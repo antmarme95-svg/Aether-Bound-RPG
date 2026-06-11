@@ -100,6 +100,17 @@ export class HUD {
       `${origin.passive.name} · ${rest.join("—").trim()}`;
   }
 
+  setAllegiance(label, color) {
+    let chip = this.el.querySelector(".allegiance-chip");
+    if (!chip) {
+      chip = document.createElement("div");
+      chip.className = "allegiance-chip";
+      this.el.appendChild(chip);
+    }
+    chip.textContent = label;
+    chip.style.setProperty("--allegiance-color", color);
+  }
+
   setMarkers(markers) {
     // wipe DOM markers and rebuild
     for (const m of this.strip.querySelectorAll(".compass-marker")) m.remove();

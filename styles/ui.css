@@ -282,6 +282,15 @@ input[type="range"]::-webkit-slider-thumb {
 .passive-chip.active { color: var(--gold); }
 .passive-chip.active .key { border-color: var(--gold); color: var(--gold); box-shadow: 0 0 10px rgba(255, 201, 77, 0.4); }
 
+/* allegiance chip — shown after path pick, sits above the passive chip */
+.allegiance-chip {
+  position: absolute; left: 26px; bottom: 143px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; letter-spacing: 0.1em; color: var(--allegiance-color, var(--accent));
+  border: 1px solid var(--allegiance-color, var(--line)); padding: 1px 9px;
+  background: rgba(0,0,0,0.5);
+}
+
 /* interact prompt — center */
 .interact-prompt {
   position: absolute; left: 50%; top: 62%; transform: translateX(-50%);

@@ -21,6 +21,15 @@ export class Stats {
     this.exhausted = false;       // drained to zero → locked out of sprint until refilled
     this._regenHold = 0;          // brief pause after spending stamina
     this.physicalResist = 0;      // set by passives (Colossus Stance)
+    this.damageMult = 1;          // multiplied by path buffs
+  }
+
+  applyPathBuff(mods) {
+    if (typeof mods.maxHealth === "number") { this.maxHealth += mods.maxHealth; this.health += mods.maxHealth; }
+    if (typeof mods.maxMagicka === "number") { this.maxMagicka += mods.maxMagicka; this.magicka += mods.maxMagicka; }
+    if (typeof mods.maxStamina === "number") { this.maxStamina += mods.maxStamina; this.stamina += mods.maxStamina; }
+    if (mods.physicalResist) this.physicalResist += mods.physicalResist;
+    if (mods.damageMult) this.damageMult *= mods.damageMult;
   }
 
   skillBonus(skillName, perPoint = 0.02) {

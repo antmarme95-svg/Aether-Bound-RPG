@@ -30,6 +30,7 @@ import { DialogueUI } from "../ui/DialogueUI.js";
 import { QuestUI } from "../ui/QuestUI.js";
 
 import { buildRecruiterDialogue } from "../data/dialogue/contract.js";
+import { PATH_BUFFS } from "../data/paths.js";
 
 export class GameDirector {
   constructor({ renderer, camera, uiRoot }) {
@@ -278,6 +279,11 @@ export class GameDirector {
         const origin = this.save.origin;
         this.questUI.showChoice(this.questTracker.pathOptions(origin), (pathId) => {
           this.questTracker.choosePath(pathId, origin);
+          const buff = PATH_BUFFS[pathId];
+          this.stats.applyPathBuff(buff.mods);
+          const opt = this.questTracker.pathOptions(origin).find((o) => o.id === pathId);
+          this.hud.setAllegiance(buff.label, opt.color);
+          bus.emit("quest:toast", { text: buff.toast });
           this.fsm.go("FREE_ROAM");
         });
       },

@@ -150,7 +150,7 @@ export class PlayerController {
   }
 
   _attackDamage(combat) {
-    let dmg = combat.damage * this.stats.skillBonus(combat.keySkill);
+    let dmg = combat.damage * this.stats.skillBonus(combat.keySkill) * this.stats.damageMult;
     return dmg;
   }
 
