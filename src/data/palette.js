@@ -37,4 +37,6 @@ export const PAINT_COLORS = [
 ];
 
 // Cel ramp steps used by ToonMaterials to build gradient maps.
-export const TOON_RAMP_STEPS = [0.18, 0.5, 0.85, 1.0];
+// Lifted shadow floor (BotW-style): minimum step raised to 0.42 so the
+// darkest toon band reads as a mid-tone rather than near-black.
+export const TOON_RAMP_STEPS = [0.42, 0.62, 0.86, 1.0];
