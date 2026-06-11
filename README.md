@@ -31,8 +31,10 @@ procedurally at runtime. Internet is required on first load for the CDN.
 | WASD / arrows | Move |
 | Shift (hold) | Sprint — drains the stamina wheel |
 | Space | Jump |
-| Mouse drag | Orbit camera · wheel zooms |
-| Click / F | Attack (class-flavored: greatblade / bolt / bow) |
+| Click (canvas) | Capture mouse (pointer lock) · Esc to release |
+| Mouse move (captured) | Look around |
+| Mouse wheel | Camera zoom |
+| Left click (captured) / F | Attack (class-flavored: greatblade / bolt / bow) |
 | C | Crouch / sneak |
 | E | Interact (talk · sign · shatter) |
 | Q (hold) | **Mana-Overload** (Aether-Born passive) |
@@ -64,6 +66,7 @@ src/
 │   ├── classes.js           Warrior/Mage/Thief attribute + skill tables
 │   ├── phenotype.js         slider/pick definitions (single source of truth for UI + rig)
 │   ├── palette.js           neon-adjacent cel palettes
+│   ├── paths.js             path allegiance buffs + HUD chips (Kingdom / Betrayal / Rogue)
 │   └── dialogue/contract.js recruiter dialogue trees + contract clauses
 ├── character/
 │   ├── CharacterRig.js      parametric humanoid; applyPhenotype() live-edits transforms,
@@ -108,8 +111,16 @@ src/
    Gods** pulses on the compass; three maddened beasts (red crystal
    corruption, stealth-aware aggro) guard it. Purge them, shatter the Core.
 5. **CHOICE** — the tracker branches: **Path A** serve your kingdom ·
-   **Path B** court the rival power · **Path C** go rogue. The pick rewrites
-   the quest tracker and the save record, then free roam + end card.
+   **Path B** court the rival power · **Path C** go rogue. The pick grants
+   a permanent buff + colored allegiance chip in the HUD:
+   - **Path A (Kingdom)** — "Crown's Aegis": +25 max health, +10% physical resist
+   - **Path B (Betrayal)** — "Double Ledger": +30 max magicka, +15 max stamina
+   - **Path C (Rogue)** — "Unbound Fury": +15% attack damage, +20 max stamina
+6. **END CARD** — the quest tracker and the save record are rewritten per your
+   path choice, and the slice stats roll (field time · kills · cores).
+7. **SECOND CORE** — dismissing the card opens quest *Amendment 001-B*: a second
+   Core of the Dead Gods pulses to the west of The Wilds, guarded by three more
+   maddened guardians. Shatter it to quiet the frontier, then free roam.
 
 ---
 
