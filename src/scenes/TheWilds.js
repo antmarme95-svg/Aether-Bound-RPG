@@ -7,6 +7,7 @@ import { skyDome, particles, tree, rock } from "./props.js";
 
 const SIZE = 220;
 const CORE_POS = { x: 8, z: -42 };
+const CORE_POS_B = { x: -46, z: 18 };
 const SPAWN = { x: 0, z: 88 };
 
 // deterministic placement
@@ -39,6 +40,7 @@ export function terrainHeight(x, z) {
   let h = rawHeight(x, z);
   h = flatten(h, x, z, SPAWN.x, SPAWN.z, 16, 0.4);
   h = flatten(h, x, z, CORE_POS.x, CORE_POS.z, 20, 0.7);
+  h = flatten(h, x, z, CORE_POS_B.x, CORE_POS_B.z, 18, 0.6);
   return h;
 }
 
@@ -59,14 +61,15 @@ export class TheWilds {
     scene.add(skyDome("#3f9fe8", "#bfe3d4"));
 
     this.t = 0;
-    this.coreAlive = true;
-    this.coreDying = false;
     this.windMats = [];
 
     this._buildTerrain();
     this._buildGrass();
     this._buildFlora();
-    this._buildCoreSite();
+    this.sites = [
+      this._buildCoreSite(CORE_POS.x, CORE_POS.z, "core"),
+      this._buildCoreSite(CORE_POS_B.x, CORE_POS_B.z, "core2"),
+    ];
     this._buildSkyDressing();
 
     scene.add(new THREE.HemisphereLight(0xbfe8ff, 0x4a7a3f, 0.95));
@@ -77,11 +80,22 @@ export class TheWilds {
     // ---- gameplay metadata ----
     const sy = terrainHeight(SPAWN.x, SPAWN.z);
     this.playerSpawn = { position: new THREE.Vector3(SPAWN.x, sy, SPAWN.z), yaw: Math.PI };
-    this.corePosition = new THREE.Vector3(CORE_POS.x, terrainHeight(CORE_POS.x, CORE_POS.z), CORE_POS.z);
+
+    this.corePositions = [CORE_POS, CORE_POS_B].map(
+      (c) => new THREE.Vector3(c.x, terrainHeight(c.x, c.z), c.z)
+    );
+    this.corePosition = this.corePositions[0];
+
     this.enemySpawns = [
       new THREE.Vector3(2, 0, -32),
       new THREE.Vector3(18, 0, -38),
       new THREE.Vector3(8, 0, -52),
+    ].map((v) => { v.y = terrainHeight(v.x, v.z); return v; });
+
+    this.enemySpawnsB = [
+      new THREE.Vector3(-40, 0, 14),
+      new THREE.Vector3(-52, 0, 12),
+      new THREE.Vector3(-46, 0, 28),
     ].map((v) => { v.y = terrainHeight(v.x, v.z); return v; });
 
     this.triggers = [
@@ -92,7 +106,14 @@ export class TheWilds {
       {
         id: "core",
         label: "Shatter the Core",
-        position: this.corePosition.clone().add(new THREE.Vector3(0, 1, 0)),
+        position: this.corePositions[0].clone().add(new THREE.Vector3(0, 1, 0)),
+        radius: 3.2,
+        enabled: false,
+      },
+      {
+        id: "core2",
+        label: "Shatter the Core",
+        position: this.corePositions[1].clone().add(new THREE.Vector3(0, 1, 0)),
         radius: 3.2,
         enabled: false,
       },
@@ -117,9 +138,11 @@ export class TheWilds {
       pos.setY(i, h);
       const n = (Math.sin(x * 0.5) * Math.cos(z * 0.45) + 1) / 2;
       c.copy(cLush).lerp(n > 0.6 ? cDry : cGrass, Math.abs(n - 0.5) * 1.6);
-      // corruption stain around the core
-      const dCore = Math.hypot(x - CORE_POS.x, z - CORE_POS.z);
-      if (dCore < 13) c.lerp(cScorch, 1 - smooth(dCore / 13));
+      // corruption stain around each core
+      for (const cp of [CORE_POS, CORE_POS_B]) {
+        const dCore = Math.hypot(x - cp.x, z - cp.z);
+        if (dCore < 13) c.lerp(cScorch, 1 - smooth(dCore / 13));
+      }
       colors.push(c.r, c.g, c.b);
     }
     geo.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
@@ -174,6 +197,7 @@ export class TheWilds {
       const z = Math.sin(a) * d * 0.95 + 10;
       // keep the spawn→core route readable
       if (Math.hypot(x - CORE_POS.x, z - CORE_POS.z) < 16) continue;
+      if (Math.hypot(x - CORE_POS_B.x, z - CORE_POS_B.z) < 16) continue;
       if (Math.abs(x) < 7 && z > -30 && z < 95) continue;
       const s = 0.8 + rand() * 0.9;
       const t = tree(s);
@@ -194,14 +218,13 @@ export class TheWilds {
     }
   }
 
-  _buildCoreSite() {
-    const { x, z } = CORE_POS;
+  _buildCoreSite(x, z, interactableId) {
     const y = terrainHeight(x, z);
-    const g = (this.coreGroup = new THREE.Group());
-    g.position.set(x, y, z);
+    const group = new THREE.Group();
+    group.position.set(x, y, z);
 
-    this.coreMat = glowMat("#ff2336", 1.0);
-    this.crystals = [];
+    const mat = glowMat("#ff2336", 1.0);
+    const crystals = [];
     const defs = [
       [0, 0, 0, 1.9, 0, 0],
       [1.4, -0.6, 0.2, 1.2, 0.5, 0.3],
@@ -210,13 +233,13 @@ export class TheWilds {
       [-0.7, -1.2, 0.1, 1.1, -0.25, 0.45],
     ];
     for (const [cx, cz, , s, rx, rz] of defs) {
-      const cr = new THREE.Mesh(new THREE.OctahedronGeometry(0.7), this.coreMat);
+      const cr = new THREE.Mesh(new THREE.OctahedronGeometry(0.7), mat);
       cr.scale.set(s * 0.55, s * 1.9, s * 0.55);
       cr.position.set(cx, s * 1.1, cz);
       cr.rotation.set(rx, 0, rz);
       cr.userData.noOutline = true;
-      g.add(cr);
-      this.crystals.push(cr);
+      group.add(cr);
+      crystals.push(cr);
     }
     // shard ring
     const shardMat = glowMat("#a8141f", 0.9);
@@ -227,18 +250,20 @@ export class TheWilds {
       sh.position.set(Math.cos(a) * 3.6, 0.3, Math.sin(a) * 3.6);
       sh.rotation.z = Math.cos(a) * 0.5;
       sh.userData.noOutline = true;
-      g.add(sh);
-      this.crystals.push(sh);
+      group.add(sh);
+      crystals.push(sh);
     }
 
-    this.coreLight = new THREE.PointLight(0xff2336, 90, 45);
-    this.coreLight.position.y = 2.5;
-    g.add(this.coreLight);
+    const light = new THREE.PointLight(0xff2336, 90, 45);
+    light.position.y = 2.5;
+    group.add(light);
 
-    this.corruptionMotes = particles(90, 0xff3344, 22, 0.09, 7);
-    g.add(this.corruptionMotes);
+    const motes = particles(90, 0xff3344, 22, 0.09, 7);
+    group.add(motes);
 
-    this.scene.add(g);
+    this.scene.add(group);
+
+    return { group, mat, crystals, light, motes, alive: true, dying: false, interactableId };
   }
 
   _buildSkyDressing() {
@@ -294,13 +319,18 @@ export class TheWilds {
   }
 
   setCoreInteractable(on) {
-    const core = this.interactables.find((i) => i.id === "core");
-    if (core) core.enabled = on && this.coreAlive;
+    const site = this.sites.find((s) => s.alive && !s.dying);
+    if (!site) return;
+    const it = this.interactables.find((i) => i.id === site.interactableId);
+    if (it) it.enabled = on;
   }
 
   destroyCore() {
-    this.coreDying = true;
-    this.setCoreInteractable(false);
+    const site = this.sites.find((s) => s.alive && !s.dying);
+    if (!site) return;
+    site.dying = true;
+    const it = this.interactables.find((i) => i.id === site.interactableId);
+    if (it) it.enabled = false;
   }
 
   update(dt) {
@@ -312,25 +342,27 @@ export class TheWilds {
       if (cl.position.x > 180) cl.position.x = -180;
     }
 
-    if (this.coreAlive) {
-      const pulse = 0.8 + Math.sin(this.t * 3.2) * 0.25 + Math.sin(this.t * 7.7) * 0.08;
-      this.coreMat.color.set("#ff2336").multiplyScalar(pulse);
-      this.coreLight.intensity = 70 + pulse * 30;
-      this.coreGroup.rotation.y += dt * 0.05;
-      this.corruptionMotes.rotation.y -= dt * 0.1;
+    for (const site of this.sites) {
+      if (site.alive) {
+        const pulse = 0.8 + Math.sin(this.t * 3.2) * 0.25 + Math.sin(this.t * 7.7) * 0.08;
+        site.mat.color.set("#ff2336").multiplyScalar(pulse);
+        site.light.intensity = 70 + pulse * 30;
+        site.group.rotation.y += dt * 0.05;
+        site.motes.rotation.y -= dt * 0.1;
 
-      if (this.coreDying) {
-        let gone = true;
-        for (const cr of this.crystals) {
-          cr.scale.multiplyScalar(Math.max(0, 1 - dt * 2.2));
-          if (cr.scale.y > 0.04) gone = false;
-        }
-        this.coreLight.intensity *= Math.max(0, 1 - dt * 2);
-        this.corruptionMotes.material.opacity *= Math.max(0, 1 - dt * 2);
-        if (gone) {
-          this.coreAlive = false;
-          this.coreGroup.visible = false;
-          this.coreLight.intensity = 0;
+        if (site.dying) {
+          let gone = true;
+          for (const cr of site.crystals) {
+            cr.scale.multiplyScalar(Math.max(0, 1 - dt * 2.2));
+            if (cr.scale.y > 0.04) gone = false;
+          }
+          site.light.intensity *= Math.max(0, 1 - dt * 2);
+          site.motes.material.opacity *= Math.max(0, 1 - dt * 2);
+          if (gone) {
+            site.alive = false;
+            site.group.visible = false;
+            site.light.intensity = 0;
+          }
         }
       }
     }

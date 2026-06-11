@@ -64,6 +64,17 @@ export class QuestTracker {
     this._emit();
   }
 
+  beginSecondPurge(origin) {
+    if (!this.quest || this.quest.id !== "campaign") return;
+    this.quest.objectives = [
+      { id: "reach", text: "A second resonance bleeds in the west", done: false, visible: true },
+      { id: "purge", text: "Put down the maddened guardians", count: 0, total: 3, done: false, visible: false },
+      { id: "shatter", text: "Shatter the second Core", done: false, visible: false },
+    ];
+    bus.emit("quest:toast", { text: "Amendment 001-B — a second Core detected" });
+    this._emit();
+  }
+
   // ---- the macro-freedom branch ----
   pathOptions(origin) {
     return [

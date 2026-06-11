@@ -260,7 +260,12 @@ export class GameDirector {
     this.scene.destroyCore();
     this.questTracker.coreDestroyed();
     this.hud.setMarkers([]);
-    this.schedule(1.7, () => this.fsm.go("CHOICE"));
+    if (this.save.chosenPath === null) {
+      this.schedule(1.7, () => this.fsm.go("CHOICE"));
+    } else {
+      this.save.persist();
+      bus.emit("quest:toast", { text: "The frontier is quiet — for now" });
+    }
   }
 
   // ==================================================================
@@ -290,9 +295,26 @@ export class GameDirector {
         };
         this.questUI.showEndCard(this.save, pathNames[this.save.chosenPath], () => {
           this.controller.enabled = true;
+          this.questTracker.beginSecondPurge(this.save.origin);
+          for (const p of this.scene.enemySpawnsB) this.enemies.push(new MaddenedBeast(p, this.scene));
+          this.hud.setMarkers([{ id: "core2", icon: "▼", color: "#ff4d5e", worldPos: this.scene.corePositions[1] }]);
+          this.scene.triggers.push(
+            { id: "coreSightB", position: this.scene.corePositions[1].clone(), radius: 42, fired: false },
+            { id: "encounterStartB", position: this.scene.corePositions[1].clone(), radius: 26, fired: false }
+          );
         });
       },
-      update: (ctx, dt) => this._gameplayUpdate(dt),
+      update: (ctx, dt) => {
+        this._gameplayUpdate(dt);
+
+        const trigger = this.controller.checkTriggers();
+        if (trigger?.id === "coreSightB") {
+          this.questTracker.reachCoreSite();
+        } else if (trigger?.id === "encounterStartB") {
+          for (const e of this.enemies) e.aggro = true;
+          bus.emit("quest:toast", { text: "The guardians wake" });
+        }
+      },
     };
   }
 
@@ -332,7 +354,7 @@ export class GameDirector {
       Sfx.uiClick();
       if (it.id === "recruiter") this._startRecruiterDialogue();
       else if (it.id === "exitDoors") this.transition(() => this.fsm.go("CITY_EXIT"));
-      else if (it.id === "core") this._onCoreShattered();
+      else if (it.id === "core" || it.id === "core2") this._onCoreShattered();
     });
   }
 
