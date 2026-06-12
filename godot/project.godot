@@ -1,5 +1,11 @@
 ; Engine configuration file.
-; BORISAWA - Godot 4 port of the Aetherpunk High-Fantasy vertical slice.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
 config_version=5
 
 [application]
@@ -17,7 +23,3 @@ Debug="*res://autoload/debug.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-
-[rendering]
-
-renderer/rendering_method="forward_plus"

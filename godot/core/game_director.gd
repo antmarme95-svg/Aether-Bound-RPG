@@ -1,7 +1,7 @@
 # game_director.gd — Top-level game FSM and scene orchestrator.
 # Port of src/core/GameDirector.js.
 # FSM: CREATION → OFFICE → CITY_EXIT → WILDS → CHOICE → FREE_ROAM
-# CREATION is a minimal stub (reads Debug args, goes to OFFICE — full UI is P5).
+# CREATION now has real UI (CreationUI) — Debug-arg fast path preserved for autotests.
 class_name GameDirector extends Node3D
 
 # ---- child nodes ----
@@ -24,6 +24,18 @@ var passives: Passives         = null
 var controller: PlayerController = null
 var rig: CharacterRig          = null
 var quest_tracker: QuestTracker = null
+
+# ---- UI layers (untyped to avoid cross-file class_name parse-order issues) ----
+var creation_ui                = null  # CreationUI
+var hud                        = null  # HUD
+var dialogue_ui                = null  # DialogueUI
+var quest_ui                   = null  # QuestUI
+
+# ---- creation stage helpers ----
+var _creation_env: WorldEnvironment = null
+var _creation_lights: Array = []
+var _creation_platform: Node3D = null
+var _turntable_t: float = 0.0
 
 # ---- visited states (for autotest reporting) ----
 var fsm_states_visited: Array  = []
@@ -68,6 +80,11 @@ func _ready() -> void:
 	# Wire global events
 	EventBus.on("combat:enemyDown", _on_enemy_down)
 	EventBus.on("player:died",      _on_player_died)
+	EventBus.on("ui:pathChosen",    _on_ui_path_chosen)
+	EventBus.on("ui:continueRoam",  _on_ui_continue_roam)
+
+	# Build persistent UI layers (always present in the tree)
+	_build_ui_layers()
 
 	# Apply Debug args (--origin / --cls / --name / --skip)
 	_apply_debug_args()
@@ -91,26 +108,135 @@ func _process(dt: float) -> void:
 	fsm.update(dt)
 
 # ================================================================
-# CREATION — reads Debug args, boots to OFFICE (creation UI is P5)
+# CREATION — real UI state.
+# Debug-args fast path: if --origin + --cls set, skip UI and go straight to OFFICE.
 # ================================================================
 func _state_creation() -> Dictionary:
 	return {
 		"enter": func(_ctx: Dictionary, _from: String, _payload: Dictionary) -> void:
 			_record_state("CREATION")
-			# If Debug already set origin (via --skip), just go straight to OFFICE
+			# Debug fast path (autotest_slice uses this)
 			if save.origin_id != "" and save.class_id != "":
 				fsm.go("OFFICE")
-			else:
-				# No args — set sensible defaults and go to OFFICE
-				if save.origin_id == "":
-					save.origin_id = "aetherborn"
-				if save.class_id == "":
-					save.class_id = "warrior"
-				if save.player_name == "":
-					var origin: Dictionary = save.get_origin()
-					save.player_name = origin.get("defaultName", "Borisawa")
-				fsm.go("OFFICE"),
+				return
+
+			# Build creation stage: dark env + rim lights + ring platform
+			_build_creation_stage()
+
+			# Show creation UI
+			creation_ui.visible = true
+
+			# Wire callbacks
+			creation_ui.on_tab       = func(_tab_id: String) -> void: pass
+			creation_ui.on_origin    = func(origin: Dictionary) -> void:
+				# Apply rig phenotype + theme accent
+				rig.apply_phenotype(save.phenotype, origin)
+				var theme: Dictionary = origin.get("theme", {})
+				var accent_hex: String = theme.get("accent", "#46e6ff")
+				var ac := Color(accent_hex)
+				creation_ui.set_accent(ac)
+				quest_ui.set_accent_color(ac)
+				hud.set_accent_color(ac)
+			creation_ui.on_phenotype = func(field_id: String, value) -> void:
+				var origin_dict: Dictionary = save.get_origin()
+				if not origin_dict.is_empty():
+					rig.apply_phenotype(save.phenotype, origin_dict)
+			creation_ui.on_class_selected = func(_cls: Dictionary) -> void: pass
+			creation_ui.on_name      = func(_n: String) -> void: pass
+			creation_ui.on_confirm   = func(_name_text: String) -> void:
+				save.persist()
+				EventBus.emit_event("creation:complete", {"save": save})
+				creation_ui.visible = false
+				_teardown_creation_stage()
+				transition(func() -> void: fsm.go("OFFICE")),
+
+		"update": func(_ctx: Dictionary, dt: float) -> void:
+			# Turntable
+			_turntable_t += dt
+			if rig != null:
+				rig.rotation.y = _turntable_t * 0.35,
+
+		"exit": func(_ctx: Dictionary, _to: String) -> void:
+			creation_ui.visible = false
+			_teardown_creation_stage(),
 	}
+
+func _build_creation_stage() -> void:
+	# Minimal creation stage: dark environment, rim lights, ring platform
+	if _creation_env != null:
+		return  # already built
+
+	# Environment
+	_creation_env = WorldEnvironment.new()
+	var env := Environment.new()
+	env.background_mode = Environment.BG_COLOR
+	env.background_color = Color(0.03, 0.05, 0.08)
+	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+	env.ambient_light_color = Color(0.15, 0.22, 0.35)
+	env.ambient_light_energy = 0.6
+	_creation_env.environment = env
+	add_child(_creation_env)
+
+	# Rim lights
+	var rim_front := OmniLight3D.new()
+	rim_front.light_color = Color("#8af0ff")
+	rim_front.light_energy = 1.4
+	rim_front.omni_range   = 12.0
+	rim_front.position     = Vector3(0, 2.8, -4)
+	add_child(rim_front)
+	_creation_lights.append(rim_front)
+
+	var rim_back := OmniLight3D.new()
+	rim_back.light_color  = Color("#ffa060")
+	rim_back.light_energy = 0.9
+	rim_back.omni_range   = 10.0
+	rim_back.position     = Vector3(0, 1.5, 4)
+	add_child(rim_back)
+	_creation_lights.append(rim_back)
+
+	# Ring platform
+	_creation_platform = Node3D.new()
+	var ring_mi := MeshInstance3D.new()
+	var ring_mesh := CylinderMesh.new()
+	ring_mesh.top_radius    = 1.6
+	ring_mesh.bottom_radius = 1.6
+	ring_mesh.height        = 0.06
+	ring_mi.mesh = ring_mesh
+	var ring_mat := ToonMaterials.toon_mat(Color(0.12, 0.18, 0.26))
+	ring_mi.material_override = ring_mat
+	_creation_platform.add_child(ring_mi)
+	_creation_platform.position = Vector3(3.5, 0.0, -2.0)
+	add_child(_creation_platform)
+
+	# Position rig on platform
+	rig.position = _creation_platform.position
+	rig.rotation.y = 0.0
+	_turntable_t = 0.0
+
+	# Camera: look at rig from front-right
+	_cam.position = _creation_platform.position + Vector3(0.0, 1.8, 4.5)
+	_cam.look_at(_creation_platform.position + Vector3(0, 1.0, 0))
+
+	# Apply default phenotype
+	if save != null:
+		var origin: Dictionary = save.get_origin()
+		if not origin.is_empty():
+			rig.apply_phenotype(save.phenotype, origin)
+
+func _teardown_creation_stage() -> void:
+	for light in _creation_lights:
+		if is_instance_valid(light):
+			remove_child(light)
+			light.queue_free()
+	_creation_lights.clear()
+	if _creation_env != null:
+		remove_child(_creation_env)
+		_creation_env.queue_free()
+		_creation_env = null
+	if _creation_platform != null:
+		remove_child(_creation_platform)
+		_creation_platform.queue_free()
+		_creation_platform = null
 
 # ================================================================
 # OFFICE
@@ -121,30 +247,53 @@ func _state_office() -> Dictionary:
 			_record_state("OFFICE")
 			var origin: Dictionary = save.get_origin()
 
-			# Build player systems
-			stats      = Stats.new(save)
-			passives   = Passives.new(save, stats)
-			controller = PlayerController.new()
-			add_child(controller)
-			controller.setup(rig, stats, passives, save, _cam)
+			# Build player systems (idempotent if already built)
+			if stats == null:
+				stats = Stats.new(save)
+			if passives == null:
+				passives = Passives.new(save, stats)
+			if controller == null:
+				controller = PlayerController.new()
+				add_child(controller)
+				controller.setup(rig, stats, passives, save, _cam)
 
 			# Build scene
 			var office := RecruitmentOffice.new(origin)
 			_set_scene(office)
 			controller.enabled = true
 
+			# HUD
+			hud.visible = true
+			hud.set_passive(origin)
+			var theme: Dictionary = origin.get("theme", {})
+			var accent_hex: String = theme.get("accent", "#46e6ff")
+			hud.set_accent_color(Color(accent_hex))
+			quest_ui.set_accent_color(Color(accent_hex))
+
+			# Wire dialogue
+			EventBus.on("ui:dialogueRequested", _on_dialogue_requested)
+
 			EventBus.emit_event("quest:toast", {"text": "Speak with the recruiter"}),
 
 		"update": func(_ctx: Dictionary, dt: float) -> void:
 			_gameplay_update(dt)
 			var it: Dictionary = controller.nearest_interactable()
+			if not it.is_empty():
+				hud.show_prompt(it.get("label", it.get("id", "")))
+			else:
+				hud.hide_prompt()
 			if Input.is_action_just_pressed("ui_accept") or _check_key_e():
 				if not it.is_empty():
 					var it_id: String = it.get("id", "")
 					if it_id == "recruiter":
-						EventBus.emit_event("ui:dialogueRequested", {"interactable": it, "origin": save.get_origin()})
+						if not dialogue_ui.is_open():
+							EventBus.emit_event("ui:dialogueRequested", {"interactable": it, "origin": save.get_origin()})
 					elif it_id == "exitDoors":
 						transition(func() -> void: fsm.go("CITY_EXIT")),
+
+		"exit": func(_ctx: Dictionary, _to: String) -> void:
+			hud.hide_prompt()
+			dialogue_ui.close_dialogue(),
 	}
 
 var _e_was_pressed: bool = false
@@ -209,7 +358,14 @@ func _state_wilds() -> Dictionary:
 			controller.enemies = enemies
 
 			# Quest
-			quest_tracker.activate(origin),
+			quest_tracker.activate(origin)
+
+			# HUD markers — core positions as compass markers
+			var markers: Array = []
+			if wilds.get("core_positions") != null:
+				for i in range(wilds.core_positions.size()):
+					markers.append({"id": "core_%d" % i, "icon": "◆", "world_pos": wilds.core_positions[i]})
+			hud.set_markers(markers),
 
 		"update": func(_ctx: Dictionary, dt: float) -> void:
 			_gameplay_update(dt)
@@ -221,11 +377,18 @@ func _state_wilds() -> Dictionary:
 					e.aggro = true
 				EventBus.emit_event("quest:toast", {"text": "The maddened have your scent"})
 
+			# Interact prompt
+			var it: Dictionary = controller.nearest_interactable()
+			if not it.is_empty():
+				hud.show_prompt(it.get("label", it.get("id", "")))
+			else:
+				hud.hide_prompt()
+
 			# E to interact
 			if _check_key_e():
-				var it: Dictionary = controller.nearest_interactable()
-				if not it.is_empty():
-					var it_id: String = it.get("id", "")
+				var it2: Dictionary = controller.nearest_interactable()
+				if not it2.is_empty():
+					var it_id: String = it2.get("id", "")
 					if it_id == "core" or it_id == "core2":
 						_on_core_shattered(),
 	}
@@ -249,6 +412,7 @@ func _state_choice() -> Dictionary:
 			_record_state("CHOICE")
 			if controller != null:
 				controller.enabled = false
+			hud.hide_prompt()
 			EventBus.emit_event("ui:choiceRequested", {
 				"options": quest_tracker.path_options(save.get_origin()),
 			}),
@@ -302,6 +466,14 @@ func _state_free_roam() -> Dictionary:
 func continue_free_roam() -> void:
 	if controller != null:
 		controller.enabled = true
+	# Set allegiance chip on HUD
+	if save != null and save.chosen_path != "" and hud != null:
+		var pb: Dictionary = PathsData.PATH_BUFFS.get(save.chosen_path, {})
+		var label: String = pb.get("label", save.chosen_path)
+		var origin: Dictionary = save.get_origin()
+		var theme: Dictionary = origin.get("theme", {})
+		var accent_hex: String = theme.get("accent", "#46e6ff")
+		hud.set_allegiance(label, Color(accent_hex))
 	var origin: Dictionary = save.get_origin()
 	quest_tracker.begin_second_purge(origin)
 	# Spawn B-wave beasts
@@ -333,6 +505,10 @@ func _gameplay_update(dt: float) -> void:
 	for enemy in enemies:
 		if not enemy.dead:
 			enemy.update_ai(dt, controller, passives)
+	# HUD per-frame update
+	if hud != null and hud.visible and stats != null and controller != null:
+		hud.update_hud(stats, controller.cam_yaw,
+			controller.position if controller != null else Vector3.ZERO)
 
 # ================================================================
 # Global event handlers
@@ -387,23 +563,104 @@ func _set_scene(new_scene: Node3D) -> void:
 	if controller != null:
 		controller.set_scene(scene)
 
-# ---- apply_debug_args: wire --origin/--cls/--name/--skip ----
+# ================================================================
+# UI layer construction (called once in _ready)
+# ================================================================
+func _build_ui_layers() -> void:
+	var _CreationUI: GDScript = load("res://ui/creation_ui.gd")
+	var _HUD: GDScript        = load("res://ui/hud.gd")
+	var _DialogueUI: GDScript = load("res://ui/dialogue_ui.gd")
+	var _QuestUI: GDScript    = load("res://ui/quest_ui.gd")
+
+	if _CreationUI == null or _HUD == null or _DialogueUI == null or _QuestUI == null:
+		push_error("[GameDirector] Failed to load one or more UI scripts")
+		return
+
+	# CreationUI — set _save BEFORE add_child (add_child triggers _ready)
+	creation_ui = _CreationUI.new()
+	creation_ui._save = save
+	add_child(creation_ui)
+	creation_ui.visible = false
+
+	# HUD
+	hud = _HUD.new()
+	add_child(hud)
+	hud.visible = false
+
+	# DialogueUI
+	dialogue_ui = _DialogueUI.new()
+	add_child(dialogue_ui)
+	dialogue_ui.visible = false
+
+	# QuestUI
+	quest_ui = _QuestUI.new()
+	add_child(quest_ui)
+
+# ================================================================
+# Dialogue request handler
+# ================================================================
+func _on_dialogue_requested(payload: Dictionary) -> void:
+	if dialogue_ui == null:
+		return
+	var origin: Dictionary = payload.get("origin", save.get_origin())
+	var theme: Dictionary = origin.get("theme", {})
+	var accent_hex: String = theme.get("accent", "#46e6ff")
+	var tree: Dictionary = ContractData.build_recruiter_dialogue(origin, save.player_name)
+	if tree.is_empty():
+		return
+	dialogue_ui.visible = true
+	controller.enabled = false
+	dialogue_ui.start_tree(tree, func(action: String) -> void:
+		if action == "openContract":
+			dialogue_ui.visible = true
+			dialogue_ui.open_contract(origin, save.player_name, func() -> void:
+				sign_contract()
+				dialogue_ui.visible = true
+				dialogue_ui.jump_to("signed")
+			)
+		elif action == "end":
+			dialogue_ui.visible = false
+			dialogue_ui.close_dialogue()
+			controller.enabled = true
+			EventBus.emit_event("quest:toast", {"text": "The doors are open — deploy to The Wilds"})
+	, Color(accent_hex))
+
+# ================================================================
+# ui:pathChosen / ui:continueRoam event handlers (from QuestUI)
+# ================================================================
+func _on_ui_path_chosen(payload: Dictionary) -> void:
+	var path_id: String = payload.get("path_id", "")
+	if path_id != "":
+		pick_path(path_id)
+
+func _on_ui_continue_roam(_payload: Dictionary) -> void:
+	continue_free_roam()
+	# Set allegiance chip
+	if save.chosen_path != "":
+		var pb: Dictionary = PathsData.PATH_BUFFS.get(save.chosen_path, {})
+		var label: String = pb.get("label", save.chosen_path)
+		var origin: Dictionary = save.get_origin()
+		var theme: Dictionary = origin.get("theme", {})
+		var accent_hex: String = theme.get("accent", "#46e6ff")
+		hud.set_allegiance(label, Color(accent_hex))
+		quest_ui.set_accent_color(Color(accent_hex))
+
 func _apply_debug_args() -> void:
 	var args: Dictionary = Debug.args
 	if args.has("origin"):
-		var origin: Dictionary = OriginsData.get_origin(String(args["origin"]))
+		var origin: Dictionary = OriginsData.get_origin(str(args["origin"]))
 		if not origin.is_empty():
 			save.origin_id = origin.get("id", "")
 	if args.has("cls"):
-		save.class_id = String(args["cls"])
+		save.class_id = str(args["cls"])
 	if args.has("name"):
-		save.player_name = String(args["name"])
+		save.player_name = str(args["name"])
 	# --skip handled after start() is called (see start())
 
 func _apply_skip_arg() -> void:
 	var args: Dictionary = Debug.args
 	if args.has("skip"):
-		var skip: String = String(args["skip"])
+		var skip: String = str(args["skip"])
 		if skip == "office":
 			fsm.go("OFFICE")
 		elif skip == "exit":

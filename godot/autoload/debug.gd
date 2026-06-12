@@ -20,13 +20,18 @@ func _ready() -> void:
 	if args.has("screenshot-and-quit"):
 		_smoke_test()
 	elif args.has("autotest"):
-		_run_autotest(String(args["autotest"]))
+		_run_autotest(str(args["autotest"]))
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_F12:
 		screenshot("res://test_out/manual_%d.png" % Time.get_ticks_msec())
 
 func screenshot(res_path: String) -> void:
+	# In headless mode (--headless), frame_post_draw never fires — skip the await
+	# and skip saving the PNG (no viewport texture available anyway).
+	if DisplayServer.get_name() == "headless":
+		print("[Debug] screenshot (headless skip) -> ", res_path)
+		return
 	await RenderingServer.frame_post_draw
 	var img := get_viewport().get_texture().get_image()
 	var abs_path := ProjectSettings.globalize_path(res_path)
