@@ -22,7 +22,7 @@ const CAM_DIST_MIN      := 2.4
 const CAM_DIST_MAX      := 8.0
 const CAM_PITCH_MIN     := -0.25
 const CAM_PITCH_MAX     :=  1.25
-const CAM_SHOULDER      :=  0.55   # right-shoulder offset in world units
+const CAM_SHOULDER      :=  0.8    # right-shoulder offset in world units
 
 # ---- deps (set via setup()) ----
 var stats: Stats       = null
@@ -161,6 +161,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				passives.toggle_night_vision()
 			elif kc == KEY_F:
 				try_attack()
+			elif kc == KEY_M:
+				EventBus.emit_event("minimap:toggled", {})
 			elif kc == KEY_ESCAPE:
 				EventBus.emit_event("player:pause_toggled", {})
 		elif not ke.pressed:
@@ -384,7 +386,7 @@ func update(dt: float) -> void:
 
 	# ---- bounds ----
 	if scene.has_method("clamp_position"):
-		scene.clamp_position(position)
+		position = scene.clamp_position(position)
 
 	# ---- rig + camera ----
 	rig.global_position = position
@@ -404,14 +406,17 @@ func _sync_camera(blend: float) -> void:
 	var target := position + Vector3(0.0, head_y, 0.0)
 	var cp: float = cos(cam_pitch)
 	var sp: float = sin(cam_pitch)
-	# Right vector perpendicular to yaw (horizontal plane).
-	# Negate to place camera behind-left of character → character on right of frame.
-	var right := Vector3(-cos(cam_yaw), 0.0, sin(cam_yaw))
+	# Camera-right vector perpendicular to yaw (horizontal plane).
+	# Camera sits over the character's RIGHT shoulder; both the camera position
+	# AND the look target shift by `shoulder`, so the view truly pans sideways and
+	# the character ends up framed slightly left (centered crosshair = clear sight).
+	var right := Vector3(cos(cam_yaw), 0.0, -sin(cam_yaw))
+	var shoulder := right * CAM_SHOULDER
 	var desired := Vector3(
 		target.x + sin(cam_yaw) * cp * cam_dist,
 		target.y + sp * cam_dist,
 		target.z + cos(cam_yaw) * cp * cam_dist
-	) + right * CAM_SHOULDER
+	) + shoulder
 	if scene != null and scene.has_method("get_height"):
 		var min_y: float = scene.get_height(desired.x, desired.z) + 0.35
 		if desired.y < min_y:
@@ -423,4 +428,4 @@ func _sync_camera(blend: float) -> void:
 		desired.z = clamp(desired.z, bounds.get("z_min", -999.0), bounds.get("z_max", 999.0))
 		desired.y = clamp(desired.y, bounds.get("y_min", 0.35),   bounds.get("y_max", 999.0))
 	cam.position = cam.position.lerp(desired, blend)
-	cam.look_at(target)
+	cam.look_at(target + shoulder)

@@ -282,14 +282,22 @@ func clamp_camera(pos: Vector3) -> void:
 	if pos.y < 0.35:
 		pos.y = 0.35
 
-func clamp_position(pos: Vector3) -> void:
+func clamp_position(pos: Vector3) -> Vector3:
 	pos.x = clamp(pos.x, -HALF_W + 0.4, HALF_W - 0.4)
 	var gate_blocked = _gate_open < 0.85
 	var min_z = GATE_Z + 1.0 if gate_blocked else END_Z - 1.0
 	pos.z = clamp(pos.z, min_z, 2.5)
+	return pos
 
 func is_in_grass(_pos: Vector3 = Vector3.ZERO) -> bool:
 	return false
+
+func get_map_info() -> Dictionary:
+	return {
+		"shape": "rect", "label": "City Exit",
+		"x_min": -HALF_W, "x_max": HALF_W,
+		"z_min": END_Z,   "z_max": 2.5,
+	}
 
 # ================================================================
 # update — call from parent per frame (mirroring JS update(dt, playerPos))

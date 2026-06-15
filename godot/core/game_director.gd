@@ -31,6 +31,7 @@ var hud                        = null  # HUD
 var dialogue_ui                = null  # DialogueUI
 var quest_ui                   = null  # QuestUI
 var pause_ui                   = null  # PauseUI
+var minimap_ui                 = null  # MinimapUI
 
 # ---- creation stage helpers ----
 var _creation_env: WorldEnvironment = null
@@ -583,6 +584,9 @@ func _set_scene(new_scene: Node3D) -> void:
 	add_child(scene)
 	if controller != null:
 		controller.set_scene(scene)
+	if minimap_ui != null:
+		minimap_ui.close()
+		minimap_ui.bind(controller, scene)
 
 # ================================================================
 # UI layer construction (called once in _ready)
@@ -593,8 +597,9 @@ func _build_ui_layers() -> void:
 	var _DialogueUI: GDScript = load("res://ui/dialogue_ui.gd")
 	var _QuestUI: GDScript    = load("res://ui/quest_ui.gd")
 	var _PauseUI: GDScript    = load("res://ui/pause_ui.gd")
+	var _MinimapUI: GDScript  = load("res://ui/minimap_ui.gd")
 
-	if _CreationUI == null or _HUD == null or _DialogueUI == null or _QuestUI == null or _PauseUI == null:
+	if _CreationUI == null or _HUD == null or _DialogueUI == null or _QuestUI == null or _PauseUI == null or _MinimapUI == null:
 		push_error("[GameDirector] Failed to load one or more UI scripts")
 		return
 
@@ -622,6 +627,12 @@ func _build_ui_layers() -> void:
 	pause_ui = _PauseUI.new()
 	add_child(pause_ui)
 	EventBus.on("player:pause_toggled", _on_pause_toggled)
+
+	# MinimapUI
+	minimap_ui = _MinimapUI.new()
+	add_child(minimap_ui)
+	minimap_ui.visible = false
+	EventBus.on("minimap:toggled", _on_minimap_toggled)
 
 # ================================================================
 # Dialogue request handler
@@ -657,10 +668,23 @@ func _on_dialogue_requested(payload: Dictionary) -> void:
 # ================================================================
 # Pause toggle handler
 # ================================================================
+func _on_minimap_toggled(_payload: Dictionary) -> void:
+	if minimap_ui == null:
+		return
+	if dialogue_ui != null and dialogue_ui.is_open():
+		return
+	if pause_ui != null and pause_ui.is_open():
+		return
+	minimap_ui.toggle()
+
 func _on_pause_toggled(_payload: Dictionary) -> void:
 	if pause_ui == null or controller == null:
 		return
 	if dialogue_ui != null and dialogue_ui.is_open():
+		return
+	# ESC dismisses an open map before opening the pause menu
+	if minimap_ui != null and minimap_ui.is_open():
+		minimap_ui.close()
 		return
 	if pause_ui.is_open():
 		pause_ui.close()

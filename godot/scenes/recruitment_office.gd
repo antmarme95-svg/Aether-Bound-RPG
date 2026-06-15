@@ -385,7 +385,14 @@ func get_bounds() -> Dictionary:
 		"y_min": 0.35,             "y_max": H - 0.35,
 	}
 
-func clamp_position(pos: Vector3, radius: float = 0.35) -> void:
+func get_map_info() -> Dictionary:
+	return {
+		"shape": "rect", "label": "Recruitment Office",
+		"x_min": -W * 0.5, "x_max": W * 0.5,
+		"z_min": -D * 0.5, "z_max": D * 0.5,
+	}
+
+func clamp_position(pos: Vector3, radius: float = 0.35) -> Vector3:
 	var in_doorway = abs(pos.x) < 1.0 and _doors_open
 	pos.x = clamp(pos.x, -W * 0.5 + 0.5, W * 0.5 - 0.5)
 	var max_z = D * 0.5 + 1.0 if in_doorway else D * 0.5 - 0.5
@@ -407,6 +414,7 @@ func clamp_position(pos: Vector3, radius: float = 0.35) -> void:
 			pos.z = a["min_z"] - radius
 		else:
 			pos.z = a["max_z"] + radius
+	return pos
 
 func is_in_grass(_pos: Vector3 = Vector3.ZERO) -> bool:
 	return false

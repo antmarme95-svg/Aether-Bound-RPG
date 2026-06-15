@@ -440,7 +440,7 @@ func _build_flora() -> void:
 	var state = [777]  # seed 777
 	obstacles = []
 
-	for i in range(38):
+	for i in range(190):
 		var a = _mulberry32_next(state) * TAU
 		var d = 24.0 + _mulberry32_next(state) * 78.0
 		var x = cos(a) * d
@@ -452,7 +452,7 @@ func _build_flora() -> void:
 			continue
 		if abs(x) < 7.0 and z > -30.0 and z < 95.0:
 			continue
-		var s = 0.8 + _mulberry32_next(state) * 0.9
+		var s = (0.8 + _mulberry32_next(state) * 0.9) * 3.0
 		var t = Props.tree(s)
 		t.position = Vector3(x, terrain_height(x, z) - 0.1, z)
 		add_child(t)
@@ -857,7 +857,10 @@ func _setup_metadata() -> void:
 func get_height(x: float, z: float) -> float:
 	return terrain_height(x, z)
 
-func clamp_position(pos: Vector3) -> void:
+func get_map_info() -> Dictionary:
+	return { "shape": "circle", "label": "The Wilds", "radius": 102.0 }
+
+func clamp_position(pos: Vector3) -> Vector3:
 	var r = sqrt(pos.x * pos.x + pos.z * pos.z)
 	var MAX_R = 102.0
 	if r > MAX_R:
@@ -871,6 +874,7 @@ func clamp_position(pos: Vector3) -> void:
 		if d < min_d and d > 0.0001:
 			pos.x = o["x"] + (dx / d) * min_d
 			pos.z = o["z"] + (dz / d) * min_d
+	return pos
 
 func is_in_grass(pos: Vector3) -> bool:
 	for p in GRASS_PATCHES:
