@@ -299,16 +299,15 @@ func _build_vignette() -> void:
 	add_child(_vignette)
 
 func _build_crosshair() -> void:
-	_crosshair = ColorRect.new()
-	_crosshair.color = Color(1.0, 1.0, 1.0, 0.75)
+	_crosshair = CrosshairDot.new()
 	_crosshair.set_anchor(SIDE_LEFT,   0.5)
 	_crosshair.set_anchor(SIDE_TOP,    0.5)
 	_crosshair.set_anchor(SIDE_RIGHT,  0.5)
 	_crosshair.set_anchor(SIDE_BOTTOM, 0.5)
-	_crosshair.set_offset(SIDE_LEFT,  -3)
-	_crosshair.set_offset(SIDE_RIGHT,   3)
-	_crosshair.set_offset(SIDE_TOP,   -3)
-	_crosshair.set_offset(SIDE_BOTTOM,  3)
+	_crosshair.set_offset(SIDE_LEFT,  -8)
+	_crosshair.set_offset(SIDE_RIGHT,   8)
+	_crosshair.set_offset(SIDE_TOP,   -8)
+	_crosshair.set_offset(SIDE_BOTTOM,  8)
 	_crosshair.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_crosshair)
 
@@ -558,3 +557,13 @@ class StaminaWheel extends Control:
 			var arc_end: float = -PI * 0.5 + _ratio * TAU
 			var fill_col: Color = Color("#ff4d5e") if _exhausted else _accent
 			draw_arc(Vector2(cx, cy), WHEEL_R, -PI * 0.5, arc_end, 64, fill_col, WHEEL_THICKNESS, true)
+
+# ================================================================
+# Crosshair dot — small circle with dark outline, visible on any bg
+# ================================================================
+class CrosshairDot extends Control:
+	func _draw() -> void:
+		var cx: float = size.x * 0.5
+		var cy: float = size.y * 0.5
+		draw_circle(Vector2(cx, cy), 4.0, Color(0.0, 0.0, 0.0, 0.55))
+		draw_circle(Vector2(cx, cy), 2.5, Color(1.0, 1.0, 1.0, 0.90))
