@@ -378,6 +378,13 @@ func clamp_camera(pos: Vector3) -> void:
 	pos.z = clamp(pos.z, -D * 0.5 + 0.35, D * 0.5 - 0.35)
 	pos.y = clamp(pos.y, 0.35, H - 0.35)
 
+func get_bounds() -> Dictionary:
+	return {
+		"x_min": -W * 0.5 + 0.35, "x_max": W * 0.5 - 0.35,
+		"z_min": -D * 0.5 + 0.35, "z_max": D * 0.5 - 0.35,
+		"y_min": 0.35,             "y_max": H - 0.35,
+	}
+
 func clamp_position(pos: Vector3, radius: float = 0.35) -> void:
 	var in_doorway = abs(pos.x) < 1.0 and _doors_open
 	pos.x = clamp(pos.x, -W * 0.5 + 0.5, W * 0.5 - 0.5)

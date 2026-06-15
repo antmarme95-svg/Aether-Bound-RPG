@@ -404,8 +404,9 @@ func _sync_camera(blend: float) -> void:
 	var target := position + Vector3(0.0, head_y, 0.0)
 	var cp: float = cos(cam_pitch)
 	var sp: float = sin(cam_pitch)
-	# Right vector perpendicular to yaw (horizontal plane)
-	var right := Vector3(cos(cam_yaw), 0.0, -sin(cam_yaw))
+	# Right vector perpendicular to yaw (horizontal plane).
+	# Negate to place camera behind-left of character → character on right of frame.
+	var right := Vector3(-cos(cam_yaw), 0.0, sin(cam_yaw))
 	var desired := Vector3(
 		target.x + sin(cam_yaw) * cp * cam_dist,
 		target.y + sp * cam_dist,
@@ -415,7 +416,11 @@ func _sync_camera(blend: float) -> void:
 		var min_y: float = scene.get_height(desired.x, desired.z) + 0.35
 		if desired.y < min_y:
 			desired.y = min_y
-	if scene != null and scene.has_method("clamp_camera"):
-		scene.clamp_camera(desired)
+	# Clamp inline — scene.clamp_camera passes Vector3 by value so it can't modify desired
+	if scene != null and scene.has_method("get_bounds"):
+		var bounds: Dictionary = scene.get_bounds()
+		desired.x = clamp(desired.x, bounds.get("x_min", -999.0), bounds.get("x_max", 999.0))
+		desired.z = clamp(desired.z, bounds.get("z_min", -999.0), bounds.get("z_max", 999.0))
+		desired.y = clamp(desired.y, bounds.get("y_min", 0.35),   bounds.get("y_max", 999.0))
 	cam.position = cam.position.lerp(desired, blend)
 	cam.look_at(target)
