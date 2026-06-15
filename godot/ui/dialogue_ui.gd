@@ -45,6 +45,7 @@ var _sign_line_drawn: bool = false
 var _sign_line: Line2D
 var _sign_name_label: Label
 var _sign_btn: Button
+var _adv_btn: Button
 
 # ================================================================
 func _ready() -> void:
@@ -72,7 +73,7 @@ func _build_letterbox() -> void:
 	_letterbox_bottom.set_anchor(SIDE_TOP,    1.0)
 	_letterbox_bottom.set_anchor(SIDE_RIGHT,  1.0)
 	_letterbox_bottom.set_anchor(SIDE_BOTTOM, 1.0)
-	_letterbox_bottom.set_offset(SIDE_TOP,   -200)
+	_letterbox_bottom.set_offset(SIDE_TOP,   -292)
 	_letterbox_bottom.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_letterbox_bottom)
 
@@ -82,7 +83,7 @@ func _build_dialogue_box() -> void:
 	_dlg_box.set_anchor(SIDE_TOP,    1.0)
 	_dlg_box.set_anchor(SIDE_RIGHT,  0.9)
 	_dlg_box.set_anchor(SIDE_BOTTOM, 1.0)
-	_dlg_box.set_offset(SIDE_TOP,   -194)
+	_dlg_box.set_offset(SIDE_TOP,   -280)
 	_dlg_box.set_offset(SIDE_BOTTOM,  -6)
 	var ps := StyleBoxFlat.new()
 	ps.bg_color = Color(0.02, 0.04, 0.07, 0.94)
@@ -127,18 +128,18 @@ func _build_dialogue_box() -> void:
 	inner.add_child(_continue_label)
 
 	# Click-to-advance on the whole box
-	var adv_btn := Button.new()
-	adv_btn.set_anchors_preset(Control.PRESET_FULL_RECT)
-	adv_btn.flat = true
-	adv_btn.focus_mode = Control.FOCUS_NONE
+	_adv_btn = Button.new()
+	_adv_btn.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_adv_btn.flat = true
+	_adv_btn.focus_mode = Control.FOCUS_NONE
 	var transparent := StyleBoxFlat.new()
 	transparent.bg_color = Color(0, 0, 0, 0)
-	adv_btn.add_theme_stylebox_override("normal",  transparent)
-	adv_btn.add_theme_stylebox_override("hover",   transparent)
-	adv_btn.add_theme_stylebox_override("pressed", transparent)
-	adv_btn.add_theme_stylebox_override("focus",   transparent)
-	adv_btn.pressed.connect(_advance)
-	_dlg_box.add_child(adv_btn)
+	_adv_btn.add_theme_stylebox_override("normal",  transparent)
+	_adv_btn.add_theme_stylebox_override("hover",   transparent)
+	_adv_btn.add_theme_stylebox_override("pressed", transparent)
+	_adv_btn.add_theme_stylebox_override("focus",   transparent)
+	_adv_btn.pressed.connect(_advance)
+	_dlg_box.add_child(_adv_btn)
 
 func _build_contract_panel() -> void:
 	_contract_panel = Control.new()
@@ -231,6 +232,7 @@ func _show_node(id: String) -> void:
 		_choices_container.remove_child(child)
 		child.queue_free()
 	_continue_label.visible = false
+	_adv_btn.mouse_filter = Control.MOUSE_FILTER_STOP
 
 	# Typewriter
 	_full_text = _current_node.get("text", "")
@@ -266,6 +268,7 @@ func _on_text_done() -> void:
 	var choices = _current_node.get("choices", null)
 	if choices != null:
 		_choices_container.visible = true
+		_adv_btn.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		for choice in choices:
 			var btn := Button.new()
 			btn.text = choice.get("label", "")

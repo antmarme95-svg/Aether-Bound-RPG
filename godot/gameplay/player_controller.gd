@@ -78,7 +78,11 @@ func setup(p_rig: CharacterRig, p_stats: Stats, p_passives: Passives, p_save: Sa
 
 var enabled: bool:
 	get: return _enabled
-	set(v): _enabled = v
+	set(v):
+		_enabled = v
+		if not v and _mouse_captured:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			_mouse_captured = false
 
 func is_sneaking() -> bool:
 	return crouching
