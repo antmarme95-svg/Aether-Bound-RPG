@@ -17,11 +17,12 @@ const GRAVITY := 24.0
 const JUMP_V  := 8.4
 
 # ---- camera constants ----
-const CAM_DIST_DEFAULT := 4.4
-const CAM_DIST_MIN     := 2.4
-const CAM_DIST_MAX     := 8.0
-const CAM_PITCH_MIN    := -0.25
-const CAM_PITCH_MAX    :=  1.25
+const CAM_DIST_DEFAULT  := 4.4
+const CAM_DIST_MIN      := 2.4
+const CAM_DIST_MAX      := 8.0
+const CAM_PITCH_MIN     := -0.25
+const CAM_PITCH_MAX     :=  1.25
+const CAM_SHOULDER      :=  0.55   # right-shoulder offset in world units
 
 # ---- deps (set via setup()) ----
 var stats: Stats       = null
@@ -403,11 +404,13 @@ func _sync_camera(blend: float) -> void:
 	var target := position + Vector3(0.0, head_y, 0.0)
 	var cp: float = cos(cam_pitch)
 	var sp: float = sin(cam_pitch)
+	# Right vector perpendicular to yaw (horizontal plane)
+	var right := Vector3(cos(cam_yaw), 0.0, -sin(cam_yaw))
 	var desired := Vector3(
 		target.x + sin(cam_yaw) * cp * cam_dist,
 		target.y + sp * cam_dist,
 		target.z + cos(cam_yaw) * cp * cam_dist
-	)
+	) + right * CAM_SHOULDER
 	if scene != null and scene.has_method("get_height"):
 		var min_y: float = scene.get_height(desired.x, desired.z) + 0.35
 		if desired.y < min_y:
