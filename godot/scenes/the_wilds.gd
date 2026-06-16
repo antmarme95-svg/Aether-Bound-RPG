@@ -2,6 +2,82 @@
 ## Deterministic PRNG, terrain math, core sites, grass MultiMesh, flora, sky dressing.
 class_name TheWilds extends Node3D
 
+# Preload to avoid class_name registry load-order race (same pattern as toon_materials.gd).
+const _DayNightCycle = preload("res://scenes/day_night.gd")
+
+# ================================================================
+# BIOME PRESETS — atmosphere data-driven (PRD-002 §6).
+# Each preset changes ONLY WorldEnvironment atmosphere:
+#   background_color, fog colors/density, ambient color/energy, glow tint.
+# NOTHING in object/cel shaders, terrain materials, or character materials is touched.
+# "wilds"            = current green/teal biome (default, unchanged look).
+# "smelting_craters" = Iron-Blooded industrial biome (PRD-002 §6): orange/lava palette.
+# ================================================================
+const BIOME_PRESETS: Dictionary = {
+	"wilds": {
+		# Background / sky fill color
+		"bg_color":              Color("#bfe3d4"),
+		# Depth fog
+		"fog_light_color":       Color("#bfe3d4"),
+		"fog_density":           0.0015,
+		"fog_aerial_perspective":0.45,
+		"fog_sky_affect":        0.4,
+		# Volumetric fog
+		"vol_fog_density":       0.018,
+		"vol_fog_albedo":        Color("#bfe3d4"),
+		"vol_fog_emission":      Color(0.0, 0.0, 0.0),
+		"vol_fog_emission_energy":0.0,
+		"vol_fog_length":        100.0,
+		"vol_fog_anisotropy":    0.2,
+		# Ambient light
+		"ambient_color":         Color("#a8d8c0"),
+		"ambient_energy":        0.30,
+		# Glow
+		"glow_intensity":        0.18,
+		"glow_bloom":            0.14,
+		"glow_levels":           [0.6, 0.5, 0.15, 0.0, 0.0, 0.0, 0.0],
+		# Sky fill directional light
+		"sky_fill_color":        Color("#bfe8ff"),
+		"sky_fill_energy":       0.18,
+		# Sun light
+		"sun_color":             Color("#fff2d8"),
+		"sun_energy":            1.1,
+	},
+	"smelting_craters": {
+		# Background / sky fill — warm ash-orange sky
+		"bg_color":              Color("#caa07a"),
+		# Depth fog — warm ash-orange haze; denser than Wilds for industrial mood
+		"fog_light_color":       Color("#d8a070"),
+		"fog_density":           0.0024,            # denser than wilds (0.0015) = industrial chokehold
+		"fog_aerial_perspective":0.55,
+		"fog_sky_affect":        0.5,
+		# Volumetric fog — warm ochre ash cloud
+		"vol_fog_density":       0.030,             # heavier than wilds (0.018)
+		"vol_fog_albedo":        Color("#c89060"),
+		"vol_fog_emission":      Color(0.18, 0.04, 0.0),  # faint lava-glow self-emission
+		"vol_fog_emission_energy":0.35,
+		"vol_fog_length":        100.0,
+		"vol_fog_anisotropy":    0.35,              # stronger forward scatter = sun shaft through ash
+		# Ambient light — warm cinder glow
+		"ambient_color":         Color("#c89060"),
+		"ambient_energy":        0.25,
+		# Glow — warm orange tint; level 0 stronger for molten-edge halos
+		"glow_intensity":        0.22,
+		"glow_bloom":            0.18,
+		"glow_levels":           [0.75, 0.55, 0.20, 0.0, 0.0, 0.0, 0.0],
+		# Sky fill — deep amber (replaces cool blue of Wilds)
+		"sky_fill_color":        Color("#d8803a"),
+		"sky_fill_energy":       0.22,
+		# Sun — harsher, more orange-red for forge heat
+		"sun_color":             Color("#ffa040"),
+		"sun_energy":            1.25,
+	},
+}
+
+# Select biome preset by name. Export so it can be set from parent scenes or debug args.
+# Default "wilds" keeps normal play unchanged.
+@export var biome_preset: String = "wilds"
+
 # ---- constants (must match JS exactly) ----
 const SIZE = 220.0
 const CORE_POS = Vector2(8.0, -42.0)    # x, z
@@ -41,12 +117,24 @@ var _wind_time_param: StringName = &"wind_time"
 var _wind_mat: ShaderMaterial = null
 var _clouds: Node3D = null
 
+# ---- lighting refs (populated by _build_environment / _build_lights) ----
+var _env: Environment = null
+var _sun: DirectionalLight3D = null
+var _hemi_fill: DirectionalLight3D = null
+var _day_night: Node = null
+var _cam_attr: CameraAttributesPractical = null  # DOF attributes assigned to Camera3D
+
 # ---- origin passed into _init ----
 var _origin: Dictionary = {}
 
 # ================================================================
-func _init(origin: Dictionary) -> void:
+func _init(origin: Dictionary, preset: String = "wilds") -> void:
 	_origin = origin
+	if BIOME_PRESETS.has(preset):
+		biome_preset = preset
+	else:
+		push_warning("TheWilds: unknown biome_preset '%s', falling back to 'wilds'" % preset)
+		biome_preset = "wilds"
 
 func _ready() -> void:
 	_build_environment()
@@ -58,9 +146,14 @@ func _ready() -> void:
 		_build_core_site(CORE_POS_B.x, CORE_POS_B.y, "core2"),
 	]
 	_build_sky_dressing()
+	_build_spores()
+	_build_floating_islands()
 	_build_ruins_zones()
 	_build_lights()
+	_build_day_night()
 	_setup_metadata()
+	# Apply DOF to active Camera3D (deferred so player camera exists in the viewport).
+	call_deferred("_apply_dof_to_camera")
 
 # ================================================================
 # PRNG — mulberry32 port, returns a callable incrementing a ref-counted state.
@@ -105,57 +198,109 @@ static func terrain_height(x: float, z: float) -> float:
 
 # ================================================================
 func _build_environment() -> void:
+	# Resolve preset — fall back to "wilds" if somehow invalid at build time.
+	var p: Dictionary = BIOME_PRESETS.get(biome_preset, BIOME_PRESETS["wilds"])
+
 	var we = WorldEnvironment.new()
 	var env = Environment.new()
-	# Sky background color matching fog
+	# Sky background color — from preset
 	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color("#bfe3d4")
-	# Depth fog — begins at 55m, blue-green horizon tint for aerial perspective
+	env.background_color = p["bg_color"]
+	# Depth fog — colors and density from preset
+	# Harmonized with volumetric fog color for seamless aerial perspective.
 	env.fog_enabled = true
-	env.fog_light_color = Color("#bfe3d4")
-	env.fog_density = 0.0015  # tuned so full at ~230
-	env.fog_aerial_perspective = 0.45
-	env.fog_sky_affect = 0.4
-	# Tonemap — exposure 1.0 avoids ACES boost blowing out pastels
+	env.fog_light_color = p["fog_light_color"]
+	env.fog_density = p["fog_density"]
+	env.fog_aerial_perspective = p["fog_aerial_perspective"]
+	env.fog_sky_affect = p["fog_sky_affect"]
+	# ---- Volumetric fog — atmospheric haze + subtle sun shafts ----
+	# Modest density keeps FPS healthy; length matches view distance to distant ridges.
+	# No GI inject (would affect cel shading, which we must not touch).
+	env.volumetric_fog_enabled = true
+	env.volumetric_fog_density = p["vol_fog_density"]
+	env.volumetric_fog_albedo = p["vol_fog_albedo"]
+	env.volumetric_fog_emission = p["vol_fog_emission"]
+	env.volumetric_fog_emission_energy = p["vol_fog_emission_energy"]
+	env.volumetric_fog_length = p["vol_fog_length"]
+	env.volumetric_fog_detail_spread = 2.5     # constant: coarser voxel marching; cheaper, minimal visual delta
+	env.volumetric_fog_gi_inject = 0.0         # do NOT inject GI — would alter cel shading
+	env.volumetric_fog_anisotropy = p["vol_fog_anisotropy"]
+	env.volumetric_fog_ambient_inject = 0.0    # keep ambient lighting on objects unchanged
+	# Tonemap — exposure 1.0 avoids ACES boost blowing out pastels (same for all biomes)
 	env.tonemap_mode = Environment.TONE_MAPPER_ACES
 	env.tonemap_exposure = 1.0
-	# Ambient — warm sky blue, moderate energy (drives ambient_lift in shader)
+	# Ambient — color and energy from preset (drives ambient_lift in shader)
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color("#a8d8c0")
-	env.ambient_light_energy = 0.30
+	env.ambient_light_color = p["ambient_color"]
+	env.ambient_light_energy = p["ambient_energy"]
 	# ---- Glow/Bloom — halos only on emissive aether tech, not white walls ----
+	# glow_hdr_threshold constant: only emissives (>1.0 effective) trigger bloom.
+	# Intensity/bloom/levels from preset so each biome can tune its halo feel.
 	env.glow_enabled = true
 	env.glow_normalized = false
-	env.glow_intensity = 0.22
-	env.glow_bloom = 0.18
-	env.glow_hdr_threshold = 1.1   # only emissives (>1.0 effective) trigger bloom
+	env.glow_intensity = p["glow_intensity"]
+	env.glow_bloom = p["glow_bloom"]
+	env.glow_hdr_threshold = 1.1
 	env.glow_hdr_luminance_cap = 2.5
 	env.glow_hdr_scale = 2.0
 	env.glow_strength = 1.0
-	# Enable levels 1-3 (tight halo), disable 4-7 (wide bleed)
-	env.set_glow_level(0, 0.6)
-	env.set_glow_level(1, 0.5)
-	env.set_glow_level(2, 0.3)
-	env.set_glow_level(3, 0.0)
-	env.set_glow_level(4, 0.0)
-	env.set_glow_level(5, 0.0)
-	env.set_glow_level(6, 0.0)
+	var glow_levels: Array = p["glow_levels"]
+	for li in range(glow_levels.size()):
+		env.set_glow_level(li, float(glow_levels[li]))
+	# ---- Far-only DOF — atmospheric perspective: distant horizon softens; near stays sharp ----
+	# dof_blur_far_distance=85: player (spawn ~88m Z) and both cores (~42-46m from origin)
+	# are well within <85m so they render SHARP. Only the 85m+ background horizon blurs.
+	# Near blur disabled — no blur on anything close to camera.
+	# DOF parameters identical across biomes (spatial, not atmospheric).
+	var cam_attr = CameraAttributesPractical.new()
+	cam_attr.dof_blur_far_enabled = true
+	cam_attr.dof_blur_far_distance = 85.0      # player + cores stay sharp (all within ~55m of origin)
+	cam_attr.dof_blur_far_transition = 30.0    # gradual transition band 85-115m
+	cam_attr.dof_blur_amount = 0.08            # subtle; pictorial softness not a blur bomb
+	cam_attr.dof_blur_near_enabled = false     # no near blur — threats must never smear
+	# NOTE: Environment has no camera_attributes property in Godot 4.6.3.
+	# DOF must be assigned to Camera3D.attributes — done in _apply_dof_to_camera().
+	_cam_attr = cam_attr
 	we.environment = env
+	_env = env
 	add_child(we)
 
+# ================================================================
+# DOF lifecycle — apply to Camera3D when Wilds is active; remove when leaving.
+# Environment.camera_attributes does NOT exist in Godot 4.6.3; the attributes
+# property lives on Camera3D only.
+# ================================================================
+func _apply_dof_to_camera() -> void:
+	if _cam_attr == null:
+		return
+	var c = get_viewport().get_camera_3d()
+	if c != null:
+		c.attributes = _cam_attr
+
+func _exit_tree() -> void:
+	# Remove DOF so office/city don't inherit the far-blur.
+	var c = get_viewport().get_camera_3d()
+	if c != null and c.attributes == _cam_attr:
+		c.attributes = null
+
 func _build_lights() -> void:
-	# Sky fill — subtle cool blue from above (replaces hemisphere sky channel)
+	# Resolve preset for light colors.
+	var p: Dictionary = BIOME_PRESETS.get(biome_preset, BIOME_PRESETS["wilds"])
+
+	# Sky fill — direction from above (−Y); color/energy from preset.
+	# Wilds = cool blue; Smelting Craters = deep amber.
 	var hemi_fill = DirectionalLight3D.new()
 	hemi_fill.rotation_degrees = Vector3(-90.0, 0.0, 0.0)
-	hemi_fill.light_color = Color("#bfe8ff")
-	hemi_fill.light_energy = 0.18
+	hemi_fill.light_color = p["sky_fill_color"]
+	hemi_fill.light_energy = p["sky_fill_energy"]
 	hemi_fill.shadow_enabled = false
+	_hemi_fill = hemi_fill
 	add_child(hemi_fill)
 
-	# Sun — warm, PCF soft shadows to ground characters and trees
+	# Sun — color/energy from preset; geometry (angle, shadow) same for all biomes.
 	var sun = DirectionalLight3D.new()
-	sun.light_color = Color("#fff2d8")
-	sun.light_energy = 1.1
+	sun.light_color = p["sun_color"]
+	sun.light_energy = p["sun_energy"]
 	sun.rotation_degrees = Vector3(-66.0, -53.0, 0.0)
 	sun.shadow_enabled = true
 	# PCF soft shadows
@@ -166,7 +311,19 @@ func _build_lights() -> void:
 	# Tune bias to avoid acne and peter-panning
 	sun.shadow_bias = 0.06
 	sun.shadow_normal_bias = 1.5
+	_sun = sun
 	add_child(sun)
+
+# ================================================================
+func _build_day_night() -> void:
+	# Instantiate the day/night cycle node and wire references.
+	# cycle_speed defaults to 0.0 → paused at noon → identical to baseline.
+	# sdfgi_enabled is not set here (remains false/default on the Environment).
+	_day_night = _DayNightCycle.new()
+	_day_night.env = _env
+	_day_night.sun = _sun
+	_day_night.hemi_fill = _hemi_fill
+	add_child(_day_night)
 
 # ================================================================
 func _build_terrain() -> void:
@@ -436,9 +593,30 @@ void light() {
 	add_child(mmi)
 
 # ================================================================
+# LOD helper — walks the node tree and applies visibility_range_end / margin
+# to every GeometryInstance3D descendant (MeshInstance3D, MultiMeshInstance3D, etc.).
+# Node3D wrappers (returned by Props.*) do NOT have visibility_range_* properties,
+# so we must target the concrete GeometryInstance3D children instead.
+func _set_lod(node: Node, end: float, margin: float) -> void:
+	for child in node.get_children():
+		if child is GeometryInstance3D:
+			child.visibility_range_end        = end
+			child.visibility_range_end_margin  = margin
+		# Recurse into grandchildren (e.g. nested Node3D groups inside Props)
+		if child.get_child_count() > 0:
+			_set_lod(child, end, margin)
+
+# ================================================================
 func _build_flora() -> void:
 	var state = [777]  # seed 777
 	obstacles = []
+
+	# LOD distances — fog is opaque by ~130 m so culling trees at 90 m is free visually.
+	# visibility_range_end_margin adds hysteresis to avoid pop-in when camera pans.
+	const TREE_VIS_END        := 90.0
+	const TREE_VIS_END_MARGIN := 6.0
+	const ROCK_VIS_END        := 80.0
+	const ROCK_VIS_END_MARGIN := 5.0
 
 	for i in range(190):
 		var a = _mulberry32_next(state) * TAU
@@ -455,6 +633,8 @@ func _build_flora() -> void:
 		var s = (0.8 + _mulberry32_next(state) * 0.9) * 3.0
 		var t = Props.tree(s)
 		t.position = Vector3(x, terrain_height(x, z) - 0.1, z)
+		# LOD: apply to GeometryInstance3D descendants (Props.tree returns a Node3D wrapper).
+		_set_lod(t, TREE_VIS_END, TREE_VIS_END_MARGIN)
 		add_child(t)
 		obstacles.append({"x": x, "z": z, "r": 0.45 * s})
 
@@ -466,6 +646,8 @@ func _build_flora() -> void:
 		var s = 0.7 + _mulberry32_next(state) * 1.8
 		var r = Props.rock(s)
 		r.position = Vector3(x, terrain_height(x, z) + 0.1, z)
+		# LOD: cull distant rocks (fog obscures them beyond ~80 m).
+		_set_lod(r, ROCK_VIS_END, ROCK_VIS_END_MARGIN)
 		add_child(r)
 		if s > 1.2:
 			obstacles.append({"x": x, "z": z, "r": 0.5 * s})
@@ -538,6 +720,22 @@ func _build_core_site(cx: float, cz: float, interactable_id: String) -> Dictiona
 	# Motes
 	var motes_node = Props.motes(90, Color("#ff3344"), 22.0, 0.09, 7.0)
 	group.add_child(motes_node)
+
+	# ---- Local red corruption fog — FogVolume centered on the core ----
+	# Sphere radius ~16 m: hugs the scorch zone (~13 m) with a thin haze margin.
+	# density 0.4 → noticeable red pocket without going opaque at approach distance.
+	# Small red emission so the haze glows at long range even in dim conditions.
+	var fog_mat = FogMaterial.new()
+	fog_mat.albedo = Color(1.0, 0.07, 0.10, 1.0)   # vivid corruption red (#ff1219)
+	fog_mat.density = 0.45                           # trim 5.4.3: was 0.5; slight cost trim, red read survives
+	fog_mat.emission = Color(0.5, 0.0, 0.03)        # brighter red self-glow for at-distance read
+
+	var fog_vol = FogVolume.new()
+	fog_vol.shape = 0                                # 0 = ELLIPSOID (sphere-like local shape)
+	fog_vol.size = Vector3(32.0, 32.0, 32.0)        # ellipsoid radii = size/2 = 16 m each axis
+	fog_vol.position = Vector3(0.0, 4.0, 0.0)       # lifted 4 m so haze sits above scorch floor
+	fog_vol.material = fog_mat
+	group.add_child(fog_vol)
 
 	add_child(group)
 
@@ -738,65 +936,273 @@ func _build_ridge_ring(dist: float, hill_h: float, segments: int, col: Color) ->
 	return g
 
 # ================================================================
+# Ambient drifting spore/mote field — gentle floating particles above terrain
+# covering the playable area. Subtle, atmospheric backdrop.
+# Uses GPUParticles3D for cheap ambient life with slow drift + gentle upward pull.
+# Optimization (Task 5.1): billboard QuadMesh replaces SphereMesh to cut fillrate
+# overdraw. Amount reduced to 80, emission box shrunk to 120×8×120 m.
+# ================================================================
+func _build_spores() -> void:
+	# Emission box ~120 × 8 × 120 m above terrain (centred ~5m high)
+	# 80 motes: enough for ambient presence, far fewer on-screen at once
+	var particles = GPUParticles3D.new()
+	particles.amount = 80
+	particles.lifetime = 8.0
+	# Centre height: box spans ±4 m → particles appear 1-9 m above ground
+	particles.position.y = 5.0
+
+	# ParticleProcessMaterial — gentle drift + updraft
+	var mat = ParticleProcessMaterial.new()
+
+	# Emission shape: box covering near-player area (120×8×120 m)
+	mat.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_BOX
+	mat.emission_box_extents = Vector3(60.0, 4.0, 60.0)  # half-extents → 120×8×120 box
+
+	# Small velocity (gentle drift)
+	mat.initial_velocity_min = 0.3
+	mat.initial_velocity_max = 1.2
+	# Random direction (spread 180° allows omnidirectional)
+	mat.direction = Vector3.UP
+	mat.spread = 180.0
+
+	# Gravity almost zero (just a tiny pull down for natural settling)
+	mat.gravity = Vector3(0.0, -0.1, 0.0)
+
+	# Damping — slows particles slightly over time
+	mat.damping_min = 0.2
+	mat.damping_max = 0.4
+
+	# Scale — small billboarded quads (0.05–0.08 m): minimal on-screen footprint
+	mat.scale_min = 0.05
+	mat.scale_max = 0.08
+
+	particles.process_material = mat
+
+	# Draw pass: billboard QuadMesh — camera-facing, single quad = tiny fillrate cost
+	# vs SphereMesh (8 seg × 4 ring = ~64 tris) which caused 56.8 FPS overdraw crash.
+	# Material is applied via surface_set_material(0, ...) — NOT material_override, which
+	# does not apply to GPUParticles3D draw passes in Godot 4.
+	var quad_mesh = QuadMesh.new()
+	quad_mesh.size = Vector2(0.06, 0.06)  # world-space size before particle scale applied
+
+	var spore_mat = StandardMaterial3D.new()
+	spore_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	spore_mat.albedo_color = Color("#d8f8e8", 0.55)  # pale soft green/white, semi-transparent
+	# BLEND_MODE_ADD already implies transparency — no TRANSPARENCY_ALPHA needed
+	# (setting both forces a heavier render path)
+	spore_mat.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
+	spore_mat.transparency = BaseMaterial3D.TRANSPARENCY_DISABLED
+	spore_mat.billboard_mode = BaseMaterial3D.BILLBOARD_ENABLED  # camera-facing quad
+	spore_mat.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_DISABLED  # no depth write (additive)
+	spore_mat.disable_receive_shadows = true
+	# Apply material to the mesh surface so GPUParticles3D uses it for every draw pass
+	quad_mesh.surface_set_material(0, spore_mat)
+
+	particles.draw_pass_1 = quad_mesh
+
+	add_child(particles)
+
+# ================================================================
 func _build_sky_dressing() -> void:
-	# Sky dome
-	var dome = Props.sky_dome(Color("#3f9fe8"), Color("#bfe3d4"))
-	add_child(dome)
+		# Sky dome
+		var dome = Props.sky_dome(Color("#3f9fe8"), Color("#bfe3d4"))
+		add_child(dome)
 
-	# ---- Distant silhouette ridges — layered aerial perspective (BotW horizon) ----
-	# 3 rings of low-poly hills beyond the 102m roam boundary.
-	# Flat-shaded, progressively lighter/more desaturated blue-greens. No outlines.
-	# Ridge colors from near to far: rich blue-green → muted haze
-	var ridge_layers = [
-		{"dist": 140.0, "h": 22.0, "segments": 14, "col": Color("#5a9e7a")},  # near ridge: rich
-		{"dist": 180.0, "h": 30.0, "segments": 12, "col": Color("#7ab8a8")},  # mid ridge
-		{"dist": 230.0, "h": 38.0, "segments": 10, "col": Color("#a8cec2")},  # far haze ridge
-	]
-	for layer in ridge_layers:
-		var ridge_node = _build_ridge_ring(
-			float(layer["dist"]), float(layer["h"]),
-			int(layer["segments"]), Color(layer["col"])
-		)
-		add_child(ridge_node)
-
-	# Cloud clusters (9 clusters, seed 42)
-	_clouds = Node3D.new()
-	var state = [42]
-	var cloud_mat = StandardMaterial3D.new()
-	cloud_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	cloud_mat.albedo_color = Color(1.0, 1.0, 1.0, 0.92)
-	cloud_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	cloud_mat.fog_enabled = false
-
-	for i in range(9):
-		var cl = Node3D.new()
-		for b in range(3):
-			var blob = MeshInstance3D.new()
-			var bmesh = SphereMesh.new()
-			var br = 5.0 + _mulberry32_next(state) * 7.0
-			bmesh.radius = br
-			bmesh.height = br * 2.0
-			blob.mesh = bmesh
-			blob.material_override = cloud_mat
-			blob.scale.y = 0.32
-			blob.position = Vector3(
-				float(b) * 7.0 - 7.0 + _mulberry32_next(state) * 4.0,
-				_mulberry32_next(state) * 2.0,
-				_mulberry32_next(state) * 5.0
+		# ---- Distant silhouette ridges — layered aerial perspective (BotW horizon) ----
+		# 3 rings of low-poly hills beyond the 102m roam boundary.
+		# Flat-shaded, progressively lighter/more desaturated blue-greens. No outlines.
+		# Ridge colors from near to far: rich blue-green → muted haze
+		var ridge_layers = [
+			{"dist": 140.0, "h": 22.0, "segments": 14, "col": Color("#5a9e7a")},  # near ridge: rich
+			{"dist": 180.0, "h": 30.0, "segments": 12, "col": Color("#7ab8a8")},  # mid ridge
+			{"dist": 230.0, "h": 38.0, "segments": 10, "col": Color("#a8cec2")},  # far haze ridge
+		]
+		for layer in ridge_layers:
+			var ridge_node = _build_ridge_ring(
+				float(layer["dist"]), float(layer["h"]),
+				int(layer["segments"]), Color(layer["col"])
 			)
-			cl.add_child(blob)
-		cl.position = Vector3(
-			-160.0 + _mulberry32_next(state) * 320.0,
-			55.0 + _mulberry32_next(state) * 28.0,
-			-160.0 + _mulberry32_next(state) * 320.0
-		)
-		cl.set_meta("cloud_speed", 0.5 + _mulberry32_next(state) * 0.7)
-		_clouds.add_child(cl)
-	add_child(_clouds)
+			# LOD: ridges are 140-230 m away; beyond 260 m they're fully in fog/out of frustum.
+			# Apply to GeometryInstance3D children (ridge_node is a Node3D wrapper).
+			_set_lod(ridge_node, 260.0, 15.0)
+			add_child(ridge_node)
 
-	# Ambient motes
-	var amb_motes = Props.motes(120, Color("#9fe8ff"), 160.0, 0.1, 24.0)
-	add_child(amb_motes)
+		# Cloud clusters (9 clusters, seed 42)
+		_clouds = Node3D.new()
+		var state = [42]
+		var cloud_mat = StandardMaterial3D.new()
+		cloud_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		cloud_mat.albedo_color = Color(1.0, 1.0, 1.0, 0.92)
+		cloud_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		cloud_mat.fog_enabled = false
+
+		for i in range(9):
+			var cl = Node3D.new()
+			for b in range(3):
+				var blob = MeshInstance3D.new()
+				var bmesh = SphereMesh.new()
+				var br = 5.0 + _mulberry32_next(state) * 7.0
+				bmesh.radius = br
+				bmesh.height = br * 2.0
+				blob.mesh = bmesh
+				blob.material_override = cloud_mat
+				blob.scale.y = 0.32
+				blob.position = Vector3(
+					float(b) * 7.0 - 7.0 + _mulberry32_next(state) * 4.0,
+					_mulberry32_next(state) * 2.0,
+					_mulberry32_next(state) * 5.0
+				)
+				cl.add_child(blob)
+			cl.position = Vector3(
+				-160.0 + _mulberry32_next(state) * 320.0,
+				55.0 + _mulberry32_next(state) * 28.0,
+				-160.0 + _mulberry32_next(state) * 320.0
+			)
+			cl.set_meta("cloud_speed", 0.5 + _mulberry32_next(state) * 0.7)
+			# LOD: clouds range ±160–320 m from origin; cull beyond 280 m from camera.
+			# Apply to GeometryInstance3D children (cl is a Node3D wrapper).
+			_set_lod(cl, 280.0, 20.0)
+			_clouds.add_child(cl)
+		add_child(_clouds)
+
+		# Ambient motes
+		var amb_motes = Props.motes(120, Color("#9fe8ff"), 160.0, 0.1, 24.0)
+		add_child(amb_motes)
+
+# ================================================================
+# Floating islands — distant low-detail landmasses high in the sky,
+# veiled by atmospheric/volumetric fog.  Pure backdrop, no collision.
+# Each island = inverted-cone rock body (tapering downward) +
+# flat cylinder grassy cap on top.
+# Cel-shaded via toon_mat so they stay in the OBJECT cel register.
+# Placed at horizontal dist 120–190 m (outside playable radius 102 m)
+# and height 35–75 m, spread around the compass.
+# ================================================================
+func _build_floating_islands() -> void:
+	# Materials — toon_mat for OBJECT cel register (PRD-002 §2).
+	# High ambient_lift so islands read their true hue in the sky even when most
+	# faces land in the shadow-ramp zero-band at extreme view angles.
+	# rim_power=0 (no rim — they're distant landmasses, not characters).
+	var grass_mat = ToonMaterials.toon_mat(Color("#3f9e4f"))  # grassy top
+	grass_mat.set_shader_parameter("ambient_lift", 0.55)
+	grass_mat.set_shader_parameter("rim_power", 0.0)
+	var rock_mat  = ToonMaterials.toon_mat(Color("#6f6a60"))  # rock body (warm grey)
+	rock_mat.set_shader_parameter("ambient_lift", 0.50)
+	rock_mat.set_shader_parameter("rim_power", 0.0)
+	var dark_mat  = ToonMaterials.toon_mat(Color("#4a4540"))  # underside shadow accent
+	dark_mat.set_shader_parameter("ambient_lift", 0.30)
+	dark_mat.set_shader_parameter("rim_power", 0.0)
+
+	# Per-island definitions:
+	# [angle_deg, horiz_dist, height_y, top_radius, body_height, cap_thickness]
+	# angle_deg  — compass bearing from origin (degrees, clockwise from +Z)
+	# horiz_dist — horizontal distance from origin (m), always > 102 (outside playable)
+	# height_y   — Y position of the rock body base (m above terrain zero)
+	# top_r      — radius of the grassy cap / top of rock cone (m)
+	# body_h     — height of the tapered rock cone body (m)
+	# cap_t      — thickness of the grassy cylinder cap (m)
+	var island_defs = [
+		# [ang_deg, dist,   y,    top_r, body_h, cap_t]
+		[  20.0,  135.0,  52.0,  14.0,  18.0,   3.5 ],   # NNE — large
+		[ 100.0,  155.0,  38.0,  10.0,  13.0,   2.8 ],   # ESE — medium
+		[ 175.0,  145.0,  65.0,  17.0,  22.0,   4.0 ],   # SSE — very large, highest
+		[ 245.0,  165.0,  43.0,   9.0,  11.0,   2.5 ],   # WSW — smaller
+		[ 310.0,  130.0,  58.0,  12.0,  15.0,   3.2 ],   # NW  — medium-large
+		[ 350.0,  185.0,  72.0,  20.0,  26.0,   4.5 ],   # NNW — farthest, most massive
+	]
+
+	for def in island_defs:
+		var ang_deg: float = def[0]
+		var dist: float    = def[1]
+		var base_y: float  = def[2]
+		var top_r: float   = def[3]
+		var body_h: float  = def[4]
+		var cap_t: float   = def[5]
+
+		var ang_rad = deg_to_rad(ang_deg)
+		var world_x = sin(ang_rad) * dist
+		var world_z = cos(ang_rad) * dist
+
+		var island_root = Node3D.new()
+		island_root.position = Vector3(world_x, base_y, world_z)
+
+		# ---- Rock body: downward-tapering cone (narrow at bottom) ----
+		# 7-sided for visible low-poly faceting (intentional low-detail).
+		var sides = 7
+		var top_y = body_h          # top of cone = where cap sits
+		var bot_r = top_r * 0.22   # taper to narrow point at bottom
+		var bot_y = 0.0
+
+		var st_rock = SurfaceTool.new()
+		st_rock.begin(Mesh.PRIMITIVE_TRIANGLES)
+
+		for si in range(sides):
+			var a0 = float(si) / float(sides) * TAU
+			var a1 = float(si + 1) / float(sides) * TAU
+
+			var t0 = Vector3(cos(a0) * top_r, top_y, sin(a0) * top_r)
+			var t1 = Vector3(cos(a1) * top_r, top_y, sin(a1) * top_r)
+			var b0 = Vector3(cos(a0) * bot_r, bot_y, sin(a0) * bot_r)
+			var b1 = Vector3(cos(a1) * bot_r, bot_y, sin(a1) * bot_r)
+
+			# Side face — two triangles, flat normal
+			var n_side = ((t1 - t0).cross(b0 - t0)).normalized()
+			st_rock.set_normal(n_side); st_rock.add_vertex(t0)
+			st_rock.set_normal(n_side); st_rock.add_vertex(b0)
+			st_rock.set_normal(n_side); st_rock.add_vertex(b1)
+			st_rock.set_normal(n_side); st_rock.add_vertex(t0)
+			st_rock.set_normal(n_side); st_rock.add_vertex(b1)
+			st_rock.set_normal(n_side); st_rock.add_vertex(t1)
+
+		# Bottom tip cap
+		var bot_center = Vector3(0.0, bot_y, 0.0)
+		for si in range(sides):
+			var a0 = float(si) / float(sides) * TAU
+			var a1 = float(si + 1) / float(sides) * TAU
+			var b0 = Vector3(cos(a0) * bot_r, bot_y, sin(a0) * bot_r)
+			var b1 = Vector3(cos(a1) * bot_r, bot_y, sin(a1) * bot_r)
+			st_rock.set_normal(Vector3.DOWN); st_rock.add_vertex(bot_center)
+			st_rock.set_normal(Vector3.DOWN); st_rock.add_vertex(b1)
+			st_rock.set_normal(Vector3.DOWN); st_rock.add_vertex(b0)
+
+		var rock_mesh = st_rock.commit()
+		var rock_mi = MeshInstance3D.new()
+		rock_mi.mesh = rock_mesh
+		rock_mi.material_override = rock_mat
+		island_root.add_child(rock_mi)
+
+		# ---- Grassy cap: short flat cylinder sitting on top of rock body ----
+		var cap_mesh = CylinderMesh.new()
+		cap_mesh.top_radius    = top_r * 1.05   # slightly wider = natural overhang
+		cap_mesh.bottom_radius = top_r * 0.95
+		cap_mesh.height        = cap_t
+		cap_mesh.radial_segments = 8             # low-poly, distant
+		cap_mesh.rings         = 1
+
+		var cap_mi = MeshInstance3D.new()
+		cap_mi.mesh = cap_mesh
+		cap_mi.material_override = grass_mat
+		cap_mi.position = Vector3(0.0, top_y + cap_t * 0.5, 0.0)
+		island_root.add_child(cap_mi)
+
+		# ---- Dark underside disc — strengthens silhouette + cel depth read ----
+		var disc_mesh = CylinderMesh.new()
+		disc_mesh.top_radius    = bot_r * 3.0
+		disc_mesh.bottom_radius = 0.3
+		disc_mesh.height        = 1.0
+		disc_mesh.radial_segments = 6
+		disc_mesh.rings         = 1
+
+		var disc_mi = MeshInstance3D.new()
+		disc_mi.mesh = disc_mesh
+		disc_mi.material_override = dark_mat
+		disc_mi.position = Vector3(0.0, bot_y + 0.5, 0.0)
+		island_root.add_child(disc_mi)
+
+		# LOD: floating islands are 130–185 m away; fog conceals them well before 200 m.
+		# Apply to GeometryInstance3D children (island_root is a Node3D wrapper).
+		_set_lod(island_root, 200.0, 10.0)
+		add_child(island_root)
 
 # ================================================================
 func _setup_metadata() -> void:
