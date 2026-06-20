@@ -363,12 +363,12 @@ func _test_config() -> void:
 		_fail("Config: class_mult(miststalker, thief) slideSteerMaxDeg==45",
 			"slideSteerMaxDeg=%s" % str(cm_mt.get("slideSteerMaxDeg", "NOT_FOUND")))
 
-	# aetherborn+mage → BALANCED tier: slideFriction==0.92
+	# aetherborn+mage → BALANCED tier: slideFriction==0.95 (softened for longer slides)
 	var cm_am: Dictionary = cfg.call("class_mult", "aetherborn", "mage")
-	if absf(float(cm_am.get("slideFriction", 0.0)) - 0.92) < 0.001:
-		_pass("Config: class_mult(aetherborn, mage) slideFriction==0.92")
+	if absf(float(cm_am.get("slideFriction", 0.0)) - 0.95) < 0.001:
+		_pass("Config: class_mult(aetherborn, mage) slideFriction==0.95")
 	else:
-		_fail("Config: class_mult(aetherborn, mage) slideFriction==0.92",
+		_fail("Config: class_mult(aetherborn, mage) slideFriction==0.95",
 			"slideFriction=%s" % str(cm_am.get("slideFriction", "NOT_FOUND")))
 
 	# unknown+unknown → graceful fallback: dict contains all 9 fields

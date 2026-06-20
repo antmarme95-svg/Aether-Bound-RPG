@@ -261,12 +261,14 @@ func tick(inp: Dictionary, dt: float) -> Dictionary:
 	if not moving:
 		new_state    = STATE_IDLE
 		planar_speed = 0.0
+	elif want_sprint and stamina_ok and not interrupt:
+		# Sprint intent (Shift) wins over a held crouch toggle so the player can always
+		# sprint → C-press → slide, even if crouch was previously toggled on.
+		new_state    = STATE_SPRINT
+		planar_speed = _speed_sprint
 	elif crouch:
 		new_state    = STATE_WALK
 		planar_speed = _speed_walk
-	elif want_sprint and stamina_ok and not interrupt:
-		new_state    = STATE_SPRINT
-		planar_speed = _speed_sprint
 	else:
 		new_state    = STATE_RUN
 		planar_speed = _speed_run

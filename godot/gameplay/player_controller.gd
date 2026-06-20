@@ -65,6 +65,7 @@ var loco_state: String = "IDLE"
 # ---- PRD-003: slide direction tracking ----
 var _slide_dir: Vector3       = Vector3.ZERO
 var _slide_entry_dir: Vector3 = Vector3.ZERO
+var _was_sliding: bool        = false   # edge-detect slide end (auto-stand from crouch toggle)
 
 # ---- Sprint L2: leap (slide→jump) state ----
 var _air_vel: Vector3  = Vector3.ZERO   # horizontal velocity carried from leap launch
@@ -250,7 +251,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				return
 			if kc == KEY_C:
 				crouching = not crouching
-				_crouch_just_pressed_this_frame = crouching   # true only when toggling ON
+				_crouch_just_pressed_this_frame = true   # slide-intent edge — fires on every C press (toggle-direction agnostic)
 			elif kc == KEY_N:
 				passives.toggle_night_vision()
 			elif kc == KEY_F:
@@ -690,10 +691,13 @@ func update(dt: float) -> void:
 	var moving: bool = ix != 0.0 or iz != 0.0
 	var want_sprint: bool = _has_key(KEY_SHIFT)
 
-	# ---- stamina drain for sprint (mirrors original logic) ----
+	# ---- stamina drain for sprint ----
+	# NOTE: sprint intent (Shift) must win even while the crouch toggle is on, otherwise
+	# a crouched player can never sprint → never slide. The FSM gives SPRINT priority over
+	# crouch when stamina_ok, so we must grant stamina here regardless of `crouching`.
 	var stamina_ok_for_sprint: bool = false
-	if moving and want_sprint and not crouching and grounded:
-		stamina_ok_for_sprint = stats.drain_stamina(15.0, dt)
+	if moving and want_sprint and grounded:
+		stamina_ok_for_sprint = stats.drain_stamina(8.0, dt)   # ~15s sprint on a 120 pool
 
 	# ---- detect edge inputs ----
 	var crouch_just_pressed: bool = false
@@ -713,7 +717,7 @@ func update(dt: float) -> void:
 
 	# ---- jump edge detect: consume SPACE once per press ----
 	var jump_pressed: bool = false
-	if _enabled and grounded and _has_key(KEY_SPACE) and stats.spend_stamina(7.0):
+	if _enabled and grounded and _has_key(KEY_SPACE) and stats.spend_stamina(4.0):
 		jump_pressed = true
 		_keys_down.erase(KEY_SPACE)
 
@@ -832,8 +836,12 @@ func update(dt: float) -> void:
 			# Camera-relative (matches JS)
 			var wx: float = iz * sin_y + ix * cos_y
 			var wz: float = iz * cos_y - ix * sin_y
-			position.x += wx * planar_speed * air_control * dt
-			position.z += wz * planar_speed * air_control * dt
+			# Air-momentum damp: a normal (non-leap) jump shouldn't broad-jump across the
+			# map. Full speed on the ground; reduced horizontal carry while airborne.
+			# The deliberate slide→leap (handled above via _air_vel) keeps its full reach.
+			var air_damp: float = 1.0 if grounded else 0.55
+			position.x += wx * planar_speed * air_control * air_damp * dt
+			position.z += wz * planar_speed * air_control * air_damp * dt
 			var target_facing: float = atan2(wx, wz)
 			var d: float = target_facing - facing
 			while d > PI:  d -= PI * 2.0
@@ -894,8 +902,14 @@ func update(dt: float) -> void:
 		_slide_dir       = Vector3(sin(facing), 0.0, cos(facing))
 		_slide_entry_dir = _slide_dir
 	elif not sliding:
+		if _was_sliding:
+			# Slide just ended — auto-stand so the crouch toggle never leaves the player
+			# stuck in a crouch pose while sprinting. (Normal crouch-walk is unaffected:
+			# it never enters SLIDE, so _was_sliding stays false.)
+			crouching = false
 		_slide_dir       = Vector3.ZERO
 		_slide_entry_dir = Vector3.ZERO
+	_was_sliding = sliding
 
 	# ---- bounds ----
 	if scene.has_method("clamp_position"):
@@ -904,7 +918,7 @@ func update(dt: float) -> void:
 	# ---- rig + camera ----
 	rig.global_position = position
 	rig.rotation.y      = facing
-	rig.set_motion(move_speed_norm, crouching)
+	rig.set_motion(move_speed_norm, crouching, sliding)
 	# rig._process is called automatically by Godot each frame
 
 	_update_projectiles(dt)
