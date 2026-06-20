@@ -831,6 +831,18 @@ func _test_interrupts_and_stealth() -> void:
 		"11g_cmp: LIGHT walk speed > HEAVY walk speed",
 		"light=%f heavy=%f" % [out_light_walk["planar_speed"], out_heavy_walk["planar_speed"]])
 
+	# 11h: crouch + Shift (want_sprint) = crouch-walk 20% faster, still WALK (no sprint)
+	var inp_cjog: Dictionary = _inp_base()
+	inp_cjog["moving"] = true
+	inp_cjog["crouch"] = true
+	inp_cjog["want_sprint"] = true
+	var out_cjog: Dictionary = lsm_light.tick(inp_cjog, 0.016)
+	_assert(out_cjog["state"] == "WALK", "11h: crouch+Shift stays WALK (no sprint)",
+		"state=%s" % out_cjog["state"])
+	_assert(absf(out_cjog["planar_speed"] - exp_light_walk * 1.2) < 0.01,
+		"11h2: crouch+Shift speed == crouch-walk * 1.2",
+		"got=%f exp=%f" % [out_cjog["planar_speed"], exp_light_walk * 1.2])
+
 # ── entry point ───────────────────────────────────────────────────────────────
 func _init() -> void:
 	_test_basic_states()
