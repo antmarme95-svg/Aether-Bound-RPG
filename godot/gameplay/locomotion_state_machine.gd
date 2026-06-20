@@ -263,11 +263,11 @@ func tick(inp: Dictionary, dt: float) -> Dictionary:
 		planar_speed = 0.0
 	elif crouch:
 		# Crouch has priority: while crouched it's a crouch-walk (never a sprint).
-		# Holding Shift does NOT exit crouch — it just speeds the crouch-walk by 20%
+		# Holding Shift does NOT exit crouch — it just speeds the crouch-walk by 30%
 		# (a faster sneak). Slide still fires from an upright sprint→C via the
 		# slide-entry check above (reads the previous-tick sprint state).
 		new_state    = STATE_WALK
-		planar_speed = _speed_walk * (1.2 if want_sprint else 1.0)
+		planar_speed = _speed_walk * (1.3 if want_sprint else 1.0)
 	elif want_sprint and stamina_ok and not interrupt:
 		new_state    = STATE_SPRINT
 		planar_speed = _speed_sprint
