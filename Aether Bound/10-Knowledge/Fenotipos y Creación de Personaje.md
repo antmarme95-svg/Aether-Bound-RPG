@@ -58,5 +58,20 @@ raciales de pelo/marcas, re-mapeo cultural de `arcaneMod`, y el paso
 Aether-Born/Iron-Blooded/Restless sobre `origins_data.gd` (que aún habla de
 "Beast-Folk" — [[Nomenclatura]], tarea C1).
 
+## Referencias visuales canónicas (`90-Raw/concept/`, 2026-07-04)
+
+Generadas en Nano Banana 2 con los [[Briefs de Concept Art]], evaluadas contra
+los 5 ejes de la [[Art Bible]] y aprobadas por el director:
+
+- `fenotipo-humano-v1.png` — doblete frontier Mistbound / city aetherpunk.
+- `fenotipo-elfo-lavanda-v1.png` + `fenotipo-elfo-porcelana-v1.png` — los dos
+  polos de la paleta de piel élfica (en la porcelana, la vista frontal perdió
+  los leggings: usar trasera+perfil; el frente vestido está en la lavanda).
+- `fenotipo-enano-varon-v1.png` — referencia del varón (trae full plate: la
+  ropa base de fenotipo es la de la v2).
+- `fenotipo-enana-v2.png` — la enana canónica: trapecio idéntico al varón,
+  trenzas de sien, tatuajes de gremio, ember accents en costuras.
+
 **Pendiente (❓):** fichas fenotípicas de los 9 Pivotes y el elenco C1/C2/C4
-(hereda de B1/B2); concept art de los 3 fenotipos base (alimenta B11).
+(hereda de B1/B2); anillas de forja más visibles en las trenzas (detalle para
+el pase de modelado, no re-roll).

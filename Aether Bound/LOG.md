@@ -28,3 +28,11 @@ Estudio de silueta de las 3 razas mostrado y validado en sesión. Nueva página
 (fenotipos) + notas de pipeline (aprobados → 90-Raw/, evaluar contra los 5
 ejes de la Art Bible). El mismo pipeline alimentará B11 (keyframes) y B9
 (Speck).
+
+## [2026-07-04] ingest | Concept art de fenotipos → 90-Raw/concept/
+5 láminas Nano Banana 2 archivadas (humano, elfo lavanda+porcelana, enano
+varón, enana v2 definitiva) tras 2 rondas de re-roll (1b piel, 2b→2c
+proporción blindada). Todas evaluadas contra los 5 ejes; referencias cruzadas
+en [[Fenotipos y Creación de Personaje]]. B13 ✅. Lección de prompt: el sesgo
+"woman→alta/esbelta" se corrige poniendo la proporción como primera regla +
+negativos anti-deriva (documentado en [[Briefs de Concept Art]] 2c).

@@ -34,7 +34,7 @@ updated: 2026-07-04
 | B10 | Game Feel Bible §6.3 (hit-stop, screen-shake budget, cámara de combate) | ⬜ | [[Combate]], [[Art Bible]] |
 | B11 | Concept art: 3 keyframes + prueba técnica 4 capas ("golden scene") | ⬜ | [[Art Bible]] — **siguiente sesión de arte acordada** |
 | B12 | Fenotipos y creación de personaje | 🔄 propuesto | [[Fenotipos y Creación de Personaje]] — página escrita, espera ratificación |
-| B13 | Generar concept art de fenotipos en Nano Banana 2 (director) | ⬜ | [[Briefs de Concept Art]] listos; resultados aprobados → `90-Raw/` |
+| B13 | Generar concept art de fenotipos en Nano Banana 2 (director) | ✅ | 5 láminas en `90-Raw/concept/`; ver [[Fenotipos y Creación de Personaje]] |
 
 ## Frente C — Técnico (hereda del prototipo)
 

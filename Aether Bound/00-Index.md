@@ -55,3 +55,4 @@
 - `LLM-WIKI.md` — Karpathy: arquitectura de wiki compilada por LLM.
 - `Vault-Driven Development (VDD).md` — framework VDD v1.0.
 - `../docs/GDD.md` — **GDD v2.2 congelado** (fuente del ingest #1).
+- `concept/` — láminas de concept art aprobadas (5 fenotipos, 2026-07-04).
