@@ -21,3 +21,10 @@ beast-folk); enanas con trenzas/patillas ornamentadas (sin barba plena);
 slider peso = solo visual (masa la fija la celda). Plan de sesiones de arte
 acordado: 1 fenotipos → 3 golden scene (B11) → 2 Game Feel Bible (B10).
 Repo renombrado a Aether-Bound-RPG (remote actualizado).
+
+## [2026-07-04] design | Briefs de concept art para fenotipos
+Estudio de silueta de las 3 razas mostrado y validado en sesión. Nueva página
+[[Briefs de Concept Art]]: 3 prompts autocontenidos para Nano Banana 2
+(fenotipos) + notas de pipeline (aprobados → 90-Raw/, evaluar contra los 5
+ejes de la Art Bible). El mismo pipeline alimentará B11 (keyframes) y B9
+(Speck).

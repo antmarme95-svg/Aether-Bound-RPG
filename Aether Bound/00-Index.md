@@ -32,6 +32,7 @@
 - [[Nomenclatura]] — AETHER BOUND y todos los nombres canónicos sellados.
 - [[Inventario del Prototipo]] — qué se conserva, re-usa o reemplaza del build Godot.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres (propuesto).
+- [[Briefs de Concept Art]] — prompts Nano Banana 2 por fenotipo + notas de pipeline (propuesto).
 
 ## 20-State (dónde está el proyecto)
 

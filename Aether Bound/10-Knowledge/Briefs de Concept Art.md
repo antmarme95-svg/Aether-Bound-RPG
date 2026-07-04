@@ -1,0 +1,47 @@
+---
+status: propuesto
+source: "[[Fenotipos y Creación de Personaje]] + [[Art Bible]] (destilados a prompt)"
+updated: 2026-07-04
+---
+
+# Briefs de Concept Art — Fenotipos
+
+> Prompts autocontenidos para generadores de imagen (calibrados para Nano
+> Banana 2; sirven igual de brief para un concept artist humano). Regla del
+> pipeline: lo generado que se apruebe entra a `90-Raw/` como referencia
+> inmutable y se evalúa contra los 5 ejes de la [[Art Bible]].
+
+**Bloque de estilo compartido (embebido en cada brief):** hand-painted
+graphic novel watercolor · crisp black ink linework · flat cel 3–4 bandas con
+bordes dry-brush · paleta lavada de baja saturación · grano de papel · Sable
+ligne claire × BotW impresionista. **Negativos:** Genshin candy saturation ·
+photorealism/PBR · generic anime cel · neon glow.
+
+## 1 — Elfo (Aether-Born)
+
+```
+Full-body character concept sheet, front view and side view, of a fantasy elf on a plain warm paper background. Silhouette reads as one continuous vertical line: very tall and slender, roughly 8 heads tall, narrow sloped shoulders, long neck, long limbs and long fingers, flexible dancer's posture with weight held high. Long ears sweeping backward continuing the line of the skull. Large almond eyes with a high tilt, high cheekbones, fine narrow jaw. Skin in cold pale tones with a faint lavender undertone. Glowing pale-teal aether engravings traced across the collarbone and forearms, like luminous filigree under the skin — subtle, not neon. Simple fitted travel clothing in muted greens and greys, medieval aetherpunk: organic shapes, a few brass pipe-fittings. Art style: hand-painted graphic novel watercolor — crisp black ink linework on the figure, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, melancholic and serene mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no heavy armor.
+```
+
+## 2 — Enano (Iron-Blooded)
+
+```
+Full-body character concept sheet, front view and side view, of a fantasy dwarf woman on a plain warm paper background. Silhouette reads as a trapezoid, nearly as wide as tall: about 4.5 heads tall, massive trapezius and shoulders swallowing the neck, short thick limbs, enormous hands, low center of gravity, deep natural squat stance, planted and immovable. Heavy brow, broad jaw, a nose with history. No beard: long ornamented side-braids at the temples, threaded with small forge-iron rings and metal inlays. Skin in warm bronze tones with soot shading, one variant in ashen forge-touched grey. Guild tattoos in dark amber geometry on the forearms. Practical smith-soldier clothing, leather and dark iron with faint warm ember accents at the seams, medieval aetherpunk. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, dignified and stubborn mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no comedic caricature dwarf, no full beard on the woman, no neon glow.
+```
+
+## 3 — Humano (the Restless / Mistbound)
+
+```
+Full-body character concept sheet, front view and side view, of a human mercenary on a plain warm paper background. Silhouette is the athletic reference the other races deviate from: about 7.5 heads tall, balanced athletic proportions, versatile ready stance mid-weight-shift, adaptable and restless energy. Face is individual and imperfect — humans are the most physically diverse race, this one with river-town features and a weathered grin. Skin any tone of the full human range; a rare frontier variant has a faint mist-mint pallor. Frontier Mistbound culture marks: a single diagonal warpaint stroke in muted green across the chest or cheekbone, fog-cured leathers, a scarf and small smuggler charms; the city variant instead wears layered river-market fabrics in wood and ochre tones, medieval aetherpunk with rough brass gadget straps. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, melancholic-adventurous mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no beast-folk features, no animal ears or tail, no neon glow.
+```
+
+## Notas de uso
+
+- Pedir siempre "concept sheet, front view and side view" — la silueta debe
+  ser comparable entre razas.
+- 3–4 variantes por brief; evaluar contra los 5 ejes de la [[Art Bible]].
+- El negativo *no beast-folk features* del humano es crítico (el modelo
+  tiende a bestializar "Mistbound") — decisión ratificada en
+  [[Fenotipos y Creación de Personaje]].
+- Mismo pipeline servirá para los 3 keyframes de B11 (Wilds amanecer /
+  Rivermeet / God-Core de noche) y para [[Speck]] (B9).
