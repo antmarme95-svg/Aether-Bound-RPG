@@ -31,6 +31,7 @@
 - [[Art Bible]] — "Melancolía Gráfica": Sable×BotW×Hinterberg, regla espacial, pipeline 4 capas.
 - [[Nomenclatura]] — AETHER BOUND y todos los nombres canónicos sellados.
 - [[Inventario del Prototipo]] — qué se conserva, re-usa o reemplaza del build Godot.
+- [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres (propuesto).
 
 ## 20-State (dónde está el proyecto)
 

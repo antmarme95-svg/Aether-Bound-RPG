@@ -32,7 +32,8 @@ updated: 2026-07-04
 | B8 | Dirección de audio/música (semilla: sting de dos notas) | ⬜ | [[Bond y el Bond Vacío]] |
 | B9 | Diseño visual de Speck (3 estadios) + re-naming de sub-estilos VFX | ⬜ | [[Speck]], [[Matriz Raza x Rol]] |
 | B10 | Game Feel Bible §6.3 (hit-stop, screen-shake budget, cámara de combate) | ⬜ | [[Combate]], [[Art Bible]] |
-| B11 | Concept art: 3 keyframes + prueba técnica 4 capas ("golden scene") | ⬜ | [[Art Bible]] |
+| B11 | Concept art: 3 keyframes + prueba técnica 4 capas ("golden scene") | ⬜ | [[Art Bible]] — **siguiente sesión de arte acordada** |
+| B12 | Fenotipos y creación de personaje | 🔄 propuesto | [[Fenotipos y Creación de Personaje]] — página escrita, espera ratificación |
 
 ## Frente C — Técnico (hereda del prototipo)
 
