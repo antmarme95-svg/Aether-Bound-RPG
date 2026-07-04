@@ -41,3 +41,11 @@ negativos anti-deriva (documentado en [[Briefs de Concept Art]] 2c).
 El director ratifica [[Fenotipos y Creación de Personaje]] (B12 ✅). La
 Sesión 1 queda cerrada: página canónica + 5 láminas de referencia. Siguiente:
 golden scene (B11).
+
+## [2026-07-04] design | Golden scene: estrategia + brief del keyframe
+Decisión de método (el director señaló que the_wilds arrastra la dirección de
+arte vieja): la golden scene NO retrofitea the_wilds.gd — se construye un
+diorama nuevo diminuto que persigue un keyframe ratificado; se hereda solo
+tech agnóstica de look (FSM, sistema MultiMesh, mecanismo de presets, harness
+A/B), nunca paletas/materiales/post viejos. Briefs 4 ("Wilds at dawn") y 4b
+(variante atardecer) escritos en [[Briefs de Concept Art]]. B11 → en curso.

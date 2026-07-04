@@ -71,6 +71,29 @@ Full-body character concept sheet, front view, back view and side view, of a fan
 Full-body character concept sheet, front view and side view, of a human mercenary on a plain warm paper background. Silhouette is the athletic reference the other races deviate from: about 7.5 heads tall, balanced athletic proportions, versatile ready stance mid-weight-shift, adaptable and restless energy. Face is individual and imperfect — humans are the most physically diverse race, this one with river-town features and a weathered grin. Skin any tone of the full human range; a rare frontier variant has a faint mist-mint pallor. Frontier Mistbound culture marks: a single diagonal warpaint stroke in muted green across the chest or cheekbone, fog-cured leathers, a scarf and small smuggler charms; the city variant instead wears layered river-market fabrics in wood and ochre tones, medieval aetherpunk with rough brass gadget straps. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, melancholic-adventurous mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no beast-folk features, no animal ears or tail, no neon glow.
 ```
 
+## 4 — Keyframe "The Wilds at dawn" (golden scene, B11)
+
+El keyframe ratificado será el **criterio de aceptación** de la golden scene
+Godot (la escena persigue la imagen — nunca al revés; así no se heredan los
+errores del look viejo, que es anti-referencia). Registro Sable×BotW (cubo de
+[[La Rueda]]).
+
+```
+Wide cinematic landscape keyframe, 16:9, of an immense melancholic fantasy forest at dawn. Composition rules: empty space is the protagonist — a vast sky and rolling terrain dwarf a single tiny traveler figure walking a faint trail, seen from far away. Foreground: a grassy clearing and two enormous ancient trees with sprawling roots, drawn with crisp black ink linework and flat watercolor color. Middle ground: the forest rolls over hills, the ink lines turning grey and fading as if the brush is running out; half-buried among the trees, one crystalline God-Core formation glows a deep saturated red — the only intense color in the frame, reading as quiet danger. Far distance: mountain ridges and treetops dissolve into flat pale-blue pastel silhouettes with no interior detail, pure aerial perspective; faint floating islands barely visible in the haze. Dawn light: washed ochres and soft pinks low on the horizon, long soft shadows, air with physical weight — light rays scattering through morning mist, subtle glowing edges where backlight meets the ink lines. Overall palette: low saturation, hand-painted watercolor wash on grainy paper, melancholic and epic, serene loneliness. Art style: a hand-painted graphic novel — the game Sable's ligne claire linework and flat graphic shapes blended with Breath of the Wild's soft impressionist color and atmospheric perspective; flat cel shading in 3–4 fixed light bands with dry-brush jittered edges; visible watercolor paper grain across the whole image. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime style, no neon glow except the single red core, no busy detail in the distance, no characters in close-up.
+```
+
+### 4b — Variante atardecer (edición sobre el keyframe aprobado)
+
+El gate de la golden scene compara dos horas del día (eje de paleta drástica):
+
+```
+Keep this exact composition, linework, framing and style — but change the time of day to dusk: the washed ochres and pinks become deep blues and violets with cool neon-tinged accents on the horizon (Sable's night palette), the sky darkens, the mist turns cold, the glowing edges intensify slightly against the backlight — and the red God-Core now burns as the brightest thing in the frame. Same paper grain, same low saturation elsewhere, same melancholic mood.
+```
+
+Qué obliga a testear: capa 1 (línea muere con la distancia), capa 2 (bandas
+jitter), capa 3 (aire con peso + glowing edges), capa 4 (grano) + espacio
+vacío protagonista y rojo = máxima saturación del frame ([[Art Bible]]).
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe
