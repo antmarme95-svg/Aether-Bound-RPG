@@ -23,6 +23,20 @@ photorealism/PBR · generic anime cel · neon glow.
 Full-body character concept sheet, front view and side view, of a fantasy elf on a plain warm paper background. Silhouette reads as one continuous vertical line: very tall and slender, roughly 8 heads tall, narrow sloped shoulders, long neck, long limbs and long fingers, flexible dancer's posture with weight held high. Long ears sweeping backward continuing the line of the skull. Large almond eyes with a high tilt, high cheekbones, fine narrow jaw. Sleek straight hair worn in a high elven topknot, long loose strands falling behind the swept-back ears and down the spine, reinforcing the single vertical line of the silhouette; hair color ranging from bone white to void black, with a faint aether-teal sheen where light catches it. Skin in cold pale tones with a faint lavender undertone. Glowing pale-teal aether engravings traced across the collarbone and forearms, like luminous filigree under the skin — subtle, not neon. Simple fitted travel clothing in muted greens and greys, medieval aetherpunk: organic shapes, a few brass pipe-fittings. Art style: hand-painted graphic novel watercolor — crisp black ink linework on the figure, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, melancholic and serene mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no heavy armor.
 ```
 
+### 1b — Re-roll: variante piel porcelana (edición sobre imagen)
+
+Adjuntar la lámina v1 del elfo y usar:
+
+```
+Keep this exact character sheet — same pose, three views, outfit, hair, ears, proportions, linework and watercolor style — but change only the skin: replace the lavender skin with a porcelain warm-pale skin tone, cold and fair, keeping just a faint lavender undertone in the shadows. The pale-teal aether engravings on collarbone and forearms stay visible against the lighter skin.
+```
+
+Fallback standalone: mismo brief 1 con la frase de piel → *"Skin in porcelain
+warm-pale tones, cold and fair, with only a faint lavender undertone in the
+shadows"* y añadir al negativo *"no purple or lavender skin"*. Motivo: la v1
+convirtió el subtono lavanda en piel completa; se canonizan ambos extremos de
+la paleta para que "elfo = piel lila" no sea la lectura por defecto.
+
 ## 2 — Enano (Iron-Blooded)
 
 ```
