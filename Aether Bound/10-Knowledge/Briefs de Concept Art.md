@@ -55,6 +55,16 @@ Keep this exact character sheet style, proportions and watercolor rendering — 
 La v1 masculina se archiva igualmente (referencia válida del varón; silueta,
 tatuajes y ember accents ✓).
 
+### 2c — Standalone: enana con proporción blindada
+
+La 2b validó cara/trenzas/ropa pero derivó alta-esbelta (sesgo del modelo con
+"woman"). Prompt desde cero con la proporción al frente, refuerzo en positivo
+y negativos anti-deriva; anillas de forja integradas:
+
+```
+Full-body character concept sheet, front view, back view and side view, of a fantasy dwarf woman on a plain warm paper background. The proportions are the single most important rule: she is exactly 4.5 heads tall, a trapezoid silhouette nearly as wide as she is tall, with massive trapezius and shoulders that swallow the neck, a wide barrel torso, enormous hands, very short thick arms and legs, and a low planted center of gravity — immovable, built like a load-bearing wall. She is NOT tall, NOT slender, NOT athletic; every limb is short and thick. Strong feminine face with a heavy brow, broad jaw and a nose with history; no beard. Hair pulled back tight, with long ornamented side-braids at the temples threaded with small forge-iron rings and metal inlays. Skin in warm bronze tones with soot shading. Amber geometric guild tattoos on both forearms. Practical smith-soldier clothing that keeps the body silhouette readable: fitted leather and cloth in earth tones, a few dark iron pieces at shoulders and boots, faint warm ember accents at the seams, heavy belt with tools, medieval aetherpunk. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, dignified and stubborn mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no tall or slender body, no long legs, no human proportions, no hourglass figure, no full beard, no heavy plate armor, no comedic caricature, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow.
+```
+
 ## 3 — Humano (the Restless / Mistbound)
 
 ```
