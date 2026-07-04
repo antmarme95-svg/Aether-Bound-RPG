@@ -1,6 +1,12 @@
-# Aether Bound — Sprint Backlog
+# Aether Bound — Sprint Backlog (ARCHIVADO)
 
-> **Durable source of truth.** Updated after *every completed task* (not just sprint gates), before spawning the next executor. On any cold resume: read this file → read auto-memory `borisawa-sprint-progress` → continue from the `Next step` of the first non-`done` task. Mirrors the in-session task list; this file outlives the session.
+> **🧊 SUPERADO (2026-07-04).** La fuente viva de estado ahora es el Vault:
+> **`Aether Bound/20-State/Current-State.md`** y `20-State/Task-Board.md`
+> (modelo de trabajo: `Aether Bound/SCHEMA.md`, ADR-001). Este archivo queda
+> como registro histórico de los sprints del prototipo (PRD-001…005) — las
+> lecciones y el entorno ya migraron a `20-State/Lecciones.md`. No actualizar.
+
+> ~~**Durable source of truth.**~~ Updated after *every completed task* (not just sprint gates), before spawning the next executor. On any cold resume: read this file → read auto-memory `borisawa-sprint-progress` → continue from the `Next step` of the first non-`done` task. Mirrors the in-session task list; this file outlives the session.
 
 ## Locked decisions (re-read first on resume)
 

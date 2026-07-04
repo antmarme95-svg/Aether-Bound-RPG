@@ -1,3 +1,8 @@
+> **🧊 v2.2 CONGELADO (2026-07-04).** Este documento es la fuente *raw*
+> inmutable del reseteo creativo — no se edita más. **La verdad viva del
+> diseño está en el Vault: `Aether Bound/` (empezar por `SCHEMA.md` y
+> `20-State/Current-State.md`).**
+
 # GDD v2.1 — AETHER BOUND ✅
 
 *(Título canónico sellado 2026-07-03. "Vanguards & Voidcores" retirado con

@@ -1,3 +1,6 @@
 # Godot import cache + local test artifacts
 godot/.godot/
 godot/test_out/
+
+# Obsidian volatile UI state (el vault sí se trackea)
+Aether Bound/.obsidian/workspace.json
