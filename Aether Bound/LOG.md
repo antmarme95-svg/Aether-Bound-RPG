@@ -36,3 +36,8 @@ proporción blindada). Todas evaluadas contra los 5 ejes; referencias cruzadas
 en [[Fenotipos y Creación de Personaje]]. B13 ✅. Lección de prompt: el sesgo
 "woman→alta/esbelta" se corrige poniendo la proporción como primera regla +
 negativos anti-deriva (documentado en [[Briefs de Concept Art]] 2c).
+
+## [2026-07-04] design | Fenotipos RATIFICADOS — Sesión 1 de arte cerrada
+El director ratifica [[Fenotipos y Creación de Personaje]] (B12 ✅). La
+Sesión 1 queda cerrada: página canónica + 5 láminas de referencia. Siguiente:
+golden scene (B11).

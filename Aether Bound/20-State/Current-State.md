@@ -13,11 +13,11 @@ updated: 2026-07-04
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** ratificar [[Fenotipos y Creación de Personaje]]
-  (B12, propuesto) → sesión de arte 2: golden scene (B11). En paralelo: elegir
-  la celda jugador×Pivote del slice (A2).
-- **Plan de sesiones de arte acordado (2026-07-04):** 1) fenotipos ✅propuesto
-  → 3) golden scene B11 → 2) Game Feel Bible B10.
+- **Próxima prioridad:** sesión de arte 2 — **golden scene (B11)**: elegir la
+  escena del prototipo y probar las 4 capas de la [[Art Bible]]. En paralelo:
+  elegir la celda jugador×Pivote del slice (A2).
+- **Plan de sesiones de arte (2026-07-04):** 1) fenotipos ✅ RATIFICADO (B12,
+  con 5 láminas canónicas) → 3) golden scene B11 → 2) Game Feel Bible B10.
 - **Branch actual:** `master` (todo mergeado; PR #4 fue el último).
 - **Decisión mayor pendiente:** motor Godot vs. Unreal — **diferida** hasta
   tener Art Bible probada + Game Feel Bible + vertical slice (ADR-002).

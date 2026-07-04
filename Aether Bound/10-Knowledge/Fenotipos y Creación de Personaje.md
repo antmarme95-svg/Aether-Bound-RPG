@@ -1,5 +1,5 @@
 ---
-status: propuesto
+status: ratificado
 source: "Design Loop 2026-07-04 (Sesión 1 de arte) + prototipo godot/data/phenotype_data.gd"
 updated: 2026-07-04
 ---
