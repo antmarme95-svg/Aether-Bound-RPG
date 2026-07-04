@@ -43,6 +43,18 @@ la paleta para que "elfo = piel lila" no sea la lectura por defecto.
 Full-body character concept sheet, front view and side view, of a fantasy dwarf woman on a plain warm paper background. Silhouette reads as a trapezoid, nearly as wide as tall: about 4.5 heads tall, massive trapezius and shoulders swallowing the neck, short thick limbs, enormous hands, low center of gravity, deep natural squat stance, planted and immovable. Heavy brow, broad jaw, a nose with history. No beard: long ornamented side-braids at the temples, threaded with small forge-iron rings and metal inlays. Skin in warm bronze tones with soot shading, one variant in ashen forge-touched grey. Guild tattoos in dark amber geometry on the forearms. Practical smith-soldier clothing, leather and dark iron with faint warm ember accents at the seams, medieval aetherpunk. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, dignified and stubborn mood, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no comedic caricature dwarf, no full beard on the woman, no neon glow.
 ```
 
+### 2b — Re-roll: enana sin barba, ropa ligera (edición sobre imagen)
+
+La v1 entregó varón con barba plena y full plate (desviación de las decisiones
+ratificadas). Adjuntar la lámina v1 y usar:
+
+```
+Keep this exact character sheet style, proportions and watercolor rendering — same trapezoid silhouette, 4.5 heads tall, massive shoulders, huge hands, low center of gravity — but change the character to a dwarf woman with no beard: strong heavy-browed feminine face, broad jaw, hair pulled back with long ornamented side-braids at the temples threaded with small forge-iron rings. Replace the full plate armor with practical smith-soldier clothing: fitted leather and cloth in earth tones with a few dark iron pieces and faint warm ember accents at the seams, so the body silhouette stays readable. Keep the amber geometric guild tattoos on the forearms. Negative: no full beard, no heavy plate armor, no comedic caricature.
+```
+
+La v1 masculina se archiva igualmente (referencia válida del varón; silueta,
+tatuajes y ember accents ✓).
+
 ## 3 — Humano (the Restless / Mistbound)
 
 ```
