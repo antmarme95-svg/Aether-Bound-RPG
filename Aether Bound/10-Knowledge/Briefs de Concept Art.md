@@ -122,6 +122,24 @@ ella"). Archivos destino: `speck-estadio{1-cria,2-vinculo,3-espejo}-v1.png`.
 Creature concept sheet, front view and side view, of "Speck", stage one "the hatchling", on a plain warm paper background. A small bio-construct guardian creature built by a lost divine civilization: living technology that breathes, part grown and part crafted, luminous amphibian salamander-axolotl base form. Small enough to carry in one arm, plump and clumsy, oversized curious dark warm eyes, soft translucent skin in pale mint-grey with faint teal aether seams glowing gently along the spine like circuitry grown from flesh, external gill-antennae like an axolotl's frills that perk up and bristle, a tiny erectile crest, stubby legs and a thick little tail. One small vignette beside the views: she sniffs the air and sneezes tiny sparks. Mood: tender, curious, a little melancholic — an ancient being in an infant body. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain; the only saturated color is the teal aether glow; style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime style, no cute mascot Pokémon look, no dog or cat anatomy, no dragon, no neon glow except the aether seams.
 ```
 
+> **⚠ Historia de re-rolls:** los v2 (proporción con silueta de escala pero
+> sin fijar postura) derivaron a humanoide/bípedo → DESCARTADOS. Anatomía
+> ratificada: **cuadrúpeda los 3 estadios**. Usar los v3 de abajo, que parten
+> de las v1 con candado anti-bípedo. Lección: pedir proporciones sin fijar la
+> postura invita al modelo a re-anatomizar.
+
+**5b-v3 — proporciones E2 (adjuntar `speck-estadio2-vinculo-v1.png`):**
+
+```
+Keep this exact creature, face, eyes, seams, frills and art style. She stays a QUADRUPED salamander walking on four legs with animal anatomy — absolutely not humanoid, not bipedal, no human-like torso or shoulders, never standing on two legs. Fix only her body proportions for this growth stage: stretch her into a lean, gangly adolescent quadruped — longer legs and tail, limbs slightly too long and awkward for her frame, narrower cheeks, body raised higher off the ground, like a young wolf-sized salamander mid-step. Add a simple grey human silhouette standing beside her for scale: on all fours, her back reaches the human's waist. Negative: no bipedal stance, no humanoid body, no human proportions.
+```
+
+**5c-v3 — proporciones E3 (adjuntar `speck-estadio3-espejo-v1.png`):**
+
+```
+Keep this exact creature, face, eyes, red crystals and art style. She stays a QUADRUPED salamander walking on four legs with animal anatomy — absolutely not humanoid, not bipedal, no human-like torso, never standing on two legs. Fix only her body proportions for the final stage: a lean, elegant, quietly majestic adult quadruped — long graceful neck, sweeping tail, slender strong legs, no chibi plumpness, carrying herself with calm poise but pure salamander anatomy. Add a simple grey human silhouette standing beside her for scale: on all fours, her back reaches the human's chest, slightly larger than a wolf. Negative: no bipedal stance, no humanoid body, no human proportions, no dragon, no raptor.
+```
+
 **5b — edición sobre 5a aprobada:**
 
 ```
