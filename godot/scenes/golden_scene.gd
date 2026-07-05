@@ -20,11 +20,12 @@ const PRESETS := {
 	"dawn": {
 		"sky_top": Color("#cfe6f0"), "sky_horizon": Color("#f3d9a8"),
 		"ground_horizon": Color("#ecd9b0"), "ground_bottom": Color("#b9bd93"),
-		"sun_color": Color("#ffe9c0"), "sun_energy": 1.25,
+		"sun_color": Color("#ffe9c0"), "sun_energy": 1.35,
 		"sun_elev_deg": -12.0, "sun_azim_deg": 190.0,
-		"ambient": Color("#d8e2d8"), "ambient_energy": 1.05,
+		"ambient": Color("#e6dcbe"), "ambient_energy": 1.1,
 		"aerial": Color("#bcccd9"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
-		"grass": Color("#b7bd8a"), "grass_lush": Color("#9fae7c"),
+		"ray_color": Color("#ffe2ac"), "ray_strength": 0.55,
+		"grass": Color("#b8b581"), "grass_lush": Color("#9fae7c"),
 		"path": Color("#d9c9a2"),
 		"foliage": Color("#93a678"), "foliage_dark": Color("#7d9268"),
 		"trunk": Color("#7d6b58"),
@@ -40,6 +41,7 @@ const PRESETS := {
 		"sun_elev_deg": -8.0, "sun_azim_deg": 200.0,
 		"ambient": Color("#6a6f8e"), "ambient_energy": 0.9,
 		"aerial": Color("#6b7799"), "glow": Color("#4de0d8"), "glow_strength": 0.32,
+		"ray_color": Color("#b39ad0"), "ray_strength": 0.12,
 		"grass": Color("#5f6a63"), "grass_lush": Color("#525d57"),
 		"path": Color("#6f6f7c"),
 		"foliage": Color("#4d5a66"), "foliage_dark": Color("#414d58"),
@@ -58,6 +60,7 @@ var _mats: Dictionary = {}      # name -> ShaderMaterial (toon, re-tinted per pr
 var _flat_mats: Dictionary = {} # name -> StandardMaterial3D (unshaded cutouts)
 var _core_mat: StandardMaterial3D = null
 var _core_light: OmniLight3D = null
+var _cam_ref: Camera3D = null
 
 func _ready() -> void:
 	_build_environment()
@@ -166,20 +169,32 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 	var root := Node3D.new()
 	root.position = pos
 	add_child(root)
-	# tapered trunk: stacked cylinders with slight lean
+	# single tapered trunk (no stack seams) with a gentle lean + knotted branches
 	var trunk_m := _toon_mat("trunk")
 	var lean := Vector3(randf_range(-0.06, 0.06), 0, randf_range(-0.04, 0.04))
 	var seg_h := 2.2 * s
-	for i in range(3):
-		var c := MeshInstance3D.new()
-		var cyl := CylinderMesh.new()
-		cyl.top_radius = (0.42 - 0.11 * i) * s
-		cyl.bottom_radius = (0.55 - 0.11 * i) * s
-		cyl.height = seg_h
-		c.mesh = cyl
-		c.material_override = trunk_m
-		c.position = Vector3(lean.x * i * seg_h, seg_h * (0.5 + i), lean.z * i * seg_h)
-		root.add_child(c)
+	var trunk_h := seg_h * 3.0
+	var c := MeshInstance3D.new()
+	var cyl := CylinderMesh.new()
+	cyl.top_radius = 0.26 * s
+	cyl.bottom_radius = 0.62 * s
+	cyl.height = trunk_h
+	c.mesh = cyl
+	c.material_override = trunk_m
+	c.position = Vector3(lean.x * trunk_h * 0.5, trunk_h * 0.5, lean.z * trunk_h * 0.5)
+	c.rotation = Vector3(lean.z * 0.9, 0.0, -lean.x * 0.9)
+	root.add_child(c)
+	for bi in range(2):
+		var br := MeshInstance3D.new()
+		var bm := CapsuleMesh.new()
+		bm.radius = 0.14 * s
+		bm.height = 2.8 * s
+		br.mesh = bm
+		br.material_override = trunk_m
+		var ba := TAU * (float(bi) + randf() * 0.4) / 2.0
+		br.position = Vector3(cos(ba) * 0.9 * s, trunk_h * 0.82, sin(ba) * 0.9 * s)
+		br.rotation = Vector3(deg_to_rad(randf_range(28.0, 48.0)), -ba, 0)
+		root.add_child(br)
 	# root flare
 	for a in range(5):
 		var r := MeshInstance3D.new()
@@ -310,17 +325,42 @@ func _build_core() -> void:
 	_core_mat.emission = Color("#e0304a")
 	_core_mat.emission_energy_multiplier = 1.6
 	seed(13)
-	for i in range(7):
+	# crystal cluster: tall spikes center, shorter tilted-outward ring (keyframe geometry)
+	for i in range(9):
 		var shard := MeshInstance3D.new()
 		var prism := PrismMesh.new()
-		var s := randf_range(1.2, 3.4)
-		prism.size = Vector3(0.7 * s, 3.2 * s, 0.7 * s)
+		var rad := randf_range(0.2, 2.4)
+		var s := clampf(3.4 - rad * 1.0, 0.9, 3.4) * randf_range(0.8, 1.1)
+		prism.size = Vector3(0.5 * s, 3.4 * s, 0.5 * s)
 		shard.mesh = prism
 		shard.material_override = _core_mat
-		var ang := TAU * i / 7.0
-		shard.position = Vector3(cos(ang) * randf_range(0.3, 1.6), 1.2 * s, sin(ang) * randf_range(0.3, 1.4))
-		shard.rotation = Vector3(randf_range(-0.5, 0.5), ang, randf_range(-0.35, 0.35))
+		var ang := TAU * i / 9.0 + randf() * 0.4
+		var tilt := rad * 0.30 + randf_range(-0.08, 0.08)
+		var tangent := Vector3(-sin(ang), 0, cos(ang))
+		shard.transform.basis = Basis(tangent, tilt)
+		shard.position = Vector3(cos(ang) * rad, 1.05 * s, sin(ang) * rad)
 		root.add_child(shard)
+	# fallen shard + stained ground
+	var fallen := MeshInstance3D.new()
+	var fp := PrismMesh.new()
+	fp.size = Vector3(0.5, 2.2, 0.5)
+	fallen.mesh = fp
+	fallen.material_override = _core_mat
+	fallen.position = Vector3(-2.8, 0.35, 1.2)
+	fallen.rotation = Vector3(0, 0.7, deg_to_rad(102.0))
+	root.add_child(fallen)
+	var disc := MeshInstance3D.new()
+	var dm := CylinderMesh.new()
+	dm.top_radius = 5.0
+	dm.bottom_radius = 5.0
+	dm.height = 0.08
+	disc.mesh = dm
+	var stain := StandardMaterial3D.new()
+	stain.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	stain.albedo_color = Color("#8a3440")
+	disc.material_override = stain
+	disc.position = Vector3(0, 0.05, 0)
+	root.add_child(disc)
 	_core_light = OmniLight3D.new()
 	_core_light.light_color = Color("#ff2440")
 	_core_light.omni_range = 14.0
@@ -365,6 +405,7 @@ func attach_post(cam: Camera3D) -> void:
 	quad.extra_cull_margin = 16384.0
 	cam.add_child(quad)
 	quad.position = Vector3(0, 0, -1)
+	_cam_ref = cam
 
 # ================= presets =================
 func apply_time_preset(preset_name: String) -> void:
@@ -397,3 +438,15 @@ func apply_time_preset(preset_name: String) -> void:
 		_post_mat.set_shader_parameter("aerial_color", p["aerial"])
 		_post_mat.set_shader_parameter("glow_color", p["glow"])
 		_post_mat.set_shader_parameter("glow_strength", p["glow_strength"])
+		# god rays: project the sun into screen space (static gate camera)
+		if _cam_ref != null:
+			var travel: Vector3 = -_sun.global_transform.basis.z
+			var sun_pos: Vector3 = _cam_ref.global_position - travel * 400.0
+			if _cam_ref.is_position_behind(sun_pos):
+				_post_mat.set_shader_parameter("ray_strength", 0.0)
+			else:
+				var vp_size: Vector2 = _cam_ref.get_viewport().get_visible_rect().size
+				var sp: Vector2 = _cam_ref.unproject_position(sun_pos) / vp_size
+				_post_mat.set_shader_parameter("sun_screen", sp)
+				_post_mat.set_shader_parameter("ray_color", p["ray_color"])
+				_post_mat.set_shader_parameter("ray_strength", p["ray_strength"])
