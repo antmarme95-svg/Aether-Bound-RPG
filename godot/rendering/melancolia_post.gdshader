@@ -26,9 +26,9 @@ uniform float band_jitter : hint_range(0.0, 0.5) = 0.10;
 
 // --- layer 3: air ---
 uniform vec4 aerial_color : source_color = vec4(0.73, 0.80, 0.85, 1.0);
-uniform float aerial_start : hint_range(0.0, 200.0) = 35.0;
-uniform float aerial_end : hint_range(10.0, 600.0) = 220.0;
-uniform float aerial_max : hint_range(0.0, 1.0) = 0.55;
+uniform float aerial_start : hint_range(0.0, 200.0) = 55.0;
+uniform float aerial_end : hint_range(10.0, 600.0) = 230.0;
+uniform float aerial_max : hint_range(0.0, 1.0) = 0.48;
 uniform vec4 glow_color : source_color = vec4(1.0, 0.92, 0.75, 1.0);
 uniform float glow_strength : hint_range(0.0, 2.0) = 0.35;
 // god rays (radial gather toward the sun's screen position; hour-driven)

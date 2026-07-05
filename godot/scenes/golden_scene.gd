@@ -23,15 +23,15 @@ const PRESETS := {
 		"sun_color": Color("#ffe9c0"), "sun_energy": 1.35,
 		"sun_elev_deg": -12.0, "sun_azim_deg": 190.0,
 		"ambient": Color("#e8dcc0"), "ambient_energy": 1.15,
-		"shadow_opacity": 0.55,
+		"shadow_opacity": 0.42,
 		"rim": Color("#f2e6c8"), "rim_strength": 0.08,
 		"aerial": Color("#c4d2da"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
 		"ray_color": Color("#ffe2ac"), "ray_strength": 0.55,
-		"grass": Color("#a9ba7c"), "grass_lush": Color("#93ac70"),
-		"path": Color("#d9c9a2"),
-		"foliage": Color("#8ba26c"), "foliage_dark": Color("#75925e"),
+		"grass": Color("#b4c184"), "grass_lush": Color("#9fb476"),
+		"path": Color("#dccda4"),
+		"foliage": Color("#94aa6e"), "foliage_dark": Color("#7e9a62"),
 		"trunk": Color("#8a6f52"),
-		"forest_mass": Color("#8aa47e"),
+		"forest_mass": Color("#92aa80"),
 		"mountain": Color("#b9cbd9"), "mountain_far": Color("#c9d7e2"),
 		"island": Color("#c3d2de"),
 		"core_albedo": Color("#a8182e"), "core_glow": Color("#c81f3a"),
@@ -233,38 +233,67 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		var kw := lerpf(0.58, 0.30, kh / trunk_h) * s
 		kn.position = Vector3(cos(ka) * kw + lean.x * kh, kh, sin(ka) * kw + lean.z * kh)
 		root.add_child(kn)
-	# two-tone canopy: wide dark lower tier + domed light upper tier
+	# clumped canopy: 5 branch directions, each carrying 2-4 small leaf
+	# clusters with gaps between clumps (the ink outlines each clump — the
+	# anti-"plastoso" rule: many small silhouettes, not one big blob)
 	var fol_m := _toon_mat(foliage_key)
 	var fol_low := _toon_mat("foliage_dark")
 	var crown_y := seg_h * 3.1
-	for b in range(5):
-		var f := MeshInstance3D.new()
-		var sm := SphereMesh.new()
-		var rr := randf_range(2.2, 3.0) * s
-		sm.radius = rr
-		sm.height = rr * 1.25
-		f.mesh = sm
-		f.material_override = fol_low
-		var ang2 := TAU * b / 5.0 + randf() * 0.5
-		f.position = Vector3(
-			lean.x * 3.0 * seg_h + cos(ang2) * randf_range(1.4, 2.3) * s,
-			crown_y - 0.1 * s + randf_range(-0.3, 0.4) * s,
-			lean.z * 3.0 * seg_h + sin(ang2) * randf_range(1.2, 2.2) * s)
-		root.add_child(f)
-	for b in range(4):
-		var f := MeshInstance3D.new()
-		var sm := SphereMesh.new()
-		var rr := randf_range(1.9, 2.7) * s
-		sm.radius = rr
-		sm.height = rr * 1.35
-		f.mesh = sm
-		f.material_override = fol_m
-		var ang2 := TAU * b / 4.0 + randf() * 0.6
-		f.position = Vector3(
-			lean.x * 3.0 * seg_h + cos(ang2) * randf_range(0.7, 1.5) * s,
-			crown_y + randf_range(1.2, 2.2) * s,
-			lean.z * 3.0 * seg_h + sin(ang2) * randf_range(0.6, 1.3) * s)
-		root.add_child(f)
+	var crown_c := Vector3(lean.x * 3.0 * seg_h, 0, lean.z * 3.0 * seg_h)
+	for ci in range(6):
+		var ca := TAU * ci / 6.0 + randf() * 0.6
+		var cr := randf_range(1.2, 3.0) * s
+		var ch := crown_y + randf_range(-1.2, 1.6) * s
+		var center := crown_c + Vector3(cos(ca) * cr, ch, sin(ca) * cr * 0.8)
+		var tone := fol_low if ch < crown_y + 0.4 * s else fol_m
+		for b in range(randi_range(3, 5)):
+			var f := MeshInstance3D.new()
+			var sm := SphereMesh.new()
+			var rr := randf_range(1.0, 1.9) * s
+			sm.radius = rr
+			sm.height = rr * 1.15
+			f.mesh = sm
+			f.material_override = tone
+			f.position = center + Vector3(
+				randf_range(-1.1, 1.1) * s,
+				randf_range(-0.6, 0.7) * s,
+				randf_range(-1.0, 1.0) * s)
+			root.add_child(f)
+	# hero trees: one guaranteed low bough over the valley side (framing read)
+	if s >= 2.0:
+		var bough_y := trunk_h * 0.62
+		var bough_c := Vector3(randf_range(-0.6, 0.6) * s, bough_y, -1.8 * s)
+		var arm := MeshInstance3D.new()
+		var am := CapsuleMesh.new()
+		am.radius = 0.16 * s
+		am.height = 2.6 * s
+		arm.mesh = am
+		arm.material_override = trunk_m
+		arm.position = Vector3(bough_c.x * 0.5, bough_y + 0.6 * s, bough_c.z * 0.5)
+		arm.rotation = Vector3(deg_to_rad(112.0), 0, 0)
+		root.add_child(arm)
+		for b in range(3):
+			var f := MeshInstance3D.new()
+			var sm := SphereMesh.new()
+			var rr := randf_range(1.2, 1.7) * s
+			sm.radius = rr
+			sm.height = rr * 1.15
+			f.mesh = sm
+			f.material_override = fol_low
+			f.position = bough_c + Vector3(
+				randf_range(-1.0, 1.0) * s,
+				randf_range(-0.3, 0.5) * s,
+				randf_range(-0.7, 0.7) * s)
+			root.add_child(f)
+	# small crown cap (keeps the dome read from afar)
+	var cap := MeshInstance3D.new()
+	var cs := SphereMesh.new()
+	cs.radius = 1.7 * s
+	cs.height = 1.9 * s
+	cap.mesh = cs
+	cap.material_override = fol_m
+	cap.position = crown_c + Vector3(0, crown_y + 2.2 * s, 0)
+	root.add_child(cap)
 
 func _build_hero_trees() -> void:
 	seed(7)
