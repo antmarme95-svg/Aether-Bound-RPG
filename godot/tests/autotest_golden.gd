@@ -1,5 +1,7 @@
 # autotest_golden.gd — B11 golden scene A/B captures vs ratified keyframes.
 # Run: godot --path godot -- --autotest=res://tests/autotest_golden.gd
+# Live review: add --hold → window stays open; SPACE toggles dawn/dusk,
+# F12 saves a screenshot, ESC quits. (Start-GoldenScene.bat does this.)
 # Writes: test_out/golden_dawn.png + test_out/golden_dusk.png + golden_results.json
 # Gate references: Aether Bound/90-Raw/concept/keyframe-wilds-{dawn,dusk}-v1.png
 extends Node
@@ -7,6 +9,9 @@ extends Node
 const _GOLDEN := preload("res://scenes/golden_scene.gd")
 
 var _cam: Camera3D = null
+var _gs: Node3D = null
+var _hold := false
+var _preset := "dusk"
 
 func _ready() -> void:
 	_run.call_deferred()
@@ -48,7 +53,22 @@ func _run() -> void:
 
 	Debug.write_json("res://test_out/golden_results.json", results)
 	print("[autotest_golden] done")
+	if Debug.args.has("hold"):
+		_gs = gs
+		_hold = true
+		print("[autotest_golden] HOLD mode — SPACE: dawn/dusk · F12: screenshot · ESC: salir")
+		return
 	get_tree().quit(0)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not _hold or not (event is InputEventKey) or not event.pressed:
+		return
+	if event.keycode == KEY_SPACE:
+		_preset = "dawn" if _preset == "dusk" else "dusk"
+		_gs.apply_time_preset(_preset)
+		print("[autotest_golden] preset → ", _preset)
+	elif event.keycode == KEY_ESCAPE:
+		get_tree().quit(0)
 
 func _sample_fps(label: String) -> float:
 	var start := Time.get_ticks_msec()
