@@ -37,7 +37,10 @@ Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 4 Finales]]).
 
 ## Diseño visual (2026-07-04)
 
-**Forma base RATIFICADA: salamandra/axolotl luminosa** — branquias-antena
+**Anatomía RATIFICADA (2026-07-04): cuadrúpeda en los 3 estadios** — solo
+cambian tamaño y proporción; nunca bípeda ni humanoide (se evaluó y descartó
+la idea "se yergue en E3 imitando a quienes ama": potente, pero rompe la
+lectura de criatura). **Forma base RATIFICADA: salamandra/axolotl luminosa** — branquias-antena
 erizables, cresta eréctil, piel mint-grey translúcida con costuras de aether
 teal ("circuitería crecida de la carne"); estadio 3 cristaliza con la misma
 geometría del God-Core del keyframe. Congruencia deliberada con las *ruinas*

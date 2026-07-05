@@ -78,3 +78,11 @@ El director ratifica: (a) el par dawn/dusk como criterio de aceptación de la
 golden scene; (b) filos neón teal nocturnos como regla canónica de la
 [[Art Bible]] (sección nueva "regla nocturna" + keyframes canónicos). La capa
 3 del pipeline debe soportar glowing edges con color por hora del día.
+
+## [2026-07-04] design | Speck: anatomía cuadrúpeda RATIFICADA
+Los re-rolls v2 de E2/E3 derivaron a humanoide/bípedo (E2 uncanny, E3 raptor
+elegante pero otra criatura) → DESCARTADOS, no se ingestan. Decisión del
+director: **cuadrúpeda en los 3 estadios** (la alternativa "se yergue en E3"
+se evaluó y descartó). Prompts v3 emitidos: parten de las v1 (anatomía buena)
+con candado anti-bípedo triple + silueta de escala. Lección de prompt: pedir
+proporciones nuevas sin fijar la postura invita al modelo a re-anatomizar.
