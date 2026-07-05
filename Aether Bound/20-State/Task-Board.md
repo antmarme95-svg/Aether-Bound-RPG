@@ -33,7 +33,7 @@ updated: 2026-07-04
 | B8 | Dirección de audio/música (semilla: sting de dos notas) | ⬜ | [[Bond y el Bond Vacío]] |
 | B9 | Diseño visual de Speck (3 estadios) + re-naming de sub-estilos VFX | 🔄 arte ✅ | [[Speck]] — diseño visual RATIFICADO (trilogía en `90-Raw/concept/`); solo falta el re-naming de sub-estilos VFX |
 | B10 | Game Feel Bible §6.3 (hit-stop, screen-shake budget, cámara de combate) | ⬜ | [[Combate]], [[Art Bible]] |
-| B11 | Concept art: 3 keyframes + prueba técnica 4 capas ("golden scene") | 🔄 | [[Art Bible]] — **en curso**: brief 4/4b del keyframe "Wilds at dawn" listos ([[Briefs de Concept Art]]); estrategia acordada: keyframe manda, diorama nuevo (NO retrofit de the_wilds), herencia solo de tech agnóstica de look |
+| B11 | Golden scene: keyframes + prueba técnica 4 capas | 🔄 v0 ✅ | Keyframes ratificados ✅; diorama v0 aprobado en vivo y mergeado ✅ (viabilidad Godot probada — evidencia ADR-002). **Ronda 2 en curso:** calidez/rayos dawn, core-cristal, árboles nudosos, bandas cel. `Start-GoldenScene.bat` para revisar |
 | B12 | Fenotipos y creación de personaje | ✅ | [[Fenotipos y Creación de Personaje]] ratificada 2026-07-04, con 5 láminas canónicas en `90-Raw/concept/` |
 | B13 | Generar concept art de fenotipos en Nano Banana 2 (director) | ✅ | 5 láminas en `90-Raw/concept/`; ver [[Fenotipos y Creación de Personaje]] |
 

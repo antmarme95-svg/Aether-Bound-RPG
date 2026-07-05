@@ -13,11 +13,11 @@ updated: 2026-07-04
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** **Feature Loop de la golden scene (B11)** — diorama
-  nuevo en Godot persiguiendo los keyframes dawn/dusk ratificados (estrategia
-  anti-herencia en Task-Board B11). A2 ✅: pareja del slice RATIFICADA —
-  **Humano Duelist × Dagna / Seismic Springboard** ([[Slice of Bond]]);
-  siguiente: alcance del slice (A2b).
+- **Próxima prioridad:** golden scene **ronda 2** (gaps: calidez/rayos dawn,
+  core-cristal, árboles, bandas cel — Task-Board B11). v0 aprobada y mergeada:
+  las 4 capas corren en Godot a 8–10× el presupuesto (evidencia ADR-002).
+  A2 ✅: pareja del slice — **Humano Duelist × Dagna / Seismic Springboard**
+  ([[Slice of Bond]]); abierto el alcance (A2b).
 - **Plan de sesiones de arte (2026-07-04):** 1) fenotipos ✅ (B12, 5 láminas)
   · keyframes dawn/dusk ✅ (gate del diorama) + regla nocturna en Art Bible ·
   Speck trilogía ✅ (B9 arte) → falta: golden scene Godot (B11) → Game Feel
