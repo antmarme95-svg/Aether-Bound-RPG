@@ -35,7 +35,7 @@ nombre es el vínculo.**
 ~7 escenas fijas donde la tratas como herramienta, mascota o persona.
 Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 4 Finales]]).
 
-## Diseño visual (2026-07-04)
+## Diseño visual ✅ (RATIFICADO 2026-07-04 — set completo de 3 estadios)
 
 **Anatomía RATIFICADA (2026-07-04): cuadrúpeda en los 3 estadios** — solo
 cambian tamaño y proporción; nunca bípeda ni humanoide (se evaluó y descartó

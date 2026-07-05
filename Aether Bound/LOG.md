@@ -95,3 +95,10 @@ cuadrúpedas ✓, escala con silueta humana ✓ (cintura/pecho), identidad ✓,
 cristales E3 riman con el core ✓, "expresión intacta" ✓. La trilogía
 cría→adolescente→espejo lee el crecimiento completo. Set visual de Speck
 COMPLETO — pendiente ratificación del director.
+
+## [2026-07-04] design | Set visual de Speck RATIFICADO — sesión de arte cerrada
+El director ratifica la trilogía (cría v1 / adolescente v2 / espejo v2).
+B9: parte de arte ✅ (queda re-naming VFX). Balance de la sesión de arte:
+fenotipos 3 razas ✅ (5 láminas) · keyframes dawn/dusk ✅ (gate golden scene)
+· regla nocturna nueva en Art Bible · trilogía Speck ✅ · 3 lecciones de
+prompt-craft documentadas. Siguiente: Feature Loop de la golden scene (B11).
