@@ -10,7 +10,7 @@ uniform vec4 albedo_color : source_color = vec4(1.0);
 uniform bool use_vertex_color = false;
 uniform vec4 rim_color : source_color = vec4(0.749, 0.910, 1.0, 1.0);
 uniform float rim_strength : hint_range(0.0, 1.0) = 0.10;
-uniform float ambient_lift : hint_range(0.0, 1.0) = 0.16;
+uniform float ambient_lift : hint_range(0.0, 1.0) = 0.24;
 
 void fragment() {
 	vec4 base = albedo_color;

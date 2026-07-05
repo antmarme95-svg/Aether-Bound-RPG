@@ -21,16 +21,20 @@ uniform float ink_fade_dist : hint_range(1.0, 400.0) = 70.0; // lin depth where 
 
 // --- layer 2: bands ---
 uniform float band_count : hint_range(2.0, 6.0) = 4.0;
-uniform float band_mix : hint_range(0.0, 1.0) = 0.32;
+uniform float band_mix : hint_range(0.0, 1.0) = 0.45;
 uniform float band_jitter : hint_range(0.0, 0.5) = 0.10;
 
 // --- layer 3: air ---
 uniform vec4 aerial_color : source_color = vec4(0.73, 0.80, 0.85, 1.0);
-uniform float aerial_start : hint_range(0.0, 200.0) = 35.0;
-uniform float aerial_end : hint_range(10.0, 600.0) = 220.0;
-uniform float aerial_max : hint_range(0.0, 1.0) = 0.55;
+uniform float aerial_start : hint_range(0.0, 200.0) = 55.0;
+uniform float aerial_end : hint_range(10.0, 600.0) = 230.0;
+uniform float aerial_max : hint_range(0.0, 1.0) = 0.48;
 uniform vec4 glow_color : source_color = vec4(1.0, 0.92, 0.75, 1.0);
 uniform float glow_strength : hint_range(0.0, 2.0) = 0.35;
+// god rays (radial gather toward the sun's screen position; hour-driven)
+uniform vec2 sun_screen = vec2(0.5, 0.35);
+uniform vec4 ray_color : source_color = vec4(1.0, 0.9, 0.7, 1.0);
+uniform float ray_strength : hint_range(0.0, 2.0) = 0.0;
 
 // --- layer 4: paper ---
 uniform float grain_amount : hint_range(0.0, 0.3) = 0.055;
@@ -98,12 +102,33 @@ void fragment() {
 	if (!is_sky) {
 		float a = smoothstep(aerial_start, aerial_end, lin) * aerial_max;
 		col = mix(col, aerial_color.rgb, a);
-		// backlit halo: only CRISP distant edges catch the hour's light
-		col += glow_color.rgb * (e * e * (1.0 - fade) * glow_strength);
+		// backlit halo: only CRISP and truly FAR edges catch the hour's light
+		// (keyframe rule: the teal lives on the distant ridge crests, not on
+		// every mid-ground canopy)
+		float far_w = smoothstep(110.0, 210.0, lin);
+		col += glow_color.rgb * (e * e * far_w * glow_strength);
 	}
 
 	// ---- layer 1 composite: ink on top ----
 	col = mix(col, ink_rgb, ink_a);
+
+	// ---- layer 3b: god rays (the air has weight) ----
+	if (ray_strength > 0.001) {
+		vec2 rdir = sun_screen - uv;
+		float rdist = length(rdir);
+		vec2 rstep = rdir / 24.0;
+		vec2 suv = uv;
+		float acc = 0.0;
+		for (int i = 0; i < 24; i++) {
+			suv += rstep;
+			vec3 sc = texture(screen_tex, suv).rgb;
+			float b = max(dot(sc, vec3(0.333)) - 0.70, 0.0);
+			float sky_w = texture(depth_tex, suv).r <= 0.000001 ? 1.0 : 0.25;
+			acc += b * sky_w;
+		}
+		acc /= 24.0;
+		col += ray_color.rgb * acc * exp(-rdist * 2.2) * ray_strength;
+	}
 
 	// ---- layer 4b: paper grain (static-ish, subtle) ----
 	float g = hash12(floor(uv * VIEWPORT_SIZE * 0.55));

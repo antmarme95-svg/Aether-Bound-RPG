@@ -167,6 +167,24 @@ Keep this exact creature design, style, paper background and sheet layout — bu
 Keep this exact creature design, style, paper background and sheet layout — but grow her to stage three, the mirror: the same creature now lean and quietly majestic, slightly larger than a wolf; her patterns have crystallized — deep saturated red crystal formations grow along her spine and crest, with the exact same crystalline geometry as the red God-Core formation in the attached landscape reference. Beautiful and unsettling at once: a beloved friend wearing the colors of danger. Her warm dark eyes and gentle posture stay unchanged — the tragedy is that she is still herself. The teal aether seams now flicker between teal and red. In the side vignette, she imitates the stance of a tall absent companion.
 ```
 
+## 6 — Sprite sheet de grumos de follaje (golden scene / assets de árbol)
+
+Técnica ratificada en sesión (2026-07-04): follaje por **tarjetas alpha-cutout
+en cruz sobre cascarón elipsoidal con normales radiales** (TotK/Sable/
+Hinterberg; meta-referencia Moebius). Implementada en
+`godot/rendering/toon_foliage.gdshader` + `golden_scene._card_shell()` con
+textura procedural provisional. La sprite canónica reemplaza el placeholder
+guardándola como `godot/rendering/foliage_clump.png` (el código la carga solo).
+
+```
+Sprite sheet, 3x3 grid, of nine hand-drawn leaf clumps for a stylized tree canopy, on a pure white background, each clump isolated with clear white space around it. Style: Moebius ligne claire — crisp black ink outline with a scalloped, bumpy leaf-mass contour; interior filled with flat pale watercolor green in 2 tones and sparse small ink strokes suggesting individual leaves (short curved ticks, Moebius foliage texture); no gradients, no realistic rendering, visible paper grain acceptable. Each clump is a rounded cauliflower-like mass seen from the side, varied silhouettes: some wide, some tall, some small. Flat lighting, no cast shadows, no background elements. Negative: no photorealism, no 3D render look, no gradients, no Genshin saturation, no single big smooth blob — every clump edge must be scalloped and bumpy.
+```
+
+Destino: `foliage-clumps-v1.png` → recortar un grumo (o varios) → PNG con
+alpha en `godot/rendering/foliage_clump.png`. El sprite debe pintarse en tonos
+claros casi-blancos con verdor sutil: el color final lo pone `albedo_color`
+del preset (dawn/dusk lo tiñen distinto).
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

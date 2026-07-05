@@ -13,41 +13,57 @@ extends Node3D
 class_name GoldenScene
 
 const _TOON := preload("res://rendering/toon_golden.gdshader")
+const _FOLIAGE := preload("res://rendering/toon_foliage.gdshader")
 const _POST := preload("res://rendering/melancolia_post.gdshader")
+# Canonical clump texture (Nano Banana sprite, brief 6) — falls back to the
+# procedural placeholder below until the asset lands at this path.
+const _CLUMP_PATH := "res://rendering/foliage_clump.png"
 
 # ---- keyframe palettes (sampled from the ratified concept art) ----
 const PRESETS := {
 	"dawn": {
-		"sky_top": Color("#cfe6f0"), "sky_horizon": Color("#f3d9a8"),
-		"ground_horizon": Color("#ecd9b0"), "ground_bottom": Color("#b9bd93"),
-		"sun_color": Color("#ffe9c0"), "sun_energy": 1.25,
+		"sky_top": Color("#b4d7e8"), "sky_horizon": Color("#f2cd96"),
+		"ground_horizon": Color("#ecd2a2"), "ground_bottom": Color("#aab883"),
+		"sun_color": Color("#ffe9c0"), "sun_energy": 1.35,
 		"sun_elev_deg": -12.0, "sun_azim_deg": 190.0,
-		"ambient": Color("#d8e2d8"), "ambient_energy": 1.05,
-		"aerial": Color("#bcccd9"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
-		"grass": Color("#b7bd8a"), "grass_lush": Color("#9fae7c"),
-		"path": Color("#d9c9a2"),
-		"foliage": Color("#93a678"), "foliage_dark": Color("#7d9268"),
-		"trunk": Color("#7d6b58"),
-		"forest_mass": Color("#8fa383"),
+		"ambient": Color("#e8dcc0"), "ambient_energy": 1.15,
+		"shadow_opacity": 0.42,
+		"rim": Color("#f2e6c8"), "rim_strength": 0.08,
+		"aerial": Color("#c4d2da"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
+		"ray_color": Color("#ffe2ac"), "ray_strength": 0.55,
+		"grass": Color("#b4c184"), "grass_lush": Color("#9fb476"),
+		"path": Color("#dccda4"),
+		"foliage": Color("#94aa6e"), "foliage_dark": Color("#7e9a62"),
+		"pine": Color("#6d8a66"),
+		"bloom": Color("#c9aee2"), "bloom_dark": Color("#b195d2"),
+		"trunk": Color("#8a6f52"),
+		"forest_mass": Color("#92aa80"),
 		"mountain": Color("#b9cbd9"), "mountain_far": Color("#c9d7e2"),
 		"island": Color("#c3d2de"),
-		"core_emission": 2.2,
+		"core_albedo": Color("#a8182e"), "core_glow": Color("#c81f3a"),
+		"core_emission": 1.35,
 	},
 	"dusk": {
 		"sky_top": Color("#3f4677"), "sky_horizon": Color("#a98fb4"),
-		"ground_horizon": Color("#7d7a9c"), "ground_bottom": Color("#565f58"),
-		"sun_color": Color("#b8a4d8"), "sun_energy": 0.55,
+		"ground_horizon": Color("#767693"), "ground_bottom": Color("#4b544e"),
+		"sun_color": Color("#b8a4d8"), "sun_energy": 0.5,
 		"sun_elev_deg": -8.0, "sun_azim_deg": 200.0,
-		"ambient": Color("#6a6f8e"), "ambient_energy": 0.9,
-		"aerial": Color("#6b7799"), "glow": Color("#4de0d8"), "glow_strength": 0.32,
-		"grass": Color("#5f6a63"), "grass_lush": Color("#525d57"),
-		"path": Color("#6f6f7c"),
-		"foliage": Color("#4d5a66"), "foliage_dark": Color("#414d58"),
-		"trunk": Color("#4a4a56"),
-		"forest_mass": Color("#4c5870"),
-		"mountain": Color("#7482a4"), "mountain_far": Color("#8a95b5"),
-		"island": Color("#8a95b5"),
-		"core_emission": 4.0,
+		"ambient": Color("#5d6284"), "ambient_energy": 0.78,
+		"shadow_opacity": 0.75,
+		"rim": Color("#8a95b5"), "rim_strength": 0.03,
+		"aerial": Color("#6b7799"), "glow": Color("#4de0d8"), "glow_strength": 0.30,
+		"ray_color": Color("#b39ad0"), "ray_strength": 0.12,
+		"grass": Color("#49544f"), "grass_lush": Color("#3f4a45"),
+		"path": Color("#5d5d6c"),
+		"foliage": Color("#3f4c59"), "foliage_dark": Color("#36424e"),
+		"pine": Color("#39454f"),
+		"bloom": Color("#6f6392"), "bloom_dark": Color("#5c5280"),
+		"trunk": Color("#3f3f4b"),
+		"forest_mass": Color("#43506b"),
+		"mountain": Color("#6b7a9e"), "mountain_far": Color("#828db0"),
+		"island": Color("#828db0"),
+		"core_albedo": Color("#c01528"), "core_glow": Color("#e01a35"),
+		"core_emission": 3.0,
 	},
 }
 
@@ -58,6 +74,9 @@ var _mats: Dictionary = {}      # name -> ShaderMaterial (toon, re-tinted per pr
 var _flat_mats: Dictionary = {} # name -> StandardMaterial3D (unshaded cutouts)
 var _core_mat: StandardMaterial3D = null
 var _core_light: OmniLight3D = null
+var _cam_ref: Camera3D = null
+var _fol_mats: Dictionary = {}  # name -> ShaderMaterial (foliage cards)
+var _clump_tex: Texture2D = null
 
 func _ready() -> void:
 	_build_environment()
@@ -80,6 +99,69 @@ func _toon_mat(mat_name: String) -> ShaderMaterial:
 	m.set_shader_parameter("rim_strength", 0.10)
 	_mats[mat_name] = m
 	return m
+
+func _fol_mat(mat_name: String) -> ShaderMaterial:
+	if _fol_mats.has(mat_name):
+		return _fol_mats[mat_name]
+	if _clump_tex == null:
+		# load_from_file: no depende del import del editor (funciona en CLI)
+		var abs_clump := ProjectSettings.globalize_path(_CLUMP_PATH)
+		if FileAccess.file_exists(abs_clump):
+			_clump_tex = ImageTexture.create_from_image(Image.load_from_file(abs_clump))
+		else:
+			_clump_tex = _make_clump_tex()
+	var m := ShaderMaterial.new()
+	m.shader = _FOLIAGE
+	m.set_shader_parameter("toon_ramp", load("res://rendering/toon_ramp.tres"))
+	m.set_shader_parameter("clump_tex", _clump_tex)
+	_fol_mats[mat_name] = m
+	return m
+
+# Procedural placeholder clump: scalloped union of discs, baked ink contour,
+# sparse leaf ticks. Replaced 1:1 by the hand-drawn sprite when it lands.
+static func _make_clump_tex() -> ImageTexture:
+	var sz := 256
+	var img := Image.create(sz, sz, false, Image.FORMAT_RGBA8)
+	seed(42)
+	var discs: Array = []
+	for i in range(9):
+		var a := TAU * i / 9.0
+		discs.append(Vector3(
+			128.0 + cos(a) * randf_range(20.0, 52.0),
+			128.0 + sin(a) * randf_range(16.0, 44.0),
+			randf_range(30.0, 52.0)))  # x, y, radius
+	discs.append(Vector3(128.0, 128.0, 58.0))
+	var mask := PackedByteArray()
+	mask.resize(sz * sz)
+	for y in range(sz):
+		for x in range(sz):
+			var inside := false
+			for d in discs:
+				if Vector2(x - d.x, y - d.y).length() < d.z:
+					inside = true
+					break
+			mask[y * sz + x] = 1 if inside else 0
+	for y in range(sz):
+		for x in range(sz):
+			if mask[y * sz + x] == 0:
+				img.set_pixel(x, y, Color(0, 0, 0, 0))
+				continue
+			var edge := false
+			for off in [[-3, 0], [3, 0], [0, -3], [0, 3], [-2, -2], [2, 2], [-2, 2], [2, -2]]:
+				var nx: int = clampi(x + off[0], 0, sz - 1)
+				var ny: int = clampi(y + off[1], 0, sz - 1)
+				if mask[ny * sz + nx] == 0:
+					edge = true
+					break
+			if edge:
+				img.set_pixel(x, y, Color(0.13, 0.12, 0.14, 1.0))  # baked ink contour
+			else:
+				# flat tone + sparse leaf ticks (hash-based short strokes)
+				var h := fmod(sin(float(x) * 12.9898 + float(y) * 78.233) * 43758.5453, 1.0)
+				var tick := absf(h) > 0.965
+				var shade := 0.82 if tick else (0.96 + 0.04 * sin(float(x + y) * 0.05))
+				img.set_pixel(x, y, Color(shade, shade, shade, 1.0))
+	return ImageTexture.create_from_image(img)
 
 func _flat_mat(mat_name: String) -> StandardMaterial3D:
 	if _flat_mats.has(mat_name):
@@ -111,10 +193,16 @@ func _build_environment() -> void:
 
 # ================= terrain =================
 static func terrain_h(x: float, z: float) -> float:
-	# gentle clearing bowl rising toward the back
-	var h := 0.9 * sin(x * 0.055 + 1.3) * cos(z * 0.045)
-	h += 2.4 * exp(-pow((z + 95.0) / 60.0, 2.0))  # back rise toward mid forest
-	h += 0.35 * sin(x * 0.21) * sin(z * 0.17)
+	# rolling clearing: swale along the trail, flanking mounds, back rise
+	var h := 1.6 * sin(x * 0.045 + 1.3) * cos(z * 0.035)
+	h += 4.6 * exp(-pow((z + 95.0) / 55.0, 2.0))   # back rise toward mid forest
+	h += 1.1 * sin(x * 0.10 + 0.7) * sin(z * 0.085) # medium undulation
+	h += 0.35 * sin(x * 0.21) * sin(z * 0.17)       # small detail
+	# flanking mounds that grow with distance (frame the valley)
+	h += 2.0 * exp(-pow((x + 42.0) / 26.0, 2.0)) * clampf(-z / 60.0, 0.0, 1.5)
+	h += 1.6 * exp(-pow((x - 38.0) / 24.0, 2.0)) * clampf(-z / 70.0, 0.0, 1.5)
+	# the trail runs in a soft swale (reads as a carved path, not a decal)
+	h -= 1.0 * exp(-pow(_path_dist(x, z) / 7.0, 2.0)) * clampf((z + 80.0) / 100.0, 0.0, 1.0)
 	return h
 
 static func _path_dist(x: float, z: float) -> float:
@@ -125,7 +213,7 @@ func _build_terrain() -> void:
 	var st := SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	var size := 240.0
-	var steps := 72
+	var steps := 104
 	var half := size * 0.5
 	for iz in range(steps):
 		for ix in range(steps):
@@ -166,49 +254,131 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 	var root := Node3D.new()
 	root.position = pos
 	add_child(root)
-	# tapered trunk: stacked cylinders with slight lean
+	# single tapered trunk (no stack seams) with a gentle lean + knotted branches
 	var trunk_m := _toon_mat("trunk")
 	var lean := Vector3(randf_range(-0.06, 0.06), 0, randf_range(-0.04, 0.04))
 	var seg_h := 2.2 * s
-	for i in range(3):
-		var c := MeshInstance3D.new()
-		var cyl := CylinderMesh.new()
-		cyl.top_radius = (0.42 - 0.11 * i) * s
-		cyl.bottom_radius = (0.55 - 0.11 * i) * s
-		cyl.height = seg_h
-		c.mesh = cyl
-		c.material_override = trunk_m
-		c.position = Vector3(lean.x * i * seg_h, seg_h * (0.5 + i), lean.z * i * seg_h)
-		root.add_child(c)
-	# root flare
-	for a in range(5):
+	var trunk_h := seg_h * 2.1
+	var c := MeshInstance3D.new()
+	var cyl := CylinderMesh.new()
+	cyl.top_radius = 0.26 * s
+	cyl.bottom_radius = 0.62 * s
+	cyl.height = trunk_h
+	c.mesh = cyl
+	c.material_override = trunk_m
+	c.position = Vector3(lean.x * trunk_h * 0.5, trunk_h * 0.5, lean.z * trunk_h * 0.5)
+	c.rotation = Vector3(lean.z * 0.9, 0.0, -lean.x * 0.9)
+	root.add_child(c)
+	# root flare: tapered spurs (ink-drawn roots, no bubble caps)
+	for a in range(7):
 		var r := MeshInstance3D.new()
-		var rm := CapsuleMesh.new()
-		rm.radius = 0.16 * s
-		rm.height = 1.7 * s
+		var rm := CylinderMesh.new()
+		rm.bottom_radius = randf_range(0.14, 0.22) * s
+		rm.top_radius = 0.03 * s
+		rm.height = randf_range(1.5, 2.3) * s
 		r.mesh = rm
 		r.material_override = trunk_m
-		var ang := TAU * a / 5.0 + randf() * 0.5
-		r.position = Vector3(cos(ang) * 0.7 * s, 0.18 * s, sin(ang) * 0.7 * s)
-		r.rotation = Vector3(deg_to_rad(80), -ang, 0)
+		var ang := TAU * a / 7.0 + randf() * 0.4
+		r.position = Vector3(cos(ang) * 0.9 * s, 0.10 * s, sin(ang) * 0.9 * s)
+		r.rotation = Vector3(deg_to_rad(randf_range(84.0, 97.0)), -ang, 0)
 		root.add_child(r)
-	# foliage blobs
-	var fol_m := _toon_mat(foliage_key)
-	var crown_y := seg_h * 3.1
-	for b in range(6):
-		var f := MeshInstance3D.new()
-		var sm := SphereMesh.new()
-		var rr := randf_range(2.2, 3.4) * s
-		sm.radius = rr
-		sm.height = rr * 1.4
-		f.mesh = sm
-		f.material_override = fol_m
-		var ang2 := TAU * b / 6.0
-		f.position = Vector3(
-			lean.x * 3.0 * seg_h + cos(ang2) * randf_range(1.0, 2.2) * s,
-			crown_y + randf_range(-0.7, 1.4) * s,
-			lean.z * 3.0 * seg_h + sin(ang2) * randf_range(0.8, 1.8) * s)
-		root.add_child(f)
+	# branch stubs (knots read as cut limbs, not floating ovals)
+	for k in range(3):
+		var kn := MeshInstance3D.new()
+		var ks := CylinderMesh.new()
+		ks.bottom_radius = randf_range(0.09, 0.13) * s
+		ks.top_radius = 0.03 * s
+		ks.height = randf_range(0.5, 0.8) * s
+		kn.mesh = ks
+		kn.material_override = trunk_m
+		var ka := randf() * TAU
+		var kh := randf_range(0.30, 0.60) * trunk_h
+		var kw := lerpf(0.55, 0.28, kh / trunk_h) * s
+		kn.position = Vector3(cos(ka) * kw + lean.x * kh, kh, sin(ka) * kw + lean.z * kh)
+		kn.rotation = Vector3(deg_to_rad(randf_range(55.0, 75.0)), -ka, 0)
+		root.add_child(kn)
+	# Moebius anatomy: recursive limbs — the canopy EMERGES from clumps at
+	# branch tips (asymmetric silhouette, sky gaps, visible wood inside)
+	var top := Vector3(lean.x * trunk_h, trunk_h * 0.96, lean.z * trunk_h)
+	var canopy_mid := trunk_h + 1.6 * s
+	var n_limbs := 4 if s >= 2.0 else 3
+	for li in range(n_limbs):
+		var la := TAU * li / n_limbs + randf() * 0.7
+		var ldir := Vector3(cos(la) * 0.75, randf_range(0.55, 1.0), sin(la) * 0.75).normalized()
+		if s >= 2.0 and li == 0:
+			# hero trees: first limb is the low bough over the valley side
+			ldir = Vector3(randf_range(-0.3, 0.3), 0.30, -1.0).normalized()
+		_limb(root, top, ldir, 2.6 * s, 0.30 * s, 1, s, foliage_key, canopy_mid)
+
+# Recursive tapered limb; at depth 0 the tip carries a leaf-clump cluster.
+func _limb(root: Node3D, from: Vector3, dir: Vector3, length: float,
+		radius: float, depth: int, s: float, foliage_key: String,
+		canopy_mid: float) -> void:
+	var to := from + dir * length
+	var seg := MeshInstance3D.new()
+	var cyl := CylinderMesh.new()
+	cyl.bottom_radius = radius
+	cyl.top_radius = radius * 0.5
+	cyl.height = length
+	seg.mesh = cyl
+	seg.material_override = _toon_mat("trunk")
+	seg.position = (from + to) * 0.5
+	seg.quaternion = Quaternion(Vector3.UP, dir)
+	root.add_child(seg)
+	# rótula que oculta el culote plano del cilindro en la unión
+	var joint := MeshInstance3D.new()
+	var js := SphereMesh.new()
+	js.radius = radius * 0.85
+	js.height = radius * 1.7
+	joint.mesh = js
+	joint.material_override = _toon_mat("trunk")
+	joint.position = from
+	root.add_child(joint)
+	if depth <= 0:
+		var tone := foliage_key if to.y > canopy_mid else "foliage_dark"
+		_card_shell(root, to, 1.7 * s, 1.3 * s, 6, 2.1 * s, _fol_mat(tone), -0.6, 1.0)
+		return
+	for k in range(randi_range(2, 3)):
+		var axis := Vector3(randf_range(-1, 1), randf_range(-0.2, 1), randf_range(-1, 1)).normalized()
+		var rot_axis := axis.cross(dir)
+		if rot_axis.length() < 0.05:
+			rot_axis = Vector3.RIGHT
+		var ndir := dir.rotated(rot_axis.normalized(), randf_range(0.35, 0.8))
+		ndir = (ndir + Vector3.UP * 0.22).normalized()
+		_limb(root, to, ndir, length * 0.7, radius * 0.55, depth - 1, s, foliage_key, canopy_mid)
+
+# Builds one mesh of n tangent quads on an ellipsoid shell around `center`
+# (local coords). All 4 verts of a card share the RADIAL normal.
+func _card_shell(parent: Node3D, center: Vector3, rx: float, ry: float,
+		n_cards: int, card_size: float, mat: ShaderMaterial,
+		band_lo: float, band_hi: float) -> void:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	for i in range(n_cards):
+		var u := randf_range(band_lo, band_hi)
+		var a := randf() * TAU
+		var ring := sqrt(maxf(1.0 - u * u, 0.0))
+		var p := center + Vector3(cos(a) * ring * rx, u * ry, sin(a) * ring * rx * 0.85)
+		var nrm := (p - center).normalized()
+		var ref_up := Vector3.UP if absf(nrm.y) < 0.92 else Vector3.RIGHT
+		var t1 := nrm.cross(ref_up).normalized().rotated(nrm, randf() * TAU)
+		var t2 := nrm.cross(t1).normalized()
+		var hs := card_size * 0.5 * randf_range(0.8, 1.1)
+		# crossed pair: tangent quad + perpendicular quad — no edge-on slivers
+		var quads := [
+			[p - t1 * hs - t2 * hs, p + t1 * hs - t2 * hs, p + t1 * hs + t2 * hs, p - t1 * hs + t2 * hs],
+			[p - t2 * hs - nrm * hs * 0.7, p + t2 * hs - nrm * hs * 0.7, p + t2 * hs + nrm * hs * 0.7, p - t2 * hs + nrm * hs * 0.7],
+		]
+		for q in quads:
+			for v in [[q[0], Vector2(0, 0)], [q[1], Vector2(1, 0)], [q[2], Vector2(1, 1)],
+					[q[0], Vector2(0, 0)], [q[2], Vector2(1, 1)], [q[3], Vector2(0, 1)]]:
+				st.set_normal(nrm)
+				st.set_uv(v[1])
+				st.add_vertex(v[0])
+	var mi := MeshInstance3D.new()
+	mi.mesh = st.commit()
+	mi.material_override = mat
+	parent.add_child(mi)
 
 func _build_hero_trees() -> void:
 	seed(7)
@@ -220,6 +390,70 @@ func _build_hero_trees() -> void:
 	_tree(Vector3(-9, terrain_h(-9, -30), -30), 1.1, "foliage_dark")
 	_tree(Vector3(11, terrain_h(11, -38), -38), 1.3, "foliage")
 	_tree(Vector3(20, terrain_h(20, -55), -55), 1.0, "foliage_dark")
+	# pinos en el flanco derecho (riman con las coníferas del keyframe)
+	_tree_pine(Vector3(30, terrain_h(30, -50), -50), 1.5)
+	_tree_pine(Vector3(38, terrain_h(38, -66), -66), 1.8)
+	_tree_pine(Vector3(25, terrain_h(25, -78), -78), 1.2)
+	# jacaranda junto al sendero (acento lavanda — resuena con lo aether)
+	_tree_jacaranda(Vector3(-19, terrain_h(-19, -33), -33), 1.4)
+
+func _tree_pine(pos: Vector3, s: float) -> void:
+	var root := Node3D.new()
+	root.position = pos
+	add_child(root)
+	var trunk_m := _toon_mat("trunk")
+	var h := 7.0 * s
+	var c := MeshInstance3D.new()
+	var cyl := CylinderMesh.new()
+	cyl.bottom_radius = 0.30 * s
+	cyl.top_radius = 0.10 * s
+	cyl.height = h
+	c.mesh = cyl
+	c.material_override = trunk_m
+	c.position = Vector3(0, h * 0.5, 0)
+	root.add_child(c)
+	# tiers cónicos: anchos abajo, cerrando hacia la punta
+	for t in range(4):
+		var f := float(t)
+		var ty := h * (0.35 + 0.62 * f / 4.0)
+		var tr := (1.9 - 0.38 * f) * s
+		_card_shell(root, Vector3(0, ty, 0), tr, 0.85 * s, 7 - t,
+			1.7 * s * (1.0 - 0.12 * f), _fol_mat("pine"), -0.3, 1.0)
+	_card_shell(root, Vector3(0, h * 1.02, 0), 0.5 * s, 0.7 * s, 3, 1.1 * s,
+		_fol_mat("pine"), -0.2, 1.0)
+
+func _tree_jacaranda(pos: Vector3, s: float) -> void:
+	var root := Node3D.new()
+	root.position = pos
+	add_child(root)
+	var trunk_m := _toon_mat("trunk")
+	var h := 4.6 * s
+	var main := MeshInstance3D.new()
+	var mc := CylinderMesh.new()
+	mc.bottom_radius = 0.34 * s
+	mc.top_radius = 0.16 * s
+	mc.height = h * 0.65
+	main.mesh = mc
+	main.material_override = trunk_m
+	main.position = Vector3(0, h * 0.32, 0)
+	root.add_child(main)
+	# bifurcación: 3 brazos abiertos sosteniendo el paraguas
+	for bi in range(3):
+		var br := MeshInstance3D.new()
+		var bm := CylinderMesh.new()
+		bm.bottom_radius = 0.14 * s
+		bm.top_radius = 0.04 * s
+		bm.height = h * 0.62
+		br.mesh = bm
+		br.material_override = trunk_m
+		var ba := TAU * bi / 3.0 + randf() * 0.5
+		br.position = Vector3(cos(ba) * 0.7 * s, h * 0.72, sin(ba) * 0.7 * s)
+		br.rotation = Vector3(deg_to_rad(randf_range(20.0, 34.0)), -ba, 0)
+		root.add_child(br)
+	# paraguas ancho y plano de flor
+	var top := Vector3(0, h * 1.02, 0)
+	_card_shell(root, top, 3.6 * s, 1.15 * s, 20, 2.4 * s, _fol_mat("bloom"), -0.05, 1.0)
+	_card_shell(root, top, 3.8 * s, 1.15 * s, 12, 2.2 * s, _fol_mat("bloom_dark"), -0.9, 0.1)
 
 func _build_mid_forest() -> void:
 	# rolling forest masses: big soft blobs, single mid tone (ink already greys there)
@@ -309,24 +543,84 @@ func _build_core() -> void:
 	_core_mat.emission_enabled = true
 	_core_mat.emission = Color("#e0304a")
 	_core_mat.emission_energy_multiplier = 1.6
+	_core_mat.vertex_color_use_as_albedo = true
+	_core_mat.cull_mode = BaseMaterial3D.CULL_DISABLED
 	seed(13)
-	for i in range(7):
-		var shard := MeshInstance3D.new()
-		var prism := PrismMesh.new()
-		var s := randf_range(1.2, 3.4)
-		prism.size = Vector3(0.7 * s, 3.2 * s, 0.7 * s)
-		shard.mesh = prism
-		shard.material_override = _core_mat
-		var ang := TAU * i / 7.0
-		shard.position = Vector3(cos(ang) * randf_range(0.3, 1.6), 1.2 * s, sin(ang) * randf_range(0.3, 1.4))
-		shard.rotation = Vector3(randf_range(-0.5, 0.5), ang, randf_range(-0.35, 0.35))
-		root.add_child(shard)
+	# faceted crystal cluster — deliberate composition (keyframe geometry):
+	# one dominant spike, two mid, three short leaning outward. [x, z, h, tilt]
+	var spec := [
+		[0.0, 0.0, 8.5, 0.0],
+		[1.5, 0.8, 6.0, 0.16],
+		[-1.4, 1.0, 5.2, 0.20],
+		[0.9, -1.5, 3.6, 0.30],
+		[-2.1, -0.6, 2.8, 0.36],
+		[2.5, -0.3, 2.1, 0.42],
+	]
+	for e in spec:
+		var radial := Vector3(e[0], 0, e[1])
+		var tangent := Vector3(-radial.z, 0, radial.x)
+		if tangent.length() < 0.05:
+			tangent = Vector3.RIGHT
+		_crystal(root, Vector3(e[0], 0, e[1]), e[2], 0.45 + e[2] * 0.075,
+			tangent, e[3])
+	# fragmento caído
+	_crystal(root, Vector3(-2.9, 0.15, 1.3), 2.0, 0.35, Vector3(0, 0, 1), deg_to_rad(95.0))
+	var disc := MeshInstance3D.new()
+	var dm := CylinderMesh.new()
+	dm.top_radius = 5.0
+	dm.bottom_radius = 5.0
+	dm.height = 0.08
+	disc.mesh = dm
+	var stain := StandardMaterial3D.new()
+	stain.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	stain.albedo_color = Color("#8a3440")
+	disc.material_override = stain
+	disc.position = Vector3(0, 0.05, 0)
+	root.add_child(disc)
 	_core_light = OmniLight3D.new()
 	_core_light.light_color = Color("#ff2440")
 	_core_light.omni_range = 14.0
 	_core_light.light_energy = 2.2
 	_core_light.position = Vector3(0, 2.0, 0)
 	root.add_child(_core_light)
+
+# Prismatic crystal: irregular pentagon column + pyramid cap, flat facet
+# normals + per-facet shade (vertex color) so the cel ramp reads every face.
+func _crystal(root: Node3D, base_pos: Vector3, h: float, r: float,
+		tilt_axis: Vector3, tilt: float) -> void:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var sides := 5
+	var pts_lo: Array = []
+	var pts_hi: Array = []
+	var shoulder := h * randf_range(0.55, 0.75)
+	for i in range(sides):
+		var a := TAU * i / sides + randf_range(-0.15, 0.15)
+		var rr := r * randf_range(0.75, 1.15)
+		pts_lo.append(Vector3(cos(a) * rr, -0.4, sin(a) * rr))
+		pts_hi.append(Vector3(cos(a) * rr * 0.8, shoulder, sin(a) * rr * 0.8))
+	var apex := Vector3(randf_range(-0.15, 0.15) * r, h, randf_range(-0.15, 0.15) * r)
+	for i in range(sides):
+		var j := (i + 1) % sides
+		_facet(st, [pts_lo[i], pts_lo[j], pts_hi[j], pts_hi[i]])
+		_facet(st, [pts_hi[i], pts_hi[j], apex])
+	var mi := MeshInstance3D.new()
+	mi.mesh = st.commit()
+	mi.material_override = _core_mat
+	mi.position = base_pos
+	if absf(tilt) > 0.001:
+		mi.transform.basis = Basis(tilt_axis.normalized(), tilt)
+	root.add_child(mi)
+
+func _facet(st: SurfaceTool, pts: Array) -> void:
+	var n: Vector3 = ((pts[1] - pts[0]).cross(pts[2] - pts[0])).normalized()
+	var shade := randf_range(0.72, 1.0)
+	var tris := [[0, 1, 2]] if pts.size() == 3 else [[0, 1, 2], [0, 2, 3]]
+	for t in tris:
+		for idx in t:
+			st.set_normal(n)
+			st.set_color(Color(shade, shade, shade))
+			st.add_vertex(pts[idx])
 
 # ================= traveler =================
 func _build_traveler() -> void:
@@ -365,6 +659,7 @@ func attach_post(cam: Camera3D) -> void:
 	quad.extra_cull_margin = 16384.0
 	cam.add_child(quad)
 	quad.position = Vector3(0, 0, -1)
+	_cam_ref = cam
 
 # ================= presets =================
 func apply_time_preset(preset_name: String) -> void:
@@ -381,7 +676,16 @@ func apply_time_preset(preset_name: String) -> void:
 	_sun.light_color = p["sun_color"]
 	_sun.light_energy = p["sun_energy"]
 	_sun.rotation_degrees = Vector3(p["sun_elev_deg"], p["sun_azim_deg"], 0)
+	_sun.shadow_opacity = p["shadow_opacity"]
 	# object palettes
+	for key in ["terrain", "trunk", "foliage", "foliage_dark", "forest_mass"]:
+		_toon_mat(key).set_shader_parameter("rim_color", p["rim"])
+		_toon_mat(key).set_shader_parameter("rim_strength", p["rim_strength"])
+	for key in ["foliage", "foliage_dark", "pine", "bloom", "bloom_dark"]:
+		var fm := _fol_mat(key)
+		fm.set_shader_parameter("albedo_color", p[key])
+		fm.set_shader_parameter("rim_color", p["rim"])
+		fm.set_shader_parameter("rim_strength", p["rim_strength"] * 0.6)
 	_toon_mat("terrain").set_shader_parameter("albedo_color", p["grass"])
 	_toon_mat("trunk").set_shader_parameter("albedo_color", p["trunk"])
 	_toon_mat("foliage").set_shader_parameter("albedo_color", p["foliage"])
@@ -390,10 +694,25 @@ func apply_time_preset(preset_name: String) -> void:
 	_flat_mat("mountain").albedo_color = p["mountain"]
 	_flat_mat("mountain_far").albedo_color = p["mountain_far"]
 	_flat_mat("island").albedo_color = p["island"]
+	_core_mat.albedo_color = p["core_albedo"]
+	_core_mat.emission = p["core_glow"]
 	_core_mat.emission_energy_multiplier = p["core_emission"]
-	_core_light.light_energy = 1.4 + p["core_emission"]
+	_core_light.light_color = p["core_glow"]
+	_core_light.light_energy = 1.2 + p["core_emission"]
 	# post uniforms (layer 3 carries the hour: aerial + glow color)
 	if _post_mat != null:
 		_post_mat.set_shader_parameter("aerial_color", p["aerial"])
 		_post_mat.set_shader_parameter("glow_color", p["glow"])
 		_post_mat.set_shader_parameter("glow_strength", p["glow_strength"])
+		# god rays: project the sun into screen space (static gate camera)
+		if _cam_ref != null:
+			var travel: Vector3 = -_sun.global_transform.basis.z
+			var sun_pos: Vector3 = _cam_ref.global_position - travel * 400.0
+			if _cam_ref.is_position_behind(sun_pos):
+				_post_mat.set_shader_parameter("ray_strength", 0.0)
+			else:
+				var vp_size: Vector2 = _cam_ref.get_viewport().get_visible_rect().size
+				var sp: Vector2 = _cam_ref.unproject_position(sun_pos) / vp_size
+				_post_mat.set_shader_parameter("sun_screen", sp)
+				_post_mat.set_shader_parameter("ray_color", p["ray_color"])
+				_post_mat.set_shader_parameter("ray_strength", p["ray_strength"])
