@@ -41,7 +41,7 @@ const PRESETS := {
 		"mountain": Color("#b9cbd9"), "mountain_far": Color("#c9d7e2"),
 		"island": Color("#c3d2de"),
 		"core_albedo": Color("#a8182e"), "core_glow": Color("#c81f3a"),
-		"core_emission": 1.7,
+		"core_emission": 1.35,
 	},
 	"dusk": {
 		"sky_top": Color("#3f4677"), "sky_horizon": Color("#a98fb4"),
@@ -543,31 +543,28 @@ func _build_core() -> void:
 	_core_mat.emission_enabled = true
 	_core_mat.emission = Color("#e0304a")
 	_core_mat.emission_energy_multiplier = 1.6
+	_core_mat.vertex_color_use_as_albedo = true
+	_core_mat.cull_mode = BaseMaterial3D.CULL_DISABLED
 	seed(13)
-	# crystal cluster: tall spikes center, shorter tilted-outward ring (keyframe geometry)
-	for i in range(9):
-		var shard := MeshInstance3D.new()
-		var prism := PrismMesh.new()
-		var rad := randf_range(0.2, 2.4)
-		var s := clampf(3.4 - rad * 1.0, 0.9, 3.4) * randf_range(0.8, 1.1)
-		prism.size = Vector3(0.5 * s, 3.4 * s, 0.5 * s)
-		shard.mesh = prism
-		shard.material_override = _core_mat
-		var ang := TAU * i / 9.0 + randf() * 0.4
-		var tilt := rad * 0.30 + randf_range(-0.08, 0.08)
-		var tangent := Vector3(-sin(ang), 0, cos(ang))
-		shard.transform.basis = Basis(tangent, tilt)
-		shard.position = Vector3(cos(ang) * rad, 1.05 * s, sin(ang) * rad)
-		root.add_child(shard)
-	# fallen shard + stained ground
-	var fallen := MeshInstance3D.new()
-	var fp := PrismMesh.new()
-	fp.size = Vector3(0.5, 2.2, 0.5)
-	fallen.mesh = fp
-	fallen.material_override = _core_mat
-	fallen.position = Vector3(-2.8, 0.35, 1.2)
-	fallen.rotation = Vector3(0, 0.7, deg_to_rad(102.0))
-	root.add_child(fallen)
+	# faceted crystal cluster — deliberate composition (keyframe geometry):
+	# one dominant spike, two mid, three short leaning outward. [x, z, h, tilt]
+	var spec := [
+		[0.0, 0.0, 8.5, 0.0],
+		[1.5, 0.8, 6.0, 0.16],
+		[-1.4, 1.0, 5.2, 0.20],
+		[0.9, -1.5, 3.6, 0.30],
+		[-2.1, -0.6, 2.8, 0.36],
+		[2.5, -0.3, 2.1, 0.42],
+	]
+	for e in spec:
+		var radial := Vector3(e[0], 0, e[1])
+		var tangent := Vector3(-radial.z, 0, radial.x)
+		if tangent.length() < 0.05:
+			tangent = Vector3.RIGHT
+		_crystal(root, Vector3(e[0], 0, e[1]), e[2], 0.45 + e[2] * 0.075,
+			tangent, e[3])
+	# fragmento caído
+	_crystal(root, Vector3(-2.9, 0.15, 1.3), 2.0, 0.35, Vector3(0, 0, 1), deg_to_rad(95.0))
 	var disc := MeshInstance3D.new()
 	var dm := CylinderMesh.new()
 	dm.top_radius = 5.0
@@ -586,6 +583,44 @@ func _build_core() -> void:
 	_core_light.light_energy = 2.2
 	_core_light.position = Vector3(0, 2.0, 0)
 	root.add_child(_core_light)
+
+# Prismatic crystal: irregular pentagon column + pyramid cap, flat facet
+# normals + per-facet shade (vertex color) so the cel ramp reads every face.
+func _crystal(root: Node3D, base_pos: Vector3, h: float, r: float,
+		tilt_axis: Vector3, tilt: float) -> void:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var sides := 5
+	var pts_lo: Array = []
+	var pts_hi: Array = []
+	var shoulder := h * randf_range(0.55, 0.75)
+	for i in range(sides):
+		var a := TAU * i / sides + randf_range(-0.15, 0.15)
+		var rr := r * randf_range(0.75, 1.15)
+		pts_lo.append(Vector3(cos(a) * rr, -0.4, sin(a) * rr))
+		pts_hi.append(Vector3(cos(a) * rr * 0.8, shoulder, sin(a) * rr * 0.8))
+	var apex := Vector3(randf_range(-0.15, 0.15) * r, h, randf_range(-0.15, 0.15) * r)
+	for i in range(sides):
+		var j := (i + 1) % sides
+		_facet(st, [pts_lo[i], pts_lo[j], pts_hi[j], pts_hi[i]])
+		_facet(st, [pts_hi[i], pts_hi[j], apex])
+	var mi := MeshInstance3D.new()
+	mi.mesh = st.commit()
+	mi.material_override = _core_mat
+	mi.position = base_pos
+	if absf(tilt) > 0.001:
+		mi.transform.basis = Basis(tilt_axis.normalized(), tilt)
+	root.add_child(mi)
+
+func _facet(st: SurfaceTool, pts: Array) -> void:
+	var n: Vector3 = ((pts[1] - pts[0]).cross(pts[2] - pts[0])).normalized()
+	var shade := randf_range(0.72, 1.0)
+	var tris := [[0, 1, 2]] if pts.size() == 3 else [[0, 1, 2], [0, 2, 3]]
+	for t in tris:
+		for idx in t:
+			st.set_normal(n)
+			st.set_color(Color(shade, shade, shade))
+			st.add_vertex(pts[idx])
 
 # ================= traveler =================
 func _build_traveler() -> void:
