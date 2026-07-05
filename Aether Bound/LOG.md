@@ -90,7 +90,18 @@ sobre cascarón con normales radiales (`toon_foliage.gdshader` +
 paraguas lavanda; claves de preset pine/bloom/bloom_dark por hora). El look
 Moebius de copas festoneadas quedó funcionando en las dos horas.
 
-## [2026-07-04] design | Speck: anatomía cuadrúpeda RATIFICADA
+## [2026-07-04] feature | Golden scene RONDA 2 CERRADA — look capturado como sistema
+Director aprueba ("buen punto; después fine-tuning"). Entregado sobre la v0:
+color alineado a keyframes (valor de acuarela: sombras luminosas, ambient_lift
+0.24, shadow_opacity por hora) · terreno con relieve (vaguada+montículos) ·
+árboles con anatomía Moebius (esqueleto recursivo de ramas, grumos del sprite
+del director SOLO en puntas, 3 especies: caducifolio/pino/jacaranda) ·
+God-Core facetado (columnas prismáticas + facetas con banda propia) · god
+rays · regla nocturna teal. **El look es ahora un sistema replicable:**
+melancolia_post + toon_golden + toon_foliage + foliage_clump.png + tabla
+PRESETS. Gates: test_core ALL_PASS, FPS 432-530 (≥60). Merge a master.
+Fine-tuning pendiente anotado en B11: corteza/curvatura de ramas héroe en
+close-up, facetado del cristal de cerca, cel banding del terreno lejano.
 Los re-rolls v2 de E2/E3 derivaron a humanoide/bípedo (E2 uncanny, E3 raptor
 elegante pero otra criatura) → DESCARTADOS, no se ingestan. Decisión del
 director: **cuadrúpeda en los 3 estadios** (la alternativa "se yergue en E3"
