@@ -94,6 +94,21 @@ Qué obliga a testear: capa 1 (línea muere con la distancia), capa 2 (bandas
 jitter), capa 3 (aire con peso + glowing edges), capa 4 (grano) + espacio
 vacío protagonista y rojo = máxima saturación del frame ([[Art Bible]]).
 
+## 5 — Speck: los 3 estadios (B9)
+
+Forma base **ratificada 2026-07-04: salamandra/axolotl luminosa** (rima con la
+Muda; branquias-antena erizables; los cristales del estadio 3 crecen naturales
+en lomo/cresta). Regla clave: el estadio 3 usa **la misma geometría cristalina
+del God-Core** del keyframe ratificado — la revelación de [[El Mundo y la Muda]]
+cosida en el arte. Los 3 estadios comparten ADN de silueta y ojos ([[Speck]]).
+
+```
+Creature concept sheet, three growth stages side by side on a plain warm paper background, of "Speck" — a small bio-construct guardian creature built by a lost divine civilization: living technology that breathes, part grown and part crafted, luminous amphibian salamander-axolotl base form. Left, stage one "the hatchling": small enough to carry in one arm, plump and clumsy, oversized curious eyes, soft translucent skin in pale mint-grey with faint teal aether seams glowing gently along the spine like circuitry grown from flesh, external gill-antennae like an axolotl's frills that perk up and bristle, a tiny erectile crest; she sniffs the air, sneezing little sparks. Center, stage two "the adolescent": wolf-sized, gangly, limbs too long, caught awkward mid-step; the aether seams glow brighter and branch across her sides, the gill-antennae are longer and expressive, and small bridge-like arcs of light connect the crest spines. Right, stage three "the mirror": the same creature grown lean and quietly majestic, but her patterns have crystallized — deep saturated red crystal formations growing along her spine and crest, the exact same crystalline geometry as a God-Core formation, beautiful and unsettling at once: a beloved friend wearing the colors of danger. All three stages share the same silhouette DNA and the same warm dark eyes. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain; the only saturated colors in the sheet are the teal aether seams and the stage-three red crystals; style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: tender, curious, a little melancholic. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime style, no cute mascot Pokémon look, no dog or cat anatomy, no dragon, no neon glow except the aether seams and red crystals.
+```
+
+Al evaluar: comparar el estadio 3 contra `keyframe-wilds-dawn-v1.png` — los
+cristales deben rimar con el core del paisaje.
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

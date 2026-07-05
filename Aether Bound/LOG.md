@@ -49,3 +49,17 @@ diorama nuevo diminuto que persigue un keyframe ratificado; se hereda solo
 tech agnóstica de look (FSM, sistema MultiMesh, mecanismo de presets, harness
 A/B), nunca paletas/materiales/post viejos. Briefs 4 ("Wilds at dawn") y 4b
 (variante atardecer) escritos en [[Briefs de Concept Art]]. B11 → en curso.
+
+## [2026-07-04] ingest | Keyframes Wilds dawn/dusk → 90-Raw/concept/
+`keyframe-wilds-dawn-v1.png` + `keyframe-wilds-dusk-v1.png` archivados.
+Evaluación 5 ejes: línea-que-muere-con-la-distancia y rojo-único-saturado
+demostrados de libro; composición idéntica entre horas (gate A/B viable).
+Pendiente de ratificación del director: (a) el par como criterio de
+aceptación de la golden scene; (b) decisión nueva que trajo el dusk — filos
+neón teal en crestas de noche (herencia Sable nocturna, no estaba en brief).
+
+## [2026-07-04] design | Speck: forma base ratificada + brief de 3 estadios
+RATIFICADO: Speck = salamandra/axolotl luminosa (branquias-antena, cresta
+erizable; rima con la Muda). Brief 5 escrito en [[Briefs de Concept Art]] —
+regla nueva: los cristales del estadio 3 usan la misma geometría del God-Core
+del keyframe (revelación retroactiva cosida en el arte). Avanza B9.
