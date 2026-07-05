@@ -120,10 +120,16 @@ func _build_environment() -> void:
 
 # ================= terrain =================
 static func terrain_h(x: float, z: float) -> float:
-	# gentle clearing bowl rising toward the back
-	var h := 0.9 * sin(x * 0.055 + 1.3) * cos(z * 0.045)
-	h += 2.4 * exp(-pow((z + 95.0) / 60.0, 2.0))  # back rise toward mid forest
-	h += 0.35 * sin(x * 0.21) * sin(z * 0.17)
+	# rolling clearing: swale along the trail, flanking mounds, back rise
+	var h := 1.6 * sin(x * 0.045 + 1.3) * cos(z * 0.035)
+	h += 4.6 * exp(-pow((z + 95.0) / 55.0, 2.0))   # back rise toward mid forest
+	h += 1.1 * sin(x * 0.10 + 0.7) * sin(z * 0.085) # medium undulation
+	h += 0.35 * sin(x * 0.21) * sin(z * 0.17)       # small detail
+	# flanking mounds that grow with distance (frame the valley)
+	h += 2.0 * exp(-pow((x + 42.0) / 26.0, 2.0)) * clampf(-z / 60.0, 0.0, 1.5)
+	h += 1.6 * exp(-pow((x - 38.0) / 24.0, 2.0)) * clampf(-z / 70.0, 0.0, 1.5)
+	# the trail runs in a soft swale (reads as a carved path, not a decal)
+	h -= 1.0 * exp(-pow(_path_dist(x, z) / 7.0, 2.0)) * clampf((z + 80.0) / 100.0, 0.0, 1.0)
 	return h
 
 static func _path_dist(x: float, z: float) -> float:
@@ -134,7 +140,7 @@ func _build_terrain() -> void:
 	var st := SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	var size := 240.0
-	var steps := 72
+	var steps := 104
 	var half := size * 0.5
 	for iz in range(steps):
 		for ix in range(steps):
@@ -201,34 +207,63 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		br.position = Vector3(cos(ba) * 0.9 * s, trunk_h * 0.82, sin(ba) * 0.9 * s)
 		br.rotation = Vector3(deg_to_rad(randf_range(28.0, 48.0)), -ba, 0)
 		root.add_child(br)
-	# root flare
-	for a in range(5):
+	# root flare (wider, more organic)
+	for a in range(7):
 		var r := MeshInstance3D.new()
 		var rm := CapsuleMesh.new()
-		rm.radius = 0.16 * s
-		rm.height = 1.7 * s
+		rm.radius = randf_range(0.12, 0.22) * s
+		rm.height = randf_range(1.5, 2.3) * s
 		r.mesh = rm
 		r.material_override = trunk_m
-		var ang := TAU * a / 5.0 + randf() * 0.5
-		r.position = Vector3(cos(ang) * 0.7 * s, 0.18 * s, sin(ang) * 0.7 * s)
-		r.rotation = Vector3(deg_to_rad(80), -ang, 0)
+		var ang := TAU * a / 7.0 + randf() * 0.4
+		r.position = Vector3(cos(ang) * 0.75 * s, 0.18 * s, sin(ang) * 0.75 * s)
+		r.rotation = Vector3(deg_to_rad(randf_range(72.0, 86.0)), -ang, 0)
 		root.add_child(r)
-	# foliage blobs
+	# trunk knots (hand-drawn lumpiness)
+	for k in range(3):
+		var kn := MeshInstance3D.new()
+		var ks := SphereMesh.new()
+		var kr := randf_range(0.14, 0.22) * s
+		ks.radius = kr
+		ks.height = kr * 1.6
+		kn.mesh = ks
+		kn.material_override = trunk_m
+		var ka := randf() * TAU
+		var kh := randf_range(0.30, 0.60) * trunk_h
+		var kw := lerpf(0.58, 0.30, kh / trunk_h) * s
+		kn.position = Vector3(cos(ka) * kw + lean.x * kh, kh, sin(ka) * kw + lean.z * kh)
+		root.add_child(kn)
+	# two-tone canopy: wide dark lower tier + domed light upper tier
 	var fol_m := _toon_mat(foliage_key)
+	var fol_low := _toon_mat("foliage_dark")
 	var crown_y := seg_h * 3.1
-	for b in range(6):
+	for b in range(5):
 		var f := MeshInstance3D.new()
 		var sm := SphereMesh.new()
-		var rr := randf_range(2.2, 3.4) * s
+		var rr := randf_range(2.2, 3.0) * s
 		sm.radius = rr
-		sm.height = rr * 1.4
+		sm.height = rr * 1.25
+		f.mesh = sm
+		f.material_override = fol_low
+		var ang2 := TAU * b / 5.0 + randf() * 0.5
+		f.position = Vector3(
+			lean.x * 3.0 * seg_h + cos(ang2) * randf_range(1.4, 2.3) * s,
+			crown_y - 0.1 * s + randf_range(-0.3, 0.4) * s,
+			lean.z * 3.0 * seg_h + sin(ang2) * randf_range(1.2, 2.2) * s)
+		root.add_child(f)
+	for b in range(4):
+		var f := MeshInstance3D.new()
+		var sm := SphereMesh.new()
+		var rr := randf_range(1.9, 2.7) * s
+		sm.radius = rr
+		sm.height = rr * 1.35
 		f.mesh = sm
 		f.material_override = fol_m
-		var ang2 := TAU * b / 6.0
+		var ang2 := TAU * b / 4.0 + randf() * 0.6
 		f.position = Vector3(
-			lean.x * 3.0 * seg_h + cos(ang2) * randf_range(1.0, 2.2) * s,
-			crown_y + randf_range(-0.7, 1.4) * s,
-			lean.z * 3.0 * seg_h + sin(ang2) * randf_range(0.8, 1.8) * s)
+			lean.x * 3.0 * seg_h + cos(ang2) * randf_range(0.7, 1.5) * s,
+			crown_y + randf_range(1.2, 2.2) * s,
+			lean.z * 3.0 * seg_h + sin(ang2) * randf_range(0.6, 1.3) * s)
 		root.add_child(f)
 
 func _build_hero_trees() -> void:
