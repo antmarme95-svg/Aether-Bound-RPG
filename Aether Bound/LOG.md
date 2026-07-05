@@ -109,3 +109,15 @@ supersalto/momentum del PRD-005 ya es la base técnica del link; orfandad
 mecánica máximamente legible (pierdes la verticalidad); quiebre de Dagna de
 los más fuertes. Página nueva [[Slice of Bond]]. Abierto: alcance (A2b).
 (En paralelo corre el Feature Loop de la golden scene en feat/golden-scene.)
+
+## [2026-07-04] feature | Golden scene v0 APROBADA en vivo — loop cerrado (PR→master)
+Diorama nuevo (claro + árboles héroe + core + 3 planos + presets dawn/dusk) +
+`melancolia_post.gdshader` (4 capas screen-space) + `toon_golden.gdshader`
+opaco + `autotest_golden` (A/B + modo --hold / Start-GoldenScene.bat).
+Director revisó en vivo: "mucho mejor" → cierre v0. Gates: test_core ALL_PASS,
+FPS 510/625 (≥60). **Evidencia ADR-002: las 4 capas corren en Godot a 8–10×
+el presupuesto.** Lecciones nuevas: el toon del prototipo escribe ALPHA (pase
+transparente → invisible a screen_texture); quads de post van en pase
+transparente; absf/abs en inferencias GDScript.
+**Ronda 2 abierta (gaps):** calidez+rayos del dawn · core como racimo de
+cristal · árboles nudosos sin costuras · bandas cel visibles.
