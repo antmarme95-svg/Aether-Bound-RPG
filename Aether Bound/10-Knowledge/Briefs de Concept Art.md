@@ -124,17 +124,32 @@ Creature concept sheet, front view and side view, of "Speck", stage one "the hat
 
 > **⚠ Historia de re-rolls:** los v2 (proporción con silueta de escala pero
 > sin fijar postura) derivaron a humanoide/bípedo → DESCARTADOS. Anatomía
-> ratificada: **cuadrúpeda los 3 estadios**. Usar los v3 de abajo, que parten
-> de las v1 con candado anti-bípedo. Lección: pedir proporciones sin fijar la
-> postura invita al modelo a re-anatomizar.
+> ratificada: **cuadrúpeda los 3 estadios**. Lección 1: pedir proporciones
+> sin fijar la postura invita al modelo a re-anatomizar. Lección 2 (decisión
+> de dirección): **editar sobre la chibi ancla la pose chibi** — para cambios
+> de proporción grandes, generar desde cero con la v1 solo como referencia de
+> cara/estilo. → Usar los **v4** de abajo (los v3 de edición quedan como
+> fallback histórico al final de esta sección).
 
-**5b-v3 — proporciones E2 (adjuntar `speck-estadio2-vinculo-v1.png`):**
+**5b-v4 — E2 desde cero, lámina naturalista (adjuntar `speck-estadio1-cria-v1.png` como referencia de personaje):**
+
+```
+Wildlife field-guide plate, hand-painted graphic novel watercolor on warm paper, of "Speck" stage two: an adolescent quadruped bio-construct salamander, the same creature as the attached hatchling reference — same face, same warm dark eyes, same axolotl gill-antennae frills, same pale mint-grey translucent skin with teal aether seams — but grown to the size of a large wolf. Main view: side profile walking on all four legs, spine parallel to the ground, caught mid-step with gangly awkward grace — legs and tail too long for her frame, adolescent and in-between. Second smaller view: three-quarter front, head tilted curious. A simple flat grey human silhouette stands beside the main view for scale: her back reaches the human's waist. The teal aether seams glow gently and branch along her sides; small arcs of teal light bridge the spines of her erectile crest. Art style: crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor, visible paper grain; the only saturated color is the teal glow. Mood: tender, clumsy, quietly ancient. Negative: no bipedal stance, no humanoid anatomy, no standing on two legs, no dragon, no Pokémon mascot look, no Genshin saturation, no photorealism.
+```
+
+**5c-v4 — E3 desde cero, lámina naturalista (adjuntar `speck-estadio3-espejo-v1.png` para cara/cristales + keyframe dawn para geometría del cristal):**
+
+```
+Wildlife field-guide plate, hand-painted graphic novel watercolor on warm paper, of "Speck" final stage, "the mirror": an adult quadruped bio-construct salamander, the same creature as the attached reference — same warm dark eyes, same gill-antennae frills, same pale mint-grey skin — now lean, elegant and quietly majestic, slightly larger than a wolf. Main view: side profile walking on all four legs, spine parallel to the ground, long graceful neck carried low and level, sweeping tail, slender strong legs moving with calm poise. Second smaller view: three-quarter front, gentle unchanged expression. A simple flat grey human silhouette stands beside the main view for scale: her back reaches the human's chest. Deep saturated red crystal formations grow along her spine and crest — the exact same crystalline geometry as the red God-Core in the attached landscape reference — beautiful and unsettling: a beloved friend wearing the colors of danger. Her teal aether seams flicker between teal and red. Art style: crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor, visible paper grain; the only saturated colors are the teal seams and the red crystals. Mood: serene, melancholic, still herself. Negative: no bipedal stance, no humanoid anatomy, no standing on two legs, no dragon, no raptor, no Pokémon mascot look, no Genshin saturation, no photorealism.
+```
+
+**[fallback histórico] 5b-v3 — proporciones E2 por edición (adjuntar `speck-estadio2-vinculo-v1.png`):**
 
 ```
 Keep this exact creature, face, eyes, seams, frills and art style. She stays a QUADRUPED salamander walking on four legs with animal anatomy — absolutely not humanoid, not bipedal, no human-like torso or shoulders, never standing on two legs. Fix only her body proportions for this growth stage: stretch her into a lean, gangly adolescent quadruped — longer legs and tail, limbs slightly too long and awkward for her frame, narrower cheeks, body raised higher off the ground, like a young wolf-sized salamander mid-step. Add a simple grey human silhouette standing beside her for scale: on all fours, her back reaches the human's waist. Negative: no bipedal stance, no humanoid body, no human proportions.
 ```
 
-**5c-v3 — proporciones E3 (adjuntar `speck-estadio3-espejo-v1.png`):**
+**[fallback histórico] 5c-v3 — proporciones E3 por edición (adjuntar `speck-estadio3-espejo-v1.png`):**
 
 ```
 Keep this exact creature, face, eyes, red crystals and art style. She stays a QUADRUPED salamander walking on four legs with animal anatomy — absolutely not humanoid, not bipedal, no human-like torso, never standing on two legs. Fix only her body proportions for the final stage: a lean, elegant, quietly majestic adult quadruped — long graceful neck, sweeping tail, slender strong legs, no chibi plumpness, carrying herself with calm poise but pure salamander anatomy. Add a simple grey human silhouette standing beside her for scale: on all fours, her back reaches the human's chest, slightly larger than a wolf. Negative: no bipedal stance, no humanoid body, no human proportions, no dragon, no raptor.
