@@ -15,7 +15,8 @@ updated: 2026-07-04
 | ID | Tarea | Status | Notas |
 |---|---|---|---|
 | A1 | Plan de producción macro (fases, orden de frentes) | ⬜ | El objetivo actual de [[Current-State]] |
-| A2 | Definir "Slice of Bond": celda jugador + Pivote + alcance | ⬜ | Gate de casi todo lo demás |
+| A2 | Slice of Bond: pareja jugador×Pivote | ✅ | RATIFICADA: **Humano Duelist × Dagna** (Seismic Springboard) — [[Slice of Bond]] |
+| A2b | Slice of Bond: alcance completo (PRD del slice) | ⬜ | Tramo de La Rueda, sistemas mínimos, duración — [[Slice of Bond]] |
 | A3 | Decisión de motor Godot vs. Unreal | ⛔ diferida | Se evalúa contra biblias + slice (ADR-002) |
 
 ## Frente B — Diseño pendiente (los ❓ del GDD §8)

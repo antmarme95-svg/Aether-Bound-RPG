@@ -102,3 +102,10 @@ B9: parte de arte ✅ (queda re-naming VFX). Balance de la sesión de arte:
 fenotipos 3 razas ✅ (5 láminas) · keyframes dawn/dusk ✅ (gate golden scene)
 · regla nocturna nueva en Art Bible · trilogía Speck ✅ · 3 lecciones de
 prompt-craft documentadas. Siguiente: Feature Loop de la golden scene (B11).
+
+## [2026-07-04] design | Pareja del Slice of Bond RATIFICADA (A2)
+**Humano Duelist × Dagna (Seismic Springboard).** Razón principal: el
+supersalto/momentum del PRD-005 ya es la base técnica del link; orfandad
+mecánica máximamente legible (pierdes la verticalidad); quiebre de Dagna de
+los más fuertes. Página nueva [[Slice of Bond]]. Abierto: alcance (A2b).
+(En paralelo corre el Feature Loop de la golden scene en feat/golden-scene.)

@@ -33,6 +33,7 @@
 - [[Inventario del Prototipo]] — qué se conserva, re-usa o reemplaza del build Godot.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres (propuesto).
 - [[Briefs de Concept Art]] — prompts Nano Banana 2 por fenotipo + notas de pipeline (propuesto).
+- [[Slice of Bond]] — vertical slice: pareja ratificada Humano Duelist × Dagna; alcance pendiente.
 
 ## 20-State (dónde está el proyecto)
 
