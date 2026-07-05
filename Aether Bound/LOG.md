@@ -1,5 +1,18 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] design | A2b: alcance del Slice of Bond PROPUESTO
+Propuesta completa escrita en [[Slice of Bond]] (pendiente de ratificación).
+Estructura: la Estructura Dramática en miniatura, 4 escenas — cold open El
+Nido (prófugo + reclutamiento + T1), espina Cinder Ascent corto (Springboard
+como progresión + camp scene del ritual + T2), mini-dungeon eco del Sunken
+Archive (T3 + traición con la Primera Cuña), coda Bond vacío desandando el
+Ascent (ratio 80/20). Sistemas in: locomoción PRD-005, combate §4.2 mínimo
+(Humano Duelist + Dagna Enano Vanguard reducido + 2 enemigos), Tether solo-
+Bond sin Standing, 1 camp scene. Out: Quinteto, marcas, economía Standing,
+momentos de Persona sistémicos. Duración 45–60 min. Criterio de éxito: el
+playtester siente la pérdida dos veces (mecánica y emocional). Task-Board
+A2b → 🔄.
+
 ## [2026-07-04] lint | Vault preparado para orquestación por Opus
 El director pierde acceso a Fable a partir de 2026-07-05; revisión de
 agnosticismo de modelo. Resultado: el Vault ya era agnóstico por diseño (VDD);

@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-04
+updated: 2026-07-05
 ---
 
 # Task Board — preproducción
@@ -16,7 +16,7 @@ updated: 2026-07-04
 |---|---|---|---|
 | A1 | Plan de producción macro (fases, orden de frentes) | ⬜ | El objetivo actual de [[Current-State]] |
 | A2 | Slice of Bond: pareja jugador×Pivote | ✅ | RATIFICADA: **Humano Duelist × Dagna** (Seismic Springboard) — [[Slice of Bond]] |
-| A2b | Slice of Bond: alcance completo (PRD del slice) | ⬜ | Tramo de La Rueda, sistemas mínimos, duración — [[Slice of Bond]] |
+| A2b | Slice of Bond: alcance completo (PRD del slice) | 🔄 | PROPUESTA 2026-07-05 escrita en [[Slice of Bond]] (4 escenas, sistemas in/out, 45–60 min) — pendiente ratificación del director |
 | A3 | Decisión de motor | ✅ | **GODOT CONFIRMADO** (2026-07-04) — evidencia: golden scene B11; ver ADR-002 |
 
 ## Frente B — Diseño pendiente (los ❓ del GDD §8)
