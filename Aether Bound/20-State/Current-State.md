@@ -24,8 +24,8 @@ updated: 2026-07-04
   Speck trilogía ✅ (B9 arte) → falta: golden scene Godot (B11) → Game Feel
   Bible (B10).
 - **Branch actual:** `master` (todo mergeado; PR #4 fue el último).
-- **Decisión mayor pendiente:** motor Godot vs. Unreal — **diferida** hasta
-  tener Art Bible probada + Game Feel Bible + vertical slice (ADR-002).
+- **Motor: GODOT CONFIRMADO** (2026-07-04, ADR-002 cerrada con la evidencia
+  de la golden scene).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** renombrar "Vanguards & Voidcores" → AETHER BOUND
   en README/strings; T1 (`--skip=wilds` live); ver [[Task-Board]].

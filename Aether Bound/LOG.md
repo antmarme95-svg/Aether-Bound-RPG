@@ -79,6 +79,15 @@ golden scene; (b) filos neón teal nocturnos como regla canónica de la
 [[Art Bible]] (sección nueva "regla nocturna" + keyframes canónicos). La capa
 3 del pipeline debe soportar glowing edges con color por hora del día.
 
+## [2026-07-04] design | ADR-002 CERRADA: Godot confirmado + ficha de Dagna (B1)
+**"A3: Godot confirmado"** — el director sella el motor con la evidencia de
+la golden scene (ADR-002 actualizada; Task-Board A3 ✅). Decisión de
+secuencia: B1-Dagna ANTES de A2b (la ficha del Pivote dimensiona el slice,
+no al revés). Página nueva [[Dagna]] (propuesto): bio Guardiana de la Puerta,
+beat de reclutamiento ("You kept the wrong promise"), tiers del Springboard
+(T2 Fault Line / T3 Mountain's Answer), quiebre por ley del clan, objeto
+firma "la Primera Cuña" (+ martillo si T3), brief visual sobre la enana v2.
+
 ## [2026-07-04] feature+ingest | Follaje por tarjetas con sprite real + 2 especies nuevas
 Técnica de follaje ratificada e implementada: tarjetas alpha-cutout en cruz
 sobre cascarón con normales radiales (`toon_foliage.gdshader` +

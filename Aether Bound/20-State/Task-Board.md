@@ -17,13 +17,13 @@ updated: 2026-07-04
 | A1 | Plan de producción macro (fases, orden de frentes) | ⬜ | El objetivo actual de [[Current-State]] |
 | A2 | Slice of Bond: pareja jugador×Pivote | ✅ | RATIFICADA: **Humano Duelist × Dagna** (Seismic Springboard) — [[Slice of Bond]] |
 | A2b | Slice of Bond: alcance completo (PRD del slice) | ⬜ | Tramo de La Rueda, sistemas mínimos, duración — [[Slice of Bond]] |
-| A3 | Decisión de motor Godot vs. Unreal | ⛔ diferida | Se evalúa contra biblias + slice (ADR-002) |
+| A3 | Decisión de motor | ✅ | **GODOT CONFIRMADO** (2026-07-04) — evidencia: golden scene B11; ver ADR-002 |
 
 ## Frente B — Diseño pendiente (los ❓ del GDD §8)
 
 | ID | Tarea | Status | Página afectada |
 |---|---|---|---|
-| B1 | Fichas completas de los 9 Pivotes (bio, arco, visual) + naming definitivo | ⬜ | [[Los 9 Pivotes]] |
+| B1 | Fichas completas de los 9 Pivotes (bio, arco, visual) + naming definitivo | 🔄 | [[Dagna]] escrita (propuesto — la primera y la del slice); quedan 8 |
 | B2 | Tablas de C1/C2/C4 por celda + sus links + links directos de Speck E2 | ⬜ | [[El Quinteto]] |
 | B3 | Lista definitiva de ~7 Momentos de Persona + economía de Standing + contenido ruta Conqueror | ⬜ | [[The Tether]], [[Speck]] |
 | B4 | Desambiguación de Bond con dos links posibles; ¿ping opcional? | ⬜ | [[Bond y el Bond Vacío]] |
