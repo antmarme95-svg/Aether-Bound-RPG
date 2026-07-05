@@ -18,38 +18,44 @@ const _POST := preload("res://rendering/melancolia_post.gdshader")
 # ---- keyframe palettes (sampled from the ratified concept art) ----
 const PRESETS := {
 	"dawn": {
-		"sky_top": Color("#cfe6f0"), "sky_horizon": Color("#f3d9a8"),
-		"ground_horizon": Color("#ecd9b0"), "ground_bottom": Color("#b9bd93"),
+		"sky_top": Color("#dceef4"), "sky_horizon": Color("#f6e3c0"),
+		"ground_horizon": Color("#eeddb8"), "ground_bottom": Color("#aab883"),
 		"sun_color": Color("#ffe9c0"), "sun_energy": 1.35,
 		"sun_elev_deg": -12.0, "sun_azim_deg": 190.0,
-		"ambient": Color("#e6dcbe"), "ambient_energy": 1.1,
-		"aerial": Color("#bcccd9"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
+		"ambient": Color("#e8dcc0"), "ambient_energy": 1.15,
+		"shadow_opacity": 0.55,
+		"rim": Color("#f2e6c8"), "rim_strength": 0.08,
+		"aerial": Color("#c4d2da"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
 		"ray_color": Color("#ffe2ac"), "ray_strength": 0.55,
-		"grass": Color("#b8b581"), "grass_lush": Color("#9fae7c"),
+		"grass": Color("#a9ba7c"), "grass_lush": Color("#93ac70"),
 		"path": Color("#d9c9a2"),
-		"foliage": Color("#93a678"), "foliage_dark": Color("#7d9268"),
-		"trunk": Color("#7d6b58"),
-		"forest_mass": Color("#8fa383"),
+		"foliage": Color("#8ba26c"), "foliage_dark": Color("#75925e"),
+		"trunk": Color("#8a6f52"),
+		"forest_mass": Color("#8aa47e"),
 		"mountain": Color("#b9cbd9"), "mountain_far": Color("#c9d7e2"),
 		"island": Color("#c3d2de"),
-		"core_emission": 2.2,
+		"core_albedo": Color("#a8182e"), "core_glow": Color("#c81f3a"),
+		"core_emission": 1.7,
 	},
 	"dusk": {
 		"sky_top": Color("#3f4677"), "sky_horizon": Color("#a98fb4"),
-		"ground_horizon": Color("#7d7a9c"), "ground_bottom": Color("#565f58"),
-		"sun_color": Color("#b8a4d8"), "sun_energy": 0.55,
+		"ground_horizon": Color("#767693"), "ground_bottom": Color("#4b544e"),
+		"sun_color": Color("#b8a4d8"), "sun_energy": 0.5,
 		"sun_elev_deg": -8.0, "sun_azim_deg": 200.0,
-		"ambient": Color("#6a6f8e"), "ambient_energy": 0.9,
-		"aerial": Color("#6b7799"), "glow": Color("#4de0d8"), "glow_strength": 0.32,
+		"ambient": Color("#5d6284"), "ambient_energy": 0.78,
+		"shadow_opacity": 0.75,
+		"rim": Color("#8a95b5"), "rim_strength": 0.03,
+		"aerial": Color("#6b7799"), "glow": Color("#4de0d8"), "glow_strength": 0.30,
 		"ray_color": Color("#b39ad0"), "ray_strength": 0.12,
-		"grass": Color("#5f6a63"), "grass_lush": Color("#525d57"),
-		"path": Color("#6f6f7c"),
-		"foliage": Color("#4d5a66"), "foliage_dark": Color("#414d58"),
-		"trunk": Color("#4a4a56"),
-		"forest_mass": Color("#4c5870"),
-		"mountain": Color("#7482a4"), "mountain_far": Color("#8a95b5"),
-		"island": Color("#8a95b5"),
-		"core_emission": 4.0,
+		"grass": Color("#49544f"), "grass_lush": Color("#3f4a45"),
+		"path": Color("#5d5d6c"),
+		"foliage": Color("#3f4c59"), "foliage_dark": Color("#36424e"),
+		"trunk": Color("#3f3f4b"),
+		"forest_mass": Color("#43506b"),
+		"mountain": Color("#6b7a9e"), "mountain_far": Color("#828db0"),
+		"island": Color("#828db0"),
+		"core_albedo": Color("#c01528"), "core_glow": Color("#e01a35"),
+		"core_emission": 3.0,
 	},
 }
 
@@ -422,7 +428,11 @@ func apply_time_preset(preset_name: String) -> void:
 	_sun.light_color = p["sun_color"]
 	_sun.light_energy = p["sun_energy"]
 	_sun.rotation_degrees = Vector3(p["sun_elev_deg"], p["sun_azim_deg"], 0)
+	_sun.shadow_opacity = p["shadow_opacity"]
 	# object palettes
+	for key in ["terrain", "trunk", "foliage", "foliage_dark", "forest_mass"]:
+		_toon_mat(key).set_shader_parameter("rim_color", p["rim"])
+		_toon_mat(key).set_shader_parameter("rim_strength", p["rim_strength"])
 	_toon_mat("terrain").set_shader_parameter("albedo_color", p["grass"])
 	_toon_mat("trunk").set_shader_parameter("albedo_color", p["trunk"])
 	_toon_mat("foliage").set_shader_parameter("albedo_color", p["foliage"])
@@ -431,8 +441,11 @@ func apply_time_preset(preset_name: String) -> void:
 	_flat_mat("mountain").albedo_color = p["mountain"]
 	_flat_mat("mountain_far").albedo_color = p["mountain_far"]
 	_flat_mat("island").albedo_color = p["island"]
+	_core_mat.albedo_color = p["core_albedo"]
+	_core_mat.emission = p["core_glow"]
 	_core_mat.emission_energy_multiplier = p["core_emission"]
-	_core_light.light_energy = 1.4 + p["core_emission"]
+	_core_light.light_color = p["core_glow"]
+	_core_light.light_energy = 1.2 + p["core_emission"]
 	# post uniforms (layer 3 carries the hour: aerial + glow color)
 	if _post_mat != null:
 		_post_mat.set_shader_parameter("aerial_color", p["aerial"])

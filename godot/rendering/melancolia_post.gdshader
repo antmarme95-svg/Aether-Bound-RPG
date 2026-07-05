@@ -102,8 +102,11 @@ void fragment() {
 	if (!is_sky) {
 		float a = smoothstep(aerial_start, aerial_end, lin) * aerial_max;
 		col = mix(col, aerial_color.rgb, a);
-		// backlit halo: only CRISP distant edges catch the hour's light
-		col += glow_color.rgb * (e * e * (1.0 - fade) * glow_strength);
+		// backlit halo: only CRISP and truly FAR edges catch the hour's light
+		// (keyframe rule: the teal lives on the distant ridge crests, not on
+		// every mid-ground canopy)
+		float far_w = smoothstep(110.0, 210.0, lin);
+		col += glow_color.rgb * (e * e * far_w * glow_strength);
 	}
 
 	// ---- layer 1 composite: ink on top ----
