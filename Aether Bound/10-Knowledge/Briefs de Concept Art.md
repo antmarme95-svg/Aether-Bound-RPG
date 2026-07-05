@@ -109,6 +109,31 @@ Creature concept sheet, three growth stages side by side on a plain warm paper b
 Al evaluar: comparar el estadio 3 contra `keyframe-wilds-dawn-v1.png` — los
 cristales deben rimar con el core del paisaje.
 
+### 5a/5b/5c — Por estadio (flujo encadenado: 5a desde cero → 5b/5c ediciones)
+
+Cada viñeta lateral es un beat canónico: estornudo del bautizo (5a) → puente
+de link (5b) → imitación de la postura del Pivote perdido, eco del
+[[Bond y el Bond Vacío]] (5c). En 5c ojos y postura NO cambian ("sigue siendo
+ella"). Archivos destino: `speck-estadio{1-cria,2-vinculo,3-espejo}-v1.png`.
+
+**5a — desde cero:**
+
+```
+Creature concept sheet, front view and side view, of "Speck", stage one "the hatchling", on a plain warm paper background. A small bio-construct guardian creature built by a lost divine civilization: living technology that breathes, part grown and part crafted, luminous amphibian salamander-axolotl base form. Small enough to carry in one arm, plump and clumsy, oversized curious dark warm eyes, soft translucent skin in pale mint-grey with faint teal aether seams glowing gently along the spine like circuitry grown from flesh, external gill-antennae like an axolotl's frills that perk up and bristle, a tiny erectile crest, stubby legs and a thick little tail. One small vignette beside the views: she sniffs the air and sneezes tiny sparks. Mood: tender, curious, a little melancholic — an ancient being in an infant body. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain; the only saturated color is the teal aether glow; style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime style, no cute mascot Pokémon look, no dog or cat anatomy, no dragon, no neon glow except the aether seams.
+```
+
+**5b — edición sobre 5a aprobada:**
+
+```
+Keep this exact creature design, style, paper background and sheet layout — but grow her to stage two, the adolescent: now wolf-sized, gangly and awkward, limbs slightly too long for her body, caught mid-step; the teal aether seams glow brighter and branch across her sides, the gill-antennae are longer and more expressive, and small bridge-like arcs of teal light connect the spines of her crest. Same eyes, same silhouette DNA, same tender clumsy personality — just bigger and in-between. In the side vignette, replace the sneeze with her extending a bridge of light from her crest toward an unseen companion.
+```
+
+**5c — edición sobre 5b aprobada (+ adjuntar keyframe dawn como referencia del cristal):**
+
+```
+Keep this exact creature design, style, paper background and sheet layout — but grow her to stage three, the mirror: the same creature now lean and quietly majestic, slightly larger than a wolf; her patterns have crystallized — deep saturated red crystal formations grow along her spine and crest, with the exact same crystalline geometry as the red God-Core formation in the attached landscape reference. Beautiful and unsettling at once: a beloved friend wearing the colors of danger. Her warm dark eyes and gentle posture stay unchanged — the tragedy is that she is still herself. The teal aether seams now flicker between teal and red. In the side vignette, she imitates the stance of a tall absent companion.
+```
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe
