@@ -23,7 +23,7 @@ updated: 2026-07-04
 
 | ID | Tarea | Status | Página afectada |
 |---|---|---|---|
-| B1 | Fichas completas de los 9 Pivotes (bio, arco, visual) + naming definitivo | 🔄 | [[Dagna]] RATIFICADA (falta su lámina: brief 7 listo, `dagna-v1.png` pendiente); quedan 8 fichas |
+| B1 | Fichas completas de los 9 Pivotes (bio, arco, visual) + naming definitivo | 🔄 1/9 | [[Dagna]] COMPLETA (ficha ratificada + `dagna-v1.png` canónica); quedan 8 fichas |
 | B2 | Tablas de C1/C2/C4 por celda + sus links + links directos de Speck E2 | ⬜ | [[El Quinteto]] |
 | B3 | Lista definitiva de ~7 Momentos de Persona + economía de Standing + contenido ruta Conqueror | ⬜ | [[The Tether]], [[Speck]] |
 | B4 | Desambiguación de Bond con dos links posibles; ¿ping opcional? | ⬜ | [[Bond y el Bond Vacío]] |

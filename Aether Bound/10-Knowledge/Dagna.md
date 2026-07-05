@@ -81,7 +81,12 @@ no duela; solo le pide que lo haga.
 - *"Touch the ground. It remembers you longer than people do."* (T3, ritual)
 - *"The mountain doesn't forgive. And I am the mountain's."* (traición, v0 ✅)
 
-## Diseño visual (brief 7 completo en [[Briefs de Concept Art]] — lámina pendiente)
+## Diseño visual ✅ (lámina canónica: `90-Raw/concept/dagna-v1.png`, aprobada 2026-07-04)
+
+> Nota para modelado 3D: la **cuña miniatura en la trenza izquierda** (plant
+> del objeto firma) quedó tímida en la lámina — garantizarla en el modelo.
+
+Brief 7 completo en [[Briefs de Concept Art]]. Especificación original:
 
 Base: `fenotipo-enana-v2.png` como referencia de proporción/anatomía
 (trapecio canónico). Específicos de Dagna: pelo cobrizo oscuro con las

@@ -96,6 +96,13 @@ cuña miniatura en la trenza (plant del objeto firma), hombreras-compuerta,
 martillo-ariete. Pendiente: generar/aprobar `dagna-v1.png` → ingest.
 Siguiente sesión: A2b (alcance del slice), dimensionado alrededor de Dagna.
 
+## [2026-07-04] ingest | dagna-v1.png aprobada → 90-Raw/concept/
+Lámina generada por el director y aprobada por ambos: trapecio intacto (el
+ancla de la enana v2 previno la deriva esbelta), martillo-ariete ✓,
+hombreras-compuerta ✓, tatuajes de gremio ✓, sin barba ✓. Nota a modelado:
+la cuña miniatura de la trenza quedó tímida — garantizarla en el modelo 3D.
+**Dagna COMPLETA** (ficha ratificada + lámina canónica). B1: 1/9.
+
 ## [2026-07-04] feature+ingest | Follaje por tarjetas con sprite real + 2 especies nuevas
 Técnica de follaje ratificada e implementada: tarjetas alpha-cutout en cruz
 sobre cascarón con normales radiales (`toon_foliage.gdshader` +
