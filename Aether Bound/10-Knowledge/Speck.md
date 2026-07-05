@@ -45,9 +45,9 @@ erizables, cresta eréctil, piel mint-grey translúcida con costuras de aether
 teal ("circuitería crecida de la carne"); estadio 3 cristaliza con la misma
 geometría del God-Core del keyframe. Congruencia deliberada con las *ruinas*
 del mundo, no con su fauna (su familia visual = cores/tuberías/grabados).
-Referencias: `90-Raw/concept/speck-estadio{1,2,3}-*.png` (v1: identidad ✓,
-crecimiento entre estadios pendiente de re-roll). Briefs:
+Referencias canónicas: `90-Raw/concept/speck-estadio1-cria-v1.png` +
+`speck-estadio{2-vinculo,3-espejo}-v2.png` (las v2 resuelven crecimiento y
+escala; las v1 de E2/E3 quedan como historial). Briefs:
 [[Briefs de Concept Art]] §5.
 
-**Pendiente (❓):** lista definitiva de los ~7 momentos; proporciones E2/E3
-(re-roll con escala) o resolverlas en 3D. → Task-Board.
+**Pendiente (❓):** lista definitiva de los ~7 momentos. → Task-Board.

@@ -86,3 +86,12 @@ director: **cuadrúpeda en los 3 estadios** (la alternativa "se yergue en E3"
 se evaluó y descartó). Prompts v3 emitidos: parten de las v1 (anatomía buena)
 con candado anti-bípedo triple + silueta de escala. Lección de prompt: pedir
 proporciones nuevas sin fijar la postura invita al modelo a re-anatomizar.
+
+## [2026-07-04] ingest | Speck E2/E3 v2 (briefs v4) → 90-Raw/concept/
+`speck-estadio2-vinculo-v2.png` + `speck-estadio3-espejo-v2.png` archivadas.
+Los briefs v4 (generación desde cero, encuadre field-guide, spine parallel to
+the ground, v1 solo como referencia de cara) resolvieron el crecimiento:
+cuadrúpedas ✓, escala con silueta humana ✓ (cintura/pecho), identidad ✓,
+cristales E3 riman con el core ✓, "expresión intacta" ✓. La trilogía
+cría→adolescente→espejo lee el crecimiento completo. Set visual de Speck
+COMPLETO — pendiente ratificación del director.
