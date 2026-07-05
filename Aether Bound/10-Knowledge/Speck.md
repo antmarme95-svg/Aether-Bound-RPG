@@ -35,5 +35,16 @@ nombre es el vínculo.**
 ~7 escenas fijas donde la tratas como herramienta, mascota o persona.
 Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 4 Finales]]).
 
-**Pendiente (❓):** lista definitiva de los ~7 momentos; diseño visual de los
-3 estadios. → Task-Board.
+## Diseño visual (2026-07-04)
+
+**Forma base RATIFICADA: salamandra/axolotl luminosa** — branquias-antena
+erizables, cresta eréctil, piel mint-grey translúcida con costuras de aether
+teal ("circuitería crecida de la carne"); estadio 3 cristaliza con la misma
+geometría del God-Core del keyframe. Congruencia deliberada con las *ruinas*
+del mundo, no con su fauna (su familia visual = cores/tuberías/grabados).
+Referencias: `90-Raw/concept/speck-estadio{1,2,3}-*.png` (v1: identidad ✓,
+crecimiento entre estadios pendiente de re-roll). Briefs:
+[[Briefs de Concept Art]] §5.
+
+**Pendiente (❓):** lista definitiva de los ~7 momentos; proporciones E2/E3
+(re-roll con escala) o resolverlas en 3D. → Task-Board.

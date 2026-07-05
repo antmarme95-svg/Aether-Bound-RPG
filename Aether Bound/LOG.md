@@ -63,3 +63,12 @@ RATIFICADO: Speck = salamandra/axolotl luminosa (branquias-antena, cresta
 erizable; rima con la Muda). Brief 5 escrito en [[Briefs de Concept Art]] —
 regla nueva: los cristales del estadio 3 usan la misma geometría del God-Core
 del keyframe (revelación retroactiva cosida en el arte). Avanza B9.
+
+## [2026-07-04] ingest | Speck 3 estadios v1 → 90-Raw/concept/
+`speck-estadio{1-cria,2-vinculo,3-espejo}-v1.png` archivadas. Evaluación:
+identidad ✓✓ (misma criatura en las 3), beats canónicos en viñetas ✓
+(estornudo/puente/imitación del Pivote), cristales E3 riman con el core del
+keyframe ✓. FALLO: el crecimiento no se lee — las 3 comparten cuerpo de cría
+(la edición preservó de más; inverso del caso enana 2b). Re-roll propuesto
+para E2/E3 con silueta humana gris de escala + anti-chibi (prompts en sesión;
+pendiente decisión del director: re-roll vs resolver escala en 3D).
