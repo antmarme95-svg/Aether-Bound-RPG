@@ -258,7 +258,7 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 	var trunk_m := _toon_mat("trunk")
 	var lean := Vector3(randf_range(-0.06, 0.06), 0, randf_range(-0.04, 0.04))
 	var seg_h := 2.2 * s
-	var trunk_h := seg_h * 3.0
+	var trunk_h := seg_h * 2.1
 	var c := MeshInstance3D.new()
 	var cyl := CylinderMesh.new()
 	cyl.top_radius = 0.26 * s
@@ -269,18 +269,6 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 	c.position = Vector3(lean.x * trunk_h * 0.5, trunk_h * 0.5, lean.z * trunk_h * 0.5)
 	c.rotation = Vector3(lean.z * 0.9, 0.0, -lean.x * 0.9)
 	root.add_child(c)
-	for bi in range(2):
-		var br := MeshInstance3D.new()
-		var bm := CylinderMesh.new()
-		bm.bottom_radius = 0.15 * s
-		bm.top_radius = 0.04 * s
-		bm.height = 2.8 * s
-		br.mesh = bm
-		br.material_override = trunk_m
-		var ba := TAU * (float(bi) + randf() * 0.4) / 2.0
-		br.position = Vector3(cos(ba) * 0.9 * s, trunk_h * 0.82, sin(ba) * 0.9 * s)
-		br.rotation = Vector3(deg_to_rad(randf_range(28.0, 48.0)), -ba, 0)
-		root.add_child(br)
 	# root flare: tapered spurs (ink-drawn roots, no bubble caps)
 	for a in range(7):
 		var r := MeshInstance3D.new()
@@ -309,29 +297,55 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		kn.position = Vector3(cos(ka) * kw + lean.x * kh, kh, sin(ka) * kw + lean.z * kh)
 		kn.rotation = Vector3(deg_to_rad(randf_range(55.0, 75.0)), -ka, 0)
 		root.add_child(kn)
-	# card canopy (TotK/Sable technique): alpha-cutout clump cards on an
-	# ellipsoid shell, normals baked radial from the crown center so the cel
-	# ramp bands the canopy as one soft volume. Ink outlines every card free.
-	var crown_y := seg_h * 3.1
-	var crown_c := Vector3(lean.x * 3.0 * seg_h, 0, lean.z * 3.0 * seg_h)
-	var crown_center := crown_c + Vector3(0, crown_y + 0.8 * s, 0)
-	_card_shell(root, crown_center, 2.9 * s, 2.5 * s, 26, 3.1 * s, _fol_mat(foliage_key), -0.1, 1.0)
-	_card_shell(root, crown_center, 3.1 * s, 2.5 * s, 18, 2.8 * s, _fol_mat("foliage_dark"), -0.8, 0.25)
-	# hero trees: one guaranteed low bough over the valley side (framing read)
-	if s >= 2.0:
-		var bough_y := trunk_h * 0.62
-		var bough_c := Vector3(randf_range(-0.6, 0.6) * s, bough_y, -1.8 * s)
-		var arm := MeshInstance3D.new()
-		var am := CylinderMesh.new()
-		am.bottom_radius = 0.16 * s
-		am.top_radius = 0.05 * s
-		am.height = 2.6 * s
-		arm.mesh = am
-		arm.material_override = trunk_m
-		arm.position = Vector3(bough_c.x * 0.5, bough_y + 0.6 * s, bough_c.z * 0.5)
-		arm.rotation = Vector3(deg_to_rad(112.0), 0, 0)
-		root.add_child(arm)
-		_card_shell(root, bough_c, 1.9 * s, 1.1 * s, 11, 2.2 * s, _fol_mat("foliage_dark"), -0.5, 0.9)
+	# Moebius anatomy: recursive limbs — the canopy EMERGES from clumps at
+	# branch tips (asymmetric silhouette, sky gaps, visible wood inside)
+	var top := Vector3(lean.x * trunk_h, trunk_h * 0.96, lean.z * trunk_h)
+	var canopy_mid := trunk_h + 1.6 * s
+	var n_limbs := 4 if s >= 2.0 else 3
+	for li in range(n_limbs):
+		var la := TAU * li / n_limbs + randf() * 0.7
+		var ldir := Vector3(cos(la) * 0.75, randf_range(0.55, 1.0), sin(la) * 0.75).normalized()
+		if s >= 2.0 and li == 0:
+			# hero trees: first limb is the low bough over the valley side
+			ldir = Vector3(randf_range(-0.3, 0.3), 0.30, -1.0).normalized()
+		_limb(root, top, ldir, 2.6 * s, 0.30 * s, 1, s, foliage_key, canopy_mid)
+
+# Recursive tapered limb; at depth 0 the tip carries a leaf-clump cluster.
+func _limb(root: Node3D, from: Vector3, dir: Vector3, length: float,
+		radius: float, depth: int, s: float, foliage_key: String,
+		canopy_mid: float) -> void:
+	var to := from + dir * length
+	var seg := MeshInstance3D.new()
+	var cyl := CylinderMesh.new()
+	cyl.bottom_radius = radius
+	cyl.top_radius = radius * 0.5
+	cyl.height = length
+	seg.mesh = cyl
+	seg.material_override = _toon_mat("trunk")
+	seg.position = (from + to) * 0.5
+	seg.quaternion = Quaternion(Vector3.UP, dir)
+	root.add_child(seg)
+	# rótula que oculta el culote plano del cilindro en la unión
+	var joint := MeshInstance3D.new()
+	var js := SphereMesh.new()
+	js.radius = radius * 0.85
+	js.height = radius * 1.7
+	joint.mesh = js
+	joint.material_override = _toon_mat("trunk")
+	joint.position = from
+	root.add_child(joint)
+	if depth <= 0:
+		var tone := foliage_key if to.y > canopy_mid else "foliage_dark"
+		_card_shell(root, to, 1.7 * s, 1.3 * s, 6, 2.1 * s, _fol_mat(tone), -0.6, 1.0)
+		return
+	for k in range(randi_range(2, 3)):
+		var axis := Vector3(randf_range(-1, 1), randf_range(-0.2, 1), randf_range(-1, 1)).normalized()
+		var rot_axis := axis.cross(dir)
+		if rot_axis.length() < 0.05:
+			rot_axis = Vector3.RIGHT
+		var ndir := dir.rotated(rot_axis.normalized(), randf_range(0.35, 0.8))
+		ndir = (ndir + Vector3.UP * 0.22).normalized()
+		_limb(root, to, ndir, length * 0.7, radius * 0.55, depth - 1, s, foliage_key, canopy_mid)
 
 # Builds one mesh of n tangent quads on an ellipsoid shell around `center`
 # (local coords). All 4 verts of a card share the RADIAL normal.
