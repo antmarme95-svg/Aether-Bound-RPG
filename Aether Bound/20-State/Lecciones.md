@@ -12,6 +12,24 @@ updated: 2026-07-04
 
 - **Nunca usar `class_name` cruzado entre scripts** en Godot — race de
   load-order en CLI. Siempre `const _X = preload("res://…")`.
+- **El toon del prototipo (`toon.gdshader`) escribe `ALPHA`** → manda TODO al
+  pase transparente → invisible para `hint_screen_texture` (los post-process
+  lo "borran"). Para escenas con post screen-space usar `toon_golden.gdshader`
+  (opaco) o variantes sin escritura de ALPHA.
+- **Quads de post fullscreen** (POSITION override) deben escribir `ALPHA=1.0`
+  para caer en el pase transparente y muestrear el pase opaco COMPLETO del
+  frame actual (si no, feedback lavado del frame anterior).
+- **GDScript: `abs()`/`min()`/`max()` devuelven Variant** — rompen inferencia
+  `:=`. Usar `absf/mini/maxf...` o tipar la variable.
+- **Texturas cargadas en runtime por CLI:** `Image.load_from_file()` +
+  `ImageTexture.create_from_image()` — `load("res://*.png")` depende del
+  import del editor y falla en corridas CLI sin `.import`.
+- **`gh` NO está autenticado en esta máquina** — los "PR" se cierran con
+  `git merge --no-ff` local a master con mensaje estilo PR (topología
+  equivalente). No intentar `gh pr create`.
+- **Patrón para correr autotests desde el agente:** PowerShell
+  `Start-Process -Wait -NoNewWindow` con redirección a logs de `$env:TEMP`, y
+  SIEMPRE matar `Godot_v4.6.3*` huérfanos antes de cada corrida.
 - **Autotests visuales = windowed-only** y una sola instancia de Godot a la
   vez; matar procesos `Godot*` huérfanos tras cada corrida.
 - **`test_core` headless no carga scripts de escena/main** — gatear cambios
@@ -28,15 +46,24 @@ updated: 2026-07-04
   `%LOCALAPPDATA%\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.6.3-stable_win64.exe`
   (o `Start-Godot.bat`).
 - QA lógico: `--headless --path godot --script res://tests/test_core.gd`.
-- QA visual: `--path godot -- --autotest=res://tests/autotest_{rig,scenes,slice,ui}.gd`
+- QA visual: `--path godot -- --autotest=res://tests/autotest_{rig,scenes,slice,ui,golden}.gd`
   → PNG/JSON en `godot/test_out/`.
+- Revisión en vivo del look para el director: `Start-GoldenScene.bat` (raíz
+  del repo; SPACE=dawn/dusk, F12=captura, ESC=salir).
+- Regenerar el asset de follaje si cambia la sprite sheet:
+  `--headless --path godot --script res://tools/process_clump.gd`.
 - Gate de rendimiento: **≥60 FPS** en The Wilds.
 
 ## Tiering de modelos (orquestación)
 
+> Actualizado 2026-07-05: **Opus es el orquestador** (Fable ya no está
+> disponible). El Vault es agnóstico de modelo por diseño (VDD): el protocolo
+> de sesión —CLAUDE.md → [[Current-State]] → loop → checkpoint— no depende de
+> ningún modelo en particular.
+
 | Rol | Modelo |
 |---|---|
-| Orchestrator (diseño, gates, merges) | Opus/Fable |
-| Ejecutor primario (lógica/shaders/VFX) | Sonnet |
-| Ejecutor mecánico (JSON/boilerplate) | Haiku |
-| QA paralelo persistente | Sonnet |
+| Orchestrator (diseño, gates, merges) | **Opus** |
+| Ejecutor primario (lógica/shaders/VFX) | Sonnet (subagente) |
+| Ejecutor mecánico (JSON/boilerplate) | Haiku (subagente) |
+| QA paralelo persistente | Sonnet (subagente) |

@@ -42,7 +42,7 @@
 - [[Task-Board]] — tablero de preproducción: frentes A (producción), B (diseño), C (técnico).
 - [[Lecciones]] — anti-patrones técnicos, entorno Godot, gates QA, tiering de modelos.
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
-- [[ADR-002 Motor diferido]] — Godot vs. Unreal: se decide contra evidencia.
+- [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene.
 
 ## 30-Loops (cómo trabajar)
 

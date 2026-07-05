@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-04] lint | Vault preparado para orquestación por Opus
+El director pierde acceso a Fable a partir de 2026-07-05; revisión de
+agnosticismo de modelo. Resultado: el Vault ya era agnóstico por diseño (VDD);
+cambios: tiering de [[Lecciones]] actualizado (Opus = orquestador único),
+7 lecciones operativas de la sesión golden-scene consolidadas en Lecciones
+(trampa ALPHA del toon, quad de post, absf, Image.load_from_file en CLI, gh
+sin auth → merge --no-ff, patrón PowerShell de autotests, comandos de
+Start-GoldenScene/process_clump), Index desfasado de ADR-002 corregido, plan
+de sesiones de arte en Current-State actualizado a "todas cerradas".
+
 ## [2026-07-04] state | Creación del Vault
 Adopción del modelo de trabajo VDD × LLM-WIKI (ver [[SCHEMA]] y ADR-001).
 Scaffolding: capas 10-Knowledge / 20-State / 30-Loops / 90-Raw, Index y este Log.
