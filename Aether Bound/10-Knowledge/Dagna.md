@@ -1,6 +1,6 @@
 ---
-status: propuesto
-source: "GDD §3.1b/3.1c (ficha v0 aprobada) + Design Loop 2026-07-04; pareja del slice: [[Slice of Bond]]"
+status: ratificado
+source: "GDD §3.1b/3.1c (ficha v0 aprobada) + Design Loop 2026-07-04 (ratificada por el director; concept art pendiente); pareja del slice: [[Slice of Bond]]"
 updated: 2026-07-04
 ---
 
@@ -81,7 +81,7 @@ no duela; solo le pide que lo haga.
 - *"Touch the ground. It remembers you longer than people do."* (T3, ritual)
 - *"The mountain doesn't forgive. And I am the mountain's."* (traición, v0 ✅)
 
-## Diseño visual (brief NB2 — usa el flujo de [[Briefs de Concept Art]])
+## Diseño visual (brief 7 completo en [[Briefs de Concept Art]] — lámina pendiente)
 
 Base: `fenotipo-enana-v2.png` como referencia de proporción/anatomía
 (trapecio canónico). Específicos de Dagna: pelo cobrizo oscuro con las

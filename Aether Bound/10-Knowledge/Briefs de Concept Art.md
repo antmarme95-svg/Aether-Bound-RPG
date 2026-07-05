@@ -185,6 +185,17 @@ alpha en `godot/rendering/foliage_clump.png`. El sprite debe pintarse en tonos
 claros casi-blancos con verdor sutil: el color final lo pone `albedo_color`
 del preset (dawn/dusk lo tiñen distinto).
 
+## 7 — Dagna (Pivote del slice, B1)
+
+Referencia adjunta: `fenotipo-enana-v2.png` (ancla de anatomía/proporción).
+Plants visuales: cuña miniatura en la trenza izquierda (el objeto firma de
+[[Dagna]] a la vista todo el slice), hombreras-compuerta (gremio legible a
+3m), martillo-ariete (abre puertas, no mata). Destino: `dagna-v1.png`.
+
+```
+Use the attached dwarf woman character sheet as the exact anatomy, proportion and art style reference — same trapezoid silhouette exactly 4.5 heads tall, massive trapezius and shoulders swallowing the neck, wide barrel torso, enormous hands, very short thick arms and legs, low planted center of gravity — but design a specific named character: "Dagna", a veteran dwarven gatekeeper in her prime. Full-body character concept sheet, front view, back view and side view, on a plain warm paper background. Face: strong feminine face with a heavy brow, broad jaw, a nose with history, and the calm, patient gaze of someone who has stood guard at a door for decades — dignified, unhurried, quietly warm; no beard. Hair: dark copper, pulled back tight, with long ornamented side-braids at the temples threaded with small forge-iron rings, and a tiny iron wedge charm hanging from the left braid. Skin: warm bronze with soot shading. Amber geometric guild tattoos on both forearms with a gate-and-wedge motif (an arch crossed by a wedge). Clothing: practical gatekeeper armor over fitted leather and cloth in earth tones — engraved gate-plate pauldrons and shin guards that look like miniature fortress doors, a short frontier felt cape, heavy belt with tools and iron wedges, faint warm ember accents at the seams, medieval aetherpunk. Weapon: a flat-headed gate maul (the head reads as a door ram, not a war hammer) slung across her back. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: the mountain that learned to love what it guarded. Negative: no tall or slender body, no long legs, no human proportions, no hourglass figure, no full beard, no full plate armor, no comedic caricature, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow.
+```
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

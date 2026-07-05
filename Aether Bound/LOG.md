@@ -88,6 +88,14 @@ beat de reclutamiento ("You kept the wrong promise"), tiers del Springboard
 (T2 Fault Line / T3 Mountain's Answer), quiebre por ley del clan, objeto
 firma "la Primera Cuña" (+ martillo si T3), brief visual sobre la enana v2.
 
+## [2026-07-04] design | Dagna RATIFICADA + brief 7 (concept art)
+El director ratifica la ficha completa de [[Dagna]] ("me gusta todo"; solo
+faltaba el visual). Brief 7 escrito en [[Briefs de Concept Art]]: prompt
+autocontenido NB2 con la enana v2 como ancla de anatomía; plants visuales —
+cuña miniatura en la trenza (plant del objeto firma), hombreras-compuerta,
+martillo-ariete. Pendiente: generar/aprobar `dagna-v1.png` → ingest.
+Siguiente sesión: A2b (alcance del slice), dimensionado alrededor de Dagna.
+
 ## [2026-07-04] feature+ingest | Follaje por tarjetas con sprite real + 2 especies nuevas
 Técnica de follaje ratificada e implementada: tarjetas alpha-cutout en cruz
 sobre cascarón con normales radiales (`toon_foliage.gdshader` +
