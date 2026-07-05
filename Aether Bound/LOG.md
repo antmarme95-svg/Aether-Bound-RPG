@@ -72,3 +72,9 @@ keyframe ✓. FALLO: el crecimiento no se lee — las 3 comparten cuerpo de crí
 (la edición preservó de más; inverso del caso enana 2b). Re-roll propuesto
 para E2/E3 con silueta humana gris de escala + anti-chibi (prompts en sesión;
 pendiente decisión del director: re-roll vs resolver escala en 3D).
+
+## [2026-07-04] design | Keyframes RATIFICADOS + regla nocturna
+El director ratifica: (a) el par dawn/dusk como criterio de aceptación de la
+golden scene; (b) filos neón teal nocturnos como regla canónica de la
+[[Art Bible]] (sección nueva "regla nocturna" + keyframes canónicos). La capa
+3 del pipeline debe soportar glowing edges con color por hora del día.

@@ -29,6 +29,17 @@ acuarela.*
   acentos saturados; la ciudad *grita* gráficamente (pilar 4).
 - **Transición diegética** al viajar arteria→ciudad, sin UI.
 - **Peligro = ROJO saturado** en ambos registros (constante intocable).
+- **Regla nocturna (ratificada 2026-07-04):** de noche/atardecer, los glowing
+  edges ganan color aether — filos neón teal en crestas y contornos a
+  contraluz (herencia Sable nocturna). Referencia canónica:
+  `90-Raw/concept/keyframe-wilds-dusk-v1.png`.
+
+## Keyframes canónicos (criterio de aceptación de la golden scene)
+
+`keyframe-wilds-dawn-v1.png` + `keyframe-wilds-dusk-v1.png` (ratificados
+2026-07-04): la golden scene Godot se acepta comparándola lado a lado contra
+este par a las dos horas del día. La escena persigue la imagen, nunca al
+revés.
 
 ## Pipeline técnico (4 capas screen-space)
 
