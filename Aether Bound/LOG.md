@@ -79,6 +79,17 @@ golden scene; (b) filos neón teal nocturnos como regla canónica de la
 [[Art Bible]] (sección nueva "regla nocturna" + keyframes canónicos). La capa
 3 del pipeline debe soportar glowing edges con color por hora del día.
 
+## [2026-07-04] feature+ingest | Follaje por tarjetas con sprite real + 2 especies nuevas
+Técnica de follaje ratificada e implementada: tarjetas alpha-cutout en cruz
+sobre cascarón con normales radiales (`toon_foliage.gdshader` +
+`_card_shell`). Sprite sheet del brief 6 generada por el director →
+`90-Raw/concept/foliage-clumps-v1.png`; procesada a asset tintable con
+`tools/process_clump.gd` (blanco→alpha, tonos casi-blancos, tinta preservada)
+→ `godot/rendering/foliage_clump.png`. Especies nuevas en la golden scene:
+**pino** (tiers cónicos de tarjetas) y **jacaranda** (tronco bifurcado +
+paraguas lavanda; claves de preset pine/bloom/bloom_dark por hora). El look
+Moebius de copas festoneadas quedó funcionando en las dos horas.
+
 ## [2026-07-04] design | Speck: anatomía cuadrúpeda RATIFICADA
 Los re-rolls v2 de E2/E3 derivaron a humanoide/bípedo (E2 uncanny, E3 raptor
 elegante pero otra criatura) → DESCARTADOS, no se ingestan. Decisión del

@@ -34,6 +34,8 @@ const PRESETS := {
 		"grass": Color("#b4c184"), "grass_lush": Color("#9fb476"),
 		"path": Color("#dccda4"),
 		"foliage": Color("#94aa6e"), "foliage_dark": Color("#7e9a62"),
+		"pine": Color("#6d8a66"),
+		"bloom": Color("#c9aee2"), "bloom_dark": Color("#b195d2"),
 		"trunk": Color("#8a6f52"),
 		"forest_mass": Color("#92aa80"),
 		"mountain": Color("#b9cbd9"), "mountain_far": Color("#c9d7e2"),
@@ -54,6 +56,8 @@ const PRESETS := {
 		"grass": Color("#49544f"), "grass_lush": Color("#3f4a45"),
 		"path": Color("#5d5d6c"),
 		"foliage": Color("#3f4c59"), "foliage_dark": Color("#36424e"),
+		"pine": Color("#39454f"),
+		"bloom": Color("#6f6392"), "bloom_dark": Color("#5c5280"),
 		"trunk": Color("#3f3f4b"),
 		"forest_mass": Color("#43506b"),
 		"mountain": Color("#6b7a9e"), "mountain_far": Color("#828db0"),
@@ -100,7 +104,12 @@ func _fol_mat(mat_name: String) -> ShaderMaterial:
 	if _fol_mats.has(mat_name):
 		return _fol_mats[mat_name]
 	if _clump_tex == null:
-		_clump_tex = load(_CLUMP_PATH) if ResourceLoader.exists(_CLUMP_PATH) else _make_clump_tex()
+		# load_from_file: no depende del import del editor (funciona en CLI)
+		var abs_clump := ProjectSettings.globalize_path(_CLUMP_PATH)
+		if FileAccess.file_exists(abs_clump):
+			_clump_tex = ImageTexture.create_from_image(Image.load_from_file(abs_clump))
+		else:
+			_clump_tex = _make_clump_tex()
 	var m := ShaderMaterial.new()
 	m.shader = _FOLIAGE
 	m.set_shader_parameter("toon_ramp", load("res://rendering/toon_ramp.tres"))
@@ -367,6 +376,70 @@ func _build_hero_trees() -> void:
 	_tree(Vector3(-9, terrain_h(-9, -30), -30), 1.1, "foliage_dark")
 	_tree(Vector3(11, terrain_h(11, -38), -38), 1.3, "foliage")
 	_tree(Vector3(20, terrain_h(20, -55), -55), 1.0, "foliage_dark")
+	# pinos en el flanco derecho (riman con las coníferas del keyframe)
+	_tree_pine(Vector3(30, terrain_h(30, -50), -50), 1.5)
+	_tree_pine(Vector3(38, terrain_h(38, -66), -66), 1.8)
+	_tree_pine(Vector3(25, terrain_h(25, -78), -78), 1.2)
+	# jacaranda junto al sendero (acento lavanda — resuena con lo aether)
+	_tree_jacaranda(Vector3(-19, terrain_h(-19, -33), -33), 1.4)
+
+func _tree_pine(pos: Vector3, s: float) -> void:
+	var root := Node3D.new()
+	root.position = pos
+	add_child(root)
+	var trunk_m := _toon_mat("trunk")
+	var h := 7.0 * s
+	var c := MeshInstance3D.new()
+	var cyl := CylinderMesh.new()
+	cyl.bottom_radius = 0.30 * s
+	cyl.top_radius = 0.10 * s
+	cyl.height = h
+	c.mesh = cyl
+	c.material_override = trunk_m
+	c.position = Vector3(0, h * 0.5, 0)
+	root.add_child(c)
+	# tiers cónicos: anchos abajo, cerrando hacia la punta
+	for t in range(4):
+		var f := float(t)
+		var ty := h * (0.35 + 0.62 * f / 4.0)
+		var tr := (1.9 - 0.38 * f) * s
+		_card_shell(root, Vector3(0, ty, 0), tr, 0.85 * s, 7 - t,
+			1.7 * s * (1.0 - 0.12 * f), _fol_mat("pine"), -0.3, 1.0)
+	_card_shell(root, Vector3(0, h * 1.02, 0), 0.5 * s, 0.7 * s, 3, 1.1 * s,
+		_fol_mat("pine"), -0.2, 1.0)
+
+func _tree_jacaranda(pos: Vector3, s: float) -> void:
+	var root := Node3D.new()
+	root.position = pos
+	add_child(root)
+	var trunk_m := _toon_mat("trunk")
+	var h := 4.6 * s
+	var main := MeshInstance3D.new()
+	var mc := CylinderMesh.new()
+	mc.bottom_radius = 0.34 * s
+	mc.top_radius = 0.16 * s
+	mc.height = h * 0.65
+	main.mesh = mc
+	main.material_override = trunk_m
+	main.position = Vector3(0, h * 0.32, 0)
+	root.add_child(main)
+	# bifurcación: 3 brazos abiertos sosteniendo el paraguas
+	for bi in range(3):
+		var br := MeshInstance3D.new()
+		var bm := CylinderMesh.new()
+		bm.bottom_radius = 0.14 * s
+		bm.top_radius = 0.04 * s
+		bm.height = h * 0.62
+		br.mesh = bm
+		br.material_override = trunk_m
+		var ba := TAU * bi / 3.0 + randf() * 0.5
+		br.position = Vector3(cos(ba) * 0.7 * s, h * 0.72, sin(ba) * 0.7 * s)
+		br.rotation = Vector3(deg_to_rad(randf_range(20.0, 34.0)), -ba, 0)
+		root.add_child(br)
+	# paraguas ancho y plano de flor
+	var top := Vector3(0, h * 1.02, 0)
+	_card_shell(root, top, 3.6 * s, 1.15 * s, 20, 2.4 * s, _fol_mat("bloom"), -0.05, 1.0)
+	_card_shell(root, top, 3.8 * s, 1.15 * s, 12, 2.2 * s, _fol_mat("bloom_dark"), -0.9, 0.1)
 
 func _build_mid_forest() -> void:
 	# rolling forest masses: big soft blobs, single mid tone (ink already greys there)
@@ -559,7 +632,7 @@ func apply_time_preset(preset_name: String) -> void:
 	for key in ["terrain", "trunk", "foliage", "foliage_dark", "forest_mass"]:
 		_toon_mat(key).set_shader_parameter("rim_color", p["rim"])
 		_toon_mat(key).set_shader_parameter("rim_strength", p["rim_strength"])
-	for key in ["foliage", "foliage_dark"]:
+	for key in ["foliage", "foliage_dark", "pine", "bloom", "bloom_dark"]:
 		var fm := _fol_mat(key)
 		fm.set_shader_parameter("albedo_color", p[key])
 		fm.set_shader_parameter("rim_color", p["rim"])
