@@ -18,8 +18,8 @@ const _POST := preload("res://rendering/melancolia_post.gdshader")
 # ---- keyframe palettes (sampled from the ratified concept art) ----
 const PRESETS := {
 	"dawn": {
-		"sky_top": Color("#dceef4"), "sky_horizon": Color("#f6e3c0"),
-		"ground_horizon": Color("#eeddb8"), "ground_bottom": Color("#aab883"),
+		"sky_top": Color("#b4d7e8"), "sky_horizon": Color("#f2cd96"),
+		"ground_horizon": Color("#ecd2a2"), "ground_bottom": Color("#aab883"),
 		"sun_color": Color("#ffe9c0"), "sun_energy": 1.35,
 		"sun_elev_deg": -12.0, "sun_azim_deg": 190.0,
 		"ambient": Color("#e8dcc0"), "ambient_energy": 1.15,
@@ -198,8 +198,9 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 	root.add_child(c)
 	for bi in range(2):
 		var br := MeshInstance3D.new()
-		var bm := CapsuleMesh.new()
-		bm.radius = 0.14 * s
+		var bm := CylinderMesh.new()
+		bm.bottom_radius = 0.15 * s
+		bm.top_radius = 0.04 * s
 		bm.height = 2.8 * s
 		br.mesh = bm
 		br.material_override = trunk_m
@@ -207,31 +208,33 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		br.position = Vector3(cos(ba) * 0.9 * s, trunk_h * 0.82, sin(ba) * 0.9 * s)
 		br.rotation = Vector3(deg_to_rad(randf_range(28.0, 48.0)), -ba, 0)
 		root.add_child(br)
-	# root flare (wider, more organic)
+	# root flare: tapered spurs (ink-drawn roots, no bubble caps)
 	for a in range(7):
 		var r := MeshInstance3D.new()
-		var rm := CapsuleMesh.new()
-		rm.radius = randf_range(0.12, 0.22) * s
+		var rm := CylinderMesh.new()
+		rm.bottom_radius = randf_range(0.14, 0.22) * s
+		rm.top_radius = 0.03 * s
 		rm.height = randf_range(1.5, 2.3) * s
 		r.mesh = rm
 		r.material_override = trunk_m
 		var ang := TAU * a / 7.0 + randf() * 0.4
-		r.position = Vector3(cos(ang) * 0.75 * s, 0.18 * s, sin(ang) * 0.75 * s)
-		r.rotation = Vector3(deg_to_rad(randf_range(72.0, 86.0)), -ang, 0)
+		r.position = Vector3(cos(ang) * 0.9 * s, 0.10 * s, sin(ang) * 0.9 * s)
+		r.rotation = Vector3(deg_to_rad(randf_range(84.0, 97.0)), -ang, 0)
 		root.add_child(r)
-	# trunk knots (hand-drawn lumpiness)
+	# branch stubs (knots read as cut limbs, not floating ovals)
 	for k in range(3):
 		var kn := MeshInstance3D.new()
-		var ks := SphereMesh.new()
-		var kr := randf_range(0.14, 0.22) * s
-		ks.radius = kr
-		ks.height = kr * 1.6
+		var ks := CylinderMesh.new()
+		ks.bottom_radius = randf_range(0.09, 0.13) * s
+		ks.top_radius = 0.03 * s
+		ks.height = randf_range(0.5, 0.8) * s
 		kn.mesh = ks
 		kn.material_override = trunk_m
 		var ka := randf() * TAU
 		var kh := randf_range(0.30, 0.60) * trunk_h
-		var kw := lerpf(0.58, 0.30, kh / trunk_h) * s
+		var kw := lerpf(0.55, 0.28, kh / trunk_h) * s
 		kn.position = Vector3(cos(ka) * kw + lean.x * kh, kh, sin(ka) * kw + lean.z * kh)
+		kn.rotation = Vector3(deg_to_rad(randf_range(55.0, 75.0)), -ka, 0)
 		root.add_child(kn)
 	# clumped canopy: 5 branch directions, each carrying 2-4 small leaf
 	# clusters with gaps between clumps (the ink outlines each clump — the
@@ -264,8 +267,9 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		var bough_y := trunk_h * 0.62
 		var bough_c := Vector3(randf_range(-0.6, 0.6) * s, bough_y, -1.8 * s)
 		var arm := MeshInstance3D.new()
-		var am := CapsuleMesh.new()
-		am.radius = 0.16 * s
+		var am := CylinderMesh.new()
+		am.bottom_radius = 0.16 * s
+		am.top_radius = 0.05 * s
 		am.height = 2.6 * s
 		arm.mesh = am
 		arm.material_override = trunk_m
