@@ -13,7 +13,11 @@ extends Node3D
 class_name GoldenScene
 
 const _TOON := preload("res://rendering/toon_golden.gdshader")
+const _FOLIAGE := preload("res://rendering/toon_foliage.gdshader")
 const _POST := preload("res://rendering/melancolia_post.gdshader")
+# Canonical clump texture (Nano Banana sprite, brief 6) — falls back to the
+# procedural placeholder below until the asset lands at this path.
+const _CLUMP_PATH := "res://rendering/foliage_clump.png"
 
 # ---- keyframe palettes (sampled from the ratified concept art) ----
 const PRESETS := {
@@ -67,6 +71,8 @@ var _flat_mats: Dictionary = {} # name -> StandardMaterial3D (unshaded cutouts)
 var _core_mat: StandardMaterial3D = null
 var _core_light: OmniLight3D = null
 var _cam_ref: Camera3D = null
+var _fol_mats: Dictionary = {}  # name -> ShaderMaterial (foliage cards)
+var _clump_tex: Texture2D = null
 
 func _ready() -> void:
 	_build_environment()
@@ -89,6 +95,64 @@ func _toon_mat(mat_name: String) -> ShaderMaterial:
 	m.set_shader_parameter("rim_strength", 0.10)
 	_mats[mat_name] = m
 	return m
+
+func _fol_mat(mat_name: String) -> ShaderMaterial:
+	if _fol_mats.has(mat_name):
+		return _fol_mats[mat_name]
+	if _clump_tex == null:
+		_clump_tex = load(_CLUMP_PATH) if ResourceLoader.exists(_CLUMP_PATH) else _make_clump_tex()
+	var m := ShaderMaterial.new()
+	m.shader = _FOLIAGE
+	m.set_shader_parameter("toon_ramp", load("res://rendering/toon_ramp.tres"))
+	m.set_shader_parameter("clump_tex", _clump_tex)
+	_fol_mats[mat_name] = m
+	return m
+
+# Procedural placeholder clump: scalloped union of discs, baked ink contour,
+# sparse leaf ticks. Replaced 1:1 by the hand-drawn sprite when it lands.
+static func _make_clump_tex() -> ImageTexture:
+	var sz := 256
+	var img := Image.create(sz, sz, false, Image.FORMAT_RGBA8)
+	seed(42)
+	var discs: Array = []
+	for i in range(9):
+		var a := TAU * i / 9.0
+		discs.append(Vector3(
+			128.0 + cos(a) * randf_range(20.0, 52.0),
+			128.0 + sin(a) * randf_range(16.0, 44.0),
+			randf_range(30.0, 52.0)))  # x, y, radius
+	discs.append(Vector3(128.0, 128.0, 58.0))
+	var mask := PackedByteArray()
+	mask.resize(sz * sz)
+	for y in range(sz):
+		for x in range(sz):
+			var inside := false
+			for d in discs:
+				if Vector2(x - d.x, y - d.y).length() < d.z:
+					inside = true
+					break
+			mask[y * sz + x] = 1 if inside else 0
+	for y in range(sz):
+		for x in range(sz):
+			if mask[y * sz + x] == 0:
+				img.set_pixel(x, y, Color(0, 0, 0, 0))
+				continue
+			var edge := false
+			for off in [[-3, 0], [3, 0], [0, -3], [0, 3], [-2, -2], [2, 2], [-2, 2], [2, -2]]:
+				var nx: int = clampi(x + off[0], 0, sz - 1)
+				var ny: int = clampi(y + off[1], 0, sz - 1)
+				if mask[ny * sz + nx] == 0:
+					edge = true
+					break
+			if edge:
+				img.set_pixel(x, y, Color(0.13, 0.12, 0.14, 1.0))  # baked ink contour
+			else:
+				# flat tone + sparse leaf ticks (hash-based short strokes)
+				var h := fmod(sin(float(x) * 12.9898 + float(y) * 78.233) * 43758.5453, 1.0)
+				var tick := absf(h) > 0.965
+				var shade := 0.82 if tick else (0.96 + 0.04 * sin(float(x + y) * 0.05))
+				img.set_pixel(x, y, Color(shade, shade, shade, 1.0))
+	return ImageTexture.create_from_image(img)
 
 func _flat_mat(mat_name: String) -> StandardMaterial3D:
 	if _flat_mats.has(mat_name):
@@ -236,32 +300,14 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		kn.position = Vector3(cos(ka) * kw + lean.x * kh, kh, sin(ka) * kw + lean.z * kh)
 		kn.rotation = Vector3(deg_to_rad(randf_range(55.0, 75.0)), -ka, 0)
 		root.add_child(kn)
-	# clumped canopy: 5 branch directions, each carrying 2-4 small leaf
-	# clusters with gaps between clumps (the ink outlines each clump — the
-	# anti-"plastoso" rule: many small silhouettes, not one big blob)
-	var fol_m := _toon_mat(foliage_key)
-	var fol_low := _toon_mat("foliage_dark")
+	# card canopy (TotK/Sable technique): alpha-cutout clump cards on an
+	# ellipsoid shell, normals baked radial from the crown center so the cel
+	# ramp bands the canopy as one soft volume. Ink outlines every card free.
 	var crown_y := seg_h * 3.1
 	var crown_c := Vector3(lean.x * 3.0 * seg_h, 0, lean.z * 3.0 * seg_h)
-	for ci in range(6):
-		var ca := TAU * ci / 6.0 + randf() * 0.6
-		var cr := randf_range(1.2, 3.0) * s
-		var ch := crown_y + randf_range(-1.2, 1.6) * s
-		var center := crown_c + Vector3(cos(ca) * cr, ch, sin(ca) * cr * 0.8)
-		var tone := fol_low if ch < crown_y + 0.4 * s else fol_m
-		for b in range(randi_range(3, 5)):
-			var f := MeshInstance3D.new()
-			var sm := SphereMesh.new()
-			var rr := randf_range(1.0, 1.9) * s
-			sm.radius = rr
-			sm.height = rr * 1.15
-			f.mesh = sm
-			f.material_override = tone
-			f.position = center + Vector3(
-				randf_range(-1.1, 1.1) * s,
-				randf_range(-0.6, 0.7) * s,
-				randf_range(-1.0, 1.0) * s)
-			root.add_child(f)
+	var crown_center := crown_c + Vector3(0, crown_y + 0.8 * s, 0)
+	_card_shell(root, crown_center, 2.9 * s, 2.5 * s, 26, 3.1 * s, _fol_mat(foliage_key), -0.1, 1.0)
+	_card_shell(root, crown_center, 3.1 * s, 2.5 * s, 18, 2.8 * s, _fol_mat("foliage_dark"), -0.8, 0.25)
 	# hero trees: one guaranteed low bough over the valley side (framing read)
 	if s >= 2.0:
 		var bough_y := trunk_h * 0.62
@@ -276,28 +322,40 @@ func _tree(pos: Vector3, s: float, foliage_key: String) -> void:
 		arm.position = Vector3(bough_c.x * 0.5, bough_y + 0.6 * s, bough_c.z * 0.5)
 		arm.rotation = Vector3(deg_to_rad(112.0), 0, 0)
 		root.add_child(arm)
-		for b in range(3):
-			var f := MeshInstance3D.new()
-			var sm := SphereMesh.new()
-			var rr := randf_range(1.2, 1.7) * s
-			sm.radius = rr
-			sm.height = rr * 1.15
-			f.mesh = sm
-			f.material_override = fol_low
-			f.position = bough_c + Vector3(
-				randf_range(-1.0, 1.0) * s,
-				randf_range(-0.3, 0.5) * s,
-				randf_range(-0.7, 0.7) * s)
-			root.add_child(f)
-	# small crown cap (keeps the dome read from afar)
-	var cap := MeshInstance3D.new()
-	var cs := SphereMesh.new()
-	cs.radius = 1.7 * s
-	cs.height = 1.9 * s
-	cap.mesh = cs
-	cap.material_override = fol_m
-	cap.position = crown_c + Vector3(0, crown_y + 2.2 * s, 0)
-	root.add_child(cap)
+		_card_shell(root, bough_c, 1.9 * s, 1.1 * s, 11, 2.2 * s, _fol_mat("foliage_dark"), -0.5, 0.9)
+
+# Builds one mesh of n tangent quads on an ellipsoid shell around `center`
+# (local coords). All 4 verts of a card share the RADIAL normal.
+func _card_shell(parent: Node3D, center: Vector3, rx: float, ry: float,
+		n_cards: int, card_size: float, mat: ShaderMaterial,
+		band_lo: float, band_hi: float) -> void:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	for i in range(n_cards):
+		var u := randf_range(band_lo, band_hi)
+		var a := randf() * TAU
+		var ring := sqrt(maxf(1.0 - u * u, 0.0))
+		var p := center + Vector3(cos(a) * ring * rx, u * ry, sin(a) * ring * rx * 0.85)
+		var nrm := (p - center).normalized()
+		var ref_up := Vector3.UP if absf(nrm.y) < 0.92 else Vector3.RIGHT
+		var t1 := nrm.cross(ref_up).normalized().rotated(nrm, randf() * TAU)
+		var t2 := nrm.cross(t1).normalized()
+		var hs := card_size * 0.5 * randf_range(0.8, 1.1)
+		# crossed pair: tangent quad + perpendicular quad — no edge-on slivers
+		var quads := [
+			[p - t1 * hs - t2 * hs, p + t1 * hs - t2 * hs, p + t1 * hs + t2 * hs, p - t1 * hs + t2 * hs],
+			[p - t2 * hs - nrm * hs * 0.7, p + t2 * hs - nrm * hs * 0.7, p + t2 * hs + nrm * hs * 0.7, p - t2 * hs + nrm * hs * 0.7],
+		]
+		for q in quads:
+			for v in [[q[0], Vector2(0, 0)], [q[1], Vector2(1, 0)], [q[2], Vector2(1, 1)],
+					[q[0], Vector2(0, 0)], [q[2], Vector2(1, 1)], [q[3], Vector2(0, 1)]]:
+				st.set_normal(nrm)
+				st.set_uv(v[1])
+				st.add_vertex(v[0])
+	var mi := MeshInstance3D.new()
+	mi.mesh = st.commit()
+	mi.material_override = mat
+	parent.add_child(mi)
 
 func _build_hero_trees() -> void:
 	seed(7)
@@ -501,6 +559,11 @@ func apply_time_preset(preset_name: String) -> void:
 	for key in ["terrain", "trunk", "foliage", "foliage_dark", "forest_mass"]:
 		_toon_mat(key).set_shader_parameter("rim_color", p["rim"])
 		_toon_mat(key).set_shader_parameter("rim_strength", p["rim_strength"])
+	for key in ["foliage", "foliage_dark"]:
+		var fm := _fol_mat(key)
+		fm.set_shader_parameter("albedo_color", p[key])
+		fm.set_shader_parameter("rim_color", p["rim"])
+		fm.set_shader_parameter("rim_strength", p["rim_strength"] * 0.6)
 	_toon_mat("terrain").set_shader_parameter("albedo_color", p["grass"])
 	_toon_mat("trunk").set_shader_parameter("albedo_color", p["trunk"])
 	_toon_mat("foliage").set_shader_parameter("albedo_color", p["foliage"])
