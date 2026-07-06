@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] design | PRD-006 (combate mínimo) PROPUESTO — con anti-objetivo del director
+Spec nueva [[PRD-006 Combate mínimo]] en `20-State/PRDs/`. Mandato del
+director incorporado como anti-objetivo: **el combate no debe sentirse
+como el prototipo 0** — diagnóstico del viejo (`try_attack()`: botón +
+cooldown, daño plano, flash+nudge) y reemplazo estructural (combos
+AnimNotify + buffer, HitPayload 4 campos, reacciones por Equilibrio,
+GuardComponent con parry Roba, canales de la Bible, soft-aim). El código
+viejo queda intacto solo para autotest_slice histórico. Criterio de
+aceptación literal del Playtest Loop: "no se siente como el prototipo 0".
+Pendiente ratificación.
+
 ## [2026-07-05] design | B10 RATIFICADA: Game Feel Bible sellada
 El director ratifica sin cambios, incluida la decisión mayor de cámara:
 LIBRE + soft-assist, sin lock-on duro (revisable en Gate 1 si el greybox
