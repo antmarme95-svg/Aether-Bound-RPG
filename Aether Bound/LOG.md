@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Fix: el melee vivo no mostraba el strike biomecánico
+Feedback del director ("no lo siento tan melee") destapó dos cosas: (1)
+`play_strike` (hip-first + curvas del alcance 1) solo lo llamaban los
+autotests — el juego vivo animaba el envelope legacy de 0.38 s; puenteado:
+el path melee de `try_attack` ahora anima con `play_strike(0.55)`, daño
+legacy intacto (anti-objetivo). (2) El boot `--skip=wilds` sin `--cls`
+hereda la clase de la pantalla de creación — para probar melee hay que
+bootear warrior (`--origin=ironblooded --cls=warrior --skip=wilds`).
+QA: test_core y slice ALL_PASS. Commit 59ec800.
+
 ## [2026-07-06] feature | PRD-006 alcance 1: arquitectura de combate + curvas trifásicas
 Branch `feat/prd-006-a1`. (1) `godot/combat/`: HitPayload (4 campos canon
 + MarkMultiplier fijo 1.0), CombatComponent (combos con ventanas ancladas
