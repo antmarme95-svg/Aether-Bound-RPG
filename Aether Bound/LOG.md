@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] design | B10: Game Feel Bible PROPUESTA (abre Fase 1)
+Página nueva [[Game Feel Bible]] (`propuesto`), anclada en los valores
+vivos del prototipo (FOV-kick 8°, stutter 0.03 s/m, cam-thump 0.18 s).
+4 canales: tiempo (hit-stop 40/70/110 ms por masa de arma; parry =
+dilation 0.2×0.35 s, no se apilan), screen-shake (modelo trauma², cap 0.6,
+Perlin; el shake comunica masa ajena, el impacto propio habla por
+thump/stutter), cámara de combate (DECISIÓN MAYOR propuesta: libre +
+soft-assist, sin lock-on duro — el momentum del Duelist manda; revisable
+en Gate 1), y feel del Springboard (windup 0.4 s, apex float g×0.5 0.2 s,
+sting T2/T3; degradado post-traición sin float/sting). Pendiente
+ratificación del director.
+
 ## [2026-07-05] feature | Fase 0 CERRADA: C1 rename + C5 fix --skip (merge a master)
 Feature Loop en `feat/fase-0-higiene` → merge --no-ff a master. **C1:**
 AETHER BOUND en config/name (título de ventana), prints de boot y README

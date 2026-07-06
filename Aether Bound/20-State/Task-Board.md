@@ -32,7 +32,7 @@ updated: 2026-07-05
 | B7 | Progresión de personaje (skills/equipo/crafting) | ⬜ | [[Progresión y Contrato]] |
 | B8 | Dirección de audio/música (semilla: sting de dos notas) | ⬜ | [[Bond y el Bond Vacío]] |
 | B9 | Diseño visual de Speck (3 estadios) + re-naming de sub-estilos VFX | 🔄 arte ✅ | [[Speck]] — diseño visual RATIFICADO (trilogía en `90-Raw/concept/`); solo falta el re-naming de sub-estilos VFX |
-| B10 | Game Feel Bible §6.3 (hit-stop, screen-shake budget, cámara de combate) | ⬜ | [[Combate]], [[Art Bible]] |
+| B10 | Game Feel Bible §6.3 (hit-stop, screen-shake budget, cámara de combate) | 🔄 | PROPUESTA 2026-07-05: [[Game Feel Bible]] (4 canales + decisión cámara libre/soft-assist) — pendiente ratificación |
 | B11 | Golden scene: keyframes + prueba técnica 4 capas | ✅ | CERRADA (rondas 1-2 aprobadas y mergeadas). Look = sistema replicable: 3 shaders + foliage_clump.png + PRESETS. Fine-tuning diferido a producción del slice: corteza de ramas en close-up, facetas del cristal de cerca, banding del terreno lejano. `Start-GoldenScene.bat` |
 | B12 | Fenotipos y creación de personaje | ✅ | [[Fenotipos y Creación de Personaje]] ratificada 2026-07-04, con 5 láminas canónicas en `90-Raw/concept/` |
 | B13 | Generar concept art de fenotipos en Nano Banana 2 (director) | ✅ | 5 láminas en `90-Raw/concept/`; ver [[Fenotipos y Creación de Personaje]] |

@@ -13,9 +13,10 @@ updated: 2026-07-05
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** **Fase 1 del [[Plan-de-Produccion]]** (ratificado;
-  Fase 0 cerrada 2026-07-05). Primero **B10 Game Feel Bible** (Design Loop
-  — gatea todo lo demás), luego PRD-006 (combate §4.2 mínimo) y PRD-007
+- **Próxima prioridad:** **ratificar B10** — [[Game Feel Bible]] quedó
+  PROPUESTA (2026-07-05): hit-stop por masa, shake modelo trauma, cámara
+  libre + soft-assist (decisión mayor), feel del Springboard con degradado
+  post-traición. Tras ratificar: PRD-006 (combate §4.2 mínimo) y PRD-007
   (Dagna companion + Springboard T1). Objetivo del Gate 1: pelear junto a
   Dagna en greybox se siente bien a ≥60 FPS. Pareja del slice: **Humano
   Duelist × Dagna** ([[Slice of Bond]] ratificado completo).

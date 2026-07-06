@@ -34,6 +34,7 @@
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres (propuesto).
 - [[Briefs de Concept Art]] — prompts Nano Banana 2 por fenotipo + notas de pipeline (propuesto).
 - [[Slice of Bond]] — vertical slice ratificado: Humano Duelist × Dagna; 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), 45–60 min.
+- [[Game Feel Bible]] — §6.3: hit-stop por masa, shake modelo trauma, cámara libre + soft-assist, feel del Springboard (propuesto).
 - [[Dagna]] — ficha completa del Pivote del slice: bio, reclutamiento, tiers del Springboard, quiebre, la Primera Cuña (propuesto).
 
 ## 20-State (dónde está el proyecto)
