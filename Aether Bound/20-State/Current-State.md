@@ -17,8 +17,9 @@ updated: 2026-07-06
   1. ~~B14~~ ✅ (2026-07-06): benchmark v2 AAA hecho — [[Benchmark
      Biomecánico]] §v2. Veredicto: motion matching descartado; camino
      validado = Sifu (handkey trifásico) + foot IK de HZD (→C4).
-     **Pendiente del director: ratificar la página (v1+v2) y el A/B en
-     vivo del stepping en 2s.**
+     **Pendiente del director: ratificar la página (v1+v2) tras el A/B
+     en vivo del stepping — harness listo: tecla T in-game alterna
+     2s↔suave con toast en HUD (`Start-Godot.bat`, boot `--skip=wilds`).**
   2. Siguiente: [[PRD-006 Combate mínimo]] alcance 1 (4 componentes
      + HitPayload) + curvas anticipación/overshoot del strike (= la
      estructura trifásica de Sifu).

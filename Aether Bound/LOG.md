@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | A/B en vivo del stepping en 2s: tecla T in-game
+Preparado el A/B que pedía [[Benchmark Biomecánico]] v1: tecla **T** en el
+juego alterna `animation_on_twos` en caliente (toast en HUD: "EN 2s
+(12 Hz)" vs "suave (60 fps)"); boot directo a WILDS con `--skip=wilds`.
+QA: test_core ALL_PASS, autotest_scenes ok, autotest_slice ALL_PASS.
+Sesión en vivo lanzada para el director. Pendiente: veredicto del director
+(ratifica la página v1+v2 o pide ajustes — moving holds es el plan B si el
+stepping puro se siente muerto).
+
 ## [2026-07-06] design | B14 cerrada: benchmark v2 AAA — el AAA valida el camino, no lo cambia
 Research de los 5 títulos encargados, volcado en [[Benchmark Biomecánico]]
 §v2 (sigue propuesto; se ratifica junto con la v1). Hallazgo estructural:

@@ -258,6 +258,12 @@ func _unhandled_input(event: InputEvent) -> void:
 				try_attack()
 			elif kc == KEY_M:
 				EventBus.emit_event("minimap:toggled", {})
+			elif kc == KEY_T:
+				# A/B review del pose stepping ([[Benchmark Biomecánico]])
+				if rig != null:
+					rig.animation_on_twos = not rig.animation_on_twos
+					var mode: String = "Anim: EN 2s (12 Hz)" if rig.animation_on_twos else "Anim: suave (60 fps)"
+					EventBus.emit_event("quest:toast", {"text": mode})
 			elif kc == KEY_ESCAPE:
 				EventBus.emit_event("player:pause_toggled", {})
 		elif not ke.pressed:
