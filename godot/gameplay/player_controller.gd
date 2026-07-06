@@ -355,7 +355,10 @@ func try_attack() -> void:
 			return
 		attack_cooldown = float(combat.get("cooldown", 0.65)) * passives.attack_cooldown_mult()
 		_attack_pulse = 0.12   # Sprint L3: briefly interrupt sprint/slide
-		rig.play_attack("melee")
+		# PRD-006: la ANIMACIÓN visible es el strike biomecánico (hip-first,
+		# curvas trifásicas) — la resolución de daño sigue siendo la vieja
+		# hasta el alcance 2 (anti-objetivo: lógica intacta, solo se ve).
+		rig.play_strike(0.55)
 		_melee_hit(combat)
 
 func _attack_damage(combat: Dictionary) -> float:
