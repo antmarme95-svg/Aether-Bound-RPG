@@ -1,6 +1,6 @@
 ---
 status: propuesto
-source: "Deep dive 2026-07-06 (pedido del director): entrevistas/artículos de Shedworks (Sable), Microbird (Hinterberg), técnica Guilty Gear Xrd / Spider-Verse. v2 (B14, 2026-07-06): GDC/entrevistas de Ubisoft (motion matching), IOI (Glacier Next), Guerrilla (HZD), Respawn (Jedi), Sloclap (Sifu)"
+source: "Deep dive 2026-07-06 (pedido del director): entrevistas/artículos de Shedworks (Sable), Microbird (Hinterberg), técnica Guilty Gear Xrd / Spider-Verse. v2 (B14, 2026-07-06): GDC/entrevistas de Ubisoft (motion matching), IOI (Glacier Next), Guerrilla (HZD), Respawn (Jedi), Sloclap (Sifu). v3 (B15, 2026-07-06): clips 60fps grabados por el director en C:/Users/tonom/Videos/NVIDIA/ (Sifu 13.25, Fortnite 13.21, Sable 13.30) — análisis frame a frame propio"
 updated: 2026-07-06
 ---
 
@@ -160,6 +160,102 @@ la única pieza de "realismo" que falta (foot IK); el resto del AAA
 pila de 4 capas de la síntesis v1 queda ratificada como arquitectura, y
 PRD-006 alcance 1 (curvas anticipación/overshoot = trifásico de Sifu)
 es exactamente el paso correcto.
+
+## v3 — B15: mediciones observacionales con clips (2026-07-06)
+
+Clips grabados por el director (60 fps, 1080p; 1 frame = 16.7 ms):
+Sifu (combate, sala de entrenamiento, 79 s) · Fortnite (movilidad en campo
+abierto, 50 s) · Sable (interior de la cabeza gigante, 54 s). Método:
+hojas de contacto frame a frame (ffmpeg) + perfil de movimiento por frame
+(YDIF de `signalstats`: un hit-stop es una racha de frames idénticos, un
+impacto es un pico). Los números de abajo son **medidos**, no estimados.
+
+### Sifu — timings de combate
+
+| Acción | Medición (frames @60) | Segundos |
+|---|---|---|
+| Golpe de combo: viaje de extensión→contacto | ~2–3 f | 0.03–0.05 |
+| Golpe de combo: cadencia entre impactos | 16 f | 0.27 |
+| Par rápido dentro del combo (1-2) | 8 f entre impactos | 0.13 |
+| Pausa de re-chamber antes del remate | 28–29 f | ~0.47 |
+| Patada (remate): chamber + barrido | ~8 f + ~5 f | ~0.22 |
+| Double Palm (cargado): windup | ~32 f | 0.53 |
+| Double Palm: follow-through sostenido | ~24 f | 0.40 |
+| **Hit-stop golpe normal** | **2 f congelado TOTAL** | **0.033** |
+| **Hit-stop golpe pesado (arma)** | **3 f** | **0.050** |
+| Reacción del enemigo (head-snap) | arranca al frame siguiente del contacto | <0.02 |
+
+Impactos del primer combo medidos en 0.999 / 1.266 / 1.400 / 1.883 /
+2.349 s (patada): el ritmo es **sincopado** — pares rápidos + pausa
+larga antes del remate, no un metrónomo. El hit-stop congela TODO el
+frame (ambos personajes), no solo al que pega.
+
+**Contra `weapons.json` actual:** `unarmed` (dur 0.34/0.38) está en la
+zona correcta pero un pelín lento vs los 0.27 de Sifu; el contacto de
+Sifu cae ≈60% del ciclo del golpe → **nuestra frontera de release 0.58
+queda validada por medición**. `heavy_maul` (0.80/1.00 con interrupt) ≈
+Double Palm (0.53 windup + 0.40 follow ≈ 0.93 total) — validado. La
+síncopa sugiere que las `dur` de un combo NO deben ser uniformes:
+variar cadencia y meter un hueco antes del interrupt.
+
+**Faltantes del clip** (no capturados con claridad): parry y guard
+break. Si el director quiere esos números, pedir un clip corto contra
+un enemigo agresivo (defensa deliberada).
+
+### Fortnite — timings de movilidad
+
+| Acción | Medición | Segundos |
+|---|---|---|
+| Ciclo completo de carrera (2 pasos) | 27–30 f | 0.45–0.50 |
+| Cadencia de pasos | — | ~4.3 pasos/s |
+| Salto: tiempo en el aire | ~34 f | 0.57 |
+| Aterrizaje → carrera (no bloqueante) | ~6 f | ~0.10 |
+| Slide: entrada carrera→pose completa | ~6 f | ~0.10 |
+| Slide: duración sostenida (cuesta abajo) | — | 2.0–2.3 |
+| Slide → carrera (salida) | sin corte perceptible | ~0.1 |
+
+Lección de feel: **ningún estado de movilidad bloquea al siguiente** —
+aterrizar no interrumpe el sprint, el slide entra y sale en ~6 frames.
+El peso se comunica con polvo (ráfaga al arrancar sprint, estela
+continua en el slide), no con frames de bloqueo. Mantle no aparece en
+el clip (terreno abierto sin bordes).
+
+### Sable — el lenguaje del timing, medido
+
+| Capa | Medición |
+|---|---|
+| Extremidades (carrera Y escalada) | poses sostenidas **~4 frames** (≈15 Hz efectivos) |
+| **Raíz** | **avanza CONTINUA cada frame** — cero pop, cero stepping |
+| Secundario (poncho) | simulación suave continua POR ENCIMA del stepping |
+| Idle | cuasi-estático (respiración lenta); lo "vivo" son los VFX del entorno |
+| Contactos de escalada | puffs de polvo en mano/pie por agarre |
+
+**LA respuesta a la pregunta clave (raíz vs body pop):** confirmado
+frame a frame — Sable NO escalona la raíz. En carrera, el personaje se
+desplaza suavemente respecto a las baldosas del piso en cada frame
+mientras las piernas/brazos sostienen poses de 4 frames. **Es
+exactamente nuestro canon del A/B (stepping solo en extremidades,
+cuerpo/raíz a 60): validación 1:1; el descarte del body pop coincide
+con la referencia.** Nota: medimos ~4 f de hold (15 Hz), nuestro toggle
+está en 12 Hz — misma familia; el A/B con el director ya eligió y no
+hay motivo para reabrir.
+
+### Consecuencias directas (alimentan PRD-006 alcance 2)
+
+1. **Hit-stop del [[Game Feel Bible]]:** 2 f (33 ms) golpe normal,
+   3 f (50 ms) pesado, congelado global. Presupuesto exacto, medido.
+2. **`weapons.json`:** mantener fases (0.58 validado); acelerar un poco
+   `unarmed`; romper la uniformidad de `dur` dentro de cada combo
+   (síncopa: par rápido + pausa + remate).
+3. **Reacción del que recibe: al frame siguiente.** El head-snap
+   inmediato es la mitad de la legibilidad del golpe — el HitPayload
+   debe aplicar la reacción en el mismo tick del contacto.
+4. **Locomoción ([[Locomoción]]):** estados no bloqueantes estilo
+   Fortnite — aterrizaje ~0.1 s que no corta el sprint; slide con
+   entrada/salida de ~6 f.
+5. La pila de 4 capas (v1) y el camino Sifu (v2) quedan **ratificados
+   por medición propia** — tercera fuente independiente que apunta al
+   mismo lugar.
 
 ## Fuentes
 

@@ -1,5 +1,22 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] ingest | B15 ✅: benchmark observacional medido (3 clips del director)
+Clips 60 fps de Sifu/Fortnite/Sable analizados frame a frame (hojas de
+contacto ffmpeg + perfil YDIF por frame para detectar hit-stops e
+impactos). Resultado en [[Benchmark Biomecánico]] §v3 — números medidos,
+no estimados: **Sifu** hit-stop 2f normal / 3f pesado (congelado GLOBAL),
+combo sincopado (16f/8f/29f entre impactos), viaje a contacto 2–3f,
+contacto ≈60% del ciclo (**valida la frontera 0.58 de weapons.json**),
+Double Palm 32f windup + 24f follow. **Fortnite** movilidad no
+bloqueante: aterrizaje ~6f sin cortar sprint, slide entra/sale en ~6f,
+salto 34f de aire. **Sable (LA pregunta clave): raíz CONTINUA cada
+frame + holds de ~4f solo en extremidades + tela suave encima —
+validación 1:1 de nuestro canon A/B; el body pop descartado coincide
+con la referencia.** Faltantes del clip: parry/guard break, mantle
+(pedir clip extra solo si el alcance 2 los pide). Task-Board y
+Current-State actualizados; consecuencias listadas para el alcance 2
+(hit-stop budget, síncopa de dur, reacción al frame siguiente).
+
 ## [2026-07-06] state | Cierre de sesión: B14 + A/B + alcance 1 + articulación
 Sesión completa en un día. Recorrido: **B14 ✅** (benchmark v2 AAA — motion
 matching descartado, camino Sifu/HZD validado; la v1 quedó ratificada de

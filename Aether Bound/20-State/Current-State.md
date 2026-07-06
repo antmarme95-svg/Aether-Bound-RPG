@@ -10,14 +10,15 @@ updated: 2026-07-06
 
 - **Milestone:** Fase 1 del [[Plan-de-Produccion]] — combate mínimo del
   vertical slice **"Slice of Bond"** (Humano Duelist × Dagna).
-- **⚠️ ANTES DE EMPEZAR CUALQUIER COSA la próxima sesión: pedir al
-  director la UBICACIÓN de los clips del benchmark observacional (B15)**
-  — va a grabar Sifu (combate: jab/combo/cargado/parry/guard break),
-  Fortnite (movilidad: sprint/slide/etc.) y posiblemente **Sable** (lo
-  va a comprar; timing visual en 2s — incluye la pregunta clave de cómo
-  maneja Sable la raíz vs nuestro body pop descartado). Análisis frame a
-  frame → tabla comparativa → calibrar `weapons.json`, fases (0.32/0.58)
-  y [[Game Feel Bible]] con números reales en vez de valores inventados.
+- **B15 ✅ (2026-07-06): benchmark observacional medido** — los 3 clips
+  del director analizados frame a frame → [[Benchmark Biomecánico]] §v3.
+  Números clave para el alcance 2: hit-stop 2f normal / 3f pesado
+  (congelado global), reacción del golpeado al frame siguiente, combo
+  sincopado (no uniforme), frontera de release 0.58 VALIDADA (contacto
+  ≈60% del ciclo), estados de movilidad no bloqueantes (~0.1 s), y
+  **Sable confirma nuestro canon 1:1: raíz continua + stepping solo en
+  extremidades**. Faltantes (pedir clip extra solo si hace falta):
+  parry/guard break, mantle.
 - **PRIMERA TAREA de código: [[PRD-006 Combate mínimo]]
   alcance 2 — kit Humano Duelist jugable.** Combo ×4 sobre
   CombatComponent (ventanas biomecánicas + buffer generoso), parry Roba
