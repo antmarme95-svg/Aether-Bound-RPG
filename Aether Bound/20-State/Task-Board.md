@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-05
+updated: 2026-07-06
 ---
 
 # Task Board — preproducción
@@ -36,7 +36,7 @@ updated: 2026-07-05
 | B11 | Golden scene: keyframes + prueba técnica 4 capas | ✅ | CERRADA (rondas 1-2 aprobadas y mergeadas). Look = sistema replicable: 3 shaders + foliage_clump.png + PRESETS. Fine-tuning diferido a producción del slice: corteza de ramas en close-up, facetas del cristal de cerca, banding del terreno lejano. `Start-GoldenScene.bat` |
 | B12 | Fenotipos y creación de personaje | ✅ | [[Fenotipos y Creación de Personaje]] ratificada 2026-07-04, con 5 láminas canónicas en `90-Raw/concept/` |
 | B13 | Generar concept art de fenotipos en Nano Banana 2 (director) | ✅ | 5 láminas en `90-Raw/concept/`; ver [[Fenotipos y Creación de Personaje]] |
-| B14 | **Benchmark biomecánico v2: state of the art AAA** — Assassin's Creed, 007 First Light, Horizon Zero Dawn, Star Wars Jedi, y **Sifu** (biomecánica, movilidad y combate) | ⬜ | **PRIMERA TAREA de la próxima sesión, ANTES de seguir el dev** (mandato del director 2026-07-06). Extiende [[Benchmark Biomecánico]] |
+| B14 | **Benchmark biomecánico v2: state of the art AAA** — Assassin's Creed, 007 First Light, Horizon Zero Dawn, Star Wars Jedi, y **Sifu** (biomecánica, movilidad y combate) | ✅ | Research 2026-07-06 volcado en [[Benchmark Biomecánico]] §v2 (propuesto — se ratifica junto con la v1). Veredicto: motion matching descartado por costo; camino validado = Sifu (handkey trifásico) + foot IK de HZD (→C4); PRD-006 alcance 1 confirmado como paso correcto |
 
 ## Frente C — Técnico (hereda del prototipo)
 

@@ -1,5 +1,26 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] design | B14 cerrada: benchmark v2 AAA — el AAA valida el camino, no lo cambia
+Research de los 5 títulos encargados, volcado en [[Benchmark Biomecánico]]
+§v2 (sigue propuesto; se ratifica junto con la v1). Hallazgo estructural:
+el AAA se divide en dos familias. (A) Data-driven / motion matching (AC,
+For Honor, 007 First Light con Glacier Next): descartada sin ambigüedad —
+el combustible es una base masiva de mocap que no tenemos ni queremos;
+rescatables solo los conceptos (dial responsividad↔fidelidad, motion
+warping — que nuestro hip drive ya hace procedural). (B) Autorada + capas:
+NUESTRO camino, validado. Sifu es el benchmark real: combate ~100% handkey,
+estructura trifásica build-up/impacto/release (= nuestras curvas del
+alcance 1), legibilidad por silueta + timing manipulado + ralentización
+deliberada; su costo es iteración (docenas de rondas por ataque, 2→15
+animadores) — para 1+LLM: presupuestar MUCHO feedback del director, las
+curvas iteran barato. HZD aporta foot IK con anotación de contacto (→ C4,
+Godot lo trae) y el checklist de estados de locomoción. Jedi FO (physical
+animation) queda como versión procedural barata en Fase 4, respetando la
+regla del stepping. Conclusión: la pila de 4 capas de la v1 queda
+ratificada como arquitectura; PRD-006 alcance 1 es el paso correcto.
+Task-Board B14 ✅. Pendiente para ratificar la página: A/B en vivo del
+stepping (v1) + visto bueno del director a la v2.
+
 ## [2026-07-06] state | Cierre de sesión: PRD-006 parte 1 mergeada; B14 fijada como primera tarea
 Sesión 2026-07-05/06 cerrada. Recorrido: A2b ratificada (alcance del
 slice) → A1 ratificada (plan de producción, frente A COMPLETO) → Fase 0

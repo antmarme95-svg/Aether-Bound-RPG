@@ -13,13 +13,15 @@ updated: 2026-07-06
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad (ORDEN FIJADO por el director al cierre 2026-07-06):**
-  1. **B14 — Benchmark biomecánico v2 (AAA)** ANTES de seguir el dev:
-     Assassin's Creed, 007 First Light, Horizon Zero Dawn, Star Wars
-     Jedi, y **Sifu** (biomecánica + movilidad + combate). Extiende
-     [[Benchmark Biomecánico]].
-  2. Recién después: [[PRD-006 Combate mínimo]] alcance 1 (4 componentes
-     + HitPayload) + curvas anticipación/overshoot del strike.
+- **Próxima prioridad:**
+  1. ~~B14~~ ✅ (2026-07-06): benchmark v2 AAA hecho — [[Benchmark
+     Biomecánico]] §v2. Veredicto: motion matching descartado; camino
+     validado = Sifu (handkey trifásico) + foot IK de HZD (→C4).
+     **Pendiente del director: ratificar la página (v1+v2) y el A/B en
+     vivo del stepping en 2s.**
+  2. Siguiente: [[PRD-006 Combate mínimo]] alcance 1 (4 componentes
+     + HitPayload) + curvas anticipación/overshoot del strike (= la
+     estructura trifásica de Sifu).
 - **PRD-006 en curso** (Feature Loop, branch `feat/prd-006-combate`,
   mergeado a master al cierre de sesión): **alcance 0 ✅** — rig humano
   restringido (ROM + constraints cada frame) + strike hip-first; movilidad
