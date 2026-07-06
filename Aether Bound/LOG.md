@@ -1,5 +1,18 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Review de strips del strike: coil amplificado (feedback del director)
+Dos observaciones del director sobre los strips de biomech: (1) el look de
+las capturas está fuera de la Art Bible — CONFIRMADO COMO PLANEADO (stage
+pelado de QA + rig del prototipo cuyo cel genérico es anti-referencia
+explícita; el look canónico se aplica en Fase 4 del [[Plan-de-Produccion]];
+las fases 1–3 se revisan en crudo: el cuerpo, no el pixel). (2) "No veo
+mucha amplitud en el coil" → CORREGIDO (commit 47a483e): amplitudes
+llevadas al borde del ROM (cadera −0.42, columna −0.75, hombro −1.90,
+codo −1.45), contra-giro de cabeza (los ojos quedan en el objetivo — lo
+que hace legible un windup real), captura del windup movida al pico del
+coil (k 0.28). autotest_biomech ALL_PASS se mantiene (cero violaciones:
+el ROM absorbe las amplitudes nuevas).
+
 ## [2026-07-06] feature | PRD-006 alcance 0 COMPLETO: rig humano restringido (en branch)
 En `feat/prd-006-combate` (commit 5d9d93b). Entregado: `rig_biomech.gd`
 (tabla ROM humana de referencia — hombro 3-DOF, codo/rodilla bisagra sin
