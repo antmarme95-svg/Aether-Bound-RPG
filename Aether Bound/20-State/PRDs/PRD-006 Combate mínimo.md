@@ -99,6 +99,30 @@ CREATION→WILDS (la arena es escena propia hasta la Fase 3).
   se siente como el prototipo 0" y "el cuerpo importa más que el pixel".**
   Si falla, se tunea contra la Bible y §4.3 antes de abrir PRD-007.
 
+## Decisiones de implementación (alcance 2, 2026-07-06)
+
+- **Anti-objetivo resuelto por enrutamiento de input:** `try_attack()`
+  (prototipo 0) queda byte-a-byte intacto; el input real (LMB/F) enruta a
+  `duelist_attack()` cuando el estilo de la clase es melee. Solo los
+  autotests históricos (`autotest_slice`, `autotest_duelist`) llaman al
+  camino viejo, directamente. Verificado: `autotest_slice` ALL_PASS.
+- **RMB contextual:** melee = guardia (hold bloquea; el PRESS abre la
+  ventana de parry Roba — ventana estricta estilo Sifu/B15b, sin refresh
+  por hold); clases ranged conservan ADS. `test_ads` no se ve afectado
+  (asserts de datos/lógica).
+- **Momentum capturado al ARRANCAR el swing** (no al conectar): la ley
+  sprint↔arma frena el cuerpo el mismo tick, pero el golpe conserva el
+  peso con el que salió (slide/leap → `move_speed_norm` > 1 → daño ↑).
+- **Cadena con costo por paso:** cada golpe (incluido el encadenado por
+  buffer) cobra 10 de stamina al disparar; sin stamina la cadena se corta
+  limpio en el windup (cancel canónico).
+- **Durs del combo sincopadas** con los números de B15 (Sifu): 0.40 /
+  0.32 / 0.46 / 0.62 — par rápido, respiro, remate interrupt.
+- **Lunge de la bestia → HitPayload** por `receive_hit()` del jugador
+  (guardia resuelve bloqueo/parry/reacción); parry → bestia stunned ~2 s
+  (recover extendido, B15b). Reacciones completas por Equilibrio de los
+  enemigos = alcance 3.
+
 ## Riesgos
 
 El rig restringido (alcance 0) es la apuesta grande del PRD: hacer anims

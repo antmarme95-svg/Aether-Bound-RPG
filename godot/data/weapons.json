@@ -15,10 +15,10 @@
 		"momentum_gain": 0.55,
 		"buffer_window": 0.45,
 		"combo": [
-			{ "dur": 0.42, "damage": 9,  "balance": 10, "force": 3.2 },
-			{ "dur": 0.40, "damage": 10, "balance": 11, "force": 3.4 },
-			{ "dur": 0.45, "damage": 12, "balance": 13, "force": 4.0 },
-			{ "dur": 0.60, "damage": 16, "balance": 22, "force": 6.5, "interrupt": true }
+			{ "dur": 0.40, "damage": 9,  "balance": 10, "force": 3.2 },
+			{ "dur": 0.32, "damage": 10, "balance": 11, "force": 3.4 },
+			{ "dur": 0.46, "damage": 12, "balance": 13, "force": 4.0 },
+			{ "dur": 0.62, "damage": 16, "balance": 22, "force": 6.5, "interrupt": true }
 		]
 	},
 	"gloom_claws": {

@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] feature | PRD-006 alcance 2: kit Humano Duelist jugable
+El input real deja el prototipo 0 atrás: LMB/F arranca el combo ×4 del
+CombatComponent (buffer generoso; durs sincopadas con los números B15:
+0.40/0.32/0.46/0.62), RMB contextual en melee = guardia (hold bloquea,
+press abre la ventana ESTRICTA de parry Roba — B15b), momentum→daño se
+captura al arrancar el swing (el slide alimenta el golpe aunque la ley
+sprint↔arma frene el cuerpo el mismo tick), y el lunge de la bestia viaja
+como HitPayload por la guardia del jugador (parry → stun ~2 s medido en
+Sifu). **Anti-objetivo resuelto por enrutamiento de input:** try_attack()
+intacto, solo autotests históricos lo llaman. QA: test_combat/core/
+locomotion/ads ALL_PASS · autotest_slice ALL_PASS · autotest_biomech
+ALL_PASS · wilds 280 fps. Decisiones en [[PRD-006 Combate mínimo]].
+Pendiente: playtest del director (feel) antes del alcance 3.
+
 ## [2026-07-06] ingest | B15b: tutorial completo de Sifu (28 clips) — parry y guard break medidos
 El director grabó las lecciones completas del tutorial de Sifu (Structure
 & Block / Deflect / Parry / Avoid / Special / Command Attacks) + 2 peleas

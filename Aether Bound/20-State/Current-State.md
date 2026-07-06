@@ -24,13 +24,18 @@ updated: 2026-07-06
   cede terreno bajo golpes pesados (→ PushPullComponent). Ver
   [[Benchmark Biomecánico]] §B15b (consecuencias 6–8 para el alcance 2).
   Único faltante: mantle de Fortnite (irrelevante hasta C2).
-- **PRIMERA TAREA de código: [[PRD-006 Combate mínimo]]
-  alcance 2 — kit Humano Duelist jugable.** Combo ×4 sobre
-  CombatComponent (ventanas biomecánicas + buffer generoso), parry Roba
-  con input real, momentum→daño, ley sprint↔arma. **Decisión de diseño a
-  resolver al entrar:** el combate nuevo REEMPLAZA al del prototipo para
-  el jugador — definir cómo se mantiene verde el `autotest_slice`
-  histórico (anti-objetivo del PRD).
+- **PRD-006 alcance 2 ✅ CÓDIGO (2026-07-06): kit Humano Duelist
+  jugable.** Combo ×4 con buffer generoso y durs sincopadas (B15), RMB
+  contextual = guardia/parry Roba (ventana estricta), momentum→daño
+  capturado al arrancar el swing, ley sprint↔arma, lunge enemigo vía
+  HitPayload+guardia (parry → bestia stunned ~2 s). La decisión de
+  diseño quedó resuelta por ENRUTAMIENTO DE INPUT: `try_attack()` viejo
+  intacto y solo llamado por autotests históricos (`autotest_slice`
+  ALL_PASS). Decisiones documentadas en el PRD. **Siguiente: playtest
+  del director sobre el kit (boot melee:
+  `--origin=ironblooded --cls=warrior --skip=wilds`; RMB=guardia,
+  LMB/F=combo) → feedback → alcance 3 (2 enemigos con reacciones por
+  Equilibrio).**
 - **PRD-006 en curso** (Feature Loop; alcances 0 y 1 mergeados a master):
   - **Alcance 0 ✅** rig restringido (ROM + constraints) + strike
     hip-first, movilidad aprobada.
