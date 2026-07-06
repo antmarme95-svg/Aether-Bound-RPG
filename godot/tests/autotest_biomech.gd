@@ -55,7 +55,7 @@ func _run() -> void:
 	var phases_seen: Array = []
 	# Screenshot at each phase MIDPOINT so the pose is at its most readable
 	# (coil fully loaded / chain mid-release / re-balance in progress).
-	var shot_marks: Dictionary = {"windup": 0.16, "active": 0.45, "recovery": 0.78}
+	var shot_marks: Dictionary = {"windup": 0.28, "active": 0.45, "recovery": 0.78}
 	_rig.play_strike(0.55)
 	var guard: int = 0
 	while _rig.strike_phase() != "" and guard < 600:

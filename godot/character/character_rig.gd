@@ -1739,14 +1739,19 @@ func _process(delta: float) -> void:
 		# Segment targets: coil (windup peak) → release (active peak) → 0.
 		# Hips lead the rotation around Y; spine amplifies; shoulder whips
 		# the arm from cocked-back to follow-through; elbow extends last.
-		var hip_rot: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"],     -0.30, 0.28)
-		var spine_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["spine"],    -0.42, 0.45)
-		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.65, 0.55)
-		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.50, -0.10)
-		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.00, -0.12)
+		# Amplitudes pushed toward the ROM edge (director feedback 2026-07-06:
+		# the coil must READ — a shy windup kills the weight transfer).
+		var hip_rot: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"],     -0.42, 0.38)
+		var spine_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["spine"],    -0.75, 0.60)
+		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.90, 0.70)
+		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.85, -0.10)
+		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.10)
 
 		hips.rotation.y  = hip_rot
 		spine.rotation.y = spine_rot
+		# Head counter-rotates: the body coils away but the eyes stay on the
+		# target — this is what makes a real windup legible.
+		head.rotation.y = -spine_rot * 0.7
 		if arms.size() >= 2:
 			arms[1].rotation.x = arm_x
 			arms[1].rotation.z = arm_z
@@ -1766,6 +1771,7 @@ func _process(delta: float) -> void:
 		if _strike_t <= 0.0:
 			# Strike finished: release ownership; gait/idle settle takes over.
 			hips.rotation.y = 0.0
+			head.rotation.y = 0.0
 			_strike_dur = 0.0
 
 	# Idle breathe (JS: torso.scale.y = 1 + sin(t*2.1)*0.012)
