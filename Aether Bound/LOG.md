@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] ingest | B15c: crouch walk y sprint de Sable (2 clips más)
+Paréntesis del director tras el alcance 2. Mismo sistema confirmado
+(holds ~4 f solo extremidades + raíz continua) y una lección nueva de
+gaits para [[Locomoción]]/C4: **cada gait es una POSE de silueta propia**
+— crouch = torso plegado ~90° con mano rozando el suelo; sprint =
+encorvada adelante con cabeza baja (cita de Holland verificada frame a
+frame). Nuestra columna de 2 segmentos ya permite posturas de columna
+distintas por estado de la FSM. [[Benchmark Biomecánico]] §B15c.
+
 ## [2026-07-06] feature | PRD-006 alcance 2: kit Humano Duelist jugable
 El input real deja el prototipo 0 atrás: LMB/F arranca el combo ×4 del
 CombatComponent (buffer generoso; durs sincopadas con los números B15:

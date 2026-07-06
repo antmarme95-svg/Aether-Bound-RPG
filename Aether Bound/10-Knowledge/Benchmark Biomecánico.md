@@ -275,6 +275,24 @@ hit-stops de gameplay — no calibrar con ellos. Igual que el demo
 fantasma del menú (slow-mo). Los números de arriba salen de las
 ejecuciones en vivo.
 
+### B15c — gaits extra de Sable: crouch walk y sprint (2026-07-06 tarde)
+
+Dos clips más del director (serie 16.40/16.43). Confirman el sistema y
+agregan LA lección de gaits:
+
+| Gait | Timing medido | Silueta (el hallazgo) |
+|---|---|---|
+| Crouch walk | holds ~4 f, raíz continua | torso plegado ~90°, una mano ROZANDO el suelo — pose extrema, se lee a un pixel |
+| Sprint | holds ~4 f, raíz continua, ciclo ~0.4–0.5 s | encorvada hacia ADELANTE, cabeza baja, brazos bombeando — la cita de Holland ("sprinting se encorva") verificada frame a frame |
+
+**Lección para [[Locomoción]] / C4:** cada gait tiene UNA pose de
+silueta propia empujada al borde del ROM — no es el mismo ciclo más
+rápido o más agachado. Crouch ≠ walk agachado: es otra pose. Sprint ≠
+run acelerado: es otra postura de columna. Nuestro rig con columna en
+2 segmentos ya puede plegar el torso por gait (lumbar+torácico); los
+gaits L5/L6 deberían adoptar posturas de columna DISTINTAS por estado
+de la FSM (idle erguida / crouch plegada / sprint encorvada).
+
 ### Consecuencias directas (alimentan PRD-006 alcance 2)
 
 1. **Hit-stop del [[Game Feel Bible]]:** 2 f (33 ms) golpe normal,
