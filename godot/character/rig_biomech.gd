@@ -46,8 +46,12 @@ const ROM: Dictionary = {
 		"z": Vector2(-0.3, 0.3),    # lateral bend
 	},
 	"hips_root": { # pelvis orientation relative to stance
+		# y is generous on purpose: today the legs are children of the hips,
+		# so pelvis rotation carries the stance with it — it models pelvis +
+		# foot-pivot as one unit (a real hitter pivots the back foot and the
+		# pelvis turns 40–60°). Tighten when feet get planted IK (C4).
 		"x": Vector2(-0.3, 0.3),
-		"y": Vector2(-0.45, 0.45),
+		"y": Vector2(-0.7, 0.7),
 		"z": Vector2(-0.25, 0.25),
 	},
 	"head": {

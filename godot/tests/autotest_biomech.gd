@@ -43,7 +43,11 @@ func _run() -> void:
 		_rig.set_motion(spd, false, false)
 		await _run_for(1.0)
 	_rig.set_motion(0.5, true, false)    # crouch-walk at realistic speed
-	await _run_for(1.0)
+	await _run_for(0.45)
+	await Debug.screenshot("res://test_out/biomech_crouchwalk_a.png")
+	await _run_for(0.22)                 # ~half stride later (opposite extreme)
+	await Debug.screenshot("res://test_out/biomech_crouchwalk_b.png")
+	await _run_for(0.35)
 	_rig.set_motion(0.9, false, true)    # slide pose
 	await _run_for(0.7)
 	_rig.set_motion(0.0, false, false)

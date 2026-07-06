@@ -1695,20 +1695,32 @@ func _process(delta: float) -> void:
 	# Thighs flex forward at the hip; knees bend deeply; a gentle alternating stride
 	# keeps the crouch-walk readable. Overrides the standing gait leg pose.
 	if crouch and not _motion_slide and legs.size() >= 2 and arms.size() >= 2:
-		# Crouch-WALK: hips + trunk hold the low squat; the FEET step one in front of the
-		# other. NEGATIVE leg.rotation.x = thigh forward/up (hip flexion, same sign as the
-		# slide lead-leg). A clear alternating stride + per-leg knee lift = a low sneaky walk.
+		# Crouch-WALK v2 (feedback del director 2026-07-06): the pelvis is
+		# alive. A real low walk travels THROUGH the hips — pelvis rotates
+		# with the stride, weight shifts laterally over the planted foot,
+		# the trunk counter-rotates, and the arms counter-swing for balance
+		# instead of freezing. The low squat silhouette is preserved.
 		var step: float = sin(_phase) * 1.6 * spd_clamped     # alternating thigh swing
 		legs[0].rotation.x = -1.0 + step
 		legs[1].rotation.x = -1.0 - step
 		# Knee lifts on the leg that's swinging forward (clears the ground), base stays bent.
 		legs[0].get_meta("knee").rotation.x = 1.1 + max(0.0,  sin(_phase)) * 0.35 * spd_clamped
 		legs[1].get_meta("knee").rotation.x = 1.1 + max(0.0, -sin(_phase)) * 0.35 * spd_clamped
-		spine.rotation.y = 0.0                 # keep the trunk steady (no twist) while crouched
-		arms[0].rotation.x = -0.2              # arms forward for balance
-		arms[1].rotation.x = -0.2
+		# Pelvis rotates INTO each stride (leads the stepping leg)…
+		hips.rotation.y = sin(_phase) * 0.22 * spd_clamped
+		# …and the weight rides laterally over whichever foot is planted.
+		hips.position.x = sin(_phase + PI * 0.5) * 0.05 * spd_clamped
+		# Trunk counters the pelvis (stealth: shoulders stay on target).
+		spine.rotation.y = -sin(_phase) * 0.14 * spd_clamped
+		# Arms counter-swing low and wide for balance, elbows soft.
+		arms[0].rotation.x = -0.2 + sin(_phase) * 0.30 * spd_clamped
+		arms[1].rotation.x = -0.2 - sin(_phase) * 0.30 * spd_clamped
 		arms[0].get_meta("elbow").rotation.x = -0.7
 		arms[1].get_meta("elbow").rotation.x = -0.7
+	elif _strike_t <= 0.0:
+		# Not crouch-walking / not striking: relax pelvis extras to neutral.
+		hips.rotation.y = lerp(hips.rotation.y, 0.0, min(1.0, delta * 10.0))
+		hips.position.x = lerp(hips.position.x, 0.0, min(1.0, delta * 10.0))
 
 	# ── SLIDE: dedicated low committed pose (overrides crouch/gait when sliding) ──
 	# Deep body drop, strong forward lean, lead leg extended, trail leg tucked,
@@ -1740,8 +1752,9 @@ func _process(delta: float) -> void:
 		# Hips lead the rotation around Y; spine amplifies; shoulder whips
 		# the arm from cocked-back to follow-through; elbow extends last.
 		# Amplitudes pushed toward the ROM edge (director feedback 2026-07-06:
-		# the coil must READ — a shy windup kills the weight transfer).
-		var hip_rot: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"],     -0.42, 0.38)
+		# the coil must READ — a shy windup kills the weight transfer; the
+		# hips are the ENGINE of the blow, not a garnish).
+		var hip_rot: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"],     -0.60, 0.55)
 		var spine_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["spine"],    -0.75, 0.60)
 		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.90, 0.70)
 		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.85, -0.10)
@@ -1752,6 +1765,10 @@ func _process(delta: float) -> void:
 		# Head counter-rotates: the body coils away but the eyes stay on the
 		# target — this is what makes a real windup legible.
 		head.rotation.y = -spine_rot * 0.7
+		# Weight DRIVE: the pelvis sits back into the coil and surges forward
+		# through the release — the mass travels into the target (translation,
+		# not just rotation; base z was set absolutely above, += is safe).
+		hips.position.z += _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"], -0.05, 0.09)
 		if arms.size() >= 2:
 			arms[1].rotation.x = arm_x
 			arms[1].rotation.z = arm_z
