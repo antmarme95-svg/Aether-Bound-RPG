@@ -18,7 +18,11 @@ updated: 2026-07-06
   ≈60% del ciclo), estados de movilidad no bloqueantes (~0.1 s), y
   **Sable confirma nuestro canon 1:1: raíz continua + stepping solo en
   extremidades**. Faltantes (pedir clip extra solo si hace falta):
-  parry/guard break, mantle.
+  parry/guard break, mantle. **El director va a grabar el catálogo
+  COMPLETO de movimientos de Sifu** (2026-07-06; prioridad de análisis:
+  parry → guard break → reacciones del jugador al recibir; el resto es
+  biblioteca de referencia para alcances 3–5). Ojo al analizar: el demo
+  del menú de entrenamiento es slow-mo — medir SOLO ejecuciones en vivo.
 - **PRIMERA TAREA de código: [[PRD-006 Combate mínimo]]
   alcance 2 — kit Humano Duelist jugable.** Combo ×4 sobre
   CombatComponent (ventanas biomecánicas + buffer generoso), parry Roba
