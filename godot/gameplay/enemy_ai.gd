@@ -4,6 +4,21 @@ class_name MaddenedBeast extends Node3D
 
 const BASE_DETECT := 11.0
 
+# ---- PRD-006 alcance 1: los 4 componentes canónicos también en enemigos
+# (Combate §A: "en TODO personaje, sin scripts especiales"). Neutros hasta
+# el alcance 3 (los 2 enemigos del PRD los usan de verdad). ----
+const _CombatC   = preload("res://combat/combat_component.gd")
+const _GuardC    = preload("res://combat/guard_component.gd")
+const _EnergyC   = preload("res://combat/energy_component.gd")
+const _PushPullC = preload("res://combat/push_pull_component.gd")
+const _WeaponD   = preload("res://combat/weapon_data.gd")
+const BEAST_MASS := 1.2
+
+var combat = null
+var guard = null
+var energy = null
+var push_pull = null
+
 # ---- stats ----
 var health: float    = 52.0
 var max_health: float = 52.0
@@ -56,6 +71,14 @@ func _init(spawn_pos: Vector3, scene: Node3D) -> void:
 	wander_target = spawn_pos
 	facing        = randf() * TAU
 	_t            = randf() * 10.0
+	# PRD-006: componentes canónicos (neutros hasta el alcance 3)
+	combat = _CombatC.new()
+	combat.equip(_WeaponD.get_weapon("gloom_claws"), BEAST_MASS)
+	guard = _GuardC.new()
+	guard.setup(BEAST_MASS)
+	energy = _EnergyC.new()
+	energy.setup(40.0)
+	push_pull = _PushPullC.new()
 
 func _ready() -> void:
 	_build()
@@ -228,6 +251,14 @@ func update_ai(dt: float, controller: PlayerController, passives: Passives) -> v
 	_t      += dt
 	state_t += dt
 	flash_t  = maxf(0.0, flash_t - dt)
+
+	# ---- PRD-006: tick de componentes (neutros hasta el alcance 3) ----
+	if combat != null:
+		combat.tick(dt)
+		guard.tick(dt)
+		energy.tick(dt)
+		if push_pull.is_active():
+			position += push_pull.tick(dt)
 
 	# Hit flash — only push shader params when the flash state changes or is active.
 	# Skip the set_shader_parameter overhead every frame for roaming off-screen beasts.

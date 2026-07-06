@@ -67,7 +67,10 @@ el cómic se dibuja a 12.
    director en vivo/montage. ← primera consecuencia, implementable ya.
 2. **Curvas con anticipación/overshoot** en el strike (reemplazar
    smoothstep por curvas snap: hold largo en el coil, release violento,
-   settle con rebote pequeño).
+   settle con rebote pequeño). ✅ implementado en PRD-006 alcance 1
+   (2026-07-06): `rig_biomech.segment_offset` v2 — coil con moving hold
+   (+6% drift), release back-out (~10% overshoot), settle con contra-swing
+   de −7%; fracciones de fase (= ventanas de combate) intactas.
 3. **Moving holds** si el stepping puro se siente muerto (micro-drift
    dentro del hold, técnica estándar de stop-motion/Xrd).
 4. La capa de constraints (alcance 0) queda como red de seguridad — las

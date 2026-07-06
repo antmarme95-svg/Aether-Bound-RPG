@@ -1,0 +1,45 @@
+{
+	"unarmed": {
+		"name": "Unarmed",
+		"mass": 0.4,
+		"momentum_gain": 0.45,
+		"buffer_window": 0.35,
+		"combo": [
+			{ "dur": 0.34, "damage": 4, "balance": 5, "force": 2.0 },
+			{ "dur": 0.38, "damage": 5, "balance": 6, "force": 2.4 }
+		]
+	},
+	"duelist_blade": {
+		"name": "Duelist Blade",
+		"mass": 0.9,
+		"momentum_gain": 0.55,
+		"buffer_window": 0.45,
+		"combo": [
+			{ "dur": 0.42, "damage": 9,  "balance": 10, "force": 3.2 },
+			{ "dur": 0.40, "damage": 10, "balance": 11, "force": 3.4 },
+			{ "dur": 0.45, "damage": 12, "balance": 13, "force": 4.0 },
+			{ "dur": 0.60, "damage": 16, "balance": 22, "force": 6.5, "interrupt": true }
+		]
+	},
+	"gloom_claws": {
+		"name": "Gloomfang Claws",
+		"mass": 0.6,
+		"momentum_gain": 0.50,
+		"buffer_window": 0.25,
+		"combo": [
+			{ "dur": 0.36, "damage": 7, "balance": 6, "force": 2.6 },
+			{ "dur": 0.36, "damage": 7, "balance": 6, "force": 2.6 },
+			{ "dur": 0.50, "damage": 11, "balance": 10, "force": 4.2 }
+		]
+	},
+	"heavy_maul": {
+		"name": "Heavy Maul",
+		"mass": 2.2,
+		"momentum_gain": 0.35,
+		"buffer_window": 0.20,
+		"combo": [
+			{ "dur": 0.80, "damage": 18, "balance": 30, "force": 8.0, "interrupt": true },
+			{ "dur": 1.00, "damage": 26, "balance": 45, "force": 11.0, "interrupt": true }
+		]
+	}
+}

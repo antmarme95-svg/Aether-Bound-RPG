@@ -22,9 +22,13 @@ updated: 2026-07-06
      moving hold / 24 Hz) y descartado — queda tras toggle default OFF.
      La página queda `propuesto` hasta ver el alcance 1 con poses
      extremas (decisión del director).
-  2. Siguiente: [[PRD-006 Combate mínimo]] alcance 1 (4 componentes
-     + HitPayload) + curvas anticipación/overshoot del strike (= la
-     estructura trifásica de Sifu).
+  2. ~~Alcance 1~~ ✅ (2026-07-06): arquitectura `godot/combat/` (4
+     componentes + HitPayload + weapons.json, en jugador Y bestia,
+     neutros — anti-objetivo respetado) + curvas trifásicas del strike
+     (coil hold / release overshoot / settle rebote). QA: test_combat
+     41/41 + todos los gates. **Siguiente: alcance 2 — kit Humano
+     Duelist** (combo ×4 animado desde el esqueleto usando los
+     componentes; parry Roba jugable; ley sprint↔arma).
 - **PRD-006 en curso** (Feature Loop, branch `feat/prd-006-combate`,
   mergeado a master al cierre de sesión): **alcance 0 ✅** — rig humano
   restringido (ROM + constraints cada frame) + strike hip-first; movilidad
