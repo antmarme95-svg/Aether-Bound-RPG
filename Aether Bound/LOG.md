@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] design | PRD-006 iterado: Movilidad Realista como columna vertebral
+Mandato del director en sesión: construir el combate con mucho foco en
+[[Movilidad Realista]]. El PRD se reestructura: (1) nueva sección columna
+vertebral §4.3 — el moveset deriva del esqueleto, ventanas de combo =
+fases biomecánicas del golpe (carga de cadera / transferencia / re-
+equilibrio), momentum→daño como física corporal (masa × velocidad),
+telegraphs = biomecánica legible (se lee la cadera del rival, no un
+flash); (2) alcance 0 nuevo: rig humano restringido (C4 parcial: joint
+constraints + cadena de transferencia hip-first) ANTES de animar ataque
+alguno — Task-Board C4 → 🔄; (3) QA con assert de constraints por joint y
+revisión biomecánica en montage; (4) doble criterio de aceptación: "no se
+siente como el prototipo 0" + "el cuerpo importa más que el pixel".
+Sigue `propuesto`, pendiente ratificación.
+
 ## [2026-07-05] design | PRD-006 (combate mínimo) PROPUESTO — con anti-objetivo del director
 Spec nueva [[PRD-006 Combate mínimo]] en `20-State/PRDs/`. Mandato del
 director incorporado como anti-objetivo: **el combate no debe sentirse

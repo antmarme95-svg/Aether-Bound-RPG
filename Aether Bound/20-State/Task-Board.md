@@ -44,5 +44,5 @@ updated: 2026-07-05
 | C1 | Renombrar V&V → AETHER BOUND (repo/README/strings) | ✅ | 2026-07-05: config/name, boot prints, README (título + roadmap V&V histórico). Identificadores internos retenidos adrede (save path, sentinels, web congelado) |
 | C2 | Implementar Mantling + Escalada zonificada sobre la FSM | ⬜ | [[Locomoción]]; tuning montage+playtest |
 | C3 | Implementar combate 4-componentes + HitPayload; DamageProfiles por celda; enemigos | 🔄 | Spec Fase 1: [[PRD-006 Combate mínimo]] (propuesto 2026-07-05) — kit Duelist + 2 enemigos; resto de celdas post-slice |
-| C4 | Rig biomecánico: constraints + IK + 3 ROM | ⬜ | [[Movilidad Realista]]; prioridad sobre cantidad de anims |
+| C4 | Rig biomecánico: constraints + IK + 3 ROM | 🔄 | [[Movilidad Realista]]; prioridad sobre cantidad de anims. **Parcial (ROM humano + constraints + transferencia de peso) entra como alcance 0 de [[PRD-006 Combate mínimo]]** |
 | C5 | T1: fix `--skip=wilds` en boot live | ✅ | 2026-07-05: `start()` invoca `_apply_skip_arg()` tras el fast-path a OFFICE. Verificado live por log FSM (∅→CREATION→OFFICE→WILDS) |
