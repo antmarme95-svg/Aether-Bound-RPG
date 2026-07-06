@@ -13,13 +13,13 @@ updated: 2026-07-05
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** **ratificar B10** — [[Game Feel Bible]] quedó
-  PROPUESTA (2026-07-05): hit-stop por masa, shake modelo trauma, cámara
-  libre + soft-assist (decisión mayor), feel del Springboard con degradado
-  post-traición. Tras ratificar: PRD-006 (combate §4.2 mínimo) y PRD-007
-  (Dagna companion + Springboard T1). Objetivo del Gate 1: pelear junto a
-  Dagna en greybox se siente bien a ≥60 FPS. Pareja del slice: **Humano
-  Duelist × Dagna** ([[Slice of Bond]] ratificado completo).
+- **Próxima prioridad:** **PRD-006 — combate §4.2 mínimo** (Feature Loop
+  contra la [[Game Feel Bible]], RATIFICADA 2026-07-05 con cámara libre +
+  soft-assist): 4 componentes + HitPayload, kit Humano Duelist, 2 enemigos.
+  Después PRD-007 (Dagna companion + Springboard T1). Objetivo del Gate 1:
+  pelear junto a Dagna en greybox se siente bien a ≥60 FPS. Pareja del
+  slice: **Humano Duelist × Dagna** ([[Slice of Bond]] ratificado
+  completo).
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11, look = sistema replicable) · Dagna ✅ (B1 1/9).

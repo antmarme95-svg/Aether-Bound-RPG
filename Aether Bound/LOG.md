@@ -1,5 +1,13 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] design | B10 RATIFICADA: Game Feel Bible sellada
+El director ratifica sin cambios, incluida la decisión mayor de cámara:
+LIBRE + soft-assist, sin lock-on duro (revisable en Gate 1 si el greybox
+la desmiente). [[Game Feel Bible]] → `ratificado`; Task-Board B10 ✅.
+La Fase 1 queda desbloqueada para implementación: siguiente, PRD-006
+(combate §4.2 mínimo contra la Bible) y PRD-007 (Dagna companion +
+Springboard T1).
+
 ## [2026-07-05] design | B10: Game Feel Bible PROPUESTA (abre Fase 1)
 Página nueva [[Game Feel Bible]] (`propuesto`), anclada en los valores
 vivos del prototipo (FOV-kick 8°, stutter 0.03 s/m, cam-thump 0.18 s).

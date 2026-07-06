@@ -1,6 +1,6 @@
 ---
-status: propuesto
-source: "Design Loop 2026-07-05 (B10); semillas GDD §4.2.D/§6.3 + valores vivos del prototipo (locomotion.json, player_controller.gd)"
+status: ratificado
+source: "Design Loop 2026-07-05 (B10, RATIFICADA por el director — incluida cámara libre + soft-assist); semillas GDD §4.2.D/§6.3 + valores vivos del prototipo (locomotion.json, player_controller.gd)"
 updated: 2026-07-05
 ---
 
@@ -87,7 +87,7 @@ lugar:
 
 ## Pendiente (❓)
 
-Ratificación del director (decisión mayor: cámara libre + soft-assist);
-tuning fino por montage en Fase 1 (los valores son puntos de partida, no
-dogma); hit-stop de enemigos pesados (diseño de enemigos, post-PRD-006);
-sonido más allá del sting (B8). → Task-Board B10.
+Tuning fino por montage en Fase 1 (los valores son puntos de partida, no
+dogma; la cámara se revisa en el Gate 1 si el greybox la desmiente);
+hit-stop de enemigos pesados (diseño de enemigos, post-PRD-006); sonido
+más allá del sting (B8). → Task-Board.
