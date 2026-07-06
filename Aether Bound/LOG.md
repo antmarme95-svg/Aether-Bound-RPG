@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] feature | PRD-006 alcance 1: arquitectura de combate + curvas trifásicas
+Branch `feat/prd-006-a1`. (1) `godot/combat/`: HitPayload (4 campos canon
++ MarkMultiplier fijo 1.0), CombatComponent (combos con ventanas ancladas
+a las fases biomecánicas — buffer generoso acepta desde active, encadena
+al cerrar recovery, windup cancelable; momentum = masa × velocidad al
+conectar), GuardComponent (Equilibrio nace de la masa §B.3; flinch →
+stagger → posture break; parry Roba §B.4: roba Equilibrio + desarma),
+EnergyComponent (Aether placeholder), PushPullComponent (§B.2: un solo
+sistema físico — impulsos con decay, techo de sanidad; PRD-007 lo
+reutiliza). Datos: `data/weapons.json` (duelist_blade ×4, unarmed,
+gloom_claws, heavy_maul). Instanciados en jugador Y bestia, NEUTROS
+(anti-objetivo: el combate viejo intacto, autotest_slice verde). (2)
+Curvas v2 del strike en `rig_biomech.segment_offset` ([[Benchmark
+Biomecánico]] acción #2): coil con moving hold, release back-out con
+overshoot, settle con rebote; fracciones de fase (= ventanas) intactas.
+QA: test_combat NUEVO 41/41 ALL_PASS; test_core, biomech, scenes, slice
+todos verdes. Next: alcance 2 (kit Duelist jugable sobre los componentes).
+
 ## [2026-07-06] playtest | A/B CERRADO: canon = 2s solo extremidades, cuerpo suave
 Veredicto del director tras 3 rondas de body pop (completo → moving hold
 → 24 Hz jerárquico): ninguna variante paga su costo; "pop en extremidades

@@ -15,6 +15,16 @@ class_name PlayerController extends CharacterBody3D
 
 const _LSM = preload("res://gameplay/locomotion_state_machine.gd")
 
+# ---- PRD-006 alcance 1: los 4 componentes canónicos (Combate §A) ----
+# Instanciados en TODO personaje (jugador y enemigos, sin scripts
+# especiales). El combate viejo (try_attack) sigue intacto y NADA nuevo lo
+# llama (anti-objetivo del PRD); el kit Duelist los usa en el alcance 2.
+const _CombatC   = preload("res://combat/combat_component.gd")
+const _GuardC    = preload("res://combat/guard_component.gd")
+const _EnergyC   = preload("res://combat/energy_component.gd")
+const _PushPullC = preload("res://combat/push_pull_component.gd")
+const _WeaponD   = preload("res://combat/weapon_data.gd")
+
 # ---- movement constants (JS exactly) — FALLBACK only, Config drives runtime ----
 const WALK    := 3.3
 const SPRINT  := 6.6
@@ -35,6 +45,12 @@ var stats: Stats       = null
 var passives: Passives = null
 var save: SaveState    = null
 var rig: CharacterRig  = null
+
+# ---- PRD-006: componentes de combate (ver preloads arriba) ----
+var combat = null      # CombatComponent
+var guard = null       # GuardComponent (Equilibrio)
+var energy = null      # EnergyComponent (Aether)
+var push_pull = null   # PushPullComponent
 
 # ---- scene ref ----
 var scene: Node3D = null   # any scene that has get_height / clamp_position / etc.
@@ -165,6 +181,25 @@ func setup(p_rig: CharacterRig, p_stats: Stats, p_passives: Passives, p_save: Sa
 	cam      = p_cam
 	# Re-configure LSM now that save is set (class_id is now known).
 	_lsm_configure()
+	_combat_configure()
+
+# ---- PRD-006: instanciar los 4 componentes canónicos ----
+# La masa sale del perfil de clase (massMult, mismo dato que la LSM §B.3).
+func _combat_configure() -> void:
+	var mass: float = 1.0
+	var cfg_node = _get_config_node()
+	if cfg_node != null and save != null:
+		var cmult: Dictionary = cfg_node.class_mult(
+			save.origin_id if save.origin_id != "" else "aetherborn",
+			save.class_id  if save.class_id  != "" else "warrior")
+		mass = float(cmult.get("massMult", 1.0))
+	combat = _CombatC.new()
+	combat.equip(_WeaponD.get_weapon("duelist_blade"), mass)
+	guard = _GuardC.new()
+	guard.setup(mass)
+	energy = _EnergyC.new()
+	energy.setup(100.0)
+	push_pull = _PushPullC.new()
 
 var enabled: bool:
 	get: return _enabled
@@ -695,6 +730,16 @@ func update(dt: float) -> void:
 		return
 	attack_cooldown = maxf(0.0, attack_cooldown - dt)
 	_attack_pulse   = maxf(0.0, _attack_pulse - dt)   # Sprint L3: decay attack interrupt pulse
+
+	# ---- PRD-006: tick de componentes (relojes de gameplay, cada frame) ----
+	# Neutros hasta el alcance 2 (nadie les mete inputs todavía); el
+	# desplazamiento de push_pull es cero sin impulsos aplicados.
+	if combat != null:
+		combat.tick(dt)
+		guard.tick(dt)
+		energy.tick(dt)
+		if push_pull.is_active():
+			position += push_pull.tick(dt)
 
 	# ---- planar input ----
 	var ix: float = 0.0

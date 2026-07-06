@@ -136,23 +136,42 @@ static func phase_name(k: float) -> String:
 ## progress k, given its coil (windup peak) and release (active peak)
 ## values. Lag shifts the segment's personal timeline so peaks arrive
 ## in hip→spine→shoulder→elbow order.
+##
+## Curvas v2 ([[Benchmark Biomecánico]] acción #2, alcance 1): anticipación
+## con HOLD largo en el coil (moving hold con micro-drift), release
+## VIOLENTO con overshoot (~10% más allá del target, curva back-out) y
+## settle con rebote pequeño (pasa ~7% al otro lado del neutro y asienta).
+## Las fracciones de fase NO cambian — son las ventanas de combate canon.
+## Las poses empujan CONTRA el ROM: el clamp anatómico es la red (alcance 0).
 static func segment_offset(k: float, lag: float, coil: float, release: float) -> float:
 	var kk: float = clampf((k - lag) / maxf(1.0 - lag, 0.01), 0.0, 1.0)
 	if kk < PHASE_WINDUP_END:
-		# ease into the coil
+		# Anticipación: llega RÁPIDO al coil (primer 45% del windup) y
+		# HOLDEA cargado el resto, con micro-drift (+6%) — el moving hold.
 		var u: float = kk / PHASE_WINDUP_END
-		return coil * _ease_in_out(u)
+		if u < 0.45:
+			return coil * _ease_out(u / 0.45)
+		return coil * (1.0 + 0.06 * ((u - 0.45) / 0.55))
 	elif kk < PHASE_ACTIVE_END:
-		# whip: coil → release, ease-out (fast start, decelerating arrival)
+		# Release violento: látigo coil→release con overshoot back-out —
+		# arranca explosivo, pasa de largo (~10% del recorrido) y clava.
 		var u2: float = (kk - PHASE_WINDUP_END) / (PHASE_ACTIVE_END - PHASE_WINDUP_END)
-		return lerpf(coil, release, _ease_out(u2))
+		return lerpf(coil * 1.06, release, _back_out(u2, 1.3))
 	else:
-		# recovery: release → neutral
+		# Settle con rebote: release → pequeño contra-swing (−7%) → neutro.
 		var u3: float = (kk - PHASE_ACTIVE_END) / (1.0 - PHASE_ACTIVE_END)
-		return lerpf(release, 0.0, _ease_in_out(u3))
+		if u3 < 0.55:
+			return lerpf(release, -0.07 * release, _ease_out(u3 / 0.55))
+		return lerpf(-0.07 * release, 0.0, _ease_in_out((u3 - 0.55) / 0.45))
 
 static func _ease_in_out(u: float) -> float:
 	return u * u * (3.0 - 2.0 * u)
 
 static func _ease_out(u: float) -> float:
 	return 1.0 - (1.0 - u) * (1.0 - u)
+
+## Back-ease-out: sale disparado y sobrepasa el 1.0 (~10% con s=1.3)
+## antes de asentarse — el "snap" del release.
+static func _back_out(u: float, s: float) -> float:
+	var t: float = u - 1.0
+	return 1.0 + (s + 1.0) * t * t * t + s * t * t
