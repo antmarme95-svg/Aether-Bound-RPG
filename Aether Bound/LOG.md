@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Ronda 2 de movilidad: cadera como motor (feedback del director)
+Director: "buena movilidad en general; el crouch walk no convence y la
+cadera sigue conservadora". Corregido (commit 0b45ab8): (1) ROM del pelvis
+en Y ampliado a ±0.7 con justificación biomecánica (pelvis + pivote de pie
+como unidad hasta que C4 traiga pies IK); (2) strike con cadera −0.60/+0.55
++ drive de traslación (el peso viaja al objetivo, no solo rota); (3) crouch
+walk v2: rotación pélvica por zancada, peso lateral sobre el pie plantado,
+contra-rotación de tronco y brazos en contra-balanceo — la silueta baja
+aceptada se preserva. QA ALL_PASS, cero violaciones. Strips nuevos:
+biomech_crouchwalk_{a,b}.png + strike re-capturado.
+
 ## [2026-07-06] playtest | Review de strips del strike: coil amplificado (feedback del director)
 Dos observaciones del director sobre los strips de biomech: (1) el look de
 las capturas está fuera de la Art Bible — CONFIRMADO COMO PLANEADO (stage
