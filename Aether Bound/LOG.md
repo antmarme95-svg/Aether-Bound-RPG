@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Ronda de articulación APROBADA por el director
+Veredicto en vivo tras #1+#2+#3: "se ve bien". La ronda completa contra
+el feedback "legos/playmobil": #2 mató el frenar-en-seco (follow-through
+amortiguado), #1 el todo-llega-junto (lag abierto con overlap real), #3
+el torso-monobloque (columna lumbar+torácica). Lo que queda de lectura
+de juguete es etapa: mesh de bloques (pase visual en producción del
+slice) y pies sin IK (C4). Cerrada la ronda; el rig queda como base de
+animación del alcance 2.
+
 ## [2026-07-06] playtest | Articulación #1+#3: lag abierto + columna en 2 segmentos
 Director tras la #2: "vamos en dirección correcta" → aplicadas las otras
 dos. **#1:** CHAIN_LAG abierto (0/0.08/0.16/0.22 + `chest` 0.12) — más

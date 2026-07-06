@@ -24,11 +24,14 @@ updated: 2026-07-06
      extremas (decisión del director).
   2. ~~Alcance 1~~ ✅ (2026-07-06): arquitectura `godot/combat/` (4
      componentes + HitPayload + weapons.json, en jugador Y bestia,
-     neutros — anti-objetivo respetado) + curvas trifásicas del strike
-     (coil hold / release overshoot / settle rebote). QA: test_combat
-     41/41 + todos los gates. **Siguiente: alcance 2 — kit Humano
-     Duelist** (combo ×4 animado desde el esqueleto usando los
-     componentes; parry Roba jugable; ley sprint↔arma).
+     neutros) + curvas trifásicas del strike. QA: test_combat 41/41.
+  3. ~~Ronda de articulación~~ ✅ APROBADA en vivo (2026-07-06, tras
+     feedback "legos"): follow-through amortiguado + lag de cadena
+     abierto + columna en 2 segmentos (lumbar+torácico, adelanto de C4).
+     El melee vivo ahora anima `play_strike` (antes solo autotests).
+     **Siguiente: alcance 2 — kit Humano Duelist** (combo ×4 sobre los
+     componentes; parry Roba jugable; ley sprint↔arma; ojo: definir cómo
+     convive el reemplazo del combate con el autotest_slice histórico).
 - **PRD-006 en curso** (Feature Loop, branch `feat/prd-006-combate`,
   mergeado a master al cierre de sesión): **alcance 0 ✅** — rig humano
   restringido (ROM + constraints cada frame) + strike hip-first; movilidad
