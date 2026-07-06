@@ -1,5 +1,12 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] design | PRD-006 RATIFICADO — arranca el Feature Loop de combate
+El director ratifica la spec iterada (movilidad realista como columna
+vertebral). Feature Loop abierto en `feat/prd-006-combate`; orden de
+construcción: alcance 0 (rig humano restringido: constraints + cadena de
+transferencia hip-first) → componentes → kit Duelist → enemigos → feel →
+greybox/QA. Doble criterio de aceptación en Playtest Loop.
+
 ## [2026-07-06] design | PRD-006 iterado: Movilidad Realista como columna vertebral
 Mandato del director en sesión: construir el combate con mucho foco en
 [[Movilidad Realista]]. El PRD se reestructura: (1) nueva sección columna

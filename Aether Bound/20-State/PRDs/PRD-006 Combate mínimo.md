@@ -1,6 +1,6 @@
 ---
-status: propuesto
-source: "[[Combate]] (§4.2) + [[Game Feel Bible]] + [[Movilidad Realista]] (§4.3) (ratificadas); Fase 1 del [[Plan-de-Produccion]]; iterado 2026-07-06 con el mandato del director: la movilidad realista es la columna vertebral"
+status: ratificado
+source: "[[Combate]] (§4.2) + [[Game Feel Bible]] + [[Movilidad Realista]] (§4.3) (ratificadas); Fase 1 del [[Plan-de-Produccion]]; iterado 2026-07-06 (movilidad realista = columna vertebral) y RATIFICADO por el director 2026-07-06"
 updated: 2026-07-06
 ---
 
