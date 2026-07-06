@@ -37,6 +37,7 @@ updated: 2026-07-06
 | B12 | Fenotipos y creación de personaje | ✅ | [[Fenotipos y Creación de Personaje]] ratificada 2026-07-04, con 5 láminas canónicas en `90-Raw/concept/` |
 | B13 | Generar concept art de fenotipos en Nano Banana 2 (director) | ✅ | 5 láminas en `90-Raw/concept/`; ver [[Fenotipos y Creación de Personaje]] |
 | B14 | **Benchmark biomecánico v2: state of the art AAA** — Assassin's Creed, 007 First Light, Horizon Zero Dawn, Star Wars Jedi, y **Sifu** (biomecánica, movilidad y combate) | ✅ | Research 2026-07-06 volcado en [[Benchmark Biomecánico]] §v2 (propuesto — se ratifica junto con la v1). Veredicto: motion matching descartado por costo; camino validado = Sifu (handkey trifásico) + foot IK de HZD (→C4); PRD-006 alcance 1 confirmado como paso correcto |
+| B15 | **Benchmark observacional con clips** — el director graba Sifu (combate: jab, combo, cargado, parry, guard break) y Fortnite (movilidad: sprint, slide, mantle, salto); análisis frame a frame | ⬜ | **PRIMERO en la próxima sesión: pedir la ubicación de los clips.** Salida: tabla de timings (windup/activo/recovery, hit-stop, buffer, cadencia/slide) → calibra `weapons.json`, fases del strike y [[Game Feel Bible]]. Extiende [[Benchmark Biomecánico]] con mediciones propias |
 
 ## Frente C — Técnico (hereda del prototipo)
 

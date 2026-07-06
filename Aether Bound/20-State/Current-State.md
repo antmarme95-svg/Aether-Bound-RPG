@@ -10,7 +10,14 @@ updated: 2026-07-06
 
 - **Milestone:** Fase 1 del [[Plan-de-Produccion]] — combate mínimo del
   vertical slice **"Slice of Bond"** (Humano Duelist × Dagna).
-- **PRIMERA TAREA de la próxima sesión: [[PRD-006 Combate mínimo]]
+- **⚠️ ANTES DE EMPEZAR CUALQUIER COSA la próxima sesión: pedir al
+  director la UBICACIÓN de los clips del benchmark observacional (B15)**
+  — va a grabar Sifu (combate: jab/combo/cargado/parry/guard break) y
+  Fortnite (movilidad: sprint/slide/etc.) antes de la sesión. Análisis
+  frame a frame → tabla comparativa → calibrar `weapons.json`, fases
+  (0.32/0.58) y [[Game Feel Bible]] con números reales en vez de valores
+  inventados.
+- **PRIMERA TAREA de código: [[PRD-006 Combate mínimo]]
   alcance 2 — kit Humano Duelist jugable.** Combo ×4 sobre
   CombatComponent (ventanas biomecánicas + buffer generoso), parry Roba
   con input real, momentum→daño, ley sprint↔arma. **Decisión de diseño a
