@@ -115,6 +115,12 @@ var _hip_crouch: float = 0.0           # smoothed 0..1 crouch amount for hip bac
 var _attack_timer: float = 0.0
 var _attack_style: String = "melee"
 
+# ---- PRD-006 alcance 0: biomech strike + joint constraints ----
+const _Biomech = preload("res://character/rig_biomech.gd")
+var _strike_t: float = 0.0             # remaining strike time (seconds); <=0 = inactive
+var _strike_dur: float = 0.0           # total duration of the current strike
+var _constraint_report: Dictionary = {}  # per-joint attempted-violation stats
+
 # Cache keys to avoid redundant texture/hair rebuilds
 var _head_tex_key: String = ""
 var _hair_key: String = ""
@@ -1506,9 +1512,44 @@ func set_motion(speed_norm: float, crouch: bool, sliding: bool = false) -> void:
 	_motion_slide = sliding
 
 ## Trigger an attack animation. kind = "melee" or "bolt".
+## LEGACY (prototype-0 arm snap) — kept only for the historic slice flow.
+## New combat (PRD-006) uses play_strike() below.
 func play_attack(kind: String) -> void:
 	_attack_style = kind
 	_attack_timer = 0.38
+
+# ================================================================
+# PRD-006 alcance 0 — weight-transfer strike (hip-first kinetic chain)
+# ================================================================
+
+## Start a biomech strike. The pose is driven by rig_biomech.gd:
+## hips lead, spine follows, shoulder whips, elbow extends last.
+## duration = full swing in seconds (weapon mass will scale this in
+## PRD-006 alcance 2; 0.55 ≈ medium weapon).
+func play_strike(duration: float = 0.55) -> void:
+	_strike_dur = maxf(duration, 0.15)
+	_strike_t = _strike_dur
+
+## Normalized strike progress 0..1 (0 = just started, 1 = done; 0 if idle).
+func strike_progress() -> float:
+	if _strike_t <= 0.0 or _strike_dur <= 0.0:
+		return 0.0
+	return 1.0 - (_strike_t / _strike_dur)
+
+## Current biomech phase: "windup" | "active" | "recovery" | "" (idle).
+## These ARE the combat windows — CombatComponent anchors cancel/hitbox/
+## chain timing here, never to arbitrary timers (Movilidad Realista §4.3).
+func strike_phase() -> String:
+	if _strike_t <= 0.0:
+		return ""
+	return _Biomech.phase_name(strike_progress())
+
+## Constraint report accessors (QA: autotest_biomech asserts on these).
+func constraint_report() -> Dictionary:
+	return _constraint_report
+
+func reset_constraint_report() -> void:
+	_constraint_report = {}
 
 func _process(delta: float) -> void:
 	_t += delta
@@ -1597,8 +1638,8 @@ func _process(delta: float) -> void:
 	var spine_twist: float = -sin_ph * 0.06 * spd_clamped
 	spine.rotation.y = lerp(spine.rotation.y, spine_twist, min(1.0, delta * 12.0))
 
-	# ---- Apply arms (skipped when attack envelope is active) ----
-	if _attack_timer <= 0.0 and arms.size() >= 2:
+	# ---- Apply arms (skipped when an attack/strike envelope is active) ----
+	if _attack_timer <= 0.0 and _strike_t <= 0.0 and arms.size() >= 2:
 		# Contralateral swing: left arm back when left leg forward
 		var a0_swing: float = -leg0_swing * 0.65  # arm[0] opposite to leg[0]
 		var a1_swing: float = -leg1_swing * 0.65  # arm[1] opposite to leg[1]
@@ -1689,6 +1730,44 @@ func _process(delta: float) -> void:
 		arms[0].get_meta("elbow").rotation.x = -0.55
 		arms[1].get_meta("elbow").rotation.x = -0.55
 
+	# ── PRD-006 STRIKE: hip-first kinetic chain (overrides arm/spine pose) ──
+	# The blow is born in the hips and travels cadera→torso→hombro→brazo,
+	# each segment lagged so the hand arrives last (Movilidad Realista §4.3).
+	if _strike_t > 0.0:
+		_strike_t -= delta
+		var sk: float = strike_progress()
+		# Segment targets: coil (windup peak) → release (active peak) → 0.
+		# Hips lead the rotation around Y; spine amplifies; shoulder whips
+		# the arm from cocked-back to follow-through; elbow extends last.
+		var hip_rot: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"],     -0.30, 0.28)
+		var spine_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["spine"],    -0.42, 0.45)
+		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.65, 0.55)
+		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.50, -0.10)
+		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.00, -0.12)
+
+		hips.rotation.y  = hip_rot
+		spine.rotation.y = spine_rot
+		if arms.size() >= 2:
+			arms[1].rotation.x = arm_x
+			arms[1].rotation.z = arm_z
+			arms[1].get_meta("elbow").rotation.x = elbow_x
+			# Off arm counters for balance (small, opposite the swing)
+			arms[0].rotation.x = -arm_x * 0.25
+			arms[0].get_meta("elbow").rotation.x = -0.55
+		# Weight brace at idle: front leg plants, knees soften (the body
+		# receives its own transfer). Skipped while moving — locomotion owns
+		# the legs (blending with momentum is PRD-006 alcance 2).
+		if speed <= 0.02 and legs.size() >= 2 and not _motion_slide and not crouch:
+			var brace: float = absf(spine_rot) * 0.6
+			legs[0].rotation.x = -brace
+			legs[1].rotation.x = brace * 0.7
+			legs[0].get_meta("knee").rotation.x = 0.18 + brace * 0.4
+			legs[1].get_meta("knee").rotation.x = 0.18 + brace * 0.3
+		if _strike_t <= 0.0:
+			# Strike finished: release ownership; gait/idle settle takes over.
+			hips.rotation.y = 0.0
+			_strike_dur = 0.0
+
 	# Idle breathe (JS: torso.scale.y = 1 + sin(t*2.1)*0.012)
 	torso.scale.y = 1.0 + sin(_t * 2.1) * 0.012
 
@@ -1748,3 +1827,30 @@ func _process(delta: float) -> void:
 			var m := veins[i].material_override as StandardMaterial3D
 			m.albedo_color = pulsed
 			m.emission = pulsed
+
+	# ── PRD-006: joint constraints — ALWAYS the last pose pass ──
+	# "Nada rota donde un cuerpo no rota" (Movilidad Realista §4.3): every
+	# animation source above (gait, crouch, slide, legacy attack, strike)
+	# gets clamped to the human-reference ROM. Attempted violations are
+	# accumulated in _constraint_report for the QA assert.
+	_apply_joint_constraints()
+
+# ---- PRD-006: clamp every animated joint to its anatomical ROM ----
+func _apply_joint_constraints() -> void:
+	_Biomech.clamp_node(hips,  "hips_root", "hips",  _constraint_report)
+	_Biomech.clamp_node(spine, "spine",     "spine", _constraint_report)
+	_Biomech.clamp_node(head,  "head",      "head",  _constraint_report)
+	for i in range(arms.size()):
+		var arm: Node3D = arms[i]
+		var mirror: bool = int(arm.get_meta("side")) == -1  # left arm mirrors z limits
+		_Biomech.clamp_node(arm, "shoulder", "shoulder_" + ("l" if mirror else "r"),
+				_constraint_report, mirror)
+		_Biomech.clamp_node(arm.get_meta("elbow"), "elbow",
+				"elbow_" + ("l" if mirror else "r"), _constraint_report)
+	for i in range(legs.size()):
+		var leg: Node3D = legs[i]
+		var side_l: bool = i == 0
+		_Biomech.clamp_node(leg, "hip_leg", "hip_" + ("l" if side_l else "r"),
+				_constraint_report)
+		_Biomech.clamp_node(leg.get_meta("knee"), "knee",
+				"knee_" + ("l" if side_l else "r"), _constraint_report)
