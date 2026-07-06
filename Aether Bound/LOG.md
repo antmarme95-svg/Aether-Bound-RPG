@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Articulación #2: follow-through por segmento en el settle
+Feedback del director: el melee lee "como legos/playmobil". Diagnóstico
+compartido: parte etapa (mesh de bloques, sin secundario), parte deuda
+(segmentos que frenan en seco, poca superposición, columna monobloque).
+El director ordenó la ronda #2 (follow-through): el settle del strike es
+ahora un coseno amortiguado por segmento — undershoot pico ~−10% del
+release, lo distal ondula más y decae más lento (whip/decay/freq escalan
+con el lag de cadena). Pendientes de su orden: #1 (abrir CHAIN_LAG) y
+#3 (columna 2–3 segmentos, adelanto de C4). QA: test_combat, biomech y
+slice ALL_PASS.
+
 ## [2026-07-06] playtest | Fix: el melee vivo no mostraba el strike biomecánico
 Feedback del director ("no lo siento tan melee") destapó dos cosas: (1)
 `play_strike` (hip-first + curvas del alcance 1) solo lo llamaban los

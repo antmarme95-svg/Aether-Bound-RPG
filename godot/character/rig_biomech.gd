@@ -158,11 +158,16 @@ static func segment_offset(k: float, lag: float, coil: float, release: float) ->
 		var u2: float = (kk - PHASE_WINDUP_END) / (PHASE_ACTIVE_END - PHASE_WINDUP_END)
 		return lerpf(coil * 1.06, release, _back_out(u2, 1.3))
 	else:
-		# Settle con rebote: release → pequeño contra-swing (−7%) → neutro.
+		# Follow-through (ronda articulación #2, 2026-07-06): cada segmento
+		# OSCILA al frenar (coseno amortiguado) en vez de detenerse en seco
+		# — nada se para de golpe en un cuerpo. Los segmentos distales (lag
+		# mayor) ondulan más y decaen más lento: física de látigo. El
+		# undershoot pico llega a ~−10% del release (antes: rebote fijo −7%).
 		var u3: float = (kk - PHASE_ACTIVE_END) / (1.0 - PHASE_ACTIVE_END)
-		if u3 < 0.55:
-			return lerpf(release, -0.07 * release, _ease_out(u3 / 0.55))
-		return lerpf(-0.07 * release, 0.0, _ease_in_out((u3 - 0.55) / 0.45))
+		var whip: float = 0.55 + lag * 3.2            # hips ~0.55 → codo ~1.0
+		var decay: float = 3.2 - lag * 6.0            # distal decae más lento
+		var freq: float = 0.62 * (1.0 + 0.35 * whip)  # ~1 vaivén completo
+		return release * exp(-decay * u3) * cos(TAU * freq * u3)
 
 static func _ease_in_out(u: float) -> float:
 	return u * u * (3.0 - 2.0 * u)
