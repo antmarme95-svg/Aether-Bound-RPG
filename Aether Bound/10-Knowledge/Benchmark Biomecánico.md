@@ -336,12 +336,20 @@ así que la comparación es medido-contra-medido, no impresión.
 | 3 | Daño al jugador | **Tinte salmón de pantalla completa >1 s**; el personaje no se inmuta. Comunica por post-proceso y tapa la lectura justo cuando importa | Reacción en el cuerpo (pose de hit, guardia rota, ceder terreno); post-proceso mínimo (Sifu) | **Hallazgo nuevo** |
 | 4 | Telegrafía del golpe propio | Sin arco legible anticipación→contacto→recuperación en la silueta; el flash del enemigo es lo único que delata el contacto | Contacto a ≈60% del stroke con windup enorme de silueta (Sifu) | Parcial — ver salvedad |
 | 5 | Locomoción | ✅ Raíz continua + holds de extremidades ~4–5 f — **ya lee como Sable**. Falta: la columna no cambia de postura entre gaits (mismo ciclo) | Una pose de silueta propia por gait (B15c) | Base ✅; silueta por gait ya pendiente en [[Locomoción]]/C4 |
+| 6 | Running jump (W+espacio) | Aire medido **~42 f (0.70 s)**, coincide 1:1 con la analítica del código (JUMP_V 8.4 / GRAVITY 24 → 2v/g = 0.70 s). **El salto es INVISIBLE en la silueta**: `rig.set_motion()` solo recibe speed/crouch/slide — no existe canal airborne, así que despegue/aire/aterrizaje no tienen POSE; solo la raíz dibuja el arco. El landing stutter en salto plano es ~3 f (0.04 s, no bloqueante ✅); el feedback de aterrizaje vive en cámara (thump del leap, solo Vanguard) y FOV, no en el cuerpo | Fortnite: aire 34 f (0.57 s), piernas RECOGIDAS en el aire, compresión visible al aterrizar, aterrizaje→carrera ~6 f no bloqueante | **Hallazgo nuevo** — el aire es un gait sin pose (extiende B15c) |
 
 **Salvedad de método (punto 4):** por el flujo de quest visible no está
 claro si el kit Duelist (alcance 2) estaba activo o era el ataque del
 prototipo; la síncopa 0.40/0.32/0.46/0.62 no se distingue a esa distancia
 de cámara. Clip ideal para medir el kit: `--cls=warrior`, cámara quieta,
 3–4 combos completos contra una bestia.
+
+**Nota de medición del salto (punto 6):** el salto está en 8.30–9.00 s
+del clip. La duración del aire medida en frames (42 f) clava la fórmula
+del código — validación cruzada video↔código. Es ~8 f más flotante que
+Fortnite (0.70 vs 0.57 s); misma familia, afinable con GRAVITY si el
+feel lo pide. Lo estructural no es el timing: es que el rig no se entera
+de que está en el aire.
 
 **Síntesis:** hoy TODO nuestro feedback de combate es **cromático**
 (flashes y tintes) y nada es **corporal ni temporal** (poses de reacción,

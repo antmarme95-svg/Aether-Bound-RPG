@@ -31,7 +31,11 @@ updated: 2026-07-06
   nuevos: la bestia reacciona solo con flash blanco (pose idéntica — sin
   reacción corporal) y el daño al jugador es un tinte de pantalla >1 s
   que tapa la lectura. Salvedad: no está claro si el kit Duelist estaba
-  activo en ese clip — el playtest dirigido sigue pendiente.
+  activo en ese clip — el playtest dirigido sigue pendiente. Ampliado
+  con el running jump: aire 42 f = analítica del código exacta (0.70 s,
+  ~8 f más flotante que Fortnite), landing no bloqueante ✅, pero el
+  rig NO tiene canal airborne — el salto no tiene pose (gait sin
+  silueta, extiende B15c).
 - **PRD-006 alcance 2 ✅ CÓDIGO (2026-07-06): kit Humano Duelist
   jugable.** Combo ×4 con buffer generoso y durs sincopadas (B15), RMB
   contextual = guardia/parry Roba (ventana estricta), momentum→daño

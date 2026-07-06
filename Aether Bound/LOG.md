@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] ingest | B15d ampliado: running jump medido (video↔código)
+A pedido del director se midió el W+espacio del clip AS IS: aire 42 f
+(0.70 s), coincide exacto con JUMP_V 8.4 / GRAVITY 24 del código —
+validación cruzada. Landing stutter plano ~3 f (no bloqueante ✅, mejor
+que el presupuesto Fortnite de 6 f). **Hallazgo:** el salto es invisible
+en la silueta — `rig.set_motion()` no tiene canal airborne, así que
+despegue/aire/aterrizaje no tienen pose (solo la raíz arquea y la cámara
+hace thump). El aire es un gait sin pose: extiende la lección B15c.
+[[Benchmark Biomecánico]] §B15d punto 6.
+
 ## [2026-07-06] ingest | B15d: nuestra build medida contra el benchmark (AS IS vs TO BE)
 El director grabó nuestra propia build (63 s: Wilds → bestia → núcleo →
 menú) y se analizó con el pipeline idéntico de B15 (hojas 60 fps + YDIF).
