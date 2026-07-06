@@ -13,11 +13,11 @@ updated: 2026-07-05
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** **ratificar A1** — [[Plan-de-Produccion]] quedó
-  PROPUESTO (2026-07-05): 5 fases hacia shippear el [[Slice of Bond]]
-  (higiene → link vivo → espina → arco completo → arte/tuning), con gates
-  de Playtest Loop y diseño B just-in-time. Tras ratificar: Fase 0 (C1+C5)
-  y **B10 Game Feel Bible** (gatea la Fase 1). Pareja del slice: **Humano
+- **Próxima prioridad:** **Fase 1 del [[Plan-de-Produccion]]** (ratificado;
+  Fase 0 cerrada 2026-07-05). Primero **B10 Game Feel Bible** (Design Loop
+  — gatea todo lo demás), luego PRD-006 (combate §4.2 mínimo) y PRD-007
+  (Dagna companion + Springboard T1). Objetivo del Gate 1: pelear junto a
+  Dagna en greybox se siente bien a ≥60 FPS. Pareja del slice: **Humano
   Duelist × Dagna** ([[Slice of Bond]] ratificado completo).
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
@@ -27,8 +27,8 @@ updated: 2026-07-05
 - **Motor: GODOT CONFIRMADO** (2026-07-04, ADR-002 cerrada con la evidencia
   de la golden scene).
 - **Bloqueos:** ninguno.
-- **Deuda técnica visible:** renombrar "Vanguards & Voidcores" → AETHER BOUND
-  en README/strings; T1 (`--skip=wilds` live); ver [[Task-Board]].
+- **Deuda técnica visible:** ninguna pendiente de Fase 0 (C1 y C5 cerradas
+  2026-07-05); ver [[Task-Board]] frente C para lo que abre la Fase 1.
 - **Riesgos abiertos:** frame budget térmicamente frágil en la laptop RTX
   2060 (~58 fps warm); export a consolas requiere partner externo (Godot).
 

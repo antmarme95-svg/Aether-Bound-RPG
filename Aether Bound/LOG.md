@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] feature | Fase 0 CERRADA: C1 rename + C5 fix --skip (merge a master)
+Feature Loop en `feat/fase-0-higiene` → merge --no-ff a master. **C1:**
+AETHER BOUND en config/name (título de ventana), prints de boot y README
+(roadmap V&V marcado histórico); identificadores internos retenidos adrede
+(save path, sentinel de test_hello, `window.__BORISAWA` del build web
+congelado, fallback defaultName). **C5:** `start()` invoca
+`_apply_skip_arg()` cuando el fast-path llega a OFFICE; el helper quedó
+idempotente respecto de OFFICE. QA: test_core ALL_PASS, autotest_scenes
+10/10, autotest_slice ALL_PASS (errors=0), wilds_fps 372 en frío;
+aceptación live de --skip=wilds por log FSM. Además se preserva un ajuste
+manual del director en [[Lecciones]] (tiering: Opus/Fable si disponible).
+**Fase actual del [[Plan-de-Produccion]]: 1 (fundaciones — el link vivo).**
+
+## [2026-07-05] design | A1 RATIFICADA: Plan de Producción sellado — arranca Fase 0
+El director ratifica el plan sin cambios (companion AI en F1, diseño B
+just-in-time, regla de re-apertura por gate fallido x2). [[Plan-de-Produccion]]
+→ `ratificado`; Task-Board A1 ✅. **El frente A queda cerrado completo.**
+Fase actual: 0 (higiene) — C1 rename V&V → AETHER BOUND + C5 fix
+`--skip=wilds` + gates QA verdes.
+
 ## [2026-07-05] design | A1: Plan de Producción macro PROPUESTO
 Página nueva [[Plan-de-Produccion]] (20-State, `propuesto`). Norte único:
 shippear el [[Slice of Bond]]. 5 fases con gates de Playtest Loop: F0

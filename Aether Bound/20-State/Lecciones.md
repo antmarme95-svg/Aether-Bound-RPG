@@ -61,9 +61,9 @@ updated: 2026-07-04
 > de sesión —CLAUDE.md → [[Current-State]] → loop → checkpoint— no depende de
 > ningún modelo en particular.
 
-| Rol | Modelo |
-|---|---|
-| Orchestrator (diseño, gates, merges) | **Opus** |
-| Ejecutor primario (lógica/shaders/VFX) | Sonnet (subagente) |
-| Ejecutor mecánico (JSON/boilerplate) | Haiku (subagente) |
-| QA paralelo persistente | Sonnet (subagente) |
+| Rol                                    | Modelo                              |
+| -------------------------------------- | ----------------------------------- |
+| Orchestrator (diseño, gates, merges)   | **Opus/Fable (si está disponible)** |
+| Ejecutor primario (lógica/shaders/VFX) | Sonnet (subagente)                  |
+| Ejecutor mecánico (JSON/boilerplate)   | Haiku (subagente)                   |
+| QA paralelo persistente                | Sonnet (subagente)                  |

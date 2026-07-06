@@ -14,7 +14,7 @@ updated: 2026-07-05
 
 | ID | Tarea | Status | Notas |
 |---|---|---|---|
-| A1 | Plan de producción macro (fases, orden de frentes) | 🔄 | PROPUESTO 2026-07-05: [[Plan-de-Produccion]] (Fases 0–4, gates de playtest, PRD-006…012) — pendiente ratificación |
+| A1 | Plan de producción macro (fases, orden de frentes) | ✅ | RATIFICADO 2026-07-05: [[Plan-de-Produccion]] (Fases 0–4, gates de playtest, PRD-006…012). **Fase 0 ✅ (2026-07-05); fase actual: 1** |
 | A2 | Slice of Bond: pareja jugador×Pivote | ✅ | RATIFICADA: **Humano Duelist × Dagna** (Seismic Springboard) — [[Slice of Bond]] |
 | A2b | Slice of Bond: alcance completo (PRD del slice) | ✅ | RATIFICADO 2026-07-05: 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), sistemas in/out, 45–60 min — [[Slice of Bond]] |
 | A3 | Decisión de motor | ✅ | **GODOT CONFIRMADO** (2026-07-04) — evidencia: golden scene B11; ver ADR-002 |
@@ -41,8 +41,8 @@ updated: 2026-07-05
 
 | ID | Tarea | Status | Notas |
 |---|---|---|---|
-| C1 | Renombrar V&V → AETHER BOUND (repo/README/strings) | ⬜ | [[Nomenclatura]] |
+| C1 | Renombrar V&V → AETHER BOUND (repo/README/strings) | ✅ | 2026-07-05: config/name, boot prints, README (título + roadmap V&V histórico). Identificadores internos retenidos adrede (save path, sentinels, web congelado) |
 | C2 | Implementar Mantling + Escalada zonificada sobre la FSM | ⬜ | [[Locomoción]]; tuning montage+playtest |
 | C3 | Implementar combate 4-componentes + HitPayload; DamageProfiles por celda; enemigos | ⬜ | [[Combate]] |
 | C4 | Rig biomecánico: constraints + IK + 3 ROM | ⬜ | [[Movilidad Realista]]; prioridad sobre cantidad de anims |
-| C5 | T1: fix `--skip=wilds` en boot live | ⬜ | Deuda de tooling (diagnosticada en BACKLOG.md) |
+| C5 | T1: fix `--skip=wilds` en boot live | ✅ | 2026-07-05: `start()` invoca `_apply_skip_arg()` tras el fast-path a OFFICE. Verificado live por log FSM (∅→CREATION→OFFICE→WILDS) |

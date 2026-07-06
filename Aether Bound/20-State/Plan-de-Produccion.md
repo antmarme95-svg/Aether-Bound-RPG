@@ -1,6 +1,6 @@
 ---
-status: propuesto
-source: "Design Loop 2026-07-05 (A1), dimensionado sobre [[Slice of Bond]] ratificado"
+status: ratificado
+source: "Design Loop 2026-07-05 (A1, RATIFICADO por el director), dimensionado sobre [[Slice of Bond]] ratificado"
 updated: 2026-07-05
 ---
 
@@ -27,11 +27,12 @@ updated: 2026-07-05
 
 ## Fases
 
-### Fase 0 — Higiene (corta, sin gate)
+### Fase 0 — Higiene (corta, sin gate) ✅ 2026-07-05
 
-- C1: renombrar V&V → AETHER BOUND (repo/README/strings).
-- C5: fix `--skip=wilds` en boot live.
-- Sanity: gates QA verdes en frío (test_core + autotests).
+- C1: renombrar V&V → AETHER BOUND (repo/README/strings). ✅
+- C5: fix `--skip=wilds` en boot live. ✅ (verificado live por log FSM)
+- Sanity: gates QA verdes en frío (test_core + autotests). ✅
+  (test_core ALL_PASS · scenes 10/10 · slice ALL_PASS · wilds_fps 372 frío)
 
 ### Fase 1 — Fundaciones: el link vivo *(el mayor riesgo técnico)*
 

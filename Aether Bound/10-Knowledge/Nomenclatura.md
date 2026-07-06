@@ -23,5 +23,6 @@ se llama Bond y el juego Bound. *"Speck" reservado para marketing/tráiler.*
 | El reset del Aether | **the World-Molt** ("the Molt") | En español: la Muda |
 | Subcultura fronteriza | **the Mistbound** | Reuso del kit Mist-Stalker: Driftfolk del Driftmarket ([[La Rueda]], [[Las Tres Razas]]) |
 
-Idioma primario del juego: inglés. Pendiente en repo: renombrar "Vanguards &
-Voidcores" → AETHER BOUND en README/strings (→ Task-Board, fase técnica).
+Idioma primario del juego: inglés. Rename en repo COMPLETADO (C1, 2026-07-05):
+título de ventana, boot prints y README ya dicen AETHER BOUND; los
+identificadores internos del prototipo retienen el nombre viejo adrede.
