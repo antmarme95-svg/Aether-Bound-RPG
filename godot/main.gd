@@ -9,9 +9,9 @@ func _ready() -> void:
 	# When running under --autotest, the test script creates its own GameDirector.
 	# Skip main-scene boot to avoid two directors rendering simultaneously.
 	if Debug.args.has("autotest") or Debug.args.has("screenshot-and-quit"):
-		print("[Main] BORISAWA Godot — autotest mode, skipping main director boot")
+		print("[Main] AETHER BOUND Godot — autotest mode, skipping main director boot")
 		return
 	_director = GameDirector.new()
 	add_child(_director)
 	_director.start()
-	print("[Main] BORISAWA Godot — GameDirector booted")
+	print("[Main] AETHER BOUND Godot — GameDirector booted")

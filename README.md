@@ -1,6 +1,8 @@
-# Vanguards & Voidcores — Aetherpunk Open-World Action RPG
+# AETHER BOUND — Aetherpunk Open-World Action RPG
 
-*Formerly **BORISAWA** (in-game strings not yet updated).*
+*Formerly **Vanguards & Voidcores** / **BORISAWA** (repo folder name and some
+internal identifiers retain the old name). The living design truth is the
+Vault: `Aether Bound/` (see `CLAUDE.md`); `docs/GDD.md` v2.2 is frozen.*
 
 An original open-world Action RPG: **Vox Machina** irreverence × **Breath of
 the Wild** cel-shaded exploration. You are not a chosen one — you are a
@@ -190,7 +192,10 @@ godot --path godot -- --autotest=res://tests/autotest_ui.gd
 
 ---
 
-## Roadmap — Vanguards & Voidcores expansion
+## Roadmap — companion-system expansion (HISTORICAL — superseded)
+
+> Superseded by the AETHER BOUND design (GDD v2.2 → Vault, 2026-07).
+> Kept as prototype history only.
 
 The companion-system expansion unlocks the Role Matrix and crew-based story beats:
 
