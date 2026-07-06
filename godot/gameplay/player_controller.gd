@@ -272,7 +272,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					else:
 						rig.animation_on_twos = true
 						rig.body_pop_on_twos = true
-						mode = "Anim: EN 2s + pop de cuerpo"
+						mode = "Anim: EN 2s + pop cuerpo (24 Hz)"
 					EventBus.emit_event("quest:toast", {"text": mode})
 			elif kc == KEY_ESCAPE:
 				EventBus.emit_event("player:pause_toggled", {})

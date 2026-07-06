@@ -136,10 +136,15 @@ var _pose_clock: float = 0.0
 # Ronda 2 (director: "se siente con lag"): MOVING HOLD — el offset del
 # hold se capea, así el cuerpo acompaña a la raíz con un retraso acotado
 # y el pop queda como textura de chop constante, no como trailing.
+# Ronda 3 (director): timing JERÁRQUICO — el cuerpo popea a 24 Hz (fino,
+# sin lag) mientras las extremidades siguen en 2s a 12 Hz (el ritmo cómic
+# vive en los detalles, como Spider-Verse/Xrd con su mezcla de 1s y 2s).
 var body_pop_on_twos: bool = true
+const BODY_POP_STEP: float = 1.0 / 24.0  # cuerpo en "1s y medio": 24 Hz
 const BODY_POP_SNAP: float = 1.5    # saltos de raíz mayores re-anclan sin pop
-const BODY_POP_MAX: float = 0.15    # tope de trailing (m) — lag percibido ≤ ~25 ms en sprint
+const BODY_POP_MAX: float = 0.15    # tope de trailing (m) — red anti-lag
 const BODY_POP_MAX_YAW: float = 0.2 # tope de hold de giro (rad, ~11°)
+var _body_pop_clock: float = 0.0
 var _held_root_pos: Vector3 = Vector3.INF
 var _held_root_yaw: float = 0.0
 
@@ -1635,6 +1640,13 @@ func _process(delta: float) -> void:
 	# between ticks — the comic-book rhythm. Gameplay above never steps.
 	if animation_on_twos:
 		_pose_clock += delta
+		# Reloj propio del body pop (24 Hz): re-ancla el doble de rápido
+		# que la pose — jerarquía cuerpo fino / extremidades en 2s.
+		if body_pop_on_twos:
+			_body_pop_clock += delta
+			if _body_pop_clock >= BODY_POP_STEP:
+				_body_pop_clock = fmod(_body_pop_clock, BODY_POP_STEP)
+				_anchor_body_hold()
 		if _pose_clock < POSE_STEP:
 			# Held frame: the pose doesn't move, but the anatomical safety
 			# net still runs — external writes to bones get clamped anyway.

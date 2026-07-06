@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Body pop ronda 3: timing jerárquico — cuerpo a 24 Hz
+Feedback del director sobre la ronda 2: "solo extremidades es mucho mejor;
+¿y si el cuerpo va a 24 Hz?". Implementado: reloj propio del body pop a
+24 Hz (BODY_POP_STEP 1/24) — el cuerpo re-ancla el doble de rápido que la
+pose (12 Hz); caps de la ronda 2 quedan como red anti-lag. Es timing
+JERÁRQUICO à la Spider-Verse/Xrd (mezcla de 1s y 2s): la masa corre fina,
+el ritmo cómic vive en las extremidades. Toast actualizado. QA: test_core,
+biomech y slice ALL_PASS. Pendiente: veredicto de la ronda 3 (si 24 Hz
+converge visualmente a "solo extremidades", ese es el veredicto gratis).
+
 ## [2026-07-06] playtest | Body pop ronda 2: moving hold (feedback: "se siente con lag")
 El pop puro trailing-completo (hasta ~0.5 m en sprint) se percibía como
 input lag. Corregido con MOVING HOLD: el offset del hold se capea a 0.15 m
