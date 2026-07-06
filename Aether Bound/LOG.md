@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Articulación #1+#3: lag abierto + columna en 2 segmentos
+Director tras la #2: "vamos en dirección correcta" → aplicadas las otras
+dos. **#1:** CHAIN_LAG abierto (0/0.08/0.16/0.22 + `chest` 0.12) — más
+overlap entre segmentos, con el pico del codo aún pegado al cierre de la
+ventana activa (k≈0.67) para que la mano no conecte tarde. **#3:** la
+columna deja de ser monobloque — `upper_spine` (torácico, ROM propio ~60%
+del lumbar) carga torso/strap/brazos/cuello/cabeza; en el strike el twist
+se reparte 45% lumbar + 62% torácico con lag de pecho (el torso se
+ENROSCA); fuera del strike, capa de follow (38% twist / 30% lean, lagged).
+Fix en el camino: release del codo -0.10→-0.085 — el follow-through
+oscilaba +0.036 y el tope de extensión es +0.03 (lección nueva en
+[[Lecciones]]). QA: core, combat, biomech, rig, scenes, slice — todo
+ALL_PASS. Pendiente: veredicto del director de la ronda completa (1+2+3).
+
 ## [2026-07-06] playtest | Articulación #2: follow-through por segmento en el settle
 Feedback del director: el melee lee "como legos/playmobil". Diagnóstico
 compartido: parte etapa (mesh de bloques, sin secundario), parte deuda

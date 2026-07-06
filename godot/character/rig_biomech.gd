@@ -40,10 +40,15 @@ const ROM: Dictionary = {
 		"y": Vector2(0.0, 0.0),
 		"z": Vector2(0.0, 0.0),
 	},
-	"spine": {     # single node today; total thoracolumbar ROM (segments in C4)
+	"spine": {     # segmento LUMBAR (ronda #3: ya no monobloque; era el total)
 		"x": Vector2(-0.4, 0.95),   # extension back / flexion forward (slide 0.55 ok)
 		"y": Vector2(-0.85, 0.85),  # axial rotation ~48°
 		"z": Vector2(-0.3, 0.3),    # lateral bend
+	},
+	"spine_upper": {  # segmento TORÁCICO (ronda #3) — ~60% del rango lumbar
+		"x": Vector2(-0.25, 0.60),
+		"y": Vector2(-0.60, 0.60),
+		"z": Vector2(-0.20, 0.20),
 	},
 	"hips_root": { # pelvis orientation relative to stance
 		# y is generous on purpose: today the legs are children of the hips,
@@ -116,11 +121,16 @@ static func clamp_node(node: Node3D, joint: String, label: String,
 const PHASE_WINDUP_END: float = 0.32
 const PHASE_ACTIVE_END: float = 0.58
 
+# Ronda articulación #1 (2026-07-06): lag ABIERTO — antes 0/0.05/0.10/0.14,
+# los segmentos llegaban casi juntos (lectura monobloque). Con 0.22 el pico
+# del codo cae en k≈0.67, todavía pegado al cierre de la ventana activa
+# global (0.58) — más overlap sin que la mano conecte tarde.
 const CHAIN_LAG: Dictionary = {
 	"hips":     0.00,
-	"spine":    0.05,
-	"shoulder": 0.10,
-	"elbow":    0.14,
+	"spine":    0.08,   # lumbar
+	"chest":    0.12,   # torácico (ronda #3): pelvis → lumbar → pecho → hombro
+	"shoulder": 0.16,
+	"elbow":    0.22,
 }
 
 static func phase_name(k: float) -> String:

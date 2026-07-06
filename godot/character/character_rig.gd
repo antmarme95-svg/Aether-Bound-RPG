@@ -63,7 +63,8 @@ static func _disc_mesh(r: float, mat: Material) -> MeshInstance3D:
 # ----------------------------------------------------------------
 var body: Node3D
 var hips: Node3D
-var spine: Node3D
+var spine: Node3D        # segmento LUMBAR (raíz del tronco)
+var upper_spine: Node3D  # segmento TORÁCICO (ronda articulación #3) — carga brazos/cuello/cabeza
 var head: Node3D
 var hair_slot: Node3D
 var beard_slot: Node3D
@@ -269,14 +270,23 @@ func _build() -> void:
 		legs.append(leg)
 
 	# ---------- torso ----------
+	# Ronda articulación #3 (2026-07-06): la columna deja de ser monobloque.
+	# `spine` es el segmento LUMBAR; `upper_spine` (torácico, a +0.22) carga
+	# torso/strap/brazos/cuello/cabeza — el jerkin queda abajo, la bisagra
+	# visual vive en el borde jerkin/torso. Posiciones mundiales intactas.
 	spine = Node3D.new()
 	spine.name = "spine"
 	spine.position.y = 1.0
 	body.add_child(spine)
 
+	upper_spine = Node3D.new()
+	upper_spine.name = "upper_spine"
+	upper_spine.position.y = 0.22
+	spine.add_child(upper_spine)
+
 	torso = _capsule_mesh(0.16, 0.3, skin_mat)
-	torso.position.y = 0.26
-	spine.add_child(torso)
+	torso.position.y = 0.04
+	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
 
 	jerkin = _capsule_mesh(0.165, 0.18, leather_mat)
@@ -285,9 +295,9 @@ func _build() -> void:
 	_add_outline_pass(jerkin, Color("#5b4632"))
 
 	strap = _box_mesh(0.07, 0.5, 0.02, dark_leather_mat)
-	strap.position = Vector3(0.02, 0.28, 0.155)
+	strap.position = Vector3(0.02, 0.06, 0.155)
 	strap.rotation.z = 0.62
-	spine.add_child(strap)
+	upper_spine.add_child(strap)
 	_add_outline_pass(strap, Color("#3a2d22"))
 
 	# Pauldron is built AFTER arms loop so arm_r (arms[1], side==1) exists.
@@ -297,9 +307,10 @@ func _build() -> void:
 	for side in [-1, 1]:
 		var arm = Node3D.new()
 		arm.name = "arm_" + ("l" if side == -1 else "r")
-		# JS: arm.position.set(side * 0.222, 0.45, 0)
-		arm.position = Vector3(side * 0.222, 0.45, 0.0)
-		spine.add_child(arm)
+		# JS: arm.position.set(side * 0.222, 0.45, 0) — ahora relativo al
+		# torácico (0.45 − 0.22 = 0.23; posición mundial idéntica).
+		arm.position = Vector3(side * 0.222, 0.23, 0.0)
+		upper_spine.add_child(arm)
 
 		var upper = _capsule_mesh(0.054, 0.2, skin_mat)
 		upper.position.y = -0.14
@@ -375,16 +386,16 @@ func _build() -> void:
 	prosthetic.visible = false
 	left_elbow.add_child(prosthetic)
 
-	# ---------- head ----------
+	# ---------- head ---------- (colgada del torácico; mundial intacto)
 	var neck = _capsule_mesh(0.05, 0.07, skin_mat)
-	neck.position.y = 0.58
-	spine.add_child(neck)
+	neck.position.y = 0.36
+	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
 
 	head = Node3D.new()
 	head.name = "head"
-	head.position.y = 0.7
-	spine.add_child(head)
+	head.position.y = 0.48
+	upper_spine.add_child(head)
 
 	skull = _sphere_mesh(0.15, head_mat)
 	skull.name = "skull"
@@ -1289,12 +1300,12 @@ func _build_iron_armor() -> void:
 	arms[0].add_child(pauldron_l)
 	_iron_armor.append({"node": pauldron_l, "base": Vector3.ONE})
 
-	# ---- CHEST PLATE — parented to spine, covers the torso ----
+	# ---- CHEST PLATE — parented to upper_spine, covers the torso ----
 	var chest := _box_mesh(0.30, 0.26, 0.16, metal_mat)
 	chest.name = "chest_plate"
-	chest.position = Vector3(0.0, 0.26, 0.04)
+	chest.position = Vector3(0.0, 0.04, 0.04)
 	_add_outline_pass(chest, Color("#6f7a88"))
-	spine.add_child(chest)
+	upper_spine.add_child(chest)
 	_iron_armor.append({"node": chest, "base": Vector3.ONE})
 
 	# ---- GREAVES — one shin guard per leg, parented to each leg's knee pivot ----
@@ -1855,15 +1866,26 @@ func _process(delta: float) -> void:
 		# hips are the ENGINE of the blow, not a garnish).
 		var hip_rot: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["hips"],     -0.60, 0.55)
 		var spine_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["spine"],    -0.75, 0.60)
+		# Ronda #3: el twist del tronco se reparte lumbar/torácico — el
+		# torácico tiene su PROPIO lag de cadena (el pecho llega después
+		# de la pelvis, antes del hombro): el torso se ENROSCA, no gira
+		# en bloque. Suma ~107% del total viejo; el ROM clampa.
+		var chest_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["chest"],    -0.75, 0.60)
 		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.90, 0.70)
 		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.85, -0.10)
-		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.10)
+		# Elbow release -0.085 (no -0.10): la bisagra está pegada a su límite
+		# de extensión (+0.03) y el follow-through oscila ~35% del release al
+		# otro lado — con -0.085 el vaivén pico (+0.0295) queda DENTRO del ROM
+		# (la pose autorada nunca depende del clamp; autotest_biomech lo exige).
+		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.085)
 
 		hips.rotation.y  = hip_rot
-		spine.rotation.y = spine_rot
+		spine.rotation.y = spine_rot * 0.45
+		upper_spine.rotation.y = chest_rot * 0.62
 		# Head counter-rotates: the body coils away but the eyes stay on the
-		# target — this is what makes a real windup legible.
-		head.rotation.y = -spine_rot * 0.7
+		# target — this is what makes a real windup legible. Counter against
+		# the SUM of trunk segments (head hangs from upper_spine now).
+		head.rotation.y = -(spine.rotation.y + upper_spine.rotation.y) * 0.7
 		# Weight DRIVE: the pelvis sits back into the coil and surges forward
 		# through the release — the mass travels into the target (translation,
 		# not just rotation; base z was set absolutely above, += is safe).
@@ -1946,6 +1968,16 @@ func _process(delta: float) -> void:
 			m.albedo_color = pulsed
 			m.emission = pulsed
 
+	# ── Ronda #3: capa de follow del torácico fuera del strike ──
+	# La locomoción escribe `spine` (tronco total); el torácico acompaña
+	# con lag y un sobre-giro leve (~38% extra de twist, 30% del lean) —
+	# la S del torso vivo. El strike escribe upper_spine directo (arriba).
+	if _strike_t <= 0.0 and upper_spine != null:
+		upper_spine.rotation.y = lerpf(upper_spine.rotation.y,
+				spine.rotation.y * 0.38, minf(1.0, delta * 7.0))
+		upper_spine.rotation.x = lerpf(upper_spine.rotation.x,
+				spine.rotation.x * 0.30, minf(1.0, delta * 7.0))
+
 	# ── PRD-006: joint constraints — ALWAYS the last pose pass ──
 	# "Nada rota donde un cuerpo no rota" (Movilidad Realista §4.3): every
 	# animation source above (gait, crouch, slide, legacy attack, strike)
@@ -1957,6 +1989,7 @@ func _process(delta: float) -> void:
 func _apply_joint_constraints() -> void:
 	_Biomech.clamp_node(hips,  "hips_root", "hips",  _constraint_report)
 	_Biomech.clamp_node(spine, "spine",     "spine", _constraint_report)
+	_Biomech.clamp_node(upper_spine, "spine_upper", "spine_upper", _constraint_report)
 	_Biomech.clamp_node(head,  "head",      "head",  _constraint_report)
 	for i in range(arms.size()):
 		var arm: Node3D = arms[i]

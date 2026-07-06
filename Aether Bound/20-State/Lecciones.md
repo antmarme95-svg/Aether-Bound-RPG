@@ -47,6 +47,14 @@ updated: 2026-07-04
 - **Con pose stepping (2s), gameplay y seguridad corren cada frame:**
   relojes/ventanas de combate y el pase de constraints (otros sistemas
   pueden escribir huesos entre ticks). Solo la POSE se escalona.
+- **Follow-through cerca del límite de una bisagra:** el vaivén oscila
+  ~35% del release al otro lado — si el target queda pegado al tope del
+  ROM (codo: +0.03), reducir el release para que el pico quepa DENTRO.
+  `autotest_biomech` exige pose autorada sin violaciones de ROM en el
+  strike (el clamp es red, no muleta).
+- **A/B de percepción de animación: siempre con zoom de cámara** — a
+  distancia default el chop/detalle de extremidades no se lee y parece
+  que el toggle no hace nada.
 
 ## Entorno
 
