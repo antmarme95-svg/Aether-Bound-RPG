@@ -121,6 +121,14 @@ var _strike_t: float = 0.0             # remaining strike time (seconds); <=0 = 
 var _strike_dur: float = 0.0           # total duration of the current strike
 var _constraint_report: Dictionary = {}  # per-joint attempted-violation stats
 
+# ---- Benchmark Biomecánico: pose stepping "on 2s" (Sable/Xrd) ----
+# The VISIBLE pose is sampled at ~12 Hz and held (comic-book rhythm);
+# gameplay stays continuous — strike timers/phases advance every frame at
+# 60 fps, so combat windows and hitboxes never step. Toggle for A/B review.
+var animation_on_twos: bool = true
+const POSE_STEP: float = 1.0 / 12.0
+var _pose_clock: float = 0.0
+
 # Cache keys to avoid redundant texture/hair rebuilds
 var _head_tex_key: String = ""
 var _hair_key: String = ""
@@ -1560,6 +1568,32 @@ func _process(delta: float) -> void:
 	if speed > 0.02:
 		_phase += delta * (6.5 + 7.5 * speed)
 
+	# ---- Gameplay clocks: advance EVERY frame (never stepped) ----
+	# Combat windows (strike_phase) and the legacy envelope stay continuous
+	# at 60 fps even when the visible pose is sampled on 2s.
+	if _attack_timer > 0.0:
+		_attack_timer -= delta
+	if _strike_t > 0.0:
+		_strike_t -= delta
+		if _strike_t <= 0.0:
+			# Strike finished: release pose ownership immediately.
+			hips.rotation.y = 0.0
+			head.rotation.y = 0.0
+			_strike_dur = 0.0
+
+	# ---- Pose stepping "on 2s" ([[Benchmark Biomecánico]]: Sable/Xrd) ----
+	# The pose below only re-evaluates every POSE_STEP (~12 Hz) and HOLDS
+	# between ticks — the comic-book rhythm. Gameplay above never steps.
+	if animation_on_twos:
+		_pose_clock += delta
+		if _pose_clock < POSE_STEP:
+			# Held frame: the pose doesn't move, but the anatomical safety
+			# net still runs — external writes to bones get clamped anyway.
+			_apply_joint_constraints()
+			return
+		delta = _pose_clock   # the pose integrates the full held interval
+		_pose_clock = 0.0
+
 	# ---- Speed-scaled stride amplitude — has a walk floor so slow walk still reads ----
 	# amp_leg:  0.0 at idle → 0.28 at min walk → 0.62 at sprint
 	# amp_arm:  follows same curve at 65% of leg
@@ -1665,9 +1699,8 @@ func _process(delta: float) -> void:
 			e0.rotation.x = lerp(e0.rotation.x, -elbow_base, min(1.0, delta * 8.0))
 			e1.rotation.x = lerp(e1.rotation.x, -elbow_base, min(1.0, delta * 8.0))
 
-	# Attack envelope (JS: wind-up then snap)
+	# Attack envelope (JS: wind-up then snap; timer advances at top of _process)
 	if _attack_timer > 0.0:
-		_attack_timer -= delta
 		var k: float = 1.0 - max(_attack_timer, 0.0) / 0.38  # 0→1
 		var snap: float
 		if k < 0.35:
@@ -1746,7 +1779,6 @@ func _process(delta: float) -> void:
 	# The blow is born in the hips and travels cadera→torso→hombro→brazo,
 	# each segment lagged so the hand arrives last (Movilidad Realista §4.3).
 	if _strike_t > 0.0:
-		_strike_t -= delta
 		var sk: float = strike_progress()
 		# Segment targets: coil (windup peak) → release (active peak) → 0.
 		# Hips lead the rotation around Y; spine amplifies; shoulder whips
@@ -1785,11 +1817,7 @@ func _process(delta: float) -> void:
 			legs[1].rotation.x = brace * 0.7
 			legs[0].get_meta("knee").rotation.x = 0.18 + brace * 0.4
 			legs[1].get_meta("knee").rotation.x = 0.18 + brace * 0.3
-		if _strike_t <= 0.0:
-			# Strike finished: release ownership; gait/idle settle takes over.
-			hips.rotation.y = 0.0
-			head.rotation.y = 0.0
-			_strike_dur = 0.0
+		# (end-of-strike release happens at the top of _process, every frame)
 
 	# Idle breathe (JS: torso.scale.y = 1 + sin(t*2.1)*0.012)
 	torso.scale.y = 1.0 + sin(_t * 2.1) * 0.012

@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] design | Deep dive biomecánico: el benchmark es TIMING, no más realismo
+Pedido del director: benchmark contra Sable y Hinterberg. Hallazgo central
+(página nueva [[Benchmark Biomecánico]], propuesto): Sable anima EN 2s
+(12 poses/s sostenidas, frame a frame, técnica Xrd/Spider-Verse) con poses
+empujadas al extremo — legibilidad > realismo (Micah Holland, Shedworks).
+Hinterberg no publica data de animación (su deep dive público es de
+rendering); su lección es eficiencia. Diagnóstico: nuestro rig era suave/
+gomoso — ni realista ni expresivo. Síntesis con el canon §4.3: esqueleto
+REALISTA (intacto) + pose EXTREMA + timing EN 2s; el gameplay nunca se
+escalona. Implementado ya en el rig (commit en branch): pose stepping a
+12 Hz detrás de toggle `animation_on_twos`, relojes de combate continuos
+a 60 fps, constraints corriendo TODOS los frames (red de seguridad no
+escalonada — el autotest adversarial lo forzó). QA: biomech ALL_PASS,
+test_core ALL_PASS, rig 11 casos, slice ALL_PASS. Pendiente: A/B en vivo
+con el director + ratificar la página.
+
 ## [2026-07-06] playtest | Ronda 2 de movilidad: cadera como motor (feedback del director)
 Director: "buena movilidad en general; el crouch walk no convence y la
 cadera sigue conservadora". Corregido (commit 0b45ab8): (1) ROM del pelvis

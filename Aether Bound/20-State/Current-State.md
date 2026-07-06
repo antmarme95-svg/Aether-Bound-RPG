@@ -15,11 +15,14 @@ updated: 2026-07-06
   jugador + 1 Pivote.
 - **Próxima prioridad:** **implementar [[PRD-006 Combate mínimo]]**
   (RATIFICADO 2026-07-06) — Feature Loop en `feat/prd-006-combate`.
-  **Alcance 0 ✅ (rig humano restringido: ROM + strike hip-first, QA
-  verde, commit 5d9d93b en branch; strips de fases pendientes del ojo del
-  director).** Sigue: alcance 1 (4 componentes + HitPayload). Después
-  PRD-007 (Dagna companion + Springboard T1). Objetivo del Gate 1: pelear
-  junto a Dagna en greybox se siente bien a ≥60 FPS. Pareja del slice:
+  **Alcance 0 ✅** (rig restringido + strike hip-first; movilidad aprobada
+  "como primer saque" con 2 rondas de feedback aplicadas: coil/cadera/
+  crouch-walk). **Nuevo: [[Benchmark Biomecánico]]** (deep dive Sable/
+  Hinterberg) → pose stepping EN 2s implementado tras toggle
+  `animation_on_twos` (pendiente A/B del director + ratificar página).
+  Sigue: alcance 1 (4 componentes + HitPayload) + curvas anticipación/
+  overshoot del strike (acción 2 del benchmark). Después PRD-007. Gate 1:
+  pelear junto a Dagna en greybox se siente bien a ≥60 FPS. Pareja:
   **Humano Duelist × Dagna** ([[Slice of Bond]] ratificado completo).
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
