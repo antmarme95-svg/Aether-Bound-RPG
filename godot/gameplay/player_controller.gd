@@ -109,6 +109,8 @@ var _fov_target: float = 50.0
 
 # ---- ADS (aim-down-sights) state ----
 var _ads_held: bool        = false
+# ---- PRD-006 alcance 2: guardia del kit melee (RMB contextual) ----
+var _guard_held: bool      = false
 # ---- Sprint L3: attack interrupt pulse ----
 var _attack_pulse: float   = 0.0
 var _cam_dist_eff: float   = CAM_DIST_DEFAULT
@@ -263,9 +265,20 @@ func _unhandled_input(event: InputEvent) -> void:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				_mouse_captured = true
 			elif _enabled:
-				try_attack()
+				# PRD-006 alcance 2: el input real usa el kit nuevo si la
+				# clase es melee; try_attack() viejo queda SOLO para los
+				# autotests históricos (anti-objetivo del PRD).
+				if _melee_style():
+					duelist_attack()
+				else:
+					try_attack()
 		elif mb.button_index == MOUSE_BUTTON_RIGHT and _enabled and _mouse_captured:
-			_set_ads(mb.pressed)
+			# PRD-006 alcance 2: RMB contextual — melee = guardia (hold
+			# bloquea, tap abre la ventana de parry Roba §B.4); ranged = ADS.
+			if _melee_style():
+				_set_guard(mb.pressed)
+			else:
+				_set_ads(mb.pressed)
 		elif mb.button_index == MOUSE_BUTTON_WHEEL_DOWN and _enabled:
 			cam_dist = clampf(cam_dist + 0.0035 * 40.0, CAM_DIST_MIN, CAM_DIST_MAX)
 		elif mb.button_index == MOUSE_BUTTON_WHEEL_UP and _enabled:
@@ -290,7 +303,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif kc == KEY_N:
 				passives.toggle_night_vision()
 			elif kc == KEY_F:
-				try_attack()
+				if _melee_style():
+					duelist_attack()
+				else:
+					try_attack()
 			elif kc == KEY_M:
 				EventBus.emit_event("minimap:toggled", {})
 			elif kc == KEY_T:
@@ -322,6 +338,111 @@ func _set_ads(on: bool) -> void:
 		return
 	_ads_held = on
 	EventBus.emit_event("player:ads_changed", {"active": on})
+
+# ================================================================
+# PRD-006 alcance 2 — kit Humano Duelist (Combate §4.2 sobre los 4
+# componentes canónicos). El combate viejo (try_attack) queda intacto
+# más abajo; SOLO los autotests históricos lo llaman (anti-objetivo).
+# ================================================================
+
+const DUELIST_STAMINA_PER_SWING: float = 10.0
+
+func _melee_style() -> bool:
+	if save == null:
+		return false
+	var cls: Dictionary = save.get_char_class()
+	return String(cls.get("combat", {}).get("style", "melee")) == "melee"
+
+## Guardia del Duelist: hold = bloqueo; el PRESS abre la ventana de parry
+## Roba (§B.4). Ventana estricta (B15b: el input temprano no se perdona —
+## la ventana corre desde el press, sin refresh por hold).
+func _set_guard(on: bool) -> void:
+	if _guard_held == on:
+		return
+	_guard_held = on
+	if guard == null:
+		return
+	if on:
+		guard.try_parry()
+		guard.start_block()
+	else:
+		guard.end_block()
+
+## Ataque del kit: arranca el combo ×4 o bufferea la cadena (el sello del
+## Duelist es el buffer generoso — CombatComponent decide, §4.3: las
+## ventanas son las fases biomecánicas del golpe, nunca timers).
+func duelist_attack() -> void:
+	if not _enabled or combat == null or _guard_held:
+		return
+	var was_striking: bool = combat.is_striking()
+	if was_striking:
+		combat.try_attack()   # buffer de cadena; el coste se cobra al disparar
+		return
+	if not stats.spend_stamina(DUELIST_STAMINA_PER_SWING):
+		return
+	if combat.try_attack():
+		_on_duelist_swing_started()
+
+## Arranque de UN golpe de la cadena (0 o encadenado): anim del rig con la
+## dur del paso + ley sprint↔arma (§B.5: atacar cancela sprint/slide el
+## mismo tick — la LSM lee "attacking" este mismo frame).
+## El momentum se CAPTURA acá: el golpe trae el peso con el que arrancó
+## (slide/sprint), aunque la ley §B.5 frene el cuerpo durante el swing.
+var _swing_speed: float = 0.0
+
+func _on_duelist_swing_started() -> void:
+	_attack_pulse = 0.12
+	_swing_speed = move_speed_norm
+	var step: Dictionary = _WeaponD.combo_step(combat.weapon, combat.chain_index)
+	rig.play_strike(float(step.get("dur", 0.4)))
+
+## Resolución del golpe en fase ACTIVE: momentum→daño es física corporal
+## (masa × velocidad al conectar, §4.3) — move_speed_norm >1 saliendo del
+## slide/leap, y eso YA escala el payload dentro de consume_hit().
+func _duelist_try_hit() -> void:
+	if combat == null or combat.phase() != "active":
+		return
+	var fwd := Vector3(sin(facing), 0.0, cos(facing))
+	var payload = combat.consume_hit(_swing_speed, fwd)
+	if payload == null:
+		return
+	var range_m: float = 2.6
+	var cos_arc: float = cos(110.0 * PI / 360.0)
+	for enemy in enemies:
+		if enemy.dead:
+			continue
+		var to: Vector3 = (enemy.position - position)
+		to.y = 0.0
+		var d: float = to.length()
+		if d > range_m:
+			continue
+		to = to.normalized()
+		if to.dot(fwd) < cos_arc and d > 0.7:
+			continue
+		enemy.hit(payload.scaled_damage() * stats.damage_mult, self)
+		# El VectorFuerza empuja vía PushPull de la bestia (reacciones
+		# completas por Equilibrio = alcance 3, con los 2 enemigos nuevos).
+		if enemy.get("push_pull") != null:
+			enemy.push_pull.apply_impulse(payload.force / enemy.BEAST_MASS)
+
+## Entrada de daño enemigo por el GuardComponent (bloqueo/parry/reacción).
+## El atacante construye el payload; acá se resuelve y se aplica.
+## Devuelve el resultado para que el atacante reaccione (parried→stun).
+func receive_hit(payload: RefCounted) -> Dictionary:
+	if guard == null:
+		return { "reaction": "hit", "damage": 0.0 }
+	var res: Dictionary = guard.receive(payload)
+	var dmg: float = float(res.get("damage", 0.0))
+	if dmg > 0.0:
+		stats.take_damage(dmg)
+	var f: Vector3 = res.get("force", Vector3.ZERO)
+	if f.length_squared() > 0.0001 and push_pull != null:
+		push_pull.apply_impulse(f)
+	if String(res.get("reaction", "")) == "parried":
+		# Parry Roba (§B.4): feedback inmediato — el premio se siente
+		# (B15b: hit-stop 3f del clang llega con TimeFeel en alcance 4).
+		EventBus.emit_event("quest:toast", {"text": "¡Parry! Roba"})
+	return res
 
 # ----------------------------------------------------------------
 # try_attack — JS PlayerController.tryAttack()
@@ -734,11 +855,18 @@ func update(dt: float) -> void:
 	attack_cooldown = maxf(0.0, attack_cooldown - dt)
 	_attack_pulse   = maxf(0.0, _attack_pulse - dt)   # Sprint L3: decay attack interrupt pulse
 
-	# ---- PRD-006: tick de componentes (relojes de gameplay, cada frame) ----
-	# Neutros hasta el alcance 2 (nadie les mete inputs todavía); el
-	# desplazamiento de push_pull es cero sin impulsos aplicados.
+	# ---- PRD-006 alcance 2: tick de componentes (relojes de gameplay,
+	# cada frame — NUNCA se escalonan; ver Lecciones/pose stepping) ----
 	if combat != null:
-		combat.tick(dt)
+		var cev: Dictionary = combat.tick(dt)
+		if cev.get("chained", false):
+			# La cadena disparó al cerrar el recovery: cobrar el paso y
+			# animar; sin stamina la cadena se corta limpia en el windup.
+			if stats.spend_stamina(DUELIST_STAMINA_PER_SWING):
+				_on_duelist_swing_started()
+			else:
+				combat.cancel()
+		_duelist_try_hit()
 		guard.tick(dt)
 		energy.tick(dt)
 		if push_pull.is_active():

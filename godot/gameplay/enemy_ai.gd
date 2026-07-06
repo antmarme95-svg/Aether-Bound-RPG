@@ -12,7 +12,16 @@ const _GuardC    = preload("res://combat/guard_component.gd")
 const _EnergyC   = preload("res://combat/energy_component.gd")
 const _PushPullC = preload("res://combat/push_pull_component.gd")
 const _WeaponD   = preload("res://combat/weapon_data.gd")
+const _Payload   = preload("res://combat/hit_payload.gd")
 const BEAST_MASS := 1.2
+
+# PRD-006 alcance 2: el lunge golpea vía HitPayload contra la guardia del
+# jugador (bloqueo/parry Roba §B.4). Daño 13.0 = el histórico del prototipo.
+const LUNGE_DAMAGE := 13.0
+const LUNGE_BALANCE := 14.0
+const LUNGE_FORCE := 4.5
+# Parry Roba → stun (B15b medido en Sifu: ~2 s indefenso).
+const PARRY_STUN_EXTRA := 1.2
 
 var combat = null
 var guard = null
@@ -319,7 +328,20 @@ func update_ai(dt: float, controller: PlayerController, passives: Passives) -> v
 			position += lunge_dir * 9.5 * dt
 			if not lunge_hit_done and dist < 1.25:
 				lunge_hit_done = true
-				controller.stats.take_damage(13.0)
+				# PRD-006 alcance 2: el golpe viaja como HitPayload y lo
+				# resuelve la guardia del jugador (bloqueo/parry/reacción).
+				var p = _Payload.new()
+				p.damage = LUNGE_DAMAGE
+				p.balance_damage = LUNGE_BALANCE
+				p.force = lunge_dir * LUNGE_FORCE
+				p.source_mass = BEAST_MASS
+				var res: Dictionary = controller.receive_hit(p)
+				if String(res.get("reaction", "")) == "parried":
+					# Parry Roba: la bestia queda expuesta (~2 s, B15b) —
+					# recover extendido + flash para leer el castigo.
+					state   = "recover"
+					state_t = -PARRY_STUN_EXTRA
+					flash_t = 0.3
 			if state_t > 0.34:
 				state   = "recover"
 				state_t = 0.0
