@@ -1,6 +1,6 @@
 ---
 status: ratificado
-source: "Design Loop 2026-07-04 (pareja, ratificada); Design Loop 2026-07-05 (alcance A2b, PROPUESTO — pendiente de ratificación)"
+source: "Design Loop 2026-07-04 (pareja, ratificada); Design Loop 2026-07-05 (alcance A2b, RATIFICADO por el director)"
 updated: 2026-07-05
 ---
 
@@ -25,11 +25,11 @@ hacer bien primero.
 Beat firma del Bond vacío en el slice: una cornisa que *sabes* que alcanzabas
 con ella; picas Bond; nadie golpea el suelo.
 
-## Alcance del slice (A2b) — PROPUESTO 2026-07-05
+## Alcance del slice (A2b) — RATIFICADO 2026-07-05
 
-> Pendiente de ratificación del director. Principio rector: el slice es
-> **la Estructura Dramática entera en miniatura** — lealtad → intimidad →
-> traición → orfandad — con un solo Pivote y cero relleno.
+> Principio rector: el slice es **la Estructura Dramática entera en
+> miniatura** — lealtad → intimidad → traición → orfandad — con un solo
+> Pivote y cero relleno.
 
 ### Tramo de [[La Rueda]] (4 escenas, comprimido)
 
@@ -85,6 +85,6 @@ todo lo demás funcione.
 
 ## Pendiente (❓)
 
-Ratificación del alcance (arriba); tras ratificar → desglose en PRDs de
-implementación (Feature Loops) y B10 (Game Feel Bible) alimenta el feel del
-Springboard. → Task-Board A2b.
+Desglose del alcance ratificado en PRDs de implementación (Feature Loops);
+B10 (Game Feel Bible) alimenta el feel del Springboard; guion de la camp
+scene del ritual (ver [[Dagna]]). → Task-Board.

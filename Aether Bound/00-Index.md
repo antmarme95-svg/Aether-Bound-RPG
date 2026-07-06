@@ -33,7 +33,7 @@
 - [[Inventario del Prototipo]] — qué se conserva, re-usa o reemplaza del build Godot.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres (propuesto).
 - [[Briefs de Concept Art]] — prompts Nano Banana 2 por fenotipo + notas de pipeline (propuesto).
-- [[Slice of Bond]] — vertical slice: pareja ratificada Humano Duelist × Dagna; alcance A2b propuesto (4 escenas, 45–60 min).
+- [[Slice of Bond]] — vertical slice ratificado: Humano Duelist × Dagna; 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), 45–60 min.
 - [[Dagna]] — ficha completa del Pivote del slice: bio, reclutamiento, tiers del Springboard, quiebre, la Primera Cuña (propuesto).
 
 ## 20-State (dónde está el proyecto)

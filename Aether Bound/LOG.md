@@ -1,5 +1,13 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] design | A2b RATIFICADA: alcance del Slice of Bond sellado
+El director ratifica la propuesta sin cambios (incluidas las 3 decisiones
+señaladas: Cinder Ascent como espina, T1→T3 comprimido en una sesión sin
+tope por acto, Standing fuera como sistema). [[Slice of Bond]] →
+`ratificado` completo; Task-Board A2b ✅. El frente A queda: solo A1 (plan
+de producción macro) abierto. Siguiente: desglose del slice en PRDs
+(Feature Loops) + B10 (Game Feel Bible).
+
 ## [2026-07-05] design | A2b: alcance del Slice of Bond PROPUESTO
 Propuesta completa escrita en [[Slice of Bond]] (pendiente de ratificación).
 Estructura: la Estructura Dramática en miniatura, 4 escenas — cold open El
