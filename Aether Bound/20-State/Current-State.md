@@ -13,12 +13,12 @@ updated: 2026-07-05
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** el slice está definido ([[Slice of Bond]]
-  RATIFICADO completo, 2026-07-05: 4 escenas, sistemas in/out, 45–60 min).
-  Siguen, en paralelo posible: **A1** (plan de producción macro — único
-  frente A abierto), **desglose del slice en PRDs** (Feature Loops sobre
-  Godot) y **B10** (Game Feel Bible, alimenta el feel del Springboard).
-  Pareja del slice: **Humano Duelist × Dagna**.
+- **Próxima prioridad:** **ratificar A1** — [[Plan-de-Produccion]] quedó
+  PROPUESTO (2026-07-05): 5 fases hacia shippear el [[Slice of Bond]]
+  (higiene → link vivo → espina → arco completo → arte/tuning), con gates
+  de Playtest Loop y diseño B just-in-time. Tras ratificar: Fase 0 (C1+C5)
+  y **B10 Game Feel Bible** (gatea la Fase 1). Pareja del slice: **Humano
+  Duelist × Dagna** ([[Slice of Bond]] ratificado completo).
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11, look = sistema replicable) · Dagna ✅ (B1 1/9).

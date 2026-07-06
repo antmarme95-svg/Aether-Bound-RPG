@@ -14,7 +14,7 @@ updated: 2026-07-05
 
 | ID | Tarea | Status | Notas |
 |---|---|---|---|
-| A1 | Plan de producción macro (fases, orden de frentes) | ⬜ | El objetivo actual de [[Current-State]] |
+| A1 | Plan de producción macro (fases, orden de frentes) | 🔄 | PROPUESTO 2026-07-05: [[Plan-de-Produccion]] (Fases 0–4, gates de playtest, PRD-006…012) — pendiente ratificación |
 | A2 | Slice of Bond: pareja jugador×Pivote | ✅ | RATIFICADA: **Humano Duelist × Dagna** (Seismic Springboard) — [[Slice of Bond]] |
 | A2b | Slice of Bond: alcance completo (PRD del slice) | ✅ | RATIFICADO 2026-07-05: 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), sistemas in/out, 45–60 min — [[Slice of Bond]] |
 | A3 | Decisión de motor | ✅ | **GODOT CONFIRMADO** (2026-07-04) — evidencia: golden scene B11; ver ADR-002 |

@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-05] design | A1: Plan de Producción macro PROPUESTO
+Página nueva [[Plan-de-Produccion]] (20-State, `propuesto`). Norte único:
+shippear el [[Slice of Bond]]. 5 fases con gates de Playtest Loop: F0
+higiene (C1+C5) → F1 fundaciones/link vivo (B10 + PRD-006 combate mínimo +
+PRD-007 Dagna companion/Springboard T1 + C4 parcial; el mayor riesgo
+—companion AI— primero) → F2 espina Cinder Ascent + tiers (PRD-008/009 +
+T3) → F3 arco completo 4 escenas (PRD-010/011/012) → F4 arte/audio/tuning
+(gate final: playtester externo siente la pérdida dos veces). Diseño B
+just-in-time (solo B10 entra); B1-B8 restantes diferidos post-slice.
+Pendiente ratificación del director.
+
 ## [2026-07-05] design | A2b RATIFICADA: alcance del Slice of Bond sellado
 El director ratifica la propuesta sin cambios (incluidas las 3 decisiones
 señaladas: Cinder Ascent como espina, T1→T3 comprimido en una sesión sin
