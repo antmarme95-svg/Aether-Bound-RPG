@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] state | Cierre de sesión: B14 + A/B + alcance 1 + articulación
+Sesión completa en un día. Recorrido: **B14 ✅** (benchmark v2 AAA — motion
+matching descartado, camino Sifu/HZD validado; la v1 quedó ratificada de
+facto por 4 rondas de A/B en vivo) → **A/B del stepping CERRADO** (canon:
+2s solo extremidades, cuerpo suave; body pop probado en 3 variantes y
+descartado, queda tras toggle) → **PRD-006 alcance 1 ✅** (4 componentes +
+HitPayload + weapons.json + curvas trifásicas; test_combat 41/41; PR por
+merge local) → fix melee vivo (play_strike no estaba conectado al juego)
+→ **ronda de articulación ✅ aprobada** (follow-through + lag abierto +
+columna 2 segmentos) tras feedback "legos/playmobil" del director.
+Lecciones nuevas: follow-through vs tope de bisagra; A/B de percepción
+siempre con zoom. **Próxima sesión: alcance 2 (kit Duelist jugable)** —
+primera decisión: cómo convive el reemplazo del combate con el
+autotest_slice histórico. Master limpio, todo pusheado.
+
 ## [2026-07-06] playtest | Ronda de articulación APROBADA por el director
 Veredicto en vivo tras #1+#2+#3: "se ve bien". La ronda completa contra
 el feedback "legos/playmobil": #2 mató el frenar-en-seco (follow-through
