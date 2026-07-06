@@ -14,12 +14,13 @@ updated: 2026-07-06
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
 - **Próxima prioridad:** **implementar [[PRD-006 Combate mínimo]]**
-  (RATIFICADO 2026-07-06) — Feature Loop en `feat/prd-006-combate`, en el
-  orden de construcción de la spec: alcance 0 (rig humano restringido)
-  primero. Después PRD-007 (Dagna companion + Springboard T1). Objetivo
-  del Gate 1: pelear junto a Dagna en greybox se siente bien a ≥60 FPS.
-  Pareja del slice: **Humano Duelist × Dagna** ([[Slice of Bond]]
-  ratificado completo).
+  (RATIFICADO 2026-07-06) — Feature Loop en `feat/prd-006-combate`.
+  **Alcance 0 ✅ (rig humano restringido: ROM + strike hip-first, QA
+  verde, commit 5d9d93b en branch; strips de fases pendientes del ojo del
+  director).** Sigue: alcance 1 (4 componentes + HitPayload). Después
+  PRD-007 (Dagna companion + Springboard T1). Objetivo del Gate 1: pelear
+  junto a Dagna en greybox se siente bien a ≥60 FPS. Pareja del slice:
+  **Humano Duelist × Dagna** ([[Slice of Bond]] ratificado completo).
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11, look = sistema replicable) · Dagna ✅ (B1 1/9).

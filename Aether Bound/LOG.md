@@ -1,5 +1,18 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] feature | PRD-006 alcance 0 COMPLETO: rig humano restringido (en branch)
+En `feat/prd-006-combate` (commit 5d9d93b). Entregado: `rig_biomech.gd`
+(tabla ROM humana de referencia — hombro 3-DOF, codo/rodilla bisagra sin
+hiperextensión, columna, cadera; clamp con reporte de violaciones
+intentadas; curvas de cadena cinética con lags cadera→torso→hombro→brazo
+y fases windup 0–0.32 / active 0.32–0.58 / recovery = las ventanas de
+combate) + `play_strike()` hip-first en el rig (el snap legacy queda solo
+para el slice histórico) + pase de constraints SIEMPRE al final del pose.
+QA: `autotest_biomech` ALL_PASS (locomoción/strike cero violaciones ROM,
+orden de fases correcto, clamp adversarial verificado, capturas de fases a
+midpoint); regresión verde (test_core, rig 11 casos, slice). Siguiente
+tarea del loop: alcance 1 (4 componentes + HitPayload).
+
 ## [2026-07-06] design | PRD-006 RATIFICADO — arranca el Feature Loop de combate
 El director ratifica la spec iterada (movilidad realista como columna
 vertebral). Feature Loop abierto en `feat/prd-006-combate`; orden de
