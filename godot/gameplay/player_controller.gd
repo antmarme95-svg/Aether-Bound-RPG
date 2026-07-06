@@ -259,10 +259,20 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif kc == KEY_M:
 				EventBus.emit_event("minimap:toggled", {})
 			elif kc == KEY_T:
-				# A/B review del pose stepping ([[Benchmark Biomecánico]])
+				# A/B del pose stepping ([[Benchmark Biomecánico]]) — cicla:
+				# 2s + pop de cuerpo → 2s solo extremidades → suave 60
 				if rig != null:
-					rig.animation_on_twos = not rig.animation_on_twos
-					var mode: String = "Anim: EN 2s (12 Hz)" if rig.animation_on_twos else "Anim: suave (60 fps)"
+					var mode: String
+					if rig.animation_on_twos and rig.body_pop_on_twos:
+						rig.body_pop_on_twos = false
+						mode = "Anim: EN 2s (solo extremidades)"
+					elif rig.animation_on_twos:
+						rig.animation_on_twos = false
+						mode = "Anim: suave (60 fps)"
+					else:
+						rig.animation_on_twos = true
+						rig.body_pop_on_twos = true
+						mode = "Anim: EN 2s + pop de cuerpo"
 					EventBus.emit_event("quest:toast", {"text": mode})
 			elif kc == KEY_ESCAPE:
 				EventBus.emit_event("player:pause_toggled", {})

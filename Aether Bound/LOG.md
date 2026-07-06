@@ -1,5 +1,18 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | A/B resuelto: 12 Hz CANON + body pop implementado
+El director vio la diferencia (con zoom de cámara; las sondas confirmaron
+antes que el stepping funcionaba end-to-end — el enmascarador era la raíz
+continua). Decisiones: (1) **EN 2s / 12 Hz queda como canon** del rig;
+(2) **body pop implementado YA**: el mesh visible holdea X/Z + yaw entre
+ticks (estilo Sable, `body_pop_on_twos`, snap-guard 1.5 m; el eje Y del
+body queda para crouch/slide; raíz/gameplay siempre continua); (3) la
+página [[Benchmark Biomecánico]] sigue `propuesto` hasta ver el alcance 1
+(poses extremas). Tecla T ahora cicla 3 modos: 2s+pop → solo extremidades
+→ suave. QA: test_core, biomech, rig y slice ALL_PASS; tira A/B regenerada
+muestra el pop (~0.5 m de hold en sprint). Sondas tmp_* quedan hasta el
+cierre del alcance 1.
+
 ## [2026-07-06] playtest | A/B en vivo del stepping en 2s: tecla T in-game
 Preparado el A/B que pedía [[Benchmark Biomecánico]] v1: tecla **T** en el
 juego alterna `animation_on_twos` en caliente (toast en HUD: "EN 2s

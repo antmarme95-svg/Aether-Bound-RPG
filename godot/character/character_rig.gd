@@ -129,6 +129,15 @@ var animation_on_twos: bool = true
 const POSE_STEP: float = 1.0 / 12.0
 var _pose_clock: float = 0.0
 
+# Body pop (A/B 2026-07-06, director): el MESH visible también holdea su
+# offset de mundo entre ticks de pose — el personaje entero popea (Sable),
+# no solo las extremidades. La raíz/gameplay sigue continua; el hold vive
+# en X/Z + yaw del nodo body (body.position.y pertenece a crouch/slide).
+var body_pop_on_twos: bool = true
+const BODY_POP_SNAP: float = 1.5   # saltos de raíz mayores re-anclan sin pop
+var _held_root_pos: Vector3 = Vector3.INF
+var _held_root_yaw: float = 0.0
+
 # Cache keys to avoid redundant texture/hair rebuilds
 var _head_tex_key: String = ""
 var _hair_key: String = ""
@@ -1559,6 +1568,31 @@ func constraint_report() -> Dictionary:
 func reset_constraint_report() -> void:
 	_constraint_report = {}
 
+# ---- Body pop helpers (ver bloque body_pop_on_twos arriba) ----
+func _anchor_body_hold() -> void:
+	_held_root_pos = global_position
+	_held_root_yaw = rotation.y
+	_release_body_hold()
+
+func _apply_body_hold() -> void:
+	if not body_pop_on_twos or _held_root_pos == Vector3.INF:
+		return
+	var off: Vector3 = _held_root_pos - global_position
+	off.y = 0.0   # vertical sigue continuo: body.position.y es de crouch/slide
+	if off.length() > BODY_POP_SNAP:
+		_held_root_pos = global_position
+		_held_root_yaw = rotation.y
+		off = Vector3.ZERO
+	var local_off: Vector3 = off.rotated(Vector3.UP, -rotation.y)
+	body.position.x = local_off.x
+	body.position.z = local_off.z
+	body.rotation.y = wrapf(_held_root_yaw - rotation.y, -PI, PI)
+
+func _release_body_hold() -> void:
+	body.position.x = 0.0
+	body.position.z = 0.0
+	body.rotation.y = 0.0
+
 func _process(delta: float) -> void:
 	_t += delta
 	var speed: float = _motion_speed
@@ -1589,10 +1623,14 @@ func _process(delta: float) -> void:
 		if _pose_clock < POSE_STEP:
 			# Held frame: the pose doesn't move, but the anatomical safety
 			# net still runs — external writes to bones get clamped anyway.
+			_apply_body_hold()
 			_apply_joint_constraints()
 			return
 		delta = _pose_clock   # the pose integrates the full held interval
 		_pose_clock = 0.0
+		_anchor_body_hold()
+	else:
+		_release_body_hold()
 
 	# ---- Speed-scaled stride amplitude — has a walk floor so slow walk still reads ----
 	# amp_leg:  0.0 at idle → 0.28 at min walk → 0.62 at sprint
