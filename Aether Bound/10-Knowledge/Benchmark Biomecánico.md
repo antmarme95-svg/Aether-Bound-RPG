@@ -73,6 +73,17 @@ el cómic se dibuja a 12.
 4. La capa de constraints (alcance 0) queda como red de seguridad — las
    poses extremas se empujan CONTRA el ROM, nunca a través de él.
 
+## Pendiente (❓) — v2 encargada por el director (2026-07-06)
+
+Extender el benchmark al **state of the art AAA de animación biomecánica**:
+Assassin's Creed (locomoción/parkour por motion matching), 007 First
+Light, Horizon Zero Dawn, Star Wars Jedi — y **Sifu** con foco triple:
+biomecánica, movilidad y puntos de combate (su economía de posición/
+guardia es pariente del Equilibrio de [[Combate]]). Objetivo: mapear qué
+técnicas (motion matching, IK full-body, animation-driven vs physics)
+valen para un equipo de 1+LLM en Godot, y qué se descarta por costo.
+→ Task-Board B14, PRIMERA tarea de la próxima sesión.
+
 ## Fuentes
 
 - gamedeveloper.com — "Emotion in motion: expressive character animation"

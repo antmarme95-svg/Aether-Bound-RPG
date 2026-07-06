@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] state | Cierre de sesión: PRD-006 parte 1 mergeada; B14 fijada como primera tarea
+Sesión 2026-07-05/06 cerrada. Recorrido: A2b ratificada (alcance del
+slice) → A1 ratificada (plan de producción, frente A COMPLETO) → Fase 0
+cerrada (C1+C5) → B10 ratificada (Game Feel Bible) → PRD-006 ratificado e
+iniciado: alcance 0 completo (rig restringido + strike hip-first) con 2
+rondas de feedback de movilidad del director aplicadas + deep dive
+[[Benchmark Biomecánico]] (hallazgo: el gap es timing/pose, no realismo;
+pose stepping en 2s implementado tras toggle). QA todo verde al merge
+(biomech, core, rig, scenes, slice). **Mandato del director al cierre:
+B14 (benchmark v2 AAA — AC, 007 First Light, HZD, Jedi, y Sifu para
+biomecánica/movilidad/combate) es LA PRIMERA TAREA de la próxima sesión,
+antes de seguir el dev.** Branch `feat/prd-006-combate` mergeado a master
+(el loop de PRD-006 sigue abierto: alcances 1–5).
+
 ## [2026-07-06] design | Deep dive biomecánico: el benchmark es TIMING, no más realismo
 Pedido del director: benchmark contra Sable y Hinterberg. Hallazgo central
 (página nueva [[Benchmark Biomecánico]], propuesto): Sable anima EN 2s
