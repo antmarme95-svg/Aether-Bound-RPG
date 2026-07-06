@@ -39,6 +39,14 @@ updated: 2026-07-04
 - **Método de review de movimiento:** montage harness
   (`tests/autotest_montage.gd`) → regenerar strips (~20s) → revisar imágenes;
   no live window salvo aceptación final.
+- **`git commit -m` en PowerShell 5.1: sin comillas dobles dentro del
+  mensaje** — un `"` embebido rompe el parseo hacia git aunque uses
+  here-string. Frases sin comillas o varios `-m`.
+- **Capturas de fases de animación: al MIDPOINT de la fase**, no al
+  entrar — recién entrando la pose apenas arranca y el strip miente.
+- **Con pose stepping (2s), gameplay y seguridad corren cada frame:**
+  relojes/ventanas de combate y el pase de constraints (otros sistemas
+  pueden escribir huesos entre ticks). Solo la POSE se escalona.
 
 ## Entorno
 

@@ -1,5 +1,72 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] state | Cierre de sesión: PRD-006 parte 1 mergeada; B14 fijada como primera tarea
+Sesión 2026-07-05/06 cerrada. Recorrido: A2b ratificada (alcance del
+slice) → A1 ratificada (plan de producción, frente A COMPLETO) → Fase 0
+cerrada (C1+C5) → B10 ratificada (Game Feel Bible) → PRD-006 ratificado e
+iniciado: alcance 0 completo (rig restringido + strike hip-first) con 2
+rondas de feedback de movilidad del director aplicadas + deep dive
+[[Benchmark Biomecánico]] (hallazgo: el gap es timing/pose, no realismo;
+pose stepping en 2s implementado tras toggle). QA todo verde al merge
+(biomech, core, rig, scenes, slice). **Mandato del director al cierre:
+B14 (benchmark v2 AAA — AC, 007 First Light, HZD, Jedi, y Sifu para
+biomecánica/movilidad/combate) es LA PRIMERA TAREA de la próxima sesión,
+antes de seguir el dev.** Branch `feat/prd-006-combate` mergeado a master
+(el loop de PRD-006 sigue abierto: alcances 1–5).
+
+## [2026-07-06] design | Deep dive biomecánico: el benchmark es TIMING, no más realismo
+Pedido del director: benchmark contra Sable y Hinterberg. Hallazgo central
+(página nueva [[Benchmark Biomecánico]], propuesto): Sable anima EN 2s
+(12 poses/s sostenidas, frame a frame, técnica Xrd/Spider-Verse) con poses
+empujadas al extremo — legibilidad > realismo (Micah Holland, Shedworks).
+Hinterberg no publica data de animación (su deep dive público es de
+rendering); su lección es eficiencia. Diagnóstico: nuestro rig era suave/
+gomoso — ni realista ni expresivo. Síntesis con el canon §4.3: esqueleto
+REALISTA (intacto) + pose EXTREMA + timing EN 2s; el gameplay nunca se
+escalona. Implementado ya en el rig (commit en branch): pose stepping a
+12 Hz detrás de toggle `animation_on_twos`, relojes de combate continuos
+a 60 fps, constraints corriendo TODOS los frames (red de seguridad no
+escalonada — el autotest adversarial lo forzó). QA: biomech ALL_PASS,
+test_core ALL_PASS, rig 11 casos, slice ALL_PASS. Pendiente: A/B en vivo
+con el director + ratificar la página.
+
+## [2026-07-06] playtest | Ronda 2 de movilidad: cadera como motor (feedback del director)
+Director: "buena movilidad en general; el crouch walk no convence y la
+cadera sigue conservadora". Corregido (commit 0b45ab8): (1) ROM del pelvis
+en Y ampliado a ±0.7 con justificación biomecánica (pelvis + pivote de pie
+como unidad hasta que C4 traiga pies IK); (2) strike con cadera −0.60/+0.55
++ drive de traslación (el peso viaja al objetivo, no solo rota); (3) crouch
+walk v2: rotación pélvica por zancada, peso lateral sobre el pie plantado,
+contra-rotación de tronco y brazos en contra-balanceo — la silueta baja
+aceptada se preserva. QA ALL_PASS, cero violaciones. Strips nuevos:
+biomech_crouchwalk_{a,b}.png + strike re-capturado.
+
+## [2026-07-06] playtest | Review de strips del strike: coil amplificado (feedback del director)
+Dos observaciones del director sobre los strips de biomech: (1) el look de
+las capturas está fuera de la Art Bible — CONFIRMADO COMO PLANEADO (stage
+pelado de QA + rig del prototipo cuyo cel genérico es anti-referencia
+explícita; el look canónico se aplica en Fase 4 del [[Plan-de-Produccion]];
+las fases 1–3 se revisan en crudo: el cuerpo, no el pixel). (2) "No veo
+mucha amplitud en el coil" → CORREGIDO (commit 47a483e): amplitudes
+llevadas al borde del ROM (cadera −0.42, columna −0.75, hombro −1.90,
+codo −1.45), contra-giro de cabeza (los ojos quedan en el objetivo — lo
+que hace legible un windup real), captura del windup movida al pico del
+coil (k 0.28). autotest_biomech ALL_PASS se mantiene (cero violaciones:
+el ROM absorbe las amplitudes nuevas).
+
+## [2026-07-06] feature | PRD-006 alcance 0 COMPLETO: rig humano restringido (en branch)
+En `feat/prd-006-combate` (commit 5d9d93b). Entregado: `rig_biomech.gd`
+(tabla ROM humana de referencia — hombro 3-DOF, codo/rodilla bisagra sin
+hiperextensión, columna, cadera; clamp con reporte de violaciones
+intentadas; curvas de cadena cinética con lags cadera→torso→hombro→brazo
+y fases windup 0–0.32 / active 0.32–0.58 / recovery = las ventanas de
+combate) + `play_strike()` hip-first en el rig (el snap legacy queda solo
+para el slice histórico) + pase de constraints SIEMPRE al final del pose.
+QA: `autotest_biomech` ALL_PASS (locomoción/strike cero violaciones ROM,
+orden de fases correcto, clamp adversarial verificado, capturas de fases a
+midpoint); regresión verde (test_core, rig 11 casos, slice). Siguiente
+tarea del loop: alcance 1 (4 componentes + HitPayload).
+
 ## [2026-07-06] design | PRD-006 RATIFICADO — arranca el Feature Loop de combate
 El director ratifica la spec iterada (movilidad realista como columna
 vertebral). Feature Loop abierto en `feat/prd-006-combate`; orden de

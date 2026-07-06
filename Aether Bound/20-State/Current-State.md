@@ -13,13 +13,23 @@ updated: 2026-07-06
 - **Objetivo actual:** plan de producción + definición del vertical slice
   narrativo **"Slice of Bond"** — probar Bond/links/traición con 1 celda de
   jugador + 1 Pivote.
-- **Próxima prioridad:** **implementar [[PRD-006 Combate mínimo]]**
-  (RATIFICADO 2026-07-06) — Feature Loop en `feat/prd-006-combate`, en el
-  orden de construcción de la spec: alcance 0 (rig humano restringido)
-  primero. Después PRD-007 (Dagna companion + Springboard T1). Objetivo
-  del Gate 1: pelear junto a Dagna en greybox se siente bien a ≥60 FPS.
-  Pareja del slice: **Humano Duelist × Dagna** ([[Slice of Bond]]
-  ratificado completo).
+- **Próxima prioridad (ORDEN FIJADO por el director al cierre 2026-07-06):**
+  1. **B14 — Benchmark biomecánico v2 (AAA)** ANTES de seguir el dev:
+     Assassin's Creed, 007 First Light, Horizon Zero Dawn, Star Wars
+     Jedi, y **Sifu** (biomecánica + movilidad + combate). Extiende
+     [[Benchmark Biomecánico]].
+  2. Recién después: [[PRD-006 Combate mínimo]] alcance 1 (4 componentes
+     + HitPayload) + curvas anticipación/overshoot del strike.
+- **PRD-006 en curso** (Feature Loop, branch `feat/prd-006-combate`,
+  mergeado a master al cierre de sesión): **alcance 0 ✅** — rig humano
+  restringido (ROM + constraints cada frame) + strike hip-first; movilidad
+  aprobada "como primer saque" con 2 rondas de feedback aplicadas (coil
+  amplificado, cadera como motor, crouch-walk v2). **Pose stepping EN 2s**
+  implementado tras toggle `animation_on_twos` ([[Benchmark Biomecánico]],
+  propuesto) — **pendiente: A/B en vivo del director + ratificar página**.
+  Después del alcance 1: PRD-007 (Dagna + Springboard T1). Gate 1: pelear
+  junto a Dagna en greybox se siente bien a ≥60 FPS. Pareja: **Humano
+  Duelist × Dagna** ([[Slice of Bond]] ratificado completo).
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11, look = sistema replicable) · Dagna ✅ (B1 1/9).
