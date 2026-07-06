@@ -17,12 +17,13 @@ updated: 2026-07-06
   sincopado (no uniforme), frontera de release 0.58 VALIDADA (contacto
   ≈60% del ciclo), estados de movilidad no bloqueantes (~0.1 s), y
   **Sable confirma nuestro canon 1:1: raíz continua + stepping solo en
-  extremidades**. Faltantes (pedir clip extra solo si hace falta):
-  parry/guard break, mantle. **El director va a grabar el catálogo
-  COMPLETO de movimientos de Sifu** (2026-07-06; prioridad de análisis:
-  parry → guard break → reacciones del jugador al recibir; el resto es
-  biblioteca de referencia para alcances 3–5). Ojo al analizar: el demo
-  del menú de entrenamiento es slow-mo — medir SOLO ejecuciones en vivo.
+  extremidades**. **B15b (misma tarde): el director grabó el tutorial
+  COMPLETO de Sifu (28 clips) — los 3 faltantes quedaron medidos:**
+  parry (hit-stop 3 f > 2 f del golpe normal, riposte ~0.3 s, stun
+  ≥0.85 s), guard break (~1.0 s de stagger sin control), y el bloqueo
+  cede terreno bajo golpes pesados (→ PushPullComponent). Ver
+  [[Benchmark Biomecánico]] §B15b (consecuencias 6–8 para el alcance 2).
+  Único faltante: mantle de Fortnite (irrelevante hasta C2).
 - **PRIMERA TAREA de código: [[PRD-006 Combate mínimo]]
   alcance 2 — kit Humano Duelist jugable.** Combo ×4 sobre
   CombatComponent (ventanas biomecánicas + buffer generoso), parry Roba

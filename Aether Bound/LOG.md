@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] ingest | B15b: tutorial completo de Sifu (28 clips) — parry y guard break medidos
+El director grabó las lecciones completas del tutorial de Sifu (Structure
+& Block / Deflect / Parry / Avoid / Special / Command Attacks) + 2 peleas
+reales. Identificación por frame del nombre de lección en pantalla +
+detección de congelados YDIF en los 28 clips. **Cerrados los 3 faltantes
+de la v3:** parry exitoso = clang con hit-stop 3 f (un frame MÁS que el
+golpe normal: el premio está en el freeze) + riposte ~0.3 s + stun ≥0.85 s;
+guard break al jugador = burst + golpe gratis + ~1.0 s de stagger sin
+control; bloqueo bajo special = cede terreno deslizando (→
+PushPullComponent). Bonus: los fallos grabados muestran el feedback
+"Too Early" — ventana de parry estricta que castiga el spam. Trampas de
+método documentadas: pausas pedagógicas de ~18 f del tutorial y freezes
+de idle en escenas oscuras NO son hit-stops. [[Benchmark Biomecánico]]
+§B15b + consecuencias 6–8; Task-Board y Current-State al día.
+
 ## [2026-07-06] ingest | B15 ✅: benchmark observacional medido (3 clips del director)
 Clips 60 fps de Sifu/Fortnite/Sable analizados frame a frame (hojas de
 contacto ffmpeg + perfil YDIF por frame para detectar hit-stops e

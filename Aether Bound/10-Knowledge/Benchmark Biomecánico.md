@@ -240,6 +240,41 @@ con la referencia.** Nota: medimos ~4 f de hold (15 Hz), nuestro toggle
 está en 12 Hz — misma familia; el A/B con el director ya eligió y no
 hay motivo para reabrir.
 
+### B15b — catálogo de lecciones de Sifu (28 clips, 2026-07-06 tarde)
+
+El director grabó el tutorial COMPLETO de Sifu (lecciones ejecutadas en
+vivo, con fallos incluidos — oro: los fallos muestran el feedback de
+timing del juego) + 2 peleas reales. Mapa del material (copias
+analizadas; originales en `C:/Users/tonom/Videos/NVIDIA/Sifu/`,
+serie 16.03–16.25):
+
+| Clips | Lección | Qué contiene |
+|---|---|---|
+| 01–03 | Structure & Block | bloqueo, daño de estructura, **guard break al jugador** |
+| 04–06 | Deflect ×3 | timing del deflect, con fallos "Too Early" |
+| 07–11 | Parry ×5 | parry → throw / contraataque / stun |
+| 12–16 | Avoid ×5 | weave alto/bajo, castigo con slowdown |
+| 17–19 | Special Attacks | extremidades brillantes, throws |
+| 20–26 | Command Attacks | palm strike, sweep, knockdowns, crowd control |
+| 27–28 | Peleas reales | ritmo de combate en contexto (The Club) |
+
+**Mediciones nuevas (los 3 faltantes de la v3, ahora cerrados):**
+
+| Mecánica | Medición | Detalle |
+|---|---|---|
+| **Parry exitoso** | hit-stop **3 f (50 ms)** en el clang | MÁS peso que un golpe normal (2 f): el parry se premia con el freeze más gordo |
+| Parry → contraataque | conecta ~0.25–0.30 s tras el clang | la ventana de riposte abre inmediato |
+| Parry → stun del enemigo | **≥0.85 s medidos** doblado e indefenso | la lección corta antes del final; el juego dice "a short while" (~2 s en juego real) |
+| **Guard break (al jugador)** | burst blanco + golpe gratis + **stagger ~1.0 s sin control** | brazos en molinete, retrocede tambaleando, luego recupera guardia |
+| Ventana de deflect/parry | estricta, con castigo | feedback "Too Early" en pantalla: presionar antes NO cuenta — el spam se castiga, no se perdona |
+| Bloqueo bajo presión | el jugador bloqueando CEDE TERRENO | el special con extremidad brillante lo empuja deslizando en pose de guardia; la barra de estructura es el presupuesto visible |
+
+Nota de método: los congelados de ~18 f cada 4–5 s en los clips de
+lección son pausas pedagógicas/fades de reset del tutorial, NO
+hit-stops de gameplay — no calibrar con ellos. Igual que el demo
+fantasma del menú (slow-mo). Los números de arriba salen de las
+ejecuciones en vivo.
+
 ### Consecuencias directas (alimentan PRD-006 alcance 2)
 
 1. **Hit-stop del [[Game Feel Bible]]:** 2 f (33 ms) golpe normal,
@@ -256,6 +291,18 @@ hay motivo para reabrir.
 5. La pila de 4 capas (v1) y el camino Sifu (v2) quedan **ratificados
    por medición propia** — tercera fuente independiente que apunta al
    mismo lugar.
+6. **Parry Roba (B15b):** hit-stop del parry = 3 f (un frame MÁS que el
+   golpe normal — el premio se siente en el freeze); ventana estricta
+   con castigo al input temprano (nada de spam perdonado — casa con el
+   buffer generoso PERO ventana de parry exigente); riposte inmediato
+   (~0.3 s) y stun de ~1–2 s como recompensa.
+7. **Guard break (B15b):** romper la guardia = burst + golpe gratis +
+   ~1.0 s de stagger sin control. Número directo para el presupuesto de
+   `balance` y el interrupt de `weapons.json`.
+8. **El bloqueo cede terreno:** bloquear un golpe pesado desplaza al
+   que bloquea (desliza hacia atrás en pose de guardia) — barato de
+   implementar con nuestro PushPullComponent y vende el peso sin animación
+   extra.
 
 ## Fuentes
 
