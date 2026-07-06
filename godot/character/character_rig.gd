@@ -133,8 +133,13 @@ var _pose_clock: float = 0.0
 # offset de mundo entre ticks de pose — el personaje entero popea (Sable),
 # no solo las extremidades. La raíz/gameplay sigue continua; el hold vive
 # en X/Z + yaw del nodo body (body.position.y pertenece a crouch/slide).
+# Ronda 2 (director: "se siente con lag"): MOVING HOLD — el offset del
+# hold se capea, así el cuerpo acompaña a la raíz con un retraso acotado
+# y el pop queda como textura de chop constante, no como trailing.
 var body_pop_on_twos: bool = true
-const BODY_POP_SNAP: float = 1.5   # saltos de raíz mayores re-anclan sin pop
+const BODY_POP_SNAP: float = 1.5    # saltos de raíz mayores re-anclan sin pop
+const BODY_POP_MAX: float = 0.15    # tope de trailing (m) — lag percibido ≤ ~25 ms en sprint
+const BODY_POP_MAX_YAW: float = 0.2 # tope de hold de giro (rad, ~11°)
 var _held_root_pos: Vector3 = Vector3.INF
 var _held_root_yaw: float = 0.0
 
@@ -1583,10 +1588,20 @@ func _apply_body_hold() -> void:
 		_held_root_pos = global_position
 		_held_root_yaw = rotation.y
 		off = Vector3.ZERO
+	# Moving hold: capear el trailing para que no se lea como input lag.
+	# El anchor se arrastra junto con el cuerpo, así el próximo tick no
+	# acumula el excedente.
+	if off.length() > BODY_POP_MAX:
+		off = off.normalized() * BODY_POP_MAX
+		_held_root_pos = global_position + off
 	var local_off: Vector3 = off.rotated(Vector3.UP, -rotation.y)
 	body.position.x = local_off.x
 	body.position.z = local_off.z
-	body.rotation.y = wrapf(_held_root_yaw - rotation.y, -PI, PI)
+	var yaw_off: float = wrapf(_held_root_yaw - rotation.y, -PI, PI)
+	if absf(yaw_off) > BODY_POP_MAX_YAW:
+		yaw_off = signf(yaw_off) * BODY_POP_MAX_YAW
+		_held_root_yaw = rotation.y + yaw_off
+	body.rotation.y = yaw_off
 
 func _release_body_hold() -> void:
 	body.position.x = 0.0

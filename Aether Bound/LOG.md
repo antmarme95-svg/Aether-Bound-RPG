@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | Body pop ronda 2: moving hold (feedback: "se siente con lag")
+El pop puro trailing-completo (hasta ~0.5 m en sprint) se percibía como
+input lag. Corregido con MOVING HOLD: el offset del hold se capea a 0.15 m
+(≈25 ms percibidos en sprint) y el yaw a ~11°; el anchor se arrastra con
+el cuerpo para no acumular excedente entre ticks. El pop queda como chop
+constante de textura, no como retraso. Era el plan B ya documentado en
+[[Benchmark Biomecánico]] (moving holds, técnica stop-motion/Xrd). QA:
+test_core, biomech y slice ALL_PASS. Pendiente: veredicto del director
+sobre la ronda 2.
+
 ## [2026-07-06] playtest | A/B resuelto: 12 Hz CANON + body pop implementado
 El director vio la diferencia (con zoom de cámara; las sondas confirmaron
 antes que el stepping funcionaba end-to-end — el enmascarador era la raíz
