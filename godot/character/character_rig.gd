@@ -136,10 +136,12 @@ var _pose_clock: float = 0.0
 # Ronda 2 (director: "se siente con lag"): MOVING HOLD — el offset del
 # hold se capea, así el cuerpo acompaña a la raíz con un retraso acotado
 # y el pop queda como textura de chop constante, no como trailing.
-# Ronda 3 (director): timing JERÁRQUICO — el cuerpo popea a 24 Hz (fino,
-# sin lag) mientras las extremidades siguen en 2s a 12 Hz (el ritmo cómic
-# vive en los detalles, como Spider-Verse/Xrd con su mezcla de 1s y 2s).
-var body_pop_on_twos: bool = true
+# VEREDICTO A/B (director, 2026-07-06, 3 rondas): el pop de cuerpo NO
+# paga su costo — ni completo (lag), ni con moving hold, ni a 24 Hz.
+# CANON: stepping en 2s SOLO en extremidades; el cuerpo (raíz+mesh) corre
+# suave a 60. El mecanismo queda implementado tras este toggle (default
+# OFF) por si el alcance 1 (poses extremas) reabre la pregunta.
+var body_pop_on_twos: bool = false
 const BODY_POP_STEP: float = 1.0 / 24.0  # cuerpo en "1s y medio": 24 Hz
 const BODY_POP_SNAP: float = 1.5    # saltos de raíz mayores re-anclan sin pop
 const BODY_POP_MAX: float = 0.15    # tope de trailing (m) — red anti-lag

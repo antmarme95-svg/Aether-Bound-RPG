@@ -17,9 +17,10 @@ updated: 2026-07-06
   1. ~~B14~~ ✅ (2026-07-06): benchmark v2 AAA hecho — [[Benchmark
      Biomecánico]] §v2. Veredicto: motion matching descartado; camino
      validado = Sifu (handkey trifásico) + foot IK de HZD (→C4).
-     **A/B resuelto (2026-07-06): 12 Hz CANON + body pop implementado**
-     (mesh holdea X/Z+yaw estilo Sable; T cicla 2s+pop / extremidades /
-     suave). La página queda `propuesto` hasta ver el alcance 1 con poses
+     **A/B CERRADO (2026-07-06, 3 rondas): canon = 2s (12 Hz) SOLO en
+     extremidades; cuerpo suave a 60.** Body pop probado (completo /
+     moving hold / 24 Hz) y descartado — queda tras toggle default OFF.
+     La página queda `propuesto` hasta ver el alcance 1 con poses
      extremas (decisión del director).
   2. Siguiente: [[PRD-006 Combate mínimo]] alcance 1 (4 componentes
      + HitPayload) + curvas anticipación/overshoot del strike (= la

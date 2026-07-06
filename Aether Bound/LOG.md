@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | A/B CERRADO: canon = 2s solo extremidades, cuerpo suave
+Veredicto del director tras 3 rondas de body pop (completo → moving hold
+→ 24 Hz jerárquico): ninguna variante paga su costo; "pop en extremidades
+es mucho mejor". CANON: stepping en 2s (12 Hz) SOLO en extremidades;
+cuerpo/raíz suaves a 60. `body_pop_on_twos` queda default OFF con el
+mecanismo completo implementado (3 variantes probadas y commiteadas) por
+si el alcance 1 con poses extremas reabre la pregunta. Tecla T conserva
+el ciclo de 3 modos. Lección de método: el A/B de percepción necesita
+zoom de cámara — a distancia default el chop de extremidades no se lee.
+
 ## [2026-07-06] playtest | Body pop ronda 3: timing jerárquico — cuerpo a 24 Hz
 Feedback del director sobre la ronda 2: "solo extremidades es mucho mejor;
 ¿y si el cuerpo va a 24 Hz?". Implementado: reloj propio del body pop a

@@ -52,7 +52,7 @@ estilización también vive en el **timing**:
 |---|---|---|
 | **Esqueleto** (ROM, constraints, cadena de peso) | REALISTA — el mandato §4.3 intacto; BotW (referencia de Sable) también lo hace | ✅ vivo (PRD-006 alcance 0) |
 | **Pose** (keys del movimiento) | EXTREMA y legible — empujada al borde del ROM | 🔄 empezado (feedback del coil) |
-| **Timing** (muestreo visual) | **EN 2s** — pose sostenida ~1/12 s, sin interpolación; el ritmo "brusco pero expresivo" del cómic ([[Art Bible]]: *novela gráfica pintada a mano*) | ✅ vivo — A/B 2026-07-06: director decanta **12 Hz como canon** + **body pop** (el mesh entero holdea X/Z+yaw, estilo Sable; raíz/gameplay continua). Tecla T cicla 2s+pop / solo extremidades / suave |
+| **Timing** (muestreo visual) | **EN 2s** — pose sostenida ~1/12 s, sin interpolación; el ritmo "brusco pero expresivo" del cómic ([[Art Bible]]: *novela gráfica pintada a mano*) | ✅ vivo — A/B 2026-07-06 (3 rondas): **CANON = 12 Hz SOLO en extremidades; cuerpo suave a 60**. El body pop se probó completo (lag), con moving hold y a 24 Hz — descartado por ahora; el mecanismo queda tras toggle por si el alcance 1 reabre la pregunta. Tecla T cicla los 3 modos |
 | **Secundario** (tela, pelo, follow-through) | Simulado suave POR ENCIMA del stepping (como Sable: Magica Cloth) | ⬜ Fase 4 |
 
 Regla de oro derivada: **el gameplay nunca se escalona** — hitboxes,
