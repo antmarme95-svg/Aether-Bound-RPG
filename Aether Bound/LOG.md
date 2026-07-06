@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] ingest | B15d: nuestra build medida contra el benchmark (AS IS vs TO BE)
+El director grabó nuestra propia build (63 s: Wilds → bestia → núcleo →
+menú) y se analizó con el pipeline idéntico de B15 (hojas 60 fps + YDIF).
+Medido-contra-medido: 0 hit-stops en combate (esperado — alcance 4);
+locomoción YA alineada con Sable (raíz continua + holds ~4–5 f); columna
+sin postura por gait (B15c ya pendiente). **Hallazgos nuevos:** (1) la
+bestia reacciona solo con flash blanco ~7–8 f y pose IDÉNTICA — cero
+reacción corporal (refuerza la consecuencia 3 con evidencia propia);
+(2) el daño al jugador es un tinte salmón de pantalla completa >1 s que
+tapa la lectura — mover el feedback al cuerpo y acortar el tinte.
+Salvedad: no está claro si el kit Duelist estaba activo en el clip; el
+clip ideal para medirlo es `--cls=warrior`, cámara quieta, 3–4 combos.
+[[Benchmark Biomecánico]] §B15d.
+
 ## [2026-07-06] ingest | B15c: crouch walk y sprint de Sable (2 clips más)
 Paréntesis del director tras el alcance 2. Mismo sistema confirmado
 (holds ~4 f solo extremidades + raíz continua) y una lección nueva de

@@ -35,7 +35,7 @@
 - [[Briefs de Concept Art]] — prompts Nano Banana 2 por fenotipo + notas de pipeline (propuesto).
 - [[Slice of Bond]] — vertical slice ratificado: Humano Duelist × Dagna; 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), 45–60 min.
 - [[Game Feel Bible]] — §6.3 ratificada: hit-stop por masa, shake modelo trauma, cámara libre + soft-assist, feel del Springboard.
-- [[Benchmark Biomecánico]] — v1 Sable/Hinterberg: el benchmark es timing y pose (animar en 2s), no más realismo. v2 AAA (B14): motion matching descartado; camino validado = Sifu handkey trifásico + foot IK de HZD (propuesto). v3 (B15): mediciones frame a frame de los clips del director — hit-stop 2f/3f global, combo sincopado, contacto ≈60% del ciclo (valida 0.58), Sable con raíz continua = canon A/B validado 1:1.
+- [[Benchmark Biomecánico]] — v1 Sable/Hinterberg: el benchmark es timing y pose (animar en 2s), no más realismo. v2 AAA (B14): motion matching descartado; camino validado = Sifu handkey trifásico + foot IK de HZD (propuesto). v3 (B15): mediciones frame a frame de los clips del director — hit-stop 2f/3f global, combo sincopado, contacto ≈60% del ciclo (valida 0.58), Sable con raíz continua = canon A/B validado 1:1. §B15d: nuestra build medida con el mismo método (AS IS vs TO BE) — feedback de combate hoy 100% cromático (flash/tinte), 0% corporal/temporal; locomoción ya alineada con Sable.
 - [[Dagna]] — ficha completa del Pivote del slice: bio, reclutamiento, tiers del Springboard, quiebre, la Primera Cuña (propuesto).
 
 ## 20-State (dónde está el proyecto)

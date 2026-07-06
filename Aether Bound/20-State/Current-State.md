@@ -24,6 +24,14 @@ updated: 2026-07-06
   cede terreno bajo golpes pesados (→ PushPullComponent). Ver
   [[Benchmark Biomecánico]] §B15b (consecuencias 6–8 para el alcance 2).
   Único faltante: mantle de Fortnite (irrelevante hasta C2).
+  **B15d (misma tarde): el director grabó NUESTRA build y se midió con
+  el mismo pipeline → [[Benchmark Biomecánico]] §B15d (AS IS vs TO BE).**
+  Confirmado: 0 hit-stops en combate (esperado, alcance 4) y locomoción
+  ya alineada con Sable (raíz continua + holds ~4–5 f). Hallazgos
+  nuevos: la bestia reacciona solo con flash blanco (pose idéntica — sin
+  reacción corporal) y el daño al jugador es un tinte de pantalla >1 s
+  que tapa la lectura. Salvedad: no está claro si el kit Duelist estaba
+  activo en ese clip — el playtest dirigido sigue pendiente.
 - **PRD-006 alcance 2 ✅ CÓDIGO (2026-07-06): kit Humano Duelist
   jugable.** Combo ×4 con buffer generoso y durs sincopadas (B15), RMB
   contextual = guardia/parry Roba (ventana estricta), momentum→daño

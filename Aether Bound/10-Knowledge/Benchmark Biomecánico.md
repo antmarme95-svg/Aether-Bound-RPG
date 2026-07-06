@@ -1,6 +1,6 @@
 ---
 status: propuesto
-source: "Deep dive 2026-07-06 (pedido del director): entrevistas/artículos de Shedworks (Sable), Microbird (Hinterberg), técnica Guilty Gear Xrd / Spider-Verse. v2 (B14, 2026-07-06): GDC/entrevistas de Ubisoft (motion matching), IOI (Glacier Next), Guerrilla (HZD), Respawn (Jedi), Sloclap (Sifu). v3 (B15, 2026-07-06): clips 60fps grabados por el director en C:/Users/tonom/Videos/NVIDIA/ (Sifu 13.25, Fortnite 13.21, Sable 13.30) — análisis frame a frame propio"
+source: "Deep dive 2026-07-06 (pedido del director): entrevistas/artículos de Shedworks (Sable), Microbird (Hinterberg), técnica Guilty Gear Xrd / Spider-Verse. v2 (B14, 2026-07-06): GDC/entrevistas de Ubisoft (motion matching), IOI (Glacier Next), Guerrilla (HZD), Respawn (Jedi), Sloclap (Sifu). v3 (B15, 2026-07-06): clips 60fps grabados por el director en C:/Users/tonom/Videos/NVIDIA/ (Sifu 13.25, Fortnite 13.21, Sable 13.30) — análisis frame a frame propio. B15d (2026-07-06): clip de NUESTRA build grabado por el director (serie 17.00) — comparación AS IS vs TO BE con el mismo método"
 updated: 2026-07-06
 ---
 
@@ -321,6 +321,35 @@ de la FSM (idle erguida / crouch plegada / sprint encorvada).
    que bloquea (desliza hacia atrás en pose de guardia) — barato de
    implementar con nuestro PushPullComponent y vende el peso sin animación
    extra.
+
+### B15d — AS IS vs TO BE: nuestra build, medida con el mismo método (2026-07-06)
+
+El director grabó nuestra propia build (63 s, 60 fps: Wilds → pelea con
+bestia → núcleo → Conqueror's Choice) y preguntó "¿qué diferencias notas?".
+Se pasó por el pipeline idéntico (hojas de contacto 60 fps + perfil YDIF),
+así que la comparación es medido-contra-medido, no impresión.
+
+| # | Dimensión | AS IS (medido en nuestra build) | TO BE (benchmark medido) | Estado |
+|---|---|---|---|---|
+| 1 | Hit-stop | **0 congelamientos** en toda la pelea (31–46 s); los únicos freezes del clip son arranque de grabación y stills de UI del núcleo/menú (53.7–56.5 s) | Freeze global 2 f normal / 3 f pesado / 3 f parry (Sifu) | Mapeado → PRD-006 alcance 4 |
+| 2 | Reacción del enemigo | **Flash blanco ~7–8 f con pose IDÉNTICA** — el cuerpo de la bestia no registra el golpe (ni snap, ni recoil de silueta) | Head-snap al frame SIGUIENTE del contacto + pose de recoil; el color casi no cambia, reacciona el CUERPO (Sifu) | **Hallazgo nuevo** — hueco #1 |
+| 3 | Daño al jugador | **Tinte salmón de pantalla completa >1 s**; el personaje no se inmuta. Comunica por post-proceso y tapa la lectura justo cuando importa | Reacción en el cuerpo (pose de hit, guardia rota, ceder terreno); post-proceso mínimo (Sifu) | **Hallazgo nuevo** |
+| 4 | Telegrafía del golpe propio | Sin arco legible anticipación→contacto→recuperación en la silueta; el flash del enemigo es lo único que delata el contacto | Contacto a ≈60% del stroke con windup enorme de silueta (Sifu) | Parcial — ver salvedad |
+| 5 | Locomoción | ✅ Raíz continua + holds de extremidades ~4–5 f — **ya lee como Sable**. Falta: la columna no cambia de postura entre gaits (mismo ciclo) | Una pose de silueta propia por gait (B15c) | Base ✅; silueta por gait ya pendiente en [[Locomoción]]/C4 |
+
+**Salvedad de método (punto 4):** por el flujo de quest visible no está
+claro si el kit Duelist (alcance 2) estaba activo o era el ataque del
+prototipo; la síncopa 0.40/0.32/0.46/0.62 no se distingue a esa distancia
+de cámara. Clip ideal para medir el kit: `--cls=warrior`, cámara quieta,
+3–4 combos completos contra una bestia.
+
+**Síntesis:** hoy TODO nuestro feedback de combate es **cromático**
+(flashes y tintes) y nada es **corporal ni temporal** (poses de reacción,
+hit-stop). Los puntos 1 y 4 ya estaban mapeados (alcance 4 y consecuencia
+2); los hallazgos nuevos son el **2** (la bestia necesita reacción de
+cuerpo en el mismo tick — refuerza la consecuencia 3 con evidencia de
+nuestra propia build) y el **3** (acortar/atenuar el tinte de daño y mover
+el feedback al personaje).
 
 ## Fuentes
 
