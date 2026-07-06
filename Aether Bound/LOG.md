@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] state | Cierre de sesión: benchmark completo (B15–B15d) + kit Duelist listo para playtest
+Sesión cerrada con el ciclo de benchmark observacional completo: B15
+(3 clips base) → B15b (28 clips de Sifu) → B15c (gaits de Sable) → B15d
+(nuestra build, AS IS vs TO BE). El alcance 2 de PRD-006 quedó ✅ en
+código a la espera del playtest del director. Arranque de la próxima
+sesión fijado en [[Current-State]]: (1) playtest del kit Duelist con
+boot melee — ideal grabando 3–4 combos con cámara quieta; (2) alcance 3
+absorbiendo la reacción corporal de la bestia; (3) alcance 4 con
+hit-stop + revisión del tinte de daño; (4) backlog C4: poses por gait +
+canal airborne. Task-Board sincronizado (B15c/B15d visibles, herencias
+en C3 y C4).
+
 ## [2026-07-06] ingest | B15d ampliado: running jump medido (video↔código)
 A pedido del director se midió el W+espacio del clip AS IS: aire 42 f
 (0.70 s), coincide exacto con JUMP_V 8.4 / GRAVITY 24 del código —

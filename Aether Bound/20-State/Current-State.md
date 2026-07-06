@@ -43,11 +43,22 @@ updated: 2026-07-06
   HitPayload+guardia (parry → bestia stunned ~2 s). La decisión de
   diseño quedó resuelta por ENRUTAMIENTO DE INPUT: `try_attack()` viejo
   intacto y solo llamado por autotests históricos (`autotest_slice`
-  ALL_PASS). Decisiones documentadas en el PRD. **Siguiente: playtest
-  del director sobre el kit (boot melee:
-  `--origin=ironblooded --cls=warrior --skip=wilds`; RMB=guardia,
-  LMB/F=combo) → feedback → alcance 3 (2 enemigos con reacciones por
-  Equilibrio).**
+  ALL_PASS). Decisiones documentadas en el PRD.
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (fijado al cierre 2026-07-06):**
+  1. **Playtest del director del kit Duelist** — boot melee:
+     `Start-Godot.bat -- --origin=ironblooded --cls=warrior
+     --skip=wilds`; LMB/F = combo ×4, RMB = guardia/parry. Ideal:
+     grabar 3–4 combos con cámara quieta (cierra la salvedad B15d
+     sobre la síncopa).
+  2. Con el feedback → **alcance 3 (2 enemigos con reacciones por
+     Equilibrio)**, absorbiendo el hallazgo B15d #2: reacción CORPORAL
+     de la bestia al golpe (hoy solo flash).
+  3. En cola para **alcance 4**: hit-stop 2f/3f + TimeFeel + sting de
+     parry + revisar el tinte de daño (B15d #3: >1 s de pantalla
+     completa tapa la lectura).
+  4. Backlog C4 (cuando toque el pase de poses): postura de columna
+     por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
+     no tiene pose).
 - **PRD-006 en curso** (Feature Loop; alcances 0 y 1 mergeados a master):
   - **Alcance 0 ✅** rig restringido (ROM + constraints) + strike
     hip-first, movilidad aprobada.
