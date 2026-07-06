@@ -95,6 +95,9 @@ func _ready() -> void:
 func start() -> void:
 	if fsm.current_id == "":
 		fsm.go("CREATION")
+		# The --origin/--cls fast-path lands in OFFICE; only then can --skip act.
+		if fsm.current_id == "OFFICE":
+			_apply_skip_arg()
 
 func _process(dt: float) -> void:
 	# dt-scheduler
@@ -734,16 +737,17 @@ func _apply_debug_args() -> void:
 
 func _apply_skip_arg() -> void:
 	var args: Dictionary = Debug.args
-	if args.has("skip"):
-		var skip: String = str(args["skip"])
-		if skip == "office":
-			fsm.go("OFFICE")
-		elif skip == "exit":
-			fsm.go("OFFICE")
-			fsm.go("CITY_EXIT")
-		elif skip == "wilds":
-			fsm.go("OFFICE")
-			fsm.go("WILDS")
+	if not args.has("skip"):
+		return
+	var skip: String = str(args["skip"])
+	if skip != "office" and skip != "exit" and skip != "wilds":
+		return
+	if fsm.current_id != "OFFICE":
+		fsm.go("OFFICE")
+	if skip == "exit":
+		fsm.go("CITY_EXIT")
+	elif skip == "wilds":
+		fsm.go("WILDS")
 
 func _record_state(id: String) -> void:
 	if not fsm_states_visited.has(id):
