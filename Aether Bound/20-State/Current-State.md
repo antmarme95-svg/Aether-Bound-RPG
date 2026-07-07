@@ -81,9 +81,9 @@ updated: 2026-07-06
   del jugador, par light/heavy (el boot no llevó `--spawn=duelpair`) y
   síncopa. [[Benchmark Biomecánico]] §B15f.
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  1. **Cerrar la verificación del alcance 3** — clip con boot:
-     `Start-Godot.bat -- --origin=ironblooded --cls=warrior
-     --skip=wilds --spawn=duelpair` (par a 8 m frente al jugador).
+  1. **Cerrar la verificación del alcance 3** — doble clic en
+     **`Start-Playtest-Duelist.bat`** (raíz del repo; el bat viejo NO
+     reenviaba flags — por eso B15f no tuvo duelpair; ya arreglado).
      Mirar: telegraph del heavy, parry vs humanoides, y 3–4 combos
      limpios contra UNA bestia (síncopa). O avanzar directo a alcance 4
      con lo ya validado si el director prefiere.
