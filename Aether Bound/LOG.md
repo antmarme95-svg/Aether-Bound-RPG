@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | B15g ✅: par light/heavy verificado — Playtest Loop del alcance 3 CERRADO
+Clip de 23.6 s con el bat nuevo. 5/7 verificados: spawn por flag,
+siluetas por rol distinguibles sin color, ataques de ambos legibles (el
+swing del maul del heavy se lee en arco completo), reacciones y muertes
+corporales, vignette con centro limpio en pelea real. Pendientes de
+MEDICIÓN (no de implementación): parry vs humanoides y síncopa del
+combo. **Hallazgo de feel:** presión enemiga baja — cadencia ≈1 golpe/
+2–3 s se lee como pasividad; candidatos de tuning anotados en
+[[Benchmark Biomecánico]] §B15g. Lo que falta contra Sifu ahora es
+temporal: alcance 4 (hit-stop 2f/3f + TimeFeel + sting) + presión.
+
 ## [2026-07-06] playtest | B15f: alcance 3 verificado en gameplay (parcial) — los 2 asesinos de B15e resueltos
 Dos clips del director post-fix (el 2º usable solo 60 s). Pipeline B15
 sobre la pelea (52–60 s): **cero washes de pantalla** (vs 8/11.4 s en

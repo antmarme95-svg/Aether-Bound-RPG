@@ -80,13 +80,22 @@ updated: 2026-07-06
   asesinos de B15e resueltos y verificados. Sin salir en cámara: flinch
   del jugador, par light/heavy (el boot no llevó `--spawn=duelpair`) y
   síncopa. [[Benchmark Biomecánico]] §B15f.
+- **B15g ✅ (2026-07-06 noche): Playtest Loop del alcance 3 CERRADO** —
+  el par verificado en juego real (5/7): spawn por flag, siluetas por
+  rol sin leer color, swing del maul legible en arco completo,
+  reacciones/muertes corporales, vignette limpio. Pendientes de
+  medición: parry vs humanoides y síncopa. **Hallazgo de feel: presión
+  enemiga baja** (≈1 golpe/2–3 s se lee pasivo) → candidatos de tuning
+  en [[Benchmark Biomecánico]] §B15g.
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  1. **Cerrar la verificación del alcance 3** — doble clic en
-     **`Start-Playtest-Duelist.bat`** (raíz del repo; el bat viejo NO
-     reenviaba flags — por eso B15f no tuvo duelpair; ya arreglado).
-     Mirar: telegraph del heavy, parry vs humanoides, y 3–4 combos
-     limpios contra UNA bestia (síncopa). O avanzar directo a alcance 4
-     con lo ya validado si el director prefiere.
+  1. **Alcance 4 (Feature Loop):** hit-stop 2f/3f por masa + TimeFeel +
+     sting/dilation del parry + shake trauma² — canales 1–3 de la
+     [[Game Feel Bible]] como sistema reutilizable. Es la mitad
+     temporal que falta contra Sifu (B15e #1).
+  2. En el mismo paquete o después: **tuning de presión enemiga**
+     (B15g: recover del light ↓, prob. de cadena ↑, strafe en recover).
+  3. Medir parry + síncopa en el siguiente clip (piden cámara quieta y
+     combos limpios contra UNA bestia).
   2. **Alcance 4**: hit-stop 2f/3f + TimeFeel + sting de parry (B15e
      #1: 0 congelados re-medidos).
   3. Backlog C4 (cuando toque el pase de poses): postura de columna

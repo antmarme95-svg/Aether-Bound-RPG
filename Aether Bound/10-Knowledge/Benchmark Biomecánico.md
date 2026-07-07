@@ -425,6 +425,36 @@ simplemente no salió en cámara. Para cerrar el Playtest Loop del
 alcance 3 falta un clip con `--spawn=duelpair` (telegraph del heavy +
 parry) y 3–4 combos limpios contra UNA bestia para la síncopa.
 
+### B15g — playtest del par light/heavy (2026-07-06 noche, cierra el Playtest Loop del alcance 3)
+
+Clip de 23.6 s (60 fps) con `Start-Playtest-Duelist.bat` (tras arreglar
+el reenvío de flags del bat). La pelea contra el par ocupa 0–15 s;
+después el jugador pasea. Leído frame a frame:
+
+| # | Qué se verificó | Resultado |
+|---|---|---|
+| 1 | Spawn del par vía flag | ✅ Ambos aparecen y agrean de inmediato |
+| 2 | Siluetas por rol | ✅ Light lanky de palancas largas vs heavy bajo y ancho — se distinguen a distancia de juego SIN leer color |
+| 3 | Ataques de los humanoides | ✅ El light golpea temprano (~1.4 s, brazo legible); el heavy llega tarde (lento, como se diseñó) y su swing del maul se lee en arco completo (~12.3 s: subida → descarga a lo largo de ~0.5–0.8 s) |
+| 4 | Reacciones al recibir | ✅ El heavy se ladea al ser golpeado; el light muere y cae ROTANDO (la muerte se lee); postura frágil del light confirmada (cae mucho antes que el heavy) |
+| 5 | Vignette en pelea vs humanoides | ✅ Activo desde el frame 1 (el jugador llegó golpeado), centro siempre limpio |
+| 6 | Parry vs humanoides | ❓ No se distingue intento de parry en el clip |
+| 7 | Síncopa del combo | ❓ Sigue sin combo limpio medible (los swings del jugador son de espaldas y entrecortados) |
+
+**Hallazgo de feel (para el pase de tuning):** presión enemiga BAJA —
+entre golpe y golpe los enemigos se quedan parados junto al jugador
+(YDIF casi plano en tramos de varios segundos; cadencia efectiva ≈1
+golpe/2–3 s). Coincide con los números actuales (recover 0.55/1.15 s +
+re-entrada de chase con histéresis) pero en pantalla se lee como
+pasividad. Candidatos: bajar recover del light, prob. de cadena ↑, o
+micro-pasos laterales durante el recover (strafe) para que el cuerpo
+siga vivo entre golpes.
+
+**Cierre:** el alcance 3 queda VERIFICADO en playtest (5/7 ✅; parry y
+síncopa quedan como pendientes de medición, no de implementación). La
+experiencia que falta contra Sifu es ahora claramente TEMPORAL
+(hit-stop/TimeFeel, alcance 4) + la presión enemiga de arriba.
+
 ## Fuentes
 
 - gamedeveloper.com — "Emotion in motion: expressive character animation"
