@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] state | Cierre de sesión: B15e→B15g + tinte + alcance 3 completo y VERIFICADO en juego
+Sesión nocturna completa sobre el veredicto del director ("fundamentals
+sí, Sifu no"). Recorrido: **B15e** (playtest medido: 8 tintes/11.4 s +
+cero reacción corporal = trade-fest) → **fix del tinte** (wash →
+vignette de bordes, centro siempre limpio) → **PRD-006 alcance 3 ✅**
+(reacciones corporales por Equilibrio en bestia y jugador + par
+light/heavy sobre el mismo rig, mergeado a master) → **fix del bat**
+(Start-Godot.bat no reenviaba flags; nuevo Start-Playtest-Duelist.bat)
+→ **B15f–B15g** (verificación en juego real: los 2 asesinos de B15e
+resueltos, par legible por silueta, Playtest Loop CERRADO 5/7).
+Hallazgo abierto: presión enemiga baja (≈1 golpe/2–3 s). Arranque de la
+próxima sesión fijado en [[Current-State]]: alcance 4 (hit-stop 2f/3f +
+TimeFeel + sting + shake) + tuning de presión + medir parry/síncopa.
+Sondas tmp_* siguen en tests/ (limpiar al cerrar PRD-006).
+
 ## [2026-07-06] playtest | B15g ✅: par light/heavy verificado — Playtest Loop del alcance 3 CERRADO
 Clip de 23.6 s con el bat nuevo. 5/7 verificados: spawn por flag,
 siluetas por rol distinguibles sin color, ataques de ambos legibles (el
