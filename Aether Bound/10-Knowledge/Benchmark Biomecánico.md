@@ -404,6 +404,27 @@ la experiencia se pierde en la capa de feedback.
 3. **Alcance 4 sin cambios** (hit-stop 2f/3f + TimeFeel + sting) cierra
    el punto 1.
 
+### B15f — playtest del alcance 3 (2026-07-06 noche, parcial)
+
+Dos clips del director tras el fix del tinte + alcance 3 (el segundo
+usable solo 60 s — la grabación siguió sin gameplay). Flujo completo
+CREATION→OFFICE→EXIT→WILDS sin flags, pelea vs bestias en 52–60 s
+(60 fps). Medido contra los hallazgos B15e:
+
+| # | Hallazgo B15e | Estado en este clip |
+|---|---|---|
+| 1 | Tinte tapaba ~50 % de la pelea (8 washes/11.4 s) | **✅ RESUELTO en gameplay real**: cero washes a pantalla completa en todo el combate; el daño se lee como banda roja de BORDE con el centro limpio (visible pulsando en las tiras 54–58 s) |
+| 2 | Bestia con pose idéntica (solo flash) | **✅ RESUELTO**: el flash blanco ahora llega CON cuerpo — roll lateral, postura baja y patas abiertas legibles a distancia de cámara de juego (stagger se distingue de flinch en silueta) |
+| 3 | Flinch del jugador | ❓ No resoluble a esta escala/ángulo (espalda + zoom out) — queda para playtest dirigido o montage |
+| 4 | Par light/heavy + telegraph + parry | ❓ **No aparece**: el boot fue el flujo completo sin `--spawn=duelpair` |
+| 5 | Síncopa del combo (pendiente desde B15d) | ❓ La pelea es corta y con múltiples bestias encimadas — sin combos limpios medibles |
+
+**Veredicto parcial:** los 2 asesinos de lectura medidos en B15e están
+resueltos y VISIBLES en gameplay real. Lo no verificado no está roto —
+simplemente no salió en cámara. Para cerrar el Playtest Loop del
+alcance 3 falta un clip con `--spawn=duelpair` (telegraph del heavy +
+parry) y 3–4 combos limpios contra UNA bestia para la síncopa.
+
 ## Fuentes
 
 - gamedeveloper.com — "Emotion in motion: expressive character animation"

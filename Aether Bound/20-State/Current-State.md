@@ -74,14 +74,19 @@ updated: 2026-07-06
   Parry Roba contra ellos → stun 2 s. QA: test_core/test_combat/
   autotest_slice/autotest_ui ALL_PASS; sondas visuales `tmp_reactions` y
   `tmp_duel_pair`. **Pendiente: playtest del director (feel).**
+- **B15f (2026-07-06 noche): playtest del alcance 3 PARCIAL ✅** — en
+  gameplay real: cero washes (daño = banda de borde, centro limpio) y
+  la bestia acusa con el CUERPO (roll/postura baja legibles). Los 2
+  asesinos de B15e resueltos y verificados. Sin salir en cámara: flinch
+  del jugador, par light/heavy (el boot no llevó `--spawn=duelpair`) y
+  síncopa. [[Benchmark Biomecánico]] §B15f.
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  1. **Playtest del director del alcance 3** — boot:
+  1. **Cerrar la verificación del alcance 3** — clip con boot:
      `Start-Godot.bat -- --origin=ironblooded --cls=warrior
-     --skip=wilds --spawn=duelpair` (el par light/heavy aparece a 8 m
-     frente al jugador, además de las bestias). Qué mirar: ¿el windup
-     del heavy se LEE a distancia de juego? ¿el flinch/stagger/derrumbe
-     de la bestia registran cada golpe? ¿el parry contra humanoides
-     paga? Greybox/arena real = alcance 5.
+     --skip=wilds --spawn=duelpair` (par a 8 m frente al jugador).
+     Mirar: telegraph del heavy, parry vs humanoides, y 3–4 combos
+     limpios contra UNA bestia (síncopa). O avanzar directo a alcance 4
+     con lo ya validado si el director prefiere.
   2. **Alcance 4**: hit-stop 2f/3f + TimeFeel + sting de parry (B15e
      #1: 0 congelados re-medidos).
   3. Backlog C4 (cuando toque el pase de poses): postura de columna

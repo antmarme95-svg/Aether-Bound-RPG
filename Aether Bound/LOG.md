@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] playtest | B15f: alcance 3 verificado en gameplay (parcial) — los 2 asesinos de B15e resueltos
+Dos clips del director post-fix (el 2º usable solo 60 s). Pipeline B15
+sobre la pelea (52–60 s): **cero washes de pantalla** (vs 8/11.4 s en
+B15e) — el daño ahora es banda de borde con centro limpio, visible
+pulsando en pleno combate; y la bestia acusa CON EL CUERPO (roll
+lateral, postura baja, patas abiertas — stagger distinguible de flinch
+en silueta a distancia de juego). Sin verificar (no salió en cámara):
+flinch del jugador (escala/ángulo), par light/heavy (boot sin
+`--spawn=duelpair`) y síncopa (sin combos limpios). [[Benchmark
+Biomecánico]] §B15f. Decisión pendiente: cerrar verificación con clip
+dirigido o avanzar a alcance 4 con lo validado.
+
 ## [2026-07-06] feature | Flag --spawn=duelpair para el playtest del alcance 3
 El par light/heavy ya spawnea en Wilds sin sonda: boot
 `--origin=ironblooded --cls=warrior --skip=wilds --spawn=duelpair` los
