@@ -1584,6 +1584,22 @@ func strike_phase() -> String:
 		return ""
 	return _Biomech.phase_name(strike_progress())
 
+# ================================================================
+# PRD-006 alcance 3 — flinch corporal al recibir (B15/B15e)
+# ================================================================
+
+var _flinch_t: float = 0.0
+var _flinch_dur: float = 0.25   # FLINCH_TIME del GuardComponent
+var _flinch_amp: float = 1.0
+
+## El golpe recibido se registra en el CUERPO: head-snap el MISMO tick
+## (a 60, nunca stepped — Sifu reacciona al frame siguiente) + recoil de
+## columna que respira en el reloj de pose. amp: 0.35 bloqueado · 1.0
+## golpe limpio · 1.4 stagger · 1.8 posture break.
+func play_flinch(amp: float = 1.0) -> void:
+	_flinch_amp = clampf(amp, 0.0, 2.0)
+	_flinch_t = _flinch_dur * clampf(amp, 0.75, 1.6)   # golpes duros duran más
+
 ## Constraint report accessors (QA: autotest_biomech asserts on these).
 func constraint_report() -> Dictionary:
 	return _constraint_report
@@ -1647,6 +1663,17 @@ func _process(delta: float) -> void:
 			hips.rotation.y = 0.0
 			head.rotation.y = 0.0
 			_strike_dur = 0.0
+
+	# ---- Flinch (alcance 3): el head-snap corre CADA frame, nunca se
+	# escalona — la reacción al frame siguiente es canon B15. La cabeza
+	# no la posee el gait, así que el write directo no pelea con nadie. ----
+	if _flinch_t > 0.0:
+		_flinch_t -= delta
+		var fenv: float = clampf(_flinch_t / _flinch_dur, 0.0, 1.0)
+		fenv = fenv * fenv * (3.0 - 2.0 * fenv)
+		head.rotation.x = -0.40 * fenv * _flinch_amp
+		if _flinch_t <= 0.0:
+			head.rotation.x = 0.0
 
 	# ---- Pose stepping "on 2s" ([[Benchmark Biomecánico]]: Sable/Xrd) ----
 	# The pose below only re-evaluates every POSE_STEP (~12 Hz) and HOLDS
@@ -1801,6 +1828,13 @@ func _process(delta: float) -> void:
 	body.position.y += (crouch_y - body.position.y) * min(1.0, delta * 10.0)
 	var lean: float = 0.5 if crouch else 0.0
 	spine.rotation.x += (lean - spine.rotation.x) * min(1.0, delta * 10.0)
+
+	# ---- Flinch recoil (alcance 3): la columna acusa el golpe hacia
+	# atrás. Corre en el reloj de pose (hold cómic); el head-snap ya
+	# disparó a 60 en el bloque de gameplay. ----
+	if _flinch_t > 0.0:
+		var f_rec: float = clampf(_flinch_t / _flinch_dur, 0.0, 1.0)
+		spine.rotation.x -= 0.22 * f_rec * _flinch_amp
 
 	# ── CROUCH SQUAT pose: deep HIP + KNEE flexion (matches squat reference) ──
 	# Thighs flex forward at the hip; knees bend deeply; a gentle alternating stride

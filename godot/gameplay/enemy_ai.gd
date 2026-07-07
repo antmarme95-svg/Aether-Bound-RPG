@@ -53,11 +53,23 @@ var lunge_hit_done: bool  = false
 # ---- hit flash ----
 var flash_t: float = 0.0
 
+# ---- PRD-006 alcance 3: reacción CORPORAL por Equilibrio (B15/B15e:
+# el golpeado reacciona con el CUERPO al frame siguiente; el flash es
+# secundario). kind: "" | "flinch" | "stagger" | "broken" ----
+var _react_kind: String = ""
+var _react_t: float = 0.0
+var _react_dur: float = 0.0
+var _react_side: float = 1.0     # lateral del impacto (roll del cuerpo)
+var _react_dirty: bool = false   # hay pose de reacción que limpiar
+# Ventana de castigo (posture break): el daño entra amplificado.
+const PUNISH_DAMAGE_MULT := 1.5
+
 # ---- scene ref (for get_height) ----
 var _scene: Node3D = null
 
 # ---- visual parts ----
 var _body_mi: MeshInstance3D       = null
+var _head_g: Node3D                = null
 var _fur_mat: ShaderMaterial       = null
 var _dark_mat: ShaderMaterial      = null
 var _crystal_mat: StandardMaterial3D = null
@@ -175,6 +187,7 @@ func _build() -> void:
 	head_g.add_child(brow_mi)
 
 	add_child(head_g)
+	_head_g = head_g
 
 	# Legs (4)
 	_legs = []
@@ -242,6 +255,67 @@ func hit(dmg: float, controller: PlayerController) -> void:
 		if away.length() > 0.0001:
 			position += away.normalized() * 0.35
 
+## receive_strike — PRD-006 alcance 3: entrada canónica del combate nuevo.
+## El HitPayload se resuelve por el GuardComponent (flinch → stagger →
+## posture break) y la reacción se ANIMA EN EL CUERPO el mismo tick
+## (B15: head-snap al frame siguiente; el flash queda como acento).
+## `hit()` (abajo) queda intacto para el camino del prototipo 0.
+## Devuelve el resultado para que el atacante reaccione.
+func receive_strike(payload: RefCounted, controller: PlayerController) -> Dictionary:
+	if dead or payload == null:
+		return {}
+	aggro = true
+	# Ventana de castigo: golpear una postura ROTA amplifica el daño.
+	var punish: bool = guard.is_punishable()
+	var res: Dictionary = guard.receive(payload)
+	var dmg: float = float(res.get("damage", 0.0))
+	if punish:
+		dmg *= PUNISH_DAMAGE_MULT
+	health -= dmg
+	flash_t = 0.12
+
+	# Lateral del impacto: el cuerpo rueda hacia el lado contrario a la
+	# fuerza (cross con UP decide izquierda/derecha respecto al facing).
+	var f: Vector3 = payload.force
+	if f.length_squared() > 0.0001:
+		var local_x: Vector3 = Vector3(cos(facing), 0.0, -sin(facing))
+		_react_side = -signf(local_x.dot(f.normalized()))
+		if _react_side == 0.0:
+			_react_side = 1.0
+
+	if health <= 0.0:
+		state   = "dying"
+		state_t = 0.0
+		return res
+
+	# ---- reacción corporal por Equilibrio ----
+	match String(res.get("reaction", "hit")):
+		"posture_break":
+			_start_reaction("broken", guard.BREAK_TIME)
+		"stagger":
+			_start_reaction("stagger", guard.STAGGER_TIME)
+		_:
+			# todo golpe que conecta se REGISTRA en el cuerpo (B15e #5)
+			_start_reaction("flinch", guard.FLINCH_TIME)
+
+	# La reacción interrumpe el ataque en curso (windup/lunge → recover).
+	if state == "windup" or state == "lunge":
+		scale.y = 1.0
+		state   = "recover"
+		state_t = 0.0
+
+	# Knockback por VectorFuerza (ya escalado por masa en el guard).
+	var force: Vector3 = res.get("force", Vector3.ZERO)
+	if force.length_squared() > 0.0001:
+		push_pull.apply_impulse(force)
+	return res
+
+func _start_reaction(kind: String, dur: float) -> void:
+	_react_kind  = kind
+	_react_t     = dur
+	_react_dur   = dur
+	_react_dirty = true
+
 ## _detection_radius — JS MaddenedBeast._detectionRadius
 func _detection_radius(controller: PlayerController, passives: Passives) -> float:
 	var r: float = BASE_DETECT * passives.detection_mult()
@@ -282,6 +356,23 @@ func update_ai(dt: float, controller: PlayerController, passives: Passives) -> v
 	var to_player: Vector3  = (player_pos - position)
 	to_player.y = 0.0
 	var dist: float = to_player.length()
+
+	# ---- PRD-006 alcance 3: reloj de reacción corporal ----
+	if _react_t > 0.0:
+		_react_t = maxf(0.0, _react_t - dt)
+
+	# Stagger/posture break SUSPENDEN la FSM: el cuerpo está ocupado
+	# perdiendo el equilibrio — no camina, no ataca (ventana de castigo).
+	if state != "dying" and (guard.state == "stagger" or guard.state == "broken"):
+		if state == "windup" or state == "lunge":
+			scale.y = 1.0
+		state   = "recover"
+		state_t = 0.4   # al recuperar el equilibrio: ~0.35 s y vuelve a chase
+		_apply_reaction_pose()
+		position.y = _scene.get_height(position.x, position.z) if (_scene != null and _scene.has_method("get_height")) else 0.0
+		global_position = position
+		rotation.y = facing
+		return
 
 	match state:
 		"roam":
@@ -395,6 +486,47 @@ func update_ai(dt: float, controller: PlayerController, passives: Passives) -> v
 		var cry_col := Color("#ff2336") * pulse
 		_crystal_mat.albedo_color = cry_col
 		_crystal_mat.emission     = cry_col
+
+	# ---- alcance 3: la reacción corporal SIEMPRE se dibuja (es combate) ----
+	_apply_reaction_pose()
+
+## Pose de reacción por Equilibrio — offsets sobre las partes del cuerpo,
+## pico INMEDIATO al recibir (env=1 el mismo tick) y decaimiento suave.
+## flinch: head-snap + roll leve · stagger: cuerpo cae y rueda, patas se
+## abren · broken: derrumbe legible (la ventana de castigo SE VE).
+func _apply_reaction_pose() -> void:
+	if _react_t <= 0.0 or _react_dur <= 0.0:
+		if _react_dirty:
+			_react_dirty = false
+			_react_kind = ""
+			_body_mi.position.y = 0.52
+			_body_mi.rotation.z = 0.0
+			_head_g.rotation.x  = 0.0
+			_head_g.position.y  = 0.66
+			for leg in _legs:
+				leg.rotation.z = 0.0
+		return
+	var env: float = _react_t / _react_dur
+	env = env * env * (3.0 - 2.0 * env)   # smoothstep: pico al inicio, cola suave
+	match _react_kind:
+		"flinch":
+			_head_g.rotation.x  = -0.55 * env          # snap del hocico hacia atrás/arriba
+			_body_mi.rotation.z = _react_side * 0.14 * env
+		"stagger":
+			_head_g.rotation.x  = 0.35 * env           # cabeza cede hacia abajo
+			_head_g.position.y  = 0.66 - 0.06 * env
+			_body_mi.position.y = 0.52 - 0.10 * env    # el cuerpo pierde altura
+			_body_mi.rotation.z = _react_side * 0.28 * env
+			for i in range(_legs.size()):
+				_legs[i].rotation.z = (0.35 if i % 2 == 0 else -0.35) * env
+		"broken":
+			var wobble: float = sin(_t * 7.0) * 0.08 * env
+			_head_g.rotation.x  = 0.55 * env           # cabeza colgando: postura ROTA
+			_head_g.position.y  = 0.66 - 0.10 * env
+			_body_mi.position.y = 0.52 - 0.16 * env
+			_body_mi.rotation.z = _react_side * (0.42 * env) + wobble
+			for i in range(_legs.size()):
+				_legs[i].rotation.z = ((0.5 if i % 2 == 0 else -0.5)) * env
 
 func _face_dir(dir: Vector3, dt: float, rate: float) -> void:
 	var target_y: float = atan2(dir.x, dir.z)
