@@ -125,8 +125,14 @@ updated: 2026-07-07
   ALL_PASS, tmp_dagna limpio. Ejecución creativa por subagente **Fable**;
   orquestación + fixes de fidelidad (mirada nivelada, cuña) por mí.
   **Nota: la sesión de Fable se cortó por límite de gasto mensual de la
-  cuenta.** **Pendiente: visto bueno estético del director** (miss
-  conocidas: cuña sutil de frente, hombreras altas, tatuajes tenues).
+  cuenta.** Demo adicional: `tmp_dagna_golden.gd` — Dagna bajo el pase
+  Melancolía Gráfica en la golden scene (el registro del Art Bible SÍ
+  aterriza en el rig; el greybox era la anti-referencia).
+  **Veredicto del director (2026-07-07): identidad liberada, pero la
+  ANATOMÍA está lejos de la lámina** — el cuerpo base hereda gráficos del
+  prototipo pre-reset que ya estaban corruptos; debió hacerse rework
+  completo. → **C6 (rework anatómico del cuerpo base)** en el Task-Board;
+  ventana: junto al pase de poses C4, tras el Gate 1.
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
   1. **Alcance 5 (Feature Loop):** greybox con spawns parametrizables
      + `autotest_combat.gd` — cierra PRD-006 y abre el Gate 1.

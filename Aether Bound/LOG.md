@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-07] design | Veredicto del director sobre Dagna in-engine → C6 rework anatómico
+Tras ver la comparación lado a lado (lámina · greybox · golden scene):
+la demo en golden scene confirma que el REGISTRO del Art Bible aterriza
+sobre el rig (sonda nueva `tests/tmp_dagna_golden.gd`: materiales toon →
+toon_golden opaco para sobrevivir al post, conservando el outline), pero
+**la anatomía está lejos de la lámina**. Causa raíz señalada por el
+director: el cuerpo base reutiliza los gráficos del prototipo PRE-RESET,
+que ya estaban corruptos — debió hacerse un rework completo en vez de
+heredarlos. Decisión: **C6 — rework anatómico del cuerpo base** (Task-
+Board): reconstruir proporciones/volúmenes/cabeza desde las láminas de
+fenotipo, conservando la biomecánica ganada (hip-first, columna 2 seg,
+constraints, canon 2s). Ventana recomendada: junto al pase de poses C4
+(B15c/B15d), tras el Gate 1 y antes del contenido de Fase 2; el vestido
+final (materiales/cara/atlas) permanece en Fase 4.
+
 ## [2026-07-07] feature | Dagna gráfica en Godot — pipeline lámina → config → rig
 Entregable extra pedido por el director: meter a Dagna GRÁFICAMENTE en el
 motor para **liberar su diseño** y probar el pipeline replicable. Sistema
