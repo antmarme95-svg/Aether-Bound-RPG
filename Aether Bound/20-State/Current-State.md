@@ -54,17 +54,20 @@ updated: 2026-07-06
   óptimo). Todo el feedback sigue siendo cromático; nada corporal ni
   temporal. Salvedad B15d cerrada a medias: la síncopa del combo sigue
   sin ser medible con ese encuadre + wash encima.
+- **Fix del tinte de daño ✅ (2026-07-06, adelantado por B15e):** el
+  wash plano (`ColorRect` alpha 0.55 full-rect en `hud.gd`) es ahora un
+  vignette real de bordes (shader canvas_item radial, centro SIEMPRE a
+  alpha 0) con decay en dos fases: fuerte ≤0.2 s + cola ≤0.3 s.
+  Verificado con sonda visual `tests/tmp_vignette.gd` (frames t=0 /
+  0.1 / 0.25 / 0.5 s) + `autotest_ui` y `autotest_slice` ALL_PASS.
+  Con esto el próximo clip del director ya permite medir la síncopa.
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (actualizado tras B15e):**
-  1. **Fix del tinte de daño ADELANTADO** (era nota del alcance 4; es
-     barato y es el mayor destructor de lectura medido): wash → vignette
-     de bordes, fuerte ≤0.2 s, cola ≤0.3 s, centro de pantalla nunca
-     >40 % alpha. Prerequisito práctico para volver a medir la síncopa.
-  2. **Alcance 3 (2 enemigos con reacciones por Equilibrio)** — ataca
+  1. **Alcance 3 (2 enemigos con reacciones por Equilibrio)** — ataca
      directo el trade-fest: flinch del jugador al recibir (B15e #4),
      reacción CORPORAL de la bestia (B15d #2/B15e #5), stagger/castigo.
-  3. En cola para **alcance 4**: hit-stop 2f/3f + TimeFeel + sting de
+  2. En cola para **alcance 4**: hit-stop 2f/3f + TimeFeel + sting de
      parry (B15e #1: 0 congelados re-medidos).
-  4. Backlog C4 (cuando toque el pase de poses): postura de columna
+  3. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).
 - **PRD-006 en curso** (Feature Loop; alcances 0 y 1 mergeados a master):

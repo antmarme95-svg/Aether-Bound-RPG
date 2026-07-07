@@ -55,6 +55,7 @@ var _allegiance_chip: Label
 var _toast_panel: PanelContainer
 var _toast_label: Label
 var _vignette: ColorRect
+var _vignette_mat: ShaderMaterial
 var _crosshair: Control
 
 # ================================================================
@@ -293,8 +294,28 @@ func _build_toast() -> void:
 	_toast_panel.add_child(_toast_label)
 
 func _build_vignette() -> void:
+	# B15e: vignette REAL de bordes (canvas_item, sin screen texture) — el
+	# wash plano a pantalla completa tapaba la lectura del combate. El
+	# centro queda SIEMPRE a alpha 0; solo los bordes tiñen.
 	_vignette = ColorRect.new()
-	_vignette.color = Color(COL_HEALTH_LO.r, COL_HEALTH_LO.g, COL_HEALTH_LO.b, 0.0)
+	_vignette.color = Color.WHITE
+	var sh := Shader.new()
+	sh.code = """
+shader_type canvas_item;
+uniform float intensity = 0.0;
+uniform vec4 tint : source_color = vec4(1.0, 0.3, 0.37, 1.0);
+void fragment() {
+	vec2 c = UV - vec2(0.5);
+	float d = length(c) * 2.0;
+	float v = smoothstep(0.62, 1.25, d);
+	COLOR = vec4(tint.rgb, v * intensity);
+}
+"""
+	_vignette_mat = ShaderMaterial.new()
+	_vignette_mat.shader = sh
+	_vignette_mat.set_shader_parameter("tint", COL_HEALTH_LO)
+	_vignette_mat.set_shader_parameter("intensity", 0.0)
+	_vignette.material = _vignette_mat
 	_vignette.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_vignette.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_vignette)
@@ -459,10 +480,11 @@ func update_hud(stats_node, cam_yaw: float, player_pos: Vector3) -> void:
 	# ---- compass ----
 	_update_compass(cam_yaw, player_pos)
 
-	# ---- hit flash decay ----
+	# ---- hit flash decay (B15e: fuerte <=0.2 s + cola <=0.3 s) ----
 	if _hit_flash > 0.0:
-		_hit_flash = maxf(0.0, _hit_flash - get_process_delta_time() * 2.2)
-		_vignette.color = Color(COL_HEALTH_LO.r, COL_HEALTH_LO.g, COL_HEALTH_LO.b, _hit_flash * 0.55)
+		var decay_rate: float = 3.0 if _hit_flash > 0.4 else 1.34
+		_hit_flash = maxf(0.0, _hit_flash - get_process_delta_time() * decay_rate)
+		_vignette_mat.set_shader_parameter("intensity", _hit_flash * 0.65)
 
 	# ---- toast timer ----
 	if _toast_timer > 0.0:

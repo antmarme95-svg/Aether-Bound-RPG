@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] feature | Fix del tinte de daño ✅ (adelantado por B15e)
+El wash plano de daño (ColorRect full-rect alpha 0.55, decay único
+~0.45 s en hud.gd) es ahora un vignette real de bordes: shader
+canvas_item radial (sin screen texture — compatible con la lección del
+toon/ALPHA), centro SIEMPRE a alpha 0, decay en dos fases fuerte ≤0.2 s
++ cola ≤0.3 s (spec de [[Benchmark Biomecánico]] §B15e consecuencia 1).
+QA: `autotest_ui` + `autotest_slice` ALL_PASS; sonda visual
+`tests/tmp_vignette.gd` captura t=0/0.1/0.25/0.5 s — centro limpio con
+el golpe recién recibido, tinte extinto a 0.5 s. Desbloquea la medición
+de la síncopa en el próximo clip del director.
+
 ## [2026-07-06] ingest | B15e ✅: playtest dirigido del kit Duelist — "fundamentals sí, Sifu no"
 El director jugó el kit Duelist y grabó 48 s (pelea 1v1 vs bestia,
 23.0–34.5 s). Veredicto: "los fundamentals existen, pero no es ni de
