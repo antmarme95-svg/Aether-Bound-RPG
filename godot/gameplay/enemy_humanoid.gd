@@ -26,18 +26,22 @@ const PARRY_STUN := 2.0           # B15b: parry → ~2 s indefenso
 
 # Perfiles de los 2 enemigos — el fenotipo ES el gameplay: las palancas
 # del light y la base baja del heavy salen del MISMO rig paramétrico.
+# Tuning de presión (B15g): `recover` = respiro entre golpes; `chain_prob`
+# = probabilidad de encadenar otro golpe sin volver a chase; `strafe_speed`
+# = velocidad del micro-paso lateral DURANTE el recover (el cuerpo sigue
+# vivo entre golpes — mata el "YDIF plano" que se leía como pasividad).
 const PROFILES := {
 	"light": {
 		"mass": 0.7, "health": 40.0, "move_speed": 3.8,
-		"weapon": "raider_saber", "attack_range": 2.2, "recover": 0.55,
-		"detect": 12.0,
+		"weapon": "raider_saber", "attack_range": 2.2, "recover": 0.42,
+		"chain_prob": 0.72, "strafe_speed": 1.7, "detect": 12.0,
 		"phenotype": { "weight": 0.12, "height": 0.95, "jaw": 0.3,
 			"cheek": 0.6, "hair": 2, "beard": 0, "skinTone": 3, "warpaint": 3 },
 	},
 	"heavy": {
 		"mass": 1.8, "health": 85.0, "move_speed": 1.9,
-		"weapon": "heavy_maul", "attack_range": 2.4, "recover": 1.15,
-		"detect": 10.0,
+		"weapon": "heavy_maul", "attack_range": 2.4, "recover": 1.05,
+		"chain_prob": 0.0, "strafe_speed": 0.85, "detect": 10.0,
 		"phenotype": { "weight": 1.0, "height": 0.10, "jaw": 1.0,
 			"cheek": 0.2, "hair": 0, "beard": 3, "skinTone": 5, "warpaint": 5 },
 	},
@@ -63,6 +67,7 @@ var rig = null              # CharacterRig (autoload class del prototipo)
 var _profile: Dictionary = {}
 var _scene: Node3D = null
 var _stun_t: float = 0.0
+var _strafe_sign: float = 1.0   # sentido del circle-strafe (B15g)
 
 # ================================================================
 func _init(p_kind: String, spawn_pos: Vector3, scene: Node3D) -> void:
@@ -71,6 +76,7 @@ func _init(p_kind: String, spawn_pos: Vector3, scene: Node3D) -> void:
 	_scene   = scene
 	position = spawn_pos
 	facing   = randf() * TAU
+	_strafe_sign = 1.0 if randf() < 0.5 else -1.0
 
 	health     = float(_profile["health"])
 	max_health = health
@@ -215,19 +221,25 @@ func update_ai(dt: float, controller, passives) -> void:
 						state   = "stunned"
 						state_t = 0.0
 			if not combat.is_striking():
-				# El light encadena (arcos rápidos); el heavy respira.
-				if kind == "light" and randf() < 0.6 and dist < float(_profile["attack_range"]) + 0.6:
+				# El light encadena (arcos rápidos); el heavy respira
+				# (chain_prob = 0). B15g: más cadena = más presión.
+				if randf() < float(_profile.get("chain_prob", 0.0)) \
+						and dist < float(_profile["attack_range"]) + 0.6:
 					if combat.try_attack():
 						var stp: Dictionary = _WeaponD.combo_step(combat.weapon, 0)
 						rig.play_strike(float(stp.get("dur", 0.4)))
 						state_t = 0.0
 					else:
-						state = "recover"; state_t = 0.0
+						_enter_recover()
 				else:
-					state = "recover"; state_t = 0.0
+					_enter_recover()
 
 		"recover":
-			rig.set_motion(0.0, false)
+			# Presión (B15g): el cuerpo NO se congela entre golpes — hace
+			# micro-strafe CIRCULAR alrededor del jugador manteniendo el
+			# alcance y la cara. La cadencia se lee VIVA (adiós YDIF plano);
+			# el heavy acecha lento, no se planta.
+			_strafe_around(to_player, dist, dt)
 			if state_t > float(_profile["recover"]):
 				state = "chase"
 				state_t = 0.0
@@ -248,6 +260,35 @@ func update_ai(dt: float, controller, passives) -> void:
 			return
 
 	_snap_and_face(dt, to_player, false)
+
+## Entra en recover rompiendo a veces el sentido del círculo — el strafe
+## monótono se lee robótico; alternar lo hace leer como "busca hueco".
+func _enter_recover() -> void:
+	state = "recover"
+	state_t = 0.0
+	if randf() < 0.35:
+		_strafe_sign = -_strafe_sign
+
+## Circle-strafe (B15g): componente lateral (tangente) + corrección radial
+## suave para orbitar al jugador sin encimarse ni alejarse. El rig camina a
+## paso lento (el cuerpo vive); mantiene la cara al jugador.
+func _strafe_around(to_player: Vector3, dist: float, dt: float) -> void:
+	if dist < 0.001:
+		rig.set_motion(0.0, false)
+		return
+	var radial: Vector3 = to_player / dist
+	var tangent := Vector3(-radial.z, 0.0, radial.x)   # perpendicular en el plano
+	var strafe_speed: float = float(_profile.get("strafe_speed", 1.0))
+	var step: Vector3 = tangent * _strafe_sign * strafe_speed * dt
+	# Corrección radial suave: vuelve hacia el anillo ideal de ataque.
+	var ideal: float = float(_profile["attack_range"]) * 0.9
+	if dist > ideal + 0.3:
+		step += radial * float(_profile["move_speed"]) * 0.45 * dt
+	elif dist < ideal - 0.3:
+		step -= radial * float(_profile["move_speed"]) * 0.45 * dt
+	position += step
+	_face_dir(radial, dt, 6.0)
+	rig.set_motion(clampf(strafe_speed / 5.2, 0.12, 1.0), false)
 
 func _snap_and_face(_dt: float, _to_player: Vector3, _unused: bool) -> void:
 	if _scene != null and _scene.has_method("get_height"):

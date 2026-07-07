@@ -101,15 +101,23 @@ updated: 2026-07-07
   3 f exactos, dilation 0.354 s), test_core/slice/ui ALL_PASS, FPS
   491/336. Decisiones en el PRD. **Pendiente: playtest del director
   (feel).** Esto cierra el B15e #1 (la mitad temporal contra Sifu).
+- **Tuning de presión enemiga ✅ CÓDIGO (2026-07-07, B15g):** el par
+  humanoide ya no se congela entre golpes. En `enemy_humanoid.gd`:
+  recover del light 0.55→0.42 s, `chain_prob` data-driven (light 0.72,
+  heavy 0.0), y **circle-strafe durante recover** (tangente + corrección
+  radial al anillo de ataque; sentido que alterna). El heavy sigue lento
+  pero ACECHA. Verificado por sonda `tmp_pressure` en juego real:
+  `recover_path` del light ≈0 → 3.55 m, heavy 3.56 m; loop de golpes
+  vivo (light 6 / heavy 5 strikes en 8 s). **Pendiente: playtest del
+  director.**
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  1. **Tuning de presión enemiga** (B15g: recover del light ↓, prob.
-     de cadena ↑, strafe en recover) — el otro asesino del feel.
-  2. **Alcance 5 (Feature Loop):** greybox con spawns parametrizables
+  1. **Alcance 5 (Feature Loop):** greybox con spawns parametrizables
      + `autotest_combat.gd` — cierra PRD-006 y abre el Gate 1.
-  3. Medir en el próximo clip del director: parry, síncopa y AHORA los
-     hit-stops (piden cámara quieta y combos limpios contra UNA
-     bestia; el pipeline B15 ya sabe contarlos).
-  4. Backlog C4 (cuando toque el pase de poses): postura de columna
+  2. Medir en el próximo clip del director: parry, síncopa, los
+     hit-stops (alcance 4) y AHORA la presión enemiga (piden cámara
+     quieta y combos limpios contra UNA bestia; el pipeline B15 ya sabe
+     contar hit-stops).
+  3. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).
 - **PRD-006 en curso** (Feature Loop; alcances 0 y 1 mergeados a master):
@@ -138,10 +146,10 @@ updated: 2026-07-07
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
-- **Branch actual:** `master` (todo mergeado; último PR: alcance 4 vía
-  merge local `--no-ff`). Sondas temporales `tests/tmp_*.gd` (step,
-  vignette, reactions, duel_pair, spawnflag, timefeel) quedan hasta
-  cerrar PRD-006 completo.
+- **Branch actual:** `master` (todo mergeado; último PR: tuning de
+  presión vía merge local `--no-ff`). Sondas temporales `tests/tmp_*.gd`
+  (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure)
+  quedan hasta cerrar PRD-006 completo.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);
