@@ -1,6 +1,6 @@
 ---
-status: propuesto
-source: "Deep dive 2026-07-06 (pedido del director): entrevistas/artículos de Shedworks (Sable), Microbird (Hinterberg), técnica Guilty Gear Xrd / Spider-Verse. v2 (B14, 2026-07-06): GDC/entrevistas de Ubisoft (motion matching), IOI (Glacier Next), Guerrilla (HZD), Respawn (Jedi), Sloclap (Sifu). v3 (B15, 2026-07-06): clips 60fps grabados por el director en C:/Users/tonom/Videos/NVIDIA/ (Sifu 13.25, Fortnite 13.21, Sable 13.30) — análisis frame a frame propio. B15d (2026-07-06): clip de NUESTRA build grabado por el director (serie 17.00) — comparación AS IS vs TO BE con el mismo método"
+status: ratificado
+source: "Deep dive 2026-07-06 (pedido del director): entrevistas/artículos de Shedworks (Sable), Microbird (Hinterberg), técnica Guilty Gear Xrd / Spider-Verse. v2 (B14, 2026-07-06): GDC/entrevistas de Ubisoft (motion matching), IOI (Glacier Next), Guerrilla (HZD), Respawn (Jedi), Sloclap (Sifu). v3 (B15, 2026-07-06): clips 60fps grabados por el director en C:/Users/tonom/Videos/NVIDIA/ (Sifu 13.25, Fortnite 13.21, Sable 13.30) — análisis frame a frame propio. B15d (2026-07-06): clip de NUESTRA build grabado por el director (serie 17.00) — comparación AS IS vs TO BE con el mismo método. RATIFICADO por el director 2026-07-06 (noche), tras B15d–B15g: el canon quedó validado midiendo nuestra propia build y el playtest del alcance 3"
 updated: 2026-07-06
 ---
 

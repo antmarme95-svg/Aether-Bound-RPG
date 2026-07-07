@@ -121,9 +121,9 @@ updated: 2026-07-06
 - **Animación — canon fijado por A/B (2026-07-06, 3 rondas):** stepping
   EN 2s (12 Hz) SOLO en extremidades; cuerpo/raíz suaves a 60. Body pop
   descartado (mecanismo queda tras `body_pop_on_twos` OFF). Tecla T
-  cicla los 3 modos in-game. [[Benchmark Biomecánico]] (v1 Sable + v2
-  AAA: motion matching descartado, camino Sifu validado) sigue
-  `propuesto` — se ratifica al ver el alcance 2 con poses extremas.
+  cicla los 3 modos in-game. [[Benchmark Biomecánico]] **RATIFICADO por
+  el director (2026-07-06 noche)** — la condición se cumplió vía
+  B15d–B15g: canon validado midiendo nuestra propia build + playtest.
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).

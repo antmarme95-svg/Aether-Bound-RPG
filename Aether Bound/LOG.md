@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] design | [[Benchmark Biomecánico]] RATIFICADO por el director
+Cierre de la decisión que dejó abierta el Lint Loop: el director
+ratifica el benchmark (v1 Sable/Hinterberg + v2 AAA + v3 mediciones
+B15–B15g). La condición original ("ver el alcance 2 con poses
+extremas") quedó superada: el canon se validó midiendo nuestra propia
+build (B15d) y el playtest verificado del alcance 3 (B15f–B15g). Con
+esto las 27 páginas de Knowledge quedan `ratificado` salvo [[Briefs de
+Concept Art]] (propuesto legítimo — pipeline NB2 en exploración).
+
 ## [2026-07-06] lint | Lint Loop: vault sano — 7 fixes menores aplicados, 1 decisión para el director
 Barrido completo (44 páginas). **Sano:** cero wikilinks a páginas
 inexistentes, cero huérfanas (los Raw quedan enlazados vía 00-Index/
