@@ -75,10 +75,13 @@ updated: 2026-07-06
   autotest_slice/autotest_ui ALL_PASS; sondas visuales `tmp_reactions` y
   `tmp_duel_pair`. **Pendiente: playtest del director (feel).**
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  1. **Playtest del director del alcance 3** — mismo boot melee; ahora
-     los golpes se REGISTRAN en los cuerpos y hay par light/heavy
-     (spawn hoy solo vía sonda `tmp_duel_pair`; falta greybox/arena =
-     alcance 5).
+  1. **Playtest del director del alcance 3** — boot:
+     `Start-Godot.bat -- --origin=ironblooded --cls=warrior
+     --skip=wilds --spawn=duelpair` (el par light/heavy aparece a 8 m
+     frente al jugador, además de las bestias). Qué mirar: ¿el windup
+     del heavy se LEE a distancia de juego? ¿el flinch/stagger/derrumbe
+     de la bestia registran cada golpe? ¿el parry contra humanoides
+     paga? Greybox/arena real = alcance 5.
   2. **Alcance 4**: hit-stop 2f/3f + TimeFeel + sting de parry (B15e
      #1: 0 congelados re-medidos).
   3. Backlog C4 (cuando toque el pase de poses): postura de columna

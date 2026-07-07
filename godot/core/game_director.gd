@@ -4,6 +4,9 @@
 # CREATION now has real UI (CreationUI) — Debug-arg fast path preserved for autotests.
 class_name GameDirector extends Node3D
 
+# PRD-006 alcance 3: par light/heavy para playtest (--spawn=duelpair)
+const _EnemyHumanoid = preload("res://gameplay/enemy_humanoid.gd")
+
 # ---- child nodes ----
 var _cam: Camera3D
 var _fade_layer: ColorRect     = null
@@ -379,6 +382,19 @@ func _state_wilds() -> Dictionary:
 				var beast := MaddenedBeast.new(sp, wilds)
 				wilds.add_child(beast)
 				enemies.append(beast)
+
+			# PRD-006 alcance 3: --spawn=duelpair mete el par light/heavy
+			# frente al jugador (playtest del director sin esperar el
+			# greybox del alcance 5).
+			if str(Debug.args.get("spawn", "")) == "duelpair":
+				var fwd := Vector3(sin(controller.facing), 0.0, cos(controller.facing))
+				var right := Vector3(cos(controller.facing), 0.0, -sin(controller.facing))
+				var light = _EnemyHumanoid.new("light", controller.position + fwd * 8.0 - right * 2.0, wilds)
+				var heavy = _EnemyHumanoid.new("heavy", controller.position + fwd * 8.0 + right * 2.0, wilds)
+				wilds.add_child(light)
+				wilds.add_child(heavy)
+				enemies.append(light)
+				enemies.append(heavy)
 			controller.enemies = enemies
 
 			# Quest

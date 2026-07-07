@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] feature | Flag --spawn=duelpair para el playtest del alcance 3
+El par light/heavy ya spawnea en Wilds sin sonda: boot
+`--origin=ironblooded --cls=warrior --skip=wilds --spawn=duelpair` los
+mete a 8 m frente al jugador (además de las bestias). QA: sonda
+`tmp_spawnflag.gd` PASS (par presente + screenshot) y `autotest_slice`
+ALL_PASS (sin flag no cambia nada). Decisión: se valida el alcance 3 en
+playtest ANTES de construir el alcance 4 — el hit-stop congela poses, y
+las poses tienen que decir lo cierto antes de dramatizarlas con tiempo.
+
 ## [2026-07-06] feature | PRD-006 alcance 3 ✅ código: reacciones corporales + light/heavy
 Dos pasos en branch `feat/prd006-alcance3`. **Paso 1 (absorbe B15e):**
 la bestia resuelve el combate nuevo por `receive_strike()` → el
