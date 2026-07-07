@@ -115,7 +115,7 @@ updated: 2026-07-06
     melee vivo anima `play_strike` (fix: antes solo lo veían los
     autotests). Boot de prueba melee:
     `--origin=ironblooded --cls=warrior --skip=wilds`.
-  - Después del alcance 2: alcances 3–5 (2 enemigos, feel canales 1–3,
+  - Después del alcance 3 (✅ B15g): alcances 4–5 (feel canales 1–3,
     greybox+autotest_combat) → PRD-007 (Dagna + Springboard T1). Gate 1:
     pelear junto a Dagna en greybox ≥60 FPS.
 - **Animación — canon fijado por A/B (2026-07-06, 3 rondas):** stepping
@@ -127,9 +127,10 @@ updated: 2026-07-06
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
-- **Branch actual:** `master` (todo mergeado; último PR: alcance 1 vía
-  merge local `--no-ff`). Sondas temporales `tests/tmp_step_*.gd` quedan
-  hasta cerrar el alcance 2.
+- **Branch actual:** `master` (todo mergeado; último PR: alcance 3 vía
+  merge local `--no-ff`). Sondas temporales `tests/tmp_*.gd` (step,
+  vignette, reactions, duel_pair, spawnflag) quedan hasta cerrar
+  PRD-006 completo.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

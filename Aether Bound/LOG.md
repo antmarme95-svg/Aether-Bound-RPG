@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] lint | Lint Loop: vault sano — 7 fixes menores aplicados, 1 decisión para el director
+Barrido completo (44 páginas). **Sano:** cero wikilinks a páginas
+inexistentes, cero huérfanas (los Raw quedan enlazados vía 00-Index/
+SCHEMA/ADR-001), Index↔realidad 1:1 en ambas direcciones, State=repo.
+**Fixes aplicados:** 2 wikilinks partidos por salto de línea en LOG
+(B15f y alcance 1 — Obsidian no los resolvía); Current-State
+desactualizado en 3 líneas ("último PR: alcance 1"→alcance 3, sondas
+tmp ampliadas y atadas a PRD-006 completo, "después del alcance 2"→
+alcance 3 ✅); 00-Index marcaba `(propuesto)` a [[Fenotipos y Creación
+de Personaje]] y [[Dagna]] que ya son `ratificado`. **Decisión para el
+director:** [[Benchmark Biomecánico]] sigue `propuesto` y su condición
+de ratificación ("ver el alcance 2 con poses extremas") ya se cumplió —
+B15d–B15g validaron el canon contra nuestra propia build; ratificarlo
+es cosa de una palabra. [[Briefs de Concept Art]] sigue `propuesto`
+legítimamente (pipeline NB2 aún en uso exploratorio).
+
 ## [2026-07-06] state | Cierre de sesión: B15e→B15g + tinte + alcance 3 completo y VERIFICADO en juego
 Sesión nocturna completa sobre el veredicto del director ("fundamentals
 sí, Sifu no"). Recorrido: **B15e** (playtest medido: 8 tintes/11.4 s +
@@ -34,8 +50,8 @@ pulsando en pleno combate; y la bestia acusa CON EL CUERPO (roll
 lateral, postura baja, patas abiertas — stagger distinguible de flinch
 en silueta a distancia de juego). Sin verificar (no salió en cámara):
 flinch del jugador (escala/ángulo), par light/heavy (boot sin
-`--spawn=duelpair`) y síncopa (sin combos limpios). [[Benchmark
-Biomecánico]] §B15f. Decisión pendiente: cerrar verificación con clip
+`--spawn=duelpair`) y síncopa (sin combos limpios). Ver
+[[Benchmark Biomecánico]] §B15f. Decisión pendiente: cerrar verificación con clip
 dirigido o avanzar a alcance 4 con lo validado.
 
 ## [2026-07-06] feature | Flag --spawn=duelpair para el playtest del alcance 3
@@ -252,8 +268,8 @@ sistema físico — impulsos con decay, techo de sanidad; PRD-007 lo
 reutiliza). Datos: `data/weapons.json` (duelist_blade ×4, unarmed,
 gloom_claws, heavy_maul). Instanciados en jugador Y bestia, NEUTROS
 (anti-objetivo: el combate viejo intacto, autotest_slice verde). (2)
-Curvas v2 del strike en `rig_biomech.segment_offset` ([[Benchmark
-Biomecánico]] acción #2): coil con moving hold, release back-out con
+Curvas v2 del strike en `rig_biomech.segment_offset` (acción #2 de
+[[Benchmark Biomecánico]]): coil con moving hold, release back-out con
 overshoot, settle con rebote; fracciones de fase (= ventanas) intactas.
 QA: test_combat NUEVO 41/41 ALL_PASS; test_core, biomech, scenes, slice
 todos verdes. Next: alcance 2 (kit Duelist jugable sobre los componentes).
