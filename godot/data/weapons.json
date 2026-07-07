@@ -32,6 +32,17 @@
 			{ "dur": 0.50, "damage": 11, "balance": 10, "force": 4.2 }
 		]
 	},
+	"raider_saber": {
+		"name": "Raider Saber",
+		"mass": 0.7,
+		"momentum_gain": 0.50,
+		"buffer_window": 0.30,
+		"combo": [
+			{ "dur": 0.36, "damage": 7,  "balance": 8,  "force": 2.8 },
+			{ "dur": 0.30, "damage": 8,  "balance": 9,  "force": 3.0 },
+			{ "dur": 0.55, "damage": 11, "balance": 14, "force": 4.5, "interrupt": true }
+		]
+	},
 	"heavy_maul": {
 		"name": "Heavy Maul",
 		"mass": 2.2,
