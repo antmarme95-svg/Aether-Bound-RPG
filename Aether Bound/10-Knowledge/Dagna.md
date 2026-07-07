@@ -94,7 +94,17 @@ restantes. La **cuña de la trenza quedó garantizada y legible en perfil**.
 Capa de LOOK: el ROM/IK enano y su animación de combate siguen diferidos
 (C4 + PRD-007). Miss conocidas para el pase del director: de frente la cuña
 lateral es sutil, hombreras algo altas, tatuajes de antebrazo tenues.
-Sonda de presentación: `tests/tmp_dagna.gd`.
+Sondas: `tests/tmp_dagna.gd` (greybox) y `tests/tmp_dagna_golden.gd`
+(golden scene con el pase Melancolía Gráfica — el registro del Art Bible
+sí aterriza sobre el rig).
+
+**Veredicto del director (2026-07-07): la ANATOMÍA está lejos de la
+lámina.** El cuerpo base reutiliza los gráficos del prototipo pre-reset y
+esos gráficos ya estaban corruptos — debió hacerse un rework completo en
+vez de heredarlos. La identidad (silueta/piezas firma/paleta) queda
+liberada como referencia, pero el cuerpo NO es el estándar. → Rework
+anatómico agendado como **C6** en el Task-Board (ventana: junto al pase de
+poses C4, tras el Gate 1).
 
 Brief 7 completo en [[Briefs de Concept Art]]. Especificación original:
 
