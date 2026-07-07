@@ -86,6 +86,16 @@ no duela; solo le pide que lo haga.
 > Nota para modelado 3D: la **cuña miniatura en la trenza izquierda** (plant
 > del objeto firma) quedó tímida en la lámina — garantizarla en el modelo.
 
+**In-engine ✅ (2026-07-07):** Dagna montada como `CharacterRig` procedural
+vía `godot/data/characters.gd` (config `"dagna"`) +
+`godot/character/character_signature.gd` (piezas firma). Pipeline
+**lámina → config → Godot** probado — molde replicable para los 8 pivotes
+restantes. La **cuña de la trenza quedó garantizada y legible en perfil**.
+Capa de LOOK: el ROM/IK enano y su animación de combate siguen diferidos
+(C4 + PRD-007). Miss conocidas para el pase del director: de frente la cuña
+lateral es sutil, hombreras algo altas, tatuajes de antebrazo tenues.
+Sonda de presentación: `tests/tmp_dagna.gd`.
+
 Brief 7 completo en [[Briefs de Concept Art]]. Especificación original:
 
 Base: `fenotipo-enana-v2.png` como referencia de proporción/anatomía

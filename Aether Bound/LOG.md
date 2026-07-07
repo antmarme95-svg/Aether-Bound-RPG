@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-07] feature | Dagna gráfica en Godot — pipeline lámina → config → rig
+Entregable extra pedido por el director: meter a Dagna GRÁFICAMENTE en el
+motor para **liberar su diseño** y probar el pipeline replicable. Sistema
+nuevo: `godot/data/characters.gd` (configs de personajes nombrados =
+origin+clase+fenotipo+piezas firma; `apply_to_rig()`) +
+`godot/character/character_signature.gd` (extras de lámina colgados
+ADITIVOS sobre el rig: túnica de guardiana, hombreras/espinilleras de
+compuerta, cuña de trenza, tatuajes de gremio arco+cuña, martillo de
+cabezal plano a la espalda, cinturón, faldón — cero cambios al rig base).
+Dagna (`ironblooded` + warrior + fenotipo enano robusto, mismo par
+weight/height que el heavy) se lee inconfundible vs. `dagna-v1.png`; la
+**cuña de la trenza quedó garantizada y legible en perfil** (la ficha lo
+exigía). Sonda `tests/tmp_dagna.gd` (frente/espalda/perfil/detalle con
+cámara nivelada tomada por la sonda — el idle fuerza head.rotation.x=0, así
+que el "mira arriba" era encuadre). Solo capa de LOOK: ROM/IK enano +
+animación diferidos (C4 + PRD-007). QA: test_core/autotest_slice ALL_PASS,
+tmp_dagna limpio. **Ejecución creativa por subagente Fable, orquestación +
+fixes de fidelidad (mirada, cuña) por Opus.** La sesión de Fable se cortó
+por límite de gasto mensual de la cuenta. Pendiente: visto bueno estético
+del director (miss: cuña sutil de frente, hombreras altas, tatuajes
+tenues). El pipeline queda como MOLDE para los otros 8 pivotes.
+
 ## [2026-07-07] feature | PRD-006 tuning de presión enemiga (B15g)
 El par humanoide ya no se congela entre golpes — el otro asesino del
 feel medido en B15g ("YDIF plano / se lee pasivo"). En

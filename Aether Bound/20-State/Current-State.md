@@ -110,9 +110,29 @@ updated: 2026-07-07
   `recover_path` del light ≈0 → 3.55 m, heavy 3.56 m; loop de golpes
   vivo (light 6 / heavy 5 strikes en 8 s). **Pendiente: playtest del
   director.**
+- **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
+  rig PROBADO** (entregable extra pedido por el director para *liberar su
+  diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
+  (configs de personajes nombrados: origin+clase+fenotipo+piezas firma)
+  + `godot/character/character_signature.gd` (extras de lámina —
+  túnica/hombreras/cuña de trenza/tatuajes de gremio/martillo — colgados
+  aditivos sobre el rig, cero cambios al rig base). Dagna se lee
+  inconfundible vs. `dagna-v1.png`; **la cuña de la trenza queda
+  garantizada y legible en perfil** (la ficha lo exigía). Sonda de
+  presentación `tests/tmp_dagna.gd` (frente/espalda/perfil/detalle,
+  cámara nivelada). **Solo capa de LOOK** — el ROM/IK enano y su
+  animación siguen diferidos (C4 + PRD-007). QA: test_core/autotest_slice
+  ALL_PASS, tmp_dagna limpio. Ejecución creativa por subagente **Fable**;
+  orquestación + fixes de fidelidad (mirada nivelada, cuña) por mí.
+  **Nota: la sesión de Fable se cortó por límite de gasto mensual de la
+  cuenta.** **Pendiente: visto bueno estético del director** (miss
+  conocidas: cuña sutil de frente, hombreras altas, tatuajes tenues).
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
   1. **Alcance 5 (Feature Loop):** greybox con spawns parametrizables
      + `autotest_combat.gd` — cierra PRD-006 y abre el Gate 1.
+  1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
+     está listo para replicar con los otros 8 pivotes cuando toque
+     (Fase 4 / concept art). Dagna es el molde.
   2. Medir en el próximo clip del director: parry, síncopa, los
      hit-stops (alcance 4) y AHORA la presión enemiga (piden cámara
      quieta y combos limpios contra UNA bestia; el pipeline B15 ya sabe
@@ -146,10 +166,11 @@ updated: 2026-07-07
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
-- **Branch actual:** `master` (todo mergeado; último PR: tuning de
-  presión vía merge local `--no-ff`). Sondas temporales `tests/tmp_*.gd`
-  (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure)
-  quedan hasta cerrar PRD-006 completo.
+- **Branch actual:** `master` (todo mergeado; último PR: Dagna gráfica /
+  pipeline de personajes vía merge local `--no-ff`). Sondas temporales
+  `tests/tmp_*.gd` (step, vignette, reactions, duel_pair, spawnflag,
+  timefeel, pressure, dagna) quedan hasta cerrar PRD-006 / validar el
+  pipeline de personajes con el director.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);
