@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] ingest | B15e ✅: playtest dirigido del kit Duelist — "fundamentals sí, Sifu no"
+El director jugó el kit Duelist y grabó 48 s (pelea 1v1 vs bestia,
+23.0–34.5 s). Veredicto: "los fundamentals existen, pero no es ni de
+cerca la experiencia de Sifu". El pipeline B15 (hojas 60 fps + YDIF) le
+da la razón con números: 0 hit-stops; **8 tintes rojos a pantalla
+completa en 11.4 s de pelea** (el tinte es el evento visual más grande
+del clip, YDIF 37–41 vs ~10 de un swing; wash ~50 % del combate);
+jugador golpeado SIN cambio de pose; bestia solo flash blanco (kit
+activo — re-confirma B15d #2); patrón resultante = trade-fest (tanquear
+es óptimo, no se observa guardia/parry). Salvedad B15d cerrada a medias:
+kit confirmado activo, síncopa aún no medible con ese encuadre + wash.
+**Ajuste de prioridades:** adelantar el fix del tinte (wash → vignette
+≤0.2 s fuerte) ANTES del alcance 4; alcance 3 (reacción corporal por
+Equilibrio) ataca directo el trade-fest. [[Benchmark Biomecánico]] §B15e.
+
 ## [2026-07-06] state | Cierre de sesión: benchmark completo (B15–B15d) + kit Duelist listo para playtest
 Sesión cerrada con el ciclo de benchmark observacional completo: B15
 (3 clips base) → B15b (28 clips de Sifu) → B15c (gaits de Sable) → B15d

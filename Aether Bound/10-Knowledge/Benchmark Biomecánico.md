@@ -359,6 +359,51 @@ cuerpo en el mismo tick — refuerza la consecuencia 3 con evidencia de
 nuestra propia build) y el **3** (acortar/atenuar el tinte de daño y mover
 el feedback al personaje).
 
+### B15e — playtest dirigido del kit Duelist (2026-07-06 noche)
+
+El director jugó la build con el kit Duelist activo y grabó 48 s (60 fps,
+pelea 1v1 contra una bestia en ~23.0–34.5 s). Su veredicto textual: **"Los
+fundamentals existen, pero no es ni de cerca la experiencia de Sifu."**
+Mismo pipeline (hojas de contacto + YDIF por frame). Los números le dan
+la razón y localizan exactamente dónde se pierde la experiencia:
+
+| # | Medición | Resultado | vs Sifu |
+|---|---|---|---|
+| 1 | Hit-stop | **0 frames congelados** en toda la pelea (ningún YDIF <0.05 entre 23–35 s) | 2 f normal / 3 f pesado/parry |
+| 2 | Golpes recibidos | **8 tintes rojos a pantalla completa en 11.4 s** (onsets: 23.00, 27.05, 28.43, 30.77, 32.23, 32.83, 33.65, 34.40 s) | El jugador de Sifu que tanquea 8 golpes seguidos está muerto o en stagger |
+| 3 | Peso visual del tinte | Cada onset de tinte es el evento MÁS GRANDE del clip (YDIF 37–41; un swing ronda ~10). Wash fuerte ~0.5 s + cola de fade ≥0.5 s → **la pantalla está lavada de rojo cerca del 50 % de la pelea** | Post-proceso mínimo; el daño se lee en el CUERPO |
+| 4 | Reacción del jugador al ser golpeado | **Cero cambio de pose** — frame a frame la silueta es idéntica; solo cambia el post-proceso | Reacción corporal al frame siguiente |
+| 5 | Reacción de la bestia | Flash blanco, pose idéntica (re-confirma B15d #2 con el kit activo) | Head-snap + recoil de silueta |
+| 6 | Patrón de juego resultante | **Trade-fest**: intercambio de golpes cuerpo a cuerpo sin espaciar; en las tiras muestreadas no se observa postura de guardia ni stun de parry. Sin castigo corporal ni stagger, tanquear es la estrategia óptima | El espaciado y la guardia son el juego |
+
+**Salvedad B15d (punto 4) CERRADA a medias:** el kit Duelist estaba
+activo (swings encadenados visibles contra la bestia), pero la síncopa
+0.40/0.32/0.46/0.62 sigue sin ser medible a esa distancia de cámara y
+con el wash rojo encima la mitad del tiempo — otra razón para arreglar
+el tinte antes del próximo clip de medición.
+
+**Síntesis — por qué "no es ni de cerca Sifu":** en Sifu cada contacto
+tiene consecuencia en ≤1–3 frames y en TRES canales (temporal: hit-stop;
+corporal: snap/stagger/terreno; cromático: casi nada). Nuestra build
+tiene los canales invertidos: el único canal activo es el cromático, y
+dentro de él, el evento más ruidoso de la pantalla es el daño RECIBIDO —
+un tinte que además tapa la lectura del combate justo cuando más se
+necesita. El "fundamento" (combo, guardia, momentum) existe bajo el ruido;
+la experiencia se pierde en la capa de feedback.
+
+**Consecuencias (ajuste de prioridades del PRD-006):**
+
+1. **Adelantar el fix del tinte de daño** (era nota del alcance 4): es
+   barato, y es el mayor destructor de lectura medido. Propuesta: wash →
+   vignette de bordes, fuerte ≤0.2 s, cola ≤0.3 s, y nunca >40 % de alpha
+   en el centro de pantalla.
+2. **Alcance 3 tal como está en cola** (reacción corporal por Equilibrio)
+   ataca directamente los puntos 4–6: flinch del jugador al recibir,
+   recoil/stagger de la bestia, y con ello el castigo que rompe el
+   trade-fest.
+3. **Alcance 4 sin cambios** (hit-stop 2f/3f + TimeFeel + sting) cierra
+   el punto 1.
+
 ## Fuentes
 
 - gamedeveloper.com — "Emotion in motion: expressive character animation"

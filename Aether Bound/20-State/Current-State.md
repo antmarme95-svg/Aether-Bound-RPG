@@ -30,8 +30,8 @@ updated: 2026-07-06
   ya alineada con Sable (raíz continua + holds ~4–5 f). Hallazgos
   nuevos: la bestia reacciona solo con flash blanco (pose idéntica — sin
   reacción corporal) y el daño al jugador es un tinte de pantalla >1 s
-  que tapa la lectura. Salvedad: no está claro si el kit Duelist estaba
-  activo en ese clip — el playtest dirigido sigue pendiente. Ampliado
+  que tapa la lectura. Salvedad (cerrada a medias por B15e: kit activo
+  confirmado; síncopa aún sin medir). Ampliado
   con el running jump: aire 42 f = analítica del código exacta (0.70 s,
   ~8 f más flotante que Fortnite), landing no bloqueante ✅, pero el
   rig NO tiene canal airborne — el salto no tiene pose (gait sin
@@ -44,18 +44,26 @@ updated: 2026-07-06
   diseño quedó resuelta por ENRUTAMIENTO DE INPUT: `try_attack()` viejo
   intacto y solo llamado por autotests históricos (`autotest_slice`
   ALL_PASS). Decisiones documentadas en el PRD.
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (fijado al cierre 2026-07-06):**
-  1. **Playtest del director del kit Duelist** — boot melee:
-     `Start-Godot.bat -- --origin=ironblooded --cls=warrior
-     --skip=wilds`; LMB/F = combo ×4, RMB = guardia/parry. Ideal:
-     grabar 3–4 combos con cámara quieta (cierra la salvedad B15d
-     sobre la síncopa).
-  2. Con el feedback → **alcance 3 (2 enemigos con reacciones por
-     Equilibrio)**, absorbiendo el hallazgo B15d #2: reacción CORPORAL
-     de la bestia al golpe (hoy solo flash).
+- **B15e ✅ (2026-07-06 noche): playtest dirigido del kit Duelist
+  medido.** Veredicto del director: "los fundamentals existen, pero no
+  es ni de cerca la experiencia de Sifu" — y los números lo localizan
+  ([[Benchmark Biomecánico]] §B15e): 8 tintes rojos a pantalla completa
+  en 11.4 s de pelea (el evento visual MÁS grande del clip; wash ~50 %
+  del combate), jugador golpeado sin cambio de pose, bestia solo flash
+  (kit confirmado activo), patrón resultante = trade-fest (tanquear es
+  óptimo). Todo el feedback sigue siendo cromático; nada corporal ni
+  temporal. Salvedad B15d cerrada a medias: la síncopa del combo sigue
+  sin ser medible con ese encuadre + wash encima.
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (actualizado tras B15e):**
+  1. **Fix del tinte de daño ADELANTADO** (era nota del alcance 4; es
+     barato y es el mayor destructor de lectura medido): wash → vignette
+     de bordes, fuerte ≤0.2 s, cola ≤0.3 s, centro de pantalla nunca
+     >40 % alpha. Prerequisito práctico para volver a medir la síncopa.
+  2. **Alcance 3 (2 enemigos con reacciones por Equilibrio)** — ataca
+     directo el trade-fest: flinch del jugador al recibir (B15e #4),
+     reacción CORPORAL de la bestia (B15d #2/B15e #5), stagger/castigo.
   3. En cola para **alcance 4**: hit-stop 2f/3f + TimeFeel + sting de
-     parry + revisar el tinte de daño (B15d #3: >1 s de pantalla
-     completa tapa la lectura).
+     parry (B15e #1: 0 congelados re-medidos).
   4. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).
