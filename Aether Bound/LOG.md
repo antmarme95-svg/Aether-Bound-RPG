@@ -1,5 +1,22 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-06] feature | PRD-006 alcance 3 ✅ código: reacciones corporales + light/heavy
+Dos pasos en branch `feat/prd006-alcance3`. **Paso 1 (absorbe B15e):**
+la bestia resuelve el combate nuevo por `receive_strike()` → el
+GuardComponent decide (flinch/stagger/posture break) y el CUERPO lo
+anima (head snap inmediato, roll lateral, derrumbe con patas abiertas);
+FSM suspendida durante stagger/broken; ventana de castigo = daño ×1.5;
+`hit()` viejo intacto para los autotests históricos. El jugador acusa
+con `rig.play_flinch()`: head snap a 60 (nunca stepped, canon B15) +
+recoil de columna en el reloj de pose. **Paso 2:** `enemy_humanoid.gd` —
+el par del PRD sobre el MISMO CharacterRig y strike hip-first: light
+(raider_saber nuevo, masa 0.7, encadena, postura frágil) y heavy
+(heavy_maul, masa 1.8, torre, carga 0.8–1.0 s legible). Parry Roba →
+stun 2 s. QA: test_core + test_combat + autotest_slice + autotest_ui
+ALL_PASS; sondas `tmp_reactions.gd` y `tmp_duel_pair.gd` con capturas al
+midpoint. Pendiente: playtest del feel (Playtest Loop) y greybox de
+spawns (alcance 5).
+
 ## [2026-07-06] feature | Fix del tinte de daño ✅ (adelantado por B15e)
 El wash plano de daño (ColorRect full-rect alpha 0.55, decay único
 ~0.45 s en hud.gd) es ahora un vignette real de bordes: shader
