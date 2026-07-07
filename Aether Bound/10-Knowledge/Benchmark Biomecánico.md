@@ -455,6 +455,17 @@ síncopa quedan como pendientes de medición, no de implementación). La
 experiencia que falta contra Sifu es ahora claramente TEMPORAL
 (hit-stop/TimeFeel, alcance 4) + la presión enemiga de arriba.
 
+**Tuning aplicado (2026-07-07):** los 3 candidatos, medidos por sonda
+`tmp_pressure` en juego real (jugador inmortal y pineado, 8 s):
+recover del light 0.55→0.42 s, `chain_prob` data-driven (light 0.72,
+heavy 0.0 — respira), y **circle-strafe durante recover** (el cuerpo
+orbita al jugador en vez de congelarse). AS IS vs TO BE del hallazgo
+"YDIF plano": `recover_path` del light ≈0 → **3.55 m** en 2.11 s de
+recover (≈1.7 m/s), heavy **3.56 m** acechando lento; cadencia
+efectiva ≈1 golpe/2–3 s → light ~1/1.3 s + heavy ~1/1.6 s. El heavy
+sigue lento (su identidad) pero ahora ACECHA, no se planta. Pendiente:
+el juicio del director en el próximo clip (Playtest Loop).
+
 ## Fuentes
 
 - gamedeveloper.com — "Emotion in motion: expressive character animation"

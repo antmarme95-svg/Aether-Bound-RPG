@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-07] feature | PRD-006 tuning de presión enemiga (B15g)
+El par humanoide ya no se congela entre golpes — el otro asesino del
+feel medido en B15g ("YDIF plano / se lee pasivo"). En
+`enemy_humanoid.gd`, los 3 candidatos del benchmark: recover del light
+0.55→0.42 s; `chain_prob` data-driven (light 0.72 encadena, heavy 0.0
+respira — antes hardcodeado a `kind=="light"`); y **circle-strafe
+durante recover** (componente tangente + corrección radial al anillo
+de ataque; el sentido alterna al re-entrar para no leerse robótico).
+El heavy sigue lento (su identidad) pero ACECHA en vez de plantarse.
+Verificado por sonda `tmp_pressure` en juego real (jugador inmortal +
+pineado, 8 s): `recover_path` del light ≈0 → 3.55 m (≈1.7 m/s, calza
+con strafe_speed), heavy 3.56 m; loop de golpes vivo (light 6 / heavy
+5 strikes). QA: test_combat/test_core/autotest_slice ALL_PASS.
+Pendiente: playtest del director. Nota: la regresión de datos vive en
+la sonda windowed, no en test_combat headless — preload de un script
+que referencia el autoload EventBus rompe la compilación en `--script`
+(autoloads no registrados headless).
+
 ## [2026-07-07] feature | PRD-006 alcance 4: canales 1–3 de la Game Feel Bible como sistema
 La mitad temporal que faltaba contra Sifu (B15e #1). Autoload `Feel` +
 lógica pura `combat/time_feel.gd` (canal 1) y `combat/trauma_shake.gd`

@@ -34,6 +34,12 @@ updated: 2026-07-04
   vez; matar procesos `Godot*` huérfanos tras cada corrida.
 - **`test_core` headless no carga scripts de escena/main** — gatear cambios
   visuales también con `autotest_scenes` + `autotest_slice`.
+- **Headless `--script` NO registra autoloads como globals:** hacer
+  `preload()` de un script que referencia un singleton por nombre (ej.
+  `EventBus`, `Feel`) rompe la compilación en corridas `--headless
+  --script` (`Identifier not found: EventBus`). Las regresiones que
+  necesiten tocar esos scripts van en una sonda **windowed** (autoloads
+  vivos), no en `test_core`/`test_combat` headless.
 - **FPS relativo al estado térmico de la GPU** (RTX 2060 laptop: throttle
   warm ~58): tomar el número del gate en corrida fría.
 - **Método de review de movimiento:** montage harness
