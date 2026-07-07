@@ -19,6 +19,7 @@ var mark_multiplier: float = 1.0   # §B.1 — co-dependencia como dato
 # saliendo del slide pega más porque el cuerpo TRAE el peso).
 var source_mass: float = 1.0
 var source_speed: float = 0.0
+var weapon_mass: float = 1.0       # masa del ARMA (TimeFeel: 2f/3f por masa)
 
 func scaled_damage() -> float:
 	return damage * mark_multiplier

@@ -97,6 +97,7 @@ func consume_hit(speed: float, facing_dir: Vector3) -> RefCounted:
 	p.interrupt = bool(step.get("interrupt", false))
 	p.source_mass = body_mass
 	p.source_speed = speed
+	p.weapon_mass = float(weapon.get("mass", 1.0))
 	return p
 
 func _start_step(index: int) -> void:

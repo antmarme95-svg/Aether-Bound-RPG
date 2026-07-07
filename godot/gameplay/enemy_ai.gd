@@ -426,6 +426,7 @@ func update_ai(dt: float, controller: PlayerController, passives: Passives) -> v
 				p.balance_damage = LUNGE_BALANCE
 				p.force = lunge_dir * LUNGE_FORCE
 				p.source_mass = BEAST_MASS
+				p.weapon_mass = BEAST_MASS   # el lunge ES el cuerpo (TimeFeel)
 				var res: Dictionary = controller.receive_hit(p)
 				if String(res.get("reaction", "")) == "parried":
 					# Parry Roba: la bestia queda expuesta (~2 s, B15b) —

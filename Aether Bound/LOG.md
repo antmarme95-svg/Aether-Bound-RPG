@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-07] feature | PRD-006 alcance 4: canales 1–3 de la Game Feel Bible como sistema
+La mitad temporal que faltaba contra Sifu (B15e #1). Autoload `Feel` +
+lógica pura `combat/time_feel.gd` (canal 1) y `combat/trauma_shake.gd`
+(canal 2), reutilizables por PRD-007. Hit-stop 2f/3f GLOBAL por masa
+de arma (números medidos B15; ×1.5 golpe de muerte, 50% al recibir,
+cap 1 por 100 ms); parry Roba = clang 3f (B15b) + dilation 0.2×0.35 s
++ sting de dos notas sintetizado (E5→B5, placeholder hasta B8); shake
+trauma² Perlin con caps GFB (0.25 m / 2° / 0.6); canal 3 = combat
+framing (FOV +4°, lift 0.12 m, histéresis 2 s) + soft-aim cono 30°
+total. `HitPayload.weapon_mass` nuevo (el stop escala por ARMA, no por
+cuerpo; el lunge de la bestia usa masa corporal). QA: test_combat +22
+asserts, sonda en juego real `tmp_timefeel` (clang 3 f exactos,
+dilation 0.354 s, trauma, heat), test_core/autotest_slice/autotest_ui
+ALL_PASS, FPS 491/336. Lección dura: relojes reales del autoload en
+usec — sin vsync (~300–500 fps) el frame mide <1 ms y con msec el dt
+daba 0 (la dilation se quedaba pegada). Pendiente: playtest del
+director (feel) + tuning de presión enemiga (B15g).
+
 ## [2026-07-06] design | [[Benchmark Biomecánico]] RATIFICADO por el director
 Cierre de la decisión que dejó abierta el Lint Loop: el director
 ratifica el benchmark (v1 Sable/Hinterberg + v2 AAA + v3 mediciones

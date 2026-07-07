@@ -145,6 +145,40 @@ CREATION→WILDS (la arena es escena propia hasta la Fase 3).
   0.8–1.0 s de windup. Parry Roba contra ambos → desarme + stun 2 s
   (B15b). Spawn: solo vía sonda hasta el greybox (alcance 5).
 
+## Decisiones de implementación (alcance 4, 2026-07-07)
+
+- **Arquitectura reutilizable (para PRD-007):** lógica pura y testeable
+  en `combat/time_feel.gd` (canal 1) y `combat/trauma_shake.gd` (canal
+  2); el autoload `Feel` es la fachada que aplica `Engine.time_scale`
+  una vez por frame y expone el shake a la cámara del dueño.
+- **Los números MEDIDOS mandan:** hit-stop 2 f normal / 3 f pesado
+  (masa de arma ≥ 1.5), congelado GLOBAL — Benchmark §Consecuencias 1
+  reemplaza la tabla provisional en ms del GFB. Golpe de muerte ×1.5,
+  recibir daño al 50%, máx 1 stop por ventana de 100 ms (reglas GFB).
+- **Parry Roba = clang 3 f (B15b) → dilation 0.2×0.35 s + sting.** La
+  dilation ANULA cualquier hit-stop simultáneo (GFB canal 1). El sting
+  de dos notas (E5→B5, ascendente) se sintetiza al vuelo — placeholder
+  hasta B8 (sonido real).
+- **`HitPayload.weapon_mass` nuevo:** el hit-stop escala por masa del
+  ARMA, no del cuerpo (saber 0.7 = normal; maul 2.2 = pesado). El lunge
+  de la bestia usa su masa corporal (el lunge ES el cuerpo).
+- **Canal 2:** trauma² sobre Perlin (`FastNoiseLite`), decay 1.2/s,
+  caps 0.25 m / 2° / 0.6 gameplay; `add_scripted()` es el único camino
+  a 1.0 (la traición). El shake corre en el reloj del JUEGO: el freeze
+  congela el frame entero (B15).
+- **Canal 3:** combat framing = FOV +4° + lift 0.12 m con histéresis
+  2 s ("calor de combate" alimentado por swing y por recibir golpe);
+  soft-aim = cono de 30° TOTAL (±15°, canon literal — tunable en
+  playtest), alcance ×1.3, magnetiza el facing al arrancar el swing.
+- **Lección dura (→ [[Lecciones]]):** los relojes de tiempo real del
+  autoload van en **usec**, no msec — los autotests corren sin vsync
+  (~300–500 fps) y con frames < 1 ms el dt daba 0: la dilation del
+  parry se quedaba pegada.
+- QA: `test_combat` +22 asserts (frames exactos, caps, ventana,
+  dilation) ALL_PASS · sonda en juego real `tests/tmp_timefeel.gd`
+  (clang 3 f, dilation 0.354 s, trauma, heat) ALL_PASS ·
+  `test_core`/`autotest_slice`/`autotest_ui` ALL_PASS · FPS 491/336.
+
 ## Riesgos
 
 El rig restringido (alcance 0) es la apuesta grande del PRD: hacer anims

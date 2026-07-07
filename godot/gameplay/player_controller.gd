@@ -390,11 +390,45 @@ func duelist_attack() -> void:
 ## (slide/sprint), aunque la ley §B.5 frene el cuerpo durante el swing.
 var _swing_speed: float = 0.0
 
+# ---- Canal 3 (GFB): combat framing + soft-aim (sin lock-on duro) ----
+const COMBAT_FOV_BOOST: float = 4.0
+const COMBAT_HEAT_T: float = 2.0          # histéresis: vuelve solo al explorar
+const COMBAT_CAM_LIFT: float = 0.12       # la cámara "sube levemente"
+const SOFT_AIM_HALF_DEG: float = 15.0     # cono de 30° total (canon literal)
+const SOFT_AIM_RANGE_MULT: float = 1.3    # alcance del arma ×1.3
+var _combat_heat: float = 0.0
+var _combat_lift: float = 0.0
+
 func _on_duelist_swing_started() -> void:
 	_attack_pulse = 0.12
 	_swing_speed = move_speed_norm
+	_combat_heat = COMBAT_HEAT_T
+	_soft_aim()
 	var step: Dictionary = _WeaponD.combo_step(combat.weapon, combat.chain_index)
 	rig.play_strike(float(step.get("dur", 0.4)))
+
+## Soft-aim (GFB canal 3): el ataque magnetiza el facing hacia el enemigo
+## más cercano dentro del cono de 30° — asiste, no encierra (nada de
+## lock-on duro: pelearía contra la locomoción de momentum).
+func _soft_aim() -> void:
+	var fwd := Vector3(sin(facing), 0.0, cos(facing))
+	var cos_half: float = cos(deg_to_rad(SOFT_AIM_HALF_DEG))
+	var best_d: float = 2.6 * SOFT_AIM_RANGE_MULT
+	var best_to := Vector3.ZERO
+	for enemy in enemies:
+		if enemy.dead:
+			continue
+		var to: Vector3 = enemy.position - position
+		to.y = 0.0
+		var d: float = to.length()
+		if d < 0.001 or d > best_d:
+			continue
+		if to.normalized().dot(fwd) < cos_half:
+			continue
+		best_d = d
+		best_to = to
+	if best_to.length_squared() > 0.0001:
+		facing = atan2(best_to.x, best_to.z)
 
 ## Resolución del golpe en fase ACTIVE: momentum→daño es física corporal
 ## (masa × velocidad al conectar, §4.3) — move_speed_norm >1 saliendo del
@@ -408,6 +442,7 @@ func _duelist_try_hit() -> void:
 		return
 	var range_m: float = 2.6
 	var cos_arc: float = cos(110.0 * PI / 360.0)
+	var landed: bool = false
 	for enemy in enemies:
 		if enemy.dead:
 			continue
@@ -426,8 +461,22 @@ func _duelist_try_hit() -> void:
 			payload.damage *= stats.damage_mult
 			enemy.receive_strike(payload, self)
 			payload.damage /= stats.damage_mult   # restaurar para el resto del arco
+			landed = true
 		else:
 			enemy.hit(payload.scaled_damage() * stats.damage_mult, self)
+			landed = true
+	# Alcance 4 (GFB canal 1–2): el contacto congela el frame GLOBAL
+	# (2f/3f por masa de arma; ×1.5 si fue el último enemigo) y aporta
+	# trauma. Un solo request por swing aunque el arco pegue a varios.
+	if landed:
+		_combat_heat = COMBAT_HEAT_T
+		Feel.hit_landed(payload.weapon_mass, _all_enemies_down())
+
+func _all_enemies_down() -> bool:
+	for enemy in enemies:
+		if not enemy.dead and enemy.health > 0.0:
+			return false
+	return true
 
 ## Entrada de daño enemigo por el GuardComponent (bloqueo/parry/reacción).
 ## El atacante construye el payload; acá se resuelve y se aplica.
@@ -451,10 +500,14 @@ func receive_hit(payload: RefCounted) -> Dictionary:
 			"blocked":       rig.play_flinch(0.35)
 			"stagger":       rig.play_flinch(1.4)
 			"posture_break": rig.play_flinch(1.8)
+	# Alcance 4 (GFB canal 1): el parry paga con el freeze más gordo +
+	# dilation + sting; recibir daño congela al 50% del arma enemiga.
+	_combat_heat = COMBAT_HEAT_T
 	if String(res.get("reaction", "")) == "parried":
-		# Parry Roba (§B.4): feedback inmediato — el premio se siente
-		# (B15b: hit-stop 3f del clang llega con TimeFeel en alcance 4).
+		Feel.parry()
 		EventBus.emit_event("quest:toast", {"text": "¡Parry! Roba"})
+	else:
+		Feel.hit_received(payload.weapon_mass)
 	return res
 
 # ----------------------------------------------------------------
@@ -955,6 +1008,12 @@ func update(dt: float) -> void:
 	var lock_horiz:   bool   = lsm_out["lock_horizontal"]
 	_fov_target               = lsm_out["fov_target"]
 	if _ads_held: _fov_target = _ads_fov
+	# Canal 3 (GFB): combat framing — FOV +4° mientras hay calor de combate
+	# (histéresis 2 s); se SUMA al canal vivo, nunca lo reemplaza.
+	if _combat_heat > 0.0:
+		_combat_heat = maxf(0.0, _combat_heat - dt)
+		if not _ads_held:
+			_fov_target += COMBAT_FOV_BOOST
 	var jump_vel:     float  = lsm_out["jump_velocity"]
 	var launch_speed: float  = lsm_out.get("launch_speed", 0.0)
 
@@ -1143,7 +1202,10 @@ func _sync_camera(blend: float) -> void:
 		# We advance the timer in the update loop; here we compute the current dip from remaining time.
 		# Use a simple ramp-down: full dip at start, zero at end. Max dip ~0.12 m.
 		thump_offset = -0.12 * (_cam_thump / 0.18)
-	var target := position + Vector3(0.0, head_y + thump_offset, 0.0)
+	# Canal 3 (GFB): en combate la cámara sube levemente; vuelve sola con
+	# la histéresis del calor de combate.
+	_combat_lift = lerp(_combat_lift, COMBAT_CAM_LIFT if _combat_heat > 0.0 else 0.0, blend)
+	var target := position + Vector3(0.0, head_y + thump_offset + _combat_lift, 0.0)
 	var cp: float = cos(cam_pitch)
 	var sp: float = sin(cam_pitch)
 	# Camera-right vector perpendicular to yaw (horizontal plane).
@@ -1184,3 +1246,9 @@ func _sync_camera(blend: float) -> void:
 		if cam.position.y < floor_y:
 			cam.position.y = floor_y
 	cam.look_at(target + shoulder)
+	# Canal 2 (GFB): shake trauma² — offset Perlin + roll, aplicado DESPUÉS
+	# de posicionar/mirar para que el frame componga y luego tiemble.
+	var shake_off: Vector3 = Feel.shake_offset()
+	if shake_off.length_squared() > 0.0:
+		cam.position += shake_off
+		cam.rotation.z += Feel.shake_roll()

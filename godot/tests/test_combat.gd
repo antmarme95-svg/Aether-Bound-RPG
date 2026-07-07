@@ -10,6 +10,8 @@ const _GuardC   = preload("res://combat/guard_component.gd")
 const _EnergyC  = preload("res://combat/energy_component.gd")
 const _PushPull = preload("res://combat/push_pull_component.gd")
 const _Biomech  = preload("res://character/rig_biomech.gd")
+const _TimeFeel = preload("res://combat/time_feel.gd")
+const _Trauma   = preload("res://combat/trauma_shake.gd")
 
 const DT := 1.0 / 60.0
 
@@ -41,6 +43,8 @@ func _init() -> void:
 	_test_energy()
 	_test_push_pull()
 	_test_curve_shape()
+	_test_time_feel()
+	_test_trauma_shake()
 
 	print("")
 	if _fail_count == 0:
@@ -235,3 +239,79 @@ func _test_curve_shape() -> void:
 	# y termina en neutro
 	_check(absf(_Biomech.segment_offset(0.999, 0.0, coil, release)) < 0.05,
 		"Curvas: termina en neutro")
+
+# ------------------------------------------------------------------
+# PRD-006 alcance 4: TimeFeel (GFB canal 1, numeros B15/B15b medidos)
+func _test_time_feel() -> void:
+	var tf = _TimeFeel.new()
+	# golpe normal (blade 0.9): 2 f congelados, luego libera
+	_check(tf.request_hit_stop(0.9), "TimeFeel: hit-stop normal aceptado")
+	_check(tf.tick_frame(DT) == 0.0 and tf.tick_frame(DT) == 0.0,
+		"TimeFeel: 2 f congelados (golpe normal)")
+	_check(tf.tick_frame(DT) == 1.0, "TimeFeel: libera al frame 3")
+	# ventana de 100 ms: un segundo stop inmediato se rechaza
+	_check(not tf.request_hit_stop(0.9), "TimeFeel: cap 1 stop por 100 ms")
+	for i in range(6):
+		tf.tick_frame(DT)
+	_check(tf.request_hit_stop(0.9), "TimeFeel: ventana expira y acepta de nuevo")
+	# golpe pesado (maul 2.2): 3 f
+	var tf2 = _TimeFeel.new()
+	tf2.request_hit_stop(2.2)
+	var frozen := 0
+	while tf2.tick_frame(DT) == 0.0:
+		frozen += 1
+	_check(frozen == 3, "TimeFeel: 3 f congelados (golpe pesado)")
+	# golpe de muerte: x1.5 (2 f -> 3 f)
+	var tf3 = _TimeFeel.new()
+	tf3.request_hit_stop(0.9, true)
+	frozen = 0
+	while tf3.tick_frame(DT) == 0.0:
+		frozen += 1
+	_check(frozen == 3, "TimeFeel: golpe de muerte x1.5")
+	# recibir danio: 50% (normal -> 1 f; pesado -> 2 f)
+	var tf4 = _TimeFeel.new()
+	tf4.request_receive_stop(0.9)
+	_check(tf4.tick_frame(DT) == 0.0 and tf4.tick_frame(DT) == 1.0,
+		"TimeFeel: recibir normal = 1 f (50%)")
+	var tf5 = _TimeFeel.new()
+	tf5.request_receive_stop(2.2)
+	frozen = 0
+	while tf5.tick_frame(DT) == 0.0:
+		frozen += 1
+	_check(frozen == 2, "TimeFeel: recibir pesado = 2 f (50%)")
+	# parry: clang 3 f + dilation 0.2 x 0.35 s; anula hit-stops durante
+	var tf6 = _TimeFeel.new()
+	tf6.request_parry()
+	frozen = 0
+	while tf6.tick_frame(DT) == 0.0:
+		frozen += 1
+	_check(frozen == 3, "TimeFeel: parry = clang 3 f (B15b)")
+	var ts: float = tf6.tick_frame(DT)
+	_check(absf(ts - 0.2) < 0.001, "TimeFeel: dilation 0.2 tras el clang")
+	_check(not tf6.request_hit_stop(2.2), "TimeFeel: dilation anula hit-stop")
+	var t := 0.0
+	while tf6.tick_frame(DT) < 1.0 and t < 1.0:
+		t += DT
+	_check(t > 0.25 and t < 0.45, "TimeFeel: dilation dura ~0.35 s")
+
+# PRD-006 alcance 4: TraumaShake (GFB canal 2: trauma^2, caps, decay)
+func _test_trauma_shake() -> void:
+	var sh = _Trauma.new()
+	sh.add(0.3)
+	_check(absf(sh.trauma - 0.3) < 0.001, "Trauma: aporte suma")
+	_check(absf(sh.shake() - 0.09) < 0.001, "Trauma: shake = trauma^2")
+	sh.add(1.0)
+	_check(absf(sh.trauma - 0.6) < 0.001, "Trauma: cap 0.6 en gameplay")
+	sh.add_scripted(1.0)
+	_check(absf(sh.trauma - 1.0) < 0.001, "Trauma: beat scriptado llega a 1.0")
+	sh.tick(0.5)
+	_check(absf(sh.trauma - 0.4) < 0.001, "Trauma: decay 1.2/s")
+	var off: Vector3 = sh.offset()
+	_check(off.length() > 0.0, "Trauma: offset activo con trauma > 0")
+	_check(absf(off.x) <= 0.25 * sh.shake() + 0.001 and absf(off.y) <= 0.25 * sh.shake() + 0.001,
+		"Trauma: amplitud dentro del cap 0.25 m")
+	_check(absf(sh.roll()) <= deg_to_rad(2.0) * sh.shake() + 0.001,
+		"Trauma: roll dentro del cap 2 grados")
+	sh.tick(2.0)
+	_check(sh.trauma == 0.0 and sh.offset() == Vector3.ZERO,
+		"Trauma: en reposo no hay shake")
