@@ -61,12 +61,26 @@ updated: 2026-07-06
   Verificado con sonda visual `tests/tmp_vignette.gd` (frames t=0 /
   0.1 / 0.25 / 0.5 s) + `autotest_ui` y `autotest_slice` ALL_PASS.
   Con esto el próximo clip del director ya permite medir la síncopa.
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (actualizado tras B15e):**
-  1. **Alcance 3 (2 enemigos con reacciones por Equilibrio)** — ataca
-     directo el trade-fest: flinch del jugador al recibir (B15e #4),
-     reacción CORPORAL de la bestia (B15d #2/B15e #5), stagger/castigo.
-  2. En cola para **alcance 4**: hit-stop 2f/3f + TimeFeel + sting de
-     parry (B15e #1: 0 congelados re-medidos).
+- **PRD-006 alcance 3 ✅ CÓDIGO (2026-07-06 noche): reacciones
+  corporales + par light/heavy.** (a) La bestia tiene `receive_strike()`:
+  HitPayload → GuardComponent → flinch/stagger/posture break **animados
+  en el cuerpo** (head snap, roll lateral, derrumbe con patas abiertas),
+  FSM suspendida durante stagger/broken y ventana de castigo (daño
+  ×1.5). (b) El jugador acusa el golpe con `rig.play_flinch()` (head
+  snap a 60 fps + recoil de columna en el reloj de pose). (c)
+  `enemy_humanoid.gd`: light (saber rápido, postura frágil, encadena) y
+  heavy (maul, torre de Equilibrio, carga de 0.8–1.0 s) sobre el MISMO
+  CharacterRig con el strike hip-first — el telegraph es la biomecánica.
+  Parry Roba contra ellos → stun 2 s. QA: test_core/test_combat/
+  autotest_slice/autotest_ui ALL_PASS; sondas visuales `tmp_reactions` y
+  `tmp_duel_pair`. **Pendiente: playtest del director (feel).**
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
+  1. **Playtest del director del alcance 3** — mismo boot melee; ahora
+     los golpes se REGISTRAN en los cuerpos y hay par light/heavy
+     (spawn hoy solo vía sonda `tmp_duel_pair`; falta greybox/arena =
+     alcance 5).
+  2. **Alcance 4**: hit-stop 2f/3f + TimeFeel + sting de parry (B15e
+     #1: 0 congelados re-medidos).
   3. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).

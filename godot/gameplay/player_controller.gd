@@ -419,11 +419,15 @@ func _duelist_try_hit() -> void:
 		to = to.normalized()
 		if to.dot(fwd) < cos_arc and d > 0.7:
 			continue
-		enemy.hit(payload.scaled_damage() * stats.damage_mult, self)
-		# El VectorFuerza empuja vía PushPull de la bestia (reacciones
-		# completas por Equilibrio = alcance 3, con los 2 enemigos nuevos).
-		if enemy.get("push_pull") != null:
-			enemy.push_pull.apply_impulse(payload.force / enemy.BEAST_MASS)
+		# Alcance 3: el golpe viaja como HitPayload y lo resuelve el
+		# GuardComponent del enemigo (flinch/stagger/posture break CON
+		# cuerpo). El multiplicador de stats viaja en el payload.
+		if enemy.has_method("receive_strike"):
+			payload.damage *= stats.damage_mult
+			enemy.receive_strike(payload, self)
+			payload.damage /= stats.damage_mult   # restaurar para el resto del arco
+		else:
+			enemy.hit(payload.scaled_damage() * stats.damage_mult, self)
 
 ## Entrada de daño enemigo por el GuardComponent (bloqueo/parry/reacción).
 ## El atacante construye el payload; acá se resuelve y se aplica.
@@ -438,6 +442,15 @@ func receive_hit(payload: RefCounted) -> Dictionary:
 	var f: Vector3 = res.get("force", Vector3.ZERO)
 	if f.length_squared() > 0.0001 and push_pull != null:
 		push_pull.apply_impulse(f)
+	# Alcance 3 (B15e #4): el golpe se REGISTRA en el cuerpo — flinch del
+	# rig el mismo tick. El tinte de pantalla es acento, no el mensaje.
+	if rig != null and rig.has_method("play_flinch"):
+		match String(res.get("reaction", "")):
+			"hit":           rig.play_flinch(1.0)
+			"flinch":        rig.play_flinch(1.0)
+			"blocked":       rig.play_flinch(0.35)
+			"stagger":       rig.play_flinch(1.4)
+			"posture_break": rig.play_flinch(1.8)
 	if String(res.get("reaction", "")) == "parried":
 		# Parry Roba (§B.4): feedback inmediato — el premio se siente
 		# (B15b: hit-stop 3f del clang llega con TimeFeel en alcance 4).

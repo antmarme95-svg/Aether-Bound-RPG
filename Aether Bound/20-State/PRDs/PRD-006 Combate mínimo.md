@@ -123,6 +123,28 @@ CREATION→WILDS (la arena es escena propia hasta la Fase 3).
   (recover extendido, B15b). Reacciones completas por Equilibrio de los
   enemigos = alcance 3.
 
+## Decisiones de implementación (alcance 3, 2026-07-06)
+
+- **Entrada canónica de daño enemigo:** `receive_strike(payload, attacker)`
+  en todo enemigo — GuardComponent decide, el cuerpo anima. `hit()` del
+  prototipo queda intacto (proyectiles + autotests históricos).
+- **La reacción es CORPORAL y suspende la FSM:** stagger/broken congelan
+  la IA (el cuerpo está ocupado perdiendo el equilibrio); posture break
+  abre ventana de castigo con daño ×1.5 — reventar la torre paga.
+- **Bestia (cuadrúpedo):** pose de reacción procedural por partes (head
+  snap, roll lateral hacia el lado del impacto, derrumbe con patas
+  abiertas) con pico el MISMO tick y decay smoothstep (B15: reacción al
+  frame siguiente). El flash blanco queda como acento, ya no es el mensaje.
+- **Jugador:** `rig.play_flinch(amp)` — head snap corre a 60 SIEMPRE
+  (nunca stepped); el recoil de columna respira en el reloj de pose (2s).
+  Amps: 0.35 bloqueado · 1.0 limpio · 1.4 stagger · 1.8 break.
+- **Par light/heavy** (`enemy_humanoid.gd`): mismo CharacterRig y mismo
+  `play_strike` hip-first que el jugador — el telegraph ES la carga de
+  cadera. light: `raider_saber` (nuevo en weapons.json), masa 0.7,
+  encadena con prob. 0.6; heavy: `heavy_maul`, masa 1.8, single hit con
+  0.8–1.0 s de windup. Parry Roba contra ambos → desarme + stun 2 s
+  (B15b). Spawn: solo vía sonda hasta el greybox (alcance 5).
+
 ## Riesgos
 
 El rig restringido (alcance 0) es la apuesta grande del PRD: hacer anims
