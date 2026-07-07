@@ -55,6 +55,12 @@ updated: 2026-07-04
 - **A/B de percepción de animación: siempre con zoom de cámara** — a
   distancia default el chop/detalle de extremidades no se lee y parece
   que el toggle no hace nada.
+- **Relojes de tiempo real (autoloads de feel): `Time.get_ticks_usec()`,
+  nunca msec** — los autotests corren sin vsync (~300–500 fps); con
+  frames < 1 ms el dt en msec da 0 y el reloj no decae (la dilation del
+  parry se quedó pegada en 0.2×). Y al medir duraciones en sondas: los
+  freezes se cuentan en FRAMES, las duraciones en tiempo real — nunca
+  con `get_process_delta_time()` (durante un freeze delta = 0).
 
 ## Entorno
 
