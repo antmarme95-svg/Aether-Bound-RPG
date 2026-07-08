@@ -1,5 +1,22 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-07] feature | PRD-006 alcance 5: greybox + spawns parametrizables + autotest_combat — PRD-006 CERRADO
+Cierra PRD-006 y abre el Gate 1. Tres piezas nuevas: (1) `scenes/
+combat_arena.gd` — greybox blockout barato (suelo plano + anillo + postes)
+que implementa el contrato de escena completo; (2) `gameplay/spawn_spec.gd`
+— parser tolerante de la spec de spawns (`light,heavy`, `2light+1heavy`,
+`duelpair` alias, vacío→default); (3) `tests/autotest_combat.gd` — gate
+windowed permanente. Integración en `game_director.gd`: estado FSM `ARENA`
++ `--skip=arena` + helper `_spawn_humanoids` COMPARTIDO con WILDS (el
+`--spawn=duelpair` viejo se generalizó; back-compat verificado por
+`tmp_spawnflag`). El autotest verifica: spawn parametrizado (2 kinds),
+parry Roba→stun, kill loop del kit Duelist real (ambos muertos, 940
+frames) y FPS. **Greybox a 177 FPS → gate ≥60 holgado.** QA: test_core/
+slice/ui ALL_PASS. Lección dura nueva: golpear a un enemigo `dying`
+reinicia su timer de muerte (receive_strike vuelve a health<=0 y pone
+state_t=0) → en kill loops/AoE, dejar de pegar al entrar en dying. Falta
+solo el playtest del director del feel acumulado (alcances 4 + tuning).
+
 ## [2026-07-07] design | Ventana de C6 RATIFICADA: entre el Gate 1 y la Fase 2
 El director ratifica la ventana del rework anatómico (C6): tras cerrar
 PRD-006/007 y el Gate 1, junto al pase de poses C4 — una sola cirugía
