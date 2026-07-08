@@ -6,6 +6,9 @@ class_name GameDirector extends Node3D
 
 # PRD-006 alcance 3: par light/heavy para playtest (--spawn=duelpair)
 const _EnemyHumanoid = preload("res://gameplay/enemy_humanoid.gd")
+# PRD-006 alcance 5: greybox de combate + parser de spawns parametrizables.
+const _CombatArena = preload("res://scenes/combat_arena.gd")
+const _SpawnSpec   = preload("res://gameplay/spawn_spec.gd")
 
 # ---- child nodes ----
 var _cam: Camera3D
@@ -79,6 +82,7 @@ func _ready() -> void:
 	fsm.add("OFFICE",     _state_office())
 	fsm.add("CITY_EXIT",  _state_city_exit())
 	fsm.add("WILDS",      _state_wilds())
+	fsm.add("ARENA",      _state_arena())
 	fsm.add("CHOICE",     _state_choice())
 	fsm.add("FREE_ROAM",  _state_free_roam())
 
@@ -383,18 +387,12 @@ func _state_wilds() -> Dictionary:
 				wilds.add_child(beast)
 				enemies.append(beast)
 
-			# PRD-006 alcance 3: --spawn=duelpair mete el par light/heavy
-			# frente al jugador (playtest del director sin esperar el
-			# greybox del alcance 5).
-			if str(Debug.args.get("spawn", "")) == "duelpair":
-				var fwd := Vector3(sin(controller.facing), 0.0, cos(controller.facing))
-				var right := Vector3(cos(controller.facing), 0.0, -sin(controller.facing))
-				var light = _EnemyHumanoid.new("light", controller.position + fwd * 8.0 - right * 2.0, wilds)
-				var heavy = _EnemyHumanoid.new("heavy", controller.position + fwd * 8.0 + right * 2.0, wilds)
-				wilds.add_child(light)
-				wilds.add_child(heavy)
-				enemies.append(light)
-				enemies.append(heavy)
+			# PRD-006 alcance 5: --spawn mete enemigos parametrizables frente
+			# al jugador (spawn_spec.gd). Se suman a las bestias de ola A.
+			# Compat: --spawn=duelpair sigue dando el par light/heavy (alcance 3).
+			if Debug.args.has("spawn"):
+				enemies.append_array(
+					_spawn_humanoids(wilds, _SpawnSpec.parse(str(Debug.args["spawn"]))))
 			controller.enemies = enemies
 
 			# Quest
@@ -442,6 +440,82 @@ func _on_core_shattered() -> void:
 	else:
 		save.persist()
 		EventBus.emit_event("quest:toast", {"text": "The frontier is quiet — for now"})
+
+# ================================================================
+# ARENA — greybox de combate (PRD-006 alcance 5).
+# Banco de pruebas del kit contra spawns parametrizables (--spawn). Sin quest
+# ni cores: solo pelea. Boot: --skip=arena [--spawn=<spec>].
+# ================================================================
+func _state_arena() -> Dictionary:
+	return {
+		"enter": func(_ctx: Dictionary, _from: String, _payload: Dictionary) -> void:
+			_record_state("ARENA")
+			if creation_ui != null:
+				creation_ui.hide_panel()
+			var origin: Dictionary = save.get_origin()
+
+			# Sistemas del jugador (idempotente — igual que OFFICE).
+			if stats == null:
+				stats = Stats.new(save)
+			if passives == null:
+				passives = Passives.new(save, stats)
+			if controller == null:
+				controller = PlayerController.new()
+				add_child(controller)
+				controller.setup(rig, stats, passives, save, _cam)
+			if save.class_id != "":
+				rig.apply_archetype(save.class_id)
+
+			# Escena greybox.
+			var arena := _CombatArena.new(origin)
+			_set_scene(arena)
+			controller.enabled = true
+
+			# HUD (crosshair, sin quest markers).
+			hud.visible = true
+			hud.show_crosshair()
+			hud.set_passive(origin)
+			var theme: Dictionary = origin.get("theme", {})
+			var accent_hex: String = theme.get("accent", "#46e6ff")
+			hud.set_accent_color(Color(accent_hex))
+			quest_ui.set_accent_color(Color(accent_hex))
+
+			# Spawns parametrizables (default light+heavy si no hay --spawn).
+			enemies = _spawn_humanoids(arena, _SpawnSpec.parse(str(Debug.args.get("spawn", ""))))
+			controller.enemies = enemies
+			EventBus.emit_event("quest:toast", {"text": "Greybox — %d hostiles" % enemies.size()}),
+
+		"update": func(_ctx: Dictionary, dt: float) -> void:
+			_gameplay_update(dt),
+
+		"exit": func(_ctx: Dictionary, _to: String) -> void:
+			hud.hide_prompt(),
+	}
+
+## _spawn_humanoids — instancia una lista de kinds en un arco frente al
+## jugador (PRD-006 alcance 5). Reutilizado por WILDS (--spawn) y ARENA.
+## Devuelve el Array de nodos creados (el caller los añade a `enemies`).
+func _spawn_humanoids(scene: Node3D, kinds: Array) -> Array:
+	var out: Array = []
+	if controller == null or kinds.is_empty():
+		return out
+	var fwd := Vector3(sin(controller.facing), 0.0, cos(controller.facing))
+	var right := Vector3(cos(controller.facing), 0.0, -sin(controller.facing))
+	var n: int = kinds.size()
+	for i in range(n):
+		var lateral: float = (float(i) - float(n - 1) * 0.5) * 2.4
+		var base: Vector3 = controller.position + fwd * 8.0 + right * lateral
+		var gy: float = scene.get_height(base.x, base.z) if scene.has_method("get_height") else 0.0
+		var pos := Vector3(base.x, gy, base.z)
+		var kind: String = String(kinds[i])
+		var e
+		if kind == "beast":
+			e = MaddenedBeast.new(pos, scene)
+		else:
+			e = _EnemyHumanoid.new(kind, pos, scene)
+		scene.add_child(e)
+		out.append(e)
+	return out
 
 # ================================================================
 # CHOICE
@@ -756,7 +830,7 @@ func _apply_skip_arg() -> void:
 	if not args.has("skip"):
 		return
 	var skip: String = str(args["skip"])
-	if skip != "office" and skip != "exit" and skip != "wilds":
+	if skip != "office" and skip != "exit" and skip != "wilds" and skip != "arena":
 		return
 	if fsm.current_id != "OFFICE":
 		fsm.go("OFFICE")
@@ -764,6 +838,8 @@ func _apply_skip_arg() -> void:
 		fsm.go("CITY_EXIT")
 	elif skip == "wilds":
 		fsm.go("WILDS")
+	elif skip == "arena":
+		fsm.go("ARENA")
 
 func _record_state(id: String) -> void:
 	if not fsm_states_visited.has(id):

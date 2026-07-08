@@ -110,6 +110,23 @@ updated: 2026-07-07
   `recover_path` del light ≈0 → 3.55 m, heavy 3.56 m; loop de golpes
   vivo (light 6 / heavy 5 strikes en 8 s). **Pendiente: playtest del
   director.**
+- **PRD-006 alcance 5 ✅ CÓDIGO (2026-07-07): greybox + spawns
+  parametrizables + `autotest_combat.gd` — CIERRA PRD-006 y abre el
+  Gate 1.** Escena nueva `scenes/combat_arena.gd`: blockout barato (suelo
+  plano + anillo de límite + postes de parallax) que implementa el
+  contrato de escena completo (`get_height`/`clamp_position`/`get_bounds`/
+  `player_spawn`/...). Parser `gameplay/spawn_spec.gd`: spec tolerante
+  (`light,heavy`, `2light+1heavy`, `duelpair` alias, vacío→default).
+  Estado FSM `ARENA` + `--skip=arena`; helper `_spawn_humanoids`
+  COMPARTIDO con WILDS — el `--spawn=duelpair` viejo se generalizó (back-
+  compat verificado por `tmp_spawnflag`). `tests/autotest_combat.gd`
+  (windowed): verifica spawn parametrizado (2 kinds), parry Roba→stun,
+  kill loop del kit Duelist real (ambos muertos en 940 frames) y muestra
+  FPS. **FPS del greybox 177 → gate ≥60 holgado** (escena trivial;
+  captura `test_out/combat_arena.png`). QA: test_core/slice/ui ALL_PASS,
+  `tmp_spawnflag` PASS. Lección nueva: golpear a un enemigo `dying`
+  reinicia su timer de muerte (dejar de pegarle al entrar en dying).
+  **Pendiente: playtest del director del feel (alcances 4 + tuning).**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -136,8 +153,13 @@ updated: 2026-07-07
   al pase de poses C4** (cláusula de escape: se adelanta a PRD-007 si en
   el Gate 1 los cuerpos impiden juzgar el feel).
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  1. **Alcance 5 (Feature Loop):** greybox con spawns parametrizables
-     + `autotest_combat.gd` — cierra PRD-006 y abre el Gate 1.
+  0. **PRD-006 CERRADO ✅** (alcances 0–5 en código). Falta solo el
+     **playtest del director** del feel acumulado (alcances 4 + tuning de
+     presión) — el greybox (`--skip=arena --spawn=<spec>`) es el banco
+     ideal para grabar el clip: cámara quieta, spawns controlados.
+  1. **Abrir PRD-007 (Dagna + Seismic Springboard T1):** el aliado
+     jugable junto al que se pelea en el greybox. Gate 1 = pelear junto
+     a Dagna en greybox ≥60 FPS (el greybox y su FPS ya están listos).
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -148,7 +170,8 @@ updated: 2026-07-07
   3. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).
-- **PRD-006 en curso** (Feature Loop; alcances 0 y 1 mergeados a master):
+- **PRD-006 CERRADO ✅ en código** (Feature Loop; alcances 0–5). Falta
+  solo el playtest del director del feel:
   - **Alcance 0 ✅** rig restringido (ROM + constraints) + strike
     hip-first, movilidad aprobada.
   - **Alcance 1 ✅** (2026-07-06): `godot/combat/` — CombatComponent /
@@ -162,9 +185,10 @@ updated: 2026-07-07
     melee vivo anima `play_strike` (fix: antes solo lo veían los
     autotests). Boot de prueba melee:
     `--origin=ironblooded --cls=warrior --skip=wilds`.
-  - Después del alcance 4 (✅ código): alcance 5 (greybox +
-    autotest_combat) → PRD-007 (Dagna + Springboard T1). Gate 1:
-    pelear junto a Dagna en greybox ≥60 FPS.
+  - **Alcance 5 ✅ código** (2026-07-07): greybox `combat_arena.gd` +
+    spawns parametrizables (`spawn_spec.gd`) + `autotest_combat.gd`.
+    Siguiente hito: PRD-007 (Dagna + Springboard T1). Gate 1: pelear
+    junto a Dagna en el greybox ≥60 FPS (greybox ya a 177 FPS).
 - **Animación — canon fijado por A/B (2026-07-06, 3 rondas):** stepping
   EN 2s (12 Hz) SOLO en extremidades; cuerpo/raíz suaves a 60. Body pop
   descartado (mecanismo queda tras `body_pop_on_twos` OFF). Tecla T
@@ -174,11 +198,12 @@ updated: 2026-07-07
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
-- **Branch actual:** `master` (todo mergeado; último PR: Dagna gráfica /
-  pipeline de personajes vía merge local `--no-ff`). Sondas temporales
-  `tests/tmp_*.gd` (step, vignette, reactions, duel_pair, spawnflag,
-  timefeel, pressure, dagna) quedan hasta cerrar PRD-006 / validar el
-  pipeline de personajes con el director.
+- **Branch actual:** `master` (último PR local `--no-ff`: PRD-006
+  alcance 5 — greybox + spawns parametrizables + autotest_combat).
+  `autotest_combat.gd` es ahora un gate permanente (no una sonda temporal).
+  Sondas temporales `tests/tmp_*.gd` (step, vignette, reactions,
+  duel_pair, spawnflag, timefeel, pressure, dagna) quedan hasta el
+  playtest del director / validar el pipeline de personajes.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

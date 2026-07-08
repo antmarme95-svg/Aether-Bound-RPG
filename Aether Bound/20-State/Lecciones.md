@@ -61,6 +61,19 @@ updated: 2026-07-04
 - **A/B de percepción de animación: siempre con zoom de cámara** — a
   distancia default el chop/detalle de extremidades no se lee y parece
   que el toggle no hace nada.
+- **Golpear a un enemigo en estado `dying` reinicia su timer de muerte.**
+  `receive_strike` vuelve a la rama `health<=0` y pone `state="dying"; state_t=0`
+  en CADA golpe, así que un test/AoE que martillea el cadáver lo deja
+  agonizando eterno (`dead` nunca flipa a los 0.8 s). En loops de kill
+  automatizados y en AoE: dejar de aplicar daño cuando el objetivo ya está
+  `dying` (no solo cuando `dead`). Diagnóstico típico: el enemigo llega a
+  0 HP rapidísimo pero el loop consume TODO el presupuesto de frames.
+- **FPS dentro de un autotest windowed miente:** el contador es una media
+  rodante de 1 s que absorbe el ritmo del propio polling `await
+  process_frame` y cualquier thrash del test (ej. martillear cadáveres). Un
+  greybox trivial marcó 43–57 durante el bug y 177–196 ya limpio. El gate
+  real ≥60 se lee en corrida FRÍA representativa; dentro del autotest usar
+  solo un piso CATASTRÓFICO (regresión total), nunca el número del gate.
 - **Relojes de tiempo real (autoloads de feel): `Time.get_ticks_usec()`,
   nunca msec** — los autotests corren sin vsync (~300–500 fps); con
   frames < 1 ms el dt en msec da 0 y el reloj no decae (la dilation del
