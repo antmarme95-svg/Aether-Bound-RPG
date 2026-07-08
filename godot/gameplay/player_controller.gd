@@ -360,6 +360,10 @@ func _set_guard(on: bool) -> void:
 	if _guard_held == on:
 		return
 	_guard_held = on
+	# El cuerpo ahora COMUNICA la guardia: pose de bloqueo sostenida (feedback
+	# del director 2026-07-08 — antes la guardia era invisible).
+	if rig != null and rig.has_method("set_guard"):
+		rig.set_guard(on)
 	if guard == null:
 		return
 	if on:
@@ -485,9 +489,14 @@ func receive_hit(payload: RefCounted) -> Dictionary:
 	if guard == null:
 		return { "reaction": "hit", "damage": 0.0 }
 	var res: Dictionary = guard.receive(payload)
+	var reaction: String = String(res.get("reaction", ""))
+	var blocked: bool = reaction == "blocked"
 	var dmg: float = float(res.get("damage", 0.0))
 	if dmg > 0.0:
-		stats.take_damage(dmg)
+		# `blocked` viaja al HUD: golpe bloqueado = destello acero, no rojo.
+		stats.take_damage(dmg, true, blocked)
+	if blocked:
+		_spawn_guard_spark()
 	var f: Vector3 = res.get("force", Vector3.ZERO)
 	if f.length_squared() > 0.0001 and push_pull != null:
 		push_pull.apply_impulse(f)
@@ -876,6 +885,57 @@ func _spawn_impact_spark(hit_pos: Vector3) -> void:
 	# Auto-free after one-shot emission completes (lifetime + small buffer)
 	var t := Timer.new()
 	t.wait_time = 0.55
+	t.one_shot  = true
+	t.autostart = true
+	sparks.add_child(t)
+	t.timeout.connect(func() -> void:
+		if is_instance_valid(sparks) and sparks.get_parent() != null:
+			sparks.get_parent().remove_child(sparks)
+			sparks.queue_free()
+	)
+
+# _spawn_guard_spark — feedback del director (2026-07-08): un golpe BLOQUEADO
+# suelta un destello de acero corto al frente del pecho (deflexión). Cheap:
+# GPUParticles3D one-shot auto-liberado (~0.3 s), color acero.
+func _spawn_guard_spark() -> void:
+	if scene == null:
+		return
+	var fwd := Vector3(sin(facing), 0.0, cos(facing))
+	var pos := position + Vector3(0.0, 1.25, 0.0) + fwd * 0.55
+	var sparks := GPUParticles3D.new()
+	sparks.emitting      = true
+	sparks.amount        = 10
+	sparks.lifetime      = 0.22
+	sparks.explosiveness = 0.95
+	sparks.randomness    = 0.5
+	sparks.one_shot      = true
+	sparks.local_coords  = false
+	sparks.position      = pos
+	var pm := ParticleProcessMaterial.new()
+	pm.direction            = fwd
+	pm.spread               = 70.0
+	pm.initial_velocity_min = 1.8
+	pm.initial_velocity_max = 4.2
+	pm.gravity              = Vector3(0.0, -6.0, 0.0)
+	pm.scale_min            = 0.03
+	pm.scale_max            = 0.08
+	var grad := Gradient.new()
+	grad.set_color(0, Color(0.85, 0.92, 1.0, 1.0))    # acero brillante
+	grad.set_color(1, Color(0.6, 0.72, 0.9, 0.0))     # se apaga
+	var gtex := GradientTexture1D.new()
+	gtex.gradient = grad
+	pm.color_ramp = gtex
+	sparks.process_material = pm
+	var sm := SphereMesh.new()
+	sm.radius = 0.04
+	sm.height = 0.08
+	var smat := ToonMaterials.glow_mat(Color("#c8dcf0"), 2.4)
+	smat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	sm.surface_set_material(0, smat)
+	sparks.draw_pass_1 = sm
+	scene.add_child(sparks)
+	var t := Timer.new()
+	t.wait_time = 0.5
 	t.one_shot  = true
 	t.autostart = true
 	sparks.add_child(t)

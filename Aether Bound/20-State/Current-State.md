@@ -127,6 +127,24 @@ updated: 2026-07-07
   `tmp_spawnflag` PASS. Lección nueva: golpear a un enemigo `dying`
   reinicia su timer de muerte (dejar de pegarle al entrar en dying).
   **Pendiente: playtest del director del feel (alcances 4 + tuning).**
+- **Playtest del director (clip 2026-07-08) → feedback del kit defensivo.**
+  Notas: (1) RMB mantener no generaba guardia — sin pose ni cambio de
+  feedback (el rojo salía igual al bloquear); (2) LMB/RMB-tap funcionan
+  pero poco evidentes del lado del jugador (sobre todo el parry); (3) el
+  "status gráfico" del enemigo no le encanta (→ tarea de arte aparte).
+- **Capa 1 del fix ✅ CÓDIGO (2026-07-08): la guardia gana cuerpo +
+  feedback propio.** (a) Rig: `set_guard(bool)` = pose de bloqueo
+  sostenida (antebrazos cruzados al frente + arma arriba + brace),
+  blend in/out, compone sobre el gait y bajo el strike; el flinch acusa
+  el golpe SIN bajar la guardia. Dentro de ROM (constraint_report vacío).
+  (b) Feedback: un golpe BLOQUEADO deja de pintar el vignette rojo —
+  ahora destello ACERO (`COL_BLOCK`) + chispa de deflexión en el arma
+  (`_spawn_guard_spark`); el rojo queda SOLO para daño limpio. Wiring:
+  `stats.take_damage(..., blocked)` → payload al HUD; `_set_guard` llama
+  `rig.set_guard`. Sonda visual `tests/tmp_guard.gd` (neutral/guardia/
+  3-4/flinch). QA: test_core/combat/slice/ui ALL_PASS. **Pendiente:
+  visto bueno del director en vivo (`Start-Playtest-Greybox.bat`) antes
+  de la Capa 2 (tell del parry) y Capa 3 (legibilidad del swing).**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -198,12 +216,13 @@ updated: 2026-07-07
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
-- **Branch actual:** `master` (último PR local `--no-ff`: PRD-006
-  alcance 5 — greybox + spawns parametrizables + autotest_combat).
-  `autotest_combat.gd` es ahora un gate permanente (no una sonda temporal).
+- **Branch actual:** `master` (último PR local `--no-ff`: Capa 1 del fix
+  de feedback del kit defensivo — guardia con cuerpo + bloqueo acero).
+  `autotest_combat.gd` es un gate permanente. Lanzador de doble clic para
+  el playtest en el greybox: `Start-Playtest-Greybox.bat` (raíz).
   Sondas temporales `tests/tmp_*.gd` (step, vignette, reactions,
-  duel_pair, spawnflag, timefeel, pressure, dagna) quedan hasta el
-  playtest del director / validar el pipeline de personajes.
+  duel_pair, spawnflag, timefeel, pressure, dagna, guard) quedan hasta el
+  visto bueno del director / validar el pipeline de personajes.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);
