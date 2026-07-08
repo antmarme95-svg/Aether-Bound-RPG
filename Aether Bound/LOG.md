@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] feature | PRD-007 alcance 0 — Dagna aliada spawnea y sigue
+Primer alcance del PRD-007. `gameplay/ally_dagna.gd`: Dagna montada por el
+pipeline de personajes (`apply_to_rig("dagna")`) sobre los 4 componentes
+canónicos (kit Vanguard neutro por ahora), SIGUE un slot al hombro izquierdo
+del jugador (la cámara vive en el derecho — lección nueva), con ground-snap
+y gait procedural. Boot flag `--ally=dagna`: spawn en ARENA, array `allies`
+separado de `enemies`, update en `_gameplay_update`. Sonda `tests/tmp_ally.gd`
+(spawn + follow: 22 m recorridos, dist acotada ~2.6 m + captura
+`ally_dagna_follow.png` — Dagna legible). QA: test_core/combat/slice/ui
+ALL_PASS (el código de aliada solo se activa con el flag). Sin combate aún.
+Siguiente: alcance 1 (ground-pound → zona de onda PushPull + VFX teal).
+
 ## [2026-07-08] design | PRD-007 RATIFICADO — Dagna aliada + Seismic Springboard T1
 Design Loop del siguiente hito (rumbo al Gate 1). Nuevo spec
 [[PRD-007 Dagna aliada + Seismic Springboard T1]] (`20-State/PRDs/`).

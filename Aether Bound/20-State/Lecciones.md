@@ -68,6 +68,11 @@ updated: 2026-07-08
   automatizados y en AoE: dejar de aplicar daño cuando el objetivo ya está
   `dying` (no solo cuando `dead`). Diagnóstico típico: el enemigo llega a
   0 HP rapidísimo pero el loop consume TODO el presupuesto de frames.
+- **El slot de un NPC seguidor debe esquivar la cámara over-the-shoulder.**
+  La cámara vive sobre el hombro DERECHO (`CAM_SHOULDER` +). Un aliado
+  plantado detrás-derecha del jugador queda pegado/clippeado contra el
+  lente. Colocarlo al hombro IZQUIERDO (y más al lado que atrás) para que
+  se lea en pantalla sin estorbar la cámara.
 - **Loops de autotest acotados por FRAMES son dependientes del FPS.** La
   IA/combate corren en `dt` real; un `while frames < N` da tiempo real
   distinto según el FPS (a 900 fps, 1800 frames = 2 s → el heavy no
