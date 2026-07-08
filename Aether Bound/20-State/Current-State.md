@@ -141,10 +141,21 @@ updated: 2026-07-07
   ahora destello ACERO (`COL_BLOCK`) + chispa de deflexión en el arma
   (`_spawn_guard_spark`); el rojo queda SOLO para daño limpio. Wiring:
   `stats.take_damage(..., blocked)` → payload al HUD; `_set_guard` llama
-  `rig.set_guard`. Sonda visual `tests/tmp_guard.gd` (neutral/guardia/
-  3-4/flinch). QA: test_core/combat/slice/ui ALL_PASS. **Pendiente:
-  visto bueno del director en vivo (`Start-Playtest-Greybox.bat`) antes
-  de la Capa 2 (tell del parry) y Capa 3 (legibilidad del swing).**
+  `rig.set_guard`. Sonda visual `tests/tmp_guard.gd`. **Director aprobó
+  ("mejoró mucho", 2026-07-08).**
+- **Capa 2 del fix ✅ CÓDIGO (2026-07-08): el parry se ve del lado del
+  jugador.** El parry Roba solo se leía por el stun del enemigo. Ahora:
+  (a) Rig `play_parry()` = deflexión seca de TODO el cuerpo (arma batea
+  arriba-afuera + off-arm en contrapeso + giro de torso lumbar/torácico
+  + cabeza al acero robado), riposte ~0.3 s sobre la guardia, ROM limpio.
+  (b) VFX `_spawn_parry_flash()` = pop emisivo cian + burst de chispas
+  cian→oro al frente del arma (más brillante que el destello de bloqueo).
+  Wiring en `receive_hit` (reacción `parried`). Verificado: pose legible
+  en sonda (`guard_parry.png`), parry real end-to-end en autotest_combat.
+  QA: test_core/combat/slice/ui ALL_PASS. **Fix de test:** el kill loop
+  de autotest_combat se acotó por TIEMPO REAL (era por frames → falla a
+  FPS alto). **Pendiente: Capa 3 (legibilidad del swing LMB) + visto
+  bueno del director del parry en vivo.**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`

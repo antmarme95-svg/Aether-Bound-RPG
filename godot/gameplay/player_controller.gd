@@ -512,8 +512,14 @@ func receive_hit(payload: RefCounted) -> Dictionary:
 	# Alcance 4 (GFB canal 1): el parry paga con el freeze más gordo +
 	# dilation + sting; recibir daño congela al 50% del arma enemiga.
 	_combat_heat = COMBAT_HEAT_T
-	if String(res.get("reaction", "")) == "parried":
+	if reaction == "parried":
 		Feel.parry()
+		# Capa 2 (feedback del director 2026-07-08): el parry ahora se VE del
+		# lado del jugador — deflexión seca del arma + flash de robo. Antes
+		# solo se leía por el stun del enemigo.
+		if rig != null and rig.has_method("play_parry"):
+			rig.play_parry()
+		_spawn_parry_flash()
 		EventBus.emit_event("quest:toast", {"text": "¡Parry! Roba"})
 	else:
 		Feel.hit_received(payload.weapon_mass)
@@ -936,6 +942,80 @@ func _spawn_guard_spark() -> void:
 	scene.add_child(sparks)
 	var t := Timer.new()
 	t.wait_time = 0.5
+	t.one_shot  = true
+	t.autostart = true
+	sparks.add_child(t)
+	t.timeout.connect(func() -> void:
+		if is_instance_valid(sparks) and sparks.get_parent() != null:
+			sparks.get_parent().remove_child(sparks)
+			sparks.queue_free()
+	)
+
+# _spawn_parry_flash — Capa 2 (feedback del director): el parry Roba es el
+# evento más brillante del intercambio. Un POP emisivo cian-oro + burst de
+# chispas al frente del arma (más grande/brillante que el destello de bloqueo).
+# Cheap: pop auto-liberado (~0.12 s) + GPUParticles one-shot (~0.4 s).
+func _spawn_parry_flash() -> void:
+	if scene == null:
+		return
+	var fwd := Vector3(sin(facing), 0.0, cos(facing))
+	var pos := position + Vector3(0.0, 1.3, 0.0) + fwd * 0.75
+
+	# (A) Pop emisivo brillante — el "clang" del robo.
+	var pop := MeshInstance3D.new()
+	var psm := SphereMesh.new()
+	psm.radius = 0.22
+	psm.height = 0.44
+	pop.mesh = psm
+	pop.material_override = ToonMaterials.glow_mat(Color("#8ff0ff"), 4.0)
+	pop.position = pos
+	scene.add_child(pop)
+	var pt := Timer.new()
+	pt.wait_time = 0.12
+	pt.one_shot  = true
+	pt.autostart = true
+	pop.add_child(pt)
+	pt.timeout.connect(func() -> void:
+		if is_instance_valid(pop) and pop.get_parent() != null:
+			pop.get_parent().remove_child(pop)
+			pop.queue_free()
+	)
+
+	# (B) Burst de chispas cian-oro que salen hacia afuera (el golpe robado).
+	var sparks := GPUParticles3D.new()
+	sparks.emitting      = true
+	sparks.amount        = 18
+	sparks.lifetime      = 0.30
+	sparks.explosiveness = 1.0
+	sparks.randomness    = 0.6
+	sparks.one_shot      = true
+	sparks.local_coords  = false
+	sparks.position      = pos
+	var pm := ParticleProcessMaterial.new()
+	pm.direction            = fwd
+	pm.spread               = 95.0
+	pm.initial_velocity_min = 3.0
+	pm.initial_velocity_max = 6.5
+	pm.gravity              = Vector3(0.0, -5.0, 0.0)
+	pm.scale_min            = 0.04
+	pm.scale_max            = 0.10
+	var grad := Gradient.new()
+	grad.set_color(0, Color(0.6, 0.98, 1.0, 1.0))   # cian brillante
+	grad.set_color(1, Color(1.0, 0.85, 0.4, 0.0))   # se apaga a oro
+	var gtex := GradientTexture1D.new()
+	gtex.gradient = grad
+	pm.color_ramp = gtex
+	sparks.process_material = pm
+	var sm := SphereMesh.new()
+	sm.radius = 0.05
+	sm.height = 0.10
+	var smat := ToonMaterials.glow_mat(Color("#aef2ff"), 3.0)
+	smat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	sm.surface_set_material(0, smat)
+	sparks.draw_pass_1 = sm
+	scene.add_child(sparks)
+	var t := Timer.new()
+	t.wait_time = 0.55
 	t.one_shot  = true
 	t.autostart = true
 	sparks.add_child(t)

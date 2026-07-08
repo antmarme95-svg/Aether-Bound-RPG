@@ -1613,6 +1613,19 @@ var _guard_blend: float = 0.0
 func set_guard(active: bool) -> void:
 	_guard_hold = active
 
+# ================================================================
+# PRD-006 (feedback del director 2026-07-08) — Capa 2: tell del PARRY.
+# El parry Roba se veía solo del lado del enemigo (stun). `play_parry()` da
+# al JUGADOR una deflexión seca: el arma batea el golpe hacia afuera y recula
+# a la guardia (riposte ~0.3 s, B15b). Corre SOBRE la pose de guardia.
+# ================================================================
+var _parry_t: float = 0.0
+var _parry_dur: float = 0.30
+
+func play_parry(dur: float = 0.30) -> void:
+	_parry_dur = maxf(dur, 0.12)
+	_parry_t = _parry_dur
+
 ## Constraint report accessors (QA: autotest_biomech asserts on these).
 func constraint_report() -> Dictionary:
 	return _constraint_report
@@ -1687,6 +1700,11 @@ func _process(delta: float) -> void:
 		head.rotation.x = -0.40 * fenv * _flinch_amp
 		if _flinch_t <= 0.0:
 			head.rotation.x = 0.0
+
+	# ---- Parry clock (Capa 2): continuo a 60 como el strike; la POSE se
+	# aplica abajo (en la región de pose, sampleada en 2s). ----
+	if _parry_t > 0.0:
+		_parry_t -= delta
 
 	# ---- Pose stepping "on 2s" ([[Benchmark Biomecánico]]: Sable/Xrd) ----
 	# The pose below only re-evaluates every POSE_STEP (~12 Hz) and HOLDS
@@ -1973,6 +1991,30 @@ func _process(delta: float) -> void:
 		e1g.rotation.x = lerp(e1g.rotation.x, -1.35, gb)
 		# Brace: leve hunch adelante (aditivo, blended) — el cuerpo se cierra.
 		spine.rotation.x += 0.14 * gb
+
+	# ── PARRY deflect flick (Capa 2) ── El arma BATEA el golpe hacia afuera y
+	# recula a la guardia. Sobrescribe el brazo del arma mientras dura (~0.3 s);
+	# corre encima de la guardia (el parry sucede guardando). ROM-safe: el
+	# elbow sale a -0.55 (extiende), lejos del tope; arm.z a +0.30 (afuera).
+	if _parry_t > 0.0 and arms.size() >= 2:
+		var pe: float = clampf(_parry_t / _parry_dur, 0.0, 1.0)
+		var s: float = pe * pe * (3.0 - 2.0 * pe)   # smootherstep: snap fuerte al inicio
+		var e1p: Node3D = arms[1].get_meta("elbow")
+		var e0p: Node3D = arms[0].get_meta("elbow")
+		# Brazo del arma: batea hacia AFUERA y arriba, extendiendo (deflexión).
+		arms[1].rotation.x = lerp(arms[1].rotation.x, -1.05, s)
+		arms[1].rotation.z = lerp(arms[1].rotation.z,  0.40, s)
+		e1p.rotation.x     = lerp(e1p.rotation.x,     -0.50, s)
+		# Off-arm: contrapeso hacia adentro/atrás — el cuerpo se abre al robar.
+		arms[0].rotation.x = lerp(arms[0].rotation.x,  0.25, s)
+		arms[0].rotation.z = lerp(arms[0].rotation.z, -0.15, s)
+		e0p.rotation.x     = lerp(e0p.rotation.x,     -0.95, s)
+		# Giro de TORSO al golpe: el cuerpo entero batea, no solo el brazo — es
+		# lo que hace legible el parry (feedback del director). Lumbar + torácico.
+		spine.rotation.y       += -0.22 * s
+		upper_spine.rotation.y += -0.16 * s
+		# La cabeza gira al acero robado (contra el giro del torso, ojos en el golpe).
+		head.rotation.y = lerp(head.rotation.y, 0.18, s)
 
 	# Idle breathe (JS: torso.scale.y = 1 + sin(t*2.1)*0.012)
 	torso.scale.y = 1.0 + sin(_t * 2.1) * 0.012
