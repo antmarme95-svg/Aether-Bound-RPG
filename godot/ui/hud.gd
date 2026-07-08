@@ -10,6 +10,7 @@ const COL_INK_DIM   := Color(0.918, 0.965, 1.0, 0.5)
 const COL_PANEL     := Color(0.039, 0.063, 0.086, 0.88)
 const COL_HEALTH_HI := Color("#4ddd88")
 const COL_HEALTH_LO := Color("#ff4d5e")
+const COL_BLOCK     := Color("#c8dcf0")   # acero frío: golpe BLOQUEADO (deflexión, no daño)
 const COL_MAGICKA   := Color("#6688ff")
 const COL_STAMINA   := Color("#ffe066")
 const COL_STAMINA_EX:= Color("#ff4d5e")
@@ -534,8 +535,15 @@ static func _wrap_deg(d: float) -> float:
 func _on_toast(payload: Dictionary) -> void:
 	show_toast(payload.get("text", ""))
 
-func _on_player_hit(_payload: Dictionary) -> void:
-	_hit_flash = 1.0
+func _on_player_hit(payload: Dictionary) -> void:
+	# Bloqueado = destello ACERO breve (deflexión, sin sangre); limpio = rojo
+	# de daño pleno. El director notó que bloquear seguía pintando rojo.
+	if payload.get("blocked", false):
+		_vignette_mat.set_shader_parameter("tint", COL_BLOCK)
+		_hit_flash = 0.45
+	else:
+		_vignette_mat.set_shader_parameter("tint", COL_HEALTH_LO)
+		_hit_flash = 1.0
 
 func _on_passive_toggled(payload: Dictionary) -> void:
 	# night-vision handled by passives system; chip highlight

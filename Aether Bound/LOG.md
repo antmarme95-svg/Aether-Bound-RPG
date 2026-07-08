@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] feature | Feedback del kit defensivo — Capa 1: la guardia gana cuerpo + bloqueo diferenciado
+Playtest del director (clip 2026-07-08) del kit Duelist: la GUARDIA (RMB
+mantener) no comunicaba nada — sin pose y el vignette rojo salía igual al
+bloquear; el parry (RMB tap) poco evidente del lado del jugador; el status
+gráfico del enemigo no le encanta (→ tarea de arte aparte, chip creado).
+Plan en 3 capas; el director eligió arrancar por la Capa 1 con sonda visual
+para su visto bueno antes de seguir. **Capa 1 ✅ código:** (a) rig
+`set_guard(bool)` = pose de bloqueo sostenida (antebrazos cruzados + arma
+arriba + brace) que compone sobre el gait, bajo el strike, y aguanta bajo
+el flinch — dentro de ROM (constraint_report vacío); (b) golpe BLOQUEADO
+deja de pintar rojo → destello ACERO (COL_BLOCK en hud.gd) + chispa de
+deflexión en el arma (_spawn_guard_spark), el rojo queda solo para daño
+limpio; wiring `stats.take_damage(...,blocked)` + `_set_guard`→`rig.set_guard`.
+Sonda `tests/tmp_guard.gd` (neutral/guardia/3-4/flinch). QA: test_core/
+combat/slice/ui ALL_PASS. Lanzador `Start-Playtest-Greybox.bat` para el
+playtest en el greybox. Pendiente: visto bueno del director → Capa 2 (tell
+del parry) + Capa 3 (legibilidad del swing).
+
 ## [2026-07-07] feature | PRD-006 alcance 5: greybox + spawns parametrizables + autotest_combat — PRD-006 CERRADO
 Cierra PRD-006 y abre el Gate 1. Tres piezas nuevas: (1) `scenes/
 combat_arena.gd` — greybox blockout barato (suelo plano + anillo + postes)

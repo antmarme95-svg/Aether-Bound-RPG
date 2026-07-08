@@ -1600,6 +1600,19 @@ func play_flinch(amp: float = 1.0) -> void:
 	_flinch_amp = clampf(amp, 0.0, 2.0)
 	_flinch_t = _flinch_dur * clampf(amp, 0.75, 1.6)   # golpes duros duran más
 
+# ================================================================
+# PRD-006 (feedback del director 2026-07-08) — pose de GUARDIA sostenida.
+# La guardia (RMB hold) no tenía cuerpo: el jugador no distinguía bloquear
+# de recibir. `set_guard(true)` levanta el arma cruzada al frente + brazos
+# arriba + brace; blend in/out. Se compone en _process (no pelea con strike:
+# no se puede atacar guardando).
+# ================================================================
+var _guard_hold: bool = false
+var _guard_blend: float = 0.0
+
+func set_guard(active: bool) -> void:
+	_guard_hold = active
+
 ## Constraint report accessors (QA: autotest_biomech asserts on these).
 func constraint_report() -> Dictionary:
 	return _constraint_report
@@ -1941,6 +1954,25 @@ func _process(delta: float) -> void:
 			legs[0].get_meta("knee").rotation.x = 0.18 + brace * 0.4
 			legs[1].get_meta("knee").rotation.x = 0.18 + brace * 0.3
 		# (end-of-strike release happens at the top of _process, every frame)
+
+	# ── GUARD hold pose (feedback del director 2026-07-08) ──
+	# Arma cruzada al frente + antebrazos arriba + leve hunch de brace. Se
+	# CRUZA sobre el pose idle/gait de brazos (que ya escribió este frame) por
+	# blend; el strike gana (no coexisten: guardar bloquea atacar). Valores
+	# dentro del ROM (el elbow guard -1.35 < el coil del strike -1.45).
+	_guard_blend = lerp(_guard_blend, 1.0 if _guard_hold else 0.0, min(1.0, delta * 12.0))
+	if _guard_blend > 0.001 and _strike_t <= 0.0 and arms.size() >= 2:
+		var gb: float = _guard_blend
+		var e0g: Node3D = arms[0].get_meta("elbow")
+		var e1g: Node3D = arms[1].get_meta("elbow")
+		arms[0].rotation.x = lerp(arms[0].rotation.x, -0.55, gb)   # ambos brazos suben al frente
+		arms[1].rotation.x = lerp(arms[1].rotation.x, -0.65, gb)   # el del arma un poco más alto
+		arms[0].rotation.z = lerp(arms[0].rotation.z,  0.34, gb)   # cruzan hacia el centro
+		arms[1].rotation.z = lerp(arms[1].rotation.z, -0.42, gb)
+		e0g.rotation.x = lerp(e0g.rotation.x, -1.30, gb)           # antebrazos plegados arriba
+		e1g.rotation.x = lerp(e1g.rotation.x, -1.35, gb)
+		# Brace: leve hunch adelante (aditivo, blended) — el cuerpo se cierra.
+		spine.rotation.x += 0.14 * gb
 
 	# Idle breathe (JS: torso.scale.y = 1 + sin(t*2.1)*0.012)
 	torso.scale.y = 1.0 + sin(_t * 2.1) * 0.012

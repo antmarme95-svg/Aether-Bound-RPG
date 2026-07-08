@@ -87,10 +87,12 @@ func spend_magicka(amount: float) -> bool:
 	return true
 
 # ---- damage / heal (JS Stats.takeDamage / heal) ----
-func take_damage(amount: float, physical: bool = true) -> float:
+# `blocked` viaja en el evento para que el HUD distinga el feedback: golpe
+# BLOQUEADO = destello acero (deflexión), golpe LIMPIO = vignette rojo de daño.
+func take_damage(amount: float, physical: bool = true, blocked: bool = false) -> float:
 	var final_dmg: float = amount * (1.0 - physical_resist) if physical else amount
 	health = maxf(0.0, health - final_dmg)
-	EventBus.emit_event("combat:playerHit", {"amount": final_dmg})
+	EventBus.emit_event("combat:playerHit", {"amount": final_dmg, "blocked": blocked})
 	if health <= 0.0:
 		EventBus.emit_event("player:died", {})
 	return final_dmg
