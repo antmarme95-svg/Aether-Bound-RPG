@@ -1,5 +1,22 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] design | PRD-007 RATIFICADO — Dagna aliada + Seismic Springboard T1
+Design Loop del siguiente hito (rumbo al Gate 1). Nuevo spec
+[[PRD-007 Dagna aliada + Seismic Springboard T1]] (`20-State/PRDs/`).
+**2 ejes decididos por el director:** (1) Springboard T1 = onda + salto en
+ventana (co-op de timing; input único Bond; reusa PushPullComponent +
+supersalto/leap del PRD-005) — el golpe de suelo de Dagna spawnea una zona
+de onda temporal, y saltar dentro de la ventana amplifica el salto a un
+lanzamiento vertical; (2) Dagna aliada = mínima pero real (sigue + ground-
+pound + muralla + defensa básica, sobre los 4 componentes vía config
+`dagna`, sin companion AI rica). **4 detalles ratificados:** Bond=`R`; tell
+de ventana = anillos de la onda + pulso de HUD; spawn = flag `--ally=dagna`
++ presente en el gate; pounds de IA se suman en el alcance 3 (T1 arranca
+solo-Bond). Alcance en 5 pasos (0 aliada→1 onda→2 T1→3 IA→4 Gate 1 con
+cornisa + `autotest_springboard` + ≥60 FPS). Anti-obj: solo T1; sin
+Tether/T2/T3, sin camp scene; C6 no se adelanta salvo cláusula de escape.
+Task-Board: C7 🔄. Siguiente: Feature Loop alcance 0.
+
 ## [2026-07-08] lint | Salud del vault — consistente (fixes menores aplicados)
 Lint Loop tras cerrar el paquete de feedback del kit. **Reporte:**
 1. Contradicciones: ninguna (Knowledge↔código coherentes).

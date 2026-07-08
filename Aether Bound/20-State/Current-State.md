@@ -199,10 +199,13 @@ updated: 2026-07-08
      feel (feedback de guardia/parry/swing aprobado en vivo). El greybox
      (`--skip=arena --spawn=<spec>`, `Start-Playtest-Greybox.bat`) queda
      como banco de combate permanente.
-  1. **Abrir PRD-007 (Dagna + Seismic Springboard T1):** el aliado
-     jugable junto al que se pelea en el greybox. Gate 1 = pelear junto
-     a Dagna en greybox ≥60 FPS (el greybox y su FPS ya están listos).
-     Arranca por un Design Loop (spec del Springboard con el director).
+  1. **PRD-007 (Dagna + Seismic Springboard T1) — spec RATIFICADO
+     (2026-07-08):** [[PRD-007 Dagna aliada + Seismic Springboard T1]].
+     Design Loop cerrado. **Siguiente: Feature Loop alcance 0** (Dagna
+     aliada spawnea en el greybox y te sigue, sobre los 4 componentes vía
+     config `dagna`; extiende el spawn parametrizable con `--ally=dagna`).
+     Springboard T1 = onda + salto en ventana (Bond=`R`); Gate 1 = pelear
+     junto a Dagna + cornisa solo alcanzable vía Springboard, ≥60 FPS.
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
