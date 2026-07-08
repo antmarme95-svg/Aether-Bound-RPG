@@ -161,11 +161,13 @@ updated: 2026-07-07
   (crescent emisivo additivo con TAPER por vertex-color — borde de ataque
   brilla, cola se apaga) al ENTRAR la fase active (1×/golpe, detecta la
   transición). Se desvanece en ~0.16 s. Sonda `swing_arc.png` (slash
-  diagonal legible). QA: test_core/combat/slice/ui ALL_PASS. **Con esto
-  el paquete de feedback del kit (guardia+bloqueo, parry, swing) queda
-  cerrado en código; pendiente solo el visto bueno del director en vivo
-  (`Start-Playtest-Greybox.bat`). El status gráfico del enemigo corre por
-  separado (chip/tarea de arte).**
+  diagonal legible). QA: test_core/combat/slice/ui ALL_PASS.
+- **✅ PAQUETE DE FEEDBACK DEL KIT VALIDADO POR EL DIRECTOR (2026-07-08,
+  en vivo).** Las 3 capas aprobadas: guardia con cuerpo + bloqueo acero
+  (Capa 1, "mejoró mucho"), tell del parry (Capa 2) y estela del swing
+  (Capa 3) — todas confirmadas en `Start-Playtest-Greybox.bat`. El kit
+  Duelist queda cerrado a nivel feel. El status gráfico del enemigo sigue
+  como tarea de arte aparte (chip/sesión propia).
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`

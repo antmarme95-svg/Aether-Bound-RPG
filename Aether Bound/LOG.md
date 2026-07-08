@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] playtest | Paquete de feedback del kit VALIDADO por el director
+El director probó en vivo (`Start-Playtest-Greybox.bat`) y validó las 3
+capas del feedback del kit Duelist: Capa 1 (guardia con cuerpo + bloqueo
+acero, "mejoró mucho"), Capa 2 (tell del parry: batazo de cuerpo + flash
+cian-oro) y Capa 3 (estela del swing). El kit queda cerrado a nivel feel.
+Pendiente de arte aparte: el status gráfico de las reacciones del enemigo
+(sesión propia). Siguiente hito: PRD-007 (Dagna + Seismic Springboard T1)
+rumbo al Gate 1.
+
 ## [2026-07-08] feature | Feedback del kit — Capa 3: legibilidad del swing (LMB) + paquete cerrado
 Última capa del feedback del kit. El swing se leía poco del lado del
 jugador; SIN tocar la biomecánica ratificada del strike, `_spawn_swing_arc()`
