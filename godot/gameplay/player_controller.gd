@@ -393,6 +393,7 @@ func duelist_attack() -> void:
 ## El momentum se CAPTURA acá: el golpe trae el peso con el que arrancó
 ## (slide/sprint), aunque la ley §B.5 frene el cuerpo durante el swing.
 var _swing_speed: float = 0.0
+var _prev_swing_phase: String = ""   # Capa 3: detecta la transición a "active" (estela 1×/golpe)
 
 # ---- Canal 3 (GFB): combat framing + soft-aim (sin lock-on duro) ----
 const COMBAT_FOV_BOOST: float = 4.0
@@ -1025,6 +1026,70 @@ func _spawn_parry_flash() -> void:
 			sparks.queue_free()
 	)
 
+# _spawn_swing_arc — Capa 3 (feedback del director): estela del filo. Un arco
+# emisivo (banda de crescent) barrido en diagonal frente al jugador que aparece
+# al entrar la fase active y se desvanece en ~0.16 s. Da legibilidad al swing
+# sin tocar la pose ratificada. Additivo (BLEND_ADD) para que sea "luz de filo".
+func _spawn_swing_arc() -> void:
+	if scene == null:
+		return
+	var arc := MeshInstance3D.new()
+	arc.mesh = _build_swing_arc_mesh()
+	var mat := StandardMaterial3D.new()
+	mat.shading_mode   = BaseMaterial3D.SHADING_MODE_UNSHADED
+	mat.transparency   = BaseMaterial3D.TRANSPARENCY_ALPHA
+	mat.blend_mode     = BaseMaterial3D.BLEND_MODE_ADD
+	mat.cull_mode      = BaseMaterial3D.CULL_DISABLED
+	mat.vertex_color_use_as_albedo = true          # el taper del filo vive en los vértices
+	mat.albedo_color   = Color(0.62, 0.86, 1.0, 0.55)  # blanco-azul translúcido
+	arc.material_override = mat
+	# En FRENTE del jugador a la altura del pecho; plano tilteado en diagonal.
+	var fwd := Vector3(sin(facing), 0.0, cos(facing))
+	arc.position = position + fwd * 0.45 + Vector3(0.0, 1.15, 0.0)
+	arc.rotation.y = facing
+	arc.rotation.z = deg_to_rad(-52.0)   # casi vertical: slash diagonal frente al pecho
+	arc.rotation.x = deg_to_rad(4.0)
+	scene.add_child(arc)
+	# Desvanecer (albedo→transparente) y liberar. Tween: el nodo ya está vivo.
+	var tw := arc.create_tween()
+	tw.tween_property(mat, "albedo_color", Color(0.62, 0.86, 1.0, 0.0), 0.16)
+	tw.tween_callback(func() -> void:
+		if is_instance_valid(arc):
+			arc.queue_free())
+
+# _build_swing_arc_mesh — crescent fino (fan ~120°) en el plano XZ local, con
+# TAPER por vertex-color: el borde de ataque brilla, la cola se apaga (rastro).
+func _build_swing_arc_mesh() -> Mesh:
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var segs := 16
+	var a0 := deg_to_rad(-60.0)
+	var a1 := deg_to_rad(60.0)
+	var r_in := 0.5
+	var r_out := 0.95
+	for i in range(segs):
+		var f0: float = float(i) / float(segs)
+		var f1: float = float(i + 1) / float(segs)
+		var t0: float = a0 + (a1 - a0) * f0
+		var t1: float = a0 + (a1 - a0) * f1
+		# Taper: el borde de ataque (f=1) brilla; la cola (f=0) casi negra →
+		# con additivo la cola desaparece = rastro del filo.
+		var b0: float = lerp(0.10, 1.0, f0)
+		var b1: float = lerp(0.10, 1.0, f1)
+		var c0 := Color(b0, b0, b0, 1.0)
+		var c1 := Color(b1, b1, b1, 1.0)
+		var pi0 := Vector3(sin(t0) * r_in,  0.0, cos(t0) * r_in)
+		var po0 := Vector3(sin(t0) * r_out, 0.0, cos(t0) * r_out)
+		var pi1 := Vector3(sin(t1) * r_in,  0.0, cos(t1) * r_in)
+		var po1 := Vector3(sin(t1) * r_out, 0.0, cos(t1) * r_out)
+		st.set_color(c0); st.set_normal(Vector3.UP); st.add_vertex(pi0)
+		st.set_color(c0); st.set_normal(Vector3.UP); st.add_vertex(po0)
+		st.set_color(c1); st.set_normal(Vector3.UP); st.add_vertex(po1)
+		st.set_color(c0); st.set_normal(Vector3.UP); st.add_vertex(pi0)
+		st.set_color(c1); st.set_normal(Vector3.UP); st.add_vertex(po1)
+		st.set_color(c1); st.set_normal(Vector3.UP); st.add_vertex(pi1)
+	return st.commit()
+
 # ----------------------------------------------------------------
 # nearest_interactable — planar distance (JS PlayerController.nearestInteractable)
 func nearest_interactable() -> Dictionary:
@@ -1073,6 +1138,14 @@ func update(dt: float) -> void:
 			else:
 				combat.cancel()
 		_duelist_try_hit()
+		# Capa 3 (feedback del director 2026-07-08): estela de arco al ENTRAR
+		# en la fase active — el swing se leía poco del lado del jugador. Una
+		# vez por golpe (detecta la transición a active). No toca la pose
+		# (biomecánica ratificada), solo añade legibilidad.
+		var ph: String = combat.phase()
+		if ph == "active" and _prev_swing_phase != "active":
+			_spawn_swing_arc()
+		_prev_swing_phase = ph
 		guard.tick(dt)
 		energy.tick(dt)
 		if push_pull.is_active():
