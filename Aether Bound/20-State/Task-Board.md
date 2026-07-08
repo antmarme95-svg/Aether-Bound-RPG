@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-06
+updated: 2026-07-08
 ---
 
 # Task Board — preproducción

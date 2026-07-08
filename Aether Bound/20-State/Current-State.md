@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-07
+updated: 2026-07-08
 ---
 
 # Current State
@@ -194,20 +194,21 @@ updated: 2026-07-07
   al pase de poses C4** (cláusula de escape: se adelanta a PRD-007 si en
   el Gate 1 los cuerpos impiden juzgar el feel).
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  0. **PRD-006 CERRADO ✅** (alcances 0–5 en código). Falta solo el
-     **playtest del director** del feel acumulado (alcances 4 + tuning de
-     presión) — el greybox (`--skip=arena --spawn=<spec>`) es el banco
-     ideal para grabar el clip: cámara quieta, spawns controlados.
+  0. **PRD-006 CERRADO ✅** (alcances 0–5 en código) **+ playtest del
+     director VALIDADO (2026-07-08):** el kit Duelist está cerrado a nivel
+     feel (feedback de guardia/parry/swing aprobado en vivo). El greybox
+     (`--skip=arena --spawn=<spec>`, `Start-Playtest-Greybox.bat`) queda
+     como banco de combate permanente.
   1. **Abrir PRD-007 (Dagna + Seismic Springboard T1):** el aliado
      jugable junto al que se pelea en el greybox. Gate 1 = pelear junto
      a Dagna en greybox ≥60 FPS (el greybox y su FPS ya están listos).
+     Arranca por un Design Loop (spec del Springboard con el director).
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
-  2. Medir en el próximo clip del director: parry, síncopa, los
-     hit-stops (alcance 4) y AHORA la presión enemiga (piden cámara
-     quieta y combos limpios contra UNA bestia; el pipeline B15 ya sabe
-     contar hit-stops).
+  2. Tarea de arte aparte (chip/sesión propia): repasar el **status
+     gráfico de las reacciones del enemigo** (flinch/stagger/broken), que
+     al director no le convence.
   3. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).
@@ -239,13 +240,13 @@ updated: 2026-07-07
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
-- **Branch actual:** `master` (último PR local `--no-ff`: Capa 1 del fix
-  de feedback del kit defensivo — guardia con cuerpo + bloqueo acero).
-  `autotest_combat.gd` es un gate permanente. Lanzador de doble clic para
-  el playtest en el greybox: `Start-Playtest-Greybox.bat` (raíz).
-  Sondas temporales `tests/tmp_*.gd` (step, vignette, reactions,
-  duel_pair, spawnflag, timefeel, pressure, dagna, guard) quedan hasta el
-  visto bueno del director / validar el pipeline de personajes.
+- **Branch actual:** `master` (todo mergeado y pusheado; último commit:
+  validación del director del paquete de feedback del kit — Capas 1–3
+  vía merges locales `--no-ff`). `autotest_combat.gd` es un gate
+  permanente. Lanzador de doble clic para el playtest en el greybox:
+  `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
+  (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
+  dagna, guard) quedan hasta validar el pipeline de personajes / limpieza.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

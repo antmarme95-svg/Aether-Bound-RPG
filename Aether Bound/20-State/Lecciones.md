@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-04
+updated: 2026-07-08
 ---
 
 # Lecciones y entorno técnico

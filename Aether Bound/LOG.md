@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] lint | Salud del vault — consistente (fixes menores aplicados)
+Lint Loop tras cerrar el paquete de feedback del kit. **Reporte:**
+1. Contradicciones: ninguna (Knowledge↔código coherentes).
+2. Wikilinks: sin rotos (los `[[wikilink]]`/`[[wikilinks]]` son ejemplos
+   del SCHEMA, no links reales); sin páginas huérfanas — las 27 Knowledge
+   + State + Loops tienen link entrante; 90-Raw se referencia por archivo.
+3. Status: solo `Briefs de Concept Art` sigue `propuesto` (coincide con el
+   Index) — pendiente de confirmar con el director si se ratifica o queda.
+4. Index vs realidad: 44 páginas, todas catalogadas (incl. Estructura
+   Dramática); sin entradas fantasma.
+5. State vs repo: **drift corregido** — la línea "Branch actual" seguía en
+   "Capa 1" (ya íbamos por la validación) y el "arranque próxima sesión"
+   marcaba el playtest como pendiente (ya validado). Fechas `updated:` de
+   Current-State/Task-Board/Lecciones puestas al día (2026-07-08).
+Vault consistente. Único ítem abierto: status de Briefs (decisión del director).
+
 ## [2026-07-08] playtest | Paquete de feedback del kit VALIDADO por el director
 El director probó en vivo (`Start-Playtest-Greybox.bat`) y validó las 3
 capas del feedback del kit Duelist: Capa 1 (guardia con cuerpo + bloqueo
