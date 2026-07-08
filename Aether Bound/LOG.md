@@ -1,5 +1,13 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-07] design | Ventana de C6 RATIFICADA: entre el Gate 1 y la Fase 2
+El director ratifica la ventana del rework anatómico (C6): tras cerrar
+PRD-006/007 y el Gate 1, junto al pase de poses C4 — una sola cirugía
+anatómica antes del contenido de Fase 2. Cláusula de escape acordada: si
+en el playtest del Gate 1 los cuerpos impiden juzgar el feel, C6 se
+adelanta a dentro de PRD-007. Secuencia vigente: alcance 5 → PRD-007 →
+Gate 1 → C6+C4 poses → Fase 2. Fase 4 conserva solo el vestido final.
+
 ## [2026-07-07] design | Veredicto del director sobre Dagna in-engine → C6 rework anatómico
 Tras ver la comparación lado a lado (lámina · greybox · golden scene):
 la demo en golden scene confirma que el REGISTRO del Art Bible aterriza

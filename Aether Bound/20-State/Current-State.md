@@ -132,7 +132,9 @@ updated: 2026-07-07
   ANATOMÍA está lejos de la lámina** — el cuerpo base hereda gráficos del
   prototipo pre-reset que ya estaban corruptos; debió hacerse rework
   completo. → **C6 (rework anatómico del cuerpo base)** en el Task-Board;
-  ventana: junto al pase de poses C4, tras el Gate 1.
+  **ventana RATIFICADA (2026-07-07): entre el Gate 1 y la Fase 2, junto
+  al pase de poses C4** (cláusula de escape: se adelanta a PRD-007 si en
+  el Gate 1 los cuerpos impiden juzgar el feel).
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
   1. **Alcance 5 (Feature Loop):** greybox con spawns parametrizables
      + `autotest_combat.gd` — cierra PRD-006 y abre el Gate 1.
