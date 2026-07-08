@@ -168,6 +168,17 @@ updated: 2026-07-08
   (Capa 3) — todas confirmadas en `Start-Playtest-Greybox.bat`. El kit
   Duelist queda cerrado a nivel feel. El status gráfico del enemigo sigue
   como tarea de arte aparte (chip/sesión propia).
+- **PRD-007 alcance 0 ✅ CÓDIGO (2026-07-08): Dagna aliada spawnea y
+  sigue.** `gameplay/ally_dagna.gd`: montada por el pipeline de personajes
+  (`apply_to_rig("dagna")`) sobre los 4 componentes canónicos; **sigue**
+  un slot al hombro IZQUIERDO del jugador (la cámara vive en el derecho),
+  ground-snap + gait procedural. Boot flag nuevo **`--ally=dagna`** (spawn
+  en ARENA, array `allies` separado de `enemies`, update en
+  `_gameplay_update`). Sonda `tests/tmp_ally.gd`: spawn + follow (22 m
+  recorridos, dist acotada ~2.6 m) + captura `ally_dagna_follow.png`
+  (Dagna legible: trenzas/túnica/hombreras/martillo). QA: test_core/
+  combat/slice/ui ALL_PASS. **Sin combate aún** (alcance 1: ground-pound →
+  onda; alcance 2: Springboard T1).
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -201,11 +212,11 @@ updated: 2026-07-08
      como banco de combate permanente.
   1. **PRD-007 (Dagna + Seismic Springboard T1) — spec RATIFICADO
      (2026-07-08):** [[PRD-007 Dagna aliada + Seismic Springboard T1]].
-     Design Loop cerrado. **Siguiente: Feature Loop alcance 0** (Dagna
-     aliada spawnea en el greybox y te sigue, sobre los 4 componentes vía
-     config `dagna`; extiende el spawn parametrizable con `--ally=dagna`).
-     Springboard T1 = onda + salto en ventana (Bond=`R`); Gate 1 = pelear
-     junto a Dagna + cornisa solo alcanzable vía Springboard, ≥60 FPS.
+     Design Loop cerrado. **Alcance 0 ✅ (aliada spawnea y sigue,
+     `--ally=dagna`). Siguiente: alcance 1** (ground-pound de Dagna → zona
+     de onda `PushPullComponent` + VFX teal). Springboard T1 = onda +
+     salto en ventana (Bond=`R`); Gate 1 = pelear junto a Dagna + cornisa
+     solo alcanzable vía Springboard, ≥60 FPS.
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.

@@ -9,6 +9,8 @@ const _EnemyHumanoid = preload("res://gameplay/enemy_humanoid.gd")
 # PRD-006 alcance 5: greybox de combate + parser de spawns parametrizables.
 const _CombatArena = preload("res://scenes/combat_arena.gd")
 const _SpawnSpec   = preload("res://gameplay/spawn_spec.gd")
+# PRD-007 alcance 0: Dagna aliada (--ally=dagna).
+const _AllyDagna   = preload("res://gameplay/ally_dagna.gd")
 
 # ---- child nodes ----
 var _cam: Camera3D
@@ -23,6 +25,7 @@ var _timers: Array             = []
 # ---- scene wrappers ----
 var scene: Node3D              = null
 var enemies: Array             = []
+var allies: Array              = []   # PRD-007: aliados (Dagna) — separados de enemies
 
 # ---- gameplay systems ----
 var stats: Stats               = null
@@ -483,7 +486,13 @@ func _state_arena() -> Dictionary:
 			# Spawns parametrizables (default light+heavy si no hay --spawn).
 			enemies = _spawn_humanoids(arena, _SpawnSpec.parse(str(Debug.args.get("spawn", ""))))
 			controller.enemies = enemies
-			EventBus.emit_event("quest:toast", {"text": "Greybox — %d hostiles" % enemies.size()}),
+
+			# PRD-007 alcance 0: aliada Dagna (--ally=dagna) al hombro del jugador.
+			allies = []
+			if str(Debug.args.get("ally", "")) == "dagna":
+				allies = _spawn_ally_dagna(arena)
+			EventBus.emit_event("quest:toast", {"text": "Greybox — %d hostiles%s" % [
+				enemies.size(), " · Dagna a tu lado" if allies.size() > 0 else ""]}),
 
 		"update": func(_ctx: Dictionary, dt: float) -> void:
 			_gameplay_update(dt),
@@ -516,6 +525,18 @@ func _spawn_humanoids(scene: Node3D, kinds: Array) -> Array:
 		scene.add_child(e)
 		out.append(e)
 	return out
+
+## _spawn_ally_dagna — PRD-007 alcance 0: instancia a Dagna aliada al hombro
+## derecho del jugador. Devuelve el Array de aliados (el caller lo asigna).
+func _spawn_ally_dagna(scene: Node3D) -> Array:
+	if controller == null:
+		return []
+	var right := Vector3(cos(controller.facing), 0.0, -sin(controller.facing))
+	var base: Vector3 = controller.position - right * 2.2   # hombro izquierdo (a la vista)
+	var gy: float = scene.get_height(base.x, base.z) if scene.has_method("get_height") else 0.0
+	var dagna = _AllyDagna.new(Vector3(base.x, gy, base.z), scene)
+	scene.add_child(dagna)
+	return [dagna]
 
 # ================================================================
 # CHOICE
@@ -626,6 +647,10 @@ func _gameplay_update(dt: float) -> void:
 	for enemy in enemies:
 		if not enemy.dead:
 			enemy.update_ai(dt, controller, passives)
+	# PRD-007: aliados (Dagna) — siguen al jugador.
+	for ally in allies:
+		if not ally.dead:
+			ally.update_ally(dt, controller)
 	# HUD per-frame update
 	if hud != null and hud.visible and stats != null and controller != null:
 		hud.update_hud(stats, controller.cam_yaw,
