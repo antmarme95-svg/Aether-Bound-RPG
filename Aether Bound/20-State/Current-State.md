@@ -268,13 +268,13 @@ updated: 2026-07-08
   cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
-- **Branch actual:** `master` (todo mergeado y pusheado; último commit:
-  validación del director del paquete de feedback del kit — Capas 1–3
-  vía merges locales `--no-ff`). `autotest_combat.gd` es un gate
-  permanente. Lanzador de doble clic para el playtest en el greybox:
+- **Branch actual:** `master` (todo mergeado y pusheado; últimos hitos:
+  concept art del director versionado, PRD-007 ratificado, y PRD-007
+  alcance 0 — Dagna aliada). `autotest_combat.gd` es un gate permanente.
+  Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
-  dagna, guard) quedan hasta validar el pipeline de personajes / limpieza.
+  dagna, guard, ally) quedan hasta validar el pipeline / limpieza.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

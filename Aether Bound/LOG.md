@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] lint | Salud del vault — consistente (fix de branch line)
+Lint Loop tras PRD-007 (ratificación + alcance 0) y el depósito de concept
+art. **Reporte:** (1) sin contradicciones — PRD-007 coherente con Dagna /
+Los 9 Links / Slice of Bond. (2) Wikilinks: sin rotos reales (solo los
+`[[wikilink]]` de ejemplo del SCHEMA); [[PRD-007 …]] resuelve; sin huérfanas
+(solo LLM-WIKI/VDD, fuentes raw por archivo). (3) Status: `Briefs de Concept
+Art` sigue `propuesto` (único abierto, decisión del director); PRD-007
+`ratificado` ✅. (4) Index: 45 páginas, PRD-007 catalogado. (5) State vs
+repo: **fix** — la línea "Branch actual" seguía en "Capas 1–3" (después
+vinieron concept art + PRD-007 + alcance 0) y le faltaba la sonda `ally`;
+actualizada. Vault consistente.
+
 ## [2026-07-08] feature | PRD-007 alcance 0 — Dagna aliada spawnea y sigue
 Primer alcance del PRD-007. `gameplay/ally_dagna.gd`: Dagna montada por el
 pipeline de personajes (`apply_to_rig("dagna")`) sobre los 4 componentes
