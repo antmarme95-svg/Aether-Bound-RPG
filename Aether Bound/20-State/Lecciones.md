@@ -68,6 +68,14 @@ updated: 2026-07-08
   automatizados y en AoE: dejar de aplicar daño cuando el objetivo ya está
   `dying` (no solo cuando `dead`). Diagnóstico típico: el enemigo llega a
   0 HP rapidísimo pero el loop consume TODO el presupuesto de frames.
+- **VFX que se desvanecen: partículas vs. mallas fijas.** Un `GPUParticles3D`
+  se apaga solo por su `lifetime` + `color_ramp` (basta liberarlo con un
+  `Timer`). Una malla emisiva ESTÁTICA (arco de swing, anillos del pound) NO
+  se desvanece sola: necesita un `Tween` sobre el material (additivo →
+  `tween_property(mat, "albedo_color", <alpha 0>, dur)`); con solo un `Timer`
+  hace pop-and-cut. Patrón cross-entity para habilidades: el emisor manda un
+  evento (`springboard:wave`) y el director mantiene el registro + resuelve el
+  AoE (tiene `enemies`/escena) — el emisor no necesita ref al director.
 - **El slot de un NPC seguidor debe esquivar la cámara over-the-shoulder.**
   La cámara vive sobre el hombro DERECHO (`CAM_SHOULDER` +). Un aliado
   plantado detrás-derecha del jugador queda pegado/clippeado contra el
