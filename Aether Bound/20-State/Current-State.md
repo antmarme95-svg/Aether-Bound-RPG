@@ -154,8 +154,18 @@ updated: 2026-07-07
   en sonda (`guard_parry.png`), parry real end-to-end en autotest_combat.
   QA: test_core/combat/slice/ui ALL_PASS. **Fix de test:** el kill loop
   de autotest_combat se acotó por TIEMPO REAL (era por frames → falla a
-  FPS alto). **Pendiente: Capa 3 (legibilidad del swing LMB) + visto
-  bueno del director del parry en vivo.**
+  FPS alto).
+- **Capa 3 del fix ✅ CÓDIGO (2026-07-08): legibilidad del swing (LMB).**
+  El swing se leía poco del lado del jugador. SIN tocar la biomecánica
+  ratificada del strike: `_spawn_swing_arc()` dibuja una estela de filo
+  (crescent emisivo additivo con TAPER por vertex-color — borde de ataque
+  brilla, cola se apaga) al ENTRAR la fase active (1×/golpe, detecta la
+  transición). Se desvanece en ~0.16 s. Sonda `swing_arc.png` (slash
+  diagonal legible). QA: test_core/combat/slice/ui ALL_PASS. **Con esto
+  el paquete de feedback del kit (guardia+bloqueo, parry, swing) queda
+  cerrado en código; pendiente solo el visto bueno del director en vivo
+  (`Start-Playtest-Greybox.bat`). El status gráfico del enemigo corre por
+  separado (chip/tarea de arte).**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`

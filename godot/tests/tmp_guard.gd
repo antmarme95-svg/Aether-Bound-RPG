@@ -80,7 +80,17 @@ func _run() -> void:
 	await _wait_sec(0.12)
 	await Debug.screenshot("res://test_out/guard_flinch.png")
 
-	print("[TmpGuard] DONE (rev neutral/on/parry/34/flinch)")
+	# ---- swing + estela del filo (Capa 3): pose de strike + arco emisivo ----
+	rig.set_guard(false)
+	await _wait_sec(0.35)   # sale de la guardia a neutral
+	_place(cam, base + q * 3.2 + Vector3(0.0, 0.3, 0.0), base)   # 3/4 para leer el arco
+	rig.play_strike(0.5)
+	await _wait_sec(0.24)   # a mitad del swing (release) — la pose ya barrió
+	ctl._spawn_swing_arc()  # dispara la estela en ctl.scene
+	await _wait_sec(0.03)
+	await Debug.screenshot("res://test_out/swing_arc.png")
+
+	print("[TmpGuard] DONE (rev neutral/on/parry/34/flinch/swing)")
 	get_tree().quit(0)
 
 func _place(cam: Camera3D, eye: Vector3, center: Vector3) -> void:

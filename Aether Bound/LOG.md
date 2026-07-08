@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] feature | Feedback del kit — Capa 3: legibilidad del swing (LMB) + paquete cerrado
+Última capa del feedback del kit. El swing se leía poco del lado del
+jugador; SIN tocar la biomecánica ratificada del strike, `_spawn_swing_arc()`
+dibuja una estela de filo (crescent emisivo additivo con TAPER por
+vertex-color: borde de ataque brilla, cola se apaga) al ENTRAR la fase
+active — 1×/golpe detectando la transición de fase en el update del
+controller — que se desvanece en ~0.16 s (tween albedo→transparente).
+Iteración de tuning por sonda: la v1 salió gigante/reventada; se bajó a
+crescent fino translúcido (r 0.5–0.95, alpha 0.55) tilteado en diagonal.
+Sonda `tmp_guard.gd` amplió la captura (swing_arc.png). QA: test_core/
+combat/slice/ui ALL_PASS. Con esto el paquete de feedback del kit
+(guardia+bloqueo, parry, swing) queda CERRADO en código; pendiente solo el
+visto bueno del director en vivo. El status gráfico del enemigo corre
+aparte (sesión propia).
+
 ## [2026-07-08] feature | Feedback del kit defensivo — Capa 2: el parry se ve del lado del jugador
 El director aprobó la Capa 1 ("mejoró mucho") y dio luz verde a la Capa 2.
 El parry Roba solo se leía por el stun del enemigo. Ahora: (a) rig
