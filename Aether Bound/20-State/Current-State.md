@@ -177,8 +177,19 @@ updated: 2026-07-08
   `_gameplay_update`). Sonda `tests/tmp_ally.gd`: spawn + follow (22 m
   recorridos, dist acotada ~2.6 m) + captura `ally_dagna_follow.png`
   (Dagna legible: trenzas/túnica/hombreras/martillo). QA: test_core/
-  combat/slice/ui ALL_PASS. **Sin combate aún** (alcance 1: ground-pound →
-  onda; alcance 2: Springboard T1).
+  combat/slice/ui ALL_PASS.
+- **PRD-007 alcance 1 ✅ CÓDIGO (2026-07-08): ground-pound de Dagna → zona
+  de onda + VFX teal.** `ally_dagna.gd`: `ground_pound()` = secuencia
+  plant→slam→recover; en el impacto (tras windup ~0.35 s) spawnea el VFX
+  (burst teal + 2 anillos de choque expandiéndose, per la lámina) y emite
+  `springboard:wave`. El director registra la onda en `springboard_waves`
+  (zona {pos, radio 4.2, ventana 0.6 s} que consumirá el jugador en el
+  alcance 2) y **empuja a los enemigos cercanos** (la onda ES un ataque;
+  knockback por `push_pull`, sin daño aún). Triggers del pound: Bond
+  (alcance 2) e IA (alcance 3) — aquí se dispara por sonda. `tmp_pound.gd`:
+  onda registrada + knockback (1.6 m) + expiración + captura
+  `pound_wave.png` (los anillos teal leen igual que la lámina). QA:
+  test_core/combat/slice/ui + tmp_ally ALL_PASS.
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -212,11 +223,12 @@ updated: 2026-07-08
      como banco de combate permanente.
   1. **PRD-007 (Dagna + Seismic Springboard T1) — spec RATIFICADO
      (2026-07-08):** [[PRD-007 Dagna aliada + Seismic Springboard T1]].
-     Design Loop cerrado. **Alcance 0 ✅ (aliada spawnea y sigue,
-     `--ally=dagna`). Siguiente: alcance 1** (ground-pound de Dagna → zona
-     de onda `PushPullComponent` + VFX teal). Springboard T1 = onda +
-     salto en ventana (Bond=`R`); Gate 1 = pelear junto a Dagna + cornisa
-     solo alcanzable vía Springboard, ≥60 FPS.
+     Design Loop cerrado. **Alcances 0 ✅ (aliada sigue) y 1 ✅ (ground-pound
+     → zona de onda + VFX teal). Siguiente: alcance 2** — Springboard T1:
+     input **Bond=`R`** pide el pound; **saltar dentro de la onda** (ya
+     registrada en `springboard_waves`) amplifica el salto a un lanzamiento
+     vertical (PushPull + supersalto PRD-005) + tell de ventana. Gate 1 =
+     pelear junto a Dagna + cornisa solo alcanzable vía Springboard, ≥60 FPS.
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.

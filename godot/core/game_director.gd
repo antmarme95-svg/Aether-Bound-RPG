@@ -26,6 +26,7 @@ var _timers: Array             = []
 var scene: Node3D              = null
 var enemies: Array             = []
 var allies: Array              = []   # PRD-007: aliados (Dagna) — separados de enemies
+var springboard_waves: Array   = []   # PRD-007: zonas de onda activas (fuente del Springboard T1)
 
 # ---- gameplay systems ----
 var stats: Stats               = null
@@ -94,6 +95,7 @@ func _ready() -> void:
 	EventBus.on("player:died",      _on_player_died)
 	EventBus.on("ui:pathChosen",    _on_ui_path_chosen)
 	EventBus.on("ui:continueRoam",  _on_ui_continue_roam)
+	EventBus.on("springboard:wave", _on_springboard_wave)  # PRD-007: onda de Dagna
 
 	# Build persistent UI layers (always present in the tree)
 	_build_ui_layers()
@@ -489,6 +491,7 @@ func _state_arena() -> Dictionary:
 
 			# PRD-007 alcance 0: aliada Dagna (--ally=dagna) al hombro del jugador.
 			allies = []
+			springboard_waves = []
 			if str(Debug.args.get("ally", "")) == "dagna":
 				allies = _spawn_ally_dagna(arena)
 			EventBus.emit_event("quest:toast", {"text": "Greybox — %d hostiles%s" % [
@@ -537,6 +540,27 @@ func _spawn_ally_dagna(scene: Node3D) -> Array:
 	var dagna = _AllyDagna.new(Vector3(base.x, gy, base.z), scene)
 	scene.add_child(dagna)
 	return [dagna]
+
+const SPRINGBOARD_KNOCKBACK := 5.5
+
+## _on_springboard_wave — PRD-007 alcance 1: el golpe de suelo de Dagna registra
+## una zona de onda (fuente del Springboard T1, la consume el jugador en el
+## alcance 2) y empuja a los enemigos cercanos (la onda ES un ataque; sin daño
+## todavía — eso llega con la IA de combate del alcance 3).
+func _on_springboard_wave(payload: Dictionary) -> void:
+	var pos: Vector3 = payload.get("position", Vector3.ZERO)
+	var radius: float = float(payload.get("radius", 4.0))
+	var window: float = float(payload.get("window", 0.6))
+	springboard_waves.append({"position": pos, "radius": radius, "t": window})
+	for e in enemies:
+		if e.dead:
+			continue
+		var to: Vector3 = e.position - pos
+		to.y = 0.0
+		var d: float = to.length()
+		if d < radius and d > 0.01 and e.get("push_pull") != null:
+			var falloff: float = 1.0 - d / radius
+			e.push_pull.apply_impulse(to.normalized() * SPRINGBOARD_KNOCKBACK * falloff)
 
 # ================================================================
 # CHOICE
@@ -651,6 +675,11 @@ func _gameplay_update(dt: float) -> void:
 	for ally in allies:
 		if not ally.dead:
 			ally.update_ally(dt, controller)
+	# PRD-007: expira las zonas de onda del springboard.
+	for i in range(springboard_waves.size() - 1, -1, -1):
+		springboard_waves[i]["t"] -= dt
+		if springboard_waves[i]["t"] <= 0.0:
+			springboard_waves.remove_at(i)
 	# HUD per-frame update
 	if hud != null and hud.visible and stats != null and controller != null:
 		hud.update_hud(stats, controller.cam_yaw,

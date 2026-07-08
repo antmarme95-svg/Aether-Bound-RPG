@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] feature | PRD-007 alcance 1 — ground-pound de Dagna → zona de onda + VFX teal
+Donde nace la mecánica del Springboard. `ally_dagna.gd`: `ground_pound()` =
+secuencia plant→slam→recover; en el impacto (tras windup ~0.35 s) spawnea el
+VFX (burst teal + 2 anillos de choque expandiéndose por el suelo, per la
+lámina `Seismic Springboard.png`) y emite `springboard:wave`. El director
+registra la zona de onda en `springboard_waves` ({pos, radio 4.2, ventana
+0.6 s} — la consume el jugador en el alcance 2) y **empuja a los enemigos
+cercanos** (la onda ES un ataque; knockback por `push_pull`, sin daño aún —
+eso llega con la IA del alcance 3). Los triggers del pound (Bond alcance 2,
+IA alcance 3) se enchufan después; aquí lo dispara la sonda. `tests/
+tmp_pound.gd`: onda registrada + knockback (heavy 1.6 m) + expiración +
+captura `pound_wave.png` (los anillos teal leen igual que la lámina). QA:
+test_core/combat/slice/ui + tmp_ally (regresión follow) ALL_PASS. Siguiente:
+alcance 2 (Springboard T1: Bond=`R` + salto-en-onda → lanzamiento vertical).
+
 ## [2026-07-08] design | [[Briefs de Concept Art]] RATIFICADA
 El director ratifica la biblioteca de prompts: sus outputs (fenotipos,
 keyframes dawn/dusk, trilogía Speck, foliage_clump, Dagna v1) ya son canon
