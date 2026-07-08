@@ -1,7 +1,7 @@
 ---
-status: propuesto
-source: "[[Fenotipos y Creación de Personaje]] + [[Art Bible]] (destilados a prompt)"
-updated: 2026-07-04
+status: ratificado
+source: "[[Fenotipos y Creación de Personaje]] + [[Art Bible]] (destilados a prompt); RATIFICADO por el director 2026-07-08 (sus outputs — fenotipos/keyframes/Speck/foliage/Dagna — ya son canon en 90-Raw/concept/). Página viva: los briefs de los 8 pivotes restantes se AÑADEN sin desratificar lo probado."
+updated: 2026-07-08
 ---
 
 # Briefs de Concept Art — Fenotipos

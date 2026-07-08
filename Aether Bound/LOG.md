@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] design | [[Briefs de Concept Art]] RATIFICADA
+El director ratifica la biblioteca de prompts: sus outputs (fenotipos,
+keyframes dawn/dusk, trilogía Speck, foliage_clump, Dagna v1) ya son canon
+en `90-Raw/concept/`, y sus fuentes ([[Fenotipos y Creación de Personaje]],
+[[Art Bible]]) están ratificadas. Era el único `propuesto` que quedaba en el
+vault. Página VIVA: los briefs de los 8 pivotes restantes se añaden sin
+desratificar lo probado (mismo patrón que [[Benchmark Biomecánico]]). Index
+actualizado. Vault ahora 100% sin status pendientes.
+
 ## [2026-07-08] lint | Salud del vault — consistente (fix de branch line)
 Lint Loop tras PRD-007 (ratificación + alcance 0) y el depósito de concept
 art. **Reporte:** (1) sin contradicciones — PRD-007 coherente con Dagna /
