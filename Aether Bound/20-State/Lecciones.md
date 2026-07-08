@@ -68,6 +68,17 @@ updated: 2026-07-04
   automatizados y en AoE: dejar de aplicar daño cuando el objetivo ya está
   `dying` (no solo cuando `dead`). Diagnóstico típico: el enemigo llega a
   0 HP rapidísimo pero el loop consume TODO el presupuesto de frames.
+- **Loops de autotest acotados por FRAMES son dependientes del FPS.** La
+  IA/combate corren en `dt` real; un `while frames < N` da tiempo real
+  distinto según el FPS (a 900 fps, 1800 frames = 2 s → el heavy no
+  alcanza a morir; a 177 fps, los mismos frames = 10 s → sí). Acotar por
+  TIEMPO REAL acumulado (`elapsed += get_process_delta_time()`), no por
+  conteo de frames. Mismo espíritu que los relojes de feel en usec.
+- **Capturas de pose en 2s: dejar pasar un tick de pose (~0.083 s) antes
+  del screenshot.** Con `animation_on_twos`, la pose re-evalúa a ~12 Hz y
+  HOLDea entre ticks; una captura demasiado pronto tras disparar una pose
+  (ej. `play_parry`) atrapa el frame held ANTERIOR y parece que la pose no
+  se aplicó. Esperar > POSE_STEP pero dentro de la duración de la pose.
 - **FPS dentro de un autotest windowed miente:** el contador es una media
   rodante de 1 s que absorbe el ritmo del propio polling `await
   process_frame` y cualquier thrash del test (ej. martillear cadáveres). Un

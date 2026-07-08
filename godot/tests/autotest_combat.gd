@@ -139,9 +139,12 @@ func _run() -> void:
 	# en un solo loop. Reposiciono al jugador CADA frame pegado al más cercano:
 	# la fase `active` cae ~0.3 s después del input y el enemigo se mueve, así
 	# que pinnear solo al arrancar el swing hace fallar la mitad de los golpes.
+	# Acotado por TIEMPO REAL (no frames): la IA/combate corre en dt real, así
+	# que un cap de frames es dependiente del FPS (a 900 fps, 1800 frames = 2 s
+	# y el heavy no alcanza a morir). 20 s reales = ~4× margen sobre lo medido.
 	var targets := [light, heavy]
-	var frames: int = 0
-	while not _all_down(targets) and frames < 1800:
+	var elapsed: float = 0.0
+	while not _all_down(targets) and elapsed < 20.0:
 		var e = _nearest_alive(targets)
 		if e != null:
 			var to: Vector3 = e.position - _director.controller.position
@@ -155,12 +158,12 @@ func _run() -> void:
 			# mata ENCADENANDO para romperle la postura (§B.3).
 			_director.controller.duelist_attack()
 		await get_tree().process_frame
-		frames += 1
+		elapsed += get_process_delta_time()
 	# Ambos en "dying"; se dejó de golpear (si no, el timer de muerte se resetea).
 	# Espera a que la animación de muerte resuelva (~0.8 s → dead=true).
 	var all_ok: bool = await _until(
 		func() -> bool: return _all_dead(targets), 3.0, "dying resuelve")
-	_assert_true(all_ok, "both hostiles killed via duelist kit (%d frames)" % frames)
+	_assert_true(all_ok, "both hostiles killed via duelist kit (%.1fs)" % elapsed)
 	_assert_true(light.dead, "light dead")
 	_assert_true(heavy.dead, "heavy dead")
 

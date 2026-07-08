@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-08] feature | Feedback del kit defensivo — Capa 2: el parry se ve del lado del jugador
+El director aprobó la Capa 1 ("mejoró mucho") y dio luz verde a la Capa 2.
+El parry Roba solo se leía por el stun del enemigo. Ahora: (a) rig
+`play_parry()` = deflexión seca de TODO el cuerpo (el arma batea arriba-
+afuera + off-arm en contrapeso + giro de torso lumbar/torácico + cabeza al
+acero robado), riposte ~0.3 s sobre la guardia, ROM limpio; (b) VFX
+`_spawn_parry_flash()` = pop emisivo cian + burst de chispas cian→oro al
+frente del arma, más brillante que el destello de bloqueo. Wiring en
+`receive_hit` (reacción parried). Sonda `tmp_guard.gd` amplió la captura
+(guard_parry.png). QA: test_core/combat/slice/ui ALL_PASS. Fix de test
+descubierto en el camino: el kill loop de autotest_combat estaba acotado
+por FRAMES → dependiente del FPS (a ~900 fps mataba tarde y fallaba); se
+acotó por TIEMPO REAL. Lecciones nuevas: loops de autotest por tiempo real,
+y capturas de pose en 2s tras un tick. Pendiente: Capa 3 (legibilidad del
+swing LMB) + visto bueno del parry en vivo.
+
 ## [2026-07-08] feature | Feedback del kit defensivo — Capa 1: la guardia gana cuerpo + bloqueo diferenciado
 Playtest del director (clip 2026-07-08) del kit Duelist: la GUARDIA (RMB
 mantener) no comunicaba nada — sin pose y el vignette rojo salía igual al

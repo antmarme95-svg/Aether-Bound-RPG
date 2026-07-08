@@ -60,6 +60,15 @@ func _run() -> void:
 	var rep: Dictionary = rig.constraint_report() if rig.has_method("constraint_report") else {}
 	print("[TmpGuard] constraint_report (guardia): ", rep)
 
+	# ---- parry deflect flick (Capa 2): batazo (de frente) ----
+	# Nota: con pose en 2s (~12 Hz) hay que dejar pasar al menos un tick de pose
+	# tras play_parry para que el batazo se muestre; 0.12 s < 0.30 s de dur, así
+	# que _parry_t sigue alto (s≈0.8, batazo fuerte).
+	rig.play_parry()
+	await _wait_sec(0.12)
+	await Debug.screenshot("res://test_out/guard_parry.png")
+	await _wait_sec(0.4)    # deja recular a la guardia antes del 3/4
+
 	# ---- guardia en 3/4 (silueta) ----
 	var q := Vector3(sin(ctl.facing + 0.7), 0.0, cos(ctl.facing + 0.7))
 	_place(cam, base + q * 3.0 + Vector3(0.0, 0.25, 0.0), base)
@@ -71,7 +80,7 @@ func _run() -> void:
 	await _wait_sec(0.12)
 	await Debug.screenshot("res://test_out/guard_flinch.png")
 
-	print("[TmpGuard] DONE (rev neutral/on/34/flinch)")
+	print("[TmpGuard] DONE (rev neutral/on/parry/34/flinch)")
 	get_tree().quit(0)
 
 func _place(cam: Camera3D, eye: Vector3, center: Vector3) -> void:
