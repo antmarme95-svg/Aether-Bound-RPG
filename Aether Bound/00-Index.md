@@ -61,4 +61,10 @@
 - `LLM-WIKI.md` — Karpathy: arquitectura de wiki compilada por LLM.
 - `Vault-Driven Development (VDD).md` — framework VDD v1.0.
 - `../docs/GDD.md` — **GDD v2.2 congelado** (fuente del ingest #1).
-- `concept/` — láminas de concept art aprobadas (5 fenotipos, 2026-07-04).
+- `concept/` — concept art aprobado (Melancolía Gráfica). 2026-07-04: 5
+  fenotipos + keyframes dawn/dusk + trilogía Speck. 07-05: Dagna v1 +
+  foliage. 07-07: Fenotipos+Speck, Traición_Dagna, Seismic Springboard,
+  El primer viso de la muda. **07-08: 4 acoplamientos (Weaver's Net /
+  Skyhook / Arcane Ballistics / Mobile Foundry) + 4 beats narrativos
+  (El Último Vínculo, La traición ejecutada, Final 1 sacrificio
+  silencioso, Final 4 aether renacido).**

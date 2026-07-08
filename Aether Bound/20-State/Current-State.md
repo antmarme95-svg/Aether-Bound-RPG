@@ -240,6 +240,20 @@ updated: 2026-07-08
 - **Sesiones de arte (2026-07-04, todas cerradas):** fenotipos ✅ (B12) ·
   keyframes dawn/dusk ✅ + regla nocturna · Speck trilogía ✅ (B9 arte) ·
   golden scene ✅ (B11) · Dagna ✅ (B1 1/9).
+- **Depósito de concept art del director (2026-07-08, en `90-Raw/concept/`,
+  versionado):** 8 láminas nuevas en estilo Melancolía Gráfica. **4
+  acoplamientos** (link moves, lee la co-dependencia al instante): *The
+  Weaver's Net* (Humano Strategist + Nyael), *Skyhook* (Enano Vanguard +
+  Lyris), *Arcane Ballistics* (Elfo Strategist + Torgan), *Mobile Foundry*
+  (Enano Strategist + Bram) → referencia para [[Acoplamientos]] /
+  [[Los 9 Links del Pivote]] / fichas de pivotes (B1). **4 beats
+  narrativos:** *El Último Vínculo* (Dagna forja el guante, Speck al
+  hombro) y *La traición ejecutada* (la Primera Cuña en el God-Core) →
+  [[Estructura Dramática]] / [[Dagna]]; *Final 1 sacrificio silencioso* y
+  *Final 4 aether renacido* → [[Los 4 Finales]]. Es REFERENCIA raw (no
+  cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
+  ya existentes se versionaron también (Seismic Springboard, Traición_
+  Dagna, Fenotipos+Speck, El primer viso de la muda).
 - **Branch actual:** `master` (todo mergeado y pusheado; último commit:
   validación del director del paquete de feedback del kit — Capas 1–3
   vía merges locales `--no-ff`). `autotest_combat.gd` es un gate
