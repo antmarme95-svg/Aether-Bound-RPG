@@ -303,9 +303,10 @@ updated: 2026-07-09
   cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
-- **Branch actual:** `master` (últimos hitos mergeados: PRD-007 alcances 0–1;
-  el **alcance 2 (Springboard T1) queda commiteado local** pendiente de merge/
-  push tras el playtest). `autotest_combat.gd` es un gate permanente.
+- **Branch actual:** `master` (todo pusheado al cierre de la sesión 2026-07-09:
+  PRD-007 alcance 2 —Springboard T1— construido + **playtest aprobado**, lanzador
+  con `--ally=dagna`, y el Design Loop del **alcance 2b —Springboard dirigido—
+  RATIFICADO, aún sin construir**). `autotest_combat.gd` es un gate permanente.
   Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,

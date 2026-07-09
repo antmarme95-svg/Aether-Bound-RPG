@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] lint | Salud del vault — consistente (fix de wikilink histórico)
+Lint Loop de cierre de sesión (tras alcance 2 construido + playtest aprobado +
+2b ratificado). **Reporte, 5 fases:** (1) **Contradicciones:** ninguna — el
+alcance 2/2b es coherente con [[Dagna]] / [[Los 9 Links del Pivote]] / [[Game
+Feel Bible]]; el punto de canon RMB+R vs. "único botón de vínculo"
+([[Bond y el Bond Vacío]]) quedó pre-resuelto en el PRD §Extensión (RMB =
+contexto de apuntado, R sigue siendo el botón del Bond). (2) **Wikilinks:** 3
+flags, todos benignos — `[[wikilink]]`/`[[wikilinks]]` son ejemplos del SCHEMA
+(no links reales); **`[[PRD-007 …]]` de un lint previo (línea 76) sí apuntaba al
+archivo intruso borrado esta sesión → de-linkificado** (fix menor, historia
+intacta). Sin huérfanas (solo LLM-WIKI/VDD raw, por archivo). (3) **Status:**
+cero páginas `propuesto`/pendientes — `Briefs de Concept Art` ya `ratificada`;
+PRD-007 `ratificado` + §Extensión 2b `RATIFICADO`. (4) **Index vs realidad:** 43
+páginas, todas catalogadas (27 Knowledge + 8 State + 5 Loops + SCHEMA/LOG); sin
+fantasmas. (5) **State vs repo:** `Current-State` actualizado — alcance 2
+aprobado en playtest, 2b como siguiente a construir; branch line al día, se pushea
+en este cierre. **Vault consistente.**
+
 ## [2026-07-09] design | PRD-007 extensión alcance 2b — Springboard DIRIGIDO (RATIFICADA)
 Nace del playtest del alcance 2: el director aprobó el feel base y propuso
 **colocar** la onda (hoy nace pegada al slot de Dagna a tu hombro — no se puede
@@ -73,7 +91,7 @@ actualizado. Vault ahora 100% sin status pendientes.
 Lint Loop tras PRD-007 (ratificación + alcance 0) y el depósito de concept
 art. **Reporte:** (1) sin contradicciones — PRD-007 coherente con Dagna /
 Los 9 Links / Slice of Bond. (2) Wikilinks: sin rotos reales (solo los
-`[[wikilink]]` de ejemplo del SCHEMA); [[PRD-007 …]] resuelve; sin huérfanas
+`[[wikilink]]` de ejemplo del SCHEMA); el intruso `PRD-007 …` resuelve; sin huérfanas
 (solo LLM-WIKI/VDD, fuentes raw por archivo). (3) Status: `Briefs de Concept
 Art` sigue `propuesto` (único abierto, decisión del director); PRD-007
 `ratificado` ✅. (4) Index: 45 páginas, PRD-007 catalogado. (5) State vs
