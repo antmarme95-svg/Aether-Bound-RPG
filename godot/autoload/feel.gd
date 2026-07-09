@@ -67,6 +67,14 @@ func parry() -> void:
 	if _sting != null:
 		_sting.play()
 
+## PRD-007 alcance 2: despegue del Seismic Springboard. El lanzamiento merece su
+## lenguaje de tiempo (GFB): un freeze pesado (el "pop" de la curva de subida) +
+## trauma pesado (la tierra te avienta). Sin sting: el premio del Bond aquí es la
+## altura, no el clang.
+func springboard_launch() -> void:
+	time_feel.request_hit_stop(time_feel.HEAVY_MASS)
+	shake.add(shake.HIT_HEAVY)
+
 func shake_offset() -> Vector3:
 	return shake.offset()
 

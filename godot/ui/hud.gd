@@ -58,6 +58,10 @@ var _toast_label: Label
 var _vignette: ColorRect
 var _vignette_mat: ShaderMaterial
 var _crosshair: Control
+# PRD-007 alcance 2: tell de HUD del Springboard (refuerza los anillos diegéticos).
+var _springboard_cue: Label
+var _springboard_on: bool = false
+var _springboard_pulse: float = 0.0
 
 # ================================================================
 func _ready() -> void:
@@ -68,6 +72,7 @@ func _ready() -> void:
 	_build_toast()
 	_build_vignette()
 	_build_crosshair()
+	_build_springboard_cue()
 	_build_chips()
 	_stamina_wheel = StaminaWheel.new()
 	_stamina_wheel.set_accent(_accent)
@@ -333,6 +338,46 @@ func _build_crosshair() -> void:
 	_crosshair.set_offset(SIDE_BOTTOM,  12)
 	_crosshair.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_crosshair)
+
+# PRD-007 alcance 2: cue teal "SALTA" bajo el crosshair. Pulsa mientras hay una
+# onda con ventana abierta bajo los pies — el refuerzo del tell diegético (anillos).
+func _build_springboard_cue() -> void:
+	_springboard_cue = Label.new()
+	_springboard_cue.text = "SALTA"
+	_springboard_cue.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_springboard_cue.add_theme_font_size_override("font_size", 20)
+	_springboard_cue.add_theme_color_override("font_color", Color("#8ff5e6"))  # teal (familia de la onda)
+	_springboard_cue.add_theme_constant_override("outline_size", 6)
+	_springboard_cue.add_theme_color_override("font_outline_color", Color(0.0, 0.12, 0.12, 0.9))
+	_springboard_cue.set_anchor(SIDE_LEFT,   0.5)
+	_springboard_cue.set_anchor(SIDE_TOP,    0.5)
+	_springboard_cue.set_anchor(SIDE_RIGHT,  0.5)
+	_springboard_cue.set_anchor(SIDE_BOTTOM, 0.5)
+	_springboard_cue.set_offset(SIDE_LEFT,  -80)
+	_springboard_cue.set_offset(SIDE_RIGHT,  80)
+	_springboard_cue.set_offset(SIDE_TOP,    34)
+	_springboard_cue.set_offset(SIDE_BOTTOM, 60)
+	_springboard_cue.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_springboard_cue.modulate.a = 0.0
+	add_child(_springboard_cue)
+
+## set_springboard_ready — el director lo llama por frame: true mientras el
+## jugador pisa una onda con ventana abierta. Enciende/apaga el pulso del cue.
+func set_springboard_ready(active: bool) -> void:
+	_springboard_on = active
+
+func _process(delta: float) -> void:
+	if _springboard_cue == null:
+		return
+	# Pulso sutil: sube al aparecer, oscila mientras la ventana está abierta, se
+	# apaga rápido al cerrarse. Alpha en [0.35, 1.0] con seno.
+	if _springboard_on:
+		_springboard_pulse += delta * 9.0
+		var s: float = 0.5 + 0.5 * sin(_springboard_pulse)
+		_springboard_cue.modulate.a = minf(1.0, _springboard_cue.modulate.a + delta * 8.0) * (0.55 + 0.45 * s)
+	else:
+		_springboard_pulse = 0.0
+		_springboard_cue.modulate.a = maxf(0.0, _springboard_cue.modulate.a - delta * 6.0)
 
 func show_crosshair() -> void:
 	if _crosshair != null:

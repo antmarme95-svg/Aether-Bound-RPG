@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-08
+updated: 2026-07-09
 ---
 
 # Current State
@@ -190,6 +190,21 @@ updated: 2026-07-08
   onda registrada + knockback (1.6 m) + expiración + captura
   `pound_wave.png` (los anillos teal leen igual que la lámina). QA:
   test_core/combat/slice/ui + tmp_ally ALL_PASS.
+- **PRD-007 alcance 2 ✅ CÓDIGO (2026-07-09): Seismic Springboard T1 —
+  Bond=`R` + salto-en-onda → lanzamiento vertical.** `game_director`:
+  `_check_key_r()` + `request_bond_pound()` piden el pound a Dagna en ARENA;
+  el controlador comparte `springboard_waves` por referencia (patrón de
+  `enemies`). `player_controller._wave_at()`: un salto DENTRO de una onda
+  activa amplifica `vel_y` a `SPRINGBOARD_LAUNCH_VEL 17.0` → **~6.0 m** (7.3×
+  el salto normal ~0.8 m). **Air control por la ley de leap del PRD-005:** el
+  lanzamiento siembra `_air_vel` con el momentum horizontal actual + activa
+  `_leaping` → conserva y dirige la inercia (corres→cargas; parado→recto).
+  **Feel (GFB):** `Feel.springboard_launch()` (freeze pesado + trauma) + estela
+  teal + tell de HUD `set_springboard_ready()` (cue "SALTA" pulsante en suelo
+  dentro de la onda). Sonda `tests/tmp_springboard.gd` ALL_PASS (6.00 m con
+  onda / 0.82 m sin / 4.67 m de air control + captura `springboard_launch.png`);
+  regresión test_core + autotest_combat ALL_PASS. **Pendiente: playtest del
+  director (feel) — "afinamos con playtest"** (altura/tecla/ventana a tunear).
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -223,12 +238,16 @@ updated: 2026-07-08
      como banco de combate permanente.
   1. **PRD-007 (Dagna + Seismic Springboard T1) — spec RATIFICADO
      (2026-07-08):** [[PRD-007 Dagna aliada + Seismic Springboard T1]].
-     Design Loop cerrado. **Alcances 0 ✅ (aliada sigue) y 1 ✅ (ground-pound
-     → zona de onda + VFX teal). Siguiente: alcance 2** — Springboard T1:
-     input **Bond=`R`** pide el pound; **saltar dentro de la onda** (ya
-     registrada en `springboard_waves`) amplifica el salto a un lanzamiento
-     vertical (PushPull + supersalto PRD-005) + tell de ventana. Gate 1 =
-     pelear junto a Dagna + cornisa solo alcanzable vía Springboard, ≥60 FPS.
+     Design Loop cerrado. **Alcances 0 ✅ (aliada sigue), 1 ✅ (ground-pound →
+     onda + VFX teal) y 2 ✅ CÓDIGO (Springboard T1: Bond=`R` + salto-en-onda →
+     lanzamiento ~6 m con air control). PRIMERO: playtest del director del
+     alcance 2** — el springboard existe end-to-end, falta validar el FEEL en
+     vivo ("afinamos con playtest": altura, tecla `R`, ventana de la onda).
+     Banco: `Start-Playtest-Greybox.bat` con `--ally=dagna` (R pide el pound,
+     salta sobre los anillos). **Luego: alcance 3** (IA de combate mínima de
+     Dagna: muralla-block + defensa + pounds autónomos en contexto) y
+     **alcance 4 = Gate 1** (cornisa solo alcanzable vía Springboard +
+     `autotest_springboard` + ≥60 FPS frío).
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -280,13 +299,14 @@ updated: 2026-07-08
   cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
-- **Branch actual:** `master` (todo mergeado y pusheado; últimos hitos:
-  concept art del director versionado, PRD-007 ratificado, y PRD-007
-  alcance 0 — Dagna aliada). `autotest_combat.gd` es un gate permanente.
+- **Branch actual:** `master` (últimos hitos mergeados: PRD-007 alcances 0–1;
+  el **alcance 2 (Springboard T1) queda commiteado local** pendiente de merge/
+  push tras el playtest). `autotest_combat.gd` es un gate permanente.
   Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
-  dagna, guard, ally) quedan hasta validar el pipeline / limpieza.
+  dagna, guard, ally, pound, springboard) quedan hasta validar el pipeline /
+  limpieza.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

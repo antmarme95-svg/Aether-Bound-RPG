@@ -335,6 +335,21 @@ func _check_key_e() -> bool:
 	_e_was_pressed    = pressed
 	return just
 
+## PRD-007 alcance 2: Bond = R (input único del vínculo). Debounce como E.
+var _r_was_pressed: bool = false
+func _check_key_r() -> bool:
+	var pressed: bool = Input.is_key_pressed(KEY_R)
+	var just: bool    = pressed and not _r_was_pressed
+	_r_was_pressed    = pressed
+	return just
+
+## request_bond_pound — el jugador pide (Bond) el ground-pound a Dagna. La onda
+## resultante es la fuente del Springboard. Idempotente si ya está golpeando.
+func request_bond_pound() -> void:
+	for ally in allies:
+		if ally != null and not ally.dead and ally.has_method("ground_pound"):
+			ally.ground_pound()
+
 ## sign_contract — autotest direct path (bypasses dialogue UI).
 ## Mirrors the JS onSigned callback.
 func sign_contract() -> void:
@@ -492,13 +507,22 @@ func _state_arena() -> Dictionary:
 			# PRD-007 alcance 0: aliada Dagna (--ally=dagna) al hombro del jugador.
 			allies = []
 			springboard_waves = []
+			# PRD-007 alcance 2: el controlador lee las ondas por referencia (el
+			# director muta ESTE array en su lugar — nunca lo reasigna tras esto).
+			controller.springboard_waves = springboard_waves
 			if str(Debug.args.get("ally", "")) == "dagna":
 				allies = _spawn_ally_dagna(arena)
 			EventBus.emit_event("quest:toast", {"text": "Greybox — %d hostiles%s" % [
 				enemies.size(), " · Dagna a tu lado" if allies.size() > 0 else ""]}),
 
 		"update": func(_ctx: Dictionary, dt: float) -> void:
-			_gameplay_update(dt),
+			_gameplay_update(dt)
+			# PRD-007 alcance 2: Bond (R) pide el pound; el tell de HUD pulsa
+			# mientras estás en una onda con ventana abierta (refuerza los anillos).
+			if _check_key_r():
+				request_bond_pound()
+			if hud != null and controller != null:
+				hud.set_springboard_ready(controller.springboard_ready()),
 
 		"exit": func(_ctx: Dictionary, _to: String) -> void:
 			hud.hide_prompt(),

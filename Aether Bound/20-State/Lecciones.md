@@ -105,6 +105,22 @@ updated: 2026-07-08
   freezes se cuentan en FRAMES, las duraciones en tiempo real — nunca
   con `get_process_delta_time()` (durante un freeze delta = 0).
 
+- **"Air control conservado" (ley de leap PRD-005) = conserva/dirige el
+  momentum EXISTENTE, no acelera desde cero.** Para lanzar un salto en una
+  dirección (Seismic Springboard T1) NO basta con subir `vel_y`: eso da un
+  brinco puramente vertical sin steering. Hay que sembrar `_air_vel` con la
+  velocidad horizontal actual del jugador y activar `_leaping` — así el path
+  aéreo del leap integra `_air_vel` a magnitud completa y lo lerp-ea hacia el
+  input (steering escalado por `air_control` del perfil). Corolario de test: un
+  probe que mide air control SALTANDO DESDE PARADO mide 0 (no hay inercia que
+  cargar) — hay que construir momentum con W en el suelo ~0.4 s antes de saltar
+  y medir solo el tramo aéreo. El salto normal desde parado tampoco deriva.
+- **La altura de un salto es analítica pura: `h = v²/(2·GRAVITY)`.** Con
+  `GRAVITY=24`, `SPRINGBOARD_LAUNCH_VEL=17` → 6.02 m (la sonda midió 6.00). El
+  salto "normal" NO es `jump_force` crudo: el LSM lo modula por clase (el warrior
+  ironblooded `massMult 1.5` deja el salto en ~0.8 m, no ~1.5). Sizear cornisas
+  y umbrales de test contra el número MEDIDO, no el `jump_force` nominal.
+
 ## Entorno
 
 - **Godot 4.6.3** (no está en PATH):

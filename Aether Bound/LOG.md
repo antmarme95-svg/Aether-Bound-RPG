@@ -1,5 +1,29 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] feature | PRD-007 alcance 2 — Seismic Springboard T1 (Bond=`R` + salto-en-onda → lanzamiento)
+Cierra la mecánica central del PRD-007. **Input Bond = `R`** (`game_director`:
+`_check_key_r()` + `request_bond_pound()`) pide el ground-pound a Dagna en el
+estado ARENA; la onda ya se registra sola (alcance 1). El controlador comparte
+`springboard_waves` por referencia (mismo patrón que `enemies`). **Lanzamiento**
+(`player_controller._wave_at()` en el bloque de salto vertical): un salto DENTRO
+de una onda activa no usa el `jump_force` normal (8.4 → ~0.8 m con el warrior
+ironblooded pesado) sino `SPRINGBOARD_LAUNCH_VEL 17.0` → **~6.0 m** (7.3× el
+salto normal, altura "imposible" para cornisas). **Air control por la ley de leap
+del PRD-005:** el lanzamiento SIEMBRA `_air_vel` con el momentum horizontal actual
+y activa `_leaping`, de modo que el path aéreo del leap conserva y DIRIGE la
+inercia (llegas corriendo → cargas y diriges; saltas parado → subes recto). **Feel
+(GFB):** fachada nueva `Feel.springboard_launch()` = freeze pesado (pop de la
+curva de subida) + trauma; VFX de estela teal ascendente; **tell de HUD**
+(`hud.set_springboard_ready()` = cue "SALTA" teal que pulsa mientras pisas la onda
+con ventana abierta, refuerza los anillos diegéticos). Sonda
+`tests/tmp_springboard.gd` ALL_PASS: Bond→pound→onda, altura con onda 6.00 m vs.
+sin onda 0.82 m (7.3×), air control 4.67 m de desplazamiento dirigible, captura
+`springboard_launch.png` (jugador en el aire, suelo curvado abajo). QA regresión:
+test_core + autotest_combat ALL_PASS. **Pendiente: playtest del director (feel) —
+"afinamos con playtest"** (números de altura/tecla/ventana a tunear en vivo).
+Siguiente: alcance 3 (IA de combate mínima de Dagna) y alcance 4 (Gate 1: cornisa
+solo alcanzable vía Springboard + `autotest_springboard` + ≥60 FPS frío).
+
 ## [2026-07-08] feature | PRD-007 alcance 1 — ground-pound de Dagna → zona de onda + VFX teal
 Donde nace la mecánica del Springboard. `ally_dagna.gd`: `ground_pound()` =
 secuencia plant→slam→recover; en el impacto (tras windup ~0.35 s) spawnea el

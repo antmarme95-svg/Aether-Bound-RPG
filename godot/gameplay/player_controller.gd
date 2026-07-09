@@ -31,6 +31,11 @@ const SPRINT  := 6.6
 const CROUCH  := 1.9
 const GRAVITY := 24.0
 const JUMP_V  := 8.4
+# PRD-007 alcance 2: Seismic Springboard T1. Un salto DENTRO de la onda de Dagna
+# (ventana abierta) no usa el jump_force normal (8.4 → ~1.47 m): se amplifica a
+# este impulso vertical (→ ~6 m, altura "imposible" para alcanzar cornisas). El
+# air control se conserva por el path aéreo normal (no-leap), que integra input.
+const SPRINGBOARD_LAUNCH_VEL := 17.0
 
 # ---- camera constants ----
 const CAM_DIST_DEFAULT  := 4.4
@@ -55,6 +60,9 @@ var push_pull = null   # PushPullComponent
 # ---- scene ref ----
 var scene: Node3D = null   # any scene that has get_height / clamp_position / etc.
 var enemies: Array = []
+# PRD-007 alcance 2: zonas de onda activas del Springboard (el director las posee
+# y muta en su lugar; acá se leen por referencia — mismo patrón que `enemies`).
+var springboard_waves: Array = []
 var interactables: Array = []   # scene.interactables alias
 var triggers: Array = []        # scene.triggers alias
 
@@ -1091,6 +1099,67 @@ func _build_swing_arc_mesh() -> Mesh:
 	return st.commit()
 
 # ----------------------------------------------------------------
+# PRD-007 alcance 2: ¿está `pos` dentro de alguna onda del Springboard con la
+# ventana aún abierta? El director expira las ondas (su `t` se agota), así que
+# basta la distancia planar al centro < radio.
+func _wave_at(pos: Vector3) -> bool:
+	for w in springboard_waves:
+		var wp: Vector3 = w.get("position", Vector3.ZERO)
+		var r: float    = w.get("radius", 0.0)
+		if Vector2(wp.x - pos.x, wp.z - pos.z).length() <= r:
+			return true
+	return false
+
+# springboard_ready — para el tell de HUD: hay ventana abierta Y estás parado en
+# ella (el momento de "salta AHORA"). Solo cuenta en suelo (el cue es de despegue).
+func springboard_ready() -> bool:
+	return grounded and _wave_at(position)
+
+# VFX del despegue: estela teal ascendente en el jugador (la lámina Seismic).
+func _spawn_springboard_vfx() -> void:
+	if scene == null:
+		return
+	var streak := GPUParticles3D.new()
+	streak.emitting      = true
+	streak.amount        = 20
+	streak.lifetime      = 0.5
+	streak.explosiveness = 0.85
+	streak.one_shot      = true
+	streak.local_coords  = false
+	streak.position      = position + Vector3(0.0, 0.4, 0.0)
+	var pm := ParticleProcessMaterial.new()
+	pm.direction            = Vector3(0.0, 1.0, 0.0)
+	pm.spread               = 18.0
+	pm.initial_velocity_min = 6.0
+	pm.initial_velocity_max = 11.0
+	pm.gravity              = Vector3(0.0, -4.0, 0.0)
+	pm.scale_min            = 0.05
+	pm.scale_max            = 0.13
+	var grad := Gradient.new()
+	grad.set_color(0, Color(0.55, 1.0, 0.95, 1.0))   # teal brillante (misma familia que la onda)
+	grad.set_color(1, Color(0.2, 0.7, 0.7, 0.0))
+	var gtex := GradientTexture1D.new()
+	gtex.gradient = grad
+	pm.color_ramp = gtex
+	streak.process_material = pm
+	var sm := SphereMesh.new()
+	sm.radius = 0.05
+	sm.height = 0.10
+	var smat := ToonMaterials.glow_mat(Color("#8ff5e6"), 2.8)
+	smat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	sm.surface_set_material(0, smat)
+	streak.draw_pass_1 = sm
+	scene.add_child(streak)
+	var t := Timer.new()
+	t.wait_time = 0.8
+	t.one_shot  = true
+	t.autostart = true
+	streak.add_child(t)
+	t.timeout.connect(func() -> void:
+		if is_instance_valid(streak):
+			streak.queue_free())
+
+# ----------------------------------------------------------------
 # nearest_interactable — planar distance (JS PlayerController.nearestInteractable)
 func nearest_interactable() -> Dictionary:
 	var best: Dictionary = {}
@@ -1312,7 +1381,22 @@ func update(dt: float) -> void:
 		ground_y = scene.get_height(position.x, position.z)
 
 	if jump_vel > 0.0:
-		vel_y    = jump_vel
+		# PRD-007 alcance 2: si el salto arranca DENTRO de una onda de Dagna, se
+		# amplifica a un lanzamiento vertical (Seismic Springboard T1). Fuera de
+		# la onda → salto normal. Ley de leap del PRD-005: sembramos `_air_vel`
+		# con el momentum horizontal ACTUAL y activamos `_leaping`, para que el
+		# path aéreo del leap conserve y DIRIJA la inercia (air control escalado
+		# por el perfil) — así el lanzamiento alcanza cornisas arriba-y-adelante.
+		# Llegas corriendo → cargas momentum; saltas parado → subes recto.
+		if _wave_at(position):
+			vel_y = SPRINGBOARD_LAUNCH_VEL
+			_air_vel = Vector3(sin(facing), 0.0, cos(facing)) * _horiz_speed
+			_leaping = true
+			_spawn_springboard_vfx()
+			Feel.springboard_launch()
+			EventBus.emit_event("springboard:launch", {"position": position})
+		else:
+			vel_y = jump_vel
 		grounded = false
 	vel_y     -= GRAVITY * dt
 	position.y += vel_y * dt
