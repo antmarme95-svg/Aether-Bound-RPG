@@ -239,14 +239,18 @@ updated: 2026-07-09
   1. **PRD-007 (Dagna + Seismic Springboard T1) — spec RATIFICADO
      (2026-07-08):** [[PRD-007 Dagna aliada + Seismic Springboard T1]].
      Design Loop cerrado. **Alcances 0 ✅ (aliada sigue), 1 ✅ (ground-pound →
-     onda + VFX teal) y 2 ✅ CÓDIGO (Springboard T1: Bond=`R` + salto-en-onda →
-     lanzamiento ~6 m con air control). PRIMERO: playtest del director del
-     alcance 2** — el springboard existe end-to-end, falta validar el FEEL en
-     vivo ("afinamos con playtest": altura, tecla `R`, ventana de la onda).
-     Banco: `Start-Playtest-Greybox.bat` con `--ally=dagna` (R pide el pound,
-     salta sobre los anillos). **Luego: alcance 3** (IA de combate mínima de
-     Dagna: muralla-block + defensa + pounds autónomos en contexto) y
-     **alcance 4 = Gate 1** (cornisa solo alcanzable vía Springboard +
+     onda + VFX teal) y 2 ✅ CÓDIGO + PLAYTEST APROBADO (2026-07-09):** el
+     Springboard T1 (Bond=`R` + salto-en-onda → lanzamiento ~6 m con air
+     control) funciona bien en vivo. Banco: `Start-Playtest-Greybox.bat` (ya
+     trae `--ally=dagna`). **SIGUIENTE A CONSTRUIR: alcance 2b — Springboard
+     DIRIGIDO, extensión RATIFICADA (2026-07-09, aún NO arrancada):** `RMB`
+     apunta (decal teal, rango ~10–12 m) + `R` ordena → Dagna viaja al punto →
+     pound ahí → esprintas y arcas (arco emergente + empuje hacia el punto);
+     cooldown ~4–5 s, Dagna deja su slot al viajar. Los dos modos conviven
+     (reactivo + dirigido). Spec en [[PRD-007 Dagna aliada + Seismic Springboard
+     T1]] §Extensión (5 sub-pasos; único código nuevo = raycast+decal + máquina
+     de estados de la orden). **Luego: alcance 3** (IA de combate mínima de
+     Dagna) y **alcance 4 = Gate 1** (cornisa solo alcanzable vía Springboard +
      `autotest_springboard` + ≥60 FPS frío).
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque

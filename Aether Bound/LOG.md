@@ -1,5 +1,26 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] design | PRD-007 extensión alcance 2b — Springboard DIRIGIDO (RATIFICADA)
+Nace del playtest del alcance 2: el director aprobó el feel base y propuso
+**colocar** la onda (hoy nace pegada al slot de Dagna a tu hombro — no se puede
+poner adelante para arcar hacia una cornisa). Design Loop cerrado; el director
+ratificó las **3 decisiones**: (1) **dos modos** — *reactivo* (`R`, el alcance 2
+actual, intacto) + *dirigido* (`RMB` apunta con decal teal clampeado a rango → `R`
+ordena → Dagna **viaja** al punto → pound ahí → esprintas y arcas); (2) **arco
+emergente** del momentum (`_air_vel`) **+ pequeño empuje hacia el punto** (cero
+física nueva); (3) **extensión del PRD-007** (alcance 2b), no tuning. Reglas de
+arranque a tunear en playtest: rango de orden ~10–12 m, viaje a `MOVE_SPEED_MAX`
+(~2 s, **Dagna deja su slot de guardia** = costo táctico → alcance 3), cooldown
+~4–5 s, ventana de onda 0.6 s, estados `follow→traveling→pounding→cooldown`.
+Canon resuelto: **RMB+R preserva "R = el botón del vínculo"** (RMB = contexto de
+apuntado, gramática del ADS — no un segundo botón de Bond). Anti-objetivos: sin
+pathfinding rico (línea + ground-snap), sin ondas múltiples, el modo reactivo no
+cambia. Único código nuevo: apuntado (raycast + decal) + máquina de estados de la
+orden; todo lo demás reusa el alcance 2 + la locomoción de `ally_dagna.gd`. Spec
+en [[PRD-007 Dagna aliada + Seismic Springboard T1]] §Extensión. **Registrado,
+NO construido** (pedido del director). Siguiente al construir: los 5 sub-pasos del
+orden de construcción 2b.
+
 ## [2026-07-09] feature | PRD-007 alcance 2 — Seismic Springboard T1 (Bond=`R` + salto-en-onda → lanzamiento)
 Cierra la mecánica central del PRD-007. **Input Bond = `R`** (`game_director`:
 `_check_key_r()` + `request_bond_pound()`) pide el ground-pound a Dagna en el

@@ -112,3 +112,94 @@ alcanzada) + gate de FPS ≥60 frío.
    el escenario del Gate 1.
 4. **Pounds de la IA:** T1 arranca **solo-Bond** (alcances 1–2); el pound
    autónomo de la IA de Dagna se suma en el **alcance 3**.
+
+---
+
+# Extensión — Springboard dirigido (alcance 2b)
+
+> **status: RATIFICADO (Design Loop 2026-07-09) — el director aprobó las 3
+> decisiones (dos modos · arco emergente + empuje · extensión del PRD-007).**
+> Nace de un playtest del alcance 2 (el director aprobó el feel base). Amplía el
+> springboard con **colocación**: hoy la onda nace pegada a Dagna (tu hombro), no
+> se puede *poner adelante* para arcar hacia una cornisa. Esto lo resuelve.
+> **Pendiente de construir** (Feature Loop) — no arrancado a la fecha de ratificación.
+
+**Insight del playtest:** el problema real no era el ángulo (el arco ya emerge de
+tu momentum, sembrado en `_air_vel`), sino que **no puedes colocar la onda**: está
+fija en el slot de Dagna a tu lado. La designación resuelve exactamente eso; el
+45° cae solo al esprintar hacia una onda puesta adelante.
+
+## Los dos modos (RATIFICADO 2026-07-09 — decisión del director)
+
+1. **Reactivo (alcance 2, ya construido):** `R` → Dagna golpea **donde está** →
+   relanzamiento rápido en combate. Barato e inmediato. **No se toca.**
+2. **Dirigido (2b, nuevo):** `RMB` (mantener) entra en **modo apuntado**; `R`
+   confirma la orden → Dagna **viaja al punto** designado → hace el pound ahí →
+   esprintas hacia la onda y saltas en la ventana → **arco** hacia/sobre el
+   objetivo. Traversal deliberado. Aterriza el *"es traversal Y combate"* del PRD.
+
+## Modelo del modo dirigido
+
+- **Apuntado (`RMB` mantener):** raycast cámara→suelo proyecta un **decal/retícula
+  teal** en el punto objetivo, **clampeado al rango máx** de orden. Suelta RMB sin
+  R = cancela.
+- **Orden (`R` con RMB activo):** fija el destino y Dagna **viaja** a él
+  (locomoción de seguimiento que ya tiene + ground-snap; **sin pathfinding rico**,
+  línea directa). Al llegar → `ground_pound()` en el punto → la onda nace **ahí**,
+  no en su slot.
+- **Arco emergente + pequeño empuje (RATIFICADO):** el lanzamiento reusa el
+  momentum sembrado en `_air_vel` (arco de tu sprint) **y suma un empuje
+  horizontal pequeño hacia el punto** de la onda, para asegurar el arco aunque tu
+  entrada sea imperfecta. Magnitud chica, tunable. **Cero física nueva** — capa
+  sobre lo del alcance 2.
+
+## Reglas de juego (números de arranque, a tunear en playtest)
+
+- **Rango máx de apuntado/orden:** ~10–12 m (clamp del decal; fuera de rango el
+  cursor se queda en el borde y/o se pinta "fuera de alcance").
+- **Viaje de Dagna:** a su `MOVE_SPEED_MAX` (5.6) → ~2 s a rango full. Mientras
+  viaja **abandona su slot de guardia a tu lado** — costo táctico real (te quedas
+  sin muralla). Conecta con su IA de combate del **alcance 3**.
+- **Cooldown tras un pound comandado:** ~4–5 s (evita spam; da rima). El modo
+  reactivo puede tener su propio cooldown menor o compartir.
+- **Ventana de la onda:** sigue 0.6 s (canon alcance 1).
+- **Estados de Dagna:** `idle/follow → traveling → pounding → cooldown`. Solo una
+  orden dirigida en vuelo a la vez.
+
+## Feel / tell (GFB)
+
+- **Decal de destino** teal en el suelo durante el apuntado (dónde caerá la onda).
+- **Estado legible:** "Dagna en camino" vs. "lista" (los anillos siguen siendo el
+  "salta AHORA" al pound; el cue de HUD del alcance 2 se reusa).
+- El **empuje hacia el punto** debe leerse como intención, no como teleport.
+
+## Canon (resuelto)
+
+- **RMB+R preserva "R = el botón del vínculo":** RMB es **contexto de apuntado**
+  (misma gramática que el ADS del ranged), R sigue siendo el disparo del Bond. No
+  se rompe el "input único" de [[Acoplamientos]] — se contextualiza.
+
+## Anti-objetivos (2b)
+
+- **Sin pathfinding rico** (Dagna viaja en línea + ground-snap, como ya sigue).
+- **Sin ondas múltiples simultáneas** (una orden dirigida en vuelo).
+- **El modo reactivo NO cambia** (el alcance 2 queda intacto).
+- **Sin medidor/tiers de Bond** (sigue fuera, como todo el PRD-007).
+
+## Orden de construcción (2b)
+
+1. **Apuntado:** modo `RMB` → raycast cámara→suelo + decal teal clampeado a rango.
+2. **Orden + viaje:** `R` fija destino → Dagna `traveling` → al llegar, pound en el
+   punto (reusa `ground_pound()` con posición objetivo).
+3. **Arco dirigido:** al lanzarte desde una onda comandada, suma el pequeño empuje
+   horizontal hacia el punto (sobre el `_air_vel` del alcance 2).
+4. **Reglas:** cooldown + rango máx + estados de Dagna + costo de dejar el slot.
+5. **QA:** extender `tmp_springboard.gd` (o probe nuevo): apuntar→ordenar→viaje→
+   llegada→pound en el punto→arco que cubre distancia horizontal hacia el objetivo;
+   verificar clamp de rango y cooldown.
+
+## QA / dependencias (2b)
+
+Reusa todo lo del alcance 2 (`_wave_at`, `_air_vel`/`_leaping`, `Feel`, HUD cue) +
+la locomoción de seguimiento de `ally_dagna.gd`. El único sistema nuevo es el
+apuntado (raycast + decal) y la máquina de estados de la orden.
