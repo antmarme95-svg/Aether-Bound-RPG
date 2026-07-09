@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] design | Metodología del pase visual — playtests por capa con gate secuencial (RATIFICADA)
+Nace de una verificación del director (lámina NotebookLM de las 4 capas vs.
+vault). **Hallazgo de la verificación:** el pipeline de 4 capas es canon
+([[Art Bible]] §Pipeline técnico) y está IMPLEMENTADO y parametrizado por capa
+en `melancolia_post.gdshader` (probado en la golden scene B11) — pero solo lo
+usa `golden_scene.gd`; The Wilds jugable sigue en el toon viejo, y su
+aplicación (Plan §Fase 4) no tenía metodología ni PRD. **Ratificado por el
+director:** playtests por capa ACUMULATIVOS en The Wilds (L1 → L1+2 → L1+2+3 →
+full, toggles en vivo — precedente tecla T del A/B de animación) con **gate
+secuencial estricto: cada capa se LIBERA con VoBo del director ANTES de apilar
+la siguiente**; cada VoBo debe acercar al comicbook look de los keyframes
+canónicos (la escena persigue la imagen) + costo de FPS medido por capa
+(presupuesto térmico RTX 2060). Costo real identificado para el futuro PRD:
+migración de materiales de The Wilds a variantes opacas (toon escribe ALPHA →
+invisible al post, [[Lecciones]]). Registrado en [[Plan-de-Produccion]] §Fase 4.
+**Solo nota metodológica — sin construcción** (el PRD del pase visual nace en
+Fase 4 con estos gates como su QA).
+
 ## [2026-07-09] lint | Salud del vault — consistente (fix de wikilink histórico)
 Lint Loop de cierre de sesión (tras alcance 2 construido + playtest aprobado +
 2b ratificado). **Reporte, 5 fases:** (1) **Contradicciones:** ninguna — el

@@ -261,6 +261,12 @@ updated: 2026-07-09
   3. Backlog C4 (cuando toque el pase de poses): postura de columna
      por gait (B15c) + canal airborne del rig (B15d #6 — el salto hoy
      no tiene pose).
+  4. **Metodología del pase visual RATIFICADA (2026-07-09)** para la Fase 4:
+     playtests por capa acumulativos en The Wilds sobre `melancolia_post` (las
+     4 capas ya implementadas — solo las usa la golden scene), **gate
+     secuencial: cada capa se libera con VoBo del director antes de apilar la
+     siguiente**, criterio = keyframes canónicos + FPS por capa. Detalle en
+     [[Plan-de-Produccion]] §Fase 4. El PRD del pase visual nace ahí.
 - **PRD-006 CERRADO ✅ en código** (Feature Loop; alcances 0–5). Falta
   solo el playtest del director del feel:
   - **Alcance 0 ✅** rig restringido (ROM + constraints) + strike

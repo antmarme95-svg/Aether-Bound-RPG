@@ -87,6 +87,19 @@ Objetivo: **el slice shippeable al criterio de éxito.**
 
 - Look golden-scene aplicado: Wilds (existente) + **registro montaña del
   Ascent** (nuevo) + interior del eco-Archive.
+  - **Metodología del pase visual (RATIFICADA 2026-07-09):** playtests por
+    capa **ACUMULATIVOS y con gate secuencial** en The Wilds sobre
+    `melancolia_post.gdshader` (las 4 capas del [[Art Bible]] ya implementadas
+    y parametrizadas por uniforms; toggles en vivo por tecla, precedente del
+    A/B de animación). Orden del pipeline: **L1 → L1+2 → L1+2+3 → full**, y
+    **cada capa se LIBERA con VoBo del director ANTES de apilar la
+    siguiente** — nada se monta sobre una capa no aprobada. Criterio por capa:
+    acercarse al comicbook look de los keyframes canónicos dawn/dusk (la
+    escena persigue la imagen) **+ costo de FPS medido por capa** (presupuesto
+    térmico RTX 2060; si no llegamos a 60, se sabe qué degradar). Costo real a
+    especificar en el PRD: **migración de materiales de The Wilds a variantes
+    opacas** (`toon.gdshader` escribe ALPHA → invisible al post screen-space,
+    [[Lecciones]]).
 - **Dagna modelo/rig final** (lámina canónica `dagna-v1.png`; garantizar la
   cuña miniatura en la trenza) + C4 completo (constraints + IK + ROM enana).
 - Audio mínimo: sting de dos notas (semilla B8) en camp scene, traición y
