@@ -376,11 +376,25 @@ updated: 2026-07-10
   al pase de poses C4** (cláusula de escape: se adelanta a PRD-007 si en
   el Gate 1 los cuerpos impiden juzgar el feel).
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN:**
-  0. **PRD-006 CERRADO ✅** (alcances 0–5 en código) **+ playtest del
-     director VALIDADO (2026-07-08):** el kit Duelist está cerrado a nivel
-     feel (feedback de guardia/parry/swing aprobado en vivo). El greybox
-     (`--skip=arena --spawn=<spec>`, `Start-Playtest-Greybox.bat`) queda
-     como banco de combate permanente.
+  0. **VENTANA C6/C4 EN CURSO (branch `feat/c6-anatomy-rework`).** Hecho
+     (2026-07-10): **C6a r1–r3 + C6c** — humano canónico 7.49 cabezas bajo
+     línea Sobel pura (sin casco invertido; `toon_opaque` post-safe),
+     volúmenes cónicos de lámina (nada de círculos), hombros caídos con
+     trapecios, cabeza sin chibi (cráneo con forma, mandíbula, nariz, ojos
+     humanos). Banco: `tests/tmp_anatomy.gd` (medidas + capturas en
+     `godot/test_out/anatomy_*.png`). **Primero: VoBo del director de las
+     capturas r3** (las de la comparación las dio en vivo, la cara nueva aún
+     no la aprueba). **Luego C6b:** enano trapezoide 4.5 cabezas + elfo 8
+     esbelto sobre la tabla PROPORTIONS + ROM enano/elfo en `rig_biomech.gd`
+     + **Dagna re-montada** (sus piezas firma HOY están desfasadas — apuntan
+     al cuerpo viejo). Después C4a (poses por gait) + C4b (canal airborne) y
+     playtest del director de la ventana completa. Pies IK DIFERIDOS.
+  0b. **PRD-006 CERRADO ✅ + playtest VALIDADO (2026-07-08):** el kit Duelist
+     cerrado a nivel feel. El greybox (`--skip=arena --spawn=<spec>`,
+     `Start-Playtest-Greybox.bat`) queda como banco de combate permanente.
+     **Ojo: el greybox NO corre el post Melancolía — ahí el rig se ve sin
+     línea de tinta hasta que el banco de playtest gane el post (pendiente
+     de decidir al cierre de la ventana C6/C4).**
   1. **PRD-007 (Dagna + Seismic Springboard T1) — spec RATIFICADO
      (2026-07-08):** [[PRD-007 Dagna aliada + Seismic Springboard T1]].
      Design Loop cerrado. **Alcances 0 ✅ (aliada sigue), 1 ✅ (ground-pound →

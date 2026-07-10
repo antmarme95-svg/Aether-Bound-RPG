@@ -1,5 +1,13 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] state | Cierre de sesión — ventana C6/C4: C6a+C6c hechos
+Sesión cerrada con la ventana C6/C4 a medio camino y checkpoint completo: C6a
+(r1 proporciones 7.5 + Sobel-only, r2 volúmenes cónicos, r3 hombros caídos) y
+C6c (cabeza sin chibi) en código, QA verde (9 suites + biomech ×5), 3 commits
+pusheados en `feat/c6-anatomy-rework` (def9a27, bc22a4d, c58a784). Pendiente al
+reabrir: VoBo del director de las capturas r3 → C6b (enano/elfo + ROM + Dagna
+re-montada) → C4a/C4b → playtest de la ventana. Detalle en [[Current-State]].
+
 ## [2026-07-10] feature | C6a-r3 + C6c: hombros caídos + la cabeza deja el chibi
 El director pasó la comparación lado a lado contra `fenotipo-humano-v1`. Respuesta:
 trapecios con masa (sloped shoulders, fuera la repisa), silueta más enjuta
