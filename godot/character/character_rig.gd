@@ -459,8 +459,11 @@ func _build() -> void:
 		# r5c (director): el pulgar APUNTA en la misma dirección que los
 		# dedos (cuelga hacia abajo), abierto 30° respecto a ellos hacia
 		# el interior — ya no cruza horizontal.
+		# r5d (director, ref. anatómica Cleveland Clinic): el pulgar NACE
+		# de la eminencia tenar — a media palma, cerca de la muñeca — no
+		# del borde inferior; nacimiento 50% más adentro de la mano.
 		var thumb = _box_mesh(0.020, 0.05, 0.026, skin_mat)
-		thumb.position = Vector3(-float(side) * 0.038, -0.045, 0.010)
+		thumb.position = Vector3(-float(side) * 0.038, -0.022, 0.010)
 		thumb.rotation.z = -float(side) * 0.5236   # 30° de apertura
 		thumb.rotation.x = -0.25
 		hand.add_child(thumb)
