@@ -93,7 +93,9 @@ updated: 2026-07-10
   ≈ anular > meñique) + PULGAR hacia el cuerpo + curl progresivo palma→dedos.
   (La v1 con dos masas de dedos leía como garra — el director la tumbó.)
   **r5c (tuning en vivo, "funciona mejor"): dedos +20% de largo y pulgar
-  ALINEADO a la dirección de los dedos (cuelga) con 30° de apertura.** La
+  ALINEADO a la dirección de los dedos (cuelga) con 30° de apertura. r5d
+  (ref. anatómica del director — Cleveland Clinic, vista palmar): el pulgar
+  nace de la eminencia TENAR, a media palma (nacimiento 50% más adentro).** La
   palma sigue siendo el nodo `hand` (meta de montaje de arma y toggle del
   prótesis intactos). Captura del banco: `anatomy_hands.png`. QA:
   biomech/combat/slice ALL_PASS.

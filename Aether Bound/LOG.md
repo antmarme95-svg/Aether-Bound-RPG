@@ -1,5 +1,11 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r5d: el pulgar nace de la tenar (ref. anatómica)
+El director pasó referencia anatómica (Cleveland Clinic, vista palmar): el
+pulgar nace de la eminencia tenar a media palma, no del borde inferior.
+Nacimiento 50% más adentro de la mano; conserva dirección de dedos + 30°.
+QA biomech/combat ALL_PASS.
+
 ## [2026-07-10] feature | C6a-r5c: dedos +20% + pulgar alineado a 30°
 Tuning en vivo del director sobre r5b ("funciona mejor"): los cuatro dedos
 +20% de largo (medio 0.076) y el pulgar deja de cruzar horizontal — apunta en
