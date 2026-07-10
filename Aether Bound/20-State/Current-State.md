@@ -242,8 +242,11 @@ updated: 2026-07-09
   y Dagna. Archivos: `ally_dagna.gd`, `game_director.gd`, `enemy_humanoid.gd`. Sonda
   `tmp_dagna_combat.gd` ALL_PASS (nearest, retarget, pound autónomo → onda + daño
   40→24 HP, muralla arriba/abajo, bloqueo reduce daño, martilleo sin caer) +
-  captura `dagna_combat.png`; regresión completa ALL_PASS. **Pendiente: playtest
-  del director.**
+  captura `dagna_combat.png`; regresión completa ALL_PASS.
+  **✅ PLAYTEST DEL DIRECTOR APROBADO (2026-07-09): "funciona bien"** — Dagna pelea
+  a tu lado sin robarte la pelea; sin tuning (30/7 s/3.8/2.6 quedan). Playtest Loop
+  del alcance 3 CERRADO. **La mecánica de Dagna aliada queda COMPLETA; falta solo el
+  Gate 1 (alcance 4).**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -290,12 +293,15 @@ updated: 2026-07-09
      **✅ PLAYTEST APROBADO (2026-07-09):** Playtest Loop del 2b CERRADO. **Alcance 3
      ✅ CÓDIGO (2026-07-09): Dagna IA de combate mínima** (onda con daño + pound
      autónomo + muralla-block/defensa propia sin caer + aggro por cercanía). Sonda
-     `tmp_dagna_combat` ALL_PASS. **SIGUIENTE: playtest del director del alcance 3**
-     (¿la presión de Dagna se siente "pelea a tu lado"? tunear `POUND_DAMAGE` 30 /
-     `AI_POUND_CD` 7 s / `POUND_SENSE` 3.8 / `GUARD_BLOCK_RANGE` 2.6 si hace falta) —
-     `Start-Playtest-Greybox.bat`. **Luego: alcance 4 = Gate 1** (cornisa solo
-     alcanzable vía Springboard + `autotest_springboard` + ≥60 FPS frío) — CIERRA la
-     Fase 1.
+     `tmp_dagna_combat` ALL_PASS + **PLAYTEST APROBADO (2026-07-09): "funciona
+     bien"** — Playtest Loop del 3 CERRADO, sin tuning. **SIGUIENTE A CONSTRUIR:
+     alcance 4 = Gate 1** — escenario greybox con una **cornisa/objetivo solo
+     alcanzable vía Springboard** + enemigos; `tests/autotest_springboard.gd` (gate
+     permanente nuevo: spawn de aliada, pound→onda, salto-en-ventana→altura, cornisa
+     alcanzada); **≥60 FPS en corrida FRÍA** (Lecciones: el número del gate se lee
+     frío, no dentro del autotest). CIERRA la Fase 1. (Cláusula de escape C6: si los
+     cuerpos corruptos impiden juzgar el feel en el Gate 1, el rework anatómico se
+     adelanta aquí.)
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -354,9 +360,9 @@ updated: 2026-07-09
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
 - **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcances
-  **2b —Springboard DIRIGIDO— (mergeado + playtest aprobado) y 3 —Dagna IA de
-  combate— (mergeado, pendiente playtest)**). `autotest_combat.gd` es un gate
-  permanente. Lanzador de doble clic para el playtest en el greybox:
+  **2b —Springboard DIRIGIDO— y 3 —Dagna IA de combate— (ambos mergeados +
+  playtest aprobado)**. Solo falta el alcance 4 = Gate 1 para cerrar la Fase 1).
+  `autotest_combat.gd` es un gate permanente. Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
   dagna, guard, ally, pound, springboard, springboard_directed, dagna_combat)

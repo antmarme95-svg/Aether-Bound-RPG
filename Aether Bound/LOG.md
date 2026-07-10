@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] playtest | PRD-007 alcance 3 — Dagna IA de combate APROBADA
+Playtest del director en `Start-Playtest-Greybox.bat`. Veredicto: **"funciona
+bien"** — Dagna pelea a tu lado (onda con daño + pound autónomo + muralla-block +
+aggro por cercanía) sin robarte tu pelea. **Sin cambios de tuning:** `POUND_DAMAGE`
+30, `AI_POUND_CD` 7 s, `POUND_SENSE` 3.8, `GUARD_BLOCK_RANGE` 2.6 quedan como
+están. Playtest Loop del alcance 3 CERRADO. **Con esto la mecánica de Dagna aliada
+está completa; falta solo el alcance 4 = Gate 1** (cornisa vía Springboard +
+`autotest_springboard` + ≥60 FPS frío) para cerrar la Fase 1.
+
 ## [2026-07-09] feature | PRD-007 alcance 3 — Dagna IA de combate mínima (código)
 Feature Loop. Dagna ya **pelea a tu lado** (mínima pero real, sin companion AI
 rica). Tres piezas: (1) **la onda HACE DAÑO** —`_on_springboard_wave` aplica
