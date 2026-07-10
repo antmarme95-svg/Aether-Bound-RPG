@@ -56,6 +56,21 @@ updated: 2026-07-10
   el cráneo (C6c). Pauldron re-asentado al deltoide nuevo. Medidas estables
   (7.58 cabezas) y QA visual completo ALL_PASS de nuevo. Capturas en
   `godot/test_out/anatomy_*.png`.
+- **C6a-r3 + C6c ✅ CÓDIGO (2026-07-10, la comparación lado a lado del
+  director contra fenotipo-humano-v1).** (a) **Hombros CAÍDOS** (lámina:
+  narrow sloped shoulders): trapecios con masa del cuello al deltoide matan
+  la repisa cuadrada; hombros −1 cm (SHOULDER_X 0.235) y pecho más fibroso
+  (CHEST_X 1.07 / CHEST_Z 0.84) — el atleta de frontera es ENJUTO. (b)
+  **C6c — la cabeza deja el chibi:** cráneo con forma (0.90/1.06/0.97, nuca),
+  mandíbula estrecha + mentón, **nariz** (el perfil de la lámina por fin
+  existe), ojos a escala humana (r 0.021 vs 0.034 del ojazo anime), ceja baja
+  pegada al ojo; chin/nose en skin_mat (el warpaint atlas mapea raro en cajas
+  chicas). HEAD_SCALE 0.84→0.87 → **7.49 cabezas medidas** (canon 7.5 exacto).
+  (c) **Fix de gate flaky:** elbow release del strike −0.085→−0.082 — el pico
+  del follow-through rozaba el ROM con margen 0.0003 rad y fallaba
+  autotest_biomech según el alineado de frames (lección ampliada). QA: biomech
+  ×5 + combat/slice/ui/springboard + test_core ALL_PASS. **Pendiente: VoBo del
+  director. El vestuario de la lámina (capucha/vendas/faldón) = Fase 4.**
 - **B15 ✅ (2026-07-06): benchmark observacional medido** — los 3 clips
   del director analizados frame a frame → [[Benchmark Biomecánico]] §v3.
   Números clave para el alcance 2: hit-stop 2f normal / 3f pesado

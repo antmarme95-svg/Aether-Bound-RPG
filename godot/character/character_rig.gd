@@ -19,16 +19,18 @@ class_name CharacterRig extends Node3D
 # Los fenotipos enano (4.5 cabezas, trapezoide) y elfo (8, esbelto) derivan
 # de esta tabla en C6b.
 # ----------------------------------------------------------------
-const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 → cabeza de 7.5
+const HEAD_SCALE: float = 0.87       # cráneo del puerto ×0.87 → cabeza de 7.5
 const HEAD_Y: float = 0.55           # pivote de cabeza sobre el torácico
 const NECK_Y: float = 0.42
-const SHOULDER_X: float = 0.245      # media distancia entre hombros
+# r3 (comparación contra la lámina): "narrow sloped shoulders" — el atleta
+# de frontera es ENJUTO; hombros más estrechos y caídos (trapecio visible).
+const SHOULDER_X: float = 0.235      # media distancia entre hombros
 const SHOULDER_Y: float = 0.31       # altura de hombros sobre el torácico
 const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
 # V-taper del tronco (multiplicadores base sobre el build de peso/clase):
-# pecho ancho y algo plano; cintura recogida — silueta de atleta, no frijol.
-const CHEST_X: float = 1.12
-const CHEST_Z: float = 0.88
+# pecho definido pero fibroso, algo plano; cintura recogida.
+const CHEST_X: float = 1.07
+const CHEST_Z: float = 0.84
 const WAIST_XZ: float = 0.95
 
 # ---- lerp helper ----
@@ -274,7 +276,7 @@ func _build() -> void:
 		# la pierna es un volumen que ESTRECHA como en la lámina — muslo
 		# masivo arriba → rodilla, pantorrilla → tobillo. Cilindros cónicos,
 		# no cápsulas-globo; la rodilla es la única bola (articulación).
-		var thigh = _cylinder_mesh(0.088, 0.058, 0.40, dark_leather_mat)
+		var thigh = _cylinder_mesh(0.084, 0.056, 0.40, dark_leather_mat)
 		thigh.position.y = -0.22
 		leg.add_child(thigh)
 		_add_outline_pass(thigh, Color("#3a2d22"))
@@ -329,10 +331,21 @@ func _build() -> void:
 	# arriba (hombros cuadrados, no globo) que estrecha hacia la cintura; la
 	# cintura (jerkin) retoma el MISMO radio y asienta sobre la pelvis. El
 	# V-taper elíptico (CHEST_X/Z) lo aplica _apply_build sobre peso/clase.
-	torso = _cylinder_mesh(0.165, 0.115, 0.36, skin_mat)
-	torso.position.y = 0.13
+	torso = _cylinder_mesh(0.15, 0.115, 0.34, skin_mat)
+	torso.position.y = 0.12
 	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
+
+	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
+	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
+	# Con MASA (profundidad casi de pecho y solape con la tapa) — un listón
+	# delgado lee como gancho de alambre, no como músculo.
+	for tside in [-1, 1]:
+		var trap = _box_mesh(0.19, 0.085, 0.115, skin_mat)
+		trap.position = Vector3(float(tside) * 0.105, 0.315, 0.0)
+		trap.rotation.z = -float(tside) * 0.22
+		upper_spine.add_child(trap)
+		_add_outline_pass(trap, Color("#f2b186"))
 
 	jerkin = _cylinder_mesh(0.115, 0.128, 0.22, leather_mat)
 	jerkin.position.y = 0.16
@@ -364,7 +377,7 @@ func _build() -> void:
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
 
-		var upper = _cylinder_mesh(0.058, 0.042, 0.28, skin_mat)
+		var upper = _cylinder_mesh(0.054, 0.040, 0.28, skin_mat)
 		upper.position.y = -0.15
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
@@ -463,63 +476,78 @@ func _build() -> void:
 	head.scale = Vector3.ONE * HEAD_SCALE
 	upper_spine.add_child(head)
 
+	# C6c (comparación contra la lámina): el cráneo tiene FORMA — más angosto
+	# que alto, nuca redondeada; ya no es la pelota chibi.
 	skull = _sphere_mesh(0.15, head_mat)
 	skull.name = "skull"
-	skull.scale.y = 1.07
+	skull.scale = Vector3(0.90, 1.06, 0.97)
 	# Godot SphereMesh: seam at -Z, so u=0.5 (face strip) faces +Z by default.
-	# No Y rotation needed — camera at +Z sees the face strip directly.
 	skull.rotation.y = 0.0
 	head.add_child(skull)
 	_add_outline_pass(skull, Color("#f2b186"))
 
-	jaw_mesh = _box_mesh(0.165, 0.075, 0.13, head_mat)
+	# Mandíbula ESTRECHA (lámina: fine narrow jaw) + mentón propio.
+	jaw_mesh = _box_mesh(0.125, 0.065, 0.11, head_mat)
 	jaw_mesh.name = "jaw"
-	jaw_mesh.position = Vector3(0.0, -0.105, 0.062)
+	jaw_mesh.position = Vector3(0.0, -0.105, 0.05)
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
+	# (chin/nose en skin_mat: el atlas de warpaint mapea raro en cajas chicas)
+	var chin = _box_mesh(0.05, 0.032, 0.045, skin_mat)
+	chin.position = Vector3(0.0, -0.128, 0.092)
+	head.add_child(chin)
+	_add_outline_pass(chin, Color("#f2b186"))
+
+	# NARIZ — sin ella el perfil no existe (la lámina vive del perfil).
+	var nose = _box_mesh(0.02, 0.042, 0.028, skin_mat)
+	nose.position = Vector3(0.0, -0.008, 0.146)
+	nose.rotation.x = -0.15
+	head.add_child(nose)
+	_add_outline_pass(nose, Color("#f2b186"))
+
 	cheeks = []
 	for side in [-1, 1]:
-		var cheek = _sphere_mesh(0.036, head_mat)
-		cheek.position = Vector3(side * 0.088, -0.018, 0.108)
+		var cheek = _sphere_mesh(0.028, head_mat)
+		cheek.position = Vector3(side * 0.072, -0.028, 0.098)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
 
+	# Ojos a escala HUMANA (el ojazo anime era la mitad del read chibi).
 	eyes = []
 	brows = []
 	for side in [-1, 1]:
 		var eye_group = Node3D.new()
 		eye_group.name = "eye_" + ("l" if side == -1 else "r")
-		# JS: eye.position.set(side * 0.058, 0.018, 0.136)
-		eye_group.position = Vector3(side * 0.058, 0.018, 0.136)
+		eye_group.position = Vector3(side * 0.052, 0.020, 0.130)
 
-		var white = _sphere_mesh(0.034, eye_white_mat)
-		white.scale.z = 0.55
+		var white = _sphere_mesh(0.021, eye_white_mat)
+		white.scale.z = 0.5
 		eye_group.add_child(white)
 
-		var iris = _disc_mesh(0.0185, iris_mat)
+		var iris = _disc_mesh(0.0115, iris_mat)
 		iris.rotation.x = PI / 2.0
-		iris.position.z = 0.0195
+		iris.position.z = 0.0115
 		eye_group.add_child(iris)
 
-		var pupil = _disc_mesh(0.009, pupil_mat)
+		var pupil = _disc_mesh(0.0055, pupil_mat)
 		pupil.rotation.x = PI / 2.0
-		pupil.position.z = 0.0205
+		pupil.position.z = 0.0125
 		eye_group.add_child(pupil)
 
-		var glint = _disc_mesh(0.0045, eye_white_mat)
+		var glint = _disc_mesh(0.003, eye_white_mat)
 		glint.rotation.x = PI / 2.0
-		glint.position = Vector3(0.006, 0.007, 0.021)
+		glint.position = Vector3(0.004, 0.005, 0.013)
 		eye_group.add_child(glint)
 
 		eye_group.set_meta("side", side)
 		head.add_child(eye_group)
 		eyes.append(eye_group)
 
-		# JS: brow.position.set(side * 0.058, 0.07, 0.146)
-		var brow = _box_mesh(0.055, 0.012, 0.012, pupil_mat)
-		brow.position = Vector3(side * 0.058, 0.07, 0.146)
+		# Ceja BAJA y cercana al ojo (lámina: brow line marcada, no flotante)
+		var brow = _box_mesh(0.048, 0.011, 0.012, pupil_mat)
+		brow.position = Vector3(side * 0.052, 0.058, 0.140)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -2007,11 +2035,13 @@ func _process(delta: float) -> void:
 		var chest_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["chest"],    -0.75, 0.60)
 		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.90, 0.70)
 		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.85, -0.10)
-		# Elbow release -0.085 (no -0.10): la bisagra está pegada a su límite
+		# Elbow release -0.082 (no -0.10): la bisagra está pegada a su límite
 		# de extensión (+0.03) y el follow-through oscila ~35% del release al
-		# otro lado — con -0.085 el vaivén pico (+0.0295) queda DENTRO del ROM
-		# (la pose autorada nunca depende del clamp; autotest_biomech lo exige).
-		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.085)
+		# otro lado. Con -0.085 el pico rozaba +0.0297 (margen 0.0003 rad =
+		# flake por alineado de frames en autotest_biomech, visto 2026-07-10);
+		# con -0.082 el pico (+0.0287) queda DENTRO con margen real. La pose
+		# autorada nunca depende del clamp; autotest_biomech lo exige.
+		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.082)
 
 		hips.rotation.y  = hip_rot
 		spine.rotation.y = spine_rot * 0.45

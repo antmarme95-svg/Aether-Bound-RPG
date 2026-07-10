@@ -1,5 +1,13 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r3 + C6c: hombros caídos + la cabeza deja el chibi
+El director pasó la comparación lado a lado contra `fenotipo-humano-v1`. Respuesta:
+trapecios con masa (sloped shoulders, fuera la repisa), silueta más enjuta
+(SHOULDER_X/CHEST_X/Z abajo), y C6c adelantado — cráneo con forma, mandíbula
+estrecha + mentón, NARIZ (el perfil existe), ojos a escala humana, ceja baja.
+7.49 cabezas medidas (canon 7.5). Fix de gate flaky: elbow release −0.085→−0.082
+(margen 0.0003 rad → real; lección ampliada). QA completo ALL_PASS (biomech ×5).
+
 ## [2026-07-10] feature | C6a-r2: volúmenes de lámina (feedback del director)
 Feedback en vivo sobre las capturas de C6a: "que los cuerpos dejen de componerse de
 puros círculos". Los volúmenes pasan a masas cónicas (`CylinderMesh` con taper):

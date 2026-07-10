@@ -57,7 +57,10 @@ updated: 2026-07-08
   ~35% del release al otro lado — si el target queda pegado al tope del
   ROM (codo: +0.03), reducir el release para que el pico quepa DENTRO.
   `autotest_biomech` exige pose autorada sin violaciones de ROM en el
-  strike (el clamp es red, no muleta).
+  strike (el clamp es red, no muleta). **Y el margen debe ser REAL
+  (≥ ~0.001 rad):** con margen 0.0003 el pico cruza o no según el alineado
+  de frames del pose stepping → gate FLAKY (visto 2026-07-10: elbow release
+  −0.085 fallaba 1 de ~4 corridas; −0.082 lo estabiliza).
 - **A/B de percepción de animación: siempre con zoom de cámara** — a
   distancia default el chop/detalle de extremidades no se lee y parece
   que el toggle no hace nada.
