@@ -1,5 +1,26 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] lint | Cierre de sesión — vault consistente tras PRD-007 2b + 3
+Lint Loop pedido por el director al cierre. Reporte de las 5 fases:
+1. **Contradicciones Knowledge↔código:** ninguna. El cambio de control del 2b
+   (RMB→apuntar, guardia→`XBUTTON1`) no aparece en ninguna página Knowledge —
+   correcto: los bindings son detalle de implementación, no canon. El "único
+   botón de vínculo = R" sigue coherente (RMB es solo contexto de apuntado, ya
+   reconciliado en el PRD-007 §Canon).
+2. **Wikilinks:** cero colgantes reales. Falsos positivos descartados: links que
+   envuelven salto de línea, `[[wikilink]]`/`[[wikilinks]]` (ejemplos del SCHEMA/
+   Lint Loop) y `[[PRD-007 …]]` (menciones EN BACKTICKS de un lint histórico +
+   caché de UI de Obsidian, no links vivos). 2 "huérfanas" (LLM-WIKI, VDD) son
+   fuentes 90-Raw referenciadas por ruta — legítimo.
+3. **Status:** cero páginas `propuesto` pendientes de ratificar.
+4. **Index vs. realidad:** 27 Knowledge + 8 State + 5 Loops — todas en [[00-Index]]
+   y viceversa. Fix menor: la línea del PRD-007 en el Index ahora refleja progreso
+   (alcances 0–3+2b ✅), alineada con el estilo de la del PRD-006.
+5. **State vs. repo:** [[Current-State]] refleja el branch real (`master`, todo
+   pusheado; los alcances 2b y 3 mergeados + playtest aprobado). Árbol limpio salvo
+   `.obsidian/graph.json` (estado de UI), commiteado en este cierre.
+Vault consistente. Sin reparaciones pendientes.
+
 ## [2026-07-09] playtest | PRD-007 alcance 3 — Dagna IA de combate APROBADA
 Playtest del director en `Start-Playtest-Greybox.bat`. Veredicto: **"funciona
 bien"** — Dagna pelea a tu lado (onda con daño + pound autónomo + muralla-block +
