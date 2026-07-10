@@ -1,5 +1,12 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r5: manos con dedos estilizados
+Feedback del director: las manos no tenían dedos. Solución BotW/Palia: palma +
+dos masas de dedos con ranura (el Sobel entinta la separación — de cerca se ve,
+a distancia muda) + pulgar aparte hacia el cuerpo + curl progresivo. El nodo
+`hand` sigue siendo la palma (arma/prótesis intactos). Captura nueva
+`anatomy_hands.png`. QA biomech/combat/slice ALL_PASS.
+
 ## [2026-07-10] ingest+feature | Review v0.1 del director archivada + C6a-r4
 El director entregó la **Character Blockout Review v0.1** (Needs Revision,
 ~60–65% fidelidad; norte: BotW/Hinterberg/Palia/Torchlight, NO anime) →

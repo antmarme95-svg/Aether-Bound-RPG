@@ -84,6 +84,13 @@ func _run() -> void:
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_close.png")
 
+	# detalle de MANO derecha (r5: palma + masas de dedos + pulgar)
+	var hand_t: Vector3 = _holder.global_position + Vector3(0.28, 0.92, 0.0)
+	_cam.look_at_from_position(hand_t + Vector3(0.25, 0.10, 0.85), hand_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_hands.png")
+
 	_frame_full_front(4.0)
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_full_front.png")

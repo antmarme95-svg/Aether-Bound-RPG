@@ -84,6 +84,15 @@ updated: 2026-07-10
   (rediseño de peinados), MEDIUM 11–12 (capas de ropa + peso de accesorios —
   el director los difirió explícitamente junto con el detalle de pies),
   LOW 14 fino (postura relajada global). **VoBo pendiente de las capturas r4.**
+- **C6a-r5 ✅ CÓDIGO (2026-07-10, feedback del director: "las manos aún no
+  tienen dedos").** Mano estilizada BotW/Palia sin dedos individuales: palma
+  + DOS masas de dedos con ranura de 5 mm (discontinuidad real de profundidad
+  → **el Sobel entinta la separación solo** en close-up y muda a distancia —
+  la línea hace el trabajo, no la geometría) + PULGAR aparte hacia el cuerpo
+  (vende la mano en la silueta y el perfil) + curl de dedos mayor que el de
+  la palma. La palma sigue siendo el nodo `hand` (meta de montaje de arma y
+  toggle del prótesis intactos). Captura nueva del banco:
+  `anatomy_hands.png`. QA: biomech/combat/slice ALL_PASS.
 - **C6a-r3 + C6c ✅ CÓDIGO (2026-07-10, la comparación lado a lado del
   director contra fenotipo-humano-v1).** (a) **Hombros CAÍDOS** (lámina:
   narrow sloped shoulders): trapecios con masa del cuello al deltoide matan

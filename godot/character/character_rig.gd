@@ -430,12 +430,32 @@ func _build() -> void:
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
 
-		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna
-		var hand = _box_mesh(0.065, 0.115, 0.07, skin_mat)
-		hand.position.y = -0.31
+		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna.
+		# r5 (feedback del director: "las manos no tienen dedos"): mano
+		# estilizada BotW/Palia = palma + DOS masas de dedos con ranura
+		# (la separación la entinta el Sobel — discontinuidad real de
+		# profundidad, visible de cerca, muda a distancia) + PULGAR aparte
+		# hacia el cuerpo (vende la mano en la silueta). Sin dedos
+		# individuales: formas grandes, cero ruido.
+		var hand = _box_mesh(0.062, 0.062, 0.068, skin_mat)
+		hand.position.y = -0.30
 		hand.rotation.x = -0.12   # curl relajado de la lámina
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
+
+		for f in [-1, 1]:
+			var fingers = _box_mesh(0.026, 0.062, 0.058, skin_mat)
+			fingers.position = Vector3(float(f) * 0.0165, -0.056, 0.006)
+			fingers.rotation.x = -0.20   # los dedos doblan más que la palma
+			hand.add_child(fingers)
+			_add_outline_pass(fingers, Color("#f2b186"))
+
+		var thumb = _box_mesh(0.022, 0.05, 0.026, skin_mat)
+		thumb.position = Vector3(-float(side) * 0.042, -0.012, 0.014)
+		thumb.rotation.z = float(side) * 0.5
+		thumb.rotation.x = -0.25
+		hand.add_child(thumb)
+		_add_outline_pass(thumb, Color("#f2b186"))
 
 		arm.set_meta("elbow", elbow)
 		arm.set_meta("upper", upper)
