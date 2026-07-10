@@ -205,6 +205,25 @@ updated: 2026-07-09
   onda / 0.82 m sin / 4.67 m de air control + captura `springboard_launch.png`);
   regresión test_core + autotest_combat ALL_PASS. **Pendiente: playtest del
   director (feel) — "afinamos con playtest"** (altura/tecla/ventana a tunear).
+- **PRD-007 alcance 2b ✅ CÓDIGO (2026-07-09): Seismic Springboard DIRIGIDO.**
+  Capa de **colocación** sobre el reactivo: `RMB` (mantener) apunta un punto en el
+  suelo (raycast cámara→suelo `cam.project_ray_*` + decal teal clampeado a
+  `DESIGNATE_RANGE` 11 m; teal en rango, ámbar si se recorta al borde); `R` con el
+  apuntado activo → `_issue_directed_pound()` ordena a Dagna **viajar** al punto
+  (estado `traveling`, deja su slot de guardia = costo táctico) y golpear ahí; la
+  onda nace MARCADA `directed` y el lanzamiento suma un empuje horizontal hacia el
+  punto (`SPRINGBOARD_DIRECT_PUSH` 3 m/s) sobre el `_air_vel` del alcance 2.
+  Cooldown de orden 4.5 s. **Los dos modos conviven:** `R` solo = reactivo (alcance
+  2, intacto). **Decisión de control del director (2026-07-09): RMB pasó a apuntar
+  y la guardia/parry se mudó al botón lateral TRASERO del mouse (`XBUTTON1`);**
+  SPACE sigue siendo salto, el lateral delantero (`XBUTTON2`) queda libre. Archivos:
+  `player_controller.gd`, `game_director.gd`, `ally_dagna.gd`. Sonda nueva
+  `tmp_springboard_directed.gd` ALL_PASS (clamp 11.0 m, onda en punto err 0.45 m,
+  Dagna viaja 5.9 m, arco dirigido **8.91 m vs 4.67 m** plano = +4.24 m, cooldown
+  activo/decae) + captura `springboard_directed.png`; regresión tmp_springboard /
+  autotest_combat / test_core / autotest_slice / autotest_ui ALL_PASS. **Pendiente:
+  playtest del director** (rango/cooldown/empuje/altura a tunear; verificar que
+  `XBUTTON1` = botón trasero físico — swappable a `XBUTTON2` si sale invertido).
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -242,16 +261,17 @@ updated: 2026-07-09
      onda + VFX teal) y 2 ✅ CÓDIGO + PLAYTEST APROBADO (2026-07-09):** el
      Springboard T1 (Bond=`R` + salto-en-onda → lanzamiento ~6 m con air
      control) funciona bien en vivo. Banco: `Start-Playtest-Greybox.bat` (ya
-     trae `--ally=dagna`). **SIGUIENTE A CONSTRUIR: alcance 2b — Springboard
-     DIRIGIDO, extensión RATIFICADA (2026-07-09, aún NO arrancada):** `RMB`
-     apunta (decal teal, rango ~10–12 m) + `R` ordena → Dagna viaja al punto →
-     pound ahí → esprintas y arcas (arco emergente + empuje hacia el punto);
-     cooldown ~4–5 s, Dagna deja su slot al viajar. Los dos modos conviven
-     (reactivo + dirigido). Spec en [[PRD-007 Dagna aliada + Seismic Springboard
-     T1]] §Extensión (5 sub-pasos; único código nuevo = raycast+decal + máquina
-     de estados de la orden). **Luego: alcance 3** (IA de combate mínima de
-     Dagna) y **alcance 4 = Gate 1** (cornisa solo alcanzable vía Springboard +
-     `autotest_springboard` + ≥60 FPS frío).
+     trae `--ally=dagna`). **Alcance 2b — Springboard DIRIGIDO ✅ CÓDIGO
+     (2026-07-09):** `RMB` apunta (raycast cámara→suelo, decal teal, rango 11 m) +
+     `R` ordena → Dagna viaja al punto → pound ahí → esprintas y arcas (empuje
+     hacia el punto sobre tu momentum); cooldown 4.5 s, Dagna deja su slot al
+     viajar. Los dos modos conviven (reactivo + dirigido). Guardia/parry mudada a
+     `XBUTTON1` (botón lateral trasero). Sonda `tmp_springboard_directed` ALL_PASS.
+     **SIGUIENTE: playtest del director del 2b** (tunear rango/cooldown/empuje +
+     confirmar mapeo del botón lateral) — arranca con `Start-Playtest-Greybox.bat`.
+     **Luego: alcance 3** (IA de combate mínima de Dagna) y **alcance 4 = Gate 1**
+     (cornisa solo alcanzable vía Springboard + `autotest_springboard` + ≥60 FPS
+     frío).
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -309,15 +329,14 @@ updated: 2026-07-09
   cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
-- **Branch actual:** `master` (todo pusheado al cierre de la sesión 2026-07-09:
-  PRD-007 alcance 2 —Springboard T1— construido + **playtest aprobado**, lanzador
-  con `--ally=dagna`, y el Design Loop del **alcance 2b —Springboard dirigido—
-  RATIFICADO, aún sin construir**). `autotest_combat.gd` es un gate permanente.
+- **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcance
+  **2b —Springboard DIRIGIDO— construido en código y mergeado**; pendiente el
+  playtest del director del 2b). `autotest_combat.gd` es un gate permanente.
   Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
-  dagna, guard, ally, pound, springboard) quedan hasta validar el pipeline /
-  limpieza.
+  dagna, guard, ally, pound, springboard, springboard_directed) quedan hasta
+  validar el pipeline / limpieza.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

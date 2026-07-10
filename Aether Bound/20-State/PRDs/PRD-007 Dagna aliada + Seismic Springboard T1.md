@@ -122,7 +122,15 @@ alcanzada) + gate de FPS ≥60 frío.
 > Nace de un playtest del alcance 2 (el director aprobó el feel base). Amplía el
 > springboard con **colocación**: hoy la onda nace pegada a Dagna (tu hombro), no
 > se puede *poner adelante* para arcar hacia una cornisa. Esto lo resuelve.
-> **Pendiente de construir** (Feature Loop) — no arrancado a la fecha de ratificación.
+> **✅ CONSTRUIDO EN CÓDIGO (2026-07-09, Feature Loop)** — los 5 sub-pasos de
+> abajo implementados: apuntado (`RMB` + raycast + decal clampeado a 11 m), orden
+> `R` + viaje de Dagna (`traveling` → pound en el punto), arco dirigido (empuje
+> 3 m/s hacia el punto), cooldown 4.5 s + rango + costo de dejar el slot. **Nota
+> de control (decisión del director):** `RMB` pasó a apuntar y la guardia/parry se
+> mudó al **botón lateral trasero del mouse (`XBUTTON1`)**; `SPACE` sigue siendo
+> salto. Sonda `tmp_springboard_directed.gd` ALL_PASS. **Pendiente: playtest del
+> director** (rango/cooldown/empuje/altura a tunear; confirmar el mapeo físico del
+> botón lateral).
 
 **Insight del playtest:** el problema real no era el ángulo (el arco ya emerge de
 tu momentum, sembrado en `_air_vel`), sino que **no puedes colocar la onda**: está

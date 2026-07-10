@@ -36,6 +36,13 @@ const JUMP_V  := 8.4
 # este impulso vertical (→ ~6 m, altura "imposible" para alcanzar cornisas). El
 # air control se conserva por el path aéreo normal (no-leap), que integra input.
 const SPRINGBOARD_LAUNCH_VEL := 17.0
+# PRD-007 alcance 2b: Springboard DIRIGIDO. `RMB` (mantener) apunta un punto en el
+# suelo (raycast cámara→suelo, decal teal) clampeado a este rango; `R` con el
+# apuntado activo ordena a Dagna viajar ahí y golpear. El lanzamiento desde una
+# onda COMANDADA suma este pequeño empuje horizontal hacia el punto (sobre el
+# `_air_vel` del alcance 2) — asegura el arco aunque la entrada sea imperfecta.
+const DESIGNATE_RANGE     := 11.0   # rango máx de la orden dirigida (m)
+const SPRINGBOARD_DIRECT_PUSH := 3.0   # empuje horizontal hacia el punto (m/s), tunable
 
 # ---- camera constants ----
 const CAM_DIST_DEFAULT  := 4.4
@@ -117,8 +124,15 @@ var _fov_target: float = 50.0
 
 # ---- ADS (aim-down-sights) state ----
 var _ads_held: bool        = false
-# ---- PRD-006 alcance 2: guardia del kit melee (RMB contextual) ----
+# ---- PRD-006 alcance 2: guardia del kit melee (botón lateral trasero — antes
+# RMB; PRD-007 2b mudó RMB al apuntado del Springboard dirigido) ----
 var _guard_held: bool      = false
+# ---- PRD-007 alcance 2b: apuntado del Springboard dirigido (RMB mantener) ----
+var _designating: bool       = false
+var designate_point: Vector3 = Vector3.ZERO   # punto objetivo (ya clampeado a rango)
+var designate_valid: bool    = false          # hay un punto ordenable bajo el crosshair
+var _designate_decal: MeshInstance3D = null   # anillo teal en el suelo (dónde caerá la onda)
+var _designate_mat: StandardMaterial3D = null
 # ---- Sprint L3: attack interrupt pulse ----
 var _attack_pulse: float   = 0.0
 var _cam_dist_eff: float   = CAM_DIST_DEFAULT
@@ -281,12 +295,19 @@ func _unhandled_input(event: InputEvent) -> void:
 				else:
 					try_attack()
 		elif mb.button_index == MOUSE_BUTTON_RIGHT and _enabled and _mouse_captured:
-			# PRD-006 alcance 2: RMB contextual — melee = guardia (hold
-			# bloquea, tap abre la ventana de parry Roba §B.4); ranged = ADS.
+			# PRD-007 alcance 2b: RMB contextual — melee = APUNTAR el Springboard
+			# dirigido (mantener → decal en el suelo; suelta sin R = cancela);
+			# ranged = ADS. (La guardia melee se mudó al botón lateral trasero.)
 			if _melee_style():
-				_set_guard(mb.pressed)
+				_set_designating(mb.pressed)
 			else:
 				_set_ads(mb.pressed)
+		elif mb.button_index == MOUSE_BUTTON_XBUTTON1 and _enabled and _mouse_captured:
+			# PRD-007 alcance 2b: guardia/parry en el botón lateral TRASERO del
+			# mouse (hold bloquea, tap abre la ventana de parry Roba §B.4). RMB
+			# pasó a apuntar el Springboard dirigido. Solo aplica a melee.
+			if _melee_style():
+				_set_guard(mb.pressed)
 		elif mb.button_index == MOUSE_BUTTON_WHEEL_DOWN and _enabled:
 			cam_dist = clampf(cam_dist + 0.0035 * 40.0, CAM_DIST_MIN, CAM_DIST_MAX)
 		elif mb.button_index == MOUSE_BUTTON_WHEEL_UP and _enabled:
@@ -1103,17 +1124,128 @@ func _build_swing_arc_mesh() -> Mesh:
 # ventana aún abierta? El director expira las ondas (su `t` se agota), así que
 # basta la distancia planar al centro < radio.
 func _wave_at(pos: Vector3) -> bool:
+	return not _active_wave_at(pos).is_empty()
+
+# _active_wave_at — la onda (dict) que cubre `pos`, o {} si ninguna. El dict
+# lleva `directed` (PRD-007 2b): una onda COMANDADA suma el empuje al lanzar.
+func _active_wave_at(pos: Vector3) -> Dictionary:
 	for w in springboard_waves:
 		var wp: Vector3 = w.get("position", Vector3.ZERO)
 		var r: float    = w.get("radius", 0.0)
 		if Vector2(wp.x - pos.x, wp.z - pos.z).length() <= r:
-			return true
-	return false
+			return w
+	return {}
 
 # springboard_ready — para el tell de HUD: hay ventana abierta Y estás parado en
 # ella (el momento de "salta AHORA"). Solo cuenta en suelo (el cue es de despegue).
 func springboard_ready() -> bool:
 	return grounded and _wave_at(position)
+
+# ================================================================
+# PRD-007 alcance 2b — apuntado del Springboard dirigido.
+# `RMB` mantener proyecta el crosshair al suelo (raycast cámara→suelo), clampea
+# el punto al rango de orden y pinta un decal teal. El director lee
+# `designate_point`/`designate_valid` cuando el jugador confirma con `R`.
+# ================================================================
+func is_designating() -> bool:
+	return _designating
+
+func _set_designating(on: bool) -> void:
+	if _designating == on:
+		return
+	_designating = on
+	if not on:
+		designate_valid = false
+		_hide_designate_decal()
+
+# _update_designation — por frame mientras se apunta (melee). Proyecta el centro
+# del viewport al suelo y coloca el decal en el punto clampeado a rango.
+func _update_designation() -> void:
+	if not _designating or cam == null or not _melee_style():
+		if _designate_decal != null and _designate_decal.visible:
+			_hide_designate_decal()
+		return
+	var vp := cam.get_viewport()
+	if vp == null:
+		return
+	var center: Vector2 = vp.get_visible_rect().size * 0.5
+	var ro: Vector3 = cam.project_ray_origin(center)
+	var rn: Vector3 = cam.project_ray_normal(center)
+	var hit: Dictionary = _ray_ground(ro, rn)
+	if not hit.get("hit", false):
+		designate_valid = false
+		_hide_designate_decal()
+		return
+	var c: Dictionary = _clamp_designate(hit["point"])
+	designate_point = c["point"]
+	designate_valid = true   # ordenable siempre (clampeado al borde si excede el rango)
+	_show_designate_decal(designate_point, c["in_range"])
+
+# _clamp_designate — recorta un punto crudo del suelo al rango planar de orden
+# alrededor del jugador. Devuelve { point, in_range }. Pura (testeable sin cámara).
+func _clamp_designate(raw: Vector3) -> Dictionary:
+	var to := Vector3(raw.x - position.x, 0.0, raw.z - position.z)
+	var d: float = to.length()
+	if d <= DESIGNATE_RANGE or d < 0.001:
+		return {"point": raw, "in_range": true}
+	var edge := to / d * DESIGNATE_RANGE
+	return {"point": Vector3(position.x + edge.x, raw.y, position.z + edge.z), "in_range": false}
+
+# _ray_ground — marcha un rayo hasta cruzar el suelo analítico (scene.get_height).
+# Refina linealmente en el cruce. Devuelve { hit, point }.
+func _ray_ground(ro: Vector3, rn: Vector3) -> Dictionary:
+	if scene == null or not scene.has_method("get_height"):
+		return {"hit": false}
+	if rn.y >= 0.0:
+		return {"hit": false}   # el rayo no baja hacia el suelo
+	var step: float = 0.5
+	var max_t: float = 90.0
+	var t: float = 0.0
+	var prev_above: float = ro.y - scene.get_height(ro.x, ro.z)
+	while t < max_t:
+		t += step
+		var p: Vector3 = ro + rn * t
+		var above: float = p.y - scene.get_height(p.x, p.z)
+		if above <= 0.0:
+			var frac: float = prev_above / maxf(0.0001, prev_above - above)
+			var pt: Vector3 = ro + rn * (t - step + step * frac)
+			pt.y = scene.get_height(pt.x, pt.z)
+			return {"hit": true, "point": pt}
+		prev_above = above
+	return {"hit": false}
+
+# ---- decal teal del apuntado (anillo plano en el suelo) ----
+func _show_designate_decal(pos: Vector3, in_range: bool) -> void:
+	if scene == null:
+		return
+	if _designate_decal == null:
+		_designate_decal = MeshInstance3D.new()
+		var tm := TorusMesh.new()      # yace en XZ (plano al suelo), como los anillos del pound
+		tm.inner_radius = 1.0
+		tm.outer_radius = 1.25
+		_designate_decal.mesh = tm
+		_designate_mat = StandardMaterial3D.new()
+		_designate_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		_designate_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		_designate_mat.blend_mode   = BaseMaterial3D.BLEND_MODE_ADD
+		_designate_decal.material_override = _designate_mat
+		scene.add_child(_designate_decal)
+	elif _designate_decal.get_parent() != scene:
+		# Cambió la escena bajo el decal: re-parent.
+		if _designate_decal.get_parent() != null:
+			_designate_decal.get_parent().remove_child(_designate_decal)
+		scene.add_child(_designate_decal)
+	# Teal en rango; ámbar apagado si el punto se clampeó al borde ("fuera de alcance").
+	_designate_mat.albedo_color = Color(0.5, 0.95, 0.9, 0.85) if in_range else Color(0.95, 0.7, 0.35, 0.6)
+	_designate_decal.position = pos + Vector3(0.0, 0.04, 0.0)
+	# Pulso sutil de escala para leerse vivo.
+	var s: float = 1.0 + 0.06 * sin(float(Time.get_ticks_msec()) * 0.006)
+	_designate_decal.scale = Vector3(s, 1.0, s)
+	_designate_decal.visible = true
+
+func _hide_designate_decal() -> void:
+	if _designate_decal != null:
+		_designate_decal.visible = false
 
 # VFX del despegue: estela teal ascendente en el jugador (la lámina Seismic).
 func _spawn_springboard_vfx() -> void:
@@ -1388,9 +1520,18 @@ func update(dt: float) -> void:
 		# path aéreo del leap conserve y DIRIJA la inercia (air control escalado
 		# por el perfil) — así el lanzamiento alcanza cornisas arriba-y-adelante.
 		# Llegas corriendo → cargas momentum; saltas parado → subes recto.
-		if _wave_at(position):
+		var wave: Dictionary = _active_wave_at(position)
+		if not wave.is_empty():
 			vel_y = SPRINGBOARD_LAUNCH_VEL
 			_air_vel = Vector3(sin(facing), 0.0, cos(facing)) * _horiz_speed
+			# PRD-007 2b: si la onda fue COMANDADA (modo dirigido), suma un empuje
+			# horizontal pequeño hacia el punto de la onda — asegura el arco hacia
+			# el objetivo aunque el sprint de entrada venga algo desalineado.
+			if wave.get("directed", false):
+				var wp: Vector3 = wave.get("position", position)
+				var toward := Vector3(wp.x - position.x, 0.0, wp.z - position.z)
+				if toward.length() > 0.5:
+					_air_vel += toward.normalized() * SPRINGBOARD_DIRECT_PUSH
 			_leaping = true
 			_spawn_springboard_vfx()
 			Feel.springboard_launch()
@@ -1469,6 +1610,10 @@ func update(dt: float) -> void:
 	if _cam_thump > 0.0:
 		_cam_thump = maxf(0.0, _cam_thump - dt)
 	_sync_camera(minf(1.0, dt * 7.0))
+
+	# PRD-007 alcance 2b: apuntado del Springboard dirigido (usa la cámara recién
+	# sincronizada). Proyecta el crosshair al suelo y coloca/actualiza el decal.
+	_update_designation()
 
 	# ---- FOV kick (lerp toward target) ----
 	if cam != null:
