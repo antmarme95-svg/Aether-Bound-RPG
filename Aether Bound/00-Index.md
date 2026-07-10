@@ -45,7 +45,7 @@
 - [[Plan-de-Produccion]] — plan macro A1 ratificado: 5 fases (higiene → link vivo → espina → arco → arte/tuning) con gates de playtest.
 - [[Lecciones]] — anti-patrones técnicos, entorno Godot, gates QA, tiering de modelos.
 - [[PRD-006 Combate mínimo]] — spec Fase 1 ratificada: columna vertebral = Movilidad Realista (rig restringido primero, ventanas de combo = fases biomecánicas); 4 componentes + HitPayload, kit Duelist, 2 enemigos, feel contra la Bible; anti-objetivo: el prototipo 0. **CERRADO en código + playtest (alcances 0–5).**
-- [[PRD-007 Dagna aliada + Seismic Springboard T1]] — spec Fase 1 ratificada (2026-07-08): Dagna aliada mínima-real + Springboard T1 (onda + salto en ventana, input Bond=`R`) en el greybox → Gate 1. Reusa PushPull + supersalto PRD-005 + pipeline de personajes. Solo T1; Tether/T2/T3 diferidos. **Alcances 0–4 ✅ código (2026-07-09)** — 0–3 + 2b con playtest aprobado; **el 4 = Gate 1 (cornisa vía Springboard + `autotest_springboard`) espera el playtest del director** para cerrar la Fase 1.
+- [[PRD-007 Dagna aliada + Seismic Springboard T1]] — spec Fase 1 ratificada (2026-07-08): Dagna aliada mínima-real + Springboard T1 (onda + salto en ventana, input Bond=`R`) en el greybox → Gate 1. Reusa PushPull + supersalto PRD-005 + pipeline de personajes. Solo T1; Tether/T2/T3 diferidos. **✅ COMPLETO — alcances 0–4 en código + playtest (2026-07-09).** El Gate 1 (cornisa vía Springboard + `autotest_springboard`) aprobado por el director: **🏁 Fase 1 CERRADA.**
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
 - [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene.
 

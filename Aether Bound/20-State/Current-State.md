@@ -8,8 +8,10 @@ updated: 2026-07-09
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **Milestone:** Fase 1 del [[Plan-de-Produccion]] — combate mínimo del
-  vertical slice **"Slice of Bond"** (Humano Duelist × Dagna).
+- **Milestone:** **Fase 1 CERRADA ✅ (2026-07-09)** — combate mínimo + Dagna aliada +
+  Seismic Springboard T1 del vertical slice **"Slice of Bond"** (Humano Duelist ×
+  Dagna), Gate 1 aprobado por el director. Siguiente: ventana C6/C4 (rework
+  anatómico + pase de poses) → Fase 2 del [[Plan-de-Produccion]].
 - **B15 ✅ (2026-07-06): benchmark observacional medido** — los 3 clips
   del director analizados frame a frame → [[Benchmark Biomecánico]] §v3.
   Números clave para el alcance 2: hit-stop 2f normal / 3f pesado
@@ -280,7 +282,15 @@ updated: 2026-07-09
   hacia el suelo). Gate ampliado con **F2** (regresión permanente del corte: lanzarse
   pegado al cliff → pico 5.99 ≥ 5.0, antes ~3.3). QA: gate + test_core/locomotion +
   autotest_combat/slice/ui + tmp_springboard/tmp_springboard_directed ALL_PASS.
-  **Pendiente: re-verificación del director del feel → CIERRA la Fase 1.**
+  **✅ RE-VERIFICADO POR EL DIRECTOR (2026-07-09): "se siente perfecto".** El arco
+  del Springboard completa limpio a la cornisa. Playtest Loop del Gate 1 CERRADO.
+- **🏁 FASE 1 CERRADA (2026-07-09).** Gate 1 aprobado: en el greybox peleas junto a
+  Dagna y usas el Springboard T1 sobre su onda para alcanzar una cornisa imposible,
+  ≥60 FPS. PRD-006 (combate mínimo) + PRD-007 (Dagna aliada + Seismic Springboard
+  T1) completos en código Y validados en playtest. **Siguiente: la ventana C6
+  (rework anatómico del cuerpo base) + pase de poses C4, RATIFICADA entre el Gate 1
+  y la Fase 2** — no se disparó la cláusula de escape (los cuerpos no impidieron
+  juzgar el feel). Luego, la Fase 2 del [[Plan-de-Produccion]].
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -333,11 +343,12 @@ updated: 2026-07-09
      alcanzable vía Springboard (salto normal 0.82 m no llega; lanzamiento 6.01 m
      sí), cliff no trepable a pie (step-block en el controlador, gateado por
      escena), gate permanente `tests/autotest_springboard.gd` ALL_PASS + captura.
-     **SIGUIENTE: PLAYTEST DEL DIRECTOR del Gate 1** en `Start-Playtest-Greybox.bat`
-     (ya trae `--ally=dagna`; la meseta vive en el greybox): pelear junto a Dagna +
-     usar el Springboard sobre su onda para subir a la cornisa, **≥60 FPS**. Su VoBo
-     CIERRA la Fase 1. (Cláusula de escape C6: si los cuerpos corruptos impiden
-     juzgar el feel en el Gate 1, el rework anatómico se adelanta aquí.)
+     **✅ PLAYTEST APROBADO (2026-07-09): "se siente perfecto"** (tras el fix del
+     corte del salto — aterrizaje descend-only + muro firme). Playtest Loop del Gate 1
+     CERRADO. **🏁 FASE 1 CERRADA.** La cláusula de escape C6 NO se disparó (los
+     cuerpos no impidieron juzgar el feel). **SIGUIENTE: ventana C6 (rework anatómico
+     del cuerpo base) + pase de poses C4** — RATIFICADA entre el Gate 1 y la Fase 2;
+     luego la Fase 2 del [[Plan-de-Produccion]].
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -396,10 +407,9 @@ updated: 2026-07-09
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
 - **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcances
-  **2b —Springboard DIRIGIDO—, 3 —Dagna IA de combate— y 4 —Gate 1— (todos
-  mergeados)**. Los 2b/3 con playtest aprobado; el **4 (Gate 1) a la espera del
-  playtest del director** para cerrar la Fase 1). `autotest_combat.gd` y el nuevo
-  `autotest_springboard.gd` son gates permanentes. Lanzador de doble clic para el
+  **2b, 3 y 4 —Gate 1— mergeados + playtest aprobado; 🏁 FASE 1 CERRADA**, más el fix
+  del corte del salto del Gate 1). `autotest_combat.gd` y `autotest_springboard.gd`
+  son gates permanentes. Lanzador de doble clic para el
   playtest en el greybox: `Start-Playtest-Greybox.bat` (raíz; la meseta del Gate 1
   ya vive en el greybox). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,

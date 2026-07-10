@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] playtest | Gate 1 APROBADO — 🏁 FASE 1 CERRADA
+Re-verificación del director tras el fix del corte del salto: **"se siente
+perfecto"**. El arco del Springboard completa limpio hasta la cornisa. Playtest Loop
+del Gate 1 CERRADO. **Fase 1 del [[Plan-de-Produccion]] CERRADA:** en el greybox se
+pelea junto a Dagna y se usa el Seismic Springboard T1 sobre su onda para alcanzar
+una cornisa imposible, ≥60 FPS. PRD-006 (combate mínimo) + PRD-007 (Dagna aliada +
+Springboard T1) completos en código Y validados en playtest. La cláusula de escape
+C6 NO se disparó (los cuerpos corruptos no impidieron juzgar el feel). **Siguiente:
+la ventana C6 (rework anatómico del cuerpo base) + pase de poses C4, RATIFICADA entre
+el Gate 1 y la Fase 2; luego la Fase 2.**
+
 ## [2026-07-09] feature | Gate 1 — fix del corte del salto (feedback del director)
 Boris probó el Gate 1: **"se siente bien pero al llegar a la altura de la cornisa,
 como que se cortó el salto"** (lo dio por posible bug gráfico). Diagnóstico: NO era
