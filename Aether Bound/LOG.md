@@ -1,5 +1,12 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r5b: cuatro dedos reales (la garra se tumbó)
+Segunda ronda del director sobre las manos: "hay tres masas — pulgar más dos"
+(la v1 de dos bloques leía como garra). Ahora: palma + CUATRO dedos delgados
+individuales con ranuras de 3 mm entintadas por el Sobel y largos naturales
+(medio el más largo) + pulgar. A distancia se funden en una masa. QA
+biomech/combat/slice ALL_PASS.
+
 ## [2026-07-10] feature | C6a-r5: manos con dedos estilizados
 Feedback del director: las manos no tenían dedos. Solución BotW/Palia: palma +
 dos masas de dedos con ranura (el Sobel entinta la separación — de cerca se ve,

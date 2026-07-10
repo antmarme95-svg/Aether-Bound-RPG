@@ -431,27 +431,32 @@ func _build() -> void:
 		_add_outline_pass(fore, Color("#f2b186"))
 
 		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna.
-		# r5 (feedback del director: "las manos no tienen dedos"): mano
-		# estilizada BotW/Palia = palma + DOS masas de dedos con ranura
-		# (la separación la entinta el Sobel — discontinuidad real de
-		# profundidad, visible de cerca, muda a distancia) + PULGAR aparte
-		# hacia el cuerpo (vende la mano en la silueta). Sin dedos
-		# individuales: formas grandes, cero ruido.
-		var hand = _box_mesh(0.062, 0.062, 0.068, skin_mat)
+		# r5b (feedback del director: "hay tres masas — pulgar más dos"):
+		# la mano lee como MANO, no como garra — palma + CUATRO dedos
+		# individuales delgados (ranura ~3 mm entre cada uno: el Sobel
+		# entinta las separaciones en close-up y a distancia se funden en
+		# una masa) con largos naturales (medio > índice ≈ anular > meñique)
+		# + PULGAR hacia el cuerpo. La línea hace el trabajo.
+		var hand = _box_mesh(0.064, 0.062, 0.066, skin_mat)
 		hand.position.y = -0.30
 		hand.rotation.x = -0.12   # curl relajado de la lámina
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
 
-		for f in [-1, 1]:
-			var fingers = _box_mesh(0.026, 0.062, 0.058, skin_mat)
-			fingers.position = Vector3(float(f) * 0.0165, -0.056, 0.006)
-			fingers.rotation.x = -0.20   # los dedos doblan más que la palma
-			hand.add_child(fingers)
-			_add_outline_pass(fingers, Color("#f2b186"))
+		# offsets del índice→meñique (x local); el índice queda del lado
+		# del pulgar (interior). Largos por dedo, medio el más largo.
+		var f_off: Array = [0.022, 0.0073, -0.0073, -0.022]
+		var f_len: Array = [0.056, 0.063, 0.058, 0.046]
+		for fi in range(4):
+			var f_l: float = f_len[fi]
+			var finger = _box_mesh(0.012, f_l, 0.042, skin_mat)
+			finger.position = Vector3(-float(side) * float(f_off[fi]), -0.027 - f_l * 0.5, 0.006)
+			finger.rotation.x = -0.22   # los dedos doblan más que la palma
+			hand.add_child(finger)
+			_add_outline_pass(finger, Color("#f2b186"))
 
-		var thumb = _box_mesh(0.022, 0.05, 0.026, skin_mat)
-		thumb.position = Vector3(-float(side) * 0.042, -0.012, 0.014)
+		var thumb = _box_mesh(0.020, 0.05, 0.026, skin_mat)
+		thumb.position = Vector3(-float(side) * 0.043, -0.012, 0.014)
 		thumb.rotation.z = float(side) * 0.5
 		thumb.rotation.x = -0.25
 		hand.add_child(thumb)
