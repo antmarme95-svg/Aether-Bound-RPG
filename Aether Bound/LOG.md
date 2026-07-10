@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] ingest+feature | Review v0.2 archivada + M9-r2/M10: cabeza del concept
+Segunda review estructurada del director (Head/Bust v0.2, fidelidad 4/10) →
+archivada en `90-Raw/reviews/`. Respuesta en código: pelo nuevo `frontier_crop`
+castaño claro (fuera cuña/rizo; hack del hair_slot revertido — Dagna recupera
+sus trenzas), warpaint 6 "Scout Marks" + banda de pintura en el bíceps,
+mandíbula ancha/amable + boca con sonrisa franca + ojos entrecerrados (fuera
+caricatura) + cejas rectas, cuello 0.15 grueso (convergencia v0.1/v0.2),
+orejas a banda ceja-nariz. Hallazgos de pipeline: la cara del atlas vive en la
+costura u=0; jaw/cheeks embarraban la pintura (atlas ahora solo en cráneo);
+dump `warpaint_atlas.png` en el banco. Vestuario = base-body modular
+DOCUMENTADO (sistema signature; ropa Fase 4 por decisión previa del director).
+TODO puntual: diagonal de FRENTE oculta bajo hairline (debug UV con retícula).
+QA completo ALL_PASS.
+
 ## [2026-07-10] feature | M9-r1: la cara gana personalidad (review MEDIUM 9)
 Primera ronda de M9 (manos cerradas, "listo, vamos con M9"): mandíbula marcada
 + mentón presente, nariz más fina y larga, MEJILLAS ALTAS (pómulos bajo el ojo;

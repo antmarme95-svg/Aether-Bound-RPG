@@ -130,6 +130,8 @@ static func build_hair(index: int, mat: Material) -> Node3D:
 			return _hair_shorn_scout(mat)
 		9:
 			return _hair_drake_dreads(mat)
+		10:
+			return _hair_frontier_crop(mat)
 		_:
 			return Node3D.new()
 
@@ -247,6 +249,28 @@ static func _hair_twin_tails(mat: Material) -> Node3D:
 static func _hair_shorn_scout(mat: Material) -> Node3D:
 	var g = Node3D.new()
 	g.add_child(_cap(mat, 1.012, 0.96))
+	return g
+
+# 10 — Frontier Crop (M10, concept humano canónico): corto, lados
+# recortados, volumen barrido ARRIBA y ATRÁS. Sin cuña frontal ni rizos
+# sueltos (review v0.2 CRITICAL 1: la cuña leía como gorro/objeto ajeno).
+static func _hair_frontier_crop(mat: Material) -> Node3D:
+	var g = Node3D.new()
+	# Casquete pegado al cráneo, lados recortados (x más angosto)
+	var cap = _sphere(mat, R * 1.04, 0.0, R * 0.08, -R * 0.08)
+	cap.scale = Vector3(0.94, 0.90, 1.02)
+	g.add_child(cap)
+	# Masa barrida hacia arriba-atrás (el volumen del concept)
+	var sweep = _sphere(mat, 0.085, 0.0, R * 0.70, -R * 0.42)
+	sweep.scale = Vector3(1.05, 0.72, 1.35)
+	sweep.rotation.x = -0.35
+	g.add_child(sweep)
+	# HAIRLINE frontal BAJA — la frente no domina la cara (el nacimiento
+	# arranca a media frente y empuja hacia atrás, como el concept).
+	var front = _sphere(mat, 0.075, 0.0, R * 0.60, R * 0.56)
+	front.scale = Vector3(1.35, 0.45, 0.55)
+	front.rotation.x = -0.42
+	g.add_child(front)
 	return g
 
 # 9 — Drake Dreads: cap + 7 hanging cylinder ropes

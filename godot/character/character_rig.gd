@@ -24,7 +24,7 @@ class_name CharacterRig extends Node3D
 # CRITICAL 2 cabeza menor, CRITICAL 3 cuello largo + hombros más bajos.
 const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos cabezón)
 const HEAD_Y: float = 0.56           # pivote de cabeza sobre el torácico
-const NECK_Y: float = 0.385
+const NECK_Y: float = 0.375   # M9-r2 (review v0.2 M6): cuello un poco más corto
 const SHOULDER_X: float = 0.262      # media distancia entre hombros (review +12%)
 const SHOULDER_Y: float = 0.29       # línea de hombros MÁS BAJA (review: cuello)
 const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
@@ -188,6 +188,10 @@ var _head_tex_key: String = ""
 var _hair_key: String = ""
 var _beard_key: String = ""
 var _origin_id: String = ""
+
+# M9-r2 (review v0.2 CRITICAL 2): banda de pintura en el brazo — acompaña
+# al warpaint facial (identidad del concept: marca en el bíceps izquierdo).
+var _arm_stripe: MeshInstance3D = null
 
 # ---- archetype silhouette state ----
 var _archetype_class: String = ""        # "warrior" / "mage" / "thief" / ""
@@ -370,10 +374,12 @@ func _build() -> void:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
 	# Con MASA (profundidad casi de pecho y solape con la tapa) — un listón
 	# delgado lee como gancho de alambre, no como músculo.
+	# (M9-r2: pendiente más pronunciada — el trapecio FUNDE cuello y hombro,
+	# review v0.2 M6: transición abrupta.)
 	for tside in [-1, 1]:
-		var trap = _box_mesh(0.19, 0.085, 0.115, skin_mat)
-		trap.position = Vector3(float(tside) * 0.105, 0.30, 0.0)
-		trap.rotation.z = -float(tside) * 0.22
+		var trap = _box_mesh(0.19, 0.09, 0.115, skin_mat)
+		trap.position = Vector3(float(tside) * 0.10, 0.305, 0.0)
+		trap.rotation.z = -float(tside) * 0.27
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
 
@@ -527,9 +533,10 @@ func _build() -> void:
 	left_elbow.add_child(prosthetic)
 
 	# ---------- head ---------- (colgada del torácico)
-	# Cuello LARGO con taper (review CRITICAL 3: el concept tiene cuello,
-	# línea continua cabeza-hombros; la cabeza no vive incrustada).
-	var neck = _cylinder_mesh(0.043, 0.056, 0.17, skin_mat)
+	# Cuello con taper — convergencia de las dos reviews: la v0.1 pedía que
+	# EXISTIERA (0.13→0.17), la v0.2 lo marcó overlong → 0.15, más GRUESO
+	# (el hilo de teléfono no sostiene una cabeza).
+	var neck = _cylinder_mesh(0.048, 0.062, 0.15, skin_mat)
 	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
@@ -545,51 +552,54 @@ func _build() -> void:
 
 	# C6c (comparación contra la lámina): el cráneo tiene FORMA — más angosto
 	# que alto, nuca redondeada; ya no es la pelota chibi.
+	# M9-r2 (review v0.2 HIGH 4): cara media más CORTA (y 1.06→1.03).
 	skull = _sphere_mesh(0.15, head_mat)
 	skull.name = "skull"
-	skull.scale = Vector3(0.90, 1.06, 0.97)
+	skull.scale = Vector3(0.90, 1.03, 0.97)
 	# Godot SphereMesh: seam at -Z, so u=0.5 (face strip) faces +Z by default.
 	skull.rotation.y = 0.0
 	head.add_child(skull)
 	_add_outline_pass(skull, Color("#f2b186"))
 
-	# Mandíbula ESTRECHA (lámina: fine narrow jaw) + mentón propio.
-	# M9-r1: mandíbula MARCADA — más profunda y con el mentón presente
-	# (el jawline se lee en ¾ y perfil, review M9).
-	jaw_mesh = _box_mesh(0.118, 0.07, 0.112, head_mat)
+	# M9-r2 (review v0.2 HIGH 4): mandíbula más ANCHA y cuadrada — la
+	# estructura del concept es amable y curtida, no fina y joven. El
+	# mentón se funde en la mandíbula (fuera la costura vertical dura).
+	# (jaw/cheeks en skin_mat — M9-r2b: sus UVs de caja/esfera muestrean el
+	# atlas SIN control y embarran el warpaint; la textura vive en el cráneo)
+	jaw_mesh = _box_mesh(0.132, 0.072, 0.112, skin_mat)
 	jaw_mesh.name = "jaw"
-	jaw_mesh.position = Vector3(0.0, -0.103, 0.048)
+	jaw_mesh.position = Vector3(0.0, -0.100, 0.048)
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
 	# (chin/nose en skin_mat: el atlas de warpaint mapea raro en cajas chicas)
-	var chin = _box_mesh(0.052, 0.034, 0.048, skin_mat)
-	chin.position = Vector3(0.0, -0.13, 0.094)
+	var chin = _box_mesh(0.062, 0.030, 0.046, skin_mat)
+	chin.position = Vector3(0.0, -0.124, 0.090)
 	head.add_child(chin)
 	_add_outline_pass(chin, Color("#f2b186"))
 
 	# NARIZ — sin ella el perfil no existe. M9-r1: más FINA, un pelo más larga.
 	var nose = _box_mesh(0.017, 0.046, 0.028, skin_mat)
-	nose.position = Vector3(0.0, -0.010, 0.147)
+	nose.position = Vector3(0.0, -0.006, 0.147)
 	nose.rotation.x = -0.15
 	head.add_child(nose)
 	_add_outline_pass(nose, Color("#f2b186"))
 
-	# M9-r1: SONRISA ligera — línea de boca en tres segmentos de tinta con
-	# las comisuras hacia ARRIBA (la review pide media sonrisa, no neutro).
-	var mouth_c = _box_mesh(0.032, 0.005, 0.004, pupil_mat)
-	mouth_c.position = Vector3(0.0, -0.080, 0.129)
+	# M9-r2 (review v0.2): boca más ANCHA con sonrisa franca — la mueca
+	# apretada leía en blanco; el concept sonríe.
+	var mouth_c = _box_mesh(0.040, 0.005, 0.004, pupil_mat)
+	mouth_c.position = Vector3(0.0, -0.076, 0.129)
 	head.add_child(mouth_c)
 	for mside in [-1, 1]:
-		var mouth_k = _box_mesh(0.012, 0.005, 0.004, pupil_mat)
-		mouth_k.position = Vector3(float(mside) * 0.0215, -0.0755, 0.127)
+		var mouth_k = _box_mesh(0.013, 0.005, 0.004, pupil_mat)
+		mouth_k.position = Vector3(float(mside) * 0.026, -0.0715, 0.127)
 		mouth_k.rotation.z = float(mside) * 0.45   # comisuras arriba (+x sube con +z)
 		head.add_child(mouth_k)
 
 	# M9-r1: MEJILLAS ALTAS — pómulos bajo el ojo, no cachetes bajos.
 	cheeks = []
 	for side in [-1, 1]:
-		var cheek = _sphere_mesh(0.026, head_mat)
+		var cheek = _sphere_mesh(0.026, skin_mat)
 		cheek.position = Vector3(side * 0.074, 0.0, 0.102)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
@@ -601,25 +611,28 @@ func _build() -> void:
 	for side in [-1, 1]:
 		var eye_group = Node3D.new()
 		eye_group.name = "eye_" + ("l" if side == -1 else "r")
-		eye_group.position = Vector3(side * 0.052, 0.020, 0.130)
+		eye_group.position = Vector3(side * 0.052, 0.022, 0.130)
 
-		var white = _sphere_mesh(0.021, eye_white_mat)
-		white.scale.z = 0.5
+		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
+		# esclerótica visible, apertura angosta (fuera el ojo-platillo
+		# caricatura; registro grounded-fantasy).
+		var white = _sphere_mesh(0.018, eye_white_mat)
+		white.scale = Vector3(1.0, 0.78, 0.5)
 		eye_group.add_child(white)
 
-		var iris = _disc_mesh(0.0115, iris_mat)
+		var iris = _disc_mesh(0.011, iris_mat)
 		iris.rotation.x = PI / 2.0
-		iris.position.z = 0.0115
+		iris.position.z = 0.0100
 		eye_group.add_child(iris)
 
 		var pupil = _disc_mesh(0.0055, pupil_mat)
 		pupil.rotation.x = PI / 2.0
-		pupil.position.z = 0.0125
+		pupil.position.z = 0.0110
 		eye_group.add_child(pupil)
 
-		var glint = _disc_mesh(0.003, eye_white_mat)
+		var glint = _disc_mesh(0.0026, eye_white_mat)
 		glint.rotation.x = PI / 2.0
-		glint.position = Vector3(0.004, 0.005, 0.013)
+		glint.position = Vector3(0.0035, 0.004, 0.0115)
 		eye_group.add_child(glint)
 
 		eye_group.set_meta("side", side)
@@ -627,12 +640,13 @@ func _build() -> void:
 		eyes.append(eye_group)
 
 		# Ceja BAJA y cercana al ojo (lámina: brow line marcada, no flotante).
-		# M9-r1: más fina y CAFÉ CÁLIDO (no tinta negra — losas = enojo).
+		# M9-r1: fina y CAFÉ CÁLIDO. M9-r2: más baja y RECTA (review v0.2:
+		# el arco alto empuja a caricatura).
 		var brow_mat := StandardMaterial3D.new()
 		brow_mat.albedo_color = Color("#3a2418")
 		brow_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		var brow = _box_mesh(0.042, 0.009, 0.012, brow_mat)
-		brow.position = Vector3(side * 0.052, 0.056, 0.140)
+		var brow = _box_mesh(0.046, 0.009, 0.012, brow_mat)
+		brow.position = Vector3(side * 0.052, 0.046, 0.140)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -670,14 +684,12 @@ func _build() -> void:
 	head.add_child(goggles)
 
 	# Hair / beard slots
-	# r4 (review MEDIUM 10, parcial): el pelo se APLASTA y corre hacia
-	# ATRÁS (concept: cabello corto con volumen hacia atrás, no un bloque
-	# encima). Transform del slot = vale para todos los estilos del library;
-	# el rediseño real de peinados queda con la cara (C6c fino).
+	# M10 (review v0.2): el hack de aplastar el slot se REVIERTE — cada
+	# estilo se autora a su cráneo (el flatten distorsionaba TODOS los
+	# estilos, incluidas las trenzas aprobadas de Dagna). El canon humano
+	# usa el estilo 10 "frontier crop" (corto, barrido arriba-atrás).
 	hair_slot = Node3D.new()
 	hair_slot.name = "hair_slot"
-	hair_slot.scale = Vector3(1.0, 0.82, 1.06)
-	hair_slot.position = Vector3(0.0, -0.012, -0.015)
 	beard_slot = Node3D.new()
 	beard_slot.name = "beard_slot"
 	head.add_child(hair_slot)
@@ -1354,7 +1366,8 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		cheek.scale = Vector3(cheek_s, cheek_s, cheek_s)
 
 	# JS eyes: rotation.z = side * lerp(-0.32, 0.26, eyeTilt), scale.y = lerp(0.5, 1.3, eyeShape)
-	# JS brows: rotation.z = side * lerp(-0.4, 0.18, eyeTilt)
+	# M9-r2: rango de tilt de CEJA acotado (review v0.2: cejas RECTAS —
+	# el arco alto era caricatura); el ojo conserva su rango.
 	var eye_tilt: float = p.get("eyeTilt", 0.5)
 	var eye_shape: float = p.get("eyeShape", 0.5)
 	for i in range(eyes.size()):
@@ -1362,7 +1375,7 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		var side: int = eye.get_meta("side")
 		eye.rotation.z = float(side) * _lerp(-0.32, 0.26, eye_tilt)
 		eye.scale.y = _lerp(0.5, 1.3, eye_shape)
-		brows[i].rotation.z = float(side) * _lerp(-0.4, 0.18, eye_tilt)
+		brows[i].rotation.z = float(side) * _lerp(-0.20, 0.09, eye_tilt)
 
 	# ---- colors ----
 	var skin_tones: Array = PaletteData.SKIN_TONES
@@ -1387,10 +1400,23 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		_head_tex_key = tex_key
 		var new_tex = WarpaintAtlas.build_head_texture(skin_color, warpaint_idx, paint_color)
 		head_mat = ToonMaterials.toon_mat_opaque_textured(new_tex)
+		# M9-r2b: SOLO el cráneo lleva el atlas (jaw/cheeks = skin plano;
+		# sus UVs de primitiva embarraban la pintura).
 		skull.material_override = head_mat
-		jaw_mesh.material_override = head_mat
-		for cheek in cheeks:
-			cheek.material_override = head_mat
+
+	# ---- marca de pintura del brazo (acompaña al warpaint facial) ----
+	if _arm_stripe != null:
+		_arm_stripe.queue_free()
+		_arm_stripe = null
+	if warpaint_idx > 0:
+		var stripe_mat := StandardMaterial3D.new()
+		stripe_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		stripe_mat.albedo_color = paint_color
+		_arm_stripe = _cylinder_mesh(0.058, 0.060, 0.028, stripe_mat)
+		_arm_stripe.name = "arm_paint_stripe"
+		_arm_stripe.position = Vector3(0.0, -0.115, 0.0)
+		_arm_stripe.rotation.z = 0.12
+		arms[0].add_child(_arm_stripe)
 
 	# ---- hair swap ----
 	var hair_style: int = int(p.get("hair", 0))
@@ -1732,16 +1758,17 @@ func _build_origin_features(origin: Dictionary) -> void:
 
 	else:
 		# ---- Origin neutro/desconocido (M9-r1): un humano base TIENE
-		# orejas — redondas simples; los origins las REEMPLAZAN arriba. ----
+		# orejas — redondas simples; los origins las REEMPLAZAN arriba.
+		# M9-r2 (review v0.2 M7): más BAJAS y grandes — banda ceja-nariz. ----
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var smesh = SphereMesh.new()
-			smesh.radius = 0.030
-			smesh.height = 0.060
+			smesh.radius = 0.032
+			smesh.height = 0.064
 			ear.mesh = smesh
 			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.145, 0.0, 0.0)
-			ear.scale = Vector3(0.55, 1.0, 0.8)   # oreja plana, no bola
+			ear.position = Vector3(side * 0.142, -0.012, 0.0)
+			ear.scale = Vector3(0.55, 1.15, 0.85)   # oreja plana, no bola
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
 

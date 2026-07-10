@@ -214,5 +214,16 @@ static func _draw_pattern(img: Image, idx: int, paint: Color) -> void:
 				x = nx
 				up = !up
 
+		6:
+			# Scout Marks (M9/M10, concept humano canónico — review v0.2
+			# CRITICAL 2): ASIMÉTRICO — diagonal en la frente + diagonal en
+			# la mejilla izquierda. VERIFICADO por A/B de render (M9-r2):
+			# la cara está en la COSTURA u=0 → x=0/W (como asumen los
+			# patrones 1–5); x chico = mejilla IZQUIERDA del personaje. El
+			# centro de la textura es la nuca. La banda de frente visible
+			# (entre ceja y hairline del frontier crop) es y≈80..100.
+			_slash(img, 2, 92, 60, 106, 8, paint)
+			_slash(img, 34, FACE_CY_EYE + 10, 66, FACE_CY_EYE + 34, 8, paint)
+
 		_:
 			pass # index 0 = no paint

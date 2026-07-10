@@ -97,6 +97,40 @@ updated: 2026-07-10
   (ref. anatómica del director — Cleveland Clinic, vista palmar): el pulgar
   nace de la eminencia TENAR, a media palma (nacimiento 50% más adentro).
   r5e: dedos 10% más delgados (sección 0.0108×0.038; el pulgar no).**
+- **📋 Character Head/Bust Review v0.2 del director (2026-07-10) — ARCHIVADA
+  en `90-Raw/reviews/Character-Head-Review-v0.2.md`.** Sobre las capturas de
+  M9-r1. Veredicto: Needs Revision, fidelidad 4/10 / overall 5/10. Críticos:
+  pelo (color/forma), pintura facial verde ausente. Altos: capas de vestuario
+  (o documentar base modular), estructura facial (mandíbula ancha/amable),
+  ojos-platillo. Medios: cuello overlong, orejas. **Checklist de M9/M10.**
+- **M9-r2 + M10 ✅ CÓDIGO (2026-07-10): respuesta a la review v0.2.**
+  (a) **CRITICAL 1 — pelo:** estilo NUEVO `frontier_crop` (índice 10 del
+  hair_library: corto, lados recortados, volumen barrido arriba-atrás,
+  hairline baja) en castaño claro (#8a6b48, patrón de tinte de Dagna); fuera
+  la cuña y el rizo suelto; el hack de aplastar hair_slot REVERTIDO (cada
+  estilo se autora a su cráneo — las trenzas de Dagna vuelven a su forma
+  aprobada). (b) **CRITICAL 2 — pintura:** patrón warpaint 6 "Scout Marks"
+  (asimétrico) + **banda de pintura en el bíceps izquierdo** (acompaña al
+  warpaint, color de paleta); verde wyld + piel porcelana en el banco.
+  **Hallazgo de pipeline:** la cara del cráneo vive en la COSTURA u=0 del
+  atlas; los jaw-box/cheeks con material de atlas EMBARRABAN la pintura (UVs
+  de primitiva sin control) → el atlas ahora vive SOLO en el cráneo (jaw/
+  cheeks = skin plano); el banco vuelca `warpaint_atlas.png` para calibrar
+  viendo. La diagonal de mejilla marca ✓; **la de FRENTE sigue oculta bajo
+  el hairline — TODO puntual: debug de UV con retícula.** (c) **HIGH 4–5 —
+  cara:** mandíbula +12% más ancha (registro amable, no joven), cara media
+  más corta (skull y 1.03), boca ancha con sonrisa franca, mentón fundido,
+  ojos −15% con apertura entrecerrada y menos esclerótica (fuera el
+  ojo-platillo caricatura), cejas más bajas/RECTAS (rango de tilt acotado
+  en apply_phenotype). (d) **M6–M7:** cuello 0.15 y más grueso (convergencia
+  v0.1 "no existe" / v0.2 "overlong"), trapecio más fundido, orejas a la
+  banda ceja-nariz y +15%. (e) **HIGH 3 — vestuario: DOCUMENTADO como
+  base-body modular intencional** (el sistema signature de Dagna ES el
+  sistema de equipamiento por capas; el director difirió la ropa a Fase 4 en
+  la review v0.1 — la v0.2 acepta esta vía si se documenta). (f) **LOW 8:**
+  el "prop" era el pauldron — oculto en el banco de anatomía. LOW 9 (piel
+  cálida): parcialmente iluminación dawn del banco; A/B en luz neutra
+  pendiente para el lock de textura (Fase 4). QA completo ALL_PASS.
 - **M9-r1 ✅ CÓDIGO (2026-07-10): la cara gana personalidad (review M9).**
   Mandíbula marcada + mentón, nariz fina, MEJILLAS ALTAS (pómulos bajo el
   ojo; rango del slider `cheek` subido en apply_phenotype), SONRISA ligera

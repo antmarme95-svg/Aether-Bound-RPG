@@ -55,11 +55,29 @@ func _run() -> void:
 	_holder.position = Vector3(x, _GOLDEN.terrain_h(x, z), z)
 	_rig = CharacterRig.new()
 	_holder.add_child(_rig)
-	_rig.apply_phenotype(_Pheno.default_phenotype(), BASELINE_ORIGIN)
+	# Fenotipo del CONCEPT humano canónico (review v0.2: piel porcelana,
+	# pelo corto castaño claro barrido atrás, scout marks verdes).
+	var pheno: Dictionary = _Pheno.default_phenotype()
+	pheno["skinTone"] = 0     # porcelain (concept: tez pálida/fría)
+	pheno["hair"] = 10        # frontier crop (M10)
+	pheno["hairColor"] = 4    # chestnut (base; tinte exacto abajo)
+	pheno["warpaint"] = 6     # scout marks (frente + mejilla izq)
+	pheno["paintColor"] = 4   # wyld green
+	_rig.apply_phenotype(pheno, BASELINE_ORIGIN)
+	# Castaño CLARO exacto del concept (patrón Dagna: tinte post-paleta).
+	_rig.hair_mat.set_shader_parameter("albedo_color", Color("#8a6b48"))
 	# Iris café legible (el accent papel del banco lo dejaba blanco-sobre-
 	# blanco = mirada de susto; en juego el iris es el accent del origen).
 	_rig.iris_mat.albedo_color = Color("#4f3b28")
+	# Sin pauldron en el banco de anatomía (review v0.2 LOW 8: leía como
+	# "prop sin referencia" — es armadura de hombro, se juzga con vestuario).
+	var arm_r: Node3D = _rig.arms[1]
+	(arm_r.get_child(arm_r.get_child_count() - 1) as Node3D).visible = false
 	_rig.set_motion(0.0, false)
+	# Dump del atlas de warpaint generado (posicionar slashes VIENDO el strip)
+	var head_tex = _rig.head_mat.get_shader_parameter("albedo_texture")
+	if head_tex is Texture2D:
+		(head_tex as Texture2D).get_image().save_png("res://test_out/warpaint_atlas.png")
 	# Settle: > POSE_STEP (lección: capturas en 2s esperan un tick de pose)
 	await _wait(0.25)
 
