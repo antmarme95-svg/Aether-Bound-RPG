@@ -1,5 +1,18 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | Ventana C6/C4 abierta — C6a: humano 7.5 cabezas bajo Sobel
+Ventana C6/C4 arrancada (branch `feat/c6-anatomy-rework`). Decisiones del director:
+pies IK diferidos; **el rework se maneja únicamente en estilo Sobel** (la regla de
+Línea del [[Art Bible]] pasa a ser LA línea del rig — sin casco invertido). C6a en
+código: shader `toon_opaque` nuevo (toon sin ALPHA — post-safe, con textura y
+emission), tabla PROPORTIONS canónica en `character_rig.gd` (7.57 cabezas medidas
+vs 6.38 del puerto anime; hombros 2.39 cabezas; deltoides sin hueco lego; cuello
+real; cabeza = pivote ×0.84), fix del fallthrough ironblooded en
+`_build_origin_features`, banco `tests/tmp_anatomy.gd` (medidas + regla de cabezas
++ capturas 3 distancias bajo el post — regla Sobel verificada en escena). QA: 9
+suites ALL_PASS (core/combat/locomotion/ads + biomech/combat/slice/ui/springboard).
+Pendiente: VoBo del director; Dagna se re-monta en C6b.
+
 ## [2026-07-09] playtest | Gate 1 APROBADO — 🏁 FASE 1 CERRADA
 Re-verificación del director tras el fix del corte del salto: **"se siente
 perfecto"**. El arco del Springboard completa limpio hasta la cornisa. Playtest Loop

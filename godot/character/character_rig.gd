@@ -1,7 +1,35 @@
-## CharacterRig — parametric anime humanoid, direct port of CharacterRig.js.
-## All JS numeric constants are preserved exactly (positions, scales, thresholds).
-## Pivots: body > hips/spine > head > sub-meshes, arms, legs — same hierarchy.
+## CharacterRig — cuerpo humanoide paramétrico.
+## C6a (2026-07-10, rework anatómico): las proporciones ya NO son el puerto
+## del prototipo (anime ~6.4 cabezas) — siguen el canon de las láminas de
+## fenotipo (`90-Raw/concept/fenotipo-*.png`): humano ATLETA de 7.5 cabezas
+## (ver PROPORTIONS abajo). La jerarquía de pivotes es intacta (biomecánica
+## conservada: hip-first, columna lumbar+torácica, constraints de ROM).
+## Línea: el rig NO fabrica outline (decisión del director 2026-07-10) — la
+## tinta la pone el Sobel del post Melancolía (Art Bible, eje Línea); los
+## materiales son toon_opaque (pase opaco, visibles al depth del post).
+## Pivots: body > hips/spine > head > sub-meshes, arms, legs.
 class_name CharacterRig extends Node3D
+
+# ----------------------------------------------------------------
+# PROPORTIONS — canon anatómico humano (lámina fenotipo-humano-v1: atleta
+# de 7.5 cabezas). Alturas en metros a escala 1.0; el total queda ~1.92 m
+# con la coronilla y el mentón cerrando una cabeza de ~0.255 m.
+# Landmarks (mundo, de pie): coronilla 1.92 · mentón 1.67 · hombros 1.55 ·
+# codo/ombligo 1.23 · muñeca/entrepierna ~0.95 · rodilla 0.50 · suelo 0.
+# Los fenotipos enano (4.5 cabezas, trapezoide) y elfo (8, esbelto) derivan
+# de esta tabla en C6b.
+# ----------------------------------------------------------------
+const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 → cabeza de 7.5
+const HEAD_Y: float = 0.55           # pivote de cabeza sobre el torácico
+const NECK_Y: float = 0.42
+const SHOULDER_X: float = 0.245      # media distancia entre hombros
+const SHOULDER_Y: float = 0.31       # altura de hombros sobre el torácico
+const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
+# V-taper del tronco (multiplicadores base sobre el build de peso/clase):
+# pecho ancho y algo plano; cintura recogida — silueta de atleta, no frijol.
+const CHEST_X: float = 1.12
+const CHEST_Z: float = 0.88
+const WAIST_XZ: float = 0.95
 
 # ---- lerp helper ----
 static func _lerp(a: float, b: float, t: float) -> float:
@@ -184,16 +212,15 @@ var _shaman_aura: GPUParticles3D = null     # miststalker mage: green heal parti
 func _ready() -> void:
 	_init_materials()
 	_build()
-	# Apply default outline to body group (thickness 0.06, matches JS addOutline)
-	_apply_outline_to_children(self, Color("#1c1d24"), 0.02)
+	# C6: sin outline de casco invertido — la línea la pone el Sobel del post.
 
 func _init_materials() -> void:
-	skin_mat = ToonMaterials.toon_mat(Color("#f2b186"))
-	head_mat = ToonMaterials.toon_mat(Color("#ffffff"))
-	hair_mat = ToonMaterials.toon_mat(Color("#b8451f"))
-	leather_mat = ToonMaterials.toon_mat(Color("#5b4632"))
-	dark_leather_mat = ToonMaterials.toon_mat(Color("#3a2d22"))
-	metal_mat = ToonMaterials.toon_mat(Color("#6f7a88"))
+	skin_mat = ToonMaterials.toon_mat_opaque(Color("#f2b186"))
+	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
+	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
+	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
+	dark_leather_mat = ToonMaterials.toon_mat_opaque(Color("#3a2d22"))
+	metal_mat = ToonMaterials.toon_mat_opaque(Color("#6f7a88"))
 	accent_glow_mat = ToonMaterials.glow_mat(accent, 1.2)
 	vein_mat = ToonMaterials.glow_mat(accent, 0.8)
 
@@ -221,13 +248,13 @@ func _build() -> void:
 	hips.position.y = 0.95
 	body.add_child(hips)
 
-	pelvis = _box_mesh(0.27, 0.15, 0.17, dark_leather_mat)
+	pelvis = _box_mesh(0.28, 0.15, 0.17, dark_leather_mat)
 	pelvis.name = "pelvis"
 	pelvis.position.y = -0.02
 	hips.add_child(pelvis)
 	_add_outline_pass(pelvis, Color("#3a2d22"))
 
-	var belt = _box_mesh(0.3, 0.05, 0.2, leather_mat)
+	var belt = _box_mesh(0.31, 0.05, 0.2, leather_mat)
 	belt.position.y = 0.05
 	hips.add_child(belt)
 	_add_outline_pass(belt, Color("#5b4632"))
@@ -243,7 +270,8 @@ func _build() -> void:
 		leg.position = Vector3(side * 0.09, 0.0, 0.0)
 		hips.add_child(leg)
 
-		var thigh = _capsule_mesh(0.067, 0.27, dark_leather_mat)
+		# Muslo atlético (lámina: la masa de la pierna vive arriba)
+		var thigh = _capsule_mesh(0.078, 0.27, dark_leather_mat)
 		thigh.position.y = -0.21
 		leg.add_child(thigh)
 		_add_outline_pass(thigh, Color("#3a2d22"))
@@ -253,13 +281,14 @@ func _build() -> void:
 		knee.position.y = -0.45
 		leg.add_child(knee)
 
-		var shin = _capsule_mesh(0.055, 0.26, dark_leather_mat)
+		var shin = _capsule_mesh(0.06, 0.26, dark_leather_mat)
 		shin.position.y = -0.2
 		knee.add_child(shin)
 		_add_outline_pass(shin, Color("#3a2d22"))
 
-		var boot = _box_mesh(0.1, 0.08, 0.17, leather_mat)
-		boot.position = Vector3(0.0, -0.45, 0.03)
+		# Pie/bota con proyección real al frente (el pie del puerto era un taco)
+		var boot = _box_mesh(0.11, 0.085, 0.22, leather_mat)
+		boot.position = Vector3(0.0, -0.45, 0.05)
 		knee.add_child(boot)
 		_add_outline_pass(boot, Color("#5b4632"))
 
@@ -281,21 +310,24 @@ func _build() -> void:
 
 	upper_spine = Node3D.new()
 	upper_spine.name = "upper_spine"
-	upper_spine.position.y = 0.22
+	upper_spine.position.y = UPPER_SPINE_Y
 	spine.add_child(upper_spine)
 
-	torso = _capsule_mesh(0.16, 0.3, skin_mat)
-	torso.position.y = 0.04
+	# PECHO: capsula corta y ancha, alta (masa entre cintura y hombros).
+	# El V-taper base (CHEST_X/Z) lo aplica _apply_build sobre el peso/clase.
+	torso = _capsule_mesh(0.17, 0.14, skin_mat)
+	torso.position.y = 0.12
 	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
 
-	jerkin = _capsule_mesh(0.165, 0.18, leather_mat)
-	jerkin.position.y = 0.18
+	# CINTURA (jerkin): recogida — cierra el taper del atleta sobre la pelvis.
+	jerkin = _capsule_mesh(0.128, 0.16, leather_mat)
+	jerkin.position.y = 0.15
 	spine.add_child(jerkin)
 	_add_outline_pass(jerkin, Color("#5b4632"))
 
-	strap = _box_mesh(0.07, 0.5, 0.02, dark_leather_mat)
-	strap.position = Vector3(0.02, 0.06, 0.155)
+	strap = _box_mesh(0.07, 0.46, 0.02, dark_leather_mat)
+	strap.position = Vector3(0.02, 0.10, 0.165)
 	strap.rotation.z = 0.62
 	upper_spine.add_child(strap)
 	_add_outline_pass(strap, Color("#3a2d22"))
@@ -307,28 +339,29 @@ func _build() -> void:
 	for side in [-1, 1]:
 		var arm = Node3D.new()
 		arm.name = "arm_" + ("l" if side == -1 else "r")
-		# JS: arm.position.set(side * 0.222, 0.45, 0) — ahora relativo al
-		# torácico (0.45 − 0.22 = 0.23; posición mundial idéntica).
-		arm.position = Vector3(side * 0.222, 0.23, 0.0)
+		# Hombros del canon: en la línea 1.55 (SHOULDER_Y sobre el torácico)
+		# y abiertos a ±SHOULDER_X — el deltoide NACE del pecho, sin hueco lego.
+		arm.position = Vector3(side * SHOULDER_X, SHOULDER_Y, 0.0)
 		upper_spine.add_child(arm)
 
-		var upper = _capsule_mesh(0.054, 0.2, skin_mat)
+		var upper = _capsule_mesh(0.06, 0.2, skin_mat)
 		upper.position.y = -0.14
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
 
 		var elbow = Node3D.new()
 		elbow.name = "elbow"
-		elbow.position.y = -0.3
+		elbow.position.y = -0.32   # codo en la línea del ombligo (1.23)
 		arm.add_child(elbow)
 
-		var fore = _capsule_mesh(0.047, 0.18, skin_mat)
-		fore.position.y = -0.12
+		var fore = _capsule_mesh(0.05, 0.19, skin_mat)
+		fore.position.y = -0.125
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
 
-		var hand = _sphere_mesh(0.052, skin_mat)
-		hand.position.y = -0.26
+		# Mano a la entrepierna (~0.95) con el brazo caído — canon de 4 cabezas
+		var hand = _sphere_mesh(0.058, skin_mat)
+		hand.position.y = -0.29
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
 
@@ -372,11 +405,11 @@ func _build() -> void:
 	# seam1 = glow, no outline
 
 	var fist = _box_mesh(0.085, 0.07, 0.08, metal_mat)
-	fist.position.y = -0.26
+	fist.position.y = -0.29
 	_add_outline_pass(fist, Color("#6f7a88"))
 
 	var knuckle = _box_mesh(0.087, 0.018, 0.082, vein_mat)
-	knuckle.position.y = -0.235
+	knuckle.position.y = -0.265
 	# knuckle = glow, no outline
 
 	prosthetic.add_child(proseg)
@@ -386,15 +419,20 @@ func _build() -> void:
 	prosthetic.visible = false
 	left_elbow.add_child(prosthetic)
 
-	# ---------- head ---------- (colgada del torácico; mundial intacto)
-	var neck = _capsule_mesh(0.05, 0.07, skin_mat)
-	neck.position.y = 0.36
+	# ---------- head ---------- (colgada del torácico)
+	# Cuello visible (lámina: el atleta tiene cuello, el chibi no lo tenía)
+	var neck = _capsule_mesh(0.045, 0.09, skin_mat)
+	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
 
 	head = Node3D.new()
 	head.name = "head"
-	head.position.y = 0.48
+	head.position.y = HEAD_Y
+	# C6a: el pivote entero de la cabeza escala ×0.84 — cráneo, cara, pelo,
+	# barba y goggles bajan JUNTOS a la cabeza de 7.5; sus layouts internos
+	# (hair_library, warpaint) no se tocan. La cara en sí es C6c.
+	head.scale = Vector3.ONE * HEAD_SCALE
 	upper_spine.add_child(head)
 
 	skull = _sphere_mesh(0.15, head_mat)
@@ -526,19 +564,17 @@ func _build() -> void:
 		parent_node.add_child(vein)
 		veins.append(vein)
 
-# ---- helper: attach outline next_pass to a MeshInstance3D ----
-func _add_outline_pass(mi: MeshInstance3D, base_color: Color, thickness: float = 0.02) -> void:
-	if mi.material_override != null:
-		ToonMaterials.add_outline(mi.material_override, base_color, thickness)
+# ---- outline helpers: NO-OP desde C6 (2026-07-10) ----
+# La línea de tinta del rig la dibuja el Sobel del post Melancolía (Art Bible:
+# nítida cerca / grisácea media / ausente lejos). El casco invertido era el
+# look del prototipo (grosor uniforme a toda distancia = anti-referencia) y
+# además mentía sobre los volúmenes al juzgar anatomía. Los call sites se
+# conservan (documentan dónde iba la línea) pero no generan pases.
+func _add_outline_pass(_mi: MeshInstance3D, _base_color: Color, _thickness: float = 0.02) -> void:
+	pass
 
-# ---- helper: recurse node tree and add outlines ----
-func _apply_outline_to_children(node: Node, base_color: Color, thickness: float) -> void:
-	if node is MeshInstance3D:
-		var mi = node as MeshInstance3D
-		if mi.material_override != null and not (mi.material_override is StandardMaterial3D and (mi.material_override as StandardMaterial3D).emission_enabled):
-			_add_outline_pass(mi, base_color, thickness)
-	for child in node.get_children():
-		_apply_outline_to_children(child, base_color, thickness)
+func _apply_outline_to_children(_node: Node, _base_color: Color, _thickness: float) -> void:
+	pass
 
 # ================================================================
 # _apply_build — internal helper that combines phenotype weight + archetype multiplier.
@@ -559,8 +595,10 @@ func _apply_build() -> void:
 		"thief":
 			arch_xz = 0.80  # Duelist — clearly lean/agile
 
-	torso.scale  = Vector3(_lerp(0.84, 1.34, w) * arch_xz, 1.0, _lerp(0.86, 1.26, w) * arch_xz)
-	jerkin.scale = Vector3(_lerp(0.86, 1.36, w) * arch_xz, 1.0, _lerp(0.88, 1.28, w) * arch_xz)
+	# C6a: V-taper base — el pecho es ancho/plano y la cintura recogida ANTES
+	# de aplicar peso/clase (el frijol del puerto era pecho=cintura).
+	torso.scale  = Vector3(_lerp(0.84, 1.34, w) * arch_xz * CHEST_X, 1.0, _lerp(0.86, 1.26, w) * arch_xz * CHEST_Z)
+	jerkin.scale = Vector3(_lerp(0.86, 1.36, w) * arch_xz * WAIST_XZ, 1.0, _lerp(0.88, 1.28, w) * arch_xz * WAIST_XZ)
 	pelvis.scale = Vector3(_lerp(0.88, 1.25, w) * arch_xz, 1.0, 1.0)
 
 	var limb_xz: float = limb * arch_xz
@@ -1200,7 +1238,7 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	if tex_key != _head_tex_key:
 		_head_tex_key = tex_key
 		var new_tex = WarpaintAtlas.build_head_texture(skin_color, warpaint_idx, paint_color)
-		head_mat = ToonMaterials.toon_mat_textured(new_tex)
+		head_mat = ToonMaterials.toon_mat_opaque_textured(new_tex)
 		skull.material_override = head_mat
 		jaw_mesh.material_override = head_mat
 		for cheek in cheeks:
@@ -1454,8 +1492,11 @@ func _build_origin_features(origin: Dictionary) -> void:
 		tuft_fa.rotation.z = 0.15
 		_fur_slot.add_child(tuft_fa)
 
-	else:
+	elif id == "ironblooded":
 		# ---- Ironblooded: compact round ears + heat glow + sparks ----
+		# (C6a: rama EXPLÍCITA — antes era el else, y cualquier origin
+		# desconocido caía aquí con armadura de forja incluida. Un origin
+		# fuera del canon ahora deja el cuerpo desnudo: base neutral.)
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var smesh = SphereMesh.new()

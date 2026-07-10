@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 # Current State
@@ -10,8 +10,41 @@ updated: 2026-07-09
 
 - **Milestone:** **Fase 1 CERRADA ✅ (2026-07-09)** — combate mínimo + Dagna aliada +
   Seismic Springboard T1 del vertical slice **"Slice of Bond"** (Humano Duelist ×
-  Dagna), Gate 1 aprobado por el director. Siguiente: ventana C6/C4 (rework
-  anatómico + pase de poses) → Fase 2 del [[Plan-de-Produccion]].
+  Dagna), Gate 1 aprobado por el director. **EN CURSO: ventana C6/C4 (rework
+  anatómico + pase de poses, branch `feat/c6-anatomy-rework`)** → luego Fase 2
+  del [[Plan-de-Produccion]].
+- **Ventana C6/C4 ABIERTA (2026-07-10).** Decisiones del director: pies IK
+  DIFERIDOS (el greybox es plano; pagan en terreno, Fase 2+); **el rework se
+  maneja ÚNICAMENTE en estilo Sobel** — "línea de tinta nítida de cerca;
+  grisácea a media distancia; ausente en el horizonte" (la regla de Línea del
+  [[Art Bible]] hecha canon del rig). Plan: C6a humano 7.5 cabezas → C6b
+  enano/elfo + ROM → C6c cabeza/cara → C4a poses por gait → C4b canal airborne
+  → playtest del director.
+- **C6a ✅ CÓDIGO (2026-07-10): cuerpo humano canónico bajo línea Sobel.**
+  (a) **Sin outline propio:** el rig ya no fabrica casco invertido (helpers
+  no-op); materiales del rig/pelo/signature → `toon_opaque.gdshader` nuevo
+  (toon.gdshader menos la escritura de ALPHA — pase opaco, visible al
+  depth/screen del post; con textura y emission, así el warpaint y el metal
+  caliente sobreviven). Factories `ToonMaterials.toon_mat_opaque[_textured]`.
+  (b) **Proporciones canónicas** (lámina fenotipo-humano-v1): tabla
+  PROPORTIONS en `character_rig.gd` — **7.57 cabezas medidas** (antes 6.38
+  anime), hombros 2.39 cabezas, pierna 47.9%, estatura 1.93 m. Cabeza = pivote
+  escalado ×0.84 (cara/pelo/goggles bajan JUNTOS — hair_library y warpaint
+  intactos); pecho ancho/plano + cintura recogida (V-taper en _apply_build);
+  hombros a la línea 1.55 y ±0.245 (el deltoide NACE del pecho — fuera el
+  hueco lego); cuello real; manos +12%; pies con proyección. Jerarquía de
+  nodos y biomecánica INTACTAS (hip-first, columna 2 seg, ROM: autotest_biomech
+  0 violaciones). (c) **Fix de bug pre-existente:** `_build_origin_features`
+  caía a ironblooded como ELSE con cualquier origin desconocido (armadura de
+  forja fantasma en el banco); rama explícita ahora. (d) **Banco
+  `tests/tmp_anatomy.gd`:** golden scene + post 4 capas, medidas numéricas
+  (cabezas/hombros/pierna) + regla de cabezas en escena + capturas cerca/media/
+  lejos y frente/perfil — la regla Sobel verificada (tinta fina en close-up,
+  figura sin línea en el horizonte). QA completo: test_core/combat/locomotion/
+  ads + autotest_biomech/combat/slice/ui/springboard ALL_PASS. **Pendiente:
+  VoBo del director de las capturas. Dagna queda visualmente desfasada hasta
+  C6b (sus piezas firma se posicionan para el cuerpo viejo — se re-monta sobre
+  el cuerpo enano real).**
 - **B15 ✅ (2026-07-06): benchmark observacional medido** — los 3 clips
   del director analizados frame a frame → [[Benchmark Biomecánico]] §v3.
   Números clave para el alcance 2: hit-stop 2f normal / 3f pesado
@@ -406,9 +439,10 @@ updated: 2026-07-09
   cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
-- **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcances
+- **Branch actual:** `feat/c6-anatomy-rework` (ventana C6/C4; C6a hecho, sigue
+  C6b). `master` quedó al cierre de la sesión 2026-07-09: PRD-007 alcances
   **2b, 3 y 4 —Gate 1— mergeados + playtest aprobado; 🏁 FASE 1 CERRADA**, más el fix
-  del corte del salto del Gate 1). `autotest_combat.gd` y `autotest_springboard.gd`
+  del corte del salto del Gate 1. `autotest_combat.gd` y `autotest_springboard.gd`
   son gates permanentes. Lanzador de doble clic para el
   playtest en el greybox: `Start-Playtest-Greybox.bat` (raíz; la meseta del Gate 1
   ya vive en el greybox). Sondas temporales `tests/tmp_*.gd`

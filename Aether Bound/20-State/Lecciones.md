@@ -124,6 +124,14 @@ updated: 2026-07-08
   probe que mide air control SALTANDO DESDE PARADO mide 0 (no hay inercia que
   cargar) — hay que construir momentum con W en el suelo ~0.4 s antes de saltar
   y medir solo el tramo aéreo. El salto normal desde parado tampoco deriva.
+- **Cadenas if/elif por id (origins, clases): la última rama SIEMPRE explícita,
+  nunca `else`.** `_build_origin_features` tenía ironblooded como else → cualquier
+  origin desconocido (ej. el origin neutro del banco de anatomía) montaba la
+  armadura de forja + heat glow fantasma. Un id fuera del canon debe degradar a
+  NEUTRO (cuerpo desnudo), no al último caso que alguien escribió.
+- **Las "cabezas" del canon anatómico se miden suelo→CORONILLA del cráneo.** El
+  AABB del rig incluye el pelo (~+0.07 m) e infla el conteo (+0.3 cabezas). El
+  banco (`tmp_anatomy.gd`) reporta ambos números; el gate es contra la coronilla.
 - **La altura de un salto es analítica pura: `h = v²/(2·GRAVITY)`.** Con
   `GRAVITY=24`, `SPRINGBOARD_LAUNCH_VEL=17` → 6.02 m (la sonda midió 6.00). El
   salto "normal" NO es `jump_force` crudo: el LSM lo modula por clase (el warrior
