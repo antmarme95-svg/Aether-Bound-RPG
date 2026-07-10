@@ -1,5 +1,32 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] feature | PRD-007 alcance 4 — Gate 1 (código): cornisa vía Springboard
+Feature Loop. Cierra la construcción de la **Fase 1** (falta solo el playtest del
+director). Tres piezas:
+1. **La cornisa** — `scenes/combat_arena.gd` crece una meseta elevada (`LEDGE_H`
+   3.5 m; footprint x∈[-5,5] z∈[-8,2]) con faro teal = OBJETIVO, delante del
+   spawn y separada del arco de enemigos (z=4). Como la Y del jugador es analítica
+   (`get_height`), la cornisa es un footprint que devuelve `LEDGE_H`. Solo
+   alcanzable vía Springboard: salto normal medido **0.82 m** no llega; lanzamiento
+   **6.01 m** sí.
+2. **Cliff real (no trepable a pie)** — step-block en `player_controller.update()`:
+   una celda elevada a la que NO llegaste desde arriba (subida > `LEDGE_STEP_MAX`
+   0.5 m respecto a la Y de inicio de frame) es un MURO → revierte el paso
+   horizontal. Aterrizar desde el Springboard (descendiendo) sí entra. Gateado por
+   `scene.has_method("is_cliff_wall")` → **cero efecto en The Wilds ni otras
+   escenas**. Tuning de feel: el punto de lanzamiento del gate se alejó del borde
+   (pista) para que el arco cruce el labio por encima en vez de raspar la cara.
+3. **Gate permanente** — `tests/autotest_springboard.gd` ALL_PASS (A–H): boot→ARENA
+   con aliada, Bond→pound→onda (código real), no-trepa-a-pie, salto normal <cornisa,
+   Springboard-en-ventana → **cornisa alcanzada** (aterriza a y=3.50, pico 6.01, en
+   plena meseta z=-2.8), Dagna pelea sin caer (HP 120→111, piso de vida), FPS 578
+   (piso catastrófico; el ≥60 se lee frío). Captura `springboard_gate.png`.
+QA: test_core + autotest_combat + tmp_springboard + tmp_springboard_directed +
+autotest_slice + autotest_ui ALL_PASS. **FPS del greybox ≥60 con margen enorme**
+(577–583 en autotest; +3 mallas estáticas sobre el greybox de 177 fps frío del
+alcance 5). Merge a master estilo PR. **Pendiente: playtest del director del feel
+→ CIERRA la Fase 1** (cláusula de escape C6 si los cuerpos impiden juzgar).
+
 ## [2026-07-09] lint | Cierre de sesión — vault consistente tras PRD-007 2b + 3
 Lint Loop pedido por el director al cierre. Reporte de las 5 fases:
 1. **Contradicciones Knowledge↔código:** ninguna. El cambio de control del 2b
