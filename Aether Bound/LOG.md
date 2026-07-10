@@ -1,5 +1,11 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r5c: dedos +20% + pulgar alineado a 30°
+Tuning en vivo del director sobre r5b ("funciona mejor"): los cuatro dedos
++20% de largo (medio 0.076) y el pulgar deja de cruzar horizontal — apunta en
+la MISMA dirección que los dedos (cuelga) con 30° de apertura hacia el
+interior. QA biomech/combat ALL_PASS.
+
 ## [2026-07-10] feature | C6a-r5b: cuatro dedos reales (la garra se tumbó)
 Segunda ronda del director sobre las manos: "hay tres masas — pulgar más dos"
 (la v1 de dos bloques leía como garra). Ahora: palma + CUATRO dedos delgados

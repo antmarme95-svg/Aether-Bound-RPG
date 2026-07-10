@@ -444,9 +444,10 @@ func _build() -> void:
 		_add_outline_pass(hand, Color("#f2b186"))
 
 		# offsets del índice→meñique (x local); el índice queda del lado
-		# del pulgar (interior). Largos por dedo, medio el más largo.
+		# del pulgar (interior). Largos por dedo, medio el más largo
+		# (r5c, director: +20% de largo en los cuatro).
 		var f_off: Array = [0.022, 0.0073, -0.0073, -0.022]
-		var f_len: Array = [0.056, 0.063, 0.058, 0.046]
+		var f_len: Array = [0.067, 0.076, 0.070, 0.055]
 		for fi in range(4):
 			var f_l: float = f_len[fi]
 			var finger = _box_mesh(0.012, f_l, 0.042, skin_mat)
@@ -455,9 +456,12 @@ func _build() -> void:
 			hand.add_child(finger)
 			_add_outline_pass(finger, Color("#f2b186"))
 
+		# r5c (director): el pulgar APUNTA en la misma dirección que los
+		# dedos (cuelga hacia abajo), abierto 30° respecto a ellos hacia
+		# el interior — ya no cruza horizontal.
 		var thumb = _box_mesh(0.020, 0.05, 0.026, skin_mat)
-		thumb.position = Vector3(-float(side) * 0.043, -0.012, 0.014)
-		thumb.rotation.z = float(side) * 0.5
+		thumb.position = Vector3(-float(side) * 0.038, -0.045, 0.010)
+		thumb.rotation.z = -float(side) * 0.5236   # 30° de apertura
 		thumb.rotation.x = -0.25
 		hand.add_child(thumb)
 		_add_outline_pass(thumb, Color("#f2b186"))
