@@ -227,6 +227,23 @@ updated: 2026-07-09
   nuevo (RMB apunta, guardia en `XBUTTON1`, SPACE salto) validados en vivo. Sin
   tuning: rango 11 m / cooldown 4.5 s / empuje 3 m/s quedan como están. Playtest
   Loop del 2b CERRADO.
+- **PRD-007 alcance 3 ✅ CÓDIGO (2026-07-09): Dagna IA de combate mínima — pelea
+  a tu lado.** Tres piezas (mínima pero real, sin companion AI rica): (1) **la onda
+  HACE DAÑO** —`game_director._on_springboard_wave` aplica `POUND_DAMAGE` 30 con
+  falloff (+knockback) a los 3 disparos del pound (Bond/dirigido/autónomo); salta
+  enemigos `dying`. Cierra el "la onda ES un ataque" de los alcances 1–2. (2)
+  **Pound AUTÓNOMO** —`ally_dagna._update_combat_ai()`: ≥1 enemigo en `POUND_SENSE`
+  3.8 + cooldown `AI_POUND_CD` 7 s → golpea sola. (3) **Muralla-block + defensa
+  propia** — sube guardia (`rig.set_guard`) con enemigo en `GUARD_BLOCK_RANGE` 2.6;
+  `receive_hit()` acusa (flinch/bloqueo + knockback) pero **NUNCA cae** (piso
+  `HEALTH_FLOOR`; decisión del director: su pérdida es coda del slice). **Aggro por
+  CERCANÍA** (decisión del director: nearest, no tanque) —`_nearest_target()` +
+  `enemy_humanoid.combat_target` → cada enemigo va por el más cercano entre jugador
+  y Dagna. Archivos: `ally_dagna.gd`, `game_director.gd`, `enemy_humanoid.gd`. Sonda
+  `tmp_dagna_combat.gd` ALL_PASS (nearest, retarget, pound autónomo → onda + daño
+  40→24 HP, muralla arriba/abajo, bloqueo reduce daño, martilleo sin caer) +
+  captura `dagna_combat.png`; regresión completa ALL_PASS. **Pendiente: playtest
+  del director.**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -270,12 +287,15 @@ updated: 2026-07-09
      hacia el punto sobre tu momentum); cooldown 4.5 s, Dagna deja su slot al
      viajar. Los dos modos conviven (reactivo + dirigido). Guardia/parry mudada a
      `XBUTTON1` (botón lateral trasero). Sonda `tmp_springboard_directed` ALL_PASS.
-     **✅ PLAYTEST APROBADO (2026-07-09): "ambos muy bien, nada que ajustar"** —
-     Playtest Loop del 2b CERRADO, sin tuning pendiente. **SIGUIENTE A CONSTRUIR:
-     alcance 3** (IA de combate mínima de Dagna: muralla-block + defensa propia +
-     pounds autónomos en contexto — el pound de IA que los alcances 1–2 dejaron
-     solo-Bond) y **alcance 4 = Gate 1** (cornisa solo alcanzable vía Springboard +
-     `autotest_springboard` + ≥60 FPS frío).
+     **✅ PLAYTEST APROBADO (2026-07-09):** Playtest Loop del 2b CERRADO. **Alcance 3
+     ✅ CÓDIGO (2026-07-09): Dagna IA de combate mínima** (onda con daño + pound
+     autónomo + muralla-block/defensa propia sin caer + aggro por cercanía). Sonda
+     `tmp_dagna_combat` ALL_PASS. **SIGUIENTE: playtest del director del alcance 3**
+     (¿la presión de Dagna se siente "pelea a tu lado"? tunear `POUND_DAMAGE` 30 /
+     `AI_POUND_CD` 7 s / `POUND_SENSE` 3.8 / `GUARD_BLOCK_RANGE` 2.6 si hace falta) —
+     `Start-Playtest-Greybox.bat`. **Luego: alcance 4 = Gate 1** (cornisa solo
+     alcanzable vía Springboard + `autotest_springboard` + ≥60 FPS frío) — CIERRA la
+     Fase 1.
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -333,14 +353,14 @@ updated: 2026-07-09
   cierra los ítems de diseño B2/B6; los alimenta). +4 láminas del 07-07
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
-- **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcance
-  **2b —Springboard DIRIGIDO— construido, mergeado y PLAYTEST APROBADO**; sin
-  tuning pendiente). `autotest_combat.gd` es un gate permanente.
-  Lanzador de doble clic para el playtest en el greybox:
+- **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcances
+  **2b —Springboard DIRIGIDO— (mergeado + playtest aprobado) y 3 —Dagna IA de
+  combate— (mergeado, pendiente playtest)**). `autotest_combat.gd` es un gate
+  permanente. Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
-  dagna, guard, ally, pound, springboard, springboard_directed) quedan hasta
-  validar el pipeline / limpieza.
+  dagna, guard, ally, pound, springboard, springboard_directed, dagna_combat)
+  quedan hasta validar el pipeline / limpieza.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);

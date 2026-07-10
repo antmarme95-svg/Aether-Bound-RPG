@@ -34,6 +34,15 @@ const WAVE_WINDOW := 0.6       # ventana para saltar-en-onda (alcance 2 la consu
 # pounding → (cooldown lo maneja el director). Solo una orden en vuelo a la vez.
 const POUND_ARRIVE_DIST := 0.45   # llegó al punto → golpea
 
+# ---- IA de combate mínima (PRD-007 alcance 3): pelea a tu lado ----
+# Pound AUTÓNOMO en contexto (además del Bond/dirigido) + muralla-block cuando
+# un enemigo se le mete + defensa propia (acusa golpes; NUNCA cae — su pérdida es
+# la coda del slice, fuera de alcance). "Companion AI rica" queda descartada.
+const AI_POUND_CD := 7.0          # rima del pound autónomo (evita spam)
+const POUND_SENSE := 3.8          # enemigos a este radio → vale la pena golpear (⊂ WAVE_RADIUS)
+const GUARD_BLOCK_RANGE := 2.6    # enemigo a este alcance → sube la muralla
+const HEALTH_FLOOR := 1.0         # piso de vida: Dagna acusa pero no muere (PRD)
+
 var rig = null
 var combat = null
 var guard = null
@@ -48,6 +57,12 @@ var _pound_fired: bool = false  # el impacto (VFX + onda) se dispara una vez
 var _travel_target = null       # Vector3 mientras viaja a un punto comandado, o null
 var _pending_directed: bool = false  # el próximo pound nace de una orden dirigida
 var _pound_directed: bool = false    # el pound EN CURSO es dirigido (marca la onda)
+
+# ---- IA de combate (alcance 3) ----
+var health: float = 120.0       # tank enano; NUNCA baja de HEALTH_FLOOR (no muere)
+var max_health: float = 120.0
+var _ai_pound_cd: float = 0.0   # cooldown del pound autónomo
+var _guard_ai_on: bool = false  # la muralla la sube/baja la IA (no el jugador)
 
 # ================================================================
 func _init(spawn_pos: Vector3, scene: Node3D) -> void:
@@ -74,26 +89,35 @@ func _ready() -> void:
 # Alcance 0: seguir un slot al hombro del jugador. Los relojes de componente
 # corren cada frame (neutros aquí; listos para 1–3).
 # ================================================================
-func update_ally(dt: float, controller) -> void:
+func update_ally(dt: float, controller, enemies: Array = []) -> void:
 	if dead:
 		return
 	combat.tick(dt)
 	guard.tick(dt)
 	energy.tick(dt)
+	if _ai_pound_cd > 0.0:
+		_ai_pound_cd -= dt
 	if push_pull.is_active():
 		position += push_pull.tick(dt)
 
-	# Ground-pound en curso: se planta (no sigue) hasta terminar.
+	# Ground-pound en curso: se planta (no sigue) hasta terminar. Baja la muralla
+	# (el slam ES su ataque; no bloquea mientras golpea).
 	if _pound_t > 0.0:
+		_set_guard_ai(false)
 		_update_pound(dt, controller)
 		_ground_snap()
 		return
 
 	# PRD-007 2b: viaje comandado — Dagna deja su slot y va al punto designado.
 	if _travel_target != null:
+		_set_guard_ai(false)
 		_update_travel(dt)
 		_ground_snap()
 		return
+
+	# PRD-007 alcance 3: IA de combate — decide muralla-block y pound autónomo.
+	# (Puede disparar `ground_pound()`, que toma efecto el frame siguiente.)
+	_update_combat_ai(enemies)
 
 	var pf: float = controller.facing
 	var pfwd := Vector3(sin(pf), 0.0, cos(pf))
@@ -152,6 +176,79 @@ func is_pounding() -> bool:
 
 func is_traveling() -> bool:
 	return _travel_target != null
+
+# ================================================================
+# IA de combate mínima (PRD-007 alcance 3). Corre en el estado follow: sube la
+# muralla si un enemigo se le mete y lanza el pound autónomo cuando hay un grupo
+# a tiro (además del Bond/dirigido). Sin targeting rico: el enemigo más cercano.
+# ================================================================
+func _update_combat_ai(enemies: Array) -> void:
+	var nearest = _nearest_enemy(enemies)
+	var nd: float = INF
+	if nearest != null:
+		nd = Vector2(nearest.position.x - position.x, nearest.position.z - position.z).length()
+
+	# Muralla-block: enemigo en la cara → torre de Equilibrio arriba.
+	_set_guard_ai(nearest != null and nd <= GUARD_BLOCK_RANGE)
+
+	# Pound autónomo en contexto: enemigos dentro del radio de onda y cooldown
+	# libre → golpea (reactivo, en su posición). El daño lo aplica la onda.
+	if _ai_pound_cd <= 0.0 and _count_enemies_within(enemies, POUND_SENSE) >= 1:
+		ground_pound()
+		_ai_pound_cd = AI_POUND_CD
+
+func _set_guard_ai(on: bool) -> void:
+	if _guard_ai_on == on:
+		return
+	_guard_ai_on = on
+	if rig != null and rig.has_method("set_guard"):
+		rig.set_guard(on)
+	if on:
+		guard.start_block()
+	else:
+		guard.end_block()
+
+func _nearest_enemy(enemies: Array):
+	var best = null
+	var best_d: float = INF
+	for e in enemies:
+		if e == null or e.dead or e.get("state") == "dying":
+			continue
+		var d: float = Vector2(e.position.x - position.x, e.position.z - position.z).length()
+		if d < best_d:
+			best_d = d
+			best = e
+	return best
+
+func _count_enemies_within(enemies: Array, radius: float) -> int:
+	var n: int = 0
+	for e in enemies:
+		if e == null or e.dead or e.get("state") == "dying":
+			continue
+		if Vector2(e.position.x - position.x, e.position.z - position.z).length() <= radius:
+			n += 1
+	return n
+
+## receive_hit — defensa propia (PRD-007 alcance 3). Mismo camino canónico que el
+## jugador (guard.receive → reacción corporal + knockback), PERO Dagna NUNCA cae:
+## la vida tiene piso (HEALTH_FLOOR). No hace parry (solo bloquea) → el enemigo no
+## se stunnea contra ella. Devuelve el resultado para el atacante.
+func receive_hit(payload: RefCounted) -> Dictionary:
+	if guard == null or payload == null:
+		return { "reaction": "hit", "damage": 0.0 }
+	var res: Dictionary = guard.receive(payload)
+	var dmg: float = float(res.get("damage", 0.0))
+	health = maxf(HEALTH_FLOOR, health - dmg)   # acusa daño pero no muere
+	if rig != null and rig.has_method("play_flinch"):
+		match String(res.get("reaction", "")):
+			"blocked":       rig.play_flinch(0.35)
+			"stagger":       rig.play_flinch(1.4)
+			"posture_break": rig.play_flinch(1.8)
+			_:               rig.play_flinch(1.0)
+	var f: Vector3 = res.get("force", Vector3.ZERO)
+	if f.length_squared() > 0.0001:
+		push_pull.apply_impulse(f)
+	return res
 
 # _update_travel — locomoción directa hacia el punto comandado. Al llegar,
 # dispara el ground-pound EN el punto (la onda nace ahí, no en su slot).

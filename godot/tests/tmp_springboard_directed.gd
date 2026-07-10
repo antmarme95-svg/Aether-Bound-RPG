@@ -126,6 +126,10 @@ func _run() -> void:
 # ADELANTE del jugador (dentro del radio) y salta; devuelve la distancia
 # horizontal cubierta en el tramo aéreo (con W mantenido → arco hacia el punto).
 func _arc_distance(ctrl, directed: bool) -> float:
+	# Aísla del pound AUTÓNOMO de Dagna (alcance 3): silénciala para que no
+	# inyecte una onda no-dirigida que el lanzamiento agarraría en vez de la nuestra.
+	if _director.allies.size() > 0:
+		_director.allies[0]._ai_pound_cd = 999.0
 	ctrl._keys_down.clear()
 	_director.springboard_waves.clear()
 	await _wait(0.25)
@@ -133,6 +137,7 @@ func _arc_distance(ctrl, directed: bool) -> float:
 	ctrl._keys_down[KEY_W] = true
 	await _wait(0.45)                       # ramp de momentum
 	var fwd := Vector3(sin(ctrl.facing), 0.0, cos(ctrl.facing))
+	_director.springboard_waves.clear()     # descarta cualquier onda ajena antes de inyectar
 	_director.springboard_waves.append({
 		"position": ctrl.position + fwd * 3.0, "radius": 4.2, "t": 2.5, "directed": directed,
 	})

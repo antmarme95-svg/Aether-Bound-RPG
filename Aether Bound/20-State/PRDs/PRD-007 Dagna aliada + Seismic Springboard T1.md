@@ -75,7 +75,11 @@ alcanza cornisas fuera de tu salto normal. Cierra el **Gate 1** de la Fase 1
    lanzamiento vertical amplificado (PushPull + supersalto PRD-005) + air
    control + feel/tell de ventana ([[Game Feel Bible]]).
 3. **IA de combate mínima de Dagna:** muralla-block + defensa propia + pounds
-   en contexto (pelea a tu lado).
+   en contexto (pelea a tu lado). **✅ CÓDIGO (2026-07-09):** la onda hace daño
+   (`POUND_DAMAGE` 30 + falloff, los 3 disparos); pound autónomo (`POUND_SENSE` 3.8
+   + `AI_POUND_CD` 7 s); muralla-block + `receive_hit` **sin caer** (piso de vida —
+   su pérdida es coda del slice); **aggro por CERCANÍA** (nearest, decisión del
+   director; no tanque). Sonda `tmp_dagna_combat.gd` ALL_PASS. Pendiente: playtest.
 4. **Gate 1:** escenario greybox con una **cornisa/objetivo solo alcanzable vía
    Springboard** + enemigos; `tests/autotest_springboard.gd`; **≥60 FPS frío**.
 

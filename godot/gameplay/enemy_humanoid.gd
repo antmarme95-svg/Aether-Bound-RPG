@@ -68,6 +68,22 @@ var _profile: Dictionary = {}
 var _scene: Node3D = null
 var _stun_t: float = 0.0
 var _strafe_sign: float = 1.0   # sentido del circle-strafe (B15g)
+# PRD-007 alcance 3: aggro por CERCANÍA. El director fija el blanco (el más
+# cercano entre jugador y aliados) cada frame; null → cae al jugador. El blanco
+# solo necesita `.position` y `.receive_hit(payload)` (jugador y Dagna cumplen).
+var combat_target = null
+
+func set_combat_target(t) -> void:
+	combat_target = t
+
+## _resolve_target — el blanco vigente para moverse y golpear. Cae al jugador si
+## el asignado desapareció o murió (Dagna nunca muere; el jugador no expone `dead`).
+func _resolve_target(controller):
+	if combat_target != null and is_instance_valid(combat_target):
+		var td = combat_target.get("dead")
+		if td == null or td == false:
+			return combat_target
+	return controller
 
 # ================================================================
 func _init(p_kind: String, spawn_pos: Vector3, scene: Node3D) -> void:
@@ -164,7 +180,9 @@ func update_ai(dt: float, controller, passives) -> void:
 	if push_pull.is_active():
 		position += push_pull.tick(dt)
 
-	var to_player: Vector3 = controller.position - position
+	# PRD-007 alcance 3: persigue/golpea al blanco por cercanía (jugador o Dagna).
+	var tgt = _resolve_target(controller)
+	var to_player: Vector3 = tgt.position - position
 	to_player.y = 0.0
 	var dist: float = to_player.length()
 
@@ -212,7 +230,7 @@ func update_ai(dt: float, controller, passives) -> void:
 				var payload = combat.consume_hit(0.0, fwd)
 				if payload != null and dist < float(_profile["attack_range"]) + 0.4 \
 						and to_player.normalized().dot(fwd) > 0.3:
-					var res: Dictionary = controller.receive_hit(payload)
+					var res: Dictionary = tgt.receive_hit(payload)
 					if String(res.get("reaction", "")) == "parried":
 						# Parry Roba: desarmado y expuesto ~2 s (B15b).
 						combat.cancel()
