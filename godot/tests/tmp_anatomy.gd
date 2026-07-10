@@ -91,6 +91,12 @@ func _run() -> void:
 	print("[TmpAnatomy] pierna      = %.3f m (%.1f%% del alto; canon atleta ~50%%)" % [m["leg_len"], m["leg_pct"]])
 
 	# (diagnóstico disponible: _dump_tree(_rig, "") — identifica malla/color)
+	for probe_name in ["arm_paint_stripe", "face_paint_mark"]:
+		var found = _rig.find_child(probe_name, true, false)
+		if found != null:
+			print("[TmpAnatomy] %s: EXISTE, global=%s visible=%s" % [probe_name, str((found as Node3D).global_position), str((found as Node3D).visible)])
+		else:
+			print("[TmpAnatomy] %s: NO EXISTE en el árbol" % probe_name)
 
 	# ---- post Melancolía: el rig ya es opaco/sin outline de fábrica (C6a) ----
 	_gs.attach_post(_cam)
@@ -105,7 +111,8 @@ func _run() -> void:
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_close.png")
 
-	# detalle de CARA (M9: mandíbula/nariz/pómulos/sonrisa) — frente y ¾
+	# TURNAROUND de cabeza (review v0.3: frente / ¾ / perfil / espalda
+	# son obligatorios para aprobar)
 	var face_t: Vector3 = _holder.global_position + Vector3(0.0, 1.80, 0.0)
 	_cam.look_at_from_position(face_t + Vector3(0.0, 0.02, 0.62), face_t, Vector3.UP)
 	_gs.apply_time_preset("dawn")
@@ -115,6 +122,14 @@ func _run() -> void:
 	_gs.apply_time_preset("dawn")
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_face_34.png")
+	_cam.look_at_from_position(face_t + Vector3(0.62, 0.02, 0.0), face_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_face_profile.png")
+	_cam.look_at_from_position(face_t + Vector3(0.0, 0.04, -0.62), face_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_face_back.png")
 
 	# detalle de MANO derecha (r5: palma + masas de dedos + pulgar)
 	var hand_t: Vector3 = _holder.global_position + Vector3(0.28, 0.92, 0.0)

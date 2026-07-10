@@ -1,5 +1,37 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | M9-r3 CERRADO: quiff, marcas bilaterales, cráneo compacto — QA verde
+Continuación tras la caída del clasificador: bench corrido y convergido en
+varias sub-rondas. (1) Quiff angular contenido (la 1ª pasada leía sombrero de
+plato; la visera frontal ocultaba la marca → levantada) sobre el casquete
+probado del library (r3b dejaba la coronilla calva en perfil). (2) Marcas
+BILATERALES en lados opuestos como el concept: mejilla izquierda por atlas +
+frente derecha por GEOMETRÍA (dos bugs de entierro cazados: anillo del bíceps
+menor que el radio efectivo escalado ×1.12 de _apply_build; placa de frente al
+ras de la elipse = astilla de 1 mm que la tinta Sobel se comía — ambos a
+Lecciones). (3) Cráneo compacto + mandíbula dominante (trapecio invertido),
+nariz-prisma de 4 lados, orejas semi-elípticas, cuello 0.13 base ancha, boca
++15%. (4) Gate biomech FLAKY arreglado de raíz: el assert adversarial re-fuerza
+la violación 6 frames (hitch de boot saturaba el settle y borraba la violación
+antes del clamp; 2/3 fallos → 4/4 verde). Turnaround de cabeza en el banco
+(frente/¾/perfil/espalda). QA: biomech ×4 + combat/slice/ui + core ALL_PASS.
+
+## [2026-07-10] ingest+feature | Review v0.3 archivada + M9-r3: quiff, trapecio invertido, marcas bilaterales
+Tercera review del director (v0.3, overall 5.5/10; cierres verificados: pelo
+castaño, ojos on-model "no tocar más", piel, prop) → archivada en
+`90-Raw/reviews/`. r3 en código: quiff ANGULAR de cajas (fuera el moño — la
+esfera superior leía top knot), cráneo compacto 0.82 x (fuera el ovoide;
+mandíbula 0.138 domina el ancho bajo = trapecio invertido), pómulos como
+quiebre (no globo lateral), marcas BILATERALES con lateralidad corregida por
+la review (frente = lado derecho x-chico; mejilla = izquierdo espejo W-1-x;
+franjas 4:1), nariz = prisma sesgado de 4 lados con arista al frente (fuera
+el bloque), orejas semi-elípticas verticales con inclinación (fuera el
+disco), cuello 0.13 con base 0.068 al trapecio, boca +15%. Vestuario:
+base-body modular DOCUMENTADO (2ª vez — la review lo da por cerrado si está
+en el PR). Banco: turnaround de cabeza (frente/¾/perfil/espalda) obligatorio
+desde ahora. Bench+QA pendientes de correr (clasificador de shell caído
+momentáneamente); se verifican antes del cierre.
+
 ## [2026-07-10] ingest+feature | Review v0.2 archivada + M9-r2/M10: cabeza del concept
 Segunda review estructurada del director (Head/Bust v0.2, fidelidad 4/10) →
 archivada en `90-Raw/reviews/`. Respuesta en código: pelo nuevo `frontier_crop`

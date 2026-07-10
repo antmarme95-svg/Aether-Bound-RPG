@@ -127,8 +127,27 @@ updated: 2026-07-08
   probe que mide air control SALTANDO DESDE PARADO mide 0 (no hay inercia que
   cargar) — hay que construir momentum con W en el suelo ~0.4 s antes de saltar
   y medir solo el tramo aéreo. El salto normal desde parado tampoco deriva.
-- **Cadenas if/elif por id (origins, clases): la última rama SIEMPRE explícita,
-  nunca `else`.** `_build_origin_features` tenía ironblooded como else → cualquier
+- **Geometría de pintura/marcas sobre cuerpos: margen REAL fuera de la
+  superficie.** Dos entierros el mismo día (M9-r3): (a) un anillo en el bíceps
+  dimensionado al radio del mesh queda DENTRO del brazo — `_apply_build`
+  escala las extremidades ×1.12–1.42 por peso y el anillo no (dimensionar
+  contra el radio EFECTIVO máximo); (b) una placa al ras de la elipse del
+  cráneo asoma ~1 mm y la tinta Sobel se la come — centrar la pieza ~8 mm
+  FUERA de la superficie con profundidad hacia adentro. Diagnóstico útil:
+  `find_child` + global_position (el nodo existía, visible, en su lugar — el
+  problema era oclusión, no lógica).
+- **Asserts adversariales de clamp: re-forzar la violación VARIOS frames.**
+  Si un frame tarda >0.125 s (hitch de compilación de shaders al boot), el
+  settle del idle satura su lerp (factor 1.0) y devuelve el hueso a territorio
+  legal ANTES del pase de constraints → no se registra nada → gate flaky
+  (autotest_biomech 2/3 fallos). Forzar en loop (~6 frames): los frames HELD
+  del pose stepping no corren el settle y el clamp ve la violación cruda.
+- **El mapeo v del atlas de la cabeza se comprime NO-linealmente hacia la
+  ceja** (esfera: v lineal en latitud, la cara vive cerca del ecuador): franjas
+  de FRENTE por textura no son posicionables con confianza — van como
+  geometría. La cara vive en la costura u=0 del atlas (el centro de la textura
+  es la NUCA); los patrones 1–5 históricos pintaban la nuca y solo se veían por
+  el embarrado de los UV de caja del jaw (retirado en M9-r2b). `_build_origin_features` tenía ironblooded como else → cualquier
   origin desconocido (ej. el origin neutro del banco de anatomía) montaba la
   armadura de forja + heat glow fantasma. Un id fuera del canon debe degradar a
   NEUTRO (cuerpo desnudo), no al último caso que alguien escribió.

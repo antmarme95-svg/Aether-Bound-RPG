@@ -131,6 +131,28 @@ updated: 2026-07-10
   el "prop" era el pauldron — oculto en el banco de anatomía. LOW 9 (piel
   cálida): parcialmente iluminación dawn del banco; A/B en luz neutra
   pendiente para el lock de textura (Fase 4). QA completo ALL_PASS.
+- **📋 Review v0.3 del director (2026-07-10) → M9-r3 ✅ CÓDIGO + QA VERDE.**
+  Review archivada (`90-Raw/reviews/Character-Head-Review-v0.3.md`; overall
+  5.5/10, cierres verificados de ronda 1: pelo castaño, ojos on-model "no
+  tocar más", piel, prop). r3 responde: **C1** quiff ANGULAR de cajas
+  contenido (fuera el top knot; la visera frontal se levantó — ocultaba la
+  marca) sobre el casquete probado del library (la coronilla quedaba calva en
+  perfil). **C2** marcas BILATERALES en lados opuestos (concept): mejilla
+  izquierda por atlas + frente derecha por GEOMETRÍA — el v del atlas se
+  comprime no-linealmente hacia la ceja (debug de retícula) y la franja de
+  frente por textura no es posicionable; dos bugs de entierro cazados y a
+  Lecciones (anillo del bíceps < radio efectivo escalado; placa al ras =
+  astilla que la tinta se come). **H3** cráneo compacto 0.82x + mandíbula
+  0.138 dominante (trapecio invertido) + pómulos como quiebre. **H4**
+  vestuario: base-body modular DOCUMENTADO (2ª vez; la review lo cierra si
+  está en el PR — está en commit + Vault). **M5** nariz-prisma de 4 lados
+  con arista al frente. **M6** orejas semi-elípticas verticales inclinadas.
+  **M7** cuello 0.13 con base 0.068 al trapecio. **L8** boca +15%. **Gate
+  biomech flaky ARREGLADO de raíz** (assert adversarial re-fuerza 6 frames;
+  hitch de boot saturaba el settle → 4/4 verde). Banco con TURNAROUND de
+  cabeza (frente/¾/perfil/espalda — exigencia de la review para aprobar).
+  QA: biomech ×4 + combat/slice/ui + core ALL_PASS. **Pendiente: VoBo del
+  director del turnaround r3.**
 - **M9-r1 ✅ CÓDIGO (2026-07-10): la cara gana personalidad (review M9).**
   Mandíbula marcada + mentón, nariz fina, MEJILLAS ALTAS (pómulos bajo el
   ojo; rango del slider `cheek` subido en apply_phenotype), SONRISA ligera

@@ -84,14 +84,21 @@ func _run() -> void:
 	_check_zero_violations("strike_short", _rig.constraint_report())
 
 	# ---- C. Adversarial: constraints must clamp and record ----
+	# Se re-fuerza la violación VARIOS frames: si un frame tarda >0.125 s
+	# (hitch de compilación de shaders al arrancar), el settle del idle
+	# (lerp con factor saturado a 1.0) devuelve el hueso a territorio legal
+	# ANTES del clamp y no hay nada que registrar — con una sola escritura
+	# el assert era FLAKY (2026-07-10, 2/3 corridas). En los frames HELD
+	# del pose stepping el settle no corre y el clamp registra la
+	# violación cruda: 6 intentos lo hacen determinista.
 	_rig.reset_constraint_report()
 	var elbow_r: Node3D = _rig.arms[1].get_meta("elbow")
 	var knee_l: Node3D = _rig.legs[0].get_meta("knee")
-	elbow_r.rotation.x = 1.2    # hyperextension (limit 0.03)
-	knee_l.rotation.x = -0.9    # backward knee (limit 0.0)
-	_rig.arms[1].rotation.x = -3.4  # past overhead (limit -3.0)
-	await get_tree().process_frame
-	await get_tree().process_frame
+	for _i in range(6):
+		elbow_r.rotation.x = 1.2    # hyperextension (limit 0.03)
+		knee_l.rotation.x = -0.9    # backward knee (limit 0.0)
+		_rig.arms[1].rotation.x = -3.4  # past overhead (limit -3.0)
+		await get_tree().process_frame
 	var rep: Dictionary = _rig.constraint_report()
 	_assert_true(elbow_r.rotation.x <= 0.031, "elbow clamped (got %.3f)" % elbow_r.rotation.x)
 	_assert_true(knee_l.rotation.x >= -0.001, "knee clamped (got %.3f)" % knee_l.rotation.x)

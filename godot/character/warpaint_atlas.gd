@@ -215,15 +215,23 @@ static func _draw_pattern(img: Image, idx: int, paint: Color) -> void:
 				up = !up
 
 		6:
-			# Scout Marks (M9/M10, concept humano canónico — review v0.2
-			# CRITICAL 2): ASIMÉTRICO — diagonal en la frente + diagonal en
-			# la mejilla izquierda. VERIFICADO por A/B de render (M9-r2):
-			# la cara está en la COSTURA u=0 → x=0/W (como asumen los
-			# patrones 1–5); x chico = mejilla IZQUIERDA del personaje. El
-			# centro de la textura es la nuca. La banda de frente visible
-			# (entre ceja y hairline del frontier crop) es y≈80..100.
-			_slash(img, 2, 92, 60, 106, 8, paint)
-			_slash(img, 34, FACE_CY_EYE + 10, 66, FACE_CY_EYE + 34, 8, paint)
+			# Scout Marks (concept humano canónico — reviews v0.2/v0.3):
+			# BILATERAL y ASIMÉTRICO — franja diagonal en la FRENTE (lado
+			# DERECHO del personaje) + franja diagonal en la MEJILLA (lado
+			# IZQUIERDO). Lateralidad VERIFICADA por la review v0.3: la cara
+			# vive en la costura u=0 (x=0/W) y x CHICO = lado DERECHO del
+			# personaje (su izquierda = el espejo W-1-x). Franjas ALARGADAS
+			# (~4:1), no triángulos.
+			# Lateralidad EMPÍRICA (A/B bilateral M9-r3): x-chico renderiza
+			# en el lado IZQUIERDO del personaje; el espejo W-1-x en el
+			# derecho. Concept: frente=DERECHA, mejilla=IZQUIERDA.
+			# Frente: la franja de FRENTE va como GEOMETRÍA en el rig
+			# (character_rig._face_mark) — el v del atlas se comprime de
+			# forma no lineal cerca de la ceja (debug de retícula M9-r3:
+			# y 92..110 renderiza como un hilo; y 64..86 cae bajo el pelo)
+			# y el slash por textura no es posicionable con confianza.
+			# Mejilla, lado izquierdo (x-chico): franja larga bajo el ojo.
+			_slash(img, 30, FACE_CY_EYE + 8, 74, FACE_CY_EYE + 32, 8, paint)
 
 		_:
 			pass # index 0 = no paint

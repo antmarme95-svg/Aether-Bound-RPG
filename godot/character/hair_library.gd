@@ -251,26 +251,31 @@ static func _hair_shorn_scout(mat: Material) -> Node3D:
 	g.add_child(_cap(mat, 1.012, 0.96))
 	return g
 
-# 10 — Frontier Crop (M10, concept humano canónico): corto, lados
-# recortados, volumen barrido ARRIBA y ATRÁS. Sin cuña frontal ni rizos
-# sueltos (review v0.2 CRITICAL 1: la cuña leía como gorro/objeto ajeno).
+# 10 — Frontier Crop (M10, concept humano canónico): QUIFF corto barrido
+# arriba-atrás, laterales pegados, volúmenes ANGULARES (review v0.3
+# CRITICAL 1: la esfera superior leía como moño/top knot — arquetipo
+# equivocado; el quiff se construye con cajas, no con burbujas).
 static func _hair_frontier_crop(mat: Material) -> Node3D:
 	var g = Node3D.new()
-	# Casquete pegado al cráneo, lados recortados (x más angosto)
-	var cap = _sphere(mat, R * 1.04, 0.0, R * 0.08, -R * 0.08)
-	cap.scale = Vector3(0.94, 0.90, 1.02)
+	# Casquete PROBADO del library (cubre coronilla y laterales, la cara
+	# queda fuera) — r3b dejaba la coronilla calva y las cajas volaban.
+	# r3c: ensanchado y bajado un pelo — en perfil quedaba una VENTANA de
+	# cráneo desnudo a la altura de la oreja.
+	var cap := _cap(mat, 1.03, 0.94)
+	cap.scale = Vector3(cap.scale.x * 1.07, cap.scale.y, cap.scale.z * 1.07)
+	cap.position.y -= 0.012
 	g.add_child(cap)
-	# Masa barrida hacia arriba-atrás (el volumen del concept)
-	var sweep = _sphere(mat, 0.085, 0.0, R * 0.70, -R * 0.42)
-	sweep.scale = Vector3(1.05, 0.72, 1.35)
-	sweep.rotation.x = -0.35
-	g.add_child(sweep)
-	# HAIRLINE frontal BAJA — la frente no domina la cara (el nacimiento
-	# arranca a media frente y empuja hacia atrás, como el concept).
-	var front = _sphere(mat, 0.075, 0.0, R * 0.60, R * 0.56)
-	front.scale = Vector3(1.35, 0.45, 0.55)
-	front.rotation.x = -0.42
-	g.add_child(front)
+	# QUIFF: caja angular EMBEBIDA en el casquete al frente-arriba — el
+	# acento barrido hacia atrás del concept, no una segunda cabeza.
+	# (r3d: la esquina frontal-baja colgaba como VISERA sobre la frente y
+	# ocultaba la marca de pintura — quiff más alto, menos profundo)
+	var quiff = _box(mat, R * 1.0, R * 0.40, R * 0.62,
+		0.0, R * 0.78, R * 0.32, -0.26, 0.0, 0.0)
+	g.add_child(quiff)
+	# Corona media: caja baja que continúa el barrido hacia la nuca
+	var mid = _box(mat, R * 0.95, R * 0.30, R * 0.85,
+		0.0, R * 0.66, -R * 0.30, 0.15, 0.0, 0.0)
+	g.add_child(mid)
 	return g
 
 # 9 — Drake Dreads: cap + 7 hanging cylinder ropes
