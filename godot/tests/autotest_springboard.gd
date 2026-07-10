@@ -128,6 +128,36 @@ func _run() -> void:
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/springboard_gate.png")
 
+	# ---- F2. El salto NO se corta contra el labio (lanzamiento pegado al cliff) ----
+	# Regresión del feedback del director (2026-07-09): al lanzarse pegado a la cara
+	# del cliff, entrar al footprint por debajo de la tapa clavaba al jugador y
+	# cortaba el impulso vertical (pico ~3.3 en vez de ~6). Con el aterrizaje
+	# descend-only, el arco debe llegar a su altura plena aunque suba pegado al muro.
+	# (El aterrizaje LIMPIO en la meseta lo cubre F; acá solo custodiamos el corte.)
+	_settle(ctrl, Vector3(0.0, 0.0, _arena.LEDGE_MAX_Z + 0.2))   # pegado al borde
+	ctrl._keys_down[KEY_W] = true                                # empuja contra la cara
+	_director.springboard_waves.clear()
+	_director.springboard_waves.append({
+		"position": ctrl.position, "radius": 4.2, "t": 2.5, "directed": false,
+	})
+	var edge_peak: float = 0.0
+	var edge_launched: bool = false
+	ctrl._keys_down[KEY_SPACE] = true
+	var et0: int = Time.get_ticks_msec()
+	while Time.get_ticks_msec() - et0 < 3500:
+		edge_peak = maxf(edge_peak, ctrl.position.y)
+		if not ctrl.grounded:
+			edge_launched = true
+			ctrl._keys_down.erase(KEY_SPACE)
+		elif edge_launched:
+			break
+		await get_tree().process_frame
+	ctrl._keys_down.clear()
+	if edge_peak >= 5.0:
+		_pass("F2: el salto pegado al cliff NO se corta (pico %.2f ≥ 5.0)" % edge_peak)
+	else:
+		_fail("F2: el salto se cortó contra el labio (pico %.2f < 5.0)" % edge_peak)
+
 	# ---- G. Dagna pelea a tu lado y NUNCA cae ----
 	if light != null:
 		_restore_dagna()

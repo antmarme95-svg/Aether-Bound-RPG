@@ -1553,7 +1553,12 @@ func update(dt: float) -> void:
 		grounded = false
 	vel_y     -= GRAVITY * dt
 	position.y += vel_y * dt
-	if position.y <= ground_y:
+	# PRD-007 alcance 4: el suelo solo ATRAPA descendiendo (vel_y ≤ 0). Antes, al
+	# subir contra el labio de una cornisa, entrar al footprint por debajo de la
+	# tapa clavaba al jugador ahí y MATABA el impulso vertical → "el salto se corta
+	# a la altura de la cornisa". Con esto el arco del Springboard completa: subes
+	# al ápice y aterrizas cayendo (en llano nunca subes hacia el suelo, sin cambio).
+	if position.y <= ground_y and vel_y <= 0.0:
 		position.y = ground_y
 		vel_y      = 0.0
 		var was_airborne: bool = not grounded

@@ -30,7 +30,11 @@ const LEDGE_MIN_X := -5.0
 const LEDGE_MAX_X :=  5.0
 const LEDGE_MIN_Z := -8.0
 const LEDGE_MAX_Z :=  2.0      # borde CERCANO (mirando -Z desde el spawn)
-const LEDGE_STEP_MAX := 0.5    # subida máx a pie: más que esto = muro (cliff)
+# Solo entras a la meseta con los pies casi a la altura de la tapa (i.e., cayendo
+# desde arriba). Ajustado: antes 0.5 dejaba "trepar raspando" la cara del cliff
+# subiendo, y el aterrizaje cortaba el salto al llegar al labio. Ahora es un muro
+# firme + el aterrizaje solo atrapa descendiendo (ver player_controller).
+const LEDGE_STEP_MAX := 0.15
 
 # Faro/objetivo sobre la meseta (feedback de "llegaste").
 const LEDGE_BEACON := Vector3(0.0, LEDGE_H, -2.0)
