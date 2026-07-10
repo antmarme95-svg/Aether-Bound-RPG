@@ -96,7 +96,16 @@ updated: 2026-07-10
   ALINEADO a la dirección de los dedos (cuelga) con 30° de apertura. r5d
   (ref. anatómica del director — Cleveland Clinic, vista palmar): el pulgar
   nace de la eminencia TENAR, a media palma (nacimiento 50% más adentro).
-  r5e: dedos 10% más delgados (sección 0.0108×0.038; el pulgar no).** La
+  r5e: dedos 10% más delgados (sección 0.0108×0.038; el pulgar no).**
+- **M9-r1 ✅ CÓDIGO (2026-07-10): la cara gana personalidad (review M9).**
+  Mandíbula marcada + mentón, nariz fina, MEJILLAS ALTAS (pómulos bajo el
+  ojo; rango del slider `cheek` subido en apply_phenotype), SONRISA ligera
+  (3 segmentos de tinta, comisuras arriba), cejas finas café cálido, iris
+  café en el banco (en juego = accent del origen), y **orejas por defecto
+  en origin neutro** (los origins las reemplazan). Capturas:
+  `anatomy_face.png` / `anatomy_face_34.png`. QA biomech/combat/slice
+  ALL_PASS. **Ronda 2 con el ojo del director pendiente; M10 (peinado real)
+  es la mitad faltante de la cabeza.** La
   palma sigue siendo el nodo `hand` (meta de montaje de arma y toggle del
   prótesis intactos). Captura del banco: `anatomy_hands.png`. QA:
   biomech/combat/slice ALL_PASS.

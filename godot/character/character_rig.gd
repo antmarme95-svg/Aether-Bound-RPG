@@ -554,29 +554,43 @@ func _build() -> void:
 	_add_outline_pass(skull, Color("#f2b186"))
 
 	# Mandíbula ESTRECHA (lámina: fine narrow jaw) + mentón propio.
-	jaw_mesh = _box_mesh(0.125, 0.065, 0.11, head_mat)
+	# M9-r1: mandíbula MARCADA — más profunda y con el mentón presente
+	# (el jawline se lee en ¾ y perfil, review M9).
+	jaw_mesh = _box_mesh(0.118, 0.07, 0.112, head_mat)
 	jaw_mesh.name = "jaw"
-	jaw_mesh.position = Vector3(0.0, -0.105, 0.05)
+	jaw_mesh.position = Vector3(0.0, -0.103, 0.048)
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
 	# (chin/nose en skin_mat: el atlas de warpaint mapea raro en cajas chicas)
-	var chin = _box_mesh(0.05, 0.032, 0.045, skin_mat)
-	chin.position = Vector3(0.0, -0.128, 0.092)
+	var chin = _box_mesh(0.052, 0.034, 0.048, skin_mat)
+	chin.position = Vector3(0.0, -0.13, 0.094)
 	head.add_child(chin)
 	_add_outline_pass(chin, Color("#f2b186"))
 
-	# NARIZ — sin ella el perfil no existe (la lámina vive del perfil).
-	var nose = _box_mesh(0.02, 0.042, 0.028, skin_mat)
-	nose.position = Vector3(0.0, -0.008, 0.146)
+	# NARIZ — sin ella el perfil no existe. M9-r1: más FINA, un pelo más larga.
+	var nose = _box_mesh(0.017, 0.046, 0.028, skin_mat)
+	nose.position = Vector3(0.0, -0.010, 0.147)
 	nose.rotation.x = -0.15
 	head.add_child(nose)
 	_add_outline_pass(nose, Color("#f2b186"))
 
+	# M9-r1: SONRISA ligera — línea de boca en tres segmentos de tinta con
+	# las comisuras hacia ARRIBA (la review pide media sonrisa, no neutro).
+	var mouth_c = _box_mesh(0.032, 0.005, 0.004, pupil_mat)
+	mouth_c.position = Vector3(0.0, -0.080, 0.129)
+	head.add_child(mouth_c)
+	for mside in [-1, 1]:
+		var mouth_k = _box_mesh(0.012, 0.005, 0.004, pupil_mat)
+		mouth_k.position = Vector3(float(mside) * 0.0215, -0.0755, 0.127)
+		mouth_k.rotation.z = float(mside) * 0.45   # comisuras arriba (+x sube con +z)
+		head.add_child(mouth_k)
+
+	# M9-r1: MEJILLAS ALTAS — pómulos bajo el ojo, no cachetes bajos.
 	cheeks = []
 	for side in [-1, 1]:
-		var cheek = _sphere_mesh(0.028, head_mat)
-		cheek.position = Vector3(side * 0.072, -0.028, 0.098)
+		var cheek = _sphere_mesh(0.026, head_mat)
+		cheek.position = Vector3(side * 0.074, 0.0, 0.102)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
@@ -612,9 +626,13 @@ func _build() -> void:
 		head.add_child(eye_group)
 		eyes.append(eye_group)
 
-		# Ceja BAJA y cercana al ojo (lámina: brow line marcada, no flotante)
-		var brow = _box_mesh(0.048, 0.011, 0.012, pupil_mat)
-		brow.position = Vector3(side * 0.052, 0.058, 0.140)
+		# Ceja BAJA y cercana al ojo (lámina: brow line marcada, no flotante).
+		# M9-r1: más fina y CAFÉ CÁLIDO (no tinta negra — losas = enojo).
+		var brow_mat := StandardMaterial3D.new()
+		brow_mat.albedo_color = Color("#3a2418")
+		brow_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		var brow = _box_mesh(0.042, 0.009, 0.012, brow_mat)
+		brow.position = Vector3(side * 0.052, 0.056, 0.140)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -1327,10 +1345,11 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		_lerp(0.8, 1.22, jaw_v)
 	)
 
-	# JS cheek.position.y = lerp(-0.045, 0.012, cheek), scale lerp(0.75..1.3)
+	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
+	# mejillas altas); el extremo bajo ya no baja a cachete.
 	var cheek_v: float = p.get("cheek", 0.5)
 	for cheek in cheeks:
-		cheek.position.y = _lerp(-0.045, 0.012, cheek_v)
+		cheek.position.y = _lerp(-0.02, 0.032, cheek_v)
 		var cheek_s: float = _lerp(0.75, 1.3, cheek_v)
 		cheek.scale = Vector3(cheek_s, cheek_s, cheek_s)
 
@@ -1625,7 +1644,7 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# ---- Ironblooded: compact round ears + heat glow + sparks ----
 		# (C6a: rama EXPLÍCITA — antes era el else, y cualquier origin
 		# desconocido caía aquí con armadura de forja incluida. Un origin
-		# fuera del canon ahora deja el cuerpo desnudo: base neutral.)
+		# fuera del canon ahora deja el cuerpo neutral CON OREJAS, abajo.)
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var smesh = SphereMesh.new()
@@ -1710,6 +1729,21 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# Place near the right shoulder (arm_r is arms[1])
 		_spark_particles.position = Vector3(0.0, 0.06, 0.0)
 		arms[1].add_child(_spark_particles)
+
+	else:
+		# ---- Origin neutro/desconocido (M9-r1): un humano base TIENE
+		# orejas — redondas simples; los origins las REEMPLAZAN arriba. ----
+		for side in [-1, 1]:
+			var ear = MeshInstance3D.new()
+			var smesh = SphereMesh.new()
+			smesh.radius = 0.030
+			smesh.height = 0.060
+			ear.mesh = smesh
+			ear.material_override = skin_mat
+			ear.position = Vector3(side * 0.145, 0.0, 0.0)
+			ear.scale = Vector3(0.55, 1.0, 0.8)   # oreja plana, no bola
+			_add_outline_pass(ear, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear)
 
 # ================================================================
 # Motion API — mirrors JS setMotion / playAttack / update

@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | M9-r1: la cara gana personalidad (review MEDIUM 9)
+Primera ronda de M9 (manos cerradas, "listo, vamos con M9"): mandíbula marcada
++ mentón presente, nariz más fina y larga, MEJILLAS ALTAS (pómulos bajo el ojo;
+rango del slider `cheek` subido), SONRISA ligera (boca de 3 segmentos de tinta,
+comisuras arriba — el primer intento salió ceño por signo invertido), cejas
+finas café cálido (las losas negras leían enojo), iris café legible en el banco
+(el accent papel lo dejaba blanco-sobre-blanco) y **orejas por defecto** en el
+origin neutro (un humano base tiene orejas; los origins las reemplazan).
+Capturas nuevas del banco: anatomy_face.png + anatomy_face_34.png. Pendiente de
+la ronda 2 con el ojo del director: peinado real (M10), forma frontal de la
+nariz. QA biomech/combat/slice ALL_PASS.
+
 ## [2026-07-10] feature | C6a-r5e: dedos 10% más delgados
 Tuning del director tras aprobar la tenar ("listo"): los cuatro dedos (no el
 pulgar) 10% más delgados en sección (0.0108×0.038) — las ranuras crecen y la

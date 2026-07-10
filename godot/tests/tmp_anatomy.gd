@@ -56,6 +56,9 @@ func _run() -> void:
 	_rig = CharacterRig.new()
 	_holder.add_child(_rig)
 	_rig.apply_phenotype(_Pheno.default_phenotype(), BASELINE_ORIGIN)
+	# Iris café legible (el accent papel del banco lo dejaba blanco-sobre-
+	# blanco = mirada de susto; en juego el iris es el accent del origen).
+	_rig.iris_mat.albedo_color = Color("#4f3b28")
 	_rig.set_motion(0.0, false)
 	# Settle: > POSE_STEP (lección: capturas en 2s esperan un tick de pose)
 	await _wait(0.25)
@@ -83,6 +86,17 @@ func _run() -> void:
 	_frame_close()
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_close.png")
+
+	# detalle de CARA (M9: mandíbula/nariz/pómulos/sonrisa) — frente y ¾
+	var face_t: Vector3 = _holder.global_position + Vector3(0.0, 1.80, 0.0)
+	_cam.look_at_from_position(face_t + Vector3(0.0, 0.02, 0.62), face_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_face.png")
+	_cam.look_at_from_position(face_t + Vector3(0.42, 0.04, 0.48), face_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_face_34.png")
 
 	# detalle de MANO derecha (r5: palma + masas de dedos + pulgar)
 	var hand_t: Vector3 = _holder.global_position + Vector3(0.28, 0.92, 0.0)
