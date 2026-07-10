@@ -27,6 +27,7 @@ var scene: Node3D              = null
 var enemies: Array             = []
 var allies: Array              = []   # PRD-007: aliados (Dagna) — separados de enemies
 var springboard_waves: Array   = []   # PRD-007: zonas de onda activas (fuente del Springboard T1)
+var _bond_cooldown: float      = 0.0   # PRD-007 2b: cooldown tras una orden dirigida
 
 # ---- gameplay systems ----
 var stats: Stats               = null
@@ -343,12 +344,26 @@ func _check_key_r() -> bool:
 	_r_was_pressed    = pressed
 	return just
 
-## request_bond_pound — el jugador pide (Bond) el ground-pound a Dagna. La onda
-## resultante es la fuente del Springboard. Idempotente si ya está golpeando.
+## request_bond_pound — modo REACTIVO (alcance 2): el jugador pide (Bond) el
+## ground-pound a Dagna DONDE ESTÁ. La onda resultante es la fuente del
+## Springboard. Idempotente si ya está golpeando.
 func request_bond_pound() -> void:
 	for ally in allies:
 		if ally != null and not ally.dead and ally.has_method("ground_pound"):
 			ally.ground_pound()
+
+const BOND_DIRECTED_COOLDOWN := 4.5   # PRD-007 2b: rima entre órdenes dirigidas
+
+## _issue_directed_pound — modo DIRIGIDO (2b): Dagna VIAJA al punto designado
+## (deja su slot de guardia — costo táctico) y golpea ahí. Arranca el cooldown.
+## Solo una orden en vuelo (la aliada ignora si ya está viajando/golpeando).
+func _issue_directed_pound(point: Vector3) -> void:
+	for ally in allies:
+		if ally != null and not ally.dead and ally.has_method("travel_and_pound"):
+			ally.travel_and_pound(point)
+			_bond_cooldown = BOND_DIRECTED_COOLDOWN
+			EventBus.emit_event("quest:toast", {"text": "Dagna en camino"})
+			return
 
 ## sign_contract — autotest direct path (bypasses dialogue UI).
 ## Mirrors the JS onSigned callback.
@@ -507,6 +522,7 @@ func _state_arena() -> Dictionary:
 			# PRD-007 alcance 0: aliada Dagna (--ally=dagna) al hombro del jugador.
 			allies = []
 			springboard_waves = []
+			_bond_cooldown = 0.0
 			# PRD-007 alcance 2: el controlador lee las ondas por referencia (el
 			# director muta ESTE array en su lugar — nunca lo reasigna tras esto).
 			controller.springboard_waves = springboard_waves
@@ -517,10 +533,22 @@ func _state_arena() -> Dictionary:
 
 		"update": func(_ctx: Dictionary, dt: float) -> void:
 			_gameplay_update(dt)
-			# PRD-007 alcance 2: Bond (R) pide el pound; el tell de HUD pulsa
-			# mientras estás en una onda con ventana abierta (refuerza los anillos).
+			# Cooldown del Bond dirigido (2b): corre continuo; al llegar a 0
+			# avisa que el vínculo vuelve a estar listo.
+			if _bond_cooldown > 0.0:
+				_bond_cooldown = maxf(0.0, _bond_cooldown - dt)
+				if _bond_cooldown == 0.0:
+					EventBus.emit_event("quest:toast", {"text": "Bond listo"})
+			# PRD-007: Bond (R). Con el apuntado activo (RMB) y cooldown libre →
+			# orden DIRIGIDA (Dagna viaja al punto). Si no → pound REACTIVO donde
+			# está (alcance 2, intacto). El tell de HUD pulsa mientras pisas una
+			# onda con ventana abierta (refuerza los anillos).
 			if _check_key_r():
-				request_bond_pound()
+				if controller != null and controller.is_designating() \
+						and controller.designate_valid and _bond_cooldown <= 0.0:
+					_issue_directed_pound(controller.designate_point)
+				else:
+					request_bond_pound()
 			if hud != null and controller != null:
 				hud.set_springboard_ready(controller.springboard_ready()),
 
@@ -575,7 +603,10 @@ func _on_springboard_wave(payload: Dictionary) -> void:
 	var pos: Vector3 = payload.get("position", Vector3.ZERO)
 	var radius: float = float(payload.get("radius", 4.0))
 	var window: float = float(payload.get("window", 0.6))
-	springboard_waves.append({"position": pos, "radius": radius, "t": window})
+	# PRD-007 2b: `directed` marca la onda como comandada (el jugador recibe el
+	# empuje del arco hacia el punto al lanzarse desde ella).
+	var directed: bool = bool(payload.get("directed", false))
+	springboard_waves.append({"position": pos, "radius": radius, "t": window, "directed": directed})
 	for e in enemies:
 		if e.dead:
 			continue

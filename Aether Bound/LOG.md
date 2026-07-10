@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] feature | PRD-007 alcance 2b — Seismic Springboard DIRIGIDO (código)
+Feature Loop sobre el spec RATIFICADO (Extensión del [[PRD-007 Dagna aliada +
+Seismic Springboard T1]]). Añade **colocación** sobre el springboard reactivo del
+alcance 2: `RMB` (mantener) apunta un punto en el suelo (raycast cámara→suelo con
+`cam.project_ray_*` + decal teal clampeado a `DESIGNATE_RANGE` 11 m); `R` con el
+apuntado activo ordena a Dagna **viajar** al punto (deja su slot de guardia — costo
+táctico) y golpear ahí; el lanzamiento desde esa onda comandada suma un **empuje
+horizontal** hacia el punto (`SPRINGBOARD_DIRECT_PUSH` 3 m/s) sobre el `_air_vel`
+del alcance 2. Cooldown de orden 4.5 s. Los dos modos conviven (`R` solo =
+reactivo, intacto). **Decisión de control del director:** RMB pasó a apuntar y la
+**guardia/parry se mudó al botón lateral trasero del mouse (`XBUTTON1`)**; SPACE
+sigue siendo salto. Archivos: `player_controller.gd` (apuntado + clamp + decal +
+empuje del arco), `game_director.gd` (router R + cooldown + marca `directed` de la
+onda), `ally_dagna.gd` (estado `traveling` + `travel_and_pound`). QA:
+`tmp_springboard_directed.gd` nuevo ALL_PASS (clamp al borde 11.0 m, onda en el
+punto err 0.45 m, Dagna viaja 5.9 m, arco dirigido 8.91 m vs 4.67 m plano =
++4.24 m, cooldown activo/decae) + captura `springboard_directed.png`; regresión
+`tmp_springboard` (6.00/0.82/4.67 m intactos), `autotest_combat` (FPS 938),
+`test_core`, `autotest_slice`, `autotest_ui` ALL_PASS. **Pendiente: playtest del
+director** (rango/cooldown/empuje/altura a tunear; verificar el mapeo físico
+XBUTTON1 = botón trasero, swappable a XBUTTON2 si sale invertido).
+
 ## [2026-07-09] design | Metodología del pase visual — playtests por capa con gate secuencial (RATIFICADA)
 Nace de una verificación del director (lámina NotebookLM de las 4 capas vs.
 vault). **Hallazgo de la verificación:** el pipeline de 4 capas es canon

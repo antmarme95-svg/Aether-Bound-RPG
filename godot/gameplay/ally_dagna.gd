@@ -28,6 +28,12 @@ const POUND_WINDUP := 0.35     # telegraph antes del impacto
 const WAVE_RADIUS := 4.2       # radio de la zona de onda (el springboard vive aquí)
 const WAVE_WINDOW := 0.6       # ventana para saltar-en-onda (alcance 2 la consume)
 
+# ---- Springboard DIRIGIDO (PRD-007 alcance 2b) ----
+# Una orden dirigida hace que Dagna VIAJE al punto designado (abandona su slot de
+# guardia — costo táctico) y golpee ahí. Estados: idle/follow → traveling →
+# pounding → (cooldown lo maneja el director). Solo una orden en vuelo a la vez.
+const POUND_ARRIVE_DIST := 0.45   # llegó al punto → golpea
+
 var rig = null
 var combat = null
 var guard = null
@@ -39,6 +45,9 @@ var dead: bool = false          # parity/futuro (no muere en alcance 0)
 var _scene: Node3D = null
 var _pound_t: float = 0.0       # >0 mientras hace ground-pound
 var _pound_fired: bool = false  # el impacto (VFX + onda) se dispara una vez
+var _travel_target = null       # Vector3 mientras viaja a un punto comandado, o null
+var _pending_directed: bool = false  # el próximo pound nace de una orden dirigida
+var _pound_directed: bool = false    # el pound EN CURSO es dirigido (marca la onda)
 
 # ================================================================
 func _init(spawn_pos: Vector3, scene: Node3D) -> void:
@@ -77,6 +86,12 @@ func update_ally(dt: float, controller) -> void:
 	# Ground-pound en curso: se planta (no sigue) hasta terminar.
 	if _pound_t > 0.0:
 		_update_pound(dt, controller)
+		_ground_snap()
+		return
+
+	# PRD-007 2b: viaje comandado — Dagna deja su slot y va al punto designado.
+	if _travel_target != null:
+		_update_travel(dt)
 		_ground_snap()
 		return
 
@@ -119,9 +134,39 @@ func ground_pound() -> void:
 		return                     # ya está golpeando
 	_pound_t = POUND_TOTAL
 	_pound_fired = false
+	_pound_directed = _pending_directed   # ¿esta onda nace de una orden dirigida?
+	_pending_directed = false
+
+## travel_and_pound — PRD-007 2b: orden dirigida. Dagna viaja al punto (línea
+## directa + ground-snap, sin pathfinding rico) y golpea al llegar. La onda
+## resultante queda MARCADA como dirigida (empuje del arco). Idempotente si ya
+## está ocupada (golpeando o viajando) — una sola orden en vuelo.
+func travel_and_pound(point: Vector3) -> void:
+	if _pound_t > 0.0 or _travel_target != null:
+		return
+	_travel_target = point
+	_pending_directed = true
 
 func is_pounding() -> bool:
 	return _pound_t > 0.0
+
+func is_traveling() -> bool:
+	return _travel_target != null
+
+# _update_travel — locomoción directa hacia el punto comandado. Al llegar,
+# dispara el ground-pound EN el punto (la onda nace ahí, no en su slot).
+func _update_travel(dt: float) -> void:
+	var to: Vector3 = _travel_target - position
+	to.y = 0.0
+	var d: float = to.length()
+	if d <= POUND_ARRIVE_DIST:
+		_travel_target = null
+		ground_pound()             # golpea en el punto (position ≈ target)
+		return
+	var dir: Vector3 = to / d
+	position += dir * MOVE_SPEED_MAX * dt
+	_face_dir(dir, dt, 8.0)
+	rig.set_motion(1.0, false)
 
 func _update_pound(dt: float, controller) -> void:
 	_pound_t -= dt
@@ -146,6 +191,7 @@ func _do_impact() -> void:
 		"position": position,
 		"radius": WAVE_RADIUS,
 		"window": WAVE_WINDOW,
+		"directed": _pound_directed,   # PRD-007 2b: onda comandada → empuje del arco
 	})
 
 # ---- VFX teal (lámina Seismic Springboard): burst central + anillos ----
