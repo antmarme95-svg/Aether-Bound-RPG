@@ -134,8 +134,8 @@ func _measure() -> Dictionary:
 		chin = minf(chin, (_rig.jaw_mesh.global_transform * jaw_aabb.get_endpoint(i)).y)
 	var head_h: float = crown - chin
 
-	# hombros: distancia entre raíces de brazos + 2 radios de deltoide (0.06)
-	var shoulder_w: float = absf(_rig.arms[1].global_position.x - _rig.arms[0].global_position.x) + 2.0 * 0.06
+	# hombros: distancia entre raíces de brazos + 2 radios de deltoide (0.068)
+	var shoulder_w: float = absf(_rig.arms[1].global_position.x - _rig.arms[0].global_position.x) + 2.0 * 0.068
 	# pierna: raíz de cadera → suelo (lo.y)
 	var leg_len: float = _rig.hips.global_position.y - lo.y
 

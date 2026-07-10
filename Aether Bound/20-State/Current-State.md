@@ -56,6 +56,34 @@ updated: 2026-07-10
   el cráneo (C6c). Pauldron re-asentado al deltoide nuevo. Medidas estables
   (7.58 cabezas) y QA visual completo ALL_PASS de nuevo. Capturas en
   `godot/test_out/anatomy_*.png`.
+- **📋 Character Blockout Review v0.1 del director (2026-07-10) — ARCHIVADA
+  en `90-Raw/reviews/Character-Blockout-Review-v0.1.md` (fuente raw,
+  verbatim).** Veredicto: Needs Revision, ~60–65% de fidelidad al concept;
+  los problemas son de proporciones/silueta/lenguaje visual, no técnicos.
+  Norte artístico EXPLÍCITO: BotW / Hinterberg / Palia / Torchlight III —
+  anatomía estilizada, NO anime, NO low-poly crudo; formas grandes y siluetas
+  limpias. Es el checklist de aceptación de C6.
+- **C6a-r4 ✅ CÓDIGO (2026-07-10): respuesta a la review v0.1.** Implementado:
+  **CRITICAL 1** silueta atlética (hombros +12% → 0.66 m, pecho con volumen
+  CHEST_X 1.16, cintura 0.90, pelvis más ancha que cintura = cambio
+  tórax→pelvis legible) · **CRITICAL 2** cabeza menor (HEAD_SCALE 0.84; el
+  culpable del read 6.5–7 era el PELO-bloque: +7 cm de AABB → aplastado hacia
+  atrás suma solo +2 cm; lectura visual ahora ~7.4) · **CRITICAL 3** cuello
+  largo (0.17) + línea de hombros más baja (SHOULDER_Y 0.29) · **CRITICAL 4**
+  brazos con masa de atleta (deltoide 0.068, bíceps 0.062, antebrazo 0.054) ·
+  **HIGH 5** pierna con cuádriceps/rodilla/GEMELO diferenciados (masa trasera
+  nueva) · **HIGH 6** manos +18% (llegan a media pierna) · **HIGH 7** pies
+  mayores (bota 0.11×0.09×0.21 + puntera) · **HIGH 8** planos anatómicos del
+  torso (placa pectoral al ras — el plano lo lee el escalón cel, no la tinta
+  Sobel — + clavículas) · **LOW 13** A-pose suave (splay 0.15) · **LOW 14**
+  codo en reposo relajado (0.34) · **LOW 15** transición hombro-brazo fundida
+  (deltoide mayor) · **MEDIUM 10 parcial** pelo aplastado/hacia atrás vía
+  transform del hair_slot. Medidas: estatura 1.943, hombros 2.65 cabezas,
+  pierna 48.9%. QA completo ALL_PASS. **Pendientes de la review:** MEDIUM 9
+  (cara con personalidad — con el ojo del director), MEDIUM 10 completo
+  (rediseño de peinados), MEDIUM 11–12 (capas de ropa + peso de accesorios —
+  el director los difirió explícitamente junto con el detalle de pies),
+  LOW 14 fino (postura relajada global). **VoBo pendiente de las capturas r4.**
 - **C6a-r3 + C6c ✅ CÓDIGO (2026-07-10, la comparación lado a lado del
   director contra fenotipo-humano-v1).** (a) **Hombros CAÍDOS** (lámina:
   narrow sloped shoulders): trapecios con masa del cuello al deltoide matan

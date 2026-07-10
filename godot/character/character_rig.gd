@@ -19,19 +19,21 @@ class_name CharacterRig extends Node3D
 # Los fenotipos enano (4.5 cabezas, trapezoide) y elfo (8, esbelto) derivan
 # de esta tabla en C6b.
 # ----------------------------------------------------------------
-const HEAD_SCALE: float = 0.87       # cráneo del puerto ×0.87 → cabeza de 7.5
-const HEAD_Y: float = 0.55           # pivote de cabeza sobre el torácico
-const NECK_Y: float = 0.42
-# r3 (comparación contra la lámina): "narrow sloped shoulders" — el atleta
-# de frontera es ENJUTO; hombros más estrechos y caídos (trapecio visible).
-const SHOULDER_X: float = 0.235      # media distancia entre hombros
-const SHOULDER_Y: float = 0.31       # altura de hombros sobre el torácico
+# r4 = Character Blockout Review v0.1 del director (90-Raw/reviews/):
+# CRITICAL 1 silueta atlética (hombros +12%, cintura menos, pecho más),
+# CRITICAL 2 cabeza menor, CRITICAL 3 cuello largo + hombros más bajos.
+const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos cabezón)
+const HEAD_Y: float = 0.56           # pivote de cabeza sobre el torácico
+const NECK_Y: float = 0.385
+const SHOULDER_X: float = 0.262      # media distancia entre hombros (review +12%)
+const SHOULDER_Y: float = 0.29       # línea de hombros MÁS BAJA (review: cuello)
 const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
 # V-taper del tronco (multiplicadores base sobre el build de peso/clase):
-# pecho definido pero fibroso, algo plano; cintura recogida.
-const CHEST_X: float = 1.07
-const CHEST_Z: float = 0.84
-const WAIST_XZ: float = 0.95
+# pecho con VOLUMEN (review CRITICAL 1) y cintura recogida marcando el
+# cambio tórax→pelvis.
+const CHEST_X: float = 1.16
+const CHEST_Z: float = 0.92
+const WAIST_XZ: float = 0.90
 
 # ---- lerp helper ----
 static func _lerp(a: float, b: float, t: float) -> float:
@@ -250,7 +252,9 @@ func _build() -> void:
 	hips.position.y = 0.95
 	body.add_child(hips)
 
-	pelvis = _box_mesh(0.26, 0.16, 0.15, dark_leather_mat)
+	# r4 (review CRITICAL 1): pelvis un punto más ancha que la cintura — el
+	# cambio tórax→cintura→pelvis se LEE en la silueta.
+	pelvis = _box_mesh(0.27, 0.16, 0.16, dark_leather_mat)
 	pelvis.name = "pelvis"
 	pelvis.position.y = -0.01
 	hips.add_child(pelvis)
@@ -276,7 +280,9 @@ func _build() -> void:
 		# la pierna es un volumen que ESTRECHA como en la lámina — muslo
 		# masivo arriba → rodilla, pantorrilla → tobillo. Cilindros cónicos,
 		# no cápsulas-globo; la rodilla es la única bola (articulación).
-		var thigh = _cylinder_mesh(0.084, 0.056, 0.40, dark_leather_mat)
+		# r4 (review HIGH 5): la pierna tiene TRES volúmenes diferenciados —
+		# cuádriceps arriba, rodilla, GEMELO atrás — no un tubo continuo.
+		var thigh = _cylinder_mesh(0.090, 0.058, 0.40, dark_leather_mat)
 		thigh.position.y = -0.22
 		leg.add_child(thigh)
 		_add_outline_pass(thigh, Color("#3a2d22"))
@@ -286,23 +292,31 @@ func _build() -> void:
 		knee.position.y = -0.45
 		leg.add_child(knee)
 
-		var knee_cap = _sphere_mesh(0.052, dark_leather_mat)
+		var knee_cap = _sphere_mesh(0.054, dark_leather_mat)
 		knee_cap.position.y = 0.0
 		knee.add_child(knee_cap)
 		_add_outline_pass(knee_cap, Color("#3a2d22"))
 
-		var shin = _cylinder_mesh(0.056, 0.038, 0.38, dark_leather_mat)
+		var shin = _cylinder_mesh(0.052, 0.036, 0.38, dark_leather_mat)
 		shin.position.y = -0.20
 		knee.add_child(shin)
 		_add_outline_pass(shin, Color("#3a2d22"))
 
-		# Bota: caña + puntera (el pie tiene DIRECCIÓN, no es un taco)
-		var boot = _box_mesh(0.10, 0.085, 0.19, leather_mat)
-		boot.position = Vector3(0.0, -0.4525, 0.02)
+		# GEMELO: masa trasera alta de la pantorrilla (perfil de atleta)
+		var calf = _sphere_mesh(0.048, dark_leather_mat)
+		calf.scale = Vector3(0.75, 1.6, 0.85)
+		calf.position = Vector3(0.0, -0.10, -0.028)
+		knee.add_child(calf)
+		_add_outline_pass(calf, Color("#3a2d22"))
+
+		# Bota: caña + puntera (review HIGH 7: pies MAYORES — estabilidad
+		# visual, contacto con el suelo, lectura en animación)
+		var boot = _box_mesh(0.11, 0.09, 0.21, leather_mat)
+		boot.position = Vector3(0.0, -0.45, 0.03)
 		knee.add_child(boot)
 		_add_outline_pass(boot, Color("#5b4632"))
-		var toe = _box_mesh(0.092, 0.05, 0.07, leather_mat)
-		toe.position = Vector3(0.0, -0.47, 0.125)
+		var toe = _box_mesh(0.10, 0.055, 0.085, leather_mat)
+		toe.position = Vector3(0.0, -0.4675, 0.14)
 		knee.add_child(toe)
 		_add_outline_pass(toe, Color("#5b4632"))
 
@@ -331,10 +345,26 @@ func _build() -> void:
 	# arriba (hombros cuadrados, no globo) que estrecha hacia la cintura; la
 	# cintura (jerkin) retoma el MISMO radio y asienta sobre la pelvis. El
 	# V-taper elíptico (CHEST_X/Z) lo aplica _apply_build sobre peso/clase.
-	torso = _cylinder_mesh(0.15, 0.115, 0.34, skin_mat)
+	torso = _cylinder_mesh(0.16, 0.11, 0.34, skin_mat)
 	torso.position.y = 0.12
 	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
+
+	# r4 (review HIGH 8): PLANOS anatómicos del torso — el pecho y las
+	# clavículas son planos propios, no la superficie del cilindro. Solo
+	# geometría (masas grandes), cero detalle: BotW/Hinterberg.
+	# Casi al ras del cilindro: el plano se lee por el ESCALÓN del cel
+	# shading, no por tinta del Sobel (proud → parche entintado).
+	var pec_plate = _box_mesh(0.20, 0.09, 0.05, skin_mat)
+	pec_plate.position = Vector3(0.0, 0.22, 0.122)
+	pec_plate.rotation.x = 0.12   # el plano del pecho cae hacia el abdomen
+	upper_spine.add_child(pec_plate)
+	_add_outline_pass(pec_plate, Color("#f2b186"))
+
+	var clavicle = _box_mesh(0.19, 0.028, 0.04, skin_mat)
+	clavicle.position = Vector3(0.0, 0.30, 0.125)
+	upper_spine.add_child(clavicle)
+	_add_outline_pass(clavicle, Color("#f2b186"))
 
 	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
@@ -342,12 +372,12 @@ func _build() -> void:
 	# delgado lee como gancho de alambre, no como músculo.
 	for tside in [-1, 1]:
 		var trap = _box_mesh(0.19, 0.085, 0.115, skin_mat)
-		trap.position = Vector3(float(tside) * 0.105, 0.315, 0.0)
+		trap.position = Vector3(float(tside) * 0.105, 0.30, 0.0)
 		trap.rotation.z = -float(tside) * 0.22
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
 
-	jerkin = _cylinder_mesh(0.115, 0.128, 0.22, leather_mat)
+	jerkin = _cylinder_mesh(0.108, 0.125, 0.20, leather_mat)
 	jerkin.position.y = 0.16
 	spine.add_child(jerkin)
 	_add_outline_pass(jerkin, Color("#5b4632"))
@@ -372,12 +402,15 @@ func _build() -> void:
 
 		# C6a-r2: brazo que ESTRECHA — deltoide (bola de hombro) → codo →
 		# muñeca fina → mano de MITÓN (caja, no esfera). Como la lámina.
-		var deltoid = _sphere_mesh(0.062, skin_mat)
+		# r4 (review CRITICAL 4): masa de ATLETA, no de personaje delgado —
+		# bíceps/antebrazo suben sin llegar a heroico; el deltoide crece y
+		# funde la transición hombro-brazo (LOW 15).
+		var deltoid = _sphere_mesh(0.068, skin_mat)
 		deltoid.position.y = -0.01
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
 
-		var upper = _cylinder_mesh(0.054, 0.040, 0.28, skin_mat)
+		var upper = _cylinder_mesh(0.062, 0.044, 0.28, skin_mat)
 		upper.position.y = -0.15
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
@@ -387,19 +420,19 @@ func _build() -> void:
 		elbow.position.y = -0.32   # codo en la línea del ombligo (1.23)
 		arm.add_child(elbow)
 
-		var elbow_cap = _sphere_mesh(0.042, skin_mat)
+		var elbow_cap = _sphere_mesh(0.045, skin_mat)
 		elbow_cap.position.y = 0.0
 		elbow.add_child(elbow_cap)
 		_add_outline_pass(elbow_cap, Color("#f2b186"))
 
-		var fore = _cylinder_mesh(0.048, 0.030, 0.26, skin_mat)
+		var fore = _cylinder_mesh(0.054, 0.032, 0.26, skin_mat)
 		fore.position.y = -0.13
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
 
-		# Mano a la entrepierna (~0.95) con el brazo caído — canon de 4 cabezas
-		var hand = _box_mesh(0.055, 0.10, 0.06, skin_mat)
-		hand.position.y = -0.30
+		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna
+		var hand = _box_mesh(0.065, 0.115, 0.07, skin_mat)
+		hand.position.y = -0.31
 		hand.rotation.x = -0.12   # curl relajado de la lámina
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
@@ -461,9 +494,10 @@ func _build() -> void:
 	left_elbow.add_child(prosthetic)
 
 	# ---------- head ---------- (colgada del torácico)
-	# Cuello visible con taper (lámina: nace ancho del trapecio, sube fino)
-	var neck = _cylinder_mesh(0.044, 0.054, 0.13, skin_mat)
-	neck.position.y = 0.375
+	# Cuello LARGO con taper (review CRITICAL 3: el concept tiene cuello,
+	# línea continua cabeza-hombros; la cabeza no vive incrustada).
+	var neck = _cylinder_mesh(0.043, 0.056, 0.17, skin_mat)
+	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
 
@@ -585,8 +619,14 @@ func _build() -> void:
 	head.add_child(goggles)
 
 	# Hair / beard slots
+	# r4 (review MEDIUM 10, parcial): el pelo se APLASTA y corre hacia
+	# ATRÁS (concept: cabello corto con volumen hacia atrás, no un bloque
+	# encima). Transform del slot = vale para todos los estilos del library;
+	# el rediseño real de peinados queda con la cara (C6c fino).
 	hair_slot = Node3D.new()
 	hair_slot.name = "hair_slot"
+	hair_slot.scale = Vector3(1.0, 0.82, 1.06)
+	hair_slot.position = Vector3(0.0, -0.012, -0.015)
 	beard_slot = Node3D.new()
 	beard_slot.name = "beard_slot"
 	head.add_child(hair_slot)
@@ -1864,7 +1904,9 @@ func _process(delta: float) -> void:
 	# Pump amplitude scales with speed.  Elbow flexes on the FORWARD swing of its arm.
 	# arms[0] swings forward when sin_ph < 0 (contralateral to leg0).
 	# arms[1] swings forward when sin_ph > 0.
-	var elbow_base: float   = 0.30
+	# r4 (review LOW 14): codo en reposo un poco más doblado — postura
+	# relajada del concept, no maniquí vertical.
+	var elbow_base: float   = 0.34
 	var elbow_pump: float   = lerp(0.15, 0.55, spd_clamped) * spd_clamped
 	var e0_flex: float = elbow_base + max(0.0, -sin(_phase + 0.1)) * elbow_pump
 	var e1_flex: float = elbow_base + max(0.0,  sin(_phase + 0.1)) * elbow_pump
@@ -1917,9 +1959,11 @@ func _process(delta: float) -> void:
 			arms[0].rotation.x = lerp(arms[0].rotation.x, 0.0, min(1.0, delta * 8.0))
 			arms[1].rotation.x = lerp(arms[1].rotation.x, 0.0, min(1.0, delta * 8.0))
 
-		# Slight outward splay so arms don't clip torso
-		arms[0].rotation.z = 0.1
-		arms[1].rotation.z = -0.1
+		# r4 (review LOW 13): A-pose suave — brazos despegados del cuerpo
+		# (lectura anatómica + skinning; antes iban pegados con 0.1; 0.22
+		# resultó simiesco con los hombros anchos — 0.15 es el punto)
+		arms[0].rotation.z = 0.15
+		arms[1].rotation.z = -0.15
 
 		var e0: Node3D = arms[0].get_meta("elbow")
 		var e1: Node3D = arms[1].get_meta("elbow")

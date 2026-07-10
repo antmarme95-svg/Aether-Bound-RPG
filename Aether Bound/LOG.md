@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] ingest+feature | Review v0.1 del director archivada + C6a-r4
+El director entregó la **Character Blockout Review v0.1** (Needs Revision,
+~60–65% fidelidad; norte: BotW/Hinterberg/Palia/Torchlight, NO anime) →
+archivada verbatim en `90-Raw/reviews/` como fuente raw y checklist de C6.
+r4 implementa CRITICAL 1–4 (silueta atlética +12% hombros, cabeza menor — el
+culpable visual era el pelo-bloque —, cuello largo, brazos con masa), HIGH 5–8
+(gemelo, manos, pies, planos de torso al ras del cel) y LOW 13–15 (A-pose,
+codo relajado, deltoide fundido). Pendientes: cara (M9, con el director),
+peinados (M10), ropa/accesorios (M11–12, diferidos). QA completo ALL_PASS.
+
 ## [2026-07-10] state | Cierre de sesión — ventana C6/C4: C6a+C6c hechos
 Sesión cerrada con la ventana C6/C4 a medio camino y checkpoint completo: C6a
 (r1 proporciones 7.5 + Sobel-only, r2 volúmenes cónicos, r3 hombros caídos) y
