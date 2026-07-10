@@ -105,6 +105,15 @@ updated: 2026-07-08
   freezes se cuentan en FRAMES, las duraciones en tiempo real — nunca
   con `get_process_delta_time()` (durante un freeze delta = 0).
 
+- **Un actor con IA autónoma contamina las sondas de OTRA mecánica.** Al sumar
+  el pound AUTÓNOMO de Dagna (PRD-007 alcance 3), la sonda del Springboard dirigido
+  (`tmp_springboard_directed`) empezó a fallar: Dagna inyectaba una onda
+  no-dirigida en `springboard_waves` durante el ramp del test y el lanzamiento la
+  agarraba en vez de la onda dirigida inyectada a mano (empuje del arco = 0). Fix:
+  la sonda **silencia la IA del actor** (`_ai_pound_cd = 999`) y **limpia el estado
+  compartido JUSTO antes** de inyectar el suyo. Regla: cuando un sistema nuevo
+  escribe en un array/estado compartido por su cuenta, revisar TODAS las sondas que
+  leen ese estado — no solo la del sistema nuevo.
 - **"Air control conservado" (ley de leap PRD-005) = conserva/dirige el
   momentum EXISTENTE, no acelera desde cero.** Para lanzar un salto en una
   dirección (Seismic Springboard T1) NO basta con subir `vel_y`: eso da un

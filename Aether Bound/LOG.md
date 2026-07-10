@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] feature | PRD-007 alcance 3 — Dagna IA de combate mínima (código)
+Feature Loop. Dagna ya **pelea a tu lado** (mínima pero real, sin companion AI
+rica). Tres piezas: (1) **la onda HACE DAÑO** —`_on_springboard_wave` aplica
+`POUND_DAMAGE` 30 con falloff a los enemigos, además del knockback; cierra el TODO
+"la onda ES un ataque" de los alcances 1–2 y aplica a los 3 disparos (Bond /
+dirigido / autónomo); salta enemigos `dying` (Lección). (2) **Pound AUTÓNOMO en
+contexto** —`ally_dagna._update_combat_ai()`: con ≥1 enemigo dentro de `POUND_SENSE`
+3.8 y cooldown `AI_POUND_CD` 7 s libre, Dagna golpea sola. (3) **Muralla-block +
+defensa propia** — sube `rig.set_guard`+`guard.start_block` cuando un enemigo entra
+en `GUARD_BLOCK_RANGE` 2.6; `receive_hit()` (guard.receive → flinch/bloqueo +
+knockback) pero **NUNCA cae** (piso `HEALTH_FLOOR`; decisión del director: su
+pérdida es coda del slice). **Aggro por CERCANÍA** (decisión del director:
+nearest, no tanque): `game_director._nearest_target()` + `enemy_humanoid`
+`combat_target`/`set_combat_target` → cada enemigo persigue/golpea al más cercano
+entre jugador y Dagna (Dagna atrae golpes cuando se mete). Archivos:
+`ally_dagna.gd`, `game_director.gd`, `enemy_humanoid.gd`. QA: `tmp_dagna_combat.gd`
+nuevo ALL_PASS (nearest ambos sentidos, retarget del enemigo, pound autónomo →
+onda + daño 40→24 HP, muralla arriba/abajo, bloqueo reduce daño, martilleo sin
+caer) + captura `dagna_combat.png`; regresión tmp_springboard / tmp_springboard_
+directed (aislado del pound autónomo) / autotest_combat / test_core / slice / ui
+ALL_PASS. **Pendiente: playtest del director.**
+
 ## [2026-07-09] playtest | PRD-007 alcance 2b — Springboard DIRIGIDO APROBADO
 Playtest del director en `Start-Playtest-Greybox.bat`. Veredicto: **"ambos se
 sienten muy bien, nada que ajustar"** — los dos modos (reactivo `R` solo +

@@ -594,6 +594,24 @@ func _spawn_ally_dagna(scene: Node3D) -> Array:
 	return [dagna]
 
 const SPRINGBOARD_KNOCKBACK := 5.5
+const POUND_DAMAGE := 30.0   # PRD-007 alcance 3: la onda ES un ataque (daño en el centro, con falloff)
+
+## _nearest_target — PRD-007 alcance 3: el blanco más cercano a `pos` entre el
+## jugador y los aliados vivos. Base del aggro por cercanía (Dagna atrae golpes
+## cuando se mete). Sin tabla de amenaza — solo distancia planar.
+func _nearest_target(pos: Vector3):
+	var best = controller
+	var best_d: float = INF
+	if controller != null:
+		best_d = Vector2(controller.position.x - pos.x, controller.position.z - pos.z).length()
+	for a in allies:
+		if a == null or a.dead:
+			continue
+		var d: float = Vector2(a.position.x - pos.x, a.position.z - pos.z).length()
+		if d < best_d:
+			best_d = d
+			best = a
+	return best
 
 ## _on_springboard_wave — PRD-007 alcance 1: el golpe de suelo de Dagna registra
 ## una zona de onda (fuente del Springboard T1, la consume el jugador en el
@@ -608,14 +626,19 @@ func _on_springboard_wave(payload: Dictionary) -> void:
 	var directed: bool = bool(payload.get("directed", false))
 	springboard_waves.append({"position": pos, "radius": radius, "t": window, "directed": directed})
 	for e in enemies:
-		if e.dead:
+		# Lección: NO martillar un enemigo `dying` (reinicia su timer de muerte).
+		if e.dead or e.get("state") == "dying":
 			continue
 		var to: Vector3 = e.position - pos
 		to.y = 0.0
 		var d: float = to.length()
-		if d < radius and d > 0.01 and e.get("push_pull") != null:
+		if d < radius:
 			var falloff: float = 1.0 - d / radius
-			e.push_pull.apply_impulse(to.normalized() * SPRINGBOARD_KNOCKBACK * falloff)
+			# PRD-007 alcance 3: la onda ES un ataque — daño (con falloff) + knockback.
+			if e.has_method("hit"):
+				e.hit(POUND_DAMAGE * falloff, null)
+			if d > 0.01 and e.get("push_pull") != null:
+				e.push_pull.apply_impulse(to.normalized() * SPRINGBOARD_KNOCKBACK * falloff)
 
 # ================================================================
 # CHOICE
@@ -723,13 +746,19 @@ func _gameplay_update(dt: float) -> void:
 		scene.update(dt, ctrl_pos)
 	if controller != null:
 		controller.update(dt)
+	# PRD-007 alcance 3: aggro por CERCANÍA — cada enemigo apunta al blanco más
+	# cercano entre el jugador y los aliados vivos (Dagna). Sin aliados → jugador.
 	for enemy in enemies:
-		if not enemy.dead:
-			enemy.update_ai(dt, controller, passives)
-	# PRD-007: aliados (Dagna) — siguen al jugador.
+		if enemy.dead:
+			continue
+		if allies.size() > 0 and enemy.has_method("set_combat_target"):
+			enemy.set_combat_target(_nearest_target(enemy.position))
+		enemy.update_ai(dt, controller, passives)
+	# PRD-007: aliados (Dagna) — siguen al jugador y pelean a su lado (alcance 3:
+	# leen `enemies` para el pound autónomo y la muralla-block).
 	for ally in allies:
 		if not ally.dead:
-			ally.update_ally(dt, controller)
+			ally.update_ally(dt, controller, enemies)
 	# PRD-007: expira las zonas de onda del springboard.
 	for i in range(springboard_waves.size() - 1, -1, -1):
 		springboard_waves[i]["t"] -= dt
