@@ -247,6 +247,29 @@ updated: 2026-07-09
   a tu lado sin robarte la pelea; sin tuning (30/7 s/3.8/2.6 quedan). Playtest Loop
   del alcance 3 CERRADO. **La mecánica de Dagna aliada queda COMPLETA; falta solo el
   Gate 1 (alcance 4).**
+- **PRD-007 alcance 4 ✅ CÓDIGO (2026-07-09): Gate 1 — cornisa solo alcanzable vía
+  Springboard.** Cierra la construcción de la Fase 1 (falta solo el playtest del
+  director). (a) **La cornisa:** `combat_arena.gd` crece una meseta elevada
+  (`LEDGE_H` 3.5 m; footprint x∈[-5,5] z∈[-8,2]) con **faro teal = objetivo**,
+  delante del spawn y separada del arco de enemigos. Como la Y del jugador es
+  analítica (`get_height`), la cornisa es un footprint que devuelve `LEDGE_H`.
+  **Solo alcanzable vía Springboard:** salto normal medido **0.82 m** no llega;
+  lanzamiento **6.01 m** sí. (b) **Cliff real (no trepable a pie):** step-block en
+  `player_controller.update()` — una celda elevada a la que NO llegaste desde arriba
+  (subida > `LEDGE_STEP_MAX` 0.5 m sobre la Y de inicio de frame) es un MURO
+  (revierte el paso horizontal); aterrizar descendiendo sí entra. **Gateado por
+  `scene.has_method("is_cliff_wall")` → cero efecto en The Wilds ni otras escenas.**
+  Tuning de feel: el punto de lanzamiento del gate se alejó del borde (pista) para
+  que el arco cruce el labio por encima en vez de raspar la cara del cliff. (c)
+  **Gate permanente nuevo `tests/autotest_springboard.gd` ALL_PASS** (A–H:
+  aliada+onda por Bond real, no-trepa-a-pie, salto normal <cornisa, Springboard-en-
+  ventana → cornisa ALCANZADA a y=3.50 pico 6.01 en plena meseta z=-2.8, Dagna pelea
+  sin caer HP 120→111, FPS 578) + captura `springboard_gate.png`. Regresión
+  test_core/autotest_combat/tmp_springboard/tmp_springboard_directed/slice/ui
+  ALL_PASS. **FPS ≥60 con margen enorme** (577–583 en autotest; +3 mallas estáticas
+  sobre el greybox de 177 fps frío del alcance 5; el número definitivo se confirma
+  en el playtest del director, la corrida fría natural). **Pendiente: playtest del
+  director (feel) → CIERRA la Fase 1.**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -294,14 +317,16 @@ updated: 2026-07-09
      ✅ CÓDIGO (2026-07-09): Dagna IA de combate mínima** (onda con daño + pound
      autónomo + muralla-block/defensa propia sin caer + aggro por cercanía). Sonda
      `tmp_dagna_combat` ALL_PASS + **PLAYTEST APROBADO (2026-07-09): "funciona
-     bien"** — Playtest Loop del 3 CERRADO, sin tuning. **SIGUIENTE A CONSTRUIR:
-     alcance 4 = Gate 1** — escenario greybox con una **cornisa/objetivo solo
-     alcanzable vía Springboard** + enemigos; `tests/autotest_springboard.gd` (gate
-     permanente nuevo: spawn de aliada, pound→onda, salto-en-ventana→altura, cornisa
-     alcanzada); **≥60 FPS en corrida FRÍA** (Lecciones: el número del gate se lee
-     frío, no dentro del autotest). CIERRA la Fase 1. (Cláusula de escape C6: si los
-     cuerpos corruptos impiden juzgar el feel en el Gate 1, el rework anatómico se
-     adelanta aquí.)
+     bien"** — Playtest Loop del 3 CERRADO, sin tuning. **Alcance 4 ✅ CÓDIGO
+     (2026-07-09): Gate 1** — cornisa/meseta (`LEDGE_H` 3.5) con faro teal solo
+     alcanzable vía Springboard (salto normal 0.82 m no llega; lanzamiento 6.01 m
+     sí), cliff no trepable a pie (step-block en el controlador, gateado por
+     escena), gate permanente `tests/autotest_springboard.gd` ALL_PASS + captura.
+     **SIGUIENTE: PLAYTEST DEL DIRECTOR del Gate 1** en `Start-Playtest-Greybox.bat`
+     (ya trae `--ally=dagna`; la meseta vive en el greybox): pelear junto a Dagna +
+     usar el Springboard sobre su onda para subir a la cornisa, **≥60 FPS**. Su VoBo
+     CIERRA la Fase 1. (Cláusula de escape C6: si los cuerpos corruptos impiden
+     juzgar el feel en el Gate 1, el rework anatómico se adelanta aquí.)
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -360,10 +385,12 @@ updated: 2026-07-09
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
 - **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcances
-  **2b —Springboard DIRIGIDO— y 3 —Dagna IA de combate— (ambos mergeados +
-  playtest aprobado)**. Solo falta el alcance 4 = Gate 1 para cerrar la Fase 1).
-  `autotest_combat.gd` es un gate permanente. Lanzador de doble clic para el playtest en el greybox:
-  `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
+  **2b —Springboard DIRIGIDO—, 3 —Dagna IA de combate— y 4 —Gate 1— (todos
+  mergeados)**. Los 2b/3 con playtest aprobado; el **4 (Gate 1) a la espera del
+  playtest del director** para cerrar la Fase 1). `autotest_combat.gd` y el nuevo
+  `autotest_springboard.gd` son gates permanentes. Lanzador de doble clic para el
+  playtest en el greybox: `Start-Playtest-Greybox.bat` (raíz; la meseta del Gate 1
+  ya vive en el greybox). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,
   dagna, guard, ally, pound, springboard, springboard_directed, dagna_combat)
   quedan hasta validar el pipeline / limpieza.

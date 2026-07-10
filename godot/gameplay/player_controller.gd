@@ -1324,6 +1324,9 @@ func check_triggers() -> Dictionary:
 func update(dt: float) -> void:
 	if scene == null:
 		return
+	# PRD-007 alcance 4: Y de inicio de frame — el step-block de cliffs decide si
+	# una celda elevada es piso (llegaste desde arriba) o muro (la caminaste).
+	var _frame_start := position
 	attack_cooldown = maxf(0.0, attack_cooldown - dt)
 	_attack_pulse   = maxf(0.0, _attack_pulse - dt)   # Sprint L3: decay attack interrupt pulse
 
@@ -1508,6 +1511,15 @@ func update(dt: float) -> void:
 	move_speed_norm = (planar_speed / SPRINT) if (moving or sliding) else 0.0
 
 	# ---- vertical (jump + gravity, analytic terrain Y) ----
+	# PRD-007 alcance 4: cliffs blockout. Una celda elevada a la que NO llegaste
+	# desde arriba (subida > step máx respecto a la Y de inicio de frame) es un
+	# MURO: revierte el paso horizontal para no treparla a pie. Aterrizar desde el
+	# Springboard (descendiendo, from_y ≈ tapa) no dispara el muro → aterrizas.
+	# Gateado por el método de escena → cero efecto en escenas sin cliffs.
+	if scene.has_method("is_cliff_wall") and scene.is_cliff_wall(_frame_start.y, position.x, position.z):
+		position.x = _frame_start.x
+		position.z = _frame_start.z
+
 	var ground_y: float = 0.0
 	if scene.has_method("get_height"):
 		ground_y = scene.get_height(position.x, position.z)
