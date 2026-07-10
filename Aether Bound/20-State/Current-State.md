@@ -45,6 +45,17 @@ updated: 2026-07-10
   VoBo del director de las capturas. Dagna queda visualmente desfasada hasta
   C6b (sus piezas firma se posicionan para el cuerpo viejo — se re-monta sobre
   el cuerpo enano real).**
+- **C6a-r2 ✅ CÓDIGO (2026-07-10, feedback del director: "que los cuerpos dejen
+  de componerse de puros círculos").** Los volúmenes pasan de cápsulas/esferas-
+  globo a masas que ESTRECHAN como la lámina (`CylinderMesh` cónico): tronco =
+  taper continuo pecho ancho→cintura (hombros cuadrados, el jerkin retoma el
+  mismo radio); brazo = deltoide→codo→muñeca fina + **mano de MITÓN** (caja con
+  curl, no esfera); pierna = muslo masivo→rodilla, pantorrilla→tobillo; bota
+  con puntera (el pie tiene dirección); cuello con taper desde el trapecio.
+  Las únicas esferas que quedan son articulaciones (deltoide/codo/rodilla) y
+  el cráneo (C6c). Pauldron re-asentado al deltoide nuevo. Medidas estables
+  (7.58 cabezas) y QA visual completo ALL_PASS de nuevo. Capturas en
+  `godot/test_out/anatomy_*.png`.
 - **B15 ✅ (2026-07-06): benchmark observacional medido** — los 3 clips
   del director analizados frame a frame → [[Benchmark Biomecánico]] §v3.
   Números clave para el alcance 2: hit-stop 2f normal / 3f pesado

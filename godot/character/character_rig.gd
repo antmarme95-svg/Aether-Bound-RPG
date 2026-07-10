@@ -248,9 +248,9 @@ func _build() -> void:
 	hips.position.y = 0.95
 	body.add_child(hips)
 
-	pelvis = _box_mesh(0.28, 0.15, 0.17, dark_leather_mat)
+	pelvis = _box_mesh(0.26, 0.16, 0.15, dark_leather_mat)
 	pelvis.name = "pelvis"
-	pelvis.position.y = -0.02
+	pelvis.position.y = -0.01
 	hips.add_child(pelvis)
 	_add_outline_pass(pelvis, Color("#3a2d22"))
 
@@ -270,9 +270,12 @@ func _build() -> void:
 		leg.position = Vector3(side * 0.09, 0.0, 0.0)
 		hips.add_child(leg)
 
-		# Muslo atlético (lámina: la masa de la pierna vive arriba)
-		var thigh = _capsule_mesh(0.078, 0.27, dark_leather_mat)
-		thigh.position.y = -0.21
+		# C6a-r2 (feedback del director: "que dejen de ser puros círculos"):
+		# la pierna es un volumen que ESTRECHA como en la lámina — muslo
+		# masivo arriba → rodilla, pantorrilla → tobillo. Cilindros cónicos,
+		# no cápsulas-globo; la rodilla es la única bola (articulación).
+		var thigh = _cylinder_mesh(0.088, 0.058, 0.40, dark_leather_mat)
+		thigh.position.y = -0.22
 		leg.add_child(thigh)
 		_add_outline_pass(thigh, Color("#3a2d22"))
 
@@ -281,16 +284,25 @@ func _build() -> void:
 		knee.position.y = -0.45
 		leg.add_child(knee)
 
-		var shin = _capsule_mesh(0.06, 0.26, dark_leather_mat)
-		shin.position.y = -0.2
+		var knee_cap = _sphere_mesh(0.052, dark_leather_mat)
+		knee_cap.position.y = 0.0
+		knee.add_child(knee_cap)
+		_add_outline_pass(knee_cap, Color("#3a2d22"))
+
+		var shin = _cylinder_mesh(0.056, 0.038, 0.38, dark_leather_mat)
+		shin.position.y = -0.20
 		knee.add_child(shin)
 		_add_outline_pass(shin, Color("#3a2d22"))
 
-		# Pie/bota con proyección real al frente (el pie del puerto era un taco)
-		var boot = _box_mesh(0.11, 0.085, 0.22, leather_mat)
-		boot.position = Vector3(0.0, -0.45, 0.05)
+		# Bota: caña + puntera (el pie tiene DIRECCIÓN, no es un taco)
+		var boot = _box_mesh(0.10, 0.085, 0.19, leather_mat)
+		boot.position = Vector3(0.0, -0.4525, 0.02)
 		knee.add_child(boot)
 		_add_outline_pass(boot, Color("#5b4632"))
+		var toe = _box_mesh(0.092, 0.05, 0.07, leather_mat)
+		toe.position = Vector3(0.0, -0.47, 0.125)
+		knee.add_child(toe)
+		_add_outline_pass(toe, Color("#5b4632"))
 
 		# Store sub-nodes in metadata (mirrors JS leg.userData)
 		leg.set_meta("knee", knee)
@@ -313,16 +325,17 @@ func _build() -> void:
 	upper_spine.position.y = UPPER_SPINE_Y
 	spine.add_child(upper_spine)
 
-	# PECHO: capsula corta y ancha, alta (masa entre cintura y hombros).
-	# El V-taper base (CHEST_X/Z) lo aplica _apply_build sobre el peso/clase.
-	torso = _capsule_mesh(0.17, 0.14, skin_mat)
-	torso.position.y = 0.12
+	# C6a-r2: el tronco es UN taper continuo como en la lámina — pecho ancho
+	# arriba (hombros cuadrados, no globo) que estrecha hacia la cintura; la
+	# cintura (jerkin) retoma el MISMO radio y asienta sobre la pelvis. El
+	# V-taper elíptico (CHEST_X/Z) lo aplica _apply_build sobre peso/clase.
+	torso = _cylinder_mesh(0.165, 0.115, 0.36, skin_mat)
+	torso.position.y = 0.13
 	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
 
-	# CINTURA (jerkin): recogida — cierra el taper del atleta sobre la pelvis.
-	jerkin = _capsule_mesh(0.128, 0.16, leather_mat)
-	jerkin.position.y = 0.15
+	jerkin = _cylinder_mesh(0.115, 0.128, 0.22, leather_mat)
+	jerkin.position.y = 0.16
 	spine.add_child(jerkin)
 	_add_outline_pass(jerkin, Color("#5b4632"))
 
@@ -344,8 +357,15 @@ func _build() -> void:
 		arm.position = Vector3(side * SHOULDER_X, SHOULDER_Y, 0.0)
 		upper_spine.add_child(arm)
 
-		var upper = _capsule_mesh(0.06, 0.2, skin_mat)
-		upper.position.y = -0.14
+		# C6a-r2: brazo que ESTRECHA — deltoide (bola de hombro) → codo →
+		# muñeca fina → mano de MITÓN (caja, no esfera). Como la lámina.
+		var deltoid = _sphere_mesh(0.062, skin_mat)
+		deltoid.position.y = -0.01
+		arm.add_child(deltoid)
+		_add_outline_pass(deltoid, Color("#f2b186"))
+
+		var upper = _cylinder_mesh(0.058, 0.042, 0.28, skin_mat)
+		upper.position.y = -0.15
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
 
@@ -354,14 +374,20 @@ func _build() -> void:
 		elbow.position.y = -0.32   # codo en la línea del ombligo (1.23)
 		arm.add_child(elbow)
 
-		var fore = _capsule_mesh(0.05, 0.19, skin_mat)
-		fore.position.y = -0.125
+		var elbow_cap = _sphere_mesh(0.042, skin_mat)
+		elbow_cap.position.y = 0.0
+		elbow.add_child(elbow_cap)
+		_add_outline_pass(elbow_cap, Color("#f2b186"))
+
+		var fore = _cylinder_mesh(0.048, 0.030, 0.26, skin_mat)
+		fore.position.y = -0.13
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
 
 		# Mano a la entrepierna (~0.95) con el brazo caído — canon de 4 cabezas
-		var hand = _sphere_mesh(0.058, skin_mat)
-		hand.position.y = -0.29
+		var hand = _box_mesh(0.055, 0.10, 0.06, skin_mat)
+		hand.position.y = -0.30
+		hand.rotation.x = -0.12   # curl relajado de la lámina
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
 
@@ -377,15 +403,17 @@ func _build() -> void:
 	# Local position (0, 0.03, 0) = just above the arm root = top of shoulder cap.
 	var arm_r: Node3D = arms[1]
 	var pauldron = Node3D.new()
-	pauldron.position = Vector3(0.0, 0.03, 0.0)
+	# C6a-r2: asentado SOBRE el deltoide nuevo (r 0.062) — antes flotaba al
+	# nivel de la oreja, dimensionado para el hombro-globo del puerto.
+	pauldron.position = Vector3(0.0, 0.015, 0.0)
 	pauldron.rotation.z = -0.12
-	var plate_a = _box_mesh(0.13, 0.035, 0.14, metal_mat)
+	var plate_a = _box_mesh(0.115, 0.032, 0.125, metal_mat)
 	_add_outline_pass(plate_a, Color("#6f7a88"))
-	var plate_b = _box_mesh(0.10, 0.03, 0.11, metal_mat)
-	plate_b.position.y = 0.04
+	var plate_b = _box_mesh(0.088, 0.028, 0.098, metal_mat)
+	plate_b.position.y = 0.036
 	_add_outline_pass(plate_b, Color("#6f7a88"))
-	var stud = _box_mesh(0.035, 0.02, 0.035, accent_glow_mat)
-	stud.position.y = 0.065
+	var stud = _box_mesh(0.03, 0.018, 0.03, accent_glow_mat)
+	stud.position.y = 0.058
 	pauldron.add_child(plate_a)
 	pauldron.add_child(plate_b)
 	pauldron.add_child(stud)  # stud = glow, no outline
@@ -420,9 +448,9 @@ func _build() -> void:
 	left_elbow.add_child(prosthetic)
 
 	# ---------- head ---------- (colgada del torácico)
-	# Cuello visible (lámina: el atleta tiene cuello, el chibi no lo tenía)
-	var neck = _capsule_mesh(0.045, 0.09, skin_mat)
-	neck.position.y = NECK_Y
+	# Cuello visible con taper (lámina: nace ancho del trapecio, sube fino)
+	var neck = _cylinder_mesh(0.044, 0.054, 0.13, skin_mat)
+	neck.position.y = 0.375
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
 

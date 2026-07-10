@@ -1,5 +1,13 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r2: volúmenes de lámina (feedback del director)
+Feedback en vivo sobre las capturas de C6a: "que los cuerpos dejen de componerse de
+puros círculos". Los volúmenes pasan a masas cónicas (`CylinderMesh` con taper):
+tronco pecho→cintura continuo con hombros cuadrados, brazos deltoide→muñeca fina,
+manos de mitón (caja), muslo→rodilla y pantorrilla→tobillo, botas con puntera,
+cuello desde el trapecio. Esferas solo en articulaciones + cráneo (C6c). Pauldron
+re-asentado. Medidas estables (7.58 cabezas); QA visual completo ALL_PASS.
+
 ## [2026-07-10] feature | Ventana C6/C4 abierta — C6a: humano 7.5 cabezas bajo Sobel
 Ventana C6/C4 arrancada (branch `feat/c6-anatomy-rework`). Decisiones del director:
 pies IK diferidos; **el rework se maneja únicamente en estilo Sobel** (la regla de
