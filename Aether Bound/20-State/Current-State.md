@@ -268,8 +268,19 @@ updated: 2026-07-09
   test_core/autotest_combat/tmp_springboard/tmp_springboard_directed/slice/ui
   ALL_PASS. **FPS ≥60 con margen enorme** (577–583 en autotest; +3 mallas estáticas
   sobre el greybox de 177 fps frío del alcance 5; el número definitivo se confirma
-  en el playtest del director, la corrida fría natural). **Pendiente: playtest del
-  director (feel) → CIERRA la Fase 1.**
+  en el playtest del director, la corrida fría natural).
+- **Fix del corte del salto ✅ CÓDIGO (2026-07-09, feedback del director):** Boris
+  probó el Gate 1 — "se siente bien pero al llegar a la altura de la cornisa como
+  que se cortó el salto". Diagnóstico: NO era gráfico — el aterrizaje analítico
+  atrapaba al jugador al ENTRAR al footprint subiendo (por debajo de la tapa) y
+  mataba `vel_y`. Fix: (a) el suelo **solo atrapa descendiendo** (`vel_y ≤ 0` en el
+  snap del `player_controller`) → el arco del Springboard completa hasta el ápice;
+  (b) muro del cliff más firme (`LEDGE_STEP_MAX` 0.5→0.15) → solo entras a la meseta
+  desde arriba, sin trepar raspando la cara. En llano no cambia nada (nunca subes
+  hacia el suelo). Gate ampliado con **F2** (regresión permanente del corte: lanzarse
+  pegado al cliff → pico 5.99 ≥ 5.0, antes ~3.3). QA: gate + test_core/locomotion +
+  autotest_combat/slice/ui + tmp_springboard/tmp_springboard_directed ALL_PASS.
+  **Pendiente: re-verificación del director del feel → CIERRA la Fase 1.**
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`

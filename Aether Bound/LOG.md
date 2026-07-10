@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] feature | Gate 1 — fix del corte del salto (feedback del director)
+Boris probó el Gate 1: **"se siente bien pero al llegar a la altura de la cornisa,
+como que se cortó el salto"** (lo dio por posible bug gráfico). Diagnóstico: NO era
+gráfico. Como la Y del jugador es analítica, al ENTRAR al footprint de la meseta
+**subiendo** (pies por debajo de la tapa 3.5 m), el aterrizaje lo clavaba ahí y
+mataba `vel_y` → el impulso restante se perdía. Fix en dos partes:
+1. **Aterrizaje descend-only** (`player_controller`): el suelo solo ATRAPA con
+   `vel_y ≤ 0`. Así el arco del Springboard completa hasta el ápice y aterriza
+   cayendo. En llano no cambia nada (nunca se sube hacia el suelo).
+2. **Muro del cliff más firme** (`LEDGE_STEP_MAX` 0.5→0.15): solo entras a la meseta
+   con los pies casi a la altura de la tapa (i.e., desde arriba), sin "trepar
+   raspando" la cara subiendo.
+Gate ampliado con **F2** (regresión permanente): lanzarse pegado al cliff debe
+llegar a la altura plena — pico **5.99** (antes del fix ~3.3, el corte). QA:
+autotest_springboard + test_core/test_locomotion + autotest_combat/slice/ui +
+tmp_springboard/tmp_springboard_directed ALL_PASS. Merge a master estilo PR.
+**Pendiente: re-verificación del director → CIERRA la Fase 1.**
+
 ## [2026-07-09] feature | PRD-007 alcance 4 — Gate 1 (código): cornisa vía Springboard
 Feature Loop. Cierra la construcción de la **Fase 1** (falta solo el playtest del
 director). Tres piezas:
