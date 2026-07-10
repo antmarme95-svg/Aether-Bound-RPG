@@ -450,7 +450,8 @@ func _build() -> void:
 		var f_len: Array = [0.067, 0.076, 0.070, 0.055]
 		for fi in range(4):
 			var f_l: float = f_len[fi]
-			var finger = _box_mesh(0.012, f_l, 0.042, skin_mat)
+			# r5e (director): dedos 10% más delgados (sección 0.0108×0.038)
+			var finger = _box_mesh(0.0108, f_l, 0.038, skin_mat)
 			finger.position = Vector3(-float(side) * float(f_off[fi]), -0.027 - f_l * 0.5, 0.006)
 			finger.rotation.x = -0.22   # los dedos doblan más que la palma
 			hand.add_child(finger)

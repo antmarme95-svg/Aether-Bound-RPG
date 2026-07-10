@@ -1,5 +1,10 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | C6a-r5e: dedos 10% más delgados
+Tuning del director tras aprobar la tenar ("listo"): los cuatro dedos (no el
+pulgar) 10% más delgados en sección (0.0108×0.038) — las ranuras crecen y la
+tinta Sobel de las separaciones respira mejor. QA biomech/combat ALL_PASS.
+
 ## [2026-07-10] feature | C6a-r5d: el pulgar nace de la tenar (ref. anatómica)
 El director pasó referencia anatómica (Cleveland Clinic, vista palmar): el
 pulgar nace de la eminencia tenar a media palma, no del borde inferior.
