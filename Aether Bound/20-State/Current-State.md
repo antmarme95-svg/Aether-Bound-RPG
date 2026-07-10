@@ -131,6 +131,21 @@ updated: 2026-07-10
   el "prop" era el pauldron — oculto en el banco de anatomía. LOW 9 (piel
   cálida): parcialmente iluminación dawn del banco; A/B en luz neutra
   pendiente para el lock de textura (Fase 4). QA completo ALL_PASS.
+- **📋 Review v0.4 del director (2026-07-10) → M9-r4 ✅ CÓDIGO + QA VERDE.**
+  Review archivada (`90-Raw/reviews/Character-Head-Review-v0.4.md`; overall
+  6/10; 5 bloqueantes para aspirar a Approved). Respuesta: **(1) pelo
+  reconstruido** — lección técnica: las cajas no abrazan esferas; la solución
+  es la CONCHA elipsoide ajustada que se auto-recorta contra el cráneo
+  (emerge ~7 mm arriba/atrás, se hunde en orejas/nuca baja → fade natural sin
+  borde-repisa) + quiff/cresta de cajas hundidas como acentos; **la nuca del
+  jugador ya lee corte corto, no casco**. **(2) orejas** visibles en perfil/
+  espalda. **(3) cuello −30%** (0.10, base 0.075) — bloqueante promovido
+  CERRADO. **(4) cowl** documentado 3ª vez (base-body modular; pendiente
+  ratificación EXPLÍCITA del director). **(5) plano flotante** eliminado (era
+  la cresta de la construcción vieja; quedan 2 esquinitas del quiff arriba,
+  anotadas). **(M6)** ambas marcas como geometría recta (patrón 6 del atlas
+  intencionalmente vacío — el _slash escalonaba). QA biomech/combat/slice
+  ALL_PASS. **Pendiente: VoBo del turnaround r4; ratificación del cowl.**
 - **📋 Review v0.3 del director (2026-07-10) → M9-r3 ✅ CÓDIGO + QA VERDE.**
   Review archivada (`90-Raw/reviews/Character-Head-Review-v0.3.md`; overall
   5.5/10, cierres verificados de ronda 1: pelo castaño, ojos on-model "no

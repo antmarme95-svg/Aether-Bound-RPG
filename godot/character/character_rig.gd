@@ -23,8 +23,8 @@ class_name CharacterRig extends Node3D
 # CRITICAL 1 silueta atlética (hombros +12%, cintura menos, pecho más),
 # CRITICAL 2 cabeza menor, CRITICAL 3 cuello largo + hombros más bajos.
 const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos cabezón)
-const HEAD_Y: float = 0.545          # pivote de cabeza (r3: baja con el cuello corto)
-const NECK_Y: float = 0.362   # M9-r3 (review v0.3 M7): cuello corto, base ancha
+const HEAD_Y: float = 0.505          # pivote de cabeza (v0.4 H3: cuello −30%, PROMOVIDO)
+const NECK_Y: float = 0.352   # v0.4 H3: cuello −30% (tercera ronda — promovido)
 const SHOULDER_X: float = 0.262      # media distancia entre hombros (review +12%)
 const SHOULDER_Y: float = 0.29       # línea de hombros MÁS BAJA (review: cuello)
 const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
@@ -536,9 +536,10 @@ func _build() -> void:
 	left_elbow.add_child(prosthetic)
 
 	# ---------- head ---------- (colgada del torácico)
-	# Cuello con taper — v0.1 pedía que EXISTIERA, v0.2/v0.3 lo acortan y
-	# ensanchan la BASE hacia el trapecio (r3: 0.13, base 0.068).
-	var neck = _cylinder_mesh(0.048, 0.068, 0.13, skin_mat)
+	# Cuello con taper — v0.1 pedía que EXISTIERA; v0.2/v0.3/v0.4 lo fueron
+	# acortando. v0.4 H3 (PROMOVIDO, 3ª ronda): −30% → 0.10 de largo, base
+	# 0.075 fundida al trapecio; la cabeza baja con él (HEAD_Y 0.505).
+	var neck = _cylinder_mesh(0.050, 0.075, 0.10, skin_mat)
 	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
@@ -1443,15 +1444,24 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		# 20% más oscuro: el unshaded puro brilla más que el mismo color
 		# blendeado en el atlas de la mejilla — así emparejan.
 		fm_mat.albedo_color = paint_color.darkened(0.18)
-		_face_mark = _box_mesh(0.056, 0.013, 0.010, fm_mat)
+		# v0.4 M6: AMBAS marcas como geometría (la de mejilla por atlas
+		# salía como gusano segmentado — el _slash escalona) — franjas
+		# rectas de ancho constante, ángulos paralelos, mismo valor.
+		_face_mark = MeshInstance3D.new()
 		_face_mark.name = "face_paint_mark"
-		# PROUD de la superficie del cráneo (con z al ras solo asomaba
-		# ~1 mm y la tinta Sobel se lo comía — bug M9-r3): centro 8 mm
-		# fuera de la elipse, profundidad 10 mm hacia adentro.
-		# Lado OPUESTO a la mejilla (concept: frente derecha, mejilla izq).
-		_face_mark.position = Vector3(-0.050, 0.058, 0.125)
-		_face_mark.rotation.z = 0.42    # diagonal ceja→sien
-		_face_mark.rotation.y = -0.25   # abraza la curva de la sien
+		var fm_front = _box_mesh(0.056, 0.013, 0.006, fm_mat)
+		# Frente, lado derecho (−x): 3–4 mm proud (a 8 mm leía como
+		# banderita flotante; al ras la tinta Sobel se lo comía).
+		fm_front.position = Vector3(-0.050, 0.055, 0.121)
+		fm_front.rotation.z = 0.42
+		fm_front.rotation.y = -0.25
+		_face_mark.add_child(fm_front)
+		var fm_cheek = _box_mesh(0.050, 0.013, 0.010, fm_mat)
+		# Mejilla, lado izquierdo (+x): franja recta bajo el ojo.
+		fm_cheek.position = Vector3(0.060, -0.030, 0.112)
+		fm_cheek.rotation.z = 0.42
+		fm_cheek.rotation.y = 0.45
+		_face_mark.add_child(fm_cheek)
 		head.add_child(_face_mark)
 
 	# ---- hair swap ----

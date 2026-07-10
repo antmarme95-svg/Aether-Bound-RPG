@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] ingest+feature | Review v0.4 archivada + M9-r4: la nuca del jugador
+Cuarta review (v0.4, overall 6/10, 5 bloqueantes) → archivada. r4 responde:
+(1) PELO reconstruido — el hallazgo técnico de la ronda: las cajas no pueden
+abrazar una esfera (tablones r4a, occipucio enterrado r4b); la solución es una
+CONCHA elipsoide ajustada que se auto-recorta contra el cráneo (emerge ~7 mm
+en parietales/coronilla/occipucio, se hunde a la altura de orejas y nuca baja
+→ hairline que SUBE sola en las sienes, fade natural, cero borde-repisa) +
+quiff/cresta de cajas hundidas como acentos angulares. La nuca — el ángulo del
+jugador — ya lee corte corto con fade, no casco. (2) Orejas visibles en perfil
+y espalda ✓. (3) Cuello −30% (0.10, base 0.075; HEAD_Y baja con él) —
+bloqueante promovido CERRADO. (4) Cowl: documentado por 3ª vez (base-body
+modular; pendiente ratificación del director en su respuesta). (5) El plano
+flotante era la cresta/quiff de la construcción anterior — eliminado con la
+reconstrucción (quedan 2 esquinitas del quiff en la silueta superior,
+anotadas). (M6) Ambas marcas como GEOMETRÍA recta (el _slash del atlas
+escalonaba la mejilla en gusano); patrón 6 del atlas intencionalmente vacío.
+QA: biomech/combat/slice ALL_PASS. Turnaround completo regenerado.
+
 ## [2026-07-10] feature | M9-r3 CERRADO: quiff, marcas bilaterales, cráneo compacto — QA verde
 Continuación tras la caída del clasificador: bench corrido y convergido en
 varias sub-rondas. (1) Quiff angular contenido (la 1ª pasada leía sombrero de

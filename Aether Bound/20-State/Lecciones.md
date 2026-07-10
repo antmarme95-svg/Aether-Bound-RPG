@@ -142,6 +142,15 @@ updated: 2026-07-08
   legal ANTES del pase de constraints → no se registra nada → gate flaky
   (autotest_biomech 2/3 fallos). Forzar en loop (~6 frames): los frames HELD
   del pose stepping no corren el settle y el clamp ve la violación cruda.
+- **Pelo low-poly sobre un cráneo esférico: las CAJAS no pueden abrazarlo**
+  (o hacen tablones flotantes o se entierran) **y una esfera-casquete siempre
+  lee casco/hongo** (borde-repisa de 360°). La construcción correcta es una
+  CONCHA elipsoide AJUSTADA que se auto-recorta contra el cráneo: dimensionar
+  sus semiejes para emerger ~7 mm donde hay pelo (parietales/coronilla/
+  occipucio) y hundirse bajo la superficie donde hay piel (orejas, nuca baja)
+  — la línea del pelo sube sola en las sienes (fade) y el borde es la
+  intersección de las dos superficies, no una repisa. Los acentos angulares
+  (quiff/cresta) van como cajas HUNDIDAS en la concha.
 - **El mapeo v del atlas de la cabeza se comprime NO-linealmente hacia la
   ceja** (esfera: v lineal en latitud, la cara vive cerca del ecuador): franjas
   de FRENTE por textura no son posicionables con confianza — van como
