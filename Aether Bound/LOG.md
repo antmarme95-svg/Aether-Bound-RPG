@@ -1,5 +1,14 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-09] playtest | PRD-007 alcance 2b — Springboard DIRIGIDO APROBADO
+Playtest del director en `Start-Playtest-Greybox.bat`. Veredicto: **"ambos se
+sienten muy bien, nada que ajustar"** — los dos modos (reactivo `R` solo +
+dirigido `RMB` apunta / `R` ordena) validados a nivel feel. El esquema de control
+nuevo confirmado en vivo (RMB apunta, guardia/parry en el botón lateral trasero
+`XBUTTON1`, SPACE salto). **Sin cambios de tuning:** rango 11 m, cooldown 4.5 s,
+empuje 3 m/s y altura quedan como están. Playtest Loop del 2b CERRADO. Siguiente:
+alcance 3 (IA de combate mínima de Dagna) → alcance 4 = Gate 1.
+
 ## [2026-07-09] feature | PRD-007 alcance 2b — Seismic Springboard DIRIGIDO (código)
 Feature Loop sobre el spec RATIFICADO (Extensión del [[PRD-007 Dagna aliada +
 Seismic Springboard T1]]). Añade **colocación** sobre el springboard reactivo del

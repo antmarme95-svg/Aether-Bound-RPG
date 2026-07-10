@@ -221,9 +221,12 @@ updated: 2026-07-09
   `tmp_springboard_directed.gd` ALL_PASS (clamp 11.0 m, onda en punto err 0.45 m,
   Dagna viaja 5.9 m, arco dirigido **8.91 m vs 4.67 m** plano = +4.24 m, cooldown
   activo/decae) + captura `springboard_directed.png`; regresión tmp_springboard /
-  autotest_combat / test_core / autotest_slice / autotest_ui ALL_PASS. **Pendiente:
-  playtest del director** (rango/cooldown/empuje/altura a tunear; verificar que
-  `XBUTTON1` = botón trasero físico — swappable a `XBUTTON2` si sale invertido).
+  autotest_combat / test_core / autotest_slice / autotest_ui ALL_PASS.
+  **✅ PLAYTEST DEL DIRECTOR APROBADO (2026-07-09): "ambos se sienten muy bien,
+  nada que ajustar".** Los dos modos (reactivo + dirigido) y el esquema de control
+  nuevo (RMB apunta, guardia en `XBUTTON1`, SPACE salto) validados en vivo. Sin
+  tuning: rango 11 m / cooldown 4.5 s / empuje 3 m/s quedan como están. Playtest
+  Loop del 2b CERRADO.
 - **Dagna gráfica en Godot ✅ (2026-07-07): pipeline lámina → config →
   rig PROBADO** (entregable extra pedido por el director para *liberar su
   diseño*). Sistema nuevo reutilizable: `godot/data/characters.gd`
@@ -267,11 +270,12 @@ updated: 2026-07-09
      hacia el punto sobre tu momentum); cooldown 4.5 s, Dagna deja su slot al
      viajar. Los dos modos conviven (reactivo + dirigido). Guardia/parry mudada a
      `XBUTTON1` (botón lateral trasero). Sonda `tmp_springboard_directed` ALL_PASS.
-     **SIGUIENTE: playtest del director del 2b** (tunear rango/cooldown/empuje +
-     confirmar mapeo del botón lateral) — arranca con `Start-Playtest-Greybox.bat`.
-     **Luego: alcance 3** (IA de combate mínima de Dagna) y **alcance 4 = Gate 1**
-     (cornisa solo alcanzable vía Springboard + `autotest_springboard` + ≥60 FPS
-     frío).
+     **✅ PLAYTEST APROBADO (2026-07-09): "ambos muy bien, nada que ajustar"** —
+     Playtest Loop del 2b CERRADO, sin tuning pendiente. **SIGUIENTE A CONSTRUIR:
+     alcance 3** (IA de combate mínima de Dagna: muralla-block + defensa propia +
+     pounds autónomos en contexto — el pound de IA que los alcances 1–2 dejaron
+     solo-Bond) y **alcance 4 = Gate 1** (cornisa solo alcanzable vía Springboard +
+     `autotest_springboard` + ≥60 FPS frío).
   1b. El **pipeline de personajes** (`characters.gd` + `signature.gd`) ya
      está listo para replicar con los otros 8 pivotes cuando toque
      (Fase 4 / concept art). Dagna es el molde.
@@ -330,8 +334,8 @@ updated: 2026-07-09
   ya existentes se versionaron también (Seismic Springboard, Traición_
   Dagna, Fenotipos+Speck, El primer viso de la muda).
 - **Branch actual:** `master` (al cierre de la sesión 2026-07-09: PRD-007 alcance
-  **2b —Springboard DIRIGIDO— construido en código y mergeado**; pendiente el
-  playtest del director del 2b). `autotest_combat.gd` es un gate permanente.
+  **2b —Springboard DIRIGIDO— construido, mergeado y PLAYTEST APROBADO**; sin
+  tuning pendiente). `autotest_combat.gd` es un gate permanente.
   Lanzador de doble clic para el playtest en el greybox:
   `Start-Playtest-Greybox.bat` (raíz). Sondas temporales `tests/tmp_*.gd`
   (step, vignette, reactions, duel_pair, spawnflag, timefeel, pressure,

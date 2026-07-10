@@ -128,9 +128,10 @@ alcanzada) + gate de FPS ≥60 frío.
 > 3 m/s hacia el punto), cooldown 4.5 s + rango + costo de dejar el slot. **Nota
 > de control (decisión del director):** `RMB` pasó a apuntar y la guardia/parry se
 > mudó al **botón lateral trasero del mouse (`XBUTTON1`)**; `SPACE` sigue siendo
-> salto. Sonda `tmp_springboard_directed.gd` ALL_PASS. **Pendiente: playtest del
-> director** (rango/cooldown/empuje/altura a tunear; confirmar el mapeo físico del
-> botón lateral).
+> salto. Sonda `tmp_springboard_directed.gd` ALL_PASS. **✅ PLAYTEST DEL DIRECTOR
+> APROBADO (2026-07-09): "ambos se sienten muy bien, nada que ajustar"** — los dos
+> modos y el esquema de control validados en vivo; sin tuning pendiente (rango 11 m
+> / cooldown 4.5 s / empuje 3 m/s quedan como están). Alcance 2b CERRADO.
 
 **Insight del playtest:** el problema real no era el ángulo (el arco ya emerge de
 tu momentum, sembrado en `_air_vel`), sino que **no puedes colocar la onda**: está
