@@ -1,5 +1,35 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] wip+blocked | M10-r3/r4: peinado "príncipe" (PRD ribbon) — banco colgado, cierre de sesión
+Boris pidió melena estilo Príncipe de Cuento (ref. Shrek), tono castaño
+original, "150 mechones". r3 (150 tablillas rectas al radio exterior, 2
+familias: cortina + tejas de domo) completó pero falló en revisión visual:
+orejeras tipo casco de frente + borde-repisa recto de nuca — mismo defecto que
+`frontier_crop` ya había resuelto. Boris entregó un PRD técnico completo
+("Cabello Estilizado Ondulado — Estilo Príncipe de Cuento"): construcción por
+capas de mechones-CINTA (ribbon, ancho variable raíz→punta, curva en "S",
+normal facetada por segmento — no cilindro ni tablón recto), 20–26 mechones en
+4 capas (base craneal / flequillo-coronilla 6–8 / laterales sien-oreja 8–10 /
+sueltos que rompen silueta 4–6). Este número (20–26) reemplaza el "150"
+original — Boris lo confirmó como refinamiento válido. r4 implementa el PRD:
+helpers nuevos `_ribbon`/`_s_spine` en `hair_library.gd` (cadena de cajas
+ahusadas siguiendo una curva en S) + `_hair_prince_curtain` reescrito con 22
+mechones en 4 capas. **BLOQUEADO al cierre:** `tmp_anatomy.gd` (windowed) y
+`test_core.gd` (headless) se cuelgan o quedan extremadamente lentos en 3+
+corridas limpias (proceso mata todo rastro previo confirmado, CPU real
+consumida — no deadlock clásico de GDScript). Revisión estática de
+`_ribbon`/`_s_spine` no encontró loops sin cota ni normalizaciones a NaN.
+`hair=11` no es el default (`PhenotypeData.default_phenotype()` usa `hair=0`)
+y ningún gate automatizado lo toca — CERO riesgo para test_core/
+autotest_biomech/combat/slice existentes. Sospecha sin confirmar: contención
+de recursos (Epic Games Launcher/EA Desktop/Xbox App corriendo en paralelo,
+~9 GB RAM fuera de Godot) — consistente con la fragilidad térmica ya anotada
+de la laptop RTX 2060. Código commiteado como WIP (no como ronda cerrada, no
+mostrado a Boris como terminado). Aparte: se evaluó extender la reescritura
+"ribbon" al estilo 5 (`_hair_curtain_long`, mismo defecto de tablones planos,
+actualmente sin uso en el pipeline canónico) — Boris de acuerdo en NO tocarlo
+ahora, queda anotado como deuda técnica sin urgencia.
+
 ## [2026-07-10] feature | M10-r2: 31 mechones angulares (pedido del director)
 El director pidió ~25–35 mechones para acercar el pelo a la lámina. Sistema
 procedural DETERMINISTA sobre la concha: 4 filas de latitud (cresta/corona/

@@ -182,6 +182,17 @@ updated: 2026-07-08
 - Regenerar el asset de follaje si cambia la sprite sheet:
   `--headless --path godot --script res://tools/process_clump.gd`.
 - Gate de rendimiento: **≥60 FPS** en The Wilds.
+- **Cuelgues/lentitud extrema en corridas limpias (2026-07-10):** con la
+  laptop cargada de apps de fondo (Epic Games Launcher, EA Desktop, Xbox App
+  — ~9 GB RAM fuera de Godot), tanto `tmp_anatomy.gd` (windowed) como
+  `test_core.gd` (`--headless`) se colgaron 3+ veces seguidas con procesos
+  recién lanzados y limpios (sin proceso huérfano previo — verificado con
+  `tasklist`/`taskkill //T`). El proceso consumía CPU real (no un deadlock:
+  ver CPU-time creciente vía `Get-Process -Id X | Select CPU`), pero nunca
+  llegaba a imprimir salida. Antes de sospechar del código (revisar loops sin
+  cota / NaN primero, luego esto): cerrar las apps de fondo pesadas y
+  reintentar en limpio — coincide con la fragilidad térmica ya conocida de la
+  RTX 2060 de esta laptop.
 
 ## Tiering de modelos (orquestación)
 

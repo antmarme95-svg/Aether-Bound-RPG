@@ -13,6 +13,36 @@ updated: 2026-07-10
   Dagna), Gate 1 aprobado por el director. **EN CURSO: ventana C6/C4 (rework
   anatómico + pase de poses, branch `feat/c6-anatomy-rework`)** → luego Fase 2
   del [[Plan-de-Produccion]].
+- **M10-r3/r4 🔄 EN PROGRESO, uncommitted (2026-07-10, cierre de sesión): peinado
+  "príncipe" (ref. visual Shrek, melena a la mandíbula, tono castaño original).**
+  r3 (150 tablillas rectas ancladas al radio exterior del cráneo) se descartó en
+  revisión visual — orejeras tipo casco de frente + borde-repisa recto de nuca,
+  el mismo defecto que ya se había corregido en `frontier_crop`. El director
+  entregó un PRD técnico ("Cabello Estilizado Ondulado — Estilo Príncipe de
+  Cuento"): construcción por CAPAS de mechones-cinta (ribbon con ancho variable,
+  curva en "S", normal facetada), no cilindros ni tablones rectos — base craneal
+  + flequillo/coronilla (6–8) + laterales sien/oreja (8–10) + sueltos que rompen
+  silueta (4–6), total 20–26. r4 implementa esto: helpers nuevos `_ribbon` /
+  `_s_spine` en `hair_library.gd` (cadena de cajas ahusadas siguiendo una curva
+  en S por mechón) y `_hair_prince_curtain` reescrito con 22 mechones en 4
+  capas siguiendo el PRD al pie de la letra. **BLOQUEADO: el banco
+  `tests/tmp_anatomy.gd` (windowed) y hasta `test_core.gd` (headless) se
+  quedaron colgados/extremadamente lentos en 3+ corridas limpias esta sesión**
+  — el proceso consume CPU real (no es un deadlock de GDScript; revisión
+  estática de `_ribbon`/`_s_spine` no encontró loops sin cota ni vectores que
+  normalicen a NaN) pero nunca llega a imprimir ni completar en varios minutos.
+  `hair=11` NO es el default de `PhenotypeData` (`default_phenotype()` usa
+  `hair=0`) y ningún otro gate automatizado lo invoca, así que **no hay riesgo
+  de que esto rompa test_core/autotest_biomech/combat/slice** — pero sí impide
+  la verificación visual de este estilo antes de mostrárselo al director.
+  Sospecha (sin confirmar): contención de recursos de la laptop — Epic Games
+  Launcher/EA Desktop/Xbox App corrían en paralelo esta sesión (~9 GB de RAM
+  fuera de Godot), consistente con la fragilidad térmica ya anotada en
+  [[Lecciones]]. **Próxima sesión: cerrar esas apps, relanzar el banco en
+  limpio, y si persiste, bisectar `_hair_prince_curtain` capa por capa
+  (empezar solo con la concha + 1 mechón) para aislar la causa real.** Código
+  dejado tal cual (commit WIP, no como ronda cerrada) — NO mostrar a Boris como
+  terminado hasta que el banco corra limpio y las capturas se revisen.
 - **Ventana C6/C4 ABIERTA (2026-07-10).** Decisiones del director: pies IK
   DIFERIDOS (el greybox es plano; pagan en terreno, Fase 2+); **el rework se
   maneja ÚNICAMENTE en estilo Sobel** — "línea de tinta nítida de cerca;

@@ -105,6 +105,58 @@ static func _braid(mat: Material, segments: int,
 		r *= 0.88
 	return g
 
+## S-curve spine for one hanging/sweeping mechón, in the mechón's OWN local
+## frame: local X = lateral curve offset (the wave), local Y = 0 at the root
+## sliding to -length at the tip, local Z = 0 (thickness comes from the
+## ribbon's box depth, not the spine). `waves` > 1 reads as a tighter,
+## more visible "S"; the amplitude decays slightly toward the tip so the
+## strand doesn't flare at the very end.
+static func _s_spine(length: float, sweep: float, segs: int, waves: float = 1.15) -> PackedVector3Array:
+	var pts := PackedVector3Array()
+	for i in range(segs + 1):
+		var t: float = float(i) / float(segs)
+		var y: float = -length * t
+		var s: float = sin(t * PI * waves) * sweep * (1.0 - t * 0.35)
+		pts.append(Vector3(s, y, 0.0))
+	return pts
+
+## Ribbon "mechón": a chain of tapered box segments following an S-curve
+## spine — a curved card with variable width (PRD "Cabello Estilizado
+## Ondulado" §4: ribbon, not cylinder, not straight plank). Each segment
+## keeps its own BoxMesh flat per-face normal (faceted cel shading, §5: no
+## smoothing between waves). `root`/`mbasis` are WORLD space; `mbasis.y` is
+## the flow direction (root->tip), `mbasis.x` the curve's sweep plane,
+## `mbasis.z` the outward face-normal reference (thickness axis).
+static func _ribbon(mat: Material, spine: PackedVector3Array, width0: float, width1: float,
+		thickness: float, root: Vector3, mbasis: Basis) -> Node3D:
+	var g = Node3D.new()
+	var n: int = spine.size()
+	var world_pts: Array = []
+	for p in spine:
+		world_pts.append(root + mbasis * p)
+	for i in range(n - 1):
+		var p0: Vector3 = world_pts[i]
+		var p1: Vector3 = world_pts[i + 1]
+		var mid: Vector3 = (p0 + p1) * 0.5
+		var seg_len: float = (p1 - p0).length()
+		var t: float = (float(i) + 0.5) / float(n - 1)
+		var w: float = lerp(width0, width1, t)
+		var by: Vector3 = (p1 - p0).normalized()
+		var bz: Vector3 = mbasis.z - by * by.dot(mbasis.z)
+		if bz.length() < 0.001:
+			bz = mbasis.x
+		bz = bz.normalized()
+		var bx: Vector3 = by.cross(bz).normalized()
+		bz = bx.cross(by).normalized()
+		var seg = MeshInstance3D.new()
+		var mesh = BoxMesh.new()
+		mesh.size = Vector3(w, seg_len * 1.16, thickness)
+		seg.mesh = mesh
+		seg.material_override = mat
+		seg.transform = Transform3D(Basis(bx, by, bz), mid)
+		g.add_child(seg)
+	return g
+
 # ---- public API ----
 
 ## Build a hair style node by index (0-9). Returns Node3D root.
@@ -132,6 +184,8 @@ static func build_hair(index: int, mat: Material) -> Node3D:
 			return _hair_drake_dreads(mat)
 		10:
 			return _hair_frontier_crop(mat)
+		11:
+			return _hair_prince_curtain(mat)
 		_:
 			return Node3D.new()
 
@@ -348,7 +402,119 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			idx += 1
 	return g
 
-# 9 — Drake Dreads: cap + 7 hanging cylinder ropes
+# 11 — Prince Curtain (M10-r4, PRD "Cabello Estilizado Ondulado — Estilo
+# Príncipe de Cuento"): reconstrucción por CAPAS de mechones-cinta (ribbon),
+# no cilindros ni tablones rectos. r3b (150 tablillas rectas al radio
+# exterior) leía como orejeras de casco de frente y borde-repisa plano de
+# nuca por detrás — exactamente el defecto que el PRD señala evitar (§5).
+# Capas (PRD §3): 1 base craneal (concha ajustada) + 7 flequillo/coronilla
+# (define la raya y el barrido arriba-atrás) + 8 laterales sien/oreja
+# (4 por lado) + 6 mechones sueltos que rompen la silueta — dos enmarcan
+# el rostro, dos rompen el canto lateral, dos cubren la nuca con largos
+# IRREGULARES para que no quede un borde recto. 22 mechones totales
+# (rango recomendado 20-26). Cada mechón es una cinta curva en "S" con
+# ancho variable (raíz ancha, punta fina) — PRD §4.
+static func _hair_prince_curtain(mat: Material) -> Node3D:
+	var g = Node3D.new()
+	var shell_c := Vector3(0.0, R * 0.40, -R * 0.06)
+	# Base craneal: la concha ajustada auto-recorta contra el cráneo
+	# (misma técnica del frontier crop — Lección: cajas no abrazan esferas,
+	# una elipse contra otra sí).
+	var shell = _sphere(mat, R * 1.02, shell_c.x, shell_c.y, shell_c.z)
+	shell.scale = Vector3(0.85, 0.72, 0.98)
+	g.add_child(shell)
+
+	# Tono alterno (+8% claro) para profundidad cel — un mechón entero es
+	# un solo tono (no por segmento), así cada cinta lee como un plano de
+	# luz/sombra distinto de su vecina (PRD §5, normal facetada).
+	var lighter := mat
+	if mat is ShaderMaterial:
+		lighter = (mat as ShaderMaterial).duplicate()
+		var base_col = (mat as ShaderMaterial).get_shader_parameter("albedo_color")
+		if base_col != null:
+			(lighter as ShaderMaterial).set_shader_parameter(
+				"albedo_color", (base_col as Color).lightened(0.08))
+
+	var mi: int = 0
+
+	# ---- Capa interna: flequillo + coronilla (7) ----
+	# Raíz en la línea de nacimiento frontal; fluye ARRIBA y ATRÁS sobre la
+	# coronilla — define la raya y el volumen barrido de la referencia.
+	for i in range(7):
+		var a: float = lerp(-0.62, 0.62, (float(i) + 0.5) / 7.0)
+		var ring_y: float = R * 0.58
+		var ring_r: float = R * 0.66
+		var anchor := Vector3(sin(a) * ring_r, ring_y, cos(a) * ring_r - R * 0.06)
+		var normal := (anchor - shell_c).normalized()
+		var flow := (Vector3(0.0, 0.62, -0.30) + normal * 0.35).normalized()
+		var side := flow.cross(normal)
+		if side.length() < 0.01:
+			side = Vector3(1, 0, 0)
+		var mbasis := Basis(side.normalized(), flow, normal)
+		var v: float = 0.90 + 0.2 * float((i * 5) % 4) / 3.0
+		var length: float = R * 0.78 * v
+		var sweep: float = R * 0.16 * (1.0 if i % 2 == 0 else -1.0) * 0.6
+		var spine := _s_spine(length, sweep, 4)
+		var root: Vector3 = anchor + normal * R * 0.04
+		var tone = mat if mi % 3 != 1 else lighter
+		g.add_child(_ribbon(tone, spine, R * 0.22, R * 0.09, R * 0.075, root, mbasis))
+		mi += 1
+
+	# ---- Capa media: laterales, cubren sien + oreja (4 por lado = 8) ----
+	for side_sign in [1.0, -1.0]:
+		for i in range(4):
+			var a: float = side_sign * lerp(0.60, 1.72, (float(i) + 0.5) / 4.0)
+			var ring_y: float = R * 0.52
+			var ring_r: float = R * 0.94
+			var anchor := Vector3(sin(a) * ring_r, ring_y, cos(a) * ring_r - R * 0.06)
+			var normal := (anchor - shell_c).normalized()
+			var flow := (Vector3(0.0, -1.0, 0.0) + normal * 0.30).normalized()
+			var side := flow.cross(normal)
+			if side.length() < 0.01:
+				side = Vector3(1, 0, 0)
+			var mbasis := Basis(side.normalized(), flow, normal)
+			var v: float = 0.88 + 0.28 * float((i * 7 + int(side_sign)) % 5) / 4.0
+			var length: float = R * 1.02 * v
+			var sweep: float = R * 0.13 * (0.5 if i % 2 == 0 else -0.5)
+			var spine := _s_spine(length, sweep, 5)
+			var root: Vector3 = anchor + normal * R * 0.04
+			var tone = mat if mi % 3 != 1 else lighter
+			g.add_child(_ribbon(tone, spine, R * 0.19, R * 0.08, R * 0.07, root, mbasis))
+			mi += 1
+
+	# ---- Capa externa: mechones sueltos que rompen silueta (6) ----
+	# 2 enmarcan el rostro (más largos, delante) + 2 rompen el canto
+	# lateral + 2 cubren la nuca con largos IRREGULARES (evita el
+	# borde-repisa recto que la review v0.4 marcó como defecto).
+	var loose_defs: Array = [
+		# [a, ring_y, ring_r, length_mult, sweep_mult]
+		[0.42, R * 0.50, R * 0.86, 1.18, 0.9],
+		[-0.42, R * 0.50, R * 0.86, 1.12, -0.9],
+		[1.95, R * 0.42, R * 0.90, 1.05, 1.1],
+		[-1.95, R * 0.42, R * 0.90, 0.96, -1.1],
+		[2.55, R * 0.38, R * 0.80, 1.10, 0.8],
+		[-2.55, R * 0.38, R * 0.80, 0.92, -0.8],
+	]
+	for def in loose_defs:
+		var a: float = def[0]
+		var ring_y: float = def[1]
+		var ring_r: float = def[2]
+		var anchor := Vector3(sin(a) * ring_r, ring_y, cos(a) * ring_r - R * 0.06)
+		var normal := (anchor - shell_c).normalized()
+		var flow := (Vector3(0.0, -1.0, 0.0) + normal * 0.45).normalized()
+		var side := flow.cross(normal)
+		if side.length() < 0.01:
+			side = Vector3(1, 0, 0)
+		var mbasis := Basis(side.normalized(), flow, normal)
+		var length: float = R * 1.0 * float(def[3])
+		var sweep: float = R * 0.20 * float(def[4])
+		var spine := _s_spine(length, sweep, 5, 1.5)
+		var root: Vector3 = anchor + normal * R * 0.05
+		var tone = mat if mi % 3 != 1 else lighter
+		g.add_child(_ribbon(tone, spine, R * 0.17, R * 0.06, R * 0.065, root, mbasis))
+		mi += 1
+
+	return g
 static func _hair_drake_dreads(mat: Material) -> Node3D:
 	var g = Node3D.new()
 	g.add_child(_cap(mat, 1.07))

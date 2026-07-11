@@ -59,7 +59,7 @@ func _run() -> void:
 	# pelo corto castaño claro barrido atrás, scout marks verdes).
 	var pheno: Dictionary = _Pheno.default_phenotype()
 	pheno["skinTone"] = 0     # porcelain (concept: tez pálida/fría)
-	pheno["hair"] = 10        # frontier crop (M10; cráneo desnudo ya con VoBo)
+	pheno["hair"] = 11        # prince curtain (M10-r3: melena, 150 mechones)
 	pheno["hairColor"] = 4    # chestnut (base; tinte exacto abajo)
 	pheno["warpaint"] = 6     # scout marks (frente + mejilla izq)
 	pheno["paintColor"] = 4   # wyld green
