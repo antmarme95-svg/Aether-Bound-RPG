@@ -269,16 +269,18 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	var shell = _sphere(mat, R * 1.02, 0.0, R * 0.40, -R * 0.06)
 	shell.scale = Vector3(0.85, 0.72, 0.98)
 	g.add_child(shell)
-	# QUIFF frontal HUNDIDO en la concha (emerge como acento angular, no
-	# tablita flotante): masa arriba-adelante, vector de barrido atrás;
-	# la hairline retrocede SOBRE la ceja (v0.4 M7).
-	var quiff = _box(mat, R * 1.15, R * 0.46, R * 0.62,
-		0.0, R * 0.78, R * 0.34, -0.34, 0.0, 0.0)
+	# QUIFF (v0.5 C1: CERO caras planas horizontales — las cajas coronaban
+	# como birrete): masa REDONDEADA-angular de esferas escaladas, curva
+	# superior ASIMÉTRICA más alta al frente, vector adelante-arriba-atrás.
+	var quiff = _sphere(mat, R * 0.60, 0.0, R * 0.78, R * 0.22)
+	quiff.scale = Vector3(1.02, 0.78, 1.30)
+	quiff.rotation.x = -0.38
 	g.add_child(quiff)
-	# Escalón de coronilla hundido (continúa el barrido hacia atrás)
-	var crest = _box(mat, R * 0.80, R * 0.28, R * 0.90,
-		0.0, R * 0.82, -R * 0.26, -0.08, 0.0, 0.0)
-	g.add_child(crest)
+	# Cola del barrido: masa menor que decae hacia la coronilla-atrás
+	var sweep = _sphere(mat, R * 0.48, 0.0, R * 0.86, -R * 0.28)
+	sweep.scale = Vector3(0.92, 0.60, 1.25)
+	sweep.rotation.x = -0.15
+	g.add_child(sweep)
 	return g
 
 # 9 — Drake Dreads: cap + 7 hanging cylinder ropes

@@ -69,3 +69,7 @@
   Skyhook / Arcane Ballistics / Mobile Foundry) + 4 beats narrativos
   (El Último Vínculo, La traición ejecutada, Final 1 sacrificio
   silencioso, Final 4 aether renacido).**
+- `reviews/` — reviews de arte del director, verbatim (checklist de
+  aceptación en [[Task-Board]]): **Character-Blockout-Review-v0.1**
+  (cuerpo humano, 2026-07-10) · **Character-Head-Review v0.2–v0.5**
+  (cabeza/busto, rondas M9/M10, 2026-07-10).

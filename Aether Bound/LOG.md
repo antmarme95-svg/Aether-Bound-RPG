@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] ingest+feature | Review v0.5 archivada + M9-r5: quiff redondeado, marcas restauradas, limpieza
+Quinta review (v0.5, overall 5.5 — el riesgo señalado: REGRESIONES al aplicar
+fixes) → archivada. r5 responde los 4 bloqueantes: (1) quiff sin birrete —
+masas redondeadas-angulares de esferas escaladas, curva superior ASIMÉTRICA
+más alta al frente, cero caras planas (cae también la cuña M6 y baja el
+hairline M7); (2) marcas restauradas al tamaño r3 como franjas rectas
+(frente ≈ ceja, mejilla cruzando el PÓMULO — la primera posición leía curita
+en la boca); (3) limpieza de rasgos: ojos conformados a la superficie
+(esclerótica −4 mm, más plana) y cejas pegadas (flotaban 10 mm — eso era lo
+"atravesado" visto desde atrás); (4) orejas a la vertical MEDIA del cráneo
+(leían piercing) — asoman flanqueando en la trasera ✓. PROCESO nuevo por
+exigencia del reviewer: capturas archivadas POR RONDA en
+`godot/test_out/rounds/rN/` para diff visual anti-regresiones. Turnaround
+verificado contra r4 en los 4 ángulos. QA biomech/combat/slice ALL_PASS.
+Pendiente: ratificación EXPLÍCITA del director del cowl/base-body (3ª
+documentación en PR) — con ella y el VoBo, la próxima ronda aspira a
+Approved with Minor Changes.
+
 ## [2026-07-10] ingest+feature | Review v0.4 archivada + M9-r4: la nuca del jugador
 Cuarta review (v0.4, overall 6/10, 5 bloqueantes) → archivada. r4 responde:
 (1) PELO reconstruido — el hallazgo técnico de la ronda: las cajas no pueden

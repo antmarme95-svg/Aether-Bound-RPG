@@ -131,6 +131,20 @@ updated: 2026-07-10
   el "prop" era el pauldron — oculto en el banco de anatomía. LOW 9 (piel
   cálida): parcialmente iluminación dawn del banco; A/B en luz neutra
   pendiente para el lock de textura (Fase 4). QA completo ALL_PASS.
+- **📋 Review v0.5 del director (2026-07-10) → M9-r5 ✅ CÓDIGO + QA VERDE.**
+  Archivada (`90-Raw/reviews/Character-Head-Review-v0.5.md`). Los 4
+  bloqueantes: **(1)** quiff REDONDEADO-angular de esferas escaladas (curva
+  superior asimétrica más alta al frente; fuera el birrete de cajas — y con
+  él la cuña M6 y el hairline alto M7); **(2)** marcas restauradas a tamaño
+  r3 como franjas rectas (frente ≈ ceja; mejilla cruzando el pómulo);
+  **(3)** limpieza de rasgos atravesados — ojos conformados (−4 mm, esclerótica
+  plana) y cejas pegadas al cráneo (flotaban 10 mm: eso era lo visible desde
+  atrás, no normales invertidas); **(4)** orejas a la vertical media del
+  cráneo, asoman flanqueando en la trasera. **PROCESO: capturas por ronda en
+  `godot/test_out/rounds/rN/`** (diff visual anti-regresiones, exigencia del
+  reviewer). QA biomech/combat/slice ALL_PASS. **Pendientes: VoBo del
+  turnaround r5; ratificación EXPLÍCITA del cowl/base-body modular por el
+  director (documentada 3× en PR; el reviewer la exige para cerrar).**
 - **📋 Review v0.4 del director (2026-07-10) → M9-r4 ✅ CÓDIGO + QA VERDE.**
   Review archivada (`90-Raw/reviews/Character-Head-Review-v0.4.md`; overall
   6/10; 5 bloqueantes para aspirar a Approved). Respuesta: **(1) pelo

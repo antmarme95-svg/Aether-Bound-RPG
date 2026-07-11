@@ -623,13 +623,15 @@ func _build() -> void:
 	for side in [-1, 1]:
 		var eye_group = Node3D.new()
 		eye_group.name = "eye_" + ("l" if side == -1 else "r")
-		eye_group.position = Vector3(side * 0.052, 0.022, 0.130)
+		# v0.5 C3: CONFORMADO a la superficie — a 0.130 la esclerótica
+		# sobresalía del plano facial y se veía desde atrás en perfil.
+		eye_group.position = Vector3(side * 0.052, 0.022, 0.126)
 
 		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
 		# esclerótica visible, apertura angosta (fuera el ojo-platillo
 		# caricatura; registro grounded-fantasy).
 		var white = _sphere_mesh(0.018, eye_white_mat)
-		white.scale = Vector3(1.0, 0.78, 0.5)
+		white.scale = Vector3(1.0, 0.78, 0.42)
 		eye_group.add_child(white)
 
 		var iris = _disc_mesh(0.011, iris_mat)
@@ -657,8 +659,10 @@ func _build() -> void:
 		var brow_mat := StandardMaterial3D.new()
 		brow_mat.albedo_color = Color("#3a2418")
 		brow_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		var brow = _box_mesh(0.046, 0.009, 0.012, brow_mat)
-		brow.position = Vector3(side * 0.052, 0.046, 0.140)
+		# (v0.5 C3: pegada a la superficie — a 0.140 flotaba 10 mm y se
+		# asomaba por encima del cráneo desde atrás)
+		var brow = _box_mesh(0.046, 0.009, 0.010, brow_mat)
+		brow.position = Vector3(side * 0.052, 0.046, 0.133)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -1449,18 +1453,20 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		# rectas de ancho constante, ángulos paralelos, mismo valor.
 		_face_mark = MeshInstance3D.new()
 		_face_mark.name = "face_paint_mark"
-		var fm_front = _box_mesh(0.056, 0.013, 0.006, fm_mat)
-		# Frente, lado derecho (−x): 3–4 mm proud (a 8 mm leía como
-		# banderita flotante; al ras la tinta Sobel se lo comía).
-		fm_front.position = Vector3(-0.050, 0.055, 0.121)
+		# v0.5 C2: tamaño de RONDA 3 restaurado — frente ≈ largo de ceja,
+		# mejilla ≈ pómulo-a-mandíbula; franjas rectas de ancho constante
+		# (la reducción de r4 las dejó subliminales — regresión).
+		var fm_front = _box_mesh(0.060, 0.014, 0.008, fm_mat)
+		fm_front.position = Vector3(-0.050, 0.055, 0.122)
 		fm_front.rotation.z = 0.42
 		fm_front.rotation.y = -0.25
 		_face_mark.add_child(fm_front)
-		var fm_cheek = _box_mesh(0.050, 0.013, 0.010, fm_mat)
-		# Mejilla, lado izquierdo (+x): franja recta bajo el ojo.
-		fm_cheek.position = Vector3(0.060, -0.030, 0.112)
-		fm_cheek.rotation.z = 0.42
-		fm_cheek.rotation.y = 0.45
+		# (r5b: a y −0.036 caía junto a la boca y leía curita — la franja
+		# cruza el PÓMULO bajo el ojo, como el concept)
+		var fm_cheek = _box_mesh(0.058, 0.014, 0.008, fm_mat)
+		fm_cheek.position = Vector3(0.066, -0.016, 0.106)
+		fm_cheek.rotation.z = 0.45
+		fm_cheek.rotation.y = 0.50
 		_face_mark.add_child(fm_cheek)
 		head.add_child(_face_mark)
 
@@ -1815,10 +1821,12 @@ func _build_origin_features(origin: Dictionary) -> void:
 			smesh.height = 0.060
 			ear.mesh = smesh
 			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.126, -0.012, -0.006)
-			ear.scale = Vector3(0.38, 1.25, 0.72)   # semi-elipse vertical
-			ear.rotation.x = -0.16                  # leve inclinación atrás
-			ear.rotation.z = float(side) * -0.08
+			# v0.5 H4: RETRASADA a la vertical media del cráneo (adelantada
+			# leía piercing en la mejilla); asoma flanqueando en la trasera.
+			ear.position = Vector3(side * 0.124, -0.010, -0.034)
+			ear.scale = Vector3(0.40, 1.28, 0.75)   # semi-elipse vertical
+			ear.rotation.x = -0.15                  # leve inclinación atrás
+			ear.rotation.z = float(side) * -0.06
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
 
