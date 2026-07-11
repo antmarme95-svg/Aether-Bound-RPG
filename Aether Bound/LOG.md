@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | M9-r6: cráneo desnudo VoBo (a) + mandíbula TRAPECIO
+El director pidió el turnaround CALVO para juzgar el cráneo desnudo — VoBo de
+la estructura ("todo bien"; banco queda sin pelo mientras se esculpe la cara).
+Tuning en vivo: la mandíbula pasa de caja a TRAPECIO (prisma de 4 caras con
+taper, ancho en la línea de orejas → estrecha al mentón; el ×0.81 en z del
+slider de jaw restaura la relación ancho/profundidad) — las facciones se
+afilan. QA biomech/combat ALL_PASS. Nota del cráneo desnudo para el backlog de
+cara: la bóveda sigue muy esférica de perfil (occipucio poco protagonista).
+
+
 ## [2026-07-10] ingest+feature | Review v0.5 archivada + M9-r5: quiff redondeado, marcas restauradas, limpieza
 Quinta review (v0.5, overall 5.5 — el riesgo señalado: REGRESIONES al aplicar
 fixes) → archivada. r5 responde los 4 bloqueantes: (1) quiff sin birrete —

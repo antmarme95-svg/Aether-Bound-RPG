@@ -570,10 +570,16 @@ func _build() -> void:
 	# mentón se funde en la mandíbula (fuera la costura vertical dura).
 	# (jaw/cheeks en skin_mat — M9-r2b: sus UVs de caja/esfera muestrean el
 	# atlas SIN control y embarran el warpaint; la textura vive en el cráneo)
-	# r3 (review v0.3): la mandíbula DOMINA el ancho bajo (trapecio invertido)
-	jaw_mesh = _box_mesh(0.138, 0.074, 0.112, skin_mat)
+	# r3 (review v0.3): la mandíbula DOMINA el ancho bajo. M9-r6 (director):
+	# TRAPECIO, no rectángulo — ancha en la línea de las orejas, estrechando
+	# hacia el mentón (afila las facciones). Prisma de 4 caras con taper
+	# (cilindro de 4 segmentos girado 45°, mismo truco que la nariz); la
+	# relación ancho/profundidad la pone el slider de jaw en apply_phenotype.
+	jaw_mesh = _cylinder_mesh(0.098, 0.060, 0.074, skin_mat)
+	(jaw_mesh.mesh as CylinderMesh).radial_segments = 4
 	jaw_mesh.name = "jaw"
 	jaw_mesh.position = Vector3(0.0, -0.098, 0.046)
+	jaw_mesh.rotation.y = PI / 4.0   # caras planas al frente y costados
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
@@ -1367,10 +1373,12 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# ---- face structure ----
 	# JS jaw.scale: lerp(0.72..1.28, 0.85..1.18, 0.8..1.22)
 	var jaw_v: float = p.get("jaw", 0.5)
+	# (M9-r6: el prisma trapezoidal es de sección cuadrada — el ×0.81 en z
+	# restaura la relación ancho/profundidad de la mandíbula)
 	jaw_mesh.scale = Vector3(
 		_lerp(0.72, 1.28, jaw_v),
 		_lerp(0.85, 1.18, jaw_v),
-		_lerp(0.8, 1.22, jaw_v)
+		_lerp(0.8, 1.22, jaw_v) * 0.81
 	)
 
 	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
