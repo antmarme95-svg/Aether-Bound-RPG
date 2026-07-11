@@ -281,6 +281,71 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	sweep.scale = Vector3(0.92, 0.60, 1.25)
 	sweep.rotation.x = -0.15
 	g.add_child(sweep)
+
+	# MECHONES (M10-r2, director: ~25–35): textura direccional de la
+	# lámina — cuñas angulares en filas sobre la concha/quiff, TODAS
+	# fluyendo hacia atrás, hundidas a media profundidad (el Sobel entinta
+	# sus aristas como trazos de pelo en close-up; a distancia se funden).
+	# Colocación DETERMINISTA (paridad CLI, cero random): 4 filas de
+	# latitud × columnas, tamaño en cascada (frente grande → nuca chico),
+	# tono alternado (base / +10% claro = profundidad cel de dos valores).
+	var lighter := mat
+	if mat is ShaderMaterial:
+		lighter = (mat as ShaderMaterial).duplicate()
+		var base_col = (mat as ShaderMaterial).get_shader_parameter("albedo_color")
+		if base_col != null:
+			(lighter as ShaderMaterial).set_shader_parameter(
+				"albedo_color", (base_col as Color).lightened(0.10))
+	# filas: [altura y, radio del anillo, nº mechones, escala, excluir_frente]
+	# (r2b: las filas medias EXCLUYEN el sector frontal — ahí la masa la
+	# ponen las esferas del quiff; mechones frontales leían como RULOS)
+	var rows: Array = [
+		[R * 0.96, R * 0.40, 7, 1.00, false],  # cresta del quiff
+		[R * 0.80, R * 0.68, 9, 0.85, true],   # corona (sin frente)
+		[R * 0.58, R * 0.88, 9, 0.70, true],   # parietales (sin frente)
+		[R * 0.34, R * 0.96, 6, 0.55, true],   # baja trasera
+	]
+	var idx: int = 0
+	for row in rows:
+		var ry: float = row[0]
+		var rr: float = row[1]
+		var n: int = row[2]
+		var s: float = row[3]
+		var skip_front: bool = row[4]
+		for i in range(n):
+			var a0: float = -PI * 0.78
+			var a1: float = PI * 0.78
+			if ry >= R * 0.9:
+				# cresta: arco ACOTADO a la corona (r2e — sus extremos
+				# laterales asomaban como dientes en la silueta frontal)
+				a0 = -PI * 0.55
+				a1 = PI * 0.55
+			if ry < R * 0.4:
+				a0 = PI * 0.35
+				a1 = PI * 1.65
+			var a: float = a0 + (a1 - a0) * (float(i) + 0.5) / float(n)
+			# filas marcadas: solo el sector TRASERO real, >104° (r2e — a
+			# 90° exactos los mechones del borde eran los dientes de las
+			# sienes; frente y corona ya los texturizan quiff + cresta)
+			if skip_front and cos(a) > -0.25 and ry >= R * 0.4:
+				continue
+			var cx: float = sin(a) * rr
+			var cz: float = cos(a) * rr - R * 0.06
+			# variación determinista de tamaño/ángulo por índice
+			var v: float = 0.85 + 0.3 * float((idx * 7) % 5) / 4.0
+			# más DELGADOS (0.11) y hundidos: el sink CRECE hacia los
+			# costados (r2c: los laterales asomaban como taquitos en la
+			# silueta frontal) — y caen más pegados al casco
+			var sink: float = 0.93 - 0.06 * absf(sin(a))
+			var clump = _box(mat if idx % 3 != 1 else lighter,
+				R * 0.30 * s * v, R * 0.11 * s, R * 0.46 * s * v,
+				cx * sink, ry, cz * sink)
+			# orientación: tangente al casco + barrido hacia ATRÁS
+			clump.rotation.y = atan2(cx, cz + R * 0.5) * 0.55
+			clump.rotation.x = -0.42 + ry / R * 0.28   # arriba más plano
+			clump.rotation.z = sin(a) * -0.45          # acostado a los lados
+			g.add_child(clump)
+			idx += 1
 	return g
 
 # 9 — Drake Dreads: cap + 7 hanging cylinder ropes

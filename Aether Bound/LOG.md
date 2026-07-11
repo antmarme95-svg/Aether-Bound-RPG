@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-10] feature | M10-r2: 31 mechones angulares (pedido del director)
+El director pidió ~25–35 mechones para acercar el pelo a la lámina. Sistema
+procedural DETERMINISTA sobre la concha: 4 filas de latitud (cresta/corona/
+parietales/nuca) × columnas, 31 mechones-cuña hundidos a media profundidad
+(el Sobel entinta sus aristas como trazos direccionales de pelo; a distancia
+se funden), tamaño en cascada frente→nuca, dos tonos alternados (base /
++10% claro = profundidad cel). Convergencia en 5 sub-rondas contra la
+silueta: filas medias solo sector trasero >104° (los laterales asomaban como
+rulos/dientes), cresta acotada a la corona, sink progresivo hacia los
+costados, mechones delgados (0.11R). El PERFIL es la vista más cercana a la
+lámina hasta ahora. Queda: 1 muesquita por sien en la silueta frontal (a
+decisión del director: matarla o dejarla como textura). QA
+biomech/combat/slice ALL_PASS. Ronda archivada en test_out/rounds/r6.
+
 ## [2026-07-10] feature | M9-r6: cráneo desnudo VoBo (a) + mandíbula TRAPECIO
 El director pidió el turnaround CALVO para juzgar el cráneo desnudo — VoBo de
 la estructura ("todo bien"; banco queda sin pelo mientras se esculpe la cara).
