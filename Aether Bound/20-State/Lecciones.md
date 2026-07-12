@@ -182,6 +182,11 @@ updated: 2026-07-11
 - Regenerar el asset de follaje si cambia la sprite sheet:
   `--headless --path godot --script res://tools/process_clump.gd`.
 - Gate de rendimiento: **≥60 FPS** en The Wilds.
+- **NUNCA editar archivos de texto del repo con Get-Content/Set-Content de
+  PowerShell 5.1:** sin BOM, lee UTF-8 como ANSI y al re-escribir
+  DOBLE-CODIFICA (mojibake en todos los acentos — le pasó al LOG el
+  2026-07-11; restaurado de git). Las ediciones van con las herramientas de
+  archivo del agente (Edit/Write), que preservan encoding.
 - **Extraer zips en rutas profundas de esta máquina (scratchpad/OneDrive)
   revienta MAX_PATH** (~260): `Expand-Archive` falla con zips de árboles
   hondos. Workaround probado (2026-07-11): mapear unidad temporal

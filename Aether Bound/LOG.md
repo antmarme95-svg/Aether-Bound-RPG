@@ -1,6 +1,20 @@
 # LOG — bitácora append-only del Vault
 
-## [2026-07-11] research | Segunda ronda: 4 zips más + Beckett MCP (cierra la evaluación en 12 zips)
+## [2026-07-11] state | Cierre de sesión: SCHEMA §7 (rutina de cierre consolidada) + higiene
+Boris preguntó si la rutina de cierre estaba en el Vault: estaba REPARTIDA
+(CLAUDE.md regla 4, regla de oro, SCHEMA §6, memoria persistente de Claude —
+el paso commit/push no estaba escrito en el Vault). Consolidada como
+**SCHEMA §7 "Cierre de sesión"** (checklist de 6 pasos; pendiente VoBo).
+Higiene: op-tags de hoy corregidos a la taxonomía de §4 (research→ingest);
+`.gitignore` ahora excluye sub-vaults `.obsidian` anidados (aparecieron en
+10-Knowledge y 20-State/Decisiones — abrir subcarpetas como vault en Obsidian
+los crea; el vault root es `Aether Bound/`); descartado un cambio EOL-only de
+00-Index. Current-State: sección nueva 0a "decisiones que esperan al
+director" (VoBo r5 + cowl, spike Beckett, VoBo §7). Lección de entorno
+re-pagada en vivo: Get/Set-Content de PS 5.1 corrompió el UTF-8 del LOG
+(restaurado de git; ediciones de texto SIEMPRE con herramientas del agente).
+
+## [2026-07-11] ingest | Segunda ronda: 4 zips más + Beckett MCP (cierra la evaluación en 12 zips)
 Boris sumó humanizer, skeleleton-2d, godot-vrm, AMSG y beckett-godot-mcp.
 Veredicto integrado al mismo doc raw. Hallazgo mayor: **AMSG = referencia de
 lógica para C2/C4** (detección de mantle por 3 raycasts + shapecast portable
@@ -18,7 +32,7 @@ en el editor con observación del juego corriendo (screenshot/remote tree/
 runtime props) — propuesto spike de 1 sesión cuando el banco corra limpio;
 decisión del director. Sin cambios de código.
 
-## [2026-07-11] research | Evaluación de 8 plugins + Chickensoft + cabello/facial
+## [2026-07-11] ingest | Evaluación de 8 plugins + Chickensoft + cabello/facial
 Boris entregó 8 zips en Downloads + 2 URLs. Inventario técnico por subagente
 Sonnet (tiering de [[Lecciones]]); análisis contra Plan/Art Bible/Lecciones
 por el orquestador. Veredicto archivado en

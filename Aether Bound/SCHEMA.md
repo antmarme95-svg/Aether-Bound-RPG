@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "90-Raw/LLM-WIKI.md + 90-Raw/Vault-Driven Development (VDD).md"
-updated: 2026-07-04
+updated: 2026-07-11
 ---
 
 # SCHEMA — Modelo de trabajo del Aether Bound Vault
@@ -85,3 +85,23 @@ evoluciona aquí (Design Loop); el GDD monolítico no se vuelve a editar.
 Código, Knowledge, State, Index y Log deben representar la misma realidad
 siempre. Checkpoint tras **cada tarea** (herencia del protocolo de sprints):
 flush de State + memoria de Claude antes de abrir la siguiente tarea.
+
+## 7. Cierre de sesión *(añadido 2026-07-11 — pendiente VoBo del director)*
+
+> Antes existía repartido entre CLAUDE.md (regla 4), la regla de oro, §6 y la
+> memoria persistente de Claude; aquí queda consolidado como checklist único.
+
+1. **[[Current-State]] refleja la realidad** — incluida la sección de
+   ARRANQUE DE LA PRÓXIMA SESIÓN (qué sigue, qué decisión espera al director,
+   qué quedó bloqueado y con qué sospecha).
+2. **[[LOG]]**: una entrada por operación de la sesión
+   (`op ∈ {ingest, design, feature, playtest, lint, state}`).
+3. **[[00-Index]]**: al día si hubo páginas nuevas, movidas o re-descritas.
+4. **[[Lecciones]]**: si la sesión pagó una lección (técnica o de entorno),
+   se escribe ANTES de cerrar — es la memoria dura del proyecto.
+5. **Working tree limpio**: commit descriptivo (sin comillas dobles en el
+   mensaje, [[Lecciones]]) + push del branch de trabajo. Nada queda
+   uncommitted salvo decisión explícita del director (y se anota en
+   Current-State como WIP).
+6. **Nada se reporta como terminado sin evidencia** — gates verdes o
+   capturas revisables; lo no verificado se marca pendiente de VoBo.

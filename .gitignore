@@ -4,3 +4,8 @@ godot/test_out/
 
 # Obsidian volatile UI state (el vault sí se trackea)
 Aether Bound/.obsidian/workspace.json
+
+# Sub-vaults accidentales de Obsidian (abrir subcarpetas como vault crea
+# .obsidian anidados — UI local, no se versionan; el vault root es Aether Bound/)
+Aether Bound/*/.obsidian/
+Aether Bound/*/*/.obsidian/

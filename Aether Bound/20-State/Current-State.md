@@ -577,6 +577,11 @@ updated: 2026-07-11
      + **Dagna re-montada** (sus piezas firma HOY están desfasadas — apuntan
      al cuerpo viejo). Después C4a (poses por gait) + C4b (canal airborne) y
      playtest del director de la ventana completa. Pies IK DIFERIDOS.
+  0a. **Decisiones que esperan al director (2026-07-11):** (i) VoBo del
+     turnaround r5 + ratificación explícita del cowl/base-body (pendientes
+     desde M9-r5); (ii) **spike de Beckett MCP** (1 sesión, cuando el banco
+     corra limpio) — ver 📦 y el doc de plugins; (iii) VoBo de la sección §7
+     "Cierre de sesión" añadida a [[SCHEMA]].
   0b. **PRD-006 CERRADO ✅ + playtest VALIDADO (2026-07-08):** el kit Duelist
      cerrado a nivel feel. El greybox (`--skip=arena --spawn=<spec>`,
      `Start-Playtest-Greybox.bat`) queda como banco de combate permanente.
