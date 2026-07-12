@@ -180,12 +180,12 @@ crítica del consejo externo:
 
 # SEGUNDA RONDA (mismo día): 4 zips más + tooling
 
-| Plugin | Versión | Tech | Veredicto | Cuándo paga |
-|---|---|---|---|---|
-| **AMSG** (+PoseWarping) | 0.9/0.8 | GDScript (MIT) | **MINAR lógica** ⭐ | C2 (mantling) + C4 (poses/gait) |
-| **Humanizer** | 2.2.0 | GDScript + 394 MB data (Unlicense) | Referencia (esqueleto/ROM) | C6b/C4 (cross-check articular) |
-| skeleleton-2d-asset | — | Escenas Skeleton2D (**GPLv3**) | Solo MIRAR (licencia) | mapa de articulaciones |
-| godot-vrm (este zip) | 1.2p3 | GDScript+GDNative **Godot 3** | ❌ Rama equivocada | re-bajar master (4.x) si se quiere MToon |
+| Plugin                  | Versión | Tech                               | Veredicto                  | Cuándo paga                              |
+| ----------------------- | ------- | ---------------------------------- | -------------------------- | ---------------------------------------- |
+| **AMSG** (+PoseWarping) | 0.9/0.8 | GDScript (MIT)                     | **MINAR lógica** ⭐         | C2 (mantling) + C4 (poses/gait)          |
+| **Humanizer**           | 2.2.0   | GDScript + 394 MB data (Unlicense) | Referencia (esqueleto/ROM) | C6b/C4 (cross-check articular)           |
+| skeleleton-2d-asset     | —       | Escenas Skeleton2D (**GPLv3**)     | Solo MIRAR (licencia)      | mapa de articulaciones                   |
+| godot-vrm v2.5.7        | 2.5.7 / MToon 3.4.0 | GDScript + GDExtension (binarios ✓) | ⛏️ **MToon minable**   | Referencia toon shading vs. `toon_opaque` |
 
 ### AMSG — el hallazgo de la segunda ronda (referencia para C2/C4)
 
@@ -245,14 +245,42 @@ reviews de C6b (ROM enano/elfo) y C4. Referencias de contraste: ROM de
 Humanizer (arriba) y lista humanoide VRM (55 huesos estándar, transcrita en
 `import_vrm.gd` L302-316 del zip godot-vrm).
 
-### godot-vrm — rama equivocada, descartar ESTE zip
+### godot-vrm v2.5.7 (re-bajado 2026-07-11) — CORRIGE el zip anterior; MToon minable
 
-Es la rama godot3 (enero 2022): GDNative, sintaxis `.shader` de Godot 3,
-README explícito ("use master for Godot 4.x"). Si se quiere el **MToon**
-(toon shader maduro del ecosistema VRM: shade shift/toony banding, rim
-fresnel, matcap) como referencia de comparación contra `toon_opaque`,
-re-descargar la rama master (ya portada a 4.x). Su outline es casco
-invertido = lo que C6a eliminó; esa parte se ignora.
+El zip original (`godot-vrm-c8b0527...`) era la rama godot3 obsoleta —
+Boris re-bajó la correcta: **fork AzPepoze de V-Sekai, v2.5.7** (VRM
+importer) + **MToon Shader Inspector v3.4.0**, ambos "for Godot 4.x"
+(`plugin.cfg` lo declara explícito). Verificado en el zip nuevo:
+`.gdshader` (no `.shader` de Godot 3), archivos `.uid` (autoría 4.4+),
+`vrm_physics.gdextension` con `compatibility_minimum = "4.3"` — **compatible
+con 4.6.3**. Soporta VRM 0.x y VRM 1.0 (carpetas `importer/v0/` y
+`importer/v1/vrmc/`). Licencia MIT (V-Sekai Contributors + Masataka SUMI).
+
+- **GDExtension CON binarios** para `vrm_physics` (spring bones nativos):
+  Windows/Linux/**macOS** (debug+release cada uno) — a diferencia del zip
+  viejo, esta vez SÍ trae macOS. Sin binario para iOS/Web/Android.
+- **MToon — 12 shaders, todos `.gdshader` (Godot 4 nativo)** en
+  `addons/mtoon/`: `mtoon.gdshader` (base, vía include compartido
+  `mtoon_common.gdshaderinc`) + variantes cutout/trans/cull_off/zwrite +
+  `mtoon_outline*.gdshader` (**outline por `render_mode cull_front` +
+  `#define IS_OUTLINE`** — la técnica de casco invertido que C6a
+  descartó a propósito en favor del Sobel; se ignora esa parte, se mina el
+  resto). El shading real (shade shift/toony banding, rim fresnel, matcap,
+  emisión) vive en `mtoon_common.gdshaderinc` — es la pieza que vale
+  comparar contra `toon_opaque.gdshader` para el fine-tuning de banding
+  (B11) si el escalón cel necesita más control.
+- **Definición de esqueleto humanoide** (para el cross-check articular
+  del director): `import_vrm.gd` sigue siendo la referencia de la lista
+  humanoide VRM estándar; en este fork la lógica de bone-mapping vive en
+  `importer/common/vrm_bone_renamer_humanoid.gd` (retargeting a huesos
+  humanoides) — más completo que el zip viejo, sin límites de ROM (igual
+  que antes: el spec VRM no define ángulos, solo jerarquía).
+- **No adoptar el addon completo**: seguimos sin pipeline de avatares
+  importados (C6 es 100% procedural). Uso previsto: minar `mtoon_common.
+  gdshaderinc` como referencia de shading, y opcionalmente el spring-bone
+  nativo (`vrm_physics.gdextension`) como dato de comparación si algún día
+  el pelo pide física secundaria de verdad — no ahora (M10 es forma, no
+  movimiento).
 
 ---
 

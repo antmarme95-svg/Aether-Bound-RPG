@@ -43,7 +43,7 @@ updated: 2026-07-11
   (empezar solo con la concha + 1 mechón) para aislar la causa real.** Código
   dejado tal cual (commit WIP, no como ronda cerrada) — NO mostrar a Boris como
   terminado hasta que el banco corra limpio y las capturas se revisen.
-- **📦 Evaluación de plugins ✅ COMPLETA (2026-07-11, 12 zips + Chickensoft +
+- **📦 Evaluación de plugins ✅ COMPLETA (2026-07-11, 13 zips + Chickensoft +
   Beckett MCP — sesión de research, sin tocar código):** veredicto completo en
   `90-Raw/research/Plugin-Evaluation-2026-07-11.md`. Lo accionable:
   (1) **Dialogue Manager 3.10.1 se ADOPTA cuando abra la Fase 2** (PRD-009 —
@@ -58,11 +58,16 @@ updated: 2026-07-11
   de `rig_biomech.gd`). (5) FancyControls = juice de HUD Fase 4 (UI, NO
   facial). (6) **Beckett MCP (tooling): spike de 1 sesión propuesto** cuando
   el banco corra limpio — MCP embebido en el editor que deja al agente VER el
-  juego corriendo; decisión del director. Descartados: LimboAI (compilar),
-  GodotSteam (zip vacío), Chickensoft (C#), godot-vrm (rama Godot 3 — re-bajar
-  master si se quiere MToon), skeleleton-2d GPLv3 (solo mirar). Semillas de
-  modelado: expresiones faciales por estado (Fase 3–4) + spike nodo `Decal`.
-  El cabello NO cambia de técnica: el ribbon del M10-r4 es el método canónico.
+  juego corriendo; decisión del director. (7) **godot-vrm CORREGIDO
+  (re-bajado v2.5.7, fork AzPepoze/V-Sekai, Godot 4.3+ nativo con binarios
+  incluidos Win/Linux/macOS)** — el zip viejo era rama Godot 3 obsoleta;
+  MToon (12 `.gdshader`, shading en `mtoon_common.gdshaderinc`) queda
+  minable como referencia de toon shading vs. `toon_opaque` (su outline por
+  casco invertido se ignora — ya lo resolvimos con Sobel). Descartados:
+  LimboAI (compilar), GodotSteam (zip vacío), Chickensoft (C#), skeleleton-2d
+  GPLv3 (solo mirar). Semillas de modelado: expresiones faciales por estado
+  (Fase 3–4) + spike nodo `Decal`. El cabello NO cambia de técnica: el ribbon
+  del M10-r4 es el método canónico.
 - **Ventana C6/C4 ABIERTA (2026-07-10).** Decisiones del director: pies IK
   DIFERIDOS (el greybox es plano; pagan en terreno, Fase 2+); **el rework se
   maneja ÚNICAMENTE en estilo Sobel** — "línea de tinta nítida de cerca;

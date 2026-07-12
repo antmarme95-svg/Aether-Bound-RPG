@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-11] ingest | godot-vrm corregido: v2.5.7 (fork AzPepoze, Godot 4 nativo)
+Tras el cierre de sesión, Boris re-bajó el zip correcto de godot-vrm
+(`godot-vrm-v2.5.7.zip` — el original era la rama godot3 obsoleta,
+descartada horas antes). Verificado: fork AzPepoze de V-Sekai, VRM
+Importer 2.5.7 + MToon Shader 3.4.0, ambos declarados "for Godot 4.x";
+`.gdshader` nativo + archivos `.uid` + `vrm_physics.gdextension`
+(`compatibility_minimum "4.3"`) — compatible con 4.6.3. GDExtension CON
+binarios Windows/Linux/**macOS** (mejora sobre el zip viejo, que no tenía
+macOS). Soporta VRM 0.x y 1.0. Veredicto actualizado en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`: MToon (12 shaders,
+shading real en `mtoon_common.gdshaderinc`) queda **minable** como
+referencia de toon shading contra `toon_opaque` — su técnica de outline
+(cull_front + casco invertido) se ignora, ya resuelta por Sobel en C6a. No
+se adopta el addon completo (seguimos sin pipeline de avatares importados).
+Sin cambios de código.
+
 ## [2026-07-11] state | Cierre de sesión: SCHEMA §7 (rutina de cierre consolidada) + higiene
 Boris preguntó si la rutina de cierre estaba en el Vault: estaba REPARTIDA
 (CLAUDE.md regla 4, regla de oro, SCHEMA §6, memoria persistente de Claude —
