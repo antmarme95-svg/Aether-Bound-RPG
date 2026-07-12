@@ -9,3 +9,7 @@ Aether Bound/.obsidian/workspace.json
 # .obsidian anidados — UI local, no se versionan; el vault root es Aether Bound/)
 Aether Bound/*/.obsidian/
 Aether Bound/*/*/.obsidian/
+
+# Beckett MCP: config local auto-escrita por el addon (no versionar)
+.mcp.json
+godot/.mcp.json

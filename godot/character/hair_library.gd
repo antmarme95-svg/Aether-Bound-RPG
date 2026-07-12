@@ -107,15 +107,17 @@ static func _braid(mat: Material, segments: int,
 
 ## S-curve spine for one hanging/sweeping mechón, in the mechón's OWN local
 ## frame: local X = lateral curve offset (the wave), local Y = 0 at the root
-## sliding to -length at the tip, local Z = 0 (thickness comes from the
-## ribbon's box depth, not the spine). `waves` > 1 reads as a tighter,
-## more visible "S"; the amplitude decays slightly toward the tip so the
-## strand doesn't flare at the very end.
+## sliding to +length at the tip ALONG the flow axis (`_ribbon` maps local Y
+## to `mbasis.y` = flow root->tip; con Y negativa el mechón crecía OPUESTO a
+## su flow — las capas de caída apuntaban al cielo, bug M10-r4). Local Z = 0
+## (thickness comes from the ribbon's box depth, not the spine). `waves` > 1
+## reads as a tighter, more visible "S"; the amplitude decays slightly toward
+## the tip so the strand doesn't flare at the very end.
 static func _s_spine(length: float, sweep: float, segs: int, waves: float = 1.15) -> PackedVector3Array:
 	var pts := PackedVector3Array()
 	for i in range(segs + 1):
 		var t: float = float(i) / float(segs)
-		var y: float = -length * t
+		var y: float = length * t
 		var s: float = sin(t * PI * waves) * sweep * (1.0 - t * 0.35)
 		pts.append(Vector3(s, y, 0.0))
 	return pts

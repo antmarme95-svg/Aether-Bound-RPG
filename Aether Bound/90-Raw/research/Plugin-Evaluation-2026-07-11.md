@@ -345,3 +345,85 @@ proyecto (gitignorar); registrar el MCP en Claude Code requiere sesión
 interactiva; fuente de terceros auditable (MIT). **Propuesta: spike
 time-boxeado de 1 sesión** cuando el banco corra limpio — conectar, manejar
 `tmp_anatomy` en vivo, medir overhead. Decisión del director.
+
+---
+
+# TERCERA RONDA (2026-07-12): evaluación dirigida cara / esqueleto / movilidad
+
+> Encargo del director: verificación puntual de si algo del listado ayuda
+> específicamente a (1) **cara** — facciones más fieles a las láminas RAW,
+> (2) **cuerpo** — evaluación de articulaciones/esqueleto, (3) **movilidad**
+> — comparado contra AMSG+PoseWarping. Restricción explícita del director:
+> **Aether Bound es EXCLUSIVAMENTE tercera persona** — nada específico de
+> primera persona se mina.
+
+## 1. Cara — ningún plugin ayuda (verificado)
+
+`humanizer-*.zip` se releyó puntual: `scripts/core/facial_mocap.gd` y
+`scripts/core/morphs.gd` completos. Todo su sistema facial es blend-shapes
+sobre malla MakeHuman continua — `MeshInstance3D.set_blend_shape_value` +
+`Skeleton3D.set_bone_pose_position` + `create_skin_from_rest_transforms`.
+Arquitectura incompatible de raíz con nuestro rig (ensamblado procedural de
+primitivas box/cylinder/sphere, sin mesh continuo ni skinning). Sin geometría
+ni morphs minables.
+
+**Veredicto:** la mejora de cara sigue por las vías ya conocidas —
+comparación directa contra láminas RAW (más barata en iteración con Beckett
+en vivo, ver TOOLING arriba) y el comparativo Decal vs. triplanar de la
+Sesión 5 del plan de rework (ratificado en C8).
+
+## 2. Cuerpo/esqueleto — cross-check concreto definido
+
+Nuestro set de joints en `rig_biomech.ROM` (`godot/character/rig_biomech.gd`
+líneas 21-67): `hip_leg`, `knee`, `shoulder`, `elbow`, `spine`,
+`spine_upper`, `hips_root`, `head` — dict joint→`Vector2(min,max)` por eje en
+radianes, directamente iterable para la vista-esqueleto (Sesión 3 del plan).
+
+Contra: `skeleton_config.json` de Humanizer (rig `game_engine`, 53 huesos) y
+lista humanoide VRM (55 huesos, `import_vrm.gd` L302-316).
+
+- **Huecos candidatos detectados** (anotar, NO implementar — decisión del
+  director): muñeca, tobillo, clavícula, dedos individuales (hoy geometría
+  estática sin ROM propio).
+- **Nota técnica confirmada por exploración:** `rig_biomech.gd` NO expone
+  posiciones articulares (solo ROM + `clamp_node`); las posiciones salen de
+  los nodos del `CharacterRig` vivo (`character_rig.gd:97-117`,
+  `_apply_joint_constraints` ~L2400: hips, spine, upper_spine, head,
+  arms[]+meta elbow, legs[]+meta knee) vía `global_position`. La
+  vista-esqueleto debe combinar ambas fuentes — hoy no hay dict unificado
+  joint→{posición, ROM}.
+
+## 3. Movilidad vs. AMSG+PoseWarping — comparación explícita, filtrada a tercera persona
+
+- `AMSG/Components/CameraComponent.gd` (leído completo): sí soporta cámara
+  tercera persona sobre-el-hombro con offset (`view_angle.right_shoulder`/
+  `left_shoulder`, `CameraHOffset` ±0.45), mismo esquema que nuestro
+  `CAM_SHOULDER` derecho. **Todo lo atado a `view_mode.first_person`**
+  (`first_person_camera_bone`, SpringArm negativo) **se descarta
+  explícitamente — no aplica al proyecto.**
+- `PoseWarping.gd` (leído completo, 19 KB): el **orientation warping** es
+  matemática agnóstica del motor en su núcleo —
+  `set_orientation_warping_direction` calcula la diferencia de ángulo entre
+  forward de cámara y dirección de velocidad vía quaternions, con manejo de
+  backward/lateral, clamp ±PI/2 y `lerp_angle` por `turn_rate`; el resultado
+  se reparte entre cadera (rotación completa) y segmentos de columna
+  (contra-rotación repartida: `-direction/n_spines`). **SOLO la aplicación**
+  (`set_bone_y_rotation` sobre `Skeleton3D`) está atada a huesos — portable a
+  nuestros nodos hips/spine/upper_spine (columna de 2 segmentos ya
+  existente) sin adoptar `Skeleton3D`/`SkeletonModifier3D`.
+  **CANDIDATO CONCRETO para el pase de poses C4** (hoy el torso no reacciona
+  a la cámara en combate). Es evaluación/documentación — la implementación
+  es trabajo de C4, no de la ventana C6.
+- **Stride warping y slope warping** (foot IK vía `SkeletonIK3D` + raycasts +
+  `BoneAttachment3D`) NO aplican — confirman (no cambian) la decisión ya
+  tomada de pies IK diferidos.
+- `CalculateStopLocation`/`CalculateStopTime` (distance matching de frenado,
+  física pura d=vt+½at²) portable, ganancia menor, opcional para C4.
+
+## Veredicto ejecutivo — tercera ronda
+
+| Área | Aporta algo | Veredicto |
+|---|---|---|
+| **Cara** | No | Ningún plugin minable — seguir vía RAW + Decal/triplanar (Sesión 5) |
+| **Cuerpo/esqueleto** | Parcial (referencia) | Cross-check ROM contra Humanizer/VRM; huecos anotados (muñeca/tobillo/clavícula/dedos), sin implementar |
+| **Movilidad** | Sí (candidato concreto) | Orientation warping de PoseWarping.gd portable a hips/spine/upper_spine → candidato para pase de poses C4 |
