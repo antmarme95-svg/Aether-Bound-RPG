@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-11] lint | Benchmark de calidad godot-vrm reubicado fuera de concept/ canon
+Boris había subido 3 PNG del avatar VRM "AliciaSolid" a `90-Raw/concept/`
+con el criterio: cualquier output de mayor calidad que el nuestro es
+referencia válida para iterar, aunque la técnica no encaje con el Art
+Bible. Criterio sano, pero `concept/` es la carpeta de concept art CANON
+aprobado — mezclar ahí capturas externas contaminaría compilaciones
+futuras. Reubicadas a `90-Raw/research/quality-benchmarks/` (nueva
+carpeta, index actualizado). Análisis honesto agregado al doc de
+plugins: solo 1 de las 3 imágenes es render limpio comparable (las otras
+son UI del editor / debug de física); el personaje es asset autorado a
+mano (no algo que el plugin "genere") comparado contra nuestro procedural
+en pleno rework — no es 1:1; y el estilo (anime/VTuber) es la
+anti-referencia EXPLÍCITA del [[Art Bible]] (junto a Genshin). Se
+extrajeron 3 lecciones sí transferibles a nuestro estilo: textura
+pintada/degradada vs. color plano, curva de banding más suave
+(comparable con MToon `_ShadeShift/_ShadeToony`, ya fichado), degradado
+raíz→punta en pelo. Sin cambios de código.
+
 ## [2026-07-11] ingest | godot-vrm corregido: v2.5.7 (fork AzPepoze, Godot 4 nativo)
 Tras el cierre de sesión, Boris re-bajó el zip correcto de godot-vrm
 (`godot-vrm-v2.5.7.zip` — el original era la rama godot3 obsoleta,

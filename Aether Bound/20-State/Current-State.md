@@ -67,7 +67,12 @@ updated: 2026-07-11
   LimboAI (compilar), GodotSteam (zip vacío), Chickensoft (C#), skeleleton-2d
   GPLv3 (solo mirar). Semillas de modelado: expresiones faciales por estado
   (Fase 3–4) + spike nodo `Decal`. El cabello NO cambia de técnica: el ribbon
-  del M10-r4 es el método canónico.
+  del M10-r4 es el método canónico. **Benchmark de calidad (mismo día):** 3
+  capturas del avatar VRM "AliciaSolid" reubicadas a
+  `90-Raw/research/quality-benchmarks/` (NO en `concept/` canon — estilo
+  anime, anti-referencia explícita del Art Bible). 3 lecciones transferibles
+  extraídas: textura pintada/degradada > color plano, banding cel más suave
+  (comparar vs MToon), degradado raíz→punta en pelo.
 - **Ventana C6/C4 ABIERTA (2026-07-10).** Decisiones del director: pies IK
   DIFERIDOS (el greybox es plano; pagan en terreno, Fase 2+); **el rework se
   maneja ÚNICAMENTE en estilo Sobel** — "línea de tinta nítida de cerca;

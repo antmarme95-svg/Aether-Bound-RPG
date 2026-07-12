@@ -282,6 +282,44 @@ con 4.6.3**. Soporta VRM 0.x y VRM 1.0 (carpetas `importer/v0/` y
   el pelo pide física secundaria de verdad — no ahora (M10 es forma, no
   movimiento).
 
+### Benchmark de calidad (2026-07-11) — imágenes en
+`90-Raw/research/quality-benchmarks/`, NO en `90-Raw/concept/`
+
+Boris subió 3 PNG de este addon como referencia, con el criterio explícito:
+"cualquier output mejor que el nuestro es fuente de referencia para
+iterar", comparado contra `godot/test_out/anatomy_*.png`. Criterio sano —
+pero con dos matices que hay que dejar registrados para que una compilación
+futura no los confunda con dirección de arte:
+
+- **Solo 1 de las 3 imágenes es un render limpio comparable**
+  (`v1_GodotVRM_Screenshot.png`, bust frontal de "AliciaSolid"). Las otras
+  dos son capturas de HERRAMIENTA, no de arte: `GodotVRM_screenshot.png` es
+  el editor con el panel de settings de spring bones; `collision_with_
+  environment_v0...` es una vista de debug con gizmos de colisión de física
+  encima del personaje.
+- **Comparación no es 1:1: asset autorado a mano vs. procedural generado
+  por código.** AliciaSolid es un avatar VRM modelado/texturizado por un
+  artista (flujo típico: VRoid Studio u otro DCC) que el addon solo importa
+  y sombrea; nuestro banco es geometría de primitivas ensamblada por
+  `character_rig.gd`, en pleno rework (C6, ~60-65% fidelidad per la review
+  v0.1). El "mejor pulido" es esperable del método, no un fallo de técnica.
+- **Tensión de estilo sin resolver, a ojo del director:** AliciaSolid es
+  estética anime/VTuber (ojos grandes, pelo degradado, vestido frilly) —
+  el [[Art Bible]] la nombra en la lista de **anti-referencias** (junto a
+  Genshin, "saturación caramelo"). El pulido es real; la dirección apunta
+  al lado contrario del norte BotW/Hinterberg/Palia.
+
+**3 lecciones SÍ transferibles a nuestro estilo (no exclusivas de anime),
+extraídas del render limpio vs. `anatomy_close.png`/`anatomy_face.png`:**
+
+1. Textura pintada/degradada en vez de color plano de paleta — ya lo
+   practicamos parcial en el atlas de warpaint; extensible a más piezas.
+2. Curva de transición del banding cel más suave que la nuestra —
+   comparar contra `mtoon_common.gdshaderinc` (`_ShadeShift`/`_ShadeToony`,
+   ya fichado arriba como minable) cuando toque el fine-tuning de B11.
+3. Degradado raíz→punta en el pelo — barato, compatible con el ribbon
+   procedural del M10, no depende de estilo anime.
+
 ---
 
 # TOOLING (fuera de la matriz): Beckett — MCP for Godot (Lite) 1.8.0
