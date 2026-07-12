@@ -1,5 +1,22 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-12] design | Propuesta-Recursos-de-Modelado (Design Loop abierto) + reconciliación con el plan de rework paralelo
+Boris pidió al "director técnico" los recursos para modelar mejor los
+avatares → Design Loop abierto: [[Propuesta-Recursos-de-Modelado]]
+(status propuesto, C8 en Task-Board). 5 recursos: triplanar (mata los
+bugs de UV ya pagados), generador loft/perfil (generalizar
+`_ribbon`/`_s_spine` a torso/miembros — mini-loop propio pre-C6b),
+gradientes procedurales, banding tipo MToon en `toon_opaque`, e
+iteración (vista-esqueleto + Beckett, ya agendados). Anti-objetivos:
+Blender/Blockbench/artista externo/hardware. **Reconciliación entre
+sesiones vía Vault:** se leyó el transcript de la sesión paralela
+(plan "Rework gráfico Humano C6/M10 + spike Beckett", sesiones 0–5,
+solo existía en esa conversación) — plan VALIDADO en secuencia; 3
+ajustes registrados en la propuesta (Sesión 4 += gradientes+banding;
+Sesión 5 → Decal VS triplanar; Sesión 2 nota del piloto de cinta
+continua). El Vault es el punto de sincronización: la sesión paralela
+hereda esto por Current-State §0a.
+
 ## [2026-07-11] lint | Benchmark de calidad godot-vrm reubicado fuera de concept/ canon
 Boris había subido 3 PNG del avatar VRM "AliciaSolid" a `90-Raw/concept/`
 con el criterio: cualquier output de mayor calidad que el nuestro es
