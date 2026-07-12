@@ -175,3 +175,107 @@ crítica del consejo externo:
    en el repo). Si el procedural topa techo en Fase 4, la conversación sería
    Blender con workflow toon (Blockbench vetado por estética: "no low-poly
    crudo", review v0.1).
+
+---
+
+# SEGUNDA RONDA (mismo día): 4 zips más + tooling
+
+| Plugin | Versión | Tech | Veredicto | Cuándo paga |
+|---|---|---|---|---|
+| **AMSG** (+PoseWarping) | 0.9/0.8 | GDScript (MIT) | **MINAR lógica** ⭐ | C2 (mantling) + C4 (poses/gait) |
+| **Humanizer** | 2.2.0 | GDScript + 394 MB data (Unlicense) | Referencia (esqueleto/ROM) | C6b/C4 (cross-check articular) |
+| skeleleton-2d-asset | — | Escenas Skeleton2D (**GPLv3**) | Solo MIRAR (licencia) | mapa de articulaciones |
+| godot-vrm (este zip) | 1.2p3 | GDScript+GDNative **Godot 3** | ❌ Rama equivocada | re-bajar master (4.x) si se quiere MToon |
+
+### AMSG — el hallazgo de la segunda ronda (referencia para C2/C4)
+
+NO se adopta (v0.9, CharacterBody3D/move_and_slide vs nuestra física
+analítica, capa de animación AnimationTree+Skeleton3D, APIs muertas en
+`set_bone_x_rotation`, mantle por teleport). Se MINA la lógica:
+
+- **Mantling (→ C2, decisión en PRD-008):**
+  `addons/AMSG/Components/MantleComponent/MantleComponent.gd` (66 líneas,
+  legibles y portables): detección = 3 RayCast3D hacia abajo (LedgeDetect a
+  altura del personaje + LedgeGroundDetect adelantado 1 m = punto de
+  aterrizaje + LedgeTopDetect 0.25 m arriba que NO debe chocar = clearance)
+  + ShapeCast3D con la shape del personaje sobre el punto ("¿quepo ahí?").
+  La detección NO depende de CharacterBody3D — se traduce a nuestro contrato
+  analítico como el step-block del Gate 1. Lo único acoplado es la ejecución
+  (animación + teleport — nosotros la haríamos con arco/curva propia).
+- **Poses por estado (→ C4):** `addons/PoseWarping/PoseWarping.gd` (19 KB) —
+  orientation warping (torso a cámara, piernas a velocidad — rota caderas +
+  cadena de espina), stride warping (targets IK de pierna según velocidad
+  real = anti foot-sliding), slope warping (IK de pie a terreno + foot
+  locking; rima con el "foot IK de HZD" de B14), distance matching de
+  frenado (`CalculateStopLocation/Time`). Taxonomía de estados en
+  `addons/AMSG/Global.gd` (movement_state/action/gait/stance/rotation_mode
+  — checklist para nuestro pase de poses).
+- **Patrón agnóstico:** `CharacterMovementComponent.gd` L518-533 calcula
+  velocidad/aceleración REALES por diferencias de posición (Δpos/Δt) —
+  independiente del motor de física, útil para alimentar poses por gait.
+
+### Humanizer — no para cuerpos; SÍ como referencia articular
+
+Choca de frente con C6 (cuerpos MakeHuman realistas importados vs procedural
+estilizado recién reworkeado con 5+ reviews) y pesa 394 MB. Lo valioso:
+
+- **Tabla de ROM real** en `scripts/core/physical_skeleton.gd` L118-135:
+  rodillas HINGE 20°–90°, codos HINGE 0°–90°, conos swing/twist por
+  articulación (Head 30/30, UpperArms 60/30, UpperChest 50/20, etc.) —
+  cross-check directo contra nuestras tablas de `rig_biomech.gd` en C6b.
+- **Posiciones articulares:** `data/assets/rigs/<rig>/skeleton_config.json`
+  (rig `game_engine` = 53 huesos estilo UE; `default` = 137 con falanges) —
+  head/tail por hueso derivados de la malla base MakeHuman. Sin ROM en data.
+- Licencia Unlicense (dominio público) — minable sin fricción.
+
+### skeleleton-2d-asset — intención del director: base articular
+
+El director lo pensó como base para entender DÓNDE hay articulaciones y sus
+grados de libertad. El zip: rig `Skeleton2D` hecho a mano, **41 Bone2D
+nombrados** con rest transforms (axial Back→Torso→Neck→Head; brazo con 10
+articulaciones de dedos por mano; pierna con tobillo/pie/dedos separados) +
+animaciones stand/crouch/run/walk. **GPLv3 — solo mirar, NUNCA copiar** al
+repo. Sin límites de rotación (Bone2D no los define).
+
+**Semilla derivada (la respuesta real a la intención): VISTA-ESQUELETO de
+debug en el banco de anatomía** — toggle en `tmp_anatomy.gd` que dibuje
+esferas en articulaciones + líneas de hueso + arcos de ROM (los datos YA
+existen en `rig_biomech.gd`; solo falta hacerlos visibles). Pagaría en las
+reviews de C6b (ROM enano/elfo) y C4. Referencias de contraste: ROM de
+Humanizer (arriba) y lista humanoide VRM (55 huesos estándar, transcrita en
+`import_vrm.gd` L302-316 del zip godot-vrm).
+
+### godot-vrm — rama equivocada, descartar ESTE zip
+
+Es la rama godot3 (enero 2022): GDNative, sintaxis `.shader` de Godot 3,
+README explícito ("use master for Godot 4.x"). Si se quiere el **MToon**
+(toon shader maduro del ecosistema VRM: shade shift/toony banding, rim
+fresnel, matcap) como referencia de comparación contra `toon_opaque`,
+re-descargar la rama master (ya portada a 4.x). Su outline es casco
+invertido = lo que C6a eliminó; esa parte se ignora.
+
+---
+
+# TOOLING (fuera de la matriz): Beckett — MCP for Godot (Lite) 1.8.0
+
+Revisado directamente por el orquestador (no es plugin del juego: es
+infraestructura del flujo Claude↔Godot). `addons/beckett/`, GDScript puro,
+MIT, servidor MCP **embebido en el editor** (HTTP local, sin Node/Python;
+auto-escribe `.mcp.json`). ~50 tools verificadas en código: autoría con
+parse-check (`write_script`/`script_patch`/`validate_script`), escena
+(`get_scene_tree`/`create_node`/...), y — lo valioso para nosotros —
+**observación del juego CORRIENDO**: `play_scene`/`stop_scene`,
+`screenshot`, `get_remote_tree`, `runtime_get_property`,
+`monitor_properties`, `wait_until`, `game_logs`, `get_performance_monitors`.
+Edición Lite gratuita; la Full (de pago, itch.io) añade input driving.
+
+**Potencial:** las rondas visuales (M9/M10: captura→review→retoque) hoy
+cuestan una corrida windowed + PNGs por ronda; con Beckett el agente vería
+el banco vivo e inspeccionaría transforms en runtime (los "entierros" de
+geometría de Lecciones se diagnosticarían en vivo). **Cautelas:** exige el
+EDITOR abierto (carga extra en la laptop térmicamente frágil — contraindicado
+mientras el banco cuelga por contención); `.mcp.json` en la raíz del
+proyecto (gitignorar); registrar el MCP en Claude Code requiere sesión
+interactiva; fuente de terceros auditable (MIT). **Propuesta: spike
+time-boxeado de 1 sesión** cuando el banco corra limpio — conectar, manejar
+`tmp_anatomy` en vivo, medir overhead. Decisión del director.

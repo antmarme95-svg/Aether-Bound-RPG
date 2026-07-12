@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-11] research | Segunda ronda: 4 zips más + Beckett MCP (cierra la evaluación en 12 zips)
+Boris sumó humanizer, skeleleton-2d, godot-vrm, AMSG y beckett-godot-mcp.
+Veredicto integrado al mismo doc raw. Hallazgo mayor: **AMSG = referencia de
+lógica para C2/C4** (detección de mantle por 3 raycasts + shapecast portable
+a nuestra física analítica; PoseWarping = orientation/stride/slope warping y
+taxonomía de estados para el pase de poses). Humanizer NO para cuerpos (choca
+con C6) pero su tabla ROM (`physical_skeleton.gd`) y sus skeleton_config.json
+sirven de cross-check articular en C6b — responde la intención del director
+con el zip de esqueleto ("dónde van las articulaciones y sus DOF"), que
+derivó en semilla: **vista-esqueleto de debug en el banco de anatomía**
+(dibujar articulaciones + ROM que ya viven en rig_biomech.gd). El zip
+skeleleton-2d es GPLv3 (solo mirar). godot-vrm resultó ser la RAMA GODOT 3
+(inservible en 4.6.3; re-bajar master si se quiere MToon de referencia).
+Beckett MCP (Lite 1.8.0, revisado por el orquestador): servidor MCP embebido
+en el editor con observación del juego corriendo (screenshot/remote tree/
+runtime props) — propuesto spike de 1 sesión cuando el banco corra limpio;
+decisión del director. Sin cambios de código.
+
 ## [2026-07-11] research | Evaluación de 8 plugins + Chickensoft + cabello/facial
 Boris entregó 8 zips en Downloads + 2 URLs. Inventario técnico por subagente
 Sonnet (tiering de [[Lecciones]]); análisis contra Plan/Art Bible/Lecciones
