@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-12] design | Propuesta-Recursos-de-Modelado RATIFICADA — Design Loop C8 CERRADO
+El director ratificó (mismo día, sin cambios): los 5 recursos con su
+orden (triplanar → loft/perfil → gradientes → banding MToon →
+iteración), los 3 ajustes al plan de rework C6/M10 de la sesión
+paralela, y el loft como mini-loop propio pre-C6b. Página →
+`ratificado`; C8 → 🔄 (ejecución pendiente: ajustes 1–3 dentro del plan
+de rework, sesiones 2/4/5). Quedan en §0a solo los VoBo que requieren
+ojos del director sobre material (turnaround r5 + cowl; §7 del SCHEMA).
+Cierre de sesión de la conversación de evaluación de plugins con esta
+entrada (protocolo §7).
+
 ## [2026-07-12] design | Propuesta-Recursos-de-Modelado (Design Loop abierto) + reconciliación con el plan de rework paralelo
 Boris pidió al "director técnico" los recursos para modelar mejor los
 avatares → Design Loop abierto: [[Propuesta-Recursos-de-Modelado]]

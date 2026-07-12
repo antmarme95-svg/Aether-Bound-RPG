@@ -589,14 +589,16 @@ updated: 2026-07-11
      playtest del director de la ventana completa. Pies IK DIFERIDOS.
   0a. **Decisiones que esperan al director (2026-07-12):** (i) VoBo del
      turnaround r5 + ratificación explícita del cowl/base-body (pendientes
-     desde M9-r5); (ii) **spike de Beckett MCP** — ya agendado como Sesión 1
-     del plan de rework de la sesión paralela; (iii) VoBo de la sección §7
-     "Cierre de sesión" añadida a [[SCHEMA]]; (iv) **ratificación de
-     [[Propuesta-Recursos-de-Modelado]]** (Design Loop 2026-07-12, C8 en el
-     Task-Board): 5 recursos priorizados + 3 ajustes al plan de rework
-     C6/M10 escrito en la sesión paralela (gradientes+banding se suman a su
-     Sesión 4; su Sesión 5 se vuelve Decal VS triplanar; loft = mini-loop
-     propio pre-C6b).
+     desde M9-r5 — requieren que el director VEA las capturas); (ii) VoBo de
+     la sección §7 "Cierre de sesión" añadida a [[SCHEMA]].
+     **✅ RATIFICADA (2026-07-12): [[Propuesta-Recursos-de-Modelado]]** (C8,
+     Design Loop cerrado) — los 5 recursos, los 3 ajustes al plan de rework
+     de la sesión paralela (gradientes+banding → su Sesión 4; Decal VS
+     triplanar → su Sesión 5; nota de cinta continua → su Sesión 2) y el
+     loft como mini-loop propio pre-C6b. **El plan de rework paralelo ya
+     tiene los ajustes notificados por mensaje directo entre sesiones; al
+     retomarla, hacer pull y ejecutar con los ajustes como ratificados.**
+     El spike de Beckett MCP va como Sesión 1 de ese plan.
   0b. **PRD-006 CERRADO ✅ + playtest VALIDADO (2026-07-08):** el kit Duelist
      cerrado a nivel feel. El greybox (`--skip=arena --spawn=<spec>`,
      `Start-Playtest-Greybox.bat`) queda como banco de combate permanente.

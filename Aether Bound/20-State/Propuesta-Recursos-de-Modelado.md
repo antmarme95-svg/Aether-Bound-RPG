@@ -1,6 +1,6 @@
 ---
-status: propuesto
-source: "Design Loop 2026-07-12 — diagnóstico del director técnico tras la evaluación de plugins (90-Raw/research/Plugin-Evaluation-2026-07-11.md) y el benchmark de calidad VRM"
+status: ratificado
+source: "Design Loop 2026-07-12 — diagnóstico del director técnico tras la evaluación de plugins (90-Raw/research/Plugin-Evaluation-2026-07-11.md) y el benchmark de calidad VRM. RATIFICADA por el director el 2026-07-12 (mismo día): los 5 recursos con su orden, los 3 ajustes al plan de rework paralelo, y el loft como mini-loop propio pre-C6b."
 updated: 2026-07-12
 ---
 
@@ -8,7 +8,7 @@ updated: 2026-07-12
 
 > **Frente:** subir el techo de fidelidad del pipeline procedural de
 > personajes SIN romper su ventaja (iteración same-day con el director,
-> cero fricción de importación). **Espera ratificación del director.**
+> cero fricción de importación). **✅ RATIFICADA (2026-07-12).**
 
 ## Diagnóstico
 
@@ -76,8 +76,10 @@ estos ajustes derivados de esta propuesta:
 - **Recurso 2 (loft) NO se agenda en ese plan** — mini-loop propio
   pre-C6b, con ratificación aparte del director.
 
-## Qué ratifica el director
+## Ratificación
 
-1. Los 5 recursos y su orden (o re-priorización).
-2. Los 3 ajustes al plan de rework de la sesión paralela.
-3. El loft como mini-loop propio antes de C6b (o dentro de C6b, o diferido).
+**✅ RATIFICADA por el director (2026-07-12), sin cambios:** los 5 recursos
+y su orden, los 3 ajustes al plan de rework de la sesión paralela, y el
+loft como mini-loop propio antes de C6b. Ejecución: los ajustes 1–3 se
+implementan dentro del plan de rework (sesiones 2/4/5 de la sesión
+paralela); el mini-loop del loft se abre al cerrar ese plan, antes de C6b.
