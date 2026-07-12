@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 # Current State
@@ -13,36 +13,30 @@ updated: 2026-07-11
   Dagna), Gate 1 aprobado por el director. **EN CURSO: ventana C6/C4 (rework
   anatómico + pase de poses, branch `feat/c6-anatomy-rework`)** → luego Fase 2
   del [[Plan-de-Produccion]].
-- **M10-r3/r4 🔄 EN PROGRESO, uncommitted (2026-07-10, cierre de sesión): peinado
-  "príncipe" (ref. visual Shrek, melena a la mandíbula, tono castaño original).**
-  r3 (150 tablillas rectas ancladas al radio exterior del cráneo) se descartó en
-  revisión visual — orejeras tipo casco de frente + borde-repisa recto de nuca,
-  el mismo defecto que ya se había corregido en `frontier_crop`. El director
-  entregó un PRD técnico ("Cabello Estilizado Ondulado — Estilo Príncipe de
-  Cuento"): construcción por CAPAS de mechones-cinta (ribbon con ancho variable,
-  curva en "S", normal facetada), no cilindros ni tablones rectos — base craneal
-  + flequillo/coronilla (6–8) + laterales sien/oreja (8–10) + sueltos que rompen
-  silueta (4–6), total 20–26. r4 implementa esto: helpers nuevos `_ribbon` /
-  `_s_spine` en `hair_library.gd` (cadena de cajas ahusadas siguiendo una curva
-  en S por mechón) y `_hair_prince_curtain` reescrito con 22 mechones en 4
-  capas siguiendo el PRD al pie de la letra. **BLOQUEADO: el banco
-  `tests/tmp_anatomy.gd` (windowed) y hasta `test_core.gd` (headless) se
-  quedaron colgados/extremadamente lentos en 3+ corridas limpias esta sesión**
-  — el proceso consume CPU real (no es un deadlock de GDScript; revisión
-  estática de `_ribbon`/`_s_spine` no encontró loops sin cota ni vectores que
-  normalicen a NaN) pero nunca llega a imprimir ni completar en varios minutos.
-  `hair=11` NO es el default de `PhenotypeData` (`default_phenotype()` usa
-  `hair=0`) y ningún otro gate automatizado lo invoca, así que **no hay riesgo
-  de que esto rompa test_core/autotest_biomech/combat/slice** — pero sí impide
-  la verificación visual de este estilo antes de mostrárselo al director.
-  Sospecha (sin confirmar): contención de recursos de la laptop — Epic Games
-  Launcher/EA Desktop/Xbox App corrían en paralelo esta sesión (~9 GB de RAM
-  fuera de Godot), consistente con la fragilidad térmica ya anotada en
-  [[Lecciones]]. **Próxima sesión: cerrar esas apps, relanzar el banco en
-  limpio, y si persiste, bisectar `_hair_prince_curtain` capa por capa
-  (empezar solo con la concha + 1 mechón) para aislar la causa real.** Código
-  dejado tal cual (commit WIP, no como ronda cerrada) — NO mostrar a Boris como
-  terminado hasta que el banco corra limpio y las capturas se revisen.
+- **M10-r5/r6 ✅ CÓDIGO + QA (2026-07-12): peinado "príncipe" DESBLOQUEADO,
+  reconstruido y en punto de review.** Secuencia de la sesión:
+  (a) **Cuelgue del banco RESUELTO — era contención, no código** (lección
+  confirmada en [[Lecciones]]): matando Epic/EA/Steam, `tmp_anatomy` corre en
+  7 s y `test_core` en 0.4 s ALL_PASS. (b) **El banco desbloqueado reveló el
+  bug real del r4:** `_s_spine` generaba la espina con Y NEGATIVA mientras
+  `_ribbon` mapea la espina sobre `mbasis.y` = flow root→tip → los 21
+  mechones crecían OPUESTOS a su flow (las capas de caída apuntaban al cielo
+  como astas). Fix de una línea + lección nueva del contrato de ejes entre
+  helpers. (c) **r5 (ejecutor Sonnet, 4 rondas):** capa 1 barre atrás
+  abrazando la concha (flow (0,0.24,-0.85)), enmarque a ±0.85 (cara
+  despejada), +3 mechones de nuca (24 total). (d) **r6 (orquestador, fix
+  estructural):** la concha sola era un crop — dos lóbulos nuevos de la misma
+  técnica: masa OCCIPITAL (nuca llena, sin parches de piel, orejas
+  flanqueando) + banda de FLEQUILLO frontal (hairline visible de frente; la
+  v1 quedó enterrada a z=0.82R con el frontal del cráneo en 0.97R — margen
+  real aplicado, emerge ~10 mm). Capturas por ronda:
+  `godot/test_out/rounds/m10-r5/` (estado del ejecutor) y `m10-r6/` (final).
+  QA: test_core + autotest_slice ALL_PASS. **Pendiente: VoBo del director del
+  turnaround r6.** Observaciones honestas para su ojo: (i) la cúpula lee algo
+  "piel" bajo luz dawn — cercanía tonal castaño-claro↔piel en la banda de luz
+  del cel; lo ataca el gradiente raíz→punta de C8 (Sesión 4 del plan), no la
+  geometría; (ii) los planos de sombra de algunos mechones leen gris-frío
+  (sombras del post) — misma vía C8.
 - **📦 Evaluación de plugins ✅ COMPLETA (2026-07-11, 13 zips + Chickensoft +
   Beckett MCP — sesión de research, sin tocar código):** veredicto completo en
   `90-Raw/research/Plugin-Evaluation-2026-07-11.md`. Lo accionable:
@@ -588,17 +582,29 @@ updated: 2026-07-11
      al cuerpo viejo). Después C4a (poses por gait) + C4b (canal airborne) y
      playtest del director de la ventana completa. Pies IK DIFERIDOS.
   0a. **Decisiones que esperan al director (2026-07-12):** (i) VoBo del
-     turnaround r5 + ratificación explícita del cowl/base-body (pendientes
-     desde M9-r5 — requieren que el director VEA las capturas); (ii) VoBo de
-     la sección §7 "Cierre de sesión" añadida a [[SCHEMA]].
+     turnaround r5 de la CABEZA (M9) + ratificación explícita del
+     cowl/base-body (pendientes desde M9-r5 — requieren que el director VEA
+     las capturas); (ii) VoBo de la sección §7 "Cierre de sesión" añadida a
+     [[SCHEMA]]; (iii) **VoBo del turnaround m10-r6 del peinado príncipe**
+     (capturas en `godot/test_out/rounds/m10-r6/`, ver ítem M10-r5/r6).
      **✅ RATIFICADA (2026-07-12): [[Propuesta-Recursos-de-Modelado]]** (C8,
      Design Loop cerrado) — los 5 recursos, los 3 ajustes al plan de rework
      de la sesión paralela (gradientes+banding → su Sesión 4; Decal VS
      triplanar → su Sesión 5; nota de cinta continua → su Sesión 2) y el
-     loft como mini-loop propio pre-C6b. **El plan de rework paralelo ya
-     tiene los ajustes notificados por mensaje directo entre sesiones; al
-     retomarla, hacer pull y ejecutar con los ajustes como ratificados.**
-     El spike de Beckett MCP va como Sesión 1 de ese plan.
+     loft como mini-loop propio pre-C6b.
+     **Plan de rework EN EJECUCIÓN (2026-07-12, esta sesión): Sesiones 0–2
+     COMPLETADAS.** S0: tercera ronda de evaluación dirigida volcada al doc
+     de plugins (cara sin plugin minable; cross-check ROM; orientation
+     warping de PoseWarping → candidato C4, tercera persona exclusiva).
+     S1: **Beckett MCP instalado** (`godot/addons/beckett/`, habilitado en
+     project.godot, `.mcp.json` gitignoreado; servidor solo-localhost
+     verificado) + cuelgue del banco RESUELTO (contención confirmada).
+     S2: peinado príncipe reconstruido (ver ítem M10-r5/r6, VoBo pendiente).
+     **Nota Beckett:** el editor aún NO se ha abierto con el plugin activo —
+     el `.mcp.json` se auto-escribe al primer arranque del editor, y
+     registrar el MCP en la sesión de Claude Code requiere sesión interactiva
+     + aprobación del director. **Siguen: S3 (vista-esqueleto) y S4 (repaso
+     completo + gradientes/banding C8) y S5 (Decal VS triplanar).**
   0b. **PRD-006 CERRADO ✅ + playtest VALIDADO (2026-07-08):** el kit Duelist
      cerrado a nivel feel. El greybox (`--skip=arena --spawn=<spec>`,
      `Start-Playtest-Greybox.bat`) queda como banco de combate permanente.

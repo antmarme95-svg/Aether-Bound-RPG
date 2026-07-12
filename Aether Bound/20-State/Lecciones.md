@@ -163,6 +163,19 @@ updated: 2026-07-11
 - **Las "cabezas" del canon anatómico se miden suelo→CORONILLA del cráneo.** El
   AABB del rig incluye el pelo (~+0.07 m) e infla el conteo (+0.3 cabezas). El
   banco (`tmp_anatomy.gd`) reporta ambos números; el gate es contra la coronilla.
+- **Geometría en frame local: el contrato de ejes entre el generador y el
+  consumidor debe estar ALINEADO (y documentado en ambos).** El bug M10-r4:
+  `_s_spine` generaba la espina del mechón con Y NEGATIVA (convención
+  "cuelga hacia abajo") mientras `_ribbon` mapeaba la espina sobre
+  `mbasis.y` = flow root→tip — resultado: los 21 mechones crecían en
+  dirección OPUESTA a su flow autorado (las capas de caída apuntaban al
+  cielo como astas). Ni la revisión estática de loops/NaN lo detectó: el
+  código era "correcto" línea a línea; el defecto vivía en la COSTURA entre
+  helpers. Detección: solo VISUAL (el banco desbloqueado lo mostró al
+  primer frame). Regla: al escribir un par generador/consumidor de puntos
+  en frame local, escribir el contrato de ejes en el docstring de AMBOS y
+  verificar UNA construcción end-to-end en captura antes de autorar 20 más
+  encima.
 - **La altura de un salto es analítica pura: `h = v²/(2·GRAVITY)`.** Con
   `GRAVITY=24`, `SPRINGBOARD_LAUNCH_VEL=17` → 6.02 m (la sonda midió 6.00). El
   salto "normal" NO es `jump_force` crudo: el LSM lo modula por clase (el warrior
@@ -192,17 +205,20 @@ updated: 2026-07-11
   hondos. Workaround probado (2026-07-11): mapear unidad temporal
   `subst P: <ruta>` → extraer en `P:\` → `subst P: /D`. Los archivos quedan
   en la ruta original.
-- **Cuelgues/lentitud extrema en corridas limpias (2026-07-10):** con la
-  laptop cargada de apps de fondo (Epic Games Launcher, EA Desktop, Xbox App
-  — ~9 GB RAM fuera de Godot), tanto `tmp_anatomy.gd` (windowed) como
-  `test_core.gd` (`--headless`) se colgaron 3+ veces seguidas con procesos
-  recién lanzados y limpios (sin proceso huérfano previo — verificado con
-  `tasklist`/`taskkill //T`). El proceso consumía CPU real (no un deadlock:
-  ver CPU-time creciente vía `Get-Process -Id X | Select CPU`), pero nunca
-  llegaba a imprimir salida. Antes de sospechar del código (revisar loops sin
-  cota / NaN primero, luego esto): cerrar las apps de fondo pesadas y
-  reintentar en limpio — coincide con la fragilidad térmica ya conocida de la
-  RTX 2060 de esta laptop.
+- **Cuelgues/lentitud extrema en corridas limpias (2026-07-10; CONFIRMADO
+  2026-07-12):** con la laptop cargada de apps de fondo (Epic Games Launcher,
+  EA Desktop, Xbox App — ~9 GB RAM fuera de Godot), tanto `tmp_anatomy.gd`
+  (windowed) como `test_core.gd` (`--headless`) se colgaron 3+ veces seguidas
+  con procesos recién lanzados y limpios (sin proceso huérfano previo —
+  verificado con `tasklist`/`taskkill //T`). El proceso consumía CPU real (no
+  un deadlock: ver CPU-time creciente vía `Get-Process -Id X | Select CPU`),
+  pero nunca llegaba a imprimir salida. **Cierre del diagnóstico (2026-07-12):
+  matando Epic/EA/Steam (con `taskkill /IM x.exe /F /T` proceso por proceso —
+  `Stop-Process` en lote aborta en el primer servicio protegido), los MISMOS
+  tests corrieron al instante: `tmp_anatomy` 7 s, `test_core` 0.4 s ALL_PASS.
+  Era contención de recursos, NO bug del código.** Protocolo: cerrar las apps
+  de fondo ANTES de cualquier corrida y de cualquier sesión de debug — una
+  hora de bisección de código no vale lo que 30 s de `taskkill`.
 
 ## Tiering de modelos (orquestación)
 

@@ -425,6 +425,25 @@ static func _hair_prince_curtain(mat: Material) -> Node3D:
 	var shell = _sphere(mat, R * 1.02, shell_c.x, shell_c.y, shell_c.z)
 	shell.scale = Vector3(0.85, 0.72, 0.98)
 	g.add_child(shell)
+	# La CONCHA sola es un crop: para una MELENA la masa debe bajar. Dos
+	# lóbulos más de la misma técnica (elipse contra elipse, auto-recorte):
+	# (a) masa OCCIPITAL — cubre el occipucio hasta la línea de la nuca
+	# (los ribbons van ENCIMA como textura, no son la única cobertura — con
+	# 24 cintas quedaban parches de piel); semieje X menor que el cráneo →
+	# se hunde a la vertical de las orejas (orejas visibles, review v0.5).
+	var nape = _sphere(mat, R * 0.98, 0.0, R * 0.08, -R * 0.26)
+	nape.scale = Vector3(0.84, 0.92, 0.80)
+	g.add_child(nape)
+	# (b) banda de FLEQUILLO frontal baja — de frente la concha sola leía
+	# cúpula calva (hairline inexistente); esta banda pone la línea de
+	# nacimiento y el arranque del barrido hacia atrás.
+	# (Lecciones, margen REAL fuera de la superficie: la v1 de esta banda
+	# llegaba a z=0.82R con el frontal del cráneo en ~0.97R — enterrada
+	# entera. Esta alcanza z≈1.04R: emerge ~10 mm.)
+	var fringe = _sphere(mat, R * 0.62, 0.0, R * 0.52, R * 0.28)
+	fringe.scale = Vector3(1.04, 0.60, 1.22)
+	fringe.rotation.x = 0.25
+	g.add_child(fringe)
 
 	# Tono alterno (+8% claro) para profundidad cel — un mechón entero es
 	# un solo tono (no por segmento), así cada cinta lee como un plano de
@@ -448,18 +467,18 @@ static func _hair_prince_curtain(mat: Material) -> Node3D:
 		var ring_r: float = R * 0.66
 		var anchor := Vector3(sin(a) * ring_r, ring_y, cos(a) * ring_r - R * 0.06)
 		var normal := (anchor - shell_c).normalized()
-		var flow := (Vector3(0.0, 0.62, -0.30) + normal * 0.35).normalized()
+		var flow := (Vector3(0.0, 0.24, -0.85) + normal * 0.42).normalized()
 		var side := flow.cross(normal)
 		if side.length() < 0.01:
 			side = Vector3(1, 0, 0)
 		var mbasis := Basis(side.normalized(), flow, normal)
 		var v: float = 0.90 + 0.2 * float((i * 5) % 4) / 3.0
-		var length: float = R * 0.78 * v
+		var length: float = R * 0.62 * v
 		var sweep: float = R * 0.16 * (1.0 if i % 2 == 0 else -1.0) * 0.6
 		var spine := _s_spine(length, sweep, 4)
 		var root: Vector3 = anchor + normal * R * 0.04
 		var tone = mat if mi % 3 != 1 else lighter
-		g.add_child(_ribbon(tone, spine, R * 0.22, R * 0.09, R * 0.075, root, mbasis))
+		g.add_child(_ribbon(tone, spine, R * 0.26, R * 0.10, R * 0.075, root, mbasis))
 		mi += 1
 
 	# ---- Capa media: laterales, cubren sien + oreja (4 por lado = 8) ----
@@ -490,12 +509,15 @@ static func _hair_prince_curtain(mat: Material) -> Node3D:
 	# borde-repisa recto que la review v0.4 marcó como defecto).
 	var loose_defs: Array = [
 		# [a, ring_y, ring_r, length_mult, sweep_mult]
-		[0.42, R * 0.50, R * 0.86, 1.18, 0.9],
-		[-0.42, R * 0.50, R * 0.86, 1.12, -0.9],
+		[0.85, R * 0.50, R * 0.86, 1.18, 0.9],
+		[-0.85, R * 0.50, R * 0.86, 1.12, -0.9],
 		[1.95, R * 0.42, R * 0.90, 1.05, 1.1],
 		[-1.95, R * 0.42, R * 0.90, 0.96, -1.1],
 		[2.55, R * 0.38, R * 0.80, 1.10, 0.8],
 		[-2.55, R * 0.38, R * 0.80, 0.92, -0.8],
+		[2.95, R * 0.40, R * 0.80, 1.02, 0.6],
+		[-2.95, R * 0.40, R * 0.80, 0.94, -0.6],
+		[PI, R * 0.44, R * 0.78, 0.98, 0.5],
 	]
 	for def in loose_defs:
 		var a: float = def[0]
@@ -513,7 +535,7 @@ static func _hair_prince_curtain(mat: Material) -> Node3D:
 		var spine := _s_spine(length, sweep, 5, 1.5)
 		var root: Vector3 = anchor + normal * R * 0.05
 		var tone = mat if mi % 3 != 1 else lighter
-		g.add_child(_ribbon(tone, spine, R * 0.17, R * 0.06, R * 0.065, root, mbasis))
+		g.add_child(_ribbon(tone, spine, R * 0.20, R * 0.07, R * 0.065, root, mbasis))
 		mi += 1
 
 	return g

@@ -1,5 +1,33 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-12] feature | Plan de rework EN EJECUCIÓN — Sesiones 0–2: Beckett instalado, cuelgue resuelto, peinado príncipe reconstruido (m10-r5/r6)
+Sesión de ejecución del plan "Rework gráfico Humano C6/M10 + spike
+Beckett" (Boris dio luz verde; delegación por tiering: Sonnet ejecutó
+S0 y las rondas estéticas de S2; el orquestador, diagnóstico y fixes de
+fidelidad). **S0:** TERCERA RONDA añadida a
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md` — cara sin plugin
+minable (Humanizer = blend-shapes sobre malla continua, incompatible);
+cross-check ROM contra Humanizer/VRM con huecos anotados
+(muñeca/tobillo/clavícula/dedos); orientation warping de PoseWarping
+portable a hips/spine/upper_spine → candidato C4 (tercera persona
+exclusiva, todo lo first-person descartado). **S1:** Beckett MCP 1.8.0
+instalado (`godot/addons/beckett/`, habilitado, `.mcp.json`
+gitignoreado, servidor solo-localhost verificado); **cuelgue del banco
+RESUELTO: contención confirmada** — matando Epic/EA/Steam, tmp_anatomy
+7 s / test_core 0.4 s (lección cerrada + protocolo en [[Lecciones]]).
+**S2:** el banco desbloqueado reveló el bug real del M10-r4: contrato
+de ejes contradictorio entre `_s_spine` (espina Y negativa) y `_ribbon`
+(`mbasis.y` = flow) → mechones creciendo opuestos a su flow (astas).
+Fix + lección nueva. r5 (Sonnet, 4 rondas): barrido trasero, enmarque
+lateral, +3 mechones nuca. r6 (orquestador): masa occipital + banda de
+flequillo (la concha sola era un crop; hairline frontal por fin
+visible; v1 de la banda enterrada a 0.82R — margen real aplicado).
+Capturas por ronda en `test_out/rounds/m10-r5|r6/`. QA: test_core +
+autotest_slice ALL_PASS. **VoBo del director pendiente (m10-r6)**;
+observaciones honestas anotadas en Current-State (cercanía tonal
+castaño↔piel bajo dawn y sombras gris-frío de mechones → ambas van por
+los gradientes/banding de C8 en la Sesión 4 del plan).
+
 ## [2026-07-12] design | Propuesta-Recursos-de-Modelado RATIFICADA — Design Loop C8 CERRADO
 El director ratificó (mismo día, sin cambios): los 5 recursos con su
 orden (triplanar → loft/perfil → gradientes → banding MToon →
