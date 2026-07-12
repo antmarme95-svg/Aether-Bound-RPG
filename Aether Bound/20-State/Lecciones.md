@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-08
+updated: 2026-07-11
 ---
 
 # Lecciones y entorno técnico
@@ -182,6 +182,11 @@ updated: 2026-07-08
 - Regenerar el asset de follaje si cambia la sprite sheet:
   `--headless --path godot --script res://tools/process_clump.gd`.
 - Gate de rendimiento: **≥60 FPS** en The Wilds.
+- **Extraer zips en rutas profundas de esta máquina (scratchpad/OneDrive)
+  revienta MAX_PATH** (~260): `Expand-Archive` falla con zips de árboles
+  hondos. Workaround probado (2026-07-11): mapear unidad temporal
+  `subst P: <ruta>` → extraer en `P:\` → `subst P: /D`. Los archivos quedan
+  en la ruta original.
 - **Cuelgues/lentitud extrema en corridas limpias (2026-07-10):** con la
   laptop cargada de apps de fondo (Epic Games Launcher, EA Desktop, Xbox App
   — ~9 GB RAM fuera de Godot), tanto `tmp_anatomy.gd` (windowed) como

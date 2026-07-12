@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-11] research | Evaluación de 8 plugins + Chickensoft + cabello/facial
+Boris entregó 8 zips en Downloads + 2 URLs. Inventario técnico por subagente
+Sonnet (tiering de [[Lecciones]]); análisis contra Plan/Art Bible/Lecciones
+por el orquestador. Veredicto archivado en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`: **Dialogue Manager 3.10.1
+= único candidato de adopción completa** (entra con PRD-009, Fase 2 — cubre
+el hueco real de diálogo/escenas); HTerrain y ProtonScatter = minas de
+shaders para Fase 2/4 (low_poly faceteado, wind sway, splatmapping, perlin+
+erosión GPU, grass bend, toon water); FancyControls/FACS = patrón de tween UI
+para Fase 4 (aclarado: es UI, NO facial — el consejo externo que lo
+recomendaba para caras confabuló); MTerrain referencia menor; Beehave
+diferido post-slice; LimboAI descartado (fuente C++ sin binarios);
+GodotSteam zip vacío (repo en Codeberg); Chickensoft descartado (C#-only).
+Research cabello: no hay plugin que aplique; el ribbon del M10-r4 ES la
+técnica canónica; SpringBoneSimulator3D no aplica (requiere Skeleton3D).
+Semillas para modelado futuro: expresiones faciales por estado (Fase 3–4),
+spike nodo `Decal` para rasgos (esquiva la costura UV), reglas de textura
+facial (alpha-scissor, margen 8 mm, tinte blanco×albedo). Sin cambios de
+código; ventana C6/C4 intacta.
+
 ## [2026-07-10] wip+blocked | M10-r3/r4: peinado "príncipe" (PRD ribbon) — banco colgado, cierre de sesión
 Boris pidió melena estilo Príncipe de Cuento (ref. Shrek), tono castaño
 original, "150 mechones". r3 (150 tablillas rectas al radio exterior, 2

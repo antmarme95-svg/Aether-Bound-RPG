@@ -73,3 +73,7 @@
   aceptación en [[Task-Board]]): **Character-Blockout-Review-v0.1**
   (cuerpo humano, 2026-07-10) · **Character-Head-Review v0.2–v0.5**
   (cabeza/busto, rondas M9/M10, 2026-07-10).
+- `research/Plugin-Evaluation-2026-07-11.md` — evaluación de 8 plugins
+  Godot + Chickensoft + research cabello/facial: Dialogue Manager =
+  adoptar en Fase 2; shaders minables de HTerrain/Scatter para Fase 4;
+  semillas de expresiones faciales y spike `Decal`.
