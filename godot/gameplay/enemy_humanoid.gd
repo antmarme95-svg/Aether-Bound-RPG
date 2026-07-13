@@ -20,6 +20,9 @@ const _EnergyC   = preload("res://combat/energy_component.gd")
 const _PushPullC = preload("res://combat/push_pull_component.gd")
 const _WeaponD   = preload("res://combat/weapon_data.gd")
 const _Payload   = preload("res://combat/hit_payload.gd")
+# Fase Migración de Ropa (2026-07-13): los enemigos humanoides usan el
+# mismo rig procedural que el jugador — deben salir vestidos igual.
+const _CharacterOutfit = preload("res://character/character_outfit.gd")
 
 const PUNISH_DAMAGE_MULT := 1.5   # ventana de castigo (posture break)
 const PARRY_STUN := 2.0           # B15b: parry → ~2 s indefenso
@@ -110,6 +113,7 @@ func _ready() -> void:
 	add_child(rig)
 	var origin: Dictionary = OriginsData.get_origin("ironblooded")
 	rig.apply_phenotype(_profile["phenotype"], origin)
+	_CharacterOutfit.build_frontier(rig)
 
 # ================================================================
 # Entradas de daño

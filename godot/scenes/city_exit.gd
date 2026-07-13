@@ -3,6 +3,10 @@
 ## frontier gate with rising portcullis, two guards, and a toWilds trigger.
 class_name CityExit extends Node3D
 
+# Fase Migración de Ropa (2026-07-13): los guardias son CharacterRig
+# visibles en gameplay — deben salir vestidos igual que jugador/enemigos.
+const _CharacterOutfit = preload("res://character/character_outfit.gd")
+
 const HALF_W = 4.0
 const GATE_Z = -48.0
 const END_Z  = -58.0
@@ -228,6 +232,7 @@ func _build_guards(theme: Dictionary) -> void:
 			},
 			_origin
 		)
+		_CharacterOutfit.build_frontier(guard)
 		_guards.append(guard)
 
 # ================================================================

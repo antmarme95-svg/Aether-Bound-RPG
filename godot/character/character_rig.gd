@@ -116,8 +116,9 @@ var tail_slot: Node3D
 
 var pelvis: MeshInstance3D
 var torso: MeshInstance3D
-var jerkin: MeshInstance3D
-var strap: MeshInstance3D
+# jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
+# debate orquestador↔QA 2026-07-13, GO del director) — el cuerpo base ya no
+# fabrica ropa fosilizada; build_frontier() la cuelga como outfit aditivo.
 var goggles: Node3D
 var skull: MeshInstance3D
 var jaw_mesh: MeshInstance3D  # renamed from "jaw" to avoid shadowing Node3D.get_name
@@ -278,15 +279,9 @@ func _build() -> void:
 	hips.add_child(pelvis)
 	_add_outline_pass(pelvis, Color("#3a2d22"))
 
-	var belt = _box_mesh(0.31, 0.05, 0.2, leather_mat)
-	belt.position.y = 0.05
-	hips.add_child(belt)
-	_add_outline_pass(belt, Color("#5b4632"))
-
-	var buckle = _box_mesh(0.06, 0.04, 0.02, accent_glow_mat)
-	buckle.position = Vector3(0.05, 0.05, 0.105)
-	buckle.name = "buckle_glow"
-	hips.add_child(buckle)  # no outline on glow parts
+	# belt/buckle_glow MIGRARON a character_outfit.gd (Fase Migración de
+	# Ropa) — el cuerpo base ya no fabrica cinturón fosilizado; lo cuelga
+	# CharacterOutfit.build_frontier() como pieza aditiva del outfit.
 
 	for side in [-1, 1]:
 		var leg = Node3D.new()
@@ -423,9 +418,10 @@ func _build() -> void:
 	# En y=0.02 el radio del cilindro interpola a ≈0.120; el borde del
 	# abdomen (z=0.105+0.022=0.127) protruye ~0.007 (≈12% de su propio
 	# radio, dentro del tope ≤30%) — plano-tenso, no cóncavo ni barril.
-	# NOTA: el jerkin (cilindro cuero, spine y=0.16) tapa parcialmente
-	# esta masa — migración del jerkin es tarea de otro agente; la
-	# anatomía debajo queda correcta.
+	# NOTA (Migración de Ropa, 2026-07-13): el jerkin fosilizado que tapaba
+	# esta masa MIGRÓ a character_outfit.gd (faja envuelta con margen real
+	# sobre z=0.127 — ver _attach_waist_wrap) — la anatomía queda desnuda
+	# aquí a propósito (banco tmp_anatomy.gd no llama outfit).
 	var abs_plate = _sphere_mesh(0.055, skin_mat)
 	abs_plate.scale = Vector3(1.1, 1.6, 0.4)
 	abs_plate.position = Vector3(0.0, 0.02, 0.105)
@@ -445,16 +441,13 @@ func _build() -> void:
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
 
-	jerkin = _cylinder_mesh(0.108, 0.125, 0.20, leather_mat)
-	jerkin.position.y = 0.16
-	spine.add_child(jerkin)
-	_add_outline_pass(jerkin, Color("#5b4632"))
-
-	strap = _box_mesh(0.07, 0.46, 0.02, dark_leather_mat)
-	strap.position = Vector3(0.02, 0.10, 0.165)
-	strap.rotation.z = 0.62
-	upper_spine.add_child(strap)
-	_add_outline_pass(strap, Color("#3a2d22"))
+	# jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
+	# debate orquestador↔QA 2026-07-13, GO del director): el cilindro de
+	# cuero en la cintura (spine y=0.16) y la bandolera diagonal (upper_spine)
+	# ya no viven fosilizados en el cuerpo base — CharacterOutfit.
+	# build_frontier(rig) los reemplaza por la FAJA ENVUELTA + cinturón
+	# diagonal fiel a fenotipo-humano-v1.png. El torso queda desnudo aquí
+	# a propósito (banco de anatomía tests/tmp_anatomy.gd NO llama outfit).
 
 	# Pauldron is built AFTER arms loop so arm_r (arms[1], side==1) exists.
 	# It will be added to arm_r after that loop runs — placeholder here.
@@ -930,7 +923,8 @@ func _apply_build() -> void:
 	# C6a: V-taper base — el pecho es ancho/plano y la cintura recogida ANTES
 	# de aplicar peso/clase (el frijol del puerto era pecho=cintura).
 	torso.scale  = Vector3(_lerp(0.84, 1.34, w) * arch_xz * CHEST_X, 1.0, _lerp(0.86, 1.26, w) * arch_xz * CHEST_Z)
-	jerkin.scale = Vector3(_lerp(0.86, 1.36, w) * arch_xz * WAIST_XZ, 1.0, _lerp(0.88, 1.28, w) * arch_xz * WAIST_XZ)
+	# jerkin.scale (WAIST_XZ) migró — ahora lo lee CharacterOutfit.
+	# build_frontier() en vivo desde torso.scale/pelvis.scale (ver ahí).
 	pelvis.scale = Vector3(_lerp(0.88, 1.25, w) * arch_xz, 1.0, 1.0)
 
 	var limb_xz: float = limb * arch_xz
