@@ -23,8 +23,13 @@ class_name CharacterRig extends Node3D
 # CRITICAL 1 silueta atlética (hombros +12%, cintura menos, pecho más),
 # CRITICAL 2 cabeza menor, CRITICAL 3 cuello largo + hombros más bajos.
 const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos cabezón)
-const HEAD_Y: float = 0.505          # pivote de cabeza (v0.4 H3: cuello −30%, PROMOVIDO)
-const NECK_Y: float = 0.352   # v0.4 H3: cuello −30% (tercera ronda — promovido)
+# Fase C (Benchmark-Musculatura-Torso.md / debate orquestador↔QA
+# 2026-07-13): CUELLO +15% — la caída mentón→hombro se leía corta (la
+# barbilla casi rozaba la línea de hombros en 3/4). HEAD_Y y NECK_Y suben
+# el mismo delta que el cilindro del cuello crece (ver _build, +0.015 de
+# alto) para que la cabeza no se hunda ni se separe del cuello.
+const HEAD_Y: float = 0.520          # v0.4 H3 0.505 + 15% de cuello (Fase C)
+const NECK_Y: float = 0.3595  # v0.4 H3 0.352 + 15% de cuello (Fase C)
 # QA dirigido 2026-07-13 (hombros que no convencían al director): el
 # "+12%" de la review v0.1 CONTRADECÍA la lámina (fenotipo-humano-v1 dice
 # "narrow sloped shoulders", biacromial ~2.05 cabezas ≈ 0.52 m) y quedó
@@ -381,24 +386,51 @@ func _build() -> void:
 	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
 
-	# r4 (review HIGH 8): PLANOS anatómicos del torso — el pecho y las
-	# clavículas son planos propios, no la superficie del cilindro. Solo
-	# geometría (masas grandes), cero detalle: BotW/Hinterberg.
-	# Casi al ras del cilindro: el plano se lee por el ESCALÓN del cel
-	# shading, no por tinta del Sobel (proud → parche entintado).
-	# QA 2026-07-13 (d2): las cajas al ras leían PETO — los rectángulos de
-	# tinta del Sobel cruzaban el pecho como costuras de armadura. Hundidas
-	# 0.01 más: el volumen lo pone el escalón del cel, no el rectángulo.
-	var pec_plate = _box_mesh(0.20, 0.09, 0.05, skin_mat)
-	pec_plate.position = Vector3(0.0, 0.22, 0.112)
-	pec_plate.rotation.x = 0.12   # el plano del pecho cae hacia el abdomen
-	upper_spine.add_child(pec_plate)
-	_add_outline_pass(pec_plate, Color("#f2b186"))
+	# Fase C (Benchmark-Musculatura-Torso.md): las cajas-peto (pec_plate/
+	# clavicle) SE ELIMINAN — leían como armadura de placas, no como
+	# músculo (QA d2 ya lo diagnosticaba). Reemplazo: PECTORALES =
+	# elipsoides SEMI-HUNDIDAS en el cilindro del torso, mismo patrón
+	# gemelo que brazos/piernas (esfera escalada + intersección real con
+	# el volumen anfitrión → el Sobel entinta la curva de intersección,
+	# no un rectángulo). Receta del debate orquestador↔QA: r 0.05, escala
+	# (1.4, 0.9, 0.5), centros x=±0.055 / y=0.21 / z=0.115. Verificado
+	# contra el radio real del cilindro en y=0.21 (interpolado top 0.16 /
+	# bot 0.11 sobre height 0.34): r_cyl≈0.148 → el borde del pec
+	# (z=0.115+0.025=0.140) queda LIGERAMENTE hundido (~0.008), no proud;
+	# el valle esternal lo dibuja la curva de intersección entre ambos
+	# elipsoides (se solapan ~3 cm en el centro — mismo mecanismo de
+	# "anillo" que el gemelo, aquí en par para el valle).
+	for pside in [-1, 1]:
+		var pec = _sphere_mesh(0.05, skin_mat)
+		pec.scale = Vector3(1.4, 0.9, 0.5)
+		pec.position = Vector3(float(pside) * 0.055, 0.21, 0.115)
+		upper_spine.add_child(pec)
+		_add_outline_pass(pec, Color("#f2b186"))
 
-	var clavicle = _box_mesh(0.19, 0.028, 0.04, skin_mat)
-	clavicle.position = Vector3(0.0, 0.30, 0.115)
-	upper_spine.add_child(clavicle)
-	_add_outline_pass(clavicle, Color("#f2b186"))
+	# CLAVÍCULA: cápsula finísima por lado (r 0.012), del esternón al
+	# hombro, con leve V (ángulo asimétrico) — sugiere el hueso sin
+	# fabricar una costura dura. Semi-hundida sobre la línea de los pecs.
+	for cside in [-1, 1]:
+		var clavicle = _capsule_mesh(0.012, 0.075, skin_mat)
+		clavicle.rotation.z = PI / 2.0 - float(cside) * 0.14   # V hacia el esternón
+		clavicle.position = Vector3(float(cside) * 0.075, 0.282, 0.116)
+		upper_spine.add_child(clavicle)
+		_add_outline_pass(clavicle, Color("#f2b186"))
+
+	# PLACA ABDOMINAL: 1 elipsoide aplastada única — plano tenso de
+	# abdomen enjuto, SIN six-pack ni ombligo (tabla SÍ/NO de la rúbrica).
+	# r 0.055, escala (1.1, 1.6, 0.4), y=0.02 (bajo el pecho), z=0.105.
+	# En y=0.02 el radio del cilindro interpola a ≈0.120; el borde del
+	# abdomen (z=0.105+0.022=0.127) protruye ~0.007 (≈12% de su propio
+	# radio, dentro del tope ≤30%) — plano-tenso, no cóncavo ni barril.
+	# NOTA: el jerkin (cilindro cuero, spine y=0.16) tapa parcialmente
+	# esta masa — migración del jerkin es tarea de otro agente; la
+	# anatomía debajo queda correcta.
+	var abs_plate = _sphere_mesh(0.055, skin_mat)
+	abs_plate.scale = Vector3(1.1, 1.6, 0.4)
+	abs_plate.position = Vector3(0.0, 0.02, 0.105)
+	upper_spine.add_child(abs_plate)
+	_add_outline_pass(abs_plate, Color("#f2b186"))
 
 	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
@@ -655,7 +687,10 @@ func _build() -> void:
 	# Cuello con taper — v0.1 pedía que EXISTIERA; v0.2/v0.3/v0.4 lo fueron
 	# acortando. v0.4 H3 (PROMOVIDO, 3ª ronda): −30% → 0.10 de largo, base
 	# 0.075 fundida al trapecio; la cabeza baja con él (HEAD_Y 0.505).
-	var neck = _cylinder_mesh(0.050, 0.075, 0.10, skin_mat)
+	# Fase C (debate orquestador↔QA 2026-07-13): +15% de largo — 0.10→0.115
+	# (criterio: caída barbilla→hombro ~0.55 cabezas, la barbilla no roza la
+	# línea de hombros en 3/4). NECK_Y/HEAD_Y suben el mismo delta arriba.
+	var neck = _cylinder_mesh(0.050, 0.075, 0.115, skin_mat)
 	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
