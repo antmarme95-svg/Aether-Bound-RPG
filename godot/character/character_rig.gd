@@ -476,14 +476,18 @@ func _build() -> void:
 		# r2c: 0.014 de X seguía invisible a distancia de banco (verificado
 		# por hash de capturas — el cambio cargaba, solo era chico). El
 		# gemelo protruye ~30% de su radio; estas masas apuntan a lo mismo.
+		# r2d (feedback director: "baja el tamaño pero APLÁSTALOS, no los
+		# encojas — que mantengan su ubicación"): posiciones y largo (eje Y)
+		# INTACTOS; solo se aplastan los ejes radiales X/Z ~20-25% — el
+		# músculo sigue naciendo/muriendo donde debe, pero protruye menos.
 		var bicep = _sphere_mesh(0.046, skin_mat)
-		bicep.scale = Vector3(0.9, 1.45, 0.9)
+		bicep.scale = Vector3(0.72, 1.45, 0.72)
 		bicep.position = Vector3(side * 0.020, -0.125, 0.034)   # afuera + frente
 		arm.add_child(bicep)
 		_add_outline_pass(bicep, Color("#f2b186"))
 
 		var tricep = _sphere_mesh(0.043, skin_mat)
-		tricep.scale = Vector3(0.85, 1.35, 0.9)
+		tricep.scale = Vector3(0.68, 1.35, 0.72)
 		tricep.position = Vector3(side * 0.016, -0.175, -0.034)  # afuera + espalda
 		arm.add_child(tricep)
 		_add_outline_pass(tricep, Color("#f2b186"))
@@ -519,8 +523,9 @@ func _build() -> void:
 		# r2b: mismo fix que bíceps/tríceps — componente X hacia afuera
 		# (la masa del antebrazo/brachioradialis se lee del lado del pulgar)
 		# y un punto más grande para que el cel la agarre de frente.
+		# r2d: mismo aplastado que bíceps/tríceps (posición intacta).
 		var forearm_mass = _sphere_mesh(0.042, skin_mat)
-		forearm_mass.scale = Vector3(0.9, 1.4, 0.85)
+		forearm_mass.scale = Vector3(0.72, 1.4, 0.68)
 		forearm_mass.position = Vector3(side * 0.018, -0.075, 0.026)
 		elbow.add_child(forearm_mass)
 		_add_outline_pass(forearm_mass, Color("#f2b186"))
