@@ -7,6 +7,10 @@
 
 - [[SCHEMA]] — el modelo de trabajo: capas, plantillas, contratos, regla de oro.
 - [[LOG]] — bitácora append-only de operaciones.
+- `../VAULT-STARTER.md` — **exportable**: el método completo (VDD ×
+  LLM-WIKI + nuestra rutina de cierre §7 + consejos de campo) destilado en
+  un archivo único para que cualquier persona arranque su propio Vault
+  adjuntándolo a su Claude Code. Generado 2026-07-13.
 
 ## 10-Knowledge (diseño del juego, compilado del GDD v2.2)
 

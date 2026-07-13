@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-13] design | VAULT-STARTER.md — el método exportado en un archivo único
+Encargo del director: destilar nuestro esquema de trabajo completo en un
+.md autocontenido para que cualquier persona arranque un proyecto de
+Vault adjuntándolo a su propio Claude Code. Generado en la raíz del repo
+(`VAULT-STARTER.md`) desde las fuentes raw (LLM-WIKI de Karpathy + VDD
+v1.0), el SCHEMA vigente (incluido el §7 de cierre de sesión) y los 5
+loops. Contiene: teoría (compilación vs RAG, Vault como OS/máquina de
+estados, separación de roles), estructura completa
+(Raw/Schema/Knowledge/State/Loops/Index/LOG), plantilla de página con
+ciclo de status, contratos genéricos de los 5 loops, la rutina de cierre
+de 6 pasos con la semántica de sobrescritura (Current-State = presente,
+LOG = historia, Lecciones = viva y obligatoria pre-código), tiering de
+orquestación, instrucciones de bootstrap para el agente (§9), CLAUDE.md
+sugerido (§10) y consejos de campo pagados en este proyecto (§11).
+Agnóstico de dominio; en español.
+
 ## [2026-07-13] feature | Rework integral Fases A→D: shaders VoBo, cuerpo a la lámina, anatomía de torso, outfit frontier (8 commits, 5 gates verdes)
 Día completo dirigido en vivo por Boris con QA imparcial Fable como
 contrapeso. (1) Dos auditorías imparciales archivadas verbatim
