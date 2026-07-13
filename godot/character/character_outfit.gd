@@ -20,7 +20,32 @@
 # re-llamar en cada apply_phenotype/apply_archetype sin acumular basura.
 #
 # Loaded via preload (NUNCA class_name cruzado — ver Lecciones.md).
+#
+# CONFIGURABLE POR PIEZAS (decisión del director 2026-07-13: la faja y la
+# bandolera NO van hardcodeadas al personaje): cada pieza del catálogo
+# _PIECES es montable/desmontable por separado, un outfit es una LISTA de
+# ids de pieza, y los presets nombrados (PRESETS) son solo listas
+# predefinidas. El outfit de cada personaje/spawn se declara como config
+# (patrón characters.gd); la UI de personalización del jugador (pestaña
+# OUTFIT en creación) llega en Fase 4 — esta API ya la soporta.
 extends RefCounted
+
+const _Rig := preload("res://character/character_rig.gd")
+
+# Catálogo: id de pieza → [nodo padre (nombre de propiedad del rig),
+# nombre del grupo]. Añadir una pieza nueva = entrada aquí + su _attach_*
+# + su rama en el match de build().
+const _PIECES: Dictionary = {
+	"waist_wrap":    ["spine",       "outfit_waist_wrap"],
+	"diagonal_belt": ["upper_spine", "outfit_diagonal_belt"],
+	"hip_belt":      ["hips",        "outfit_hip_belt"],
+}
+
+# Presets nombrados: solo listas de piezas. "frontier" = el conjunto de la
+# lámina fenotipo-humano-v1.
+const PRESETS: Dictionary = {
+	"frontier": ["waist_wrap", "diagonal_belt", "hip_belt"],
+}
 
 # ---- mini helpers (mismo estilo que character_signature.gd) ----
 
@@ -62,31 +87,52 @@ static func _cyl(mat: Material, top_r: float, bot_r: float, h: float,
 # API pública
 # ================================================================
 
-## Construye (o RE-construye, idempotente) el outfit "Frontier" completo
-## sobre un CharacterRig ya montado y con apply_phenotype/apply_archetype
-## ya aplicados (lee torso.scale/pelvis.scale para seguir el build actual —
-## el equivalente al escalado que _apply_build le daba al jerkin viejo).
-## Llamar SIEMPRE tras montar el rig del jugador (game_director.gd) o de
-## un enemigo humanoide (enemy_humanoid.gd); Dagna NO lo usa (su vestuario
-## es su propia signature) y el banco de anatomía tampoco (cuerpo desnudo
-## a propósito).
-static func build_frontier(rig) -> void:
-	_attach_waist_wrap(rig)
-	_attach_diagonal_belt(rig)
-	_attach_hip_belt(rig)
+## Monta una LISTA de piezas del catálogo sobre un CharacterRig ya montado
+## y con apply_phenotype/apply_archetype aplicados (cada pieza lee
+## torso.scale/pelvis.scale para seguir el build actual). Idempotente por
+## pieza (re-llamar reconstruye sin acumular basura). Ids desconocidos se
+## reportan y se saltan (config tolerante, mismo espíritu que spawn_spec).
+static func build(rig, pieces: Array) -> void:
+	for id in pieces:
+		var pid := String(id)
+		match pid:
+			"waist_wrap":
+				_attach_waist_wrap(rig)
+			"diagonal_belt":
+				_attach_diagonal_belt(rig)
+			"hip_belt":
+				_attach_hip_belt(rig)
+			_:
+				push_warning("[CharacterOutfit] pieza desconocida: " + pid)
 
-## Quita el outfit completo (para dejar el torso desnudo si algún flujo lo
-## necesita — el banco de anatomía simplemente nunca llama build_frontier,
-## pero esto queda disponible para togglear/desmontar en caliente).
+## Monta un preset nombrado (lista predefinida de piezas).
+static func build_preset(rig, preset: String = "frontier") -> void:
+	build(rig, PRESETS.get(preset, []))
+
+## Desmonta UNA pieza en caliente (personalización).
+static func remove_piece(rig, piece: String) -> void:
+	if not _PIECES.has(piece):
+		return
+	var parent: Node3D = rig.get(String(_PIECES[piece][0]))
+	var old := parent.get_node_or_null(NodePath(String(_PIECES[piece][1])))
+	if old != null:
+		parent.remove_child(old)
+		old.queue_free()
+
+## Desmonta TODO el outfit (deja el cuerpo base desnudo).
+static func remove_all(rig) -> void:
+	for piece in _PIECES:
+		remove_piece(rig, piece)
+
+# -- back-compat: los call sites existentes (game_director/enemy_humanoid/
+# city_exit/recruitment_office) llaman build_frontier; son ahora aliases
+# del preset. El default del jugador podrá venir de config cuando exista
+# la pestaña OUTFIT (Fase 4).
+static func build_frontier(rig) -> void:
+	build_preset(rig, "frontier")
+
 static func remove_frontier(rig) -> void:
-	for entry in [[rig.spine, "outfit_waist_wrap"],
-			[rig.upper_spine, "outfit_diagonal_belt"],
-			[rig.hips, "outfit_hip_belt"]]:
-		var parent: Node3D = entry[0]
-		var old := parent.get_node_or_null(NodePath(String(entry[1])))
-		if old != null:
-			parent.remove_child(old)
-			old.queue_free()
+	remove_all(rig)
 
 # ================================================================
 # 1. FAJA ENVUELTA — 3 cilindros aplastados apilados en la cintura, colgada
@@ -111,9 +157,11 @@ static func remove_frontier(rig) -> void:
 static func _attach_waist_wrap(rig) -> void:
 	var g := _fresh_group(rig.spine, "outfit_waist_wrap")
 
-	var torso_w: float = rig.torso.scale.x / CharacterRig.CHEST_X
+	# _Rig por const preload — el header prometía "nunca class_name cruzado"
+	# pero la v1 usaba el global CharacterRig (la lección exacta); pagado.
+	var torso_w: float = rig.torso.scale.x / _Rig.CHEST_X
 	var pelvis_w: float = rig.pelvis.scale.x
-	var w_scale: float = (torso_w + pelvis_w) * 0.5 * CharacterRig.WAIST_XZ
+	var w_scale: float = (torso_w + pelvis_w) * 0.5 * _Rig.WAIST_XZ
 
 	# [y (spine-local), top_r, bot_r, height, tilt_x (rad)]
 	var bands: Array = [
