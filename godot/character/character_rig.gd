@@ -289,8 +289,19 @@ func _build() -> void:
 		# no cápsulas-globo; la rodilla es la única bola (articulación).
 		# r4 (review HIGH 5): la pierna tiene TRES volúmenes diferenciados —
 		# cuádriceps arriba, rodilla, GEMELO atrás — no un tubo continuo.
-		var thigh = _cylinder_mesh(0.090, 0.058, 0.40, dark_leather_mat)
-		thigh.position.y = -0.22
+		# FASE B (fusión de uniones, QA "maniquí articulado"): el muslo
+		# terminaba en radio 0.058 a solo 0.03 del centro de la rodilla
+		# (r0.054) — el cono era MÁS GRUESO que la esfera de articulación en
+		# ese corte transversal (0.058 > sqrt(0.054²-0.03²)=0.045), así que
+		# el muslo asomaba MÁS ANCHO que la rodilla → costura dura (valle de
+		# profundidad que el Sobel entinta). Fix: el cono termina más
+		# delgado (0.050, "ligeramente menor que la esfera") y penetra
+		# HONDO (0.02 más allá del centro de la rodilla, no tangente) —
+		# se alarga el cilindro para no mover el extremo de cadera. La
+		# rodilla crece a 0.066 ("apenas mayor que ambos conos") para
+		# envolver la transición con curvatura convexa continua.
+		var thigh = _cylinder_mesh(0.090, 0.050, 0.45, dark_leather_mat)
+		thigh.position.y = -0.245
 		leg.add_child(thigh)
 		_add_outline_pass(thigh, Color("#3a2d22"))
 
@@ -299,12 +310,19 @@ func _build() -> void:
 		knee.position.y = -0.45
 		leg.add_child(knee)
 
-		var knee_cap = _sphere_mesh(0.054, dark_leather_mat)
+		var knee_cap = _sphere_mesh(0.066, dark_leather_mat)
 		knee_cap.position.y = 0.0
 		knee.add_child(knee_cap)
 		_add_outline_pass(knee_cap, Color("#3a2d22"))
 
-		var shin = _cylinder_mesh(0.052, 0.036, 0.38, dark_leather_mat)
+		# La espinilla también penetra 0.02 más allá del centro de la
+		# rodilla (arriba) — mismo criterio que el muslo — Y se alarga
+		# hacia ABAJO para cerrar el HUECO real con la bota (el tope de la
+		# espinilla quedaba en y=-0.39 mientras la bota empieza en
+		# y=-0.405: 1.5 cm de aire/piel visible entre caña y bota).
+		# bottom_r sube un poco (0.036→0.040) para fundir mejor con el
+		# ancho de la caña.
+		var shin = _cylinder_mesh(0.052, 0.040, 0.44, dark_leather_mat)
 		shin.position.y = -0.20
 		knee.add_child(shin)
 		_add_outline_pass(shin, Color("#3a2d22"))
@@ -414,13 +432,22 @@ func _build() -> void:
 		# r4 (review CRITICAL 4): masa de ATLETA, no de personaje delgado —
 		# bíceps/antebrazo suben sin llegar a heroico; el deltoide crece y
 		# funde la transición hombro-brazo (LOW 15).
-		var deltoid = _sphere_mesh(0.068, skin_mat)
+		# FASE B (fusión de uniones, QA "maniquí articulado"): igual que la
+		# pierna, hombro/codo solo TOCABAN el centro de su esfera (embed=0,
+		# tangencia pura) → el Sobel entinta el anillo de tangencia. Peor
+		# aún, el antebrazo (top_r 0.054) era MÁS GRUESO que la esfera del
+		# codo (r 0.045) en su propio corte transversal — asomaba por fuera
+		# del codo. Fix uniforme: cada esfera de articulación crece "apenas
+		# mayor que ambos conos" y cada cono PENETRA 0.02 más allá del
+		# centro de su esfera (no tangente) — se alargan los cilindros para
+		# no mover el extremo libre (hombro/mano) ya aprobado.
+		var deltoid = _sphere_mesh(0.076, skin_mat)
 		deltoid.position.y = -0.01
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
 
-		var upper = _cylinder_mesh(0.062, 0.044, 0.28, skin_mat)
-		upper.position.y = -0.15
+		var upper = _cylinder_mesh(0.056, 0.040, 0.35, skin_mat)
+		upper.position.y = -0.165
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
 
@@ -429,13 +456,13 @@ func _build() -> void:
 		elbow.position.y = -0.32   # codo en la línea del ombligo (1.23)
 		arm.add_child(elbow)
 
-		var elbow_cap = _sphere_mesh(0.045, skin_mat)
+		var elbow_cap = _sphere_mesh(0.058, skin_mat)
 		elbow_cap.position.y = 0.0
 		elbow.add_child(elbow_cap)
 		_add_outline_pass(elbow_cap, Color("#f2b186"))
 
-		var fore = _cylinder_mesh(0.054, 0.032, 0.26, skin_mat)
-		fore.position.y = -0.13
+		var fore = _cylinder_mesh(0.048, 0.036, 0.305, skin_mat)
+		fore.position.y = -0.1325
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
 
