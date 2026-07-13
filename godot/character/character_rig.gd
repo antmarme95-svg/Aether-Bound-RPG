@@ -441,8 +441,22 @@ func _build() -> void:
 		# mayor que ambos conos" y cada cono PENETRA 0.02 más allá del
 		# centro de su esfera (no tangente) — se alargan los cilindros para
 		# no mover el extremo libre (hombro/mano) ya aprobado.
-		var deltoid = _sphere_mesh(0.076, skin_mat)
-		deltoid.position.y = -0.01
+		# FASE B r2 (feedback director: "hombros abultados, muñecas
+		# inexistentes, músculos poco marcados"): el deltoide de r1 (r0.076,
+		# esfera pura) leía como hombrera/globo. Encoge a r0.066 y lo
+		# ACHATA con escala no-uniforme (0.95, 1.15, 0.9) — gota que
+		# ENVUELVE el hombro (más alto que ancho, más angosto que profundo)
+		# en vez de bola. Centro sube apenas (y −0.01→−0.006) y se sesga
+		# afuera+adelante (x=side*0.010, z=0.008) para leer músculo
+		# deltoides real, no repisa. Costura con "upper" INTACTA: el cono
+		# sigue tocando en y=0.01 (arm-local), que ahora queda 0.016 por
+		# encima del centro del deltoide (antes 0.02) — MÁS margen de
+		# solape que r1, no menos, porque el radio efectivo en Z/X de la
+		# elipsoide en ese corte (~0.057-0.060) sigue por encima del
+		# top_r del cono (0.056) — no hay asomo, no se reabre el anillo.
+		var deltoid = _sphere_mesh(0.066, skin_mat)
+		deltoid.scale = Vector3(0.95, 1.15, 0.9)
+		deltoid.position = Vector3(side * 0.010, -0.006, 0.008)
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
 
@@ -450,6 +464,29 @@ func _build() -> void:
 		upper.position.y = -0.165
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
+
+		# FASE B r2: BÍCEPS (masa frontal) y TRÍCEPS (masa trasera) del
+		# brazo superior — mismo patrón que el GEMELO de la pierna (~L331):
+		# esfera escalada, semi-hundida, el escalón del cel lee el volumen.
+		# r2b (ronda visual del orquestador): la v1 desplazaba SOLO en Z →
+		# de FRENTE la silueta del brazo no cambiaba nada y el músculo no
+		# se leía (el banco captura de frente). El bulto se lee por el
+		# ensanchamiento LATERAL: componente X hacia afuera (side*) además
+		# del sesgo Z, y masas un punto más grandes.
+		# r2c: 0.014 de X seguía invisible a distancia de banco (verificado
+		# por hash de capturas — el cambio cargaba, solo era chico). El
+		# gemelo protruye ~30% de su radio; estas masas apuntan a lo mismo.
+		var bicep = _sphere_mesh(0.046, skin_mat)
+		bicep.scale = Vector3(0.9, 1.45, 0.9)
+		bicep.position = Vector3(side * 0.020, -0.125, 0.034)   # afuera + frente
+		arm.add_child(bicep)
+		_add_outline_pass(bicep, Color("#f2b186"))
+
+		var tricep = _sphere_mesh(0.043, skin_mat)
+		tricep.scale = Vector3(0.85, 1.35, 0.9)
+		tricep.position = Vector3(side * 0.016, -0.175, -0.034)  # afuera + espalda
+		arm.add_child(tricep)
+		_add_outline_pass(tricep, Color("#f2b186"))
 
 		var elbow = Node3D.new()
 		elbow.name = "elbow"
@@ -461,10 +498,42 @@ func _build() -> void:
 		elbow.add_child(elbow_cap)
 		_add_outline_pass(elbow_cap, Color("#f2b186"))
 
-		var fore = _cylinder_mesh(0.048, 0.036, 0.305, skin_mat)
+		# FASE B r2 (feedback director: "muñecas inexistentes" — el
+		# antebrazo terminaba en bot_r=0.036, casi el mismo grosor que la
+		# mano, así que no había estrechamiento visible). bot_r baja a
+		# 0.026 (rango pedido 0.024-0.028) — la muñeca vuelve a ser el
+		# punto MÁS DELGADO del brazo. top_r/height/position INTACTOS: la
+		# punta del cono (elbow-local y=-0.285) no se mueve, así que la
+		# mano tampoco pierde su solape con ella (mismo criterio de
+		# penetración que ya tenía, solo que ahora es un cono AFILADO, no
+		# grueso).
+		var fore = _cylinder_mesh(0.048, 0.026, 0.305, skin_mat)
 		fore.position.y = -0.1325
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
+
+		# FASE B r2: masa del ANTEBRAZO (brachioradialis) — bulto superior
+		# cerca del codo que adelgaza hacia la muñeca, mismo patrón GEMELO.
+		# Semi-hundida en "fore" (cono ya con top_r=0.048 ahí cerca), sesgo
+		# frontal (+Z) que se funde con el bíceps por encima del codo.
+		# r2b: mismo fix que bíceps/tríceps — componente X hacia afuera
+		# (la masa del antebrazo/brachioradialis se lee del lado del pulgar)
+		# y un punto más grande para que el cel la agarre de frente.
+		var forearm_mass = _sphere_mesh(0.042, skin_mat)
+		forearm_mass.scale = Vector3(0.9, 1.4, 0.85)
+		forearm_mass.position = Vector3(side * 0.018, -0.075, 0.026)
+		elbow.add_child(forearm_mass)
+		_add_outline_pass(forearm_mass, Color("#f2b186"))
+
+		# FASE B r2: MUÑECA — esferita escalada que funde la punta afilada
+		# del antebrazo (r0.026) con la mano, sin mover la mano (meta de
+		# montaje de arma intacta). "Apenas mayor" que bot_r del cono,
+		# achatada (scale) para no engordar la lectura de "punto más fino".
+		var wrist_cap = _sphere_mesh(0.030, skin_mat)
+		wrist_cap.scale = Vector3(0.9, 0.8, 0.95)
+		wrist_cap.position = Vector3(0.0, -0.285, 0.0)   # punta del cono "fore"
+		elbow.add_child(wrist_cap)
+		_add_outline_pass(wrist_cap, Color("#f2b186"))
 
 		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna.
 		# r5b (feedback del director: "hay tres masas — pulgar más dos"):
@@ -1467,7 +1536,10 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		# limb-scale de peso 1.12–1.42 de _apply_build) — un anillo menor
 		# queda ENTERRADO dentro del brazo (bug M9-r3, diagnóstico por
 		# find_child: el nodo existía, invisible).
-		_arm_stripe = _cylinder_mesh(0.074, 0.076, 0.028, stripe_mat)
+		# r2c: radio subido 0.074→0.083 — el BÍCEPS nuevo (Fase B r2) alcanza
+		# 0.0754 en Z a esta altura y enterraba el borde frontal de la banda
+		# (la lección del anillo: dimensionar contra el radio efectivo MÁXIMO).
+		_arm_stripe = _cylinder_mesh(0.081, 0.083, 0.028, stripe_mat)
 		_arm_stripe.name = "arm_paint_stripe"
 		_arm_stripe.position = Vector3(0.0, -0.115, 0.0)
 		_arm_stripe.rotation.z = 0.12
