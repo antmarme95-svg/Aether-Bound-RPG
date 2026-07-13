@@ -1,5 +1,34 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-13] feature | Rework integral Fases A→D: shaders VoBo, cuerpo a la lámina, anatomía de torso, outfit frontier (8 commits, 5 gates verdes)
+Día completo dirigido en vivo por Boris con QA imparcial Fable como
+contrapeso. (1) Dos auditorías imparciales archivadas verbatim
+(`90-Raw/reviews/QA-Auditoria-{Codigo,Output-vs-RAW}-2026-07-12.md`):
+código sólido cero critical; arte ~55% fidelidad, pipeline de render
+cerca del norte, personaje no. (2) Fase A shaders ✅ VoBo colores:
+shadow_floor por preset (muere la banda negra) + cristal peligro rojo
+unshaded (42d169e). (3) Fase B cuerpo ✅ "mucho mejor": uniones fundidas
+(c31bf81), musculatura de brazos aplastada a pedido (c2be29e, 5ac2640),
+y el fix raíz del QA dirigido al tronco superior (3550bfe +
+`QA-Auditoria-Tronco-Superior-2026-07-13.md`): el esqueleto del hombro
+llevaba un fósil de la review v0.1 (+12%) que contradecía la lámina —
+SHOULDER_X 0.262→0.21, la silueta cuello→muñeca solo desciende.
+LECCIÓN mayor: ante conflicto review↔lámina, auditar contra la lámina.
+(4) Debate formal orquestador↔QA (3 temas: jerkin/cuello/musculatura)
+→ veredictos ratificados por Boris con comparativos
+(`test_out/rounds/debate-tronco/`). (5) Anatomía de torso ✅ (e5d3e51):
+pecs elipsoides, placa abdominal sin six-pack, clavícula-cápsula,
+cuello +15%, piernas ya cumplían; rúbrica [[Benchmark-Musculatura-Torso]]
+(borrador) + lámina NB `fenotipo-humano-torso-v1.png` (autoridad #1
+SOLO superficie de torso, alcance acotado por Boris). (6) Outfit
+frontier ✅ (1794b1a): jerkin/strap/belt fuera del cuerpo base →
+`character_outfit.gd` (faja envuelta de lámina + pouches); juego
+vestido, banco desnudo. Gates completos ALL_PASS. DECISIONES de Boris:
+VoBos viejos rechazados; peinado príncipe DESECHADO (Fase D = masas de
+silueta tipo animé, propuestas antes de codear); Beckett MCP adoptado
+como loop de iteración en vivo (instalado 2118c81, protagonista del
+día). Pendiente VoBo: torso desnudo + outfit.
+
 ## [2026-07-12] feature | Plan de rework EN EJECUCIÓN — Sesiones 0–2: Beckett instalado, cuelgue resuelto, peinado príncipe reconstruido (m10-r5/r6)
 Sesión de ejecución del plan "Rework gráfico Humano C6/M10 + spike
 Beckett" (Boris dio luz verde; delegación por tiering: Sonnet ejecutó

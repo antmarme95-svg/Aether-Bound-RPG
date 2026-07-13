@@ -13,7 +13,47 @@ updated: 2026-07-12
   Dagna), Gate 1 aprobado por el director. **EN CURSO: ventana C6/C4 (rework
   anatómico + pase de poses, branch `feat/c6-anatomy-rework`)** → luego Fase 2
   del [[Plan-de-Produccion]].
-- **M10-r5/r6 ✅ CÓDIGO + QA (2026-07-12): peinado "príncipe" DESBLOQUEADO,
+- **🔨 REWORK GRÁFICO INTEGRAL 2026-07-12/13 (Fases A→B→anatomía→outfit, 8
+  commits pusheados 42d169e→1794b1a, dirigido en vivo por Boris con QA
+  imparcial Fable):** el día empezó con dos auditorías imparciales (código:
+  base sólida cero critical; arte: ~55% fidelidad global — ambas archivadas
+  verbatim en `90-Raw/reviews/QA-Auditoria-*-2026-07-12.md`) y cerró con:
+  **(A) Shaders** ✅ VoBo colores del director: sombra acuarela (shadow_floor
+  por preset en `melancolia_post` — muere la banda negra que se comía el
+  dawn) + cristal de peligro ROJO unshaded (constante del Art Bible; el
+  unshaded además reveló las facetas del clúster). **(B) Cuerpo** ✅ "mucho
+  mejor" del director tras 3+2 rondas: uniones FUNDIDAS (muere el maniquí
+  con costuras), musculatura de brazos (bíceps/tríceps/brachioradialis
+  patrón gemelo, aplastados a pedido), y el fix RAÍZ del QA dirigido: el
+  esqueleto del hombro estaba 30% más ancho y 13 cm más alto que la lámina
+  (fósil del "+12%" de la review v0.1 que CONTRADECÍA el "narrow sloped
+  shoulders" del concept) — SHOULDER_X 0.262→0.21, SHOULDER_Y 0.29→0.26,
+  regla de oro: la silueta cuello→muñeca solo DESCIENDE
+  (`90-Raw/reviews/QA-Auditoria-Tronco-Superior-2026-07-13.md`).
+  **(C) Anatomía de torso** ✅ (debate formal orquestador↔QA, 3 veredictos
+  ratificados por Boris): pecs elipsoides (mueren las cajas-peto), placa
+  abdominal única sin six-pack, clavícula-cápsula, cuello +15% (~0.55
+  cabezas; el 0.8 de la lámina es parte ilusión del cowl), piernas ya
+  cumplían. Rúbrica nueva: [[Benchmark-Musculatura-Torso]] (borrador) con
+  la lámina **`fenotipo-humano-torso-v1.png`** (Nano Banana, depositada por
+  Boris) como autoridad #1 SOLO de superficie del torso (alcance acotado —
+  NO identidad). **(D) Outfit "frontier"** ✅: jerkin panza-de-olla + strap +
+  belt salen del cuerpo base a `character/character_outfit.gd` (faja
+  envuelta fiel a la lámina + pouches); jugador/enemigos/guardias/reclutador
+  vestidos in-game, banco de anatomía desnudo (constraint de Boris: outfits
+  sin playera con músculos definidos). Gates completos ALL_PASS (core/
+  biomech/combat/slice/springboard). **Pendientes de VoBo: turnaround del
+  torso desnudo + outfit frontier** (`test_out/rounds/anatomia-torso/` y
+  `outfit-frontier/`). **DECISIÓN GRANDE de Boris (2026-07-13): VoBos viejos
+  RECHAZADOS (r5 cabeza, cowl) — rework integral en curso; el peinado
+  príncipe de hebras/cintas se DESECHÓ por completo** (~8 rondas fallidas;
+  causa raíz: cuerdas rectas sobre domo convexo) — **Fase D pelo: masas de
+  silueta "tipo animé aunque la cara sea anti-Genshin" (sus palabras),
+  propuestas ANTES de codear.** Cola: Fase C cara → Fase D pelo →
+  movimientos (crouch/walk/sprint/sprint-jump/jump, minar orientation
+  warping de AMSG — solo tercera persona).
+- **M10-r5/r6 ✅ CÓDIGO + QA (2026-07-12) [SUPERSEDED — el estilo 11 se
+  desecha, ver bullet de arriba]: peinado "príncipe" DESBLOQUEADO,
   reconstruido y en punto de review.** Secuencia de la sesión:
   (a) **Cuelgue del banco RESUELTO — era contención, no código** (lección
   confirmada en [[Lecciones]]): matando Epic/EA/Steam, `tmp_anatomy` corre en
