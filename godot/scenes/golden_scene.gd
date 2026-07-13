@@ -27,7 +27,7 @@ const PRESETS := {
 		"sun_color": Color("#ffe9c0"), "sun_energy": 1.35,
 		"sun_elev_deg": -12.0, "sun_azim_deg": 190.0,
 		"ambient": Color("#e8dcc0"), "ambient_energy": 1.15,
-		"shadow_opacity": 0.42,
+		"shadow_opacity": 0.42, "shadow_floor": 0.35,
 		"rim": Color("#f2e6c8"), "rim_strength": 0.08,
 		"aerial": Color("#c4d2da"), "glow": Color("#ffe9bd"), "glow_strength": 0.38,
 		"ray_color": Color("#ffe2ac"), "ray_strength": 0.55,
@@ -40,8 +40,8 @@ const PRESETS := {
 		"forest_mass": Color("#92aa80"),
 		"mountain": Color("#b9cbd9"), "mountain_far": Color("#c9d7e2"),
 		"island": Color("#c3d2de"),
-		"core_albedo": Color("#a8182e"), "core_glow": Color("#c81f3a"),
-		"core_emission": 1.35,
+		"core_albedo": Color("#9c1020"), "core_glow": Color("#d4121c"),
+		"core_emission": 1.8,
 	},
 	"dusk": {
 		"sky_top": Color("#3f4677"), "sky_horizon": Color("#a98fb4"),
@@ -49,7 +49,7 @@ const PRESETS := {
 		"sun_color": Color("#b8a4d8"), "sun_energy": 0.5,
 		"sun_elev_deg": -8.0, "sun_azim_deg": 200.0,
 		"ambient": Color("#5d6284"), "ambient_energy": 0.78,
-		"shadow_opacity": 0.75,
+		"shadow_opacity": 0.75, "shadow_floor": 0.08,
 		"rim": Color("#8a95b5"), "rim_strength": 0.03,
 		"aerial": Color("#6b7799"), "glow": Color("#4de0d8"), "glow_strength": 0.30,
 		"ray_color": Color("#b39ad0"), "ray_strength": 0.12,
@@ -539,6 +539,13 @@ func _build_core() -> void:
 	root.position = Vector3(cx, terrain_h(cx, cz), cz)
 	add_child(root)
 	_core_mat = StandardMaterial3D.new()
+	# UNSHADED: the danger crystal must read a saturated crimson regardless of the
+	# hour's ambient. As a lit StandardMaterial3D the dawn ambient (#e8dcc0, warm
+	# and bright) added G/B onto the red albedo → washed to salmon-pink (verified
+	# with post OFF: still pink, so it's the material/ambient, not the post pass).
+	# Unshaded defines the colour by albedo×vertex-shade; emission adds a soft bloom
+	# halo. Art Bible constant: peligro = rojo saturado.
+	_core_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	_core_mat.albedo_color = Color("#c22138")
 	_core_mat.emission_enabled = true
 	_core_mat.emission = Color("#e0304a")
@@ -704,6 +711,7 @@ func apply_time_preset(preset_name: String) -> void:
 		_post_mat.set_shader_parameter("aerial_color", p["aerial"])
 		_post_mat.set_shader_parameter("glow_color", p["glow"])
 		_post_mat.set_shader_parameter("glow_strength", p["glow_strength"])
+		_post_mat.set_shader_parameter("shadow_floor", p["shadow_floor"])
 		# god rays: project the sun into screen space (static gate camera)
 		if _cam_ref != null:
 			var travel: Vector3 = -_sun.global_transform.basis.z

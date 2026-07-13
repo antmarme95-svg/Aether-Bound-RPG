@@ -156,7 +156,8 @@ func _run() -> void:
 	await Debug.screenshot("res://test_out/anatomy_far.png")
 
 	print("[TmpAnatomy] DONE")
-	get_tree().quit(0)
+	if not bool(ProjectSettings.get_setting("beckett/hold_anatomy_bench", false)):
+		get_tree().quit(0)
 
 func _wait(secs: float) -> void:
 	var t := 0.0

@@ -20,6 +20,15 @@ EventBus="*res://autoload/event_bus.gd"
 Debug="*res://autoload/debug.gd"
 Config="*res://core/config.gd"
 Feel="*res://autoload/feel.gd"
+BeckettRuntime="*uid://dspgi2nxto4e8"
+
+[beckett]
+
+effort_schema=2
+dock_revealed=true
+hold_anatomy_bench=false
+golden_preset="dawn"
+golden_nopost=false
 
 [display]
 

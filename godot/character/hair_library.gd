@@ -444,6 +444,26 @@ static func _hair_prince_curtain(mat: Material) -> Node3D:
 	fringe.scale = Vector3(1.04, 0.60, 1.22)
 	fringe.rotation.x = 0.25
 	g.add_child(fringe)
+	# (c) REWORK de la capa corona (2026-07-12, feedback del director: "el
+	# nacimiento parte desde la parte más alta y genera una curva para que el
+	# cabello CAIGA" — leía Miguel Hidalgo, tonsura). Tres rondas de cintas
+	# largas ancladas cerca del polo de LA CONCHA GRANDE fallaron siempre por
+	# la misma causa: una cuerda recta viajando lejos desde cerca de un polo
+	# convexo se reentierra sin importar el offset ni la dirección exacta
+	# (enterrado / antena flotante / starburst horizontal — mismo problema,
+	# tres síntomas). Rework, no parche: un lóbulo de VOLUMEN nuevo
+	# (`crown_drape`, misma técnica elipse-contra-elipse que nape/fringe) que
+	# por sí solo rompe la cúpula lisa con un bulto visible en la coronilla
+	# real — sin matemática de cuerda-sobre-domo. Las cintas de textura de
+	# abajo son CORTAS y anclan sobre ESTE lóbulo chico/achatado (no la concha
+	# grande), lejos de SU propio polo — el mismo patrón de la capa lateral
+	# que ya funciona, pero con radios pequeños donde los márgenes chicos
+	# alcanzan de verdad.
+	var crown_c := Vector3(0.0, R * 0.95, -R * 0.10)
+	var crown_drape = _sphere(mat, R * 0.55, crown_c.x, crown_c.y, crown_c.z)
+	crown_drape.scale = Vector3(0.85, 0.51, 1.05)
+	crown_drape.rotation.x = -0.30
+	g.add_child(crown_drape)
 
 	# Tono alterno (+8% claro) para profundidad cel — un mechón entero es
 	# un solo tono (no por segmento), así cada cinta lee como un plano de
@@ -458,27 +478,37 @@ static func _hair_prince_curtain(mat: Material) -> Node3D:
 
 	var mi: int = 0
 
-	# ---- Capa interna: flequillo + coronilla (7) ----
-	# Raíz en la línea de nacimiento frontal; fluye ARRIBA y ATRÁS sobre la
-	# coronilla — define la raya y el volumen barrido de la referencia.
-	for i in range(7):
-		var a: float = lerp(-0.62, 0.62, (float(i) + 0.5) / 7.0)
-		var ring_y: float = R * 0.58
-		var ring_r: float = R * 0.66
-		var anchor := Vector3(sin(a) * ring_r, ring_y, cos(a) * ring_r - R * 0.06)
-		var normal := (anchor - shell_c).normalized()
-		var flow := (Vector3(0.0, 0.24, -0.85) + normal * 0.42).normalized()
+	# ---- Capa CORONA: textura corta SOBRE `crown_drape` (no sobre la concha
+	# grande — ver el comentario del lóbulo arriba). Anclas a solo ~35% del
+	# semieje vertical del lóbulo chico (R*0.10 de R*0.28), lejos de SU propio
+	# polo: el `normal` ahí ya trae suficiente componente horizontal real para
+	# que `Vector3(0,-1,back) + normal*k` no degenere. Cintas CORTAS (4
+	# segmentos, no 5) — si el margen no fuera perfecto, no alcanzan a viajar
+	# lo bastante para reenterrarse en la concha grande de abajo.
+	var CROWN := 9
+	for i in range(CROWN):
+		var a: float = lerp(-1.3, 1.3, (float(i) + 0.5) / float(CROWN))
+		var ring_y: float = R * 0.10
+		var ring_r: float = R * 0.30
+		var anchor := crown_c + Vector3(sin(a) * ring_r, ring_y, cos(a) * ring_r)
+		var normal := (anchor - crown_c).normalized()
+		# Frontalidad ∈ [0,1]: 1 al frente (a≈0), 0 en los flancos. Los
+		# frontales suman barrido atrás (para no tapar la cara) y acortan.
+		var frontality: float = clampf(cos(a), 0.0, 1.0)
+		var back_bias: float = -0.5 * frontality
+		var flow := (Vector3(0.0, -1.0, back_bias) + normal * 0.40).normalized()
 		var side := flow.cross(normal)
 		if side.length() < 0.01:
 			side = Vector3(1, 0, 0)
 		var mbasis := Basis(side.normalized(), flow, normal)
-		var v: float = 0.90 + 0.2 * float((i * 5) % 4) / 3.0
-		var length: float = R * 0.62 * v
-		var sweep: float = R * 0.16 * (1.0 if i % 2 == 0 else -1.0) * 0.6
+		var v: float = 0.92 + 0.22 * float((i * 5) % 4) / 3.0
+		# más corto al frente (no cae sobre los ojos), más largo a los flancos
+		var length: float = R * (0.55 + 0.35 * (1.0 - frontality)) * v
+		var sweep: float = R * 0.12 * (1.0 if i % 2 == 0 else -1.0)
 		var spine := _s_spine(length, sweep, 4)
-		var root: Vector3 = anchor + normal * R * 0.04
+		var root: Vector3 = anchor + normal * R * 0.06
 		var tone = mat if mi % 3 != 1 else lighter
-		g.add_child(_ribbon(tone, spine, R * 0.26, R * 0.10, R * 0.075, root, mbasis))
+		g.add_child(_ribbon(tone, spine, R * 0.22, R * 0.09, R * 0.07, root, mbasis))
 		mi += 1
 
 	# ---- Capa media: laterales, cubren sien + oreja (4 por lado = 8) ----
