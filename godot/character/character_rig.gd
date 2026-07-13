@@ -25,8 +25,14 @@ class_name CharacterRig extends Node3D
 const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos cabezón)
 const HEAD_Y: float = 0.505          # pivote de cabeza (v0.4 H3: cuello −30%, PROMOVIDO)
 const NECK_Y: float = 0.352   # v0.4 H3: cuello −30% (tercera ronda — promovido)
-const SHOULDER_X: float = 0.262      # media distancia entre hombros (review +12%)
-const SHOULDER_Y: float = 0.29       # línea de hombros MÁS BAJA (review: cuello)
+# QA dirigido 2026-07-13 (hombros que no convencían al director): el
+# "+12%" de la review v0.1 CONTRADECÍA la lámina (fenotipo-humano-v1 dice
+# "narrow sloped shoulders", biacromial ~2.05 cabezas ≈ 0.52 m) y quedó
+# fosilizado — el render medía 0.67 m (+30%). Dos rondas esculpieron el
+# deltoide correcto sobre el pivote equivocado. La lámina es el canon:
+# pivote ADENTRO y ABAJO; la silueta cuello→muñeca solo DESCIENDE.
+const SHOULDER_X: float = 0.21       # media distancia entre hombros (lámina, ex-0.262)
+const SHOULDER_Y: float = 0.26       # línea de hombros (lámina: caída real, ex-0.29)
 const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
 # V-taper del tronco (multiplicadores base sobre el build de peso/clase):
 # pecho con VOLUMEN (review CRITICAL 1) y cintura recogida marcando el
@@ -380,27 +386,30 @@ func _build() -> void:
 	# geometría (masas grandes), cero detalle: BotW/Hinterberg.
 	# Casi al ras del cilindro: el plano se lee por el ESCALÓN del cel
 	# shading, no por tinta del Sobel (proud → parche entintado).
+	# QA 2026-07-13 (d2): las cajas al ras leían PETO — los rectángulos de
+	# tinta del Sobel cruzaban el pecho como costuras de armadura. Hundidas
+	# 0.01 más: el volumen lo pone el escalón del cel, no el rectángulo.
 	var pec_plate = _box_mesh(0.20, 0.09, 0.05, skin_mat)
-	pec_plate.position = Vector3(0.0, 0.22, 0.122)
+	pec_plate.position = Vector3(0.0, 0.22, 0.112)
 	pec_plate.rotation.x = 0.12   # el plano del pecho cae hacia el abdomen
 	upper_spine.add_child(pec_plate)
 	_add_outline_pass(pec_plate, Color("#f2b186"))
 
 	var clavicle = _box_mesh(0.19, 0.028, 0.04, skin_mat)
-	clavicle.position = Vector3(0.0, 0.30, 0.125)
+	clavicle.position = Vector3(0.0, 0.30, 0.115)
 	upper_spine.add_child(clavicle)
 	_add_outline_pass(clavicle, Color("#f2b186"))
 
 	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
-	# Con MASA (profundidad casi de pecho y solape con la tapa) — un listón
-	# delgado lee como gancho de alambre, no como músculo.
-	# (M9-r2: pendiente más pronunciada — el trapecio FUNDE cuello y hombro,
-	# review v0.2 M6: transición abrupta.)
+	# QA 2026-07-13 (b/extra): caída 0.27→0.40 rad (~23°, la de la lámina),
+	# centro afuera para que la punta ATERRICE sobre el tope del deltoide
+	# (una sola línea cuello→brazo, sin remontar), y profundidad 0.115→0.08
+	# — con casi la del pecho, la vista trasera leía techo a dos aguas.
 	for tside in [-1, 1]:
-		var trap = _box_mesh(0.19, 0.09, 0.115, skin_mat)
-		trap.position = Vector3(float(tside) * 0.10, 0.305, 0.0)
-		trap.rotation.z = -float(tside) * 0.27
+		var trap = _box_mesh(0.19, 0.09, 0.08, skin_mat)
+		trap.position = Vector3(float(tside) * 0.115, 0.315, 0.0)
+		trap.rotation.z = -float(tside) * 0.40
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
 
@@ -454,9 +463,15 @@ func _build() -> void:
 		# solape que r1, no menos, porque el radio efectivo en Z/X de la
 		# elipsoide en ese corte (~0.057-0.060) sigue por encima del
 		# top_r del cono (0.056) — no hay asomo, no se reabre el anillo.
+		# QA 2026-07-13 (b/c): el tope del deltoide subía SOBRE la línea del
+		# trapecio → la silueta bajaba y REMONTABA (charretera). Estirado
+		# vertical fuera (1.15→1.0) y centro más abajo (−0.006→−0.02): el
+		# deltoide vive SIEMPRE bajo la línea descendente cuello→brazo. Con
+		# el pivote nuevo (0.21) su borde interior queda DENTRO del cilindro
+		# del pecho → solape real, muere la costura pecho-hombro.
 		var deltoid = _sphere_mesh(0.066, skin_mat)
-		deltoid.scale = Vector3(0.95, 1.15, 0.9)
-		deltoid.position = Vector3(side * 0.010, -0.006, 0.008)
+		deltoid.scale = Vector3(0.95, 1.0, 0.9)
+		deltoid.position = Vector3(side * 0.010, -0.02, 0.008)
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
 
@@ -2223,11 +2238,13 @@ func _process(delta: float) -> void:
 			arms[0].rotation.x = lerp(arms[0].rotation.x, 0.0, min(1.0, delta * 8.0))
 			arms[1].rotation.x = lerp(arms[1].rotation.x, 0.0, min(1.0, delta * 8.0))
 
-		# r4 (review LOW 13): A-pose suave — brazos despegados del cuerpo
-		# (lectura anatómica + skinning; antes iban pegados con 0.1; 0.22
-		# resultó simiesco con los hombros anchos — 0.15 es el punto)
-		arms[0].rotation.z = 0.15
-		arms[1].rotation.z = -0.15
+		# r4 (review LOW 13): A-pose suave — brazos despegados del cuerpo.
+		# QA 2026-07-13 (d1): con el pivote de hombro de vuelta a la lámina
+		# (0.262→0.21) el splay 0.15 dejaba luz de axila corriendo por todo
+		# el flanco (lectura gorila). La lámina: el brazo interior ROZA el
+		# torso todo el trayecto — splay mínimo, cuelgue casi vertical.
+		arms[0].rotation.z = 0.07
+		arms[1].rotation.z = -0.07
 
 		var e0: Node3D = arms[0].get_meta("elbow")
 		var e1: Node3D = arms[1].get_meta("elbow")
