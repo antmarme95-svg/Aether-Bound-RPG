@@ -163,11 +163,24 @@ static func _attach_waist_wrap(rig) -> void:
 	var pelvis_w: float = rig.pelvis.scale.x
 	var w_scale: float = (torso_w + pelvis_w) * 0.5 * _Rig.WAIST_XZ
 
+	# FIX 2026-07-13 (feedback director: "hueco del ombligo a la cadera"):
+	# la faja de 3 bandas quedaba en la cintura ALTA (spine-local 0.095-0.205
+	# = body 1.065-1.235) y dejaba ~4.5 cm de PIEL entre su borde inferior y
+	# el pantalón/belt (pelvis tope ≈ body 1.02 = spine-local 0.02). El jerkin
+	# viejo (cilindro sólido spine 0.06-0.26) tapaba todo eso de corrido. Se
+	# BAJA la faja hasta solapar el belt (banda más baja en y=0.020) con radio
+	# CRECIENTE hacia abajo (top_r→bot_r sube hasta ~0.19) para seguir el
+	# ensanchamiento a la cadera — la pelvis (half-width 0.135) + belt (0.155)
+	# son más anchos que la cintura, y una faja de radio de cintura dejaría el
+	# flanco de la cadera al aire. Bandas SOLAPADAS (gap 0.045, height 0.062)
+	# = tela continua sin franjas de piel entre vueltas.
 	# [y (spine-local), top_r, bot_r, height, tilt_x (rad)]
 	var bands: Array = [
-		[0.095, 0.150, 0.162, 0.060,  0.055],
-		[0.150, 0.144, 0.153, 0.060, -0.060],
-		[0.205, 0.137, 0.146, 0.060,  0.045],
+		[0.020, 0.166, 0.190, 0.062,  0.050],  # cadera — solapa el belt
+		[0.065, 0.158, 0.170, 0.062, -0.045],  # bajo vientre (el hueco)
+		[0.110, 0.150, 0.160, 0.062,  0.055],
+		[0.155, 0.144, 0.153, 0.062, -0.060],
+		[0.200, 0.137, 0.146, 0.062,  0.045],
 	]
 	for b in bands:
 		var band := _cyl(rig.leather_mat,
