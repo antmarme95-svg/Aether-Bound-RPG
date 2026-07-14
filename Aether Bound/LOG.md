@@ -27,6 +27,19 @@ orquestación, instrucciones de bootstrap para el agente (§9), CLAUDE.md
 sugerido (§10) y consejos de campo pagados en este proyecto (§11).
 Agnóstico de dominio; en español.
 
+## [2026-07-13] feature | Outfit configurable por piezas + cierre de sesión (checkpoint §7)
+Feedback de Boris tras ver el outfit frontier: la faja y la bandolera
+NO deben quedar hardcodeadas al personaje. Refactor (305eac1):
+`character_outfit.gd` pasa de bloque monolítico a catálogo de piezas
+(`build(rig, [ids])` + `remove_piece`/`remove_all` + `PRESETS.frontier`);
+back-compat vía alias `build_frontier`. La UI de personalización (pestaña
+OUTFIT) queda para Fase 4, la API ya la soporta. Andamiaje Beckett
+`golden_boot` versionado (c9c6f22). Gates de cierre: core+slice+combat
+ALL_PASS sobre HEAD. Working tree limpio; `Los 9 Links` (toque
+accidental CRLF de Obsidian) restaurado. **Pendientes de VoBo: torso
+desnudo + outfit. Sigue: Fase C cara → Fase D pelo (propuestas por
+masas antes de codear) → movimientos.**
+
 ## [2026-07-13] feature | Rework integral Fases A→D: shaders VoBo, cuerpo a la lámina, anatomía de torso, outfit frontier (8 commits, 5 gates verdes)
 Día completo dirigido en vivo por Boris con QA imparcial Fable como
 contrapeso. (1) Dos auditorías imparciales archivadas verbatim

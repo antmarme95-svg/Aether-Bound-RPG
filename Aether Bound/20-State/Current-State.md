@@ -41,10 +41,16 @@ updated: 2026-07-12
   belt salen del cuerpo base a `character/character_outfit.gd` (faja
   envuelta fiel a la lámina + pouches); jugador/enemigos/guardias/reclutador
   vestidos in-game, banco de anatomía desnudo (constraint de Boris: outfits
-  sin playera con músculos definidos). Gates completos ALL_PASS (core/
-  biomech/combat/slice/springboard). **Pendientes de VoBo: turnaround del
-  torso desnudo + outfit frontier** (`test_out/rounds/anatomia-torso/` y
-  `outfit-frontier/`). **DECISIÓN GRANDE de Boris (2026-07-13): VoBos viejos
+  sin playera con músculos definidos). **(D2) Outfit CONFIGURABLE POR PIEZAS**
+  ✅ (`305eac1`, feedback de Boris: "nada hardcodeado — faja y bandolera
+  deben ser personalizables"): catálogo `_PIECES` (waist_wrap/diagonal_belt/
+  hip_belt), `build(rig, [ids])` monta una lista arbitraria, `remove_piece`/
+  `remove_all` para toggle en caliente, `PRESETS.frontier` = solo una lista
+  predefinida; los call sites usan `build_frontier` (alias del preset). La
+  UI de personalización (pestaña OUTFIT en creación) llega en Fase 4 — la
+  API ya la soporta. Gates completos ALL_PASS (core/biomech/combat/slice/
+  springboard). **Pendientes de VoBo: turnaround del torso desnudo + outfit
+  frontier** (`test_out/rounds/anatomia-torso/` y `outfit-frontier/`). **DECISIÓN GRANDE de Boris (2026-07-13): VoBos viejos
   RECHAZADOS (r5 cabeza, cowl) — rework integral en curso; el peinado
   príncipe de hebras/cintas se DESECHÓ por completo** (~8 rondas fallidas;
   causa raíz: cuerdas rectas sobre domo convexo) — **Fase D pelo: masas de

@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-11
+updated: 2026-07-13
 ---
 
 # Lecciones y entorno técnico
@@ -176,6 +176,30 @@ updated: 2026-07-11
   en frame local, escribir el contrato de ejes en el docstring de AMBOS y
   verificar UNA construcción end-to-end en captura antes de autorar 20 más
   encima.
+- **Ante conflicto entre una review del director y la LÁMINA, auditar contra
+  la lámina.** (2026-07-13, hombros que no convencían tras 2 rondas.) La review
+  v0.1 pidió hombros "+10-15% más anchos"; se aplicó (+12%) y quedó FOSILIZADO
+  en `SHOULDER_X`. Pero la lámina dice "narrow sloped shoulders" (biacromial
+  ~2.05 cabezas): el render medía +30% de ancho y +13 cm de alto. Dos rondas
+  esculpieron el músculo correcto sobre el PIVOTE equivocado — ninguna
+  escultura del deltoide podía arreglar un esqueleto mal dimensionado. Un QA
+  imparcial dirigido midió lámina↔render en píxeles y dirimió; Boris lo aprobó.
+  Regla: cuando un fix estético no cierra tras 2 iteraciones, sospechar del
+  ANDAMIAJE (proporción/pivote/posición), no seguir puliendo la superficie; y
+  medir contra la lámina, no contra un número heredado de una review previa
+  (las reviews pueden contradecir el concept).
+- **Músculo/pelo estilizado = MASAS de silueta semi-hundidas, NUNCA hebras ni
+  cuerdas rectas sobre superficie convexa.** (2026-07-12/13.) El peinado
+  príncipe de cintas rectas (cadenas de cajas cayendo desde cerca del polo del
+  cráneo) falló ~8 rondas: enterrado/antena/starburst — porque una cuerda recta
+  larga que parte cerca de un polo convexo se reentierra sin importar el offset
+  ni la dirección. Se DESECHÓ. El patrón que SÍ funciona (probado en gemelo,
+  bíceps/tríceps, pecs): elipsoide escalada SEMI-HUNDIDA en el volumen
+  anfitrión (protrusión ≤30%), el escalón del cel-shading lee el volumen y el
+  Sobel entinta solo el contorno. El bulto se lee de FRENTE por el
+  ensanchamiento lateral (X), no por el sesgo frontal (Z). Corolario: "aplastar"
+  un músculo = bajar los ejes radiales X/Z dejando el eje Y (largo) y la
+  posición intactos (feedback del director sobre los brazos).
 - **La altura de un salto es analítica pura: `h = v²/(2·GRAVITY)`.** Con
   `GRAVITY=24`, `SPRINGBOARD_LAUNCH_VEL=17` → 6.02 m (la sonda midió 6.00). El
   salto "normal" NO es `jump_force` crudo: el LSM lo modula por clase (el warrior
