@@ -829,23 +829,30 @@ func _build() -> void:
 		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
 		# esclerótica visible, apertura angosta (fuera el ojo-platillo
 		# caricatura; registro grounded-fantasy).
-		var white = _sphere_mesh(0.018, eye_white_mat)
-		white.scale = Vector3(1.0, 0.78, 0.42)
+		# FASE C paso 3 (luz verde director): seguía leyendo "platillo" — la
+		# esclerótica (white) era GRANDE relativo al iris (r0.018 vs r0.011,
+		# el iris cubría ~60%) y la ceja no llegaba a tocarla (gap real de
+		# ~1 cm) -> ojo redondo flotando en blanco, sin párpado. Dos cambios:
+		# (a) white más CHICA y más aplastada (menos área visible total);
+		# (b) iris/pupila CRECEN para llenar casi todo el alto del ojo
+		# (margen de blanco fino arriba/abajo = almendra, no aro ancho).
+		var white = _sphere_mesh(0.015, eye_white_mat)
+		white.scale = Vector3(1.0, 0.58, 0.36)
 		eye_group.add_child(white)
 
-		var iris = _disc_mesh(0.011, iris_mat)
+		var iris = _disc_mesh(0.0135, iris_mat)
 		iris.rotation.x = PI / 2.0
 		iris.position.z = 0.0100
 		eye_group.add_child(iris)
 
-		var pupil = _disc_mesh(0.0055, pupil_mat)
+		var pupil = _disc_mesh(0.0062, pupil_mat)
 		pupil.rotation.x = PI / 2.0
 		pupil.position.z = 0.0110
 		eye_group.add_child(pupil)
 
-		var glint = _disc_mesh(0.0026, eye_white_mat)
+		var glint = _disc_mesh(0.0022, eye_white_mat)
 		glint.rotation.x = PI / 2.0
-		glint.position = Vector3(0.0035, 0.004, 0.0115)
+		glint.position = Vector3(0.003, 0.003, 0.0115)
 		eye_group.add_child(glint)
 
 		eye_group.set_meta("side", side)
@@ -860,8 +867,13 @@ func _build() -> void:
 		brow_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		# (v0.5 C3: pegada a la superficie — a 0.140 flotaba 10 mm y se
 		# asomaba por encima del cráneo desde atrás)
-		var brow = _box_mesh(0.046, 0.009, 0.010, brow_mat)
-		brow.position = Vector3(side * 0.052, 0.046, 0.133)
+		# FASE C paso 3: PÁRPADO — la ceja crece un poco y baja para que su
+		# borde inferior SOLAPE de verdad el tope del ojo (overlap real, no
+		# tangente, misma lección que las uniones del cuerpo): tapa el borde
+		# superior de la esclerótica → lee entrecerrado/con párpado, no un
+		# óvalo blanco completo flotando bajo una ceja separada.
+		var brow = _box_mesh(0.048, 0.013, 0.010, brow_mat)
+		brow.position = Vector3(side * 0.052, 0.041, 0.133)
 		head.add_child(brow)
 		brows.append(brow)
 
