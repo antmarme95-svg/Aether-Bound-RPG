@@ -795,17 +795,23 @@ func _build() -> void:
 	# mandíbula) — el pómulo es un QUIEBRE, no un globo lateral.
 	# FASE C paso 2 (luz verde director): PÓMULOS ALTOS como PLANO MALAR, no
 	# esferita redonda (la r0.023 al ras no leia nada -> cara plana del r5).
-	# Masa elongada y semi-hundida bajo el angulo externo del ojo, con el eje
-	# largo DIAGONAL (outer-arriba -> inner-abajo, la eminencia malar); poco
-	# Z para leer como PLANO (no bola). Semi-hundido en el plano facial: el
-	# cel-step lee el escalon del pomulo, el Sobel entinta solo el borde. La
-	# forma (rotacion + escala no uniforme) se fija aqui; apply_phenotype
-	# modula alto/tamano alrededor de esta base sin romper el eje diagonal.
+	# Masa elongada y semi-hundida BAJO el ojo, con el eje largo DIAGONAL
+	# (outer-arriba -> inner-abajo, la eminencia malar); poco Z para leer
+	# como PLANO (no bola). Semi-hundido en el plano facial: el cel-step lee
+	# el escalon del pomulo, el Sobel entinta solo el borde. La forma
+	# (rotacion + escala no uniforme) se fija aqui; apply_phenotype modula
+	# alto/tamano alrededor de esta base sin romper el eje diagonal.
+	# Fix (feedback director 2026-07-13: "los pusiste a un lado de los ojos"):
+	# el ojo vive en y=0.022 — con el pomulo casi a esa misma altura (y~0.016)
+	# y solo un poco mas afuera en X, leia LATERAL al ojo, no bajo el ojo.
+	# Bajado a y=-0.012 (claramente por debajo) y recogido en X (0.067->0.060,
+	# mas cerca de la nariz que del borde de la mandibula) para que el plano
+	# quede BAJO el angulo externo del ojo, como pide la lamina.
 	cheeks = []
 	for side in [-1, 1]:
 		var cheek = _sphere_mesh(0.030, skin_mat)
 		cheek.rotation.z = -float(side) * 0.5   # eje largo diagonal
-		cheek.position = Vector3(side * 0.067, 0.006, 0.110)
+		cheek.position = Vector3(side * 0.060, -0.012, 0.110)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
@@ -1581,9 +1587,12 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# Escala NO uniforme: ancho X y alto Y del plano, poco Z (semi-hundido).
 	# cheek alto = base (lamina: high cheekbones); el slider sube el pomulo y
 	# lo agranda un poco, sin volverlo bola (Z se queda corto).
+	# Fix (feedback director: pomulo lateral al ojo, no bajo el ojo): rango
+	# bajado 0.004..0.028 -> -0.024..0.000 — el ojo vive en y=0.022, el tope
+	# del rango (0.0) queda 2.2 cm por debajo, nunca cruza la altura del ojo.
 	var cheek_v: float = p.get("cheek", 0.5)
 	for cheek in cheeks:
-		cheek.position.y = _lerp(0.004, 0.028, cheek_v)
+		cheek.position.y = _lerp(-0.024, 0.000, cheek_v)
 		var cs: float = _lerp(0.9, 1.16, cheek_v)
 		cheek.scale = Vector3(1.45 * cs, 0.82 * cs, 0.46)
 
