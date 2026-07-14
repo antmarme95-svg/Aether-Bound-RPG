@@ -793,10 +793,19 @@ func _build() -> void:
 	# M9-r1: MEJILLAS ALTAS — pómulos bajo el ojo, no cachetes bajos.
 	# r3: más ADENTRO y chicos (review: no expandir más allá de la línea de
 	# mandíbula) — el pómulo es un QUIEBRE, no un globo lateral.
+	# FASE C paso 2 (luz verde director): PÓMULOS ALTOS como PLANO MALAR, no
+	# esferita redonda (la r0.023 al ras no leia nada -> cara plana del r5).
+	# Masa elongada y semi-hundida bajo el angulo externo del ojo, con el eje
+	# largo DIAGONAL (outer-arriba -> inner-abajo, la eminencia malar); poco
+	# Z para leer como PLANO (no bola). Semi-hundido en el plano facial: el
+	# cel-step lee el escalon del pomulo, el Sobel entinta solo el borde. La
+	# forma (rotacion + escala no uniforme) se fija aqui; apply_phenotype
+	# modula alto/tamano alrededor de esta base sin romper el eje diagonal.
 	cheeks = []
 	for side in [-1, 1]:
-		var cheek = _sphere_mesh(0.023, skin_mat)
-		cheek.position = Vector3(side * 0.064, 0.002, 0.100)
+		var cheek = _sphere_mesh(0.030, skin_mat)
+		cheek.rotation.z = -float(side) * 0.5   # eje largo diagonal
+		cheek.position = Vector3(side * 0.067, 0.006, 0.110)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
@@ -1568,11 +1577,15 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 
 	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
 	# mejillas altas); el extremo bajo ya no baja a cachete.
+	# FASE C paso 2: el pomulo es el PLANO MALAR elongado (base en _build).
+	# Escala NO uniforme: ancho X y alto Y del plano, poco Z (semi-hundido).
+	# cheek alto = base (lamina: high cheekbones); el slider sube el pomulo y
+	# lo agranda un poco, sin volverlo bola (Z se queda corto).
 	var cheek_v: float = p.get("cheek", 0.5)
 	for cheek in cheeks:
-		cheek.position.y = _lerp(-0.02, 0.032, cheek_v)
-		var cheek_s: float = _lerp(0.75, 1.3, cheek_v)
-		cheek.scale = Vector3(cheek_s, cheek_s, cheek_s)
+		cheek.position.y = _lerp(0.004, 0.028, cheek_v)
+		var cs: float = _lerp(0.9, 1.16, cheek_v)
+		cheek.scale = Vector3(1.45 * cs, 0.82 * cs, 0.46)
 
 	# JS eyes: rotation.z = side * lerp(-0.32, 0.26, eyeTilt), scale.y = lerp(0.5, 1.3, eyeShape)
 	# M9-r2: rango de tilt de CEJA acotado (review v0.2: cejas RECTAS —
