@@ -116,6 +116,7 @@ var tail_slot: Node3D
 
 var pelvis: MeshInstance3D
 var torso: MeshInstance3D
+var waist: MeshInstance3D  # cintura/lumbar — cierra el hueco torso->pelvis (ver _build)
 # jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
 # debate orquestador↔QA 2026-07-13, GO del director) — el cuerpo base ya no
 # fabrica ropa fosilizada; build_frontier() la cuelga como outfit aditivo.
@@ -427,6 +428,28 @@ func _build() -> void:
 	abs_plate.position = Vector3(0.0, 0.02, 0.105)
 	upper_spine.add_child(abs_plate)
 	_add_outline_pass(abs_plate, Color("#f2b186"))
+
+	# CINTURA (lumbar): cierra el HUECO real entre el borde del abdomen
+	# (abs_plate, mundo y≈1.172 al fondo) y el tope de la pelvis (mundo
+	# y≈1.02) — auditoría 2026-07-13 (faja/jerkin migrado a outfit dejaba
+	# la anatomía DESNUDA con 15 cm de vacío ahí; con outfits sin playera
+	# se veía fondo a través del torso). Cilindro de piel, hijo de `spine`
+	# (frame lumbar, coincide con el mundo de `hips`/`upper_spine`):
+	# top_radius=0.11 = MISMO radio base que el fondo del cilindro del
+	# torso (línea torso arriba) — al copiarle exactamente torso.scale.x/z
+	# en _apply_build, el borde superior queda IDÉNTICO en cualquier build
+	# (mismo factor elíptico CHEST_X/Z), costura cero. bottom_radius=0.085
+	# funde con el ancho de la pelvis (half x≈0.144, half z≈0.08 en build
+	# neutro) sin que sobresalga. Altura 0.22, y=0.08 (spine-local): borde
+	# superior en spine-y=0.19 (mundo 1.19, = fondo del torso) y borde
+	# inferior en spine-y=-0.03 (mundo 0.97), 5 cm HONDO dentro de la
+	# pelvis (tope en mundo 1.02) — overlap real, no tangente, mismo
+	# criterio que las uniones de pierna/brazo (evita costura por huecos
+	# de precisión flotante).
+	waist = _cylinder_mesh(0.11, 0.085, 0.22, skin_mat)
+	waist.position = Vector3(0.0, 0.08, 0.0)
+	spine.add_child(waist)
+	_add_outline_pass(waist, Color("#f2b186"))
 
 	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
@@ -926,6 +949,11 @@ func _apply_build() -> void:
 	# jerkin.scale (WAIST_XZ) migró — ahora lo lee CharacterOutfit.
 	# build_frontier() en vivo desde torso.scale/pelvis.scale (ver ahí).
 	pelvis.scale = Vector3(_lerp(0.88, 1.25, w) * arch_xz, 1.0, 1.0)
+	# waist copia EXACTO el x/z de torso: su top_radius (0.11) es el mismo
+	# radio base del fondo del cilindro del torso, así que igualando el
+	# factor elíptico la costura queda idéntica en cualquier build/peso
+	# (ver comentario en _build). Y se deja en 1.0 (no respira con torso).
+	waist.scale = Vector3(torso.scale.x, 1.0, torso.scale.z)
 
 	var limb_xz: float = limb * arch_xz
 	for arm in arms:
