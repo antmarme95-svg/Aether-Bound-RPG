@@ -8,6 +8,22 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, cierre) — QA visual imparcial de cierre:
+  32% → 42%.** Mismo protocolo que la ronda anterior (subagente sin
+  contexto de código, renders frescos post-13-puntos contra ambas
+  láminas RAW). Mejora real pero moderada (+10 puntos). **CRITICAL sin
+  resolver:** el pelo (punto 2) cambió de estilo en código pero el QA
+  sigue leyéndolo como casco/gorro sólido sin textura de mechones — el
+  swap de índice NO resolvió el hallazgo #1 de la ronda del 32%.
+  **Hallazgo NUEVO (no es parte del PRD, no tocado esta sesión):** un
+  pauldron fantasma (rectángulo gris/azul) flota sobre el hombro derecho
+  en todos los renders — `tmp_anatomy.gd:75` lo intenta ocultar con un
+  hack frágil (buscar el ÚLTIMO hijo de `arm_r`) que dejó de funcionar;
+  verificado visualmente por el orquestador. Detalle completo de los 10
+  hallazgos (CRITICAL→LOW) en [[LOG]]. **Decisión pendiente de Boris:**
+  ¿segunda ronda de fixes (pelo real con mechones + pauldron fantasma
+  primero, los más baratos) o aceptar 42% como checkpoint de este PRD y
+  pasar a Fase D con las notas abiertas?**
 - **SESIÓN 2026-07-14 (noche, continuación) — los 13 puntos del
   [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] EJECUTADOS EN CÓDIGO.**
   Orden por dependencia tal como quedó ratificado: venas cian/arcaneMod →

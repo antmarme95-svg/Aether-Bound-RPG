@@ -1,5 +1,39 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] qa | QA visual imparcial de cierre — 32% → 42% (mismo protocolo, subagente sin contexto)
+Corrido el mismo protocolo de la ronda que dio ~32%: subagente sin contexto
+de código, renders frescos (`tmp_anatomy.gd` tras los 13 puntos) contra
+`fenotipo-humano-v1.png` + `fenotipo-humano-torso-v1.png`. **Veredicto:
+42% de fidelidad global** (+10 puntos). Mejoras confirmadas por el QA:
+torso sin caja rígida (hombros/pectorales con volumen real), manos con
+dedos separados (aunque la forma final — "abanico de cartas" — no
+convence), ubicación del warpaint correcta aunque la forma no.
+**CRITICAL sin resolver / nuevo:**
+1. **Pelo sigue leyendo casco/gorro sólido** — el swap a Frontier Crop
+   (punto 2) cambió el ÍNDICE de estilo pero el QA no ve textura de
+   mechones ni volumen direccional; sigue siendo el hallazgo #1, igual
+   que en la ronda del 32%.
+2. **Objeto flotante gris/azul en el hombro derecho** — verificado por el
+   orquestador contra `anatomy_close.png`: es el pauldron, que
+   `tmp_anatomy.gd:75` intenta ocultar buscando el ÚLTIMO hijo de `arm_r`
+   (hack frágil por índice) pero no lo está logrando. **No es parte de
+   los 13 puntos de este PRD ni se tocó en esta sesión** — bug
+   preexistente, candidato a fix rápido separado.
+3. **Costuras duras en abdomen/pelvis** — el ajuste del punto 12
+   (abs_plate) no cerró la lectura de "caja" que ve el QA en esa zona.
+**HIGH nuevos/reabiertos:** boca abierta con relleno sólido (lee como
+grito, no como expresión neutra — geometría, no color; el punto 8 solo
+tocó el TONO de `mouth_seam`, no la forma del hueco entre labios); warpaint
+con forma rígida (2 barras verticales cortas) en vez de trazo diagonal
+fluido continuo hacia la mejilla; piel grisácea confirma el diagnóstico
+del punto 11 (LUT del post, no tocado sin Boris). MEDIUM: piernas/botas
+muy finas y oscuras vs. el volumen muscular de la lámina; orejas "asa
+pegada" sin pliegue interior; nariz aún facetada en perfil.
+**Pendiente: decisión de Boris** — ¿segunda ronda de fixes (empezando por
+pelo + pauldron fantasma, los 2 CRITICAL más baratos de arreglar) o
+aceptar el 42% como checkpoint y avanzar a Fase D con estas notas
+abiertas?
+
 ## [2026-07-14] fix | PRD Rework Fenotipo Humano Cuerpo Completo — 13 puntos EJECUTADOS EN CÓDIGO
 Ejecución completa del plan ratificado en
 [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] (13 puntos, orden por
