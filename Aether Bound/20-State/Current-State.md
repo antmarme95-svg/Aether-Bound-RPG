@@ -13,6 +13,26 @@ updated: 2026-07-12
   Dagna), Gate 1 aprobado por el director. **EN CURSO: ventana C6/C4 (rework
   anatómico + pase de poses, branch `feat/c6-anatomy-rework`)** → luego Fase 2
   del [[Plan-de-Produccion]].
+- **SESIÓN 2026-07-13 (tarde) — cintura cerrada + Fase C ABIERTA:**
+  **(1) VoBo del director** al outfit frontier (turnarounds r2). **(2) Hueco
+  de cintura del cuerpo DESNUDO CERRADO** (`de347d3`, delegado a subagente
+  Sonnet, verificado por el orquestador): el auditor tenía razón — había
+  **15.2 cm de vacío** entre `abs_plate` (mundo y=1.172) y `pelvis` (y=1.02),
+  se veía el fondo a través del torso; se agregó una malla `waist` (cilindro
+  de piel hijo de `spine`, top_radius=0.11 = radio base del torso → costura
+  cero copiando `torso.scale` x/z, overlap real 5 cm). Banco reusable
+  `tmp_waist_check.gd`. QA `test_core`+`autotest_biomech` ALL_PASS.
+  **Nota abierta (preexistente, NO tocada): sliver de axila brazo-torso**
+  (gap lateral, visible en cuerpo desnudo sin mangas). **(3) Fase C cara
+  ABIERTA con LUZ VERDE del director** a la propuesta por masas fundidas
+  (esquema anclado a `fenotipo-humano-v1.png`, anti-anime/ligne claire).
+  Orden de masas aprobado: (1) cráneo+mandíbula fundida → (2) pómulos altos
+  → (3) ojos almendra → (4) nariz cuña integrada → (5) boca por geometría →
+  (6) **barba corta** (el rasgo que más falta: el fenotipo humano canónico
+  está en `beard=0` lampiño; la lámina pide stubble) → (7) orejas → (8)
+  warpaint 1 franja limpia. Hallazgo: existe `HairLibrary.build_beard()`
+  (estilos 0-3) pero el stubble usa overlay translúcido (pitfall del toon
+  ALPHA) → irá como MASA opaca semi-hundida. Pelo (crop) = Fase D aparte.
 - **🔨 REWORK GRÁFICO INTEGRAL 2026-07-12/13 (Fases A→B→anatomía→outfit, 8
   commits pusheados 42d169e→1794b1a, dirigido en vivo por Boris con QA
   imparcial Fable):** el día empezó con dos auditorías imparciales (código:

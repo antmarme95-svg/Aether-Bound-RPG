@@ -1,5 +1,26 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-13] feature | Cintura del cuerpo desnudo cerrada + Fase C cara abierta
+Sesión de tarde. (1) **VoBo del director** al outfit frontier (r2). (2) Se
+retomó el pendiente dejado a propósito: **verificar la continuidad de cintura
+del cuerpo DESNUDO**. Delegado a subagente Sonnet; había un hueco REAL de
+15.2 cm entre `abs_plate` (mundo y=1.172) y `pelvis` (y=1.02) — se veía el
+fondo a través del torso, tapado por accidente por la faja del outfit. Fix
+(`de347d3`): malla `waist` (cilindro de piel hijo de `spine`, top_radius=0.11
+= radio base del torso, copia `torso.scale` x/z en `_apply_build` → costura
+cero en cualquier build; overlap real 5 cm en la pelvis). Banco reusable
+`tmp_waist_check.gd`. QA `test_core`+`autotest_biomech` ALL_PASS; verificado
+visualmente por el orquestador (`waist_check_*.png`, piel continua). Nota
+abierta menor (preexistente, no tocada): sliver de axila brazo-torso. (3)
+**Fase C cara ABIERTA con luz verde del director** a la propuesta por masas
+fundidas (esquema `propuesta_masas_cara_humano_faseC`, anclado a la lámina
+`fenotipo-humano-v1.png`). Diagnóstico r5-rechazado vs lámina: falta barba
+corta, ojos anti-platillo, nariz integrada, mandíbula fundida sin costuras,
+boca por geometría, warpaint de 1 franja. Orden de masas aprobado (8 pasos,
+captura por paso). Hallazgo de infra: `HairLibrary.build_beard()` existe pero
+el stubble usa overlay translúcido (pitfall toon ALPHA) → barba como masa
+opaca semi-hundida.
+
 ## [2026-07-13] feature | Faja: cierra el hueco ombligo-a-cadera (feedback director)
 Boris vio en las capturas del outfit una franja de piel entre la faja y
 el pantalón. Diagnóstico medido (cotas de nodos, no a ojo): la faja de 3
