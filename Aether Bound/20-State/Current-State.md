@@ -8,6 +8,24 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, ronda 3) — boca/warpaint/brazalete: 45% →
+  49%.** Boca: la línea de comisura (agrandada en rondas viejas para
+  competir con la barba, ya fuera del default) se achicó/recedió y los
+  labios ganaron masa propia. Warpaint: reconstruido bilateral y diagonal
+  tras verificar la lámina DIRECTAMENTE (el orquestador la leyó en
+  pantalla) — el patrón real es una "V" simétrica desde ambas sienes al
+  puente de la nariz, no 2 trazos de un solo lado como había transcrito
+  el QA de la ronda del 32%. Brazalete verde del bíceps retirado (no
+  existe en la lámina; ahí hay un brazal de cuero, vestuario aparte).
+  **El propio QA de esta ronda ubica el techo de la técnica en ~50-55%**
+  mientras 4 bloqueadores sigan sin geometría nueva: torso "plancha" a
+  distancia media, pelo-casco (2 intentos de tuning geométrico ya
+  fallaron, necesita rediseño), manos "tabla", boca sin volumen real de
+  labios. Recordatorio (no nuevo): la barba sigue fuera del default,
+  nota abierta desde Fase C. **No tocado a propósito:** los `pec`
+  (masas del pecho) que un QA anterior leyó como "ojos" — geometría con
+  historial de debate específico orquestador↔QA, no se toca sin más
+  contexto de Boris. Detalle completo en [[LOG]].
 - **SESIÓN 2026-07-14 (noche, ronda 2) — pauldron fantasma RESUELTO, pelo
   mejora parcial: 42% → 45%.** El pauldron fantasma tenía causa raíz real
   (no solo de banco): las venas de mana se parentean a `arms[1]` DESPUÉS

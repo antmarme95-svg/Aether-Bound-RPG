@@ -1,5 +1,50 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] fix+qa | Tercera ronda: boca/warpaint/brazalete — 45% → 49%
+Boris pidió seguir con los hallazgos más baratos de la ronda del 45%.
+**16. Boca — geometría, no solo color.** El `mouth_seam` (línea de
+comisura) se había agrandado en rondas históricas para forzar visibilidad
+bajo el toon (cuando competía con la barba) — con la barba ya fuera del
+default, esa caja pasó a ser el elemento MÁS prominente de la boca, leída
+por el QA como "rectángulo sólido". Achicada (alto 0.010→0.006) y
+recedida (z 0.137→0.129, detrás de la cara frontal de los labios en vez de
+casi al ras). Labios engrosados (radios 0.007/0.009→0.010/0.013) para que
+tengan masa propia en vez de perderse contra la línea de comisura.
+**17. Warpaint bilateral y diagonal (corrige el punto 7 original).** El
+orquestador leyó DIRECTAMENTE `fenotipo-humano-torso-v1.png` (sin
+intermediario) y confirmó que el patrón real es una "V"/"A" simétrica —
+dos franjas anchas desde ambas sienes convergiendo en diagonal hacia el
+puente de la nariz — no "2 trazos verticales de un solo lado" como había
+transcrito el QA original de la ronda del 32%. Reconstruido bilateral
+(`for fside in [-1,1]`), diagonal (`rotation.z`), y engrosado
+(0.006→0.011) para que se note a distancia media, no solo en close-up.
+**18. Brazalete verde retirado.** `_arm_stripe` (banda de pintura en el
+bíceps) no existe en ninguna lámina — verificado contra
+`fenotipo-humano-torso-v1.png`: lo que hay ahí es un BRAZAL DE CUERO
+(vestuario, ya cubierto por `character_outfit.gd`, no modelado en el
+banco desnudo), no pintura. Se quita del fenotipo humano base.
+**QA visual de esta ronda: 45% → 49%** (+4). El propio QA confirma los 3
+fixes en su alcance (bíceps limpio, warpaint bilateral con dirección
+correcta, boca ya no domina la lectura) pero señala que el techo de esta
+técnica ronda 50-55% mientras 4 bloqueadores estructurales sigan sin
+geometría nueva: **torso lee "plancha/prisma" sin anatomía a distancia
+media**, **pelo sigue como casco/domo sin mechones reales** (confirmado
+tras 2 intentos fallidos de tuning geométrico en la ronda anterior —
+necesita rediseño, no parámetros), **manos como "tablas planas"** pese a
+la separación de dedos, y **boca sin volumen real de labios** (el fix de
+esta ronda la sacó de "elemento más ruidoso" pero no logró que lea como
+labios). **Hallazgo re-señalado (no nuevo, ya conocido):** la barba sigue
+fuera del default (decisión de Boris de la Fase C) — el QA sin contexto
+la marca como ausencia mayor, recordatorio de que sigue como nota abierta
+para cuando se aborde junto con el pelo real. QA de regresión
+(`test_core`/`test_combat`/`autotest_biomech`/`autotest_slice`/
+`autotest_ui`) ALL_PASS. **No tocado a propósito:** los pecs (`pec`
+sphere, líneas ~433-438) que el QA de la ronda 42% señaló como "leen como
+ojos en el torso" — geometría con historial de debate específico
+orquestador↔QA (números ya negociados: r 0.05, escala 1.4/0.9/0.5,
+verificados contra el radio real del cilindro) — no se toca sin más
+contexto de Boris.
+
 ## [2026-07-14] fix+qa | Segunda ronda: pauldron fantasma + contraste de pelo — 42% → 45%
 Boris pidió arrancar la segunda ronda de fixes tras el QA del 42%,
 empezando por los 2 más baratos.

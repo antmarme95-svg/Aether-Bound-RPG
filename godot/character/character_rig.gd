@@ -984,7 +984,12 @@ func _build() -> void:
 	# en el banco (confirma: el techo era de MAGNITUD, no de técnica) — se
 	# calibra hacia abajo a ~2.6cm, todavía pronunciado pero sin leer como
 	# jeta/protuberancia en perfil.
-	var lip_upper = _cylinder_mesh(0.007, 0.007, 0.054, lip_mat)
+	# PRD Rework Fenotipo pt.16 (2026-07-14, ronda 3): radio subido
+	# 0.007→0.010 — el QA lee la boca como "agujero geométrico" porque el
+	# mouth_seam (la línea de comisura) es más grande que los labios que
+	# se supone acompaña; los labios necesitan masa propia para dominar la
+	# lectura en vez de la línea entre ellos.
+	var lip_upper = _cylinder_mesh(0.010, 0.010, 0.054, lip_mat)
 	lip_upper.rotation.z = PI / 2.0
 	lip_upper.position = Vector3(0.0, -0.069, 0.122)
 	head.add_child(lip_upper)
@@ -996,16 +1001,26 @@ func _build() -> void:
 	# 0.009) y protrusión recortada (z 0.144→0.136, escalón ahora ~1.6cm
 	# en vez de 2.6cm) — sigue leyendo más carnoso que el superior sin
 	# desproporcionarse.
-	var lip_lower = _cylinder_mesh(0.009, 0.009, 0.056, lip_mat_lower)
+	# PRD Rework Fenotipo pt.16: radio subido junto al superior (0.009→0.013,
+	# manteniendo la proporción "más carnoso" ya establecida).
+	var lip_lower = _cylinder_mesh(0.013, 0.013, 0.056, lip_mat_lower)
 	lip_lower.rotation.z = PI / 2.0
 	lip_lower.position = Vector3(0.0, -0.087, 0.136)
 	head.add_child(lip_lower)
 	_add_outline_pass(lip_lower, Color("#f2b186"))
 
-	# línea de comisura FORZADA: agrandada/oscurecida más — actúa como
-	# línea explícita de boca, no depende del Sobel detectando el escalón.
-	var mouth_seam = _box_mesh(0.044, 0.010, 0.014, mouth_seam_mat)
-	mouth_seam.position = Vector3(0.0, -0.078, 0.137)
+	# línea de comisura: actúa como línea explícita de boca, no depende del
+	# Sobel detectando el escalón.
+	# PRD Rework Fenotipo pt.16 (2026-07-14, ronda 3): el tamaño "agrandada"
+	# de esta caja (heredado de cuando aún competía visualmente con la
+	# barba, ya retirada del default) hoy es el elemento MÁS prominente de
+	# la boca — el QA la lee como "rectángulo sólido, boca como agujero
+	# geométrico" en vez de una línea entre dos labios. Achicada (alto
+	# 0.010→0.006) y RECEDIDA (z 0.137→0.129, detrás de la cara frontal de
+	# ambos labios en vez de casi al ras del inferior) para que lea como
+	# sombra/valle entre las dos masas de labio, no como la boca entera.
+	var mouth_seam = _box_mesh(0.040, 0.006, 0.012, mouth_seam_mat)
+	mouth_seam.position = Vector3(0.0, -0.078, 0.129)
 	head.add_child(mouth_seam)
 
 	for mside in [-1, 1]:
@@ -1957,35 +1972,31 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		# sus UVs de primitiva embarraban la pintura).
 		skull.material_override = head_mat
 
-	# ---- marca de pintura del brazo (acompaña al warpaint facial) ----
+	# ---- marca de pintura del brazo — RETIRADA (PRD Rework Fenotipo pt.18,
+	# 2026-07-14) ----
+	# El PRD original dejaba esto como decisión abierta ("Fable no confirma
+	# que la banda de brazo exista en la lámina"). Verificado ahora contra
+	# `fenotipo-humano-torso-v1.png` directamente: no hay ninguna banda de
+	# pintura en el brazo — lo que SÍ hay ahí es un BRAZAL DE CUERO (vestuario,
+	# antebrazo, ambos lados, ya cubierto por `character_outfit.gd`), no
+	# pintura de bíceps. El QA de la ronda 42%→45% lo señaló como "objeto no
+	# reconocido contra ninguna lámina". Se quita del fenotipo humano base.
 	if _arm_stripe != null:
 		_arm_stripe.queue_free()
 		_arm_stripe = null
-	if warpaint_idx > 0:
-		var stripe_mat := StandardMaterial3D.new()
-		stripe_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		stripe_mat.albedo_color = paint_color
-		# r 0.075: el bíceps EFECTIVO llega a ~0.070 (radio 0.055 × el
-		# limb-scale de peso 1.12–1.42 de _apply_build) — un anillo menor
-		# queda ENTERRADO dentro del brazo (bug M9-r3, diagnóstico por
-		# find_child: el nodo existía, invisible).
-		# r2c: radio subido 0.074→0.083 — el BÍCEPS nuevo (Fase B r2) alcanza
-		# 0.0754 en Z a esta altura y enterraba el borde frontal de la banda
-		# (la lección del anillo: dimensionar contra el radio efectivo MÁXIMO).
-		_arm_stripe = _cylinder_mesh(0.081, 0.083, 0.028, stripe_mat)
-		_arm_stripe.name = "arm_paint_stripe"
-		_arm_stripe.position = Vector3(0.0, -0.115, 0.0)
-		_arm_stripe.rotation.z = 0.12
-		arms[0].add_child(_arm_stripe)
 
-	# ---- PRD Rework Fenotipo pt.7 (2026-07-14): warpaint = 2 TRAZOS
-	# VERTICALES (corrige la Fase C p8 anterior, 1 franja horizontal-
-	# diagonal). QA de cuerpo completo (Fable) confirmó contra la lámina:
-	# "dos trazos verticales que bajan desde el nacimiento del pelo
-	# cruzando ceja/sien izquierda hacia el pómulo, no diagonal ni
-	# horizontal". Lado IZQUIERDO (side=-1) como antes; ambos trazos rectos
-	# (sin rotation.y/z) descendiendo de la altura de `brow` (y=0.038,
-	# z=0.133) a la de `cheek` (y≈-0.020, z≈0.112).
+	# ---- PRD Rework Fenotipo pt.17 (2026-07-14, ronda 3): warpaint
+	# BILATERAL Y DIAGONAL — corrige el punto 7 anterior (2 trazos
+	# verticales, un solo lado), que seguía el veredicto textual del QA
+	# imparcial original ("dos trazos verticales... ceja/sien izquierda").
+	# Verificado ahora DIRECTAMENTE contra `fenotipo-humano-torso-v1.png`
+	# (el orquestador leyó la lámina en pantalla, sin intermediario): el
+	# patrón real es una "V"/"A" SIMÉTRICA — dos franjas anchas que bajan
+	# desde ambas sienes/nacimiento del pelo y CONVERGEN en diagonal hacia
+	# el puente de la nariz, no un trazo vertical de un solo lado. El QA de
+	# la ronda 42%→45% también marcó el warpaint como "casi invisible a
+	# distancia" — franjas engrosadas (0.006→0.011) para que se noten en
+	# `anatomy_medium`/`anatomy_full_front`, no solo en close-up.
 	if _face_mark != null:
 		_face_mark.queue_free()
 		_face_mark = null
@@ -1997,9 +2008,12 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		fm_mat.albedo_color = paint_color.darkened(0.18)
 		_face_mark = MeshInstance3D.new()
 		_face_mark.name = "face_paint_mark"
-		for si in range(2):
-			var fm_stroke = _box_mesh(0.006, 0.045, 0.005, fm_mat)
-			fm_stroke.position = Vector3(-0.058 - float(si) * 0.014, 0.008, 0.135)
+		for fside in [-1, 1]:
+			var fm_stroke = _box_mesh(0.011, 0.075, 0.006, fm_mat)
+			# arriba (sien/nacimiento del pelo, afuera) → abajo (puente de
+			# la nariz, adentro): tilt en Z converge las dos franjas.
+			fm_stroke.position = Vector3(float(fside) * 0.032, 0.010, 0.132)
+			fm_stroke.rotation.z = float(fside) * 0.40
 			_face_mark.add_child(fm_stroke)
 		head.add_child(_face_mark)
 
