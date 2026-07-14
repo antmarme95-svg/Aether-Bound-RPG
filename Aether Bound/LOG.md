@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-13] design | VAULT-STARTER.md — pase agnóstico (sin dominio de juego)
+El director pidió dejar el starter agnóstico a cualquier proyecto: fuera
+toda mención a Godot/videojuegos. Cambios: intro sin "videojuego"; árbol
+sin `godot/`; op-tags `feature→build` y `playtest→review`; "Feature
+Loop"→"Build Loop", "Review/Playtest Loop"→"Review Loop" (fuera
+feel/montages); "código" (como entregable) → "entregables/trabajo" en los
+principios SSoT/sincronización, Lint, gate y CLAUDE.md; bootstrap pregunta
+"dominio (software/investigación/escritura/producto/operaciones…)". Se
+conserva la terminología git (repo/branch/commit) por ser parte del
+método para cualquier dominio. Verificado: 0 menciones a juego/Godot.
+
 ## [2026-07-13] design | VAULT-STARTER.md — el método exportado en un archivo único
 Encargo del director: destilar nuestro esquema de trabajo completo en un
 .md autocontenido para que cualquier persona arranque un proyecto de

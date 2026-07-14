@@ -3,8 +3,8 @@
 > **Qué es esto:** un archivo único y autocontenido para arrancar un proyecto
 > bajo el método **VDD × LLM-WIKI** — el conocimiento vive en un Vault de
 > markdown versionado, no en las conversaciones; el agente de IA lo mantiene
-> y el humano lo dirige. Destilado de un proyecto real (un videojuego con
-> meses de desarrollo continuo bajo este esquema) y de sus dos fuentes
+> y el humano lo dirige. Destilado de un proyecto real de desarrollo
+> continuo a lo largo de meses bajo este esquema, y de sus dos fuentes
 > teóricas: *LLM-WIKI* (A. Karpathy) y *Vault-Driven Development v1.0*.
 >
 > **Cómo usarlo:** copia este archivo a la raíz de tu repositorio y dile a
@@ -41,8 +41,8 @@ son un trabajo de editor que las wikis humanas no pagan — por eso se pudren.
    sistema operativo del proyecto: conocimiento, estado y procedimientos
    viven en él; el agente solo lo consulta, interpreta el estado actual y
    ejecuta el siguiente procedimiento. Los prompts son efímeros; los
-   procesos (loops) son permanentes. El verdadero activo no es el código ni
-   los prompts: es el sistema capaz de producir ambos.
+   procesos (loops) son permanentes. El verdadero activo no es el entregable
+   ni los prompts: es el sistema capaz de producir ambos.
 
 **Separación estricta de roles** (el principio que sostiene todo):
 **el humano cura y decide; el agente escribe, enlaza y reconcilia.**
@@ -51,15 +51,15 @@ son un trabajo de editor que las wikis humanas no pagan — por eso se pudren.
 
 - *Single Source of Truth* — la información permanente existe SOLO en el
   Vault. Nunca solo en conversaciones, ni solo en la memoria del modelo, ni
-  solo en el código.
+  solo en los entregables.
 - *Reproducibilidad* — cualquier agente (incluso de otro proveedor) debe
   poder continuar el proyecto leyendo únicamente el Vault. El sistema es
   agnóstico de modelo por diseño.
 - *Mínimo cambio* — cambios pequeños, reversibles, fáciles de revisar.
 - *Evidencia* — lo que no puede justificarse con información del Vault no se
   asume: se documenta o se pregunta.
-- *Sincronización* — código, documentación, estado y backlog representan la
-  misma realidad SIEMPRE.
+- *Sincronización* — entregables, documentación, estado y backlog
+  representan la misma realidad SIEMPRE.
 
 ---
 
@@ -81,7 +81,7 @@ el Vault.*)
 <TuProyecto>/
 ├── CLAUDE.md                  ← reglas de arranque (ver §10)
 ├── VAULT-STARTER.md           ← este archivo (queda como referencia)
-├── src/ | godot/ | app/ ...   ← tu código
+├── src/                       ← tu trabajo (código, manuscrito, análisis…)
 └── Vault/
     ├── SCHEMA.md              ← el modelo de trabajo (este contenido, §2–§8)
     ├── 00-Index.md            ← catálogo: una línea por página
@@ -126,7 +126,8 @@ cuyo estado de entrada no se cumple.
   Párrafo(s) con lo que pasó, decisiones y punteros.
   ```
 
-  donde `op ∈ {ingest, design, feature, playtest, lint, state}`.
+  donde `op ∈ {ingest, design, build, review, lint, state}` (adapta el
+  conjunto a tu dominio).
 
 ---
 
@@ -181,23 +182,24 @@ explícita del humano** → `ratificado`; propagar coherencia a toda página
 enlazada. Decisión estructural → ADR en `20-State/Decisiones/` (título,
 fecha, contexto, alternativas, razón, consecuencias, estado).
 
-**Feature Loop** — tarea técnica → código con gates verdes.
+**Build Loop** — tarea de trabajo → entregable con gates verdes.
 Entrada: tarea del Task-Board con criterios de aceptación y specs
 `ratificado`. Fases: leer Current-State + **Lecciones (obligatorio antes de
-tocar código)** + specs; planear; implementar en branch propio con cambios
-mínimos; **gates de validación** (compila, tests, checks específicos del
-proyecto — defínelos y automatízalos pronto); actualizar Task-Board +
-Current-State + LOG + Lecciones si algo dolió; checkpoint. Salida: tarea ✅.
+empezar)** + specs; planear; ejecutar en branch propio con cambios
+mínimos; **gates de validación** (los checks propios del proyecto —
+defínelos y automatízalos pronto); actualizar Task-Board + Current-State +
+LOG + Lecciones si algo dolió; checkpoint. Salida: tarea ✅.
 
-**Review/Playtest Loop** — de "funciona" a "está bien" (calidad subjetiva).
-Entrada: feature con gates verdes cuyo valor es cualitativo (feel, UX,
-estética, redacción). Fases: generar evidencia revisable barata (capturas,
-montages, demos — iterar sobre artefactos, no en vivo); ajustar; cuando
-convence, **revisión en vivo del humano**; capturar su feedback como ítems
-concretos; iterar. Cierre = aceptación explícita registrada.
+**Review Loop** — de "funciona" a "está bien" (calidad subjetiva).
+Entrada: entregable con gates verdes cuyo valor es cualitativo (UX,
+estética, redacción, tono). Fases: generar evidencia revisable barata
+(capturas, borradores, prototipos, demos — iterar sobre artefactos, no en
+vivo); ajustar; cuando convence, **revisión en vivo del humano**; capturar
+su feedback como ítems concretos; iterar. Cierre = aceptación explícita
+registrada.
 
 **Lint Loop** — salud del Vault (periódico).
-Buscar: contradicciones (entre páginas, y entre páginas y código);
+Buscar: contradicciones (entre páginas, y entre páginas y los entregables);
 wikilinks rotos (= backlog, listar sin borrar) y páginas huérfanas; status
 desactualizados; Index vs. realidad (toda página en el Index y viceversa);
 State vs. repo (Current-State refleja el branch/commit real). Fixes menores
@@ -228,8 +230,8 @@ Anti-patrones técnicos y datos del entorno, ganados con dolor real. Cada
 entrada es una regla accionable con su porqué (ej.: "nunca X — en tal fecha
 causó Y; hacer Z en su lugar"). Reglas de mantenimiento:
 
-- **Lectura obligatoria antes de tocar código** (todo Feature Loop, y en el
-  brief de todo subagente ejecutor).
+- **Lectura obligatoria antes de empezar a ejecutar** (todo Build Loop, y en
+  el brief de todo subagente ejecutor).
 - Si una sesión paga una lección nueva, **se escribe ANTES de cerrar** — una
   lección no escrita se volverá a pagar.
 - Se **sobrescribe/refina**: si una lección resulta incompleta o queda
@@ -268,9 +270,9 @@ tokens o cambios de modelo sin avisar:
   grande — lógica/arquitectura al modelo grande; ejecución mecánica
   (boilerplate, formateo, inventarios, QA repetitivo) a modelos
   medianos/chicos como subagentes. Paraleliza lo independiente.
-- **Gate de validación antes de aprobar cualquier cambio**: compila, tests
-  verdes, documentación actualizada, State actualizado, backlog consistente.
-  Solo entonces la máquina de estados avanza.
+- **Gate de validación antes de aprobar cualquier cambio**: los checks del
+  proyecto en verde, documentación actualizada, State actualizado, backlog
+  consistente. Solo entonces la máquina de estados avanza.
 
 **Difiere a v2 (no lo construyas el día 1):** scheduler formal, contratos
 de loop exhaustivos, orquestación multi-agente declarativa, búsqueda
@@ -283,9 +285,10 @@ pragmático; el Lint Loop te dirá cuándo creciste.
 
 Si un humano te pidió inicializar el Vault desde este archivo:
 
-1. Pregunta (una sola tanda): nombre del proyecto, dominio (juego/app/
-   investigación/otro), qué fuentes raw existen ya, y cómo se valida el
-   proyecto (build/tests).
+1. Pregunta (una sola tanda): nombre del proyecto, dominio (software,
+   investigación, escritura, producto, operaciones… lo que sea), qué fuentes
+   raw existen ya, y cómo se valida un entregable en este proyecto (tests,
+   revisión, criterios de aceptación…).
 2. Crea la estructura de §3 (carpeta `Vault/` o en la raíz, a gusto del
    humano — respeta lo que ya exista).
 3. Genera `SCHEMA.md` con el contenido de §2–§8 de este archivo (adaptando
@@ -315,7 +318,7 @@ Si un humano te pidió inicializar el Vault desde este archivo:
 4. Ningún loop termina sin actualizar `00-Index.md`, `LOG.md` y
    `Current-State.md` (checkpoint tras CADA tarea; rutina completa de
    cierre en SCHEMA §7).
-5. Lecciones técnicas obligatorias antes de tocar código:
+5. Lecciones obligatorias antes de empezar a ejecutar:
    `Vault/20-State/Lecciones.md`.
 6. El humano cura y decide; el agente escribe, enlaza y reconcilia. Nada
    `ratificado` se cambia sin Design Loop.
