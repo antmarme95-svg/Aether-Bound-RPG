@@ -33,6 +33,31 @@ updated: 2026-07-12
   warpaint 1 franja limpia. Hallazgo: existe `HairLibrary.build_beard()`
   (estilos 0-3) pero el stubble usa overlay translúcido (pitfall del toon
   ALPHA) → irá como MASA opaca semi-hundida. Pelo (crop) = Fase D aparte.
+- **Fase C — masas de cara EN CURSO (3/8, 2026-07-13 tarde/noche):**
+  **(p1) Mandíbula fundida** ✅ (`c12da0a`, director: "me convence muchísimo") —
+  esfera escalada que penetra el cráneo (overlap real), mata las costuras de
+  caja del r5, mentón suave; recalibrado a 7.49 cabezas. **(p2) Pómulos altos**
+  ✅ con 1 ronda de fix (`eb1ecab` + `23f03d7`) — plano malar elongado
+  semi-hundido; feedback del director ("los pusiste a un lado de los ojos"):
+  el pómulo quedaba a la misma altura que el ojo, se bajó (y=-0.012 base,
+  rango del slider tope en y=0.0, nunca cruza la altura del ojo 0.022) y
+  ahora lee bajo el ángulo externo del ojo. **Nota abierta del director:**
+  "no me terminan de convencer" — decisión conjunta de NO seguir iterando a
+  ciegas: revisar en un VoBo de CARA COMPLETA tras barba (más contexto para
+  juzgar una masa sutil). **(p3) Ojos almendra** ✅ (`ea3f5bb`) — mata el
+  ojo-platillo del r5: esclerótica más chica/aplastada, iris+pupila crecen
+  para llenar el alto del ojo (poco blanco visible), ceja crece y baja para
+  SOLAPAR de verdad el tope del ojo (párpado real, no separado) → lee
+  entrecerrado/calmado. Rango de `eyeShape` intacto (personalización de
+  jugador, extremo alto = anime a propósito). **Pendiente inmediato: p4
+  nariz cuña integrada** (hoy prisma de 4 caras pegado sin conexión al
+  plano facial) → p5 boca por geometría → **p6 barba corta** (rasgo de
+  identidad que más falta; `HairLibrary.build_beard()` existe pero el
+  stubble usa overlay translúcido — pitfall del toon ALPHA, va como masa
+  opaca) → **CHECKPOINT: VoBo de cara completa con Boris** (incluye retocar
+  pómulos con contexto) → p7 orejas → p8 warpaint 1 franja. QA de cada paso:
+  `test_core` ALL_PASS + banco `tmp_anatomy.gd` sin errores, 7.49 cabezas
+  estable en todos los pasos.
 - **🔨 REWORK GRÁFICO INTEGRAL 2026-07-12/13 (Fases A→B→anatomía→outfit, 8
   commits pusheados 42d169e→1794b1a, dirigido en vivo por Boris con QA
   imparcial Fable):** el día empezó con dos auditorías imparciales (código:

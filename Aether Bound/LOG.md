@@ -1,5 +1,30 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-13] feature | Fase C cara: mandíbula, pómulos y ojos (3/8 masas)
+Continuación de la sesión de tarde. **p1 mandíbula fundida** (`c12da0a`):
+esfera escalada que penetra el cráneo (overlap real, no tangente — lección
+de las uniones del cuerpo), mata el prisma de 4 caras + caja de mentón del
+r5 (los dos ofensores de costura). Recalibrado a 7.49 cabezas (colgaba a
+6.67 en el primer intento). **Veredicto del director: "me convence
+muchísimo".** **p2 pómulos altos** (`eb1ecab`): plano malar elongado
+semi-hundido en vez de esferita redonda al ras. Feedback del director:
+"los pusiste a un lado de los ojos" — diagnóstico correcto, el pómulo
+quedaba casi a la misma altura que el ojo (y=0.016 vs ojo y=0.022); fix
+(`23f03d7`) baja la base a y=-0.012 y el rango del slider nunca cruza la
+altura del ojo. Segundo veredicto: "no me terminan de convencer". Decisión
+conjunta (pregunta del director, respuesta del orquestador): NO seguir
+iterando el pómulo a ciegas contra una cara incompleta — es una masa sutil
+por diseño y compite mal con una nariz-prisma vieja y sin barba; se revisa
+en un **VoBo de cara completa después de la barba** (p6), con más contexto
+y sin costo (el pómulo es un parámetro aislado, retocable después). **p3
+ojos almendra** (`ea3f5bb`): mata el ojo-platillo del r5 — esclerótica más
+chica/aplastada, iris+pupila crecen para llenar casi todo el alto del ojo,
+la ceja crece y baja para SOLAPAR de verdad el tope del ojo (párpado real)
+→ lee entrecerrado/calmado. QA de los 3 pasos: `test_core` ALL_PASS + banco
+`tmp_anatomy.gd` sin errores en cada ronda. **Pendiente: p4 nariz cuña
+integrada → p5 boca → p6 barba corta → checkpoint VoBo cara completa → p7
+orejas → p8 warpaint.**
+
 ## [2026-07-13] feature | Cintura del cuerpo desnudo cerrada + Fase C cara abierta
 Sesión de tarde. (1) **VoBo del director** al outfit frontier (r2). (2) Se
 retomó el pendiente dejado a propósito: **verificar la continuidad de cintura
