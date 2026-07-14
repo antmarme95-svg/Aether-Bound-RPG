@@ -742,19 +742,30 @@ func _build() -> void:
 	# hacia el mentón (afila las facciones). Prisma de 4 caras con taper
 	# (cilindro de 4 segmentos girado 45°, mismo truco que la nariz); la
 	# relación ancho/profundidad la pone el slider de jaw en apply_phenotype.
-	jaw_mesh = _cylinder_mesh(0.098, 0.060, 0.074, skin_mat)
-	(jaw_mesh.mesh as CylinderMesh).radial_segments = 4
+	# FASE C paso 1 (luz verde del director 2026-07-13, propuesta por masas):
+	# la mandibula ya NO es un prisma de 4 caras + caja de menton apilados
+	# (esos eran los dos ofensores de costura del r5). Ahora es UNA masa
+	# redondeada (esfera escalada) que PENETRA dentro del craneo (overlap
+	# real, no tangente — misma leccion que las uniones de pierna/brazo): el
+	# borde superior queda ~2 cm DENTRO del craneo, asi el cel-step lee un
+	# craneo->mandibula continuo y el Sobel entinta solo el contorno externo,
+	# sin anillo de costura. Mas angosta que el craneo en X (mandibula fina,
+	# lamina: "fine narrow jaw continuing the line of the skull") y el borde
+	# inferior forma el menton suave (fuera la caja dura). El menton se funde
+	# aqui (ya no hay nodo `chin` aparte). skin_mat: el atlas de warpaint solo
+	# vive en el craneo (M9-r2b), la mandibula va en piel plana.
+	jaw_mesh = _sphere_mesh(0.12, skin_mat)
 	jaw_mesh.name = "jaw"
-	jaw_mesh.position = Vector3(0.0, -0.098, 0.046)
-	jaw_mesh.rotation.y = PI / 4.0   # caras planas al frente y costados
+	# X0.78 (angosta) · Y0.84 (largo craneo->menton) · Z0.94 (plano facial)
+	jaw_mesh.scale = Vector3(0.78, 0.84, 0.94)
+	# y=-0.048: tope en y=+0.053 (bien dentro del craneo), menton en y=-0.149
+	# — calibrado para 7.5 cabezas canon (alto menton->coronilla 0.253 m; el
+	# -0.085 inicial colgaba el menton a 6.67 cabezas, cara larga). z=0.026:
+	# frente de la mandibula en z=0.139, al ras del plano facial del craneo
+	# (0.1425), con el menton bajo la nariz.
+	jaw_mesh.position = Vector3(0.0, -0.048, 0.026)
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
-
-	# (chin/nose en skin_mat: el atlas de warpaint mapea raro en cajas chicas)
-	var chin = _box_mesh(0.062, 0.030, 0.046, skin_mat)
-	chin.position = Vector3(0.0, -0.124, 0.090)
-	head.add_child(chin)
-	_add_outline_pass(chin, Color("#f2b186"))
 
 	# NARIZ — M9-r3 (review v0.3 M5): prisma SESGADO, no bloque — puente
 	# fino arriba que abre a base/alas abajo, con leve proyección de punta
@@ -1544,14 +1555,15 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	left_hand.visible = not prosthetic_on
 
 	# ---- face structure ----
-	# JS jaw.scale: lerp(0.72..1.28, 0.85..1.18, 0.8..1.22)
+	# FASE C paso 1: la mandibula es ahora la esfera fundida (base
+	# 0.78/0.84/0.94 en _build). El slider modula ANCHO y profundidad
+	# alrededor de esa base SIN tocar el largo (Y), que fija el menton al
+	# ras de la nariz. jaw bajo = mandibula fina (lamina); jaw alto = amplia.
 	var jaw_v: float = p.get("jaw", 0.5)
-	# (M9-r6: el prisma trapezoidal es de sección cuadrada — el ×0.81 en z
-	# restaura la relación ancho/profundidad de la mandíbula)
 	jaw_mesh.scale = Vector3(
-		_lerp(0.72, 1.28, jaw_v),
-		_lerp(0.85, 1.18, jaw_v),
-		_lerp(0.8, 1.22, jaw_v) * 0.81
+		0.78 * _lerp(0.86, 1.16, jaw_v),
+		0.84,
+		0.94 * _lerp(0.92, 1.08, jaw_v)
 	)
 
 	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
