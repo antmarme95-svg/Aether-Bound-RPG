@@ -348,16 +348,34 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# Colocación DETERMINISTA (paridad CLI, cero random): 4 filas de
 	# latitud × columnas, tamaño en cascada (frente grande → nuca chico),
 	# tono alternado (base / +10% claro = profundidad cel de dos valores).
+	# PRD Rework Fenotipo pt.15 (2026-07-14, ronda 2 post-QA 42%): el QA
+	# imparcial leyó esta masa como "casco sólido", pese a los 31 mechones
+	# ya existentes — el contraste tonal (+10%) se lavaba bajo la misma
+	# banda del cel-shading toon y los mechones quedaban casi al ras de la
+	# concha (poco relieve real para que el Sobel trace sus bordes).
+	# Contraste subido a 3 tonos (base/claro +28%/oscuro -18%) para que el
+	# escalón de tono sobreviva al banding del toon.
 	var lighter := mat
+	var darker := mat
 	if mat is ShaderMaterial:
 		lighter = (mat as ShaderMaterial).duplicate()
+		darker = (mat as ShaderMaterial).duplicate()
 		var base_col = (mat as ShaderMaterial).get_shader_parameter("albedo_color")
 		if base_col != null:
 			(lighter as ShaderMaterial).set_shader_parameter(
-				"albedo_color", (base_col as Color).lightened(0.10))
+				"albedo_color", (base_col as Color).lightened(0.28))
+			(darker as ShaderMaterial).set_shader_parameter(
+				"albedo_color", (base_col as Color).darkened(0.18))
 	# filas: [altura y, radio del anillo, nº mechones, escala, excluir_frente]
 	# (r2b: las filas medias EXCLUYEN el sector frontal — ahí la masa la
 	# ponen las esferas del quiff; mechones frontales leían como RULOS)
+	# PRD Rework Fenotipo pt.15: se probó subir la protrusión/sink (blanket
+	# y por fila) para dar más relieve — reabría "dientes" en la cresta
+	# frontal (blanket) o no cambiaba nada visible en la nuca (por fila,
+	# probablemente porque el eje que realmente lee en silueta es el
+	# ensanchamiento LATERAL/X, no el sesgo Z, según [[Lecciones]]).
+	# Revertido a la geometría original; el fix real y verificado es el
+	# contraste tonal de 3 tonos (arriba).
 	var rows: Array = [
 		[R * 0.96, R * 0.40, 7, 1.00, false],  # cresta del quiff
 		[R * 0.80, R * 0.68, 9, 0.85, true],   # corona (sin frente)
@@ -392,11 +410,13 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			var cz: float = cos(a) * rr - R * 0.06
 			# variación determinista de tamaño/ángulo por índice
 			var v: float = 0.85 + 0.3 * float((idx * 7) % 5) / 4.0
-			# más DELGADOS (0.11) y hundidos: el sink CRECE hacia los
-			# costados (r2c: los laterales asomaban como taquitos en la
-			# silueta frontal) — y caen más pegados al casco
 			var sink: float = 0.93 - 0.06 * absf(sin(a))
-			var clump = _box(mat if idx % 3 != 1 else lighter,
+			var clump_mat = mat
+			if idx % 3 == 1:
+				clump_mat = lighter
+			elif idx % 5 == 3:
+				clump_mat = darker
+			var clump = _box(clump_mat,
 				R * 0.30 * s * v, R * 0.11 * s, R * 0.46 * s * v,
 				cx * sink, ry, cz * sink)
 			# orientación: tangente al casco + barrido hacia ATRÁS

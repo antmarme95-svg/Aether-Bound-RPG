@@ -717,6 +717,13 @@ func _build() -> void:
 	# Local position (0, 0.03, 0) = just above the arm root = top of shoulder cap.
 	var arm_r: Node3D = arms[1]
 	var pauldron = Node3D.new()
+	# PRD Rework Fenotipo pt.14 (2026-07-14): nombrado explícito — el resto
+	# del código (línea ~1286, `_apply_build`) y `tmp_anatomy.gd` lo
+	# buscaban por "último hijo de arm_r", un hack roto desde que las venas
+	# de mana (`vein_defs`, más abajo en `_build()`) empezaron a parentear
+	# una vena directo a `arms[1]` DESPUÉS del pauldron — el "último hijo"
+	# pasó a ser la vena, no el pauldron.
+	pauldron.name = "pauldron"
 	# C6a-r2: asentado SOBRE el deltoide nuevo (r 0.062) — antes flotaba al
 	# nivel de la oreja, dimensionado para el hombro-globo del puerto.
 	pauldron.position = Vector3(0.0, 0.015, 0.0)
@@ -1283,7 +1290,10 @@ func _apply_build() -> void:
 		shin.scale  = Vector3(limb_xz, 1.0, limb_xz)
 
 	# Vanguard: larger pauldron to read as tank
-	var pauldron: Node3D = arms[1].get_child(arms[1].get_child_count() - 1)
+	# PRD Rework Fenotipo pt.14: lookup por NOMBRE — "último hijo" dejó de
+	# ser el pauldron desde que las venas de mana empezaron a parentear una
+	# vena a arms[1] después de construirlo (ver `_build()`).
+	var pauldron: Node3D = arms[1].find_child("pauldron", false, false)
 	if pauldron != null:
 		if _archetype_class == "warrior":
 			pauldron.scale = Vector3(1.3, 1.2, 1.3)

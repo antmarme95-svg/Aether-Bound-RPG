@@ -71,8 +71,15 @@ func _run() -> void:
 	_rig.iris_mat.albedo_color = Color("#4f3b28")
 	# Sin pauldron en el banco de anatomía (review v0.2 LOW 8: leía como
 	# "prop sin referencia" — es armadura de hombro, se juzga con vestuario).
+	# PRD Rework Fenotipo pt.14 (2026-07-14): buscarlo por NOMBRE, no por
+	# "último hijo de arm_r" — ese hack quedó roto por las venas de mana
+	# (ver `character_rig.gd _build()`), dejaba el pauldron VISIBLE por
+	# accidente en cada render del banco (confirmado por QA visual: objeto
+	# gris/azul flotando en el hombro en todas las capturas).
 	var arm_r: Node3D = _rig.arms[1]
-	(arm_r.get_child(arm_r.get_child_count() - 1) as Node3D).visible = false
+	var _pauldron := arm_r.find_child("pauldron", false, false)
+	if _pauldron != null:
+		(_pauldron as Node3D).visible = false
 	_rig.set_motion(0.0, false)
 	# Dump del atlas de warpaint generado (posicionar slashes VIENDO el strip)
 	var head_tex = _rig.head_mat.get_shader_parameter("albedo_texture")

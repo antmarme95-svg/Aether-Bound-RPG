@@ -8,6 +8,21 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, ronda 2) — pauldron fantasma RESUELTO, pelo
+  mejora parcial: 42% → 45%.** El pauldron fantasma tenía causa raíz real
+  (no solo de banco): las venas de mana se parentean a `arms[1]` DESPUÉS
+  del pauldron en `_build()`, rompiendo el hack "último hijo" que también
+  usaba `_apply_build()` en producción (escalado Vanguard) — pauldron
+  ahora tiene nombre y se busca por `find_child()`. El pelo NO se resolvió
+  de raíz: se probaron 3 variantes de geometría (protrusión/sink) que o
+  reabrían el defecto histórico de "dientes en la silueta frontal" o no
+  cambiaban nada visible; quedó solo un contraste tonal de 3 tonos que el
+  propio QA confirma que no alcanza — **el problema es de silueta/
+  geometría, no de color; necesita una sesión dedicada, posiblemente con
+  propuesta visual antes de codear**. Hallazgos NUEVOS de este corte:
+  boca lee como agujero geométrico (antes tapado por la barba), y dos
+  masas del pecho (`pec`) leen como "ojos" en el torso — no reportado en
+  rondas anteriores. Detalle completo en [[LOG]].
 - **SESIÓN 2026-07-14 (noche, cierre) — QA visual imparcial de cierre:
   32% → 42%.** Mismo protocolo que la ronda anterior (subagente sin
   contexto de código, renders frescos post-13-puntos contra ambas

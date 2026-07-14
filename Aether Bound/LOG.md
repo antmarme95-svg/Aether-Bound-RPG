@@ -1,5 +1,47 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] fix+qa | Segunda ronda: pauldron fantasma + contraste de pelo — 42% → 45%
+Boris pidió arrancar la segunda ronda de fixes tras el QA del 42%,
+empezando por los 2 más baratos.
+**14. Pauldron fantasma (RESUELTO, confirmado por el QA de esta ronda,
+ausente en los 9 renders).** Causa raíz: `_build()` en `character_rig.gd`
+agrega las venas de mana DESPUÉS del pauldron, y una de ellas ("right
+upper arm") se parentea directo a `arms[1]` — el mismo nodo del pauldron
+— así que el pauldron dejó de ser el "último hijo de arm_r". El hack por
+índice (`get_child(count-1)`) que tanto `tmp_anatomy.gd:75` como
+`_apply_build()` (línea ~1286, lógica de escalado Vanguard — **bug de
+producción real, no solo de banco de pruebas**) usaban para encontrarlo
+empezó a agarrar la vena en su lugar. Fix: pauldron ahora tiene
+`.name = "pauldron"`; ambos call sites lo buscan por `find_child()` en vez
+de por índice.
+**15. Pelo — mejora parcial, NO resuelto de raíz.** Se probaron 3
+variantes de geometría (subir protrusión/reducir sink globalmente, luego
+solo en filas traseras) — ambas reabrieron el defecto histórico "dientes
+en la silueta frontal" (blanket) o no produjeron cambio visible perceptible
+(por fila) — revertidas. Lo único que quedó: contraste tonal de mechones
+subido de 2 tonos (±10%) a 3 tonos (+28%/-18%), técnicamente perceptible
+mirando de cerca pero el QA confirma que **no resuelve el problema real**:
+la silueta general sigue leyendo "casco/gorro sólido", con un borde
+horizontal duro entre pelo y frente. **Diagnóstico para la próxima
+sesión:** el problema es de GEOMETRÍA/silueta (la concha elipsoide +
+mechones semi-hundidos no rompen el contorno general), no de tono — un
+ajuste de color no lo va a cerrar; hace falta una revisión de forma más
+profunda (quizás una sesión dedicada, posiblemente con propuesta visual
+ANTES de codear, como se hizo con pelo/Fase D en el pasado).
+**QA visual de esta ronda: 42% → 45%** (+3). Confirma que ambos fixes
+funcionan en su alcance específico pero no mueven los bloqueadores de
+fondo. **Hallazgos NUEVOS que aparecieron en este corte (no reportados
+antes):** boca como "rectángulo sólido, lee como agujero geométrico"
+(más notorio sin barba encima); **dos manchas ovaladas en el pecho que
+leen como "ojos" en el torso** (geometría de `pec`, preexistente, nunca
+señalada hasta ahora); brazalete/banda verde en el brazo que el QA no
+reconoce contra ninguna lámina (es `_arm_stripe`, ya marcado como
+"sin confirmar en la lámina" en el PRD original — candidato a quitar).
+Resto de hallazgos (nariz faceted, ojos platillo, warpaint casi invisible
+a distancia, manos aún angulosas, cuello grueso) se mantienen de la ronda
+anterior. QA de regresión (`test_core`/`test_combat`/`autotest_biomech`)
+ALL_PASS en ambos fixes.
+
 ## [2026-07-14] qa | QA visual imparcial de cierre — 32% → 42% (mismo protocolo, subagente sin contexto)
 Corrido el mismo protocolo de la ronda que dio ~32%: subagente sin contexto
 de código, renders frescos (`tmp_anatomy.gd` tras los 13 puntos) contra
