@@ -192,12 +192,15 @@ static func build_hair(index: int, mat: Material) -> Node3D:
 			return Node3D.new()
 
 ## Build a beard style node by index (0-3). Returns Node3D root.
-static func build_beard(index: int, mat: Material) -> Node3D:
+## `density` (0..1) solo aplica al estilo 1 (Stubble) — CONFIGURABLE
+## (pedido del director): 0 = sombra de 3 días apenas insinuada, 1 = barba
+## corta pareja tipo `fenotipo-humano-torso-v1`. Ver `_beard_stubble()`.
+static func build_beard(index: int, mat: Material, density: float = 0.4) -> Node3D:
 	match index:
 		0:
 			return Node3D.new()   # Clean — empty group
 		1:
-			return _beard_stubble(mat)
+			return _beard_stubble(mat, density)
 		2:
 			return _beard_braided_jarl(mat)
 		3:
@@ -583,28 +586,89 @@ static func _hair_drake_dreads(mat: Material) -> Node3D:
 
 # ---- beard builders ----
 
-# 1 — Stubble: translucent jaw shell approximated as a flattened sphere
-static func _beard_stubble(mat: Material) -> Node3D:
+# 1 — Stubble: FASE C paso 6 (luz verde director). La v1 usaba un shell
+# translúcido (ALPHA) sobre TODA la mandíbula — pitfall del toon: el shader
+# `toon_opaque` no escribe ALPHA (banding/artefactos, ver Lecciones). r6a
+# (opaca única, revertida): tapaba la boca entera, leía "máscara". r6b/r6c/
+# r6d/r6e (cadena de esferas en fila, overlap creciente): pasó de "perilla"
+# a "collar de cuentas" a "masa sólida oscura" — cualquier fila 1D con
+# suficiente overlap para fundirse en un contorno único termina leyendo
+# como barba SÓLIDA pareja, no como sombra de vello de 3 días (que es
+# ruidosa/parcial por naturaleza, no una silueta lisa).
+# r6f (post-QA Ronda 2 + feedback del director): dispersión 2D de motas
+# chicas con RNG determinista. r6g (post-QA Ronda 8, DESEMPATE — confirmado
+# leyendo el código, no solo impresión): la primitiva elegida (N esferas
+# aisladas, radio 0.007-0.011) NO PUEDE leer como masa continua a ninguna
+# densidad razonable — a esta escala de low-poly toon, cualquier separación
+# entre esferas se ve como "collar de cuentas/granos de café" sin importar
+# cuántas se agreguen. El problema era de VOCABULARIO, no de tuning.
+# Reemplazado por BLOQUE SÓLIDO CONTINUO (ref. `fenotipo-humano-torso-
+# v1.png`, pedido directo del director): dos masas fundidas por overlap
+# real (mismo truco que jaw/cheek) — bigote chico sobre el labio superior
+# + una masa de mandíbula+mentón que sigue el contorno de `jaw_mesh` sin
+# subir a la mejilla ni cruzar la línea de la boca. CONFIGURABLE: `density`
+# (0..1) sigue existiendo, ahora escala el TAMAÑO de ambas masas (0 = sombra
+# apenas insinuada y chica, 1 = barba corta pareja y más llena, tipo la
+# lámina de torso) en vez de la cantidad de motas.
+static func _beard_stubble(mat: Material, density: float = 0.4) -> Node3D:
 	var g = Node3D.new()
-	var shell_mat = mat.duplicate()
-	# ShaderMaterial does not have transparency toggle; use a StandardMaterial overlay
-	var stub_mat = StandardMaterial3D.new()
-	stub_mat.albedo_color = Color(mat.get_shader_parameter("albedo_color")) if mat is ShaderMaterial else Color(0.1, 0.1, 0.1)
-	stub_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	stub_mat.albedo_color.a = 0.45
-	stub_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	# Low-poly flattened hemisphere over the jaw area
-	var shell = MeshInstance3D.new()
-	var mesh = SphereMesh.new()
-	mesh.radius = R * 0.92
-	mesh.height = R * 0.92 * 2.0
-	mesh.rings = 5
-	mesh.radial_segments = 14
-	shell.mesh = mesh
-	shell.material_override = stub_mat
-	shell.position = Vector3(0.0, -0.035, 0.012)
-	shell.scale = Vector3(0.5, 0.34, 0.4)  # flatten to jaw shape
-	g.add_child(shell)
+	var stub_mat: Material = mat
+	if mat is ShaderMaterial:
+		var base_c = mat.get_shader_parameter("albedo_color")
+		if base_c != null:
+			stub_mat = mat.duplicate()
+			stub_mat.set_shader_parameter("albedo_color", Color(base_c).darkened(0.12))
+
+	var d: float = clamp(density, 0.0, 1.0)
+
+	# bigote: masa chica y fina sobre el labio superior, sin tapar la boca.
+	var m_scale: float = lerp(0.7, 1.05, d)
+	g.add_child(_sphere(stub_mat, 0.020, 0.0, -0.053, 0.132, 1.5 * m_scale, 0.40 * m_scale, 0.42))
+
+	# mandíbula + mentón: UNA masa continua (no esferas sueltas) siguiendo
+	# el contorno del jaw, hundida por overlap real — sin subir a la
+	# mejilla ni cruzar la línea de la boca (labio inferior en y=-0.087).
+	# r6g-v2: el primer intento (sy=0.62) se extendía por debajo del mentón
+	# real (jaw tip y=-0.149) hasta invadir el cuello. r6g-v3: SEGUÍA
+	# leyendo como collar — la causa real era ANCHO, no largo: a la altura
+	# y=-0.125 el `jaw_mesh` real ya mide solo ~6cm de semi-ancho (se angosta
+	# hacia el mentón), y el disco de 7cm de semi-ancho sobresalía por los
+	# COSTADOS del propio contorno de la mandíbula, leyendo como un aro
+	# ancho. Achicado en X e Y para quedar DENTRO de la silueta del jaw en
+	# toda su altura, no solo en el punto más ancho.
+	# r6g-v4 (desempate): a y=-0.115 el `jaw_mesh` real todavía proyecta
+	# hasta z≈0.110 — con semi-Z de solo ~1cm y z=0.075 la masa quedaba
+	# DETRÁS de esa superficie = invisible, embebida. r6g-v5 (desempate de
+	# nuevo): adelantarla 1.5cm SÍ la hizo visible, pero una ESFERA de ese
+	# tamaño cae casi entera en la banda oscura del toon (curvatura
+	# continua en todas direcciones) → leía como "bulto/tumor negro", no
+	# vello. Mismo aprendizaje que `chin_boss` (Ronda 3, character_rig.gd
+	# ~L809: "una esfera NUNCA da un borde recto") — CAJA en vez de esfera,
+	# protrusión recortada (1.5cm→0.7cm) y menos alto (semi 2.3cm→1.6cm).
+	# r6g-v6 (desempate, tercera vuelta): la caja ÚNICA de lados paralelos
+	# no sigue la conicidad real de `jaw_mesh` (trapecio: ancho arriba,
+	# angosto en el mentón) — leía "ladrillo pegado", con un borde inferior
+	# recto cortando de golpe contra el cuello. Reemplazada por 3 cajas
+	# ESCALONADAS (angostan Y retroceden en Z de arriba a abajo, siguiendo
+	# la curva real del jaw en esa zona — ver comentario debajo con los
+	# z_surface medidos en cada altura), con overlap real entre capas
+	# consecutivas para fundirse en un contorno cónico, no un bloque recto.
+	var jaw_scale: float = lerp(0.75, 1.05, d)
+	# AJUSTE FINO post-QA (pulido MEDIUM, confirmado por el desempate):
+	# quedaba un escalón de 90° visible en el costado (poco overlap Y entre
+	# capas) y un borde inferior recto contra el cuello. Pasos de ancho más
+	# chicos + más overlap vertical (h subida) suavizan el costado; una
+	# esfera chica al final redondea la punta en vez de terminar en una
+	# arista de caja.
+	# L1 arriba (más ancha, jaw_surface≈0.126 a esa altura)
+	g.add_child(_box(stub_mat, 0.086 * jaw_scale, 0.024 * jaw_scale, 0.017 * jaw_scale, 0.0, -0.102, 0.126))
+	# L2 medio (jaw_surface≈0.110)
+	g.add_child(_box(stub_mat, 0.074 * jaw_scale, 0.024 * jaw_scale, 0.016 * jaw_scale, 0.0, -0.114, 0.110))
+	# L3 abajo (más angosta y con menos protrusión — jaw_surface≈0.100)
+	g.add_child(_box(stub_mat, 0.060 * jaw_scale, 0.020 * jaw_scale, 0.012 * jaw_scale, 0.0, -0.124, 0.102))
+	# remate redondeado: esfera chica en la punta, funde el borde inferior
+	# de L3 en vez de terminar en arista recta contra el cuello.
+	g.add_child(_sphere(stub_mat, 0.014 * jaw_scale, 0.0, -0.133, 0.096, 1.4, 0.6, 0.6))
 	return g
 
 # 2 — Braided Jarl: chin mass sphere + hanging braid

@@ -61,6 +61,10 @@
 - [[Feature Loop]] — spec ratificada → implementación → gates QA → sync.
 - [[Playtest Loop]] — montage → tuning → aceptación del director.
 - [[Lint Loop]] — salud del vault: contradicciones, huérfanas, status, index.
+- [[QA Loop]] — subagente QA imparcial mide fidelidad vs. lámina RAW +
+  subagente PRD traduce el veredicto a plan ejecutable; itera código↔QA↔PRD
+  hasta un % objetivo o el techo real de la técnica. Nace de la Fase C
+  (rework facial, 2026-07-14).
 
 ## 90-Raw (fuentes inmutables)
 
@@ -88,3 +92,13 @@
   addon godot-vrm (avatar VRM "AliciaSolid"), aportados por el director
   como benchmark de pulido. Estilo anime = anti-referencia del [[Art
   Bible]]; lecciones transferibles extraídas en el doc de arriba.
+  **Ampliada 2026-07-14 (aporte del director):** `link-01/02/03.jpg` +
+  `zelda.jpg` (Link/Zelda de BotW/TotK) — fenotipo BASE recomendado para
+  cuando arranque el modelado del elfo (Fase C6b/C6c): resultado YA
+  logrado dentro de un videojuego real (no solo still de concept), norte
+  directo para ojos almendra con esclerótica visible, nariz fina, boca
+  seria de línea simple. `sable-01..05.{webp,jpg}` y
+  `dungeons-of-hinterberg-01..03.jpg` — referencia visual directa de los
+  dos pilares del norte artístico ([[Art Bible]] "Melancolía Gráfica":
+  Sable × Hinterberg), complementa el texto de la Art Bible con capturas
+  reales del juego.

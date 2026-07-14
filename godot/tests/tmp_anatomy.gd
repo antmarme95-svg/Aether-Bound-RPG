@@ -61,7 +61,7 @@ func _run() -> void:
 	pheno["skinTone"] = 0     # porcelain (concept: tez pálida/fría)
 	pheno["hair"] = 11        # prince curtain (M10-r3: melena, 150 mechones)
 	pheno["hairColor"] = 4    # chestnut (base; tinte exacto abajo)
-	pheno["warpaint"] = 6     # scout marks (frente + mejilla izq)
+	pheno["warpaint"] = 6     # Fase C p8: 1 franja limpia (mejilla izq, sobre el pómulo)
 	pheno["paintColor"] = 4   # wyld green
 	_rig.apply_phenotype(pheno, BASELINE_ORIGIN)
 	# Castaño CLARO exacto del concept (patrón Dagna: tinte post-paleta).

@@ -24,7 +24,21 @@ const PHENOTYPE_FIELDS: Array[Dictionary] = [
 	{"id": "eyeShape",  "label": "Eye Shape",              "kind": "float", "tab": "face", "section": "Structure",   "default": 0.5,  "hint": "narrow glare ↔ wide anime"},
 	# --- STYLIZED AESTHETICS ---
 	{"id": "hair",       "label": "Hair",       "kind": "pick",  "tab": "face", "section": "Hair & Beard",     "default": 0, "options": HAIR_STYLES},
+	# AJUSTE FINO post-QA (2026-07-14, feedback directo del director: "no me
+	# gusta nada"): default vuelve a Clean (0) — pese a 6+ rondas de ajuste
+	# (esferas dispersas → bloque sólido → conicidad → pulido de contorno,
+	# ver [[PRD-Fase-C-Ajuste-Facial]] y [[LOG]]) el resultado no convenció
+	# al director. El fenotipo humano canónico queda lampiño de nuevo. El
+	# slider/estilo Stubble (`_beard_stubble`, `hair_library.gd`) NO se
+	# borra — sigue disponible para personalización del jugador, solo deja
+	# de ser el default.
 	{"id": "beard",      "label": "Beard",      "kind": "pick",  "tab": "face", "section": "Hair & Beard",     "default": 0, "options": BEARD_STYLES},
+	# AJUSTE FINO post-QA (2026-07-14, pedido del director): la densidad de
+	# la barba (solo aplica al estilo Stubble) queda CONFIGURABLE en vez de
+	# fija — 0 = sombra de 3 días apenas insinuada, 1 = barba corta pareja
+	# tipo `fenotipo-humano-torso-v1`. Default 0.35: más cerca del extremo
+	# ligero (el director la pidió "menos densa").
+	{"id": "beardDensity", "label": "Beard Density", "kind": "float", "tab": "face", "section": "Hair & Beard", "default": 0.35, "hint": "sparse 3-day shadow ↔ full trimmed beard"},
 	{"id": "hairColor",  "label": "Hair Color", "kind": "color", "tab": "face", "section": "Hair & Beard",     "default": 2, "paletteKey": "hair"},
 	{"id": "warpaint",   "label": "Warpaint",   "kind": "pick",  "tab": "face", "section": "Warpaint & Ink",   "default": 0, "options": WARPAINTS},
 	{"id": "paintColor", "label": "Paint Color","kind": "color", "tab": "face", "section": "Warpaint & Ink",   "default": 0, "paletteKey": "paint"},

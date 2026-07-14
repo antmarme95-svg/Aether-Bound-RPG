@@ -133,6 +133,8 @@ var veins: Array = []
 
 # ---- materials (per-rig so colors are independent) ----
 var skin_mat: ShaderMaterial
+var lip_mat: ShaderMaterial
+var lip_mat_lower: ShaderMaterial
 var head_mat: ShaderMaterial
 var hair_mat: ShaderMaterial
 var leather_mat: ShaderMaterial
@@ -240,6 +242,18 @@ func _ready() -> void:
 
 func _init_materials() -> void:
 	skin_mat = ToonMaterials.toon_mat_opaque(Color("#f2b186"))
+	# FASE C paso 5: tono de labio propio (rosa cálido, más profundo que la
+	# piel) — la boca deja de ser una línea pintada y necesita distinguirse
+	# como masa de piel distinta bajo el cel-shading, no un trazo de color.
+	# AJUSTE FINO post-QA Ronda 3: 3 rondas moviendo solo posición/escala no
+	# lograron que labio sup/inf lean como DOS masas (bloque -> agujero ->
+	# bloque otra vez) — el QA sugirió variar TONO además de geometría, para
+	# que el toon shading marque la separación y no dependa solo del Sobel.
+	# Superior más oscuro/en sombra (el labio superior normalmente recibe
+	# menos luz frontal), inferior más claro/rosado (recibe más luz, además
+	# de ser el más carnoso).
+	lip_mat = ToonMaterials.toon_mat_opaque(Color("#a85f47"))
+	lip_mat_lower = ToonMaterials.toon_mat_opaque(Color("#e0947a"))
 	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
 	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
 	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
@@ -767,28 +781,178 @@ func _build() -> void:
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
-	# NARIZ — M9-r3 (review v0.3 M5): prisma SESGADO, no bloque — puente
-	# fino arriba que abre a base/alas abajo, con leve proyección de punta
-	# (cel-shading: el primitivo debe describir la forma correcta).
-	var nose = _cylinder_mesh(0.008, 0.015, 0.048, skin_mat)
+	# ÁNGULO GONÍACO — AJUSTE FINO post-QA (2026-07-14, veredicto del
+	# director: "totalmente alejada" de la lámina). La esfera única de
+	# `jaw_mesh` tiene curvatura uniforme en todo su perímetro -> ningún
+	# punto del contorno lee como quiebre óseo, la cara entera se ve
+	# "óvalo/blob" en vez de "por masas". Se agrega una masa chica en la
+	# zona donde la mandíbula gira de vertical (rama, junto a la oreja) a
+	# horizontal (cuerpo) — MISMO truco de overlap real (hundida en
+	# jaw_mesh, sin costura), pero rompe la curvatura continua con un
+	# segundo radio distinto, dando el ángulo que el Sobel puede entintar.
+	for gside in [-1, 1]:
+		var jaw_angle = _sphere_mesh(0.050, skin_mat)
+		jaw_angle.scale = Vector3(0.55, 0.35, 0.85)
+		jaw_angle.position = Vector3(gside * 0.095, 0.00, 0.050)
+		head.add_child(jaw_angle)
+		_add_outline_pass(jaw_angle, Color("#f2b186"))
+
+	# MENTÓN CENTRAL — AJUSTE FINO post-QA Ronda 2 (PRD punto 8): el ángulo
+	# goníaco de arriba solo cubre la zona junto a la oreja; el mentón en
+	# sí (x=0, cerca de la punta y=-0.149 de `jaw_mesh`) seguía redondo/
+	# blando. Cerca del polo de la elipsoide la proyección Z se achica
+	# mucho (jaw solo llega a z≈0.072 ahí) — un bulto chico ahí, con más
+	# proyección Z propia, da la punta de mentón que la lámina pide, sin
+	# invadir la boca (labios en y=-0.069/-0.087, este bulto vive más abajo).
+	# AJUSTE FINO post-QA Ronda 3: la esfera (`chin_boss` v1) atenuó la
+	# redondez pero una esfera NUNCA da un borde recto — el QA señaló que
+	# la lámina tiene mentón cuadrado/definido, no una bola. Cambiado a
+	# CAJA (borde inferior recto real), mismo hundimiento por overlap.
+	# AJUSTE FINO Ronda 4: el QA notó un canto/borde flotante — protrusión
+	# ~2cm más allá de la superficie del jaw en ese punto, demasiado poco
+	# hundimiento para una caja (una caja plana sobre una superficie curva
+	# SIEMPRE deja un escalón visible donde no es tangente; necesita más
+	# overlap que una esfera para integrarse). Recesado 0.086→0.080
+	# (protrusión ahora ~1.3cm en vez de ~2cm).
+	# AJUSTE FINO Ronda 6: ensanchado (0.052→0.058) para un mentón cuadrado
+	# más definido, siguiendo la lámina.
+	# AJUSTE FINO post-QA (barba quitada, mentón por fin visible sin tapar):
+	# la cara frontal quedaba en z≈0.098 — ~4.7cm DETRÁS de la cara frontal
+	# de `lip_lower` (z≈0.145). El mentón nunca competía visualmente con el
+	# labio inferior: el punto más adelantado de esa zona era la boca, no
+	# la mandíbula, al revés de la lámina (mentón marcado, el rasgo más
+	# anguloso de la cara). Profundidad y posición subidas para que la cara
+	# frontal iguale/supere levemente al labio (z≈0.148).
+	# Primer intento (z=0.109, prof. 0.078, front≈0.148) se pasó de rosca —
+	# leía como mandíbula protuberante/bulldog, no mentón marcado. Bajado a
+	# un punto intermedio (front≈0.125, entre el 0.098 original y el 0.148
+	# exagerado).
+	var chin_boss = _box_mesh(0.058, 0.032, 0.055, skin_mat)
+	chin_boss.position = Vector3(0.0, -0.134, 0.0975)
+	head.add_child(chin_boss)
+	_add_outline_pass(chin_boss, Color("#f2b186"))
+
+	# NARIZ — FASE C paso 4 (luz verde director): cuña INTEGRADA. Antes era
+	# un prisma de 4 caras con cap plano flotando SOBRE la piel (sin overlap)
+	# -> costura visible en la base, "pegado" al cráneo en vez de nacer de él.
+	# Mismo truco de fusión que mandíbula/pómulo: la RAÍZ (puente, arriba)
+	# se encoge casi a un punto (top_r≈0) y se HUNDE ~1.6 cm dentro del
+	# cráneo (overlap real) — sin cap visible, el cel-step lee cráneo->nariz
+	# continuo. La PUNTA (abajo) es el extremo ancho (bot_r) que sí proyecta
+	# fuera del cráneo (~8-9 mm), como pide la lámina (cuña que abre hacia
+	# la base). Arista al frente (PI/4) conserva el facetado de prisma.
+	# AJUSTE FINO post-QA (Ronda 6): "se aplana en vista frontal" — con
+	# bot_r 0.017 la cuña era angosta y su facetado apenas contrastaba de
+	# frente (la arista al frente reparte la luz simétrico entre 2 caras
+	# chicas). Base ensanchada (0.017→0.021) y protrusión subida (z 0.136→
+	# 0.139) para más volumen visible desde cámara frontal, sin perder el
+	# facetado de prisma (M9-r3) ni la raíz hundida.
+	# AJUSTE FINO Ronda 8 — PRUEBA DE DIAGNÓSTICO (misma técnica que resolvió
+	# la boca): la arista-al-frente (rotation.y=PI/4) reparte la luz
+	# simétrica entre 2 caras chicas iguales -> poco contraste frontal, sin
+	# importar cuánto se agrande la base (ya se probó en Ronda 6-7). Prueba
+	# exagerada: CARA plana al frente (rotation.y=0, no arista) — una cara
+	# put a la cámara + dos caras laterales en sombra debería dar un
+	# quiebre de tono real (puente iluminado, lados oscuros), y bot_r subido
+	# fuerte (0.021→0.030) para confirmar el umbral de visibilidad.
+	# La prueba (bot_r 0.030, cara plana) SÍ resolvió el frontal — el
+	# quiebre de tono cara-iluminada/lados-en-sombra lee mucho mejor que la
+	# arista simétrica. Calibrado hacia abajo desde el extremo de la prueba.
+	var nose = _cylinder_mesh(0.0015, 0.026, 0.062, skin_mat)
 	(nose.mesh as CylinderMesh).radial_segments = 4
-	nose.position = Vector3(0.0, -0.008, 0.144)
-	nose.rotation.x = -0.18   # la base proyecta la punta hacia el frente
-	nose.rotation.y = PI / 4.0   # arista al frente (prisma, no cara plana)
+	nose.position = Vector3(0.0, -0.010, 0.139)
+	nose.rotation.x = -0.34   # raíz hundida arriba, punta proyecta frente-abajo
+	nose.rotation.y = 0.0     # cara plana al frente (fix Ronda 8, no arista)
 	head.add_child(nose)
 	_add_outline_pass(nose, Color("#f2b186"))
 
-	# M9-r2 (review v0.2): boca más ANCHA con sonrisa franca — la mueca
-	# apretada leía en blanco; el concept sonríe.
-	# (r3, review LOW 8: boca base más ancha — prevé la sonrisa amplia del rig)
-	var mouth_c = _box_mesh(0.046, 0.005, 0.004, pupil_mat)
-	mouth_c.position = Vector3(0.0, -0.076, 0.128)
-	head.add_child(mouth_c)
+	# ALAS de la nariz: el M9-r3 pedía que la cuña "abriera a base/alas" y
+	# nunca se construyó — sin ellas la punta terminaba en el aire, sin
+	# conexión lateral a mejilla/mandíbula. Bulto chico semi-hundido a cada
+	# lado de la punta (overlap real con nariz Y mandíbula) que rellena esa
+	# transición — funde la base de la cuña con el plano facial.
+	for aside in [-1, 1]:
+		var ala = _sphere_mesh(0.011, skin_mat)
+		ala.scale = Vector3(0.8, 0.6, 0.6)
+		ala.position = Vector3(aside * 0.014, -0.043, 0.132)
+		head.add_child(ala)
+		_add_outline_pass(ala, Color("#f2b186"))
+
+	# BOCA — FASE C paso 5 (luz verde director): boca por GEOMETRÍA, no línea
+	# pintada. Antes eran 3 cajas planas en pupil_mat (negro) simulando un
+	# trazo de tinta sin volumen — el "cel-shading debe describir la forma
+	# correcta" (M9-r3) pedía labios reales, no un dibujo. Ahora: labio
+	# SUPERIOR + INFERIOR (masas cilíndricas en lip_mat, el inferior más
+	# grueso/carnoso — asimetría natural) que se HUNDEN en la mandíbula
+	# (overlap real, mismo truco que nariz/mandíbula/pómulo) y protruyen un
+	# poco al frente del plano facial; la línea oscura queda SOLO como la
+	# comisura interior (sombra de la boca entreabierta, ya no dibuja la
+	# boca entera) — mantiene la sonrisa franca de M9-r2 con las comisuras
+	# como bultos chicos subidos en las puntas.
+	# AJUSTE FINO post-QA: labio sup/inf estaban casi tangentes en Y (gap
+	# 0.013) y a la misma Z -> sin escalón de profundidad, el Sobel no
+	# distinguía las dos masas y el conjunto leía como un solo bloque. Ahora:
+	# gap Y casi al doble + escalón Z real (superior protruye más/bermellón,
+	# inferior se hunde) -> discontinuidad detectable = línea de comisura.
+	# AJUSTE FINO post-QA Ronda 2 (2026-07-14): el gap Y (0.066→0.090=0.024,
+	# casi el doble del valor pre-ajuste 0.013) + escalón Z (0.140/0.132)
+	# SOBRE-corrigió — el QA lo leyó como boca abierta tipo "O"/grito.
+	# AJUSTE FINO Ronda 3: gap Y recortado a 0.018 (mató el efecto "O") pero
+	# el escalón Z (0.004) quedó MAL calibrado — con radios distintos
+	# (0.007 vs 0.011) las caras FRONTALES de ambos labios terminaban
+	# exactamente al mismo Z (0.145 los dos), sin ningún escalón visible
+	# desde cámara frontal — de ahí que Ronda 4 (variar solo el TONO) no
+	# generara ningún cambio perceptible: no había geometría con la que el
+	# tono pudiera interactuar. AJUSTE FINO Ronda 5 (recomendación directa
+	# del QA — "más separación Z con hueco de sombra real" + "línea de
+	# contorno forzada, no depender del Sobel automático"): el escalón
+	# ahora se calcula sobre la cara FRONTAL de cada labio, no el centro
+	# (inferior protruye ~8mm más que superior); `mouth_seam` se hunde en
+	# ese valle real entre las dos caras Y se OSCURECE/agranda para actuar
+	# como línea de comisura forzada, visible sin depender del toon step.
+	# AJUSTE FINO Ronda 6 — PRUEBA DE DIAGNÓSTICO (recomendación directa del
+	# QA): 5 rondas corrigiendo la geometría en pasos de milímetros sin
+	# cambio perceptible → el QA sugirió un escalón EXAGERADO (3-4x) para
+	# encontrar el umbral real de visibilidad antes de seguir ajustando a
+	# ciegas. Escalón subido a ~3.6cm entre caras frontales (antes 0.8cm) —
+	# valor deliberadamente grande, a recalibrar hacia abajo si esto SÍ se
+	# lee (o a investigar la vía material/shader si ni así se nota).
+	# La prueba con escalón exagerado (3.6cm entre caras) SÍ se hizo visible
+	# en el banco (confirma: el techo era de MAGNITUD, no de técnica) — se
+	# calibra hacia abajo a ~2.6cm, todavía pronunciado pero sin leer como
+	# jeta/protuberancia en perfil.
+	var lip_upper = _cylinder_mesh(0.007, 0.007, 0.054, lip_mat)
+	lip_upper.rotation.z = PI / 2.0
+	lip_upper.position = Vector3(0.0, -0.069, 0.122)
+	head.add_child(lip_upper)
+	_add_outline_pass(lip_upper, Color("#f2b186"))
+
+	# AJUSTE FINO post-QA Ronda 8 (desempate): radio 57% más grueso que el
+	# superior + 2.2cm más de protrusión hacía que el inferior se viera
+	# como un parche aislado/pegado, no integrado. Radio bajado (0.011→
+	# 0.009) y protrusión recortada (z 0.144→0.136, escalón ahora ~1.6cm
+	# en vez de 2.6cm) — sigue leyendo más carnoso que el superior sin
+	# desproporcionarse.
+	var lip_lower = _cylinder_mesh(0.009, 0.009, 0.056, lip_mat_lower)
+	lip_lower.rotation.z = PI / 2.0
+	lip_lower.position = Vector3(0.0, -0.087, 0.136)
+	head.add_child(lip_lower)
+	_add_outline_pass(lip_lower, Color("#f2b186"))
+
+	# línea de comisura FORZADA: agrandada/oscurecida más — actúa como
+	# línea explícita de boca, no depende del Sobel detectando el escalón.
+	var mouth_seam = _box_mesh(0.044, 0.010, 0.014, pupil_mat)
+	mouth_seam.position = Vector3(0.0, -0.078, 0.137)
+	head.add_child(mouth_seam)
+
 	for mside in [-1, 1]:
-		var mouth_k = _box_mesh(0.014, 0.005, 0.004, pupil_mat)
-		mouth_k.position = Vector3(float(mside) * 0.029, -0.0710, 0.126)
-		mouth_k.rotation.z = float(mside) * 0.45   # comisuras arriba (+x sube con +z)
-		head.add_child(mouth_k)
+		# comisuras: bulto chico SUBIDO (sonrisa franca de M9-r2), fusiona
+		# labio superior/inferior en la punta.
+		var corner = _sphere_mesh(0.008, lip_mat)
+		corner.scale = Vector3(0.6, 0.6, 0.6)
+		corner.position = Vector3(float(mside) * 0.0275, -0.078, 0.137)
+		head.add_child(corner)
+		_add_outline_pass(corner, Color("#f2b186"))
 
 	# M9-r1: MEJILLAS ALTAS — pómulos bajo el ojo, no cachetes bajos.
 	# r3: más ADENTRO y chicos (review: no expandir más allá de la línea de
@@ -807,11 +971,35 @@ func _build() -> void:
 	# Bajado a y=-0.012 (claramente por debajo) y recogido en X (0.067->0.060,
 	# mas cerca de la nariz que del borde de la mandibula) para que el plano
 	# quede BAJO el angulo externo del ojo, como pide la lamina.
+	# AJUSTE FINO post-QA Ronda 1: Z=0.46 aplastaba el pómulo tanto que no
+	# generaba discontinuidad de profundidad detectable por el Sobel ("no
+	# lee desde ningún ángulo"). Subido a 0.64 — Ronda 2 confirmó que
+	# "prácticamente no cambió nada". AJUSTE FINO Ronda 2 (PRD punto 7a):
+	# la magnitud seguía siendo insuficiente (protrusión efectiva ~2cm
+	# contra un cráneo de 15cm de radio). Radio base 0.030→0.032 y posición
+	# más adelante (0.114→0.116); el multiplicador de escala Z sube de
+	# 0.64 a 0.75 en `apply_phenotype`.
+	# AJUSTE FINO Ronda 3: Ronda 2 con radio 0.032/Z-mult 0.75 dio "mejora
+	# leve, insuficiente". El QA pidió descartar la hipótesis (a) magnitud
+	# antes de investigar (b) causa externa — se sube otro escalón: radio
+	# 0.032→0.036, posición 0.116→0.122, Z-mult 0.75→0.95 en apply_phenotype.
+	# AJUSTE FINO Ronda 4 (mismo día): 0.036/0.122/Z-mult 0.95 SÍ se hizo
+	# visible, pero se pasó de rosca — lee "cachete gordo", no plano malar
+	# alto (más radio en una ESFERA siempre lee más gordo, nunca más
+	# anguloso). AJUSTE FINO Ronda 5 (recomendación directa del QA — mismo
+	# truco que ya resolvió el mentón): CAJA achatada en vez de esfera. Una
+	# caja tiene caras PLANAS — lee como plano óseo anguloso en vez de bulto
+	# redondo, sin importar cuánto se escale.
+	# r_cheek-box-v2: 0.068 (el "diámetro" equivalente de la esfera 0.034)
+	# resultó ENORME como caja — las caras planas con arista dura leen
+	# mucho más grandes que una esfera de igual bounding box (el Sobel
+	# entinta el borde recto entero, no un highlight suave). Base bajada a
+	# ~60%.
 	cheeks = []
 	for side in [-1, 1]:
-		var cheek = _sphere_mesh(0.030, skin_mat)
+		var cheek = _box_mesh(0.040, 0.040, 0.040, skin_mat)
 		cheek.rotation.z = -float(side) * 0.5   # eje largo diagonal
-		cheek.position = Vector3(side * 0.060, -0.012, 0.110)
+		cheek.position = Vector3(side * 0.060, -0.012, 0.112)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
@@ -824,7 +1012,14 @@ func _build() -> void:
 		eye_group.name = "eye_" + ("l" if side == -1 else "r")
 		# v0.5 C3: CONFORMADO a la superficie — a 0.130 la esclerótica
 		# sobresalía del plano facial y se veía desde atrás en perfil.
-		eye_group.position = Vector3(side * 0.052, 0.022, 0.126)
+		# AJUSTE FINO post-QA (feedback directo de Boris): a x=0.052 con
+		# radio 0.015 el hueco entre esquinas internas (0.074) era ~2.4x el
+		# ancho de un ojo (0.030) — muy separados, leían como botones
+		# flotando lejos de la nariz. Regla humana estándar: el hueco entre
+		# ojos ≈ el ancho de un ojo. Recogido a x=0.036 (con el radio nuevo
+		# de 0.017 abajo, el hueco entre esquinas internas queda en ~0.038,
+		# cerca de 1 ancho de ojo).
+		eye_group.position = Vector3(side * 0.036, 0.022, 0.126)
 
 		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
 		# esclerótica visible, apertura angosta (fuera el ojo-platillo
@@ -836,16 +1031,31 @@ func _build() -> void:
 		# (a) white más CHICA y más aplastada (menos área visible total);
 		# (b) iris/pupila CRECEN para llenar casi todo el alto del ojo
 		# (margen de blanco fino arriba/abajo = almendra, no aro ancho).
-		var white = _sphere_mesh(0.015, eye_white_mat)
-		white.scale = Vector3(1.0, 0.58, 0.36)
+		# AJUSTE FINO post-QA Ronda 8 (desempate, confirmado por Boris contra
+		# refs. de Link/Zelda BotW/TotK): el iris (disco r0.0135, diámetro
+		# 0.027) era MÁS ALTO que la esclerótica entera (white Y-semi
+		# 0.015*0.58=0.0087, alto total 0.0174) — el iris literalmente
+		# desbordaba el blanco por todos lados, margen NEGATIVO. El
+		# comentario de p3 decía "margen de blanco fino" pero en los
+		# números reales el margen no existía. White agrandada en Y
+		# (0.58→0.85) e iris/pupila achicadas — ahora el margen es real y
+		# perceptible (~3.7mm), sin volver al ojo-platillo del r5 (el iris
+		# sigue llenando la mayoría del alto).
+		# Radio subido 0.015→0.017 (mismo ajuste de Boris de arriba): los
+		# ojos eran chicos Y separados a la vez, se veían como botones. Se
+		# agrandan un poco (manteniendo la proporción esclerótica/iris ya
+		# corregida) para que aporten estructura real a la cara, no solo un
+		# punto decorativo perdido en un óvalo grande.
+		var white = _sphere_mesh(0.017, eye_white_mat)
+		white.scale = Vector3(1.0, 0.85, 0.36)
 		eye_group.add_child(white)
 
-		var iris = _disc_mesh(0.0135, iris_mat)
+		var iris = _disc_mesh(0.0102, iris_mat)
 		iris.rotation.x = PI / 2.0
 		iris.position.z = 0.0100
 		eye_group.add_child(iris)
 
-		var pupil = _disc_mesh(0.0062, pupil_mat)
+		var pupil = _disc_mesh(0.0048, pupil_mat)
 		pupil.rotation.x = PI / 2.0
 		pupil.position.z = 0.0110
 		eye_group.add_child(pupil)
@@ -872,8 +1082,14 @@ func _build() -> void:
 		# tangente, misma lección que las uniones del cuerpo): tapa el borde
 		# superior de la esclerótica → lee entrecerrado/con párpado, no un
 		# óvalo blanco completo flotando bajo una ceja separada.
-		var brow = _box_mesh(0.048, 0.013, 0.010, brow_mat)
-		brow.position = Vector3(side * 0.052, 0.041, 0.133)
+		# AJUSTE FINO post-QA: el solape de párpado (bueno para matar el
+		# ojo-platillo) apilaba una segunda línea de tinta muy cerca de la
+		# del pómulo (paso de arriba) -> lectura de "arrugas". Se afina un
+		# poco (menos invasión + menos alto) sin perder el párpado real.
+		# x recogido junto con el ojo (0.052→0.036) para seguir centrada
+		# sobre el ojo movido.
+		var brow = _box_mesh(0.048, 0.011, 0.010, brow_mat)
+		brow.position = Vector3(side * 0.036, 0.038, 0.133)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -1602,11 +1818,20 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# Fix (feedback director: pomulo lateral al ojo, no bajo el ojo): rango
 	# bajado 0.004..0.028 -> -0.024..0.000 — el ojo vive en y=0.022, el tope
 	# del rango (0.0) queda 2.2 cm por debajo, nunca cruza la altura del ojo.
+	# AJUSTE FINO post-QA: el "escalón" del pómulo (Z) se subió en _build a
+	# 0.64 (antes 0.46, demasiado aplastado para leer). Acá dos fixes más:
+	# (a) rango Y bajado otros 0.008 (-0.024..0.000 -> -0.032..-0.008) — el
+	# pómulo vivía a solo ~3.4 cm del ojo (y=0.022), tan cerca que el Sobel
+	# apilaba su borde + el de la ceja como "arrugas/patas de gallo" en vez
+	# de una sola línea de párpado limpia; (b) Z de escala sube con él.
 	var cheek_v: float = p.get("cheek", 0.5)
 	for cheek in cheeks:
-		cheek.position.y = _lerp(-0.024, 0.000, cheek_v)
+		cheek.position.y = _lerp(-0.032, -0.008, cheek_v)
 		var cs: float = _lerp(0.9, 1.16, cheek_v)
-		cheek.scale = Vector3(1.45 * cs, 0.82 * cs, 0.46)
+		# r_cheek-box-v2: base bajada a 0.040 (de 0.068) — multiplicadores
+		# recalibrados para la caja chica (antes tuneados para radio de
+		# esfera 0.034, quedaban gigantes sobre la base nueva).
+		cheek.scale = Vector3(1.3 * cs, 0.55 * cs, 0.55 * cs)
 
 	# JS eyes: rotation.z = side * lerp(-0.32, 0.26, eyeTilt), scale.y = lerp(0.5, 1.3, eyeShape)
 	# M9-r2: rango de tilt de CEJA acotado (review v0.2: cejas RECTAS —
@@ -1668,7 +1893,12 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		_arm_stripe.rotation.z = 0.12
 		arms[0].add_child(_arm_stripe)
 
-	# ---- franja de FRENTE (geometría; lado DERECHO del personaje = +x) ----
+	# ---- FASE C paso 8: warpaint = 1 FRANJA limpia (geometría) ----
+	# Antes eran DOS marcas asimétricas (frente + mejilla, patrón "Scout
+	# Marks" de M9-r2) — el director simplifica a UNA sola franja limpia,
+	# sobre el pómulo IZQUIERDO (side=-1), seguía el eje diagonal del plano
+	# malar de la Fase C p2 (mismo ángulo que la masa `cheek`, para que la
+	# pintura lea como si siguiera la escultura, no flotara encima).
 	if _face_mark != null:
 		_face_mark.queue_free()
 		_face_mark = null
@@ -1678,25 +1908,21 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		# 20% más oscuro: el unshaded puro brilla más que el mismo color
 		# blendeado en el atlas de la mejilla — así emparejan.
 		fm_mat.albedo_color = paint_color.darkened(0.18)
-		# v0.4 M6: AMBAS marcas como geometría (la de mejilla por atlas
-		# salía como gusano segmentado — el _slash escalona) — franjas
-		# rectas de ancho constante, ángulos paralelos, mismo valor.
 		_face_mark = MeshInstance3D.new()
 		_face_mark.name = "face_paint_mark"
-		# v0.5 C2: tamaño de RONDA 3 restaurado — frente ≈ largo de ceja,
-		# mejilla ≈ pómulo-a-mandíbula; franjas rectas de ancho constante
-		# (la reducción de r4 las dejó subliminales — regresión).
-		var fm_front = _box_mesh(0.060, 0.014, 0.008, fm_mat)
-		fm_front.position = Vector3(-0.050, 0.055, 0.122)
-		fm_front.rotation.z = 0.42
-		fm_front.rotation.y = -0.25
-		_face_mark.add_child(fm_front)
-		# (r5b: a y −0.036 caía junto a la boca y leía curita — la franja
-		# cruza el PÓMULO bajo el ojo, como el concept)
-		var fm_cheek = _box_mesh(0.058, 0.014, 0.008, fm_mat)
-		fm_cheek.position = Vector3(0.066, -0.016, 0.106)
+		# AJUSTE FINO post-QA: proporción vieja (~4:1) leía "curita/parche
+		# cuadrado" — la lámina es una pincelada larga y fina (~10:1). Ancho
+		# 0.058→0.075, alto 0.014→0.007. z sube otra vez (0.128→0.140): el
+		# pómulo del paso de arriba creció en Z (0.46→0.64 de escala) y
+		# volvió a enterrar la franja — mismo bug, mismo fix, cheek más
+		# grande de nuevo.
+		var fm_cheek = _box_mesh(0.075, 0.007, 0.006, fm_mat)
+		# z bajado 0.162→0.137: Ronda 5 cambió el pómulo de esfera a caja
+		# CHICA (0.040 en vez de 0.068) — la franja quedaba flotando en el
+		# aire, muy adelante de la superficie nueva, más chica.
+		fm_cheek.position = Vector3(-0.066, -0.020, 0.137)
 		fm_cheek.rotation.z = 0.45
-		fm_cheek.rotation.y = 0.50
+		fm_cheek.rotation.y = -0.50
 		_face_mark.add_child(fm_cheek)
 		head.add_child(_face_mark)
 
@@ -1715,13 +1941,15 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 
 	# ---- beard swap ----
 	var beard_style: int = int(p.get("beard", 0))
-	var beard_k = str(beard_style)
+	# CONFIGURABLE (pedido del director): densidad de la barba Stubble.
+	var beard_density: float = float(p.get("beardDensity", 0.35))
+	var beard_k = str(beard_style) + "|" + str(beard_density)
 	if beard_k != _beard_key:
 		_beard_key = beard_k
 		for child in beard_slot.get_children():
 			beard_slot.remove_child(child)
 			child.queue_free()
-		var built_b = HairLibrary.build_beard(beard_style, hair_mat)
+		var built_b = HairLibrary.build_beard(beard_style, hair_mat, beard_density)
 		if built_b != null and built_b.get_child_count() > 0:
 			_apply_outline_to_children(built_b, hair_color, 0.025)
 			beard_slot.add_child(built_b)
@@ -2059,6 +2287,17 @@ func _build_origin_features(origin: Dictionary) -> void:
 			ear.rotation.z = float(side) * -0.06
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
+
+			# FASE C paso 7: LÓBULO — la masa única leía como botón plano sin
+			# forma (una sola bola). Bulto chico colgando bajo el pabellón
+			# (mismo truco de fusión: overlap real con el ear de arriba), da
+			# el quiebre lóbulo/pabellón que el resto de la cara ya tiene
+			# (mandíbula/pómulo/nariz) — silueta de oreja real en perfil.
+			var lobe = _sphere_mesh(0.012, skin_mat)
+			lobe.scale = Vector3(0.55, 0.6, 0.55)
+			lobe.position = Vector3(side * 0.120, -0.050, -0.030)
+			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
+			feature_slot.add_child(lobe)
 
 # ================================================================
 # Motion API — mirrors JS setMotion / playAttack / update

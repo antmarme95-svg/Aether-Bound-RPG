@@ -1,5 +1,192 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] fix | Mentón corregido tras quitar la barba — cierra la ventana de ajuste facial
+Con la barba fuera, un QA final enfocado solo en labios+mentón encontró un
+problema real que la barba había estado tapando: la cara frontal de
+`chin_boss` (z≈0.098) quedaba ~4.7cm detrás de la cara frontal de
+`lip_lower` (z≈0.145) — el mentón nunca competía visualmente con el labio,
+al revés de la lámina (mentón marcado, el rasgo más anguloso de la cara).
+Primer intento de fix (igualar/superar el z del labio, front≈0.148) se
+pasó de rosca — leía como mandíbula protuberante/bulldog, detectado en
+captura antes de pedir verificación. Calibrado a un punto intermedio
+(`character_rig.gd`: profundidad 0.036→0.055, posición z 0.080→0.0975,
+front≈0.125) — confirmado: mentón como masa definida y separada, sin
+sobremordida, con un pliegue mentolabial que el QA identificó como
+anatómicamente correcto (no un artefacto). Labios sin cambios (ya estaban
+resueltos). QA de regresión ALL_PASS. **Cierra la ventana de ajuste facial
+de la Fase C — listo para pasar a Fase D (orejas + pelo).** **Mapeado para
+Fase D: revisar la barba de nuevo** (Boris la sacó del default por
+"no me gusta nada" pese al 75% técnico; retomarla junto con el pelo real,
+no como tema cerrado para siempre).
+
+## [2026-07-14] fix | Barba quitada del default (veredicto directo de Boris: "no me gusta nada")
+Pese a que el [[QA Loop]] cerró la barba en un estado técnicamente sólido
+(6+ rondas: esferas dispersas → bloque sólido → conicidad real → pulido de
+contorno, confirmado por el agente de desempate como "coherente con el
+lenguaje del resto de la cara"), el director la rechazó de plano al verla
+en las capturas finales. Se prioriza el veredicto directo del director por
+encima del % de QA — el `beardDensity`/`_beard_stubble` no se borran (el
+sistema queda intacto y configurable para personalización del jugador),
+solo cambia el DEFAULT del fenotipo humano canónico: `beard` vuelve de 1
+(Stubble) a 0 (Clean) en `phenotype_data.gd`. QA de regresión completo
+ALL_PASS. El fenotipo humano canónico queda lampiño otra vez, como estaba
+antes de la Fase C paso 6.
+
+## [2026-07-14] feature | QA Loop cierra Fase C cara en 75% de fidelidad
+Boris pidió correr el [[QA Loop]] (código↔QA↔PRD) hasta ~80% de fidelidad
+o el techo real de la técnica. Progreso medido: 30-35% → 40-45% → 50-55%
+→ 53-56% → 60-63% → 62-65% (el agente QA perdió su historial de
+transcript a mitad de camino) → un agente nuevo sin contexto visual
+discrepó fuerte con lo que orquestador y Boris veían directamente en las
+capturas (dijo "sin esclerótica visible, peor rasgo de la cara" y "barba
+retrocedida a collar de cuentas") → se lanzó un TERCER agente de
+DESEMPATE que leyó el código real (no solo impresión) y falló: confirmó
+la falta de esclerótica (bug real, iris desbordaba el blanco entero) pero
+objetó la lectura de "collar" en la barba. Desde ahí, 6+ rondas más de
+desempate → 55% → 58% → 61% → 69% → **75% final**.
+
+Se resolvieron con múltiples iteraciones EN VIVO (capturar → ver el
+problema → corregir → recapturar, no solo cálculo teórico):
+- **Boca**: bloque (r1) → agujero tipo "grito" por sobre-corregir el gap Y
+  (r2) → bloque chico de nuevo (r3) → escalón real sobre las CARAS
+  FRONTALES (no los centros — con radios distintos ambas caras pueden
+  coincidir en el mismo Z pese a que los números "parecen" distintos, fue
+  la causa de 4 rondas estancadas) + tono diferenciado por labio
+  (`lip_mat` oscuro arriba / `lip_mat_lower` claro abajo) — resuelto.
+- **Barba**: reemplazo COMPLETO del vocabulario, de esferas dispersas
+  (`_beard_stubble` original de Fase C p6) a bloque sólido CONFIGURABLE
+  (`density`, fenotipo `beardDensity`). 5 iteraciones de forma: collar
+  gigante (cálculo de profundidad de jaw mal hecho) → aro (más ancho que
+  el jaw real a esa altura, la mandíbula se angosta hacia el mentón) →
+  bulto negro (esfera cae entera en la banda oscura del toon) → "ladrillo"
+  (caja única sin la conicidad del jaw) → 3 cajas escalonadas + esfera de
+  remate, midiendo el z_surface real del jaw en 3 alturas distintas.
+- **Ojos**: iris/pupila desbordaban la esclerótica entera (margen
+  NEGATIVO, no "fino" como decía el comentario de Fase C p3) — confirmado
+  contra refs. de Link/Zelda (BotW/TotK) que Boris aportó al Vault
+  (`90-Raw/research/quality-benchmarks/`). Luego Boris notó que los ojos
+  quedaban muy separados (hueco entre esquinas internas ~2.4x el ancho de
+  un ojo vs. la regla estándar ~1x) — recogidos y agrandados, ceja movida
+  junto.
+- **Pómulos/mentón**: esfera → caja achatada (mismo principio en ambos).
+- **Nariz**: causa real no era magnitud sino ORIENTACIÓN — arista al
+  frente (dos caras iguales, luz simétrica, sin contraste) → cara plana
+  al frente (una cara iluminada + sombra lateral = quiebre real), misma
+  lección que resolvió la boca.
+- **Warpaint**: color bajado 3 veces hasta un oliva apagado.
+
+**Lección nueva (candidata a [[Lecciones]]):** una esfera NUNCA da un
+plano/borde anguloso en este vocabulario de primitivas+Sobel — confirmado
+independientemente en mentón, pómulo y barba. Usar cajas para cualquier
+rasgo que la lámina muestre como plano definido.
+
+PRD actualizado y cerrado: [[PRD-Fase-C-Ajuste-Facial]]. QA de regresión
+completo ALL_PASS en cada ronda, 7.49 cabezas estable. **Pendiente: VoBo
+final de Boris sobre el 75% antes de pasar a Fase D pelo** (el techo del
+75% es atribuible a pelo/orejas placeholder, fuera de este scope).
+
+## [2026-07-14] ingest | Benchmarks visuales Link/Zelda + Sable/Hinterberg
+El director agregó 9 archivos a `90-Raw/research/quality-benchmarks/`:
+`link-01/02/03.jpg` + `zelda.jpg` (Breath of the Wild / Tears of the
+Kingdom) — propuestos como fenotipo BASE para el modelado del elfo
+(Fase C6b/C6c): a diferencia de la lámina de concept (still 2D), esto es
+un resultado YA logrado dentro de un videojuego real — ojos almendra con
+esclerótica blanca claramente visible, nariz fina, boca seria de línea
+simple. Sirvió además de evidencia directa en el desempate de la Fase C:
+confirmó que la esclerótica del ojo humano actual (Godot) tenía margen
+NEGATIVO (el iris desbordaba la esclerótica entera), comparando contra
+estas referencias. `sable-01..05.{webp,jpg}` + `dungeons-of-hinterberg-
+01..03.jpg` — capturas reales de los dos pilares del norte artístico
+([[Art Bible]] "Melancolía Gráfica"), complementan el texto con
+referencia visual directa. Indexado en `00-Index.md`.
+
+## [2026-07-14] design | QA Loop ratificado (nuevo método de trabajo)
+Boris pidió formalizar en el Vault el método que surgió durante el ajuste
+fino de la Fase C: un subagente QA imparcial (sin contexto de la sesión)
+mide fidelidad contra la lámina RAW canónica (rasgo por rasgo, % + lista
+priorizada CRITICAL/HIGH/MEDIUM/LOW), un segundo subagente PRD traduce ese
+veredicto a un documento ejecutable (mismo formato que PRD-006/007, citando
+archivos/variables reales), y el orquestador itera código→QA→PRD hasta un
+% objetivo o hasta que el QA declare el techo real de la técnica vigente.
+Documentado en `30-Loops/QA Loop.md` (contrato mínimo: Objetivo · Entrada ·
+Fases · Validación · Artefactos · Salida, mismo esqueleto que los demás
+Loops). Indexado en `00-Index.md`. Reemplaza el patrón viejo de "VoBo del
+director → ajuste a ciegas → VoBo de nuevo" cuando existe una lámina de
+referencia canónica contra la que medir.
+
+## [2026-07-14] feature | Fase C ajuste fino post-QA (mandíbula, boca, pómulos, ojos, barba, warpaint)
+Boris pidió QA imparcial (subagente sin contexto previo) comparando las
+capturas de la Fase C contra la lámina `fenotipo-humano-v1.png`. Veredicto:
+**≈30-35% de fidelidad, "totalmente alejada"** — silueta craneal demasiado
+esférica (sin quiebres), pómulos invisibles, ojos con "arrugas" no
+buscadas, boca como bloque sin lectura de labios, barba no perceptible,
+warpaint como "curita fosforescente". Objeté parcialmente (yo veía
+labios/barba en mis propias capturas) pero Boris, comparando de nuevo
+contra la lámina, le dio la razón al QA — la lámina muestra barba COMPLETA
+de mandíbula-a-mandíbula, no un mentón aislado. Se le pidió al QA pasar de
+diagnóstico a plan ejecutable (geometría concreta, no "mejorar X") y se
+ejecutó en su orden sugerido:
+1. **Silueta craneal**: masa de "ángulo goníaco" (bulto hundido por
+   overlap, altura de oreja) — introduce el quiebre vertical→horizontal
+   de la mandíbula que la esfera única de `jaw_mesh` no tenía.
+2. **Boca**: labio sup/inf casi tangentes (gap Y 0.013, misma Z) → sin
+   escalón de profundidad detectable por el Sobel. Gap Y al doble +
+   escalón Z real (sup. protruye, inf. se hunde).
+3. **Pómulos**: escala Z 0.46→0.64 (estaban tan aplastados que "no leían
+   desde ningún ángulo") + menos hundimiento.
+4. **Ojos/arrugas**: diagnóstico correcto del QA — no era piel, era el
+   Sobel apilando pómulo+ceja a ~3.4cm del ojo. Más distancia pómulo-ojo +
+   brow con menos invasión.
+5. **Barba** (prioridad explícita de Boris): de 2 esferas aisladas
+   ("perilla") a cadena de 11 masas con overlap real ~2x entre centros,
+   de patilla a patilla. 2 rondas de fix en vivo: r6d (subida — colgaba
+   sobre el cuello por falta de quiebre jaw/cuello) y r6e (más overlap —
+   leía "collar de cuentas" antes de suficiente solape). Oscurecido
+   35%→20%.
+6. **Warpaint**: proporción 4:1→10:1 + color `PAINT_COLORS[4]` desaturado
+   `#4dff9d`→`#6b7f4a` en `palette_data.gd` (array propio, no toca
+   `HAIR_COLORS`). Franja subida de nuevo en Z (pómulo más grande volvió a
+   enterrarla).
+QA: `test_core`+`autotest_biomech`+`test_combat`+`autotest_slice`+
+`autotest_ui` ALL_PASS, 7.49 cabezas estable. **Pendiente: VoBo de Boris —
+¿re-correr QA vs. lámina o cerrar Fase C y pasar a Fase D pelo?**
+
+## [2026-07-14] feature | Fase C cara COMPLETA — p4 nariz, p5 boca, p6 barba, p7 orejas, p8 warpaint (8/8)
+Sesión corrida de un tirón (director: "avancemos y al final vemos ajuste
+fino") — los 5 pasos restantes de la Fase C ejecutados y verificados en
+`character_rig.gd` / `hair_library.gd` / `phenotype_data.gd`.
+**p4 nariz cuña integrada**: el prisma de 4 caras vivía como cap plano
+flotando sobre el plano facial (sin overlap) → costura visible. Mismo
+truco de fusión que mandíbula/pómulo: raíz (puente) encogida casi a un
+punto y HUNDIDA ~1.6 cm dentro del cráneo; punta proyecta ~8-9 mm fuera.
+Se agregaron ALAS (bultos chicos semi-hundidos junto a la punta) que el
+M9-r3 pedía y nunca se construyeron.
+**p5 boca por geometría**: las 3 cajas planas (pupil_mat negro, un trazo
+sin volumen) se reemplazan por labio superior + inferior reales (`lip_mat`
+nuevo, rosa cálido, cilindros que se hunden en la mandíbula) + comisuras
+como bultos; la línea oscura queda solo de sombra interior.
+**p6 barba corta**: `HairLibrary._beard_stubble()` usaba un shell
+translúcido (pitfall ALPHA del toon `toon_opaque`, que no escribe alpha).
+r6a (revertido): una sola masa opaca grande tapaba la boca entera y leía
+como bigote-máscara. r6b (final): DOS masas chicas (bigote + mentón/
+mandíbula) con gap real donde vive la boca, oscurecidas 35% vs. el pelo.
+Default del slider `beard` sube de 0 (Clean) a 1 (Stubble) — la lámina
+pedía barba de 3 días como rasgo de identidad, el fenotipo canónico vivía
+lampiño. **Nota de ajuste fino: el mentón lee como bola marcada en
+perfil, candidato a achicar/aplanar.**
+**p7 orejas**: se agregó un lóbulo (bulto chico bajo el pabellón existente,
+mismo truco de fusión) — faltaba el quiebre lóbulo/pabellón que el resto
+de la cara ya tenía.
+**p8 warpaint 1 franja limpia**: de DOS marcas asimétricas ("Scout Marks"
+de M9-r2, frente + mejilla) a UNA franja sobre el pómulo izquierdo. **Bug
+de regresión encontrado y corregido en el mismo paso:** la franja (z=0.106
+desde M9-r2, nunca retocada) quedaba enterrada dentro de la masa `cheek`
+nueva de la Fase C p2 — invisible en render; subida a z=0.128.
+QA de los 8 pasos: `test_core` + `autotest_biomech` + `test_combat` +
+`autotest_slice` + `autotest_ui` ALL_PASS, 7.49 cabezas estable en todos.
+**Pendiente: VoBo de cara completa con Boris (ajuste fino: pómulos + barba/
+mentón) → Fase D pelo.**
+
 ## [2026-07-13] feature | Fase C cara: mandíbula, pómulos y ojos (3/8 masas)
 Continuación de la sesión de tarde. **p1 mandíbula fundida** (`c12da0a`):
 esfera escalada que penetra el cráneo (overlap real, no tangente — lección

@@ -200,6 +200,27 @@ updated: 2026-07-13
   ensanchamiento lateral (X), no por el sesgo frontal (Z). Corolario: "aplastar"
   un músculo = bajar los ejes radiales X/Z dejando el eje Y (largo) y la
   posición intactos (feedback del director sobre los brazos).
+- **Una ESFERA nunca da un plano/borde anguloso bajo el toon+Sobel de este
+  proyecto — usar CAJA.** Confirmado 3 veces independientes durante el ajuste
+  fino de la Fase C cara (2026-07-14, loop QA↔código): mentón cuadrado,
+  pómulo como plano malar, y el primer intento de barba en bloque, los tres
+  leían "bola/cachete/bulto negro" con una esfera (por chica o aplastada que
+  fuera — la curvatura continua en todas direcciones cae en la banda oscura
+  de la rampa toon) y se resolvieron al cambiar a una caja (caras planas =
+  el cel-step lee un escalón de tono real, no una autosombra redonda). Si la
+  lámina muestra un plano o borde definido (pómulo, mentón, mandíbula), la
+  primitiva correcta es caja, no esfera — reservar la esfera para masas
+  genuinamente redondeadas (mejilla llena, articulaciones).
+- **Un "escalón" de profundidad entre dos masas solo existe si sus CARAS
+  FRONTALES terminan en Z distinto — no alcanza con mover el centro o el
+  radio sin verificarlo.** Bug real de 4 rondas de ajuste de labios (Fase C,
+  2026-07-14): con radios distintos (0.007 vs 0.011) y un offset de centro
+  que "parecía" dar un escalón, las caras FRONTALES de ambos labios
+  terminaban exactamente en el mismo Z — cero discontinuidad real, por eso
+  un cambio de tono de material (ronda 4) no tuvo nada con qué interactuar.
+  Antes de dar un escalón por bueno, calcular `posición_z + radio` (la cara
+  frontal real) de cada masa y confirmar que difieren — no confiar en que
+  los números de posición/radio "se ven distintos".
 - **La altura de un salto es analítica pura: `h = v²/(2·GRAVITY)`.** Con
   `GRAVITY=24`, `SPRINGBOARD_LAUNCH_VEL=17` → 6.02 m (la sonda midió 6.00). El
   salto "normal" NO es `jump_force` crudo: el LSM lo modula por clase (el warrior
