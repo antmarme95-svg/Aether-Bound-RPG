@@ -1,5 +1,78 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] fix | PRD Rework Fenotipo Humano Cuerpo Completo — 13 puntos EJECUTADOS EN CÓDIGO
+Ejecución completa del plan ratificado en
+[[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] (13 puntos, orden por
+dependencia), con QA visual (`tests/tmp_anatomy.gd`) y regresión
+(`test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+`autotest_ui`) ALL_PASS tras cada punto. Todo en `character_rig.gd` salvo
+donde se indica.
+1. **Venas cian:** el bloque que actualiza `accent` por tema de origin
+   corría DESPUÉS del cálculo de `vein_mat.albedo_color` — en el primer
+   `apply_phenotype()` las venas se pintaban con el cyan default
+   `#46e6ff` antes de que `accent` tomara el color del origin. Movido el
+   bloque de origin ANTES del cálculo de venas. `phenotype_data.gd`:
+   default de `arcaneMod` 0.25→0.0 (no es parte del fenotipo humano base).
+2. **Pelo:** `tmp_anatomy.gd` tenía `hair=11` (Prince Curtain, melena de
+   cintas) en vez de `10` (Frontier Crop, el propio código lo marca como
+   canon del fenotipo humano). Verificado visualmente: silueta corta real,
+   no la misma lógica de cintas en versión chica.
+3. **Torso:** trapecios eran `BoxMesh` sobre el cilindro del torso (arista
+   dura garantizada); reemplazados por esfera escalada semi-hundida, mismo
+   patrón que `pec`/`deltoid`.
+4. **Hombros:** ángulo del trapecio 0.40→0.28 rad — primer paso de bajo
+   riesgo; `SHOULDER_X` queda intacto (decisión de Boris si no basta).
+5. **Orejas:** resuelto pasivamente por el swap de pelo (punto 2) — visibles
+   en perfil sin tocar `hair_library.gd`.
+6. **Manos:** gap entre dedos (`f_off`) de ~0.38mm efectivo a ~1.4mm limpio;
+   nudillo (esfera chica semi-hundida) agregado en la base de cada dedo;
+   pulgar de caja a cápsula (ya no lee "ranura paralela").
+7. **Warpaint:** de 1 franja diagonal a 2 trazos verticales (ceja/sien
+   izquierda → pómulo), confirmado por Fable contra la lámina.
+   **Corrección sobre el propio PRD:** el punto 7 daba por "índice inválido"
+   `warpaint=6` en `tmp_anatomy.gd` (la lista `WARPAINTS` de la UI solo
+   llega a 5) y proponía fijarlo a un valor 1-5 — pero el atlas
+   (`warpaint_atlas.gd:217-231`) documenta que el patrón 6 ("Scout Marks")
+   está VACÍO A PROPÓSITO porque esa marca vive como geometría en
+   `_face_mark`. Probado con `warpaint=1`: pintó el patrón legacy "Slash
+   Crimson" ENCIMA de los 2 trazos nuevos — revertido a `6`.
+8. **Boca:** `mouth_seam` usaba `pupil_mat` (negro plano, leía "hueco");
+   nuevo `mouth_seam_mat` en tono de labio oscurecido (`#a85f47` al 55%).
+9. **Nariz:** `bot_r` 0.026→0.019 (base más angosta). **Desviación del
+   PRD:** no se tocaron `radial_segments` (4→6-8 propuesto) — con N=4 y
+   `rotation.y=0` hay una cara plana exacta al frente (el fix de "Ronda 8"
+   ya documentado en el código, que cerró 3 rondas de facetado ilegible);
+   con N par >4 ningún múltiplo de `rotation.y` deja una cara centrada en
+   +Z, así que subir segmentos reabría el problema que Ronda 8 cerró.
+10. **Cejas:** `BoxMesh` (0.048,0.011,0.010)→(0.040,0.006,0.010) — primer
+    paso de bajo riesgo; Fable ya advirtió que esto no da arco real
+    (segunda pasada = cadena de cápsulas, pendiente si Boris lo pide).
+11. **Piel:** diagnóstico con post desactivado — confirma que `skin_mat`
+    base es cálido/rosado; el LUT del post (dawn) es el responsable del
+    "gris apagado" percibido (y del entintado toon completo). Es global —
+    **no tocado** sin aprobación explícita de Boris, tal como pedía el PRD.
+12. **Abdomen:** `abs_plate.scale` x 1.1→1.25 (ancho), z 0.4→0.30
+    (protrusión) — borde más gradual contra el cilindro.
+13. **Columna (riesgo alto):** `spine.position.z += 0.01` (estático, sin
+    lerp que lo borre). **Desviación del PRD:** `upper_spine.rotation.x =
+    -0.09` NO se asignó una sola vez en `_build()` como proponía el plan —
+    se descubrió que el "follow del torácico fuera del strike" (línea
+    ~2892) hace `lerp` cada frame que no es strike hacia
+    `spine.rotation.x * 0.30`, así que una asignación directa se borra sola
+    en <150ms de idle (mismo mecanismo que "el settle satura el clamp" de
+    [[Lecciones]]). Se sumó como offset constante (`DORSAL_CURVE_X`) al
+    TARGET de ese lerp, para que la curva sobreviva al reposo real, no solo
+    al primer frame. `autotest_biomech` + `test_combat` corridos
+    ANTES y DESPUÉS del cambio, ambos ALL_PASS. **Nota abierta:** la
+    métrica "cabezas" del banco bajó 7.49→7.13 tras este cambio — el
+    cráneo inclinado infla su propio AABB (medición suelo→coronilla vía
+    bounding box, ver [[Lecciones]] sobre inflación de AABB), probablemente
+    un artefacto de medición y no una regresión anatómica real, pero sin
+    confirmar — a verificar antes del próximo VoBo.
+**Pendiente: correr un nuevo QA visual imparcial (mismo protocolo, sin
+contexto de código) contra ambas láminas para medir el % de fidelidad
+resultante, y VoBo de Boris.**
+
 ## [2026-07-14] plan | PRD nuevo: rework de fenotipo humano CUERPO COMPLETO — QA imparcial detecta ~32% de fidelidad
 Boris no había ratificado la sesión anterior (cierre de Fase C cara al 75%)
 y pidió, antes de seguir, correr un QA visual imparcial (subagente Fable)

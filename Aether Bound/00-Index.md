@@ -54,11 +54,21 @@
   ajuste fino facial post-Fase-C, 75% de fidelidad alcanzado (boca, barba,
   ojos, pómulos, mentón, warpaint); barba quitada del default por veredicto
   directo del director pese al % técnico.
-- [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] — spec abierta (2026-07-14):
-  QA visual imparcial post-Fase-C reveló ~32% de fidelidad de CUERPO
-  COMPLETO (el 75% facial no se sostiene con pelo/torso/manos incluidos);
-  13 puntos priorizados con archivo/línea/valor concreto, ratificados por
-  QA↔técnico↔QA antes de tocar código. Código sin tocar todavía.
+- [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] — spec (2026-07-14): QA
+  visual imparcial post-Fase-C reveló ~32% de fidelidad de CUERPO COMPLETO
+  (el 75% facial no se sostiene con pelo/torso/manos incluidos); 13 puntos
+  priorizados con archivo/línea/valor concreto, ratificados por
+  QA↔técnico↔QA antes de tocar código. **Los 13 puntos EJECUTADOS EN CÓDIGO
+  (2026-07-14 noche)**: venas cian + arcaneMod, pelo Frontier Crop, torso/
+  hombros, manos, warpaint (2 trazos verticales — corrigió un hallazgo
+  erróneo del propio PRD sobre el índice 6), boca, nariz, cejas, piel
+  (investigado: confirma LUT, no tocado sin Boris), abdomen, columna
+  (riesgo alto, gates ANTES/DESPUÉS ALL_PASS). QA completo ALL_PASS. **Nota
+  abierta:** la métrica "cabezas" bajó 7.49→7.13 tras la curva dorsal —
+  probablemente artefacto de medición AABB sobre cráneo inclinado (ver
+  Lecciones), no confirmado como regresión real. **Pendiente: VoBo de
+  Boris + nuevo QA visual imparcial contra las láminas para medir el
+  nuevo % de fidelidad.**
 - [[Propuesta-Recursos-de-Modelado]] — **RATIFICADA 2026-07-12**: 5 recursos para subir el techo del pipeline procedural de personajes (triplanar, loft/perfil, gradientes, banding MToon, iteración) + 3 ajustes al plan de rework C6/M10 de la sesión paralela; loft = mini-loop pre-C6b.
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
 - [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene.

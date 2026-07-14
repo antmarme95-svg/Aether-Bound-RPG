@@ -15,7 +15,7 @@ const PHENOTYPE_FIELDS: Array[Dictionary] = [
 	# --- BODY & TECH ---
 	{"id": "weight",    "label": "Weight / Muscle",       "kind": "float", "tab": "body", "section": "Frame",       "default": 0.5,  "hint": "lean & wiry ↔ bulky & heavy"},
 	{"id": "height",    "label": "Height",                 "kind": "float", "tab": "body", "section": "Frame",       "default": 0.5,  "hint": "scaled within your origin's range"},
-	{"id": "arcaneMod", "label": "Arcane Modification",   "kind": "float", "tab": "body", "section": "Technomancy", "default": 0.25, "hint": "glowing mana veins → prosthetic aether limb"},
+	{"id": "arcaneMod", "label": "Arcane Modification",   "kind": "float", "tab": "body", "section": "Technomancy", "default": 0.0, "hint": "glowing mana veins → prosthetic aether limb"},
 	{"id": "skinTone",  "label": "Skin Tone",              "kind": "color", "tab": "body", "section": "Skin",        "default": 1,    "paletteKey": "skin"},
 	# --- HEAD & FACE ---
 	{"id": "jaw",       "label": "Jaw Definition",         "kind": "float", "tab": "face", "section": "Structure",   "default": 0.5},

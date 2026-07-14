@@ -39,6 +39,17 @@ const NECK_Y: float = 0.3595  # v0.4 H3 0.352 + 15% de cuello (Fase C)
 const SHOULDER_X: float = 0.21       # media distancia entre hombros (lámina, ex-0.262)
 const SHOULDER_Y: float = 0.26       # línea de hombros (lámina: caída real, ex-0.29)
 const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
+# PRD Rework Fenotipo pt.13 (2026-07-14, riesgo alto): curva dorsal estática
+# — perfil "en tabla" del QA de cuerpo completo. Subido de -0.05 (propuesta
+# técnica inicial) a -0.09 por objeción directa de Fable (imperceptible con
+# el torso construido en placas separadas). Se suma como OFFSET al target
+# del settle de `upper_spine.rotation.x` (línea ~2900, el "follow del
+# torácico fuera del strike") en vez de asignarse una sola vez en _build():
+# ese lerp corre TODO frame que no sea strike y converge hacia
+# `spine.rotation.x * 0.30` — una asignación directa en _build() se borra
+# sola en <150ms de idle (mismo mecanismo que el "settle satura el clamp"
+# de Lecciones). Sumar el offset al target la hace parte del reposo real.
+const DORSAL_CURVE_X: float = -0.09
 # V-taper del tronco (multiplicadores base sobre el build de peso/clase):
 # pecho con VOLUMEN (review CRITICAL 1) y cintura recogida marcando el
 # cambio tórax→pelvis.
@@ -135,6 +146,7 @@ var veins: Array = []
 var skin_mat: ShaderMaterial
 var lip_mat: ShaderMaterial
 var lip_mat_lower: ShaderMaterial
+var mouth_seam_mat: ShaderMaterial
 var head_mat: ShaderMaterial
 var hair_mat: ShaderMaterial
 var leather_mat: ShaderMaterial
@@ -254,6 +266,10 @@ func _init_materials() -> void:
 	# de ser el más carnoso).
 	lip_mat = ToonMaterials.toon_mat_opaque(Color("#a85f47"))
 	lip_mat_lower = ToonMaterials.toon_mat_opaque(Color("#e0947a"))
+	# PRD Rework Fenotipo pt.8: la comisura usaba pupil_mat (negro plano,
+	# leía "hueco/prótesis") — tono de labio oscurecido, coherente con el
+	# resto de la boca en vez de un agujero sin relación de color.
+	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#a85f47").darkened(0.55))
 	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
 	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
 	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
@@ -380,6 +396,10 @@ func _build() -> void:
 	spine = Node3D.new()
 	spine.name = "spine"
 	spine.position.y = 1.0
+	# PRD Rework Fenotipo pt.13: leve avance de la lumbar (perfil "en tabla"
+	# del QA) — posición pura, sin lerp que la sobrescriba (a diferencia de
+	# upper_spine.rotation.x, ver DORSAL_CURVE_X arriba).
+	spine.position.z = 0.01
 	body.add_child(spine)
 
 	upper_spine = Node3D.new()
@@ -437,8 +457,13 @@ func _build() -> void:
 	# esta masa MIGRÓ a character_outfit.gd (faja envuelta con margen real
 	# sobre z=0.127 — ver _attach_waist_wrap) — la anatomía queda desnuda
 	# aquí a propósito (banco tmp_anatomy.gd no llama outfit).
+	# PRD Rework Fenotipo pt.12 (2026-07-14): QA de cuerpo completo la leyó
+	# "óvalo sin correspondencia" — scale.z (protrusión) recortada 0.4→0.30
+	# y scale.x (ancho) subida 1.1→1.25 para un borde más gradual contra el
+	# cilindro del torso. Si sigue leyendo "óvalo", bajar a ~0.22 (no
+	# insistir en 0.30 per nota del QA).
 	var abs_plate = _sphere_mesh(0.055, skin_mat)
-	abs_plate.scale = Vector3(1.1, 1.6, 0.4)
+	abs_plate.scale = Vector3(1.25, 1.6, 0.30)
 	abs_plate.position = Vector3(0.0, 0.02, 0.105)
 	upper_spine.add_child(abs_plate)
 	_add_outline_pass(abs_plate, Color("#f2b186"))
@@ -469,12 +494,19 @@ func _build() -> void:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
 	# QA 2026-07-13 (b/extra): caída 0.27→0.40 rad (~23°, la de la lámina),
 	# centro afuera para que la punta ATERRICE sobre el tope del deltoide
-	# (una sola línea cuello→brazo, sin remontar), y profundidad 0.115→0.08
-	# — con casi la del pecho, la vista trasera leía techo a dos aguas.
+	# (una sola línea cuello→brazo, sin remontar).
+	# PRD Rework Fenotipo pt.3 (2026-07-14): la CAJA sobre el cilindro del
+	# torso siempre deja arista visible (caras planas intersectando una
+	# superficie curva) — reemplazada por esfera escalada semi-hundida,
+	# mismo patrón que `pec`/`deltoid` arriba (masa de silueta, no plano).
+	# PRD Rework Fenotipo pt.4 (2026-07-14): ángulo 0.40→0.28 rad (~16°) —
+	# el QA de cuerpo completo leyó los hombros angostos; primer paso de
+	# menor riesgo antes de tocar SHOULDER_X (decisión de Boris si no basta).
 	for tside in [-1, 1]:
-		var trap = _box_mesh(0.19, 0.09, 0.08, skin_mat)
+		var trap = _sphere_mesh(0.10, skin_mat)
+		trap.scale = Vector3(1.6, 0.6, 0.7)
 		trap.position = Vector3(float(tside) * 0.115, 0.315, 0.0)
-		trap.rotation.z = -float(tside) * 0.40
+		trap.rotation.z = -float(tside) * 0.28
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
 
@@ -633,16 +665,29 @@ func _build() -> void:
 		# offsets del índice→meñique (x local); el índice queda del lado
 		# del pulgar (interior). Largos por dedo, medio el más largo
 		# (r5c, director: +20% de largo en los cuatro).
-		var f_off: Array = [0.022, 0.0073, -0.0073, -0.022]
+		# PRD Rework Fenotipo pt.6 (2026-07-14): gap efectivo era ~0.38mm
+		# (prácticamente fundido pese a que el comentario histórico decía
+		# "~3mm") — offsets separados a gap ~1.4mm limpio + nudillo (esfera
+		# chica semi-hundida en la base de cada dedo, mismo patrón de
+		# overlap real que codo/rodilla) para que el Sobel entinte tanto la
+		# ranura entre dedos como el quiebre nudillo→falange.
+		var f_off: Array = [0.025, 0.010, -0.010, -0.025]
 		var f_len: Array = [0.067, 0.076, 0.070, 0.055]
 		for fi in range(4):
 			var f_l: float = f_len[fi]
+			var f_x: float = -float(side) * float(f_off[fi])
 			# r5e (director): dedos 10% más delgados (sección 0.0108×0.038)
 			var finger = _box_mesh(0.0108, f_l, 0.038, skin_mat)
-			finger.position = Vector3(-float(side) * float(f_off[fi]), -0.027 - f_l * 0.5, 0.006)
+			finger.position = Vector3(f_x, -0.027 - f_l * 0.5, 0.006)
 			finger.rotation.x = -0.22   # los dedos doblan más que la palma
 			hand.add_child(finger)
 			_add_outline_pass(finger, Color("#f2b186"))
+
+			var knuckle = _sphere_mesh(0.007, skin_mat)
+			knuckle.scale = Vector3(1.0, 0.75, 1.0)
+			knuckle.position = Vector3(f_x, -0.027, 0.008)
+			hand.add_child(knuckle)
+			_add_outline_pass(knuckle, Color("#f2b186"))
 
 		# r5c (director): el pulgar APUNTA en la misma dirección que los
 		# dedos (cuelga hacia abajo), abierto 30° respecto a ellos hacia
@@ -650,7 +695,10 @@ func _build() -> void:
 		# r5d (director, ref. anatómica Cleveland Clinic): el pulgar NACE
 		# de la eminencia tenar — a media palma, cerca de la muñeca — no
 		# del borde inferior; nacimiento 50% más adentro de la mano.
-		var thumb = _box_mesh(0.020, 0.05, 0.026, skin_mat)
+		# PRD Rework Fenotipo pt.6: de caja de sección uniforme (leía
+		# "ranura paralela" a los dedos) a cápsula — extremos redondeados
+		# lo distinguen de los dedos-caja sin cambiar largo/ángulo.
+		var thumb = _capsule_mesh(0.014, 0.05, skin_mat)
 		thumb.position = Vector3(-float(side) * 0.038, -0.022, 0.010)
 		thumb.rotation.z = -float(side) * 0.5236   # 30° de apertura
 		thumb.rotation.x = -0.25
@@ -858,7 +906,15 @@ func _build() -> void:
 	# La prueba (bot_r 0.030, cara plana) SÍ resolvió el frontal — el
 	# quiebre de tono cara-iluminada/lados-en-sombra lee mucho mejor que la
 	# arista simétrica. Calibrado hacia abajo desde el extremo de la prueba.
-	var nose = _cylinder_mesh(0.0015, 0.026, 0.062, skin_mat)
+	# PRD Rework Fenotipo pt.9 (2026-07-14): "prisma muy ancho/duro en
+	# frontal" — bot_r angostado 0.026→0.019. NO se tocan radial_segments
+	# (el PRD proponía 4→6-8): con N=4 y rotation.y=0 hay una CARA plana
+	# exactamente al frente (el fix de Ronda 8, documentado arriba, que
+	# resolvió 3 rondas de facetado ilegible); con N par >4 ningún múltiplo
+	# de rotation.y deja una cara centrada en +Z, así que subir segmentos
+	# reintroduce el problema que Ronda 8 cerró. Ángulo de facetas sin
+	# tocar; solo se angosta la base.
+	var nose = _cylinder_mesh(0.0015, 0.019, 0.062, skin_mat)
 	(nose.mesh as CylinderMesh).radial_segments = 4
 	nose.position = Vector3(0.0, -0.010, 0.139)
 	nose.rotation.x = -0.34   # raíz hundida arriba, punta proyecta frente-abajo
@@ -941,7 +997,7 @@ func _build() -> void:
 
 	# línea de comisura FORZADA: agrandada/oscurecida más — actúa como
 	# línea explícita de boca, no depende del Sobel detectando el escalón.
-	var mouth_seam = _box_mesh(0.044, 0.010, 0.014, pupil_mat)
+	var mouth_seam = _box_mesh(0.044, 0.010, 0.014, mouth_seam_mat)
 	mouth_seam.position = Vector3(0.0, -0.078, 0.137)
 	head.add_child(mouth_seam)
 
@@ -1088,7 +1144,11 @@ func _build() -> void:
 		# poco (menos invasión + menos alto) sin perder el párpado real.
 		# x recogido junto con el ojo (0.052→0.036) para seguir centrada
 		# sobre el ojo movido.
-		var brow = _box_mesh(0.048, 0.011, 0.010, brow_mat)
+		# PRD Rework Fenotipo pt.10 (2026-07-14): primer paso de bajo riesgo
+		# (mismo mesh, solo dimensiones) — Fable señala que esto NO da arco
+		# real; si sigue leyendo recta, segunda pasada = cadena de 2-3
+		# cápsulas/esferas decrecientes (patrón `_braid`).
+		var brow = _box_mesh(0.040, 0.006, 0.010, brow_mat)
 		brow.position = Vector3(side * 0.036, 0.038, 0.133)
 		head.add_child(brow)
 		brows.append(brow)
@@ -1779,6 +1839,21 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	var range_arr: Array = origin.get("heightRange", [0.94, 1.1])
 	scale = Vector3.ONE * _lerp(float(range_arr[0]), float(range_arr[1]), p.get("height", 0.5))
 
+	# ---- origin features (ears, tail, accent) ----
+	# NOTE: must run BEFORE the vein color calc below — vein_mat.albedo_color
+	# reads `accent`, and on the first apply_phenotype call `accent` is still
+	# the class default (#46e6ff cyan) until this block updates it per-origin.
+	var origin_id: String = origin.get("id", "")
+	if origin_id != _origin_id:
+		_origin_id = origin_id
+		var theme: Dictionary = origin.get("theme", {})
+		var accent_hex: String = theme.get("accent", "#46e6ff")
+		accent = Color(accent_hex)
+		iris_mat.albedo_color = accent
+		accent_glow_mat.albedo_color = accent * 1.2
+		accent_glow_mat.emission = accent * 1.2
+		_build_origin_features(origin)
+
 	# Arcane modification thresholds (JS: >0.06, >0.38, >0.68)
 	var mod: float = p.get("arcaneMod", 0.0)
 	for vein in veins:
@@ -1893,12 +1968,14 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		_arm_stripe.rotation.z = 0.12
 		arms[0].add_child(_arm_stripe)
 
-	# ---- FASE C paso 8: warpaint = 1 FRANJA limpia (geometría) ----
-	# Antes eran DOS marcas asimétricas (frente + mejilla, patrón "Scout
-	# Marks" de M9-r2) — el director simplifica a UNA sola franja limpia,
-	# sobre el pómulo IZQUIERDO (side=-1), seguía el eje diagonal del plano
-	# malar de la Fase C p2 (mismo ángulo que la masa `cheek`, para que la
-	# pintura lea como si siguiera la escultura, no flotara encima).
+	# ---- PRD Rework Fenotipo pt.7 (2026-07-14): warpaint = 2 TRAZOS
+	# VERTICALES (corrige la Fase C p8 anterior, 1 franja horizontal-
+	# diagonal). QA de cuerpo completo (Fable) confirmó contra la lámina:
+	# "dos trazos verticales que bajan desde el nacimiento del pelo
+	# cruzando ceja/sien izquierda hacia el pómulo, no diagonal ni
+	# horizontal". Lado IZQUIERDO (side=-1) como antes; ambos trazos rectos
+	# (sin rotation.y/z) descendiendo de la altura de `brow` (y=0.038,
+	# z=0.133) a la de `cheek` (y≈-0.020, z≈0.112).
 	if _face_mark != null:
 		_face_mark.queue_free()
 		_face_mark = null
@@ -1910,20 +1987,10 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		fm_mat.albedo_color = paint_color.darkened(0.18)
 		_face_mark = MeshInstance3D.new()
 		_face_mark.name = "face_paint_mark"
-		# AJUSTE FINO post-QA: proporción vieja (~4:1) leía "curita/parche
-		# cuadrado" — la lámina es una pincelada larga y fina (~10:1). Ancho
-		# 0.058→0.075, alto 0.014→0.007. z sube otra vez (0.128→0.140): el
-		# pómulo del paso de arriba creció en Z (0.46→0.64 de escala) y
-		# volvió a enterrar la franja — mismo bug, mismo fix, cheek más
-		# grande de nuevo.
-		var fm_cheek = _box_mesh(0.075, 0.007, 0.006, fm_mat)
-		# z bajado 0.162→0.137: Ronda 5 cambió el pómulo de esfera a caja
-		# CHICA (0.040 en vez de 0.068) — la franja quedaba flotando en el
-		# aire, muy adelante de la superficie nueva, más chica.
-		fm_cheek.position = Vector3(-0.066, -0.020, 0.137)
-		fm_cheek.rotation.z = 0.45
-		fm_cheek.rotation.y = -0.50
-		_face_mark.add_child(fm_cheek)
+		for si in range(2):
+			var fm_stroke = _box_mesh(0.006, 0.045, 0.005, fm_mat)
+			fm_stroke.position = Vector3(-0.058 - float(si) * 0.014, 0.008, 0.135)
+			_face_mark.add_child(fm_stroke)
 		head.add_child(_face_mark)
 
 	# ---- hair swap ----
@@ -1953,18 +2020,6 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		if built_b != null and built_b.get_child_count() > 0:
 			_apply_outline_to_children(built_b, hair_color, 0.025)
 			beard_slot.add_child(built_b)
-
-	# ---- origin features (ears, tail, accent) ----
-	var origin_id: String = origin.get("id", "")
-	if origin_id != _origin_id:
-		_origin_id = origin_id
-		var theme: Dictionary = origin.get("theme", {})
-		var accent_hex: String = theme.get("accent", "#46e6ff")
-		accent = Color(accent_hex)
-		iris_mat.albedo_color = accent
-		accent_glow_mat.albedo_color = accent * 1.2
-		accent_glow_mat.emission = accent * 1.2
-		_build_origin_features(origin)
 
 	# ---- per-origin rim override (MUST be after warpaint rebuild so head_mat is current) ----
 	_apply_origin_rim()
@@ -2849,8 +2904,10 @@ func _process(delta: float) -> void:
 	if _strike_t <= 0.0 and upper_spine != null:
 		upper_spine.rotation.y = lerpf(upper_spine.rotation.y,
 				spine.rotation.y * 0.38, minf(1.0, delta * 7.0))
+		# DORSAL_CURVE_X (PRD Rework Fenotipo pt.13): offset sumado al target,
+		# no asignado una vez — así sobrevive al settle de idle.
 		upper_spine.rotation.x = lerpf(upper_spine.rotation.x,
-				spine.rotation.x * 0.30, minf(1.0, delta * 7.0))
+				spine.rotation.x * 0.30 + DORSAL_CURVE_X, minf(1.0, delta * 7.0))
 
 	# ── PRD-006: joint constraints — ALWAYS the last pose pass ──
 	# "Nada rota donde un cuerpo no rota" (Movilidad Realista §4.3): every

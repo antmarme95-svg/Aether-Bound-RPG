@@ -59,9 +59,9 @@ func _run() -> void:
 	# pelo corto castaño claro barrido atrás, scout marks verdes).
 	var pheno: Dictionary = _Pheno.default_phenotype()
 	pheno["skinTone"] = 0     # porcelain (concept: tez pálida/fría)
-	pheno["hair"] = 11        # prince curtain (M10-r3: melena, 150 mechones)
+	pheno["hair"] = 10        # frontier crop (PRD Rework Fenotipo pt.2: canon del fenotipo humano)
 	pheno["hairColor"] = 4    # chestnut (base; tinte exacto abajo)
-	pheno["warpaint"] = 6     # Fase C p8: 1 franja limpia (mejilla izq, sobre el pómulo)
+	pheno["warpaint"] = 6     # Scout Marks: patrón 6 vacío A PROPÓSITO en warpaint_atlas.gd (la marca real es geometría en _face_mark) — el PRD Rework Fenotipo lo daba por "índice inválido" (WARPAINTS de la UI solo llega a 5) pero SÍ es válido para el atlas/gating; corregido tras verificar visualmente que 1-5 pintan patrones legacy superpuestos
 	pheno["paintColor"] = 4   # wyld green
 	_rig.apply_phenotype(pheno, BASELINE_ORIGIN)
 	# Castaño CLARO exacto del concept (patrón Dagna: tinte post-paleta).
@@ -99,6 +99,12 @@ func _run() -> void:
 			print("[TmpAnatomy] %s: NO EXISTE en el árbol" % probe_name)
 
 	# ---- post Melancolía: el rig ya es opaco/sin outline de fábrica (C6a) ----
+	# PRD Rework Fenotipo pt.11 (2026-07-14): diagnóstico hecho comentando
+	# esta línea — SIN post la piel lee cálida/rosada (confirma que
+	# skin_mat/SKIN_TONES[0] NO es el problema); el post/LUT dawn también
+	# resulta ser el responsable del ENTINTADO toon completo (sin post no
+	# hay outline ni cel-shading, no solo el tinte de piel). Es global — no
+	# se toca sin aprobación explícita de Boris (ver Current-State).
 	_gs.attach_post(_cam)
 	_gs.apply_time_preset("dawn")
 	await _wait(0.15)

@@ -8,6 +8,29 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, continuación) — los 13 puntos del
+  [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] EJECUTADOS EN CÓDIGO.**
+  Orden por dependencia tal como quedó ratificado: venas cian/arcaneMod →
+  pelo (Frontier Crop) → torso/hombros → orejas (pasivo) → manos → warpaint
+  → boca → nariz/cejas → piel (investigado) → abdomen → columna (riesgo
+  alto). QA completo (`test_core`/`autotest_biomech`/`test_combat`/
+  `autotest_slice`/`autotest_ui`) ALL_PASS en cada checkpoint, incluyendo
+  ANTES y DESPUÉS del cambio de columna. Detalle punto por punto en
+  [[LOG]]. **Dos correcciones sobre el propio PRD, encontradas ejecutando:**
+  (a) el "índice inválido" de warpaint (6) en realidad es un patrón vacío
+  A PROPÓSITO en el atlas — usar un índice 1-5 pintaba un patrón legacy
+  encima de los trazos nuevos; revertido a 6. (b) la asignación estática de
+  `upper_spine.rotation.x` que pedía el PRD se hubiera borrado sola en
+  <150ms de idle (hay un lerp de "follow del torácico" que corre cada
+  frame fuera de strike) — implementada como offset del target del lerp
+  en su lugar, para que la curva sobreviva en reposo real. **Nota abierta
+  sin resolver: la métrica "cabezas" del banco bajó 7.49→7.13 tras el
+  cambio de columna** — sospecha de artefacto de medición AABB sobre
+  cráneo inclinado (no confirmado), a verificar antes del VoBo. **Pendiente
+  para la próxima sesión: correr un nuevo QA visual imparcial (mismo
+  protocolo del ~32%, sin contexto de código) contra ambas láminas para
+  medir el % de fidelidad resultante, y VoBo de Boris antes de dar este
+  PRD por cerrado y pasar a Fase D (pelo real + barba revisada).**
 - **SESIÓN 2026-07-14 (noche) — Boris NO había ratificado el cierre de Fase
   C (75% cara) y pidió, antes de seguir a Fase D, un QA imparcial de CUERPO
   COMPLETO contra las láminas RAW.** Veredicto: **~32% de fidelidad

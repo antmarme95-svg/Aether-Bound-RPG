@@ -1,8 +1,16 @@
 ---
-status: abierto (plan ratificado, código sin tocar)
+status: código de los 13 puntos EJECUTADO (2026-07-14 noche) — pendiente QA visual de cierre + VoBo de Boris
 source: "QA visual imparcial (subagente Fable, sin contexto previo, ~32% de fidelidad contra `fenotipo-humano-v1.png`/`fenotipo-humano-torso-v1.png`) + subagente técnico (lectura de `character_rig.gd`/`hair_library.gd`/`palette_data.gd`/`phenotype_data.gd`/`tmp_anatomy.gd`) + ratificación cruzada de Fable sobre el plan técnico — los tres coordinados por el orquestador"
 updated: 2026-07-14
 ---
+
+> **Nota de ejecución (2026-07-14 noche):** los 13 puntos están implementados
+> y pasan QA de regresión completo. Detalle punto por punto, incluyendo 2
+> correcciones encontradas sobre este mismo documento (índice de warpaint 6
+> NO era inválido; la asignación estática de columna se hubiera borrado
+> sola por el sistema de settle), en [[LOG]] y [[Current-State]]. Falta el
+> QA visual de cierre (mismo protocolo del 32%) + VoBo de Boris antes de
+> considerar la Definición de Terminado (abajo) satisfecha.
 
 # PRD — Rework de fenotipo humano (cuerpo completo, post-cierre Fase C)
 
