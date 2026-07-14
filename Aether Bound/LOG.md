@@ -1,5 +1,20 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-13] feature | Faja: cierra el hueco ombligo-a-cadera (feedback director)
+Boris vio en las capturas del outfit una franja de piel entre la faja y
+el pantalón. Diagnóstico medido (cotas de nodos, no a ojo): la faja de 3
+bandas quedaba en cintura alta (body 1.065-1.235) y dejaba ~4.5 cm de
+piel sobre el pantalón (pelvis tope ~1.02) — el jerkin sólido viejo lo
+tapaba. Fix (ea985f1): 5 bandas solapadas bajando hasta solapar el belt,
+radio creciente para seguir la cadera; el vuelo se acerca al faldón de
+la lámina. Gates core+slice ALL_PASS; capturas r2 en
+`test_out/rounds/outfit-frontier/`. **PENDIENTE (dejado a propósito por
+Boris): verificar la continuidad de cintura del cuerpo DESNUDO**
+(constraint sin-playera; el auditor advirtió que el jerkin tapaba un
+posible hueco de anatomía torso→pelvis) — zoom preparado, sin revisar.
+Nota abierta menor: el belt horizontal quedó parcial bajo la faja
+(subirlo si Boris quiere el cinturón sobre el fajín, como la lámina).
+
 ## [2026-07-13] design | VAULT-STARTER.md — pase agnóstico (sin dominio de juego)
 El director pidió dejar el starter agnóstico a cualquier proyecto: fuera
 toda mención a Godot/videojuegos. Cambios: intro sin "videojuego"; árbol

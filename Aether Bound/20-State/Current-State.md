@@ -48,9 +48,19 @@ updated: 2026-07-12
   `remove_all` para toggle en caliente, `PRESETS.frontier` = solo una lista
   predefinida; los call sites usan `build_frontier` (alias del preset). La
   UI de personalización (pestaña OUTFIT en creación) llega en Fase 4 — la
-  API ya la soporta. Gates completos ALL_PASS (core/biomech/combat/slice/
-  springboard). **Pendientes de VoBo: turnaround del torso desnudo + outfit
-  frontier** (`test_out/rounds/anatomia-torso/` y `outfit-frontier/`). **DECISIÓN GRANDE de Boris (2026-07-13): VoBos viejos
+  API ya la soporta. **(D3) Faja: hueco ombligo-a-cadera CERRADO** ✅
+  (`ea985f1`, feedback de Boris): la faja de 3 bandas dejaba ~4.5 cm de piel
+  sobre el pantalón → 5 bandas solapadas bajando hasta el belt con radio
+  creciente (sigue la cadera; se acerca al faldón de la lámina). Gates
+  completos ALL_PASS (core/biomech/combat/slice/springboard). **Pendientes
+  de VoBo: turnaround del torso desnudo + outfit frontier**
+  (`test_out/rounds/anatomia-torso/` y `outfit-frontier/`). **⚠️ PENDIENTE
+  dejado a propósito (retomar): verificar la CONTINUIDAD DE CINTURA DEL
+  CUERPO DESNUDO** (torso→pelvis; el auditor advirtió que el jerkin tapaba
+  un posible hueco de anatomía — para outfits sin playera debe estar
+  cerrado en el cuerpo base, no solo bajo la faja). Nota menor: el belt
+  quedó parcial bajo la faja (subirlo si Boris quiere el cinturón sobre el
+  fajín). **DECISIÓN GRANDE de Boris (2026-07-13): VoBos viejos
   RECHAZADOS (r5 cabeza, cowl) — rework integral en curso; el peinado
   príncipe de hebras/cintas se DESECHÓ por completo** (~8 rondas fallidas;
   causa raíz: cuerdas rectas sobre domo convexo) — **Fase D pelo: masas de
