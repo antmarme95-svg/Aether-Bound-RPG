@@ -8,6 +8,29 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche) — Boris NO había ratificado el cierre de Fase
+  C (75% cara) y pidió, antes de seguir a Fase D, un QA imparcial de CUERPO
+  COMPLETO contra las láminas RAW.** Veredicto: **~32% de fidelidad
+  global** — el 75% facial no se sostiene con pelo/torso/manos/hombros
+  incluidos (pelo con estilo de banco equivocado — "11 Prince Curtain" en
+  vez del canon "10 Frontier Crop"; torso con trapecios-caja que dejan
+  costura; manos con dedos casi fundidos; bug real de venas cian por orden
+  de ejecución de `accent`/`arcaneMod`). **Se ejecutó el proceso que Boris
+  pidió para dejar de iterar a ciegas:** QA visual (Fable, sin código) →
+  subagente técnico (lee `character_rig.gd`/`hair_library.gd`/
+  `palette_data.gd`/`phenotype_data.gd`, traduce cada hallazgo a
+  archivo/línea/valor, detecta 2 falsos positivos: el "mentón bloque" era
+  boca mal interpretada, el "brazalete gris" era el bug de venas + warpaint
+  de brazo ya conocido, no gear fantasma) → Fable ratifica la traducción
+  (corrige 2 valores propuestos: columna -0.05→-0.09 rad, cejas necesitan
+  arco no solo adelgazar). Plan de 13 puntos con orden por dependencia
+  (venas→hombros→pelo→orejas→torso→warpaint→boca→nariz/cejas/manos→
+  piel→abdomen→columna, el único de riesgo alto por tocar pivotes de
+  combate) asentado en
+  [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]]. **Código sin tocar
+  todavía — próxima sesión: ejecutar el plan en el orden indicado,
+  empezando por el bug de venas (punto 1, limpia el ruido visual para
+  todo lo demás).**
 - **Milestone:** **Fase 1 CERRADA ✅ (2026-07-09)** — combate mínimo + Dagna aliada +
   Seismic Springboard T1 del vertical slice **"Slice of Bond"** (Humano Duelist ×
   Dagna), Gate 1 aprobado por el director. **EN CURSO: ventana C6/C4 (rework

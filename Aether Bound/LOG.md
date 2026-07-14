@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] plan | PRD nuevo: rework de fenotipo humano CUERPO COMPLETO — QA imparcial detecta ~32% de fidelidad
+Boris no había ratificado la sesión anterior (cierre de Fase C cara al 75%)
+y pidió, antes de seguir, correr un QA visual imparcial (subagente Fable)
+comparando el personaje humano completo contra las láminas RAW
+(`fenotipo-humano-v1.png` + `fenotipo-humano-torso-v1.png`) — no solo cara.
+Veredicto: **~32% de fidelidad global**. El 75% que cerró la Fase C solo
+medía cara; con pelo (estilo "Prince Curtain" de 22 cintas en vez del canon
+"Frontier Crop"), torso (trapecios como cajas, costuras visibles), manos
+(dedos casi fundidos) y un bug real de venas cian (`accent`/`arcaneMod`) el
+personaje completo lee como maniquí técnico, no como el aventurero de la
+lámina. **Lección de proceso que motivó este PRD (pedido explícito de
+Boris):** el feedback de arte no se estaba traduciendo a requerimiento
+técnico preciso antes de tocar código, forzando demasiadas rondas de
+iteración. Se corrigió con 3 roles separados que se validan entre sí ANTES
+de escribir código: QA visual (Fable) → técnico (lee el código real,
+traduce a archivo/línea/valor, detecta 2 falsos positivos) → QA de nuevo
+(ratifica o corrige la traducción técnica). El plan resultante — 13 puntos
+priorizados CRITICAL→LOW con coordenadas/valores concretos y orden de
+ejecución por dependencia — queda asentado en
+[[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]]. **Código sin tocar
+todavía** — este checkpoint es solo de planeación.
+
 ## [2026-07-14] fix | Mentón corregido tras quitar la barba — cierra la ventana de ajuste facial
 Con la barba fuera, un QA final enfocado solo en labios+mentón encontró un
 problema real que la barba había estado tapando: la cara frontal de

@@ -50,6 +50,15 @@
 - [[Lecciones]] — anti-patrones técnicos, entorno Godot, gates QA, tiering de modelos.
 - [[PRD-006 Combate mínimo]] — spec Fase 1 ratificada: columna vertebral = Movilidad Realista (rig restringido primero, ventanas de combo = fases biomecánicas); 4 componentes + HitPayload, kit Duelist, 2 enemigos, feel contra la Bible; anti-objetivo: el prototipo 0. **CERRADO en código + playtest (alcances 0–5).**
 - [[PRD-007 Dagna aliada + Seismic Springboard T1]] — spec Fase 1 ratificada (2026-07-08): Dagna aliada mínima-real + Springboard T1 (onda + salto en ventana, input Bond=`R`) en el greybox → Gate 1. Reusa PushPull + supersalto PRD-005 + pipeline de personajes. Solo T1; Tether/T2/T3 diferidos. **✅ COMPLETO — alcances 0–4 en código + playtest (2026-07-09).** El Gate 1 (cornisa vía Springboard + `autotest_springboard`) aprobado por el director: **🏁 Fase 1 CERRADA.**
+- [[PRD-Fase-C-Ajuste-Facial]] — spec cerrada (2026-07-14): [[QA Loop]] de
+  ajuste fino facial post-Fase-C, 75% de fidelidad alcanzado (boca, barba,
+  ojos, pómulos, mentón, warpaint); barba quitada del default por veredicto
+  directo del director pese al % técnico.
+- [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] — spec abierta (2026-07-14):
+  QA visual imparcial post-Fase-C reveló ~32% de fidelidad de CUERPO
+  COMPLETO (el 75% facial no se sostiene con pelo/torso/manos incluidos);
+  13 puntos priorizados con archivo/línea/valor concreto, ratificados por
+  QA↔técnico↔QA antes de tocar código. Código sin tocar todavía.
 - [[Propuesta-Recursos-de-Modelado]] — **RATIFICADA 2026-07-12**: 5 recursos para subir el techo del pipeline procedural de personajes (triplanar, loft/perfil, gradientes, banding MToon, iteración) + 3 ajustes al plan de rework C6/M10 de la sesión paralela; loft = mini-loop pre-C6b.
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
 - [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene.
