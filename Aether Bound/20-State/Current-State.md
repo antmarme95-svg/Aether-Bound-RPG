@@ -8,6 +8,12 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, ratificación) — Boris aprueba geometría
+  nueva de pelo/torso/manos sin cambios; boca = Opción A (fusión en una
+  sola masa); warpaint queda como está (bilateral) — "mientras quede
+  bien" — y se confirma como REQUISITO NUEVO que debe ser
+  personalizable por el jugador en la creación de personaje (dato ya
+  soportado, falta la UI de Fase 4).** Arranca ejecución en código.
 - **SESIÓN 2026-07-14 (noche, planeación) — propuesta de geometría nueva
   para pelo/torso/manos/boca, esperando ratificación de Boris.** Con el
   techo de ajuste de parámetros confirmado (~50-55%), el orquestador miró

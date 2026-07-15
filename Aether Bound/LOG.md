@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] ratificación | Boris aprueba geometría nueva; boca=Opción A; warpaint personalizable (Fase 4)
+Boris ratificó las 3 direcciones de [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]
+(pelo/torso/manos) sin cambios, eligió **Opción A para la boca** (fusionar
+en una sola masa) y resolvió la nota fuera de alcance del warpaint: **no le
+preocupa la contradicción entre las dos láminas** — la versión bilateral
+actual se queda "mientras quede bien". Decisión de producto nueva: **el
+warpaint debe ser personalizable por el jugador en la creación de
+personaje**, no fijo en el fenotipo humano base. El dato ya existe
+(`PhenotypeData.PHENOTYPE_FIELDS["warpaint"]`, pick de `WARPAINTS`) — falta
+la UI de creación de personaje, que ya vive en **Fase 4** del
+[[Plan-de-Produccion]] ("Vestir y doler"). No es trabajo de la ventana C6;
+queda anotado como requisito confirmado para cuando se aborde esa UI.
+Arranca ejecución en código de pelo/torso/manos/boca.
+
 ## [2026-07-14] plan | Propuesta de geometría nueva para pelo/torso/manos/boca
 Boris pidió planear la geometría nueva tras confirmar que los 18 puntos de
 ajuste de parámetros llegaron al techo (~50-55%, según el propio QA de la

@@ -1,10 +1,32 @@
 ---
-status: propuesta — esperando ratificación de Boris (masas propuestas ANTES de codear, mismo protocolo que Fase D)
+status: RATIFICADO por Boris (2026-07-14 noche) — pelo/torso/manos con la dirección propuesta; boca = Opción A; warpaint queda como está (bilateral), decisión de personalización anotada abajo. Código en ejecución.
 source: "Observación directa del orquestador sobre `fenotipo-humano-v1.png` (zoom cara/pelo frente+espalda) y `fenotipo-humano-torso-v1.png` (zoom mano/torso), no un QA intermediario — más 3 rondas de QA visual imparcial (32%→42%→45%→49%) que ubicaron el techo de la técnica actual en ~50-55% mientras estos 4 puntos sigan siendo parámetro y no geometría nueva"
 updated: 2026-07-14
 ---
 
 # PRD — Geometría nueva: pelo, torso, manos, boca
+
+## Ratificación de Boris (2026-07-14 noche)
+
+- **Pelo, torso, manos:** dirección propuesta aprobada tal cual, sin
+  cambios. Arranca ejecución en código.
+- **Boca:** **Opción A** — fusionar en una sola masa (labio sup+inf
+  unificados con una línea de comisura tallada, no una caja separada).
+- **Warpaint (nota fuera de alcance del PRD original, resuelta acá):**
+  Boris NO le preocupa la contradicción entre las dos láminas (asimétrica
+  en la de cara vs. bilateral en la de torso) — "mientras quede bien". La
+  versión bilateral actual (ronda 3, 45%→49%) se queda. **Decisión de
+  producto nueva:** el warpaint debe ser **personalizable por el jugador
+  en la creación de personaje**, antes de arrancar la campaña — no un
+  valor fijo del fenotipo humano base. El sistema YA soporta esto a nivel
+  de datos (`PhenotypeData.PHENOTYPE_FIELDS` tiene `warpaint` como campo
+  `"pick"` con `WARPAINTS` como opciones, tab "face", sección "Warpaint &
+  Ink") — lo que falta es la UI de creación de personaje que exponga ese
+  slider, que [[Current-State]] ya reserva para **Fase 4** (Progresión y
+  Contrato / UI). No es trabajo de este PRD ni de la ventana C6 —
+  queda como requisito confirmado para cuando se aborde esa UI.
+
+---
 
 > Los 18 puntos de [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] (ejecutados
 > en 3 rondas, 32%→49%) agotaron lo que un ajuste de parámetro puede dar. El
