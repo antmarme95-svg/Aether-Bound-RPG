@@ -8,6 +8,20 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, geometría nueva ejecutada) — 49% → 55%.**
+  Los 4 puntos del [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]
+  ejecutados en código: torso sin masa elevada de abdomen (objetivo
+  logrado, confirmado por QA), manos con quiebre de ángulo real en el
+  nudillo, pelo reconstruido con concha recortada (nuca/orejas expuestas
+  — confirmado) pero mechones aún fundidos en lóbulos (no logrado del
+  todo), boca fusionada en una sola masa (estructura lograda, color/tono
+  pendiente). QA de regresión completo ALL_PASS. **El propio QA de esta
+  ronda ubica el mayor punto de apalancamiento para la próxima sesión en
+  la SILUETA GENERAL del torso/hombros** ("maniquí de tienda", sin
+  cintura ni trapecio real) — más que cualquier detalle de cara/manos, y
+  toca `SHOULDER_X`/proporciones, un punto que varios PRDs anteriores
+  vienen dejando como decisión explícita de Boris. Detalle completo en
+  [[LOG]]. **Progreso total de la ventana: 32%→42%→45%→49%→55%.**
 - **SESIÓN 2026-07-14 (noche, ratificación) — Boris aprueba geometría
   nueva de pelo/torso/manos sin cambios; boca = Opción A (fusión en una
   sola masa); warpaint queda como está (bilateral) — "mientras quede

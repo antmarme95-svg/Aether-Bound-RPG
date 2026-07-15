@@ -1,5 +1,5 @@
 ---
-status: RATIFICADO por Boris (2026-07-14 noche) — pelo/torso/manos con la dirección propuesta; boca = Opción A; warpaint queda como está (bilateral), decisión de personalización anotada abajo. Código en ejecución.
+status: EJECUTADO en código (2026-07-14 noche) — QA visual 49%→55%. Torso y estructura de boca lograron el objetivo; pelo (concha sí, mechones no del todo) y boca (color/tono) quedan a medias. Ver [[LOG]] para hallazgos nuevos (costura cuello, silueta de torso/hombros como mayor punto de apalancamiento siguiente).
 source: "Observación directa del orquestador sobre `fenotipo-humano-v1.png` (zoom cara/pelo frente+espalda) y `fenotipo-humano-torso-v1.png` (zoom mano/torso), no un QA intermediario — más 3 rondas de QA visual imparcial (32%→42%→45%→49%) que ubicaron el techo de la técnica actual en ~50-55% mientras estos 4 puntos sigan siendo parámetro y no geometría nueva"
 updated: 2026-07-14
 ---

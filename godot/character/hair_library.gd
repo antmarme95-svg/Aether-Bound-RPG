@@ -318,43 +318,49 @@ static func _hair_shorn_scout(mat: Material) -> Node3D:
 # ningún volumen envuelve; cada losa asienta sobre la curva.
 static func _hair_frontier_crop(mat: Material) -> Node3D:
 	var g = Node3D.new()
-	# CONCHA AJUSTADA (r4c): elipsoide que se AUTO-RECORTA contra el
-	# cráneo — dimensionado para emerger ~7 mm en parietales, coronilla y
-	# occipucio, y HUNDIRSE bajo la superficie a la altura de las orejas y
-	# la nuca baja. La línea del pelo SUBE sola en las sienes (fade, sin
-	# borde-repisa) y orejas/nuca quedan de piel. Las cajas no pueden
-	# abrazar una esfera (r4a tablones, r4b occipucio enterrado); una
-	# elipse contra otra sí.
-	var shell = _sphere(mat, R * 1.02, 0.0, R * 0.40, -R * 0.06)
-	shell.scale = Vector3(0.85, 0.72, 0.98)
+	# PRD Geometría Nueva (2026-07-14, ratificado): reconstrucción completa.
+	# 3 rondas de QA (32%→42%→45%→49%) confirmaron que ni el contraste
+	# tonal (2→3 tonos) ni la protrusión (probada y revertida 2 veces —
+	# reabría "dientes" en la cresta frontal) resuelven la lectura de
+	# "casco sólido": el problema es que la CONCHA cubre casi todo el
+	# cráneo con un borde continuo, y 31 mechones casi al ras nunca rompen
+	# esa silueta única. Zoom directo sobre `fenotipo-humano-v1.png`
+	# (frente + espalda) confirma: nuca/laterales MUY cortos (mucha piel
+	# expuesta, oreja completa visible), volumen concentrado en la
+	# coronilla, flequillo de 4-5 mechones INDIVIDUALES con puntas reales,
+	# no una masa continua.
+
+	# CONCHA — recortada agresivamente: antes cubría hasta las orejas/nuca
+	# baja (scale.y 0.72, centro R*0.40); ahora se achica y SUBE (scale.y
+	# 0.72→0.50, centro R*0.40→R*0.50) para exponer nuca/sienes reales —
+	# el corte corto de la lámina, no una melena corta.
+	var shell = _sphere(mat, R * 1.00, 0.0, R * 0.50, -R * 0.06)
+	shell.scale = Vector3(0.80, 0.50, 0.90)
 	g.add_child(shell)
-	# QUIFF (v0.5 C1: CERO caras planas horizontales — las cajas coronaban
-	# como birrete): masa REDONDEADA-angular de esferas escaladas, curva
-	# superior ASIMÉTRICA más alta al frente, vector adelante-arriba-atrás.
-	var quiff = _sphere(mat, R * 0.60, 0.0, R * 0.78, R * 0.22)
-	quiff.scale = Vector3(1.02, 0.78, 1.30)
+	# QUIFF — volumen frontal (se mantiene, ya daba lectura de "barrido
+	# arriba-atrás" correcta); ligeramente más grande para compensar la
+	# concha más chica.
+	var quiff = _sphere(mat, R * 0.62, 0.0, R * 0.80, R * 0.22)
+	quiff.scale = Vector3(1.02, 0.80, 1.30)
 	quiff.rotation.x = -0.38
 	g.add_child(quiff)
-	# Cola del barrido: masa menor que decae hacia la coronilla-atrás
-	var sweep = _sphere(mat, R * 0.48, 0.0, R * 0.86, -R * 0.28)
-	sweep.scale = Vector3(0.92, 0.60, 1.25)
+	# Cola del barrido hacia la coronilla-atrás (se mantiene).
+	var sweep = _sphere(mat, R * 0.50, 0.0, R * 0.88, -R * 0.26)
+	sweep.scale = Vector3(0.92, 0.62, 1.25)
 	sweep.rotation.x = -0.15
 	g.add_child(sweep)
+	# REMOLINO de coronilla (nuevo): 3 cajas finas en abanico radial desde
+	# el punto más alto — la lámina de espalda muestra un cowlick real ahí;
+	# sin él, la vista trasera lee "domo liso".
+	for wi in range(3):
+		var wa: float = -0.55 + 0.55 * float(wi)
+		var swirl = _box(mat, R * 0.05, R * 0.09, R * 0.22,
+			sin(wa) * R * 0.10, R * 0.92, cos(wa) * R * 0.10 - R * 0.02)
+		swirl.rotation.y = wa
+		swirl.rotation.x = -0.55
+		g.add_child(swirl)
 
-	# MECHONES (M10-r2, director: ~25–35): textura direccional de la
-	# lámina — cuñas angulares en filas sobre la concha/quiff, TODAS
-	# fluyendo hacia atrás, hundidas a media profundidad (el Sobel entinta
-	# sus aristas como trazos de pelo en close-up; a distancia se funden).
-	# Colocación DETERMINISTA (paridad CLI, cero random): 4 filas de
-	# latitud × columnas, tamaño en cascada (frente grande → nuca chico),
-	# tono alternado (base / +10% claro = profundidad cel de dos valores).
-	# PRD Rework Fenotipo pt.15 (2026-07-14, ronda 2 post-QA 42%): el QA
-	# imparcial leyó esta masa como "casco sólido", pese a los 31 mechones
-	# ya existentes — el contraste tonal (+10%) se lavaba bajo la misma
-	# banda del cel-shading toon y los mechones quedaban casi al ras de la
-	# concha (poco relieve real para que el Sobel trace sus bordes).
-	# Contraste subido a 3 tonos (base/claro +28%/oscuro -18%) para que el
-	# escalón de tono sobreviva al banding del toon.
+	# Contraste tonal (se mantiene — 3 tonos, sí sobrevive el banding toon).
 	var lighter := mat
 	var darker := mat
 	if mat is ShaderMaterial:
@@ -366,65 +372,48 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 				"albedo_color", (base_col as Color).lightened(0.28))
 			(darker as ShaderMaterial).set_shader_parameter(
 				"albedo_color", (base_col as Color).darkened(0.18))
-	# filas: [altura y, radio del anillo, nº mechones, escala, excluir_frente]
-	# (r2b: las filas medias EXCLUYEN el sector frontal — ahí la masa la
-	# ponen las esferas del quiff; mechones frontales leían como RULOS)
-	# PRD Rework Fenotipo pt.15: se probó subir la protrusión/sink (blanket
-	# y por fila) para dar más relieve — reabría "dientes" en la cresta
-	# frontal (blanket) o no cambiaba nada visible en la nuca (por fila,
-	# probablemente porque el eje que realmente lee en silueta es el
-	# ensanchamiento LATERAL/X, no el sesgo Z, según [[Lecciones]]).
-	# Revertido a la geometría original; el fix real y verificado es el
-	# contraste tonal de 3 tonos (arriba).
-	var rows: Array = [
-		[R * 0.96, R * 0.40, 7, 1.00, false],  # cresta del quiff
-		[R * 0.80, R * 0.68, 9, 0.85, true],   # corona (sin frente)
-		[R * 0.58, R * 0.88, 9, 0.70, true],   # parietales (sin frente)
-		[R * 0.34, R * 0.96, 6, 0.55, true],   # baja trasera
-	]
-	var idx: int = 0
-	for row in rows:
-		var ry: float = row[0]
-		var rr: float = row[1]
-		var n: int = row[2]
-		var s: float = row[3]
-		var skip_front: bool = row[4]
-		for i in range(n):
-			var a0: float = -PI * 0.78
-			var a1: float = PI * 0.78
-			if ry >= R * 0.9:
-				# cresta: arco ACOTADO a la corona (r2e — sus extremos
-				# laterales asomaban como dientes en la silueta frontal)
-				a0 = -PI * 0.55
-				a1 = PI * 0.55
-			if ry < R * 0.4:
-				a0 = PI * 0.35
-				a1 = PI * 1.65
-			var a: float = a0 + (a1 - a0) * (float(i) + 0.5) / float(n)
-			# filas marcadas: solo el sector TRASERO real, >104° (r2e — a
-			# 90° exactos los mechones del borde eran los dientes de las
-			# sienes; frente y corona ya los texturizan quiff + cresta)
-			if skip_front and cos(a) > -0.25 and ry >= R * 0.4:
-				continue
-			var cx: float = sin(a) * rr
-			var cz: float = cos(a) * rr - R * 0.06
-			# variación determinista de tamaño/ángulo por índice
-			var v: float = 0.85 + 0.3 * float((idx * 7) % 5) / 4.0
-			var sink: float = 0.93 - 0.06 * absf(sin(a))
-			var clump_mat = mat
-			if idx % 3 == 1:
-				clump_mat = lighter
-			elif idx % 5 == 3:
-				clump_mat = darker
-			var clump = _box(clump_mat,
-				R * 0.30 * s * v, R * 0.11 * s, R * 0.46 * s * v,
-				cx * sink, ry, cz * sink)
-			# orientación: tangente al casco + barrido hacia ATRÁS
-			clump.rotation.y = atan2(cx, cz + R * 0.5) * 0.55
-			clump.rotation.x = -0.42 + ry / R * 0.28   # arriba más plano
-			clump.rotation.z = sin(a) * -0.45          # acostado a los lados
-			g.add_child(clump)
-			idx += 1
+
+	# FLEQUILLO — 5 mechones INDIVIDUALES grandes con punta real (cono, no
+	# caja), largos/ángulos distintos (variación determinista), colgando
+	# sobre la frente con protrusión de verdad (no semi-hundidos al 93-97%
+	# como la versión anterior). Raíz ancha embebida en la concha/quiff,
+	# punta afuera — mismo truco que la nariz (`_cone`: top_r chico=punta,
+	# bottom_r grande=raíz).
+	var fringe_x: Array = [-0.62, -0.32, 0.0, 0.34, 0.64]
+	var fringe_len: Array = [0.85, 1.05, 0.95, 1.0, 0.80]
+	for fi in range(5):
+		var fx: float = fringe_x[fi]
+		var flen: float = fringe_len[fi] * R * 0.62
+		var fmat = lighter if fi % 2 == 0 else mat
+		var lock = _cone(fmat, R * 0.13, flen,
+			fx * R * 0.62, R * 0.62, R * 0.68)
+		lock.rotation.x = -2.0 - 0.12 * float(fi % 3)   # raíz arriba/adentro, punta abajo/afuera
+		lock.rotation.z = fx * 0.35                      # abanico lateral
+		g.add_child(lock)
+
+	# LATERALES — 3 mechones grandes por lado (menos que antes, más
+	# grandes, gap real entre ellos) sobre lo que queda de la concha
+	# acortada; ya NO bajan hasta la nuca (esa zona ahora es piel).
+	for side in [-1, 1]:
+		for si in range(3):
+			var sy: float = R * 0.62 - float(si) * R * 0.20
+			var sa: float = float(side) * (0.85 + float(si) * 0.14)
+			var lock2 = _cone(mat if si != 1 else darker, R * 0.11, R * 0.34,
+				sin(sa) * R * 0.62, sy, cos(sa) * R * 0.62 - R * 0.04)
+			lock2.rotation.x = -1.85
+			lock2.rotation.z = float(side) * (0.55 + float(si) * 0.08)
+			lock2.rotation.y = float(side) * 0.3
+			g.add_child(lock2)
+
+	# CORONA/NUCA ALTA — 3 mechones grandes solo en la porción trasera que
+	# la concha acortada todavía cubre (no más abajo — ahí es piel).
+	for ci in range(3):
+		var ca: float = PI * 0.85 + (float(ci) - 1.0) * 0.45
+		var lock3 = _cone(lighter if ci == 1 else mat, R * 0.12, R * 0.30,
+			sin(ca) * R * 0.60, R * 0.66, cos(ca) * R * 0.60 - R * 0.04)
+		lock3.rotation.x = -1.6
+		lock3.rotation.y = ca
+		g.add_child(lock3)
 	return g
 
 # 11 — Prince Curtain (M10-r4, PRD "Cabello Estilizado Ondulado — Estilo

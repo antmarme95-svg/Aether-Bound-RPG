@@ -145,7 +145,6 @@ var veins: Array = []
 # ---- materials (per-rig so colors are independent) ----
 var skin_mat: ShaderMaterial
 var lip_mat: ShaderMaterial
-var lip_mat_lower: ShaderMaterial
 var mouth_seam_mat: ShaderMaterial
 var head_mat: ShaderMaterial
 var hair_mat: ShaderMaterial
@@ -261,11 +260,7 @@ func _init_materials() -> void:
 	# lograron que labio sup/inf lean como DOS masas (bloque -> agujero ->
 	# bloque otra vez) — el QA sugirió variar TONO además de geometría, para
 	# que el toon shading marque la separación y no dependa solo del Sobel.
-	# Superior más oscuro/en sombra (el labio superior normalmente recibe
-	# menos luz frontal), inferior más claro/rosado (recibe más luz, además
-	# de ser el más carnoso).
 	lip_mat = ToonMaterials.toon_mat_opaque(Color("#a85f47"))
-	lip_mat_lower = ToonMaterials.toon_mat_opaque(Color("#e0947a"))
 	# PRD Rework Fenotipo pt.8: la comisura usaba pupil_mat (negro plano,
 	# leía "hueco/prótesis") — tono de labio oscurecido, coherente con el
 	# resto de la boca en vez de un agujero sin relación de color.
@@ -430,9 +425,16 @@ func _build() -> void:
 	# el valle esternal lo dibuja la curva de intersección entre ambos
 	# elipsoides (se solapan ~3 cm en el centro — mismo mecanismo de
 	# "anillo" que el gemelo, aquí en par para el valle).
+	# PRD Geometría Nueva (2026-07-14, ratificado): la lámina de torso
+	# muestra pectorales como curvas MUY suaves, casi lineales — no bultos
+	# redondos. El QA de la ronda 42% leyó estas esferas como "dos ojos en
+	# el torso" (protrusión Z 0.5 con separación x=±0.055 = simetría +
+	# tamaño que lee como par de cuencas). Aplanadas (escala Z 0.5→0.32) y
+	# alargadas (X 1.4→1.7) para acercarse a "línea de pectoral", no
+	# "bulto".
 	for pside in [-1, 1]:
 		var pec = _sphere_mesh(0.05, skin_mat)
-		pec.scale = Vector3(1.4, 0.9, 0.5)
+		pec.scale = Vector3(1.7, 0.9, 0.32)
 		pec.position = Vector3(float(pside) * 0.055, 0.21, 0.115)
 		upper_spine.add_child(pec)
 		_add_outline_pass(pec, Color("#f2b186"))
@@ -447,26 +449,21 @@ func _build() -> void:
 		upper_spine.add_child(clavicle)
 		_add_outline_pass(clavicle, Color("#f2b186"))
 
-	# PLACA ABDOMINAL: 1 elipsoide aplastada única — plano tenso de
-	# abdomen enjuto, SIN six-pack ni ombligo (tabla SÍ/NO de la rúbrica).
-	# r 0.055, escala (1.1, 1.6, 0.4), y=0.02 (bajo el pecho), z=0.105.
-	# En y=0.02 el radio del cilindro interpola a ≈0.120; el borde del
-	# abdomen (z=0.105+0.022=0.127) protruye ~0.007 (≈12% de su propio
-	# radio, dentro del tope ≤30%) — plano-tenso, no cóncavo ni barril.
-	# NOTA (Migración de Ropa, 2026-07-13): el jerkin fosilizado que tapaba
-	# esta masa MIGRÓ a character_outfit.gd (faja envuelta con margen real
-	# sobre z=0.127 — ver _attach_waist_wrap) — la anatomía queda desnuda
-	# aquí a propósito (banco tmp_anatomy.gd no llama outfit).
-	# PRD Rework Fenotipo pt.12 (2026-07-14): QA de cuerpo completo la leyó
-	# "óvalo sin correspondencia" — scale.z (protrusión) recortada 0.4→0.30
-	# y scale.x (ancho) subida 1.1→1.25 para un borde más gradual contra el
-	# cilindro del torso. Si sigue leyendo "óvalo", bajar a ~0.22 (no
-	# insistir en 0.30 per nota del QA).
-	var abs_plate = _sphere_mesh(0.055, skin_mat)
-	abs_plate.scale = Vector3(1.25, 1.6, 0.30)
-	abs_plate.position = Vector3(0.0, 0.02, 0.105)
-	upper_spine.add_child(abs_plate)
-	_add_outline_pass(abs_plate, Color("#f2b186"))
+	# ABDOMEN: SIN masa elevada — PRD Geometría Nueva (2026-07-14,
+	# ratificado por Boris). El `abs_plate` (elipsoide que sobresalía del
+	# cilindro) leyó "óvalo"/"placa geométrica"/"pieza de armadura pegada"
+	# en TRES magnitudes distintas de ajuste (0.4→0.30 de protrusión, PRD
+	# Rework Fenotipo pt.12) porque el problema nunca fue CUÁNTO sobresale
+	# — es que la lámina (`fenotipo-humano-torso-v1.png`, zoom directo) no
+	# tiene NADA que sobresalga ahí: el abdomen es prácticamente plano, y
+	# los "oblicuos" que pide la ficha técnica ("Lean obliques are
+	# suggests one or two") son literalmente 1-2 líneas de TRAZO sin
+	# volumen — el dibujo los resuelve con línea, no con forma. El abdomen
+	# vuelve a ser la superficie desnuda del cilindro del torso.
+	# NOTA (Migración de Ropa, 2026-07-13, sigue vigente): el jerkin
+	# fosilizado que tapaba esta zona MIGRÓ a `character_outfit.gd` (faja
+	# envuelta — ver `_attach_waist_wrap`); la anatomía queda desnuda aquí
+	# a propósito (banco `tmp_anatomy.gd` no llama outfit).
 
 	# CINTURA (lumbar): cierra el HUECO real entre el borde del abdomen
 	# (abs_plate, mundo y≈1.172 al fondo) y el tope de la pelvis (mundo
@@ -662,46 +659,61 @@ func _build() -> void:
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
 
-		# offsets del índice→meñique (x local); el índice queda del lado
-		# del pulgar (interior). Largos por dedo, medio el más largo
-		# (r5c, director: +20% de largo en los cuatro).
-		# PRD Rework Fenotipo pt.6 (2026-07-14): gap efectivo era ~0.38mm
-		# (prácticamente fundido pese a que el comentario histórico decía
-		# "~3mm") — offsets separados a gap ~1.4mm limpio + nudillo (esfera
-		# chica semi-hundida en la base de cada dedo, mismo patrón de
-		# overlap real que codo/rodilla) para que el Sobel entinte tanto la
-		# ranura entre dedos como el quiebre nudillo→falange.
-		var f_off: Array = [0.025, 0.010, -0.010, -0.025]
+		# PRD Geometría Nueva (2026-07-14, ratificado): la lámina (zoom
+		# directo, mano sobre la cadera en `fenotipo-humano-torso-v1.png`)
+		# muestra los dedos CASI JUNTOS — la separación se lee por la LÍNEA
+		# de contorno, no por un hueco físico grande — y cada dedo tiene un
+		# quiebre de ÁNGULO real en el nudillo medio, no un bulto. El PRD
+		# Rework Fenotipo pt.6 había ido en la dirección contraria (agrandar
+		# el gap + esfera-nudillo) y el QA lo siguió leyendo como "abanico
+		# de cartas"/"tablas planas". Gap recortado de vuelta (offsets más
+		# juntos) y cada dedo pasa de 1 caja recta a 2 falanges (proximal +
+		# distal) encadenadas por un Node3D con su propia rotación — mismo
+		# principio que brazo→antebrazo, a escala de dedo.
+		var f_off: Array = [0.0175, 0.0058, -0.0058, -0.0175]
 		var f_len: Array = [0.067, 0.076, 0.070, 0.055]
 		for fi in range(4):
 			var f_l: float = f_len[fi]
 			var f_x: float = -float(side) * float(f_off[fi])
+			var prox_l: float = f_l * 0.58
+			var dist_l: float = f_l * 0.42
+
+			var finger_root = Node3D.new()
+			finger_root.position = Vector3(f_x, -0.027, 0.006)
+			finger_root.rotation.x = -0.16   # curl leve de la falange proximal
+			hand.add_child(finger_root)
+
 			# r5e (director): dedos 10% más delgados (sección 0.0108×0.038)
-			var finger = _box_mesh(0.0108, f_l, 0.038, skin_mat)
-			finger.position = Vector3(f_x, -0.027 - f_l * 0.5, 0.006)
-			finger.rotation.x = -0.22   # los dedos doblan más que la palma
-			hand.add_child(finger)
-			_add_outline_pass(finger, Color("#f2b186"))
+			var prox = _box_mesh(0.0108, prox_l, 0.036, skin_mat)
+			prox.position.y = -prox_l * 0.5
+			finger_root.add_child(prox)
+			_add_outline_pass(prox, Color("#f2b186"))
 
-			var knuckle = _sphere_mesh(0.007, skin_mat)
-			knuckle.scale = Vector3(1.0, 0.75, 1.0)
-			knuckle.position = Vector3(f_x, -0.027, 0.008)
-			hand.add_child(knuckle)
-			_add_outline_pass(knuckle, Color("#f2b186"))
+			# nudillo medio: quiebre de ÁNGULO real (no esfera-bulto) —
+			# la falange distal cuelga más que la proximal, como pide la
+			# lámina.
+			var knuckle_joint = Node3D.new()
+			knuckle_joint.position.y = -prox_l
+			knuckle_joint.rotation.x = -0.36
+			finger_root.add_child(knuckle_joint)
 
-		# r5c (director): el pulgar APUNTA en la misma dirección que los
-		# dedos (cuelga hacia abajo), abierto 30° respecto a ellos hacia
-		# el interior — ya no cruza horizontal.
+			var dist = _box_mesh(0.0098, dist_l, 0.032, skin_mat)
+			dist.position.y = -dist_l * 0.5
+			knuckle_joint.add_child(dist)
+			_add_outline_pass(dist, Color("#f2b186"))
+
 		# r5d (director, ref. anatómica Cleveland Clinic): el pulgar NACE
 		# de la eminencia tenar — a media palma, cerca de la muñeca — no
-		# del borde inferior; nacimiento 50% más adentro de la mano.
-		# PRD Rework Fenotipo pt.6: de caja de sección uniforme (leía
-		# "ranura paralela" a los dedos) a cápsula — extremos redondeados
-		# lo distinguen de los dedos-caja sin cambiar largo/ángulo.
+		# del borde inferior.
+		# PRD Geometría Nueva: la lámina muestra el pulgar CASI OCULTO,
+		# enroscado hacia la palma (nace bajo y se curva hacia adentro) —
+		# no un apéndice separado y visible. Nacimiento acercado al centro
+		# (x 0.038→0.030) y curl mucho más agresivo (rotation.x
+		# -0.25→-0.55) para que lea "enroscado", no "flotando".
 		var thumb = _capsule_mesh(0.014, 0.05, skin_mat)
-		thumb.position = Vector3(-float(side) * 0.038, -0.022, 0.010)
+		thumb.position = Vector3(-float(side) * 0.030, -0.020, 0.012)
 		thumb.rotation.z = -float(side) * 0.5236   # 30° de apertura
-		thumb.rotation.x = -0.25
+		thumb.rotation.x = -0.55
 		hand.add_child(thumb)
 		_add_outline_pass(thumb, Color("#f2b186"))
 
@@ -984,43 +996,32 @@ func _build() -> void:
 	# en el banco (confirma: el techo era de MAGNITUD, no de técnica) — se
 	# calibra hacia abajo a ~2.6cm, todavía pronunciado pero sin leer como
 	# jeta/protuberancia en perfil.
-	# PRD Rework Fenotipo pt.16 (2026-07-14, ronda 3): radio subido
-	# 0.007→0.010 — el QA lee la boca como "agujero geométrico" porque el
-	# mouth_seam (la línea de comisura) es más grande que los labios que
-	# se supone acompaña; los labios necesitan masa propia para dominar la
-	# lectura en vez de la línea entre ellos.
-	var lip_upper = _cylinder_mesh(0.010, 0.010, 0.054, lip_mat)
-	lip_upper.rotation.z = PI / 2.0
-	lip_upper.position = Vector3(0.0, -0.069, 0.122)
-	head.add_child(lip_upper)
-	_add_outline_pass(lip_upper, Color("#f2b186"))
+	# PRD Geometría Nueva (2026-07-14, ratificado, Opción A): FUSIÓN en una
+	# sola masa. Tres piezas separadas (labio sup, labio inf, comisura)
+	# pasaron por 8+ rondas de calibración (historial completo arriba) sin
+	# dejar de leer "parche"/"rectángulo sólido" — el QA de la ronda 3
+	# (45%→49%) confirmó que ni achicar/receder la comisura ni engordar los
+	# labios resolvió la lectura. Boris eligió simplificar en vez de seguir
+	# calibrando: UNA sola cápsula (no depende de que 2 caras frontales
+	# distintas coincidan en Z, la lección que costó 4 rondas) + una línea
+	# de comisura fina TALLADA sobre su superficie (no una caja aparte que
+	# compita visualmente). La asimetría "inferior más carnoso" (tradición
+	# de M9-r2 en adelante) se preserva sin una segunda masa: la comisura
+	# vive DESCENTRADA hacia arriba dentro de la cápsula, así la porción de
+	# abajo (más alta) lee más llena que la de arriba.
+	var mouth_r: float = 0.011
+	var mouth = _capsule_mesh(mouth_r, 0.056, lip_mat)
+	mouth.rotation.z = PI / 2.0
+	mouth.position = Vector3(0.0, -0.078, 0.128)
+	head.add_child(mouth)
+	_add_outline_pass(mouth, Color("#f2b186"))
 
-	# AJUSTE FINO post-QA Ronda 8 (desempate): radio 57% más grueso que el
-	# superior + 2.2cm más de protrusión hacía que el inferior se viera
-	# como un parche aislado/pegado, no integrado. Radio bajado (0.011→
-	# 0.009) y protrusión recortada (z 0.144→0.136, escalón ahora ~1.6cm
-	# en vez de 2.6cm) — sigue leyendo más carnoso que el superior sin
-	# desproporcionarse.
-	# PRD Rework Fenotipo pt.16: radio subido junto al superior (0.009→0.013,
-	# manteniendo la proporción "más carnoso" ya establecida).
-	var lip_lower = _cylinder_mesh(0.013, 0.013, 0.056, lip_mat_lower)
-	lip_lower.rotation.z = PI / 2.0
-	lip_lower.position = Vector3(0.0, -0.087, 0.136)
-	head.add_child(lip_lower)
-	_add_outline_pass(lip_lower, Color("#f2b186"))
-
-	# línea de comisura: actúa como línea explícita de boca, no depende del
-	# Sobel detectando el escalón.
-	# PRD Rework Fenotipo pt.16 (2026-07-14, ronda 3): el tamaño "agrandada"
-	# de esta caja (heredado de cuando aún competía visualmente con la
-	# barba, ya retirada del default) hoy es el elemento MÁS prominente de
-	# la boca — el QA la lee como "rectángulo sólido, boca como agujero
-	# geométrico" en vez de una línea entre dos labios. Achicada (alto
-	# 0.010→0.006) y RECEDIDA (z 0.137→0.129, detrás de la cara frontal de
-	# ambos labios en vez de casi al ras del inferior) para que lea como
-	# sombra/valle entre las dos masas de labio, no como la boca entera.
-	var mouth_seam = _box_mesh(0.040, 0.006, 0.012, mouth_seam_mat)
-	mouth_seam.position = Vector3(0.0, -0.078, 0.129)
+	# comisura tallada: línea fina sobre la superficie frontal de la
+	# cápsula (no una masa que sobresalga por su cuenta), descentrada
+	# +0.003 hacia arriba desde el centro de `mouth` para que la porción
+	# inferior (más alta) lea más carnosa.
+	var mouth_seam = _box_mesh(0.038, 0.0035, 0.005, mouth_seam_mat)
+	mouth_seam.position = Vector3(0.0, -0.078 + 0.003, 0.128 + mouth_r * 0.85)
 	head.add_child(mouth_seam)
 
 	for mside in [-1, 1]:

@@ -1,5 +1,49 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] fix+qa | Geometría nueva ejecutada (pelo/torso/manos/boca) — 49% → 55%
+Ejecución de [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]] tras la
+ratificación de Boris. QA de regresión completo
+(`test_core`/`test_combat`/`autotest_biomech`/`autotest_slice`/
+`autotest_ui`) ALL_PASS en cada punto.
+**19. Torso:** `abs_plate` (masa elevada) ELIMINADO — el abdomen vuelve a
+ser la superficie desnuda del cilindro. `pec` aplanado (escala Z 0.5→0.32,
+X 1.4→1.7) para acercarse a "línea de pectoral" en vez de bulto.
+**20. Manos:** gap entre dedos recortado (offsets 0.025/0.010→0.0175/
+0.0058); cada dedo pasa de 1 caja + esfera-nudillo a 2 falanges
+(proximal+distal) encadenadas por un `Node3D` con rotación propia —
+quiebre de ángulo real, no bulto. Pulgar con curl mucho más agresivo
+(rotation.x −0.25→−0.55) y nacimiento más cerca del centro.
+**21. Pelo — reconstrucción completa de `_hair_frontier_crop`
+(`hair_library.gd`):** concha recortada agresivamente (scale.y 0.72→0.50,
+centro subido) para exponer nuca/orejas reales; remolino de coronilla
+nuevo (3 cajas en abanico); reemplazo de las 31 mechones-caja
+casi-fundidas por ~25 mechones-CONO (flequillo 5 + laterales 6 + corona
+3, más grandes, protrusión real vía `_cone` con la misma técnica de raíz-
+hundida/punta-afuera que la nariz). Mejora MUY visible en banco (nuca/
+orejas expuestas confirmado, ver capturas) pero el QA de esta ronda
+señala que los mechones todavía no leen como hebras individuales — se
+funden en 2-3 lóbulos redondos ("birrete/casco de natación"), objetivo
+parcialmente logrado.
+**22. Boca — Opción A ejecutada:** de 3 piezas (lip_upper/lip_lower/
+mouth_seam) a 1 sola cápsula fusionada + línea de comisura tallada
+(descentrada hacia arriba para preservar la asimetría "inferior más
+carnoso" sin una segunda masa). `lip_mat_lower` eliminado (quedó sin uso).
+**QA visual de esta ronda: 49% → 55%** (+6 — salto real pero menor al
+esperado de un cambio de geometría). El propio QA confirma 2 de 4 áreas
+resueltas en su objetivo (torso, boca-estructura) y 2 a medias (pelo —
+concha sí, mechones no; manos — quiebre sí, proporción no). **Hallazgos
+nuevos de esta ronda:** (a) parche/costura visible cuello-hombro (posible
+gap de geometría no soldada, no investigado); (b) boca lee como "herida"
+por el tono rojo-marrón oscuro, no por la forma; (c) **la silueta general
+del torso/hombros ("maniquí de tienda", sin cintura ni trapecio real) es
+ahora, según el propio QA, el mayor punto de apalancamiento para la
+próxima ronda** — más que cualquier detalle de cara/manos, y está fuera
+del alcance de este PRD (toca `SHOULDER_X`/proporciones, un punto que
+varios PRDs anteriores vienen dejando como decisión explícita de Boris,
+no ejecución automática). Warpaint sigue sin coincidir con la lámina de
+CARA (siempre existió esa discrepancia entre las dos láminas — Boris ya
+resolvió que no le preocupa, ver ratificación arriba).
+
 ## [2026-07-14] ratificación | Boris aprueba geometría nueva; boca=Opción A; warpaint personalizable (Fase 4)
 Boris ratificó las 3 direcciones de [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]
 (pelo/torso/manos) sin cambios, eligió **Opción A para la boca** (fusionar
