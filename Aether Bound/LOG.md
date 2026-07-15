@@ -1,5 +1,29 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] plan | Propuesta de geometría nueva para pelo/torso/manos/boca
+Boris pidió planear la geometría nueva tras confirmar que los 18 puntos de
+ajuste de parámetros llegaron al techo (~50-55%, según el propio QA de la
+ronda 3). En vez de delegar a un QA imparcial de nuevo, el orquestador miró
+DIRECTO ambas láminas con zoom (`fenotipo-humano-v1.png` cara/pelo frente+
+espalda, `fenotipo-humano-torso-v1.png` mano/torso) — mismo principio que
+"ante conflicto, auditar contra la lámina" de [[Lecciones]]. Hallazgos que
+cambian el enfoque: (1) **pelo** — la lámina tiene nuca/laterales casi
+rapados (mucha piel expuesta) y un flequillo de 4-5 mechones INDIVIDUALES
+grandes con puntas reales, no una concha continua con 31 mechones chicos
+casi fundidos; (2) **torso** — el abdomen es CASI PLANO en la lámina, los
+"oblicuos" son literalmente 1-2 líneas de trazo sin volumen — `abs_plate`
+como masa elevada está resolviendo el problema equivocado; (3) **manos** —
+los dedos de la lámina están CASI JUNTOS (la separación se lee por la línea,
+no por el hueco físico) con un quiebre de ÁNGULO real en el nudillo, no una
+esfera-bulto; (4) **boca** — sin referencia directa en pose neutra, queda
+como decisión de Boris entre 2 direcciones. **Hallazgo colateral fuera de
+alcance:** las dos láminas dibujan el warpaint DISTINTO (asimétrico en la
+de cara, bilateral en la de torso, la ronda 3 implementó la bilateral) — ni
+un QA imparcial ni el orquestador pueden resolver esa contradicción sin que
+Boris elija cuál lámina manda. Propuesta completa en
+[[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]. **Código sin tocar — este
+checkpoint es de planeación, esperando ratificación antes de ejecutar.**
+
 ## [2026-07-14] fix+qa | Tercera ronda: boca/warpaint/brazalete — 45% → 49%
 Boris pidió seguir con los hallazgos más baratos de la ronda del 45%.
 **16. Boca — geometría, no solo color.** El `mouth_seam` (línea de

@@ -8,6 +8,23 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, planeación) — propuesta de geometría nueva
+  para pelo/torso/manos/boca, esperando ratificación de Boris.** Con el
+  techo de ajuste de parámetros confirmado (~50-55%), el orquestador miró
+  DIRECTO ambas láminas con zoom (no delegó a un QA intermediario) y
+  encontró que la construcción actual de las 4 áreas resuelve el problema
+  equivocado: pelo necesita nuca/laterales casi rapados + flequillo de
+  pocos mechones GRANDES (no una concha con 31 chicos); torso necesita
+  el abdomen CASI PLANO (`abs_plate` como masa elevada sobra — los
+  "oblicuos" de la ficha son literalmente 1-2 líneas de trazo); manos
+  necesitan dedos CASI JUNTOS con quiebre de ángulo real en el nudillo
+  (no más separación ni esferas-bulto); boca queda como decisión de
+  Boris entre 2 direcciones (sin referencia directa en pose neutra).
+  **Hallazgo colateral:** las dos láminas dibujan el warpaint distinto
+  (asimétrico en la de cara vs. bilateral en la de torso, ya
+  implementada) — contradicción que solo Boris puede resolver. Propuesta
+  completa en [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]. **Código sin
+  tocar — pendiente ratificación antes de ejecutar.**
 - **SESIÓN 2026-07-14 (noche, ronda 3) — boca/warpaint/brazalete: 45% →
   49%.** Boca: la línea de comisura (agrandada en rondas viejas para
   competir con la barba, ya fuera del default) se achicó/recedió y los
