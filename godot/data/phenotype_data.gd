@@ -8,7 +8,13 @@ const HAIR_STYLES: Array[String] = [
 
 const BEARD_STYLES: Array[String] = ["Clean", "Stubble", "Braided Jarl", "Goatee"]
 
-const WARPAINTS: Array[String] = ["None", "Slash Crimson", "Hexbrand", "Tribal Tide", "Eye of Ash", "Jagged Crown"]
+# PRD Warpaint Personalizable (2026-07-14): "Scout Marks" (índice 6) se
+# agrega a la lista seleccionable — ya existía en el atlas/geometría
+# (`warpaint_atlas.gd` lo deja vacío A PROPÓSITO porque su marca real es
+# geometría en `character_rig._face_mark`) pero nunca estuvo expuesto en
+# este array, así que la UI de creación de personaje (Fase 4) no podía
+# ofrecerlo como opción.
+const WARPAINTS: Array[String] = ["None", "Slash Crimson", "Hexbrand", "Tribal Tide", "Eye of Ash", "Jagged Crown", "Scout Marks"]
 
 # kind: "float" => slider 0..1  |  "pick" => button grid index  |  "color" => swatch index
 const PHENOTYPE_FIELDS: Array[Dictionary] = [

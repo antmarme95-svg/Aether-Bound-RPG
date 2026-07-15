@@ -8,6 +8,18 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **SESIÓN 2026-07-14 (noche, warpaint personalizable) — bug real
+  corregido, 3 estilos reales curados.** Boris aclaró que
+  "personalizable" exige estilos REALMENTE distintos con buena pinta, no
+  solo exponer el slider. Se encontró la causa: la "V" geométrica se
+  dibujaba para cualquier `warpaint_idx>0`, tapando los 5 patrones del
+  atlas — corregido (exclusiva de idx==6). `WARPAINTS` ganó su 7ª
+  entrada ("Scout Marks"). Evaluación visual de los 6: **3 buenos
+  (Hexbrand, Eye of Ash, Scout Marks) + None = 4 opciones** (cumple el
+  mínimo pedido); **3 rotos/débiles (Slash Crimson, Tribal Tide
+  —invisible, confirmado—, Jagged Crown)** quedan como rework de atlas
+  pendiente, fuera de esta sesión. Detalle en
+  [[PRD-Warpaint-Personalizable]]. UI de elección = Fase 4 (sin tocar).
 - **SESIÓN 2026-07-14 (noche, geometría nueva ejecutada) — 49% → 55%.**
   Los 4 puntos del [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]
   ejecutados en código: torso sin masa elevada de abdomen (objetivo

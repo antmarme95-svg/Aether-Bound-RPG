@@ -1998,10 +1998,20 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# la ronda 42%→45% también marcó el warpaint como "casi invisible a
 	# distancia" — franjas engrosadas (0.006→0.011) para que se noten en
 	# `anatomy_medium`/`anatomy_full_front`, no solo en close-up.
+	# PRD Warpaint Personalizable (2026-07-14): la "V" geométrica de arriba
+	# solo pertenece al estilo 6 (Scout Marks) — el atlas ya dibuja un
+	# patrón DISTINTO por cada índice 1-5 (Slash Crimson/Hexbrand/Tribal
+	# Tide/Eye of Ash/Jagged Crown, ver `warpaint_atlas.gd`). Antes esta
+	# masa se dibujaba para CUALQUIER warpaint_idx>0, así que elegir
+	# cualquier estilo 1-5 mostraba el patrón del atlas CON la "V" encima
+	# (el mismo bug que se encontró y revirtió en `tmp_anatomy.gd` — acá
+	# vivía la causa raíz real). Cada índice ahora es visualmente distinto,
+	# condición necesaria para que la elección del jugador en creación de
+	# personaje tenga sentido.
 	if _face_mark != null:
 		_face_mark.queue_free()
 		_face_mark = null
-	if warpaint_idx > 0:
+	if warpaint_idx == 6:
 		var fm_mat := StandardMaterial3D.new()
 		fm_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		# 20% más oscuro: el unshaded puro brilla más que el mismo color

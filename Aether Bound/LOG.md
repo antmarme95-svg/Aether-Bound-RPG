@@ -1,5 +1,29 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] fix | Warpaint personalizable — bug de doble-dibujo corregido, 3 estilos reales curados
+Boris aclaró que "personalizable" no es exponer el slider existente — cada
+estilo tiene que verse REALMENTE distinto y con buena pinta antes de que
+la elección del jugador tenga sentido. Al investigar se encontró un bug
+real: `_face_mark` (la "V" geométrica de Rework Fenotipo ronda 3) se
+dibujaba para CUALQUIER `warpaint_idx>0`, tapando los 5 patrones propios
+del atlas (`warpaint_atlas.gd`) — ningún índice era visualmente distinto
+de los demás. Corregido: la "V" ahora es exclusiva de `warpaint_idx==6`
+("Scout Marks"). `WARPAINTS` en `phenotype_data.gd` ganó esa 7ª entrada
+(existía en el atlas/geometría pero nunca estuvo expuesta como opción).
+Banco nuevo `tests/tmp_warpaint_gallery.gd` renderiza los 6 estilos
+aislados para evaluarlos — **3 con buena pinta (Hexbrand: glifo sutil en
+la frente; Eye of Ash: banda tipo antifaz, bold; Scout Marks: la "V",
+la más pulida) + None = 4 opciones, cumple el mínimo pedido.** 3 rotos o
+débiles: **Slash Crimson** (rayas verticales tipo camuflaje, probable
+distorsión de UV cerca de la ceja), **Tribal Tide** (invisible de frente,
+confirmado con zoom — roto, no solo débil), **Jagged Crown** (línea
+delgada casi tapada por el flequillo nuevo). Detalle completo con tabla
+y capturas en [[PRD-Warpaint-Personalizable]]. **Pendiente, fuera de esta
+sesión:** rework de las 3 funciones de atlas rotas (`_draw_pattern` casos
+1/3/5) o reemplazo por patrones geométricos nuevos; la UI de elección en
+creación de personaje sigue siendo Fase 4. QA de regresión
+(`test_core`/`test_combat`) ALL_PASS.
+
 ## [2026-07-14] fix+qa | Geometría nueva ejecutada (pelo/torso/manos/boca) — 49% → 55%
 Ejecución de [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]] tras la
 ratificación de Boris. QA de regresión completo

@@ -69,6 +69,12 @@
   Lecciones), no confirmado como regresión real. **Pendiente: VoBo de
   Boris + nuevo QA visual imparcial contra las láminas para medir el
   nuevo % de fidelidad.**
+- [[PRD-Warpaint-Personalizable]] — bug real encontrado y corregido
+  (2026-07-14): la "V" geométrica de warpaint se dibujaba para CUALQUIER
+  índice >0, tapando los 5 patrones del atlas. Evaluación visual de los 6
+  estilos: 3 con buena pinta (Hexbrand, Eye of Ash, Scout Marks) + None,
+  3 rotos/débiles (Slash Crimson, Tribal Tide invisible, Jagged Crown)
+  pendientes de rework de atlas. UI de elección = Fase 4.
 - [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]] — propuesta (2026-07-14,
   esperando ratificación de Boris): tras 18 puntos de ajuste de parámetros
   (32%→49%), el QA imparcial ubica el techo en ~50-55% mientras pelo/
