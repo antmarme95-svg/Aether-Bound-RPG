@@ -8,20 +8,31 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (cierre 2026-07-14 noche):**
-  Ventana `feat/c6-anatomy-rework` — rework de fenotipo humano cuerpo
-  completo. QA visual imparcial: **32% → 42% → 45% → 49% → 55%**
-  (progreso de toda la sesión de hoy). Los 4 PRDs de hoy
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (cierre 2026-07-14 noche, actualizado
+  con autorización de Boris):** Ventana `feat/c6-anatomy-rework` — rework
+  de fenotipo humano cuerpo completo. QA visual imparcial: **32% → 42% →
+  45% → 49% → 55%** (progreso de toda la sesión de hoy). Los 4 PRDs de hoy
   ([[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]],
   [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]],
   [[PRD-Warpaint-Personalizable]]) están en código y pasan QA de
   regresión completo. **Lo que sigue, en orden de impacto según el
   propio QA de la última ronda:**
-  1. **Silueta general del torso/hombros** — el QA la marca como el
-     mayor punto de apalancamiento ahora ("maniquí de tienda", sin
-     cintura ni trapecio real). Toca `SHOULDER_X`/proporciones base —
-     **decisión de Boris**, no ejecución automática (varios PRDs previos
-     ya lo vienen dejando así).
+  1. **✅ AUTORIZADO por Boris (2026-07-14, verbal en chat de cierre):
+     reabrir `SHOULDER_X`/proporciones base del hombro.** El QA de la
+     ronda 55% volvió a marcar la silueta general como "maniquí de
+     tienda, sin cintura ni trapecio real" — el mayor punto de
+     apalancamiento ahora, más que cara/manos. Contexto para quien
+     ejecute: `SHOULDER_X` (hoy 0.21, `character_rig.gd`) fue calibrado
+     en una sesión previa midiendo la lámina en píxeles (biacromial
+     ~2.05 cabezas) — no es arbitrario, y una review vieja ya lo dejó
+     fosilizado mal una vez (pidió "+10-15% más ancho", terminó +30%
+     contradiciendo la lámina "narrow sloped shoulders" — ver
+     [[Lecciones]], "ante conflicto con una review, auditar contra la
+     lámina"). **Antes de tocar el número: medir la lámina en píxeles de
+     nuevo** (mismo método que la vez anterior) para confirmar si el
+     problema es realmente de ancho de hombro/cintura o de otra cosa
+     (definición de superficie, vestuario que llega en Fase 4, etc.) —
+     no cambiar el pivote a ciegas solo porque el QA lo nombró.
   2. **Pelo — mechones siguen fundidos en 2-3 lóbulos**, no leen como
      hebras individuales pese a la reconstrucción completa de
      `_hair_frontier_crop`. Necesita otra pasada de geometría (quizás
@@ -35,11 +46,10 @@ updated: 2026-07-14
   5. **Warpaint — 3 estilos rotos** (Slash Crimson, Tribal Tide invisible,
      Jagged Crown) esperando rework de `warpaint_atlas.gd _draw_pattern()`
      — no bloqueante, Boris ya tiene 4 opciones viables (3 buenas + None).
-  **No bloqueado en nada — todo lo anterior es "qué seguir mejorando", no
-  decisiones pendientes salvo el punto 1 (hombros).** Barba sigue fuera
-  del default (nota abierta desde Fase C, sin cambios). UI de creación de
-  personaje (elegir warpaint/pelo/etc.) = Fase 4, sin tocar en esta
-  ventana.
+  **Nada bloqueado — el punto 1 ya tiene luz verde, arranca directo la
+  próxima sesión.** Barba sigue fuera del default (nota abierta desde
+  Fase C, sin cambios). UI de creación de personaje (elegir warpaint/
+  pelo/etc.) = Fase 4, sin tocar en esta ventana.
 - **SESIÓN 2026-07-14 (noche, warpaint personalizable) — bug real
   corregido, 3 estilos reales curados.** Boris aclaró que
   "personalizable" exige estilos REALMENTE distintos con buena pinta, no

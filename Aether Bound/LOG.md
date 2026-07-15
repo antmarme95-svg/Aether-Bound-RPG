@@ -1,5 +1,17 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] ratificación | Boris autoriza reabrir SHOULDER_X/proporciones de hombro
+Al preguntarle qué decisión quedaba pendiente antes de cerrar, Boris pidió
+el contexto de la silueta de torso/hombros (mayor punto de apalancamiento
+según el QA de la ronda 55%) y **autorizó reabrir `SHOULDER_X`** — el
+pivote que varios PRDs venían dejando explícitamente como "no tocar sin
+confirmación de Boris" por el precedente de 2026-07-13 (una review vieja
+lo fosilizó +30% contradiciendo la lámina). Con esto el punto 1 del
+arranque de la próxima sesión pasa de "decisión pendiente" a "autorizado,
+ejecutar" — con la salvedad ya anotada de medir la lámina en píxeles antes
+de mover el número, mismo método que la vez que se detectó el error
+anterior.
+
 ## [2026-07-14] state | Cierre de sesión — rutina §7 de SCHEMA ejecutada
 Sesión larga en `feat/c6-anatomy-rework`: PRD Rework Fenotipo (13 puntos,
 32%→42%), 2 rondas de fixes dirigidos (42%→45%→49%), PRD Geometría Nueva

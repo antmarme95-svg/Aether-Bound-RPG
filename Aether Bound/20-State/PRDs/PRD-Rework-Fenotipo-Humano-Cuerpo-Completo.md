@@ -247,8 +247,12 @@ ciclo de QA.
   construido).
 - **Sin tocar el LUT del post** sin aprobación explícita (punto 11) — es
   global, no aislado a este personaje.
-- **Sin reabrir `SHOULDER_X`/`SHOULDER_Y`** de forma automática (punto 4) —
-  es punto de decisión de Boris si el fix de trapecio no basta.
+- ~~Sin reabrir `SHOULDER_X`/`SHOULDER_Y` de forma automática~~ —
+  **AUTORIZADO por Boris (2026-07-14, cierre de sesión)** tras que el QA
+  de la ronda 55% (ver [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]])
+  volviera a marcar la silueta de hombros/torso como el mayor punto de
+  apalancamiento. Ejecutar midiendo la lámina en píxeles primero (mismo
+  método que detectó el error de +30% en 2026-07-13), no a ciegas.
 - **Sin re-litigar mandíbula/pómulo/ojos ya cerrados por el [[QA Loop]]
   anterior** (75% de fidelidad facial) — este PRD ataca torso/pelo/manos/
   hombros/warpaint/nariz/cejas/columna, más el bug de venas y el relleno de
