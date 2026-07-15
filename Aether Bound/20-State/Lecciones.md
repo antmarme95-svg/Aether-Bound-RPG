@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-13
+updated: 2026-07-14
 ---
 
 # Lecciones y entorno técnico
@@ -226,6 +226,51 @@ updated: 2026-07-13
   salto "normal" NO es `jump_force` crudo: el LSM lo modula por clase (el warrior
   ironblooded `massMult 1.5` deja el salto en ~0.8 m, no ~1.5). Sizear cornisas
   y umbrales de test contra el número MEDIDO, no el `jump_force` nominal.
+- **Buscar un nodo por "el último hijo" (`get_child(count-1)`) es un hack que
+  se rompe SOLO cuando otro sistema agrega un hijo más tarde — no en el
+  momento en que se escribe.** El pauldron (`character_rig.gd`) se ubicaba así
+  desde hacía mucho, y funcionaba, hasta que las venas de mana (`vein_defs`,
+  agregadas DESPUÉS del pauldron en `_build()`) empezaron a parentear una vena
+  al mismo nodo (`arms[1]`) — el "último hijo" pasó a ser la vena, no el
+  pauldron, y quedó VISIBLE por accidente en todos los renders (2026-07-14,
+  bug de producción real, no solo de banco de pruebas: `_apply_build()`
+  también lo usaba para el escalado de Vanguard). Nombrar el nodo
+  (`.name = "..."`) y buscar por `find_child()` es un costo fijo mínimo que
+  evita esta clase entera de bug silencioso.
+- **Una asignación de rotación/posición hecha UNA VEZ en `_build()` se puede
+  borrar sola si existe un sistema de "settle"/"follow" que corre cada frame
+  y hace `lerp` hacia un target que no la incluye.** Al agregar una curva
+  dorsal estática (`upper_spine.rotation.x`) para el perfil "en tabla"
+  (PRD Rework Fenotipo pt.13), la asignación directa en `_build()` se hubiera
+  borrado en <150ms de idle real — el "follow del torácico fuera del strike"
+  (`character_rig.gd`, corre todo frame que no sea strike) hace `lerp` de
+  `upper_spine.rotation.x` hacia `spine.rotation.x * 0.30`, sin ningún término
+  que preserve un offset estático. Fix: sumar el offset al TARGET del lerp,
+  no asignarlo aparte. Antes de asumir que "poner el valor en `_build()`
+  alcanza", rastrear si algo en `_process()` escribe esa misma propiedad cada
+  frame.
+- **Un array de datos usado por dos sistemas (UI-facing vs. técnico/atlas)
+  puede tener longitudes distintas — verificar AMBOS antes de declarar un
+  índice "inválido".** `PhenotypeData.WARPAINTS` (para la UI) llegaba hasta
+  el índice 5; `warpaint_atlas.gd` reconoce un índice 6 ("Scout Marks") que
+  el propio atlas deja VACÍO A PROPÓSITO (su marca vive como geometría en
+  `character_rig._face_mark`, documentado en el código desde M9-r4). El PRD
+  Rework Fenotipo (2026-07-14) dio ese 6 por "índice inválido" y lo cambió a
+  un valor 1-5 — eso pintó un patrón LEGACY encima de la geometría nueva,
+  detectado recién al renderizar. Antes de "corregir" un índice que parece
+  fuera de rango, grep el símbolo en TODO el código, no solo en el array más
+  a mano.
+- **Ante un QA imparcial que describe una forma en TEXTO (no solo un
+  veredicto de %), verificar la lámina en pixeles antes de implementar esa
+  descripción como spec.** El primer QA de warpaint (ronda 32%) transcribió
+  "dos trazos verticales... ceja/sien izquierda" y esa descripción se
+  implementó literal — recién al mirar `fenotipo-humano-torso-v1.png`
+  directamente (2026-07-14, sin intermediario) se confirmó que el patrón
+  real es una "V" bilateral diagonal, no 2 trazos de un lado. Mismo
+  principio que "ante conflicto con una review, auditar contra la lámina"
+  (arriba), extendido: un QA de IA parafraseando una imagen es UNA capa de
+  traducción con pérdida, igual que una review humana — para geometría/forma
+  específica, mirar el píxel gana.
 
 ## Entorno
 

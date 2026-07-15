@@ -8,6 +8,38 @@ updated: 2026-07-14
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (cierre 2026-07-14 noche):**
+  Ventana `feat/c6-anatomy-rework` — rework de fenotipo humano cuerpo
+  completo. QA visual imparcial: **32% → 42% → 45% → 49% → 55%**
+  (progreso de toda la sesión de hoy). Los 4 PRDs de hoy
+  ([[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]],
+  [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]],
+  [[PRD-Warpaint-Personalizable]]) están en código y pasan QA de
+  regresión completo. **Lo que sigue, en orden de impacto según el
+  propio QA de la última ronda:**
+  1. **Silueta general del torso/hombros** — el QA la marca como el
+     mayor punto de apalancamiento ahora ("maniquí de tienda", sin
+     cintura ni trapecio real). Toca `SHOULDER_X`/proporciones base —
+     **decisión de Boris**, no ejecución automática (varios PRDs previos
+     ya lo vienen dejando así).
+  2. **Pelo — mechones siguen fundidos en 2-3 lóbulos**, no leen como
+     hebras individuales pese a la reconstrucción completa de
+     `_hair_frontier_crop`. Necesita otra pasada de geometría (quizás
+     tercer intento con una técnica distinta a boxes/conos semi-hundidos).
+  3. **Costura/parche visible cuello-hombro** (hallazgo nuevo de la
+     ronda 55%, NO investigado — puede ser un gap de geometría no
+     soldada en la unión torso/cabeza/collar).
+  4. **Boca — tono rojo-marrón oscuro lee "herida"**, no labios; la
+     geometría (Opción A, fusión) ya está resuelta, falta solo color/
+     material.
+  5. **Warpaint — 3 estilos rotos** (Slash Crimson, Tribal Tide invisible,
+     Jagged Crown) esperando rework de `warpaint_atlas.gd _draw_pattern()`
+     — no bloqueante, Boris ya tiene 4 opciones viables (3 buenas + None).
+  **No bloqueado en nada — todo lo anterior es "qué seguir mejorando", no
+  decisiones pendientes salvo el punto 1 (hombros).** Barba sigue fuera
+  del default (nota abierta desde Fase C, sin cambios). UI de creación de
+  personaje (elegir warpaint/pelo/etc.) = Fase 4, sin tocar en esta
+  ventana.
 - **SESIÓN 2026-07-14 (noche, warpaint personalizable) — bug real
   corregido, 3 estilos reales curados.** Boris aclaró que
   "personalizable" exige estilos REALMENTE distintos con buena pinta, no

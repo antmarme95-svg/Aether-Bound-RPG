@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-14] state | Cierre de sesión — rutina §7 de SCHEMA ejecutada
+Sesión larga en `feat/c6-anatomy-rework`: PRD Rework Fenotipo (13 puntos,
+32%→42%), 2 rondas de fixes dirigidos (42%→45%→49%), PRD Geometría Nueva
+ratificado y ejecutado (pelo/torso/manos/boca, 49%→55%), y PRD Warpaint
+Personalizable (bug de doble-dibujo corregido + 3 estilos curados).
+Checklist de cierre ([[SCHEMA]] §7): (1) [[Current-State]] con bloque
+ARRANQUE DE LA PRÓXIMA SESIÓN fresco al tope, consolidando las 5
+prioridades siguientes en orden de impacto; (2) LOG con una entrada por
+operación (9 entradas esta sesión); (3) [[00-Index]] al día con los 3 PRDs
+nuevos; (4) [[Lecciones]] — 3 lecciones nuevas pagadas hoy: lookup por
+"último hijo" es frágil ante builds que agregan nodos después (bug real de
+producción, no solo de banco), una asignación estática se puede borrar
+sola si existe un sistema de settle/follow por frame, y un array de datos
+compartido entre UI y sistema técnico puede tener longitudes distintas
+(no asumir "índice inválido" sin grep completo) — más un refuerzo de la
+lección de auditar contra la lámina, extendida a paráfrasis de QA de IA;
+(5) working tree limpio, commits descriptivos, push pendiente de este
+mismo cierre; (6) todo lo reportado como terminado tiene gate verde o
+captura — nada se marcó "listo" sin evidencia.
+
 ## [2026-07-14] fix | Warpaint personalizable — bug de doble-dibujo corregido, 3 estilos reales curados
 Boris aclaró que "personalizable" no es exponer el slider existente — cada
 estilo tiene que verse REALMENTE distinto y con buena pinta antes de que
