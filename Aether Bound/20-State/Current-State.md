@@ -17,10 +17,20 @@ updated: 2026-07-16
   criterio "medición manda" para `SHOULDER_X` (Fase 1.1) confirmado. **Fase
   0 ejecutada y cerrada (2026-07-16, mismo día) — ver hallazgo detallado
   abajo: el pipeline de tinta funcionaba bien, el problema real era el
-  ángulo de cámara del banco, ya corregido y verificado (gates ALL_PASS).
-  Listo para arrancar Fase 1 (torso/hombros) directo** — nada bloquea el
-  arranque; Fase 0.3 (A/B banding LINEAR) y 0.4 (re-baseline QA) quedan
-  como opcionales, no bloqueantes.
+  ángulo de cámara del banco, ya corregido y verificado (gates ALL_PASS).**
+  Fase 0.3 (A/B banding LINEAR) y 0.4 (re-baseline QA) quedan como
+  opcionales, no bloqueantes. **Fase 1 (torso/hombros) — primera pasada
+  ejecutada (2026-07-16, mismo día):** 1.1 medido (biacromial ~2.05-2.08
+  cabezas en la lámina, coincide exacto con el render actual —
+  `SHOULDER_X` NO se toca, confirmado que el problema es de masas
+  faltantes). Trapecio (ya existía en código, agrandado — antes invisible
+  en perfil, ahora tiene contorno propio), cintura (ya no copia el radio
+  exacto del torso — primer pellizco real) y clavícula (partida en 2 con
+  quiebre de S, más sutil) actualizados. Gates ALL_PASS. **Pendiente antes
+  de cerrar Fase 1:** acromion plano + deltoide-bajo-trapecio (no
+  implementado), QA imparcial + VoBo de Boris con capturas frente/perfil/
+  3-4/espalda — ver [[PRD-Rework-Modelado-Personajes-v2]] Fase 1 para el
+  detalle completo.
 - **➕ FASE 5 PROPUESTA (cara: mandíbula/ojos/nariz/mentón/orejas), pedida
   por Boris el mismo día, posterior a la Fase 4 (boca):** borrador completo
   en [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`, NO fusionado al PRD

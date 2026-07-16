@@ -103,7 +103,54 @@ nuevo), NO resolverlo en este PRD.
 
 ---
 
-## FASE 1 — Torso/hombros: bloqueo de 3 masas + cintura escapular (prioridad #1, AUTORIZADA por Boris)
+## FASE 1 — Torso/hombros: bloqueo de 3 masas + cintura escapular — 🔄 EN CURSO (2026-07-16, primera pasada ejecutada)
+
+**Progreso 1.1-1.3 ejecutado (2026-07-16):**
+- **1.1 medido:** biacromial en `fenotipo-humano-torso-v1.png` (medición
+  propia por muestreo de píxeles + cuadrícula de cabezas superpuesta,
+  regla "7.5 heads tall" del lado izquierdo = 92.67px/cabeza) da **~2.05-
+  2.08 cabezas** — coincide exacto con lo que el render ACTUAL ya produce
+  (`hombros_w = 0.556 m, 2.08 cabezas`, verificado en banco). **Conclusión:
+  SHOULDER_X=0.21 NO se toca** — la lámina no pide más ancho, confirma la
+  hipótesis del libro de que el problema es de masas faltantes (trapecio),
+  no de ancho de hombro. Vista de espalda de la misma lámina confirma un
+  trapecio VISIBLE y real (fluye del cuello a cada hombro con definición
+  muscular) — respalda directamente 1.3.
+- **1.2 (parcial) — cintura deja de copiar el torso:** `waist` (`:485`,
+  ahora en línea ajustada) baja su `top_radius` de 0.11 (idéntico al fondo
+  del torso) a 0.095 — primer "pellizco" real entre caja torácica y
+  cintura (antes leían como un solo cono continuo, confirmado en capturas
+  frescas de perfil/frente). El factor elíptico sigue copiándose de
+  `torso.scale` en `_apply_build` para que la proporción se mantenga en
+  cualquier build. **Pendiente de esta fase:** la pelvis YA es una caja
+  (`_box_mesh`, `:302`) — el libro asumía que no existía como masa propia,
+  pero SÍ existe; no hace falta crearla, solo verificar que la transición
+  cintura→pelvis lea bien (no evaluado a fondo todavía).
+- **1.3 (parcial) — trapecio agrandado + clavícula partida en 2:** el
+  trapecio YA EXISTÍA en código (esfera semi-hundida, `:502-508`, desde
+  2026-07-13) — la premisa de este PRD de que "no existe" estaba
+  desactualizada. El problema real (confirmado en captura de perfil
+  ANTES del fix: cero bulto visible, curva lisa cuello→hombro) era que su
+  escala Y (0.6) lo hacía demasiado chico/corto para leer como masa
+  propia — subida a 1.5 (radio efectivo 0.06→0.15). Captura fresca DESPUÉS
+  del fix confirma un bulto con contorno propio en perfil, donde antes no
+  había nada. Clavícula (`:442-450`) partida en 2 cápsulas cortas con
+  quiebre de Z (medial proa/lateral recesada) sugiriendo la curva en S del
+  libro — visualmente sutil en las capturas actuales, no tan dramático
+  como el fix de trapecio/cintura, candidato a revisar en el QA de cierre.
+  Acromion como plano separado y "deltoide emergiendo del trapecio" (resto
+  de 1.3) — **NO implementado todavía**, el brazo sigue montado directo en
+  `±SHOULDER_X` sin bloque escapular propio como padre.
+- **Gates:** `test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+  `autotest_ui` ALL_PASS tras los 3 cambios.
+- **1.4 (costura cuello-hombro):** no evaluada a fondo todavía — el
+  trapecio agrandado probablemente ya ayuda (esa masa ES la transición),
+  pendiente de confirmar con QA de cierre.
+
+**Pendiente antes de dar por cerrada la fase:** QA imparcial + reporte con
+capturas frente/perfil/3-4/espalda + VoBo de Boris (criterio de cierre
+original, sin cambios) — decidir si la clavícula S y el acromion/deltoide-
+bajo-trapecio necesitan otra pasada o si el resultado actual ya alcanza.
 
 **Estado actual del código:** `character_rig.gd:39-40` (`SHOULDER_X 0.21`,
 `SHOULDER_Y 0.26`), `:56-58` (`CHEST_X 1.16`, `WAIST_XZ 0.90`), `:446-449`

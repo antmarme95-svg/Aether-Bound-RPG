@@ -439,15 +439,31 @@ func _build() -> void:
 		upper_spine.add_child(pec)
 		_add_outline_pass(pec, Color("#f2b186"))
 
-	# CLAVÍCULA: cápsula finísima por lado (r 0.012), del esternón al
-	# hombro, con leve V (ángulo asimétrico) — sugiere el hueso sin
-	# fabricar una costura dura. Semi-hundida sobre la línea de los pecs.
+	# CLAVÍCULA: partida en 2 segmentos (FASE 1.3, PRD-Rework-Modelado-
+	# Personajes-v2, 2026-07-16). Antes: una sola cápsula finísima recta
+	# (r 0.012) del esternón al hombro. El libro de anatomía
+	# ([[Principios de Anatomía 3D]] → "Cabeza, cuello y cara"/torso) marca
+	# la clavícula recta como el error #1 de principiante: el hueso real
+	# tiene una curva en S (convexa cerca del esternón, cóncava cerca del
+	# hombro), no una barra recta. Dos cápsulas cortas con un quiebre de Z
+	# entre ellas (medial más al frente/proa hacia el pecho, lateral más
+	# recesada hacia el hombro) sugieren la S sin necesitar una curva real
+	# — mismo espíritu que el ángulo goníaco de la mandíbula (Fase C):
+	# quiebre de radio/posición, no geometría curva compleja. Overlap real
+	# en la unión (Lección "overlap real para fundir masas").
 	for cside in [-1, 1]:
-		var clavicle = _capsule_mesh(0.012, 0.075, skin_mat)
-		clavicle.rotation.z = PI / 2.0 - float(cside) * 0.14   # V hacia el esternón
-		clavicle.position = Vector3(float(cside) * 0.075, 0.282, 0.116)
-		upper_spine.add_child(clavicle)
-		_add_outline_pass(clavicle, Color("#f2b186"))
+		# medial: del esternón hacia afuera, convexa (Z más adelante)
+		var clav_in = _capsule_mesh(0.011, 0.038, skin_mat)
+		clav_in.rotation.z = PI / 2.0 - float(cside) * 0.22
+		clav_in.position = Vector3(float(cside) * 0.042, 0.284, 0.120)
+		upper_spine.add_child(clav_in)
+		_add_outline_pass(clav_in, Color("#f2b186"))
+		# lateral: hacia el hombro, cóncava (Z recesada) — solapa con la medial
+		var clav_out = _capsule_mesh(0.011, 0.038, skin_mat)
+		clav_out.rotation.z = PI / 2.0 - float(cside) * 0.06
+		clav_out.position = Vector3(float(cside) * 0.100, 0.280, 0.106)
+		upper_spine.add_child(clav_out)
+		_add_outline_pass(clav_out, Color("#f2b186"))
 
 	# ABDOMEN: SIN masa elevada — PRD Geometría Nueva (2026-07-14,
 	# ratificado por Boris). El `abs_plate` (elipsoide que sobresalía del
@@ -470,19 +486,27 @@ func _build() -> void:
 	# y≈1.02) — auditoría 2026-07-13 (faja/jerkin migrado a outfit dejaba
 	# la anatomía DESNUDA con 15 cm de vacío ahí; con outfits sin playera
 	# se veía fondo a través del torso). Cilindro de piel, hijo de `spine`
-	# (frame lumbar, coincide con el mundo de `hips`/`upper_spine`):
-	# top_radius=0.11 = MISMO radio base que el fondo del cilindro del
-	# torso (línea torso arriba) — al copiarle exactamente torso.scale.x/z
-	# en _apply_build, el borde superior queda IDÉNTICO en cualquier build
-	# (mismo factor elíptico CHEST_X/Z), costura cero. bottom_radius=0.085
-	# funde con el ancho de la pelvis (half x≈0.144, half z≈0.08 en build
-	# neutro) sin que sobresalga. Altura 0.22, y=0.08 (spine-local): borde
-	# superior en spine-y=0.19 (mundo 1.19, = fondo del torso) y borde
-	# inferior en spine-y=-0.03 (mundo 0.97), 5 cm HONDO dentro de la
-	# pelvis (tope en mundo 1.02) — overlap real, no tangente, mismo
-	# criterio que las uniones de pierna/brazo (evita costura por huecos
-	# de precisión flotante).
-	waist = _cylinder_mesh(0.11, 0.085, 0.22, skin_mat)
+	# (frame lumbar, coincide con el mundo de `hips`/`upper_spine`).
+	# FASE 1.2 (PRD-Rework-Modelado-Personajes-v2, 2026-07-16): bloqueo de
+	# 3 masas del libro de anatomía — antes top_radius=0.11 copiaba EXACTO
+	# el radio del fondo del torso (misma línea de arriba), así que torso+
+	# cintura leían como UN cilindro cónico continuo, sin "pellizco" real
+	# (confirmado visual: perfil/3-4 no mostraban ninguna transición). Baja
+	# a 0.095 (~86% del radio del torso) — un escalón real de radio en el
+	# límite torso→cintura (ambos tangentes en el mismo Y, el cambio de
+	# radio por sí solo ya genera el reborde que el Sobel entinta, sin
+	# necesitar offset de Z — es un cilindro, no una cara plana). El factor
+	# elíptico (X/Z) se sigue copiando de `torso.scale` en _apply_build
+	# (ver ahí) para que la PROPORCIÓN del pellizco sea consistente en
+	# cualquier build/peso — lo que cambia es el radio BASE, no el
+	# mecanismo de copia. bottom_radius=0.085 sigue fundiendo con el ancho
+	# de la pelvis (half x≈0.135 en build neutro) sin sobresalir. Altura
+	# 0.22, y=0.08 (spine-local): borde superior en spine-y=0.19 (mundo
+	# 1.19, = fondo del torso) y borde inferior en spine-y=-0.03 (mundo
+	# 0.97), 5 cm HONDO dentro de la pelvis (tope en mundo 1.02) — overlap
+	# real, no tangente, mismo criterio que las uniones de pierna/brazo
+	# (evita costura por huecos de precisión flotante).
+	waist = _cylinder_mesh(0.095, 0.085, 0.22, skin_mat)
 	waist.position = Vector3(0.0, 0.08, 0.0)
 	spine.add_child(waist)
 	_add_outline_pass(waist, Color("#f2b186"))
@@ -499,10 +523,22 @@ func _build() -> void:
 	# PRD Rework Fenotipo pt.4 (2026-07-14): ángulo 0.40→0.28 rad (~16°) —
 	# el QA de cuerpo completo leyó los hombros angostos; primer paso de
 	# menor riesgo antes de tocar SHOULDER_X (decisión de Boris si no basta).
+	# FASE 1.3 (PRD-Rework-Modelado-Personajes-v2, 2026-07-16): el QA de la
+	# ronda 55% seguía reportando "sin trapecio real" pese a que esta masa
+	# YA EXISTE desde 2026-07-13 — verificado en captura fresca (perfil):
+	# la escala Y=0.6 la hace demasiado CORTA/chica (radio efectivo Y=0.06)
+	# para leerse como "masa triangular base-cráneo→hombros" (libro de
+	# anatomía, [[Principios de Anatomía 3D]]) — se funde por completo con
+	# el cuello/deltoide vecinos sin dejar silueta propia. Escalada Y
+	# 0.6→1.5 (radio efectivo 0.15, cubre de verdad el tramo cuello→hombro)
+	# y X 1.6→1.4 (compensa para no invadir demasiado el cuello). Z se deja
+	# igual (0.7, "aplastada en Z" ya pedido por el libro — no es el
+	# problema). Posición Y sube 0.315→0.30 para centrar mejor el tramo
+	# ahora más alto contra la base del cuello.
 	for tside in [-1, 1]:
 		var trap = _sphere_mesh(0.10, skin_mat)
-		trap.scale = Vector3(1.6, 0.6, 0.7)
-		trap.position = Vector3(float(tside) * 0.115, 0.315, 0.0)
+		trap.scale = Vector3(1.4, 1.5, 0.7)
+		trap.position = Vector3(float(tside) * 0.115, 0.30, 0.0)
 		trap.rotation.z = -float(tside) * 0.28
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
@@ -1286,10 +1322,11 @@ func _apply_build() -> void:
 	# jerkin.scale (WAIST_XZ) migró — ahora lo lee CharacterOutfit.
 	# build_frontier() en vivo desde torso.scale/pelvis.scale (ver ahí).
 	pelvis.scale = Vector3(_lerp(0.88, 1.25, w) * arch_xz, 1.0, 1.0)
-	# waist copia EXACTO el x/z de torso: su top_radius (0.11) es el mismo
-	# radio base del fondo del cilindro del torso, así que igualando el
-	# factor elíptico la costura queda idéntica en cualquier build/peso
-	# (ver comentario en _build). Y se deja en 1.0 (no respira con torso).
+	# waist copia el FACTOR elíptico (x/z) de torso, no el radio base (Fase
+	# 1.2: el radio base de waist es 0.095 vs 0.11 de torso — ver comentario
+	# en _build) — así la proporción del pellizco cintura/torso se mantiene
+	# consistente en cualquier build/peso, en vez de desaparecer si cada
+	# uno escalara distinto. Y se deja en 1.0 (no respira con torso).
 	waist.scale = Vector3(torso.scale.x, 1.0, torso.scale.z)
 
 	var limb_xz: float = limb * arch_xz

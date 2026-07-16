@@ -1,5 +1,34 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] feature | Fase 1 (torso/hombros) primera pasada — cintura con pellizco real, trapecio agrandado, clavícula partida en 2
+Arranque de Fase 1 tras cerrar Fase 0. **1.1 medido primero** (mandato de
+Boris): biacromial en `fenotipo-humano-torso-v1.png` medido por muestreo de
+píxeles propio (PowerShell + System.Drawing, cuadrícula de cabezas
+superpuesta sobre la regla "7.5 heads tall") — da ~2.05-2.08 cabezas,
+coincide EXACTO con lo que el render actual ya produce
+(`hombros_w=0.556m, 2.08 cabezas`). **Conclusión: `SHOULDER_X=0.21` no se
+toca** — confirma que el problema es de masas faltantes, no de ancho. La
+vista de espalda de la misma lámina muestra un trapecio real y visible,
+respaldando 1.3. Hallazgo importante al leer código: el trapecio y la
+clavícula YA EXISTÍAN (desde 2026-07-13/r3) — la premisa del PRD de que
+"no existe bloque escapular" estaba parcialmente desactualizada. El
+problema real (confirmado con captura de perfil fresca ANTES del fix: cero
+bulto de trapecio visible) era que el trapecio existente tenía escala Y
+demasiado chica (0.6, radio efectivo 0.06) para leer como masa propia —
+subida a 1.5. Captura DESPUÉS confirma un bulto con contorno propio donde
+antes había una curva lisa. Cintura (`waist`): antes copiaba EXACTO el
+radio del fondo del torso (0.11=0.11, cero pellizco, torso+cintura leían
+como un cilindro cónico continuo) — bajada a 0.095, primer paso real hacia
+el bloqueo de 3 masas (la pelvis YA es una caja, no hacía falta crearla).
+Clavícula partida en 2 cápsulas cortas con quiebre de Z (medial proa/
+lateral recesada) sugiriendo la curva en S del libro de anatomía — mejora
+más sutil que las otras dos, candidata a revisar en el QA de cierre.
+Gates `test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+`autotest_ui` ALL_PASS. Pendiente antes de cerrar la fase: acromion
+plano + deltoide-emergiendo-del-trapecio (no implementado todavía, el
+brazo sigue montado directo en `±SHOULDER_X`), QA imparcial + VoBo de
+Boris con capturas frente/perfil/3-4/espalda.
+
 ## [2026-07-16] fix | Fase 0 (pipeline de tinta) ejecutada y cerrada — la premisa "personaje sin tratamiento" NO se sostuvo; fix real fue el ángulo de cámara del banco
 Arranque de la ejecución real del PRD-Rework-Modelado-Personajes-v2 tras
 el VoBo de Boris. Diagnóstico 0.1 (solo lectura): `tmp_anatomy.gd:115` SÍ

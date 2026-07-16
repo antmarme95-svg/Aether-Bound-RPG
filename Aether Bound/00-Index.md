@@ -85,7 +85,14 @@
   (convergencia + nudillos), Fase 3 pelo (loft ratificado, prohibido 4º
   intento con cajas), Fase 4 boca/warpaint. Cruza [[Principios de Anatomía
   3D]] + [[Catálogo Técnico Godot]] + [[Lecciones]] con anclas de código
-  verificadas. Listo para ejecutar Fase 0 en cuanto Boris confirme arranque.
+  verificadas. **Fase 0 ejecutada y cerrada (2026-07-16): el pipeline de
+  tinta funcionaba bien, fix real fue el ángulo de cámara del banco.
+  Fase 1 en curso (primera pasada, mismo día): SHOULDER_X confirmado sin
+  cambios (biacromial de la lámina coincide con el render actual),
+  trapecio agrandado (antes invisible en perfil), cintura con pellizco
+  real (antes copiaba el torso exacto), clavícula partida en 2 (curva S).
+  Gates ALL_PASS. Pendiente: acromion/deltoide-bajo-trapecio, QA imparcial
+  + VoBo de Boris antes de cerrar Fase 1.**
 - [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`) — **borrador de trabajo,
   NO fusionado al PRD**, pedido por Boris como Fase 5 posterior a la boca:
   rework dirigido de mandíbula/ojos/nariz/mentón/orejas sobre la cara ya
