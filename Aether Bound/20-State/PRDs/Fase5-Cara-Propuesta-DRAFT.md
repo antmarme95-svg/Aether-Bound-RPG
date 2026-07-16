@@ -468,13 +468,23 @@ corregido una vez).
   abierta de Fase C — no se reabre aquí); el pelo (Fase 3, ya tiene su
   propio plan de loft); warpaint/UI de creación (Fase 4); biomecánica/ROM
   del rig.
-- Dado que 3 de las 5 partes (mandíbula, mentón, nariz) ya tienen entre 4 y
-  8 rondas de ajuste fino documentadas y estables, se recomienda que esta
-  fase empiece por **ojos y orejas** (menos iteradas, más espacio de
-  mejora real) y trate mandíbula/mentón/nariz como "verificar primero con
-  captura fresca, tocar solo si el QA de Fase 5 encuentra un defecto
-  concreto no descartado ya" — para no quemar presupuesto reabriendo
-  problemas ya resueltos.
+- **Decisión de Boris (2026-07-16): las 5 partes se revisan parejo**, no
+  solo ojos/orejas. Para mandíbula/mentón/nariz (3 de las 5 con 4-8 rondas
+  de ajuste fino ya estables), el protocolo sigue siendo "verificar primero
+  con captura fresca contra la lámina de rostro nueva, tocar solo si
+  aparece un defecto concreto no descartado ya" — no reabrir a ciegas los
+  extremos ya probados (esfera→bulldog en mentón, `radial_segments` en
+  nariz, etc.), pero sí incluirlas en el turnaround y el QA de cierre.
+  Ojos y orejas, al tener menos iteración documentada, son las que más
+  margen real de cambio tienen.
+- **Verificación de extremos de slider incluida en el criterio de cierre**
+  (decisión de Boris): además del valor base 0.5, revisar visualmente los
+  extremos 0.0/1.0 de `jaw`, `eyeTilt`, `eyeShape` contra la lámina de
+  rostro nueva.
+- **Lámina de rostro nueva requerida antes de medir proporciones** —
+  brief en [[Briefs de Concept Art]] → "8 — Cabeza/rostro close-up
+  (Humano)", generar y aprobar contra los 5 ejes del [[Art Bible]] antes
+  de arrancar la medición en píxeles de esta fase.
 
 ---
 
@@ -487,45 +497,37 @@ corregido una vez).
    mención tangencial de animación de expresión). Para orejas sigue
    aplicando lámina + criterio de Fase C + principio esfera-vs-caja
    general.
-2. **No existe una lámina de cabeza/rostro en close-up dedicada** en
-   `90-Raw/concept/` — solo `fenotipo-humano-v1.png` (cuerpo completo, cara
-   chica) y las reviews `Character-Head-Review-v0.2-v0.5` (turnarounds ya
-   hechos, pero son capturas del propio rig en rondas previas, no arte
-   concept de referencia). ¿Se pide/genera una lámina de rostro dedicada
-   antes de arrancar, o esta fase se mide contra el veredicto verbal de
-   Boris + las reviews ya existentes?
-3. **Confirmado por investigación, no es ambigüedad real pero vale
-   ratificar:** la oreja "default" es la rama `else` de
-   `_build_origin_features` (`character_rig.gd:2359-2390`) — las otras 3
-   (aetherborn, miststalker, ironblooded) son variantes de raza
-   intencionales, no inconsistencia. ¿Esta fase debe tocar SOLO la oreja
-   neutra, o también ajustar las 3 variantes de origen si el mismo defecto
-   aplica a todas (ej. si se agrega detalle de hélix/trago, ¿se replica en
-   las 4 ramas o solo en la default)?
-4. **El sistema de sliders de fenotipo** (`jaw`, `eyeTilt`, `eyeShape`) hoy
-   solo tiene rango validado en su valor base (0.5) — los extremos del
-   rango nunca se verificaron visualmente contra la lámina en las rondas de
-   Fase C. ¿Se agrega verificación de extremos de slider al criterio de
-   cierre de esta fase, o queda fuera de alcance (geometría base, no
-   sliders)?
-5. **Mandíbula/mentón/nariz ya tienen 4-8 rondas de ajuste fino
-   documentadas y "estables on-model"** según la última review disponible
-   (v0.5). ¿Boris quiere que esta fase las toque de todos modos (por
-   ejemplo si el 75% de Fase C dejó algo pendiente específico en esas 3
-   partes que no quedó registrado en el código), o el foco real de Fase 5
-   debe ser ojos/orejas (las 2 partes con menos iteración y más margen de
-   mejora aparente)?
-6. **Sesgo racial de mandíbula/ojos — ¿dentro o fuera de esta fase?** El
-   cruce código-vs-diseño (2026-07-16, [[Principios de Anatomía 3D]] →
-   "Cabeza y ojos — brecha real detectada") confirmó que `jaw`/`eyeTilt`/
-   `eyeShape` deberían tener rangos por raza según el fenotipo ratificado
-   ([[Fenotipos y Creación de Personaje]]) pero hoy usan un solo rango
-   neutral para las 3 razas (`character_rig.gd:1906-1947`), mientras que
-   oreja y `heightRange` sí son por-origen. Las propuestas de mecanismo ya
-   están escritas en §1 y §4 de este borrador (ventana de `_lerp` sesgada
-   vía `match _origin_id`, interfaz de slider intacta). Pero es trabajo de
-   CÓDIGO NUEVO con alcance mayor: agrega validación visual por raza (la
-   ventana élfica nunca se ha visto en pantalla) y la Fase 5 tal como está
-   redactada solo cubre la geometría base humana. ¿Boris quiere que la
-   Fase 5 incluya implementar este sesgo racial, o queda como un frente
-   aparte (fase/PRD propio) y esta fase se limita al humano base?
+2. **RESUELTO por Boris (2026-07-16): SÍ se genera una lámina de rostro
+   dedicada** antes de arrancar la fase (no se mide solo contra reviews
+   viejas). Brief nuevo redactado en [[Briefs de Concept Art]] → "8 —
+   Cabeza/rostro close-up (Humano)", mismo formato/estilo que los briefs
+   1-3 ya ratificados. Pendiente: generar y evaluar contra los 5 ejes del
+   [[Art Bible]] antes de medir proporciones en píxeles.
+3. **RESUELTO por Boris (2026-07-16): esta fase toca SOLO la oreja
+   neutra** (rama `else` de `_build_origin_features`,
+   `character_rig.gd:2359-2390`) — coherente con que la fase es geometría
+   base humana; las otras 3 variantes (aetherborn, miststalker,
+   ironblooded) quedan para el frente de elfo/enano.
+4. **RESUELTO por Boris (2026-07-16): SÍ se agrega verificación de
+   extremos de slider** (`jaw`, `eyeTilt`, `eyeShape`) al criterio de
+   cierre — no solo el valor base 0.5, también los extremos 0.0/1.0 contra
+   la lámina nueva.
+5. **RESUELTO por Boris (2026-07-16): las 5 partes parejo.** No solo
+   ojos/orejas — mandíbula/mentón/nariz también se revisan en esta fase
+   aunque ya tengan 4-8 rondas estables, por si el 75% de Fase C dejó algo
+   pendiente sin registrar en el código. La recomendación de "verificar
+   primero con captura fresca, tocar solo si aparece un defecto concreto"
+   (ver "Cierre de fase" arriba) sigue aplicando como PROTOCOLO de trabajo
+   para esas 3 partes — parejo no significa reabrir a ciegas, significa que
+   ninguna de las 5 queda fuera del alcance de revisión.
+6. **RESUELTO por Boris (2026-07-16, mismo día): el sesgo racial de
+   mandíbula/ojos queda FUERA de esta Fase 5.** Boris confirmó que entra
+   "en cuanto empecemos con enanos y elfos" — es decir, es un frente propio
+   que se abre cuando arranque el trabajo dedicado a esas dos razas, no
+   parte de esta fase (que se mantiene enfocada en la geometría base
+   humana). Las propuestas de mecanismo ya escritas en §1 y §4 (ventana de
+   `_lerp` sesgada vía `match _origin_id`, interfaz de slider intacta)
+   quedan como insumo listo para ESE frente futuro — no se pierden, solo se
+   difieren. Cuando se abra el trabajo de elfo/enano, este borrador (§1,
+   §4, §5) más [[Principios de Anatomía 3D]] → "Cabeza y ojos — brecha real
+   detectada" son el punto de partida directo, sin re-investigar.

@@ -98,10 +98,14 @@
   `eyeShape` usan un solo rango para las 3 razas pese a que [[Fenotipos y
   Creación de Personaje]] ya ratificó rango racial para esos 3 rasgos (la
   oreja sí lo cumple). Un subagente Fable incorporó la propuesta de sesgo
-  racial (§1/§4 del borrador) y una pregunta abierta nueva (#6). Pendiente
-  de VoBo de Boris sobre 6 preguntas abiertas antes de fusionar como Fase 5
-  oficial. Colateral: `origins_data.gd` sigue tratando a Mist-Stalker como
-  raza completa pese al canon ya ratificado — separado como tarea aparte.
+  racial (§1/§4 del borrador) y una pregunta abierta nueva (#6). **Las 6
+  preguntas quedaron RESUELTAS por Boris (2026-07-16, mismo día):** lámina
+  de rostro nueva SÍ se genera (brief 8 en [[Briefs de Concept Art]]), fase
+  toca solo oreja neutra, sí verificar extremos de slider, las 5 partes
+  parejo, sesgo racial fuera (entra con elfo/enano). Falta generar/aprobar
+  la lámina antes de medir. Colateral: `origins_data.gd` sigue tratando a
+  Mist-Stalker como raza completa pese al canon ya ratificado — separado
+  como tarea aparte (en curso en sesión paralela de Boris).
 - [[PRD-Warpaint-Personalizable]] — bug real encontrado y corregido
   (2026-07-14): la "V" geométrica de warpaint se dibujaba para CUALQUIER
   índice >0, tapando los 5 patrones del atlas. Evaluación visual de los 6

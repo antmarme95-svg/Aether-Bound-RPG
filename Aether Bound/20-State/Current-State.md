@@ -33,9 +33,15 @@ updated: 2026-07-16
   NO — relevante para los sliders `eyeTilt`/`eyeShape`). Único vacío real
   del libro: no cubre proporción/estructura de OREJA. Mandíbula/mentón/
   nariz ya tienen 4-8 rondas de ajuste fino documentadas y estables —
-  recomendación del borrador: priorizar ojos/orejas en esta fase. **Pendiente
-  VoBo de Boris sobre 6 preguntas abiertas antes de fusionar como Fase 5
-  oficial del PRD** (ver el archivo para el detalle).
+  recomendación del borrador: priorizar ojos/orejas en esta fase. **Las 6
+  preguntas abiertas quedaron RESUELTAS por Boris (2026-07-16, mismo día):**
+  se genera lámina de rostro nueva (brief 8 en [[Briefs de Concept Art]]);
+  esta fase toca solo la oreja neutra; se verifican extremos de slider; las
+  5 partes se revisan parejo (no solo ojos/orejas); el sesgo racial de
+  mandíbula/ojos queda fuera, entra con el frente de elfo/enano. **Único
+  paso pendiente antes de arrancar la medición de esta fase: generar y
+  aprobar la lámina de rostro** (brief 8) contra los 5 ejes del [[Art
+  Bible]] — todavía no se generó ninguna imagen.
 - **➕ Minado ampliado + brecha racial detectada (2026-07-16, mismo día,
   pedido explícito de Boris de cubrir "el humano completo + el work del
   elfo y el enano"):** [[Principios de Anatomía 3D]] ganó 3 secciones más

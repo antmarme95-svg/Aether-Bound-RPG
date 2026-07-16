@@ -196,6 +196,32 @@ Plants visuales: cuña miniatura en la trenza izquierda (el objeto firma de
 Use the attached dwarf woman character sheet as the exact anatomy, proportion and art style reference — same trapezoid silhouette exactly 4.5 heads tall, massive trapezius and shoulders swallowing the neck, wide barrel torso, enormous hands, very short thick arms and legs, low planted center of gravity — but design a specific named character: "Dagna", a veteran dwarven gatekeeper in her prime. Full-body character concept sheet, front view, back view and side view, on a plain warm paper background. Face: strong feminine face with a heavy brow, broad jaw, a nose with history, and the calm, patient gaze of someone who has stood guard at a door for decades — dignified, unhurried, quietly warm; no beard. Hair: dark copper, pulled back tight, with long ornamented side-braids at the temples threaded with small forge-iron rings, and a tiny iron wedge charm hanging from the left braid. Skin: warm bronze with soot shading. Amber geometric guild tattoos on both forearms with a gate-and-wedge motif (an arch crossed by a wedge). Clothing: practical gatekeeper armor over fitted leather and cloth in earth tones — engraved gate-plate pauldrons and shin guards that look like miniature fortress doors, a short frontier felt cape, heavy belt with tools and iron wedges, faint warm ember accents at the seams, medieval aetherpunk. Weapon: a flat-headed gate maul (the head reads as a door ram, not a war hammer) slung across her back. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: the mountain that learned to love what it guarded. Negative: no tall or slender body, no long legs, no human proportions, no hourglass figure, no full beard, no full plate armor, no comedic caricature, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow.
 ```
 
+## 8 — Cabeza/rostro close-up (Humano) — lámina de medición para Fase 5
+
+**Por qué existe:** [[Fase5-Cara-Propuesta-DRAFT]] (rework de mandíbula/
+ojos/nariz/mentón/orejas) necesita medir proporción en píxeles con el mismo
+método que ya destrabó `SHOULDER_X` ([[Lecciones]]) — pero no existe lámina
+de cabeza en close-up, solo `fenotipo-humano-v1.png` (cuerpo completo, cara
+chica) y las reviews `Character-Head-Review-v0.2-v0.5` (capturas del propio
+rig, no concept art de referencia externa). **Decisión de Boris
+(2026-07-16): generar una nueva.** Referencia de fenotipo: brief 3 —
+humano the Restless/Mistbound, silueta atlética neutral de la que las otras
+2 razas se desvían. A diferencia del brief 3 (cuerpo completo, expresión de
+personalidad), esta lámina pide **expresión neutra y encuadre grande**
+específicamente para que las 5 partes sean medibles pixel a pixel en las 4
+vistas — no es una lámina de personalidad, es una lámina de regla.
+
+```
+Head and neck close-up character reference sheet, four views side by side at the exact same scale (front view, three-quarter view, profile view, back view), of a human mercenary — the same phenotype as the athletic reference human (the Restless / Mistbound): balanced proportions, individual and imperfect features typical of the most physically diverse race, weathered river-town features, adult male, on a plain warm paper background. Neutral relaxed expression with mouth closed in all four views — this is a measurement reference, not an expression study. Bald or short cropped hair pulled back so the ears, jaw line, cheekbones and hairline are fully visible and unobstructed in every view — no hair covering the ears or forehead. Skin in a mid-range human tone. Clearly readable individual features: defined jaw, natural nose, visible ear shape and placement, natural eye shape and spacing — every part at consistent scale across all four views so proportions can be compared directly view to view. Art style: hand-painted graphic novel watercolor — crisp black ink linework on the figure, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no hair covering the ears or jaw, no smiling or exaggerated expression, no different head size between the four views, no accessories or headwear, no beast-folk features, no animal ears or tail.
+```
+
+**Uso previsto:** una vez generada y aprobada contra los 5 ejes del [[Art
+Bible]] (mismo protocolo que el resto de este documento), guardar como
+`fenotipo-humano-rostro-v1.png` en `90-Raw/concept/` y medir sobre ella
+(método de [[Lecciones]]: medir en píxeles, convertir a proporción
+relativa, nunca inventar el número) mandíbula, separación de ojos,
+proyección de nariz, mentón y posición/tamaño de oreja en las 4 vistas.
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

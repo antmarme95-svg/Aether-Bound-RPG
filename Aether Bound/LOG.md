@@ -1,5 +1,26 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] design | Fase 5 (cara) resuelta en las 6 preguntas abiertas — brief de lámina de rostro nuevo
+Boris resolvió las 6 preguntas pendientes de [[Fase5-Cara-Propuesta-DRAFT]]
+en una ronda de chat: (1) libro sí cubre cabeza/cara [ya resuelto antes],
+(2) **generar lámina de rostro nueva** (no medir solo contra reviews
+viejas), (3) esta fase toca SOLO la oreja neutra (las 3 variantes de
+origen quedan para el frente de elfo/enano), (4) SÍ verificar extremos de
+slider (`jaw`/`eyeTilt`/`eyeShape`, no solo el valor base 0.5), (5) **las 5
+partes se revisan parejo** (no solo ojos/orejas — mandíbula/mentón/nariz
+también, con el protocolo "verificar con captura fresca, tocar solo si
+aparece defecto concreto" para no reabrir a ciegas lo ya estable), (6) el
+sesgo racial de mandíbula/ojos (detectado esta misma sesión) queda FUERA
+de esta fase — entra "en cuanto empecemos con enanos y elfos", con el
+mecanismo ya propuesto en §1/§4 del borrador como insumo listo para ese
+frente futuro. Redactado brief nuevo "8 — Cabeza/rostro close-up (Humano)"
+en [[Briefs de Concept Art]], mismo formato/estilo que los briefs 1-3 ya
+ratificados: turnaround de 4 vistas a la misma escala, expresión neutra,
+pelo recogido para dejar oreja/mandíbula/pómulos visibles — pensado
+explícitamente como lámina de MEDICIÓN (método ya usado para `SHOULDER_X`),
+no de personalidad. Pendiente: generar y aprobar contra los 5 ejes del
+[[Art Bible]] antes de medir proporciones.
+
 ## [2026-07-16] design | Minado completo del humano (piernas/pies/brazos/piel) + brecha racial (mandíbula/ojos) detectada + Fase 5 actualizada por subagente Fable
 Boris pidió asegurar que el minado del libro de anatomía cubriera "un rework
 completo del humano y todo el work del elfo y el enano", y encargó a un
