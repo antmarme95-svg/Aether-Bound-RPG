@@ -90,9 +90,11 @@
   Fase 1 en curso (primera pasada, mismo día): SHOULDER_X confirmado sin
   cambios (biacromial de la lámina coincide con el render actual),
   trapecio agrandado (antes invisible en perfil), cintura con pellizco
-  real (antes copiaba el torso exacto), clavícula partida en 2 (curva S).
-  Gates ALL_PASS. Pendiente: acromion/deltoide-bajo-trapecio, QA imparcial
-  + VoBo de Boris antes de cerrar Fase 1.**
+  real (antes copiaba el torso exacto), clavícula partida en 2 (curva S),
+  acromion agregado + trapecio corrido para solapar el deltoide (Fase 1.3
+  completa, verificación honesta: bien en perfil, sutil en frente/3-4).
+  Gates ALL_PASS. Pendiente: QA imparcial + VoBo de Boris antes de cerrar
+  Fase 1.**
 - [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`) — **borrador de trabajo,
   NO fusionado al PRD**, pedido por Boris como Fase 5 posterior a la boca:
   rework dirigido de mandíbula/ojos/nariz/mentón/orejas sobre la cara ya

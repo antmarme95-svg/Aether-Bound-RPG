@@ -26,11 +26,16 @@ updated: 2026-07-16
   faltantes). Trapecio (ya existía en código, agrandado — antes invisible
   en perfil, ahora tiene contorno propio), cintura (ya no copia el radio
   exacto del torso — primer pellizco real) y clavícula (partida en 2 con
-  quiebre de S, más sutil) actualizados. Gates ALL_PASS. **Pendiente antes
-  de cerrar Fase 1:** acromion plano + deltoide-bajo-trapecio (no
-  implementado), QA imparcial + VoBo de Boris con capturas frente/perfil/
-  3-4/espalda — ver [[PRD-Rework-Modelado-Personajes-v2]] Fase 1 para el
-  detalle completo.
+  quiebre de S, más sutil) actualizados. **Acromion + overlap trapecio-
+  deltoide completados (mismo día, a pedido de Boris):** caja chata
+  semi-hundida en el tope del hombro + trapecio corrido para solapar
+  directo el deltoide. Verificación honesta: se lee bien en perfil, sutil
+  en frente/3-4 (un plano de acromion se luce más visto desde arriba) —
+  no rompió nada, tampoco es dramático en esos ángulos. Gates ALL_PASS.
+  **Con esto, Fase 1.3 queda completa en su primera pasada. Pendiente
+  antes de cerrar Fase 1:** QA imparcial + VoBo de Boris con capturas
+  frente/perfil/3-4/espalda — ver [[PRD-Rework-Modelado-Personajes-v2]]
+  Fase 1 para el detalle completo.
 - **➕ FASE 5 PROPUESTA (cara: mandíbula/ojos/nariz/mentón/orejas), pedida
   por Boris el mismo día, posterior a la Fase 4 (boca):** borrador completo
   en [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`, NO fusionado al PRD

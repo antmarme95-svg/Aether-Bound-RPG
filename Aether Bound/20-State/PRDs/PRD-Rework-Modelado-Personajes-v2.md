@@ -147,10 +147,31 @@ nuevo), NO resolverlo en este PRD.
   trapecio agrandado probablemente ya ayuda (esa masa ES la transición),
   pendiente de confirmar con QA de cierre.
 
+**Acromion + deltoide-bajo-trapecio ejecutado (2026-07-16, mismo día):**
+- **Acromion agregado** (`_box_mesh` chico y chato, por lado, semi-hundido
+  entre el borde exterior del trapecio y el tope del deltoide, rotado con
+  la misma caída del trapecio) — principio esfera-vs-caja ya confirmado 3
+  veces en Fase C (mentón/pómulo/barba).
+- **Trapecio corrido** (centro `0.115→0.135`, Y `0.30→0.285`) para que se
+  solape DIRECTO sobre el tope del deltoide, no solo comparta vecindad —
+  antes quedaba demasiado medial y su borde apenas tocaba el hombro.
+- **Verificación honesta contra captura fresca:** en PERFIL, el bulto de
+  trapecio sigue leyéndose bien (confirmado con zoom). En FRENTE y 3/4, el
+  acromion y el ajuste de overlap NO producen un quiebre claramente
+  visible a estos ángulos de cámara — un plano en el "tope" del hombro se
+  luce más desde arriba que desde encuadres horizontales; no se ve como
+  defecto nuevo (nada roto/flotando), pero tampoco como una mejora
+  dramática en estas vistas específicas. No se sobre-ajustó a ciegas más
+  allá de este punto — queda para el QA de cierre decidir si hace falta
+  otra pasada (ej. probar la caja del acromion más grande, o verificar
+  desde un ángulo 3/4-alto) o si el resultado ya alcanza.
+- Gates `test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+  `autotest_ui` ALL_PASS.
+
 **Pendiente antes de dar por cerrada la fase:** QA imparcial + reporte con
 capturas frente/perfil/3-4/espalda + VoBo de Boris (criterio de cierre
-original, sin cambios) — decidir si la clavícula S y el acromion/deltoide-
-bajo-trapecio necesitan otra pasada o si el resultado actual ya alcanza.
+original, sin cambios) — decidir si el acromion/deltoide-bajo-trapecio y
+la clavícula S necesitan otra pasada o si el resultado actual ya alcanza.
 
 **Estado actual del código:** `character_rig.gd:39-40` (`SHOULDER_X 0.21`,
 `SHOULDER_Y 0.26`), `:56-58` (`CHEST_X 1.16`, `WAIST_XZ 0.90`), `:446-449`

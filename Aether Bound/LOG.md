@@ -1,5 +1,24 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] feature | Fase 1.3 completada: acromion agregado + trapecio corrido para solapar el deltoide
+A pedido de Boris ("termina el acromion y el deltoide bajo el trapecio
+primero"), se completó lo que faltaba de 1.3. **Acromion:** `_box_mesh`
+chico y chato por lado, semi-hundido entre el borde exterior del trapecio
+y el tope del deltoide, mismo principio esfera-vs-caja ya confirmado 3
+veces en Fase C. **Overlap trapecio-deltoide:** el trapecio se corrió
+(centro 0.115→0.135, Y 0.30→0.285) para solaparse DIRECTO sobre el tope
+del deltoide — antes quedaba demasiado medial (cerca del cuello) y apenas
+tocaba el hombro. **Verificación honesta, no sobre-vendida:** en perfil el
+bulto de trapecio sigue leyéndose bien; en frente/3-4 el acromion y el
+ajuste de overlap no producen un quiebre claramente visible a esos
+ángulos de cámara (un plano en el tope del hombro se luce más desde
+arriba) — no rompió nada, pero tampoco es una mejora dramática ahí. No se
+sobre-ajustó a ciegas — queda anotado para que el QA de cierre decida si
+hace falta otra pasada. Gates ALL_PASS. Con esto, Fase 1.3 (cintura
+escapular: clavícula S + trapecio + acromion + deltoide-bajo-trapecio)
+queda completa en su primera pasada — falta el QA imparcial + VoBo de
+Boris para cerrar formalmente la fase.
+
 ## [2026-07-16] feature | Fase 1 (torso/hombros) primera pasada — cintura con pellizco real, trapecio agrandado, clavícula partida en 2
 Arranque de Fase 1 tras cerrar Fase 0. **1.1 medido primero** (mandato de
 Boris): biacromial en `fenotipo-humano-torso-v1.png` medido por muestreo de

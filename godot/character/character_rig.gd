@@ -535,13 +535,37 @@ func _build() -> void:
 	# igual (0.7, "aplastada en Z" ya pedido por el libro — no es el
 	# problema). Posición Y sube 0.315→0.30 para centrar mejor el tramo
 	# ahora más alto contra la base del cuello.
+	# FASE 1.3 (cont., 2026-07-16): centro corrido 0.115→0.135 (más hacia
+	# afuera, hacia el deltoide) e Y bajado 0.30→0.285 — el propósito
+	# explícito del libro ("el deltoide emerge de abajo del trapecio,
+	# overlap real, no pegado junto a él") necesita que el trapecio se
+	# solape DIRECTO sobre el tope del deltoide (`arm`/`deltoid` más abajo,
+	# centro upper_spine-frame ≈ side*0.22, 0.24), no solo compartir
+	# vecindad — con el centro viejo (0.115) el trapecio quedaba demasiado
+	# medial (cerca del cuello) y su borde apenas tocaba el deltoide.
 	for tside in [-1, 1]:
 		var trap = _sphere_mesh(0.10, skin_mat)
 		trap.scale = Vector3(1.4, 1.5, 0.7)
-		trap.position = Vector3(float(tside) * 0.115, 0.30, 0.0)
+		trap.position = Vector3(float(tside) * 0.135, 0.285, 0.0)
 		trap.rotation.z = -float(tside) * 0.28
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
+
+	# ACROMION: FASE 1.3 — "acromion como plano (caja chica, no esfera) en
+	# el tope del hombro" ([[Principios de Anatomía 3D]]): el punto óseo
+	# donde la clavícula se articula sobre la escápula. Mismo principio ya
+	# confirmado 3 veces en Fase C (mentón/pómulo/barba): una esfera nunca
+	# da un plano/borde definido bajo el toon+Sobel de este proyecto — usar
+	# caja ([[Lecciones]]). Caja chica y chata, semi-hundida entre el borde
+	# exterior del trapecio (arriba) y el tope del deltoide (abajo),
+	# rotada con la misma caída que el trapecio para que el plano quede
+	# alineado con la línea cuello→hombro, no plano al mundo.
+	for aside in [-1, 1]:
+		var acromion = _box_mesh(0.05, 0.022, 0.05, skin_mat)
+		acromion.position = Vector3(float(aside) * 0.205, 0.275, 0.022)
+		acromion.rotation.z = -float(aside) * 0.30
+		upper_spine.add_child(acromion)
+		_add_outline_pass(acromion, Color("#f2b186"))
 
 	# jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
 	# debate orquestador↔QA 2026-07-13, GO del director): el cilindro de
