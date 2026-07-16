@@ -1,5 +1,39 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] design | VoBo de Boris sobre PRD-Rework-Modelado-Personajes-v2 + Fase 5 (cara) propuesta y corrección del minado
+Boris revisó los 3 puntos pendientes de ratificación del PRD y dio VoBo a
+los 3: (a) orden de fases 0→4, (b) A/B de banding LINEAR autorizado en Fase
+0.3, (c) criterio "medición manda" para `SHOULDER_X` en Fase 1 confirmado.
+Además pidió agregar una **Fase 5 nueva** (posterior a la boca): rework
+dirigido de mandíbula/ojos/nariz/mentón/orejas. Un subagente investigó y
+redactó [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`), pero reportó
+—incorrectamente— que el libro de anatomía minado no cubre cabeza/cara en
+absoluto. **Boris corrigió esto en el acto**, señalando los capítulos
+exactos del mismo PDF: "Sculpting an archetypal figure — 3D male — Part 01
+| Basic form" §10-11 (pp.94-101, bloqueo general de cráneo/cara) y
+"Advanced 3D male — Part 01 | Head, neck, and face" de Djordje Nagulov
+(pp.116-121, capítulo completo de cabeza/cuello/expresiones). Se localizó
+el PDF en `Downloads` (383 MB, mismo archivo de la sesión anterior), se
+usó `mutool` (ya instalado) para ubicar el rango exacto de páginas
+(el PDF no tiene outline/marcadores — se ubicó renderizando muestras y
+leyendo cabeceras de capítulo) y se minaron las 7 páginas relevantes.
+Hallazgo con más señal: **principio hueso-vs-músculo** — "la cara tiene
+pocos músculos que definan forma; la mitad superior de la cabeza está
+definida por el hueso; error de principiante citado por el libro: levantar
+el borde del hueco ocular junto con las cejas, los huesos del cráneo no se
+mueven" — aplicable directo a los sliders `eyeTilt`/`eyeShape` de
+`character_rig.gd`. También confirma que la regla ya aplicada en código
+("hueco entre ojos = 1 ancho de ojo") viene efectivamente de este libro
+(§11), no de una fuente sin documentar como se pensó en la primera pasada.
+Único vacío real que persiste: el libro NO tiene proporción/estructura de
+OREJA (solo una mención tangencial de animación: "las orejas suben un poco
+al sonreír"). Agregado como sección nueva "Cabeza, cuello y cara" en
+[[Principios de Anatomía 3D]]; [[Fase5-Cara-Propuesta-DRAFT]] corregida en
+las secciones de mandíbula/ojos y en el aviso previo. Sigue como borrador
+de trabajo, NO fusionada al PRD oficial — pendiente VoBo de Boris sobre 5
+preguntas abiertas (lámina de rostro dedicada o no, alcance de las 4
+variantes de oreja por origen, verificación de extremos de slider, etc.).
+
 ## [2026-07-16] design | PRD-Rework-Modelado-Personajes-v2 — instrucciones ejecutables compiladas
 Boris pidió traducir todo el conocimiento acumulado hoy (análisis
 motor-vs-ejecución, verificación de recursos sin ejecutar, minado del

@@ -72,7 +72,29 @@
   Lecciones), no confirmado como regresión real. **Pendiente: VoBo de
   Boris + nuevo QA visual imparcial contra las láminas para medir el
   nuevo % de fidelidad.**
-- [[PRD-Rework-Modelado-Personajes-v2]] — **propuesto (2026-07-16, esperando VoBo de Boris)**: instrucciones ejecutables para Sonnet del rework completo de modelado — Fase 0 pipeline de tinta en el banco (bloqueante, re-baseline del %), Fase 1 torso en 3 masas + cintura escapular (SHOULDER_X solo si la lámina lo pide), Fase 2 manos (convergencia + nudillos), Fase 3 pelo (loft ratificado, prohibido 4º intento con cajas), Fase 4 boca/warpaint. Cruza [[Principios de Anatomía 3D]] + [[Catálogo Técnico Godot]] + [[Lecciones]] con anclas de código verificadas.
+- [[PRD-Rework-Modelado-Personajes-v2]] — **orden de fases 0→4 APROBADO por
+  Boris (2026-07-16), banding LINEAR autorizado para A/B, criterio
+  "medición manda" para SHOULDER_X confirmado**: instrucciones ejecutables
+  para Sonnet del rework completo de modelado — Fase 0 pipeline de tinta en
+  el banco (bloqueante, re-baseline del %), Fase 1 torso en 3 masas +
+  cintura escapular (SHOULDER_X solo si la lámina lo pide), Fase 2 manos
+  (convergencia + nudillos), Fase 3 pelo (loft ratificado, prohibido 4º
+  intento con cajas), Fase 4 boca/warpaint. Cruza [[Principios de Anatomía
+  3D]] + [[Catálogo Técnico Godot]] + [[Lecciones]] con anclas de código
+  verificadas. Listo para ejecutar Fase 0 en cuanto Boris confirme arranque.
+- [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`) — **borrador de trabajo,
+  NO fusionado al PRD**, pedido por Boris como Fase 5 posterior a la boca:
+  rework dirigido de mandíbula/ojos/nariz/mentón/orejas sobre la cara ya
+  cerrada en Fase C (75%). Primera pasada de minado había reportado
+  erróneamente que el libro no cubre cabeza/cara — Boris señaló los
+  capítulos exactos ("3D male Part 01" §10-11 + "Advanced 3D male Part 01 |
+  Head, neck, and face", Djordje Nagulov, pp.94-121) y se re-minaron,
+  agregados a [[Principios de Anatomía 3D]] → "Cabeza, cuello y cara".
+  Único vacío real del libro: proporción/estructura de OREJA (solo mención
+  tangencial de animación). Mandíbula/mentón/nariz ya tienen 4-8 rondas de
+  ajuste fino estables — recomendación: priorizar ojos/orejas. Pendiente de
+  VoBo de Boris sobre 5 preguntas abiertas antes de fusionar como Fase 5
+  oficial.
 - [[PRD-Warpaint-Personalizable]] — bug real encontrado y corregido
   (2026-07-14): la "V" geométrica de warpaint se dibujaba para CUALQUIER
   índice >0, tapando los 5 patrones del atlas. Evaluación visual de los 6

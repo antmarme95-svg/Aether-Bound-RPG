@@ -1,6 +1,6 @@
 ---
 status: propuesto
-source: "Minado 2026-07-16 de 'Anatomy for 3D Artists — The Essential Guide for CG Professionals' (Chris Legaspi, Laura Braga, Djordje Nagulov, Mario Anger, César Zambelli, Daniel Peteuil; 3dtotal Publishing) — copia personal de Boris, NUNCA copiada al repo. 5 subagentes leyeron las 157 páginas (renderizadas a JPEG vía mutool/MuPDF) y reportaron principios en su propia síntesis, sin transcribir texto ni reproducir imágenes. Esta página es una segunda pasada de síntesis + cruce contra el código y las Lecciones del proyecto."
+source: "Minado 2026-07-16 de 'Anatomy for 3D Artists — The Essential Guide for CG Professionals' (Chris Legaspi, Laura Braga, Djordje Nagulov, Mario Anger, César Zambelli, Daniel Peteuil; 3dtotal Publishing) — copia personal de Boris, NUNCA copiada al repo. 5 subagentes leyeron las 157 páginas (renderizadas a JPEG vía mutool/MuPDF) y reportaron principios en su propia síntesis, sin transcribir texto ni reproducir imágenes. Esta página es una segunda pasada de síntesis + cruce contra el código y las Lecciones del proyecto. **Ampliada 2026-07-16 (misma sesión, más tarde):** la primera pasada NO cubrió cabeza/cara — Boris señaló los capítulos exactos ('Sculpting an archetypal figure — 3D male — Part 01 | Basic form', secciones 10-11, pp.96-97; y 'Sculpting an archetypal figure — Advanced 3D male — Part 01 | Head, neck, and face' por Djordje Nagulov, pp.116-121) y se re-abrió el PDF (mutool, sin outline — se ubicó el rango renderizando muestras y leyendo cabeceras de capítulo) para minar esas 6 páginas específicas, agregadas como sección nueva abajo."
 updated: 2026-07-16
 ---
 
@@ -167,6 +167,84 @@ hasta que no haya costura" — es variar tamaño/ángulo/profundidad real
 mechón a mechón para que el Sobel entinte cada uno como un trazo distinto,
 en vez de mechones idénticos y parejos que el Sobel también agrupa en un
 solo contorno grande.
+
+## Cabeza, cuello y cara (minado 2026-07-16, segunda pasada — insumo directo para la Fase 5 propuesta)
+
+A diferencia de torso/manos/pelo, este bloque sale de dos capítulos
+puntuales que Boris identificó por nombre y que la primera pasada no había
+localizado: "3D male — Part 01 | Basic form" §10-11 (bloqueo general de
+cabeza) y "Advanced 3D male — Part 01 | Head, neck, and face" (capítulo
+completo, 13 secciones, dedicado a cabeza/cuello/expresiones). El libro SÍ
+tiene contenido facial — la primera pasada simplemente no llegó a esas
+páginas porque no era la prioridad de esa sesión.
+
+**Bloqueo general del cráneo (§10, "Shaping the head"):** el cráneo se
+visualiza como un huevo/caja alargada apoyada de lado, con la cara colgando
+del lado puntiagudo. Es importante meter el cuello temprano en el proceso —
+informa el resto de la estructura de la cabeza: el cuello se apoya en
+ángulo contra el cráneo, con los dos "tendones" del esternocleidomastoideo
+cruzando en diagonal opuesta entre sí. La cara se resuelve con planos
+frontal/lateral + un indicio de mandíbula. **La mandíbula masculina es más
+angular, con cambios de plano más marcados que la femenina** — coherente
+con la elección ya hecha en código de esfera+ángulo goníaco en vez de una
+esfera lisa.
+
+**Proporción y orden de refinamiento (§11, "Refining the head"):** la línea
+horizontal de los ojos va aproximadamente a la mitad de la cara — error
+común: ponerlos demasiado alto. Los ojos se separan por aproximadamente el
+ancho de un ojo (coincide con la corrección ya aplicada en
+`character_rig.gd`: `side*0.052`→`side*0.036`). El pómulo desciende en
+diagonal hasta la oreja, que en perfil se ubica a la mitad de la cabeza. La
+frente es "un arreglo complejo de planos" que merece atención propia, no
+solo una curva lisa. La boca se bloquea AL FINAL, después de ojos/nariz/
+mandíbula — mismo principio de orden que ya se aplicó en pelo (masa/
+landmarks generales antes que detalle).
+
+**Principio de hueso vs. músculo (§06, "Bone visibility"):** la cara tiene
+pocos músculos que definan forma — la mitad superior de la cabeza está
+definida sobre todo por el hueso del cráneo, incluso en gente con más
+grasa. En expresión neutra se ve la mayor parte de la órbita ocular y el
+borde exterior del pómulo. **Error de principiante explícito citado por el
+libro: "levantar el borde del hueco ocular junto con las cejas — los huesos
+del cráneo no se mueven."** Esto es directamente aplicable a cualquier
+slider de ceja/ojo en `character_rig.gd` (`eyeTilt`/`eyeShape`): la rotación
+del grupo del ojo no debería sugerir que la órbita ósea se mueve, solo el
+tejido blando (párpado/ceja) alrededor de ella.
+
+**Ojo — mecánica del globo ocular (§02 "the face at rest", §08 "rotating the
+eyes"):** el globo ocular se modela como pieza separada encajada en la
+órbita, con el párpado superior plegándose bajo la ceja; conviene que el
+párpado tenga grosor suficiente para que el borde interno atrape luz (no un
+disco plano). El globo ocular es solo ligeramente más grande que el hueco
+del párpado y, por el abultamiento de la córnea, no es perfectamente
+esférico — esto afecta cómo se ve el ojo al girar. Al cerrar el ojo, el
+párpado SUPERIOR hace casi todo el movimiento (el inferior casi no se
+mueve) — relevante si en el futuro se anima parpadeo, no aplica a la
+geometría estática actual.
+
+**Mandíbula — pivote real (§12, "afraid and in pain"):** al abrir la
+mandíbula, el pivote de rotación está delante de la oreja, bajo el arco
+cigomático — dato concreto útil si el proyecto alguna vez anima apertura de
+mandíbula (hoy `character_rig.gd` no lo hace, la mandíbula es geometría
+fija).
+
+**Oreja — única mención encontrada, tangencial:** el libro NO tiene una
+sección dedicada a proporción/estructura de oreja. La única referencia
+encontrada es de paso (§10 "happy and smiling": "las orejas también se
+levantan un poco" al sonreír) — un dato de animación de expresión, no de
+proporción base. **Para proporción/estructura de oreja en reposo, este
+libro no aporta nada más allá del principio general esfera-vs-caja** (la
+oreja es masa redondeada tipo articulación bola-cuenco → esfera, coherente
+con la elección ya hecha en `_build_origin_features`).
+
+**Nota de aplicabilidad — el capítulo es sobre EXPRESIONES, el rig es
+ESTÁTICO:** buena parte de "Head, neck, and face" (§03-05, 09-13) describe
+cómo cambian las masas al girar/inclinar la cabeza o gesticular (enojo,
+miedo, sonrisa, beso) — no aplica directo a una malla facial fija sin
+blendshapes. Lo transferible a Fase 5 es específicamente lo de arriba
+(bloqueo §10-11, hueso-vs-músculo §06, mecánica de globo ocular §02/08) —
+el resto queda como referencia para el día que el proyecto anime
+expresiones faciales, no para esta fase.
 
 ## Nota de estilo — qué extraer y qué NO copiar literal
 

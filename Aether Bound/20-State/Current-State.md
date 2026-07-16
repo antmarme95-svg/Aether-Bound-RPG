@@ -12,9 +12,30 @@ updated: 2026-07-16
   [[PRD-Rework-Modelado-Personajes-v2]]** — todo lo de abajo (hallazgos
   #0/#0.5/#0.6 + puntos 1-5) quedó traducido a instrucciones ejecutables
   para Sonnet en 5 fases con anclas de código, gates y reglas de sesión.
-  **Espera VoBo de Boris en 3 puntos** (orden de fases, banding LINEAR,
-  criterio lámina-primero para SHOULDER_X) — con su OK, la próxima sesión
-  de código arranca directo en la Fase 0 del PRD.
+  **VoBo de Boris RECIBIDO en los 3 puntos (2026-07-16, mismo día):** orden
+  de fases 0→4 aprobado, A/B de banding LINEAR (Fase 0.3) autorizado,
+  criterio "medición manda" para `SHOULDER_X` (Fase 1.1) confirmado. **Listo
+  para arrancar Fase 0 (diagnóstico del pipeline de tinta) en cuanto Boris
+  dé luz verde a empezar a tocar código** — nada más bloquea el arranque.
+- **➕ FASE 5 PROPUESTA (cara: mandíbula/ojos/nariz/mentón/orejas), pedida
+  por Boris el mismo día, posterior a la Fase 4 (boca):** borrador completo
+  en [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`, NO fusionado al PRD
+  oficial todavía). Esto NO es reabrir la cara desde cero — la Fase C ya la
+  cerró al 75% (2026-07-14); es una pasada dirigida a esas 5 partes con
+  conocimiento nuevo. **Corrección importante ocurrida en esta misma
+  sesión:** el primer borrador reportó que el libro de anatomía minado no
+  cubre cabeza/cara — Boris señaló los capítulos exactos ("3D male Part 01"
+  §10-11 + "Advanced 3D male Part 01 | Head, neck, and face", Djordje
+  Nagulov) y se re-minaron esas 7 páginas del mismo PDF (localizado en
+  `Downloads`, `mutool` ya instalado). Nueva sección "Cabeza, cuello y cara"
+  agregada a [[Principios de Anatomía 3D]] — el hallazgo más aplicable es el
+  principio hueso-vs-músculo (las cejas/párpados se mueven, la órbita ósea
+  NO — relevante para los sliders `eyeTilt`/`eyeShape`). Único vacío real
+  del libro: no cubre proporción/estructura de OREJA. Mandíbula/mentón/
+  nariz ya tienen 4-8 rondas de ajuste fino documentadas y estables —
+  recomendación del borrador: priorizar ojos/orejas en esta fase. **Pendiente
+  VoBo de Boris sobre 5 preguntas abiertas antes de fusionar como Fase 5
+  oficial del PRD** (ver el archivo para el detalle).
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (2026-07-16, actualizado tras análisis
   técnico + QA visual pedido por Boris — LEER ANTES DE TOCAR GEOMETRÍA):**
   Boris pidió un análisis con 2 subagentes (técnico: lee shaders/pipeline;
