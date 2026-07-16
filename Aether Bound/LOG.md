@@ -1,5 +1,42 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] fix | Fase 0 (pipeline de tinta) ejecutada y cerrada — la premisa "personaje sin tratamiento" NO se sostuvo; fix real fue el ángulo de cámara del banco
+Arranque de la ejecución real del PRD-Rework-Modelado-Personajes-v2 tras
+el VoBo de Boris. Diagnóstico 0.1 (solo lectura): `tmp_anatomy.gd:115` SÍ
+llama `_gs.attach_post(_cam)`; el material del rig SÍ es `toon_opaque` vía
+`PipelineConfig.apply_to()` (`character_rig.gd:255`,
+`toon_materials.gd:50-56`) — sin desconexión. `ink_fade_dist=70` da
+fade≈1 a las distancias de estas capturas — no apaga nada de cerca.
+Inspección directa (zoom ×4, PowerShell + System.Drawing ante la
+ausencia de Python/ImageMagick en la máquina) de `anatomy_close.png`/
+`anatomy_face.png`/`anatomy_full_front.png` confirmó que la tinta Sobel
+SÍ entinta al personaje (silueta, cejas, nariz, boca, mandíbula,
+pectorales, comparable en peso al entorno) y que el banding SÍ existe con
+fuerza en `anatomy_full_side.png`/`anatomy_face_back.png` — **la
+afirmación del QA visual previo ("no muestra línea de tinta ni acuarela
+en absoluto") no se sostuvo contra el píxel real** (Lección ya escrita:
+"un QA de IA parafraseando una imagen es una capa de traducción con
+pérdida"). **Causa real:** las capturas "de frente" ponían la cámara
+EXACTAMENTE alineada con el eje del sol de "dawn"
+(`golden_scene.gd` PRESETS.dawn.sun_azim_deg=190 ≈ eje +Z del personaje)
+→ superficie uniformemente iluminada sin contraste que mostrar, mismo
+shader que el perfil (que sí banding bien en un ángulo distinto). La
+divergencia `golden_scene.gd:98-99` (`ambient_lift`/`rim_strength`
+hardcodeados para materiales de escena) vs `pipeline_config.gd:11,15` es
+real pero cosmética — no afecta al personaje. **Fix aplicado:**
+`tmp_anatomy.gd` — helper `_key_offset()` nuevo, rota 15° alrededor de Y
+el offset de cámara en `_frame_close()`, el shot frontal del turnaround
+de cabeza y `_frame_full_front()` (misma distancia/zoom, solo ángulo).
+Verificado visualmente (capturas regeneradas muestran volumen/sombreado
+real) + los 5 gates de la regla de sesión (`test_core`,
+`autotest_biomech`, `test_combat`, `autotest_slice`, `autotest_ui`)
+ALL_PASS. **Conclusión: el % de fidelidad medido hasta ahora (32→55%) NO
+estaba contaminado — Fase 1 (torso/hombros) puede arrancar directo, sin
+re-baseline obligatorio.** Fase 0.3 (A/B banding LINEAR) y 0.4
+(re-baseline) quedan como opcionales, no bloqueantes. Fase 0.5 (aclarar
+el rig de cápsulas en wilds_start/combat/city) sigue pendiente, sin
+investigar.
+
 ## [2026-07-16] design | Fase 5 (cara) resuelta en las 6 preguntas abiertas — brief de lámina de rostro nuevo
 Boris resolvió las 6 preguntas pendientes de [[Fase5-Cara-Propuesta-DRAFT]]
 en una ronda de chat: (1) libro sí cubre cabeza/cara [ya resuelto antes],

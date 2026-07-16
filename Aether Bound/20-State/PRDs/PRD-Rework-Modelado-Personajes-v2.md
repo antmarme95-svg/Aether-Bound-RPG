@@ -43,48 +43,63 @@ updated: 2026-07-16
 
 ---
 
-## FASE 0 — Pipeline de tinta en el banco de anatomía (BLOQUEANTE de todo lo demás)
+## FASE 0 — Pipeline de tinta en el banco de anatomía — ✅ EJECUTADA Y CERRADA (2026-07-16)
 
-**Por qué primero:** el QA visual (2026-07-16) detectó que los renders
-`anatomy_*.png` NO muestran línea de tinta/acuarela mientras el entorno
-del juego sí — si el banco no aplica el tratamiento completo, **todos los
-% de fidelidad medidos hasta ahora (32→55%) están parcialmente
-contaminados** y las fases siguientes se medirían mal.
+**Por qué primero (premisa original):** el QA visual (2026-07-16) detectó
+que los renders `anatomy_*.png` NO muestran línea de tinta/acuarela
+mientras el entorno del juego sí — si el banco no aplica el tratamiento
+completo, todos los % de fidelidad medidos hasta ahora (32→55%) estarían
+parcialmente contaminados.
 
-**0.1 — Diagnóstico (solo lectura primero):**
-- Comparar cómo `tmp_anatomy.gd` arma su escena/post vs. cómo lo hace
-  `golden_scene.gd:657-669` (`attach_post`, quad manual con
-  `extra_cull_margin` + `position.z=-1`).
-- Verificar si el banco llama `attach_post` o equivalente; si los
-  materiales del rig en el banco son los `toon_opaque` correctos (sin
-  escritura de ALPHA — [[Lecciones]]); y si `ink_fade_dist`
-  (`melancolia_post.gdshader:20`) apaga la tinta a la distancia de cámara
-  de las capturas del banco.
-- Verificar la divergencia conocida: `golden_scene.gd:97-99,115` hardcodea
-  `ambient_lift=0.16`/`rim_strength=0.10` vs `pipeline_config.gd:11,15`
-  (`0.14`/`0.18`) — unificar vía `PipelineConfig.apply_to()`.
+**Resultado del diagnóstico 0.1 (solo lectura + verificación de píxel):**
+**la premisa NO se sostuvo.** `_gs.attach_post(_cam)` SÍ se llama en
+`tmp_anatomy.gd:115`; el material del rig SÍ es `toon_opaque` vía
+`ToonMaterials.toon_mat_opaque()` → `PipelineConfig.apply_to()`
+(`character_rig.gd:255`, `toon_materials.gd:50-56`) — correcto, no hay
+desconexión. `ink_fade_dist=70` (`melancolia_post.gdshader:20`) da fade≈1
+a las distancias de estas capturas (2-8m) — no apaga nada de cerca.
+Inspección directa con zoom ×4 de `anatomy_close.png`/`anatomy_face.png`/
+`anatomy_full_front.png` confirmó que la tinta Sobel SÍ entinta al
+personaje (silueta, cejas, nariz, boca, mandíbula, pectorales) y que el
+banding SÍ existe (fuerte en `anatomy_full_side.png`/`anatomy_face_back.png`).
+**Causa real encontrada:** las capturas "de frente" ponían la cámara
+EXACTAMENTE alineada con el eje del sol de "dawn" (`sun_azim_deg=190` ≈
+eje +Z del personaje) → superficie uniformemente iluminada sin contraste
+que mostrar (mismo shader que el perfil, que sí banding bien). La
+divergencia `golden_scene.gd:98-99` (`ambient_lift=0.16`/`rim_strength=0.10`
+hardcodeados para materiales propios de la escena) vs
+`pipeline_config.gd:11,15` (`0.14`/`0.18`) es real pero cosmética/menor —
+no afecta al personaje, que usa `PipelineConfig` correctamente.
 
-**0.2 — Fix:** lo que salga del diagnóstico. Criterio de aceptación:
-captura del banco donde el personaje muestre línea de tinta Sobel en
-close-up (fina), agrisada a media distancia — lado a lado con una captura
-del entorno para confirmar tratamiento IDÉNTICO.
+**0.2 — Fix aplicado:** `tmp_anatomy.gd` — nuevo helper `_key_offset()`
+que rota 15° alrededor de Y el offset de cámara en `_frame_close()`, el
+shot frontal del turnaround de cabeza, y `_frame_full_front()` (misma
+distancia, mismo zoom, solo rota el ángulo) — rompe la alineación
+cámara-luz sin dejar de leer como vista de frente. Verificado: capturas
+regeneradas muestran volumen/sombreado real (comparable al entorno) + los
+5 gates de la regla de sesión (`test_core`, `autotest_biomech`,
+`test_combat`, `autotest_slice`, `autotest_ui`) ALL_PASS.
 
-**0.3 — Quick win de shading (cambio de una línea, A/B):**
-`godot/rendering/toon_ramp.tres` tiene `interpolation_mode = 1`
-(CONSTANT, 4 escalones duros en offsets 0/0.2/0.5/0.78). Probar `LINEAR`
-(o un punto intermedio agregando paradas de gradiente cortas en cada
-borde) y capturar A/B del personaje en close-up. **Decisión de Boris con
-las capturas** — no comprometer sin su VoBo (toca el look global).
+**Conclusión:** el % de fidelidad medido hasta ahora (32→55%) **NO estaba
+contaminado** por falta de tratamiento visual — esa hipótesis no se
+sostuvo contra el píxel real. Fase 1 puede arrancar directo sin
+re-baseline obligatorio.
 
-**0.4 — Re-baseline:** con la tinta funcionando en el banco, correr UN QA
-visual imparcial ANTES de tocar geometría — ese número es el baseline real
-de las fases siguientes (el 55% previo puede subir o bajar solo).
+**0.3 — Quick win de shading (A/B banding LINEAR) — QUEDA OPCIONAL, no
+bloqueante.** `godot/rendering/toon_ramp.tres` tiene
+`interpolation_mode = 1` (CONSTANT, 4 escalones duros). Si Boris quiere
+probar `LINEAR` en A/B, sigue disponible como tarea aparte — no
+condiciona el arranque de Fase 1.
 
-**0.5 — Aclarar el segundo hallazgo del QA:** confirmar si el rig de
-cápsulas sin cara en `wilds_start/combat/city` es el rig real de gameplay
-o un placeholder — si el juego real usa otro rig, anotar en
-[[Current-State]] como frente aparte (integración del rig nuevo), NO
-resolverlo en este PRD.
+**0.4 — Re-baseline: OPCIONAL.** Dado que la Fase 0 no encontró
+contaminación real, un QA imparcial nuevo puede correr en paralelo a Fase
+1 si Boris lo quiere, pero no es prerrequisito.
+
+**0.5 — Aclarar el segundo hallazgo del QA: PENDIENTE, sin investigar.**
+Confirmar si el rig de cápsulas sin cara en `wilds_start/combat/city` es
+el rig real de gameplay o un placeholder — si el juego real usa otro rig,
+anotar en [[Current-State]] como frente aparte (integración del rig
+nuevo), NO resolverlo en este PRD.
 
 ---
 

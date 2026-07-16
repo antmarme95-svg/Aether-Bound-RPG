@@ -14,9 +14,13 @@ updated: 2026-07-16
   para Sonnet en 5 fases con anclas de código, gates y reglas de sesión.
   **VoBo de Boris RECIBIDO en los 3 puntos (2026-07-16, mismo día):** orden
   de fases 0→4 aprobado, A/B de banding LINEAR (Fase 0.3) autorizado,
-  criterio "medición manda" para `SHOULDER_X` (Fase 1.1) confirmado. **Listo
-  para arrancar Fase 0 (diagnóstico del pipeline de tinta) en cuanto Boris
-  dé luz verde a empezar a tocar código** — nada más bloquea el arranque.
+  criterio "medición manda" para `SHOULDER_X` (Fase 1.1) confirmado. **Fase
+  0 ejecutada y cerrada (2026-07-16, mismo día) — ver hallazgo detallado
+  abajo: el pipeline de tinta funcionaba bien, el problema real era el
+  ángulo de cámara del banco, ya corregido y verificado (gates ALL_PASS).
+  Listo para arrancar Fase 1 (torso/hombros) directo** — nada bloquea el
+  arranque; Fase 0.3 (A/B banding LINEAR) y 0.4 (re-baseline QA) quedan
+  como opcionales, no bloqueantes.
 - **➕ FASE 5 PROPUESTA (cara: mandíbula/ojos/nariz/mentón/orejas), pedida
   por Boris el mismo día, posterior a la Fase 4 (boca):** borrador completo
   en [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`, NO fusionado al PRD
@@ -76,21 +80,37 @@ updated: 2026-07-16
   acuarela objetivo. Ghibli sería barato de probar (uniforms) pero
   quitaría la línea Sobel que hoy DISFRAZA la crudeza de las primitivas
   procedurales del personaje — expondría el maniquí, no lo arreglaría.
-  **HALLAZGO NUEVO Y ACCIONABLE (prioridad #0, antes que SHOULDER_X):**
-  el QA visual detectó que el PERSONAJE en los renders `anatomy_*.png`
-  (banco `tmp_anatomy.gd`) **no muestra línea de tinta ni acuarela** —
-  se lee piel con specular tipo PBR/plástico genérico — mientras el
-  entorno, en el mismo pipeline, sí la muestra. El tratamiento visual
-  funciona, solo no está llegando al rig del personaje en ese banco
-  específico (posible desconexión entre `attach_post`/`PipelineConfig` y
-  la escena de `tmp_anatomy.gd`, o `ink_fade_dist`/parámetros que apagan
-  la tinta a la distancia de esas capturas — ver hallazgos B/D del
-  subagente técnico: `golden_scene.gd:97-99,115` diverge de
-  `pipeline_config.gd:11,15`). **Investigar y arreglar esto ANTES de
-  seguir puliendo geometría** — el % de fidelidad reportado (32→55%)
-  puede estar midiendo capturas que nunca tuvieron el tratamiento
-  completo aplicado, lo cual invalida parcialmente la comparación contra
-  la lámina. Segundo hallazgo del QA visual, sin investigar aún: los
+  **FASE 0 EJECUTADA Y CERRADA (2026-07-16, mismo día) — el hallazgo de
+  arriba resultó SOBREESTIMADO, no confirmado contra el píxel real.**
+  Diagnóstico directo (Lección: "para geometría/forma específica, mirar
+  el píxel gana") sobre `anatomy_close.png`/`anatomy_face.png`/
+  `anatomy_full_front.png` con zoom ×4 mostró que la tinta Sobel SÍ
+  entinta al personaje (silueta, cejas, nariz, boca, mandíbula,
+  pectorales — comparable en peso al entorno) y que el banding SÍ existe
+  (visible con fuerza en `anatomy_full_side.png`/`anatomy_face_back.png`).
+  **Causa real:** las capturas "de frente" (`_frame_close`, el shot
+  frontal del turnaround, `_frame_full_front`) ponían la cámara
+  EXACTAMENTE alineada con el eje del sol de "dawn" (`sun_azim_deg=190`
+  ≈ eje +Z del personaje) → superficie uniformemente iluminada, sin
+  contraste que mostrar, aunque el pipeline funcionara perfecto (el
+  perfil, en un ángulo distinto, ya mostraba banding fuerte con el MISMO
+  shader). **Fix aplicado:** `tmp_anatomy.gd` — nuevo helper
+  `_key_offset()` que rota 15° alrededor de Y el offset de cámara en esos
+  3 encuadres (misma distancia, no cambia el zoom), rompiendo la
+  alineación cámara-luz sin dejar de leer como vista de frente. Verificado
+  visualmente (capturas regeneradas muestran volumen/sombreado real) +
+  los 5 gates de la regla de sesión (`test_core`, `autotest_biomech`,
+  `test_combat`, `autotest_slice`, `autotest_ui`) ALL_PASS. La divergencia
+  real de `golden_scene.gd:98-99` (ambient_lift/rim_strength hardcodeados
+  para los materiales propios de la escena) vs `pipeline_config.gd:11,15`
+  sigue existiendo pero es cosmética/menor — el personaje ya usa
+  `PipelineConfig.apply_to()` correctamente vía `ToonMaterials.
+  toon_mat_opaque()`, no es la causa de nada. **Conclusión: el % de
+  fidelidad medido hasta ahora (32→55%) NO estaba contaminado por falta
+  de tratamiento visual — esa hipótesis no se sostuvo.** Fase 0.3 (A/B
+  banding LINEAR) y 0.4 (re-baseline QA) siguen pendientes si Boris los
+  quiere correr, pero ya no son bloqueantes de Fase 1. Segundo hallazgo
+  del QA visual, sin investigar aún: los
   renders `wilds_start/combat/city` muestran un rig de personaje
   DISTINTO y mucho más primitivo (cápsulas sin cara, tipo bloqueo) que
   los renders `anatomy_*` — confirmar si eso es un placeholder de

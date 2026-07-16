@@ -75,8 +75,12 @@
 - [[PRD-Rework-Modelado-Personajes-v2]] — **orden de fases 0→4 APROBADO por
   Boris (2026-07-16), banding LINEAR autorizado para A/B, criterio
   "medición manda" para SHOULDER_X confirmado**: instrucciones ejecutables
-  para Sonnet del rework completo de modelado — Fase 0 pipeline de tinta en
-  el banco (bloqueante, re-baseline del %), Fase 1 torso en 3 masas +
+  para Sonnet del rework completo de modelado. **Fase 0 EJECUTADA Y CERRADA
+  (2026-07-16, mismo día): la premisa "personaje sin tinta" no se sostuvo
+  contra el píxel real (zoom ×4 confirmó tinta+banding funcionando) — el
+  fix real fue el ángulo de cámara del banco (`tmp_anatomy.gd`, alineado
+  con el sol de "dawn", ahora rotado 15°). 5 gates ALL_PASS. Fase 1 arranca
+  directo, sin re-baseline obligatorio.** Fase 1 torso en 3 masas +
   cintura escapular (SHOULDER_X solo si la lámina lo pide), Fase 2 manos
   (convergencia + nudillos), Fase 3 pelo (loft ratificado, prohibido 4º
   intento con cajas), Fase 4 boca/warpaint. Cruza [[Principios de Anatomía

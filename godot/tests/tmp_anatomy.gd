@@ -127,7 +127,7 @@ func _run() -> void:
 	# TURNAROUND de cabeza (review v0.3: frente / ¾ / perfil / espalda
 	# son obligatorios para aprobar)
 	var face_t: Vector3 = _holder.global_position + Vector3(0.0, 1.80, 0.0)
-	_cam.look_at_from_position(face_t + Vector3(0.0, 0.02, 0.62), face_t, Vector3.UP)
+	_cam.look_at_from_position(face_t + _key_offset(Vector3(0.0, 0.02, 0.62)), face_t, Vector3.UP)
 	_gs.apply_time_preset("dawn")
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_face.png")
@@ -177,6 +177,21 @@ func _wait(secs: float) -> void:
 	while t < secs:
 		await get_tree().process_frame
 		t += get_process_delta_time()
+
+# Ángulo de cámara "casi-frente" (Fase 0 diagnóstico, 2026-07-16): el sol de
+# "dawn" (golden_scene.gd sun_azim_deg=190) queda ~alineado con el eje +Z del
+# personaje (su frente). Una cámara EXACTAMENTE de frente (offset X=0) queda
+# co-lineal con la luz -> superficie uniformemente iluminada, sin banding
+# visible pese a que el pipeline funciona bien (confirmado: el perfil SÍ
+# muestra banding fuerte, el frente puro no — mismo shader, mismo post,
+# distinto ángulo). Rotar el offset de cámara ~15° alrededor de Y rompe esa
+# alineación sin dejar de leer como vista de frente (bastante menor que el
+# 3/4 existente, ~41°). Mantiene la distancia a cámara igual (solo rota el
+# offset), así el encuadre/zoom no cambia.
+const KEY_ANGLE_DEG: float = 15.0
+
+func _key_offset(base: Vector3) -> Vector3:
+	return base.rotated(Vector3.UP, deg_to_rad(KEY_ANGLE_DEG))
 
 # ================= medidas =================
 # Merged AABB mundial de las mallas del rig (sin glow/ojos: solo toon skin/
@@ -302,11 +317,11 @@ func _build_ruler(m: Dictionary) -> void:
 # ================= encuadres =================
 func _frame_close() -> void:
 	var target: Vector3 = _holder.global_position + Vector3(0.0, 1.45, 0.0)
-	_cam.look_at_from_position(target + Vector3(0.15, 0.05, 2.0), target, Vector3.UP)
+	_cam.look_at_from_position(target + _key_offset(Vector3(0.0, 0.05, 2.0)), target, Vector3.UP)
 	_gs.apply_time_preset("dawn")
 
 func _frame_full_front(dist: float) -> void:
 	var target: Vector3 = _holder.global_position + Vector3(0.0, 0.95, 0.0)
 	var eye_h: float = 1.35 + (dist - 4.0) * 0.06   # se eleva un poco al alejarse
-	_cam.look_at_from_position(target + Vector3(0.0, eye_h - 0.95, dist), target, Vector3.UP)
+	_cam.look_at_from_position(target + _key_offset(Vector3(0.0, eye_h - 0.95, dist)), target, Vector3.UP)
 	_gs.apply_time_preset("dawn")
