@@ -309,6 +309,18 @@ updated: 2026-07-14
   Era contención de recursos, NO bug del código.** Protocolo: cerrar las apps
   de fondo ANTES de cualquier corrida y de cualquier sesión de debug — una
   hora de bisección de código no vale lo que 30 s de `taskkill`.
+- **Una propuesta RATIFICADA no está ejecutada solo porque quedó escrita.**
+  [[Propuesta-Recursos-de-Modelado]] (5 recursos, ratificada 2026-07-12)
+  se asumió "en curso" durante 4 días de sesiones de rework de geometría
+  (pelo llegó a un 3er intento con cajas/conos) hasta que una verificación
+  de campo (grep directo sobre `character_rig.gd`/`toon_ramp.tres`,
+  2026-07-16) confirmó que NINGUNO de los 5 recursos se había tocado en
+  código. Antes de seguir iterando con la MISMA técnica que ya falló 2+
+  veces en el mismo problema, grep el código para confirmar si existe ya
+  una solución ratificada sin ejecutar — no confiar en la memoria de
+  sesión de que "eso ya se resolvió" o "ya está en curso". Ver
+  [[Catálogo Técnico Godot]] para el estado verificado de recursos
+  pendientes.
 
 ## Tiering de modelos (orquestación)
 

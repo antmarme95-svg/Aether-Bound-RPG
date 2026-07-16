@@ -35,6 +35,8 @@
 - [[Art Bible]] — "Melancolía Gráfica": Sable×BotW×Hinterberg, regla espacial, pipeline 4 capas.
 - [[Nomenclatura]] — AETHER BOUND y todos los nombres canónicos sellados.
 - [[Inventario del Prototipo]] — qué se conserva, re-usa o reemplaza del build Godot.
+- [[Catálogo Técnico Godot]] — librerías/técnicas de Godot 4.6 priorizadas para el proyecto; confirma en código que los 5 recursos de [[Propuesta-Recursos-de-Modelado]] (loft, banding, triplanar) siguen SIN ejecutar; suma `CompositorEffect` (Alta, deuda técnica del post manual) y descarta CSG/compute shaders/plugins de pelo con evidencia.
+- [[Principios de Anatomía 3D]] — minado de "Anatomy for 3D Artists" (157 páginas, 5 subagentes, 2026-07-16): torso en 3 masas (caja torácica 2/3 + cintura + pelvis 1/3), cintura escapular como bloque separado, sistema de mitades sucesivas para nudillos, pelo = masa completa primero + variación anti-paralelismo entre mechones. Insumo directo para `SHOULDER_X`/manos/pelo, nada aplicado aún en código.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres.
 - [[Briefs de Concept Art]] — prompts Nano Banana 2 (fenotipos/keyframes/Speck/foliage/Dagna) + notas de pipeline; ratificada 2026-07-08 (sus outputs ya son canon). Página viva: se añaden los 8 pivotes restantes.
 - [[Slice of Bond]] — vertical slice ratificado: Humano Duelist × Dagna; 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), 45–60 min.
@@ -44,7 +46,8 @@
 
 ## 20-State (dónde está el proyecto)
 
-- [[Current-State]] — **punto de entrada de toda sesión**: milestone, objetivo, prioridad, riesgos.
+- [[Current-State]] — **punto de entrada de toda sesión**: milestone, objetivo, prioridad, riesgos. Recortado a ~2,200 tokens (2026-07-16, higiene de contexto) — solo lo vigente; el relato histórico completo vive en [[Current-State-Historico]].
+- [[Current-State-Historico]] — archivo (NO se auto-carga): relato sesión-por-sesión que antes vivía en Current-State, movido verbatim el 2026-07-16 para no inflar el arranque de sesión.
 - [[Task-Board]] — tablero de preproducción: frentes A (producción), B (diseño), C (técnico).
 - [[Plan-de-Produccion]] — plan macro A1 ratificado: 5 fases (higiene → link vivo → espina → arco → arte/tuning) con gates de playtest.
 - [[Lecciones]] — anti-patrones técnicos, entorno Godot, gates QA, tiering de modelos.
@@ -69,6 +72,7 @@
   Lecciones), no confirmado como regresión real. **Pendiente: VoBo de
   Boris + nuevo QA visual imparcial contra las láminas para medir el
   nuevo % de fidelidad.**
+- [[PRD-Rework-Modelado-Personajes-v2]] — **propuesto (2026-07-16, esperando VoBo de Boris)**: instrucciones ejecutables para Sonnet del rework completo de modelado — Fase 0 pipeline de tinta en el banco (bloqueante, re-baseline del %), Fase 1 torso en 3 masas + cintura escapular (SHOULDER_X solo si la lámina lo pide), Fase 2 manos (convergencia + nudillos), Fase 3 pelo (loft ratificado, prohibido 4º intento con cajas), Fase 4 boca/warpaint. Cruza [[Principios de Anatomía 3D]] + [[Catálogo Técnico Godot]] + [[Lecciones]] con anclas de código verificadas.
 - [[PRD-Warpaint-Personalizable]] — bug real encontrado y corregido
   (2026-07-14): la "V" geométrica de warpaint se dibujaba para CUALQUIER
   índice >0, tapando los 5 patrones del atlas. Evaluación visual de los 6
@@ -121,6 +125,17 @@
   adoptar en Fase 2; shaders minables de HTerrain/Scatter/godot-vrm(MToon)
   para Fase 2/4; AMSG = referencia de lógica para C2/C4; semillas de
   expresiones faciales, spike `Decal` y vista-esqueleto de debug.
+  **4ª ronda (2026-07-16):** skill "Godot-Claude-Skills" (GdUnit4 +
+  PlayGodot) — PlayGodot descartado (exige compilar fork custom del
+  motor, Beckett ya cubre lo mismo sin eso); GdUnit4 no se adopta
+  completo, solo un spike puntual de 30 min sobre el problema de
+  autoloads en headless.
+  **5ª ronda (2026-07-16):** "Godot AI Builder" (HubDev-AI) descartado
+  como framework completo (sidecar Node.js, exige editor abierto, instala
+  addons solo, compite con el SCHEMA/Vault); de sus 9 skills evaluadas la
+  mayoría asume Godot **2D** (`CharacterBody2D`/`move_and_slide`) — choque
+  de dimensión con el proyecto 100% 3D analítico, no solo de estilo.
+  Único ítem portable: Audio Manager Pattern de `godot-effects`.
 - `research/quality-benchmarks/` — capturas EXTERNAS de calidad de
   render (no concept art canon, no confundir con `concept/`): 3 PNG del
   addon godot-vrm (avatar VRM "AliciaSolid"), aportados por el director

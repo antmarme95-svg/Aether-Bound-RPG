@@ -93,7 +93,12 @@ flush de State + memoria de Claude antes de abrir la siguiente tarea.
 
 1. **[[Current-State]] refleja la realidad** — incluida la sección de
    ARRANQUE DE LA PRÓXIMA SESIÓN (qué sigue, qué decisión espera al director,
-   qué quedó bloqueado y con qué sospecha).
+   qué quedó bloqueado y con qué sospecha). **Higiene de contexto
+   (2026-07-16):** este archivo se auto-carga en CADA sesión (regla de oro) —
+   describe SOLO lo vigente, con techo razonable (~2,500-3,000 tokens). Si un
+   punto deja de ser "lo que sigue" y pasa a ser "lo que ya pasó", se mueve a
+   [[Current-State-Historico]] (o vive solo en [[LOG]], que ya es el
+   append-only autoritativo) — no se acumula aquí como relato.
 2. **[[LOG]]**: una entrada por operación de la sesión
    (`op ∈ {ingest, design, feature, playtest, lint, state}`).
 3. **[[00-Index]]**: al día si hubo páginas nuevas, movidas o re-descritas.

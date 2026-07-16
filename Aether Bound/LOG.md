@@ -1,5 +1,179 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] design | PRD-Rework-Modelado-Personajes-v2 — instrucciones ejecutables compiladas
+Boris pidió traducir todo el conocimiento acumulado hoy (análisis
+motor-vs-ejecución, verificación de recursos sin ejecutar, minado del
+libro de anatomía) en instrucciones técnicas concretas que Sonnet pueda
+ejecutar para el rework completo de modelado de personajes. Compilado en
+[[PRD-Rework-Modelado-Personajes-v2]] con anclas de código verificadas
+por grep el mismo día (`SHOULDER_X character_rig.gd:39`, clavícula recta
+`:446-448`, waist copiando el torso `:485/1289-1293`, dedos uniformes
+`:681-702`, `_hair_frontier_crop hair_library.gd:319`,
+`toon_ramp.tres` CONSTANT). Estructura: 5 fases con dependencias — F0
+pipeline de tinta en el banco (BLOQUEANTE: los % medidos hasta hoy están
+parcialmente contaminados si el banco no aplica el post completo;
+incluye re-baseline y el A/B de banding LINEAR), F1 torso en 3 masas +
+cintura escapular como bloque propio (clavícula en S, trapecio real,
+acromion-caja; SHOULDER_X solo se mueve si la medición en píxeles de la
+lámina lo pide), F2 manos (curva de convergencia + inserción en arco +
+nudillos como masas puntuales + curl variable), F3 pelo (helper de loft
+`Curve3D`+`SurfaceTool` ratificado desde 07-12, orden invertido
+masa→mechones, anti-paralelismo adaptado al Sobel; PROHIBIDO 4º intento
+con cajas/conos), F4 menores (boca color, warpaint atlas). Reglas de
+sesión duras (Lecciones primero, gates + captura por fase, QA imparcial
+máx. 2 rondas sin reporte, no tocar pecs/barba/ROM). **Status:
+propuesto — espera VoBo de Boris en 3 puntos: orden de fases, banding
+LINEAR (look global) y el criterio lámina-primero de F1.**
+
+## [2026-07-16] lint | Higiene de contexto — Current-State.md recortado a solo el presente
+Boris pidió evaluar la skill "project-context" (higiene de archivos de
+contexto de Claude Code) y, al ver que su diagnóstico aplicaba directo a
+este Vault, pidió implementarlo. Su regla central: el archivo que se
+auto-carga en cada sesión ("status.md" en su vocabulario) debe describir
+SOLO el presente, con techo ~2,500 tokens; la historia va a un archivo
+append-only que no se auto-carga. **Diagnóstico confirmado con evidencia:**
+[[Current-State]] había llegado a 1,197 líneas / ~21,846 tokens — puro
+relato sesión-por-sesión acumulado desde el reseteo (2026-07-04), cargado
+entero en CADA arranque de sesión por la regla 1 de `CLAUDE.md`. Ya no era
+"estado actual", era el historial completo duplicando lo que [[LOG]] ya
+guarda. **Acción:** copia verbatim de todo el contenido a
+[[Current-State-Historico]] (archivo nuevo, cero pérdida de dato —
+verificado por copia exacta antes de tocar el original), luego
+`Current-State.md` se recortó a: el bloque vigente de "ARRANQUE DE LA
+PRÓXIMA SESIÓN" (con los hallazgos #0/#0.5/#0.6 de hoy) + una sección
+nueva "Hechos vigentes" (branch, motor, bloqueos, deuda técnica, riesgos
+abiertos) + punteros a [[LOG]] y [[Current-State-Historico]]. Resultado:
+~2,211 tokens (90% menos). Regla nueva documentada en `SCHEMA.md` §7 punto
+1 para que no vuelva a inflarse: lo que deja de ser "lo que sigue" se
+mueve, no se acumula. **No se instaló la skill ni su script
+`check_context.py`** (requiere Python real, no instalado en esta máquina;
+la adaptación del script queda como follow-up opcional, no bloqueante).
+
+## [2026-07-16] ingest | Minado de "Anatomy for 3D Artists" — Principios de Anatomía 3D
+Boris consiguió un libro (PDF de 366 MB, copia personal, NUNCA copiado al
+repo) sobre anatomía para modelado 3D y pidió revisarlo completo en modo
+automático. El PDF excedía el límite de extracción de texto (100 MB) por
+ser un escaneo de imagen por página a resolución de impresión —
+**se instaló `mutool` (MuPDF, vía winget, autorizado por Boris)** para
+re-renderizar las 157 páginas a JPEG legible (~1.5-2 MB c/u) sin tocar el
+archivo original. 5 subagentes en paralelo (30 páginas c/u) leyeron el
+libro completo y reportaron principios en su propia síntesis (disciplina
+de copyright: sin transcribir texto ni reproducir imágenes). Compilado en
+[[Principios de Anatomía 3D]] (`10-Knowledge/`), cruzado contra
+[[Lecciones]] y las prioridades abiertas del rework de fenotipo.
+Hallazgos con más señal: **torso** se bloquea en 3 masas (caja torácica
+2/3 + cintura deformable + pelvis 1/3, NO un cilindro continuo) con la
+cintura escapular como bloque separado y articulado — insumo directo para
+reabrir `SHOULDER_X`; **manos** tienen un sistema de proporción por
+mitades sucesivas + los dedos NUNCA rectos (curvan convergiendo al medio)
+— explica el síntoma "tabla plana"; **pelo** se bloquea como masa
+completa primero, mechones individuales al final, con variación
+deliberada anti-paralelismo entre mechones vecinos — probable causa real
+de los "2-3 lóbulos fundidos". Nota de fricción resuelta en la página: la
+recomendación del libro de "transiciones suaves" en pelo no aplica igual
+en un pipeline de línea de tinta Sobel (que necesita escalones de
+profundidad REALES para entintar mechones como trazos distintos) — se
+dejó explícito para no copiarlo ciego. **Nada de esto se aplicó todavía
+en código** — es conocimiento compilado, pendiente de ejecución cuando
+se retome `SHOULDER_X`/manos/pelo.
+
+## [2026-07-16] ingest | Quinta ronda de plugins — "Godot AI Builder" (framework + 9 skills) descartado
+Boris encontró `github.com/HubDev-AI/godot-ai-builder` (plugin de Claude
+Code + addon de editor Godot para generar juegos completos desde
+prompts) y pidió evaluarlo, primero como framework completo y luego
+9 skills sueltas que propuso como candidatas (`godot-builder`,
+`godot-director` +Opus orquestando, `godot-polish`, `godot-scene-arch`,
+`godot-player`, `godot-enemies`, `godot-physics`, `godot-effects`,
+`godot-assets`). **Framework completo: descartado** — sidecar Node.js
+(mismo criterio que ya rechazó `godot-ai`), exige el editor de Godot
+abierto (mismo costo ya marcado contraindicado para el spike de
+Beckett, sin correr todavía), `godot_install_addon` instala addons de
+forma autónoma (opuesto a la disciplina de 4 rondas de evaluación
+manual), y su protocolo de 6 fases compite con el SCHEMA/Vault ya
+funcionando. **Las 9 skills: descartadas en su mayoría por un hallazgo
+de fondo, no solo de estilo** — zip extraído a scratchpad (no
+instalado) y verificado con grep directo: la mayoría asume Godot
+**2D** (`CharacterBody2D`/`move_and_slide()`, `_draw()`, shaders
+`canvas_item`), y Aether Bound es 100% 3D con física analítica propia
+— choque de dimensión, no de arquitectura de juego. Único ítem
+rescatable: el Audio Manager Pattern de `godot-effects` (pool de
+`AudioStreamPlayer`), a confirmar contra `godot/autoload/` antes de
+portar. `godot-director` aporta solo 4 reglas sueltas de higiene
+GDScript como checklist, no su protocolo. Registrado como 5ª ronda en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`. Nada instalado.
+
+## [2026-07-16] ingest | Cuarta ronda de plugins — skill "Godot-Claude-Skills" evaluado y descartado
+Boris encontró y subió un skill de Claude Code para Godot
+(`Randroids-Dojo/Godot-Claude-Skills`, deprecated, ahora en el
+marketplace `Randroids-Dojo/skills`) pidiendo evaluación antes de
+instalar. Trae GdUnit4 (testing GDScript dentro de Godot) + PlayGodot
+(automatización tipo Playwright, requiere compilar un FORK CUSTOM del
+motor) + export web/Vercel/CI. **PlayGodot descartado**: mismo
+anti-patrón ya rechazado con LimboAI (toolchain de compilación
+injustificable) pero peor — reemplaza el binario del motor, no un
+addon; además duplica 1:1 lo que ya cubre Beckett MCP sin exigir
+compilar nada. **GdUnit4 no se adopta completo**: el harness propio de
+tests ya funciona y tiene 15+ lecciones específicas pagadas; único valor
+real detectado es un spike de 30 min para verificar si su runner
+registra autoloads en headless (limitación real y documentada de
+`--headless --script`, ver [[Lecciones]]) — no urgente, no bloqueante.
+Export web/CI: no aplica a la fase actual (desktop, sin `gh`
+autenticado). Registrado como 4ª ronda en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`. Nada instalado.
+
+## [2026-07-16] ingest | Catálogo Técnico Godot — verificación de campo + huecos nuevos
+Boris pidió revisar TODAS las librerías/técnicas de Godot y compilarlas al
+Vault con prioridad de uso, para conocer mejor la herramienta de trabajo
+tras el análisis de la sesión anterior. 2 subagentes: uno verificó en
+código (grep directo, no memoria) el estado real de los 5 recursos de
+[[Propuesta-Recursos-de-Modelado]] (ratificada 2026-07-12) — **confirmado:
+ninguno de los 5 está ejecutado en el personaje** (`character_rig.gd`
+sigue en 0 usos de `SurfaceTool`/`Curve3D`/triplanar; `toon_ramp.tres`
+sigue en `interpolation_mode=CONSTANT`, la causa exacta del banding duro
+que un benchmark ya había señalado). El otro subagente investigó con web
+search el ecosistema Godot 4.6 2026 buscando huecos no cubiertos por
+`Plugin-Evaluation-2026-07-11.md`: encontró 2 cosas nuevas de valor real —
+**`CompositorEffect`** (API nativa 4.3+ para saldar la deuda del post
+manual de `golden_scene.gd:657`, con `PPMagic` como referencia Sobel+
+Kuwahara casi 1:1) y el mecanismo técnico concreto para la "vista-esqueleto
+de debug" ya pedida (`ImmediateMesh` en el banco, más simple que un
+`EditorNode3DGizmoPlugin` completo). Confirmó con evidencia que NO vale
+la pena: CSG en runtime, compute shaders sin cuello de botella real,
+shaders de acuarela genéricos de comunidad, ningún addon nuevo de
+"humanoide procedural", ningún plugin de pelo maduro, y que Beckett
+sigue ganando sobre otros MCP servers 2026. Compilado en
+[[Catálogo Técnico Godot]] (nueva página, `10-Knowledge/`), sin duplicar
+los 2 documentos de investigación previos. **Conclusión operativa: antes
+de cualquier técnica nueva, ejecutar el Tier 0 (loft/banding/triplanar/
+gradientes/gizmo de debug) — ya ratificado desde 07-12 y nunca tocado.**
+
+## [2026-07-16] research | Análisis técnico + QA visual: ¿motor o ejecución? ¿Ghibli o Art Bible?
+Boris, honesto sobre el techo de ~50% de fidelidad o menos, pidió correr
+2 subagentes en paralelo (uno técnico leyendo shaders/pipeline sin ver
+estética, uno de QA visual mirando renders vs láminas RAW y benchmarks
+de estilo sin ver código) para saber si el techo es del motor Godot o de
+la habilidad de ejecución del equipo, y si convendría pivotar de
+"Melancolía Gráfica" a un estilo tipo Ghibli. **Veredicto convergente de
+ambos: no es el motor (Forward+ soporta bien el pipeline; las 4 capas de
+`melancolia_post.gdshader` están completas y wireadas), y no conviene
+Ghibli** (sería barato en uniforms pero quitaría la línea Sobel que hoy
+disfraza la crudeza de las primitivas procedurales del personaje — el
+entorno del propio juego ya logra el look objetivo, prueba de que el
+pipeline funciona). **Hallazgo nuevo y accionable:** el QA visual detectó
+que los renders `anatomy_*.png` (banco `tmp_anatomy.gd`) no muestran
+línea de tinta/acuarela — se leen como PBR/plástico genérico — mientras
+el entorno (`wilds_start/combat/city`) sí la muestra con el mismo
+pipeline; posible desconexión entre `attach_post`/`PipelineConfig` y la
+escena de `tmp_anatomy.gd`. Esto puede estar contaminando la medición de
+% de fidelidad de toda la ventana `feat/c6-anatomy-rework` (32→55%) — se
+registra como prioridad #0 de la próxima sesión en [[Current-State]],
+antes de reabrir `SHOULDER_X`. Hallazgo secundario sin investigar: los
+renders de gameplay (`wilds_start/combat/city`) muestran un rig de
+personaje distinto y más primitivo (cápsulas sin cara) que los renders
+`anatomy_*` — sin confirmar si es placeholder intencional o
+desincronización real entre bancos. Sesión de solo análisis, sin cambios
+de código.
+
 ## [2026-07-14] ratificación | Boris autoriza reabrir SHOULDER_X/proporciones de hombro
 Al preguntarle qué decisión quedaba pendiente antes de cerrar, Boris pidió
 el contexto de la silueta de torso/hombros (mayor punto de apalancamiento

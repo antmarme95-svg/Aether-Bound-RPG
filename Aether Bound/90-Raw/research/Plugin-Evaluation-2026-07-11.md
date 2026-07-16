@@ -427,3 +427,90 @@ lista humanoide VRM (55 huesos, `import_vrm.gd` L302-316).
 | **Cara** | No | Ningún plugin minable — seguir vía RAW + Decal/triplanar (Sesión 5) |
 | **Cuerpo/esqueleto** | Parcial (referencia) | Cross-check ROM contra Humanizer/VRM; huecos anotados (muñeca/tobillo/clavícula/dedos), sin implementar |
 | **Movilidad** | Sí (candidato concreto) | Orientation warping de PoseWarping.gd portable a hips/spine/upper_spine → candidato para pase de poses C4 |
+
+---
+
+# CUARTA RONDA (2026-07-16): skill "Godot-Claude-Skills" (Boris lo encontró y lo subió para evaluar)
+
+> Encargo puntual de Boris: evaluar un skill de Claude Code descargado en
+> `C:\Users\tonom\Downloads` antes de instalarlo. **Aclaración de campo:**
+> el archivo `SKILL.md` (29 KB) resultó ser un skill NO relacionado
+> (generación de imágenes RunComfy); el skill de Godot real estaba en
+> `SKILL (1).md` (9.5 KB), del repo **Randroids-Dojo/Godot-Claude-Skills**
+> (marcado *deprecated* en su propio README — vive ahora en el
+> marketplace `Randroids-Dojo/skills`). No instalado — solo evaluado.
+
+| Componente | Tech | Veredicto | Razón |
+|---|---|---|---|
+| **PlayGodot** | Python + fork custom de Godot compilado (`Randroids-Dojo/godot`, rama `automation`, vía `scons`) | **Descartar** | Mismo anti-patrón ya rechazado con LimboAI ("costo de toolchain injustificable para un problema que no tenemos") — pero peor: no es un addon, es reemplazar el BINARIO del motor entero por un fork que puede desalinearse de la 4.6.3 exacta del proyecto. Además duplica 1:1 lo que ya cubre **Beckett MCP** (screenshot, `get_remote_tree`, `runtime_get_property`, input simulado) sin exigir compilar nada — mismo beneficio, cero costo. |
+| **GdUnit4** | Addon GDScript, corre dentro de Godot vía `GdUnitCmdTool.gd` | **No adoptar completo; 1 spike puntual con valor real** | El proyecto ya tiene su propio harness (`test_core`/`autotest_biomech/combat/slice/ui`, banco `tmp_anatomy`) con 15+ lecciones duras específicas a la física analítica y el rig procedural propios — reemplazarlo no es gratis, no resuelve un problema hoy sin cubrir (mismo criterio que ya filtró Beehave/LimboAI/Chickensoft). **Único punto con valor concreto:** verificar si el runner de GdUnit4 carga el proyecto completo (autoloads incluidos) a diferencia de `--headless --script`, que [[Lecciones]] documenta que NO registra `EventBus`/`Feel` como globals — si eso es cierto, resuelve una limitación real hoy. Spike de ~30 min, no una migración. |
+| **Export web/Vercel/GitHub Pages/CI** | GitHub Actions + Vercel CLI | **No aplica a esta fase** | El juego es desktop, sin build web planeado; `gh` ni siquiera está autenticado en esta máquina ([[Lecciones]]). Infraestructura para un tipo de proyecto/fase distinto al actual. |
+
+**Conclusión de la cuarta ronda:** ningún componente se instala. El único
+seguimiento con valor real (no urgente, no bloqueante) es el spike de 30
+min de GdUnit4 sobre el problema de autoloads en headless — el resto
+(PlayGodot, export/CI) queda descartado con evidencia, no reabrir sin
+cambio de fase del proyecto (ej. si algún día se planea build web/Steam).
+
+---
+
+# QUINTA RONDA (2026-07-16): "Godot AI Builder" (HubDev-AI) — framework completo + 9 skills individuales
+
+> Encargo de Boris: evaluar `github.com/HubDev-AI/godot-ai-builder` (zip
+> bajado a Downloads, extraído a scratchpad para inspección, NO
+> instalado) primero como framework completo, luego 9 skills sueltas que
+> Boris propuso como candidatas de adopción parcial: `godot-builder`,
+> `godot-director` (junto con Opus como orquestador), `godot-polish`,
+> `godot-scene-arch`, `godot-player`, `godot-enemies`, `godot-physics`,
+> `godot-effects`, `godot-assets`.
+
+## Veredicto del framework completo: descartar
+
+Es un plugin de Claude Code + addon de editor Godot (14 skills + 28 MCP
+tools + servidor MCP Node.js + puente HTTP en puerto 6100) para generar
+juegos completos desde prompts, con protocolo de build de 6 fases y
+"quality gates" propios. Descartado por 5 razones concretas: (1) sidecar
+Node.js — mismo criterio que ya descartó `godot-ai` en la 4ª ronda, Beckett
+gana por ser GDScript puro; (2) exige el editor de Godot abierto durante
+la generación — mismo costo ya marcado "contraindicado" para el spike de
+Beckett, que ni siquiera se ha corrido todavía; (3) es un framework de
+"arma un juego entero" con protocolo/gates propios que compite con el
+SCHEMA/Vault ya funcionando; (4) trae `godot_install_addon` — instala
+addons de forma autónoma, lo opuesto exacto a la disciplina de evaluación
+manual mantenida en 4 rondas; (5) ninguno de sus 28 tools resuelve algo
+que Beckett no resuelva ya para el único caso de uso legítimo (ver el
+editor/juego corriendo en vivo).
+
+## Veredicto de las 9 skills individuales
+
+**Hallazgo que cambia el panorama, verificado con grep directo sobre los
+archivos extraídos (no solo el resumen del README):** la mayoría de estas
+skills asume un juego **2D**, no 3D — `CharacterBody2D`/`move_and_slide()`,
+`_draw()`, `Sprite2D`, shaders `canvas_item`. Aether Bound es 100% 3D con
+física analítica propia (sin `CharacterBody3D`/motor de física). No es un
+desajuste de estilo de juego, es un desajuste de dimensión completa.
+
+| Skill | Veredicto | Por qué |
+|---|---|---|
+| `godot-builder` | Descartar | Depende de tools MCP de un addon no instalado; duplica el rol del Vault como orquestador de builds. |
+| `godot-director` (+ Opus) | Minar solo 4 reglas sueltas | Protocolo de 6 fases con gates propios choca de frente con el Feature Loop + ALL_PASS ya funcionando — dos fuentes de verdad de "qué está completo" es más fricción, no menos. |
+| `godot-polish` | Minar 1 tabla | Shaders `canvas_item` (2D); solo el checklist "toda acción necesita feedback" (líneas 13-24) sirve como auditoría del combate propio, no como código. |
+| `godot-scene-arch` | Minar 1 principio | Todos los ejemplos son 2D; solo "programático > `.tscn`" (líneas 11-20) es agnóstico — y ya es como construyen sus escenas hoy. |
+| `godot-player` | Descartar | Los 4 controladores usan `move_and_slide()` — choca de raíz con la locomoción 100% analítica propia. |
+| `godot-enemies` | Descartar | IA `CharacterBody2D` + `_draw()`; `enemy_humanoid.gd` ya validado en playtest real (Gate 1 aprobado). Cero valor nuevo. |
+| `godot-physics` | Minar 1 dato | Todo en `Vector2`/`CharacterBody2D`; solo la aritmética de bits de collision layers/masks (líneas 101-122) sirve igual en 3D. |
+| `godot-effects` | Minar 1 patrón | Shake/partículas 2D, probablemente ya cubierto por `trauma_shake.gd`/`time_feel.gd`; el Audio Manager Pattern (pool de `AudioStreamPlayer` con buses Music/SFX, líneas 189-230) SÍ es código genérico portable. |
+| `godot-assets` | Descartar | Choca en 3 frentes a la vez: visuals 2D, shaders `canvas_item`, y pipeline de arte por IA — ya rechazado explícitamente en la evaluación del skill `3d-model-generation` la sesión pasada. |
+
+**Único ítem con valor real de portar directo:** el Audio Manager Pattern
+de `godot-effects` — verificar primero si ya existe algo equivalente en
+`godot/autoload/` antes de copiarlo, para no duplicar.
+
+**Sobre `godot-director` + Opus orquestando (propuesta puntual de Boris):
+no adoptar el protocolo.** Su sistema de fases/gates es un SCHEMA paralelo
+al que ya existe; las únicas 4 reglas rescatables (líneas 393-480,
+agnósticas de motor/dimensión) son higiene general de GDScript: nunca
+dejar métodos `pass` como stub en gameplay crítico, bounds-check en
+accesos a arrays, probar cada 2-3 scripts en vez de acumular cambios sin
+correr nada, y conexión defensiva de señales — útiles como checklist de
+code-review, no como reemplazo del Feature Loop.
