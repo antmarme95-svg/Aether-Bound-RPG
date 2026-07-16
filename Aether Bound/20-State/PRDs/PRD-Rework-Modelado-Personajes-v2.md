@@ -168,6 +168,24 @@ nuevo), NO resolverlo en este PRD.
 - Gates `test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
   `autotest_ui` ALL_PASS.
 
+**Corrección post-cierre (2026-07-16, mismo día): trapecio hipertrofiado.**
+Boris revisó la captura de espalda del cierre y detectó que el trapecio
+(escalado Y=1.5 en el paso anterior) leía como "tres cabezas" — un bulto
+redondo del mismo porte que la cabeza, no una pendiente muscular. Error de
+proceso admitido: se había escalado para "que se viera algo" tras
+confirmar que la versión original (Y=0.6) era invisible, sin medir contra
+la lámina (viola la regla 4: "la lámina es la autoridad de proporción").
+Comparación directa contra `fenotipo-humano-torso-v1.png` (vista de
+espalda): ahí el trapecio es una pendiente suave leída por sombreado, no
+un bulto separado. Se generaron 3 variantes en paralelo — **A**
+(1.2/0.85/0.6), **B** (1.0/0.7/0.55), **C** (1.5/0.55/0.6, más ancha —
+resultó tan prominente como A pese a ser más corta en Y) — con captura de
+espalda lado a lado. **Boris eligió B**, la que menos lee como bulto
+separado (sigue habiendo un quiebre chico, aceptado: el estilo tinta+Sobel
+necesita algo de quiebre real para entintar cualquier masa, confirmado en
+Fase 0). Valor final en código: `trap.scale = Vector3(1.0, 0.7, 0.55)`.
+Gates re-verificados ALL_PASS.
+
 **Pendiente antes de dar por cerrada la fase:** QA imparcial + reporte con
 capturas frente/perfil/3-4/espalda + VoBo de Boris (criterio de cierre
 original, sin cambios) — decidir si el acromion/deltoide-bajo-trapecio y

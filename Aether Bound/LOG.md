@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] fix | Trapecio corregido: Boris detectó hipertrofia ("tres cabezas") — A/B/C comparadas, elegida B
+Boris revisó la captura de espalda del cierre de Fase 1.3 y marcó el
+trapecio como hipertrofiado ("¿no dirías que están demasiado
+hipertrofiados?") — la vista trasera mostraba literalmente "tres cabezas"
+(el trapecio de cada lado, escalado Y=1.5 en la corrección anterior, leía
+como un bulto redondo del mismo porte que la cabeza). **Admitido el error
+de proceso:** se había escalado el trapecio para que "se viera algo" tras
+confirmar que la versión original (Y=0.6) era invisible, sin medir contra
+la lámina — exactamente el atajo que la regla del proyecto ("la lámina es
+la autoridad de proporción") advierte evitar. Comparado directo contra la
+vista de espalda de `fenotipo-humano-torso-v1.png`: ahí el trapecio es una
+pendiente suave leída por sombreado, no un bulto separado. Se generaron 3
+variantes en paralelo (A 1.2/0.85/0.6, B 1.0/0.7/0.55, C 1.5/0.55/0.6 — C
+resultó tan prominente como A pese a ser más corta en Y, porque el ancho
+mayor compensaba) con captura de espalda lado a lado (PowerShell +
+System.Drawing, composición de 3 crops con etiqueta). **Boris eligió B**
+por ser la que menos lee como bulto separado — sigue habiendo un quiebre
+chico en la silueta, aceptado como necesario para que el Sobel entinte la
+masa (el sombreado solo, como en la lámina, no se lee a esta escala —
+confirmado en Fase 0). Gates ALL_PASS. Fase 1.3 se mantiene completa con
+el valor corregido.
+
 ## [2026-07-16] feature | Fase 1.3 completada: acromion agregado + trapecio corrido para solapar el deltoide
 A pedido de Boris ("termina el acromion y el deltoide bajo el trapecio
 primero"), se completó lo que faltaba de 1.3. **Acromion:** `_box_mesh`

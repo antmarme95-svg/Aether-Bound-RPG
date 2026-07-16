@@ -93,6 +93,8 @@
   real (antes copiaba el torso exacto), clavícula partida en 2 (curva S),
   acromion agregado + trapecio corrido para solapar el deltoide (Fase 1.3
   completa, verificación honesta: bien en perfil, sutil en frente/3-4).
+  **Corrección: Boris detectó el trapecio hipertrofiado ("tres cabezas" en
+  espalda) — 3 variantes A/B/C comparadas, eligió B (escala 1.0/0.7/0.55).**
   Gates ALL_PASS. Pendiente: QA imparcial + VoBo de Boris antes de cerrar
   Fase 1.**
 - [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`) — **borrador de trabajo,

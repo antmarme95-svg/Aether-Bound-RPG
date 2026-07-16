@@ -31,8 +31,14 @@ updated: 2026-07-16
   semi-hundida en el tope del hombro + trapecio corrido para solapar
   directo el deltoide. Verificación honesta: se lee bien en perfil, sutil
   en frente/3-4 (un plano de acromion se luce más visto desde arriba) —
-  no rompió nada, tampoco es dramático en esos ángulos. Gates ALL_PASS.
-  **Con esto, Fase 1.3 queda completa en su primera pasada. Pendiente
+  no rompió nada, tampoco es dramático en esos ángulos. **Corrección
+  posterior, mismo día: Boris detectó el trapecio HIPERTROFIADO** en la
+  vista de espalda ("tres cabezas" — el escalado Y=1.5 se eligió para que
+  "se viera algo", sin medir contra la lámina). Comparadas 3 variantes en
+  paralelo (A/B/C) con captura de espalda lado a lado; Boris eligió **B
+  (escala 1.0/0.7/0.55)** por ser la que menos lee como bulto separado.
+  Gates ALL_PASS con el valor corregido.
+  **Con esto, Fase 1.3 queda completa. Pendiente
   antes de cerrar Fase 1:** QA imparcial + VoBo de Boris con capturas
   frente/perfil/3-4/espalda — ver [[PRD-Rework-Modelado-Personajes-v2]]
   Fase 1 para el detalle completo.

@@ -161,7 +161,6 @@ var accent: Color = Color("#46e6ff")
 
 # Per-origin visual state
 var _spark_particles: GPUParticles3D = null   # ironblooded sparks node
-var _fur_slot: Node3D = null                  # miststalker fake-fur node
 var _iron_armor: Array = []                   # ironblooded armor pieces: [{node, base}]
 
 # Motion / animation state
@@ -543,9 +542,23 @@ func _build() -> void:
 	# centro upper_spine-frame ≈ side*0.22, 0.24), no solo compartir
 	# vecindad — con el centro viejo (0.115) el trapecio quedaba demasiado
 	# medial (cerca del cuello) y su borde apenas tocaba el deltoide.
+	# FASE 1.3 (corrección, 2026-07-16, MISMO DÍA): Boris marcó el escalado
+	# Y=1.5 de arriba como HIPERTROFIADO — vista de espalda (turnaround)
+	# mostraba "tres cabezas" (el trapecio de cada lado leía como un bulto
+	# redondo del mismo porte que la cabeza, no una pendiente muscular).
+	# Error de proceso: se escaló para que "se viera algo" sin medir contra
+	# la lámina, violando la regla del proyecto de que la lámina manda la
+	# proporción. Se probaron 3 variantes en paralelo (A 1.2/0.85/0.6,
+	# B 1.0/0.7/0.55, C 1.5/0.55/0.6 — C, más ancha, leía tan prominente
+	# como A pese a ser más corta en Y) con captura de espalda lado a lado;
+	# Boris eligió **B** por ser la que menos lee como bulto separado. Sigue
+	# habiendo un quiebre chico en la silueta incluso en B — esperado y
+	# aceptado: el estilo tinta+Sobel del proyecto necesita algo de quiebre
+	# real para que cualquier masa se entinte (Fase 0), la lámina sola
+	# (sombreado suave) no alcanza a leerse a esta escala.
 	for tside in [-1, 1]:
 		var trap = _sphere_mesh(0.10, skin_mat)
-		trap.scale = Vector3(1.4, 1.5, 0.7)
+		trap.scale = Vector3(1.0, 0.7, 0.55)
 		trap.position = Vector3(float(tside) * 0.135, 0.285, 0.0)
 		trap.rotation.z = -float(tside) * 0.28
 		upper_spine.add_child(trap)
@@ -2222,11 +2235,6 @@ func _build_origin_features(origin: Dictionary) -> void:
 			n.queue_free()
 	_iron_armor.clear()
 
-	# Clean up miststalker fur (always; only re-created when miststalker)
-	if _fur_slot != null:
-		_fur_slot.queue_free()
-		_fur_slot = null
-
 	# Reset metal heat glow (cleared for all non-ironblooded origins)
 	metal_mat.set_shader_parameter("emission_color", Color(0.0, 0.0, 0.0, 1.0))
 	metal_mat.set_shader_parameter("emission_strength", 0.0)
@@ -2259,73 +2267,19 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")
 
 	elif id == "miststalker":
-		# Beastfolk ears (ConeGeometry(0.045, 0.11, 5)) using hair color
+		# Mistbound — 100% human (Aether Bound/10-Knowledge/Fenotipos y Creación
+		# de Personaje.md, decisión 2026-07-04): no beast-folk geometry. Plain
+		# rounded human ears, same treatment as the other human-shaped origins.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
-			var mesh = CylinderMesh.new()
-			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.045
-			mesh.height = 0.11
-			ear.mesh = mesh
-			ear.material_override = hair_mat
-			ear.position = Vector3(side * 0.082, 0.15, 0.0)
-			ear.rotation.z = float(side) * -0.35
-			_add_outline_pass(ear, Color("#b8451f"), 0.02)
-			feature_slot.add_child(ear)
-
-		# Tail: 6 sphere segments tapering from hips
-		var tail = Node3D.new()
-		var r: float = 0.035
-		for i in range(6):
-			var seg = MeshInstance3D.new()
 			var smesh = SphereMesh.new()
-			smesh.radius = r
-			smesh.height = r * 2.0
-			seg.mesh = smesh
-			seg.material_override = hair_mat
-			seg.position = Vector3(0.0, -0.05 - float(i) * 0.012, -0.12 - float(i) * 0.07)
-			_add_outline_pass(seg, Color("#b8451f"), 0.02)
-			tail.add_child(seg)
-			r *= 0.92
-		tail_slot.add_child(tail)
-
-		# ---- Miststalker fake-fur tufts ----
-		# A few flat alpha-card-like quads (thin boxes) on shoulders and torso to
-		# read as a pelt silhouette. Green-tinted, slightly semi-transparent.
-		# Parented to spine so they follow the torso.
-		_fur_slot = Node3D.new()
-		_fur_slot.name = "fur_slot"
-		spine.add_child(_fur_slot)
-
-		var fur_color: Color = Color(0.18, 0.38, 0.12, 0.72)  # mossy green, partly transparent
-		var fur_mat := StandardMaterial3D.new()
-		fur_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		fur_mat.albedo_color = fur_color
-		fur_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		fur_mat.cull_mode = BaseMaterial3D.CULL_DISABLED  # visible from both sides
-
-		# Left shoulder tuft
-		var tuft_l := _box_mesh(0.08, 0.14, 0.03, fur_mat)
-		tuft_l.position = Vector3(-0.22, 0.44, 0.0)
-		tuft_l.rotation.z = 0.3
-		_fur_slot.add_child(tuft_l)
-
-		# Right shoulder tuft (smaller — pauldron is on this side)
-		var tuft_r := _box_mesh(0.06, 0.10, 0.03, fur_mat)
-		tuft_r.position = Vector3(0.22, 0.44, 0.0)
-		tuft_r.rotation.z = -0.3
-		_fur_slot.add_child(tuft_r)
-
-		# Chest center tuft
-		var tuft_c := _box_mesh(0.07, 0.16, 0.03, fur_mat)
-		tuft_c.position = Vector3(0.0, 0.30, 0.15)
-		_fur_slot.add_child(tuft_c)
-
-		# Forearm left tuft
-		var tuft_fa := _box_mesh(0.06, 0.11, 0.025, fur_mat)
-		tuft_fa.position = Vector3(-0.22, 0.18, 0.0)
-		tuft_fa.rotation.z = 0.15
-		_fur_slot.add_child(tuft_fa)
+			smesh.radius = 0.030
+			smesh.height = 0.060
+			ear.mesh = smesh
+			ear.material_override = skin_mat
+			ear.position = Vector3(side * 0.150, 0.0, 0.0)
+			_add_outline_pass(ear, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear)
 
 	elif id == "ironblooded":
 		# ---- Ironblooded: compact round ears + heat glow + sparks ----
