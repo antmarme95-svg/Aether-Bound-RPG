@@ -246,6 +246,111 @@ blendshapes. Lo transferible a Fase 5 es específicamente lo de arriba
 el resto queda como referencia para el día que el proyecto anime
 expresiones faciales, no para esta fase.
 
+## Piernas y pies (minado 2026-07-16, tercera pasada — completa el rework humano)
+
+De "3D male — Part 01 | Basic form" §08-09 (piernas) y §14-15 (pies), no
+minado en la primera pasada porque esa sesión priorizó torso/manos/pelo.
+
+**Bloqueo de piernas (§08):** las piernas se arman igual que los brazos —
+nota el "gesto ondulado" (no un tubo recto): el sartorius (la franja
+distintiva del muslo) curva desde el frente de la cadera, alrededor del
+muslo, hacia el interior de la rodilla. Las rodillas "solo se ponen como
+bultos por ahora" en el bloqueo inicial — se refinan después. **Refinar
+las piernas (§09):** el glúteo es sorprendentemente grande, se desliza por
+debajo de la cresta ilíaca y se curva alrededor del trocánter mayor —
+visualízalo como un frijol grande sentado en ángulo. El trocánter es un
+landmark importante en el lateral de la cadera, básicamente invisible en
+gente musculosa salvo en contrapposto. Hay una curva en S al ver la pierna
+de perfil — importante para que la pantorrilla "entre" bien detrás del
+muslo, en vez de ser dos cilindros apilados sin relación.
+
+**Pies (§14-15):** dato de proporción rápido y verificable: **el pie mide
+aproximadamente lo mismo que el antebrazo** (útil como regla de escala
+cruzada si el rig necesita re-chequear proporciones). El hueso del dedo
+gordo (primer metatarsiano) da la "vara" principal de la que sale el resto
+del pie. Los dedos se bloquean con el ángulo agudo hacia abajo en el primer
+nudillo — EXCEPTO el dedo gordo, que apunta recto (no cae en ángulo como
+los otros 4). En el borde exterior del pie, el extensor digitorum brevis
+es uno de los pocos músculos superficiales visibles; hay un bulto chico en
+el borde exterior de la planta donde termina el hueso del meñique.
+
+**Aplicabilidad al rig actual:** `character_rig.gd` no tiene pies/piernas
+articulados con el mismo nivel de detalle que manos/torso (deuda técnica
+ya registrada en [[Current-State]]: "pies sin IK y ROM enano/elfo", frente
+aparte de este PRD). Estos principios quedan como INSUMO para ese frente
+futuro, no para ejecutar ahora — ninguna fase actual del PRD toca piernas/
+pies.
+
+## Brazos y antebrazos (minado 2026-07-16, tercera pasada)
+
+De "3D male — Part 01 | Basic form" §06-07 (brazos), §17 (arm overview) y
+"Advanced 3D male — Part 02 | Shoulders, arms, and hands" (dinámica de
+pose, aplicabilidad limitada — ver nota abajo).
+
+**Bloqueo de brazos (§06-07):** trazos rápidos y gestuales para los
+miembros. Ojo con el ligero quiebre en el codo visto de frente — el brazo
+extendido NUNCA está perfectamente recto (más pronunciado en mujeres). Una
+vez dibujado el tubo básico, se le da forma moviendo/inflando las formas.
+Agregar un toque de bíceps e implicar el cambio de plano donde el
+braquiorradial curva alrededor del hueso; el bulto chico en el interior
+del codo es el epicóndilo medial — epicóndilo y codo quedan alineados
+cuando el brazo está recto. **"El brazo superior aparece mucho más corto
+que el antebrazo porque gran parte de su largo lo cubre el deltoides"**
+(§17) — dato de proporción aparente útil si el rig necesita revisar por
+qué un brazo "se ve" corto/largo en cámara aunque las medidas sean
+correctas.
+
+**Nota de aplicabilidad — la mayor parte de "Shoulders, arms, and hands"
+(Advanced 3D male Part 02) es sobre POSADO dinámico** (brazo a 30°/90°/
+180°, supinación/pronación, ritmo escapulohumeral) — no aplica a
+`character_rig.gd`, que arma primitivas rígidas sin deformación muscular
+por pose. Queda como referencia para el día que el proyecto anime
+deformación de brazo, no para esta fase.
+
+## Piel y pliegues — nota breve (Part 03 | Skin, aplicabilidad indirecta)
+
+"3D male — Part 03 | Skin" describe cómo simular grasa/piel sobre músculo
+ya bloqueado: los pliegues permanentes (codo, atrás de la rodilla, interior
+de la muñeca, ingle/axila) vienen de dónde la piel está más floja vs. más
+pegada al hueso. **Esto es escultura de detalle en malla continua — no se
+traduce directo al vocabulario de primitivas de Aether Bound** (no hay
+"piel" separada del hueso en `CylinderMesh`/`BoxMesh`/`SphereMesh`). Lo
+único transferible es conceptual: los pliegues de la Fase 1 (costura
+cuello-hombro) y cualquier futuro pliegue de codo/rodilla deben pensarse
+como "dónde la piel está floja" (una masa semi-hundida adicional), no como
+seguir tirando de la geometría rígida existente.
+
+## Cabeza y ojos — brecha real detectada: rango racial no implementado
+
+**Hallazgo cruzando código contra diseño ratificado (2026-07-16, mismo
+día):** [[Fenotipos y Creación de Personaje]] (ratificado 2026-07-04) dice
+explícitamente que `mandíbula`, `pómulos` y `tilt/forma de ojos` son
+**"rango racial: mismo slider, rangos distintos"** — igual que `heightRange`
+(que SÍ está implementado por origen en `origins_data.gd:24,56,88`). Pero
+`character_rig.gd:1906-1947` (`jaw`, `cheek`, `eyeTilt`, `eyeShape`) usa el
+MISMO `_lerp(min, max, v)` para cualquier `_origin_id` — no hay branch por
+raza. Esto es una brecha real, no una hipótesis: el código no cumple
+todavía la especificación ya ratificada de fenotipo. La tabla de
+[[Fenotipos y Creación de Personaje]] da los extremos deseados por raza:
+- **Elfo (aetherborn):** "mandíbula fina" (extremo bajo de `jaw` como base
+  racial, no el punto medio 0.5 actual), "ojos grandes, tilt alto"
+  (`eyeShape`/`eyeTilt` sesgados hacia sus extremos altos), "pómulos altos"
+  (coherente con el rango ya implementado, sin sesgo adicional necesario).
+- **Enano (ironblooded):** "mandíbula ancha" (extremo alto de `jaw`),
+  "frente pesada", "nariz con historia" — la nariz no tiene slider hoy
+  (geometría fija en `_build()`); si se quiere una nariz "con historia" por
+  raza, hace falta agregar un parámetro nuevo (ej. `noseBump`), no reusar
+  uno existente.
+- **Humano:** "máxima variación individual" — el rango completo actual
+  (0.0-1.0 sin sesgo) es correcto tal cual para esta raza, es la
+  referencia neutral contra la que las otras dos se desvían.
+
+**Esto es exactamente "el work del elfo y el enano" que falta para un
+rework completo de cara:** la oreja YA es race-specific (`_build_origin_features`,
+4 ramas), pero mandíbula/ojos NO lo son todavía — el rework de Fase 5 no
+está completo si solo ajusta la forma base (humano) sin agregar el sesgo
+racial que el propio diseño ya ratificó y el código nunca implementó.
+
 ## Nota de estilo — qué extraer y qué NO copiar literal
 
 El libro está escrito para escultura realista/semi-realista en ZBrush con

@@ -34,8 +34,27 @@ updated: 2026-07-16
   del libro: no cubre proporción/estructura de OREJA. Mandíbula/mentón/
   nariz ya tienen 4-8 rondas de ajuste fino documentadas y estables —
   recomendación del borrador: priorizar ojos/orejas en esta fase. **Pendiente
-  VoBo de Boris sobre 5 preguntas abiertas antes de fusionar como Fase 5
+  VoBo de Boris sobre 6 preguntas abiertas antes de fusionar como Fase 5
   oficial del PRD** (ver el archivo para el detalle).
+- **➕ Minado ampliado + brecha racial detectada (2026-07-16, mismo día,
+  pedido explícito de Boris de cubrir "el humano completo + el work del
+  elfo y el enano"):** [[Principios de Anatomía 3D]] ganó 3 secciones más
+  (Piernas y pies, Brazos y antebrazos, Piel y pliegues) — insumo para el
+  frente de piernas/pies (deuda técnica ya conocida), no para ejecutar ya.
+  **Hallazgo real con impacto directo en Fase 5:** `character_rig.gd:1906-
+  1947` (`jaw`/`cheek`/`eyeTilt`/`eyeShape`) usa el MISMO rango para las 3
+  razas, pese a que [[Fenotipos y Creación de Personaje]] (ratificado
+  2026-07-04) ya declara esos 3 rasgos como "rango racial" — mismo
+  tratamiento que `heightRange`, que sí es por-origen. La oreja SÍ cumple
+  el diseño por raza (4 ramas ya existentes). Un subagente Fable (2
+  reintentos por error 529 del servidor, 3er intento OK) incorporó esto al
+  borrador con una propuesta de mecanismo concreta (§1/§4 de
+  [[Fase5-Cara-Propuesta-DRAFT]]) y una pregunta abierta nueva (#6: ¿el
+  sesgo racial entra en esta fase o es frente aparte?). **Hallazgo
+  colateral, ya separado como tarea aparte (no bloquea nada de lo
+  anterior):** `origins_data.gd` sigue tratando a Mist-Stalker como raza
+  completa (Beast-Folk) pese a la decisión ratificada "Mistbound 100%
+  humanos" — tarea C1 pendiente de [[Nomenclatura]].
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (2026-07-16, actualizado tras análisis
   técnico + QA visual pedido por Boris — LEER ANTES DE TOCAR GEOMETRÍA):**
   Boris pidió un análisis con 2 subagentes (técnico: lee shaders/pipeline;

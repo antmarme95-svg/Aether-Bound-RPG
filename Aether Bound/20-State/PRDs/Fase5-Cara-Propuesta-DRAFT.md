@@ -133,6 +133,21 @@ pasó por ~4 iteraciones documentadas (prisma recto → esfera+ajustes 2-6 →
 evidencia visual repite el patrón de "2 rondas sin cerrar, sospechar del
 andamiaje" al revés — aquí el andamiaje YA se corrigió una vez.
 
+**Nota — sesgo racial pendiente (mismo hallazgo que en Ojos, ver §4):**
+[[Fenotipos y Creación de Personaje]] (ratificado 2026-07-04) declara
+`mandíbula` como "rango racial: mismo slider, rangos distintos" — Elfo
+(aetherborn) = "mandíbula fina", Enano (ironblooded) = "mandíbula ancha",
+Humano = referencia neutral. El código actual
+(`character_rig.gd:1906-1911`) usa el MISMO rango
+`_lerp(0.86, 1.16, jaw_v)` para cualquier `_origin_id` — la brecha está
+documentada en [[Principios de Anatomía 3D]] → "Cabeza y ojos — brecha
+real detectada". El mecanismo propuesto es el mismo que para ojos (§4,
+"Propuesta concreta — sesgo racial"): un `match _origin_id` que sesga el
+rango base antes del `_lerp` — Elfo hacia el extremo bajo de `jaw`, Enano
+hacia el extremo alto, Humano/else el rango completo actual sin cambio.
+Esto NO reabre la forma base de la esfera+ángulo goníaco (la propuesta de
+arriba sigue vigente): solo mueve la ventana que el slider recorre.
+
 ---
 
 ## 2. Mentón (`chin_boss`, `character_rig.gd:867-900`)
@@ -268,21 +283,81 @@ RADIOS reales, no solo posiciones (mismo espíritu que la Lección del
 escalón Z: "no confiar en que los números se ven distintos" — aquí ya se
 verificó explícitamente en Ronda 8, con números).
 
-**Propuesta concreta:** los ojos están en el estado MÁS validado de las 5
-partes ("ojos, cejas y proyección Z de nariz/mentón estables on-model",
-review v0.5 positivos). Si el objetivo de Boris para Fase 5 es re-abrir
-esto, la sugerencia es acotar el trabajo a: (a) verificar que
-`eyeTilt`/`eyeShape` cubren un rango de fenotipos creíble sin romper la
-proporción validada en los extremos del slider (hoy solo se validó en el
-valor base 0.5); (b) considerar si la ceja necesita un arco real (el propio
-código señala en un comentario de PRD previo: "esto NO da arco real; si
-sigue leyendo recta, segunda pasada = cadena de 2-3 cápsulas/esferas
-decrecientes" — pendiente, nunca ejecutado).
+**Brecha real detectada — rango racial no implementado (verificado
+2026-07-16, documentado en [[Principios de Anatomía 3D]] → "Cabeza y ojos
+— brecha real detectada"):** Aether Bound tiene TRES razas jugables, y
+[[Fenotipos y Creación de Personaje]] (ratificado 2026-07-04) declara
+`tilt/forma de ojos` (junto con mandíbula y pómulos) como **"rango racial:
+mismo slider, rangos distintos"** — el mismo patrón que `heightRange`, que
+SÍ está implementado por origen (`origins_data.gd:24,56,88`). Pero
+`character_rig.gd:1940-1947` aplica el MISMO
+`_lerp(-0.32, 0.26, eye_tilt)` / `_lerp(0.5, 1.3, eye_shape)` para
+cualquier `_origin_id` — no hay branch por raza. La tabla canónica pide:
+- **Elfo (aetherborn):** "ojos grandes, tilt alto" — como BASE racial, no
+  como el extremo alto de un rango humano neutral. El elfo en 0.5 de
+  slider debe leer ya élfico.
+- **Enano (ironblooded):** la tabla NO menciona rasgo de ojo enano (solo
+  "frente pesada, mandíbula ancha, nariz con historia") — sin sesgo de
+  ojos para esta raza; no inventar uno.
+- **Humano (else):** "máxima variación individual" — el rango completo
+  actual sin sesgo es correcto tal cual: es la referencia neutral.
+
+**Propuesta concreta — sesgo racial (código nuevo, mismo patrón, no
+arquitectura nueva):** conservar intacta la interfaz del slider
+(`p.get("eyeTilt", 0.5)` / `p.get("eyeShape", 0.5)`, valor 0-1) y ajustar
+solo el RANGO que el `_lerp` recorre, con un `match _origin_id` ANTES de
+aplicar `_lerp` — el mismo patrón de branch por origen que ya usa
+`_build_origin_features` para armadura/partículas/oreja
+(`character_rig.gd:2143-2391`). Esquema (ilustrativo, valores a calibrar
+con captura, no medidos aún):
+
+```gdscript
+# rangos base (humano = referencia neutral, sin cambio)
+var tilt_min := -0.32; var tilt_max := 0.26
+var shape_min := 0.5;  var shape_max := 1.3
+match _origin_id:
+    "aetherborn":
+        # tabla: "ojos grandes tilt alto" — la VENTANA entera sube;
+        # el 0.5 del elfo cae donde el humano tendría ~0.7-0.8.
+        tilt_min = ...; tilt_max = ...    # ventana desplazada hacia tilt alto
+        shape_min = ...; shape_max = ...  # ventana desplazada hacia ojo grande
+    # "ironblooded": sin rama — la tabla no da rasgo de ojo enano.
+    # else/humano: rango completo actual, sin sesgo.
+eye.rotation.z = float(side) * _lerp(tilt_min, tilt_max, eye_tilt)
+eye.scale.y = _lerp(shape_min, shape_max, eye_shape)
+```
+
+Claves del enfoque: (1) el slider sigue siendo 0-1 y la firma de
+`apply_phenotype()` no cambia — se cumple la regla "Sistema de fenotipo —
+qué NO romper" de arriba; (2) es sesgo de VENTANA, no reemplazo: el elfo
+conserva variación individual dentro de su ventana desplazada; (3) el
+mismo mecanismo aplica a `jaw` (ver nota en §1) y eventualmente a `cheek`
+(la tabla también lista pómulos como rango racial, aunque el comentario de
+código en `:1913-1917` sugiere que el rango actual ya tiene el pómulo alto
+como base — verificar antes de sesgar). ADVERTENCIA de alcance: esto es
+trabajo de código NUEVO (la Fase 5 tal como estaba redactada solo cubría
+geometría base humana) — ver pregunta abierta 6.
+
+**Propuesta concreta (geometría base humana, alcance original):** los ojos
+están en el estado MÁS validado de las 5 partes ("ojos, cejas y proyección
+Z de nariz/mentón estables on-model", review v0.5 positivos). Si el
+objetivo de Boris para Fase 5 es re-abrir esto, la sugerencia es acotar el
+trabajo a: (a) verificar que `eyeTilt`/`eyeShape` cubren un rango de
+fenotipos creíble sin romper la proporción validada en los extremos del
+slider (hoy solo se validó en el valor base 0.5) — verificación que,
+si se aprueba el sesgo racial de arriba, debe hacerse POR RAZA (extremos
+de la ventana élfica además de la humana); (b) considerar si la ceja
+necesita un arco real (el propio código señala en un comentario de PRD
+previo: "esto NO da arco real; si sigue leyendo recta, segunda pasada =
+cadena de 2-3 cápsulas/esferas decrecientes" — pendiente, nunca
+ejecutado).
 
 **Riesgo de regresión:** MEDIO-ALTO — esta es la pieza donde más rondas de
 ajuste fino ya "cerraron" un problema (separación, proporción iris/blanco);
 tocar sin evidencia visual fresca de defecto arriesga reabrir esas 2
-correcciones.
+correcciones. El sesgo racial propuesto arriba tiene riesgo BAJO para el
+humano (su rama no cambia ni un número) pero requiere validación visual
+propia para el elfo (ventana nueva jamás vista en pantalla).
 
 ---
 
@@ -334,6 +409,32 @@ redondeada (pabellón) — el libro reserva la esfera para "articulaciones
 bola-y-cuenco y masas redondeadas (mejilla llena, glúteo)", coherente con
 usar esfera aquí en vez de caja. No hay contradicción con la elección
 actual.
+
+**Verificación cruzada contra [[Fenotipos y Creación de Personaje]]
+(2026-07-16):** a diferencia de mandíbula/ojos (donde el rango racial
+ratificado NO está implementado, ver §1 y §4), la oreja es la pieza de
+cara que YA cumple el diseño por raza — las 4 ramas de arriba son
+exactamente el patrón "fijo por raza: orejas" de la tabla canónica.
+Cotejo rama por rama: la **aetherborn** (`:2184-2198`) es consistente con
+"orejas largas hacia atrás (continúan la línea)" — el cono largo
+(height=0.14) con `rotation.z = side * -1.95` y `rotation.x = -0.25` la
+tumba hacia afuera/atrás en vez de dejarla vertical; la única duda menor
+es de grado, no de diseño: si el barrido hacia ATRÁS (la continuación de
+la línea vertical élfica, silueta "una línea continua") se lee suficiente
+en perfil, o si conviene más `rotation.x` negativa — verificar con captura
+en perfil, no cambiar a priori. La **ironblooded** (esfera compacta,
+`:2269-2283`) es coherente con la lectura compacta/trapecio del enano (la
+tabla no pide rasgo de oreja enana específico — no inventar uno). La
+**default/else** (`:2359-2390`) es la humana neutra correcta. Nota de
+canon: la rama `miststalker` (oreja bestial + cola + pelaje) corresponde
+al kit beast-folk RETIRADO por la decisión ratificada "Mistbound 100%
+humanos" ([[Fenotipos y Creación de Personaje]], decisión 1, 2026-07-04)
+— esa rama es deuda de nomenclatura/canon (tarea C1, `origins_data.gd`
+aún habla de "Beast-Folk"), fuera del alcance de esta fase; se anota para
+que nadie invierta pulido en una oreja que el canon ya jubiló. En
+resumen: la sección de oreja NO tiene brecha de implementación — el
+trabajo de Fase 5 aquí sigue siendo solo el pulido de la oreja neutra
+descrito abajo.
 
 **Propuesta concreta:** de las 5 partes, la oreja neutra es la que menos
 iteración visual documentada tiene comparada con mandíbula/mentón/ojos —
@@ -414,3 +515,17 @@ corregido una vez).
    partes que no quedó registrado en el código), o el foco real de Fase 5
    debe ser ojos/orejas (las 2 partes con menos iteración y más margen de
    mejora aparente)?
+6. **Sesgo racial de mandíbula/ojos — ¿dentro o fuera de esta fase?** El
+   cruce código-vs-diseño (2026-07-16, [[Principios de Anatomía 3D]] →
+   "Cabeza y ojos — brecha real detectada") confirmó que `jaw`/`eyeTilt`/
+   `eyeShape` deberían tener rangos por raza según el fenotipo ratificado
+   ([[Fenotipos y Creación de Personaje]]) pero hoy usan un solo rango
+   neutral para las 3 razas (`character_rig.gd:1906-1947`), mientras que
+   oreja y `heightRange` sí son por-origen. Las propuestas de mecanismo ya
+   están escritas en §1 y §4 de este borrador (ventana de `_lerp` sesgada
+   vía `match _origin_id`, interfaz de slider intacta). Pero es trabajo de
+   CÓDIGO NUEVO con alcance mayor: agrega validación visual por raza (la
+   ventana élfica nunca se ha visto en pantalla) y la Fase 5 tal como está
+   redactada solo cubre la geometría base humana. ¿Boris quiere que la
+   Fase 5 incluya implementar este sesgo racial, o queda como un frente
+   aparte (fase/PRD propio) y esta fase se limita al humano base?

@@ -1,5 +1,39 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] design | Minado completo del humano (piernas/pies/brazos/piel) + brecha racial (mandíbula/ojos) detectada + Fase 5 actualizada por subagente Fable
+Boris pidió asegurar que el minado del libro de anatomía cubriera "un rework
+completo del humano y todo el work del elfo y el enano", y encargó a un
+subagente con modelo **Fable** actualizar el borrador de Fase 5 con temas de
+orejas/ojos congruentes con el modelo 3D procedural propuesto. Minado propio
+(sin subagente, mismas 7 páginas + 3 nuevas del PDF ya localizado): agregadas
+a [[Principios de Anatomía 3D]] las secciones **Piernas y pies** (bloqueo,
+refinamiento, proporción pie≈antebrazo) y **Brazos y antebrazos** (codo,
+braquiorradial, "el brazo superior se ve corto porque el deltoides lo tapa")
+de "3D male Part 01 | Basic form"; **Piel y pliegues** (breve, aplicabilidad
+indirecta a malla continua vs. primitivas) de "Part 03 | Skin". Marcadas como
+insumo para el frente de piernas/pies (deuda técnica ya conocida, fuera de
+esta PRD), no para ejecutar ya. **Hallazgo con más impacto real:** cruzando
+[[Fenotipos y Creación de Personaje]] (ratificado 2026-07-04, tabla "rango
+racial: mismo slider, rangos distintos" para mandíbula/pómulos/tilt de ojos)
+contra `character_rig.gd:1906-1947`, se confirmó que `jaw`/`cheek`/
+`eyeTilt`/`eyeShape` usan el MISMO rango para las 3 razas — mientras que
+`heightRange` (`origins_data.gd`) y la oreja (`_build_origin_features`, 4
+ramas) SÍ son por-origen. Es una brecha real entre diseño ya ratificado y
+código, no una hipótesis. El subagente Fable (2 intentos previos fallaron por
+error 529 "Overloaded" del servidor, sin tocar el archivo; el 3er intento
+completó) actualizó [[Fase5-Cara-Propuesta-DRAFT]]: sección "Brecha real
+detectada" en §4 Ojos con propuesta de mecanismo concreto (`match
+_origin_id` desplazando la ventana del `_lerp` antes de aplicarlo, interfaz
+de slider intacta), nota equivalente en §1 Mandíbula, verificación cruzada
+en §5 Orejas (las 4 ramas ya cumplen el diseño por raza — la única brecha
+real es mandíbula/ojos, no oreja) y pregunta abierta nueva (#6: ¿el sesgo
+racial entra en esta fase o es frente aparte, dado que es código nuevo con
+validación visual propia?). De paso se detectó que `origins_data.gd` sigue
+tratando a Mist-Stalker como una raza completa (Beast-Folk, lore/pasiva/
+ciudad/rival propios) pese a que el diseño ya ratificó "Mistbound 100%
+humanos" — se separó como tarea aparte (spawn_task), fuera del alcance de
+este PRD de cara. Sigue todo como borrador, sin fusionar al PRD oficial.
+
 ## [2026-07-16] design | VoBo de Boris sobre PRD-Rework-Modelado-Personajes-v2 + Fase 5 (cara) propuesta y corrección del minado
 Boris revisó los 3 puntos pendientes de ratificación del PRD y dio VoBo a
 los 3: (a) orden de fases 0→4, (b) A/B de banding LINEAR autorizado en Fase

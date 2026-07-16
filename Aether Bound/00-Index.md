@@ -92,9 +92,16 @@
   agregados a [[Principios de Anatomía 3D]] → "Cabeza, cuello y cara".
   Único vacío real del libro: proporción/estructura de OREJA (solo mención
   tangencial de animación). Mandíbula/mentón/nariz ya tienen 4-8 rondas de
-  ajuste fino estables — recomendación: priorizar ojos/orejas. Pendiente de
-  VoBo de Boris sobre 5 preguntas abiertas antes de fusionar como Fase 5
-  oficial.
+  ajuste fino estables — recomendación: priorizar ojos/orejas. **Ampliado
+  (mismo día): 3 secciones nuevas en [[Principios de Anatomía 3D]] (piernas/
+  pies, brazos, piel) + brecha real detectada** — `jaw`/`eyeTilt`/
+  `eyeShape` usan un solo rango para las 3 razas pese a que [[Fenotipos y
+  Creación de Personaje]] ya ratificó rango racial para esos 3 rasgos (la
+  oreja sí lo cumple). Un subagente Fable incorporó la propuesta de sesgo
+  racial (§1/§4 del borrador) y una pregunta abierta nueva (#6). Pendiente
+  de VoBo de Boris sobre 6 preguntas abiertas antes de fusionar como Fase 5
+  oficial. Colateral: `origins_data.gd` sigue tratando a Mist-Stalker como
+  raza completa pese al canon ya ratificado — separado como tarea aparte.
 - [[PRD-Warpaint-Personalizable]] — bug real encontrado y corregido
   (2026-07-14): la "V" geométrica de warpaint se dibujaba para CUALQUIER
   índice >0, tapando los 5 patrones del atlas. Evaluación visual de los 6
