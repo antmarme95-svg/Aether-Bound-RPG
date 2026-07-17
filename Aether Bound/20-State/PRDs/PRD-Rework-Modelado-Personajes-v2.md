@@ -221,6 +221,44 @@ resolver, para decisión de Boris** — necesita una investigación dedicada
 es de lectura de silueta/Sobel en vez de overlap puro) antes de intentar
 un 4º ajuste.
 
+**CRITICAL 2 ("costura cuello-hombro"/"cuello de camisa de cartón") — CERRADO
+(2026-07-17, protocolo [[QA Loop]]).** La investigación de campo de arriba
+(2026-07-16) había identificado bien la pieza culpable (`chin_boss`) pero
+diagnosticaba mal el hueco: no estaba entre `chin_boss` y `jaw_mesh` (esos
+sí se tocan bien de frente, por eso 6+ rondas de calibración frontal nunca
+lo vieron), sino entre `chin_boss` y `neck` — un cilindro completamente
+aparte, hijo de `upper_spine` en vez de `head`, sin ninguna pieza que
+continuara el saliente frontal del mentón hacia la superficie lisa del
+cuello. Salto real de profundidad de varios cm, invisible en el render
+completo a 1280×720 pero clarísimo en un recorte ampliado 3-4x de la zona
+mentón/cuello (lección nueva: **antes de dar un hallazgo geométrico por
+cerrado, hacer zoom a la unión exacta, no confiar en el render completo a
+tamaño natural** — ver [[Lecciones]]). Fix de 2 partes en
+`character_rig.gd` (~línea 1018-1031): `chin_boss` achicado (0.058×0.032×
+0.055 → 0.045×0.014×0.030, preservando su punta frontal ya calibrada) +
+`chin_bridge` (masa puente, mismo patrón que `jaw_angle`) agrandada y
+estirada para llegar hasta la superficie real de `neck`, no solo hasta la
+mitad del camino. Gates `test_core`/`autotest_biomech` re-verificados
+ALL_PASS. QA imparcial (mismo subagente, protocolo de re-invocación del
+[[QA Loop]]) confirmó **CERRADO** en las 4 vistas del turnaround, con
+recortes ampliados de verificación — el bloque/hueco ya no aparece ni a
+resolución completa ni en zoom 5-6x.
+
+**Hallazgos nuevos, reportados por el mismo QA de cierre (no bloquean este
+cierre, quedan para otra ronda):**
+- Mentón/mandíbula siguen leyendo "blandos"/redondeados en vez de por
+  masas angulares — la geometría ya suelda bien, pero no tiene la
+  definición de plano que pide la lámina. Distinto del CRITICAL 1 (torso
+  "peto/cartón") pero mismo espíritu — candidato a atacar junto con HIGH/
+  MEDIUM de abajo.
+- Seam/pliegue visible en la base del cuello donde se junta con el
+  trapecio/hombro (vistas 3/4 y perfil) — fuera del scope de hoy (se pidió
+  ignorar hombros/torso), pero puede ser el próximo punto de fricción
+  visual cuando se ataquen los HIGH de hombros.
+- Marca blanca en forma de corchete sobre el cuello, debajo del mentón —
+  posible artefacto de UV o highlight sin ajustar; preexistente (no
+  introducida por este fix), sin investigar todavía.
+
 **Hallazgos HIGH — NO atacados todavía:**
 - Hombros como esferas infladas en vista trasera ("hombreras de fútbol
   americano"), contradice "narrow sloped shoulders" de la lámina.
@@ -233,15 +271,16 @@ un 4º ajuste.
 - Cintura se lee por una línea de tinta dibujada, no por la silueta real.
 - Clavícula como 2 trazos flotantes, desconectados visualmente.
 
-**Estado de la fase: EN CURSO, no cerrada.** Sesión detenida tras el
-hallazgo del mentón para reportar a Boris en vez de seguir gastando
-presupuesto en ajustes sin evidencia clara. Gates
-`test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
-`autotest_ui` ALL_PASS con el estado revertido.
+**Estado de la fase: EN CURSO, no cerrada.** CRITICAL 2 (cuello de camisa
+de cartón) cerrado y verificado 2026-07-17. CRITICAL 1 (torso "peto/
+cartón") y todos los HIGH/MEDIUM siguen sin atacar. Gates
+`test_core`/`autotest_biomech` ALL_PASS con el estado actual del código.
 
 **Pendiente antes de dar por cerrada la fase:** resolver (o decidir
-diferir) los hallazgos CRITICAL/HIGH/MEDIUM de arriba, nuevo QA imparcial
-de re-medición, y VoBo de Boris con capturas frente/perfil/3-4/espalda.
+diferir) CRITICAL 1 + los hallazgos HIGH/MEDIUM de arriba + los 3
+hallazgos nuevos reportados por el QA de cierre del CRITICAL 2, nuevo QA
+imparcial de re-medición de fidelidad global, y VoBo de Boris con capturas
+frente/perfil/3-4/espalda.
 
 **Estado actual del código:** `character_rig.gd:39-40` (`SHOULDER_X 0.21`,
 `SHOULDER_Y 0.26`), `:56-58` (`CHEST_X 1.16`, `WAIST_XZ 0.90`), `:446-449`

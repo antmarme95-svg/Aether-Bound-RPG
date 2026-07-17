@@ -1,5 +1,44 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] fix | CRITICAL "cuello de camisa de cartón" (Fase 1) CERRADO — el hueco real era mentón↔cuello, no mentón↔mandíbula
+Plan del día: atacar el único hallazgo CRITICAL de Fase 1 primero, protocolo
+[[QA Loop]] completo. (1) Higiene de entorno: Epic Games Launcher/EA
+Desktop corriendo, matados antes de tocar Godot (gotcha ya documentado en
+[[Lecciones]]). (2) Confirmado que `_add_outline_pass` (`character_rig.gd`)
+es un no-op — el rig NO fabrica outline por-pieza; la tinta la pone el
+Sobel de profundidad full-screen de `melancolia_post.gdshader`, sensible a
+saltos de pocos mm entre píxeles vecinos — cualquier hueco 3D real se
+entinta como borde propio, confirmando que la ruta de fix es geométrica,
+no de shader. (3) Diagnóstico de color aplicado por primera vez a la
+RELACIÓN entre piezas (no solo "cuál pieza", que ya se sabía) — magenta
+`chin_boss`/cian `jaw_mesh`/verde `neck` en `anatomy_face_34.png` — reveló
+que el hueco NO estaba entre mentón y mandíbula (esos se tocan bien de
+frente) sino entre mentón y CUELLO: `chin_boss` vive bajo `head` (escala
+×0.84, montada en `upper_spine`) mientras `neck` es un cilindro fijo
+aparte, hijo directo de `upper_spine` — el saliente frontal del mentón no
+tenía nada que lo continuara hacia la superficie lisa del cuello, salto
+real de varios cm invisible en el render completo a 1280×720 pero
+clarísimo en un recorte ampliado. (4) Primer intento de fix (bridge chico
+solo hacia la mandíbula) pasó la propia inspección visual pero el
+subagente QA imparcial (Opus, sin contexto previo) lo marcó **NO CERRADO**
+con precisión quirúrgica — señaló el bloque exacto que yo no había
+detectado a resolución completa. (5) Zoom manual (recortar+ampliar 3-4x
+con System.Drawing) sobre esa misma zona confirmó el veredicto del QA:
+había un bloque real que a tamaño natural se camufla. (6) Segundo fix:
+`chin_boss` achicado (0.058×0.032×0.055 → 0.045×0.014×0.030, preservando
+su punta frontal ya calibrada) + `chin_bridge` agrandada/estirada hasta
+tocar la superficie real de `neck`, no solo la mitad del camino. Gates
+`test_core`/`autotest_biomech` ALL_PASS. (7) Mismo subagente QA
+re-invocado (`SendMessage` al `agentId`, protocolo del [[QA Loop]]) con
+capturas + recortes ampliados nuevos → **CERRADO** en las 4 vistas,
+resolución completa y zoom. Reportó 3 hallazgos nuevos sin bloquear el
+cierre (mentón/mandíbula blandos sin masas, seam cuello-trapecio, marca
+blanca tipo corchete en el cuello — posible artefacto de UV) — anotados en
+[[PRD-Rework-Modelado-Personajes-v2]] Fase 1 para la próxima ronda. Detalle
+completo en [[PRD-Rework-Modelado-Personajes-v2]]; lección metodológica
+nueva (zoom obligatorio antes de dar un hallazgo geométrico por cerrado)
+en [[Lecciones]].
+
 ## [2026-07-17] chore | Cierre de sesión — 2da higiene de contexto del día + 3 lecciones nuevas documentadas
 Boris pidió cerrar sesión con énfasis explícito en documentar aprendizajes
 para no repetir una sesión sin avance. Acciones: (1) [[Lecciones]] ganó 3

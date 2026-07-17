@@ -310,6 +310,40 @@ updated: 2026-07-14
   presupuesto sin converger (mismo espíritu que "sospechar del andamiaje
   tras 2 iteraciones", pero aquí el andamiaje en sí no cambió — es la
   cámara/ángulo la variable no probada).
+- **El rig NO fabrica outline por-pieza — `_add_outline_pass` es un no-op
+  a propósito (decisión del director 2026-07-10, documentada en el header
+  de `character_rig.gd`).** La tinta la pone un ÚNICO Sobel de profundidad
+  full-screen (`melancolia_post.gdshader`), muy sensible (tinta cualquier
+  salto de profundidad de pocos mm entre píxeles vecinos, a la distancia
+  de cámara típica del banco). Consecuencia práctica: cualquier "costura"
+  o "pieza que se ve suelta" es SIEMPRE un hueco/salto 3D real entre
+  masas, nunca un artefacto de outline-por-objeto — no perder tiempo
+  buscando causas de shader/render, ir directo a la geometría.
+- **Antes de dar un hallazgo geométrico por CERRADO, hacer zoom (recortar
+  y ampliar 3-4x) a la unión exacta — el render completo a resolución de
+  banco (1280×720) puede camuflar un hueco real.** Caso real (2026-07-17,
+  cierre del CRITICAL `chin_boss`↔`neck`): un primer fix se verificó
+  mirando `anatomy_face_34.png`/`anatomy_face.png` completas y parecía
+  cerrado — un QA imparcial (con las mismas 4 capturas, sin zoom manual)
+  lo marcó NO CERRADO con precisión; recién al recortar y ampliar la zona
+  mentón/cuello con `System.Drawing` (PowerShell: `Bitmap.Clone(rect)` +
+  `Graphics.DrawImage` con `InterpolationMode.NearestNeighbor` para no
+  perder los bordes duros del toon) se vio el bloque real que el ojo
+  pasaba por alto a tamaño natural. Regla: un veredicto "se ve bien" sobre
+  el render completo NO alcanza para cerrar un hallazgo de fusión
+  geométrica — zoom a la unión específica primero, en cada vista relevante.
+- **Un salto de profundidad entre dos masas puede existir DENTRO del rango
+  de overlap "correcto" en un eje (Y) pero estar fuera en el eje que no se
+  está mirando (Z / profundidad hacia cámara) — sobre todo entre piezas
+  con jerarquías de padre distintas.** `chin_boss` (hijo de `head`, que
+  escala ×0.84) y `neck` (cilindro fijo, hijo directo de `upper_spine`) SÍ
+  se solapaban en rango Y, pero el mentón, al ser un rasgo que sobresale
+  hacia adelante (Z), no tenía nada que continuara ese saliente hasta la
+  superficie — más lisa, menos profunda — del cuello: un salto real de
+  varios cm en Z, no en Y, invisible al razonar solo en términos de "¿se
+  tocan verticalmente?". Antes de dar una fusión por buena entre piezas de
+  padres distintos, verificar el solape en LOS 3 EJES, no solo el que
+  parece relevante a simple vista.
 - **El límite de gasto de Claude puede ser una ventana de 5 horas, no
   mensual/semanal** — un subagente que falla por "spend limit" puede
   volver a funcionar poco después con el MISMO prompt; no asumir que hay

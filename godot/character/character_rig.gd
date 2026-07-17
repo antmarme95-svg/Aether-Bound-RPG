@@ -986,24 +986,48 @@ func _build() -> void:
 	# descartados) identificó que el hallazgo CRITICAL "bloque rectangular
 	# con bordes de tinta en la base del cuello, tipo cuello de camisa sin
 	# soldar" en la vista 3/4 (`anatomy_face_34.png`) es en realidad
-	# **`chin_boss`** (el mentón) — NO una pieza de hombro/cuello. Su Z
-	# (front≈0.125) ya está calibrada correctamente contra la lámina (6
-	# rondas de ajuste documentadas arriba, frente). El defecto real es que
-	# en el ÁNGULO 3/4 se ve desconectado de la mandíbula. Se probaron 3
-	# variantes de overlap (profundidad 0.055→0.075, centro Z 0.0975→0.0875;
-	# alto 0.032→0.06 con centro Y -0.134→-0.120) — NINGUNA cerró la
-	# desconexión visual en 3/4 pese a que el cálculo de solape 3D decía que
-	# debía funcionar (posible causa: el corte transversal elíptico de
-	# `jaw_mesh` en ese punto no coincide con lo esperado, o el defecto es
-	# de lectura de silueta/Sobel más que de overlap puro). **No se sigue
-	# ajustando a ciegas** — esta pieza ya tiene 6+ rondas de calibración
-	# validadas de frente (Lección: no reabrir sin evidencia nueva clara de
-	# qué cambiar). Revertido a los valores originales, documentado en LOG
-	# como hallazgo abierto para decisión de Boris.
-	var chin_boss = _box_mesh(0.058, 0.032, 0.055, skin_mat)
-	chin_boss.position = Vector3(0.0, -0.134, 0.0975)
+	# **`chin_boss`** (el mentón) — NO una pieza de hombro/cuello. Se
+	# probaron 3 variantes de overlap contra `jaw_mesh` (profundidad
+	# 0.055→0.075, centro Z 0.0975→0.0875; alto 0.032→0.06 con centro Y
+	# -0.134→-0.120) — NINGUNA cerró la desconexión visual en 3/4.
+	# FASE 1 RONDA 4 (2026-07-17) — causa raíz real + fix. El rig NO
+	# fabrica outline por-pieza (`_add_outline_pass` es un no-op, ver
+	# header del archivo) — la tinta la pone el Sobel de profundidad del
+	# post Melancolía (`melancolia_post.gdshader`), full-screen, sensible a
+	# saltos de profundidad de pocos mm entre píxeles vecinos: cualquier
+	# hueco 3D real entre dos masas se entinta como borde propio.
+	# Diagnóstico de color (`chin_boss`=magenta, `jaw_mesh`=cian,
+	# `neck`=verde) reveló que el hueco NO estaba entre `chin_boss` y
+	# `jaw_mesh` (de frente ambas se tocan bien, por eso 6 rondas de
+	# calibración frontal nunca lo vieron) — estaba entre `chin_boss` y
+	# `neck`. `chin_boss` vive bajo `head` (que escala ×0.84 y se apoya en
+	# `upper_spine` en HEAD_Y=0.520) mientras `neck` es un cilindro fijo
+	# bajo `upper_spine` (NECK_Y=0.3595, radio 0.075→0.050) — un mentón que
+	# sobresale hacia adelante (Z) no tiene NADA que lo continúe hacia el
+	# cuello, que es un tubo liso sin ese saliente: un salto real de ~5cm
+	# en Z entre la punta del mentón y la superficie frontal del cuello,
+	# invisible en el render sin diagnóstico porque el tono de piel lo
+	# camufla, pero el Sobel de profundidad lo entinta igual. Fix de 2
+	# partes: (1) `chin_boss` se achica (0.058×0.032×0.055 → 0.045×0.014×
+	# 0.030) preservando la punta frontal ya calibrada (mismo z_max/y_min)
+	# — de mole visible pasa a filo chico, la mayoría queda embebida; (2)
+	# `chin_bridge`, una masa alargada (no una esfera chica como el primer
+	# intento) que corre desde debajo de `jaw_mesh` hasta la superficie
+	# frontal de `neck`, hundida por overlap real en ambas — funde
+	# mentón→mandíbula→cuello en una sola silueta en las 4 vistas.
+	# Confirmado con recortes ampliados (no alcanza con mirar el render
+	# completo a 1280×720 — a esa escala el hueco/step no se nota; hay que
+	# hacer zoom a la zona mentón/cuello para verlo, lección nueva).
+	var chin_boss = _box_mesh(0.045, 0.014, 0.030, skin_mat)
+	chin_boss.position = Vector3(0.0, -0.143, 0.110)
 	head.add_child(chin_boss)
 	_add_outline_pass(chin_boss, Color("#f2b186"))
+
+	var chin_bridge = _sphere_mesh(0.050, skin_mat)
+	chin_bridge.scale = Vector3(0.95, 1.7, 0.95)
+	chin_bridge.position = Vector3(0.0, -0.145, 0.075)
+	head.add_child(chin_bridge)
+	_add_outline_pass(chin_bridge, Color("#f2b186"))
 
 	# NARIZ — FASE C paso 4 (luz verde director): cuña INTEGRADA. Antes era
 	# un prisma de 4 caras con cap plano flotando SOBRE la piel (sin overlap)

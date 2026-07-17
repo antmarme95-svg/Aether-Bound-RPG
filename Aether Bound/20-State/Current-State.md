@@ -9,30 +9,20 @@ updated: 2026-07-17
 > funciona el juego (eso vive en `10-Knowledge/`).
 
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — Fase 1 (torso/hombros) EN CURSO, no
-  cerrada.** Vehículo: [[PRD-Rework-Modelado-Personajes-v2]]. Fase 0
-  (pipeline de tinta) y Fase 1.1-1.3 (medición + trapecio + cintura +
-  clavícula + acromion) ya ejecutados y verificados (gates ALL_PASS). El
-  **QA imparcial corrió y dio ~40% de fidelidad torso/hombros** — antes de
-  tocar más código, leer esto:
+  cerrada.** Vehículo: [[PRD-Rework-Modelado-Personajes-v2]]. Fase 0, Fase
+  1.1-1.3, y el CRITICAL 2 (cuello de camisa de cartón) ya ejecutados y
+  verificados (gates ALL_PASS + QA imparcial CERRADO). Antes de tocar más
+  código, leer esto:
   1. **Lo bueno, ya confirmado — no reabrir sin evidencia nueva:** trapecio
-     sin hipertrofia (arreglado esta sesión), proporción global (~7.5
-     cabezas) correcta, `SHOULDER_X=0.21` confirmado contra la lámina (no
-     tocar), pipeline de tinta fiel al estilo.
-  2. **CRITICAL abierto, SIN resolver:** el hallazgo "costura cuello-hombro
-     sin soldar / cuello de camisa de cartón" (visible en
-     `anatomy_face_34.png`, vista 3/4) es **`chin_boss`** (el mentón,
-     `character_rig.gd` cerca de la nariz), NO una pieza de hombro. Ya se
-     investigó a fondo (8 piezas descartadas por marcado de color, ver
-     [[Lecciones]]) y se probaron 3 fixes de overlap (profundidad Z,
-     alto/Y) — **ninguno cerró la desconexión visual en 3/4**. Revertido a
-     sus valores originales (`_box_mesh(0.058, 0.032, 0.055)`, posición
-     `(0.0, -0.134, 0.0975)`) porque ya tiene 6+ rondas de calibración
-     validadas de FRENTE — no seguir ajustando a ciegas. **Antes de un 4º
-     intento:** considerar que el defecto puede ser de lectura de
-     silueta/Sobel en ese ángulo específico, no de overlap 3D puro (el
-     cálculo decía que debía funcionar y no funcionó) — quizás valga
-     probar un ángulo de cámara distinto en el banco, o replantear la
-     pieza en vez de mover números.
+     sin hipertrofia, proporción global (~7.5 cabezas) correcta,
+     `SHOULDER_X=0.21` confirmado contra la lámina, pipeline de tinta fiel
+     al estilo, Y (2026-07-17) **la fusión mentón→mandíbula→cuello** —
+     `chin_boss` + `chin_bridge` en `character_rig.gd` (~línea 1018-1031),
+     verificada por QA imparcial en las 4 vistas del turnaround, con zoom.
+  2. **CRITICAL abierto, SIN resolver:** hallazgo #1 — "torso lee como
+     peto/cartón" (contorno de tinta interior completo), del QA de
+     2026-07-16. Sin investigar todavía (la sesión del 17 se enfocó en el
+     CRITICAL #2, ya cerrado).
   3. **HIGH, no atacados todavía:** hombros como esferas infladas en vista
      trasera (contradice "narrow sloped shoulders" de la lámina); el
      trapecio ya arreglado ahora es ILEGIBLE en el sentido opuesto (sin
@@ -41,12 +31,22 @@ updated: 2026-07-17
   4. **MEDIUM, no atacados todavía:** cintura se lee por una línea de tinta
      dibujada, no por la silueta real; clavícula como 2 trazos flotantes
      desconectados.
-  5. **Metodología a seguir (ver [[Lecciones]] para el detalle):** para
-     encontrar qué pieza causa un defecto, marcar con COLOR (no ocultar) —
-     es inequívoco en un solo render. Revisar overlaps en las 4 vistas del
-     turnaround (frente/3-4/perfil/espalda), no solo frente.
-  Detalle completo de esta ronda en [[LOG]] y
-  [[PRD-Rework-Modelado-Personajes-v2]] Fase 1.
+  5. **Hallazgos menores nuevos (2026-07-17, del QA que cerró el CRITICAL
+     #2, no bloquean nada):** mentón/mandíbula siguen "blandos" sin masas
+     angulares definidas; seam visible en la base del cuello contra el
+     trapecio/hombro (vistas 3/4 y perfil); marca blanca tipo corchete en
+     el cuello, posible artefacto de UV — ninguno investigado todavía.
+  6. **Metodología a seguir (ver [[Lecciones]] para el detalle):** para
+     encontrar qué pieza causa un defecto, marcar con COLOR (no ocultar).
+     Revisar overlaps en las 4 vistas del turnaround, no solo frente.
+     **Nuevo (2026-07-17): antes de dar un hallazgo geométrico por
+     cerrado, hacer zoom (recortar+ampliar) a la unión exacta** — el
+     render completo a 1280×720 puede camuflar un hueco real que un QA
+     (o un recorte ampliado) sí detecta; y verificar solape en los 3 ejes
+     entre piezas de padres distintos (`chin_boss`↔`neck` se solapaban en
+     Y pero no en Z).
+  Detalle completo en [[LOG]] y [[PRD-Rework-Modelado-Personajes-v2]]
+  Fase 1.
 - **➕ FASE 5 (cara: mandíbula/ojos/nariz/mentón/orejas) — borrador
   completo y con VoBo de Boris en sus 6 preguntas abiertas**, pero NO
   fusionada al PRD oficial. Ver [[Fase5-Cara-Propuesta-DRAFT]]
