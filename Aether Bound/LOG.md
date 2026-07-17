@@ -1,5 +1,33 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] feature | R1 cabeza/rostro por masas: 35% → 52% en 2 rondas de QA — freno por regla del loop, decisión de Boris pendiente
+Primera pasada de la reescritura ([[PRD-Reescritura-Escultura-Rig-v1]]
+fase R1) sobre `character_rig.gd`: mandíbula como ESTRUCTURA de cajas
+(cuerpo/mentón central `jaw_mesh` — su AABB sigue siendo el mentón que
+mide el banco, slider `jaw` escala la estructura completa vía hijas — +
+2 ramas + 2 facets de cuerpo), cráneo con mitad inferior retraída (la
+coronilla intacta; la mandíbula pasa a dibujar la silueta de la cara
+baja), boca aplastada casi al ras (adiós pico de pato), raíz de nariz
+nueva, pómulos acostados sobre la normal local (rampa, no pared), ojos a
+mitad de cara (libro), glint espejado (mirada alineada), tono de labio
+rosa-tierra (absorbe la Fase 4a del PRD v2). `chin_boss`/`chin_bridge`/
+`jaw_angle` retirados. 7 rondas internas de iteración visual con los
+close-ups nuevos del banco. **QA imparcial Fable (mismo agente, 2
+rondas): 35% → 40% → 52%.** Nada empeoró; el fix de mayor impacto fue la
+silueta de mandíbula. Gates `test_core`/`autotest_biomech` ALL_PASS en
+cada ronda. **El QA declaró techo parcial de la técnica: con primitivas
+puras estima ~60% de máximo; para ≥70% hacen falta (a) labios sin borde
+perimetral (textura/vertex color/decal o máscara de tinta selectiva) y
+(b) aceptar o resolver el "cartón" del mentón visto desde ABAJO (ángulo
+que la cámara de juego casi no usa).** Alcanzable con más rondas de
+primitivas: pómulo derecho aún entintado (el izquierdo ya fundió —
+técnica probada), outline de nariz, escalón cráneo-mandíbula en silueta,
+mirada divergente en 3/4. Por regla de freno del [[QA Loop]] (máx 2
+rondas de QA sin reportar + techo declarado ⇒ decisión del director), R1
+queda EN PAUSA con el código commiteado y verde, esperando el VoBo de
+Boris sobre la ruta (cerrar el margen alcanzable ~60% y seguir a R2, o
+atacar primero la técnica nueva de labios/tinta selectiva).
+
 ## [2026-07-17] design+feature | Reescritura de la escultura del rig APROBADA — PRD-Reescritura-Escultura-Rig-v1 + Fase R0 (banco confiable) CERRADA
 Tras el QA imparcial de rostro (35% vs [[fenotipo-humano-rostro-v1]], ver
 entrada anterior del día), Boris pidió plan formal y lo aprobó: reescribir

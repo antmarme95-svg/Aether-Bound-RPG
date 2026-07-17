@@ -24,12 +24,18 @@ updated: 2026-07-17
      3 close-ups institucionalizados en `tmp_anatomy.gd`
      (`anatomy_closeup_chin/neckshoulder/chin_front.png`); baseline A/B en
      `90-Raw/reviews/baseline-pre-reescritura-rig-2026-07-17/`.
-  2. **R1 (siguiente):** cabeza/rostro desde cero contra la lámina de
-     rostro — mandíbula/mentón como estructura angular de cajas (adiós
-     parches `chin_boss`/`chin_bridge`/`jaw_angle`), boca integrada al
-     plano facial, nariz con raíz, pómulos como planos, ojos a mitad de
-     cara. Sliders `jaw/cheek/eyeTilt/eyeShape` re-conectados. Objetivo
-     ≥70% (Boris fija el número final).
+  2. **R1 EN PAUSA — 52% tras 2 rondas de QA (35→40→52), decisión de
+     Boris pendiente.** La estructura nueva ya está en el código (gates
+     ALL_PASS, commiteada): mandíbula de cajas con silueta angular real,
+     cráneo bajo retraído, boca al ras, ojos a mitad de cara. El QA
+     declaró techo parcial: ~60% máximo con primitivas puras; para ≥70%
+     hace falta técnica nueva para labios (decal/textura/máscara de
+     tinta — SIN borde perimetral) y aceptar o resolver el mentón visto
+     desde abajo. Alcanzable sin técnica nueva: pómulo derecho (el
+     izquierdo ya fundió), outline de nariz, escalón de silueta, mirada
+     3/4. **Boris decide la ruta:** (a) cerrar el margen alcanzable y
+     pasar a R2, (b) atacar la técnica de labios/tinta primero, o (c)
+     otra. Detalle en [[LOG]].
   3. Luego R2 (torso 3 masas + cintura escapular), R3 (extremidades/
      manos), R4 (integración + batería completa). Cada fase: gates + QA
      imparcial (máx 2 rondas sin reportar) + VoBo.

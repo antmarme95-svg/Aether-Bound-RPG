@@ -259,11 +259,14 @@ func _init_materials() -> void:
 	# lograron que labio sup/inf lean como DOS masas (bloque -> agujero ->
 	# bloque otra vez) — el QA sugirió variar TONO además de geometría, para
 	# que el toon shading marque la separación y no dependa solo del Sobel.
-	lip_mat = ToonMaterials.toon_mat_opaque(Color("#a85f47"))
+	# R1: tono acercado a la piel (rosa-tierra desaturado) — el terracota
+	# #a85f47 leía "masa rojiza oscura/herida" (QA rostro 35% + Fase 4 del
+	# PRD v2, que pedía exactamente este cambio).
+	lip_mat = ToonMaterials.toon_mat_opaque(Color("#c98e70"))
 	# PRD Rework Fenotipo pt.8: la comisura usaba pupil_mat (negro plano,
 	# leía "hueco/prótesis") — tono de labio oscurecido, coherente con el
 	# resto de la boca en vez de un agujero sin relación de color.
-	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#a85f47").darkened(0.55))
+	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#c98e70").darkened(0.55))
 	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
 	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
 	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
@@ -893,7 +896,13 @@ func _build() -> void:
 	# ancho lo domina la MANDÍBULA (trapecio invertido), no las mejillas.
 	skull = _sphere_mesh(0.15, head_mat)
 	skull.name = "skull"
-	skull.scale = Vector3(0.82, 1.02, 0.95)
+	# R1 ronda 6: mitad INFERIOR retraída (escala Y 1.02→0.94 + centro
+	# +0.012 = coronilla intacta, fondo sube ~24mm) — el huevo del cráneo
+	# ya no domina la silueta de la cara baja; la estructura de mandíbula
+	# (cajas) pasa a dibujar el taper angular oreja→mentón que pide la
+	# lámina (QA R1-r1: "silueta frontal de huevo liso, cero quiebre").
+	skull.scale = Vector3(0.82, 0.94, 0.95)
+	skull.position.y = 0.012
 	# Godot SphereMesh: seam at -Z, so u=0.5 (face strip) faces +Z by default.
 	skull.rotation.y = 0.0
 	head.add_child(skull)
@@ -921,18 +930,54 @@ func _build() -> void:
 	# inferior forma el menton suave (fuera la caja dura). El menton se funde
 	# aqui (ya no hay nodo `chin` aparte). skin_mat: el atlas de warpaint solo
 	# vive en el craneo (M9-r2b), la mandibula va en piel plana.
-	jaw_mesh = _sphere_mesh(0.12, skin_mat)
+	# R1 (reescritura por masas, 2026-07-17): la mandíbula es una ESTRUCTURA
+	# angular de cajas, no una esfera + parches. Este mesh es el CUERPO/
+	# MENTÓN central — su AABB inferior ES el mentón que mide el banco
+	# (bottom -0.1475 ≈ canon 7.5 cabezas; frente z 0.1215 ≈ el z≈0.125 de
+	# las 6 rondas de calibración frontal previas). Las 2 ramas laterales
+	# son HIJAS: heredan la escala X/Z del slider `jaw` y se separan/acercan
+	# con ella. Caja = plano/borde real bajo el toon (Lecciones: la esfera
+	# nunca dio mandíbula angular).
+	# Ronda 2: caja angostada (el frente 0.075 leía como "panel/barba
+	# recortada"), tope bajado para esconderse BAJO la cápsula de la boca,
+	# e inclinación mentolabial (rotation.x): el mentón (borde inferior)
+	# protruye al máximo y la cara superior recede — el quiebre boca→mentón
+	# sale de la geometría, no de una arista expuesta.
+	jaw_mesh = _box_mesh(0.055, 0.055, 0.095, skin_mat)
 	jaw_mesh.name = "jaw"
-	# X0.78 (angosta) · Y0.84 (largo craneo->menton) · Z0.94 (plano facial)
-	jaw_mesh.scale = Vector3(0.78, 0.84, 0.94)
-	# y=-0.048: tope en y=+0.053 (bien dentro del craneo), menton en y=-0.149
-	# — calibrado para 7.5 cabezas canon (alto menton->coronilla 0.253 m; el
-	# -0.085 inicial colgaba el menton a 6.67 cabezas, cara larga). z=0.026:
-	# frente de la mandibula en z=0.139, al ras del plano facial del craneo
-	# (0.1425), con el menton bajo la nariz.
-	jaw_mesh.position = Vector3(0.0, -0.048, 0.026)
+	jaw_mesh.position = Vector3(0.0, -0.122, 0.070)
+	jaw_mesh.rotation.x = 0.12
+
+	# Ronda 3: CUERPO mandibular — 2 facets angulados entre el mentón y las
+	# ramas (el arco facetado mentón→cuerpo→ángulo goníaco de la lámina).
+	# Se INTERPENETRAN con la caja central y las ramas: donde dos
+	# superficies se cruzan la profundidad es continua y el Sobel no dibuja
+	# costura — mata las líneas verticales que aislaban el mentón como
+	# "parche de barba" (rondas 1-2).
+	for bside in [-1, 1]:
+		# Ronda 6: yaw reducido (-0.55→-0.40) — quiebre angular más chico
+		# entre facet y mentón = menos costura entintada en cada unión.
+		var jaw_body = _box_mesh(0.050, 0.050, 0.075, skin_mat)
+		jaw_body.position = Vector3(float(bside) * 0.033, -0.006, 0.002)
+		jaw_body.rotation.y = float(bside) * -0.40
+		jaw_mesh.add_child(jaw_body)
+		_add_outline_pass(jaw_body, Color("#f2b186"))
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
+
+	# Ramas de la mandíbula: cajas inclinadas oreja→mentón (yaw hacia
+	# adentro + pitch hacia abajo). Su esquina inferior-trasera ES el
+	# ángulo goníaco — el quiebre óseo sale de la estructura, no de una
+	# masa suelta.
+	for jside in [-1, 1]:
+		# Ronda 6: más altas (el cráneo retraído les cede la silueta de la
+		# cara baja — deben cubrir hasta donde el cráneo nuevo termina).
+		var ramus = _box_mesh(0.038, 0.085, 0.085, skin_mat)
+		ramus.position = Vector3(float(jside) * 0.066, 0.052, -0.026)
+		ramus.rotation.y = float(jside) * -0.42
+		ramus.rotation.x = 0.30
+		jaw_mesh.add_child(ramus)
+		_add_outline_pass(ramus, Color("#f2b186"))
 
 	# ÁNGULO GONÍACO — AJUSTE FINO post-QA (2026-07-14, veredicto del
 	# director: "totalmente alejada" de la lámina). La esfera única de
@@ -943,12 +988,8 @@ func _build() -> void:
 	# horizontal (cuerpo) — MISMO truco de overlap real (hundida en
 	# jaw_mesh, sin costura), pero rompe la curvatura continua con un
 	# segundo radio distinto, dando el ángulo que el Sobel puede entintar.
-	for gside in [-1, 1]:
-		var jaw_angle = _sphere_mesh(0.050, skin_mat)
-		jaw_angle.scale = Vector3(0.55, 0.35, 0.85)
-		jaw_angle.position = Vector3(gside * 0.095, 0.00, 0.050)
-		head.add_child(jaw_angle)
-		_add_outline_pass(jaw_angle, Color("#f2b186"))
+	# (R1: el ángulo goníaco vive ahora en la esquina de las ramas de
+	# `jaw_mesh` — las 2 esferas sueltas de este bloque se retiraron.)
 
 	# MENTÓN CENTRAL — AJUSTE FINO post-QA Ronda 2 (PRD punto 8): el ángulo
 	# goníaco de arriba solo cubre la zona junto a la oreja; el mentón en
@@ -1018,16 +1059,8 @@ func _build() -> void:
 	# Confirmado con recortes ampliados (no alcanza con mirar el render
 	# completo a 1280×720 — a esa escala el hueco/step no se nota; hay que
 	# hacer zoom a la zona mentón/cuello para verlo, lección nueva).
-	var chin_boss = _box_mesh(0.045, 0.014, 0.030, skin_mat)
-	chin_boss.position = Vector3(0.0, -0.143, 0.110)
-	head.add_child(chin_boss)
-	_add_outline_pass(chin_boss, Color("#f2b186"))
-
-	var chin_bridge = _sphere_mesh(0.050, skin_mat)
-	chin_bridge.scale = Vector3(0.95, 1.7, 0.95)
-	chin_bridge.position = Vector3(0.0, -0.145, 0.075)
-	head.add_child(chin_bridge)
-	_add_outline_pass(chin_bridge, Color("#f2b186"))
+	# (R1: `chin_boss` y `chin_bridge` retirados — el mentón marcado es el
+	# borde inferior-frontal de la caja `jaw_mesh`, no un parche encima.)
 
 	# NARIZ — FASE C paso 4 (luz verde director): cuña INTEGRADA. Antes era
 	# un prisma de 4 caras con cap plano flotando SOBRE la piel (sin overlap)
@@ -1063,13 +1096,21 @@ func _build() -> void:
 	# de rotation.y deja una cara centrada en +Z, así que subir segmentos
 	# reintroduce el problema que Ronda 8 cerró. Ángulo de facetas sin
 	# tocar; solo se angosta la base.
-	var nose = _cylinder_mesh(0.0015, 0.019, 0.062, skin_mat)
+	var nose = _cylinder_mesh(0.0015, 0.019, 0.070, skin_mat)
 	(nose.mesh as CylinderMesh).radial_segments = 4
-	nose.position = Vector3(0.0, -0.010, 0.139)
+	nose.position = Vector3(0.0, -0.020, 0.139)
 	nose.rotation.x = -0.34   # raíz hundida arriba, punta proyecta frente-abajo
 	nose.rotation.y = 0.0     # cara plana al frente (fix Ronda 8, no arista)
 	head.add_child(nose)
 	_add_outline_pass(nose, Color("#f2b186"))
+
+	# R1: RAÍZ/PUENTE — caja chica en la glabela. La cuña sola "nacía en la
+	# ceja" sin quiebre (QA rostro 35%); este escalón da el puente definido
+	# que la lámina pide entre ceja y nariz.
+	var nose_root = _box_mesh(0.016, 0.020, 0.016, skin_mat)
+	nose_root.position = Vector3(0.0, 0.020, 0.138)
+	head.add_child(nose_root)
+	_add_outline_pass(nose_root, Color("#f2b186"))
 
 	# ALAS de la nariz: el M9-r3 pedía que la cuña "abriera a base/alas" y
 	# nunca se construyó — sin ellas la punta terminaba en el aire, sin
@@ -1079,7 +1120,7 @@ func _build() -> void:
 	for aside in [-1, 1]:
 		var ala = _sphere_mesh(0.011, skin_mat)
 		ala.scale = Vector3(0.8, 0.6, 0.6)
-		ala.position = Vector3(aside * 0.014, -0.043, 0.132)
+		ala.position = Vector3(aside * 0.014, -0.052, 0.130)
 		head.add_child(ala)
 		_add_outline_pass(ala, Color("#f2b186"))
 
@@ -1139,10 +1180,20 @@ func _build() -> void:
 	# de M9-r2 en adelante) se preserva sin una segunda masa: la comisura
 	# vive DESCENTRADA hacia arriba dentro de la cápsula, así la porción de
 	# abajo (más alta) lee más llena que la de arriba.
-	var mouth_r: float = 0.011
-	var mouth = _capsule_mesh(mouth_r, 0.056, lip_mat)
+	# R1: boca INTEGRADA al plano facial — cápsula más chica, hundida en el
+	# frente de `jaw_mesh`/cráneo (protrusión ≤5mm, adiós "pico de pato" en
+	# 3/4 y perfil del QA rostro 35%), subida a la posición canónica (1/3
+	# entre base de nariz y mentón).
+	# Ronda 6: cápsula APLASTADA en Z (escala 0.45) y con el frente ~2-4mm
+	# sobre el plano de la mandíbula — labios como cambio de plano casi al
+	# ras (QA R1-r1: la cápsula redonda sobresalía como pico/tapón en
+	# perfil y leía "curita" de frente; el color del material hace la
+	# lectura, no el contorno de tinta).
+	var mouth_r: float = 0.0095
+	var mouth = _capsule_mesh(mouth_r, 0.052, lip_mat)
 	mouth.rotation.z = PI / 2.0
-	mouth.position = Vector3(0.0, -0.078, 0.128)
+	mouth.scale = Vector3(1.0, 1.0, 0.45)
+	mouth.position = Vector3(0.0, -0.088, 0.115)
 	head.add_child(mouth)
 	_add_outline_pass(mouth, Color("#f2b186"))
 
@@ -1150,18 +1201,12 @@ func _build() -> void:
 	# cápsula (no una masa que sobresalga por su cuenta), descentrada
 	# +0.003 hacia arriba desde el centro de `mouth` para que la porción
 	# inferior (más alta) lea más carnosa.
-	var mouth_seam = _box_mesh(0.038, 0.0035, 0.005, mouth_seam_mat)
-	mouth_seam.position = Vector3(0.0, -0.078 + 0.003, 0.128 + mouth_r * 0.85)
+	var mouth_seam = _box_mesh(0.034, 0.0030, 0.005, mouth_seam_mat)
+	mouth_seam.position = Vector3(0.0, -0.088 + 0.003, 0.115 + mouth_r * 0.40)
 	head.add_child(mouth_seam)
-
-	for mside in [-1, 1]:
-		# comisuras: bulto chico SUBIDO (sonrisa franca de M9-r2), fusiona
-		# labio superior/inferior en la punta.
-		var corner = _sphere_mesh(0.008, lip_mat)
-		corner.scale = Vector3(0.6, 0.6, 0.6)
-		corner.position = Vector3(float(mside) * 0.0275, -0.078, 0.137)
-		head.add_child(corner)
-		_add_outline_pass(corner, Color("#f2b186"))
+	# (R1: las esferas de comisura se retiran — leían como "remaches" en
+	# los extremos de la cápsula, QA rostro 35%. La cápsula redondea sus
+	# propias puntas.)
 
 	# M9-r1: MEJILLAS ALTAS — pómulos bajo el ojo, no cachetes bajos.
 	# r3: más ADENTRO y chicos (review: no expandir más allá de la línea de
@@ -1208,7 +1253,12 @@ func _build() -> void:
 	for side in [-1, 1]:
 		var cheek = _box_mesh(0.040, 0.040, 0.040, skin_mat)
 		cheek.rotation.z = -float(side) * 0.5   # eje largo diagonal
-		cheek.position = Vector3(side * 0.060, -0.012, 0.112)
+		# Ronda 6: la placa se ACUESTA sobre la superficie local (yaw ±35°
+		# siguiendo la normal del cráneo en ese punto) — emerge en rampa
+		# gradual en vez de presentar una pared lateral empinada que el
+		# Sobel entinta como perímetro completo ("calcomanía", QA R1-r1).
+		cheek.rotation.y = float(side) * 0.61
+		cheek.position = Vector3(side * 0.066, -0.018, 0.107)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
@@ -1228,7 +1278,11 @@ func _build() -> void:
 		# ojos ≈ el ancho de un ojo. Recogido a x=0.036 (con el radio nuevo
 		# de 0.017 abajo, el hueco entre esquinas internas queda en ~0.038,
 		# cerca de 1 ancho de ojo).
-		eye_group.position = Vector3(side * 0.036, 0.022, 0.126)
+		# R1: ojos a la MITAD de la cara (libro: el error común es ponerlos
+		# altos — mid coronilla↔mentón ≈ y 0.002; estaban en 0.022). z sube
+		# para seguir conformados a la superficie del cráneo en la altura
+		# nueva.
+		eye_group.position = Vector3(side * 0.036, 0.008, 0.130)
 
 		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
 		# esclerótica visible, apertura angosta (fuera el ojo-platillo
@@ -1271,7 +1325,10 @@ func _build() -> void:
 
 		var glint = _disc_mesh(0.0022, eye_white_mat)
 		glint.rotation.x = PI / 2.0
-		glint.position = Vector3(0.003, 0.003, 0.0115)
+		# R1: offset ESPEJADO por lado (hacia la nariz en ambos) — el offset
+		# fijo +x hacía que un ojo llevara el brillo hacia afuera y leyera
+		# "esclerótica despegada"/mirada desalineada (QA rostro 35%).
+		glint.position = Vector3(float(side) * -0.003, 0.003, 0.0115)
 		eye_group.add_child(glint)
 
 		eye_group.set_meta("side", side)
@@ -1302,7 +1359,8 @@ func _build() -> void:
 		# real; si sigue leyendo recta, segunda pasada = cadena de 2-3
 		# cápsulas/esferas decrecientes (patrón `_braid`).
 		var brow = _box_mesh(0.040, 0.006, 0.010, brow_mat)
-		brow.position = Vector3(side * 0.036, 0.038, 0.133)
+		# R1: baja junto con el ojo (mismo gap ceja↔ojo de antes).
+		brow.position = Vector3(side * 0.036, 0.024, 0.134)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -2034,11 +2092,15 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# 0.78/0.84/0.94 en _build). El slider modula ANCHO y profundidad
 	# alrededor de esa base SIN tocar el largo (Y), que fija el menton al
 	# ras de la nariz. jaw bajo = mandibula fina (lamina); jaw alto = amplia.
+	# R1: `jaw_mesh` es la caja central de la mandíbula con las ramas como
+	# hijas — el slider escala ancho/profundidad de TODA la estructura
+	# (las hijas heredan), base 1.0. Y fijo: el mentón no se mueve del
+	# canon de 7.5 cabezas.
 	var jaw_v: float = p.get("jaw", 0.5)
 	jaw_mesh.scale = Vector3(
-		0.78 * _lerp(0.86, 1.16, jaw_v),
-		0.84,
-		0.94 * _lerp(0.92, 1.08, jaw_v)
+		_lerp(0.86, 1.16, jaw_v),
+		1.0,
+		_lerp(0.92, 1.08, jaw_v)
 	)
 
 	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
@@ -2058,7 +2120,9 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# de una sola línea de párpado limpia; (b) Z de escala sube con él.
 	var cheek_v: float = p.get("cheek", 0.5)
 	for cheek in cheeks:
-		cheek.position.y = _lerp(-0.032, -0.008, cheek_v)
+		# R1: rango bajado con el ojo (ojo ahora en y=0.008) — el pómulo
+		# vive SIEMPRE claramente bajo el ojo, sin apilar tinta con la ceja.
+		cheek.position.y = _lerp(-0.038, -0.016, cheek_v)
 		var cs: float = _lerp(0.9, 1.16, cheek_v)
 		# r_cheek-box-v2: base bajada a 0.040 (de 0.068) — multiplicadores
 		# recalibrados para la caja chica (antes tuneados para radio de
