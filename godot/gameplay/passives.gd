@@ -6,7 +6,7 @@ var origin_id: String = ""
 var stats: Stats       = null
 
 var overclock_active: bool = false   # aetherborn: held Q
-var night_vision: bool     = false   # miststalker: toggled N
+var night_vision: bool     = false   # miststalker (Mistbound): toggled N
 
 func _init(save: SaveState, p_stats: Stats) -> void:
 	origin_id = save.origin_id
@@ -35,7 +35,7 @@ func cast_cooldown_mult() -> float:
 func attack_cooldown_mult() -> float:
 	return 0.8 if origin_id == "ironblooded" else 1.0
 
-# ---- Feral Instinct ----
+# ---- Frontier Instinct (Mistbound) ----
 func grass_speed_mult(in_grass: bool) -> float:
 	return 1.35 if (origin_id == "miststalker" and in_grass) else 1.0
 

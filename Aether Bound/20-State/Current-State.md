@@ -226,6 +226,11 @@ updated: 2026-07-16
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);
   mesh de bloques = etapa (pase visual en producción del slice).
+- **✅ CERRADO (2026-07-16, sesión paralela):** `origins_data.gd` ya no
+  trata a Mist-Stalker como raza Beast-Folk aparte — reconvertido a
+  Mistbound (subcultura humana fronteriza), geometría bestial (orejas/cola/
+  pelaje falso) quitada de `character_rig.gd`. Gates ALL_PASS. Detalle en
+  [[LOG]] y [[Fenotipos y Creación de Personaje]].
 - **Riesgos abiertos:** frame budget térmicamente frágil en la laptop RTX
   2060 (~58 fps warm); export a consolas requiere partner externo (Godot).
 

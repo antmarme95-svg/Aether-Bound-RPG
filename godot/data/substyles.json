@@ -17,7 +17,7 @@
       "thief": { "name": "Scrap-Slinger", "archetype": "Duelist", "role": "Hitscan / Marksman", "palette": "orange/ocre", "mechanic": "High-precision sniper utilizing heavily modified long-range aether rifles.", "silhouette": "Lean marksman with a long rifle silhouette", "vfx": "Muzzle flash + hitscan tracer + impact decals" }
     },
     "miststalker": {
-      "warrior": { "name": "Pack-Leader", "archetype": "Vanguard", "role": "Off-Tank / Utility", "palette": "terran green", "mechanic": "Mitigates damage by summoning spectral beasts; creates active stealth zones.", "silhouette": "Sturdy beastfolk with pelt/fur bulk (fake fur via shell/alpha cards)", "vfx": "Spectral beast summon VFX + stealth-zone ground decal" },
+      "warrior": { "name": "Pack-Leader", "archetype": "Vanguard", "role": "Off-Tank / Utility", "palette": "terran green", "mechanic": "Mitigates damage by summoning spectral beasts; creates active stealth zones.", "silhouette": "Sturdy human frontier bulk, layered canal-runner gear", "vfx": "Spectral beast summon VFX + stealth-zone ground decal" },
       "mage": { "name": "Blood-Shaman", "archetype": "Strategist", "role": "Main Healer", "palette": "terran green", "mechanic": "Siphons health from enemies in a designated area and redistributes it to allies.", "silhouette": "Ritual support frame with totem / charms", "vfx": "Health-siphon AoE drain decal + heal aura particles" },
       "thief": { "name": "Shadow-Stalker", "archetype": "Duelist", "role": "Flanker / Assassin", "palette": "terran green", "mechanic": "Pure stealth archetype featuring short-range blinks and high backstab criticals.", "silhouette": "Lean low-profile stealth, hooded/cloaked", "vfx": "Short-range blink VFX + backstab crit flash" }
     }

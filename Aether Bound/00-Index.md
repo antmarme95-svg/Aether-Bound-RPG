@@ -118,9 +118,11 @@
   de rostro nueva SÍ se genera (brief 8 en [[Briefs de Concept Art]]), fase
   toca solo oreja neutra, sí verificar extremos de slider, las 5 partes
   parejo, sesgo racial fuera (entra con elfo/enano). Falta generar/aprobar
-  la lámina antes de medir. Colateral: `origins_data.gd` sigue tratando a
-  Mist-Stalker como raza completa pese al canon ya ratificado — separado
-  como tarea aparte (en curso en sesión paralela de Boris).
+  la lámina antes de medir. Colateral (RESUELTO 2026-07-16, sesión
+  paralela): `origins_data.gd` tratada a Mist-Stalker como raza Beast-Folk
+  completa pese al canon ya ratificado — reconvertida a Mistbound (variante
+  cultural humana), geometría bestial quitada de `character_rig.gd`. Detalle
+  en [[Fenotipos y Creación de Personaje]] y [[LOG]].
 - [[PRD-Warpaint-Personalizable]] — bug real encontrado y corregido
   (2026-07-14): la "V" geométrica de warpaint se dibujaba para CUALQUIER
   índice >0, tapando los 5 patrones del atlas. Evaluación visual de los 6

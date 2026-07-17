@@ -1,5 +1,48 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] fix | Mist-Stalker reconvertido a Mistbound (raza Beast-Folk → subcultura humana) en `origins_data.gd` + `character_rig.gd`
+El canon (`Las Tres Razas.md`, `Fenotipos y Creación de Personaje.md`,
+ratificados 2026-07-04) establece solo 3 razas jugables — Elfos, Enanos,
+Humanos — y que el kit Mist-Stalker se reinterpreta como **the Mistbound**,
+subcultura humana fronteriza del Driftmarket, 100% humana (sin rasgos de
+bestia). El código nunca se había actualizado: `origins_data.gd` seguía
+definiendo `"miststalker"` como tercera raza completa (tag "Beast-Folk
+Outlaw Rogues", `heightRange` propio) y `character_rig.gd` le generaba
+orejas cónicas bestiales, una cola de 6 segmentos y mechones de pelaje
+falso. Detectado por Boris en sesión paralela mientras trabajaba Fase 1 del
+rework de anatomía (nota "colateral" dejada en `00-Index.md`).
+
+**Alcance de la corrección (con 3 puntos de diseño confirmados por Boris
+antes de tocar código):**
+- `origins_data.gd`: `"miststalker"` → nombre "Mistbound", tag "Driftmarket
+  Frontier Outlaws", lore sin beastfolk, passive renombrado "Frontier
+  Instinct" (misma mecánica: velocidad en pasto/fog-sight/detección —
+  confirmado que no es exclusivamente bestial, solo se renombró el lore).
+  `heightRange` [0.9, 1.1] → **[0.9, 1.15]** (el más ancho de las 3 razas,
+  reflejando "máxima variación individual" de Fenotipos.md — confirmado por
+  Boris). Ciudad/reclutador/rival (Titan's Docks / Quill Marrow / Gilded
+  Concord) se mantuvieron como la cara Mistbound específica de esta entrada
+  (confirmado por Boris, consistente con "Driftfolk del Driftmarket" de Las
+  Tres Razas.md).
+- `character_rig.gd`: eliminada la rama completa de orejas cónicas +
+  cola de 6 esferas + mechones de pelaje falso (`_fur_slot`, ~70 líneas);
+  reemplazada por oreja humana neutra (mismo patrón esfera pequeña que ya
+  usa Iron-Blooded). Variable `_fur_slot` eliminada por no tener ya ningún
+  productor.
+- `substyles.json`: silueta de "Pack-Leader" (Vanguard de este origin) ya no
+  describe "beastfolk con pelt/fur bulk".
+- El **id interno `"miststalker"` se mantuvo sin cambios** — renombrarlo
+  arrastraría ~10 archivos de test que lo usan como string key
+  (`autotest_classes.gd`, `test_core.gd`, etc.); fuera del alcance pedido.
+  Los efectos visuales de clase (Pack-Leader wisp, Blood-Shaman siphon ring)
+  no son bestiales y se dejaron intactos.
+
+Gates verificados tras el cambio: `test_core.gd` ALL_PASS,
+`autotest_combat.gd` ALL_PASS, `autotest_springboard.gd` ALL_PASS,
+`autotest_classes.gd` (screenshots regenerados, confirmado visualmente sin
+orejas/cola/pelaje bestial). Cierra la nota "colateral" del punto 5 del
+[[Fase5-Cara-Propuesta-DRAFT]] en `00-Index.md`.
+
 ## [2026-07-16] fix | Trapecio corregido: Boris detectó hipertrofia ("tres cabezas") — A/B/C comparadas, elegida B
 Boris revisó la captura de espalda del cierre de Fase 1.3 y marcó el
 trapecio como hipertrofiado ("¿no dirías que están demasiado

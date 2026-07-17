@@ -54,9 +54,19 @@ intocable. Los sliders comparten UI pero **cada raza re-rangea cada slider**
 El motor de creación del prototipo se conserva entero: campos
 `float/pick/color` (`phenotype_data.gd`), `hair_library`, `warpaint_atlas`,
 paletas (`palette_data.gd`). Trabajo nuevo = re-rangear por raza, bibliotecas
-raciales de pelo/marcas, re-mapeo cultural de `arcaneMod`, y el paso
-Aether-Born/Iron-Blooded/Restless sobre `origins_data.gd` (que aún habla de
-"Beast-Folk" — [[Nomenclatura]], tarea C1).
+raciales de pelo/marcas, re-mapeo cultural de `arcaneMod`.
+
+**Tarea C1 (código) CERRADA (2026-07-16):** `origins_data.gd` ya no describe
+al origin `"miststalker"` como raza Beast-Folk aparte — nombre/tag/lore/
+passive/heightRange reconvertidos al concepto Mistbound (subcultura humana
+fronteriza del Driftmarket), `heightRange` unificado al rango humano
+[0.9, 1.15]. `character_rig.gd` ya no genera orejas bestiales, cola ni
+mechones de pelaje falso para ese origin — usa oreja humana neutra (mismo
+tratamiento que las demás razas humanoides). El id interno `"miststalker"`
+se mantuvo (renombrarlo tocaría ~10 archivos de test que lo usan como string
+key) — ver comentario en `origins_data.gd`. Gates `test_core`,
+`autotest_combat`, `autotest_springboard`, `autotest_classes` ALL_PASS tras
+el cambio.
 
 ## Referencias visuales canónicas (`90-Raw/concept/`, 2026-07-04)
 

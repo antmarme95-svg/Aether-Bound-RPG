@@ -67,17 +67,22 @@ const ORIGINS: Array[Dictionary] = [
 		},
 	},
 	{
+		# Human origin (the Restless). Kept id "miststalker" internally — renaming
+		# it would touch ~10 test files that key origins by string id — but the
+		# race is 100% human: this entry represents the Mistbound, the frontier
+		# Driftfolk subculture of the Restless (Aether Bound/10-Knowledge/Las Tres
+		# Razas.md, Fenotipos y Creación de Personaje.md — decisión 2026-07-04).
 		"id": "miststalker",
-		"name": "Mist-Stalkers",
-		"tag": "Beast-Folk Outlaw Rogues",
-		"lore": "Canal-running beastfolk of the fog. If you can see them, they are either being polite or you are already robbed.",
+		"name": "Mistbound",
+		"tag": "Driftmarket Frontier Outlaws",
+		"lore": "Canal-running smugglers of the fog, Driftmarket-born and beholden to no crown. If you can see them, they are either being polite or you are already robbed.",
 		"defaultName": "Ryx",
 		"passive": {
 			"id": "feralInstinct",
-			"name": "Feral Instinct",
-			"desc": "Move faster through high grass, toggle night-vision with N, and enemies notice you far later.",
+			"name": "Frontier Instinct",
+			"desc": "Move faster through high grass, toggle fog-sight with N, and enemies notice you far later.",
 			"attributeMods": {},
-			"hint": "N — NIGHT-VISION",
+			"hint": "N — FOG-SIGHT",
 		},
 		"city": {
 			"name": "The Titan's Docks",
@@ -85,7 +90,7 @@ const ORIGINS: Array[Dictionary] = [
 		},
 		"recruiter": {"name": "Quillane “Quill” Marrow", "title": "Acquisitions (Don't Ask) Desk"},
 		"rival": "The Gilded Concord of Free Captains",
-		"heightRange": [0.9, 1.1],
+		"heightRange": [0.9, 1.15],
 		"theme": {
 			"accent": "#4dff9d",
 			"sky": "#2c4a44",
