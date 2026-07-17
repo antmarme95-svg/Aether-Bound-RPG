@@ -405,6 +405,15 @@ func _build() -> void:
 	# arriba (hombros cuadrados, no globo) que estrecha hacia la cintura; la
 	# cintura (jerkin) retoma el MISMO radio y asienta sobre la pelvis. El
 	# V-taper elíptico (CHEST_X/Z) lo aplica _apply_build sobre peso/clase.
+	# FASE 1 — investigación tras QA imparcial (2026-07-16, veredicto ~40%,
+	# CRITICAL: "bloque rectangular con bordes de tinta en la base del
+	# cuello... cuello de camisa sin soldar"). Hipótesis inicial DESCARTADA
+	# por investigación de campo (marcado de color pieza por pieza): NO es
+	# un disco expuesto por diferencia de radio torso/cuello — top_radius
+	# se probó en 0.16/0.14/0.10 sin ningún cambio visual en el defecto. La
+	# causa real es `chin_boss` (ver más abajo, cerca de la nariz) leyendo
+	# desconectado de la mandíbula en ángulo 3/4 — ya corregido ahí. Radio
+	# del torso se deja en su valor original (0.16), sin cambios.
 	torso = _cylinder_mesh(0.16, 0.11, 0.34, skin_mat)
 	torso.position.y = 0.12
 	upper_spine.add_child(torso)
@@ -455,12 +464,14 @@ func _build() -> void:
 		var clav_in = _capsule_mesh(0.011, 0.038, skin_mat)
 		clav_in.rotation.z = PI / 2.0 - float(cside) * 0.22
 		clav_in.position = Vector3(float(cside) * 0.042, 0.284, 0.120)
+		clav_in.visible = true
 		upper_spine.add_child(clav_in)
 		_add_outline_pass(clav_in, Color("#f2b186"))
 		# lateral: hacia el hombro, cóncava (Z recesada) — solapa con la medial
 		var clav_out = _capsule_mesh(0.011, 0.038, skin_mat)
 		clav_out.rotation.z = PI / 2.0 - float(cside) * 0.06
 		clav_out.position = Vector3(float(cside) * 0.100, 0.280, 0.106)
+		clav_out.visible = true
 		upper_spine.add_child(clav_out)
 		_add_outline_pass(clav_out, Color("#f2b186"))
 
@@ -561,6 +572,7 @@ func _build() -> void:
 		trap.scale = Vector3(1.0, 0.7, 0.55)
 		trap.position = Vector3(float(tside) * 0.135, 0.285, 0.0)
 		trap.rotation.z = -float(tside) * 0.28
+		trap.visible = true
 		upper_spine.add_child(trap)
 		_add_outline_pass(trap, Color("#f2b186"))
 
@@ -577,6 +589,7 @@ func _build() -> void:
 		var acromion = _box_mesh(0.05, 0.022, 0.05, skin_mat)
 		acromion.position = Vector3(float(aside) * 0.205, 0.275, 0.022)
 		acromion.rotation.z = -float(aside) * 0.30
+		acromion.visible = true
 		upper_spine.add_child(acromion)
 		_add_outline_pass(acromion, Color("#f2b186"))
 
@@ -967,6 +980,26 @@ func _build() -> void:
 	# leía como mandíbula protuberante/bulldog, no mentón marcado. Bajado a
 	# un punto intermedio (front≈0.125, entre el 0.098 original y el 0.148
 	# exagerado).
+	# FASE 1 — investigación tras QA imparcial (2026-07-16). Investigación de
+	# campo (marcado de color por pieza, uno a la vez: torso, cuello,
+	# trapecio, clavícula, acromion, pauldron, pec, deltoide — TODOS
+	# descartados) identificó que el hallazgo CRITICAL "bloque rectangular
+	# con bordes de tinta en la base del cuello, tipo cuello de camisa sin
+	# soldar" en la vista 3/4 (`anatomy_face_34.png`) es en realidad
+	# **`chin_boss`** (el mentón) — NO una pieza de hombro/cuello. Su Z
+	# (front≈0.125) ya está calibrada correctamente contra la lámina (6
+	# rondas de ajuste documentadas arriba, frente). El defecto real es que
+	# en el ÁNGULO 3/4 se ve desconectado de la mandíbula. Se probaron 3
+	# variantes de overlap (profundidad 0.055→0.075, centro Z 0.0975→0.0875;
+	# alto 0.032→0.06 con centro Y -0.134→-0.120) — NINGUNA cerró la
+	# desconexión visual en 3/4 pese a que el cálculo de solape 3D decía que
+	# debía funcionar (posible causa: el corte transversal elíptico de
+	# `jaw_mesh` en ese punto no coincide con lo esperado, o el defecto es
+	# de lectura de silueta/Sobel más que de overlap puro). **No se sigue
+	# ajustando a ciegas** — esta pieza ya tiene 6+ rondas de calibración
+	# validadas de frente (Lección: no reabrir sin evidencia nueva clara de
+	# qué cambiar). Revertido a los valores originales, documentado en LOG
+	# como hallazgo abierto para decisión de Boris.
 	var chin_boss = _box_mesh(0.058, 0.032, 0.055, skin_mat)
 	chin_boss.position = Vector3(0.0, -0.134, 0.0975)
 	head.add_child(chin_boss)

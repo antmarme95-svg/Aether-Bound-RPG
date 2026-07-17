@@ -186,10 +186,62 @@ necesita algo de quiebre real para entintar cualquier masa, confirmado en
 Fase 0). Valor final en código: `trap.scale = Vector3(1.0, 0.7, 0.55)`.
 Gates re-verificados ALL_PASS.
 
-**Pendiente antes de dar por cerrada la fase:** QA imparcial + reporte con
-capturas frente/perfil/3-4/espalda + VoBo de Boris (criterio de cierre
-original, sin cambios) — decidir si el acromion/deltoide-bajo-trapecio y
-la clavícula S necesitan otra pasada o si el resultado actual ya alcanza.
+**QA imparcial CORRIDO (2026-07-16, mismo día — subagente Fable, protocolo
+[[QA Loop]]): ~40% de fidelidad torso/hombros.**
+
+Positivo confirmado por el QA: la hipertrofia del trapecio quedó
+genuinamente resuelta (sin "tercera cabeza"); la proporción global
+(~7.5 cabezas, figura esbelta) aguanta a distancia; el pipeline de
+tinta/sombreado es fiel al estilo — el problema es de fusión anatómica,
+no de shader.
+
+**Hallazgos CRITICAL — investigados:**
+1. Torso lee como "peto/cartón" (contorno de tinta interior completo).
+2. "Costura cuello-hombro sin soldar" — bloque rectangular tipo cuello de
+   camisa en la base del cuello (vista 3/4).
+
+Investigación de campo (marcado de color pieza por pieza, una a la vez,
+en `anatomy_face_34.png`): torso, cuello, trapecio, clavícula (×2),
+acromion, pauldron, pec y deltoide — **los 8 descartados uno por uno**
+(cambiar color/ocultar cada uno no afectó el defecto). **El objeto real
+es `chin_boss`** (el mentón, `character_rig.gd` cerca de la nariz) —  en
+el ángulo 3/4 se lee desconectado de la mandíbula, no es una pieza de
+hombro/cuello en absoluto. Se probaron 3 variantes de overlap (profundidad
+Z 0.055→0.075 + centro; alto Y 0.032→0.06 + centro) — **ninguna cerró la
+desconexión visual**, pese a que el cálculo de solape 3D (corte elíptico
+de `jaw_mesh` en ese punto) indicaba que debía funcionar. Dado que
+`chin_boss` ya tiene 6+ rondas de calibración validadas de FRENTE contra
+la lámina (documentadas en el propio código), **se decidió NO seguir
+ajustando a ciegas** (Lección: no reabrir una pieza ya validada sin
+evidencia clara de qué cambiar) — revertido a sus valores originales
+(`_box_mesh(0.058, 0.032, 0.055, skin_mat)`, posición
+`Vector3(0.0, -0.134, 0.0975)`). **Queda como hallazgo ABIERTO, sin
+resolver, para decisión de Boris** — necesita una investigación dedicada
+(quizás un ángulo de cámara distinto en el banco, o revisar si el defecto
+es de lectura de silueta/Sobel en vez de overlap puro) antes de intentar
+un 4º ajuste.
+
+**Hallazgos HIGH — NO atacados todavía:**
+- Hombros como esferas infladas en vista trasera ("hombreras de fútbol
+  americano"), contradice "narrow sloped shoulders" de la lámina.
+- El trapecio corregido (Fase 1.3, ya cerrada) ahora es ILEGIBLE en el
+  sentido opuesto — transición abrupta cilindro→esfera, sin pendiente.
+- Perfil sin profundidad de pecho ni curva lumbar — el torso de lado es
+  una tabla plana.
+
+**Hallazgos MEDIUM — NO atacados todavía:**
+- Cintura se lee por una línea de tinta dibujada, no por la silueta real.
+- Clavícula como 2 trazos flotantes, desconectados visualmente.
+
+**Estado de la fase: EN CURSO, no cerrada.** Sesión detenida tras el
+hallazgo del mentón para reportar a Boris en vez de seguir gastando
+presupuesto en ajustes sin evidencia clara. Gates
+`test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+`autotest_ui` ALL_PASS con el estado revertido.
+
+**Pendiente antes de dar por cerrada la fase:** resolver (o decidir
+diferir) los hallazgos CRITICAL/HIGH/MEDIUM de arriba, nuevo QA imparcial
+de re-medición, y VoBo de Boris con capturas frente/perfil/3-4/espalda.
 
 **Estado actual del código:** `character_rig.gd:39-40` (`SHOULDER_X 0.21`,
 `SHOULDER_Y 0.26`), `:56-58` (`CHEST_X 1.16`, `WAIST_XZ 0.90`), `:446-449`

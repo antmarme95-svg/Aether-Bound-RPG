@@ -38,10 +38,20 @@ updated: 2026-07-16
   paralelo (A/B/C) con captura de espalda lado a lado; Boris eligió **B
   (escala 1.0/0.7/0.55)** por ser la que menos lee como bulto separado.
   Gates ALL_PASS con el valor corregido.
-  **Con esto, Fase 1.3 queda completa. Pendiente
-  antes de cerrar Fase 1:** QA imparcial + VoBo de Boris con capturas
-  frente/perfil/3-4/espalda — ver [[PRD-Rework-Modelado-Personajes-v2]]
-  Fase 1 para el detalle completo.
+  **QA imparcial CORRIDO (2026-07-16, mismo día): ~40% de fidelidad
+  torso/hombros.** Positivo: trapecio sin hipertrofia, proporción global
+  ok, pipeline de tinta fiel al estilo. **CRITICAL "cardboard collar"
+  rastreado hasta `chin_boss`** (el mentón, no una pieza de hombro) —
+  se ve desconectado de la mandíbula en ángulo 3/4. 3 intentos de fix
+  (overlap Z, alto/Y) NO cerraron la desconexión — revertido a valores
+  originales (6+ rondas ya validadas de frente, no se sigue ajustando a
+  ciegas). **Queda como hallazgo ABIERTO sin resolver.** Otros hallazgos
+  del QA (hombros-globo, trapecio ahora ilegible en el otro sentido,
+  perfil sin profundidad de pecho/curva lumbar, cintura solo por línea,
+  clavícula como trazos flotantes) **no se atacaron todavía.** Gates
+  ALL_PASS con el estado revertido. Ver [[PRD-Rework-Modelado-Personajes-v2]]
+  Fase 1 y [[LOG]] para el detalle completo — Fase 1 sigue EN CURSO, no
+  cerrada.
 - **➕ FASE 5 PROPUESTA (cara: mandíbula/ojos/nariz/mentón/orejas), pedida
   por Boris el mismo día, posterior a la Fase 4 (boca):** borrador completo
   en [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`, NO fusionado al PRD

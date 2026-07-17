@@ -1,5 +1,37 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-16] investigate | QA imparcial Fase 1 (~40% fidelidad) + "cardboard collar" rastreado hasta chin_boss — 2 intentos de fix sin éxito, revertido
+Con el subagente Fable QA imparcial finalmente corrido (2 intentos previos
+fallaron por límite de gasto de 5 horas, no mensual como se pensó — el
+3er intento con el mismo prompt sí completó), se obtuvo el primer veredicto
+medido de la Fase 1: **~40% de fidelidad torso/hombros.** Positivo: la
+hipertrofia del trapecio quedó genuinamente resuelta (sin "tercera
+cabeza"), la proporción global (~7.5 cabezas) aguanta, y el pipeline de
+tinta/sombreado es fiel al estilo — el problema es de fusión anatómica,
+no de shader. **CRITICAL #1 y #2** (torso "peto/cartón" + "costura
+cuello-hombro sin soldar, bloque rectangular tipo cuello de camisa")
+motivaron una investigación de campo: marcado de color pieza por pieza
+(torso, cuello, trapecio, clavícula ×2, acromion, pauldron, pec, deltoide)
+descartó las 8 primero — **el objeto real es `chin_boss` (el mentón)**,
+que en el ángulo 3/4 (`anatomy_face_34.png`) se lee desconectado de la
+mandíbula, no una pieza de hombro. Se probaron 3 variantes de overlap
+(profundidad, centro Z, alto/centro Y) — **ninguna cerró la desconexión
+visual** pese a que el cálculo de solape 3D indicaba que debía funcionar.
+Dado que `chin_boss` ya tiene 6+ rondas de calibración validadas de frente
+contra la lámina (documentadas en el propio código), se decidió NO seguir
+ajustando a ciegas (Lección: no reabrir una pieza ya validada sin
+evidencia clara de qué cambiar) — revertido a sus valores originales.
+**Queda como hallazgo abierto, sin resolver, para decisión de Boris.**
+Los demás hallazgos del QA (HIGH: hombros-globo, trapecio ahora ilegible
+en el otro sentido, perfil plano sin profundidad de pecho/curva lumbar;
+MEDIUM: cintura solo por línea dibujada, clavícula como trazos flotantes)
+**no se atacaron todavía** — la sesión se detuvo en el hallazgo del
+mentón para reportar y no seguir gastando presupuesto en ajustes sin
+evidencia. Gates `test_core`/`autotest_biomech`/`test_combat`/
+`autotest_slice`/`autotest_ui` ALL_PASS con el estado revertido (limpio,
+sin cambios netos de comportamiento respecto al commit anterior salvo
+comentarios de investigación).
+
 ## [2026-07-16] fix | Mist-Stalker reconvertido a Mistbound (raza Beast-Folk → subcultura humana) en `origins_data.gd` + `character_rig.gd`
 El canon (`Las Tres Razas.md`, `Fenotipos y Creación de Personaje.md`,
 ratificados 2026-07-04) establece solo 3 razas jugables — Elfos, Enanos,
