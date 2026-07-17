@@ -97,6 +97,12 @@
   espalda) — 3 variantes A/B/C comparadas, eligió B (escala 1.0/0.7/0.55).**
   Gates ALL_PASS. Pendiente: QA imparcial + VoBo de Boris antes de cerrar
   Fase 1.**
+- [[PRD-Reescritura-Escultura-Rig-v1]] (`20-State/PRDs/`) — **APROBADO
+  (2026-07-17)**: reescritura from-scratch de la escultura de
+  `character_rig.gd` por masas contra las 3 láminas (baselines: rostro 35%,
+  torso ~40% — techo del tuning confirmado 2 veces), fases R0-R4 con
+  contrato duro de API/pivotes/biomech intacto; supersede las Fases 1-2 del
+  [[PRD-Rework-Modelado-Personajes-v2]] (sus Fases 3-4 siguen vigentes).
 - [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`) — **borrador de trabajo,
   NO fusionado al PRD**, pedido por Boris como Fase 5 posterior a la boca:
   rework dirigido de mandíbula/ojos/nariz/mentón/orejas sobre la cara ya

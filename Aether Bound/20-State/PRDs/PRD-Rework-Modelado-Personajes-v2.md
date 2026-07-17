@@ -4,6 +4,16 @@ source: "Compilado 2026-07-16 por el orquestador a pedido de Boris: cruce de [[C
 updated: 2026-07-16
 ---
 
+> **NOTA DE ESTADO (2026-07-17):** la **Fase 1 (torso/hombros)** y la
+> **Fase 2 (manos)** quedan **SUPERSEDED** por
+> [[PRD-Reescritura-Escultura-Rig-v1]] (fases **R2** y **R3**
+> respectivamente) — dos QA imparciales consecutivos (rostro 35%,
+> torso ~40%) confirmaron el techo del ajuste de parámetros y se aprobó
+> la reescritura por masas de la escultura. Las **Fases 3 (pelo/loft)**
+> y **4 (boca/warpaint)** siguen vigentes AQUÍ y se retoman después de
+> la reescritura. El contenido de abajo se conserva íntegro como
+> registro.
+
 # PRD — Rework de Modelado de Personajes v2 (instrucciones para el ejecutor)
 
 > **Ejecutor previsto: Sonnet** (tiering de [[Lecciones]]). **Orquestador

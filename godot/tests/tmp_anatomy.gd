@@ -81,6 +81,17 @@ func _run() -> void:
 	if _pauldron != null:
 		(_pauldron as Node3D).visible = false
 	_rig.set_motion(0.0, false)
+	# DIAG_AXIS=1 (R0 reescritura): dos "lanzas" delgadas apuntando al +Z
+	# local — azul en `_rig.head`, roja en `_holder`. En el perfil (cámara a
+	# +X) ambas deben verse horizontales a máxima longitud apuntando a la
+	# izquierda; si divergen entre sí, hay yaw acumulado en la cadena
+	# body/spine/head; si se acortan, la cámara no está a 90° reales.
+	if OS.get_environment("DIAG_AXIS") == "1":
+		_add_axis_spear(_rig.head, Color(0.1, 0.3, 1.0))
+		var holder_anchor := Node3D.new()
+		_holder.add_child(holder_anchor)
+		holder_anchor.position = Vector3(0.0, 1.90, 0.0)
+		_add_axis_spear(holder_anchor, Color(1.0, 0.1, 0.1))
 	# Dump del atlas de warpaint generado (posicionar slashes VIENDO el strip)
 	var head_tex = _rig.head_mat.get_shader_parameter("albedo_texture")
 	if head_tex is Texture2D:
@@ -144,6 +155,28 @@ func _run() -> void:
 	await _wait(0.15)
 	await Debug.screenshot("res://test_out/anatomy_face_back.png")
 
+	# CLOSE-UPS de uniones (R0 reescritura, lección 2026-07-17: un hueco de
+	# fusión geométrica se camufla en el render completo a 1280×720 — el
+	# zoom a la unión exacta deja de ser un recorte manual de PowerShell y
+	# queda institucionalizado como captura del banco).
+	# (a) mentón/cuello en 3/4 — la zona del ex-CRITICAL "cardboard collar".
+	var chin_t: Vector3 = _holder.global_position + Vector3(0.0, 1.66, 0.0)
+	_cam.look_at_from_position(chin_t + Vector3(0.22, 0.02, 0.26), chin_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_closeup_chin.png")
+	# (b) unión cuello→trapecio/hombro (seam reportado por QA 2026-07-17).
+	var neck_t: Vector3 = _holder.global_position + Vector3(0.0, 1.56, 0.0)
+	_cam.look_at_from_position(neck_t + Vector3(0.32, 0.08, 0.18), neck_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_closeup_neckshoulder.png")
+	# (c) mentón/boca de FRENTE cerca (donde el QA vio el "rectángulo").
+	_cam.look_at_from_position(chin_t + _key_offset(Vector3(0.0, 0.03, 0.32)), chin_t, Vector3.UP)
+	_gs.apply_time_preset("dawn")
+	await _wait(0.15)
+	await Debug.screenshot("res://test_out/anatomy_closeup_chin_front.png")
+
 	# detalle de MANO derecha (r5: palma + masas de dedos + pulgar)
 	var hand_t: Vector3 = _holder.global_position + Vector3(0.28, 0.92, 0.0)
 	_cam.look_at_from_position(hand_t + Vector3(0.25, 0.10, 0.85), hand_t, Vector3.UP)
@@ -192,6 +225,21 @@ const KEY_ANGLE_DEG: float = 15.0
 
 func _key_offset(base: Vector3) -> Vector3:
 	return base.rotated(Vector3.UP, deg_to_rad(KEY_ANGLE_DEG))
+
+# ================= diagnóstico de ejes (DIAG_AXIS) =================
+# Caja delgada de 0.30 m que nace en el origen del padre y corre por su +Z
+# local. Material unshaded: el color debe leerse puro, sin toon/sombra.
+func _add_axis_spear(parent: Node3D, color: Color) -> void:
+	var spear := MeshInstance3D.new()
+	var bm := BoxMesh.new()
+	bm.size = Vector3(0.012, 0.012, 0.30)
+	spear.mesh = bm
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = color
+	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	spear.material_override = mat
+	spear.position = Vector3(0.0, 0.0, 0.15)
+	parent.add_child(spear)
 
 # ================= medidas =================
 # Merged AABB mundial de las mallas del rig (sin glow/ojos: solo toon skin/

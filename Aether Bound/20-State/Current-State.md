@@ -8,53 +8,41 @@ updated: 2026-07-17
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — Fase 1 (torso/hombros) EN CURSO, no
-  cerrada.** Vehículo: [[PRD-Rework-Modelado-Personajes-v2]]. Fase 0, Fase
-  1.1-1.3, y el CRITICAL 2 (cuello de camisa de cartón) ya ejecutados y
-  verificados (gates ALL_PASS + QA imparcial CERRADO). Antes de tocar más
-  código, leer esto:
-  1. **Lo bueno, ya confirmado — no reabrir sin evidencia nueva:** trapecio
-     sin hipertrofia, proporción global (~7.5 cabezas) correcta,
-     `SHOULDER_X=0.21` confirmado contra la lámina, pipeline de tinta fiel
-     al estilo, Y (2026-07-17) **la fusión mentón→mandíbula→cuello** —
-     `chin_boss` + `chin_bridge` en `character_rig.gd` (~línea 1018-1031),
-     verificada por QA imparcial en las 4 vistas del turnaround, con zoom.
-  2. **CRITICAL abierto, SIN resolver:** hallazgo #1 — "torso lee como
-     peto/cartón" (contorno de tinta interior completo), del QA de
-     2026-07-16. Sin investigar todavía (la sesión del 17 se enfocó en el
-     CRITICAL #2, ya cerrado).
-  3. **HIGH, no atacados todavía:** hombros como esferas infladas en vista
-     trasera (contradice "narrow sloped shoulders" de la lámina); el
-     trapecio ya arreglado ahora es ILEGIBLE en el sentido opuesto (sin
-     pendiente cuello→hombro, transición abrupta); perfil sin profundidad
-     de pecho ni curva lumbar (torso de lado = tabla plana).
-  4. **MEDIUM, no atacados todavía:** cintura se lee por una línea de tinta
-     dibujada, no por la silueta real; clavícula como 2 trazos flotantes
-     desconectados.
-  5. **Hallazgos menores nuevos (2026-07-17, del QA que cerró el CRITICAL
-     #2, no bloquean nada):** mentón/mandíbula siguen "blandos" sin masas
-     angulares definidas; seam visible en la base del cuello contra el
-     trapecio/hombro (vistas 3/4 y perfil); marca blanca tipo corchete en
-     el cuello, posible artefacto de UV — ninguno investigado todavía.
-  6. **Metodología a seguir (ver [[Lecciones]] para el detalle):** para
-     encontrar qué pieza causa un defecto, marcar con COLOR (no ocultar).
-     Revisar overlaps en las 4 vistas del turnaround, no solo frente.
-     **Nuevo (2026-07-17): antes de dar un hallazgo geométrico por
-     cerrado, hacer zoom (recortar+ampliar) a la unión exacta** — el
-     render completo a 1280×720 puede camuflar un hueco real que un QA
-     (o un recorte ampliado) sí detecta; y verificar solape en los 3 ejes
-     entre piezas de padres distintos (`chin_boss`↔`neck` se solapaban en
-     Y pero no en Z).
-  Detalle completo en [[LOG]] y [[PRD-Rework-Modelado-Personajes-v2]]
-  Fase 1.
-- **➕ FASE 5 (cara: mandíbula/ojos/nariz/mentón/orejas) — borrador
-  completo y con VoBo de Boris en sus 6 preguntas abiertas**, pero NO
-  fusionada al PRD oficial. Ver [[Fase5-Cara-Propuesta-DRAFT]]
-  (`20-State/PRDs/`). **Único paso pendiente antes de arrancar su
-  medición: generar y aprobar la lámina de rostro** (brief 8 en
-  [[Briefs de Concept Art]]) contra los 5 ejes del [[Art Bible]] — todavía
-  no se generó ninguna imagen. Esta fase va DESPUÉS de la Fase 4 (boca) en
-  el orden del PRD — no es urgente mientras Fase 1 siga abierta.
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — REESCRITURA DE LA ESCULTURA DEL RIG
+  en curso, Fase R1 (cabeza/rostro) es lo siguiente.** Vehículo:
+  [[PRD-Reescritura-Escultura-Rig-v1]] (aprobado por Boris 2026-07-17).
+  Por qué: dos QA imparciales consecutivos confirmaron el techo del ajuste
+  de parámetros — **rostro 35%** (vs [[fenotipo-humano-rostro-v1]], lámina
+  nueva 2026-07-16: "blando/redondeado tipo bola con calcomanías, no por
+  masas") y **torso ~40%**. Se reescribe la construcción de meshes POR
+  MASAS conservando intacto el andamiaje (API de 12 funciones, pivotes,
+  metas, nombres, materiales, contrato outfit/signature/tests — el
+  contrato duro completo está en el PRD).
+  1. **R0 CERRADA (2026-07-17):** cámara de perfil exonerada (diagnóstico
+     DIAG_AXIS con lanzas de eje: 90° real, sin yaw en la cadena — el
+     "sobre-rotado" que reportó el QA era la geometría sin relieve facial);
+     3 close-ups institucionalizados en `tmp_anatomy.gd`
+     (`anatomy_closeup_chin/neckshoulder/chin_front.png`); baseline A/B en
+     `90-Raw/reviews/baseline-pre-reescritura-rig-2026-07-17/`.
+  2. **R1 (siguiente):** cabeza/rostro desde cero contra la lámina de
+     rostro — mandíbula/mentón como estructura angular de cajas (adiós
+     parches `chin_boss`/`chin_bridge`/`jaw_angle`), boca integrada al
+     plano facial, nariz con raíz, pómulos como planos, ojos a mitad de
+     cara. Sliders `jaw/cheek/eyeTilt/eyeShape` re-conectados. Objetivo
+     ≥70% (Boris fija el número final).
+  3. Luego R2 (torso 3 masas + cintura escapular), R3 (extremidades/
+     manos), R4 (integración + batería completa). Cada fase: gates + QA
+     imparcial (máx 2 rondas sin reportar) + VoBo.
+  4. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
+     piezas; 4 vistas del turnaround + close-ups; zoom antes de cerrar
+     hallazgos; solape en los 3 ejes entre piezas de padres distintos;
+     esfera nunca da borde anguloso (caja); overlap real ≤30%.
+- **Fases 1-2 del [[PRD-Rework-Modelado-Personajes-v2]] quedaron
+  SUPERSEDED** por R2/R3 (nota de estado en el propio PRD); sus Fases 3
+  (pelo/loft) y 4 (boca-color/warpaint) siguen vigentes para DESPUÉS de la
+  reescritura. [[Fase5-Cara-Propuesta-DRAFT]] queda absorbida
+  conceptualmente por R1 (la lámina de rostro que le faltaba ya existe:
+  [[fenotipo-humano-rostro-v1]]).
 - **Higiene de contexto aplicada 2 veces el mismo día (2026-07-16-17):**
   este archivo se recorta a solo el presente cada vez que crece con el
   relato sesión-por-sesión; ese relato se mueve VERBATIM a

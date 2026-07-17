@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] design+feature | Reescritura de la escultura del rig APROBADA — PRD-Reescritura-Escultura-Rig-v1 + Fase R0 (banco confiable) CERRADA
+Tras el QA imparcial de rostro (35% vs [[fenotipo-humano-rostro-v1]], ver
+entrada anterior del día), Boris pidió plan formal y lo aprobó: reescribir
+la construcción de meshes de `character_rig.gd` desde cero, POR MASAS,
+conservando el andamiaje completo (API pública de 12 funciones, pivotes
+biomecánicos, metas, nombres de nodos/materiales, contrato con outfit/
+signature/tests — mapeado por 3 exploraciones dedicadas). Fases R0-R4 en
+[[PRD-Reescritura-Escultura-Rig-v1]] (formalizado por subagente PRD;
+Fases 1-2 del [[PRD-Rework-Modelado-Personajes-v2]] quedan superseded por
+R2/R3). **R0 ejecutada y cerrada:** (a) la cámara de perfil del banco
+quedó EXONERADA con diagnóstico empírico — lanzas de eje (DIAG_AXIS=1 en
+`tmp_anatomy.gd`) horizontales, paralelas y a longitud completa en el
+render: es un 90° real sin yaw acumulado en la cadena; la percepción de
+"sobre-rotada ~110-120°" del QA era otro síntoma de la geometría (nariz
+sin proyección + mentón huidizo = perfil sin silueta facial). (b) 3
+close-ups institucionalizados en el banco (`anatomy_closeup_chin.png`,
+`anatomy_closeup_neckshoulder.png`, `anatomy_closeup_chin_front.png`) —
+la lección del zoom deja de ser un recorte manual. (c) Baseline A/B
+pre-reescritura guardado en
+`90-Raw/reviews/baseline-pre-reescritura-rig-2026-07-17/` (14 capturas).
+Siguiente: R1 (cabeza/rostro por masas, objetivo ≥70%).
+
 ## [2026-07-17] fix | CRITICAL "cuello de camisa de cartón" (Fase 1) CERRADO — el hueco real era mentón↔cuello, no mentón↔mandíbula
 Plan del día: atacar el único hallazgo CRITICAL de Fase 1 primero, protocolo
 [[QA Loop]] completo. (1) Higiene de entorno: Epic Games Launcher/EA
