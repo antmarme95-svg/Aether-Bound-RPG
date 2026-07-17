@@ -1,5 +1,30 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] chore | Cierre de sesión — 2da higiene de contexto del día + 3 lecciones nuevas documentadas
+Boris pidió cerrar sesión con énfasis explícito en documentar aprendizajes
+para no repetir una sesión sin avance. Acciones: (1) [[Lecciones]] ganó 3
+entradas nuevas — marcar con COLOR (no ocultar) para aislar qué primitiva
+causa un defecto visual (el método de ocultar generó falsa sospecha de que
+los cambios de código no se aplicaban, hasta forzar un color para
+confirmarlo); una pieza validada solo de FRENTE puede fallar en otros
+ángulos del turnaround sin que nadie lo note (caso `chin_boss`, 6+ rondas
+de calibración, nunca antes visto en 3/4); cuando 2-3 intentos razonados
+de overlap no cierran una desconexión pese a que el cálculo 3D dice que
+debería funcionar, parar y documentar en vez de seguir ajustando a ciegas
+(puede ser un problema de lectura de silueta/Sobel en ese ángulo, no de
+overlap puro). (2) [[Current-State]] recortado por 2da vez en el mismo
+día (había vuelto a crecer a ~230 líneas tras la ronda de Fase 0/1/5) —
+el relato completo se movió VERBATIM a [[Current-State-Historico]]; el
+archivo activo queda con SOLO el arranque de la próxima sesión (Fase 1 en
+curso, QA ~40%, hallazgo abierto de `chin_boss` con sus 3 intentos
+fallidos documentados para no repetirlos) + hechos vigentes. (3) Estado
+real al cierre: Fase 1 (torso/hombros) sigue EN CURSO — CRITICAL
+`chin_boss` sin resolver, HIGH (hombros-globo, trapecio sin pendiente,
+perfil plano) y MEDIUM (cintura por línea, clavícula flotante) sin
+atacar todavía. Fase 5 (cara) con VoBo en sus 6 preguntas, pendiente solo
+de generar la lámina de rostro (brief 8). Nada bloqueado, nada roto —
+gates ALL_PASS en el último commit de código.
+
 ## [2026-07-16] investigate | QA imparcial Fase 1 (~40% fidelidad) + "cardboard collar" rastreado hasta chin_boss — 2 intentos de fix sin éxito, revertido
 Con el subagente Fable QA imparcial finalmente corrido (2 intentos previos
 fallaron por límite de gasto de 5 horas, no mensual como se pensó — el

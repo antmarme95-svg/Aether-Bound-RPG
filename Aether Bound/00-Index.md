@@ -46,8 +46,8 @@
 
 ## 20-State (dónde está el proyecto)
 
-- [[Current-State]] — **punto de entrada de toda sesión**: milestone, objetivo, prioridad, riesgos. Recortado a ~2,200 tokens (2026-07-16, higiene de contexto) — solo lo vigente; el relato histórico completo vive en [[Current-State-Historico]].
-- [[Current-State-Historico]] — archivo (NO se auto-carga): relato sesión-por-sesión que antes vivía en Current-State, movido verbatim el 2026-07-16 para no inflar el arranque de sesión.
+- [[Current-State]] — **punto de entrada de toda sesión**: milestone, objetivo, prioridad, riesgos. Recortado 2 veces el mismo día (2026-07-16 y 2026-07-17, higiene de contexto — vuelve a crecer rápido en sesiones largas de rework visual) — solo lo vigente; el relato histórico completo vive en [[Current-State-Historico]].
+- [[Current-State-Historico]] — archivo (NO se auto-carga): relato sesión-por-sesión que antes vivía en Current-State, movido verbatim (2 tandas, 2026-07-16 y 2026-07-17) para no inflar el arranque de sesión.
 - [[Task-Board]] — tablero de preproducción: frentes A (producción), B (diseño), C (técnico).
 - [[Plan-de-Produccion]] — plan macro A1 ratificado: 5 fases (higiene → link vivo → espina → arco → arte/tuning) con gates de playtest.
 - [[Lecciones]] — anti-patrones técnicos, entorno Godot, gates QA, tiering de modelos.

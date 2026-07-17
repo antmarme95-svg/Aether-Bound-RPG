@@ -272,6 +272,50 @@ updated: 2026-07-14
   traducción con pérdida, igual que una review humana — para geometría/forma
   específica, mirar el píxel gana.
 
+- **Para encontrar QUÉ primitiva causa un defecto visual, marcar con color
+  diagnóstico (`material_override` a un color imposible de confundir —
+  magenta/rojo/verde/azul), NO alternar `visible=false` una pieza a la
+  vez.** Caso real (2026-07-16): un "bloque rectangular tipo cuello de
+  camisa sin soldar" en `anatomy_face_34.png` (vista 3/4) se investigó
+  ocultando, una por una, 8 piezas candidatas (torso, cuello, trapecio,
+  clavícula ×2, acromion, pauldron, pec, deltoide) — el render salió
+  PIXEL-IDÉNTICO las 8 veces, generando sospecha de que los cambios de
+  código no se estaban aplicando (llegó a verificarse timestamp de
+  archivo y hasta forzar un color magenta en el torso solo para confirmar
+  que si SÍ recargaba). El método de ocultar no distingue "esta pieza no
+  es la culpable" de "mi cambio no se aplicó" — un color imposible de
+  confundir sí lo hace, sin ambigüedad, en un solo render. Cambiar a
+  colorear en vez de ocultar identificó la pieza real (`chin_boss`) al
+  primer intento.
+- **Una pieza validada SOLO contra la vista de FRENTE puede fallar en
+  otros ángulos del turnaround (3/4, perfil) sin que nadie lo note hasta
+  que un QA mira esas capturas específicas.** `chin_boss` (el mentón)
+  tiene 6+ rondas de calibración documentadas, todas contra la lámina de
+  frente — nunca se verificó en 3/4. Ahí se lee desconectado de la
+  mandíbula (Sobel entinta un borde completo alrededor, como si fuera una
+  pieza suelta) pese a que el overlap 3D calculado dice que debería
+  fusionar. Regla: cualquier pieza con bordes duros (`_box_mesh`)
+  solapada contra un volumen redondeado (`_sphere_mesh`/`_cylinder_mesh`)
+  debe revisarse en las 4 vistas del turnaround (frente/3-4/perfil/
+  espalda), no solo la que ya se validó — el ángulo cambia qué overlap
+  es "suficiente" para que el Sobel no dibuje una costura.
+- **Cuando 2-3 intentos razonados de ajustar overlap (profundidad, alto/Y)
+  no cierran una desconexión visual pese a que el cálculo de solape 3D
+  dice que debería funcionar, PARAR y documentar — no seguir iterando a
+  ciegas sobre una pieza con historial de calibración pesado.** Puede ser
+  que el defecto real sea de LECTURA DE SILUETA/SOBEL en ese ángulo
+  específico (cómo se proyecta el corte transversal de una caja contra
+  una esfera desde esa cámara), no de overlap puro medido en el espacio
+  3D del objeto — seguir moviendo números sin una hipótesis nueva quema
+  presupuesto sin converger (mismo espíritu que "sospechar del andamiaje
+  tras 2 iteraciones", pero aquí el andamiaje en sí no cambió — es la
+  cámara/ángulo la variable no probada).
+- **El límite de gasto de Claude puede ser una ventana de 5 horas, no
+  mensual/semanal** — un subagente que falla por "spend limit" puede
+  volver a funcionar poco después con el MISMO prompt; no asumir que hay
+  que esperar hasta el próximo mes ni cambiar de enfoque solo por ese
+  error.
+
 ## Entorno
 
 - **Godot 4.6.3** (no está en PATH):
