@@ -359,7 +359,9 @@ func _build_ruler(m: Dictionary) -> void:
 		bm.size = Vector3(0.36 if i % 1 == 0 else 0.2, 0.008, 0.008)
 		rung.mesh = bm
 		rung.material_override = ink
-		rung.position = Vector3(-0.55, (m["ground_y"] - _holder.global_position.y) + m["head_h"] * float(i), 0.0)
+		# R2: a -0.55 la regla proyectaba su SOMBRA sobre el pecho con el sol
+		# de dawn — leía como "correa diagonal" (falso CRITICAL de QA).
+		rung.position = Vector3(-1.05, (m["ground_y"] - _holder.global_position.y) + m["head_h"] * float(i), 0.0)
 		_holder.add_child(rung)
 
 # ================= encuadres =================

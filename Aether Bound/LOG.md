@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] feature | R2 torso/hombros: 40% → 45% → 55% en 2 rondas de QA — freno: el techo de AMBAS fases es la regla de tinta (shader), decisión de Boris pendiente
+Reescultura R2 sobre `character_rig.gd` (5 rondas internas): clavículas-
+tubo RETIRADAS ("understated collarbones" literal de la lámina), masas
+nuevas de pecho/espalda/abdomen (elipsoides-rampa — profundidad de perfil
+real, la S completa), trapecio como RAMPA de caja (la pendiente cuello→
+hombro es ahora SILUETA, frente y espalda), deltoide gota (adiós
+hombreras-globo traseras), cintura sin escalón de radio (pellizco
+continuo), pecs subidos al frente de chest_mass. Falso CRITICAL cazado:
+la "correa diagonal" era en parte la SOMBRA de la regla de cabezas del
+banco (movida a x=-1.05 en `tmp_anatomy.gd`) — pero el QA ronda 2
+confirmó que una diagonal REAL persiste (frontera de masas trapecio/
+pecho/costado). **QA imparcial (agente propio de fase, 2 rondas): 40% →
+45% → 55%.** Espalda = el salto más grande (pendiente continua, sin
+globos). Gates ALL_PASS en cada ronda. **Techo declarado por el QA, y es
+EL MISMO de R1: el Sobel de profundidad entinta cada frontera interior
+entre masas — "una ronda dedicada a la regla de tinta (dónde sí y dónde
+no dibuja) probablemente mueva el % más que cualquier retoque de
+masas". Esa ronda toca `melancolia_post.gdshader` = anti-objetivo del
+PRD aprobado ⇒ decisión de Boris.** R2 queda en 55% commiteada y verde.
+
 ## [2026-07-17] feature | R1 CERRADA en 57% (35→40→52→57, techo de primitivas alcanzado) — VoBo de ruta de Boris, sigue R2
 Boris eligió "cerrar el margen alcanzable y seguir a R2" tras el freno de
 la ronda 2. Ronda 8 de código (pómulos más acostados y menos profundos —

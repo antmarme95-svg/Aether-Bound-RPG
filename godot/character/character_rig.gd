@@ -443,10 +443,14 @@ func _build() -> void:
 	# tamaño que lee como par de cuencas). Aplanadas (escala Z 0.5→0.32) y
 	# alargadas (X 1.4→1.7) para acercarse a "línea de pectoral", no
 	# "bulto".
+	# R2 ronda 4: los pecs SUBEN al frente de chest_mass (z 0.115→0.138) —
+	# quedaban 2cm DENTRO de la masa nueva de pecho y solo asomaban arcos
+	# parciales asimétricos ("semicírculos de tinta", QA 45%). Con ~3mm
+	# proud sobre chest_mass leen como la curva casi lineal de la lámina.
 	for pside in [-1, 1]:
 		var pec = _sphere_mesh(0.05, skin_mat)
 		pec.scale = Vector3(1.7, 0.9, 0.32)
-		pec.position = Vector3(float(pside) * 0.055, 0.21, 0.115)
+		pec.position = Vector3(float(pside) * 0.055, 0.21, 0.138)
 		upper_spine.add_child(pec)
 		_add_outline_pass(pec, Color("#f2b186"))
 
@@ -462,21 +466,38 @@ func _build() -> void:
 	# — mismo espíritu que el ángulo goníaco de la mandíbula (Fase C):
 	# quiebre de radio/posición, no geometría curva compleja. Overlap real
 	# en la unión (Lección "overlap real para fundir masas").
-	for cside in [-1, 1]:
-		# medial: del esternón hacia afuera, convexa (Z más adelante)
-		var clav_in = _capsule_mesh(0.011, 0.038, skin_mat)
-		clav_in.rotation.z = PI / 2.0 - float(cside) * 0.22
-		clav_in.position = Vector3(float(cside) * 0.042, 0.284, 0.120)
-		clav_in.visible = true
-		upper_spine.add_child(clav_in)
-		_add_outline_pass(clav_in, Color("#f2b186"))
-		# lateral: hacia el hombro, cóncava (Z recesada) — solapa con la medial
-		var clav_out = _capsule_mesh(0.011, 0.038, skin_mat)
-		clav_out.rotation.z = PI / 2.0 - float(cside) * 0.06
-		clav_out.position = Vector3(float(cside) * 0.100, 0.280, 0.106)
-		clav_out.visible = true
-		upper_spine.add_child(clav_out)
-		_add_outline_pass(clav_out, Color("#f2b186"))
+	# R2 (2026-07-17): las 2 cápsulas finas por lado leían "2 trazos
+	# flotantes dibujados" (QA 40%, MEDIUM) — un tubo delgado presenta
+	# pared empinada en TODO su perímetro y el Sobel lo entinta entero
+	# (Lección R1: pendiente, no protrusión). Reemplazo: UNA cresta
+	# elipsoidal semi-hundida por lado sobre la superficie del pecho —
+	# emerge en rampa, el cel-step la lee como "clavícula discreta"
+	# (exactamente lo que pide [[Benchmark-Musculatura-Torso]]) sin
+	# contorno propio. La S del hueso queda sugerida por la inclinación.
+	# R2 ronda 4: las crestas claviculares SE RETIRAN — el QA leyó "yugo/
+	# barra con píldoras apiladas"; la anotación literal de la lámina es
+	# "understated collarbones" y a esta escala del estilo la clavícula la
+	# sugieren el borde de chest_mass + la rampa del trapecio, sin pieza
+	# propia (menos es más bajo el Sobel).
+
+	# R2: PROFUNDIDAD DE PERFIL — el QA 40% (HIGH) leía el torso de lado
+	# como "tabla plana" (el cilindro con taper lineal no tiene convexidad
+	# de pecho ni curva dorsal). Dos masas GRANDES Y SUAVES (elipsoides =
+	# rampa por naturaleza, cero tinta interior — NO cajas: las cajas-peto
+	# ya fracasaron como armadura en Fase C): pecho (convexidad esternal
+	# que abarca ambos pecs) y dorsal (convexidad torácica alta). Con la
+	# cintura más angosta/plana, el perfil gana la S chest→lumbar real.
+	var chest_mass = _sphere_mesh(0.11, skin_mat)
+	chest_mass.scale = Vector3(1.35, 0.85, 0.35)
+	chest_mass.position = Vector3(0.0, 0.20, 0.115)
+	upper_spine.add_child(chest_mass)
+	_add_outline_pass(chest_mass, Color("#f2b186"))
+
+	var back_mass = _sphere_mesh(0.10, skin_mat)
+	back_mass.scale = Vector3(1.5, 1.3, 0.4)
+	back_mass.position = Vector3(0.0, 0.22, -0.115)
+	upper_spine.add_child(back_mass)
+	_add_outline_pass(back_mass, Color("#f2b186"))
 
 	# ABDOMEN: SIN masa elevada — PRD Geometría Nueva (2026-07-14,
 	# ratificado por Boris). El `abs_plate` (elipsoide que sobresalía del
@@ -519,10 +540,24 @@ func _build() -> void:
 	# 0.97), 5 cm HONDO dentro de la pelvis (tope en mundo 1.02) — overlap
 	# real, no tangente, mismo criterio que las uniones de pierna/brazo
 	# (evita costura por huecos de precisión flotante).
-	waist = _cylinder_mesh(0.095, 0.085, 0.22, skin_mat)
+	# R2 ronda 4: top vuelve a ~flush con el fondo del torso (0.095→0.108;
+	# el escalón de radio leía "costura de peto", QA 45% HIGH) y el
+	# PELLIZCO real se profundiza en el fondo (0.085→0.078) — la cintura
+	# como silueta continua, no como línea de tinta horizontal.
+	waist = _cylinder_mesh(0.108, 0.078, 0.22, skin_mat)
 	waist.position = Vector3(0.0, 0.08, 0.0)
 	spine.add_child(waist)
 	_add_outline_pass(waist, Color("#f2b186"))
+
+	# R2 ronda 4: convexidad ABDOMINAL leve (elipsoide ancha muy plana,
+	# rampa pura) — completa la S del perfil por abajo (QA 45% MEDIUM:
+	# "frente del torso plano de pecho a cadera"). Sin six-pack: es UNA
+	# superficie tensa, como pide la lámina.
+	var abdomen_mass = _sphere_mesh(0.07, skin_mat)
+	abdomen_mass.scale = Vector3(1.25, 1.25, 0.26)
+	abdomen_mass.position = Vector3(0.0, 0.115, 0.080)
+	spine.add_child(abdomen_mass)
+	_add_outline_pass(abdomen_mass, Color("#f2b186"))
 
 	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
 	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
@@ -570,14 +605,36 @@ func _build() -> void:
 	# aceptado: el estilo tinta+Sobel del proyecto necesita algo de quiebre
 	# real para que cualquier masa se entinte (Fase 0), la lámina sola
 	# (sombreado suave) no alcanza a leerse a esta escala.
+	# R2 (2026-07-17): el trapecio-esfera (variante B) seguía ILEGIBLE
+	# (QA 40%, HIGH: "sin pendiente cuello→hombro, transición abrupta").
+	# Lección R1: la SILUETA es tinta gratis — la pendiente debe SER la
+	# silueta, no un bulto que la insinúe. Rampa de caja: su cara superior
+	# es la línea recta descendente base-del-cuello→acromion (~25°, la de
+	# la lámina "narrow sloped shoulders"); extremos enterrados en cuello/
+	# torso (adentro) y acromion/deltoide (afuera) — sin cantos expuestos.
+	# Una esfera chica atrás mantiene el relleno dorsal del trapecio.
 	for tside in [-1, 1]:
-		var trap = _sphere_mesh(0.10, skin_mat)
-		trap.scale = Vector3(1.0, 0.7, 0.55)
-		trap.position = Vector3(float(tside) * 0.135, 0.285, 0.0)
-		trap.rotation.z = -float(tside) * 0.28
-		trap.visible = true
-		upper_spine.add_child(trap)
-		_add_outline_pass(trap, Color("#f2b186"))
+		# R2 ronda 2: menos profundidad + volcada 0.18 rad hacia adelante —
+		# la cara frontal de la caja era un facet grande tipo "hombrera" en
+		# close-up; volcado, el tope redondea hacia el pecho y el facet
+		# muere contra chest_mass/clavícula.
+		var trap_ramp = _box_mesh(0.16, 0.045, 0.075, skin_mat)
+		trap_ramp.position = Vector3(float(tside) * 0.125, 0.293, -0.004)
+		trap_ramp.rotation.z = -float(tside) * 0.44
+		# R2 ronda 3: volcado 0.18→0.10 — a 0.18 se abrían bolsas oscuras
+		# entre cuello y hombro en la vista TRASERA (regresión detectada en
+		# banco); trap_back sube y se acerca al cuello para sellar atrás.
+		trap_ramp.rotation.x = 0.10
+		upper_spine.add_child(trap_ramp)
+		_add_outline_pass(trap_ramp, Color("#f2b186"))
+		# R2 ronda 4: más grande y pegada al cuello — sella los "huecos
+		# triangulares oscuros" de la base del cuello por atrás (QA 45%
+		# HIGH; no era malla abierta, era bolsa de sombra sin masa).
+		var trap_back = _sphere_mesh(0.075, skin_mat)
+		trap_back.scale = Vector3(1.35, 0.95, 0.55)
+		trap_back.position = Vector3(float(tside) * 0.082, 0.30, -0.04)
+		upper_spine.add_child(trap_back)
+		_add_outline_pass(trap_back, Color("#f2b186"))
 
 	# ACROMION: FASE 1.3 — "acromion como plano (caja chica, no esfera) en
 	# el tope del hombro" ([[Principios de Anatomía 3D]]): el punto óseo
@@ -649,9 +706,15 @@ func _build() -> void:
 		# deltoide vive SIEMPRE bajo la línea descendente cuello→brazo. Con
 		# el pivote nuevo (0.21) su borde interior queda DENTRO del cilindro
 		# del pecho → solape real, muere la costura pecho-hombro.
+		# R2 (2026-07-17): recogido en Z (0.9→0.78) y sesgado adelante — de
+		# ESPALDA leía "esfera inflada/hombrera de fútbol" (QA 40%, HIGH);
+		# el deltoide posterior real es chico, la masa vive adelante-afuera.
+		# R2 ronda 4: gota real — más alto que ancho/profundo, sesgado
+		# adelante; de ATRÁS ya no debe leer esfera con contorno propio
+		# (CRITICAL del QA 45%: "hombreras de armadura").
 		var deltoid = _sphere_mesh(0.066, skin_mat)
-		deltoid.scale = Vector3(0.95, 1.0, 0.9)
-		deltoid.position = Vector3(side * 0.010, -0.02, 0.008)
+		deltoid.scale = Vector3(0.86, 1.08, 0.70)
+		deltoid.position = Vector3(side * 0.008, -0.025, 0.020)
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
 

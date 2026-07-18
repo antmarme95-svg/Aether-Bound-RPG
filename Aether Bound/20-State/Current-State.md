@@ -33,11 +33,18 @@ updated: 2026-07-17
      mandibular) — lista residual completa en
      [[PRD-Reescritura-Escultura-Rig-v1]], se ataca como recurso nuevo
      DESPUÉS de la reescritura, no ahora.
-  3. **R2 (siguiente): torso/hombros por masas** — baseline 40%. Caja
-     torácica bullet + cintura + pelvis inclinada + cintura escapular
-     (clavícula-S, acromion, trapecio con pendiente) sobre la caja
-     torácica; `_apply_build()` re-implementado conservando su contrato
-     de escalas. QA vs `fenotipo-humano-torso-v1` + `fenotipo-humano-v1`.
+  3. **R2 EN PAUSA — 55% tras 2 rondas de QA (40→45→55), decisión de
+     Boris pendiente.** Escultura nueva commiteada y verde: trapecio-
+     rampa (pendiente cuello→hombro real, frente Y espalda), deltoide
+     gota, clavículas retiradas, masas de pecho/espalda/abdomen (perfil
+     con S), cintura sin escalón. **El techo declarado es EL MISMO de
+     R1: el Sobel entinta cada frontera interior entre masas** (la
+     diagonal CRITICAL del pecho incluida). El QA recomienda una ronda
+     dedicada a la REGLA DE TINTA en `melancolia_post.gdshader` (matar
+     contornos interiores por umbral/profundidad, conservar silueta +
+     pliegues elegidos) — **es anti-objetivo del PRD aprobado, así que
+     la decide Boris.** Esa misma ronda destrabaría los residuales de
+     R1 (nariz 360°, restos de pómulo).
   4. Luego R3 (extremidades/manos), R4 (integración + batería completa).
      Cada fase: gates + QA imparcial (máx 2 rondas sin reportar) + VoBo.
   5. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
