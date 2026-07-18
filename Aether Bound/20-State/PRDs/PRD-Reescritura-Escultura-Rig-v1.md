@@ -129,21 +129,42 @@ tunea.
 **Cierre R0:** cámara de perfil verificada/corregida + close-ups en el
 banco + set baseline A/B guardado + gates mínimos verdes.
 
-### R1 — Cabeza/rostro desde cero (la herida abierta: 35%)
+### R1 — Cabeza/rostro desde cero — ✅ CERRADA (2026-07-17, 57% final)
 
-- Reescribir el bloque cráneo→mandíbula→mentón→nariz→boca→pómulos→ojos→
-  cejas→orejas como estructura por masas contra
-  `fenotipo-humano-rostro-v1.png` (4 vistas).
-- `chin_boss`/`chin_bridge`/`jaw_angle` desaparecen como parches — la
-  mandíbula angular con mentón marcado es UNA estructura diseñada, no
-  esfera + curitas.
-- Sliders `jaw/cheek/eyeTilt/eyeShape` re-conectados a la geometría
-  nueva.
-- Warpaint (`_face_mark`, atlas en cráneo) y slots de pelo/barba siguen
-  funcionando.
+**Ejecutado (8 rondas internas + 3 rondas de QA imparcial Fable, mismo
+agente):** mandíbula como estructura de cajas (`jaw_mesh` central — su
+AABB sigue siendo el mentón que mide el banco, el slider `jaw` escala la
+estructura completa vía hijas — + 2 ramas + 2 facets de cuerpo); cráneo
+con la mitad inferior retraída (coronilla intacta; la mandíbula dibuja
+la silueta de la cara baja — el fix de mayor impacto según el QA); boca
+aplastada casi al ras; raíz de nariz nueva; pómulos acostados sobre la
+normal local (rampa, no pared); ojos a mitad de cara con convergencia
+~3.5°; glint espejado; labio rosa-tierra (absorbe la Fase 4a del PRD
+v2). `chin_boss`/`chin_bridge`/`jaw_angle` retirados. Sliders
+`jaw/cheek/eyeTilt/eyeShape` re-conectados. Warpaint y slots intactos.
 
-**Cierre R1:** gates + QA imparcial vs lámina de rostro (objetivo a
-proponer a Boris: ≥70%) + VoBo.
+**Resultado: 35% → 40% → 52% → 57%. Sin regresiones. Techo de la
+técnica de primitivas (~60%) alcanzado y certificado por el QA ("no
+gastar más rondas; el costo/beneficio ya es negativo"). VoBo de ruta de
+Boris: cerrar aquí y seguir a R2.** Gates ALL_PASS en cada ronda.
+
+**LISTA RESIDUAL (insumo directo de la futura pasada con técnica nueva
+— NO atacar con primitivas, ya se demostró que no responde):**
+- **HIGH — Labios decal/malla:** sustituir la cápsula con borde café por
+  labios como cambio de plano al ras + color por textura/vertex color
+  SIN contorno perimetral. Verificar frente (hoy "curita"), 3/4, y
+  ángulo bajo (hoy rebasa la silueta facial).
+- **HIGH — Máscara de tinta selectiva:** el Sobel entinta el perímetro
+  360° de la nariz y deja restos en el pómulo derecho. Criterio de
+  aceptación: en close-up frontal ninguna línea de tinta forma polígono
+  cerrado alrededor de un rasgo.
+- **HIGH — Fusión del bloque mandibular en vistas no frontales:**
+  biselar esquinas ortogonales visibles desde abajo/perfil cercano.
+- **MEDIUM — Oreja con volumen** (hélix; hoy óvalo-decal de perfil) —
+  geometría por-origen. **MEDIUM — quiebre goníaco biselado** (hoy
+  vértice de caja; la lámina lo suaviza con masetero).
+- **LOW — Mirada 3/4 residual** (esclerótica exterior de más en el ojo
+  lejano; subir convergencia o córnea curva).
 
 ### R2 — Torso/hombros por masas (cierra la Fase 1 del PRD v2: 40%)
 

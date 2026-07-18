@@ -972,8 +972,11 @@ func _build() -> void:
 	for jside in [-1, 1]:
 		# Ronda 6: más altas (el cráneo retraído les cede la silueta de la
 		# cara baja — deben cubrir hasta donde el cráneo nuevo termina).
-		var ramus = _box_mesh(0.038, 0.085, 0.085, skin_mat)
-		ramus.position = Vector3(float(jside) * 0.066, 0.052, -0.026)
+		# Ronda 8: +alto (0.085→0.095) — cierra la muesca de silueta donde
+		# el cráneo retraído se encontraba con la caja mandibular (QA R1-r2
+		# MEDIUM).
+		var ramus = _box_mesh(0.038, 0.095, 0.085, skin_mat)
+		ramus.position = Vector3(float(jside) * 0.066, 0.056, -0.026)
 		ramus.rotation.y = float(jside) * -0.42
 		ramus.rotation.x = 0.30
 		jaw_mesh.add_child(ramus)
@@ -1096,7 +1099,10 @@ func _build() -> void:
 	# de rotation.y deja una cara centrada en +Z, así que subir segmentos
 	# reintroduce el problema que Ronda 8 cerró. Ángulo de facetas sin
 	# tocar; solo se angosta la base.
-	var nose = _cylinder_mesh(0.0015, 0.019, 0.070, skin_mat)
+	# Ronda 8: base 0.019→0.017 — flancos menos empinados = menos outline
+	# perimetral (el trazo lateral de nariz de la lámina sí existe; el
+	# anillo 360° no).
+	var nose = _cylinder_mesh(0.0015, 0.017, 0.070, skin_mat)
 	(nose.mesh as CylinderMesh).radial_segments = 4
 	nose.position = Vector3(0.0, -0.020, 0.139)
 	nose.rotation.x = -0.34   # raíz hundida arriba, punta proyecta frente-abajo
@@ -1257,7 +1263,12 @@ func _build() -> void:
 		# siguiendo la normal del cráneo en ese punto) — emerge en rampa
 		# gradual en vez de presentar una pared lateral empinada que el
 		# Sobel entinta como perímetro completo ("calcomanía", QA R1-r1).
-		cheek.rotation.y = float(side) * 0.61
+		# Ronda 8: más acostado aún (0.61→0.70) — la cámara frontal del
+		# banco lleva 15° de key offset hacia +x, así que el pómulo -x
+		# presenta su canto más empinado a cámara y seguía entintado
+		# mientras el +x ya fundía (QA R1-r2). Aplanar más ambos baja el
+		# escalón emergente bajo el umbral de tinta desde cualquier lado.
+		cheek.rotation.y = float(side) * 0.70
 		cheek.position = Vector3(side * 0.066, -0.018, 0.107)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
@@ -1283,6 +1294,11 @@ func _build() -> void:
 		# para seguir conformados a la superficie del cráneo en la altura
 		# nueva.
 		eye_group.position = Vector3(side * 0.036, 0.008, 0.130)
+		# Ronda 8: convergencia natural ~3.5° hacia la nariz — en 3/4 el
+		# iris del ojo lejano dejaba de mirar a cámara y quedaba
+		# "arrinconado"/divergente (QA R1-r2 MEDIUM). De frente el
+		# desplazamiento del iris es <1mm, imperceptible.
+		eye_group.rotation.y = float(side) * -0.06
 
 		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
 		# esclerótica visible, apertura angosta (fuera el ojo-platillo
@@ -2127,7 +2143,9 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 		# r_cheek-box-v2: base bajada a 0.040 (de 0.068) — multiplicadores
 		# recalibrados para la caja chica (antes tuneados para radio de
 		# esfera 0.034, quedaban gigantes sobre la base nueva).
-		cheek.scale = Vector3(1.3 * cs, 0.55 * cs, 0.55 * cs)
+		# Ronda 8: menos profundidad (0.55→0.42) — escalón emergente más
+		# chico = menos tinta perimetral, el plano se lee por cel-step.
+		cheek.scale = Vector3(1.25 * cs, 0.55 * cs, 0.42 * cs)
 
 	# JS eyes: rotation.z = side * lerp(-0.32, 0.26, eyeTilt), scale.y = lerp(0.5, 1.3, eyeShape)
 	# M9-r2: rango de tilt de CEJA acotado (review v0.2: cejas RECTAS —

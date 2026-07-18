@@ -344,6 +344,27 @@ updated: 2026-07-14
   tocan verticalmente?". Antes de dar una fusión por buena entre piezas de
   padres distintos, verificar el solape en LOS 3 EJES, no solo el que
   parece relevante a simple vista.
+- **Bajo el Sobel de profundidad, lo que entinta el perímetro de un rasgo
+  no es su protrusión total sino la PENDIENTE de sus paredes: pared
+  empinada (perpendicular a cámara) = salto de profundidad grande entre
+  píxeles vecinos = contorno entintado completo; rampa gradual = el mismo
+  volumen SIN contorno.** (2026-07-17, R1 rostro.) A distancia de banco
+  el post entinta saltos de ~6mm+ por píxel. Por eso los músculos del
+  cuerpo (elipsoides semi-hundidas, pendientes suaves) nunca se
+  entintaron pero TODA pieza facial montada con paredes (caja de pómulo
+  tangente, cápsula de boca, prisma de nariz) recibía perímetro de tinta
+  y leía "calcomanía". Fix probado (pómulos): ACOSTAR la pieza sobre la
+  normal local de la superficie anfitriona (yaw/pitch alineado) y bajar
+  su profundidad — emerge en rampa y el cel-step la lee sin que el Sobel
+  la recorte. Corolario 1: la silueta de la CABEZA contra el fondo sí se
+  entinta siempre (salto de metros) — diseñar la silueta con la
+  estructura (mandíbula de cajas) es gratis en tinta. Corolario 2: dos
+  primitivas que se INTERPENETRAN comparten profundidad continua en la
+  curva de intersección — un arco facetado de cajas solapadas no dibuja
+  costuras entre facets si el ángulo entre ellos es chico. Corolario 3:
+  el key offset de 15° de la cámara del banco hace que fixes de
+  pendiente calibrados "de frente" queden asimétricos — verificar ambos
+  lados.
 - **El límite de gasto de Claude puede ser una ventana de 5 horas, no
   mensual/semanal** — un subagente que falla por "spend limit" puede
   volver a funcionar poco después con el MISMO prompt; no asumir que hay

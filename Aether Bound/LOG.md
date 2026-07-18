@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] feature | R1 CERRADA en 57% (35→40→52→57, techo de primitivas alcanzado) — VoBo de ruta de Boris, sigue R2
+Boris eligió "cerrar el margen alcanzable y seguir a R2" tras el freno de
+la ronda 2. Ronda 8 de código (pómulos más acostados y menos profundos —
+la asimetría era el key offset de 15° de la cámara del banco; base de
+nariz angostada; ramas mandibulares más altas, muesca de silueta
+RESUELTA; convergencia ocular ~3.5° para la mirada en 3/4) + QA ronda 3:
+**57% final, sin regresiones, techo ~60% confirmado — "no gastar más
+rondas de ajuste; el costo/beneficio ya es negativo"**. Mejora neta de la
+fase: +22 puntos sobre el baseline (35%→57%). Gates
+`test_core`/`autotest_biomech` ALL_PASS. **Lista residual (insumo directo
+de la futura pasada con técnica nueva, guardada en
+[[PRD-Reescritura-Escultura-Rig-v1]]):** HIGH labios decal/malla sin
+borde perimetral; HIGH máscara de tinta selectiva (criterio: ninguna
+línea de tinta debe formar polígono cerrado alrededor de un rasgo); HIGH
+fusión del bloque mandibular en vistas no frontales (bisel);
+MEDIUM oreja con volumen (hélix) + quiebre goníaco biselado; LOW mirada
+3/4 residual. Lección nueva de mecanismo en [[Lecciones]] (paredes
+empinadas vs rampas bajo el Sobel de profundidad). R1 CERRADA — arranca
+R2 (torso/hombros, baseline 40%).
+
 ## [2026-07-17] feature | R1 cabeza/rostro por masas: 35% → 52% en 2 rondas de QA — freno por regla del loop, decisión de Boris pendiente
 Primera pasada de la reescritura ([[PRD-Reescritura-Escultura-Rig-v1]]
 fase R1) sobre `character_rig.gd`: mandíbula como ESTRUCTURA de cajas

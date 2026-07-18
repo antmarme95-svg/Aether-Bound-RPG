@@ -24,22 +24,23 @@ updated: 2026-07-17
      3 close-ups institucionalizados en `tmp_anatomy.gd`
      (`anatomy_closeup_chin/neckshoulder/chin_front.png`); baseline A/B en
      `90-Raw/reviews/baseline-pre-reescritura-rig-2026-07-17/`.
-  2. **R1 EN PAUSA — 52% tras 2 rondas de QA (35→40→52), decisión de
-     Boris pendiente.** La estructura nueva ya está en el código (gates
-     ALL_PASS, commiteada): mandíbula de cajas con silueta angular real,
-     cráneo bajo retraído, boca al ras, ojos a mitad de cara. El QA
-     declaró techo parcial: ~60% máximo con primitivas puras; para ≥70%
-     hace falta técnica nueva para labios (decal/textura/máscara de
-     tinta — SIN borde perimetral) y aceptar o resolver el mentón visto
-     desde abajo. Alcanzable sin técnica nueva: pómulo derecho (el
-     izquierdo ya fundió), outline de nariz, escalón de silueta, mirada
-     3/4. **Boris decide la ruta:** (a) cerrar el margen alcanzable y
-     pasar a R2, (b) atacar la técnica de labios/tinta primero, o (c)
-     otra. Detalle en [[LOG]].
-  3. Luego R2 (torso 3 masas + cintura escapular), R3 (extremidades/
-     manos), R4 (integración + batería completa). Cada fase: gates + QA
-     imparcial (máx 2 rondas sin reportar) + VoBo.
-  4. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
+  2. **R1 CERRADA (2026-07-17) — 57% final (35→40→52→57), techo de
+     primitivas ~60% alcanzado, VoBo de ruta de Boris.** Mandíbula de
+     cajas con silueta angular, cráneo bajo retraído, boca al ras, ojos
+     a mitad de cara con convergencia, pómulos fundidos por rampa. La
+     brecha al 70% vive en 3 límites de técnica aceptados (labios sin
+     borde perimetral, máscara de tinta selectiva, bisel del bloque
+     mandibular) — lista residual completa en
+     [[PRD-Reescritura-Escultura-Rig-v1]], se ataca como recurso nuevo
+     DESPUÉS de la reescritura, no ahora.
+  3. **R2 (siguiente): torso/hombros por masas** — baseline 40%. Caja
+     torácica bullet + cintura + pelvis inclinada + cintura escapular
+     (clavícula-S, acromion, trapecio con pendiente) sobre la caja
+     torácica; `_apply_build()` re-implementado conservando su contrato
+     de escalas. QA vs `fenotipo-humano-torso-v1` + `fenotipo-humano-v1`.
+  4. Luego R3 (extremidades/manos), R4 (integración + batería completa).
+     Cada fase: gates + QA imparcial (máx 2 rondas sin reportar) + VoBo.
+  5. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
      piezas; 4 vistas del turnaround + close-ups; zoom antes de cerrar
      hallazgos; solape en los 3 ejes entre piezas de padres distintos;
      esfera nunca da borde anguloso (caja); overlap real ≤30%.
