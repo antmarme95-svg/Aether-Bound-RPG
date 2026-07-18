@@ -33,18 +33,25 @@ updated: 2026-07-17
      mandibular) — lista residual completa en
      [[PRD-Reescritura-Escultura-Rig-v1]], se ataca como recurso nuevo
      DESPUÉS de la reescritura, no ahora.
-  3. **R2 EN PAUSA — 55% tras 2 rondas de QA (40→45→55), decisión de
-     Boris pendiente.** Escultura nueva commiteada y verde: trapecio-
-     rampa (pendiente cuello→hombro real, frente Y espalda), deltoide
-     gota, clavículas retiradas, masas de pecho/espalda/abdomen (perfil
-     con S), cintura sin escalón. **El techo declarado es EL MISMO de
-     R1: el Sobel entinta cada frontera interior entre masas** (la
-     diagonal CRITICAL del pecho incluida). El QA recomienda una ronda
-     dedicada a la REGLA DE TINTA en `melancolia_post.gdshader` (matar
-     contornos interiores por umbral/profundidad, conservar silueta +
-     pliegues elegidos) — **es anti-objetivo del PRD aprobado, así que
-     la decide Boris.** Esa misma ronda destrabaría los residuales de
-     R1 (nariz 360°, restos de pómulo).
+  3. **R2 con escultura nueva commiteada** (trapecio-rampa, deltoide
+     gota, clavículas retiradas, masas de pecho/espalda/abdomen, cintura
+     sin escalón; su hilo de QA midió 40→45→55).
+  3b. **REGLA DE TINTA ADOPTADA (2026-07-17, VoBo de Boris con A/B):**
+     `melancolia_post.gdshader` `edge_threshold` 0.30→1.00 — murieron
+     las costuras interiores entre masas (el techo común de R1 y R2);
+     silueta, pliegues hondos y follaje intactos. Ver [[Lecciones]].
+  3c. **⚠️ Lección de medición (leer antes de citar cualquier %):** al
+     expirar los hilos de QA, jueces frescos midieron rostro 48% y torso
+     38% (vs 57%/55% de los hilos de fase), con veredictos opuestos en
+     la espalda. El % solo es comparable dentro del mismo hilo de
+     agente; estado honesto: **R1 rostro 48-57%, R2 torso 38-55%** —
+     ambos muy por encima de sus baselines (35%/40%), ambos abajo del
+     70%. Los insumos CRITICAL/HIGH consolidados de los 4 QA están en
+     [[PRD-Reescritura-Escultura-Rig-v1]]; los más accionables para la
+     próxima ronda de escultura: extremos del hombro (escalones trap/
+     deltoide/brazo apilados, visibles de espalda), tercio inferior de
+     la cara (mentón aún profundo, boca-píldora por contraste de
+     MATERIAL — ya no de tinta), unión pec↔deltoide.
   4. Luego R3 (extremidades/manos), R4 (integración + batería completa).
      Cada fase: gates + QA imparcial (máx 2 rondas sin reportar) + VoBo.
   5. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar

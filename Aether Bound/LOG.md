@@ -1,5 +1,32 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] feature+lesson | REGLA DE TINTA adoptada (Sobel 0.30→1.00, VoBo con A/B) + la re-medición expone varianza entre jueces QA
+Con VoBo explícito de Boris (excepción puntual al anti-objetivo de
+shaders del PRD, decidida con A/B enfrente): `melancolia_post.gdshader`
+`edge_threshold` 0.30→1.00 — el Sobel deja de entintar saltos de
+profundidad <~2cm (las fronteras interiores entre masas del rig, causa
+raíz del techo de R1 Y R2) y conserva silueta, pliegues hondos
+(mandíbula, cuello→hombro) y clumps de follaje. A/B corrido contra 1.60
+(sin ganancia en el cuerpo, más erosión de follaje — descartado) y 0.30
+(baseline); sets guardados en scratchpad de sesión. Verificación visual
+propia: la diagonal del pecho, los arcos de pec, las costuras del mentón
+y la línea caja/abdomen MUEREN; el entorno a 30m conserva su tinta.
+Gates ALL_PASS. **La re-medición formal expuso un problema de
+metodología:** los hilos de los agentes QA de fase expiraron y los
+agentes FRESCOS midieron rostro 48% (vs 57% del hilo de fase) y torso
+38% (vs 55%), con veredictos OPUESTOS sobre la espalda ("el salto más
+grande" vs "desastre"). Arbitraje visual del orquestador: la pendiente
+cuello→hombro es real y continua; los escalones en los EXTREMOS del
+hombro (trap/deltoide/brazo apilados) también son reales. Conclusión
+registrada en [[Lecciones]]: el % de un QA-LLM solo es comparable DENTRO
+del mismo hilo de agente (varianza entre jueces ±10-17 pts); un juez
+fresco además no distingue tinta Sobel de banda oscura del cel. Los
+números del día quedan como RANGOS honestos: R1 rostro 48-57%, R2 torso
+38-55%, ambos claramente arriba de sus baselines (35% / 40%) y abajo
+del objetivo 70%. Insumos priorizados de los 4 QA consolidados en
+[[PRD-Reescritura-Escultura-Rig-v1]]. El ancla de verdad sigue siendo
+el pixel + el VoBo del director, no el número (QA Loop fase 7).
+
 ## [2026-07-17] feature | R2 torso/hombros: 40% → 45% → 55% en 2 rondas de QA — freno: el techo de AMBAS fases es la regla de tinta (shader), decisión de Boris pendiente
 Reescultura R2 sobre `character_rig.gd` (5 rondas internas): clavículas-
 tubo RETIRADAS ("understated collarbones" literal de la lámina), masas

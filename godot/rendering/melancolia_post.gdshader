@@ -15,7 +15,15 @@ uniform sampler2D depth_tex : hint_depth_texture, filter_nearest, repeat_disable
 // --- layer 1: ink ---
 uniform vec4 ink_color : source_color = vec4(0.10, 0.09, 0.11, 1.0);
 uniform float ink_strength : hint_range(0.0, 2.0) = 1.0;
-uniform float edge_threshold : hint_range(0.0, 2.0) = 0.30;
+// REGLA DE TINTA (2026-07-17, A/B aprobado por el director): 0.30 → 1.00.
+// A 0.30 el Sobel entintaba cualquier salto >6mm a distancia de cámara
+// cercana — cada frontera interior entre masas del rig se dibujaba como
+// contorno propio ("collage/maniquí", techo común de los QA de rostro y
+// torso). A 1.00 solo entintan saltos >~2cm: silueta, pliegues hondos
+// (mandíbula, cuello→hombro) y clumps de follaje sobreviven; las costuras
+// interiores de masas mueren. A/B contra 1.60 (sin ganancia en el cuerpo,
+// más erosión de follaje) y 0.30 (baseline) en scratchpad de la sesión.
+uniform float edge_threshold : hint_range(0.0, 2.0) = 1.00;
 uniform float edge_gain : hint_range(0.0, 24.0) = 10.0;
 uniform float ink_fade_dist : hint_range(1.0, 400.0) = 70.0; // lin depth where ink is ~gone
 

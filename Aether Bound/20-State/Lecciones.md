@@ -365,6 +365,32 @@ updated: 2026-07-14
   el key offset de 15° de la cámara del banco hace que fixes de
   pendiente calibrados "de frente" queden asimétricos — verificar ambos
   lados.
+- **El % de fidelidad de un QA-LLM solo es comparable DENTRO del mismo
+  hilo de agente — nunca entre agentes distintos.** (2026-07-17.) Al
+  expirar los hilos de los QA de fase, agentes frescos re-midieron el
+  MISMO estado: rostro 48% donde el hilo de fase había dado 57%, torso
+  38% donde había dado 55% — y con veredictos opuestos sobre la misma
+  vista (espalda: "el salto más grande de la ronda" vs "desastre de
+  malvavisco"). Varianza entre jueces: ±10-17 puntos. Además un juez
+  fresco no distingue tinta Sobel de banda oscura del cel-shading (llamó
+  "banda negra de tinta" a una sombra de quantización). Reglas: (a) los
+  deltas ronda-a-ronda valen solo dentro del mismo agente (por eso el QA
+  Loop pide re-invocar al MISMO, fase 4 — si el hilo expiró, anotar el
+  quiebre de serie y arrancar rango nuevo); (b) ante contradicción entre
+  jueces, el orquestador arbitra mirando el PIXEL él mismo antes de
+  escribir nada al Vault; (c) el número informa, el VoBo del director
+  cierra (fase 7) — no perseguir un % absoluto entre jueces distintos.
+- **La regla de tinta vive en UN número: `edge_threshold` de
+  `melancolia_post.gdshader` (0.30→1.00, 2026-07-17, VoBo con A/B).**
+  A 0.30 el Sobel entintaba saltos >6mm de cerca (cada frontera interior
+  entre masas del rig = contorno propio = lectura "collage/maniquí" —
+  el techo común que declararon los QA de rostro Y torso). A 1.00
+  entinta solo >~2cm: silueta, pliegues hondos y follaje sobreviven;
+  las costuras interiores mueren. Corolario: si una masa nueva necesita
+  leerse, debe hacerlo por SILUETA o por cel-step — ya no puede apoyarse
+  en que el Sobel le dibuje el borde (diseñar pendientes con eso en
+  mente). A/B 1.60 descartado: nada extra en el cuerpo, más erosión de
+  follaje.
 - **El límite de gasto de Claude puede ser una ventana de 5 horas, no
   mensual/semanal** — un subagente que falla por "spend limit" puede
   volver a funcionar poco después con el MISMO prompt; no asumir que hay
