@@ -52,8 +52,13 @@ updated: 2026-07-17
      deltoide/brazo apilados, visibles de espalda), tercio inferior de
      la cara (mentón aún profundo, boca-píldora por contraste de
      MATERIAL — ya no de tinta), unión pec↔deltoide.
-  4. Luego R3 (extremidades/manos), R4 (integración + batería completa).
-     Cada fase: gates + QA imparcial (máx 2 rondas sin reportar) + VoBo.
+  4. **R3 CERRADA (2026-07-17): manos 45→70% (objetivo ≥70% CUMPLIDO,
+     primera fase que lo logra), extremidades 60→68% (techo de
+     primitivas).** Palma plana+taper, dedos convergentes con curl
+     variable, nudillos de silueta, pulgar del tenar, gemelo con bulge.
+     Residuales en el PRD. **Sigue R4** (integración: orígenes, outfit,
+     signature, Dagna/enemigos, batería completa de gates, QA de cuerpo
+     entero, VoBo final).
   5. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
      piezas; 4 vistas del turnaround + close-ups; zoom antes de cerrar
      hallazgos; solape en los 3 ejes entre piezas de padres distintos;

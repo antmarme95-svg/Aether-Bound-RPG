@@ -178,13 +178,32 @@ Boris: cerrar aquí y seguir a R2.** Gates ALL_PASS en cada ronda.
 **Cierre R2:** gates + QA imparcial vs `fenotipo-humano-torso-v1.png` +
 `fenotipo-humano-v1.png` + VoBo.
 
-### R3 — Extremidades y manos
+### R3 — Extremidades y manos — ✅ CERRADA (2026-07-17)
 
-- Brazos/piernas: conservar el patrón gemelo ya validado (elipsoide
-  semi-hundida); manos según el libro (dedos convergentes, nudillos como
-  protuberancias, palma-caja ahusada) — absorbe la Fase 2 del PRD v2.
+**Ejecutado (4 rondas internas + 3 rondas de QA de fase, mismo hilo):**
+palma plana + prisma de taper (nudillos anchos → muñeca angosta); dedos
+con bases abiertas y puntas convergentes (mitón frontal roto), curl
+distinto por dedo, nudillos hasta la silueta dorsal; pulgar hundido
+naciendo de la eminencia tenar (nueva); muñeca encogida (punto más
+delgado real); gemelo con bulge posterior de silueta en perfil. Brazos/
+piernas: patrón gemelo conservado sin cambios.
 
-**Cierre R3:** gates + QA imparcial + VoBo.
+**Resultado: MANOS 45% → 60% → 70% (objetivo ≥70% CUMPLIDO);
+EXTREMIDADES 60% → 68% (techo de primitivas — el gap restante es
+íntegramente la bolsa de bisel/malla).** Gates ALL_PASS. La regresión
+de ronda 3 (isla de tinta en dorso izquierdo) se resolvió antes del
+cierre, verificada en pixel.
+
+**Residuales R3 (registro):**
+- Bolsa bisel/malla (heredada, compartida con R1/R2): anillos de tinta
+  codo/hombro (look maniquí), escalón de rodilla, transición abrupta
+  del bulge del gemelo.
+- LOW de primitivas: slivers naranjas (2-3 px) en canto del pulgar
+  derecho; pulgar izquierdo sin dirección de enrosque legible; seam
+  highlight horizontal en muñeca izquierda; chevrones toscos de
+  separación frontal de dedos (aceptables a distancia de juego); muslo
+  tubular sin cuádriceps (ROI casi nulo con pantalón oscuro — no
+  atacar).
 
 ### R4 — Integración y cierre
 

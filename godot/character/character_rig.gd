@@ -362,9 +362,12 @@ func _build() -> void:
 		_add_outline_pass(shin, Color("#3a2d22"))
 
 		# GEMELO: masa trasera alta de la pantorrilla (perfil de atleta)
+		# R3: +Z trasero (0.85→1.05, centro -0.028→-0.034) — el QA leyó la
+		# pantorrilla como cono recto en perfil; el bulge posterior del
+		# gemelo debe ser SILUETA (la lámina lo muestra incluso con bota).
 		var calf = _sphere_mesh(0.048, dark_leather_mat)
-		calf.scale = Vector3(0.75, 1.6, 0.85)
-		calf.position = Vector3(0.0, -0.10, -0.028)
+		calf.scale = Vector3(0.75, 1.6, 1.05)
+		calf.position = Vector3(0.0, -0.10, -0.034)
 		knee.add_child(calf)
 		_add_outline_pass(calf, Color("#3a2d22"))
 
@@ -792,11 +795,28 @@ func _build() -> void:
 		# del antebrazo (r0.026) con la mano, sin mover la mano (meta de
 		# montaje de arma intacta). "Apenas mayor" que bot_r del cono,
 		# achatada (scale) para no engordar la lectura de "punto más fino".
-		var wrist_cap = _sphere_mesh(0.030, skin_mat)
-		wrist_cap.scale = Vector3(0.9, 0.8, 0.95)
+		# R3: encogida — su disco X-Y (5cm) era más ANCHO que la palma nueva
+		# y asomaba como burbuja en el dorso; con r 0.024 queda contenida en
+		# la silueta mano/antebrazo y sigue tapando la costura del cono. La
+		# muñeca ES el punto más delgado (feedback histórico del director).
+		var wrist_cap = _sphere_mesh(0.024, skin_mat)
+		wrist_cap.scale = Vector3(0.85, 0.75, 0.60)
 		wrist_cap.position = Vector3(0.0, -0.285, 0.0)   # punta del cono "fore"
 		elbow.add_child(wrist_cap)
 		_add_outline_pass(wrist_cap, Color("#f2b186"))
+		if OS.get_environment("DIAG_HAND") == "1":
+			var _dm := StandardMaterial3D.new()
+			_dm.albedo_color = Color(1.0, 0.0, 1.0)
+			wrist_cap.material_override = _dm
+			var _df := StandardMaterial3D.new()
+			_df.albedo_color = Color(0.0, 1.0, 1.0)
+			fore.material_override = _df
+			var _de := StandardMaterial3D.new()
+			_de.albedo_color = Color(1.0, 1.0, 0.0)
+			elbow_cap.material_override = _de
+			var _dfm := StandardMaterial3D.new()
+			_dfm.albedo_color = Color(0.0, 1.0, 0.0)
+			forearm_mass.material_override = _dfm
 
 		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna.
 		# r5b (feedback del director: "hay tres masas — pulgar más dos"):
@@ -805,11 +825,26 @@ func _build() -> void:
 		# entinta las separaciones en close-up y a distancia se funden en
 		# una masa) con largos naturales (medio > índice ≈ anular > meñique)
 		# + PULGAR hacia el cuerpo. La línea hace el trabajo.
-		var hand = _box_mesh(0.064, 0.062, 0.066, skin_mat)
+		# R3 (2026-07-17, libro de anatomía): PALMA PLANA + AHUSADA. La caja
+		# baja de cubo-mitón (prof. 0.066) a palma real (0.036) — sigue
+		# siendo el MeshInstance3D pivote de dedos/arma (meta "hand"), con
+		# ESCALA UNIFORME (los dedos hijos rotados se sesgarían bajo escala
+		# no uniforme del padre). El TAPER nudillos-anchos→muñeca-angosta lo
+		# pone un prisma hijo SIN descendientes (cilindro 4 seg, truco de la
+		# nariz), que sí puede aplastarse en Z sin sesgar a nadie.
+		var hand = _box_mesh(0.058, 0.066, 0.036, skin_mat)
 		hand.position.y = -0.30
 		hand.rotation.x = -0.12   # curl relajado de la lámina
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
+
+		var palm_taper = _cylinder_mesh(0.027, 0.046, 0.070, skin_mat)
+		(palm_taper.mesh as CylinderMesh).radial_segments = 4
+		palm_taper.scale = Vector3(1.0, 1.0, 0.46)
+		palm_taper.rotation.y = 0.0   # cara plana al frente (lección nariz N=4)
+		palm_taper.position = Vector3(0.0, -0.004, 0.0)
+		hand.add_child(palm_taper)
+		_add_outline_pass(palm_taper, Color("#f2b186"))
 
 		# PRD Geometría Nueva (2026-07-14, ratificado): la lámina (zoom
 		# directo, mano sobre la cadera en `fenotipo-humano-torso-v1.png`)
@@ -822,8 +857,20 @@ func _build() -> void:
 		# juntos) y cada dedo pasa de 1 caja recta a 2 falanges (proximal +
 		# distal) encadenadas por un Node3D con su propia rotación — mismo
 		# principio que brazo→antebrazo, a escala de dedo.
-		var f_off: Array = [0.0175, 0.0058, -0.0058, -0.0175]
+		# R3 r3: bases más ABIERTAS (0.0175→0.0195) — de frente el índice y
+		# el meñique rompen la silueta del mitón; la convergencia (abajo)
+		# sigue juntando las PUNTAS, como una mano real (bases separadas,
+		# puntas reunidas).
+		var f_off: Array = [0.0195, 0.0065, -0.0065, -0.0195]
 		var f_len: Array = [0.067, 0.076, 0.070, 0.055]
+		# R3 (libro): (a) los 4 dedos CONVERGEN hacia el medio — "dedos
+		# rectos/paralelos = mano de plástico"; (b) curl DISTINTO por dedo
+		# (índice más recto → meñique más enroscado), la mano relajada real
+		# nunca curva parejo; (c) nudillo = cabeza del metacarpiano ASOMANDO
+		# en el dorso (protuberancia→canal→protuberancia) — con la regla de
+		# tinta nueva leen por highlight del cel, no por contorno.
+		var f_curl_root: Array = [-0.10, -0.15, -0.19, -0.26]
+		var f_curl_mid: Array = [-0.26, -0.34, -0.42, -0.52]
 		for fi in range(4):
 			var f_l: float = f_len[fi]
 			var f_x: float = -float(side) * float(f_off[fi])
@@ -831,9 +878,26 @@ func _build() -> void:
 			var dist_l: float = f_l * 0.42
 
 			var finger_root = Node3D.new()
-			finger_root.position = Vector3(f_x, -0.027, 0.006)
-			finger_root.rotation.x = -0.16   # curl leve de la falange proximal
+			# R3 r2: raíz en z=0 — a +0.006 la cara dorsal del dedo quedaba
+			# 6mm adelante del plano dorsal de la palma y entre las bases se
+			# veía el fondo ("dedos-tablilla", QA manos 45%).
+			finger_root.position = Vector3(f_x, -0.027, 0.0)
+			finger_root.rotation.x = float(f_curl_root[fi])
+			finger_root.rotation.z = -f_x * 3.2   # convergencia al eje medio
 			hand.add_child(finger_root)
+
+			# R3 r2: asoman de verdad por el dorso (a -0.012 quedaban DENTRO
+			# de la caja de la palma — "cero protuberancias", QA).
+			# R3 r3: hasta la SILUETA dorsal (a -0.017 eran solo highlights).
+			# r4 (cierre condicionado del QA): -0.020 generaba una ISLA de
+			# tinta aislada en el dorso izquierdo (el salto del bump contra
+			# la palma cruzaba el umbral desde el ángulo oblicuo) — punto
+			# medio -0.0185: ondulación de silueta sin isla.
+			var knuckle_bump = _sphere_mesh(0.010, skin_mat)
+			knuckle_bump.scale = Vector3(1.0, 0.85, 0.7)
+			knuckle_bump.position = Vector3(f_x, -0.028, -0.0185)
+			hand.add_child(knuckle_bump)
+			_add_outline_pass(knuckle_bump, Color("#f2b186"))
 
 			# r5e (director): dedos 10% más delgados (sección 0.0108×0.038)
 			var prox = _box_mesh(0.0108, prox_l, 0.036, skin_mat)
@@ -846,7 +910,7 @@ func _build() -> void:
 			# lámina.
 			var knuckle_joint = Node3D.new()
 			knuckle_joint.position.y = -prox_l
-			knuckle_joint.rotation.x = -0.36
+			knuckle_joint.rotation.x = float(f_curl_mid[fi])
 			finger_root.add_child(knuckle_joint)
 
 			var dist = _box_mesh(0.0098, dist_l, 0.032, skin_mat)
@@ -862,12 +926,41 @@ func _build() -> void:
 		# no un apéndice separado y visible. Nacimiento acercado al centro
 		# (x 0.038→0.030) y curl mucho más agresivo (rotation.x
 		# -0.25→-0.55) para que lea "enroscado", no "flotando".
-		var thumb = _capsule_mesh(0.014, 0.05, skin_mat)
-		thumb.position = Vector3(-float(side) * 0.030, -0.020, 0.012)
-		thumb.rotation.z = -float(side) * 0.5236   # 30° de apertura
-		thumb.rotation.x = -0.55
+		# R3: base del pulgar BAJADA (-0.020→-0.030) — con la palma delgada
+		# nueva, la cápsula asomaba por el canto dorsal como burbuja junto
+		# al tenar (diagnóstico de color 2026-07-17).
+		# R3 r2 (QA manos 45%, CRITICAL): la cápsula HUNDIDA en la palma
+		# (base adentro, la tapa libre ya no flota — el Sobel entintaba su
+		# end-cap como círculo de pieza suelta) + enrosque más agresivo
+		# hacia el plano palmar (-0.55→-0.78), el pulgar NACE del tenar.
+		# R3 r3: punta presionada contra el frente de la palma (z 0.012→
+		# 0.008) — la protrusión del cap cae bajo el umbral de tinta (~2cm)
+		# y el "botón incrustado" con anillo desaparece.
+		var thumb = _capsule_mesh(0.014, 0.044, skin_mat)
+		thumb.position = Vector3(-float(side) * 0.027, -0.028, 0.008)
+		thumb.rotation.z = -float(side) * 0.44
+		thumb.rotation.x = -0.78
 		hand.add_child(thumb)
 		_add_outline_pass(thumb, Color("#f2b186"))
+
+		# R3 (libro): EMINENCIA TENAR — el pad de donde nace el pulgar, la
+		# masa que hace "palma" a una palma (semi-hundida en la caja, lado
+		# palmar, junto al nacimiento del pulgar).
+		var tenar = _sphere_mesh(0.015, skin_mat)
+		tenar.scale = Vector3(1.0, 1.25, 0.50)
+		tenar.position = Vector3(-float(side) * 0.016, -0.016, 0.011)
+		hand.add_child(tenar)
+		_add_outline_pass(tenar, Color("#f2b186"))
+		if OS.get_environment("DIAG_HAND") == "1":
+			var _dt := StandardMaterial3D.new()
+			_dt.albedo_color = Color(1.0, 0.5, 0.0)
+			tenar.material_override = _dt
+			var _dp := StandardMaterial3D.new()
+			_dp.albedo_color = Color(0.5, 0.0, 1.0)
+			palm_taper.material_override = _dp
+			var _dth := StandardMaterial3D.new()
+			_dth.albedo_color = Color(1.0, 0.0, 0.0)
+			thumb.material_override = _dth
 
 		arm.set_meta("elbow", elbow)
 		arm.set_meta("upper", upper)

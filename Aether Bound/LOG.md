@@ -1,5 +1,24 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] feature | R3 CERRADA — manos 45%→70% (objetivo cumplido), extremidades 60%→68% (techo de primitivas)
+Manos según el libro sobre `character_rig.gd`: palma plana (0.036 de
+prof., adiós cubo-mitón) + prisma de taper nudillos→muñeca (hijo sin
+descendientes — lección: escala no uniforme del padre sesga a hijos
+rotados); dedos con bases abiertas y PUNTAS convergentes (rompen el
+mitón de frente), curl distinto por dedo, nudillos hasta la silueta
+dorsal, pulgar acortado/hundido naciendo del tenar (el end-cap
+entintado murió al caer bajo el umbral de tinta), eminencia tenar;
+muñeca encogida (su disco era más ancho que la palma nueva y leía
+burbuja — cazado con 2 pases de diagnóstico de color tras 2 edits sin
+efecto); gemelo con bulge posterior real en perfil. QA de fase (mismo
+hilo, 3 rondas): manos 45→60→70 ✓ objetivo; extremidades 60→68 con
+techo de primitivas confirmado (el gap restante es la bolsa de bisel/
+malla: anillos codo/hombro, escalón de rodilla, transición del gemelo).
+Cierre firmado por el QA condicionado a matar la isla de tinta del
+dorso izquierdo (regresión de la ronda 3) — RESUELTA (-0.020→-0.0185)
+y verificada en pixel. Gates ALL_PASS. Residuales LOW registrados en
+[[PRD-Reescritura-Escultura-Rig-v1]]. Sigue R4 (integración).
+
 ## [2026-07-17] feature+lesson | REGLA DE TINTA adoptada (Sobel 0.30→1.00, VoBo con A/B) + la re-medición expone varianza entre jueces QA
 Con VoBo explícito de Boris (excepción puntual al anti-objetivo de
 shaders del PRD, decidida con A/B enfrente): `melancolia_post.gdshader`
