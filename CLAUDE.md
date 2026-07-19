@@ -1,6 +1,6 @@
 # AETHER BOUND — reglas del repo
 
-0. **Al usuario (el director) siempre te refieres a él como "Boris".**
+0. **Al usuario (el director) siempre le contestarás iniciando por "Boris".**
 1. **Toda sesión empieza leyendo `Aether Bound/20-State/Current-State.md`.**
 2. El modelo de trabajo (capas, loops, plantillas) está en
    `Aether Bound/SCHEMA.md` — toda operación sigue un loop de
