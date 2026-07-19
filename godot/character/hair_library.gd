@@ -250,6 +250,26 @@ static func _loft(mat: Material, curve: Curve3D, radii: PackedFloat32Array,
 	mi.material_override = mat
 	return mi
 
+## Superficie del cráneo del rig humano en el frame del hair_slot (hijo
+## directo de `head`, sin offset): `skull = SphereMesh(0.15)` con scale
+## (0.82, 0.94, 0.95) y position.y = 0.012 (character_rig.gd) → semiejes
+## (0.123, 0.141, 0.1425) centrados en (0, 0.012, 0). Este helper devuelve
+## el punto de la superficie para (x, y) dados (z positiva=frente, pasar
+## `back=true` para el hemisferio trasero), empujado `lift` metros hacia
+## afuera en dirección radial. Autorar mechones CON esto, no con números a
+## ojo — 3 rondas ciegas de 2026-07-19 salieron de asumir semiejes falsos.
+const SKULL_SEMI := Vector3(0.123, 0.141, 0.1425)
+const SKULL_C := Vector3(0.0, 0.012, 0.0)
+
+static func _on_skull(x: float, y: float, lift: float = 0.0, back: bool = false) -> Vector3:
+	var nx: float = clampf(x / SKULL_SEMI.x, -0.97, 0.97)
+	var ny: float = clampf((y - SKULL_C.y) / SKULL_SEMI.y, -0.97, 0.97)
+	var z2: float = maxf(0.04, 1.0 - nx * nx - ny * ny)
+	var z: float = SKULL_SEMI.z * sqrt(z2) * (-1.0 if back else 1.0)
+	var p := Vector3(x, y, z)
+	var radial: Vector3 = (p - SKULL_C).normalized()
+	return p + radial * lift
+
 ## Azúcar del loft: espina por puntos de control (frame del grupo, root→tip)
 ## → Curve3D con tangentes automáticas suaves (Catmull-Rom aproximado vía
 ## in/out handles) y radios del perfil. Mantiene el contrato de ejes de
@@ -445,25 +465,16 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# baja (scale.y 0.72, centro R*0.40); ahora se achica y SUBE (scale.y
 	# 0.72→0.50, centro R*0.40→R*0.50) para exponer nuca/sienes reales —
 	# el corte corto de la lámina, no una melena corta.
-	var shell = _sphere(mat, R * 1.00, 0.0, R * 0.50, -R * 0.06)
-	shell.scale = Vector3(0.80, 0.50, 0.90)
-	g.add_child(shell)
-	# QUIFF — volumen frontal (se mantiene, ya daba lectura de "barrido
-	# arriba-atrás" correcta); ligeramente más grande para compensar la
-	# concha más chica.
-	var quiff = _sphere(mat, R * 0.62, 0.0, R * 0.80, R * 0.22)
-	quiff.scale = Vector3(1.02, 0.80, 1.30)
-	quiff.rotation.x = -0.38
-	g.add_child(quiff)
-	# Cola del barrido hacia la coronilla-atrás (se mantiene).
-	var sweep = _sphere(mat, R * 0.50, 0.0, R * 0.88, -R * 0.26)
-	sweep.scale = Vector3(0.92, 0.62, 1.25)
-	sweep.rotation.x = -0.15
-	g.add_child(sweep)
-	# (FASE 3 loft, 2026-07-19: el remolino de cajas y TODOS los conos de
-	# flequillo/laterales/corona de abajo se reemplazan por mechones de
-	# loft — ver bloque LOFT al final de esta función. Prohibido volver a
-	# cajas/conos para mechones: 3 intentos fallidos documentados.)
+	# Ronda 4 del rework (ANDAMIAJE medido): las rondas 1-3 autoraban con
+	# semiejes de cráneo FALSOS (asumían media anchura ~0.096 y centro y
+	# 0.045; los reales son (0.123, 0.141, 0.1425) @ y=0.012 — ver
+	# `_on_skull`). Resultado: "copete flotante" (r2) y "mohawk hundido"
+	# (r3). Ahora TODA raíz/cresta se calcula sobre la superficie real.
+	# Ronda 8: la CONCHA se retira definitivamente — con el clump medido
+	# ya cubre el domo, y la pared trasera de la concha (en sombra) era el
+	# "óvalo/cuenco oscuro" de la vista de arriba-atrás que 4 rondas
+	# intentaron tapar con tiras. El clump madre + tiras dan toda la
+	# cobertura; la nuca corta muestra piel (lámina), sin cuenco.
 
 	# Contraste tonal (se mantiene — 3 tonos, sí sobrevive el banding toon).
 	var lighter := mat
@@ -478,121 +489,120 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			(darker as ShaderMaterial).set_shader_parameter(
 				"albedo_color", (base_col as Color).darkened(0.18))
 
-	# ===== BLOQUE LOFT (FASE 3, piloto 2026-07-19) =====
-	# Orden del libro (PRD 3.2): la MASA ya está (concha+quiff+sweep,
-	# arriba); aquí se subdivide frente/coronilla en mechones de loft
-	# individuales, y al final van los rebeldes. Regla anti-paralelismo
-	# (PRD 3.3): largo/grosor/ángulo DISTINTOS entre vecinos + escalón de
-	# profundidad real (radial_lift alternado) para que la separación la
-	# den silueta y cel-step (la tinta a threshold 1.00 ya no dibuja
-	# fronteras interiores). Todos los puntos van en el frame del grupo
-	# (contrato de `_loft`; flow root→tip = orden de los puntos).
-	var skull_c := Vector3(0.0, R * 0.30, 0.0)
+	# ===== FULL REWORK 2026-07-19 (minado dirigido de pelo, Boris rechazó
+	# el piloto "casco con dentículos") — jerarquía de 3 PASADAS del libro
+	# (p.156 Anger): (1) clumps grandes con UNA dirección de flujo y
+	# silueta que se DESPEGA del contorno craneal (galería p.147: curvas
+	# propias, no concéntricas); (2) tiras que SIGUEN LAS TRAYECTORIAS de
+	# la masa madre — "la masa se parte en tiras", no cosas pegadas
+	# encima; (3) mechones contrastantes. Valor (p.243): capa honda
+	# oscura (depresión), tiras claras (protuberancia) — pelo oscuro pide
+	# valles HONDOS. Todos los puntos en frame del grupo (contrato de
+	# `_loft`; flow root→tip = orden de los puntos).
+	var skull_c := SKULL_C
 
-	# FLEQUILLO — 5 mechones barridos arriba-atrás→cayendo sobre la
-	# frente. Raíz enterrada en el quiff, arco hacia adelante, punta
-	# libre con caída. Vecinos alternan largo/ancho/altura de punta.
-	# Ronda 2 (verificación end-to-end r1): puntas ACORTADAS (drop 0.055-
-	# 0.079→0.030-0.046 — llegaban a la ceja y leían "garras", el defecto
-	# histórico de dientes) y arrimadas al casco (tip_z 0.128-0.148→0.116-
-	# 0.128 — flotaban 2-4cm proud en 3/4); anchos subidos (las caras en
-	# sombra las adelgazaban aún más a ojo).
-	# Ronda 3 (tonal): NADA de `darker` en el flequillo — cuelga bajo el
-	# quiff y ya vive en la banda de sombra del toon (con darker leía
-	# "agujero"); mayoría `lighter` para compensar. Puntas +6mm afuera
-	# (z) para que la cara visible pesque el key light. (El tinte azulado
-	# de piezas colgantes es del shader — preexistente con los conos,
-	# anotado para el PRD del catálogo.)
-	#            x_root   x_tip    len_y   tip_z   w      mat
-	var fdefs: Array = [
-		[-0.058,  -0.070,  0.030,  0.124,  0.022,  0],
-		[-0.028,  -0.033,  0.044,  0.130,  0.017,  1],
-		[ 0.004,   0.006,  0.036,  0.134,  0.024,  0],
-		[ 0.033,   0.042,  0.046,  0.128,  0.016,  0],
-		[ 0.060,   0.074,  0.028,  0.122,  0.020,  1],
+	# --- PASADA 1: clump principal (oscuro) — lomo direccional frente→
+	# nuca sobre el cráneo REAL, con la cresta despegada ~2cm al frente y
+	# cayendo en curva propia (anti-concéntrico). Es el fondo de valle
+	# que asoma entre las tiras claras.
+	# Ronda 5: cresta del clump ANIDADA bajo las tiras (lift 0.020→0.006,
+	# radios recortados) — con lift alto sobresalía entre las tiras como
+	# parche negro-azul en la coronilla; debe asomar solo en los valles.
+	# Ronda 6: clump en tono MEDIO — el albedo `darker` bajo la banda de
+	# sombra del toon rendía casi NEGRO con sheen azul en caras hacia el
+	# cielo; la oscuridad del valle (libro p.243) ya la pone el sombreado
+	# natural del receso, no hace falta apilarla en el albedo.
+	# Ronda 7: corte TRASERO subido (nuca 0.094→0.124) — el clump bajaba
+	# hasta la nuca-baja y su superficie trasera-inferior, que mira
+	# abajo/atrás fuera del key, leía como cuenco/tonsura oscuro en la
+	# vista de arriba-atrás. La lámina tiene nuca CORTA con piel expuesta;
+	# subir el corte muestra la piel (iluminada) y el cuenco desaparece.
+	# Ronda 9: clump ENGROSADO y flatten alto (0.60→0.92, casi redondo) —
+	# sin la concha el clump ES el cap del domo; delgado dejaba ver frente
+	# entre tiras ("ralo/entradas"). Front root bajado (0.102→0.088) para
+	# una línea del pelo más generosa. Radios +40%.
+	g.add_child(_lock(mat, [
+		_on_skull(0.0, 0.088, 0.004),               # nacimiento en la frente (más bajo)
+		_on_skull(0.005, 0.150, 0.008),             # cresta del barrido
+		_on_skull(-0.004, 0.140, 0.007, true),      # lomo de coronilla
+		_on_skull(0.0, 0.124, 0.004, true),         # corte trasero (nuca corta)
+	], PackedFloat32Array([0.062, 0.082, 0.072, 0.020]), 8, 0.92, skull_c))
+
+	# --- PASADA 2: el clump se parte en TIRAS drapeadas SOBRE el cráneo
+	# (raíces en la línea del pelo real, calculadas con `_on_skull`),
+	# misma familia de trayectorias frente→cresta→nuca. Anchos/largos/
+	# lifts DISTINTOS entre vecinas (anti-paralelismo p.244); los lifts
+	# alternados dan el valle real donde asoma el clump oscuro. Las que
+	# convergen hacia el centro arriba (x*0.8) dan el barrido peinado.
+	#            dx      lift    w      largo  mat(0=light,1=mat)
+	var sdefs: Array = [
+		[-0.092,  0.003,  0.024,  0.78,  1],
+		[-0.062,  0.011,  0.028,  1.00,  0],
+		[-0.031,  0.005,  0.023,  0.68,  1],
+		[ 0.001,  0.014,  0.030,  1.00,  0],
+		[ 0.033,  0.006,  0.022,  0.90,  1],
+		[ 0.064,  0.012,  0.028,  1.00,  0],
+		[ 0.093,  0.004,  0.023,  0.82,  1],
 	]
-	for fd in fdefs:
-		var fmat: Material = mat
-		if int(fd[5]) == 0:
-			fmat = lighter
-		elif int(fd[5]) == 2:
-			fmat = darker
-		var xr: float = fd[0]
-		var xt: float = fd[1]
-		var drop: float = fd[2]
-		var tz: float = fd[3]
-		var w: float = fd[4]
-		g.add_child(_lock(fmat, [
-			Vector3(xr, R * 0.72, R * 0.42),                 # raíz enterrada en quiff
-			Vector3(lerpf(xr, xt, 0.4), R * 0.86, R * 0.72), # cresta del barrido
-			Vector3(lerpf(xr, xt, 0.75), R * 0.80, tz * 0.92),
-			Vector3(xt, R * 0.80 - drop, tz),                # punta sobre la frente
-		], PackedFloat32Array([w * 0.9, w, w * 0.6, 0.004]), 6, 0.55, skull_c))
+	for sd in sdefs:
+		var dx: float = sd[0]
+		var lift: float = sd[1]
+		var w: float = sd[2]
+		var reach: float = sd[3]
+		var smat: Material = lighter if int(sd[4]) == 0 else mat
+		# Línea del pelo: más baja en las sienes, irregular entre vecinas.
+		var root_y: float = 0.100 - absf(dx) * 0.22 + lift * 0.4
+		var pts: Array = [
+			_on_skull(dx, root_y, 0.005 + lift * 0.4),
+			_on_skull(dx * 0.82, 0.149, 0.010 + lift),          # monta la cresta
+			_on_skull(dx * 0.74, 0.132, 0.008 + lift * 0.7, true),
+		]
+		if reach >= 0.8:
+			pts.append(_on_skull(dx * 0.62, 0.120 + (1.0 - reach) * 0.04, 0.003, true))
+		g.add_child(_lock(smat, pts,
+			PackedFloat32Array([w * 0.55, w, w * 0.8, 0.004]), 6, 0.6, skull_c))
 
-	# CORONILLA/REMOLINO — 4 mechones en abanico desde el punto alto
-	# hacia atrás-abajo (cowlick real de la lámina de espalda; sin esto
-	# la vista trasera lee "domo liso"). Largos y yaw irregulares.
-	# Ronda 2: más angostos (0.014-0.020→0.010-0.015) y con más caída
-	# (reach extendido) — a los anchos de r1 emergían de la concha como
-	# lóbulos redondos apilados ("soft-serve" en la vista trasera), no
-	# como mechones drapeados.
-	var cdefs: Array = [
-		[-0.045, -0.020,  0.130, 0.012, 1],
-		[-0.012,  0.030,  0.150, 0.015, 0],
-		[ 0.022, -0.036,  0.142, 0.010, 2],
-		[ 0.050,  0.012,  0.122, 0.013, 1],
-	]
-	for cd in cdefs:
-		var cmat: Material = mat
-		if int(cd[4]) == 0:
-			cmat = lighter
-		elif int(cd[4]) == 2:
-			cmat = darker
-		var cx: float = cd[0]
-		var jig: float = cd[1]
-		var reach: float = cd[2]
-		var cw: float = cd[3]
-		g.add_child(_lock(cmat, [
-			Vector3(cx * 0.3, R * 0.96, -R * 0.06),           # raíz en la coronilla
-			Vector3(cx + jig * 0.5, R * 0.90, -R * 0.42),
-			Vector3(cx * 1.6 + jig, R * 0.70, -reach),        # punta nuca alta
-		], PackedFloat32Array([cw, cw * 0.8, 0.004]), 6, 0.5, skull_c))
-
-	# LATERALES — 2 mechones por lado sobre la sien (la concha corta ya
-	# expone la oreja; estos rompen el canto lateral sin taparla).
-	# Ronda 2: tips laterales ARRIMADOS al cráneo (x 0.096-0.100→0.084-
-	# 0.088) y más cortos — a x≈0.10 quedaban fuera de la superficie y
-	# asomaban como cuernitos en la vista trasera.
+	# Tiras laterales de sien (1 por lado): borde inferior del pelo sobre
+	# la oreja — se APOYAN en el borde superior del pabellón (libro p.40:
+	# transición pelo→oreja por solapamiento; la oreja queda expuesta).
 	for side in [-1, 1]:
 		var s_f: float = float(side)
-		g.add_child(_lock(darker if side < 0 else mat, [
-			Vector3(s_f * 0.052, R * 0.78, R * 0.30),
-			Vector3(s_f * 0.076, R * 0.68, R * 0.18),
-			Vector3(s_f * 0.084, R * 0.58, R * 0.06),          # punta sobre la sien
-		], PackedFloat32Array([0.016, 0.012, 0.003]), 6, 0.5, skull_c))
-		g.add_child(_lock(lighter if side < 0 else darker, [
-			Vector3(s_f * 0.045, R * 0.82, R * 0.06),
-			Vector3(s_f * 0.078, R * 0.72, -R * 0.08),
-			Vector3(s_f * 0.088, R * 0.60, -R * 0.20),         # punta hacia atrás
-		], PackedFloat32Array([0.014, 0.011, 0.003]), 6, 0.5, skull_c))
+		g.add_child(_lock(mat if side < 0 else lighter, [
+			_on_skull(s_f * 0.096, 0.078, 0.004),
+			_on_skull(s_f * 0.108, 0.098, 0.008),
+			_on_skull(s_f * 0.094, 0.082, 0.005, true),
+		], PackedFloat32Array([0.013, 0.018, 0.004]), 6, 0.5, skull_c))
 
-	# REBELDES (PRD 3.2 paso 3) — 3 mechones que rompen el patrón: uno
-	# cruza el flequillo en diagonal, uno se alza en la coronilla contra
-	# el flow, uno escapa del barrido en la sien derecha.
+	# Coronilla trasera: 3 tiras anchas y CLARAS que cubren la banda
+	# nuca-media (la vista arriba-atrás veía un óvalo oscuro donde las
+	# tiras del barrido divergían y asomaba el clump — "tonsura"). Nacen
+	# en el lomo de la coronilla y bajan cubriendo el centro con lift
+	# alto (montan por encima del clump que dejaba el hueco).
+	var qb: Array = [-0.030, 0.002, 0.032]
+	for qi in range(3):
+		var qx: float = qb[qi]
+		g.add_child(_lock(lighter if qi != 1 else mat, [
+			_on_skull(qx * 0.6, 0.146, 0.012, true),
+			_on_skull(qx, 0.134, 0.014, true),            # lomo trasero
+			_on_skull(qx * 1.1, 0.124, 0.008, true),      # corte (nuca corta)
+		], PackedFloat32Array([0.026, 0.024, 0.006]), 6, 0.55, skull_c))
+
+	# --- PASADA 3: mechones CONTRASTANTES (pocos, rompen el patrón).
+	# Uno cae del flequillo contra el barrido; uno se alza en la cresta;
+	# uno escapa hacia la sien derecha cruzando el flow.
 	g.add_child(_lock(lighter, [
-		Vector3(-0.010, R * 0.84, R * 0.55),
-		Vector3(0.030, R * 0.74, R * 0.88),
-		Vector3(0.058, R * 0.52, R * 0.94),                    # diagonal sobre el flequillo
-	], PackedFloat32Array([0.012, 0.009, 0.003]), 5, 0.5, skull_c))
+		_on_skull(-0.018, 0.098, 0.006),
+		_on_skull(-0.034, 0.072, 0.009),            # cae sobre la frente
+	], PackedFloat32Array([0.013, 0.004]), 5, 0.55, skull_c))
 	g.add_child(_lock(mat, [
-		Vector3(0.012, R * 0.98, -R * 0.12),
-		Vector3(0.036, R * 1.10, -R * 0.20),                   # se alza contra el flow
-		Vector3(0.058, R * 1.06, -R * 0.30),
-	], PackedFloat32Array([0.010, 0.007, 0.003]), 5, 0.6, skull_c))
+		_on_skull(0.016, 0.150, 0.016),
+		_on_skull(0.046, 0.152, 0.034),             # se alza sobre la cresta
+		_on_skull(0.066, 0.148, 0.030, true),
+	], PackedFloat32Array([0.011, 0.008, 0.003]), 5, 0.6, skull_c))
 	g.add_child(_lock(darker, [
-		Vector3(0.070, R * 0.80, R * 0.36),
-		Vector3(0.100, R * 0.64, R * 0.30),
-		Vector3(0.112, R * 0.46, R * 0.16),                    # escapa en la sien derecha
+		_on_skull(0.052, 0.128, 0.008),
+		_on_skull(0.090, 0.100, 0.008),             # cruza el flow hacia la sien
+		_on_skull(0.100, 0.078, 0.004, true),
 	], PackedFloat32Array([0.011, 0.008, 0.003]), 5, 0.5, skull_c))
 	return g
 

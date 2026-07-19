@@ -28,6 +28,25 @@ owner: Boris (director) / orquestador
   humano = cortes prácticos fronterizos (frontier crop es el canon) +
   variantes de ciudad aetherpunk.
 
+## Full rework del frontier crop (2026-07-19, tras minado del libro)
+
+El piloto se reemplazó por un rework con la jerarquía de 3 pasadas del
+libro ([[Principios de Anatomía 3D]] §Pelo 2ª pasada): clump madre
+direccional → tiras que siguen su flujo → contrastantes. QA imparcial
+**52%** (vs 38% piloto). Herramienta nueva `_on_skull()` (superficie del
+cráneo medida) — USARLA para todo peinado futuro. Bug de rim azul
+cerrado (`rim_strength` del pelo a 0.04). Residual a atacar en la ronda
+de refinamiento (HIGH, dentro del método, techo 65-75%):
+- **Faceting duro entre tiras** lee "placas/tejas/armadura" en 3-4 y
+  perfil — suavizar el quiebre (más lados en la sección del loft, o
+  variar escala/ángulo entre tiras vecinas para que no formen un patrón
+  de paneles regulares).
+- **Línea del pelo sin taper**: el corte pelo→piel es abrupto y parejo;
+  la lámina lo ahusa. Adelgazar las raíces frontales / escalonar la
+  línea del pelo.
+- **Dirección de barrido poco legible de frente/perfil**: inclinar el
+  mechón frontal visiblemente hacia atrás (peak ahusado), no recto.
+
 ## Estado de la técnica (piloto 2026-07-19, frontier crop masculino)
 
 - `_loft` (Curve3D + perfil de radios → malla SurfaceTool facetada,

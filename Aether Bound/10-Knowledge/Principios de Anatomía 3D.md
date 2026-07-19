@@ -168,6 +168,51 @@ mechón a mechón para que el Sobel entinte cada uno como un trazo distinto,
 en vez de mechones idénticos y parejos que el Sobel también agrupa en un
 solo contorno grande.
 
+### Pelo — minado dirigido 2026-07-19 (2ª pasada, tras el piloto de loft 38%)
+
+Pedido por Boris tras rechazar el piloto (leía "casco con dentículos").
+3 mineros releyeron las 157 pp buscando SOLO pelo. El corpus completo del
+libro sobre pelo son 3 zonas: p.39-40 (2D male, Braga), p.156 (3D female
+paso "Hair", Anger — el pasaje central), p.242-244 (Slim female Part 03,
+Zambelli — el único proceso paso a paso), + galería 3D (pp.147/151-153).
+
+1. **Jerarquía de 3 pasadas (p.156, el pasaje central):** (1º) 2-3
+   CLUMPS grandes que definen el volumen con UNA dirección de flujo
+   coherente; (2º) mechones intermedios que SIGUEN LAS MISMAS
+   TRAYECTORIAS de la masa madre (no direcciones propias); (3º) unos
+   pocos mechones CONTRASTANTES que rompen el patrón. **Diagnóstico del
+   piloto fallido:** los mechones eran picos independientes contra el
+   casco (paso 2 sin obedecer al paso 1) — la subdivisión intermedia
+   debe leerse como "la masa se parte en tiras", no como "cosas pegadas
+   a la masa".
+2. **La silueta del pelo se DESPEGA del contorno craneal** (galería
+   p.147; también implícito en p.156): el contorno del peinado dibuja
+   curvas PROPIAS que se alejan del cráneo — un volumen concéntrico a la
+   esfera craneal siempre lee casco, por bien subdividido que esté.
+3. **Volumen como un todo con variación de VALOR (p.243):** primero la
+   masa completa; los mechones se leen por depresiones (oscuro) y
+   protuberancias (claro) — en nuestro pipeline: valles REALES entre
+   tiras (escalón de profundidad + banda oscura del cel) y crestas que
+   pescan luz. **Pelo oscuro exige MÁS contraste de profundidad entre
+   mechones; rubio va más parejo** — el castaño oscuro del humano
+   necesita valles hondos, no surcos tímidos.
+4. **Anti-paralelismo re-confirmado como regla dura (p.244):** capas
+   con detalle progresivamente más fino; dentro de un clump los
+   mechones sueltos crecen en direcciones ligeramente DISTINTAS.
+5. **Hairline (p.242):** el pelo es malla separada del cráneo, PERO la
+   zona de nacimiento se trabaja compartida — sin salto duro entre
+   objetos en la frente. Y (p.39-40) la oreja NO se oculta por defecto:
+   la transición pelo→oreja es un mechón que se APOYA sobre el borde
+   superior del pabellón (solapamiento, no corte).
+6. **El pelo va AL FINAL del personaje (p.242)** y es señal de
+   arquetipo/narrativa tan fuerte como los rasgos (p.39: mismo rostro +
+   3 peinados = 3 personajes) — la silueta del peinado se decide como
+   diseño ANTES de iterar geometría.
+7. **En cabezas con movimiento/melena (galería pp.151-152):** 3-4 masas
+   grandes subdivididas en tiras menores, flow direccional coherente en
+   TODO el volumen — el patrón de referencia para los estilos largos
+   del [[PRD-Catalogo-Peinados-v1]].
+
 ## Cabeza, cuello y cara (minado 2026-07-16, segunda pasada — insumo directo para la Fase 5 propuesta)
 
 A diferencia de torso/manos/pelo, este bloque sale de dos capítulos

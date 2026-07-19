@@ -274,6 +274,13 @@ func _init_materials() -> void:
 	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#dba07c").darkened(0.58))
 	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
 	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
+	# Full rework de pelo 2026-07-19: rim CASI apagado solo en el pelo —
+	# el rim azul-cielo (#bfe8ff, strength 0.18) baña COMPLETAS las tiras
+	# delgadas de loft (todo su perímetro está en ángulo rasante → el
+	# fresnel^3 satura) y las teñía de azul-gris; en masas grandes solo
+	# toca el borde y ahí sí funciona. Causa raíz del "tinte azulado de
+	# piezas colgantes" visto desde los conos del piloto.
+	hair_mat.set_shader_parameter("rim_strength", 0.04)
 	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
 	dark_leather_mat = ToonMaterials.toon_mat_opaque(Color("#3a2d22"))
 	metal_mat = ToonMaterials.toon_mat_opaque(Color("#6f7a88"))

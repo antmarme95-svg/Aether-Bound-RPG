@@ -11,13 +11,24 @@ updated: 2026-07-19
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-19 ejecutó: mini-
   ronda de quiebres de mandíbula ✅, GRUPO C ✅, piloto de loft (FASE 3
   pelo) ✅-detenido-en-regla. Queda del día:**
-  1. **VoBo de Boris con capturas enfrente** sobre (a) la mandíbula
-     aligerada (sus quiebres azules muertos, ver [[LOG]] 07-19) y
-     (b) el PILOTO DE LOFT del frontier crop: mechones con punta real
-     pero QA 38% ("casco con dentículos" — falta separación real entre
-     puntas y romper el domo trasero). Boris decide: ronda de
-     separación (paso 1 de [[PRD-Catalogo-Peinados-v1]], draft nuevo)
-     o cambio de dirección. Set fresco en `godot/test_out/`.
+  1. **VoBo de Boris pendiente sobre el FULL REWORK del cabello**
+     (frontier crop reconstruido con la jerarquía de 3 pasadas del
+     libro; QA imparcial **52%**, subió de 38% del piloto — defecto de
+     "dientes" ELIMINADO, sin cuenco trasero, nuca corta con piel,
+     color castaño correcto). Es el checkpoint de "cabello decente" que
+     Boris pidió ANTES de la última ronda de cara. Set fresco en
+     `godot/test_out/` (anatomy_face*.png). Residual conocido (HIGH,
+     refinable): el faceting duro de las tiras lee "placas"; falta
+     taper en la línea del pelo (techo estimado 65-75%). Siguiente si
+     Boris aprueba: última ronda de AJUSTES DE CARA (VoBo de mandíbula
+     era TEMPORAL, se cierra con el pelo puesto).
+     - **Herramienta nueva reutilizable:** `HairLibrary._on_skull(x,y,
+       lift,back)` da el punto de la superficie del cráneo REAL — TODO
+       peinado futuro del [[PRD-Catalogo-Peinados-v1]] se autora con
+       ella, no a ojo (3 rondas se perdieron por semiejes inventados).
+     - **Bug de shader cerrado:** `hair_mat.rim_strength` 0.18→0.04
+       (el rim azul bañaba las tiras finas completas — causa del "tinte
+       azulado" que venía desde el piloto).
   2. **Grupo C EJECUTADO (07-19):** jueces canónicos nuevos — rostro
      34%, torso 32% (manos 70% quedó de la serie anterior). Baselines
      de la serie NUEVA (no comparables con 48-57%/38-55% de jueces

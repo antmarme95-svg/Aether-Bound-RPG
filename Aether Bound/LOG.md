@@ -1,5 +1,50 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] feature | FULL REWORK del cabello con jerarquía de 3 pasadas del libro — frontier crop reconstruido, causa raíz del "casco" resuelta
+Tras el minado dirigido, `_hair_frontier_crop` reconstruido según el
+método del libro (p.156/243): (1) UN clump madre direccional frente→
+nuca que ES el cap del domo (no concéntrico al cráneo), (2) 7 tiras que
+SIGUEN las trayectorias del clump ("la masa se parte en tiras", no
+picos pegados) + 2 laterales que exponen la oreja, (3) mechones
+contrastantes. Herramienta nueva `_on_skull(x,y,lift,back)`: devuelve
+el punto de la superficie del cráneo REAL (semiejes medidos
+0.123/0.141/0.1425 @ y=0.012) — las 3 primeras rondas fallaron por
+autorar con semiejes INVENTADOS ("copete flotante"/"mohawk hundido"),
+lección: autorar geometría de pelo contra la superficie medida, no a
+ojo. Cuatro defectos cazados en captura y resueltos: (a) winding que
+dejaba mechones huecos color cielo; (b) tinte AZUL de todas las tiras =
+rim del `toon_opaque` (fresnel^3) que en tiras finas baña el perímetro
+completo — `hair_mat.rim_strength` 0.18→0.04 SOLO en pelo (causa raíz
+del "tinte azulado" que venía desde los conos del piloto); (c) albedo
+`darker` que bajo la banda de sombra rendía casi negro-azul → clump a
+tono medio; (d) "cuenco/tonsura oscuro" trasero = pared en sombra de la
+concha re-añadida → concha RETIRADA, nuca corta que expone piel
+(lámina). Front/3-4/perfil leen pelo castaño barrido con mechones;
+nuca corta con piel. QA imparcial nuevo: **52%** (vs 38% del piloto —
+juez distinto, no comparable directo, pero: defecto de "dientes"
+ELIMINADO, sin cuenco trasero, color correcto). Residual HIGH: el
+faceting duro entre tiras lee "placas/armadura" y la línea del pelo es
+muy pareja (falta taper) — refinable dentro del método (techo estimado
+65-75%). Gates core+combat+springboard ALL_PASS. VoBo de Boris
+pendiente (su checkpoint de "cabello decente" antes de la última ronda
+de cara).
+
+## [2026-07-19] design | VoBo TEMPORAL de mandíbula + piloto de loft RECHAZADO → full rework de cabello con minado dirigido del libro
+Boris sobre la mandíbula aligerada: "funciona muy bien y visiblemente
+mejor que el principio" — VoBo temporal; la última ronda de cara se
+hará cuando el humano tenga cabello decente. El piloto de loft NO lo
+convence → full rework del cabello. Validación pedida por Boris: el
+Vault solo tenía 3 principios de pelo en [[Principios de Anatomía 3D]]
+(masa primero / anti-paralelismo / adaptación Sobel) — exactamente los
+que el piloto ya aplicó; la propia página admite que faltan las
+"pasadas intermedias de subdivisión progresiva" sin documentarlas.
+Veredicto: INSUFICIENTE → se re-abrió "Anatomy for 3D Artists" (copia
+personal en Downloads, mutool; el PDF no tiene capa de texto, se
+re-renderizaron las 157 pp a JPEG) y se lanzaron 3 mineros en paralelo
+dedicados EXCLUSIVAMENTE a pelo (pp.1-55 / 56-110 / 111-157):
+proceso de construcción, subdivisión 1ria→2ria→3ria, mechones,
+hairline, flow, silueta anti-casco, estilizado vs realista.
+
 ## [2026-07-19] feature | FASE 3 pelo: loft IMPLEMENTADO y piloto ejecutado — detenido en regla de cierre con QA 38%
 Primera ejecución real del recurso ratificado 2026-07-12: `_loft`
 (Curve3D + perfil de radios → malla SurfaceTool facetada, contrato de
