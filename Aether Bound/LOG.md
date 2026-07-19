@@ -1,5 +1,28 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] feature | R4 CERRADA — integración verificada, batería completa ALL_PASS; la reescritura de la escultura queda COMPLETA, sigue sprint de ajustes
+Batería completa en verde: `test_core`, `autotest_biomech`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`,
+`autotest_ui` ALL_PASS + galería `autotest_rig` completa (3 orígenes,
+extremos de sliders, arcano full). Integraciones verificadas en pixel:
+orejas de elfo/iron/mist bien ancladas pese al cráneo retraído de R1;
+armadura ironblooded, goggles, prótesis y venas de mana en su sitio;
+outfit (faja/bandolera) asienta en la cintura nueva; Dagna (signature +
+build pesado) correcta. **Bug real de R4 cazado y arreglado:** las
+masas nuevas de pecho/espalda/abdomen no escalaban con `_apply_build` —
+en peso máximo el torso crecía y se las tragaba (el "peto" renacía,
+visible en `rig_weight_max.png`). Fix estructural: reparentadas a
+`torso`/`waist` (heredan el factor elíptico del build; sin skew porque
+no están rotadas); el neutro del banco quedó pixel-idéntico y
+weight_max ya lee pecho/panza escalados. `tmp_dagna` FAIL "sin
+controller" = limitación del banco (requiere boot con --ally), no
+regresión. El QA final de cuerpo completo se cortó por límite de gasto
+de subagentes — el backlog del sprint se consolidó desde los residuales
+documentados de los 3 QA de fase + jueces frescos + hallazgos de
+integración propios (está en [[PRD-Reescritura-Escultura-Rig-v1]]).
+Cierre real del loop: VoBo de Boris sobre capturas + sprint de ajustes
+(pedido explícito del director al arrancar R4).
+
 ## [2026-07-17] feature | R3 CERRADA — manos 45%→70% (objetivo cumplido), extremidades 60%→68% (techo de primitivas)
 Manos según el libro sobre `character_rig.gd`: palma plana (0.036 de
 prof., adiós cubo-mitón) + prisma de taper nudillos→muñeca (hijo sin

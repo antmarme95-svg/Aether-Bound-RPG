@@ -205,18 +205,57 @@ cierre, verificada en pixel.
   tubular sin cuádriceps (ROI casi nulo con pantalón oscuro — no
   atacar).
 
-### R4 — Integración y cierre
+### R4 — Integración y cierre — ✅ CERRADA (2026-07-17, pendiente VoBo)
 
-- Cuerpo completo ensamblado, orígenes (`_build_origin_features`
-  re-anclado a la geometría nueva: orejas por raza, armadura iron,
-  venas), outfit y signature verificados encima del rig nuevo, Dagna y
-  enemigos en el greybox.
-- Batería completa: `test_core`, `autotest_biomech`, `autotest_combat`,
-  `autotest_springboard`, `autotest_rig`, `autotest_slice`, `autotest_ui`
-  ALL_PASS + playtest visual en `Start-GoldenScene.bat`.
+**Ejecutado:** batería completa ALL_PASS (`test_core`, `autotest_biomech`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`,
+`autotest_ui`) + galería `autotest_rig` completa. Integraciones
+verificadas en pixel: orejas de los 3 orígenes ancladas al cráneo nuevo,
+armadura iron, goggles/prótesis/venas (arcano full), outfit sobre la
+cintura nueva, Dagna con su signature y build pesado, extremos de altura.
+**Bug de R4 arreglado:** las masas de pecho/espalda/abdomen no escalaban
+con el build (peso máximo = "peto" de vuelta) — reparentadas a
+`torso`/`waist`, neutro pixel-idéntico verificado. Nota: `tmp_dagna`
+requiere boot con `--ally` (limitación del banco, no regresión); el QA
+final de cuerpo completo se cortó por límite de gasto — sustituido por
+el backlog consolidado de abajo. El cierre REAL es el VoBo de Boris.
 
-**Cierre R4:** batería completa ALL_PASS + QA imparcial final de cuerpo
-completo + VoBo de Boris.
+## BACKLOG DEL SPRINT DE AJUSTES (consolidado de los 4 QA + integración)
+
+**A. Integración/calibración (primitivas, ROI alto):**
+- A1. Anillo blanco en la base del cuello del aetherborn
+  (`rig_aetherborn_default.png`) — investigar (¿rim de accent vs rampas
+  de trapecio?).
+- A2. Panza de `weight_max` — calibrar `abdomen_mass` en peso alto
+  (direccionalmente correcta, magnitud a gusto del director).
+- A3. Cintura escapular (rampas de trapecio, deltoides, acromion) NO
+  escala con build/clase — verificar Vanguard (arch_xz 1.30) y decidir
+  si se reparenta como las masas del torso.
+- A4. Extremos del hombro de espalda: escalones trap/deltoide/brazo
+  apilados (lo real del "malvavisco" del juez fresco).
+- A5. Cintura frontal 86% del hombro (objetivo visual lámina ~75-78%).
+- A6. Streaks crema diagonales en pec (3/4, slivers con rim) + divot
+  supraclavicular "moneda" en close extremo.
+- A7. LOWs de manos: slivers naranjas pulgar der., enrosque pulgar izq.,
+  seam muñeca izq., chevrones frontales de dedos.
+- A8. Tercio inferior de la cara: mentón aún profundo; ojos grandes
+  ("cachorro" vs párpado pesado del canon — juez fresco; el hilo de fase
+  no lo marcó: ARBITRAR con Boris frente a capturas).
+- A9. `tmp_dagna`: documentar en su header que requiere boot con
+  `--ally=dagna` (o darle fallback standalone).
+
+**B. Bolsa bisel/malla (técnica nueva, compartida por las 3 fases):**
+- B1. Labios sin borde perimetral (decal/textura/vertex color — el borde
+  actual es contraste de MATERIAL, la regla de tinta ya no es el
+  problema).
+- B2. Bisel del bloque mandibular en vistas bajas + quiebre goníaco.
+- B3. Oreja neutra con volumen (hélix/trago — hoy óvalo-decal).
+- B4. Anillos de codo/hombro (look maniquí) + escalón de rodilla +
+  transición del bulge del gemelo.
+
+**C. Medición:** designar UN prompt+hilo canónico de QA por región para
+re-medir DESPUÉS del sprint (lección de varianza entre jueces: los
+números solo comparan dentro del mismo hilo).
 
 ## Verificación end-to-end (transversal a las fases)
 

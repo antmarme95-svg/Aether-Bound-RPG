@@ -450,11 +450,16 @@ func _build() -> void:
 	# quedaban 2cm DENTRO de la masa nueva de pecho y solo asomaban arcos
 	# parciales asimétricos ("semicírculos de tinta", QA 45%). Con ~3mm
 	# proud sobre chest_mass leen como la curva casi lineal de la lámina.
+	# R4: HIJOS DE `torso` (antes upper_spine) — heredan la escala x/z del
+	# build (peso/clase); con peso máximo el cilindro crecía y se tragaba
+	# las masas fijas (el "peto" renacía, verificado en rig_weight_max).
+	# Sin skew: ninguna de estas masas está rotada. Posiciones en frame
+	# torso-local (el torso vive en y=0.12 del upper_spine).
 	for pside in [-1, 1]:
 		var pec = _sphere_mesh(0.05, skin_mat)
 		pec.scale = Vector3(1.7, 0.9, 0.32)
-		pec.position = Vector3(float(pside) * 0.055, 0.21, 0.138)
-		upper_spine.add_child(pec)
+		pec.position = Vector3(float(pside) * 0.055, 0.09, 0.138)
+		torso.add_child(pec)
 		_add_outline_pass(pec, Color("#f2b186"))
 
 	# CLAVÍCULA: partida en 2 segmentos (FASE 1.3, PRD-Rework-Modelado-
@@ -492,14 +497,14 @@ func _build() -> void:
 	# cintura más angosta/plana, el perfil gana la S chest→lumbar real.
 	var chest_mass = _sphere_mesh(0.11, skin_mat)
 	chest_mass.scale = Vector3(1.35, 0.85, 0.35)
-	chest_mass.position = Vector3(0.0, 0.20, 0.115)
-	upper_spine.add_child(chest_mass)
+	chest_mass.position = Vector3(0.0, 0.08, 0.115)
+	torso.add_child(chest_mass)
 	_add_outline_pass(chest_mass, Color("#f2b186"))
 
 	var back_mass = _sphere_mesh(0.10, skin_mat)
 	back_mass.scale = Vector3(1.5, 1.3, 0.4)
-	back_mass.position = Vector3(0.0, 0.22, -0.115)
-	upper_spine.add_child(back_mass)
+	back_mass.position = Vector3(0.0, 0.10, -0.115)
+	torso.add_child(back_mass)
 	_add_outline_pass(back_mass, Color("#f2b186"))
 
 	# ABDOMEN: SIN masa elevada — PRD Geometría Nueva (2026-07-14,
@@ -556,10 +561,13 @@ func _build() -> void:
 	# rampa pura) — completa la S del perfil por abajo (QA 45% MEDIUM:
 	# "frente del torso plano de pecho a cadera"). Sin six-pack: es UNA
 	# superficie tensa, como pide la lámina.
+	# R4: hija de `waist` (hereda su copia del factor elíptico del torso —
+	# misma razón que chest/back/pec arriba). Frame waist-local (la waist
+	# vive en y=0.08 del spine).
 	var abdomen_mass = _sphere_mesh(0.07, skin_mat)
 	abdomen_mass.scale = Vector3(1.25, 1.25, 0.26)
-	abdomen_mass.position = Vector3(0.0, 0.115, 0.080)
-	spine.add_child(abdomen_mass)
+	abdomen_mass.position = Vector3(0.0, 0.035, 0.080)
+	waist.add_child(abdomen_mass)
 	_add_outline_pass(abdomen_mass, Color("#f2b186"))
 
 	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
