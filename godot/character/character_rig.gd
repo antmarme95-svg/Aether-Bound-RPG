@@ -262,11 +262,16 @@ func _init_materials() -> void:
 	# R1: tono acercado a la piel (rosa-tierra desaturado) — el terracota
 	# #a85f47 leía "masa rojiza oscura/herida" (QA rostro 35% + Fase 4 del
 	# PRD v2, que pedía exactamente este cambio).
-	lip_mat = ToonMaterials.toon_mat_opaque(Color("#c98e70"))
+	# Sprint B1: MÁS cerca aún de la piel (#f2b186 → #dba07c, ~10% más
+	# oscuro con sesgo rosa) — la frontera dura de MATERIAL alrededor de
+	# la cápsula era lo único que quedaba leyendo "curita" (la tinta ya no
+	# la dibuja desde la regla nueva). La lámina resuelve los labios con
+	# LÍNEA + tono sutil: la comisura oscura hace el trabajo de lectura.
+	lip_mat = ToonMaterials.toon_mat_opaque(Color("#dba07c"))
 	# PRD Rework Fenotipo pt.8: la comisura usaba pupil_mat (negro plano,
 	# leía "hueco/prótesis") — tono de labio oscurecido, coherente con el
 	# resto de la boca en vez de un agujero sin relación de color.
-	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#c98e70").darkened(0.55))
+	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#dba07c").darkened(0.58))
 	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
 	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
 	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
@@ -344,7 +349,12 @@ func _build() -> void:
 		knee.position.y = -0.45
 		leg.add_child(knee)
 
+		# Sprint B4: achatada lateralmente (x 0.88) — la esfera 0.066 era
+		# más ancha que ambos tubos (0.050/0.052) y leía "repisa/escalón"
+		# de frente; el bulge de rótula (y/z) se conserva y el solape hondo
+		# de FASE B en Y no se toca.
 		var knee_cap = _sphere_mesh(0.066, dark_leather_mat)
+		knee_cap.scale = Vector3(0.88, 1.0, 1.0)
 		knee_cap.position.y = 0.0
 		knee.add_child(knee_cap)
 		_add_outline_pass(knee_cap, Color("#3a2d22"))
@@ -365,8 +375,11 @@ func _build() -> void:
 		# R3: +Z trasero (0.85→1.05, centro -0.028→-0.034) — el QA leyó la
 		# pantorrilla como cono recto en perfil; el bulge posterior del
 		# gemelo debe ser SILUETA (la lámina lo muestra incluso con bota).
+		# Sprint B4: más largo y un pelo más angosto (1.6→1.78 en Y) — el
+		# bulge entraba/salía abrupto en la silueta ("joroba pegada");
+		# alargarlo suaviza la entrada y salida sin perder el bulge.
 		var calf = _sphere_mesh(0.048, dark_leather_mat)
-		calf.scale = Vector3(0.75, 1.6, 1.05)
+		calf.scale = Vector3(0.72, 1.78, 1.02)
 		calf.position = Vector3(0.0, -0.10, -0.034)
 		knee.add_child(calf)
 		_add_outline_pass(calf, Color("#3a2d22"))
@@ -1146,6 +1159,25 @@ func _build() -> void:
 		jaw_body.rotation.y = float(bside) * -0.40
 		jaw_mesh.add_child(jaw_body)
 		_add_outline_pass(jaw_body, Color("#f2b186"))
+
+	# Sprint B2a: CHAFLÁN del borde inferior-frontal del mentón — caja
+	# fina a 45° que parte el escalón de 90° en dos de 45° (las vistas
+	# BAJAS dejaban de leer "caja de cartón" por ese canto vivo).
+	var chin_chamfer = _box_mesh(0.052, 0.015, 0.015, skin_mat)
+	chin_chamfer.position = Vector3(0.0, -0.0265, 0.039)
+	chin_chamfer.rotation.x = PI / 4.0
+	jaw_mesh.add_child(chin_chamfer)
+	_add_outline_pass(chin_chamfer, Color("#f2b186"))
+
+	# Sprint B2b: GONÍACO suavizado — esfera chica en el vértice de cada
+	# rama (la lámina redondea ese ángulo con el masetero; era vértice de
+	# caja).
+	for gside in [-1, 1]:
+		var gonial = _sphere_mesh(0.020, skin_mat)
+		gonial.scale = Vector3(0.7, 0.6, 0.85)
+		gonial.position = Vector3(float(gside) * 0.068, 0.006, -0.042)
+		jaw_mesh.add_child(gonial)
+		_add_outline_pass(gonial, Color("#f2b186"))
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
@@ -2733,6 +2765,24 @@ func _build_origin_features(origin: Dictionary) -> void:
 			lobe.position = Vector3(side * 0.120, -0.050, -0.030)
 			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
 			feature_slot.add_child(lobe)
+
+			# Sprint B3: HÉLIX — toro aplastado semi-hundido en el pabellón
+			# (anillo en el plano YZ, hueco hacia ±X): el borde exterior
+			# emerge en rampa (sin tinta propia bajo la regla nueva) y el
+			# hueco deja ver la elipse de abajo como concha — la oreja de
+			# perfil deja de ser un óvalo-decal plano.
+			var helix = MeshInstance3D.new()
+			var tmesh = TorusMesh.new()
+			tmesh.inner_radius = 0.011
+			tmesh.outer_radius = 0.017
+			helix.mesh = tmesh
+			helix.material_override = skin_mat
+			helix.scale = Vector3(1.0, 1.3, 0.9)
+			helix.rotation.z = PI / 2.0
+			helix.rotation.x = -0.15
+			helix.position = Vector3(side * 0.127, -0.006, -0.035)
+			_add_outline_pass(helix, Color("#f2b186"), 0.02)
+			feature_slot.add_child(helix)
 
 # ================================================================
 # Motion API — mirrors JS setMotion / playAttack / update

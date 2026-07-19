@@ -70,8 +70,15 @@ updated: 2026-07-17
      ✓, A2 panza weight_max ✓, A3 sin cambio (por diseño) ✓, A4 espalda
      pendiente única ✓, A5 cintura ~77% ✓, A6 streaks/divot ✓, A7 LOWs
      de manos ✓, A8 arbitrado por Boris (párpado pesado + mentón
-     aligerado) ✓, A9 doc tmp_dagna ✓. Quedan grupo B (bisel/malla) y
-     grupo C (re-medición con juez canónico).
+     aligerado) ✓, A9 doc tmp_dagna ✓.
+  7. **SPRINT GRUPO B COMPLETO (2026-07-17):** B1 labios sin frontera de
+     material (tono piel oscurecida, la comisura lee) ✓, B2 chaflán del
+     mentón + goníaco redondeado ✓, B3 oreja con hélix (toro — adiós
+     óvalo-decal de perfil) ✓, B4 rodilla sin repisa + gemelo suave ✓.
+     Los anillos de codo/hombro quedan como ESTILO ACEPTADO salvo veto
+     de Boris. **Queda solo grupo C** (re-medición con juez canónico
+     único — esperar renovación del presupuesto de subagentes) y el VoBo
+     final de Boris sobre capturas.
   5. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
      piezas; 4 vistas del turnaround + close-ups; zoom antes de cerrar
      hallazgos; solape en los 3 ejes entre piezas de padres distintos;

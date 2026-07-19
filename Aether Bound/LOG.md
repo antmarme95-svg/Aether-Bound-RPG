@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] fix | Sprint GRUPO B ejecutado — labios sin frontera de material, chaflán+goníaco, oreja con hélix, rodilla/gemelo
+La "bolsa de bisel/malla" resultó atacable con primitivas + la regla de
+tinta nueva, sin malla custom: **B1** labios re-tonalizados a piel
+oscurecida (#dba07c) — la frontera dura de MATERIAL era lo único que
+seguía leyendo "curita" (la tinta ya no la dibujaba); la lectura la
+lleva la comisura, como la lámina ("labios delgados y serios"). **B2**
+chaflán de 45° en el borde inferior-frontal del mentón (parte el
+escalón de 90° en dos — vistas bajas) + esferas goníacas (el vértice de
+caja de cada rama ahora redondea como masetero). **B3** OREJA con
+hélix: toro aplastado semi-hundido en el pabellón (TorusMesh, anillo en
+YZ) — el borde emerge en rampa sin tinta propia y el hueco muestra la
+elipse de abajo como concha; el óvalo-decal de perfil murió. **B4**
+rodilla achatada lateralmente (la esfera 0.066 era más ancha que ambos
+tubos = "repisa") + gemelo más largo (entrada/salida de silueta suave).
+Los ANILLOS de codo/hombro quedan como estilo aceptado por ahora
+(el QA mismo los marcó "consistentes si son intención") — se reabren
+solo si Boris los veta en capturas. Gates ALL_PASS. Verificado en
+pixel: perfil con oreja estructurada, frente con labios finos, mentón
+chaflanado.
+
 ## [2026-07-17] fix | Sprint GRUPO A COMPLETO — A8 arbitrado por Boris (párpado pesado + mentón aligerado), gates verdes
 Cierre de A8 con VoBo del director sobre captura: (a) esclerótica
 achatada (0.85→0.70) + ceja más baja/gruesa — apertura angosta = párpado
