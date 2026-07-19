@@ -392,6 +392,19 @@ mitad; medio ≈ largo de palma; índice≈anular < medio; meñique llega al
 
 ## FASE 3 — Pelo: loft + orden de trabajo invertido (prioridad #3)
 
+> **ESTADO 2026-07-19 — PILOTO EJECUTADO (3 rondas + fix de winding).**
+> 3.1 ✅ helper `_loft` + azúcar `_lock` en `hair_library.gd` (contrato de
+> ejes documentado en ambos; winding verificado en captura). 3.2 ✅
+> frontier crop reconstruido: concha/quiff/sweep conservados, TODOS los
+> conos/cajas de mechones reemplazados por lofts (5 flequillo + 4
+> coronilla + 4 laterales + 3 rebeldes). 3.3 aplicado (variación entre
+> vecinos). Detenido en regla de cierre: QA imparcial dio 38% (hilo
+> nuevo, no comparable con el 49% de los conos de otro juez) — los
+> mechones tienen punta real pero el conjunto aún lee "casco con
+> dentículos"; falta SEPARACIÓN real (huecos en silueta) y romper el
+> domo trasero. Continúa en [[PRD-Catalogo-Peinados-v1]] (ronda de
+> separación) tras VoBo de Boris.
+
 **Contexto crítico:** van 3 intentos fallidos con cajas/conos. El loft
 (`Curve3D` + `SurfaceTool`) está RATIFICADO desde 2026-07-12
 ([[Propuesta-Recursos-de-Modelado]] recurso 2, piloto natural = pelo) y

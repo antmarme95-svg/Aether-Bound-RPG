@@ -8,24 +8,23 @@ updated: 2026-07-19
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — la REESCRITURA DE LA ESCULTURA
-  está COMPLETA (R0-R4 + regla de tinta + sprints A y B, 2026-07-17);
-  quedan exactamente 2 cosas:**
-  1. **VoBo de Boris sobre capturas** — PARCIAL 2026-07-19: cara "90%
-     bien"; los quiebres azules que circuló (junturas de mandíbula/
-     mentón) se resolvieron en mini-ronda dirigida de 2 rondas (ver
-     [[LOG]] 07-19; gates ALL_PASS). Set FRESCO regenerado en
-     `godot/test_out/`. Falta su VoBo final sobre las capturas nuevas.
-     Lo único que NO le convence: el CABELLO → decidió piloto de loft
-     (FASE 3 del PRD) hoy + catálogo 6-8 estilos/género/raza después.
-  2. **Grupo C del sprint: re-medición con juez canónico ÚNICO** (un
-     prompt+hilo por región) — ESPERAR renovación del presupuesto de
-     subagentes (se agotó el mensual el 07-17). El % de un juez solo
-     compara dentro de su propio hilo (varianza entre jueces ±10-17
-     pts, ver [[Lecciones]]).
-  - **Fidelidad al cierre:** manos 70% (objetivo cumplido); rostro
-    48-57% y torso 38-55% MEDIDOS ANTES de los sprints A/B (baselines
-    35%/40%) — el número real post-sprint lo dará C.
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-19 ejecutó: mini-
+  ronda de quiebres de mandíbula ✅, GRUPO C ✅, piloto de loft (FASE 3
+  pelo) ✅-detenido-en-regla. Queda del día:**
+  1. **VoBo de Boris con capturas enfrente** sobre (a) la mandíbula
+     aligerada (sus quiebres azules muertos, ver [[LOG]] 07-19) y
+     (b) el PILOTO DE LOFT del frontier crop: mechones con punta real
+     pero QA 38% ("casco con dentículos" — falta separación real entre
+     puntas y romper el domo trasero). Boris decide: ronda de
+     separación (paso 1 de [[PRD-Catalogo-Peinados-v1]], draft nuevo)
+     o cambio de dirección. Set fresco en `godot/test_out/`.
+  2. **Grupo C EJECUTADO (07-19):** jueces canónicos nuevos — rostro
+     34%, torso 32% (manos 70% quedó de la serie anterior). Baselines
+     de la serie NUEVA (no comparables con 48-57%/38-55% de jueces
+     previos, varianza ±10-17). Hallazgos accionables que sobrevivieron
+     el arbitraje: boca-cápsula (20%), mentón-cuboide en perfil,
+     hombro→torso y cintura recta. El presupuesto de subagentes es
+     ventana de 5h (confirmado) — sondear antes de asumir espera.
   - **Registro:** fases y backlog con estado en
     [[PRD-Reescritura-Escultura-Rig-v1]]; narrativa del día en [[LOG]].
   - **Decisiones de estilo vigentes:** regla de tinta
@@ -36,10 +35,11 @@ updated: 2026-07-19
     + close-ups + zoom antes de cerrar; solape en 3 ejes entre padres
     distintos; caja para bordes, rampa/tangente para que el Sobel no
     recorte; masas del torso = hijas de `torso`/`waist`.
-  - **Tras VoBo + C, frentes siguientes** (orden a gusto de Boris):
-    Fases 3 (pelo/loft) y 4b (warpaint) del
-    [[PRD-Rework-Modelado-Personajes-v2]]; C6b (enano/elfo reales); C4
-    (pies IK / ROM).
+  - **Frentes siguientes** (orden a gusto de Boris): ronda de
+    separación del pelo + catálogo ([[PRD-Catalogo-Peinados-v1]]);
+    Fase 4b (warpaint) del [[PRD-Rework-Modelado-Personajes-v2]];
+    ataque a los hallazgos del grupo C (boca/mentón-perfil/hombro/
+    cintura); C6b (enano/elfo reales); C4 (pies IK / ROM).
 - **Fases 1-2 del [[PRD-Rework-Modelado-Personajes-v2]] quedaron
   SUPERSEDED** por R2/R3 (nota de estado en el propio PRD); sus Fases 3
   (pelo/loft) y 4 (boca-color/warpaint) siguen vigentes para DESPUÉS de la

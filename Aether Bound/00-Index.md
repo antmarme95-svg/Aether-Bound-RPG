@@ -103,6 +103,12 @@
   torso ~40% — techo del tuning confirmado 2 veces), fases R0-R4 con
   contrato duro de API/pivotes/biomech intacto; supersede las Fases 1-2 del
   [[PRD-Rework-Modelado-Personajes-v2]] (sus Fases 3-4 siguen vigentes).
+- [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
+  catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje
+  (decisión de Boris); técnica única = loft (`_loft`/`_lock` implementados en
+  el piloto FASE 3, QA 38% con techo estimado 50-55%: falta separación real
+  entre mechones). Orden: ronda de separación del piloto → template femenino
+  → producción por lotes → barbas.
 - [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`) — **borrador de trabajo,
   NO fusionado al PRD**, pedido por Boris como Fase 5 posterior a la boca:
   rework dirigido de mandíbula/ojos/nariz/mentón/orejas sobre la cara ya

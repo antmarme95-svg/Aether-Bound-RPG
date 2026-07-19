@@ -1,5 +1,38 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] feature | FASE 3 pelo: loft IMPLEMENTADO y piloto ejecutado — detenido en regla de cierre con QA 38%
+Primera ejecución real del recurso ratificado 2026-07-12: `_loft`
+(Curve3D + perfil de radios → malla SurfaceTool facetada, contrato de
+ejes documentado generador+consumidor) y `_lock` en `hair_library.gd`.
+Frontier crop reconstruido con el orden del libro (masa conservada →
+16 mechones loft → 3 rebeldes, anti-paralelismo). 3 rondas: r1 puntas
+"garra" hasta la ceja; r2 acortadas/arrimadas; bug real cazado en
+captura: WINDING invertido (caras exteriores culled — mechones leían
+"V huecas" color cielo); r3 tonal (sin `darker` en flequillo — colgado
+bajo el quiff ya vive en la banda de sombra; con darker leía "agujero").
+QA imparcial de cierre: 38% (baseline de SU hilo) — mechones con punta
+real SÍ, pero conjunto "casco con dentículos": falta separación real
+entre puntas y romper el domo trasero; techo estimado 50-55%. Regla del
+PRD aplicada: DETENERSE y reportar (no iterar a ciegas). Continuación
+diseñada en [[PRD-Catalogo-Peinados-v1]] (draft nuevo: 6-8 estilos ×
+género × raza, decisión de Boris). Issue conocido anotado: tinte
+azulado del shader en piezas colgantes (preexistente con los conos).
+
+## [2026-07-19] qa | GRUPO C ejecutado — jueces canónicos nuevos: rostro 34%, torso 32% (baselines de SUS hilos)
+El presupuesto de subagentes volvió (lección confirmada: ventana de
+5h, no mensual — sondeo barato antes de asumir espera). Un juez único
+por región sobre el set fresco post-mini-ronda: ROSTRO 34% (peores:
+boca-cápsula 20%, mentón-cuboide en perfil 25%; mejores: cráneo 55%,
+orejas 45%) y TORSO 32% (CRITICAL: hombro-esfera desconectado, cintura
+sin angostamiento; techo declarado: pec/oblicuos/omóplato como forma).
+Arbitraje del orquestador sobre hallazgos: "ojos anime" DESCARTADO
+(párpado pesado A8 tiene VoBo de Boris), "triángulo verde bajo el ojo"
+DESCARTADO (warpaint Mistbound deliberado), "sin clavícula/cuello
+esfera" contradice A4/A6 verificados en píxel — se toman con pinzas.
+Números NO comparables con los 48-57%/38-55% de jueces anteriores
+(varianza entre jueces ±10-17, lección 07-17); estos son los baselines
+canónicos de la serie nueva. El VoBo de Boris sigue mandando.
+
 ## [2026-07-19] fix | Mini-ronda VoBo: quiebres de mandíbula/mentón aligerados (2 rondas, causa calculada)
 Boris revisó capturas (VoBo condicional: cara "90% bien") y circuló en
 azul los quiebres de tinta en las junturas de la mandíbula. Diagnóstico

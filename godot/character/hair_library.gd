@@ -159,6 +159,117 @@ static func _ribbon(mat: Material, spine: PackedVector3Array, width0: float, wid
 		g.add_child(seg)
 	return g
 
+## LOFT (FASE 3 PRD-Rework-v2, recurso 2 ratificado 2026-07-12; primera
+## ejecución 2026-07-19): malla CONTINUA de un mechón a partir de una espina
+## `Curve3D` + perfil de radios — reemplaza cadenas de cajas/conos (3 intentos
+## fallidos; prohibido un 4º con esa técnica).
+## CONTRATO DE EJES (lección M10-r4 — documentado en generador Y consumidor):
+## los puntos de control de `curve` van en el frame del GRUPO de pelo (mismo
+## frame donde vive la concha, cráneo R=0.15 centrado en el origen del grupo),
+## con el flow root→tip en el ORDEN de los puntos (punto 0 = raíz enterrada,
+## último punto = punta libre). La malla se emite en ese mismo frame: el nodo
+## devuelto va en position=(0,0,0) sin rotación. Nada de frames locales por
+## mechón — el bug de "astas al cielo" no puede reproducirse aquí.
+## `radii` mapea 1:1 a lo largo de la espina (se interpola linealmente entre
+## entradas); el último radio se fuerza a punta (~0) con un cap de abanico.
+## `flatten` achata la sección en el eje saliente-del-cráneo (mechón-cinta,
+## no espagueti); `center` es el centro del cráneo en el frame del grupo —
+## orienta el eje de grosor hacia afuera para que la cara plana abrace el
+## casco. Sección de `sides` lados, vértices duplicados por quad (normales
+## planas = facetado cel, sin suavizado entre anillos). Material del llamador
+## (toon_opaque — NUNCA ALPHA, regla del PRD).
+static func _loft(mat: Material, curve: Curve3D, radii: PackedFloat32Array,
+		sides: int = 6, flatten: float = 0.55,
+		center: Vector3 = Vector3(0.0, 0.04, 0.0)) -> MeshInstance3D:
+	var samples: int = maxi(radii.size(), 6)
+	var pts: Array = []
+	var length: float = curve.get_baked_length()
+	for i in range(samples):
+		pts.append(curve.sample_baked(length * float(i) / float(samples - 1)))
+	# Radio interpolado sobre el perfil.
+	var rad: Array = []
+	for i in range(samples):
+		var t: float = float(i) / float(samples - 1) * float(radii.size() - 1)
+		var i0: int = int(floor(t))
+		var i1: int = mini(i0 + 1, radii.size() - 1)
+		rad.append(lerpf(radii[i0], radii[i1], t - float(i0)))
+	# Frames por anillo: tangente + referencia radial al cráneo (la cara
+	# ancha del mechón queda tangente al casco, el grosor apunta afuera).
+	var rings: Array = []
+	for i in range(samples):
+		var p: Vector3 = pts[i]
+		var tang: Vector3
+		if i == 0:
+			tang = (pts[1] - pts[0]).normalized()
+		elif i == samples - 1:
+			tang = (pts[i] - pts[i - 1]).normalized()
+		else:
+			tang = (pts[i + 1] - pts[i - 1]).normalized()
+		var out_ref: Vector3 = (p - center).normalized()
+		var ax: Vector3 = tang.cross(out_ref)
+		if ax.length() < 0.001:
+			ax = tang.cross(Vector3.UP)
+			if ax.length() < 0.001:
+				ax = Vector3.RIGHT
+		ax = ax.normalized()
+		var az: Vector3 = ax.cross(tang).normalized()
+		var ring := PackedVector3Array()
+		for s in range(sides):
+			var a: float = float(s) / float(sides) * TAU
+			ring.append(p + ax * cos(a) * rad[i] + az * sin(a) * rad[i] * flatten)
+		rings.append(ring)
+	# Triángulos con vértices sueltos (sin índice) → generate_normals() da
+	# normales PLANAS por cara: facetado cel, sin suavizado entre anillos.
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	# (Winding verificado en captura 2026-07-19: el orden inicial dejaba
+	# las caras exteriores culled — mechones leían como "V huecas" color
+	# cielo. Este orden es el correcto para cull_back de Godot.)
+	for i in range(samples - 1):
+		var r0: PackedVector3Array = rings[i]
+		var r1: PackedVector3Array = rings[i + 1]
+		for s in range(sides):
+			var s2: int = (s + 1) % sides
+			st.add_vertex(r0[s]); st.add_vertex(r1[s2]); st.add_vertex(r1[s])
+			st.add_vertex(r0[s]); st.add_vertex(r0[s2]); st.add_vertex(r1[s2])
+	# Cap de punta: abanico del último anillo al punto final de la curva.
+	var tip: Vector3 = pts[samples - 1]
+	var rl: PackedVector3Array = rings[samples - 1]
+	for s in range(sides):
+		var s2b: int = (s + 1) % sides
+		st.add_vertex(rl[s]); st.add_vertex(rl[s2b]); st.add_vertex(tip)
+	# Cap de raíz (por si la raíz asoma en algún ángulo: cerrada, no tubo hueco).
+	var root_c: Vector3 = pts[0]
+	var r0c: PackedVector3Array = rings[0]
+	for s in range(sides):
+		var s2c: int = (s + 1) % sides
+		st.add_vertex(r0c[s]); st.add_vertex(root_c); st.add_vertex(r0c[s2c])
+	st.generate_normals()
+	var mi = MeshInstance3D.new()
+	mi.mesh = st.commit()
+	mi.material_override = mat
+	return mi
+
+## Azúcar del loft: espina por puntos de control (frame del grupo, root→tip)
+## → Curve3D con tangentes automáticas suaves (Catmull-Rom aproximado vía
+## in/out handles) y radios del perfil. Mantiene el contrato de ejes de
+## `_loft` (mismo frame, mismo orden).
+static func _lock(mat: Material, control_pts: Array, radii: PackedFloat32Array,
+		sides: int = 6, flatten: float = 0.55,
+		center: Vector3 = Vector3(0.0, 0.04, 0.0)) -> MeshInstance3D:
+	var curve := Curve3D.new()
+	var n: int = control_pts.size()
+	for i in range(n):
+		var p: Vector3 = control_pts[i]
+		var t_in := Vector3.ZERO
+		var t_out := Vector3.ZERO
+		if i > 0 and i < n - 1:
+			var dir: Vector3 = (control_pts[i + 1] - control_pts[i - 1]) * 0.25
+			t_in = -dir
+			t_out = dir
+		curve.add_point(p, t_in, t_out)
+	return _loft(mat, curve, radii, sides, flatten, center)
+
 # ---- public API ----
 
 ## Build a hair style node by index (0-9). Returns Node3D root.
@@ -349,16 +460,10 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	sweep.scale = Vector3(0.92, 0.62, 1.25)
 	sweep.rotation.x = -0.15
 	g.add_child(sweep)
-	# REMOLINO de coronilla (nuevo): 3 cajas finas en abanico radial desde
-	# el punto más alto — la lámina de espalda muestra un cowlick real ahí;
-	# sin él, la vista trasera lee "domo liso".
-	for wi in range(3):
-		var wa: float = -0.55 + 0.55 * float(wi)
-		var swirl = _box(mat, R * 0.05, R * 0.09, R * 0.22,
-			sin(wa) * R * 0.10, R * 0.92, cos(wa) * R * 0.10 - R * 0.02)
-		swirl.rotation.y = wa
-		swirl.rotation.x = -0.55
-		g.add_child(swirl)
+	# (FASE 3 loft, 2026-07-19: el remolino de cajas y TODOS los conos de
+	# flequillo/laterales/corona de abajo se reemplazan por mechones de
+	# loft — ver bloque LOFT al final de esta función. Prohibido volver a
+	# cajas/conos para mechones: 3 intentos fallidos documentados.)
 
 	# Contraste tonal (se mantiene — 3 tonos, sí sobrevive el banding toon).
 	var lighter := mat
@@ -373,47 +478,122 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			(darker as ShaderMaterial).set_shader_parameter(
 				"albedo_color", (base_col as Color).darkened(0.18))
 
-	# FLEQUILLO — 5 mechones INDIVIDUALES grandes con punta real (cono, no
-	# caja), largos/ángulos distintos (variación determinista), colgando
-	# sobre la frente con protrusión de verdad (no semi-hundidos al 93-97%
-	# como la versión anterior). Raíz ancha embebida en la concha/quiff,
-	# punta afuera — mismo truco que la nariz (`_cone`: top_r chico=punta,
-	# bottom_r grande=raíz).
-	var fringe_x: Array = [-0.62, -0.32, 0.0, 0.34, 0.64]
-	var fringe_len: Array = [0.85, 1.05, 0.95, 1.0, 0.80]
-	for fi in range(5):
-		var fx: float = fringe_x[fi]
-		var flen: float = fringe_len[fi] * R * 0.62
-		var fmat = lighter if fi % 2 == 0 else mat
-		var lock = _cone(fmat, R * 0.13, flen,
-			fx * R * 0.62, R * 0.62, R * 0.68)
-		lock.rotation.x = -2.0 - 0.12 * float(fi % 3)   # raíz arriba/adentro, punta abajo/afuera
-		lock.rotation.z = fx * 0.35                      # abanico lateral
-		g.add_child(lock)
+	# ===== BLOQUE LOFT (FASE 3, piloto 2026-07-19) =====
+	# Orden del libro (PRD 3.2): la MASA ya está (concha+quiff+sweep,
+	# arriba); aquí se subdivide frente/coronilla en mechones de loft
+	# individuales, y al final van los rebeldes. Regla anti-paralelismo
+	# (PRD 3.3): largo/grosor/ángulo DISTINTOS entre vecinos + escalón de
+	# profundidad real (radial_lift alternado) para que la separación la
+	# den silueta y cel-step (la tinta a threshold 1.00 ya no dibuja
+	# fronteras interiores). Todos los puntos van en el frame del grupo
+	# (contrato de `_loft`; flow root→tip = orden de los puntos).
+	var skull_c := Vector3(0.0, R * 0.30, 0.0)
 
-	# LATERALES — 3 mechones grandes por lado (menos que antes, más
-	# grandes, gap real entre ellos) sobre lo que queda de la concha
-	# acortada; ya NO bajan hasta la nuca (esa zona ahora es piel).
+	# FLEQUILLO — 5 mechones barridos arriba-atrás→cayendo sobre la
+	# frente. Raíz enterrada en el quiff, arco hacia adelante, punta
+	# libre con caída. Vecinos alternan largo/ancho/altura de punta.
+	# Ronda 2 (verificación end-to-end r1): puntas ACORTADAS (drop 0.055-
+	# 0.079→0.030-0.046 — llegaban a la ceja y leían "garras", el defecto
+	# histórico de dientes) y arrimadas al casco (tip_z 0.128-0.148→0.116-
+	# 0.128 — flotaban 2-4cm proud en 3/4); anchos subidos (las caras en
+	# sombra las adelgazaban aún más a ojo).
+	# Ronda 3 (tonal): NADA de `darker` en el flequillo — cuelga bajo el
+	# quiff y ya vive en la banda de sombra del toon (con darker leía
+	# "agujero"); mayoría `lighter` para compensar. Puntas +6mm afuera
+	# (z) para que la cara visible pesque el key light. (El tinte azulado
+	# de piezas colgantes es del shader — preexistente con los conos,
+	# anotado para el PRD del catálogo.)
+	#            x_root   x_tip    len_y   tip_z   w      mat
+	var fdefs: Array = [
+		[-0.058,  -0.070,  0.030,  0.124,  0.022,  0],
+		[-0.028,  -0.033,  0.044,  0.130,  0.017,  1],
+		[ 0.004,   0.006,  0.036,  0.134,  0.024,  0],
+		[ 0.033,   0.042,  0.046,  0.128,  0.016,  0],
+		[ 0.060,   0.074,  0.028,  0.122,  0.020,  1],
+	]
+	for fd in fdefs:
+		var fmat: Material = mat
+		if int(fd[5]) == 0:
+			fmat = lighter
+		elif int(fd[5]) == 2:
+			fmat = darker
+		var xr: float = fd[0]
+		var xt: float = fd[1]
+		var drop: float = fd[2]
+		var tz: float = fd[3]
+		var w: float = fd[4]
+		g.add_child(_lock(fmat, [
+			Vector3(xr, R * 0.72, R * 0.42),                 # raíz enterrada en quiff
+			Vector3(lerpf(xr, xt, 0.4), R * 0.86, R * 0.72), # cresta del barrido
+			Vector3(lerpf(xr, xt, 0.75), R * 0.80, tz * 0.92),
+			Vector3(xt, R * 0.80 - drop, tz),                # punta sobre la frente
+		], PackedFloat32Array([w * 0.9, w, w * 0.6, 0.004]), 6, 0.55, skull_c))
+
+	# CORONILLA/REMOLINO — 4 mechones en abanico desde el punto alto
+	# hacia atrás-abajo (cowlick real de la lámina de espalda; sin esto
+	# la vista trasera lee "domo liso"). Largos y yaw irregulares.
+	# Ronda 2: más angostos (0.014-0.020→0.010-0.015) y con más caída
+	# (reach extendido) — a los anchos de r1 emergían de la concha como
+	# lóbulos redondos apilados ("soft-serve" en la vista trasera), no
+	# como mechones drapeados.
+	var cdefs: Array = [
+		[-0.045, -0.020,  0.130, 0.012, 1],
+		[-0.012,  0.030,  0.150, 0.015, 0],
+		[ 0.022, -0.036,  0.142, 0.010, 2],
+		[ 0.050,  0.012,  0.122, 0.013, 1],
+	]
+	for cd in cdefs:
+		var cmat: Material = mat
+		if int(cd[4]) == 0:
+			cmat = lighter
+		elif int(cd[4]) == 2:
+			cmat = darker
+		var cx: float = cd[0]
+		var jig: float = cd[1]
+		var reach: float = cd[2]
+		var cw: float = cd[3]
+		g.add_child(_lock(cmat, [
+			Vector3(cx * 0.3, R * 0.96, -R * 0.06),           # raíz en la coronilla
+			Vector3(cx + jig * 0.5, R * 0.90, -R * 0.42),
+			Vector3(cx * 1.6 + jig, R * 0.70, -reach),        # punta nuca alta
+		], PackedFloat32Array([cw, cw * 0.8, 0.004]), 6, 0.5, skull_c))
+
+	# LATERALES — 2 mechones por lado sobre la sien (la concha corta ya
+	# expone la oreja; estos rompen el canto lateral sin taparla).
+	# Ronda 2: tips laterales ARRIMADOS al cráneo (x 0.096-0.100→0.084-
+	# 0.088) y más cortos — a x≈0.10 quedaban fuera de la superficie y
+	# asomaban como cuernitos en la vista trasera.
 	for side in [-1, 1]:
-		for si in range(3):
-			var sy: float = R * 0.62 - float(si) * R * 0.20
-			var sa: float = float(side) * (0.85 + float(si) * 0.14)
-			var lock2 = _cone(mat if si != 1 else darker, R * 0.11, R * 0.34,
-				sin(sa) * R * 0.62, sy, cos(sa) * R * 0.62 - R * 0.04)
-			lock2.rotation.x = -1.85
-			lock2.rotation.z = float(side) * (0.55 + float(si) * 0.08)
-			lock2.rotation.y = float(side) * 0.3
-			g.add_child(lock2)
+		var s_f: float = float(side)
+		g.add_child(_lock(darker if side < 0 else mat, [
+			Vector3(s_f * 0.052, R * 0.78, R * 0.30),
+			Vector3(s_f * 0.076, R * 0.68, R * 0.18),
+			Vector3(s_f * 0.084, R * 0.58, R * 0.06),          # punta sobre la sien
+		], PackedFloat32Array([0.016, 0.012, 0.003]), 6, 0.5, skull_c))
+		g.add_child(_lock(lighter if side < 0 else darker, [
+			Vector3(s_f * 0.045, R * 0.82, R * 0.06),
+			Vector3(s_f * 0.078, R * 0.72, -R * 0.08),
+			Vector3(s_f * 0.088, R * 0.60, -R * 0.20),         # punta hacia atrás
+		], PackedFloat32Array([0.014, 0.011, 0.003]), 6, 0.5, skull_c))
 
-	# CORONA/NUCA ALTA — 3 mechones grandes solo en la porción trasera que
-	# la concha acortada todavía cubre (no más abajo — ahí es piel).
-	for ci in range(3):
-		var ca: float = PI * 0.85 + (float(ci) - 1.0) * 0.45
-		var lock3 = _cone(lighter if ci == 1 else mat, R * 0.12, R * 0.30,
-			sin(ca) * R * 0.60, R * 0.66, cos(ca) * R * 0.60 - R * 0.04)
-		lock3.rotation.x = -1.6
-		lock3.rotation.y = ca
-		g.add_child(lock3)
+	# REBELDES (PRD 3.2 paso 3) — 3 mechones que rompen el patrón: uno
+	# cruza el flequillo en diagonal, uno se alza en la coronilla contra
+	# el flow, uno escapa del barrido en la sien derecha.
+	g.add_child(_lock(lighter, [
+		Vector3(-0.010, R * 0.84, R * 0.55),
+		Vector3(0.030, R * 0.74, R * 0.88),
+		Vector3(0.058, R * 0.52, R * 0.94),                    # diagonal sobre el flequillo
+	], PackedFloat32Array([0.012, 0.009, 0.003]), 5, 0.5, skull_c))
+	g.add_child(_lock(mat, [
+		Vector3(0.012, R * 0.98, -R * 0.12),
+		Vector3(0.036, R * 1.10, -R * 0.20),                   # se alza contra el flow
+		Vector3(0.058, R * 1.06, -R * 0.30),
+	], PackedFloat32Array([0.010, 0.007, 0.003]), 5, 0.6, skull_c))
+	g.add_child(_lock(darker, [
+		Vector3(0.070, R * 0.80, R * 0.36),
+		Vector3(0.100, R * 0.64, R * 0.30),
+		Vector3(0.112, R * 0.46, R * 0.16),                    # escapa en la sien derecha
+	], PackedFloat32Array([0.011, 0.008, 0.003]), 5, 0.5, skull_c))
 	return g
 
 # 11 — Prince Curtain (M10-r4, PRD "Cabello Estilizado Ondulado — Estilo
