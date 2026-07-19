@@ -1124,9 +1124,12 @@ func _build() -> void:
 	# e inclinación mentolabial (rotation.x): el mentón (borde inferior)
 	# protruye al máximo y la cara superior recede — el quiebre boca→mentón
 	# sale de la geometría, no de una arista expuesta.
-	jaw_mesh = _box_mesh(0.055, 0.055, 0.095, skin_mat)
+	# Sprint A8 (VoBo Boris): profundidad 0.095→0.082 recortada por la
+	# ESPALDA (el centro avanza para que la cara frontal/punta del mentón
+	# no se mueva) — el tercio inferior pierde masa sin tocar el canon.
+	jaw_mesh = _box_mesh(0.055, 0.055, 0.082, skin_mat)
 	jaw_mesh.name = "jaw"
-	jaw_mesh.position = Vector3(0.0, -0.122, 0.070)
+	jaw_mesh.position = Vector3(0.0, -0.122, 0.0765)
 	jaw_mesh.rotation.x = 0.12
 
 	# Ronda 3: CUERPO mandibular — 2 facets angulados entre el mentón y las
@@ -1506,8 +1509,11 @@ func _build() -> void:
 		# agrandan un poco (manteniendo la proporción esclerótica/iris ya
 		# corregida) para que aporten estructura real a la cara, no solo un
 		# punto decorativo perdido en un óvalo grande.
+		# Sprint A8 (VoBo Boris): esclerótica achatada 0.85→0.70 — apertura
+		# angosta = párpado pesado/mirada dura del canon, no ojo redondo
+		# "cachorro".
 		var white = _sphere_mesh(0.017, eye_white_mat)
-		white.scale = Vector3(1.0, 0.85, 0.36)
+		white.scale = Vector3(1.0, 0.70, 0.36)
 		eye_group.add_child(white)
 
 		var iris = _disc_mesh(0.0102, iris_mat)
@@ -1555,9 +1561,11 @@ func _build() -> void:
 		# (mismo mesh, solo dimensiones) — Fable señala que esto NO da arco
 		# real; si sigue leyendo recta, segunda pasada = cadena de 2-3
 		# cápsulas/esferas decrecientes (patrón `_braid`).
-		var brow = _box_mesh(0.040, 0.006, 0.010, brow_mat)
+		var brow = _box_mesh(0.040, 0.007, 0.010, brow_mat)
 		# R1: baja junto con el ojo (mismo gap ceja↔ojo de antes).
-		brow.position = Vector3(side * 0.036, 0.024, 0.134)
+		# Sprint A8: más baja aún (0.024→0.021) — tapa el tope del ojo,
+		# refuerza el párpado pesado.
+		brow.position = Vector3(side * 0.036, 0.021, 0.134)
 		head.add_child(brow)
 		brows.append(brow)
 

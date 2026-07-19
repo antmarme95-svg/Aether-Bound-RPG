@@ -66,6 +66,12 @@ updated: 2026-07-17
      decal, bisel mandibular, oreja con hélix, anillos de
      articulaciones), grupo C = re-medición con juez canónico único.
      Falta el VoBo de Boris sobre capturas (cierre real del loop).
+  6. **SPRINT GRUPO A COMPLETO (2026-07-17, 9/9):** A1 anillo aetherborn
+     ✓, A2 panza weight_max ✓, A3 sin cambio (por diseño) ✓, A4 espalda
+     pendiente única ✓, A5 cintura ~77% ✓, A6 streaks/divot ✓, A7 LOWs
+     de manos ✓, A8 arbitrado por Boris (párpado pesado + mentón
+     aligerado) ✓, A9 doc tmp_dagna ✓. Quedan grupo B (bisel/malla) y
+     grupo C (re-medición con juez canónico).
   5. **Metodología (ver [[Lecciones]]):** marcar con COLOR para aislar
      piezas; 4 vistas del turnaround + close-ups; zoom antes de cerrar
      hallazgos; solape en los 3 ejes entre piezas de padres distintos;

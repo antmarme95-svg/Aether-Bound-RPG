@@ -1,5 +1,15 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] fix | Sprint GRUPO A COMPLETO — A8 arbitrado por Boris (párpado pesado + mentón aligerado), gates verdes
+Cierre de A8 con VoBo del director sobre captura: (a) esclerótica
+achatada (0.85→0.70) + ceja más baja/gruesa — apertura angosta = párpado
+pesado/mirada dura del canon (adiós "ojos de cachorro" del juez fresco);
+(b) bloque del mentón −13mm de profundidad recortados por la ESPALDA (la
+punta frontal calibrada y el canon del mentón no se movieron; la
+proporción subió a 7.36 cabezas). Gates ALL_PASS. Con esto el GRUPO A
+del sprint queda 9/9. Pendientes: grupo B (bisel/malla — técnica nueva)
+y grupo C (re-medición con juez canónico único).
+
 ## [2026-07-17] fix | Sprint de ajustes GRUPO A ejecutado (A1-A7, A9) — queda A8 (arbitraje de cara) para Boris
 Lote de calibración sobre `character_rig.gd` + verificación por captura:
 **A1 ✓** anillo cian del cuello aetherborn muerto (rim 0.28→0.24 + el
