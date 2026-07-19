@@ -6,6 +6,9 @@
 # Emite: medidas numéricas (alto total, cabeza, ratio en cabezas, hombros)
 # + capturas a 3 distancias y 2 vistas, con regla de cabezas en escena.
 # Boot: --autotest=res://tests/tmp_anatomy.gd  (windowed)
+# (Sprint A9, nota de familia: `tmp_dagna.gd` NO corre standalone — espera
+# el boot de juego con `--ally=dagna` y falla "sin controller" si se lanza
+# como autotest suelto. Para ver a Dagna standalone: `tmp_dagna_golden.gd`.)
 extends Node
 
 const _GOLDEN      = preload("res://scenes/golden_scene.gd")

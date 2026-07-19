@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-17] fix | Sprint de ajustes GRUPO A ejecutado (A1-A7, A9) — queda A8 (arbitraje de cara) para Boris
+Lote de calibración sobre `character_rig.gd` + verificación por captura:
+**A1 ✓** anillo cian del cuello aetherborn muerto (rim 0.28→0.24 + el
+surco supraclavicular cerrado por A6); **A2 ✓** panza de peso máximo
+calibrada (abdomen z 0.26→0.22, lleno pero tenso); **A3 ✓ SIN CAMBIO,
+por diseño** — la cintura escapular no escala con el build porque los
+pivotes de brazo (SHOULDER_X) tampoco: la corpulencia del Vanguard la
+ponen torso+extremidades, verificado coherente en `rig_arch_vanguard`;
+**A4 ✓** espalda con pendiente ÚNICA continua (trap_back más ancha/
+afuera, tope de deltoide 1.08→1.02 — los escalones trap/delt/brazo se
+fundieron); **A5 ✓** cintura frontal más honda (fondo 0.078→0.071,
+apunta al ~77% del hombro de la lámina); **A6 ✓** streaks crema del pec
+y divot "moneda" cerrados (chest_mass +6mm, pec z −3mm); **A7 ✓** seam
+de muñeca (taper −2mm) y slivers del pulgar (apertura 0.44→0.40)
+atenuados; **A9 ✓** nota de familia sobre `tmp_dagna` (requiere boot
+con --ally). Gates `test_core`/`autotest_biomech` ALL_PASS. **A8
+pendiente de arbitraje del director** (contradicción entre jueces:
+ojos "cachorro" vs párpado pesado; mentón "profundo") — se decide con
+capturas enfrente. Grupo B (bisel/malla) y C (re-medición) sin arrancar.
+
 ## [2026-07-17] feature | R4 CERRADA — integración verificada, batería completa ALL_PASS; la reescritura de la escultura queda COMPLETA, sigue sprint de ajustes
 Batería completa en verde: `test_core`, `autotest_biomech`,
 `autotest_combat`, `autotest_springboard`, `autotest_slice`,

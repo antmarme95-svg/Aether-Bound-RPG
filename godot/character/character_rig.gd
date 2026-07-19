@@ -456,9 +456,11 @@ func _build() -> void:
 	# Sin skew: ninguna de estas masas está rotada. Posiciones en frame
 	# torso-local (el torso vive en y=0.12 del upper_spine).
 	for pside in [-1, 1]:
+		# Sprint A6: z 0.138→0.135 — el filo superior del pec asomaba
+		# sobre chest_mass y el rim lo encendía como "streak crema" en 3/4.
 		var pec = _sphere_mesh(0.05, skin_mat)
 		pec.scale = Vector3(1.7, 0.9, 0.32)
-		pec.position = Vector3(float(pside) * 0.055, 0.09, 0.138)
+		pec.position = Vector3(float(pside) * 0.055, 0.09, 0.135)
 		torso.add_child(pec)
 		_add_outline_pass(pec, Color("#f2b186"))
 
@@ -495,9 +497,11 @@ func _build() -> void:
 	# ya fracasaron como armadura en Fase C): pecho (convexidad esternal
 	# que abarca ambos pecs) y dorsal (convexidad torácica alta). Con la
 	# cintura más angosta/plana, el perfil gana la S chest→lumbar real.
+	# Sprint A6: y 0.08→0.086 — cierra el surco supraclavicular ("divot
+	# moneda" del QA y el anillo de rim del aetherborn viven ahí).
 	var chest_mass = _sphere_mesh(0.11, skin_mat)
 	chest_mass.scale = Vector3(1.35, 0.85, 0.35)
-	chest_mass.position = Vector3(0.0, 0.08, 0.115)
+	chest_mass.position = Vector3(0.0, 0.086, 0.115)
 	torso.add_child(chest_mass)
 	_add_outline_pass(chest_mass, Color("#f2b186"))
 
@@ -552,7 +556,9 @@ func _build() -> void:
 	# el escalón de radio leía "costura de peto", QA 45% HIGH) y el
 	# PELLIZCO real se profundiza en el fondo (0.085→0.078) — la cintura
 	# como silueta continua, no como línea de tinta horizontal.
-	waist = _cylinder_mesh(0.108, 0.078, 0.22, skin_mat)
+	# Sprint A5: fondo 0.078→0.071 — la cintura frontal medía 86% del
+	# hombro; la lámina pide ~75-78% (pellizco de silueta más hondo).
+	waist = _cylinder_mesh(0.108, 0.071, 0.22, skin_mat)
 	waist.position = Vector3(0.0, 0.08, 0.0)
 	spine.add_child(waist)
 	_add_outline_pass(waist, Color("#f2b186"))
@@ -564,8 +570,11 @@ func _build() -> void:
 	# R4: hija de `waist` (hereda su copia del factor elíptico del torso —
 	# misma razón que chest/back/pec arriba). Frame waist-local (la waist
 	# vive en y=0.08 del spine).
+	# Sprint A2: z 0.26→0.22 — en peso máximo (hereda la escala del build
+	# vía waist) leía panza de barril; con 0.22 queda vientre lleno pero
+	# tenso.
 	var abdomen_mass = _sphere_mesh(0.07, skin_mat)
-	abdomen_mass.scale = Vector3(1.25, 1.25, 0.26)
+	abdomen_mass.scale = Vector3(1.25, 1.25, 0.22)
 	abdomen_mass.position = Vector3(0.0, 0.035, 0.080)
 	waist.add_child(abdomen_mass)
 	_add_outline_pass(abdomen_mass, Color("#f2b186"))
@@ -641,9 +650,11 @@ func _build() -> void:
 		# R2 ronda 4: más grande y pegada al cuello — sella los "huecos
 		# triangulares oscuros" de la base del cuello por atrás (QA 45%
 		# HIGH; no era malla abierta, era bolsa de sombra sin masa).
+		# Sprint A4: más ancha y afuera — solapa el tope del deltoide para
+		# fundir el escalón trap/deltoide/brazo de la vista trasera.
 		var trap_back = _sphere_mesh(0.075, skin_mat)
-		trap_back.scale = Vector3(1.35, 0.95, 0.55)
-		trap_back.position = Vector3(float(tside) * 0.082, 0.30, -0.04)
+		trap_back.scale = Vector3(1.5, 0.9, 0.55)
+		trap_back.position = Vector3(float(tside) * 0.09, 0.30, -0.04)
 		upper_spine.add_child(trap_back)
 		_add_outline_pass(trap_back, Color("#f2b186"))
 
@@ -723,8 +734,10 @@ func _build() -> void:
 		# R2 ronda 4: gota real — más alto que ancho/profundo, sesgado
 		# adelante; de ATRÁS ya no debe leer esfera con contorno propio
 		# (CRITICAL del QA 45%: "hombreras de armadura").
+		# Sprint A4: tope 1.08→1.02 — no asoma sobre la línea del trapecio
+		# desde atrás (escalón).
 		var deltoid = _sphere_mesh(0.066, skin_mat)
-		deltoid.scale = Vector3(0.86, 1.08, 0.70)
+		deltoid.scale = Vector3(0.86, 1.02, 0.70)
 		deltoid.position = Vector3(side * 0.008, -0.025, 0.020)
 		arm.add_child(deltoid)
 		_add_outline_pass(deltoid, Color("#f2b186"))
@@ -850,7 +863,9 @@ func _build() -> void:
 		(palm_taper.mesh as CylinderMesh).radial_segments = 4
 		palm_taper.scale = Vector3(1.0, 1.0, 0.46)
 		palm_taper.rotation.y = 0.0   # cara plana al frente (lección nariz N=4)
-		palm_taper.position = Vector3(0.0, -0.004, 0.0)
+		# Sprint A7: -0.004→-0.006 — su cara superior rozaba la de la caja
+		# y generaba el seam highlight horizontal en la muñeca izquierda.
+		palm_taper.position = Vector3(0.0, -0.006, 0.0)
 		hand.add_child(palm_taper)
 		_add_outline_pass(palm_taper, Color("#f2b186"))
 
@@ -944,9 +959,11 @@ func _build() -> void:
 		# R3 r3: punta presionada contra el frente de la palma (z 0.012→
 		# 0.008) — la protrusión del cap cae bajo el umbral de tinta (~2cm)
 		# y el "botón incrustado" con anillo desaparece.
+		# Sprint A7: apertura 0.44→0.40 — pega la cápsula al canto (mata
+		# los slivers naranjas de fondo iluminado entre pulgar y palma).
 		var thumb = _capsule_mesh(0.014, 0.044, skin_mat)
 		thumb.position = Vector3(-float(side) * 0.027, -0.028, 0.008)
-		thumb.rotation.z = -float(side) * 0.44
+		thumb.rotation.z = -float(side) * 0.40
 		thumb.rotation.x = -0.78
 		hand.add_child(thumb)
 		_add_outline_pass(thumb, Color("#f2b186"))
@@ -2444,7 +2461,9 @@ func _apply_origin_rim() -> void:
 	var rim_col: Color
 
 	if _origin_id == "aetherborn":
-		rim_str = 0.28
+		# Sprint A1: 0.28→0.24 — a 0.28 el rim cian encendía el surco
+		# cuello↔trapecio como "anillo de collar" en ángulo rasante.
+		rim_str = 0.24
 		rim_col = accent
 	elif _origin_id == "ironblooded":
 		rim_str = 0.32
