@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] fix | Mini-ronda VoBo: quiebres de mandíbula/mentón aligerados (2 rondas, causa calculada)
+Boris revisó capturas (VoBo condicional: cara "90% bien") y circuló en
+azul los quiebres de tinta en las junturas de la mandíbula. Diagnóstico
+por geometría + zoom 3× (System.Drawing): (1) la esquina frontal-interna
+de cada faceta `jaw_body` (yaw 0.40) quedaba ~4mm POR DELANTE de la cara
+frontal de la caja central — arista proud que el Sobel entintaba como
+trazo vertical junto a la comisura; (2) los fondos de las facetas
+colgaban 3.5mm bajo el fondo de la caja central — cada desnivel un jog
+en la línea de la mandíbula; (3) el chaflán B2a estaba centrado casi
+SOBRE la arista (sobresalía 9.6mm bajo el fondo y 8.6mm frente a la
+cara: fabricaba sus propios labios de tinta en vez de cortar la
+esquina). Fixes: yaw 0.40→0.30, fondos alineados al ras (-0.0275),
+faceta retraída (z 0.002→-0.003, cruce sobre la cara central =
+profundidad continua), chaflán hundido a (y-0.019, z 0.032) con inset
+~7mm/lado y puntas enterradas, goníacas agrandadas (0.9/0.7/1.05)
+envolviendo el vértice de la rama. Verificado con zoom: trazo vertical
+MUERTO, línea inferior continua, goníaco curvo en 3/4; turnaround sin
+regresiones. Gates: test_core + autotest_combat + autotest_springboard
+ALL_PASS. Queda: VoBo final de Boris sobre las capturas nuevas.
+
 ## [2026-07-17] fix | Sprint GRUPO B ejecutado — labios sin frontera de material, chaflán+goníaco, oreja con hélix, rodilla/gemelo
 La "bolsa de bisel/malla" resultó atacable con primitivas + la regla de
 tinta nueva, sin malla custom: **B1** labios re-tonalizados a piel

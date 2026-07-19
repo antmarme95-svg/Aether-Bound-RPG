@@ -1154,17 +1154,39 @@ func _build() -> void:
 	for bside in [-1, 1]:
 		# Ronda 6: yaw reducido (-0.55→-0.40) — quiebre angular más chico
 		# entre facet y mentón = menos costura entintada en cada unión.
+		# Mini-ronda VoBo 2026-07-19 (quiebres azules de Boris): yaw
+		# 0.40→0.30 (la arista del cruce facet↔caja central aún entintaba
+		# un trazo vertical junto a la comisura) y fondo alineado al ras del
+		# fondo de la caja central (-0.0275): colgaba 3.5 mm por debajo y
+		# cada desnivel es un jog en la línea de tinta de la mandíbula.
+		# Ronda 2 de la mini-ronda: z 0.002→-0.003 — con el yaw, la esquina
+		# frontal-INTERNA de la faceta quedaba ~4 mm por delante de la cara
+		# frontal de la caja central (z_local 0.0452 vs 0.041): esa arista
+		# proud entintaba el trazo vertical junto a la comisura. Retraída
+		# para que el cruce caiga SOBRE la cara central (0.0402 ≤ 0.041,
+		# profundidad continua = sin tinta).
 		var jaw_body = _box_mesh(0.050, 0.050, 0.075, skin_mat)
-		jaw_body.position = Vector3(float(bside) * 0.033, -0.006, 0.002)
-		jaw_body.rotation.y = float(bside) * -0.40
+		jaw_body.position = Vector3(float(bside) * 0.033, -0.0025, -0.003)
+		jaw_body.rotation.y = float(bside) * -0.30
 		jaw_mesh.add_child(jaw_body)
 		_add_outline_pass(jaw_body, Color("#f2b186"))
 
 	# Sprint B2a: CHAFLÁN del borde inferior-frontal del mentón — caja
 	# fina a 45° que parte el escalón de 90° en dos de 45° (las vistas
 	# BAJAS dejaban de leer "caja de cartón" por ese canto vivo).
-	var chin_chamfer = _box_mesh(0.052, 0.015, 0.015, skin_mat)
-	chin_chamfer.position = Vector3(0.0, -0.0265, 0.039)
+	# Mini-ronda VoBo 2026-07-19: ensanchado 0.052→0.058 — las puntas
+	# cuadradas del chaflán quedaban DENTRO del ancho de la mandíbula y
+	# sus esquinas dejaban un escalón propio en la silueta baja del mentón
+	# (jog de tinta); ahora las puntas se entierran en las facetas.
+	# Ronda 2 de la mini-ronda: centro hundido (-0.0265,0.039)→(-0.019,
+	# 0.032). Antes el centro caía casi SOBRE la arista frontal-inferior de
+	# la caja (-0.0275, 0.041): la mitad exterior del chaflán sobresalía
+	# 9.6 mm bajo el fondo y 8.6 mm frente a la cara — fabricaba sus
+	# propios labios/escalones de tinta en vez de cortar la esquina. En el
+	# centro nuevo su cara a 45° rebana la esquina con inset ~7 mm por lado
+	# y las puntas quedan enterradas en las facetas.
+	var chin_chamfer = _box_mesh(0.058, 0.015, 0.015, skin_mat)
+	chin_chamfer.position = Vector3(0.0, -0.019, 0.032)
 	chin_chamfer.rotation.x = PI / 4.0
 	jaw_mesh.add_child(chin_chamfer)
 	_add_outline_pass(chin_chamfer, Color("#f2b186"))
@@ -1172,9 +1194,13 @@ func _build() -> void:
 	# Sprint B2b: GONÍACO suavizado — esfera chica en el vértice de cada
 	# rama (la lámina redondea ese ángulo con el masetero; era vértice de
 	# caja).
+	# Mini-ronda VoBo 2026-07-19: esfera agrandada (0.7/0.6/0.85 →
+	# 0.9/0.7/1.05) — en 3/4 la esquina inferior-trasera de la rama seguía
+	# asomando como vértice de caja con trazos quebrados; la esfera debe
+	# envolver ese vértice, no solo tocarlo.
 	for gside in [-1, 1]:
 		var gonial = _sphere_mesh(0.020, skin_mat)
-		gonial.scale = Vector3(0.7, 0.6, 0.85)
+		gonial.scale = Vector3(0.9, 0.7, 1.05)
 		gonial.position = Vector3(float(gside) * 0.068, 0.006, -0.042)
 		jaw_mesh.add_child(gonial)
 		_add_outline_pass(gonial, Color("#f2b186"))

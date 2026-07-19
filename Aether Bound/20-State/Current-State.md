@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-17
+updated: 2026-07-19
 ---
 
 # Current State
@@ -11,11 +11,13 @@ updated: 2026-07-17
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — la REESCRITURA DE LA ESCULTURA
   está COMPLETA (R0-R4 + regla de tinta + sprints A y B, 2026-07-17);
   quedan exactamente 2 cosas:**
-  1. **VoBo de Boris sobre capturas** (cierre real del loop, [[QA Loop]]
-     fase 7). Set fresco en `godot/test_out/`: turnaround de cabeza + 3
-     close-ups, manos, cuerpo entero, galería `rig_*` de orígenes/
-     extremos, `outfit_*`, `dagna_golden_*`. Si algo chirría →
-     mini-ronda dirigida.
+  1. **VoBo de Boris sobre capturas** — PARCIAL 2026-07-19: cara "90%
+     bien"; los quiebres azules que circuló (junturas de mandíbula/
+     mentón) se resolvieron en mini-ronda dirigida de 2 rondas (ver
+     [[LOG]] 07-19; gates ALL_PASS). Set FRESCO regenerado en
+     `godot/test_out/`. Falta su VoBo final sobre las capturas nuevas.
+     Lo único que NO le convence: el CABELLO → decidió piloto de loft
+     (FASE 3 del PRD) hoy + catálogo 6-8 estilos/género/raza después.
   2. **Grupo C del sprint: re-medición con juez canónico ÚNICO** (un
      prompt+hilo por región) — ESPERAR renovación del presupuesto de
      subagentes (se agotó el mensual el 07-17). El % de un juez solo
