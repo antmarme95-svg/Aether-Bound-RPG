@@ -17,14 +17,21 @@ updated: 2026-07-19
      "dientes" ELIMINADO, sin cuenco trasero, nuca corta con piel,
      color castaño correcto). Es el checkpoint de "cabello decente" que
      Boris pidió ANTES de la última ronda de cara. Set fresco en
-     `godot/test_out/` (anatomy_face*.png). **RONDA DE REFINAMIENTO
-     APLICADA (pedido de Boris):** quiebres suavizados (más lados en la
-     sección del loft), TAPER real en la línea del pelo, y FADE nuevo
-     en temporales/patillas/nuca (antes piel desnuda) — el fade va como
-     BANDAS CONTINUAS, nunca tiras (corolario duro en
-     [[Principios de Anatomía 3D]]). Siguiente: última ronda de
-     AJUSTES DE CARA (el VoBo de mandíbula era TEMPORAL, se cierra con
-     el pelo puesto).
+     `godot/test_out/` (anatomy_face*.png). **PELO REFINADO en MÚLTIPLES
+     rondas (07-19/20):** quiebres suavizados, taper, fade completo
+     (temporales/patillas/nuca/costado como BANDAS continuas + casquete
+     elipsoide, nunca tiras — corolario en [[Principios de Anatomía 3D]]);
+     reestructura por jerarquía de 3 pasadas del libro; patilla suelta
+     eliminada (decisión de Boris); roseta de nuca rota; nacimiento con
+     espaciado irregular; nuca baja subdividida. **Último QA de ZONAS vs
+     referencia de cráneo (07-20):** coinciden patilla/oreja/occipucio/
+     nuca; hueco de coronilla-frontal tapado ~95% con bandas que hugean
+     (pinhole residual de PIEL solo visible a 3× zoom — confirmado por
+     diagnóstico de color; se paró tras 3 intentos por regla del Vault).
+     Gates ALL_PASS. **Pendiente artístico menor:** pinhole de coronilla
+     + nacimiento algo despareja. **Siguiente frente:** última ronda de
+     AJUSTES DE CARA (el VoBo de mandíbula era TEMPORAL, se cierra con el
+     pelo puesto) — a criterio de Boris.
      - **Herramienta nueva reutilizable:** `HairLibrary._on_skull(x,y,
        lift,back)` da el punto de la superficie del cráneo REAL — TODO
        peinado futuro del [[PRD-Catalogo-Peinados-v1]] se autora con

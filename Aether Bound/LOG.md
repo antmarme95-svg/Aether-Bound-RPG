@@ -1,5 +1,26 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] qa+fix | QA de ZONAS de pelo vs referencia de cráneo (pedido de Boris): hueco de coronilla + pendientes previos
+Boris pasó una referencia de cráneo rapado en 4 ángulos y pidió comparar
+las ZONAS donde vive el pelo (no el peinado ni la barba). La referencia
+es imagen pegada (no archivo), así que el orquestador hizo la comparación
+en píxel directa (regla del Vault). Zonas que YA coinciden: patilla corta
+delante de la oreja, cobertura sobre la oreja, occipucio, nuca hasta el
+cuello. Hallazgo real de ZONA: **hueco de piel en la coronilla-frontal**
+en perfil — los mechones se arquean sobre la masa base y dejan ventanas
+de cuero cabelludo. Fixes de la sesión: (a) los 2 pendientes del QA
+anterior (nuca baja subdividida con 5 mechones sobre el casquete;
+nacimiento con dx a paso irregular y anchos de rango doble), commit
+b4b1f20; (b) masa base engrosada probó ser "abultado" (vetado por Boris)
+→ revertida, y la coronilla se tapa con BANDAS que hugean el cráneo a
+lift bajo (mismo truco del fade de nuca, sin bulto) + arco de los
+mechones bajado. Diagnóstico de color (bandas en `darker`): el punto
+residual SEGUÍA tan → es piel real, un pinhole que un mechón arqueado
+abre, no un brillo. Las bandas cierran ~95%; el residual es invisible a
+escala de visualización (solo a 3× de zoom). Lección aplicada: PARAR
+tras 3 intentos razonados sobre un hueco y documentar
+([[Lecciones]]/[[Principios de Anatomía 3D]]). Gates ALL_PASS.
+
 ## [2026-07-19] qa+fix | QA final del pelo (libro 35% / lámina 35%): patilla eliminada por decisión de Boris y "roseta" de nuca rota
 Tercer QA doble sobre el estado final, con la observación de Boris
 pasada como contexto ya resuelto (el mechón de patilla sobra; el

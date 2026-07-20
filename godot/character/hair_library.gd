@@ -665,11 +665,15 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# sin la concha el clump ES el cap del domo; delgado dejaba ver frente
 	# entre tiras ("ralo/entradas"). Front root bajado (0.102→0.088) para
 	# una línea del pelo más generosa. Radios +40%.
+	# Ronda 28 (QA de ZONAS vs referencia de cráneo: hueco de piel en la
+	# coronilla en perfil): la masa base se ENGROSA para llenar el volumen
+	# bajo los mechones y garantizar cobertura del cráneo — el cuero
+	# cabelludo asomaba en las ventanas entre los mechones arqueados.
 	g.add_child(_lock(mat, [
-		_on_skull(0.0, 0.088, 0.004),               # nacimiento en la frente (más bajo)
-		_on_skull(0.005, 0.150, 0.008),             # cresta del barrido
-		_on_skull(-0.004, 0.140, 0.007, true),      # lomo de coronilla
-		_on_skull(0.0, 0.124, 0.004, true),         # corte trasero (nuca corta)
+		_on_skull(0.0, 0.082, 0.005),               # nacimiento en la frente
+		_on_skull(0.005, 0.150, 0.010),             # cresta del barrido
+		_on_skull(-0.004, 0.140, 0.009, true),      # lomo de coronilla
+		_on_skull(0.0, 0.124, 0.005, true),         # corte trasero (nuca corta)
 	# Ronda 10: sides 8→14 — el QA leyó "placas/tejas/armadura"; a 8 lados
 	# con este radio cada faceta mide ~2.5cm y el cel-step la marca como
 	# panel. Más lados = quiebres más chicos que la banda del toon.
@@ -679,7 +683,40 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# cráneo — un blob, no un peinado barrido. A 0.50 protruye ~4cm y la
 	# masa se convierte en un casquete tendido que sigue la curva del
 	# cráneo (el ancho lateral, que es el que da cobertura, no se toca).
-	], PackedFloat32Array([0.062, 0.082, 0.072, 0.020]), 14, 0.50, skull_c))
+	], PackedFloat32Array([0.066, 0.086, 0.076, 0.020]), 14, 0.56, skull_c))
+
+	# CAPA DE COBERTURA DE CORONILLA (ronda 28) — bandas horizontales que
+	# HUGEAN el cráneo (lift bajo, flatten 0.16, como el fade de nuca) por
+	# DEBAJO de la masa y las tiras. Su único trabajo es que no se vea
+	# cuero cabelludo en las ventanas entre mechones arqueados (hueco de
+	# coronilla del QA de zonas). No suman bulto: son cintas de ~3mm
+	# pegadas a la superficie, del mismo castaño. Cubren de la línea del
+	# pelo (frente) al lomo (coronilla), que es donde estaban las ventanas.
+	# Ronda 28b: 3→4 bandas y lift subido (0.006→0.009) para alcanzar la
+	# ventana bajo el mechón arqueado que dejaba un punto de piel a zoom.
+	var crown_cover: Array = [
+		[0.100, 0.009],   # frente-alto
+		[0.120, 0.010],   # media-baja coronilla (donde quedaba el punto)
+		[0.134, 0.009],   # media coronilla
+		[0.150, 0.008],   # cresta
+	]
+	# (Diagnóstico de color 2026-07-20: con las bandas en `darker` el
+	# punto de piel de la coronilla-frontal SEGUÍA tan → es piel real, no
+	# un brillo de banda. Es un pinhole que un mechón arqueado abre justo
+	# ahí; las bandas de cobertura cierran el 95% del hueco. Residual
+	# invisible a escala de visualización, solo se ve a 3× de zoom.
+	# Lección: PARAR tras 3 intentos razonados — ver [[Lecciones]].)
+	for cc in crown_cover:
+		var cy2: float = cc[0]
+		var clf: float = cc[1]
+		var cback: bool = cy2 >= 0.145
+		g.add_child(_lock(mat, [
+			_on_skull(-0.086, cy2, clf, cback),
+			_on_skull(-0.044, cy2 + 0.004, clf, cback),
+			_on_skull(0.0, cy2 + 0.006, clf, cback),
+			_on_skull(0.044, cy2 + 0.004, clf, cback),
+			_on_skull(0.086, cy2, clf, cback),
+		], PackedFloat32Array([0.030, 0.040, 0.044, 0.040, 0.030]), 10, 0.16, skull_c))
 
 	# --- PASADA 2: el clump se parte en TIRAS drapeadas SOBRE el cráneo
 	# (raíces en la línea del pelo real, calculadas con `_on_skull`),
@@ -742,11 +779,16 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# leían "flequillo despeinado juvenil" (QA HIGH) y no existen en
 		# el canon. Ahora el primer punto queda EN la línea del pelo, con
 		# un mínimo voladizo irregular (2-5mm) que solo ablanda el borde.
+		# Ronda 28: lift de cresta/lomo BAJADO (0.010+lift → 0.005+lift*0.6;
+		# 0.008 → 0.005) para que las tiras NO se arqueen sobre la masa
+		# base — el arco dejaba ventanas de cuero cabelludo entre tira y
+		# masa (hueco de coronilla del QA de zonas). Ahora se tienden sobre
+		# la masa engrosada, sin puente.
 		var pts: Array = [
 			_on_skull(dx * 1.03, root_y - hl_drop[si2], 0.003),  # borde del nacimiento
-			_on_skull(dx, root_y + 0.014, 0.005 + lift * 0.4),
-			_on_skull(dx * 0.82, 0.149, 0.010 + lift),          # monta la cresta
-			_on_skull(dx * 0.74, 0.132, 0.008 + lift * 0.7, true),
+			_on_skull(dx, root_y + 0.014, 0.004 + lift * 0.3),
+			_on_skull(dx * 0.82, 0.149, 0.005 + lift * 0.6),    # monta la cresta
+			_on_skull(dx * 0.74, 0.132, 0.005 + lift * 0.5, true),
 		]
 		# Ronda 25 (QA CRITICAL: "la nuca es una cúpula lisa sin ninguna
 		# subdivisión — ~80% del área visible sin quiebres"): las tiras
@@ -758,10 +800,10 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# cráneo, así que una tira con lift chico quedaría DENTRO de él
 		# (invisible) — hay que apoyarse sobre el casquete, no sobre el
 		# cráneo.
-		pts.append(_on_skull(dx * (0.62 + fn * 0.30), 0.104, 0.016, true))
-		pts.append(_on_skull(dx * (0.54 + fn * 0.40), 0.058 + ey * 0.6, 0.015, true))
+		pts.append(_on_skull(dx * (0.62 + fn * 0.30), 0.104, 0.011, true))
+		pts.append(_on_skull(dx * (0.54 + fn * 0.40), 0.058 + ey * 0.6, 0.011, true))
 		if reach >= 0.9:
-			pts.append(_on_skull(dx * (0.44 + fn * 0.46), ey, 0.012, true))  # nuca
+			pts.append(_on_skull(dx * (0.44 + fn * 0.46), ey, 0.010, true))  # nuca
 		var radii := PackedFloat32Array([w * hl_tip[si2], w * 0.72, w, w * 0.85,
 			w * 0.80, w * 0.62, 0.004])
 		if reach < 0.9:
