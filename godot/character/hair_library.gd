@@ -589,8 +589,16 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# tilt = borde delantero más bajo. Y se ANGOSTA en X (0.126→0.121)
 	# para que la oreja (que llega a x≈0.136) sobresalga del casquete y
 	# no quede "enmarcada por un agujero" (HIGH del QA).
-	var fade_shell = _sphere(fade_mat, 0.121, 0.0, 0.008, -0.018,
-		1.0, 1.190, 1.140, 0.28, 0.0, 0.0)
+	# Ronda 29 (pinhole de coronilla, enfoque de raíz): el casquete estaba
+	# más chico que el cráneo en Z (semi 0.138 vs 0.1425), corrido atrás
+	# (z-0.018) e inclinado atrás (0.28) → su superficie quedaba DETRÁS
+	# del cráneo en la coronilla-frontal y la piel asomaba. Se AGRANDA en
+	# Z (1.140→1.215 → semi 0.147 > cráneo) y se corre menos atrás
+	# (-0.018→-0.010): ahora emerge por encima del cráneo en toda la
+	# coronilla y tapa el hueco de raíz, sin tocar el borde delantero
+	# (que lo fija la inclinación) ni la oreja (X sin cambios).
+	var fade_shell = _sphere(fade_mat, 0.121, 0.0, 0.008, -0.010,
+		1.0, 1.190, 1.215, 0.28, 0.0, 0.0)
 	g.add_child(fade_shell)
 
 	# COSTADO DEL CRÁNEO — ronda 21 (Boris marcó en azul los huecos):
@@ -770,8 +778,12 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# EXTRA por delante del nacimiento, mucho más finas (w*0.55→w*0.22)
 		# y con la irregularidad amplificada — el corte pelo→piel deja de
 		# ser un contorno duro y parejo (leía "gorro/jockey") y se ahúsa.
+		# Ronda 29 (línea del nacimiento despareja vs referencia): la
+		# recesión de sienes bajó de 0.26 a 0.16 → el arco del nacimiento
+		# es más LLENO y parejo de sien a sien (la referencia tiene un
+		# arco redondeado, no un pico central con entradas).
 		var jitter: float = (0.9 if int(sd[4]) == 0 else 1.15)
-		var root_y: float = 0.092 - absf(dx) * 0.26 + lift * 0.9 * jitter
+		var root_y: float = 0.096 - absf(dx) * 0.16 + lift * 0.9 * jitter
 		# Ronda 23 — verificación en píxel de la lámina (zoom a la cabeza
 		# frontal y de perfil): el frontier crop NO tiene flequillo. El
 		# pelo NACE en la línea del nacimiento y sube barriendo hacia
@@ -784,11 +796,17 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# base — el arco dejaba ventanas de cuero cabelludo entre tira y
 		# masa (hueco de coronilla del QA de zonas). Ahora se tienden sobre
 		# la masa engrosada, sin puente.
+		# Ronda 29: cresta/lomo bajados otro escalón (0.005+lift*0.6 →
+		# 0.003+lift*0.3) para que la tira se TIENDA sobre el casquete
+		# agrandado en vez de puentear — el arco era lo que abría la
+		# ventana de piel en la coronilla. Con el casquete emergiendo
+		# ~12mm, una tira a lift ~8mm queda apoyada sobre él (cubierta),
+		# no flotando con hueco debajo.
 		var pts: Array = [
 			_on_skull(dx * 1.03, root_y - hl_drop[si2], 0.003),  # borde del nacimiento
-			_on_skull(dx, root_y + 0.014, 0.004 + lift * 0.3),
-			_on_skull(dx * 0.82, 0.149, 0.005 + lift * 0.6),    # monta la cresta
-			_on_skull(dx * 0.74, 0.132, 0.005 + lift * 0.5, true),
+			_on_skull(dx, root_y + 0.014, 0.004 + lift * 0.2),
+			_on_skull(dx * 0.82, 0.149, 0.003 + lift * 0.3),    # monta la cresta
+			_on_skull(dx * 0.74, 0.132, 0.003 + lift * 0.3, true),
 		]
 		# Ronda 25 (QA CRITICAL: "la nuca es una cúpula lisa sin ninguna
 		# subdivisión — ~80% del área visible sin quiebres"): las tiras

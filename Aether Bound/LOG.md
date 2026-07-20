@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] decision+fix | Boris RATIFICA VoBo de mandíbula (permanente) + línea del nacimiento más llena; pinhole de coronilla = stop documentado
+Boris ratifica el VoBo de la mandíbula: la mini-ronda de quiebres queda
+PERMANENTE (deja de ser temporal). Ese frente cierra. Sobre el pelo,
+dos ataques a los pendientes: **(1) línea del nacimiento** — la
+recesión de sienes bajó de 0.26 a 0.16 → arco lleno y parejo de sien a
+sien (la referencia de cráneo tiene arco redondeado, no pico central
+con entradas); mejora clara en frente y 3/4. **(2) pinhole de
+coronilla** — se probó agrandar el casquete en Z (semi 0.138→0.147, que
+ahora supera al cráneo) + correrlo menos atrás, y bajar el arco de los
+mechones para que se tiendan en vez de puentear. El pinhole NO cerró:
+es un bolsillo cóncavo que la cámara de perfil mira de canto en ese
+ángulo puntual — lectura de silueta, no cobertura simple (lección del
+Vault confirmada por 3ª vez). A escala de visualización las 4 vistas
+leen totalmente cubiertas; el punto solo aparece a 3× zoom. STOP
+documentado. Gates ALL_PASS.
+
 ## [2026-07-20] qa+fix | QA de ZONAS de pelo vs referencia de cráneo (pedido de Boris): hueco de coronilla + pendientes previos
 Boris pasó una referencia de cráneo rapado en 4 ángulos y pidió comparar
 las ZONAS donde vive el pelo (no el peinado ni la barba). La referencia

@@ -11,12 +11,12 @@ updated: 2026-07-19
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-19 ejecutó: mini-
   ronda de quiebres de mandíbula ✅, GRUPO C ✅, piloto de loft (FASE 3
   pelo) ✅-detenido-en-regla. Queda del día:**
-  1. **VoBo de Boris pendiente sobre el FULL REWORK del cabello**
-     (frontier crop reconstruido con la jerarquía de 3 pasadas del
-     libro; QA imparcial **52%**, subió de 38% del piloto — defecto de
-     "dientes" ELIMINADO, sin cuenco trasero, nuca corta con piel,
-     color castaño correcto). Es el checkpoint de "cabello decente" que
-     Boris pidió ANTES de la última ronda de cara. Set fresco en
+  0. **✅ MANDÍBULA: VoBo RATIFICADO por Boris (2026-07-20)** — la mini-
+     ronda de quiebres queda PERMANENTE (ya no es temporal). Cierra ese
+     frente; la cara vuelve solo en la ronda de ajustes finales.
+  1. **PELO: frontier crop reconstruido** (jerarquía de 3 pasadas del
+     libro; defecto de "dientes" ELIMINADO, sin cuenco trasero, nuca
+     corta con piel, color castaño correcto). Set fresco en
      `godot/test_out/` (anatomy_face*.png). **PELO REFINADO en MÚLTIPLES
      rondas (07-19/20):** quiebres suavizados, taper, fade completo
      (temporales/patillas/nuca/costado como BANDAS continuas + casquete
