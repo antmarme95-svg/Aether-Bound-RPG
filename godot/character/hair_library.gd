@@ -528,27 +528,37 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# TEMPORAL — ronda 15: banda de una pieza que baja de la línea del
 		# pelo a la sien (antes 1 tira suelta = otro diente en la silueta).
 		g.add_child(_lock(fade_mat, [
-			_on_skull(sf * 0.100, 0.100, 0.002),
-			_on_skull(sf * 0.110, 0.074, 0.002),
-			_on_skull(sf * 0.117, 0.048, 0.001),
+			_on_skull(sf * 0.100, 0.100, 0.005),
+			_on_skull(sf * 0.110, 0.074, 0.005),
+			_on_skull(sf * 0.117, 0.048, 0.004),
 		], PackedFloat32Array([0.022, 0.026, 0.016]), 10, 0.14, skull_c))
 		# temporal bajo → PATILLA (baja por delante de la oreja; la punta
 		# SÍ se afila — una patilla termina en punta, a diferencia del
 		# fade de nuca que es un borde romo).
+		# Ronda 18 (Boris: "las patillas deben pasar lo más pegado a las
+		# orejas para conectar con la parte de atrás"): la patilla se
+		# corre al ANCHO MÁXIMO del cráneo (x≈0.122; ahí la superficie
+		# cae en z≈0, es decir justo por delante de la oreja, que vive en
+		# z -0.057..-0.012) y baja hasta y=-0.038, por debajo del lóbulo.
+		# Antes iba a x 0.119/y -0.012 → z≈+0.034, o sea 4,6cm ADELANTE
+		# de la oreja y terminando a media oreja: ni pegada ni conectada.
 		g.add_child(_lock(fade_mat, [
-			_on_skull(sf * 0.116, 0.062, 0.002),
-			_on_skull(sf * 0.119, 0.022, 0.002),
-			_on_skull(sf * 0.119, -0.012, 0.001),    # punta de patilla
-		], PackedFloat32Array([0.017, 0.013, 0.004]), 10, 0.15, skull_c))
+			_on_skull(sf * 0.114, 0.066, 0.004),
+			_on_skull(sf * 0.122, 0.020, 0.004),
+			_on_skull(sf * 0.122, -0.038, 0.003),    # punta bajo el lóbulo
+		], PackedFloat32Array([0.018, 0.016, 0.006]), 10, 0.15, skull_c))
 		# detrás de la oreja (cierra el fade lateral con la nuca)
 		# Detrás de la oreja — ronda 15: también BANDA de una pieza (misma
 		# razón que la nuca). Espina vertical → el radio se proyecta en Z
 		# (adelante-atrás), cubriendo el parche entre la oreja y la nuca.
+		# Ronda 18: baja hasta y=-0.020 (bajo el lóbulo) y se ensancha —
+		# es la pieza que CIERRA el circuito patilla→oreja→nuca; antes
+		# terminaba en y 0.030, dejando el hueco que rompía la conexión.
 		g.add_child(_lock(fade_mat, [
-			_on_skull(sf * 0.104, 0.100, 0.002, true),
-			_on_skull(sf * 0.110, 0.062, 0.002, true),
-			_on_skull(sf * 0.106, 0.030, 0.001, true),
-		], PackedFloat32Array([0.024, 0.030, 0.020]), 10, 0.14, skull_c))
+			_on_skull(sf * 0.104, 0.100, 0.006, true),
+			_on_skull(sf * 0.113, 0.052, 0.006, true),
+			_on_skull(sf * 0.110, -0.020, 0.005, true),
+		], PackedFloat32Array([0.026, 0.034, 0.026]), 10, 0.14, skull_c))
 
 	# NUCA: 4 tiras que bajan desde el corte del pelo largo hasta la nuca
 	# baja, afilando (el fade se desvanece hacia el cuello, sin borde duro).
@@ -571,14 +581,46 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# ablandar el filo: leyeron colmillos triangulares — la misma clase de
 	# defecto que las tiras verticales. Conclusión asentada: en la zona de
 	# fade, CUALQUIER pieza suelta con punta lee diente; el fade solo
-	# funciona como superficie continua. El borde algo recto se acepta.
-	g.add_child(_lock(fade_mat, [
-		_on_skull(-0.098, 0.088, 0.002, true),
-		_on_skull(-0.052, 0.087, 0.002, true),
-		_on_skull(0.0, 0.086, 0.002, true),
-		_on_skull(0.052, 0.087, 0.002, true),
-		_on_skull(0.098, 0.088, 0.002, true),
-	], PackedFloat32Array([0.028, 0.042, 0.046, 0.042, 0.028]), 10, 0.13, skull_c))
+	# funciona como superficie continua.
+	# Ronda 18 (Boris: "la parte de abajo debería llegar cercana al
+	# cuello"): la nuca baja hasta y≈-0.048 (antes cortaba en 0.040 y
+	# dejaba media nuca en piel). NO se hace con una banda única alta: el
+	# anillo del loft es una elipse PLANA, así que una banda de más de
+	# ~6cm de alto deja de abrazar el cráneo curvo y flota en sus bordes
+	# (calculado: a ±0.058 del eje, el cráneo se adelanta ~1.4cm). Se
+	# resuelve APILANDO 3 bandas de media altura ≤0.036 con solape — las
+	# costuras horizontales no dentan (los dientes venían de costuras
+	# VERTICALES entre tiras).
+	# Ronda 20: solape mayor entre bandas y LIFT ESCALONADO (más afuera
+	# arriba) — así el borde inferior de cada banda monta SOBRE la de
+	# abajo, como capas de pelo, y el escalón de la costura mira hacia
+	# abajo (invisible desde la cámara de arriba-atrás). Con lift igual,
+	# las tres costuras se leían como caparazón segmentado.
+	#          spine_y  r_side  r_mid   lift
+	var nape_bands: Array = [
+		[0.100, 0.026, 0.034, 0.009],
+		[0.052, 0.028, 0.036, 0.0075],
+		[-0.004, 0.028, 0.038, 0.006],
+	]
+	for nb in nape_bands:
+		var by2: float = nb[0]
+		var r_side: float = nb[1]
+		var r_mid: float = nb[2]
+		var lf: float = nb[3]
+		# Ronda 19 — HUECOS DE PIEL entre bandas, causa calculada: el
+		# anillo del loft es una CUERDA recta, no un arco; sobre el
+		# cráneo (R≈0.14) una banda de media altura h se hunde
+		# h²/(2R) en sus bordes (h=0.032 → 3.7mm). Con lift 2mm el
+		# borde quedaba 1.7mm DENTRO y el cráneo asomaba. El lift debe
+		# superar esa sagita: 0.002→0.007.
+		g.add_child(_lock(fade_mat, [
+			_on_skull(-0.104, by2 + 0.004, lf, true),
+			_on_skull(-0.056, by2 + 0.001, lf, true),
+			_on_skull(0.0, by2, lf, true),
+			_on_skull(0.056, by2 + 0.001, lf, true),
+			_on_skull(0.104, by2 + 0.004, lf, true),
+		], PackedFloat32Array([r_side, r_mid * 0.94, r_mid, r_mid * 0.94, r_side]),
+			10, 0.13, skull_c))
 
 	# --- PASADA 1: clump principal (oscuro) — lomo direccional frente→
 	# nuca sobre el cráneo REAL, con la cresta despegada ~2cm al frente y

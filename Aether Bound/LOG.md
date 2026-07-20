@@ -1,5 +1,30 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] fix | Fade completado: nuca hasta el cuello + patillas pegadas a la oreja (circuito cerrado) — lección de la SAGITA
+Boris sobre capturas: "la parte de abajo debería llegar cercana al
+cuello, las patillas deben pasar lo más pegado a las orejas para
+conectar con la parte de atrás". **Nuca:** baja de y 0.040 a y≈-0.048.
+NO se hizo con una banda alta única — el anillo del loft es una elipse
+PLANA, así que una banda de más de ~6cm de alto deja de abrazar el
+cráneo y flota en los bordes (calculado: a ±0.058 del eje el cráneo se
+adelanta ~1.4cm). Se APILARON 3 bandas de media altura ≤0.038 con
+solape; las costuras horizontales no dentan (los dientes venían de
+costuras VERTICALES). **Patillas:** movidas al ANCHO MÁXIMO del cráneo
+(x≈0.122, donde la superficie cae en z≈0 = justo delante de la oreja,
+que vive en z -0.057..-0.012) y bajadas a y=-0.038; antes iban a
+x 0.119/y -0.012 → z≈+0.034, o sea 4,6cm ADELANTE de la oreja y
+cortando a media oreja: ni pegadas ni conectadas. La banda de detrás de
+la oreja se extendió a y=-0.020 para cerrar el circuito patilla→oreja→
+nuca. **LECCIÓN NUEVA (2 rondas perdidas):** al apoyar una banda de
+loft sobre una superficie curva, el anillo es una CUERDA, no un arco:
+sus bordes se hunden h²/(2R) (h=media altura, R=radio del cráneo). Si
+el `lift` no supera esa sagita, el cráneo asoma por los bordes y
+aparecen HUECOS DE PIEL entre bandas (fue exactamente el defecto: lift
+2mm contra sagita 3.7mm). Fix: lift 0.007 en las bandas de nuca,
+escalonado (más afuera arriba) para que cada banda monte sobre la de
+abajo como capas. Gates core+combat+springboard ALL_PASS. Residual
+menor: las costuras entre bandas apiladas todavía se insinúan.
+
 ## [2026-07-19] fix | Refinamiento de pelo pedido por Boris: quiebres suaves + taper + FADE de temporales/patillas/nuca
 Tres pedidos del director sobre el rework: (a) suavizar quiebres, (b)
 taper, (c) "no tiene nada de cabello en los temporales y patillas, ni

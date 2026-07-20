@@ -226,6 +226,19 @@ así el radio del loft se proyecta en vertical y define el alto del
 rapado sin generar costuras verticales) y `flatten` bajo (~0.15) para
 que la cinta sea de ~3 mm y se lea "al ras" y no melena corta.
 
+**Sagita: el número que decide el `lift` de una banda sobre superficie
+curva.** El anillo del loft es una elipse PLANA (una cuerda), no un
+arco: apoyado sobre el cráneo (R≈0.14), los bordes de una banda de
+media altura `h` quedan `h²/(2R)` por DENTRO de la superficie. Si el
+`lift` no supera esa sagita, el cráneo asoma y aparecen huecos de piel
+(caso real: h=0.032 → sagita 3.7 mm contra lift 2 mm). Corolarios:
+(1) `lift > h²/(2R)`, con margen; (2) una banda no puede ser muy alta
+— pasados ~6 cm la sagita obliga a un lift que ya despega la pieza del
+cráneo: para cubrir más área, APILAR bandas de media altura chica con
+solape, nunca agrandar una; (3) escalonar el lift (más afuera arriba)
+para que cada banda monte sobre la de abajo como capas de pelo, con el
+escalón de la costura mirando hacia abajo.
+
 ## Cabeza, cuello y cara (minado 2026-07-16, segunda pasada — insumo directo para la Fase 5 propuesta)
 
 A diferencia de torso/manos/pelo, este bloque sale de dos capítulos
