@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] qa+fix | QA final del pelo (libro 35% / lámina 35%): patilla eliminada por decisión de Boris y "roseta" de nuca rota
+Tercer QA doble sobre el estado final, con la observación de Boris
+pasada como contexto ya resuelto (el mechón de patilla sobra; el
+casquete debe parar por delante de la oreja a la altura donde ese
+mechón terminaba). Veredicto: lámina 35%, método 35%. **CRITICAL 1:**
+en la vista de espalda las tiras leían una ROSETA/molinete — 5-6
+lóbulos-gota de igual tamaño y ángulo convergiendo a un punto de la
+coronilla; anti-paralelismo violado de la forma más visible. Fix:
+factores `fan` y `endy` por tira — unas convergen, otras siguen rectas
+y otras ABREN hacia afuera, con alturas de muerte dispersas.
+**CRITICAL 2:** el tercio inferior de la nuca seguía liso sin
+subdivisión (pendiente). **HIGH:** el casquete abombaba sobre la oreja
+y la dejaba "enmarcada por un agujero" — el propio QA avisó que quitar
+solo la patilla no bastaría porque el bulto viene también de arriba y
+atrás; fix: casquete angostado en X (0.126→0.121) para que la oreja
+(x≈0.136) sobresalga, menos inclinación (0.36→0.28) y centro más bajo
+para que su borde delantero baje a y≈-0.035 y dibuje la patilla, como
+pidió Boris. **Decisión de Boris ejecutada:** el mechón de patilla
+suelto se ELIMINÓ (era una segunda pieza en una zona que el casquete
+ya rodeaba). Gates ALL_PASS. Pendientes del QA: subdivisión del tercio
+inferior de la nuca y picos del nacimiento aún parejos.
+
 ## [2026-07-19] feature+qa | QA doble (libro + lámina) y REESTRUCTURA del pelo: casquete elipsoide continuo, sin flequillo, volumen aplanado
 Boris: "ya cumple preliminarmente, falta quitar eso abultado para que
 se vea más fluido; corre un QA que compare vs el libro y vs RAW".

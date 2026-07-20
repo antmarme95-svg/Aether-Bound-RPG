@@ -540,11 +540,12 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# z -0.057..-0.012) y baja hasta y=-0.038, por debajo del lóbulo.
 		# Antes iba a x 0.119/y -0.012 → z≈+0.034, o sea 4,6cm ADELANTE
 		# de la oreja y terminando a media oreja: ni pegada ni conectada.
-		g.add_child(_lock(fade_mat, [
-			_on_skull(sf * 0.114, 0.066, 0.004),
-			_on_skull(sf * 0.122, 0.020, 0.004),
-			_on_skull(sf * 0.122, -0.038, 0.003),    # punta bajo el lóbulo
-		], PackedFloat32Array([0.018, 0.016, 0.006]), 10, 0.15, skull_c))
+		# Ronda 26 (decisión de Boris): el MECHÓN DE PATILLA suelto se
+		# ELIMINA — sobraba, y el casquete lo rodeaba por completo
+		# (doble pieza en la misma zona). La patilla ahora la forma el
+		# BORDE del casquete, que por delante de la oreja termina a la
+		# altura donde llegaba este mechón (y≈-0.035), sin envolverla.
+		pass
 		# detrás de la oreja (cierra el fade lateral con la nuca)
 		# Detrás de la oreja — ronda 15: también BANDA de una pieza (misma
 		# razón que la nuca). Espina vertical → el radio se proyecta en Z
@@ -581,8 +582,15 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# su borde inferior-frontal montaba sobre la oreja en perfil (QA
 	# CRITICAL; el canon la quiere completamente visible con la patilla
 	# corta por delante).
-	var fade_shell = _sphere(fade_mat, 0.126, 0.0, 0.016, -0.016,
-		1.0, 1.135, 1.080, 0.36, 0.0, 0.0)
+	# Ronda 26 (decisión de Boris + aviso del QA): el borde del casquete
+	# por delante de la oreja BAJA hasta y≈-0.035 (donde moría el mechón
+	# de patilla retirado) — la patilla la dibuja ahora ese borde. Para
+	# eso se reduce la inclinación (0.36→0.28) y baja el centro: menos
+	# tilt = borde delantero más bajo. Y se ANGOSTA en X (0.126→0.121)
+	# para que la oreja (que llega a x≈0.136) sobresalga del casquete y
+	# no quede "enmarcada por un agujero" (HIGH del QA).
+	var fade_shell = _sphere(fade_mat, 0.121, 0.0, 0.008, -0.018,
+		1.0, 1.190, 1.140, 0.28, 0.0, 0.0)
 	g.add_child(fade_shell)
 
 	# COSTADO DEL CRÁNEO — ronda 21 (Boris marcó en azul los huecos):
@@ -689,11 +697,23 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		[ 0.064,  0.012,  0.028,  1.00,  0],
 		[ 0.093,  0.004,  0.023,  0.82,  1],
 	]
-	for sd in sdefs:
+	# Ronda 26 — CRITICAL del QA: en la vista de espalda las tiras leían
+	# una ROSETA/molinete (5-6 lóbulos-gota iguales convergiendo a un
+	# punto de la coronilla) porque TODAS cerraban hacia el centro con el
+	# mismo factor y terminaban a la misma altura: anti-paralelismo
+	# violado de la forma más visible. `fan` rompe eso — unas convergen,
+	# otras siguen rectas y otras ABREN hacia afuera — y `endy` dispersa
+	# dónde muere cada una.
+	var fan: Array = [0.55, 1.02, 0.72, 1.18, 0.62, 1.10, 0.80]
+	var endy: Array = [0.030, -0.004, 0.052, 0.014, 0.040, -0.010, 0.024]
+	for si2 in range(sdefs.size()):
+		var sd: Array = sdefs[si2]
 		var dx: float = sd[0]
 		var lift: float = sd[1]
 		var w: float = sd[2]
 		var reach: float = sd[3]
+		var fn: float = fan[si2]
+		var ey: float = endy[si2]
 		var smat: Material = lighter if int(sd[4]) == 0 else mat
 		# Línea del pelo: más baja en las sienes, irregular entre vecinas.
 		# Ronda 10 (TAPER, hallazgo HIGH del QA): las raíces bajan un punto
@@ -725,10 +745,10 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# cráneo, así que una tira con lift chico quedaría DENTRO de él
 		# (invisible) — hay que apoyarse sobre el casquete, no sobre el
 		# cráneo.
-		pts.append(_on_skull(dx * 0.68, 0.104, 0.016, true))
-		pts.append(_on_skull(dx * 0.62, 0.060 + (1.0 - reach) * 0.06, 0.015, true))
+		pts.append(_on_skull(dx * (0.62 + fn * 0.30), 0.104, 0.016, true))
+		pts.append(_on_skull(dx * (0.54 + fn * 0.40), 0.058 + ey * 0.6, 0.015, true))
 		if reach >= 0.9:
-			pts.append(_on_skull(dx * 0.52, 0.016, 0.012, true))   # baja a la nuca
+			pts.append(_on_skull(dx * (0.44 + fn * 0.46), ey, 0.012, true))  # nuca
 		var radii := PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.85,
 			w * 0.80, w * 0.62, 0.004])
 		if reach < 0.9:
