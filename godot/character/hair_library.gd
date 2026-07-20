@@ -525,13 +525,11 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# rapado, y por eso leían lóbulos redondos. A flatten 0.15 la tira
 		# es una cinta plana de ~3 mm apoyada sobre el cráneo: capa
 		# continua de pelo al ras (buzzed), que es lo que pide el fade.
-		# TEMPORAL — ronda 15: banda de una pieza que baja de la línea del
-		# pelo a la sien (antes 1 tira suelta = otro diente en la silueta).
-		g.add_child(_lock(fade_mat, [
-			_on_skull(sf * 0.100, 0.100, 0.005),
-			_on_skull(sf * 0.110, 0.074, 0.005),
-			_on_skull(sf * 0.117, 0.048, 0.004),
-		], PackedFloat32Array([0.022, 0.026, 0.016]), 10, 0.14, skull_c))
+		# (Ronda 21: la banda TEMPORAL que vivía aquí se RETIRÓ — quedó
+		# redundante con las 3 bandas de costado nuevas, que cubren la
+		# misma zona con mejor solape. Superpuestas apilaban bordes y el
+		# lateral leía acolchado/mosaico: menos piezas = menos siluetas
+		# internas compitiendo.)
 		# temporal bajo → PATILLA (baja por delante de la oreja; la punta
 		# SÍ se afila — una patilla termina en punta, a diferencia del
 		# fade de nuca que es un borde romo).
@@ -562,6 +560,30 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 
 	# NUCA: 4 tiras que bajan desde el corte del pelo largo hasta la nuca
 	# baja, afilando (el fade se desvanece hacia el cuello, sin borde duro).
+	# COSTADO DEL CRÁNEO — ronda 21 (Boris marcó en azul los huecos):
+	# el parietal entero (entre la masa de arriba y la nuca/patilla)
+	# estaba en piel; las piezas previas solo cubrían una diagonal fina.
+	# 3 bandas por lado que ENVUELVEN el costado de frente a nuca a tres
+	# alturas, con solape vertical entre ellas. Las x están acotadas al
+	# semiancho REAL del cráneo a cada altura (a y=0.105 el cráneo mide
+	# 0.092 de semiancho, no 0.123: pedir x=0.11 ahí daba un punto fuera
+	# de la elipsoide y `_on_skull` lo clampeaba a un z falso).
+	# Lift escalonado (más afuera arriba) por la regla de la sagita.
+	#            x_frente x_lado  x_nuca  y_f    y_l    y_n    r_ext r_mid lift
+	var side_bands: Array = [
+		[0.070, 0.090, 0.078, 0.108, 0.100, 0.104, 0.026, 0.030, 0.0075],
+		[0.098, 0.114, 0.104, 0.066, 0.058, 0.062, 0.026, 0.030, 0.0068],
+		[0.104, 0.119, 0.108, 0.042, 0.034, 0.038, 0.018, 0.022, 0.006],
+	]
+	for side2 in [-1, 1]:
+		var s2f: float = float(side2)
+		for sb in side_bands:
+			g.add_child(_lock(fade_mat, [
+				_on_skull(s2f * sb[0], sb[3], sb[8]),
+				_on_skull(s2f * sb[1], sb[4], sb[8]),
+				_on_skull(s2f * sb[2], sb[5], sb[8], true),
+			], PackedFloat32Array([sb[6], sb[7], sb[6]]), 10, 0.14, skull_c))
+
 	# NUCA — ronda 15: UNA SOLA BANDA HORIZONTAL, no tiras verticales.
 	# Rondas 11-14 probaron 4→7 tiras verticales con anchos, solapes,
 	# puntas y largos distintos: SIEMPRE leían dientes/garras, porque cada

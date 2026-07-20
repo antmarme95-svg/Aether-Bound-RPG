@@ -1,5 +1,21 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] fix | Costado del cráneo cubierto (Boris marcó los huecos en azul) — 3 bandas envolventes por lado
+Boris marcó en azul sobre la captura de perfil los puntos sin pelo:
+todos caían en el PARIETAL, entre la masa de arriba y las piezas de
+nuca/patilla. Las piezas previas solo cubrían una diagonal fina, así
+que el costado quedaba al aire. Fix: 3 bandas por lado que ENVUELVEN el
+costado de frente a nuca a tres alturas (y≈0.104 / 0.062 / 0.038), con
+solape vertical entre ellas y lift escalonado (regla de la sagita).
+Detalle que importa para autorar más: las x hay que acotarlas al
+SEMIANCHO REAL del cráneo a cada altura (a y=0.105 el cráneo mide 0.092
+de semiancho, no 0.123) — pedir un x mayor da un punto fuera de la
+elipsoide y `_on_skull` lo clampea a un z falso. Se RETIRÓ la banda
+temporal vieja, redundante con las nuevas: superpuestas apilaban bordes
+y el lateral leía acolchado/mosaico (menos piezas = menos siluetas
+internas). Gates core+combat+springboard ALL_PASS. Residual: el costado
+todavía lee algo geométrico por el apilado de bandas.
+
 ## [2026-07-19] fix | Fade completado: nuca hasta el cuello + patillas pegadas a la oreja (circuito cerrado) — lección de la SAGITA
 Boris sobre capturas: "la parte de abajo debería llegar cercana al
 cuello, las patillas deben pasar lo más pegado a las orejas para
