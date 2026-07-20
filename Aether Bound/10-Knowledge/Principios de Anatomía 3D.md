@@ -239,6 +239,29 @@ solape, nunca agrandar una; (3) escalonar el lift (más afuera arriba)
 para que cada banda monte sobre la de abajo como capas de pelo, con el
 escalón de la costura mirando hacia abajo.
 
+**Pero apilar bandas tiene su propio techo: leen ANILLOS
+CONCÉNTRICOS.** (2026-07-19, QA CRITICAL contra la lámina.) Tres
+bandas de nuca + tres de costado cubrían bien y sin dientes, pero el
+conjunto se lee "capas de cebolla" envolviendo la esfera craneal —
+justo el defecto de casco que el rework buscaba matar, y encima
+contradice el anti-paralelismo (bandas casi paralelas entre sí). La
+solución para una masa de fade GRANDE y continua no es una banda ni
+varias: es un **ELIPSOIDE**, que abraza la esfera del cráneo por
+construcción (sin sagita, sin costuras) y se auto-recorta contra ella.
+La herramienta de control es la INCLINACIÓN: al rotarlo hacia atrás,
+el polo inferior se va a la nuca (pelo bajo por detrás) mientras el
+borde delantero sube por encima de la frente y de la oreja — que es
+exactamente la forma de un corte corto masculino. Regla práctica:
+bandas de loft para franjas angostas y dirigidas; elipsoide inclinado
+para la masa de fade que envuelve cráneo entero.
+
+**Verificar la lámina uno mismo antes de implementar el veredicto de
+un QA sobre FORMA.** El QA reportó "los picos frontales no existen en
+el canon"; al hacer zoom 6× a las tres cabezas de la lámina se
+confirmó (el frontier crop nace en una línea alta y barre arriba-atrás,
+sin flequillo colgando) — pero la confirmación es lo que autoriza el
+cambio, no el reporte. Mismo principio ya asentado para reviews.
+
 ## Cabeza, cuello y cara (minado 2026-07-16, segunda pasada — insumo directo para la Fase 5 propuesta)
 
 A diferencia de torso/manos/pelo, este bloque sale de dos capítulos

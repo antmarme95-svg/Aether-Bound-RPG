@@ -1,5 +1,29 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] feature+qa | QA doble (libro + lámina) y REESTRUCTURA del pelo: casquete elipsoide continuo, sin flequillo, volumen aplanado
+Boris: "ya cumple preliminarmente, falta quitar eso abultado para que
+se vea más fluido; corre un QA que compare vs el libro y vs RAW".
+**(1) Abultado:** el grosor RADIAL de una pieza de loft es
+radio×flatten — la masa de la coronilla iba a 0.92 y protruía ~7.5cm
+(un blob). Bajado a 0.50 (masa) y 0.38 (tiras): el ancho lateral, que
+da la cobertura, no se toca. **(2) QA doble** (juez único, dos ejes:
+página p.156 del libro + lámina): lámina 40%, método 35%, con dos
+hallazgos duros — CRITICAL "las bandas apiladas leen anillos
+concéntricos / capas de cebolla" y HIGH "los picos frontales no
+existen en la lámina". **(3) Verificación en píxel propia** (regla del
+Vault: ante un QA que describe forma, mirar la lámina uno mismo; zoom
+6× a las 3 cabezas del canon): CONFIRMADOS los dos. El frontier crop
+NO tiene flequillo — el pelo nace en una línea alta y barre arriba-
+atrás — y la nuca es UNA MASA CONTINUA hasta el cuello, no anillos.
+**(4) Reestructura:** las 3 bandas de nuca + 3 de costado por lado se
+RETIRARON y se reemplazaron por UN CASQUETE ELIPSOIDE inclinado. Un
+elipsoide abraza la esfera craneal por construcción (sin sagita, sin
+costuras, sin anillos) y se auto-recorta; la INCLINACIÓN (rot.x 0.36)
+es la clave: manda el polo inferior a la nuca (pelo bajo atrás) y sube
+el borde delantero por encima de la frente (línea del pelo alta) y por
+encima de la oreja (que el canon quiere despejada). Las puntas del
+flequillo se subieron a la línea del nacimiento. Gates ALL_PASS.
+
 ## [2026-07-19] fix | Costado del cráneo cubierto (Boris marcó los huecos en azul) — 3 bandas envolventes por lado
 Boris marcó en azul sobre la captura de perfil los puntos sin pelo:
 todos caían en el PARIETAL, entre la masa de arriba y las piezas de

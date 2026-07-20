@@ -560,6 +560,31 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 
 	# NUCA: 4 tiras que bajan desde el corte del pelo largo hasta la nuca
 	# baja, afilando (el fade se desvanece hacia el cuello, sin borde duro).
+	# ===== CASQUETE DEL FADE — ronda 23 =====
+	# Verificación en píxel de la lámina (zoom a las 3 cabezas): la nuca
+	# y los laterales del canon son UNA MASA CONTINUA que baja hasta
+	# justo encima del cuello, NO una pila de bandas. Las bandas apiladas
+	# (rondas 18-21) cubrían bien pero leían "anillos concéntricos /
+	# capas de cebolla" (QA CRITICAL). Un ELIPSOIDE abraza la esfera
+	# craneal por construcción — sin sagita, sin costuras, sin anillos —
+	# y se auto-recorta: emerge donde es mayor que el cráneo y desaparece
+	# donde es menor. El truco para que cubra nuca+laterales pero NO la
+	# frente es INCLINARLO hacia atrás: el polo inferior se va a la nuca
+	# (pelo bajo atrás) y el borde delantero sube por encima de la frente
+	# (línea del pelo alta, como la lámina).
+	# Ronda 24: más INCLINACIÓN (0.26→0.36) y algo menos de eje Y. Al
+	# inclinar más, el borde inferior baja aún más en la nuca pero SUBE
+	# en los laterales — que es justo lo que hacía falta: el casquete
+	# montaba sobre la oreja (x±0.124, y -0.048..0.028) y el canon la
+	# quiere despejada con el pelo pasando por detrás.
+	# Ronda 25: casquete un pelo más angosto en X (1.0→0.975 del radio) —
+	# su borde inferior-frontal montaba sobre la oreja en perfil (QA
+	# CRITICAL; el canon la quiere completamente visible con la patilla
+	# corta por delante).
+	var fade_shell = _sphere(fade_mat, 0.126, 0.0, 0.016, -0.016,
+		1.0, 1.135, 1.080, 0.36, 0.0, 0.0)
+	g.add_child(fade_shell)
+
 	# COSTADO DEL CRÁNEO — ronda 21 (Boris marcó en azul los huecos):
 	# el parietal entero (entre la masa de arriba y la nuca/patilla)
 	# estaba en piel; las piezas previas solo cubrían una diagonal fina.
@@ -569,20 +594,9 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# 0.092 de semiancho, no 0.123: pedir x=0.11 ahí daba un punto fuera
 	# de la elipsoide y `_on_skull` lo clampeaba a un z falso).
 	# Lift escalonado (más afuera arriba) por la regla de la sagita.
-	#            x_frente x_lado  x_nuca  y_f    y_l    y_n    r_ext r_mid lift
-	var side_bands: Array = [
-		[0.070, 0.090, 0.078, 0.108, 0.100, 0.104, 0.026, 0.030, 0.0075],
-		[0.098, 0.114, 0.104, 0.066, 0.058, 0.062, 0.026, 0.030, 0.0068],
-		[0.104, 0.119, 0.108, 0.042, 0.034, 0.038, 0.018, 0.022, 0.006],
-	]
-	for side2 in [-1, 1]:
-		var s2f: float = float(side2)
-		for sb in side_bands:
-			g.add_child(_lock(fade_mat, [
-				_on_skull(s2f * sb[0], sb[3], sb[8]),
-				_on_skull(s2f * sb[1], sb[4], sb[8]),
-				_on_skull(s2f * sb[2], sb[5], sb[8], true),
-			], PackedFloat32Array([sb[6], sb[7], sb[6]]), 10, 0.14, skull_c))
+	# (Ronda 23: las 3 bandas de costado por lado se RETIRARON — el
+	# casquete elipsoide cubre esa zona de una pieza. Apiladas leían
+	# anillos concéntricos, defecto CRITICAL del QA contra la lámina.)
 
 	# NUCA — ronda 15: UNA SOLA BANDA HORIZONTAL, no tiras verticales.
 	# Rondas 11-14 probaron 4→7 tiras verticales con anchos, solapes,
@@ -618,31 +632,10 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# abajo, como capas de pelo, y el escalón de la costura mira hacia
 	# abajo (invisible desde la cámara de arriba-atrás). Con lift igual,
 	# las tres costuras se leían como caparazón segmentado.
-	#          spine_y  r_side  r_mid   lift
-	var nape_bands: Array = [
-		[0.100, 0.026, 0.034, 0.009],
-		[0.052, 0.028, 0.036, 0.0075],
-		[-0.004, 0.028, 0.038, 0.006],
-	]
-	for nb in nape_bands:
-		var by2: float = nb[0]
-		var r_side: float = nb[1]
-		var r_mid: float = nb[2]
-		var lf: float = nb[3]
-		# Ronda 19 — HUECOS DE PIEL entre bandas, causa calculada: el
-		# anillo del loft es una CUERDA recta, no un arco; sobre el
-		# cráneo (R≈0.14) una banda de media altura h se hunde
-		# h²/(2R) en sus bordes (h=0.032 → 3.7mm). Con lift 2mm el
-		# borde quedaba 1.7mm DENTRO y el cráneo asomaba. El lift debe
-		# superar esa sagita: 0.002→0.007.
-		g.add_child(_lock(fade_mat, [
-			_on_skull(-0.104, by2 + 0.004, lf, true),
-			_on_skull(-0.056, by2 + 0.001, lf, true),
-			_on_skull(0.0, by2, lf, true),
-			_on_skull(0.056, by2 + 0.001, lf, true),
-			_on_skull(0.104, by2 + 0.004, lf, true),
-		], PackedFloat32Array([r_side, r_mid * 0.94, r_mid, r_mid * 0.94, r_side]),
-			10, 0.13, skull_c))
+	# (Ronda 23: las 3 bandas apiladas de NUCA se RETIRARON por el mismo
+	# motivo — el casquete las reemplaza con una sola superficie. Las
+	# lecciones que dejaron siguen vigentes y documentadas arriba: la
+	# sagita del lift, y que las tiras verticales sueltas siempre dentan.)
 
 	# --- PASADA 1: clump principal (oscuro) — lomo direccional frente→
 	# nuca sobre el cráneo REAL, con la cresta despegada ~2cm al frente y
@@ -672,7 +665,13 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# Ronda 10: sides 8→14 — el QA leyó "placas/tejas/armadura"; a 8 lados
 	# con este radio cada faceta mide ~2.5cm y el cel-step la marca como
 	# panel. Más lados = quiebres más chicos que la banda del toon.
-	], PackedFloat32Array([0.062, 0.082, 0.072, 0.020]), 14, 0.92, skull_c))
+	# Ronda 22 (Boris: "quitar eso abultado para que se vea más fluido"):
+	# `flatten` 0.92→0.50. El grosor RADIAL de la masa es radio×flatten,
+	# así que a 0.92 con radio 0.082 protruía ~7.5cm de pelo sobre el
+	# cráneo — un blob, no un peinado barrido. A 0.50 protruye ~4cm y la
+	# masa se convierte en un casquete tendido que sigue la curva del
+	# cráneo (el ancho lateral, que es el que da cobertura, no se toca).
+	], PackedFloat32Array([0.062, 0.082, 0.072, 0.020]), 14, 0.50, skull_c))
 
 	# --- PASADA 2: el clump se parte en TIRAS drapeadas SOBRE el cráneo
 	# (raíces en la línea del pelo real, calculadas con `_on_skull`),
@@ -703,19 +702,44 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# ser un contorno duro y parejo (leía "gorro/jockey") y se ahúsa.
 		var jitter: float = (0.9 if int(sd[4]) == 0 else 1.15)
 		var root_y: float = 0.092 - absf(dx) * 0.26 + lift * 0.9 * jitter
+		# Ronda 23 — verificación en píxel de la lámina (zoom a la cabeza
+		# frontal y de perfil): el frontier crop NO tiene flequillo. El
+		# pelo NACE en la línea del nacimiento y sube barriendo hacia
+		# atrás. Las puntas que colgaban 14mm por DEBAJO de esa línea
+		# leían "flequillo despeinado juvenil" (QA HIGH) y no existen en
+		# el canon. Ahora el primer punto queda EN la línea del pelo, con
+		# un mínimo voladizo irregular (2-5mm) que solo ablanda el borde.
 		var pts: Array = [
-			_on_skull(dx * 1.03, root_y - 0.014 * jitter, 0.002),  # punta ahusada
-			_on_skull(dx, root_y + 0.012, 0.005 + lift * 0.4),
+			_on_skull(dx * 1.03, root_y - 0.004 * jitter, 0.003),  # borde del nacimiento
+			_on_skull(dx, root_y + 0.014, 0.005 + lift * 0.4),
 			_on_skull(dx * 0.82, 0.149, 0.010 + lift),          # monta la cresta
 			_on_skull(dx * 0.74, 0.132, 0.008 + lift * 0.7, true),
 		]
-		if reach >= 0.8:
-			pts.append(_on_skull(dx * 0.62, 0.120 + (1.0 - reach) * 0.04, 0.003, true))
-		var radii := PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.8, 0.003])
-		if reach < 0.8:
-			radii = PackedFloat32Array([w * 0.22, w * 0.72, w, 0.004])
+		# Ronda 25 (QA CRITICAL: "la nuca es una cúpula lisa sin ninguna
+		# subdivisión — ~80% del área visible sin quiebres"): las tiras
+		# ahora CORREN POR TODO EL CASQUETE hasta la nuca baja, no se
+		# quedan en la coronilla. Son la pasada 2 del libro (la masa se
+		# parte en tiras que siguen su flujo) y son las que dan la
+		# dirección de barrido que faltaba. El lift sube a ~0.016 en el
+		# tramo trasero: el casquete elipsoide ya está ~8-12mm fuera del
+		# cráneo, así que una tira con lift chico quedaría DENTRO de él
+		# (invisible) — hay que apoyarse sobre el casquete, no sobre el
+		# cráneo.
+		pts.append(_on_skull(dx * 0.68, 0.104, 0.016, true))
+		pts.append(_on_skull(dx * 0.62, 0.060 + (1.0 - reach) * 0.06, 0.015, true))
+		if reach >= 0.9:
+			pts.append(_on_skull(dx * 0.52, 0.016, 0.012, true))   # baja a la nuca
+		var radii := PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.85,
+			w * 0.80, w * 0.62, 0.004])
+		if reach < 0.9:
+			radii = PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.85,
+				w * 0.78, 0.004])
 		# sides 6→12: mata la lectura de "tejas" entre tiras vecinas.
-		g.add_child(_lock(smat, pts, radii, 12, 0.6, skull_c))
+		# Ronda 22: flatten 0.6→0.38 — a 0.6 cada tira era un tubo de
+		# ~18mm de grosor apilado SOBRE la masa (lectura de salchichas);
+		# aplanadas son cintas que se tienden sobre ella y el barrido
+		# se lee fluido.
+		g.add_child(_lock(smat, pts, radii, 12, 0.38, skull_c))
 
 	# Tiras laterales de sien (1 por lado): borde inferior del pelo sobre
 	# la oreja — se APOYAN en el borde superior del pabellón (libro p.40:
@@ -726,7 +750,7 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			_on_skull(s_f * 0.096, 0.078, 0.004),
 			_on_skull(s_f * 0.108, 0.098, 0.008),
 			_on_skull(s_f * 0.094, 0.082, 0.005, true),
-		], PackedFloat32Array([0.013, 0.018, 0.004]), 12, 0.5, skull_c))
+		], PackedFloat32Array([0.013, 0.018, 0.004]), 12, 0.38, skull_c))
 
 	# Coronilla trasera: 3 tiras anchas y CLARAS que cubren la banda
 	# nuca-media (la vista arriba-atrás veía un óvalo oscuro donde las
@@ -740,7 +764,7 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			_on_skull(qx * 0.6, 0.146, 0.012, true),
 			_on_skull(qx, 0.134, 0.014, true),            # lomo trasero
 			_on_skull(qx * 1.1, 0.124, 0.008, true),      # corte (nuca corta)
-		], PackedFloat32Array([0.026, 0.024, 0.006]), 12, 0.55, skull_c))
+		], PackedFloat32Array([0.026, 0.024, 0.006]), 12, 0.40, skull_c))
 
 	# --- PASADA 3: mechones CONTRASTANTES (pocos, rompen el patrón).
 	# Uno cae del flequillo contra el barrido; uno se alza en la cresta;
