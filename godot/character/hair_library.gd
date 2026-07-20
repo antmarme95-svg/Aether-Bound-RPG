@@ -687,15 +687,22 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# lifts DISTINTOS entre vecinas (anti-paralelismo p.244); los lifts
 	# alternados dan el valle real donde asoma el clump oscuro. Las que
 	# convergen hacia el centro arriba (x*0.8) dan el barrido peinado.
+	# Ronda 27 (MEDIUM del QA: "picos del nacimiento muy parejos en tamaño
+	# y espaciado, efecto corona/llama"): el defecto estaba en los datos —
+	# el `dx` iba casi a paso constante (30/31/32/32/31/29 mm) y los
+	# anchos en una banda estrecha (0.022-0.030). Ahora el paso es
+	# IRREGULAR (26/24/32/26/36/40) y los anchos se abren casi al doble de
+	# rango (0.018-0.034). Un patrón parejo delata el procedural aunque
+	# cada pieza esté bien hecha (regla anti-paralelismo del libro).
 	#            dx      lift    w      largo  mat(0=light,1=mat)
 	var sdefs: Array = [
-		[-0.092,  0.003,  0.024,  0.78,  1],
-		[-0.062,  0.011,  0.028,  1.00,  0],
-		[-0.031,  0.005,  0.023,  0.68,  1],
-		[ 0.001,  0.014,  0.030,  1.00,  0],
-		[ 0.033,  0.006,  0.022,  0.90,  1],
-		[ 0.064,  0.012,  0.028,  1.00,  0],
-		[ 0.093,  0.004,  0.023,  0.82,  1],
+		[-0.096,  0.003,  0.019,  0.78,  1],
+		[-0.070,  0.012,  0.031,  1.00,  0],
+		[-0.046,  0.005,  0.022,  0.68,  1],
+		[-0.014,  0.015,  0.034,  1.00,  0],
+		[ 0.012,  0.006,  0.018,  0.90,  1],
+		[ 0.048,  0.011,  0.029,  1.00,  0],
+		[ 0.088,  0.004,  0.024,  0.82,  1],
 	]
 	# Ronda 26 — CRITICAL del QA: en la vista de espalda las tiras leían
 	# una ROSETA/molinete (5-6 lóbulos-gota iguales convergiendo a un
@@ -706,6 +713,12 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# dónde muere cada una.
 	var fan: Array = [0.55, 1.02, 0.72, 1.18, 0.62, 1.10, 0.80]
 	var endy: Array = [0.030, -0.004, 0.052, 0.014, 0.040, -0.010, 0.024]
+	# Ronda 27: cuánto BAJA la punta de cada tira sobre la línea del pelo
+	# y qué tan fina termina — antes eran iguales para las 7 (drop fijo
+	# 0.004×jitter, radio fijo w*0.22), que es lo que producía la fila de
+	# picos clonados.
+	var hl_drop: Array = [0.002, 0.011, 0.000, 0.007, 0.014, 0.003, 0.009]
+	var hl_tip: Array = [0.30, 0.16, 0.34, 0.13, 0.22, 0.28, 0.18]
 	for si2 in range(sdefs.size()):
 		var sd: Array = sdefs[si2]
 		var dx: float = sd[0]
@@ -730,7 +743,7 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		# el canon. Ahora el primer punto queda EN la línea del pelo, con
 		# un mínimo voladizo irregular (2-5mm) que solo ablanda el borde.
 		var pts: Array = [
-			_on_skull(dx * 1.03, root_y - 0.004 * jitter, 0.003),  # borde del nacimiento
+			_on_skull(dx * 1.03, root_y - hl_drop[si2], 0.003),  # borde del nacimiento
 			_on_skull(dx, root_y + 0.014, 0.005 + lift * 0.4),
 			_on_skull(dx * 0.82, 0.149, 0.010 + lift),          # monta la cresta
 			_on_skull(dx * 0.74, 0.132, 0.008 + lift * 0.7, true),
@@ -749,10 +762,10 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		pts.append(_on_skull(dx * (0.54 + fn * 0.40), 0.058 + ey * 0.6, 0.015, true))
 		if reach >= 0.9:
 			pts.append(_on_skull(dx * (0.44 + fn * 0.46), ey, 0.012, true))  # nuca
-		var radii := PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.85,
+		var radii := PackedFloat32Array([w * hl_tip[si2], w * 0.72, w, w * 0.85,
 			w * 0.80, w * 0.62, 0.004])
 		if reach < 0.9:
-			radii = PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.85,
+			radii = PackedFloat32Array([w * hl_tip[si2], w * 0.72, w, w * 0.85,
 				w * 0.78, 0.004])
 		# sides 6→12: mata la lectura de "tejas" entre tiras vecinas.
 		# Ronda 22: flatten 0.6→0.38 — a 0.6 cada tira era un tubo de
@@ -785,6 +798,33 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			_on_skull(qx, 0.134, 0.014, true),            # lomo trasero
 			_on_skull(qx * 1.1, 0.124, 0.008, true),      # corte (nuca corta)
 		], PackedFloat32Array([0.026, 0.024, 0.006]), 12, 0.40, skull_c))
+
+	# NUCA BAJA — ronda 27 (CRITICAL del QA: "el tercio inferior de la
+	# masa es una superficie continua sin ningún quiebre de valor, justo
+	# donde el libro pide valles hondos para pelo oscuro"). Las tiras de
+	# la pasada 2 mueren alrededor de y≈0.0 y por debajo el casquete
+	# quedaba liso. Estas 5 corren SOBRE el casquete (lift 0.013 — apoyar
+	# en el cráneo las dejaría enterradas dentro de él) y son anchas,
+	# solapadas y de puntas romas: sobre una MASA leen como separación de
+	# mechones, no como dientes (los dientes salían de piezas puntiagudas
+	# sobre PIEL desnuda, ver corolario en Principios de Anatomía 3D).
+	# Largos, anchos y desplazamientos irregulares entre vecinas.
+	#              x0      x1      y0      y1      w      mat
+	var lower_nape: Array = [
+		[-0.078, -0.066,  0.030, -0.030,  0.026,  1],
+		[-0.040, -0.048,  0.014, -0.052,  0.030,  0],
+		[-0.004,  0.010,  0.026, -0.038,  0.024,  1],
+		[ 0.038,  0.030,  0.010, -0.056,  0.031,  0],
+		[ 0.074,  0.064,  0.032, -0.026,  0.025,  1],
+	]
+	for ln in lower_nape:
+		var lmat: Material = lighter if int(ln[5]) == 0 else mat
+		g.add_child(_lock(lmat, [
+			_on_skull(ln[0], ln[2], 0.013, true),
+			_on_skull((ln[0] + ln[1]) * 0.5, (ln[2] + ln[3]) * 0.5, 0.012, true),
+			_on_skull(ln[1], ln[3], 0.010, true),
+		], PackedFloat32Array([ln[4], ln[4] * 0.92, ln[4] * 0.60]),
+			10, 0.18, skull_c))   # flatten bajo: cintas tendidas, no parches
 
 	# --- PASADA 3: mechones CONTRASTANTES (pocos, rompen el patrón).
 	# Uno cae del flequillo contra el barrido; uno se alza en la cresta;
