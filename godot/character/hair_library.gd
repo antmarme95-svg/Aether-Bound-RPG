@@ -501,6 +501,85 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 	# `_loft`; flow root→tip = orden de los puntos).
 	var skull_c := SKULL_C
 
+	# --- PASADA 0: FADE (rework r10, pedido de Boris: "no tiene nada de
+	# cabello en los temporales y patillas, ni en la nuca"). Un frontier
+	# crop lleva los lados y la nuca RAPADOS — pelo corto pegado al
+	# cráneo, no piel desnuda. Tiras que hugean la superficie a 4 mm
+	# (buzzed): a esa distancia sombrean casi igual que el cráneo, así que
+	# leen como pelo al ras y NO reabren el "cuenco oscuro" (ese venía de
+	# una concha suelta con pared propia en sombra). Todas con taper a
+	# punta fina: el borde inferior del fade se desvanece, no corta recto.
+	# Ronda 11: fade en tono MEDIO (con `darker`, sobre superficies que
+	# miran atrás/abajo caía en la banda de sombra y rendía casi negro:
+	# leía "garras negras" en nuca y detrás de la oreja — mismo modo de
+	# falla que el clump en la ronda 6).
+	var fade_mat: Material = mat
+
+	# Temporales (2 por lado) + PATILLA (delante de la oreja, que vive en
+	# x≈±0.124, z≈-0.034 → estas van a z≈+0.03, por delante).
+	for side in [-1, 1]:
+		var sf: float = float(side)
+		# Ronda 13 (TODO el fade): `flatten` 0.42-0.45→0.15 y lift ~0. El
+		# grosor radial de una tira es radio×flatten, así que a 0.45 con
+		# radio 0.023 protruían ~14 mm — eso es una MELENA corta, no un
+		# rapado, y por eso leían lóbulos redondos. A flatten 0.15 la tira
+		# es una cinta plana de ~3 mm apoyada sobre el cráneo: capa
+		# continua de pelo al ras (buzzed), que es lo que pide el fade.
+		# TEMPORAL — ronda 15: banda de una pieza que baja de la línea del
+		# pelo a la sien (antes 1 tira suelta = otro diente en la silueta).
+		g.add_child(_lock(fade_mat, [
+			_on_skull(sf * 0.100, 0.100, 0.002),
+			_on_skull(sf * 0.110, 0.074, 0.002),
+			_on_skull(sf * 0.117, 0.048, 0.001),
+		], PackedFloat32Array([0.022, 0.026, 0.016]), 10, 0.14, skull_c))
+		# temporal bajo → PATILLA (baja por delante de la oreja; la punta
+		# SÍ se afila — una patilla termina en punta, a diferencia del
+		# fade de nuca que es un borde romo).
+		g.add_child(_lock(fade_mat, [
+			_on_skull(sf * 0.116, 0.062, 0.002),
+			_on_skull(sf * 0.119, 0.022, 0.002),
+			_on_skull(sf * 0.119, -0.012, 0.001),    # punta de patilla
+		], PackedFloat32Array([0.017, 0.013, 0.004]), 10, 0.15, skull_c))
+		# detrás de la oreja (cierra el fade lateral con la nuca)
+		# Detrás de la oreja — ronda 15: también BANDA de una pieza (misma
+		# razón que la nuca). Espina vertical → el radio se proyecta en Z
+		# (adelante-atrás), cubriendo el parche entre la oreja y la nuca.
+		g.add_child(_lock(fade_mat, [
+			_on_skull(sf * 0.104, 0.100, 0.002, true),
+			_on_skull(sf * 0.110, 0.062, 0.002, true),
+			_on_skull(sf * 0.106, 0.030, 0.001, true),
+		], PackedFloat32Array([0.024, 0.030, 0.020]), 10, 0.14, skull_c))
+
+	# NUCA: 4 tiras que bajan desde el corte del pelo largo hasta la nuca
+	# baja, afilando (el fade se desvanece hacia el cuello, sin borde duro).
+	# NUCA — ronda 15: UNA SOLA BANDA HORIZONTAL, no tiras verticales.
+	# Rondas 11-14 probaron 4→7 tiras verticales con anchos, solapes,
+	# puntas y largos distintos: SIEMPRE leían dientes/garras, porque cada
+	# costura entre dos tiras vecinas es un diente (el QA lo marcó
+	# CRITICAL 2 veces). La banda corre a lo ANCHO (izq→der) sobre la
+	# nuca: con la espina horizontal, el radio del loft se proyecta en
+	# VERTICAL, así que el radio define el alto del rapado y no hay
+	# ninguna costura vertical que dentar. El perfil de radios da el
+	# taper: alto al centro, se afina hacia las sienes.
+	# Ronda 16: banda SUBIDA (y 0.075→0.090) y más corta (radios −25%) —
+	# a la altura anterior su borde recto bajaba hasta media nuca y leía
+	# "visera"; ahora se mete bajo la masa principal y termina arriba, que
+	# es donde muere un fade real.
+	# Ronda 17: banda un poco más alta y ANCHA para que su borde superior
+	# se meta bajo la masa principal (sin franja de piel entre ambas).
+	# Se PROBARON Y DESCARTARON mechitas cortas colgando de su borde para
+	# ablandar el filo: leyeron colmillos triangulares — la misma clase de
+	# defecto que las tiras verticales. Conclusión asentada: en la zona de
+	# fade, CUALQUIER pieza suelta con punta lee diente; el fade solo
+	# funciona como superficie continua. El borde algo recto se acepta.
+	g.add_child(_lock(fade_mat, [
+		_on_skull(-0.098, 0.088, 0.002, true),
+		_on_skull(-0.052, 0.087, 0.002, true),
+		_on_skull(0.0, 0.086, 0.002, true),
+		_on_skull(0.052, 0.087, 0.002, true),
+		_on_skull(0.098, 0.088, 0.002, true),
+	], PackedFloat32Array([0.028, 0.042, 0.046, 0.042, 0.028]), 10, 0.13, skull_c))
+
 	# --- PASADA 1: clump principal (oscuro) — lomo direccional frente→
 	# nuca sobre el cráneo REAL, con la cresta despegada ~2cm al frente y
 	# cayendo en curva propia (anti-concéntrico). Es el fondo de valle
@@ -526,7 +605,10 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		_on_skull(0.005, 0.150, 0.008),             # cresta del barrido
 		_on_skull(-0.004, 0.140, 0.007, true),      # lomo de coronilla
 		_on_skull(0.0, 0.124, 0.004, true),         # corte trasero (nuca corta)
-	], PackedFloat32Array([0.062, 0.082, 0.072, 0.020]), 8, 0.92, skull_c))
+	# Ronda 10: sides 8→14 — el QA leyó "placas/tejas/armadura"; a 8 lados
+	# con este radio cada faceta mide ~2.5cm y el cel-step la marca como
+	# panel. Más lados = quiebres más chicos que la banda del toon.
+	], PackedFloat32Array([0.062, 0.082, 0.072, 0.020]), 14, 0.92, skull_c))
 
 	# --- PASADA 2: el clump se parte en TIRAS drapeadas SOBRE el cráneo
 	# (raíces en la línea del pelo real, calculadas con `_on_skull`),
@@ -551,16 +633,25 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 		var reach: float = sd[3]
 		var smat: Material = lighter if int(sd[4]) == 0 else mat
 		# Línea del pelo: más baja en las sienes, irregular entre vecinas.
-		var root_y: float = 0.100 - absf(dx) * 0.22 + lift * 0.4
+		# Ronda 10 (TAPER, hallazgo HIGH del QA): las raíces bajan un punto
+		# EXTRA por delante del nacimiento, mucho más finas (w*0.55→w*0.22)
+		# y con la irregularidad amplificada — el corte pelo→piel deja de
+		# ser un contorno duro y parejo (leía "gorro/jockey") y se ahúsa.
+		var jitter: float = (0.9 if int(sd[4]) == 0 else 1.15)
+		var root_y: float = 0.092 - absf(dx) * 0.26 + lift * 0.9 * jitter
 		var pts: Array = [
-			_on_skull(dx, root_y, 0.005 + lift * 0.4),
+			_on_skull(dx * 1.03, root_y - 0.014 * jitter, 0.002),  # punta ahusada
+			_on_skull(dx, root_y + 0.012, 0.005 + lift * 0.4),
 			_on_skull(dx * 0.82, 0.149, 0.010 + lift),          # monta la cresta
 			_on_skull(dx * 0.74, 0.132, 0.008 + lift * 0.7, true),
 		]
 		if reach >= 0.8:
 			pts.append(_on_skull(dx * 0.62, 0.120 + (1.0 - reach) * 0.04, 0.003, true))
-		g.add_child(_lock(smat, pts,
-			PackedFloat32Array([w * 0.55, w, w * 0.8, 0.004]), 6, 0.6, skull_c))
+		var radii := PackedFloat32Array([w * 0.22, w * 0.72, w, w * 0.8, 0.003])
+		if reach < 0.8:
+			radii = PackedFloat32Array([w * 0.22, w * 0.72, w, 0.004])
+		# sides 6→12: mata la lectura de "tejas" entre tiras vecinas.
+		g.add_child(_lock(smat, pts, radii, 12, 0.6, skull_c))
 
 	# Tiras laterales de sien (1 por lado): borde inferior del pelo sobre
 	# la oreja — se APOYAN en el borde superior del pabellón (libro p.40:
@@ -571,7 +662,7 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			_on_skull(s_f * 0.096, 0.078, 0.004),
 			_on_skull(s_f * 0.108, 0.098, 0.008),
 			_on_skull(s_f * 0.094, 0.082, 0.005, true),
-		], PackedFloat32Array([0.013, 0.018, 0.004]), 6, 0.5, skull_c))
+		], PackedFloat32Array([0.013, 0.018, 0.004]), 12, 0.5, skull_c))
 
 	# Coronilla trasera: 3 tiras anchas y CLARAS que cubren la banda
 	# nuca-media (la vista arriba-atrás veía un óvalo oscuro donde las
@@ -585,25 +676,25 @@ static func _hair_frontier_crop(mat: Material) -> Node3D:
 			_on_skull(qx * 0.6, 0.146, 0.012, true),
 			_on_skull(qx, 0.134, 0.014, true),            # lomo trasero
 			_on_skull(qx * 1.1, 0.124, 0.008, true),      # corte (nuca corta)
-		], PackedFloat32Array([0.026, 0.024, 0.006]), 6, 0.55, skull_c))
+		], PackedFloat32Array([0.026, 0.024, 0.006]), 12, 0.55, skull_c))
 
 	# --- PASADA 3: mechones CONTRASTANTES (pocos, rompen el patrón).
 	# Uno cae del flequillo contra el barrido; uno se alza en la cresta;
 	# uno escapa hacia la sien derecha cruzando el flow.
 	g.add_child(_lock(lighter, [
 		_on_skull(-0.018, 0.098, 0.006),
-		_on_skull(-0.034, 0.072, 0.009),            # cae sobre la frente
-	], PackedFloat32Array([0.013, 0.004]), 5, 0.55, skull_c))
+		_on_skull(-0.034, 0.070, 0.009),            # cae sobre la frente
+	], PackedFloat32Array([0.013, 0.003]), 10, 0.55, skull_c))
 	g.add_child(_lock(mat, [
 		_on_skull(0.016, 0.150, 0.016),
 		_on_skull(0.046, 0.152, 0.034),             # se alza sobre la cresta
 		_on_skull(0.066, 0.148, 0.030, true),
-	], PackedFloat32Array([0.011, 0.008, 0.003]), 5, 0.6, skull_c))
+	], PackedFloat32Array([0.011, 0.008, 0.003]), 10, 0.6, skull_c))
 	g.add_child(_lock(darker, [
 		_on_skull(0.052, 0.128, 0.008),
 		_on_skull(0.090, 0.100, 0.008),             # cruza el flow hacia la sien
-		_on_skull(0.100, 0.078, 0.004, true),
-	], PackedFloat32Array([0.011, 0.008, 0.003]), 5, 0.5, skull_c))
+		_on_skull(0.100, 0.076, 0.004, true),
+	], PackedFloat32Array([0.011, 0.008, 0.003]), 10, 0.5, skull_c))
 	return g
 
 # 11 — Prince Curtain (M10-r4, PRD "Cabello Estilizado Ondulado — Estilo

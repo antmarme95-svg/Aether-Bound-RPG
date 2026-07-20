@@ -1,5 +1,38 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-19] fix | Refinamiento de pelo pedido por Boris: quiebres suaves + taper + FADE de temporales/patillas/nuca
+Tres pedidos del director sobre el rework: (a) suavizar quiebres, (b)
+taper, (c) "no tiene nada de cabello en los temporales y patillas, ni
+en la nuca". **(a)** `sides` de las secciones del loft subido (clump
+8→14, tiras 6→12, contrastantes 5→10): a 8 lados cada faceta medía
+~2.5cm y el cel-step la marcaba como panel (el QA leía "placas/tejas").
+**(b)** TAPER real: las tiras ganan un punto extra por delante del
+nacimiento con radio w*0.22 (era w*0.55) y la irregularidad entre
+vecinas se amplificó — el corte pelo→piel dejó de ser el contorno duro
+y parejo que leía "gorro/jockey". **(c)** PASADA 0 nueva = FADE: tiras
+que hugean el cráneo en temporales (2/lado), PATILLA por delante de la
+oreja (que vive en x±0.124, z-0.034), detrás de la oreja (2/lado) y
+NUCA (7 solapadas). Cuatro rondas para calibrarlo, cada una con causa
+medida: fade en `darker` → casi negro ("garras") → tono medio; tiras
+finas y puntiagudas → borde festoneado ("dedos") → más anchas que su
+paso + puntas romas; y **`flatten` 0.45→0.15**: el grosor
+radial de una tira es radio×flatten, así que a 0.45 protruían ~14mm —
+eso es melena corta, no rapado, y por eso leían lóbulos; a 0.15 son
+cintas de ~3mm apoyadas en el cráneo. QA intermedio 58% (de 52%) pero
+con CRITICAL: patillas/nuca seguían leyendo "picos/garras sobre piel".
+**LECCIÓN QUE CERRÓ EL PROBLEMA (rondas 15-17):** el defecto no era el
+ancho, el tono ni el largo de las tiras — era que eran TIRAS. Cada
+costura entre dos tiras vecinas ES un diente, y toda pieza suelta con
+punta en esa zona lee colmillo (probado y descartado también con
+"mechitas" cortas para ablandar el filo: salieron colmillos
+triangulares). El fade se rehízo como **BANDAS CONTINUAS de una sola
+pieza**: la de nuca corre a lo ANCHO (espina horizontal → el radio del
+loft se proyecta en vertical, define el alto del rapado y no queda
+ninguna costura vertical que dentar), más una banda por lado en
+temporal y otra detrás de la oreja. Regla nueva: en zonas de fade/
+rapado, superficie continua; los mechones sueltos son solo para pelo
+largo. Gates core+combat+springboard ALL_PASS.
+
 ## [2026-07-19] feature | FULL REWORK del cabello con jerarquía de 3 pasadas del libro — frontier crop reconstruido, causa raíz del "casco" resuelta
 Tras el minado dirigido, `_hair_frontier_crop` reconstruido según el
 método del libro (p.156/243): (1) UN clump madre direccional frente→

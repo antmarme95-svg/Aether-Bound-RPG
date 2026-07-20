@@ -17,11 +17,14 @@ updated: 2026-07-19
      "dientes" ELIMINADO, sin cuenco trasero, nuca corta con piel,
      color castaño correcto). Es el checkpoint de "cabello decente" que
      Boris pidió ANTES de la última ronda de cara. Set fresco en
-     `godot/test_out/` (anatomy_face*.png). Residual conocido (HIGH,
-     refinable): el faceting duro de las tiras lee "placas"; falta
-     taper en la línea del pelo (techo estimado 65-75%). Siguiente si
-     Boris aprueba: última ronda de AJUSTES DE CARA (VoBo de mandíbula
-     era TEMPORAL, se cierra con el pelo puesto).
+     `godot/test_out/` (anatomy_face*.png). **RONDA DE REFINAMIENTO
+     APLICADA (pedido de Boris):** quiebres suavizados (más lados en la
+     sección del loft), TAPER real en la línea del pelo, y FADE nuevo
+     en temporales/patillas/nuca (antes piel desnuda) — el fade va como
+     BANDAS CONTINUAS, nunca tiras (corolario duro en
+     [[Principios de Anatomía 3D]]). Siguiente: última ronda de
+     AJUSTES DE CARA (el VoBo de mandíbula era TEMPORAL, se cierra con
+     el pelo puesto).
      - **Herramienta nueva reutilizable:** `HairLibrary._on_skull(x,y,
        lift,back)` da el punto de la superficie del cráneo REAL — TODO
        peinado futuro del [[PRD-Catalogo-Peinados-v1]] se autora con

@@ -213,6 +213,19 @@ Zambelli — el único proceso paso a paso), + galería 3D (pp.147/151-153).
    TODO el volumen — el patrón de referencia para los estilos largos
    del [[PRD-Catalogo-Peinados-v1]].
 
+**Corolario propio del pipeline (2026-07-19, no del libro — ganado en 7
+rondas de fade):** la jerarquía de mechones vale para pelo LARGO. En
+zonas de FADE/RAPADO (temporales, patillas, nuca) hay que hacer lo
+contrario: **superficie CONTINUA de una pieza, nunca tiras**. Bajo
+cel-shading cada costura entre dos tiras vecinas se lee como un diente,
+y toda pieza suelta con punta lee colmillo — se probaron tiras finas,
+anchas, solapadas, romas, oscuras, claras, y "mechitas" cortas para
+ablandar el borde: todas dieron dientes o garras. La solución es una
+banda de loft con la espina cruzando la zona (en la nuca, horizontal:
+así el radio del loft se proyecta en vertical y define el alto del
+rapado sin generar costuras verticales) y `flatten` bajo (~0.15) para
+que la cinta sea de ~3 mm y se lea "al ras" y no melena corta.
+
 ## Cabeza, cuello y cara (minado 2026-07-16, segunda pasada — insumo directo para la Fase 5 propuesta)
 
 A diferencia de torso/manos/pelo, este bloque sale de dos capítulos
