@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] state | Python 3.12 instalado + check_vault.py verificado en corrida real + gitignore de privados wireado
+Boris pidió instalar Python (bloqueaba `check_vault.py` desde el checkpoint
+anterior). Instalado vía `winget install --id Python.Python.3.12`
+(3.12.10, oficial python.org, hash verificado por winget) en
+`%LOCALAPPDATA%\Programs\Python\Python312\`. La terminal ya abierta de la
+sesión no releyó el PATH nuevo — se usó la ruta completa del ejecutable
+para no depender de reiniciarla; lección actualizada en [[Lecciones]]
+(refinada, no acumulada: ya no dice "no instalado").
+
+Primera corrida real del script (antes solo se había estimado a mano):
+confirmó **~1,894 tokens de arranque, 🟢 VERDE**, sin `@imports`. Encontró
+dos cosas reales, no cosméticas del todo:
+1. **Mojibake de acentos** en la salida de consola de Windows (encoding no
+   UTF-8 por defecto) — arreglado forzando `sys.stdout.reconfigure(
+   encoding="utf-8")`.
+2. **Los privados opcionales (`Notas-Privadas.md`/`Bitacora-Privada.md`)
+   NO estaban protegidos en `.gitignore`** — el patrón quedó documentado en
+   SCHEMA/VAULT-STARTER §5.5 pero nunca se escribió el glob real. Se agregó
+   ahora (`Aether Bound/20-State/Notas-Privadas*` y `Bitacora-Privada*`) —
+   verificado con `git check-ignore` (no a ojo), aunque los archivos en sí
+   siguen sin crearse (nadie los ha pedido todavía).
+
 ## [2026-07-20] design | SCHEMA v1.1: dieta de arranque fusionada desde `project-context` + VAULT-STARTER v2 + check_vault.py
 Boris trajo una skill externa (`project-context`, de Claude Code) con un
 playbook de optimización de contexto que el propio `VAULT-STARTER.md` no

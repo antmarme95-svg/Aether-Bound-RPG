@@ -16,6 +16,9 @@ Fuente: VAULT-STARTER.md §9 (fusión con la skill project-context).
 """
 import os, sys, re, json, subprocess, datetime
 
+if sys.stdout.encoding is None or sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")  # consola de Windows no siempre usa UTF-8 por defecto
+
 OLD_DAYS = 14
 CURRENT_STATE_CEILING = 3000   # techo documentado en SCHEMA §7 (~2,500-3,000)
 ARRANQUE_VERDE = 10000

@@ -399,15 +399,19 @@ updated: 2026-07-14
 
 ## Entorno
 
-- **Python no está instalado como binario real en esta máquina** (2026-07-20):
-  `python3`/`python`/`py` resuelven al stub de Microsoft Store
-  (`%LOCALAPPDATA%\Microsoft\WindowsApps\`) y fallan con "Python was not
-  found". Afecta a `Aether Bound/scripts/check_vault.py` (auditoría de
-  peso de arranque, SCHEMA §8): no se puede correr localmente hasta
-  instalar un Python real (winget/python.org) o ejecutarlo en WSL. Mientras
-  tanto, estimar tokens a mano con `wc -c archivo` ÷ 4 (mismo criterio que
-  usa el script) sobre `CLAUDE.md` + `Current-State.md` + cualquier
-  `@import` de `CLAUDE.md`.
+- **Python 3.12 instalado vía winget** (2026-07-20:
+  `winget install --id Python.Python.3.12`) en
+  `%LOCALAPPDATA%\Programs\Python\Python312\python.exe`. El alias
+  `python`/`python3`/`py` seguía resolviendo al stub roto de Microsoft
+  Store (`%LOCALAPPDATA%\Microsoft\WindowsApps\`, "Python was not found")
+  en terminales YA ABIERTAS antes de instalar — el PATH de máquina/usuario
+  se actualiza al instalar, pero una sesión de shell existente no lo
+  relee. Si `python`/`python3` fallan así después de instalar: abre una
+  terminal NUEVA, o usa la ruta completa de arriba directamente. Afecta a
+  `Aether Bound/scripts/check_vault.py` (auditoría de peso de arranque,
+  SCHEMA §8) — con Python real, el script corre en Windows sin más ajuste
+  salvo forzar UTF-8 en `sys.stdout` (la consola de Windows no siempre usa
+  UTF-8 por defecto; sin eso, los acentos salen como `�`).
 - **Godot 4.6.3** (no está en PATH):
   `%LOCALAPPDATA%\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.6.3-stable_win64.exe`
   (o `Start-Godot.bat`).

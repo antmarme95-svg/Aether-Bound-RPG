@@ -98,9 +98,10 @@ updated: 2026-07-20
 - **Riesgos abiertos:** frame budget térmicamente frágil en la laptop RTX
   2060 (~58 fps warm); export a consolas requiere partner externo (Godot).
 - **SCHEMA v1.1 (2026-07-20):** dieta de arranque fusionada desde la skill
-  `project-context` — auditoría de tokens en `Aether Bound/scripts/
-  check_vault.py` (bloqueada hoy: sin Python real instalado, ver
-  [[Lecciones]]). Línea base a mano: ~1,640 tokens de arranque, 🟢 VERDE.
-  Detalle completo en [[LOG]] y `../VAULT-STARTER.md` v2.
+  `project-context`. Python 3.12 instalado (ver [[Lecciones]]);
+  `check_vault.py` corriendo y verificado: **~1,894 tokens de arranque,
+  🟢 VERDE**, sin `@imports`, privados protegidos en `.gitignore`
+  (confirmado con `git check-ignore`). Detalle completo en [[LOG]] y
+  `../VAULT-STARTER.md` v2.
 
 **Historial de estados:** ver [[LOG]] y [[Current-State-Historico]].

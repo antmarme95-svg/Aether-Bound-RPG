@@ -13,3 +13,10 @@ Aether Bound/*/*/.obsidian/
 # Beckett MCP: config local auto-escrita por el addon (no versionar)
 .mcp.json
 godot/.mcp.json
+
+# Privados del Vault (SCHEMA §8 / VAULT-STARTER §5.5) — glob, no línea
+# literal: cubre el archivo y cualquier split futuro (ej. -Archivo.md) sin
+# volver a tocar este .gitignore. No existen todavía; se crean solo si
+# Boris los pide.
+Aether Bound/20-State/Notas-Privadas*
+Aether Bound/20-State/Bitacora-Privada*
