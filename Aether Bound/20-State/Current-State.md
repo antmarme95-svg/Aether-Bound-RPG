@@ -56,11 +56,16 @@ updated: 2026-07-19
     + close-ups + zoom antes de cerrar; solape en 3 ejes entre padres
     distintos; caja para bordes, rampa/tangente para que el Sobel no
     recorte; masas del torso = hijas de `torso`/`waist`.
-  - **Frentes siguientes** (orden a gusto de Boris): ronda de
-    separación del pelo + catálogo ([[PRD-Catalogo-Peinados-v1]]);
-    Fase 4b (warpaint) del [[PRD-Rework-Modelado-Personajes-v2]];
-    ataque a los hallazgos del grupo C (boca/mentón-perfil/hombro/
-    cintura); C6b (enano/elfo reales); C4 (pies IK / ROM).
+  - **Orden acordado con Boris (2026-07-20):** (1) hallazgos restantes
+    del grupo C — hombro→torso y cintura recta; (2) C4 — pies IK/ROM;
+    (3) [[PRD-C6b-Enano-Elfo-v1]] (cuerpo+ROM enano/elfo, AMPLIADO a
+    incluir catálogo de peinados + marca cultural por raza, con plan de
+    optimización de tokens). Catálogo de peinados humano
+    ([[PRD-Catalogo-Peinados-v1]]) y Fase 4b (warpaint) del
+    [[PRD-Rework-Modelado-Personajes-v2]] quedan POSPUESTOS — Boris:
+    "no creo que sea prioridad ahorita" (son trabajo de catálogo, no
+    frente urgente). **No arrancar nada de esto sin señal explícita de
+    Boris** (pidió verificar alineación primero, sin ejecutar).
 - **Fases 1-2 del [[PRD-Rework-Modelado-Personajes-v2]] quedaron
   SUPERSEDED** por R2/R3 (nota de estado en el propio PRD); sus Fases 3
   (pelo/loft) y 4 (boca-color/warpaint) siguen vigentes para DESPUÉS de la

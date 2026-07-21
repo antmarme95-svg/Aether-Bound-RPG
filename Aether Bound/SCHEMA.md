@@ -1,7 +1,7 @@
 ---
 status: ratificado
-source: "90-Raw/LLM-WIKI.md + 90-Raw/Vault-Driven Development (VDD).md"
-updated: 2026-07-11
+source: "90-Raw/LLM-WIKI.md + 90-Raw/Vault-Driven Development (VDD).md + ../VAULT-STARTER.md v2 (fusión con project-context, 2026-07-20)"
+updated: 2026-07-20
 ---
 
 # SCHEMA — Modelo de trabajo del Aether Bound Vault
@@ -20,9 +20,13 @@ frameworks (ambos archivados en `90-Raw/`):
   proyecto — capas **Knowledge / State / Execution**, Programming Loops como
   procedimientos permanentes, sincronización código↔docs↔estado.
 
-**Versión del framework: v1 (híbrido pragmático).** Diferido a v2: Scheduler
-formal, contratos de loop exhaustivos (12 campos), orquestación multi-agente
-declarativa, búsqueda BM25/embeddings (innecesaria bajo ~300 páginas).
+**Versión del framework: v1.1 (híbrido pragmático + dieta de arranque).**
+Añade sobre v1 la auditoría de peso de sesión (§8) incorporada desde
+`project-context` — completitud del Vault y costo de arrancarlo son dos
+ejes que se auditan por separado (ver [[Lint Loop]]). Diferido a v2:
+Scheduler formal, contratos de loop exhaustivos (12 campos), orquestación
+multi-agente declarativa, búsqueda BM25/embeddings (innecesaria bajo ~300
+páginas).
 
 ---
 
@@ -110,3 +114,46 @@ flush de State + memoria de Claude antes de abrir la siguiente tarea.
    Current-State como WIP).
 6. **Nada se reporta como terminado sin evidencia** — gates verdes o
    capturas revisables; lo no verificado se marca pendiente de VoBo.
+
+## 8. Dieta de arranque: auditoría, semáforo y palancas
+*(añadido 2026-07-20 — fusión con `project-context`, pendiente VoBo del
+director)*
+
+Un Vault puede estar **completo** (nada falta, nada contradice) y aun así
+ser **caro de arrancar**. Son dos ejes independientes; este framework solo
+auditaba el primero hasta ahora. La métrica que importa es cuántos tokens
+se pagan ANTES del primer mensaje de la sesión.
+
+**Medir.** `python3 "Aether Bound/scripts/check_vault.py" --json` reporta,
+por archivo, si se auto-carga (hard = CLAUDE.md, siempre; soft = [[Current-State]],
+por protocolo; no = bajo demanda), su peso en tokens, y a nivel proyecto el
+**arranque_tokens** total con semáforo: 🟢 <10,000 · 🟡 10,000–30,000 ·
+🔴 >30,000. También detecta `@imports` en `CLAUDE.md` (peso escondido que se
+paga cada sesión aunque la tarea no lo toque) y si el Vault es
+**colaborativo** (más de un autor en el historial de [[Current-State]]/
+[[LOG]]/`CLAUDE.md` — hoy es individual, un solo autor).
+
+**Palancas, de menor a mayor fricción:**
+1. `@imports` en `CLAUDE.md` → bajo demanda (hoy no hay ninguno — sano).
+2. No auto-cargar el LOG completo; leer solo la entrada más reciente.
+3. Notas privadas (si se usan) separadas de lo vivo — fricción nula.
+4. [[Current-State]] recortado a solo-presente bajo su techo de
+   ~2,500-3,000 tokens (ya documentado en el punto 1 de arriba desde
+   2026-07-16; el script de este punto solo lo convierte en número
+   verificable en vez de juicio a ojo).
+
+**Colaborativo vs individual:** el script detecta autores reales vía
+`git log`. Con un solo autor (caso actual), hay libertad total para
+reestructurar [[Current-State]]/[[LOG]]; si algún día se suma otro
+colaborador, aplica la regla de `project-context`: no reestructurar esos
+dos archivos, solo sacarlos del auto-load.
+
+**Niveles equipo/privado (opcional):** si en algún momento se necesita
+separar estrategia cruda o contexto sensible de lo que vive en el repo,
+el patrón es `20-State/Notas-Privadas.md` + `20-State/Bitacora-Privada.md`
+(gitignored con glob `Notas-Privadas*`/`Bitacora-Privada*`, verificado con
+`git check-ignore`, nunca a ojo). Hoy no existen — se crean solo si Boris
+los pide (VDD: no se construye lo que no se necesita).
+
+Detalle completo del método (script íntegro, puentes a claude.ai, hook de
+cierre): `../VAULT-STARTER.md` §9.

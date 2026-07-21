@@ -17,6 +17,10 @@ updated: 2026-07-04
      ❓ resueltos que siguen abiertos en [[Task-Board]].
   4. **Index vs. realidad:** toda página existe en [[00-Index]] y viceversa.
   5. **State vs. repo:** [[Current-State]] refleja el branch/commit real.
+  6. **Peso de arranque** *(añadido 2026-07-20, SCHEMA §8):* corre
+     `python3 "Aether Bound/scripts/check_vault.py"`; si el semáforo sale
+     🟡/🔴, es trabajo de este loop aunque los 5 puntos anteriores salgan
+     limpios — completitud y costo de arranque son ejes distintos.
 - **Validación:** el reporte en sí.
 - **Artefactos:** entrada en [[LOG]] (`lint`) con el reporte; fixes menores
   aplicados en el momento; contradicciones de diseño → Design Loop.

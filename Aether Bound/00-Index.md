@@ -103,6 +103,14 @@
   torso ~40% — techo del tuning confirmado 2 veces), fases R0-R4 con
   contrato duro de API/pivotes/biomech intacto; supersede las Fases 1-2 del
   [[PRD-Rework-Modelado-Personajes-v2]] (sus Fases 3-4 siguen vigentes).
+- [[PRD-C6b-Enano-Elfo-v1]] (`20-State/PRDs/`) — **draft (2026-07-20)**:
+  cuerpo+ROM enano/elfo (histórico) AMPLIADO por Boris a incluir catálogo
+  racial de peinados + marca cultural (aether élfico, tatuajes/inlays de
+  forja enanos). No arranca hasta cerrar grupo C restante (hombro/
+  cintura) + pies (C4). Incluye plan de optimización de tokens pedido
+  por Boris: reusar `apply_phenotype` en vez de geometría nueva donde
+  se pueda, medir superficies ANTES de autorar (lección `_on_skull`),
+  delegar el ciclo render→zoom→diagnóstico a subagente barato.
 - [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
   catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje
   (decisión de Boris); técnica única = loft (`_loft`/`_lock` implementados en

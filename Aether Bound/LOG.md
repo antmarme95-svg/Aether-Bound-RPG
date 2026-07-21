@@ -1,5 +1,33 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] design | Mentón aceptado como estilo (S20) + orden de trabajo acordado + PRD C6b ampliado con plan de optimización de tokens
+Boris cierra la ronda de cara: mentón en 20% se ACEPTA como estilo
+(igual que anillos de codo/hombro), no se toca más por ahora. Orden
+acordado para lo que sigue: (1) hallazgos restantes de grupo C —
+hombro→torso y cintura recta; (2) C4 — pies IK/ROM; (3) C6b — enano/elfo
+reales. Catálogo de peinados humano y Fase 4b (warpaint) quedan
+POSPUESTOS ("no creo que sea prioridad ahorita" — ambos son trabajo de
+catálogo/múltiples variantes, no frente urgente).
+
+Boris preguntó si se puede optimizar el gasto de tokens para cuando
+lleguemos a C6b ("cada feature nos toma muchísimos tokens") y pidió
+armarlo como PARTE DEL PLAN, con énfasis explícito: cada raza necesita
+también su propio catálogo de peinados y marca cultural (warpaint/
+tatuajes/birth marks), no solo el cuerpo — ampliando el alcance
+histórico de C6b. Nuevo [[PRD-C6b-Enano-Elfo-v1]] registra el alcance
+ampliado (confirmado contra [[Fenotipos y Creación de Personaje]]: aether
+luminoso élfico, tatuajes de gremio + inlays de forja enanos) y 3
+optimizaciones concretas: (1) reusar `apply_phenotype` para reproporción
+racial en vez de geometría nueva donde se pueda — el costo alto de esta
+sesión fue geometría SIN precedente (loft de pelo), no reproporción;
+(2) medir superficies ANTES de autorar (lección `_on_skull`: 3 rondas
+del pelo se perdieron por semiejes de cráneo inventados); (3) delegar
+el ciclo render→zoom→diagnóstico a un subagente barato (Haiku, validar
+con 1 caso antes de generalizar) — el orquestador solo lee capturas de
+cierre de ronda y QA formales, no cada zoom intermedio de la iteración
+ciega. Nada de C6b se ejecuta todavía — Boris pidió solo verificar
+alineación, sin tocar código.
+
 ## [2026-07-20] fix+stop | Mentón: 2do intento (biseles verticales) sin ganancia visible — STOP documentado, techo de técnica sobre geometría ratificada
 Boris decidió: boca queda ACEPTADA en 35% (no reabrir la estructura de
 2 labios); mentón sigue con cuidado. Segundo intento: biseles en las
