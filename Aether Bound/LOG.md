@@ -1,5 +1,47 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] design | SCHEMA v1.1: dieta de arranque fusionada desde `project-context` + VAULT-STARTER v2 + check_vault.py
+Boris trajo una skill externa (`project-context`, de Claude Code) con un
+playbook de optimización de contexto que el propio `VAULT-STARTER.md` no
+cubría: auditoría objetiva de cuántos tokens se pagan AL ARRANCAR una
+sesión (no cuánto cuesta ejecutar una tarea — eso es el frente separado
+del PRD-C6b de la entrada de abajo). Se fusionaron ambos métodos:
+
+- **`../VAULT-STARTER.md` → v2**, reescrito completo con: §9 "Dieta de
+  arranque" (script de auditoría embebido, semáforo 🟢<10k/🟡10-30k/🔴>30k
+  tokens, distinción autoload hard/soft/no), §5.5 niveles equipo/privado
+  (`Notas-Privadas.md`/`Bitacora-Privada.md`, gitignored con glob,
+  verificado con `git check-ignore` real), detección individual vs.
+  colaborativo vía autores de `git log`, puente opcional `AGENTS.md`.
+- **[[SCHEMA]] → v1.1**: nueva sección 8 (mismo contenido adaptado a rutas
+  reales del proyecto); [[Current-State]] gana un techo verificable
+  (~2,500-3,000 tokens) en vez de juicio a ojo.
+- **[[Lint Loop]]**: gana un 6º punto — el peso de arranque se audita
+  aparte de la completitud/coherencia del Vault (pueden fallar
+  independientemente).
+- **`Aether Bound/scripts/check_vault.py`**: script real, extraído del
+  bloque embebido en VAULT-STARTER §9.1, con el MANIFEST apuntando a las
+  rutas reales de este repo (`CLAUDE.md`, `Aether Bound/SCHEMA.md`,
+  `Current-State.md`, etc.).
+- **`CLAUDE.md`**: nueva regla 6 (arranque barato + referencia al script).
+
+**Bloqueo técnico:** no hay un intérprete de Python real instalado en esta
+máquina (solo el stub de Microsoft Store) — el script no se pudo correr
+todavía; lección documentada en [[Lecciones]]. Línea base calculada A MANO
+con `wc -c`: `CLAUDE.md` (881B≈220t, hard) + `Current-State.md`
+(5,678B≈1,420t, soft) = **~1,640 tokens de arranque → 🟢 VERDE** (sin
+`@imports` en `CLAUDE.md` — sano). Vault es **individual** (un solo autor,
+`tonom`, en el historial de los 3 archivos de contexto), así que no aplica
+todavía la restricción de "no reestructurar Current-State/LOG" de
+`project-context` — libertad total mientras siga siendo un solo director.
+
+**Pendiente de VoBo de Boris:** la nueva sección 8 del SCHEMA (status
+`ratificado` heredado del archivo, pero el contenido nuevo no ha sido
+ratificado explícitamente todavía — mismo patrón que la sección 7 cuando
+se añadió). `Notas-Privadas.md`/`Bitacora-Privada.md` NO se crearon: son
+un patrón documentado, no un archivo — se instancian solo si Boris los
+pide.
+
 ## [2026-07-20] design | Mentón aceptado como estilo (S20) + orden de trabajo acordado + PRD C6b ampliado con plan de optimización de tokens
 Boris cierra la ronda de cara: mentón en 20% se ACEPTA como estilo
 (igual que anillos de codo/hombro), no se toca más por ahora. Orden

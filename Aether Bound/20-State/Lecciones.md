@@ -399,6 +399,15 @@ updated: 2026-07-14
 
 ## Entorno
 
+- **Python no está instalado como binario real en esta máquina** (2026-07-20):
+  `python3`/`python`/`py` resuelven al stub de Microsoft Store
+  (`%LOCALAPPDATA%\Microsoft\WindowsApps\`) y fallan con "Python was not
+  found". Afecta a `Aether Bound/scripts/check_vault.py` (auditoría de
+  peso de arranque, SCHEMA §8): no se puede correr localmente hasta
+  instalar un Python real (winget/python.org) o ejecutarlo en WSL. Mientras
+  tanto, estimar tokens a mano con `wc -c archivo` ÷ 4 (mismo criterio que
+  usa el script) sobre `CLAUDE.md` + `Current-State.md` + cualquier
+  `@import` de `CLAUDE.md`.
 - **Godot 4.6.3** (no está en PATH):
   `%LOCALAPPDATA%\Microsoft\WinGet\Packages\GodotEngine.GodotEngine_Microsoft.Winget.Source_8wekyb3d8bbwe\Godot_v4.6.3-stable_win64.exe`
   (o `Start-Godot.bat`).

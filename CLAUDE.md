@@ -13,3 +13,7 @@
 5. Código: `godot/` es la implementación (Godot 4.6.3); `src/` (Three.js) es
    referencia congelada. Lecciones técnicas obligatorias antes de tocar
    código: `Aether Bound/20-State/Lecciones.md`.
+6. Arranque de sesión barato por diseño (SCHEMA §8): nada se auto-carga vía
+   `@import` salvo lo indispensable en CADA sesión. Auditoría de peso:
+   `Aether Bound/scripts/check_vault.py` (semáforo 🟢<10k/🟡10-30k/🔴>30k
+   tokens). Si sale 🟡/🔴, es trabajo del Lint Loop aunque nada falte.

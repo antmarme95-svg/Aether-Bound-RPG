@@ -8,9 +8,14 @@
 - [[SCHEMA]] — el modelo de trabajo: capas, plantillas, contratos, regla de oro.
 - [[LOG]] — bitácora append-only de operaciones.
 - `../VAULT-STARTER.md` — **exportable**: el método completo (VDD ×
-  LLM-WIKI + nuestra rutina de cierre §7 + consejos de campo) destilado en
-  un archivo único para que cualquier persona arranque su propio Vault
-  adjuntándolo a su Claude Code. Generado 2026-07-13.
+  LLM-WIKI + rutina de cierre + dieta de arranque §9 + consejos de campo)
+  destilado en un archivo único para que cualquier persona arranque su
+  propio Vault adjuntándolo a su Claude Code. Generado 2026-07-13,
+  fusionado con `project-context` (auditoría de tokens, niveles
+  equipo/privado, puentes) el 2026-07-20.
+- `scripts/check_vault.py` — auditoría de peso de arranque del Vault
+  (SCHEMA §8): semáforo de tokens, `@imports`, niveles equipo/privado,
+  detección individual/colaborativo. Solo lectura.
 
 ## 10-Knowledge (diseño del juego, compilado del GDD v2.2)
 

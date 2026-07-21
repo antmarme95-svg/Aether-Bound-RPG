@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-19
+updated: 2026-07-20
 ---
 
 # Current State
@@ -97,5 +97,10 @@ updated: 2026-07-19
   [[LOG]] y [[Fenotipos y Creación de Personaje]].
 - **Riesgos abiertos:** frame budget térmicamente frágil en la laptop RTX
   2060 (~58 fps warm); export a consolas requiere partner externo (Godot).
+- **SCHEMA v1.1 (2026-07-20):** dieta de arranque fusionada desde la skill
+  `project-context` — auditoría de tokens en `Aether Bound/scripts/
+  check_vault.py` (bloqueada hoy: sin Python real instalado, ver
+  [[Lecciones]]). Línea base a mano: ~1,640 tokens de arranque, 🟢 VERDE.
+  Detalle completo en [[LOG]] y `../VAULT-STARTER.md` v2.
 
 **Historial de estados:** ver [[LOG]] y [[Current-State-Historico]].
