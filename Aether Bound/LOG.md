@@ -1,5 +1,25 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] fix+stop | Mentón: 2do intento (biseles verticales) sin ganancia visible — STOP documentado, techo de técnica sobre geometría ratificada
+Boris decidió: boca queda ACEPTADA en 35% (no reabrir la estructura de
+2 labios); mentón sigue con cuidado. Segundo intento: biseles en las
+ARISTAS VERTICALES de `jaw_mesh` (mismo patrón que `chin_chamfer`, boxes
+rotados 45° pero en eje Y, inset simétrico ~8.5mm, altura 0.050 para
+enterrar tapas). Verificado en captura: SIN regresión (no reabrió tinta
+ratificada) pero TAMBIÉN sin cambio visible en frontal/3-4/perfil — el
+bisel vertical corta la esquina frontal-lateral, que en perfil recto no
+se ve (solo se vería en 3/4, donde queda oculto tras jaw_body) y en
+frontal es demasiado sutil a la escala del render. Dos intentos
+cuidadosos (bisel horizontal agrandado + bisel vertical nuevo) sobre la
+geometría ratificada, cero ganancia de lectura. Regla del Vault
+aplicada: PARAR y documentar en vez de seguir a ciegas. Conclusión: el
+mentón-cuboide en perfil (20%) es un techo de la MASA base (proporción/
+pivote del bloque `jaw_mesh`, no su acabado de bordes) — moverlo
+requeriría re-dimensionar el bloque ratificado, fuera del alcance de
+"tocar con cuidado". Queda para que Boris decida: aceptar como estilo
+(igual que los anillos de codo/hombro) o autorizar una revisión de
+proporción del bloque. Gates ALL_PASS.
+
 ## [2026-07-20] fix+qa | Última ronda de cara arranca: boca 20%→35%, mentón sin cambio — decisión pendiente de Boris
 Arranque de la última ronda de ajustes de cara (objetivos grupo C: boca-
 cápsula 20%, mentón-cuboide en perfil). **BOCA:** causa raíz de "bisagra

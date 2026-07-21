@@ -1204,6 +1204,22 @@ func _build() -> void:
 	jaw_mesh.add_child(chin_chamfer)
 	_add_outline_pass(chin_chamfer, Color("#f2b186"))
 
+	# Ronda cara final, parte 2 (aristas VERTICALES del mentón, decisión
+	# de Boris de seguir con cuidado): mismo patrón que `chin_chamfer`
+	# (caja rotada 45° cortando la esquina) pero en el eje Y — corta la
+	# arista frontal-lateral (entre cara frontal y cara lateral de
+	# `jaw_mesh`) que el QA marcó como "arista vertical con highlight,
+	# inequívocamente prisma". Inset simétrico al de chin_chamfer
+	# (~8.5mm en X, ~9mm en Z desde la esquina real x=±0.0275/z=0.041).
+	# Altura 0.050 (< 0.055 del bloque) para que sus tapas queden
+	# enterradas contra las ramas/gonial, sin asomar como escalón propio.
+	for cvside in [-1, 1]:
+		var chin_vchamfer = _box_mesh(0.019, 0.050, 0.019, skin_mat)
+		chin_vchamfer.position = Vector3(float(cvside) * 0.019, 0.0, 0.032)
+		chin_vchamfer.rotation.y = float(cvside) * (PI / 4.0)
+		jaw_mesh.add_child(chin_vchamfer)
+		_add_outline_pass(chin_vchamfer, Color("#f2b186"))
+
 	# Sprint B2b: GONÍACO suavizado — esfera chica en el vértice de cada
 	# rama (la lámina redondea ese ángulo con el masetero; era vértice de
 	# caja).
