@@ -1192,7 +1192,13 @@ func _build() -> void:
 	# propios labios/escalones de tinta en vez de cortar la esquina. En el
 	# centro nuevo su cara a 45° rebana la esquina con inset ~7 mm por lado
 	# y las puntas quedan enterradas en las facetas.
-	var chin_chamfer = _box_mesh(0.058, 0.015, 0.015, skin_mat)
+	# RONDA CARA FINAL (2026-07-20, objetivo grupo C "mentón-cuboide en
+	# perfil"): geometría RATIFICADA por Boris — se toca con cuidado, sin
+	# mover el centro (mismo tangente ya calibrado), solo agrandando la
+	# sección 0.015→0.019 para que el bisel cubra más superficie y
+	# redondee la lectura del corte en perfil. Verificado en captura que
+	# la tinta ratificada no se reabre.
+	var chin_chamfer = _box_mesh(0.058, 0.019, 0.019, skin_mat)
 	chin_chamfer.position = Vector3(0.0, -0.019, 0.032)
 	chin_chamfer.rotation.x = PI / 4.0
 	jaw_mesh.add_child(chin_chamfer)
@@ -1444,21 +1450,48 @@ func _build() -> void:
 	# ras (QA R1-r1: la cápsula redonda sobresalía como pico/tapón en
 	# perfil y leía "curita" de frente; el color del material hace la
 	# lectura, no el contorno de tinta).
-	var mouth_r: float = 0.0095
-	var mouth = _capsule_mesh(mouth_r, 0.052, lip_mat)
+	# RONDA FINAL DE CARA (2026-07-20, objetivo grupo C: boca 20% = "cápsula/
+	# píldora con una línea = bisagra/ranura mecánica"). La causa de la
+	# lectura mecánica: (a) los topes REDONDOS del capsule leían como
+	# extremos de un objeto (hotdog), y (b) la ranura corta y centrada leía
+	# como slot. Fix: capsule más ANCHO y aplanado — sus topes redondos se
+	# meten en la sombra de la comisura de las mejillas y dejan de leerse;
+	# y la comisura pasa a ser una LÍNEA DE ANCHO CASI COMPLETO con las
+	# esquinas CAYENDO (boca seria de la lámina), no un slot central.
+	# Ronda 2: la cápsula seguía leyendo "hotdog" porque protruía lo
+	# suficiente para que el Sobel entintara TODO su contorno (pared
+	# empinada = borde entintado, Lecciones). Se HUNDE casi al ras (front
+	# a z≈0.116, apenas 1mm sobre el plano) y se APLANA en Y (scale 0.70)
+	# → emerge en rampa, el Sobel ya no la recorta como pastilla y solo la
+	# COMISURA (surco real) entinta. La lectura de labio la lleva el tono
+	# del material + la comisura, no un bulto contorneado.
+	var mouth_r: float = 0.0085
+	var mouth = _capsule_mesh(mouth_r, 0.060, lip_mat)
 	mouth.rotation.z = PI / 2.0
-	mouth.scale = Vector3(1.0, 1.0, 0.45)
-	mouth.position = Vector3(0.0, -0.088, 0.115)
+	mouth.scale = Vector3(1.0, 0.70, 0.34)
+	mouth.position = Vector3(0.0, -0.088, 0.1125)
 	head.add_child(mouth)
 	_add_outline_pass(mouth, Color("#f2b186"))
 
-	# comisura tallada: línea fina sobre la superficie frontal de la
-	# cápsula (no una masa que sobresalga por su cuenta), descentrada
-	# +0.003 hacia arriba desde el centro de `mouth` para que la porción
-	# inferior (más alta) lea más carnosa.
-	var mouth_seam = _box_mesh(0.034, 0.0030, 0.005, mouth_seam_mat)
-	mouth_seam.position = Vector3(0.0, -0.088 + 0.003, 0.115 + mouth_r * 0.40)
-	head.add_child(mouth_seam)
+	# COMISURA — 3 segmentos que forman una línea de boca con forma real:
+	# tramo central + dos esquinas que caen (down-turn), abarcando casi
+	# todo el ancho del labio. Descentrada +0.003 arriba (porción inferior
+	# más carnosa). El escalón frontal la mantiene como surco, no dibujo.
+	var seam_z: float = 0.1125 + mouth_r * 0.34 + 0.0006
+	# Ronda 3: esquinas ADENTRO y más cortas (x±0.020, w0.012) — antes a
+	# x±0.026/w0.018 sus puntas exteriores sobresalían del labio como
+	# muñones oscuros. Ángulo suave (0.22): down-turn de boca seria sin
+	# que la punta se salga de la cápsula.
+	var seam_defs: Array = [
+		[0.0,    -0.085,  seam_z,        0.036, 0.0],    # centro (ancho)
+		[-0.020, -0.0868, seam_z - 0.001, 0.012, 0.22],  # esquina izq cae
+		[0.020,  -0.0868, seam_z - 0.001, 0.012, -0.22], # esquina der cae
+	]
+	for sm in seam_defs:
+		var seg = _box_mesh(sm[3], 0.0028, 0.005, mouth_seam_mat)
+		seg.position = Vector3(sm[0], sm[1], sm[2])
+		seg.rotation.z = sm[4]
+		head.add_child(seg)
 	# (R1: las esferas de comisura se retiran — leían como "remaches" en
 	# los extremos de la cápsula, QA rostro 35%. La cápsula redondea sus
 	# propias puntas.)

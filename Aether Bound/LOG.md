@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-20] fix+qa | Última ronda de cara arranca: boca 20%→35%, mentón sin cambio — decisión pendiente de Boris
+Arranque de la última ronda de ajustes de cara (objetivos grupo C: boca-
+cápsula 20%, mentón-cuboide en perfil). **BOCA:** causa raíz de "bisagra
+mecánica" era doble — (a) la cápsula protruía lo suficiente para que el
+Sobel entintara TODO su contorno (pared empinada = borde completo,
+Lecciones); (b) la comisura era una ranura corta y centrada, leía slot.
+Fix: cápsula hundida casi al ras (rampa, el Sobel ya no la recorta como
+objeto pegado) + comisura rehecha como 3 segmentos (centro ancho + 2
+esquinas que caen, down-turn de boca seria) cubriendo casi todo el
+ancho del labio. QA imparcial: 20%→**35%**. Sigue CRITICAL: una sola
+cápsula con línea central lee "pieza soldada", falta separación real
+labio sup/inf (dos volúmenes con escalón Z, la estructura que Boris
+descartó tras 8+ rondas fallidas — NO se revirtió esa decisión sin
+consultar). **MENTÓN:** se agrandó con cuidado el `chin_chamfer`
+(0.015→0.019, mismo centro, geometría RATIFICADA por Boris) — verificado
+en captura que no reabrió tinta, pero QA: el bisel es invisible a
+distancia normal de render, mentón sigue en **20%** sin cambio real.
+El techo no es de técnica: requeriría biseles en las aristas VERTICALES
+del bloque del mentón (más invasivo sobre zona congelada). Gates
+ALL_PASS. Ambas decisiones (reabrir estructura de 2 labios; biselar más
+la masa ratificada del mentón) quedan para que Boris decida.
+
 ## [2026-07-20] decision+fix | Boris RATIFICA VoBo de mandíbula (permanente) + línea del nacimiento más llena; pinhole de coronilla = stop documentado
 Boris ratifica el VoBo de la mandíbula: la mini-ronda de quiebres queda
 PERMANENTE (deja de ser temporal). Ese frente cierra. Sobre el pelo,
