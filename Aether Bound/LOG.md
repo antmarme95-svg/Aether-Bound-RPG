@@ -1,5 +1,29 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] design | PRD del nacimiento de oreja ESCRITO (propuesto, sin ejecutar)
+Boris dio la señal de arrancar el frente detectado en la entrada de
+`investigate` de más abajo. Se escribió [[PRD-Nacimiento-de-Oreja-v1]] con el
+diagnóstico ya **medido** contra `HairLibrary.SKULL_SEMI` (0.123, 0.141,
+0.1425) en vez de descrito a ojo — la causa raíz resultó ser una sola y de
+SOLAPE, no de forma:
+
+| Rama | Penetración de la oreja en X | Piezas |
+|---|---|---|
+| Humano/Mistbound (`:2996`) | ~0.003 (≈5% de su ancho) | 1, esfera desnuda |
+| Enano (`:3012`) | ~0.007 (≈11%) | 1, esfera desnuda |
+| **Fallback neutro (`:3103`)** | **~0.011 (≈46%)** | **3: pabellón+lóbulo+hélix** |
+| Elfo (`:2904`) | sin costura dura, pero sin pabellón | 4 |
+
+El fallback ya resuelve el problema (achata la esfera en X y la hunde casi la
+mitad de su ancho) y las razas reales simplemente no lo usan. Encaja con la
+lección ya documentada de **fusión por overlap real, no por tangencia**.
+Plan en 5 pasos (helper factorizado → humano → enano → pabellón élfico →
+QA imparcial vs las 3 láminas de fenotipo), con anti-objetivo explícito de NO
+reabrir la oreja de elfo (cerrada al 75% con VoBo). Riesgo anotado: hundir el
+pabellón puede apagar la tinta del Sobel en su perímetro — verificar con zoom.
+**Estado: `propuesto`, cero código tocado — pendiente VoBo de Boris (incluido
+el umbral de fidelidad objetivo, sugerido 70%) antes de ejecutar.**
+
 ## [2026-07-22] investigate | Nacimiento de oreja — bug compartido humano/enano detectado, PRD propio pendiente (NO ejecutado)
 Cerrada la ronda 10 de la oreja de elfo (75%, VoBo de Boris: "Sí, dale, así
 queda" — ver entrada siguiente), Boris marcó que el "nacimiento" de la oreja

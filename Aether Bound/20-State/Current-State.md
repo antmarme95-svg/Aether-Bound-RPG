@@ -38,8 +38,19 @@ updated: 2026-07-22
   sub-ronda. Detalle completo en [[LOG]]. **VoBo de Boris sobre el 75%:
   conforme con el resultado** ("Sí, dale, así queda") — cierra la ronda
   10 de la oreja de elfo.
-- **➡️ FRENTE NUEVO detectado (2026-07-22, aún SIN ejecutar, PRD propio
-  pendiente):** Boris notó que el "nacimiento" de la oreja (dónde se
+- **➡️ FRENTE NUEVO — PRD YA ESCRITO (2026-07-22), código SIN tocar:**
+  [[PRD-Nacimiento-de-Oreja-v1]] queda en `propuesto`. **Espera de Boris:
+  VoBo del plan + el umbral de fidelidad objetivo (sugerido 70%) antes de
+  ejecutar el paso 1.** El diagnóstico ya está MEDIDO contra
+  `HairLibrary.SKULL_SEMI` (no a ojo): la causa raíz es única y de
+  SOLAPE, no de forma — humano (`character_rig.gd:2996`) y enano
+  (`:3012`) hunden su esfera solo ~5%/11% de su propio ancho dentro del
+  cráneo, contra el ~46% del fallback neutro (`:3103`) que sí lee bien
+  porque además tiene lóbulo + hélix. Plan en 5 pasos: helper
+  factorizado → rama humana → rama enana → pabellón élfico → QA
+  imparcial vs las 3 láminas de fenotipo. Anti-objetivo duro: **no
+  reabrir la oreja de elfo** (cerrada al 75% con VoBo).
+  Contexto original del hallazgo: Boris notó que el "nacimiento" (dónde se
   funde con el cráneo) no lee bien, y sospechó que el problema cruza
   razas — confirmado con capturas: **humano (`miststalker`) y enano
   (`ironblooded`)** comparten código, una `SphereMesh` desnuda tangente
@@ -52,8 +63,7 @@ updated: 2026-07-22
   de hoy) no tiene la costura dura, pero le falta el mismo tipo de
   detalle: sin pabellón/concha visible en la base, solo el cono saliendo
   derecho del cráneo. Decisión de Boris: **frente aparte, PRD propio**
-  (no colar dentro del QA loop del elfo) — arranca en una sesión futura,
-  no esta.
+  (no colar dentro del QA loop del elfo).
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de
