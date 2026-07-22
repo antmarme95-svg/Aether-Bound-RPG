@@ -121,9 +121,17 @@ formal + el ojo del orquestador, como hasta ahora.
    (Frieren + Zelda TotK) que reemplazan el criterio de la lámina de
    concept art para este rasgo — hacia afuera + leve arriba, no el
    barrido dramático hacia atrás de la ronda 1. 2 rondas de ajuste
-   (rake trasero `rotation.x` -0.38→-0.15), cerrada ahí (frente/3-4 leen
-   bien; perfil estricto queda algo fino — ángulo poco común en
-   gameplay real, no vale una 3ª ronda). Gates mínimos ALL_PASS.
+   (rake trasero `rotation.x` -0.38→-0.15).
+   **Ronda 3 — QA imparcial formal (2026-07-22, protocolo [[QA Loop]]):**
+   ronda 1 del QA 40% (CRITICAL ángulo, HIGH punta roma, MEDIUM base
+   gruesa) → fixes (z-tilt a ~8° sobre horizontal, rake -0.06,
+   `radial_segments=4`, `bottom_radius` más fina) → ronda 2 del QA
+   (mismo agente) **60-65%**, los 3 hallazgos RESUELTOS y verificados
+   por píxel. Pendiente nuevo (MEDIUM, el propio QA lo marca como
+   probable techo de la técnica de un solo cono): silueta compuesta
+   tipo "hoja" — necesitaría más segmentos a lo largo del eje de la
+   oreja, no un parámetro suelto. Sin atacar (decisión de alcance).
+   Gates mínimos ALL_PASS.
    **ROM por raza (`rig_biomech.gd`) sigue pendiente — PENDIENTE VoBo de
    Boris sobre TODO lo ejecutado (proporciones + orejas + mandíbula/
    ceja) antes de seguir.**

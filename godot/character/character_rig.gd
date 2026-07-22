@@ -2832,16 +2832,25 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# (eje X) — la cámara de perfil mira justo por ese eje, así que se
 		# ve de canto (una astilla), no como forma. -0.15 le devuelve
 		# presencia en perfil/3-4 sin volver al barrido dramático de antes.
+		# Ronda 4 (QA imparcial vs Frieren+Zelda, ~40% fidelidad):
+		# CRITICAL — en 3/4 y perfil seguía leyendo "barrida arriba/atrás"
+		# (el clásico elfo de fantasía), no el ángulo casi-horizontal +
+		# 5-15° de las referencias. z-tilt corregido de ~63° a ~82° desde
+		# vertical (solo ~8° sobre horizontal). HIGH — punta roma: pocos
+		# radial_segments (4, patrón ya usado en la nariz) leen como filo
+		# bajo el toon en vez de un cono suave que se ve redondeado/grueso.
+		# MEDIUM — base gruesa: bottom_radius 0.024→0.019.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var mesh = CylinderMesh.new()
 			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.024
+			mesh.bottom_radius = 0.019
 			mesh.height = 0.24
+			mesh.radial_segments = 4
 			ear.mesh = mesh
 			ear.material_override = skin_mat
 			ear.position = Vector3(side * 0.148, 0.050, 0.004)
-			ear.rotation = Vector3(-0.15, 0.0, float(side) * -1.10)
+			ear.rotation = Vector3(-0.06, 0.0, float(side) * -1.43)
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")

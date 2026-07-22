@@ -32,13 +32,17 @@ updated: 2026-07-21
   Chip aparte (fuera de C6b, YA EN EJECUCIÓN por el director en otra
   sesión): cámara de close-up rota en `autotest_classes.gd` (preexistente,
   confirmado con `git stash`, NO introducida por C6b).
-  **Ronda 2 de oreja élfica (mismo día):** Boris pasó 2 referencias
-  nuevas (Frieren + Zelda TotK, en `Downloads/`) — reemplazan el
-  criterio de la lámina de concept art para este rasgo (hacia afuera +
-  leve arriba, no barrido dramático hacia atrás). Ajustada en 2 rondas
-  (rotation.x del rake trasero -0.38→-0.15), cerrada ahí (frente/3-4 leen
-  bien; perfil estricto queda algo fino, ángulo poco común en gameplay).
-  Gates mínimos ALL_PASS.**
+  **Ronda 2-3 de oreja élfica (mismo día + 2026-07-22):** Boris pasó 2
+  referencias nuevas (Frieren + Zelda TotK, en `Downloads/`) — reemplazan
+  el criterio de la lámina de concept art para este rasgo. Ajuste manual
+  (2 rondas) + **QA imparcial formal** (protocolo [[QA Loop]], mismo
+  agente re-invocado): 40%→60-65% de fidelidad medida. CRITICAL (ángulo),
+  HIGH (punta roma), MEDIUM (base gruesa) RESUELTOS y verificados por
+  píxel por el propio QA. Pendiente nuevo (MEDIUM, marcado por el QA como
+  probable techo de la técnica de un solo cono): silueta compuesta tipo
+  "hoja" (curva cóncava + flick de punta) — pediría más segmentos a lo
+  largo del eje de la oreja, no un parámetro suelto; sin atacar esta
+  ronda (decisión de alcance). Gates mínimos ALL_PASS.**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**

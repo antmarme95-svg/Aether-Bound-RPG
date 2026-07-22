@@ -1,5 +1,43 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] qa | Oreja de elfo — QA imparcial (protocolo QA Loop) 40%→60-65%, fixes aplicados y verificados
+Boris pidió correr QA formal de la oreja (no solo VoBo directo). Protocolo
+[[QA Loop]]: subagente `general-purpose` SIN contexto de sesión, con las 2
+referencias (`frieren-ears-v0-pgvmflxgahrc1.png`, `zelda_ears.jpg`, en
+`Downloads/`) + las 3 capturas del banco (`anatomy_elf_face*.png`).
+
+**Ronda 1 del QA: ~40%.** CRITICAL — ángulo seguía leyendo "barrido
+arriba/atrás" (el clásico elfo de fantasía) pese al ajuste de la sesión
+anterior, no el ~horizontal+5-15° de las referencias. HIGH — punta roma.
+MEDIUM — base gruesa/bulbosa.
+
+**Fixes implementados (`character_rig.gd`, rama `aetherborn` de
+`_build_origin_features`):** z-tilt corregido de ~63° a ~82° desde
+vertical (ahora ~8° sobre horizontal, dentro del rango pedido);
+`rotation.x` (rake trasero) bajado de -0.15 a -0.06; `radial_segments`
+del cono bajado a 4 (mismo patrón low-poly ya usado en la nariz — lee
+como filo bajo el toon en vez de cono suave/redondeado); `bottom_radius`
+0.024→0.019 (base más fina).
+
+**Ronda 2 del QA (mismo agente, `SendMessage`): ~60-65%.** El propio QA
+midió por PÍXEL (trazó el contorno en la captura, no solo impresión
+visual) — ángulo real ≈7.7° sobre horizontal, dentro de rango. CRITICAL
+(ángulo), HIGH (punta) y MEDIUM (base gruesa) confirmados RESUELTOS.
+**Hallazgo nuevo (MEDIUM):** la silueta de Frieren/Zelda es una curva
+COMPUESTA tipo "hoja" (borde superior casi recto, inferior cóncavo,
+"flick" final más pronunciado en la punta) — nuestra oreja es un cono
+recto de taper uniforme, lee más "espina/cuerno" que "hoja". El propio
+QA lo marca como probable TECHO de la técnica actual (un solo cono/wedge)
+— resolverlo de verdad pediría más segmentos a lo largo del eje de la
+oreja para meter la curva, no un parámetro suelto. Queda como pendiente
+priorizado, no atacado esta ronda (decisión de alcance, no de tiempo:
+Boris no pidió seguir más allá del QA + fixes de esta ronda).
+
+**Gates:** `test_core` + `autotest_biomech` ALL_PASS (cambio acotado a la
+rama `aetherborn`). Capturas finales en `godot/test_out/
+anatomy_elf_face.png`/`_34.png`/`_profile.png`. Baseline humano
+restaurado en `anatomy_face*.png` normales.
+
 ## [2026-07-21] fix | Oreja de elfo, ronda 2 — Boris pasó referencias nuevas (Frieren + Zelda TotK), reemplaza el criterio de la lámina de concept art
 Tras la primera pasada de la oreja élfica (ver entrada anterior, medida
 contra `fenotipo-elfo-lavanda-v1.png`: oreja larga muy barrida hacia
