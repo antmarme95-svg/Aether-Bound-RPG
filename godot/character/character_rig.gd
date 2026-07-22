@@ -587,7 +587,12 @@ func _build() -> void:
 	# más rápido abajo, así que el ancho combinado brazo+torso no baja.
 	# Profundiza el pellizco (0.071→0.058) para que la curva de cintura
 	# gane margen real frente al brazo, no solo frente al fondo.
-	waist = _cylinder_mesh(0.108, 0.058, 0.22, skin_mat)
+	# Ronda 2 (mismo frente, pedido de Boris "ataca el perfil también"):
+	# diagnóstico confirmó que el pellizco de PERFIL (profundidad Z) era
+	# incluso más sutil que el de frente — mismo radio de cilindro
+	# controla X y Z por igual, así que profundizar más (0.058→0.048)
+	# angosta ambas vistas a la vez (verificado que el frente no se pasa).
+	waist = _cylinder_mesh(0.108, 0.048, 0.22, skin_mat)
 	waist.position = Vector3(0.0, 0.08, 0.0)
 	spine.add_child(waist)
 	_add_outline_pass(waist, Color("#f2b186"))

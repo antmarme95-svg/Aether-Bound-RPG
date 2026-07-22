@@ -8,15 +8,15 @@ updated: 2026-07-21
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 ejecutó el
-  frente 1 del orden acordado (hombro→torso + cintura recta, CRITICAL de
-  Grupo C 07-19): hombro-esfera fundido con el trapecio (trap_back
-  agrandado/acercado) y cintura con pellizco real (waist bottom_radius
-  0.071→0.058) + hueco visible entre brazo y torso de frente. Gates
-  ALL_PASS. Perfil sigue sin pellizco visible — sin atacar aún. Detalle
-  completo en [[LOG]]. Queda VoBo de Boris sobre las capturas
-  (`godot/test_out/anatomy_full_front.png`,
-  `anatomy_closeup_neckshoulder.png`, `zoom_torso_front_r1.png`) antes de
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 ejecutó y CERRÓ
+  el frente 1 del orden acordado (hombro→torso + cintura recta, CRITICAL
+  de Grupo C 07-19), frente Y perfil: hombro-esfera fundido con el
+  trapecio (trap_back agrandado/acercado) y cintura con pellizco real en
+  las 2 vistas (waist bottom_radius 0.071→0.058→0.048, medido por píxel:
+  ~55% de reducción real en perfil). Gates ALL_PASS (test_core, biomech,
+  combat, springboard). Detalle completo en [[LOG]]. Queda VoBo de Boris
+  sobre las capturas (`godot/test_out/anatomy_full_front.png`,
+  `anatomy_full_side.png`, `anatomy_closeup_neckshoulder.png`) antes de
   seguir con el resto del orden (C4 pies IK/ROM, luego C6b).**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del

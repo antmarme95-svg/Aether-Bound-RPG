@@ -23,11 +23,24 @@ hueco real de fondo (verde) entre brazo interior y cintura + curva de
 torso visiblemente más angosta que el hombro (antes: silueta recta de
 hombro a cadera). **Gates:** `test_core`, `autotest_biomech`,
 `autotest_combat`, `autotest_springboard` ALL_PASS — cero regresión.
-Perfil (side view) sigue sin mostrar mucho pellizco (la vista de frente
-era donde el QA lo marcó CRITICAL); pendiente decidir con Boris si vale
-una 2da ronda en perfil o se cierra aquí. Queda VoBo de Boris sobre las
-capturas. Herramienta nueva reutilizable: `DIAG_TORSO=1` en
-`tmp_anatomy.gd` (aísla torso/waist/pelvis + oculta brazos).
+Perfil (side view) seguía sin mostrar mucho pellizco tras la ronda 1.
+Herramienta nueva reutilizable: `DIAG_TORSO=1` en `tmp_anatomy.gd` (aísla
+torso/waist/pelvis + oculta brazos).
+
+**Ronda 2 (mismo día, pedido de Boris "ataca el perfil también"):**
+diagnóstico por color confirmó que el pellizco de PROFUNDIDAD (Z) era
+aún más sutil a ojo que el de ancho (X), aunque el mismo radio de
+cilindro controla ambos ejes por igual. Profundizado más: `waist`
+bottom_radius 0.058→0.048. Medido por PÍXEL (no solo a ojo — lección
+"zoom antes de cerrar"): el ancho de la franja de cintura en perfil baja
+de 54px (torso, altura hombro) a 24px (fondo de waist) = ~55% de
+reducción real, confirmando que el pellizco SÍ es genuino en las dos
+vistas (el ojo lo subestimaba por el tamaño chico de la franja visible).
+Frente sigue con hourglass limpio (no se pasó). Gates: `test_core`,
+`autotest_biomech`, `autotest_combat`, `autotest_springboard` ALL_PASS.
+**Frente 1 CERRADO** (hombro→torso + cintura recta, frente y perfil).
+Queda VoBo de Boris sobre las capturas antes de seguir con el resto del
+orden (C4 pies IK/ROM, luego C6b).
 
 ## [2026-07-20] state | Python 3.12 instalado + check_vault.py verificado en corrida real + gitignore de privados wireado
 Boris pidió instalar Python (bloqueaba `check_vault.py` desde el checkpoint
