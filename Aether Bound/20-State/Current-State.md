@@ -20,13 +20,23 @@ updated: 2026-07-22
   reemplazado por 4 masas (cuerpo + punta + base + hélix, las 3 últimas
   hijas del cuerpo para alineación garantizada). Diagnóstico nuevo del
   subagente: el cono medía 3.1× la oreja humana del rig, muy por encima
-  del 1.5-2× pedido — ahora ≈1.8× (largo total ≈0.14). `rotation.y`
-  nuevo (yaw posterior ~20°, eje nunca tocado antes). Verificado en banco:
-  de perfil ya lee como oreja con volumen real (antes, astilla de canto);
-  legible incluso a distancia normal de juego (antes se perdía). Gate
-  `test_core.gd` ALL_PASS. Detalle completo en [[LOG]]. **Queda VoBo
-  visual de Boris** — primera pasada de parámetros, sujeta a afinar en
-  banco si pide ajustes.
+  del 1.5-2× pedido — ahora ≈1.8× (largo total ≈0.14).
+- **✅ QA imparcial corrido (protocolo [[QA Loop]], mismo agente
+  re-invocado 2 veces): 35-40%→55-60%→75%.** Ronda 9 midió CRITICAL en
+  el eje (leía casi lateral, sin rake). Sub-ronda 1 resolvió proporción y
+  costura (55-60%) pero el eje persistió. Diagnóstico descartó bug de
+  cálculo (verificado con matrices `Basis` explícitas) — la causa real
+  era que la oreja venía "casi horizontal" por decisión de las rondas
+  4-5; al re-mirar las referencias con el hallazgo en mente, ambas
+  muestran la oreja apuntando hacia ARRIBA. **Boris reabrió esa decisión**
+  y se subió la elevación (~28° arriba + ~20° atrás, construcción directa
+  de dirección en vez de ángulos Euler encadenados) → **75%, sin
+  CRITICAL abierto**. Quedan 2 hallazgos menores: MEDIUM (verificar
+  cuando el pelo definitivo reemplace el placeholder — riesgo de que
+  tape la punta) y LOW (ángulo 5-6° por encima del techo de 40° pedido,
+  sin impacto visual reportado). Gates `test_core.gd` ALL_PASS en cada
+  sub-ronda. Detalle completo en [[LOG]]. **Pendiente VoBo final de
+  Boris** sobre el 75% — decidir si cierra aquí o se afina más.
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de

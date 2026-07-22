@@ -2869,33 +2869,77 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# 6-8, por leer "alambre/gancho" — ver comentario arriba y
 		# [[Lecciones]]).
 		#
+		# QA imparcial ronda 9v1: ~35-40% (bajó del 60-65% del cono viejo).
+		# CRITICAL — el yaw posterior (rotation.y=0.35, ~20°) no se leía en
+		# perfil/3-4: con `rotation.z`≈82° aplicado primero (orden Euler de
+		# Godot es extrínseco Z→X→Y sobre los ejes FIJOS del padre), la
+		# mayor parte del largo del cono ya quedó proyectada sobre el eje X
+		# antes de que Y actúe — el desplazamiento en Z que produce un yaw
+		# chico resulta minúsculo en metros absolutos. Subido a 0.70 (~40°,
+		# el TECHO del rango 20-40° de Boris) para que el corrimiento hacia
+		# atrás sea medible a esta escala. HIGH — proporción "muñón"
+		# corta/gruesa, no alargada: largo subido (0.10+0.05 → 0.115+0.06,
+		# overlap 0.008) y radios adelgazados (0.024/0.014 → 0.020/0.011,
+		# tip a 0.005 sin cambio) para una silueta más esbelta, sin volver
+		# al problema de "alambre" del loft (radio mínimo pre-punta sigue
+		# ≥0.011, con volumen real). MEDIUM — el quiebre local de ~3° en la
+		# punta (`ear_tip.rotation.x=-0.05`) leía como un ESCALÓN visible en
+		# la costura, no una curva — innecesario además para la variante
+		# Zelda (borde superior YA leía "casi recto" con quiebre): bajado a
+		# ~0 (colineal con el cuerpo), el taper de radios solo (sin quiebre
+		# angular) alcanza para el efecto "ancha en la base, afina rápido
+		# cerca de la punta".
+		#
 		# 4 masas hijas de `ear_body` (evita recalcular a mano la base
 		# rotada del cono — error real de la ronda 8, el lóbulo quedó
 		# flotando invisible por usar el CENTRO del cono en vez de su base):
 		#   #1 base  — SphereMesh chico, clavado al extremo -Y (base) del cuerpo.
 		#   #2 cuerpo — CylinderMesh ancho, taper LENTO (borde ~recto, Zelda).
-		#   #3 punta  — CylinderMesh corto, taper RÁPIDO + quiebre local ~3°
-		#               (remate limpio, NO el flick curvo de Frieren).
+		#   #3 punta  — CylinderMesh corto, taper RÁPIDO, colineal (Zelda).
 		#   #4 hélix  — TorusMesh aplastado, discreto, cerca de la base.
 		# Oreja humana del rig (línea ~3013, referencia de proporción):
 		# SphereMesh(0.030,0.060)*scale(0.40,1.28,0.75) → eje largo ≈0.077.
-		# Target Zelda ≈2× eso ≈0.15; cuerpo 0.10 + punta 0.05 (solape 0.01)
-		# ≈0.14, mismo grosor de base que la humana (bottom_radius 0.024 ≈
-		# diámetro humano 0.045).
+		# Target Zelda ≈2× eso ≈0.15-0.17; cuerpo 0.115 + punta 0.06 (solape
+		# 0.008) ≈0.167.
 		for side in [-1, 1]:
 			var ear_body = MeshInstance3D.new()
 			var body_mesh = CylinderMesh.new()
-			body_mesh.top_radius = 0.014
-			body_mesh.bottom_radius = 0.024
-			body_mesh.height = 0.10
+			body_mesh.top_radius = 0.011
+			body_mesh.bottom_radius = 0.020
+			body_mesh.height = 0.115
 			body_mesh.radial_segments = 6
 			ear_body.mesh = body_mesh
 			ear_body.material_override = skin_mat
-			# Mismo eje z/x ya validado (casi horizontal, sin rake sagital);
-			# rotation.y NUEVO — yaw posterior ~20° pedido por Boris (nunca
-			# tocado en rondas 1-8, ese eje es distinto del rake que falló).
+			# RONDA 10 (2026-07-22): el diagnóstico confirmó que el giro se
+			# estaba aplicando bien (misma lectura con Euler que con Basis
+			# explícito) — el problema real era otro: esta oreja quedó
+			# "casi horizontal" desde las rondas 4-5 (decisión validada en su
+			# momento contra Frieren/Zelda), pero al re-mirar esas MISMAS
+			# referencias (`zelda_ears.jpg`, `zoom_frieren_ear_left.png`) la
+			# oreja apunta claramente hacia ARRIBA (~25-35° sobre la
+			# horizontal), no casi-horizontal. Boris reabrió esa decisión.
+			#
+			# Se arma la dirección del eje DIRECTO por elevación+yaw (más
+			# claro de ajustar que encadenar 3 ángulos de Euler, que ya dio
+			# una lectura contra-intuitiva una vez): `elev` = cuánto sube
+			# sobre la horizontal (nuevo, la reapertura de hoy), `yaw_back` =
+			# barrido hacia atrás en el plano horizontal (el ajuste de la
+			# ronda 9v2/10). El eje +Y local del cilindro (extremo
+			# top_radius = la punta) se apunta directo a esta dirección vía
+			# una base ortonormal construida con producto cruz — sin pasar
+			# por ninguna convención de Euler.
+			var elev: float = deg_to_rad(28.0)
+			var yaw_back: float = deg_to_rad(20.0)
+			var tip_dir := Vector3(
+				side * cos(elev) * cos(yaw_back),
+				sin(elev),
+				-cos(elev) * sin(yaw_back)
+			).normalized()
+			var ref_axis := Vector3(0.0, 0.0, 1.0)
+			var local_x := tip_dir.cross(ref_axis).normalized()
+			var local_z := local_x.cross(tip_dir).normalized()
 			ear_body.position = Vector3(side * 0.1645, 0.040, 0.004)
-			ear_body.rotation = Vector3(-0.06, side * 0.35, float(side) * -1.43)
+			ear_body.transform.basis = Basis(local_x, tip_dir, local_z)
 			_add_outline_pass(ear_body, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear_body)
 
@@ -2903,29 +2947,28 @@ func _build_origin_features(origin: Dictionary) -> void:
 			# el ancho que nace del cráneo) — alineación garantizada sin trig.
 			var ear_base = MeshInstance3D.new()
 			var base_mesh = SphereMesh.new()
-			base_mesh.radius = 0.014
-			base_mesh.height = 0.028
+			base_mesh.radius = 0.012
+			base_mesh.height = 0.024
 			ear_base.mesh = base_mesh
 			ear_base.material_override = skin_mat
 			ear_base.scale = Vector3(0.6, 0.9, 0.6)
-			ear_base.position = Vector3(0.0, -0.045, 0.0)
+			ear_base.position = Vector3(0.0, -0.052, 0.0)
 			_add_outline_pass(ear_base, Color("#f2b186"), 0.02)
 			ear_body.add_child(ear_base)
 
 			# #3 punta — hija de ear_body, en su extremo +Y local (top_radius);
-			# quiebre local de ~3° (Zelda: casi colineal con el cuerpo, no el
-			# 5-8° curvo de Frieren) + top_radius=0.005 (redondeo mínimo, no
-			# el top_radius≈0 que leía "filo" bajo el toon en rondas previas).
+			# SIN quiebre angular (colineal, Zelda: borde superior recto) —
+			# el taper de radios (0.011→0.005) ya da el afine rápido cerca
+			# de la punta sin el "escalón" que un quiebre local producía.
 			var ear_tip = MeshInstance3D.new()
 			var tip_mesh = CylinderMesh.new()
 			tip_mesh.top_radius = 0.005
-			tip_mesh.bottom_radius = 0.014
-			tip_mesh.height = 0.05
+			tip_mesh.bottom_radius = 0.011
+			tip_mesh.height = 0.06
 			tip_mesh.radial_segments = 6
 			ear_tip.mesh = tip_mesh
 			ear_tip.material_override = skin_mat
-			ear_tip.position = Vector3(0.0, 0.04, 0.0)
-			ear_tip.rotation = Vector3(-0.05, 0.0, 0.0)
+			ear_tip.position = Vector3(0.0, 0.0495, 0.0)
 			_add_outline_pass(ear_tip, Color("#f2b186"), 0.02)
 			ear_body.add_child(ear_tip)
 
@@ -2935,13 +2978,13 @@ func _build_origin_features(origin: Dictionary) -> void:
 			# hélix marcada de Frieren).
 			var helix = MeshInstance3D.new()
 			var helix_mesh = TorusMesh.new()
-			helix_mesh.inner_radius = 0.008
-			helix_mesh.outer_radius = 0.012
+			helix_mesh.inner_radius = 0.007
+			helix_mesh.outer_radius = 0.010
 			helix.mesh = helix_mesh
 			helix.material_override = skin_mat
 			helix.scale = Vector3(1.0, 1.2, 0.5)
 			helix.rotation.z = PI / 2.0
-			helix.position = Vector3(0.006, -0.032, 0.004)
+			helix.position = Vector3(0.005, -0.038, 0.004)
 			_add_outline_pass(helix, Color("#f2b186"), 0.02)
 			ear_body.add_child(helix)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")

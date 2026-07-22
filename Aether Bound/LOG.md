@@ -1,5 +1,46 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] qa | Oreja de elfo — ronda 10, reabre la decisión "casi horizontal": QA 35-40%→55-60%→75%
+Tras la ronda 9 (ver entrada siguiente), el QA imparcial midió 35-40% y marcó
+CRITICAL el eje ("sin rake posterior, sigue leyendo lateral"). Se aplicaron 2
+sub-rondas de fix, cada una re-verificada con el MISMO agente QA
+(`SendMessage` al `agentId`, protocolo [[QA Loop]]):
+
+**Sub-ronda 1 (proporción + costura):** cuerpo/punta alargados (0.10+0.05 →
+0.115+0.06) y adelgazados (bottom_radius 0.024→0.020, medio 0.014→0.011);
+yaw subido de 0.35 a 0.70 rad; quiebre angular de la punta (~3°) eliminado
+(colineal). QA re-medido: **55-60%** — proporción y costura RESUELTOS, pero
+el CRITICAL del eje **persiste** (sigue midiendo ~75-80° desde la vertical).
+
+**Diagnóstico del eje:** se sospechó primero un bug de orden de composición
+Euler de Godot (`rotation.z` grande aplicado antes que `rotation.y`) — se
+verificó reconstruyendo el giro con matrices `Basis` explícitas
+(independiente de cualquier convención de Godot) y dio el MISMO resultado
+visual, descartando el bug de cálculo. La causa real: esta oreja quedó
+"casi horizontal" por decisión de las rondas 4-5 (validada en su momento
+contra Frieren/Zelda). Al re-mirar esas MISMAS referencias
+(`zelda_ears.jpg`, `zoom_frieren_ear_left.png`) con el hallazgo del QA en
+mente, ambas muestran la oreja apuntando claramente hacia ARRIBA, no casi-
+horizontal. **Boris reabrió la decisión de "casi horizontal".**
+
+**Sub-ronda 2 (elevación, cambio de familia de ángulo):** reemplazado el
+encadenado de 3 ángulos Euler por una construcción directa de dirección
+(elevación ~28° sobre la horizontal + barrido hacia atrás ~20°, vía
+producto cruz — sin depender de ninguna convención de composición). QA
+re-medido: **~75%**. El QA verificó independientemente la premisa contra
+las referencias antes de aceptarla (no la tomó a ciegas), confirmó que NO
+cae en el "barrido dramático hacia arriba" que rondas viejas habían
+rechazado (~44-46° de la vertical medido, moderado, lejos de los ~0-10°
+"look Vulcano" rechazado antes), y que **ya no queda ningún hallazgo
+CRITICAL abierto**. Quedan 2 hallazgos menores: MEDIUM (riesgo de que la
+punta quede tapada por el pelo definitivo cuando se reemplace el
+placeholder — verificar cuando haya geometría de pelo real) y LOW (ángulo
+5-6° por encima del techo de 40° pedido, sin impacto visual negativo
+reportado).
+
+Gates `test_core` ALL_PASS en cada sub-ronda. **Pendiente VoBo final de
+Boris** sobre el 75% — decidir si cierra aquí o se afina más.
+
 ## [2026-07-22] fix | Oreja de elfo — REWORK completo ronda 9 (variante Zelda, composición de 4 masas)
 Boris rechazó el resultado de la ronda 8 ("Todavía no me gustan") y escribió
 su propia spec anatómica (triángulo curvo tipo sable, eje 20-40° hacia atrás,
