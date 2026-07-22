@@ -46,8 +46,13 @@ updated: 2026-07-21
   de por medio, las 3 midieron PEOR que el cono (40%→45%→45-50% vs
   60-65%). Revertido al cono (mejor estado medido); nueva Lección
   documentada (loft puede leer peor que un cono simple en rasgos chicos/
-  cortos). Gates ALL_PASS. **Estado final de la oreja: sin cambio neto
-  respecto a la entrega anterior (cono, 60-65%).**
+  cortos). Gates ALL_PASS.
+  **Ajuste puntual (mismo día):** Boris pidió base 25% más ancha sobre
+  el cono ya validado — `bottom_radius` 0.019→0.024, sin tocar ángulo/
+  largo/punta. Verificado en banco, gates ALL_PASS. **Estado final de la
+  oreja: cono con base más ancha, sobre el 60-65% ya medido (cambio
+  puntual sin nueva medición de QA — pendiente si Boris quiere
+  re-medir).**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**

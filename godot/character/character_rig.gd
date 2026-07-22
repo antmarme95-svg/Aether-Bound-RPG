@@ -2857,11 +2857,13 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# curva compuesta en esta escala. Revertido al cono de la ronda 4
 		# (60-65%, el mejor medido). Ver [[Lecciones]] para el hallazgo
 		# completo antes de reintentar geometría curva en rasgos chicos.
+		# Pedido de Boris (2026-07-22): base 25% más ancha (0.019→0.024) —
+		# más "carne" en la raíz sin tocar ángulo/largo/punta ya medidos.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var mesh = CylinderMesh.new()
 			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.019
+			mesh.bottom_radius = 0.024
 			mesh.height = 0.24
 			mesh.radial_segments = 4
 			ear.mesh = mesh

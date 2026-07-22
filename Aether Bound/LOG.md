@@ -1,5 +1,16 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] fix | Oreja de elfo — base 25% más ancha (pedido directo de Boris)
+Tras cerrar y documentar el experimento fallido de "hoja compuesta"
+(entrada anterior), Boris pidió un ajuste puntual sobre el cono ya
+validado (60-65%): base 25% más ancha. `bottom_radius` 0.019→0.024
+(`character_rig.gd`, rama `aetherborn` de `_build_origin_features`) —
+sin tocar ángulo, largo ni punta ya medidos por el QA. Verificado en
+banco: más "carne" en la raíz, mantiene el ángulo/punta correctos.
+Gates `test_core` + `autotest_biomech` ALL_PASS. Capturas actualizadas
+en `godot/test_out/anatomy_elf_face.png`/`_34.png`/`_profile.png`;
+baseline humano restaurado en `anatomy_face*.png` normales.
+
 ## [2026-07-22] fix | Oreja de elfo — experimento de "hoja compuesta" con HairLibrary._loft/_lock: 3 rondas, todas peor que el cono; REVERTIDO
 Siguiendo el plan aprobado por Boris para atacar el hallazgo del QA
 anterior ("silueta de hoja compuesta, técnica de un solo cono en su

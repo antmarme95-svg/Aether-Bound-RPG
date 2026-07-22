@@ -144,6 +144,9 @@ formal + el ojo del orquestador, como hasta ahora.
    simple en rasgos chicos y cortos, no transferir la técnica de pelo
    sin verificar contra el baseline. **Estado final: oreja = cono,
    60-65%, sin cambio neto.** Gates ALL_PASS.
+   **Ajuste puntual (mismo día):** base 25% más ancha (`bottom_radius`
+   0.019→0.024) por pedido directo de Boris, sin tocar ángulo/largo/
+   punta. Verificado en banco, gates ALL_PASS — sin re-medir con QA.
    **ROM por raza (`rig_biomech.gd`) sigue pendiente — PENDIENTE VoBo de
    Boris sobre TODO lo ejecutado (proporciones + orejas + mandíbula/
    ceja) antes de seguir.**
