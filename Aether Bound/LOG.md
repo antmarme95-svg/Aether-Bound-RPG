@@ -1,6 +1,39 @@
 # LOG — bitácora append-only del Vault
 
-## [2026-07-22] qa | Oreja de elfo — ronda 10, reabre la decisión "casi horizontal": QA 35-40%→55-60%→75%
+## [2026-07-22] investigate | Nacimiento de oreja — bug compartido humano/enano detectado, PRD propio pendiente (NO ejecutado)
+Cerrada la ronda 10 de la oreja de elfo (75%, VoBo de Boris: "Sí, dale, así
+queda" — ver entrada siguiente), Boris marcó que el "nacimiento" de la oreja
+(la zona donde se funde con el cráneo) no lee bien en el elfo, y sospechó que
+el problema cruzaba razas. Se generaron capturas de banco de los 3 casos
+(`ANATOMY_ORIGIN=miststalker|ironblooded|aetherborn`) con zoom 4× sobre la
+zona de nacimiento para confirmar antes de tocar código:
+
+- **Humano (`miststalker`) y enano (`ironblooded`):** comparten el mismo
+  patrón — una `SphereMesh` desnuda (radius 0.030/0.032) puesta TANGENTE al
+  cráneo, sin lóbulo ni hélix, cero blending. Se ve la costura circular
+  completa en el zoom — lee "canica pegada", no oreja naciendo del cráneo.
+  Confirmado el hallazgo de Boris: es un bug real, no una impresión.
+- **Dato clave:** el rig YA TIENE una versión bien resuelta del mismo
+  problema — la rama "Origin neutro/desconocido" (fallback humano base,
+  `character_rig.gd` ~3097-3146, comentario "M9-r1"/"FASE C paso 7"/"Sprint
+  B3") tiene lóbulo colgando (`_sphere_mesh(0.012)`, overlap real) + hélix
+  hundida (`TorusMesh` semi-embebido) — exactamente el tratamiento que
+  falta en humano/enano. Parece que esa rama de fallback quedó con mejor
+  geometría que las razas reales que la reemplazan, probablemente un
+  desfase histórico entre cuándo se hizo el pulido de M9/Fase-C (contra la
+  cara neutra) y cuándo se separaron las ramas explícitas por origin (C6a).
+- **Elfo (ronda 9-10, hoy):** no tiene la costura dura de humano/enano (la
+  base-esfera nueva se funde bien), pero comparte la falta de fondo: sin
+  pabellón/concha visible en el nacimiento, solo el cono emergiendo derecho
+  del cráneo.
+
+**Decisión de Boris:** tratarlo como frente aparte con PRD propio, NO
+colarlo dentro del QA loop de la oreja de elfo de esta sesión. Sin código
+tocado — solo diagnóstico y capturas de evidencia (no versionadas,
+`test_out/` gitignored). Detalle en [[Current-State]] bajo "FRENTE NUEVO
+detectado".
+
+## [2026-07-22] qa | Oreja de elfo — ronda 10, reabre la decisión "casi horizontal": QA 35-40%→55-60%→75% — CERRADA, VoBo de Boris
 Tras la ronda 9 (ver entrada siguiente), el QA imparcial midió 35-40% y marcó
 CRITICAL el eje ("sin rake posterior, sigue leyendo lateral"). Se aplicaron 2
 sub-rondas de fix, cada una re-verificada con el MISMO agente QA

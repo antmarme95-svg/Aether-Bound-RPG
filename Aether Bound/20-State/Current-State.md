@@ -35,8 +35,25 @@ updated: 2026-07-22
   cuando el pelo definitivo reemplace el placeholder — riesgo de que
   tape la punta) y LOW (ángulo 5-6° por encima del techo de 40° pedido,
   sin impacto visual reportado). Gates `test_core.gd` ALL_PASS en cada
-  sub-ronda. Detalle completo en [[LOG]]. **Pendiente VoBo final de
-  Boris** sobre el 75% — decidir si cierra aquí o se afina más.
+  sub-ronda. Detalle completo en [[LOG]]. **VoBo de Boris sobre el 75%:
+  conforme con el resultado** ("Sí, dale, así queda") — cierra la ronda
+  10 de la oreja de elfo.
+- **➡️ FRENTE NUEVO detectado (2026-07-22, aún SIN ejecutar, PRD propio
+  pendiente):** Boris notó que el "nacimiento" de la oreja (dónde se
+  funde con el cráneo) no lee bien, y sospechó que el problema cruza
+  razas — confirmado con capturas: **humano (`miststalker`) y enano
+  (`ironblooded`)** comparten código, una `SphereMesh` desnuda tangente
+  al cráneo, sin lóbulo ni hélix — se ve la costura circular completa,
+  lee "canica pegada" no oreja. Dato clave: el rig YA TIENE una versión
+  bien resuelta de esto (lóbulo colgando + hélix hundida, con solape
+  real) en la rama "origin neutro/desconocido" (fallback humano base,
+  `character_rig.gd` ~3097-3146) — humano y enano simplemente no la usan,
+  tienen su propia versión simplificada al hueso. El **elfo** (ronda 9-10
+  de hoy) no tiene la costura dura, pero le falta el mismo tipo de
+  detalle: sin pabellón/concha visible en la base, solo el cono saliendo
+  derecho del cráneo. Decisión de Boris: **frente aparte, PRD propio**
+  (no colar dentro del QA loop del elfo) — arranca en una sesión futura,
+  no esta.
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de
