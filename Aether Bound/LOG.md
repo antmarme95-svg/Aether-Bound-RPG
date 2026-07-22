@@ -1,5 +1,38 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] fix | Oreja de elfo — REWORK completo ronda 9 (variante Zelda, composición de 4 masas)
+Boris rechazó el resultado de la ronda 8 ("Todavía no me gustan") y escribió
+su propia spec anatómica (triángulo curvo tipo sable, eje 20-40° hacia atrás,
+proporción 1.5-2× una oreja humana MISMO grosor, punta 50-70° redondeada)
+contra Zelda TotK + Frieren, pidiendo traducirla a plan técnico vía un
+**subagente Opus dedicado** (`subagent_type: Plan`, `model: opus`). El
+subagente verificó el código real (líneas exactas), encontró un diagnóstico
+no visto antes — el cono de la ronda 8 medía `height=0.24`, **3.1× la oreja
+humana del propio rig** (`character_rig.gd:3013-3038`, eje largo ≈0.077),
+muy por encima del 1.5-2× pedido — y propuso 3 decisiones a Boris, quien
+eligió: (1) sí recortar a la proporción 1.5-2×, (2) **Zelda puro** (no
+Frieren, no síntesis), (3) **composición de primitivas sólidas**, NO
+reintentar el loft (ya falló 3 veces, rondas 6-8).
+
+**Implementación** (`character_rig.gd`, rama `aetherborn`): reemplazado el
+cono de un solo taper por 4 masas — cuerpo (`CylinderMesh` 0.024→0.014,
+height=0.10, 6 segmentos, taper lento/borde recto) + punta (`CylinderMesh`
+0.014→0.005, height=0.05, quiebre local ~3°) + base (`SphereMesh` chico) +
+hélix (`TorusMesh` aplastado discreto), las 3 últimas hijas directas de la
+pieza cuerpo (alineación garantizada por parenting, evita el error de la
+ronda 8 donde el lóbulo se posicionó a mano con el CENTRO del cono en vez de
+su base y quedó flotando invisible). `rotation.y` NUEVO (yaw posterior ~20°,
+eje nunca tocado en rondas 1-8 — distinto del rake sagital que falló en
+rondas 1-3). Largo total ≈0.14 (≈1.8× la oreja humana).
+
+Verificado en banco visual (`ANATOMY_ORIGIN=aetherborn ANATOMY_HAIR=8`):
+de perfil ahora se lee como una oreja real con volumen (antes, el cono se
+veía "de canto"/astilla desde ese ángulo); a distancia normal de juego
+(`anatomy_full_side.png`) también es legible por primera vez (antes se
+perdía en la resolución). Gate lógico `test_core.gd` ALL_PASS, cero
+regresión. **Pendiente VoBo visual de Boris** — primera pasada de parámetros
+(offsets/quiebre/hélix) sujeta a afinar en banco si Boris pide ajustes.
+
 ## [2026-07-22] fix | Oreja de elfo — base un poco más ancha (ronda 2) + lóbulo triangular nuevo
 Siguiendo el pedido de Boris de la noche anterior (ver Current-State),
 dos cambios aditivos sobre el cono ya validado (60-65%, `character_rig.gd`

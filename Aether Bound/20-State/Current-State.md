@@ -8,20 +8,25 @@ updated: 2026-07-22
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **✅ EJECUTADO (2026-07-22, sesión siguiente):** las dos cosas pedidas
-  anoche sobre la oreja de elfo, ambas aditivas sobre el cono ya
-  validado (60-65%), sin tocar ángulo/largo/punta: (1) base un poco más
-  ancha, `bottom_radius` 0.024→0.027 (~+12%, paso más chico que el salto
-  de ayer); (2) lóbulo nuevo — `PrismMesh` con `left_to_right=0.15`
-  (perfil escaleno), chico, colgando de la base del cono. Primer intento
-  de posición falló (usó el CENTRO del cono en vez de su base, quedó
-  flotando invisible cerca de la mandíbula); recalculado con trig sobre
-  la rotación del cono y reubicado en
-  `Vector3(side*0.135, 0.015, 0.018)` — ahora se lee bien en frente/3-4/
-  perfil, sin verse como "oreja llena". Verificado en banco
-  (`ANATOMY_ORIGIN=aetherborn ANATOMY_HAIR=8`) + gate lógico
-  `test_core.gd` ALL_PASS. Detalle completo en [[LOG]]. **Queda VoBo de
-  Boris** (cambio puntual, sin nueva medición de QA imparcial).
+- **Boris rechazó la ronda 2 de ajustes** ("Todavía no me gustan") y
+  encargó traducir su propia spec anatómica (triángulo curvo tipo sable,
+  eje 20-40° atrás, proporción 1.5-2× oreja humana MISMO grosor, punta
+  50-70° redondeada) contra Zelda TotK/Frieren a un plan técnico, vía un
+  **subagente Opus dedicado**. Decisiones que tomó Boris sobre el plan:
+  recortar a la proporción 1.5-2× (revierte el ancho de las 2 rondas
+  previas), variante **Zelda puro**, técnica = **composición de
+  primitivas sólidas** (no reintentar el loft, ya falló 3 veces).
+- **✅ REWORK EJECUTADO (2026-07-22, ronda 9):** cono de un solo taper
+  reemplazado por 4 masas (cuerpo + punta + base + hélix, las 3 últimas
+  hijas del cuerpo para alineación garantizada). Diagnóstico nuevo del
+  subagente: el cono medía 3.1× la oreja humana del rig, muy por encima
+  del 1.5-2× pedido — ahora ≈1.8× (largo total ≈0.14). `rotation.y`
+  nuevo (yaw posterior ~20°, eje nunca tocado antes). Verificado en banco:
+  de perfil ya lee como oreja con volumen real (antes, astilla de canto);
+  legible incluso a distancia normal de juego (antes se perdía). Gate
+  `test_core.gd` ALL_PASS. Detalle completo en [[LOG]]. **Queda VoBo
+  visual de Boris** — primera pasada de parámetros, sujeta a afinar en
+  banco si pide ajustes.
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de

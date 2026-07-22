@@ -117,9 +117,11 @@
   forja enanos). Proporciones (enano 4.49 cabezas / elfo 8.17, objetivos
   4.5/8.0) + geometría nueva de oreja élfica y mandíbula/ceja por raza
   (campo `"face"`) EJECUTADAS y medidas en banco, sin regresión. Oreja de
-  elfo en ajuste iterativo (base ensanchada 2 rondas + lóbulo triangular
-  nuevo, ronda 2 el 2026-07-22). Gates ALL_PASS. **VoBo de Boris
-  pendiente antes de seguir** con ROM por raza.
+  elfo en REWORK completo ronda 9 (2026-07-22): 4 masas compuestas
+  (cuerpo+punta+base+hélix), variante Zelda, plan traducido por subagente
+  Opus a partir de la spec anatómica de Boris — reemplaza el cono de
+  8 rondas previas. Gates ALL_PASS. **VoBo de Boris pendiente antes de
+  seguir** con ROM por raza.
 - [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
   catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje
   (decisión de Boris); técnica única = loft (`_loft`/`_lock` implementados en

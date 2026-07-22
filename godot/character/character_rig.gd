@@ -2857,46 +2857,93 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# curva compuesta en esta escala. Revertido al cono de la ronda 4
 		# (60-65%, el mejor medido). Ver [[Lecciones]] para el hallazgo
 		# completo antes de reintentar geometría curva en rasgos chicos.
-		# Pedido de Boris (2026-07-22): base 25% más ancha (0.019→0.024) —
-		# más "carne" en la raíz sin tocar ángulo/largo/punta ya medidos.
-		# Ronda 2 (mismo pedido, día siguiente): "un poco más todavía" —
-		# paso más chico que el de ayer, 0.024→0.027 (~+12%), mismo criterio
-		# (no tocar ángulo/largo/punta/posición/rotación del cono).
-		# Además, pieza NUEVA de lóbulo: prisma triangular ESCALENO chico
-		# (`PrismMesh.left_to_right` sesgado, mismo patrón que `_wedge()` en
-		# character_signature.gd) colgando de la base del cono — Boris pidió
-		# explícitamente que NO se lea como "oreja llena", solo el detalle
-		# puntual del lóbulo.
+		# RONDA 9 (2026-07-22, REWORK COMPLETO — reemplaza el cono de un solo
+		# taper de las rondas 1-8): Boris rechazó el resultado de la ronda 8
+		# ("Todavía no me gustan") y escribió su propia spec anatómica contra
+		# Zelda TotK/Frieren, traducida a plan técnico por un subagente Opus
+		# dedicado (ver [[LOG]]). Decisiones de Boris: proporción 1.5-2× una
+		# oreja humana MISMO grosor (no más ancha — revierte el ensanchado de
+		# las rondas 7-8), variante **Zelda puro** (borde superior casi recto,
+		# punta muy limpia, curvatura mínima), y **composición de primitivas
+		# sólidas** en vez de reintentar el loft (ya falló 3 veces, rondas
+		# 6-8, por leer "alambre/gancho" — ver comentario arriba y
+		# [[Lecciones]]).
+		#
+		# 4 masas hijas de `ear_body` (evita recalcular a mano la base
+		# rotada del cono — error real de la ronda 8, el lóbulo quedó
+		# flotando invisible por usar el CENTRO del cono en vez de su base):
+		#   #1 base  — SphereMesh chico, clavado al extremo -Y (base) del cuerpo.
+		#   #2 cuerpo — CylinderMesh ancho, taper LENTO (borde ~recto, Zelda).
+		#   #3 punta  — CylinderMesh corto, taper RÁPIDO + quiebre local ~3°
+		#               (remate limpio, NO el flick curvo de Frieren).
+		#   #4 hélix  — TorusMesh aplastado, discreto, cerca de la base.
+		# Oreja humana del rig (línea ~3013, referencia de proporción):
+		# SphereMesh(0.030,0.060)*scale(0.40,1.28,0.75) → eje largo ≈0.077.
+		# Target Zelda ≈2× eso ≈0.15; cuerpo 0.10 + punta 0.05 (solape 0.01)
+		# ≈0.14, mismo grosor de base que la humana (bottom_radius 0.024 ≈
+		# diámetro humano 0.045).
 		for side in [-1, 1]:
-			var ear = MeshInstance3D.new()
-			var mesh = CylinderMesh.new()
-			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.027
-			mesh.height = 0.24
-			mesh.radial_segments = 4
-			ear.mesh = mesh
-			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.148, 0.050, 0.004)
-			ear.rotation = Vector3(-0.06, 0.0, float(side) * -1.43)
-			_add_outline_pass(ear, Color("#f2b186"), 0.02)
-			feature_slot.add_child(ear)
+			var ear_body = MeshInstance3D.new()
+			var body_mesh = CylinderMesh.new()
+			body_mesh.top_radius = 0.014
+			body_mesh.bottom_radius = 0.024
+			body_mesh.height = 0.10
+			body_mesh.radial_segments = 6
+			ear_body.mesh = body_mesh
+			ear_body.material_override = skin_mat
+			# Mismo eje z/x ya validado (casi horizontal, sin rake sagital);
+			# rotation.y NUEVO — yaw posterior ~20° pedido por Boris (nunca
+			# tocado en rondas 1-8, ese eje es distinto del rake que falló).
+			ear_body.position = Vector3(side * 0.1645, 0.040, 0.004)
+			ear_body.rotation = Vector3(-0.06, side * 0.35, float(side) * -1.43)
+			_add_outline_pass(ear_body, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear_body)
 
-			# NOTA: `ear.position` es el CENTRO del cono (0.148 en X), no su
-			# base — la base real (donde el cono nace del cráneo) está mucho
-			# más cerca del eje central, ~x=0.03 con la rotación de arriba.
-			# El lóbulo va ahí, pegado a la superficie del cráneo, no en el
-			# punto medio del cono (ahí queda flotando en el aire, invisible/
-			# fuera de silueta — primer intento falló por esto).
-			var lobe = MeshInstance3D.new()
-			var lobe_mesh = PrismMesh.new()
-			lobe_mesh.size = Vector3(0.016, 0.020, 0.014)
-			lobe_mesh.left_to_right = 0.15
-			lobe.mesh = lobe_mesh
-			lobe.material_override = skin_mat
-			lobe.position = Vector3(side * 0.135, 0.015, 0.018)
-			lobe.rotation = Vector3(0.0, 0.0, float(side) * -1.43 + PI)
-			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
-			feature_slot.add_child(lobe)
+			# #1 base — hija de ear_body, en su extremo -Y local (bottom_radius,
+			# el ancho que nace del cráneo) — alineación garantizada sin trig.
+			var ear_base = MeshInstance3D.new()
+			var base_mesh = SphereMesh.new()
+			base_mesh.radius = 0.014
+			base_mesh.height = 0.028
+			ear_base.mesh = base_mesh
+			ear_base.material_override = skin_mat
+			ear_base.scale = Vector3(0.6, 0.9, 0.6)
+			ear_base.position = Vector3(0.0, -0.045, 0.0)
+			_add_outline_pass(ear_base, Color("#f2b186"), 0.02)
+			ear_body.add_child(ear_base)
+
+			# #3 punta — hija de ear_body, en su extremo +Y local (top_radius);
+			# quiebre local de ~3° (Zelda: casi colineal con el cuerpo, no el
+			# 5-8° curvo de Frieren) + top_radius=0.005 (redondeo mínimo, no
+			# el top_radius≈0 que leía "filo" bajo el toon en rondas previas).
+			var ear_tip = MeshInstance3D.new()
+			var tip_mesh = CylinderMesh.new()
+			tip_mesh.top_radius = 0.005
+			tip_mesh.bottom_radius = 0.014
+			tip_mesh.height = 0.05
+			tip_mesh.radial_segments = 6
+			ear_tip.mesh = tip_mesh
+			ear_tip.material_override = skin_mat
+			ear_tip.position = Vector3(0.0, 0.04, 0.0)
+			ear_tip.rotation = Vector3(-0.05, 0.0, 0.0)
+			_add_outline_pass(ear_tip, Color("#f2b186"), 0.02)
+			ear_body.add_child(ear_tip)
+
+			# #4 hélix — toro aplastado DISCRETO cerca de la base, sobre el
+			# borde superior-posterior (insinúa la convexidad inicial del
+			# sable sin agregar curvatura visible — variante Zelda, no la
+			# hélix marcada de Frieren).
+			var helix = MeshInstance3D.new()
+			var helix_mesh = TorusMesh.new()
+			helix_mesh.inner_radius = 0.008
+			helix_mesh.outer_radius = 0.012
+			helix.mesh = helix_mesh
+			helix.material_override = skin_mat
+			helix.scale = Vector3(1.0, 1.2, 0.5)
+			helix.rotation.z = PI / 2.0
+			helix.position = Vector3(0.006, -0.032, 0.004)
+			_add_outline_pass(helix, Color("#f2b186"), 0.02)
+			ear_body.add_child(helix)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")
 
 	elif id == "miststalker":
