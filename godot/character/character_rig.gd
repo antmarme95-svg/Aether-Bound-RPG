@@ -31,6 +31,7 @@ const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos 
 const HEAD_Y: float = 0.520          # v0.4 H3 0.505 + 15% de cuello (Fase C)
 const NECK_Y: float = 0.3595  # v0.4 H3 0.352 + 15% de cuello (Fase C)
 const NECK_HEIGHT: float = 0.115     # alto del cilindro de cuello (ver _build) — C6b lo estira/encoge por raza
+const BROW_Y_BASE: float = 0.021     # y de la ceja en _build — C6b la baja/sube por raza (frente pesada de enano)
 # QA dirigido 2026-07-13 (hombros que no convencían al director): el
 # "+12%" de la review v0.1 CONTRADECÍA la lámina (fenotipo-humano-v1 dice
 # "narrow sloped shoulders", biacromial ~2.05 cabezas ≈ 0.52 m) y quedó
@@ -2518,11 +2519,20 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# hijas — el slider escala ancho/profundidad de TODA la estructura
 	# (las hijas heredan), base 1.0. Y fijo: el mentón no se mueve del
 	# canon de 7.5 cabezas.
+	# C6b (2026-07-21, frente de geometría nueva): sesgo racial sobre el
+	# MISMO rango de slider — "frente pesada, mandíbula ancha" del enano y
+	# "mandíbula fina" del elfo ([[Fenotipos y Creación de Personaje]],
+	# gap ya anotado ahí: jaw/eyeTilt/eyeShape usaban un solo rango para
+	# las 3 razas). `face` vacío (humano/miststalker) = multiplicadores en
+	# 1.0/offset 0.0, CERO cambio de comportamiento.
+	var face: Dictionary = _last_origin.get("face", {})
+	var jaw_width_bias: float = face.get("jaw_width", 1.0)
+	var jaw_depth_bias: float = face.get("jaw_depth", 1.0)
 	var jaw_v: float = p.get("jaw", 0.5)
 	jaw_mesh.scale = Vector3(
-		_lerp(0.86, 1.16, jaw_v),
+		_lerp(0.86, 1.16, jaw_v) * jaw_width_bias,
 		1.0,
-		_lerp(0.92, 1.08, jaw_v)
+		_lerp(0.92, 1.08, jaw_v) * jaw_depth_bias
 	)
 
 	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
@@ -2558,12 +2568,19 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	# el arco alto era caricatura); el ojo conserva su rango.
 	var eye_tilt: float = p.get("eyeTilt", 0.5)
 	var eye_shape: float = p.get("eyeShape", 0.5)
+	# C6b: ceja pesada del enano (frente prominente) / fina del elfo —
+	# mismo sesgo racial que la mandíbula arriba, sobre el tamaño/altura
+	# de la ceja (no toca el rango del slider eyeTilt, que sigue vivo).
+	var brow_scale_bias: float = face.get("brow_scale", 1.0)
+	var brow_y_bias: float = face.get("brow_y", 0.0)
 	for i in range(eyes.size()):
 		var eye = eyes[i]
 		var side: int = eye.get_meta("side")
 		eye.rotation.z = float(side) * _lerp(-0.32, 0.26, eye_tilt)
 		eye.scale.y = _lerp(0.5, 1.3, eye_shape)
 		brows[i].rotation.z = float(side) * _lerp(-0.20, 0.09, eye_tilt)
+		brows[i].scale = Vector3.ONE * brow_scale_bias
+		brows[i].position.y = BROW_Y_BASE + brow_y_bias
 
 	# ---- colors ----
 	var skin_tones: Array = PaletteData.SKIN_TONES
@@ -2798,17 +2815,25 @@ func _build_origin_features(origin: Dictionary) -> void:
 	var id: String = origin.get("id", "")
 
 	if id == "aetherborn":
-		# Long pointed elven ears (ConeGeometry(0.026, 0.14, 6))
+		# C6b (2026-07-21, frente de geometría nueva): las orejas leían como
+		# un nudo horizontal apenas asomando del cráneo (verificado en banco,
+		# `ANATOMY_HAIR=0` para juzgar sin el peinado tapándolas) — contra la
+		# lámina (`fenotipo-elfo-lavanda-v1.png`) la oreja élfica es LARGA,
+		# barre hacia ATRÁS y ARRIBA continuando la línea sien→pómulo, con
+		# la punta a la altura de la frente, no un nudo apuntando al costado.
+		# Alargada (0.14→0.21) y el z-tilt bajado de ~112° a ~66° (menos
+		# horizontal, más "barrido hacia atrás"); x-tilt más negativo suma
+		# el rake hacia atrás.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var mesh = CylinderMesh.new()
 			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.026
-			mesh.height = 0.14
+			mesh.bottom_radius = 0.024
+			mesh.height = 0.24
 			ear.mesh = mesh
 			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.155, 0.02, 0.0)
-			ear.rotation = Vector3(-0.25, 0.0, float(side) * -1.95)
+			ear.position = Vector3(side * 0.148, 0.050, -0.010)
+			ear.rotation = Vector3(-0.38, 0.0, float(side) * -1.10)
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")

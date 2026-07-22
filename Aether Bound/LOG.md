@@ -1,5 +1,46 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-21] feature | PRD-C6b: geometría nueva — orejas de elfo + mandíbula/ceja de enano
+Continuación del piloto de C6b: primera pasada de GEOMETRÍA racial nueva
+(paso 4 del PRD, adelantado sobre orejas/mandíbula sin esperar el VoBo de
+proporciones — pedido directo de Boris).
+
+**Diagnóstico primero (Lección: medir/mirar antes de autorar):** las
+orejas del elfo (ya existían desde antes de C6b) leían como un nudo
+horizontal apenas asomando, no la oreja larga barrida hacia atrás de la
+lámina — confirmado en banco con `ANATOMY_HAIR=8` ("Shorn Scout", nuevo
+override de diagnóstico en `tmp_anatomy.gd` — el peinado default humano
+tapaba la oreja y confundía el juicio; el catálogo racial de peinados
+sigue pospuesto, esto es solo para ver la geometría).
+
+**Oreja élfica (`_build_origin_features`, rama `aetherborn`):** alargada
+0.14→0.24, z-tilt bajado de ~112° a ~66° (menos horizontal, más barrido
+hacia atrás/arriba continuando la sien), posición subida y retrasada. 2
+rondas verificadas en banco (frente + perfil + 3/4) contra
+`fenotipo-elfo-lavanda-v1.png`.
+
+**Mandíbula/ceja por raza (`character_rig.gd apply_phenotype` +
+`origins_data.gd`):** nuevo campo `"face"` por origin (`jaw_width`,
+`jaw_depth`, `brow_scale`, `brow_y`) — sesgo MULTIPLICATIVO/aditivo sobre
+el mismo rango de slider `jaw`/misma ceja compartida (el gap que
+[[Fenotipos y Creación de Personaje]] ya había anotado: "jaw/eyeTilt/
+eyeShape usan un solo rango para las 3 razas"). Enano: mandíbula +35%
+ancho/+20% profundidad, ceja +65% de tamaño y bajada (frente pesada, ojos
+hundidos) — contra `fenotipo-enano-varon-v1.png`. Elfo: mandíbula -15%/
+-10% (fina), ceja -15% (ligera) — contra `fenotipo-elfo-lavanda-v1.png`.
+`face` vacío en humano/miststalker = cero cambio.
+
+**Gates:** `test_core`, `autotest_biomech`, `autotest_footik`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`, `autotest_ui`
+ALL_PASS. Capturas guardadas en `godot/test_out/`:
+`anatomy_elf_face*.png`, `anatomy_dwarf_face*.png` (+ `_full_front/_side`
+del piloto de proporciones anterior). Baseline humano restaurado en
+`anatomy_face*.png` normales (7.35 cabezas).
+
+**Pendiente:** VoBo de Boris sobre TODO C6b hasta ahora (proporciones +
+orejas + mandíbula/ceja) antes de seguir con ROM por raza y ambos torsos
+en juego real (hoy solo verificado en el banco de anatomía).
+
 ## [2026-07-21] feature | PRD-C6b arrancado: proporciones raciales enano/elfo (piloto de las 2 razas)
 Arrancado [[PRD-C6b-Enano-Elfo-v1]] tras cerrar frente 1 y frente 2. Seguido
 el orden del propio PRD: (1) mapear qué % ya resuelve `apply_phenotype` vs

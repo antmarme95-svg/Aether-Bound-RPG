@@ -114,11 +114,10 @@
 - [[PRD-C6b-Enano-Elfo-v1]] (`20-State/PRDs/`) — **en curso (2026-07-21)**:
   cuerpo+ROM enano/elfo (histórico) AMPLIADO por Boris a incluir catálogo
   racial de peinados + marca cultural (aether élfico, tatuajes/inlays de
-  forja enanos). Piloto de PROPORCIONES ejecutado y medido en banco
-  (enano 4.49 cabezas / elfo 8.17, objetivos 4.5/8.0) reusando los hooks
-  de escala existentes — sin geometría nueva. Gates ALL_PASS. **VoBo de
-  Boris pendiente antes de seguir** a geometría nueva (orejas/mandíbula)
-  + ROM por raza.
+  forja enanos). Proporciones (enano 4.49 cabezas / elfo 8.17, objetivos
+  4.5/8.0) + geometría nueva de oreja élfica y mandíbula/ceja por raza
+  (campo `"face"`) EJECUTADAS y medidas en banco, sin regresión. Gates
+  ALL_PASS. **VoBo de Boris pendiente antes de seguir** con ROM por raza.
 - [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
   catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje
   (decisión de Boris); técnica única = loft (`_loft`/`_lock` implementados en

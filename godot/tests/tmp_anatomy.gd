@@ -64,6 +64,11 @@ func _run() -> void:
 	var pheno: Dictionary = _Pheno.default_phenotype()
 	pheno["skinTone"] = 0     # porcelain (concept: tez pálida/fría)
 	pheno["hair"] = 10        # frontier crop (PRD Rework Fenotipo pt.2: canon del fenotipo humano)
+	# C6b: ANATOMY_HAIR=0 (calvo) para juzgar geometría de oreja/cráneo sin
+	# que el peinado humano por defecto la tape — el catálogo racial de
+	# peinados sigue pospuesto (Boris), esto es solo diagnóstico.
+	if OS.get_environment("ANATOMY_HAIR") != "":
+		pheno["hair"] = int(OS.get_environment("ANATOMY_HAIR"))
 	pheno["hairColor"] = 4    # chestnut (base; tinte exacto abajo)
 	pheno["warpaint"] = 6     # Scout Marks: patrón 6 vacío A PROPÓSITO en warpaint_atlas.gd (la marca real es geometría en _face_mark) — el PRD Rework Fenotipo lo daba por "índice inválido" (WARPAINTS de la UI solo llega a 5) pero SÍ es válido para el atlas/gating; corregido tras verificar visualmente que 1-5 pintan patrones legacy superpuestos
 	pheno["paintColor"] = 4   # wyld green

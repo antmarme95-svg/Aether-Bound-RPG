@@ -9,26 +9,29 @@ updated: 2026-07-21
 > funciona el juego (eso vive en `10-Knowledge/`).
 
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 cerró el frente 1
-  (hombro→torso+cintura) y frente 2 (C4 pies IK) del orden acordado, y
-  ARRANCÓ [[PRD-C6b-Enano-Elfo-v1]] (piloto de proporciones raciales
-  enano/elfo): nuevo campo `"proportions"` por origin (`limb_len`,
-  `shoulder_x`, `neck_len`, `head_scale`, `hand_scale`), reutiliza los
-  hooks de escala ya existentes (sin geometría nueva). Medido en banco
-  (`ANATOMY_ORIGIN=aetherborn|ironblooded` en `tmp_anatomy.gd`, nuevo):
-  enano 4.49 cabezas (objetivo 4.5 lámina), elfo 8.17 (objetivo 8.0).
-  Gates ALL_PASS, cero regresión humano/miststalker. Detalle completo en
-  [[LOG]]. **Queda VoBo de Boris sobre estas proporciones ANTES de seguir
-  a geometría nueva** (orejas élficas, frente/mandíbula de enano, ROM por
-  raza — el propio PRD pide validar el piloto antes de generalizar).
-  Capturas guardadas aparte para VoBo: `godot/test_out/
-  anatomy_dwarf_full_front.png`/`_side.png` y `anatomy_elf_full_front.png`/
-  `_side.png` (banco corrido con `ANATOMY_ORIGIN=ironblooded|aetherborn`,
-  nuevo env var reutilizable en `tmp_anatomy.gd`, mismo patrón que
-  `DIAG_*`). `anatomy_full_front.png`/`_side.png` normales quedaron
-  restaurados al humano baseline (7.35 cabezas) tras medir.
-  Chip aparte (fuera de C6b): cámara de close-up rota en
-  `autotest_classes.gd` (preexistente, confirmado con `git stash`, NO
-  introducida hoy).**
+  (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
+  [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de
+  PROPORCIONES (campo `"proportions"` por origin: `limb_len`/
+  `shoulder_x`/`neck_len`/`head_scale`/`hand_scale`, reutiliza hooks de
+  escala existentes) — enano 4.49 cabezas / elfo 8.17 (objetivos 4.5/8.0);
+  (2) geometría nueva de OREJA élfica (alargada + barrida hacia atrás,
+  antes leía como nudo horizontal) y MANDÍBULA/CEJA por raza (campo
+  `"face"`: `jaw_width`/`jaw_depth`/`brow_scale`/`brow_y` — enano frente
+  pesada/mandíbula ancha, elfo mandíbula fina). Gates ALL_PASS en ambas
+  pasadas, cero regresión humano/miststalker (proportions/face vacío).
+  Detalle completo en [[LOG]]. **Queda VoBo de Boris sobre TODO C6b hasta
+  ahora antes de seguir con ROM por raza.**
+  Capturas guardadas para VoBo en `godot/test_out/`:
+  `anatomy_dwarf_full_front/_side.png`, `anatomy_dwarf_face/_34/_profile.png`,
+  `anatomy_elf_full_front/_side.png`, `anatomy_elf_face/_34/_profile.png`
+  (banco corrido con `ANATOMY_ORIGIN=ironblooded|aetherborn` +
+  `ANATOMY_HAIR=8` para juzgar oreja/mandíbula sin el peinado tapando —
+  ambos env vars nuevos y reutilizables en `tmp_anatomy.gd`, mismo patrón
+  que `DIAG_*`). `anatomy_face*.png`/`anatomy_full_*.png` normales
+  restaurados al humano baseline (7.35 cabezas).
+  Chip aparte (fuera de C6b, YA EN EJECUCIÓN por el director en otra
+  sesión): cámara de close-up rota en `autotest_classes.gd` (preexistente,
+  confirmado con `git stash`, NO introducida por C6b).**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**

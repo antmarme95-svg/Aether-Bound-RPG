@@ -37,6 +37,15 @@ const ORIGINS: Array[Dictionary] = [
 			"head_scale": 0.94,
 			"hand_scale": 1.08,
 		},
+		# Rasgos faciales (2026-07-21, frente de geometría nueva): "mandíbula
+		# fina" (lámina) — sesgo sobre el MISMO rango del slider `jaw`, ceja
+		# fina/alta (elfo joven, no frente pesada).
+		"face": {
+			"jaw_width": 0.85,
+			"jaw_depth": 0.90,
+			"brow_scale": 0.85,
+			"brow_y": 0.003,
+		},
 		"theme": {
 			"accent": "#46e6ff",
 			"sky": "#7fd4ff",
@@ -82,6 +91,16 @@ const ORIGINS: Array[Dictionary] = [
 			"neck_len": 0.45,
 			"head_scale": 1.24,
 			"hand_scale": 1.40,
+		},
+		# Rasgos faciales (2026-07-21, frente de geometría nueva): "frente
+		# pesada, mandíbula ancha" (lámina `fenotipo-enano-varon-v1.png`) —
+		# sesgo sobre el MISMO rango del slider `jaw`, ceja gruesa y baja
+		# (frente prominente, ojos hundidos).
+		"face": {
+			"jaw_width": 1.35,
+			"jaw_depth": 1.20,
+			"brow_scale": 1.65,
+			"brow_y": -0.006,
 		},
 		"theme": {
 			"accent": "#ff9d4d",

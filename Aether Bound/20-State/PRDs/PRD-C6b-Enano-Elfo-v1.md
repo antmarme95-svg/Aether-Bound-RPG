@@ -108,9 +108,17 @@ formal + el ojo del orquestador, como hasta ahora.
    hacía falta todavía; queda para cuando entre geometría nueva
    (orejas/mandíbula), que sí es el tipo de iteración visual ciega cara.
    Detalle completo: [[LOG]].
-4. Cuerpo completo de ambas razas + ROM — **PENDIENTE VoBo de Boris
-   sobre las proporciones del paso 3 antes de seguir** (geometría nueva
-   de orejas/frente/mandíbula + ROM por raza en `rig_biomech.gd`).
+4. ✅ Geometría nueva adelantada (2026-07-21, mismo día, pedido directo
+   de Boris antes de esperar el VoBo del paso 3): oreja élfica
+   rediseñada (alargada + barrida hacia atrás — leía como nudo
+   horizontal, diagnosticado con `ANATOMY_HAIR=8` para ver la geometría
+   sin el peinado default tapándola) y mandíbula/ceja por raza (campo
+   `"face"` en `origins_data.gd`: `jaw_width`/`jaw_depth`/`brow_scale`/
+   `brow_y`, mismo patrón de sesgo sobre rango de slider compartido que
+   `proportions`). Verificado en banco (frente/3-4/perfil), gates
+   ALL_PASS. **ROM por raza (`rig_biomech.gd`) sigue pendiente — PENDIENTE
+   VoBo de Boris sobre TODO lo ejecutado (proporciones + orejas +
+   mandíbula/ceja) antes de seguir.**
 5. Peinados y marca cultural quedan referidos a
    [[PRD-Catalogo-Peinados-v1]] (pospuesto, pero la técnica de loft +
    `_on_skull` ya está probada y se hereda sin costo de re-descubrimiento).
