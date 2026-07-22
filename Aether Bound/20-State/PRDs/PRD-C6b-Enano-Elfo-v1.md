@@ -1,6 +1,7 @@
 ---
-status: draft
+status: en curso (piloto de proporciones ejecutado, VoBo pendiente)
 created: 2026-07-20
+updated: 2026-07-21
 owner: Boris (director) / orquestador
 ---
 
@@ -86,14 +87,30 @@ formal + el ojo del orquestador, como hasta ahora.
 
 ## Orden de ejecución (cuando Boris dé la señal)
 
-1. Cuerpo: mapear qué proporciones ya resuelve `apply_phenotype` vs qué
-   necesita geometría nueva (orejas elfo, frente/mandíbula enano).
+1. ✅ Cuerpo: mapeado qué proporciones ya resuelve `apply_phenotype` vs
+   qué necesita geometría nueva (2026-07-21) — hallazgo: el cuerpo
+   enano/elfo era un clon humano con solo `scale` UNIFORME (ninguna
+   RATIO cambiaba); orejas/accent cultural YA existían.
 2. Medir superficies nuevas ANTES de autorar (equivalente a `_on_skull`
-   por raza) si hace falta geometría nueva de cabeza/cráneo.
-3. Piloto de UN elemento (ej. cuerpo enano) con el ciclo delegado a
-   subagente barato — validar que el ahorro de tokens es real antes de
-   generalizar el patrón al resto.
-4. Cuerpo completo de ambas razas + ROM.
+   por raza) — pendiente, solo aplica cuando se ataque geometría nueva
+   (orejas élficas largas, frente/mandíbula de enano). El PILOTO de
+   proporciones (paso 3) no necesitó geometría nueva, solo reposicionar.
+3. ✅ Piloto EJECUTADO (2026-07-21, sin subagente delegado — hecho
+   directo por el orquestador): nuevo campo `"proportions"` por origin
+   (`limb_len`/`shoulder_x`/`neck_len`/`head_scale`/`hand_scale`) sobre
+   los MISMOS hooks de escala de peso/clase, sin geometría nueva. Medido
+   en banco (no a ojo): enano 4.49 cabezas (objetivo 4.5), elfo 8.17
+   (objetivo 8.0). Gates ALL_PASS, cero regresión humano. **Nota de
+   optimización #3 (subagente barato para render→zoom): NO se probó
+   esta ronda** — el ciclo completo (mapear→medir→piloto de ambas
+   razas) se resolvió con pocas iteraciones numéricas (banco imprime
+   "CABEZAS" directo, sin necesitar zoom manual), así que delegar no
+   hacía falta todavía; queda para cuando entre geometría nueva
+   (orejas/mandíbula), que sí es el tipo de iteración visual ciega cara.
+   Detalle completo: [[LOG]].
+4. Cuerpo completo de ambas razas + ROM — **PENDIENTE VoBo de Boris
+   sobre las proporciones del paso 3 antes de seguir** (geometría nueva
+   de orejas/frente/mandíbula + ROM por raza en `rig_biomech.gd`).
 5. Peinados y marca cultural quedan referidos a
    [[PRD-Catalogo-Peinados-v1]] (pospuesto, pero la técnica de loft +
    `_on_skull` ya está probada y se hereda sin costo de re-descubrimiento).

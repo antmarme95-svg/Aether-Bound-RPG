@@ -111,14 +111,14 @@
   Backlog Grupo C (07-19) frente 1 CERRADO (2026-07-21): hombro-esfera
   fundido + cintura con pellizco real en frente Y perfil (medido por
   píxel), gates ALL_PASS, VoBo pendiente.
-- [[PRD-C6b-Enano-Elfo-v1]] (`20-State/PRDs/`) — **draft (2026-07-20)**:
+- [[PRD-C6b-Enano-Elfo-v1]] (`20-State/PRDs/`) — **en curso (2026-07-21)**:
   cuerpo+ROM enano/elfo (histórico) AMPLIADO por Boris a incluir catálogo
   racial de peinados + marca cultural (aether élfico, tatuajes/inlays de
-  forja enanos). No arranca hasta cerrar grupo C restante (hombro/
-  cintura) + pies (C4). Incluye plan de optimización de tokens pedido
-  por Boris: reusar `apply_phenotype` en vez de geometría nueva donde
-  se pueda, medir superficies ANTES de autorar (lección `_on_skull`),
-  delegar el ciclo render→zoom→diagnóstico a subagente barato.
+  forja enanos). Piloto de PROPORCIONES ejecutado y medido en banco
+  (enano 4.49 cabezas / elfo 8.17, objetivos 4.5/8.0) reusando los hooks
+  de escala existentes — sin geometría nueva. Gates ALL_PASS. **VoBo de
+  Boris pendiente antes de seguir** a geometría nueva (orejas/mandíbula)
+  + ROM por raza.
 - [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
   catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje
   (decisión de Boris); técnica única = loft (`_loft`/`_lock` implementados en

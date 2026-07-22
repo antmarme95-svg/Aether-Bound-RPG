@@ -33,7 +33,11 @@ func _run() -> void:
 	_rig = CharacterRig.new()
 	get_tree().root.add_child(_rig)
 	_rig.position = Vector3.ZERO
-	var origin: Dictionary = OriginsData.get_origin("aetherborn")
+	# Origen humano NEUTRO a propósito (proportions vacío = limb_len 1.0):
+	# esta prueba verifica el MECANISMO de IK, no el tuning racial de C6b,
+	# que cambia con cada ronda de medición — no acoplar el gate al valor
+	# de "aetherborn"/"ironblooded" del día.
+	var origin: Dictionary = OriginsData.get_origin("miststalker")
 	_rig.apply_phenotype(PhenotypeData.default_phenotype(), origin)
 	_rig.set_motion(0.0, false, false)
 	await get_tree().process_frame

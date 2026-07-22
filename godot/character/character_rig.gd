@@ -30,6 +30,7 @@ const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos 
 # alto) para que la cabeza no se hunda ni se separe del cuello.
 const HEAD_Y: float = 0.520          # v0.4 H3 0.505 + 15% de cuello (Fase C)
 const NECK_Y: float = 0.3595  # v0.4 H3 0.352 + 15% de cuello (Fase C)
+const NECK_HEIGHT: float = 0.115     # alto del cilindro de cuello (ver _build) — C6b lo estira/encoge por raza
 # QA dirigido 2026-07-13 (hombros que no convencían al director): el
 # "+12%" de la review v0.1 CONTRADECÍA la lámina (fenotipo-humano-v1 dice
 # "narrow sloped shoulders", biacromial ~2.05 cabezas ≈ 0.52 m) y quedó
@@ -428,6 +429,7 @@ func _build() -> void:
 		leg.set_meta("thigh", thigh)
 		leg.set_meta("shin", shin)
 		leg.set_meta("ankle", ankle)
+		leg.set_meta("calf", calf)
 		legs.append(leg)
 
 	# ---------- torso ----------
@@ -1054,6 +1056,10 @@ func _build() -> void:
 		arm.set_meta("upper", upper)
 		arm.set_meta("fore", fore)
 		arm.set_meta("hand", hand)
+		arm.set_meta("bicep", bicep)
+		arm.set_meta("tricep", tricep)
+		arm.set_meta("forearm_mass", forearm_mass)
+		arm.set_meta("wrist_cap", wrist_cap)
 		arm.set_meta("side", side)
 		arms.append(arm)
 
@@ -1120,10 +1126,11 @@ func _build() -> void:
 	# Fase C (debate orquestador↔QA 2026-07-13): +15% de largo — 0.10→0.115
 	# (criterio: caída barbilla→hombro ~0.55 cabezas, la barbilla no roza la
 	# línea de hombros en 3/4). NECK_Y/HEAD_Y suben el mismo delta arriba.
-	var neck = _cylinder_mesh(0.050, 0.075, 0.115, skin_mat)
+	var neck = _cylinder_mesh(0.050, 0.075, NECK_HEIGHT, skin_mat)
 	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
+	upper_spine.set_meta("neck", neck)
 
 	head = Node3D.new()
 	head.name = "head"
@@ -1843,18 +1850,71 @@ func _apply_build() -> void:
 	# uno escalara distinto. Y se deja en 1.0 (no respira con torso).
 	waist.scale = Vector3(torso.scale.x, 1.0, torso.scale.z)
 
+	# ---- C6b (2026-07-21, frente 3 del orden con Boris): proporciones
+	# raciales — "palancas largas/cortas" ([[Fenotipos y Creación de
+	# Personaje]]). Reutiliza los MISMOS hooks de escala que ya existen para
+	# peso/clase arriba — nada de geometría nueva para esto (orejas/marca
+	# cultural per-origin YA existían en `_build_origin_features`; lo que
+	# faltaba era esto). `proportions` vacío (humano/miststalker) = todos
+	# los multiplicadores en 1.0, CERO cambio de comportamiento (el
+	# contrato de `SHOULDER_X`/etc. del rig humano queda intacto).
+	# NOTA de corrección (medido en banco, no a ojo): escalar solo el nodo
+	# `leg`/`arm` padre en Y estira el DROP vertical pero no el alcance
+	# lateral cuando la rodilla/codo está doblado (Godot compone escala EN
+	# el frame local del padre antes de rotar — con una rotación de por
+	# medio esto genera CIZALLA, no un miembro más largo). Por eso cada
+	# segmento (mesh + el offset del joint que le sigue) se re-posiciona
+	# a mano por su PROPIO eje local, no por un scale.y del padre.
+	var prop: Dictionary = _last_origin.get("proportions", {})
+	var limb_len: float = prop.get("limb_len", 1.0)
+	var shoulder_mult: float = prop.get("shoulder_x", 1.0)
+	var neck_len: float = prop.get("neck_len", 1.0)
+	var head_mult: float = prop.get("head_scale", 1.0)
+	var hand_mult: float = prop.get("hand_scale", 1.0)
+
 	var limb_xz: float = limb * arch_xz
 	for arm in arms:
 		var upper: MeshInstance3D = arm.get_meta("upper")
 		var fore: MeshInstance3D = arm.get_meta("fore")
-		upper.scale = Vector3(limb_xz, 1.0, limb_xz)
-		fore.scale  = Vector3(limb_xz, 1.0, limb_xz)
+		var elbow: Node3D = arm.get_meta("elbow")
+		var hand: MeshInstance3D = arm.get_meta("hand")
+		var bicep: MeshInstance3D = arm.get_meta("bicep")
+		var tricep: MeshInstance3D = arm.get_meta("tricep")
+		var forearm_mass: MeshInstance3D = arm.get_meta("forearm_mass")
+		var wrist_cap: MeshInstance3D = arm.get_meta("wrist_cap")
+		upper.scale = Vector3(limb_xz, limb_len, limb_xz)
+		upper.position.y = -0.165 * limb_len
+		bicep.position.y = -0.125 * limb_len
+		tricep.position.y = -0.175 * limb_len
+		elbow.position.y = -0.32 * limb_len
+		fore.scale = Vector3(limb_xz, limb_len, limb_xz)
+		fore.position.y = -0.1325 * limb_len
+		forearm_mass.position.y = -0.075 * limb_len
+		wrist_cap.position.y = -0.285 * limb_len
+		hand.position.y = -0.30 * limb_len
+		hand.scale = Vector3.ONE * hand_mult
+		var side2: int = int(arm.get_meta("side"))
+		arm.position.x = float(side2) * SHOULDER_X * shoulder_mult
 
 	for leg in legs:
 		var thigh: MeshInstance3D = leg.get_meta("thigh")
 		var shin:  MeshInstance3D = leg.get_meta("shin")
-		thigh.scale = Vector3(limb_xz, 1.0, limb_xz)
-		shin.scale  = Vector3(limb_xz, 1.0, limb_xz)
+		var knee:  Node3D = leg.get_meta("knee")
+		var ankle: Node3D = leg.get_meta("ankle")
+		var calf:  MeshInstance3D = leg.get_meta("calf")
+		thigh.scale = Vector3(limb_xz, limb_len, limb_xz)
+		thigh.position.y = -0.245 * limb_len
+		knee.position.y = -0.45 * limb_len
+		shin.scale = Vector3(limb_xz, limb_len, limb_xz)
+		shin.position.y = -0.20 * limb_len
+		calf.position.y = -0.10 * limb_len
+		ankle.position.y = -0.45 * limb_len
+
+	var neck_node: Node3D = upper_spine.get_meta("neck")
+	if neck_node != null:
+		neck_node.scale.y = neck_len
+		head.position.y = HEAD_Y + (neck_len - 1.0) * (NECK_HEIGHT * 0.5)
+	head.scale = Vector3.ONE * HEAD_SCALE * head_mult
 
 	# Vanguard: larger pauldron to read as tank
 	# PRD Rework Fenotipo pt.14: lookup por NOMBRE — "último hijo" dejó de
@@ -3014,6 +3074,11 @@ func apply_foot_ik(l_height: float, r_height: float, l_normal: Vector3 = Vector3
 ## y nivela el tobillo contra la normal de pendiente — nunca toca la cadera.
 func _apply_foot_ik_pose(delta: float) -> void:
 	var t: float = minf(1.0, delta * 10.0)
+	# C6b: el largo de pierna cambia por raza (enano/elfo) — el segmento
+	# real que la IK debe resolver es LEG_SEGMENT_LEN * limb_len, no la
+	# constante humana fija (ver `_apply_build`, mismo multiplicador).
+	var limb_len: float = _last_origin.get("proportions", {}).get("limb_len", 1.0)
+	var seg_len: float = _Biomech.LEG_SEGMENT_LEN * limb_len
 	for i in range(legs.size()):
 		var target_h: float = _ik_ground_h[i]
 		if is_nan(target_h):
@@ -3022,7 +3087,7 @@ func _apply_foot_ik_pose(delta: float) -> void:
 		var knee: Node3D = leg.get_meta("knee")
 		var ankle: Node3D = leg.get_meta("ankle")
 		var knee_delta: float = _Biomech.solve_knee_for_height(
-				leg.rotation.x, leg.global_position.y, target_h, _Biomech.LEG_SEGMENT_LEN)
+				leg.rotation.x, leg.global_position.y, target_h, seg_len)
 		var target_knee: float = clampf(knee_delta, 0.0, 2.4)
 		knee.rotation.x = lerpf(knee.rotation.x, target_knee, t)
 		var lvl: Vector2 = _Biomech.solve_ankle_level(knee.global_transform.basis, _ik_ground_n[i])

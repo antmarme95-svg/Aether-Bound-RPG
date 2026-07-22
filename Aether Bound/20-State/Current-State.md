@@ -8,21 +8,27 @@ updated: 2026-07-21
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 CERRÓ el frente 1
-  (hombro→torso + cintura, frente y perfil, CRITICAL de Grupo C 07-19) Y
-  ejecutó el frente 2 (C4 — pies IK): nodo `ankle` nuevo (2-DOF, antes la
-  bota colgaba rígida sin pivote propio) + solver analítico en
-  `rig_biomech.gd` (`solve_knee_for_height`/`solve_ankle_level`) —
-  "pies plantados en pendiente" ya funciona, sin Skeleton3D, 100% Node3D
-  procedural. `CharacterRig.apply_foot_ik()` público, alimentado por
-  `player_controller.gd` vía el contrato `get_height()` ya existente.
-  Gate nuevo `autotest_footik.gd` ALL_PASS + regresión completa (incluida
-  corrida real en The Wilds) ALL_PASS. Detalle completo en [[LOG]]. Queda
-  VoBo de Boris sobre capturas de frente 1
-  (`godot/test_out/anatomy_full_front.png`, `anatomy_full_side.png`) y
-  frente 2 (`godot/test_out/footik_slope.png`). **Siguiente frente:
-  [[PRD-C6b-Enano-Elfo-v1]]** (cuerpo+ROM enano/elfo + catálogo de
-  peinados) — no arrancar sin señal explícita de Boris.**
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 cerró el frente 1
+  (hombro→torso+cintura) y frente 2 (C4 pies IK) del orden acordado, y
+  ARRANCÓ [[PRD-C6b-Enano-Elfo-v1]] (piloto de proporciones raciales
+  enano/elfo): nuevo campo `"proportions"` por origin (`limb_len`,
+  `shoulder_x`, `neck_len`, `head_scale`, `hand_scale`), reutiliza los
+  hooks de escala ya existentes (sin geometría nueva). Medido en banco
+  (`ANATOMY_ORIGIN=aetherborn|ironblooded` en `tmp_anatomy.gd`, nuevo):
+  enano 4.49 cabezas (objetivo 4.5 lámina), elfo 8.17 (objetivo 8.0).
+  Gates ALL_PASS, cero regresión humano/miststalker. Detalle completo en
+  [[LOG]]. **Queda VoBo de Boris sobre estas proporciones ANTES de seguir
+  a geometría nueva** (orejas élficas, frente/mandíbula de enano, ROM por
+  raza — el propio PRD pide validar el piloto antes de generalizar).
+  Capturas guardadas aparte para VoBo: `godot/test_out/
+  anatomy_dwarf_full_front.png`/`_side.png` y `anatomy_elf_full_front.png`/
+  `_side.png` (banco corrido con `ANATOMY_ORIGIN=ironblooded|aetherborn`,
+  nuevo env var reutilizable en `tmp_anatomy.gd`, mismo patrón que
+  `DIAG_*`). `anatomy_full_front.png`/`_side.png` normales quedaron
+  restaurados al humano baseline (7.35 cabezas) tras medir.
+  Chip aparte (fuera de C6b): cámara de close-up rota en
+  `autotest_classes.gd` (preexistente, confirmado con `git stash`, NO
+  introducida hoy).**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**

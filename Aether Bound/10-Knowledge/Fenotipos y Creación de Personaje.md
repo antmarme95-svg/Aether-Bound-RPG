@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "Design Loop 2026-07-04 (Sesión 1 de arte) + prototipo godot/data/phenotype_data.gd"
-updated: 2026-07-04
+updated: 2026-07-21
 ---
 
 # Fenotipos y Creación de Personaje
@@ -55,6 +55,17 @@ El motor de creación del prototipo se conserva entero: campos
 `float/pick/color` (`phenotype_data.gd`), `hair_library`, `warpaint_atlas`,
 paletas (`palette_data.gd`). Trabajo nuevo = re-rangear por raza, bibliotecas
 raciales de pelo/marcas, re-mapeo cultural de `arcaneMod`.
+
+**C6b piloto de proporciones (código) EN CURSO (2026-07-21):** el esqueleto
+fijo por raza ("palancas largas/cortas", hombros anchos/caídos, cuello,
+manos) se implementó como un campo `"proportions"` por origin
+(`origins_data.gd`: `limb_len`/`shoulder_x`/`neck_len`/`head_scale`/
+`hand_scale`), leído por `character_rig.gd _apply_build()` — reutiliza los
+mismos hooks de escala de peso/clase, sin geometría nueva. Medido contra
+las láminas (no a ojo): enano 4.49 cabezas (objetivo 4.5), elfo 8.17
+(objetivo 8.0). Pendiente VoBo de Boris antes de atacar geometría racial
+nueva (orejas élficas, frente/mandíbula de enano) y ROM por raza. Detalle:
+[[LOG]], [[PRD-C6b-Enano-Elfo-v1]].
 
 **Tarea C1 (código) CERRADA (2026-07-16):** `origins_data.gd` ya no describe
 al origin `"miststalker"` como raza Beast-Folk aparte — nombre/tag/lore/

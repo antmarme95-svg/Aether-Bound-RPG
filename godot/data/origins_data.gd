@@ -22,6 +22,21 @@ const ORIGINS: Array[Dictionary] = [
 		"recruiter": {"name": "Provost Ilyra Venn", "title": "Office of Profitable Curiosity"},
 		"rival": "The Iron Tribunal of the Craters",
 		"heightRange": [0.97, 1.13],
+		# C6b (2026-07-21): esqueleto FIJO por raza ([[Fenotipos y Creación
+		# de Personaje]] — "palancas largas, hombros estrechos caídos,
+		# cuello largo"). Multiplicadores sobre el rig humano (1.0 =
+		# comportamiento humano, ver `character_rig.gd _apply_build`).
+		# Punto de partida medido contra la lámina (`fenotipo-elfo-*.png`,
+		# "8 heads tall"); afinar con el banco de anatomía antes de VoBo.
+		"proportions": {
+			# Ronda 1 (medido en banco 2026-07-21): 8.78 cabezas con
+			# 1.15/0.90 — objetivo 8.0, un poco menos extremo.
+			"limb_len": 1.08,
+			"shoulder_x": 0.82,
+			"neck_len": 1.35,
+			"head_scale": 0.94,
+			"hand_scale": 1.08,
+		},
 		"theme": {
 			"accent": "#46e6ff",
 			"sky": "#7fd4ff",
@@ -54,6 +69,20 @@ const ORIGINS: Array[Dictionary] = [
 		"recruiter": {"name": "Forge-Sergeant Brakka Húldottir", "title": "Conscription & Quenching Division"},
 		"rival": "The Archlectors of Zephyr-Academica",
 		"heightRange": [0.92, 1.08],
+		# C6b (2026-07-21): "palancas cortas, trapecio masivo, cuello
+		# hundido, manos enormes, centro bajo" ([[Fenotipos y Creación de
+		# Personaje]]). Punto de partida medido contra la lámina
+		# (`fenotipo-enano-varon-v1.png`, "4.5 heads tall"); afinar con el
+		# banco de anatomía antes de VoBo.
+		"proportions": {
+			# Ronda 3 (medido en banco 2026-07-21): r1 5.34 cabezas (0.62/1.12),
+			# r2 4.22 cabezas (0.45/1.30) — se pasó un poco del objetivo 4.5.
+			"limb_len": 0.48,
+			"shoulder_x": 1.60,
+			"neck_len": 0.45,
+			"head_scale": 1.24,
+			"hand_scale": 1.40,
+		},
 		"theme": {
 			"accent": "#ff9d4d",
 			"sky": "#3a2420",

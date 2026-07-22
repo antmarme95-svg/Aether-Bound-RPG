@@ -1,5 +1,56 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-21] feature | PRD-C6b arrancado: proporciones raciales enano/elfo (piloto de las 2 razas)
+Arrancado [[PRD-C6b-Enano-Elfo-v1]] tras cerrar frente 1 y frente 2. Seguido
+el orden del propio PRD: (1) mapear qué % ya resuelve `apply_phenotype` vs
+qué necesita geometría nueva, (2) medir contra la lámina ANTES de autorar,
+(3) piloto. Hallazgo del mapeo: el CUERPO enano/elfo hoy es un clon exacto
+del humano con solo un `scale` UNIFORME por `heightRange` — proporción
+(palancas largas/cortas, hombros anchos/caídos) es CERO, porque un escalado
+uniforme no puede cambiar una RATIO. Orejas/accent cultural (`_build_
+origin_features`) YA existían — el trabajo real faltante era exactamente lo
+que el PRD identificó: el cuerpo.
+
+**Implementado (reutiliza los MISMOS hooks de escala que peso/clase, sin
+geometría nueva — optimización #1 del PRD):** nuevo campo `"proportions"`
+por origin (`origins_data.gd`): `limb_len` (largo de palancas), `shoulder_x`
+(ancho de hombro), `neck_len`, `head_scale`, `hand_scale`. `character_rig.gd
+_apply_build()` los lee (default 1.0 = comportamiento humano intacto —
+`proportions` vacío en humano/miststalker, CERO cambio de comportamiento) y
+reposiciona thigh/knee/shin/calf/ankle (pierna) y upper/bicep/tricep/elbow/
+fore/forearm_mass/wrist_cap/hand (brazo) por su PROPIO eje local + shoulder_x
+sobre `SHOULDER_X`, más neck/head. **Corrección de diseño encontrada
+ANTES de romper nada:** escalar solo `leg.scale.y`/`arm.scale.y` (el nodo
+padre) parecía más simple pero genera CIZALLA con el codo/rodilla doblado
+(Godot escala en el frame local del padre ANTES de rotar) — cada segmento
+se reposiciona a mano por su propio offset en cambio. `_Biomech.
+solve_knee_for_height` (foot IK, frente 2) también actualizado para usar
+`LEG_SEGMENT_LEN * limb_len`, no la constante humana fija.
+
+**Medido en banco (`tmp_anatomy.gd`, nuevo `ANATOMY_ORIGIN=aetherborn|
+ironblooded` — reusa el patrón `DIAG_*`), NO a ojo:**
+- Enano: r1 5.34 cabezas (objetivo 4.5, canon lámina `fenotipo-enano-
+  varon-v1.png` "4.5 heads tall") → r2 4.22 (se pasó) → r3 **4.49** ✅.
+- Elfo: r1 8.78 cabezas (objetivo 8.0, lámina `fenotipo-elfo-lavanda-v1.png`
+  "8 heads tall") → r2 **8.17** ✅ (cerca, aceptable para piloto).
+
+**Hallazgo colateral (NO introducido por este trabajo, verificado con
+`git stash`):** `autotest_classes.gd` tiene una cámara de close-up rota
+preexistente (reproduce igual en el commit anterior a hoy) — chip
+delegado aparte, fuera de alcance de C6b.
+
+**Gates:** `test_core`, `autotest_biomech`, `autotest_footik`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`, `autotest_ui`,
+`autotest_classes` (smoke, sin crash en los 9 combos origen×clase) — TODOS
+ALL_PASS. Cero regresión en humano/miststalker (proportions vacío).
+
+**Pendiente (según el propio orden del PRD):** VoBo de Boris sobre estas
+proporciones ANTES de seguir a geometría nueva (orejas élficas largas
+"que continúan la línea del cráneo", frente/mandíbula pesada de enano,
+ROM por raza, peinados/marca cultural — pospuestos explícitamente por
+Boris). Este es el piloto que el PRD pedía validar antes de generalizar
+más.
+
 ## [2026-07-21] feature | Frente 2 (orden Boris): C4 pies IK — nodo ankle nuevo + solver analítico de rodilla/tobillo
 Arrancado el frente 2 (C4 — pies IK/ROM) tras cerrar el frente 1. Alcance:
 "pies plantados en pendiente" ([[Movilidad Realista]] §"IK como estándar"),

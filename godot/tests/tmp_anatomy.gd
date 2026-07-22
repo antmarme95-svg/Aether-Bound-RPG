@@ -13,6 +13,7 @@ extends Node
 
 const _GOLDEN      = preload("res://scenes/golden_scene.gd")
 const _Pheno       = preload("res://data/phenotype_data.gd")
+const _Origins     = preload("res://data/origins_data.gd")
 const _TOON_GOLDEN = preload("res://rendering/toon_golden.gdshader")
 
 # Origin NEUTRO: sin piezas de origen (fallback limpio de _build_origin_features),
@@ -66,7 +67,22 @@ func _run() -> void:
 	pheno["hairColor"] = 4    # chestnut (base; tinte exacto abajo)
 	pheno["warpaint"] = 6     # Scout Marks: patrón 6 vacío A PROPÓSITO en warpaint_atlas.gd (la marca real es geometría en _face_mark) — el PRD Rework Fenotipo lo daba por "índice inválido" (WARPAINTS de la UI solo llega a 5) pero SÍ es válido para el atlas/gating; corregido tras verificar visualmente que 1-5 pintan patrones legacy superpuestos
 	pheno["paintColor"] = 4   # wyld green
-	_rig.apply_phenotype(pheno, BASELINE_ORIGIN)
+	# C6b (2026-07-21): ANATOMY_ORIGIN=aetherborn|ironblooded pisa el
+	# origin neutro con la raza real (proporciones + orejas/features de
+	# `_build_origin_features`) pero mantiene heightRange fijo en 1.0 y el
+	# accent papel del banco — se juzga PROPORCIÓN, no identidad/luz.
+	var anatomy_origin: Dictionary = BASELINE_ORIGIN
+	var origin_override: String = OS.get_environment("ANATOMY_ORIGIN")
+	if origin_override != "":
+		var real_origin: Dictionary = _Origins.get_origin(origin_override)
+		if not real_origin.is_empty():
+			anatomy_origin = real_origin.duplicate(true)
+			anatomy_origin["heightRange"] = [1.0, 1.0]
+			anatomy_origin["theme"] = BASELINE_ORIGIN["theme"]
+	_rig.apply_phenotype(pheno, anatomy_origin)
+	var class_override: String = OS.get_environment("ANATOMY_CLASS")
+	if class_override != "":
+		_rig.apply_archetype(class_override)
 	# Castaño CLARO exacto del concept (patrón Dagna: tinte post-paleta).
 	_rig.hair_mat.set_shader_parameter("albedo_color", Color("#8a6b48"))
 	# Iris café legible (el accent papel del banco lo dejaba blanco-sobre-
