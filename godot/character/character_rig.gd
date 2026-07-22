@@ -2840,6 +2840,23 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# radial_segments (4, patrón ya usado en la nariz) leen como filo
 		# bajo el toon en vez de un cono suave que se ve redondeado/grueso.
 		# MEDIUM — base gruesa: bottom_radius 0.024→0.019.
+		# Ronda 5 (QA re-medido tras ronda 4: 60-65%, CRITICAL/HIGH/MEDIUM
+		# de arriba RESUELTOS y verificados por píxel). Hallazgo nuevo del
+		# QA: silueta de "hoja compuesta" (Frieren/Zelda) — borde superior
+		# casi recto, inferior cóncavo, flick final más inclinado; un cono
+		# de taper lineal no puede darla.
+		# RONDAS 6-8 (2026-07-22, EXPERIMENTO CERRADO — revertido): se
+		# probó `HairLibrary._loft`/`_lock` (curva + perfil de radios, el
+		# reemplazo vigente de `_ribbon`/`_s_spine` para pelo) 3 veces con
+		# QA imparcial de por medio, y las 3 midieron PEOR que este cono
+		# (40%, 45%, 45-50% vs 60-65%). Causa según el propio QA: a esta
+		# escala/distancia de cámara, una curva delgada de perfil de radio
+		# decreciente lee como "alambre con gancho/cuerno", no como el
+		# cuerpo ancho-que-se-angosta de una oreja — el cono simple, aun
+		# siendo genérico, comunica "oreja" de forma más inequívoca que la
+		# curva compuesta en esta escala. Revertido al cono de la ronda 4
+		# (60-65%, el mejor medido). Ver [[Lecciones]] para el hallazgo
+		# completo antes de reintentar geometría curva en rasgos chicos.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var mesh = CylinderMesh.new()

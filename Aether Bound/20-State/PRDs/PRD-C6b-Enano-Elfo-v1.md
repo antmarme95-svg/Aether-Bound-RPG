@@ -130,8 +130,20 @@ formal + el ojo del orquestador, como hasta ahora.
    por píxel. Pendiente nuevo (MEDIUM, el propio QA lo marca como
    probable techo de la técnica de un solo cono): silueta compuesta
    tipo "hoja" — necesitaría más segmentos a lo largo del eje de la
-   oreja, no un parámetro suelto. Sin atacar (decisión de alcance).
-   Gates mínimos ALL_PASS.
+   oreja, no un parámetro suelto. Gates mínimos ALL_PASS.
+   **Ronda 4 — experimento de "hoja compuesta" (2026-07-22): CERRADO,
+   REVERTIDO.** Se reusó `HairLibrary._loft`/`_lock` (curva+perfil de
+   radios) con un plan formal (modo plan aprobado por Boris) — 3 rondas
+   con QA imparcial de por medio en cada una, TODAS midieron peor que el
+   cono (40% → 45% → 45-50%, vs 60-65% del cono). Diagnóstico del QA:
+   a la escala de este rasgo, un perfil de radio decreciente lee "sin
+   volumen" y una curva concentrada al final lee "gancho", no remate
+   suave — el cono simple comunica la forma base con más claridad.
+   Revertido al cono de la Ronda 3 (mejor estado medido). Nueva Lección
+   documentada ([[Lecciones]]): loft/ribbon puede leer peor que un cono
+   simple en rasgos chicos y cortos, no transferir la técnica de pelo
+   sin verificar contra el baseline. **Estado final: oreja = cono,
+   60-65%, sin cambio neto.** Gates ALL_PASS.
    **ROM por raza (`rig_biomech.gd`) sigue pendiente — PENDIENTE VoBo de
    Boris sobre TODO lo ejecutado (proporciones + orejas + mandíbula/
    ceja) antes de seguir.**

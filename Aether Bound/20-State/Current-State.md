@@ -38,11 +38,16 @@ updated: 2026-07-21
   (2 rondas) + **QA imparcial formal** (protocolo [[QA Loop]], mismo
   agente re-invocado): 40%→60-65% de fidelidad medida. CRITICAL (ángulo),
   HIGH (punta roma), MEDIUM (base gruesa) RESUELTOS y verificados por
-  píxel por el propio QA. Pendiente nuevo (MEDIUM, marcado por el QA como
-  probable techo de la técnica de un solo cono): silueta compuesta tipo
-  "hoja" (curva cóncava + flick de punta) — pediría más segmentos a lo
-  largo del eje de la oreja, no un parámetro suelto; sin atacar esta
-  ronda (decisión de alcance). Gates mínimos ALL_PASS.**
+  píxel por el propio QA.
+  **Experimento de "hoja compuesta" (mismo día, 2026-07-22): CERRADO,
+  revertido.** Se probó `HairLibrary._loft`/`_lock` (curva+radios, el
+  reemplazo vigente de la técnica de pelo vieja) para el hallazgo de
+  silueta "hoja" que el QA marcó como techo del cono — 3 rondas con QA
+  de por medio, las 3 midieron PEOR que el cono (40%→45%→45-50% vs
+  60-65%). Revertido al cono (mejor estado medido); nueva Lección
+  documentada (loft puede leer peor que un cono simple en rasgos chicos/
+  cortos). Gates ALL_PASS. **Estado final de la oreja: sin cambio neto
+  respecto a la entrega anterior (cono, 60-65%).**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**

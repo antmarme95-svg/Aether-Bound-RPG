@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # Lecciones y entorno técnico
@@ -410,6 +410,31 @@ updated: 2026-07-21
   (brazo, correa, prop) que dibuja el borde exterior real de la silueta a
   esa altura — diagnosticar ocultando ese vecino antes de re-esculpir la
   masa misma.
+- **Una curva delgada con perfil de radio decreciente (loft/ribbon) puede
+  leer PEOR que un cono/cápsula simple para un rasgo CHICO y CORTO, aunque
+  la técnica de curva sea la correcta "en teoría" para la silueta que se
+  busca.** (2026-07-22, oreja de elfo.) Un QA imparcial pidió una silueta
+  de "hoja compuesta" (borde recto + cóncavo + flick de punta) para
+  reemplazar un cono de taper lineal que ya medía 60-65%. Se probó
+  `HairLibrary._loft`/`_lock` (curva Catmull-Rom + perfil de radios, la
+  técnica vigente y correcta para mechones de pelo) — 3 rondas con QA de
+  por medio, cada una peor que la anterior (40% → 45% → 45-50%, todas
+  por debajo del cono). Causa diagnosticada por el propio QA: a la
+  distancia de cámara del banco, un perfil de radio que cae rápido deja
+  el 70-80% del cuerpo de la pieza como "alambre sin volumen", y una
+  curva concentrada en el tramo final lee como gancho/garfio, no como
+  remate suave — el cono simple, aunque genérico, comunica la FORMA
+  base (triángulo que se angosta) de manera más inequívoca que una curva
+  compuesta a esta escala. Se revirtió al cono. Regla: una técnica de
+  curva/loft que funciona bien para pelo (mechones largos, MUCHOS puntos
+  de control, radio que se mantiene grueso buen trecho) no se transfiere
+  automáticamente a un rasgo corto y chico — si el primer intento con la
+  técnica nueva mide peor que el baseline, no seguir puliendo parámetros
+  de la misma técnica más de 1 ronda extra de corrección dirigida por
+  QA; si la 2ª ronda tampoco supera el baseline, es señal real de que la
+  técnica no encaja en esta escala (no un problema de calibración), y
+  toca revertir y documentar, no seguir iterando (mismo espíritu que
+  "sospechar del andamiaje tras 2-3 intentos").
 - **IK analítica de 2 huesos sin Skeleton3D: si dos rotaciones consecutivas
   de la cadena giran sobre el MISMO eje local fijo (aquí, X: cadera→rodilla
   del rig `Node3D` procedural), sus ángulos se SUMAN — un solo `acos` da el

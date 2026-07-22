@@ -1,5 +1,49 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] fix | Oreja de elfo — experimento de "hoja compuesta" con HairLibrary._loft/_lock: 3 rondas, todas peor que el cono; REVERTIDO
+Siguiendo el plan aprobado por Boris para atacar el hallazgo del QA
+anterior ("silueta de hoja compuesta, técnica de un solo cono en su
+techo"), se investigó y reusó `HairLibrary._loft`/`_lock`
+(`hair_library.gd:181`/`:277` — curva `Curve3D` + perfil de radios, el
+reemplazo VIGENTE de la técnica vieja de cadenas de cajas `_ribbon`/
+`_s_spine`, esa sí deprecada con 4º intento prohibido). Nunca antes
+usada para algo que no fuera pelo — riesgo anotado explícitamente en el
+plan.
+
+**3 rondas ejecutadas, con QA imparcial (mismo agente, `SendMessage`)
+después de cada una:**
+- Ronda 1 (4 puntos, curva sostenida en todo el largo, ~0.205 de
+  alcance): QA la comparó contra el cono → **~40-45%**, "cuerno curvo",
+  RETROCESO vs el cono (60-65%).
+- Ronda 2 (acortada a ~0.165, flick concentrado al final): QA →
+  **~40-45%** de nuevo, mismo diagnóstico ("cuerno de toro"), pidió 4
+  correcciones concretas (acortar más, colinealidad estricta raíz→2/3,
+  eje barrido hacia atrás no perpendicular, radio cayendo rápido en el
+  primer tercio).
+- Ronda 3 (las 4 correcciones aplicadas literalmente: ~0.11 de alcance,
+  P0-P1-P2 exactamente colineales con un solo vector de dirección
+  escalado, componente Z negativa real, radios 0.023→0.011 ya en el
+  primer punto): QA → **~45-50%**, TODAVÍA por debajo del cono. Nuevo
+  diagnóstico: el tramo recto quedó tan delgado que lee "alambre sin
+  volumen" y el flick final quedó tan concentrado que lee "gancho/
+  garfio", no remate de punta.
+
+**Decisión (Lección aplicada, no una 4ª ronda a ciegas):** revertido
+al cono de la ronda 4 anterior (60-65%, mejor medido) — mismo criterio
+que "sospechar del andamiaje tras 2-3 intentos": si una técnica nueva,
+correcta en teoría, mide peor en CADA ronda pese a corrección dirigida
+por QA, es señal de que no encaja a esta escala, no un problema de
+calibración. Documentado en [[Lecciones]] (nueva entrada: loft/ribbon
+puede leer peor que un cono simple en rasgos chicos y cortos).
+
+**Gates:** `test_core` + `autotest_biomech` ALL_PASS tras el revert.
+Estado final: oreja de elfo = cono de la ronda 5 anterior, 60-65% de
+fidelidad medida, sin cambios respecto a la última entrega aprobada.
+Capturas oficiales sin cambio: `godot/test_out/anatomy_elf_face.png`/
+`_34.png`/`_profile.png`. Las capturas del experimento fallido quedan en
+`anatomy_elf_face_leaf.png`/`_34_leaf.png`/`_profile_leaf.png` (no se
+borran — documentan el intento para no repetirlo sin releer esto).
+
 ## [2026-07-22] qa | Oreja de elfo — QA imparcial (protocolo QA Loop) 40%→60-65%, fixes aplicados y verificados
 Boris pidió correr QA formal de la oreja (no solo VoBo directo). Protocolo
 [[QA Loop]]: subagente `general-purpose` SIN contexto de sesión, con las 2
