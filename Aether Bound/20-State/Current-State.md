@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # Current State
@@ -8,7 +8,16 @@ updated: 2026-07-21
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 cerró el frente 1
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (pendiente de Boris, 2026-07-22
+  noche, SIN ejecutar todavía — "mañana empezamos con el plan"):**
+  sobre la oreja de elfo (cono, base ya ensanchada 25% hoy), Boris pidió
+  DOS cosas más para la próxima sesión: (1) ensanchar la base un poco
+  más todavía; (2) agregar una pieza CHICA con forma de **triángulo
+  escaleno por debajo** de la oreja, funcionando como **lóbulo** —
+  explícitamente "no generes lleno de aurita" (no una oreja "llena"/
+  grande, solo el detalle puntual del lóbulo). Confirmado el
+  entendimiento en chat, sin tocar código todavía.
+- **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de
   PROPORCIONES (campo `"proportions"` por origin: `limb_len`/
