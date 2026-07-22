@@ -1,5 +1,34 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-21] fix | Frente 1 (orden Boris 07-20): hombro-esfera fundido + cintura con pellizco real
+Arrancado el frente 1 del orden acordado (hombro→torso y cintura recta,
+hallazgos CRITICAL de Grupo C 07-19). Diagnóstico por color (torso/waist/
+pelvis con `material_override` imposible de confundir + brazos ocultos,
+`DIAG_TORSO=1` nuevo en `tmp_anatomy.gd`, mismo patrón que `DIAG_AXIS`/
+`DIAG_HAND`): el pellizco de cintura SÍ existe en la malla pero es débil
+y además queda tapado por el brazo — el brazo cuelga con splay mínimo
+("roza el torso todo el trayecto", decisión anti-gorila 2026-07-13) a una
+tasa fija mientras el torso se angosta más rápido abajo, así que el ancho
+COMBINADO brazo+torso no bajaba pese a que el cilindro sí tapera.
+**Fixes:** (1) `waist` bottom_radius 0.071→0.058 (pellizco más profundo,
+gana margen real frente al brazo, no solo frente al fondo); (2) `trap_back`
+(esfera trasera del trapecio) agrandada (1.5/0.9/0.55→1.7/1.05/0.65) y
+acercada al deltoide (0.09→0.105, y 0.30→0.29, z -0.04→-0.025) para tragar
+su cuadrante trasero-superior completo — corolario de Lecciones: dos
+esferas que solo se TOCAN dejan ver el horizonte propio de cada una,
+necesitan INTERPENETRAR de verdad. **Resultado verificado en render:**
+closeup hombro-cuello ahora funde en una sola masa continua (antes: bola
+con costura de tinta clara alrededor); vista de frente ahora muestra un
+hueco real de fondo (verde) entre brazo interior y cintura + curva de
+torso visiblemente más angosta que el hombro (antes: silueta recta de
+hombro a cadera). **Gates:** `test_core`, `autotest_biomech`,
+`autotest_combat`, `autotest_springboard` ALL_PASS — cero regresión.
+Perfil (side view) sigue sin mostrar mucho pellizco (la vista de frente
+era donde el QA lo marcó CRITICAL); pendiente decidir con Boris si vale
+una 2da ronda en perfil o se cierra aquí. Queda VoBo de Boris sobre las
+capturas. Herramienta nueva reutilizable: `DIAG_TORSO=1` en
+`tmp_anatomy.gd` (aísla torso/waist/pelvis + oculta brazos).
+
 ## [2026-07-20] state | Python 3.12 instalado + check_vault.py verificado en corrida real + gitignore de privados wireado
 Boris pidió instalar Python (bloqueaba `check_vault.py` desde el checkpoint
 anterior). Instalado vía `winget install --id Python.Python.3.12`

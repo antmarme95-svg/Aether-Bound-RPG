@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-14
+updated: 2026-07-21
 ---
 
 # Lecciones y entorno técnico
@@ -391,6 +391,25 @@ updated: 2026-07-14
   en que el Sobel le dibuje el borde (diseñar pendientes con eso en
   mente). A/B 1.60 descartado: nada extra en el cuerpo, más erosión de
   follaje.
+- **Un pellizco de cintura correcto en la MALLA puede seguir sin leerse si
+  el brazo cuelga pegado al torso a tasa fija.** (2026-07-21, frente
+  hombro/cintura.) `waist` tapera de verdad (top→bottom radius), pero el
+  brazo (`arm.rotation.z` fijo, decisión anti-gorila 2026-07-13: "roza el
+  torso todo el trayecto") lo hace a una tasa CONSTANTE mientras el torso
+  se angosta más abajo — el ANCHO COMBINADO brazo+torso a esa altura lo
+  fija el brazo, no el torso, así que ningún ajuste del radio de cintura
+  se ve mientras el brazo siga tapando ese borde. Diagnóstico: colorear
+  torso/waist/pelvis con `material_override` + OCULTAR los brazos (nuevo
+  `DIAG_TORSO=1` en `tmp_anatomy.gd`, mismo patrón que `DIAG_AXIS`)
+  confirmó que el pellizco SÍ existía antes de tocar nada. Fix: profundizar
+  el radio de cintura lo suficiente para que gane margen real contra el
+  brazo (no solo contra el fondo/pelvis) — verificado por un hueco de
+  fondo visible entre brazo interior y cintura en el render con brazos
+  puestos. Regla: ante una masa que "no se angosta" pese a que su propio
+  mesh sí tapera, sospechar de un vecino con posición/rotación FIJA
+  (brazo, correa, prop) que dibuja el borde exterior real de la silueta a
+  esa altura — diagnosticar ocultando ese vecino antes de re-esculpir la
+  masa misma.
 - **El límite de gasto de Claude puede ser una ventana de 5 horas, no
   mensual/semanal** — un subagente que falla por "spend limit" puede
   volver a funcionar poco después con el MISMO prompt; no asumir que hay

@@ -578,7 +578,16 @@ func _build() -> void:
 	# como silueta continua, no como línea de tinta horizontal.
 	# Sprint A5: fondo 0.078→0.071 — la cintura frontal medía 86% del
 	# hombro; la lámina pide ~75-78% (pellizco de silueta más hondo).
-	waist = _cylinder_mesh(0.108, 0.071, 0.22, skin_mat)
+	# GRUPO C 07-19 (frente 1, orden Boris 07-20): CRITICAL "cintura sin
+	# angostamiento" — diagnóstico por color (torso/waist/pelvis aislados,
+	# brazos ocultos) confirmó que el pellizco SÍ existe en la malla pero
+	# es débil y además queda tapado por el brazo colgando (splay mínimo,
+	# "roza el torso todo el trayecto", decisión 2026-07-13 anti-gorila):
+	# el brazo pega al torso a una tasa fija mientras el torso se angosta
+	# más rápido abajo, así que el ancho combinado brazo+torso no baja.
+	# Profundiza el pellizco (0.071→0.058) para que la curva de cintura
+	# gane margen real frente al brazo, no solo frente al fondo.
+	waist = _cylinder_mesh(0.108, 0.058, 0.22, skin_mat)
 	waist.position = Vector3(0.0, 0.08, 0.0)
 	spine.add_child(waist)
 	_add_outline_pass(waist, Color("#f2b186"))
@@ -672,9 +681,16 @@ func _build() -> void:
 		# HIGH; no era malla abierta, era bolsa de sombra sin masa).
 		# Sprint A4: más ancha y afuera — solapa el tope del deltoide para
 		# fundir el escalón trap/deltoide/brazo de la vista trasera.
+		# GRUPO C 07-19 (frente 1): CRITICAL "hombro-esfera desconectado" —
+		# pese al solape ya verificado en los 3 ejes, la curva de intersección
+		# entre trap_back y el deltoide no era lo bastante profunda (lección
+		# corolario 2: dos esferas que solo se TOCAN, no INTERPENETRAN,
+		# dejan ver el horizonte propio de cada una = anillo de tinta). Más
+		# grande y más cerca del deltoide para tragar su cuadrante trasero-
+		# superior completo, no solo rozarlo.
 		var trap_back = _sphere_mesh(0.075, skin_mat)
-		trap_back.scale = Vector3(1.5, 0.9, 0.55)
-		trap_back.position = Vector3(float(tside) * 0.09, 0.30, -0.04)
+		trap_back.scale = Vector3(1.7, 1.05, 0.65)
+		trap_back.position = Vector3(float(tside) * 0.105, 0.29, -0.025)
 		upper_spine.add_child(trap_back)
 		_add_outline_pass(trap_back, Color("#f2b186"))
 

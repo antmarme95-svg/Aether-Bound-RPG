@@ -95,6 +95,15 @@ func _run() -> void:
 		_holder.add_child(holder_anchor)
 		holder_anchor.position = Vector3(0.0, 1.90, 0.0)
 		_add_axis_spear(holder_anchor, Color(1.0, 0.1, 0.1))
+	# DIAG_TORSO: aísla torso/cintura/pelvis con color diagnóstico y oculta
+	# brazos, para ver si el pellizco de cintura es real o queda tapado por
+	# el brazo colgando al lado (frente 1 del orden 2026-07-20).
+	if OS.get_environment("DIAG_TORSO") == "1":
+		_diag_color(_rig.torso, Color(0.1, 0.9, 0.9))
+		_diag_color(_rig.waist, Color(1.0, 0.1, 0.9))
+		_diag_color(_rig.pelvis, Color(1.0, 0.9, 0.1))
+		_rig.arms[0].visible = false
+		_rig.arms[1].visible = false
 	# Dump del atlas de warpaint generado (posicionar slashes VIENDO el strip)
 	var head_tex = _rig.head_mat.get_shader_parameter("albedo_texture")
 	if head_tex is Texture2D:
@@ -232,6 +241,16 @@ func _key_offset(base: Vector3) -> Vector3:
 # ================= diagnóstico de ejes (DIAG_AXIS) =================
 # Caja delgada de 0.30 m que nace en el origen del padre y corre por su +Z
 # local. Material unshaded: el color debe leerse puro, sin toon/sombra.
+func _diag_color(node: Node3D, color: Color) -> void:
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = color
+	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	if node is MeshInstance3D:
+		(node as MeshInstance3D).material_override = mat
+	for c in node.get_children():
+		if c is MeshInstance3D:
+			(c as MeshInstance3D).material_override = mat
+
 func _add_axis_spear(parent: Node3D, color: Color) -> void:
 	var spear := MeshInstance3D.new()
 	var bm := BoxMesh.new()

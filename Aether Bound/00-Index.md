@@ -108,6 +108,8 @@
   torso ~40% — techo del tuning confirmado 2 veces), fases R0-R4 con
   contrato duro de API/pivotes/biomech intacto; supersede las Fases 1-2 del
   [[PRD-Rework-Modelado-Personajes-v2]] (sus Fases 3-4 siguen vigentes).
+  Backlog Grupo C (07-19) frente 1 EJECUTADO (2026-07-21): hombro-esfera
+  fundido + cintura con pellizco real, gates ALL_PASS, VoBo pendiente.
 - [[PRD-C6b-Enano-Elfo-v1]] (`20-State/PRDs/`) — **draft (2026-07-20)**:
   cuerpo+ROM enano/elfo (histórico) AMPLIADO por Boris a incluir catálogo
   racial de peinados + marca cultural (aether élfico, tatuajes/inlays de
