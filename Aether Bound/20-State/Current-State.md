@@ -8,15 +8,20 @@ updated: 2026-07-22
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (pendiente de Boris, 2026-07-22
-  noche, SIN ejecutar todavía — "mañana empezamos con el plan"):**
-  sobre la oreja de elfo (cono, base ya ensanchada 25% hoy), Boris pidió
-  DOS cosas más para la próxima sesión: (1) ensanchar la base un poco
-  más todavía; (2) agregar una pieza CHICA con forma de **triángulo
-  escaleno por debajo** de la oreja, funcionando como **lóbulo** —
-  explícitamente "no generes lleno de aurita" (no una oreja "llena"/
-  grande, solo el detalle puntual del lóbulo). Confirmado el
-  entendimiento en chat, sin tocar código todavía.
+- **✅ EJECUTADO (2026-07-22, sesión siguiente):** las dos cosas pedidas
+  anoche sobre la oreja de elfo, ambas aditivas sobre el cono ya
+  validado (60-65%), sin tocar ángulo/largo/punta: (1) base un poco más
+  ancha, `bottom_radius` 0.024→0.027 (~+12%, paso más chico que el salto
+  de ayer); (2) lóbulo nuevo — `PrismMesh` con `left_to_right=0.15`
+  (perfil escaleno), chico, colgando de la base del cono. Primer intento
+  de posición falló (usó el CENTRO del cono en vez de su base, quedó
+  flotando invisible cerca de la mandíbula); recalculado con trig sobre
+  la rotación del cono y reubicado en
+  `Vector3(side*0.135, 0.015, 0.018)` — ahora se lee bien en frente/3-4/
+  perfil, sin verse como "oreja llena". Verificado en banco
+  (`ANATOMY_ORIGIN=aetherborn ANATOMY_HAIR=8`) + gate lógico
+  `test_core.gd` ALL_PASS. Detalle completo en [[LOG]]. **Queda VoBo de
+  Boris** (cambio puntual, sin nueva medición de QA imparcial).
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de

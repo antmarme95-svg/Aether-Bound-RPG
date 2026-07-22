@@ -2859,11 +2859,19 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# completo antes de reintentar geometría curva en rasgos chicos.
 		# Pedido de Boris (2026-07-22): base 25% más ancha (0.019→0.024) —
 		# más "carne" en la raíz sin tocar ángulo/largo/punta ya medidos.
+		# Ronda 2 (mismo pedido, día siguiente): "un poco más todavía" —
+		# paso más chico que el de ayer, 0.024→0.027 (~+12%), mismo criterio
+		# (no tocar ángulo/largo/punta/posición/rotación del cono).
+		# Además, pieza NUEVA de lóbulo: prisma triangular ESCALENO chico
+		# (`PrismMesh.left_to_right` sesgado, mismo patrón que `_wedge()` en
+		# character_signature.gd) colgando de la base del cono — Boris pidió
+		# explícitamente que NO se lea como "oreja llena", solo el detalle
+		# puntual del lóbulo.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var mesh = CylinderMesh.new()
 			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.024
+			mesh.bottom_radius = 0.027
 			mesh.height = 0.24
 			mesh.radial_segments = 4
 			ear.mesh = mesh
@@ -2872,6 +2880,23 @@ func _build_origin_features(origin: Dictionary) -> void:
 			ear.rotation = Vector3(-0.06, 0.0, float(side) * -1.43)
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
+
+			# NOTA: `ear.position` es el CENTRO del cono (0.148 en X), no su
+			# base — la base real (donde el cono nace del cráneo) está mucho
+			# más cerca del eje central, ~x=0.03 con la rotación de arriba.
+			# El lóbulo va ahí, pegado a la superficie del cráneo, no en el
+			# punto medio del cono (ahí queda flotando en el aire, invisible/
+			# fuera de silueta — primer intento falló por esto).
+			var lobe = MeshInstance3D.new()
+			var lobe_mesh = PrismMesh.new()
+			lobe_mesh.size = Vector3(0.016, 0.020, 0.014)
+			lobe_mesh.left_to_right = 0.15
+			lobe.mesh = lobe_mesh
+			lobe.material_override = skin_mat
+			lobe.position = Vector3(side * 0.135, 0.015, 0.018)
+			lobe.rotation = Vector3(0.0, 0.0, float(side) * -1.43 + PI)
+			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
+			feature_slot.add_child(lobe)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")
 
 	elif id == "miststalker":

@@ -1,5 +1,29 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] fix | Oreja de elfo — base un poco más ancha (ronda 2) + lóbulo triangular nuevo
+Siguiendo el pedido de Boris de la noche anterior (ver Current-State),
+dos cambios aditivos sobre el cono ya validado (60-65%, `character_rig.gd`
+rama `aetherborn` de `_build_origin_features`), sin tocar ángulo/largo/
+punta:
+1. **Base un poco más ancha (ronda 2):** `bottom_radius` 0.024→0.027
+   (~+12%, paso más chico que el salto de 25% de ayer).
+2. **Lóbulo nuevo:** pieza chica de `PrismMesh` (prisma triangular,
+   `left_to_right=0.15` para el perfil ESCALENO pedido — mismo patrón que
+   `_wedge()` en `character_signature.gd`) colgando de la base del cono,
+   NO una "oreja llena". Primer intento de posicionamiento falló (usó
+   `ear.position`, que es el CENTRO del cono en X≈0.148, no su base en
+   X≈0.03-0.12 según altura) — el lóbulo quedó flotando invisible cerca
+   de la mandíbula (confirmado en banco). Recalculada la geometría de la
+   base real del cono (trig sobre su rotación) y reposicionado en
+   `Vector3(side*0.135, 0.015, 0.018)`: ahora se lee como un triángulo
+   chico bien pegado a la base ensanchada, visible en frente/3-4/perfil,
+   sin leer como segunda oreja.
+Verificado en banco visual (`ANATOMY_ORIGIN=aetherborn ANATOMY_HAIR=8`,
+capturas en `godot/test_out/anatomy_face*.png`) y gate lógico
+`test_core.gd` ALL_PASS (cero regresión — único bloque tocado es el de
+`aetherborn`). Sin re-medición de QA imparcial (cambio puntual, mismo
+criterio que la ronda 1 de ayer) — pendiente VoBo de Boris.
+
 ## [2026-07-22] fix | Oreja de elfo — base 25% más ancha (pedido directo de Boris)
 Tras cerrar y documentar el experimento fallido de "hoja compuesta"
 (entrada anterior), Boris pidió un ajuste puntual sobre el cono ya
