@@ -8,16 +8,21 @@ updated: 2026-07-21
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 ejecutó y CERRÓ
-  el frente 1 del orden acordado (hombro→torso + cintura recta, CRITICAL
-  de Grupo C 07-19), frente Y perfil: hombro-esfera fundido con el
-  trapecio (trap_back agrandado/acercado) y cintura con pellizco real en
-  las 2 vistas (waist bottom_radius 0.071→0.058→0.048, medido por píxel:
-  ~55% de reducción real en perfil). Gates ALL_PASS (test_core, biomech,
-  combat, springboard). Detalle completo en [[LOG]]. Queda VoBo de Boris
-  sobre las capturas (`godot/test_out/anatomy_full_front.png`,
-  `anatomy_full_side.png`, `anatomy_closeup_neckshoulder.png`) antes de
-  seguir con el resto del orden (C4 pies IK/ROM, luego C6b).**
+- **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN — sesión 2026-07-21 CERRÓ el frente 1
+  (hombro→torso + cintura, frente y perfil, CRITICAL de Grupo C 07-19) Y
+  ejecutó el frente 2 (C4 — pies IK): nodo `ankle` nuevo (2-DOF, antes la
+  bota colgaba rígida sin pivote propio) + solver analítico en
+  `rig_biomech.gd` (`solve_knee_for_height`/`solve_ankle_level`) —
+  "pies plantados en pendiente" ya funciona, sin Skeleton3D, 100% Node3D
+  procedural. `CharacterRig.apply_foot_ik()` público, alimentado por
+  `player_controller.gd` vía el contrato `get_height()` ya existente.
+  Gate nuevo `autotest_footik.gd` ALL_PASS + regresión completa (incluida
+  corrida real en The Wilds) ALL_PASS. Detalle completo en [[LOG]]. Queda
+  VoBo de Boris sobre capturas de frente 1
+  (`godot/test_out/anatomy_full_front.png`, `anatomy_full_side.png`) y
+  frente 2 (`godot/test_out/footik_slope.png`). **Siguiente frente:
+  [[PRD-C6b-Enano-Elfo-v1]]** (cuerpo+ROM enano/elfo + catálogo de
+  peinados) — no arrancar sin señal explícita de Boris.**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**

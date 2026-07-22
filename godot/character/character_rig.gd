@@ -173,6 +173,14 @@ var _hip_crouch: float = 0.0           # smoothed 0..1 crouch amount for hip bac
 var _attack_timer: float = 0.0
 var _attack_style: String = "melee"
 
+# ---- Foot IK (C4, frente 2): terreno bajo cada pie, seteado por el
+# consumidor (player_controller/escena) vía `apply_foot_ik()` cada frame.
+# NAN = sin dato de terreno todavía → esa pierna no aplica corrección
+# (gates/bancos que nunca llaman `apply_foot_ik` quedan bit-idénticos).
+var _ik_ground_h: Array = [NAN, NAN]
+var _ik_ground_n: Array = [Vector3.UP, Vector3.UP]
+var _ik_active: bool = false
+
 # ---- PRD-006 alcance 0: biomech strike + joint constraints ----
 const _Biomech = preload("res://character/rig_biomech.gd")
 var _strike_t: float = 0.0             # remaining strike time (seconds); <=0 = inactive
@@ -391,21 +399,35 @@ func _build() -> void:
 		knee.add_child(calf)
 		_add_outline_pass(calf, Color("#3a2d22"))
 
+		# TOBILLO (C4, frente 2 del orden 2026-07-20/21): 2-DOF ["Movilidad
+		# Realista": "muñeca/tobillo 2-DOF"] — antes la bota colgaba RÍGIDA
+		# del nodo `knee` (sin pivote propio), así que "pies plantados en
+		# pendiente" ([[Movilidad Realista]], IK como estándar) era
+		# imposible: no había ningún hueso que pudiera inclinar la suela.
+		# Nace en el mismo punto donde colgaba la bota (knee-local y=-0.45)
+		# — con rotation=0 el mundo queda IDÉNTICO al de antes (solo cambia
+		# la jerarquía), así que esto es neutro en reposo/gates viejos.
+		var ankle = Node3D.new()
+		ankle.name = "ankle"
+		ankle.position.y = -0.45
+		knee.add_child(ankle)
+
 		# Bota: caña + puntera (review HIGH 7: pies MAYORES — estabilidad
 		# visual, contacto con el suelo, lectura en animación)
 		var boot = _box_mesh(0.11, 0.09, 0.21, leather_mat)
-		boot.position = Vector3(0.0, -0.45, 0.03)
-		knee.add_child(boot)
+		boot.position = Vector3(0.0, 0.0, 0.03)
+		ankle.add_child(boot)
 		_add_outline_pass(boot, Color("#5b4632"))
 		var toe = _box_mesh(0.10, 0.055, 0.085, leather_mat)
-		toe.position = Vector3(0.0, -0.4675, 0.14)
-		knee.add_child(toe)
+		toe.position = Vector3(0.0, -0.0175, 0.14)
+		ankle.add_child(toe)
 		_add_outline_pass(toe, Color("#5b4632"))
 
 		# Store sub-nodes in metadata (mirrors JS leg.userData)
 		leg.set_meta("knee", knee)
 		leg.set_meta("thigh", thigh)
 		leg.set_meta("shin", shin)
+		leg.set_meta("ankle", ankle)
 		legs.append(leg)
 
 	# ---------- torso ----------
@@ -2972,6 +2994,41 @@ func play_parry(dur: float = 0.30) -> void:
 	_parry_dur = maxf(dur, 0.12)
 	_parry_t = _parry_dur
 
+## apply_foot_ik — C4 frente 2 (2026-07-21): "pies plantados en pendiente"
+## ([[Movilidad Realista]]). El CONSUMIDOR (player_controller u otra escena)
+## mide el terreno bajo cada pie con su propio `get_height()` (contrato ya
+## existente, agnóstico de escena) y pasa altura+normal aquí cada frame; el
+## rig no sabe nada de escenas/terreno (mismo principio que `set_motion` —
+## el rig solo POSA, quien mueve el cuerpo decide contra qué). Sin llamar a
+## esto nunca (bancos/escenas planas), el rig queda bit-idéntico a antes de
+## C4 — cero riesgo de regresión donde no se usa.
+func apply_foot_ik(l_height: float, r_height: float, l_normal: Vector3 = Vector3.UP, r_normal: Vector3 = Vector3.UP) -> void:
+	_ik_ground_h = [l_height, r_height]
+	_ik_ground_n = [l_normal, r_normal]
+	_ik_active = true
+
+## Capa correctiva de IK: corre DESPUÉS de que el gait/strike/crouch ya
+## escribió leg.rotation.x de este frame (se preserva el swing autorado) y
+## ANTES del clamp de ROM (la red de seguridad de siempre). Dobla la
+## rodilla lo justo para que el tobillo alcance la altura de terreno medida
+## y nivela el tobillo contra la normal de pendiente — nunca toca la cadera.
+func _apply_foot_ik_pose(delta: float) -> void:
+	var t: float = minf(1.0, delta * 10.0)
+	for i in range(legs.size()):
+		var target_h: float = _ik_ground_h[i]
+		if is_nan(target_h):
+			continue
+		var leg: Node3D = legs[i]
+		var knee: Node3D = leg.get_meta("knee")
+		var ankle: Node3D = leg.get_meta("ankle")
+		var knee_delta: float = _Biomech.solve_knee_for_height(
+				leg.rotation.x, leg.global_position.y, target_h, _Biomech.LEG_SEGMENT_LEN)
+		var target_knee: float = clampf(knee_delta, 0.0, 2.4)
+		knee.rotation.x = lerpf(knee.rotation.x, target_knee, t)
+		var lvl: Vector2 = _Biomech.solve_ankle_level(knee.global_transform.basis, _ik_ground_n[i])
+		ankle.rotation.x = lerpf(ankle.rotation.x, lvl.x, t)
+		ankle.rotation.z = lerpf(ankle.rotation.z, lvl.y, t)
+
 ## Constraint report accessors (QA: autotest_biomech asserts on these).
 func constraint_report() -> Dictionary:
 	return _constraint_report
@@ -3067,7 +3124,12 @@ func _process(delta: float) -> void:
 		if _pose_clock < POSE_STEP:
 			# Held frame: the pose doesn't move, but the anatomical safety
 			# net still runs — external writes to bones get clamped anyway.
+			# Foot IK también: es necesidad física (no clipping en terreno
+			# irregular), no ritmo de pose — corre cada frame real, como los
+			# relojes de gameplay de arriba, no escalonado en 2s.
 			_apply_body_hold()
+			if _ik_active:
+				_apply_foot_ik_pose(delta)
 			_apply_joint_constraints()
 			return
 		delta = _pose_clock   # the pose integrates the full held interval
@@ -3442,6 +3504,10 @@ func _process(delta: float) -> void:
 		upper_spine.rotation.x = lerpf(upper_spine.rotation.x,
 				spine.rotation.x * 0.30 + DORSAL_CURVE_X, minf(1.0, delta * 7.0))
 
+	# ── C4 frente 2: foot IK corre DESPUÉS del gait/pose, ANTES del clamp ──
+	if _ik_active:
+		_apply_foot_ik_pose(delta)
+
 	# ── PRD-006: joint constraints — ALWAYS the last pose pass ──
 	# "Nada rota donde un cuerpo no rota" (Movilidad Realista §4.3): every
 	# animation source above (gait, crouch, slide, legacy attack, strike)
@@ -3469,3 +3535,5 @@ func _apply_joint_constraints() -> void:
 				_constraint_report)
 		_Biomech.clamp_node(leg.get_meta("knee"), "knee",
 				"knee_" + ("l" if side_l else "r"), _constraint_report)
+		_Biomech.clamp_node(leg.get_meta("ankle"), "ankle",
+				"ankle_" + ("l" if side_l else "r"), _constraint_report)

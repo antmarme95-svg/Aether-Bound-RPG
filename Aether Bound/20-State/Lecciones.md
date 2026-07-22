@@ -410,6 +410,21 @@ updated: 2026-07-21
   (brazo, correa, prop) que dibuja el borde exterior real de la silueta a
   esa altura — diagnosticar ocultando ese vecino antes de re-esculpir la
   masa misma.
+- **IK analítica de 2 huesos sin Skeleton3D: si dos rotaciones consecutivas
+  de la cadena giran sobre el MISMO eje local fijo (aquí, X: cadera→rodilla
+  del rig `Node3D` procedural), sus ángulos se SUMAN — un solo `acos` da el
+  ángulo TOTAL de la cadena para alcanzar una altura de mundo, sin
+  necesitar Jacobianos ni iterar.** (2026-07-21, C4 foot IK.) Con
+  `down.rotated(X, θ).y == -cos(θ)` (rotación estándar mano derecha) y dos
+  segmentos iguales `L`: `hip_y - L·cos(hip_flex) - L·cos(hip_flex+knee) =
+  target_y` se despeja directo (`knee = acos(...) - hip_flex`), preservando
+  el ángulo de cadera YA autorado por el gait (la IK es una capa correctiva
+  ENCIMA, no lo reemplaza — mismo principio que el foot IK de HZD sobre
+  mocap, [[Benchmark Biomecánico]]). Corolario de andamiaje: si un joint
+  nuevo (aquí, tobillo) no EXISTE en la jerarquía, ninguna cantidad de IK
+  en los joints vecinos puede fingirlo — antes de resolver la cinemática,
+  verificar que el nodo que necesita rotar de verdad tiene su propio pivote
+  (la bota colgaba rígida del `knee`, sin `ankle` propio).
 - **El límite de gasto de Claude puede ser una ventana de 5 horas, no
   mensual/semanal** — un subagente que falla por "spend limit" puede
   volver a funcionar poco después con el MISMO prompt; no asumir que hay

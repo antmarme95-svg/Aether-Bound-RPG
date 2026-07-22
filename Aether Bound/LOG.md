@@ -1,5 +1,65 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-21] feature | Frente 2 (orden Boris): C4 pies IK — nodo ankle nuevo + solver analítico de rodilla/tobillo
+Arrancado el frente 2 (C4 — pies IK/ROM) tras cerrar el frente 1. Alcance:
+"pies plantados en pendiente" ([[Movilidad Realista]] §"IK como estándar"),
+la única pieza de foot IK que el benchmark AAA marcaba pendiente (HZD,
+[[Benchmark Biomecánico]] v2). ROM enano/elfo queda para
+[[PRD-C6b-Enano-Elfo-v1]] (frente 3), fuera de este frente.
+
+**Hallazgo de partida:** la bota colgaba RÍGIDA del nodo `knee` — cero
+pivote de tobillo, así que nivelar el pie contra una pendiente era
+imposible sin importar cuánta IK se le pusiera a rodilla/cadera.
+
+**Implementado:**
+- `character_rig.gd`: nodo `ankle` nuevo (2-DOF, entre `knee` y la bota —
+  antes bota/puntera colgaban directo del knee). Con rotation=0 el mundo
+  queda IDÉNTICO a antes (solo cambia la jerarquía) — cero riesgo en
+  escenas/bancos que nunca llaman la IK nueva.
+- `rig_biomech.gd`: ROM `"ankle"` (x dorsi/plantarflexión, z inversión/
+  eversión, y=0 fijo, canon "muñeca/tobillo 2-DOF"). Dos funciones puras
+  nuevas: `solve_knee_for_height` (dado el ángulo de cadera YA autorado
+  por el gait, calcula cuánto doblar la rodilla —vía composición de dos
+  rotaciones sobre el mismo eje X, que se SUMAN— para que el tobillo
+  alcance una altura de mundo dada, sin tocar la cadera) y
+  `solve_ankle_level` (nivela la suela contra la normal real del terreno,
+  expresada en el frame local de la rodilla). Sin `Skeleton3D`/
+  `SkeletonIK3D`: este rig es 100% `Node3D` procedural (Lecciones — el
+  `class_name` cruzado rompe el load-order en CLI), la IK vive como
+  funciones puras igual que el resto de la biomecánica.
+- `CharacterRig.apply_foot_ik(l_h, r_h, l_normal, r_normal)` público:
+  el rig no sabe de terreno/escenas (mismo principio que `set_motion`) —
+  el CONSUMIDOR mide el suelo bajo cada pie con el contrato `get_height()`
+  ya existente (PRD-007 alcance 4) y se lo pasa cada frame. Sin llamarlo
+  nunca, el rig queda bit-idéntico a antes de C4.
+- `player_controller.gd`: muestrea `get_height()` bajo cada pie (offset
+  lateral = mismo `FOOT_STANCE` que `leg.position.x` en el rig) + normal
+  por diferencias finitas (`_terrain_normal`), llama `apply_foot_ik` justo
+  después de `set_motion`.
+- Corre TAMBIÉN en el frame HELD del pose-stepping en 2s (no escalonado):
+  es necesidad física (no clipping en terreno irregular), no ritmo de
+  pose — mismo criterio que los relojes de gameplay que nunca se
+  escalonan.
+
+**Gate nuevo `tests/autotest_footik.gd`** (patrón de `autotest_biomech.gd`):
+sin llamar la IK nunca → ankle en reposo (cero regresión); suelo llano →
+converge a ankle~0 sin violaciones; rampa de 20° con un pie 0.15 m más
+alto → rodilla se dobla lo justo (tobillo alcanza la altura objetivo
+dentro de tolerancia, verificado por posición global real, no solo el
+ángulo) + tobillo se inclina para nivelar, cero violaciones; agujero
+fuera de alcance (adversarial) → rodilla clampea a ROM, sin NaN. **Lección
+aplicada de entrada** (no repetida): los loops de convergencia se acotan
+por TIEMPO REAL (`_drive_ik_for(seconds, ...)`), no por conteo de frames —
+un primer intento con conteo fijo dio un falso FAIL por variar el FPS de
+la corrida.
+
+**Gates:** `test_core`, `autotest_biomech`, `autotest_footik`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice` (juego real
+completo en The Wilds con el jugador real, terreno real), `autotest_ui` —
+TODOS ALL_PASS. Screenshot de verificación visual:
+`godot/test_out/footik_slope.png` (pierna en terreno más alto dobla más
+la rodilla + tobillo inclinado, pose creíble).
+
 ## [2026-07-21] fix | Frente 1 (orden Boris 07-20): hombro-esfera fundido + cintura con pellizco real
 Arrancado el frente 1 del orden acordado (hombro→torso y cintura recta,
 hallazgos CRITICAL de Grupo C 07-19). Diagnóstico por color (torso/waist/
