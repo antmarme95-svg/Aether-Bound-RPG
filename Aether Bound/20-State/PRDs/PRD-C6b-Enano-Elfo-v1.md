@@ -116,9 +116,17 @@ formal + el ojo del orquestador, como hasta ahora.
    `"face"` en `origins_data.gd`: `jaw_width`/`jaw_depth`/`brow_scale`/
    `brow_y`, mismo patrón de sesgo sobre rango de slider compartido que
    `proportions`). Verificado en banco (frente/3-4/perfil), gates
-   ALL_PASS. **ROM por raza (`rig_biomech.gd`) sigue pendiente — PENDIENTE
-   VoBo de Boris sobre TODO lo ejecutado (proporciones + orejas +
-   mandíbula/ceja) antes de seguir.**
+   ALL_PASS.
+   **Ronda 2 de oreja (mismo día):** Boris pasó 2 referencias nuevas
+   (Frieren + Zelda TotK) que reemplazan el criterio de la lámina de
+   concept art para este rasgo — hacia afuera + leve arriba, no el
+   barrido dramático hacia atrás de la ronda 1. 2 rondas de ajuste
+   (rake trasero `rotation.x` -0.38→-0.15), cerrada ahí (frente/3-4 leen
+   bien; perfil estricto queda algo fino — ángulo poco común en
+   gameplay real, no vale una 3ª ronda). Gates mínimos ALL_PASS.
+   **ROM por raza (`rig_biomech.gd`) sigue pendiente — PENDIENTE VoBo de
+   Boris sobre TODO lo ejecutado (proporciones + orejas + mandíbula/
+   ceja) antes de seguir.**
 5. Peinados y marca cultural quedan referidos a
    [[PRD-Catalogo-Peinados-v1]] (pospuesto, pero la técnica de loft +
    `_on_skull` ya está probada y se hereda sin costo de re-descubrimiento).

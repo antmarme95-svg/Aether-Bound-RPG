@@ -2817,13 +2817,21 @@ func _build_origin_features(origin: Dictionary) -> void:
 	if id == "aetherborn":
 		# C6b (2026-07-21, frente de geometría nueva): las orejas leían como
 		# un nudo horizontal apenas asomando del cráneo (verificado en banco,
-		# `ANATOMY_HAIR=0` para juzgar sin el peinado tapándolas) — contra la
-		# lámina (`fenotipo-elfo-lavanda-v1.png`) la oreja élfica es LARGA,
-		# barre hacia ATRÁS y ARRIBA continuando la línea sien→pómulo, con
-		# la punta a la altura de la frente, no un nudo apuntando al costado.
-		# Alargada (0.14→0.21) y el z-tilt bajado de ~112° a ~66° (menos
-		# horizontal, más "barrido hacia atrás"); x-tilt más negativo suma
-		# el rake hacia atrás.
+		# `ANATOMY_HAIR=0` para juzgar sin el peinado tapándolas). Primera
+		# pasada: alargada + barrido fuerte hacia atrás/arriba, medida contra
+		# la lámina de concept art (`fenotipo-elfo-lavanda-v1.png`).
+		# Ronda 2 (Boris pasó 2 referencias nuevas — Frieren + Zelda TotK,
+		# ambas en estilo más cercano al norte de siluetas limpias del
+		# proyecto): las dos apuntan la oreja hacia AFUERA con un ángulo
+		# leve hacia arriba, casi SIN rake hacia atrás — el barrido dramático
+		# de la ronda 1 (rotation.x -0.38) fue lo que la hizo leer "hacia
+		# atrás" en perfil en vez de "hacia afuera". `rotation.x` bajado a
+		# -0.08 (casi neutro) y `position.z` adelantado (-0.010→0.004, la
+		# oreja nace alineada con la sien, no detrás de ella).
+		# Ronda 3: con rotation.x≈0 la oreja queda casi PURAMENTE lateral
+		# (eje X) — la cámara de perfil mira justo por ese eje, así que se
+		# ve de canto (una astilla), no como forma. -0.15 le devuelve
+		# presencia en perfil/3-4 sin volver al barrido dramático de antes.
 		for side in [-1, 1]:
 			var ear = MeshInstance3D.new()
 			var mesh = CylinderMesh.new()
@@ -2832,8 +2840,8 @@ func _build_origin_features(origin: Dictionary) -> void:
 			mesh.height = 0.24
 			ear.mesh = mesh
 			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.148, 0.050, -0.010)
-			ear.rotation = Vector3(-0.38, 0.0, float(side) * -1.10)
+			ear.position = Vector3(side * 0.148, 0.050, 0.004)
+			ear.rotation = Vector3(-0.15, 0.0, float(side) * -1.10)
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")

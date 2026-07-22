@@ -1,5 +1,41 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-21] fix | Oreja de elfo, ronda 2 — Boris pasó referencias nuevas (Frieren + Zelda TotK), reemplaza el criterio de la lámina de concept art
+Tras la primera pasada de la oreja élfica (ver entrada anterior, medida
+contra `fenotipo-elfo-lavanda-v1.png`: oreja larga muy barrida hacia
+atrás), Boris pidió "cambiar un poco las orejas" y, en vez de responder
+mi pregunta de dirección (AskUserQuestion rechazada), pasó DOS
+referencias visuales nuevas guardadas en `Downloads/`:
+`frieren-ears-v0-pgvmflxgahrc1.png` (oreja larga y fina, hacia AFUERA
+con ángulo leve arriba, casi sin rake trasero) y `zelda_ears.jpg` (BotW/
+TotK, misma lógica, más corta/compacta). Ambas más cercanas al norte de
+siluetas limpias del proyecto que el barrido dramático de la lámina
+vieja — se toman como el criterio nuevo para ESTE rasgo específico (no
+cambia el norte artístico general, que sigue siendo Sable×Hinterberg,
+no anime).
+
+**Plan explícito antes de tocar código** (modo plan, aprobado por
+Boris): diagnóstico de que `rotation.x` (rake trasero, -0.38 rad) era el
+principal culpable de que la oreja leyera "hacia atrás" en vez de "hacia
+afuera" — se baja a casi cero, `position.z` se adelanta.
+
+**2 rondas ejecutadas** (regla de freno del proyecto): r1 (rotation.x
+-0.08) — frente y 3/4 leen bien (afuera + leve arriba, sin el barrido de
+antes), pero el perfil quedó casi de canto (astilla fina: con
+rotation.x≈0 la oreja apunta casi puramente sobre el eje X, el mismo eje
+que mira la cámara de perfil → foreshortening). r2 (rotation.x -0.15) —
+perfil gana algo de presencia sin volver al barrido dramático; frente/
+3-4 siguen leyendo bien. **Se cierra aquí** (frente/3-4 — los ángulos de
+juego más comunes — leen bien; el perfil estricto a 90° es un ángulo
+poco frecuente en gameplay real y el foreshortening residual es
+aceptable, no vale una 3ª ronda).
+
+Gates mínimos (cambio acotado a la rama `aetherborn` de
+`_build_origin_features`, sin tocar nada más): `test_core` +
+`autotest_biomech` ALL_PASS. Capturas actualizadas:
+`godot/test_out/anatomy_elf_face.png`/`_34.png`/`_profile.png`. Baseline
+humano restaurado en `anatomy_face*.png` normales.
+
 ## [2026-07-21] feature | PRD-C6b: geometría nueva — orejas de elfo + mandíbula/ceja de enano
 Continuación del piloto de C6b: primera pasada de GEOMETRÍA racial nueva
 (paso 4 del PRD, adelantado sobre orejas/mandíbula sin esperar el VoBo de

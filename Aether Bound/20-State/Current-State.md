@@ -31,7 +31,14 @@ updated: 2026-07-21
   restaurados al humano baseline (7.35 cabezas).
   Chip aparte (fuera de C6b, YA EN EJECUCIÓN por el director en otra
   sesión): cámara de close-up rota en `autotest_classes.gd` (preexistente,
-  confirmado con `git stash`, NO introducida por C6b).**
+  confirmado con `git stash`, NO introducida por C6b).
+  **Ronda 2 de oreja élfica (mismo día):** Boris pasó 2 referencias
+  nuevas (Frieren + Zelda TotK, en `Downloads/`) — reemplazan el
+  criterio de la lámina de concept art para este rasgo (hacia afuera +
+  leve arriba, no barrido dramático hacia atrás). Ajustada en 2 rondas
+  (rotation.x del rake trasero -0.38→-0.15), cerrada ahí (frente/3-4 leen
+  bien; perfil estricto queda algo fino, ángulo poco común en gameplay).
+  Gates mínimos ALL_PASS.**
 - **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
   GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
   día:**
