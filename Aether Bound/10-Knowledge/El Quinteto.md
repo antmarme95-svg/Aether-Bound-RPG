@@ -3,7 +3,7 @@ status: ratificado
 source: "GDD §3.1"
 updated: 2026-07-04
 ---
-
+Los 
 # El Quinteto Disfuncional
 
 **5 contando al jugador** + [[Speck]] como +1 no-combatiente que se vuelve

@@ -216,34 +216,38 @@ updated: 2026-07-23
 
 ---
 
-## Pendientes de concept art / estilísticos (2026-07-23)
+## Estado de concept art (2026-07-23)
 
-**NB Pro — prompts listos, pendientes de generar:**
+**✅ COMPLETADO esta sesión:**
 
 *Personajes nuevos:*
-- Roen (Humano Vanguard, fronterizo curtido)
-- Valen (Elfo Strategist, pelo negro, piel blanca acromática)
-- Darro (Enano Duelist, ligero, tatuaje incompleto)
-- Quinteto grupal ×2 (Humano Duelist + Dagna / Elfa Duelist + Maren)
-
-*Links faltantes:*
-- **Guided Avalanche** (Sereth + Torgan) — ⭐ ARRANQUE MAÑANA
-- Riposte Runner (Iven + Elfo Vanguard)
-- Warforging (Vekka + Humano Vanguard)
+- `Roen (The Kindred).png` — Humano Vanguard, fronterizo curtido
+- `Valen (The Counterpoint).png` — Elfo Strategist, pelo negro, piel blanca
+- `Darro (The Spark).png` — Enano Duelist, ligero, tatuaje incompleto
+- `Quinteto Humano+Dagna.png` — campamento nocturno en The Wilds
+- `Quinteto elfa+Maren.png` — acantilado al amanecer
 
 *Keyframes de mundo:*
-- Stillwood (ciudad élfica — Stillspire)
-- Ignis Reach / Emberdeep (ciudad enana volcánica)
-- Driftmarket (mercado flotante, tres razas)
-- Frontera Mistbound (borde Wilds/civilización, niebla)
-- The Wilds — interior bajo el dosel
-- The Wilds — noche con corrupción activa (La Muda)
-- The Wilds — Las Arterias (caminos de energía teal)
-- The Wilds — ruinas antiguas con God-Core al fondo
+- `Stillwood (ciudad élfica orgánica).png`
+- `Ignis Reach (territorio enano volcánico).png`
+- `Driftmarket (mercado flotante).png`
+- `Mistbound Frontier.png`
+- `Interior de The Wilds.png`
+- `Noche con Muda The Wilds.png`
+- `Arterias The Wilds.png`
+- `Ruinas The Wilds.png`
 
-**Higgsfield — re-shoots pendientes:**
-- Arcane Ballistics: Sereth aparece como elfa — re-shoot con prompt
-  corregido (Sereth masculino, robes grises, adjuntar Sereth-elfo.png)
-- Speck sneak peek: prompt listo, nunca mandado
+*Higgsfield re-shoots:*
+- `Arcane Ballistics.mp4` — Sereth corregido (masculino)
+- `Weaver´s Net.mp4` — Nyael con traje correcto
+- `Seismic Springboard (2).mp4` — versión corregida (Dagna + energía ámbar)
+
+**❌ Pendiente — NB Pro:**
+- **Guided Avalanche** (Sereth + Torgan) — ⭐ ARRANQUE MAÑANA
+- Riposte Runner (Iven + Elfo Vanguard) — prompt listo
+- Warforging (Vekka + Humano Vanguard) — prompt listo
+
+**❌ Pendiente — Higgsfield:**
+- Speck sneak peek — prompt listo, nunca mandado
 
 **Historial de estados:** ver [[LOG]] y [[Current-State-Historico]].
