@@ -1,5 +1,32 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] feature | Nacimiento de oreja humano — paso 1 CERRADO (74%, VoBo de Boris)
+Ejecutado el paso 1 de [[PRD-Nacimiento-de-Oreja-v1]]: rama `miststalker` de
+`character_rig.gd`. Se reemplazó la esfera desnuda (1 pieza, 4.3% de
+penetración) por 3 piezas hermanas en `feature_slot`:
+
+| Pieza | Mesh | Scale | Position (side=1) | Nota |
+|---|---|---|---|---|
+| Pabellón | `_sphere_mesh(0.030)` | `(0.58, 1.45, 0.75)` | `(0.130, 0.0, -0.024)` | rot.x=-0.15, rot.z=side*-0.06 |
+| Lóbulo | `_sphere_mesh(0.012)` | `(0.55, 0.75, 0.55)` | `(0.126, -0.042, -0.020)` | — |
+| Hélix | `TorusMesh(0.011, 0.021)` | `(1.0, 1.45, 0.9)` | `(0.140, 0.004, -0.025)` | rot.z=PI/2, rot.x=-0.15 |
+
+Trayectoria QA imparcial (subagente sin contexto, 4 rondas, mismo agente
+re-invocado): **55%→69%→71%→74%** (umbral 70%). Desglose final: costura 82,
+lectura 78, proporción 75, estructura 70, tinta 68.
+
+**Techo declarado por el QA:** el HIGH de tinta antero-superior resistió 3
+rondas de tuning en Z. La concha es imposible con primitivas convexas aditivas.
+Lo que falta requiere cambio de enfoque, no más iteración.
+
+**Correcciones al PRD durante la ejecución:** (1) penetración del fallback era
+25%, no 46% (semieje ecuatorial ≠ radio en el punto de la oreja); (2) el
+fallback neutro NO era "la referencia buena" (portado 1:1 midió 55%, dos
+defectos heredados nunca detectados); (3) helper factorizado movido al paso 2.
+
+Gates: `test_core.gd` ALL_PASS en cada ronda. Sin regresión en elfo ni enano
+(verificado por diff de píxeles: 3.4% = solo venas animadas del aether).
+
 ## [2026-07-22] design | PRD del nacimiento de oreja ESCRITO (propuesto, sin ejecutar)
 Boris dio la señal de arrancar el frente detectado en la entrada de
 `investigate` de más abajo. Se escribió [[PRD-Nacimiento-de-Oreja-v1]] con el

@@ -38,32 +38,17 @@ updated: 2026-07-22
   sub-ronda. Detalle completo en [[LOG]]. **VoBo de Boris sobre el 75%:
   conforme con el resultado** ("Sí, dale, así queda") — cierra la ronda
   10 de la oreja de elfo.
-- **➡️ FRENTE NUEVO — PRD YA ESCRITO (2026-07-22), código SIN tocar:**
-  [[PRD-Nacimiento-de-Oreja-v1]] queda en `propuesto`. **Espera de Boris:
-  VoBo del plan + el umbral de fidelidad objetivo (sugerido 70%) antes de
-  ejecutar el paso 1.** El diagnóstico ya está MEDIDO contra
-  `HairLibrary.SKULL_SEMI` (no a ojo): la causa raíz es única y de
-  SOLAPE, no de forma — humano (`character_rig.gd:2996`) y enano
-  (`:3012`) hunden su esfera solo ~5%/11% de su propio ancho dentro del
-  cráneo, contra el ~46% del fallback neutro (`:3103`) que sí lee bien
-  porque además tiene lóbulo + hélix. Plan en 5 pasos: helper
-  factorizado → rama humana → rama enana → pabellón élfico → QA
-  imparcial vs las 3 láminas de fenotipo. Anti-objetivo duro: **no
-  reabrir la oreja de elfo** (cerrada al 75% con VoBo).
-  Contexto original del hallazgo: Boris notó que el "nacimiento" (dónde se
-  funde con el cráneo) no lee bien, y sospechó que el problema cruza
-  razas — confirmado con capturas: **humano (`miststalker`) y enano
-  (`ironblooded`)** comparten código, una `SphereMesh` desnuda tangente
-  al cráneo, sin lóbulo ni hélix — se ve la costura circular completa,
-  lee "canica pegada" no oreja. Dato clave: el rig YA TIENE una versión
-  bien resuelta de esto (lóbulo colgando + hélix hundida, con solape
-  real) en la rama "origin neutro/desconocido" (fallback humano base,
-  `character_rig.gd` ~3097-3146) — humano y enano simplemente no la usan,
-  tienen su propia versión simplificada al hueso. El **elfo** (ronda 9-10
-  de hoy) no tiene la costura dura, pero le falta el mismo tipo de
-  detalle: sin pabellón/concha visible en la base, solo el cono saliendo
-  derecho del cráneo. Decisión de Boris: **frente aparte, PRD propio**
-  (no colar dentro del QA loop del elfo).
+- **➡️ NACIMIENTO DE OREJA — paso 1 humano CERRADO (2026-07-22, VoBo):**
+  [[PRD-Nacimiento-de-Oreja-v1]] pasa a `en curso`. La esfera desnuda del
+  humano se reemplazó por 3 piezas (pabellón+lóbulo+hélix) con overlap
+  real. QA imparcial: **55%→69%→71%→74%** (umbral 70%, superado). Techo
+  declarado: el arco antero-superior sin tinta (HIGH) resistió 3 rondas de
+  tuning; la concha es imposible con primitivas convexas. Lo que falta
+  requiere cambio de enfoque, no más iteración. Gates ALL_PASS, sin
+  regresión en elfo ni enano. **Quedan paso 2 (enano, con factorización
+  del helper) y paso 3 (pabellón élfico) — NO ejecutar sin señal de
+  Boris.** Anti-objetivo duro: **no reabrir la oreja de elfo** (cerrada
+  al 75% con VoBo).
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de

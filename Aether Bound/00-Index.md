@@ -128,14 +128,13 @@
   propio pendiente): "nacimiento" de oreja (bug compartido humano/enano —
   esfera pegada sin lóbulo/hélix; el elfo le falta pabellón visible) —
   detalle en [[Current-State]]/[[LOG]]. Sigue pendiente ROM por raza.
-- [[PRD-Nacimiento-de-Oreja-v1]] (`20-State/PRDs/`) — **propuesto
-  (2026-07-22)**: la unión oreja↔cráneo lee "canica pegada" en humano y
-  enano (esfera tangente, penetración ~5%/11% de su ancho contra el 46%
-  del fallback neutro que SÍ está bien resuelto con pabellón+lóbulo+hélix);
-  al elfo le falta pabellón en la base. Causa raíz única y de solape, no de
-  forma. Plan: helper factorizado → humano → enano → pabellón élfico → QA
-  imparcial. Anti-objetivo duro: no reabrir la oreja de elfo (75%, con
-  VoBo). Pendiente VoBo de Boris antes de ejecutar.
+- [[PRD-Nacimiento-de-Oreja-v1]] (`20-State/PRDs/`) — **en curso
+  (2026-07-22)**: paso 1 humano CERRADO con VoBo al 74% (umbral 70%,
+  4 rondas QA: 55→69→71→74). Esfera desnuda reemplazada por 3 piezas
+  (pabellón+lóbulo+hélix) con overlap real. Techo de la técnica declarado
+  (arco sin tinta + concha imposible con primitivas convexas). Quedan
+  paso 2 (enano + helper factorizado) y paso 3 (pabellón élfico).
+  Anti-objetivo duro: no reabrir la oreja de elfo (75%, con VoBo).
 - [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
   catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje
   (decisión de Boris); técnica única = loft (`_loft`/`_lock` implementados en

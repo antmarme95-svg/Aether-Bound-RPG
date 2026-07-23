@@ -2993,16 +2993,121 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# Mistbound — 100% human (Aether Bound/10-Knowledge/Fenotipos y Creación
 		# de Personaje.md, decisión 2026-07-04): no beast-folk geometry. Plain
 		# rounded human ears, same treatment as the other human-shaped origins.
+		#
+		# PRD-Nacimiento-de-Oreja paso 1 (2026-07-22): esta rama tenía UNA
+		# `SphereMesh` desnuda en `x=±0.150`, sin scale ni rotación — TANGENTE
+		# al cráneo, no fundida. Medido contra `HairLibrary.SKULL_SEMI` en el
+		# punto real de la oreja (no en el ecuador): penetraba 0.0026 sobre un
+		# ancho de 0.060 = **4.3%**. En el zoom leía como un círculo perfecto
+		# con tinta Sobel completa alrededor: "canica pegada", no oreja.
+		#
+		# Se adopta el patrón de 3 masas de la rama neutra de abajo (~3097),
+		# que ya pasó tres reviews (M9-r2/r3, FASE C paso 7, Sprint B3) y es
+		# la única geometría de oreja validada del proyecto: pabellón achatado
+		# en X y HUNDIDO (penetración 25%, la fusión por overlap real que pide
+		# [[Lecciones]]), lóbulo colgando que da el quiebre de silueta, y
+		# hélix semi-embebida cuyo hueco deja ver la concha.
+		#
+		# RONDA 2 (mismo día): la ronda 1 copió la rama neutra 1:1 y el QA
+		# imparcial midió 55% (objetivo 70%) — con un hallazgo que corrige la
+		# premisa del paso: **la rama neutra NO era tan buena como se asumió**.
+		# Se afinó contra la cara de M9/Fase-C, que desde entonces cambió; sus
+		# números ya no rinden sobre el cráneo actual. Los 3 defectos medidos:
+		#   CRITICAL — de FRENTE la oreja no existe: con `scale.x=0.40` el
+		#     delta de profundidad contra la mejilla no llegaba al umbral del
+		#     Sobel, así que no se entintaba NI sobresalía del contorno.
+		#     Engrosada a 0.58 y sacada a x=0.130 (protrusión +59%: 0.018 →
+		#     0.029; la penetración baja de 25% a ~17%, sigue siendo overlap
+		#     real, no tangencia).
+		#   HIGH — el lóbulo leía como "cuentita pegada" con su propio anillo
+		#     de tinta cerrado: quedaba casi TANGENTE al pabellón, no fundido.
+		#     Subido a y=-0.042 y alargado (`scale.y` 0.6→0.75) para que la
+		#     intersección sea franca (~0.009 de solape) y el Sobel no cierre
+		#     el círculo.
+		#   CRITICAL — el hélix no leía como forma sino como brillo. Medido:
+		#     el toro quedaba ENTERRADO bajo la superficie del pabellón (tubo
+		#     hasta x=0.132 contra una superficie en ~0.134) — nunca emergió,
+		#     ni en la rama neutra. Engrosado (`outer` 0.017→0.021) y sacado a
+		#     x=0.140 para que el borde exterior asome en rampa de verdad.
+		# El conjunto sube ~0.006 en Y: el QA lo midió colgando hasta la altura
+		# de la boca, y la lámina lo termina en la base de la nariz.
+		#
+		# RONDA 3 (mismo día): ronda 2 midió 69% — a UN punto del objetivo, con
+		# un solo bloqueante identificado. Dos cambios, ambos del QA:
+		#   HIGH — el arco antero-superior seguía SIN entintar (de las 11 a las
+		#     7 del reloj en perfil): ahí la normal del pabellón quedaba casi
+		#     paralela a la de la mejilla y el Sobel por profundidad no
+		#     disparaba. `position.z` -0.034 → -0.030 le da ángulo al borde
+		#     anterior contra el plano de la mejilla. Se eligió esto antes que
+		#     inclinar más el pabellón (`rotation.x`) porque no mueve la altura,
+		#     que la ronda 2 dejó ya correcta (ceja → base de nariz, verificado
+		#     contra la lámina en lateral puro).
+		#   MEDIUM — oreja subdimensionada ~25-30% contra la lámina: `scale.y`
+		#     1.28 → 1.45. El centro sube en la misma medida en que la masa
+		#     crece hacia abajo (y -0.004 → 0.000), así que la oreja se alarga
+		#     hacia ARRIBA y la punta del lóbulo NO se despega de la base de la
+		#     nariz — que es la trampa que el QA marcó al pedir el cambio.
+		# Lóbulo y hélix acompañan el corrimiento en Z para no quedar atrás.
+		#
+		# RONDA 4 (mismo día): la ronda 3 cruzó el objetivo (71%) pero dejó dos
+		# cosas medidas y abiertas, ambas baratas de cerrar:
+		#   HIGH — el arco antero-superior SIGUE sin entintar: la dirección del
+		#     fix era la correcta, la magnitud no. 0.004 sobre un radio de 0.030
+		#     es ~13% de corrimiento; el QA pidió 0.008-0.010 para que ese arco
+		#     gane ángulo real contra el plano de la mejilla. `position.z` va a
+		#     -0.024 (0.010 total desde el -0.034 de la ronda 2).
+		#     OJO CON EL SIGNO: el QA escribió "-0.030 → -0.038", pero eso mueve
+		#     la oreja hacia ATRÁS, o sea al revés de lo que él mismo venía
+		#     pidiendo ("empujar hacia adelante en Z"). Se aplicó la DIRECCIÓN
+		#     pedida, no el número escrito. Aun así queda 0.024 por detrás del
+		#     centro del cráneo, lejos del "piercing en la mejilla" que la
+		#     review M9-r2 arregló retrasando esta pieza — ese es el límite por
+		#     el otro lado y no se cruza.
+		#   REGRESIÓN — al alargar el pabellón en la ronda 3 sin escalar el
+		#     hélix, el anillo quedó chico dentro de una masa 13% mayor y la
+		#     estructura interna BAJÓ (62→58): el tercio inferior quedó como
+		#     carne lisa. `helix.scale.y` 1.3 → 1.45, el mismo factor que se le
+		#     dio al pabellón.
+		# Lo que NO se toca y queda documentado como techo de la técnica: la
+		# CONCHA (el hueco interno). Tres primitivas convexas ADITIVAS pueden
+		# dar un reborde — lo probó el fix del hélix — pero no una concavidad.
+		# Eso es cambio de enfoque (primitiva embebida más oscura, vertex-color
+		# o malla propia), no otra vuelta de parámetros.
 		for side in [-1, 1]:
-			var ear = MeshInstance3D.new()
-			var smesh = SphereMesh.new()
-			smesh.radius = 0.030
-			smesh.height = 0.060
-			ear.mesh = smesh
-			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.150, 0.0, 0.0)
+			# Pabellón: masa madre — las otras dos se posicionan respecto de él.
+			var ear = _sphere_mesh(0.030, skin_mat)
+			ear.scale = Vector3(0.58, 1.45, 0.75)   # semi-elipse vertical
+			ear.rotation.x = -0.15                  # leve inclinación atrás
+			ear.rotation.z = float(side) * -0.06
+			ear.position = Vector3(side * 0.130, 0.0, -0.024)
 			_add_outline_pass(ear, Color("#f2b186"), 0.02)
 			feature_slot.add_child(ear)
+
+			# Lóbulo: bulto colgando bajo el pabellón, con overlap real contra
+			# él — da el quiebre lóbulo/pabellón que el resto de la cara ya
+			# tiene (mandíbula/pómulo/nariz).
+			var lobe = _sphere_mesh(0.012, skin_mat)
+			lobe.scale = Vector3(0.55, 0.75, 0.55)
+			lobe.position = Vector3(side * 0.126, -0.042, -0.020)
+			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
+			feature_slot.add_child(lobe)
+
+			# Hélix: toro aplastado semi-hundido (anillo en el plano YZ, hueco
+			# hacia ±X). El borde exterior emerge en rampa y el hueco deja ver
+			# la elipse de abajo como concha — sin esto la oreja de perfil
+			# vuelve a leer como óvalo plano.
+			var helix = MeshInstance3D.new()
+			var tmesh = TorusMesh.new()
+			tmesh.inner_radius = 0.011
+			tmesh.outer_radius = 0.021
+			helix.mesh = tmesh
+			helix.material_override = skin_mat
+			helix.scale = Vector3(1.0, 1.45, 0.9)
+			helix.rotation.z = PI / 2.0
+			helix.rotation.x = -0.15
+			helix.position = Vector3(side * 0.140, 0.004, -0.025)
+			_add_outline_pass(helix, Color("#f2b186"), 0.02)
+			feature_slot.add_child(helix)
 
 	elif id == "ironblooded":
 		# ---- Ironblooded: compact round ears + heat glow + sparks ----
