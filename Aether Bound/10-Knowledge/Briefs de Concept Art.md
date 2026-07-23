@@ -94,54 +94,72 @@ Qué obliga a testear: capa 1 (línea muere con la distancia), capa 2 (bandas
 jitter), capa 3 (aire con peso + glowing edges), capa 4 (grano) + espacio
 vacío protagonista y rojo = máxima saturación del frame ([[Art Bible]]).
 
-## 5 — Speck: los 3 estadios (B9)
+## 5 — Speck: los 3 estadios + Forma shapeshifteada (B9)
 
-Forma base **ratificada 2026-07-04: salamandra/axolotl luminosa** (rima con la
-Muda; branquias-antena erizables; los cristales del estadio 3 crecen naturales
-en lomo/cresta). Regla clave: el estadio 3 usa **la misma geometría cristalina
-del God-Core** del keyframe ratificado — la revelación de [[El Mundo y la Muda]]
-cosida en el arte. Los 3 estadios comparten ADN de silueta y ojos ([[Speck]]).
+**Redireccionamiento 2026-07-23:** Speck es último Warden, no criatura natural.
+Forma base = **Warden cristalino + runas Warden + translúcido**, no salamandra.
+Los 3 estadios son **manifestación del despertar**, no crecimiento animal. 
 
-```
-Creature concept sheet, three growth stages side by side on a plain warm paper background, of "Speck" — a small bio-construct guardian creature built by a lost divine civilization: living technology that breathes, part grown and part crafted, luminous amphibian salamander-axolotl base form. Left, stage one "the hatchling": small enough to carry in one arm, plump and clumsy, oversized curious eyes, soft translucent skin in pale mint-grey with faint teal aether seams glowing gently along the spine like circuitry grown from flesh, external gill-antennae like an axolotl's frills that perk up and bristle, a tiny erectile crest; she sniffs the air, sneezing little sparks. Center, stage two "the adolescent": wolf-sized, gangly, limbs too long, caught awkward mid-step; the aether seams glow brighter and branch across her sides, the gill-antennae are longer and expressive, and small bridge-like arcs of light connect the crest spines. Right, stage three "the mirror": the same creature grown lean and quietly majestic, but her patterns have crystallized — deep saturated red crystal formations growing along her spine and crest, the exact same crystalline geometry as a God-Core formation, beautiful and unsettling at once: a beloved friend wearing the colors of danger. All three stages share the same silhouette DNA and the same warm dark eyes. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain; the only saturated colors in the sheet are the teal aether seams and the stage-three red crystals; style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: tender, curious, a little melancholic. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime style, no cute mascot Pokémon look, no dog or cat anatomy, no dragon, no neon glow except the aether seams and red crystals.
-```
+Regla clave: E1 es crisálida (dormida, shapeshifteada); E2 es despertar (forma
+real emerge lentamente); E3 es verdad completa (cristales rojos = God-Core,
+idéntica geometría). La revelación de [[El Mundo y la Muda]] cosida en arte.
+Los 3 estadios comparten ADN de silueta, ojos facetados tipo gema, y runas.
 
-Al evaluar: comparar el estadio 3 contra `keyframe-wilds-dawn-v1.png` — los
-cristales deben rimar con el core del paisaje.
+**Forma shapeshifteada (E1→E2 coexisten):** Zorro endémico de The Wilds,
+1.5× tamaño normal, pelaje beige/gris con patrones geométricos sutiles (runas
+Warden interpretadas como "coloración rara"). Seams teal presentes. Pata
+delantera izquierda con cristal visible (glitch del shapeshifting). Ojos
+facetados. Comportamiento demasiado inteligente.
 
-### 5a/5b/5c — Por estadio (flujo encadenado: 5a desde cero → 5b/5c ediciones)
+### 5a — Speck E1, Crisálida/Forma Warden (GENERADO 2026-07-23, NB Pro)
 
-Cada viñeta lateral es un beat canónico: estornudo del bautizo (5a) → puente
-de link (5b) → imitación de la postura del Pivote perdido, eco del
-[[Bond y el Bond Vacío]] (5c). En 5c ojos y postura NO cambian ("sigue siendo
-ella"). Archivos destino: `speck-estadio{1-cria,2-vinculo,3-espejo}-v1.png`.
-
-**5a — desde cero:**
-
-```
-Creature concept sheet, front view and side view, of "Speck", stage one "the hatchling", on a plain warm paper background. A small bio-construct guardian creature built by a lost divine civilization: living technology that breathes, part grown and part crafted, luminous amphibian salamander-axolotl base form. Small enough to carry in one arm, plump and clumsy, oversized curious dark warm eyes, soft translucent skin in pale mint-grey with faint teal aether seams glowing gently along the spine like circuitry grown from flesh, external gill-antennae like an axolotl's frills that perk up and bristle, a tiny erectile crest, stubby legs and a thick little tail. One small vignette beside the views: she sniffs the air and sneezes tiny sparks. Mood: tender, curious, a little melancholic — an ancient being in an infant body. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain; the only saturated color is the teal aether glow; style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime style, no cute mascot Pokémon look, no dog or cat anatomy, no dragon, no neon glow except the aether seams.
-```
-
-> **⚠ Historia de re-rolls:** los v2 (proporción con silueta de escala pero
-> sin fijar postura) derivaron a humanoide/bípedo → DESCARTADOS. Anatomía
-> ratificada: **cuadrúpeda los 3 estadios**. Lección 1: pedir proporciones
-> sin fijar la postura invita al modelo a re-anatomizar. Lección 2 (decisión
-> de dirección): **editar sobre la chibi ancla la pose chibi** — para cambios
-> de proporción grandes, generar desde cero con la v1 solo como referencia de
-> cara/estilo. → Usar los **v4** de abajo (los v3 de edición quedan como
-> fallback histórico al final de esta sección).
-
-**5b-v4 — E2 desde cero, lámina naturalista (adjuntar `speck-estadio1-cria-v1.png` como referencia de personaje):**
+**Especificación:** Speck en crisálida, forma Warden real (no shapeshifteada).
+Superviviente de civilización Warden — tecnología biológica diseñada, no
+evolucionada.
 
 ```
-Wildlife field-guide plate, hand-painted graphic novel watercolor on warm paper, of "Speck" stage two: an adolescent quadruped bio-construct salamander, the same creature as the attached hatchling reference — same face, same warm dark eyes, same axolotl gill-antennae frills, same pale mint-grey translucent skin with teal aether seams — but grown to the size of a large wolf. Main view: side profile walking on all four legs, spine parallel to the ground, caught mid-step with gangly awkward grace — legs and tail too long for her frame, adolescent and in-between. Second smaller view: three-quarter front, head tilted curious. A simple flat grey human silhouette stands beside the main view for scale: her back reaches the human's waist. The teal aether seams glow gently and branch along her sides; small arcs of teal light bridge the spines of her erectile crest. Art style: crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor, visible paper grain; the only saturated color is the teal glow. Mood: tender, clumsy, quietly ancient. Negative: no bipedal stance, no humanoid anatomy, no standing on two legs, no dragon, no Pokémon mascot look, no Genshin saturation, no photorealism.
+Creature concept sheet of "Speck" stage one, the crisalis form: a small bio-construct, 
+living relic of a lost Warden civilization. Not an axolotl — a deliberate creation. 
+Small enough to carry, form reads as sculptural, semi-geological. Body is pale translucent 
+flesh with visible crystalline structures veined beneath like mineral growth. The crystal 
+patterns are angular, geometric — evidence of design, not nature. External gill-like 
+structures are thin, faceted, almost insectoid — they catch light like quartz. Dark warm 
+eyes are faceted, gem-like, reflecting an ancient consciousness. Faint teal aether seams 
+glow very softly along spine and limbs, like cracks where power is contained but dormant. 
+Subtle geometric runes are etched or branded across the body in thin lines — symbols of 
+a civilization, but they are DARK/INACTIVE, not yet awakened. Stubby thick limbs, posture 
+suggests something coiled, waiting. Small vignette: she rests in a palm, ancient and small. 
+Mood: mysterious, precious, unsettling — a relic that should not exist. Art style: 
+hand-painted graphic novel watercolor, ligne claire with mineral/crystalline detail work, 
+flat cel shading in 3–4 bands, low saturation palette with only teal aether seams and 
+faint copper/bronze tones for the runes. Visible paper grain. No Genshin mascot look — 
+this is ancient technology, not a pet.
 ```
 
-**5c-v4 — E3 desde cero, lámina naturalista (adjuntar `speck-estadio3-espejo-v1.png` para cara/cristales + keyframe dawn para geometría del cristal):**
+**Archivos:** `speck-estadio1-warden-crisalis-v1.png` (RATIFICADO 2026-07-23)
 
-```
-Wildlife field-guide plate, hand-painted graphic novel watercolor on warm paper, of "Speck" final stage, "the mirror": an adult quadruped bio-construct salamander, the same creature as the attached reference — same warm dark eyes, same gill-antennae frills, same pale mint-grey skin — now lean, elegant and quietly majestic, slightly larger than a wolf. Main view: side profile walking on all four legs, spine parallel to the ground, long graceful neck carried low and level, sweeping tail, slender strong legs moving with calm poise. Second smaller view: three-quarter front, gentle unchanged expression. A simple flat grey human silhouette stands beside the main view for scale: her back reaches the human's chest. Deep saturated red crystal formations grow along her spine and crest — the exact same crystalline geometry as the red God-Core in the attached landscape reference — beautiful and unsettling: a beloved friend wearing the colors of danger. Her teal aether seams flicker between teal and red. Art style: crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor, visible paper grain; the only saturated colors are the teal seams and the red crystals. Mood: serene, melancholic, still herself. Negative: no bipedal stance, no humanoid anatomy, no standing on two legs, no dragon, no raptor, no Pokémon mascot look, no Genshin saturation, no photorealism.
-```
+### 5b — Speck E2, Despertar (PENDIENTE — brief a escribir)
+
+**Especificación:** Estadio 2 — forma real emergiendolentamente, shapeshifting se
+rompe parcialmente. El cuerpo Warden comienza a mostrar bajo el disfraz.
+
+BRIEF PENDIENTE (escribir post-E1 validation).
+
+### 5c — Speck E3, Espejo/Verdad Completa (PENDIENTE — brief a escribir)
+
+**Especificación:** Estadio 3 — forma Warden adulta completamente despierta,
+cristales rojos God-Core, no más shapeshifting.
+
+BRIEF PENDIENTE (escribir post-E1 validation).
+
+### Forma Shapeshifteada (E1→E2, coexiste con Estadios Warden)
+
+**Especificación:** La forma que ve el mundo (menos el jugador con su poder).
+Zorro endémico de The Wilds, imperfectamente shapeshifteado por Speck mientras
+despierta lentamente.
+
+BRIEF PENDIENTE — será generado como asset separado (concepto de zorro).
+Referencia narrativa: ver [[Speck]] sección "Encuentro & Shapeshifting".
 
 **[fallback histórico] 5b-v3 — proporciones E2 por edición (adjuntar `speck-estadio2-vinculo-v1.png`):**
 

@@ -1,5 +1,41 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-23] design | REDIRECCIONAMIENTO NARRATIVO COMPLETO: Speck de ajolote a Warden Cristalino
+**Sesión guionística — análisis + redireccionamiento temático de Speck.**
+
+**Problema identificado:** Speck (axolotl mascota-like) no se sentía coherente en universo de tres razas humanoides. El "ajolote" leía como mascota/Genshin, no como ser antiguo.
+
+**Redireccionamiento ejecutado:**
+- **De:** Salamandra/axolotl biológica (mascota)
+- **A:** Último Warden — constructo cristalino + runas (tecnología biológica diseñada, no evolucionada)
+
+**Especificación nueva RATIFICADA:**
+- **Forma Warden real:** Cristalino translúcido, runas geométricas (Warden símbolos), seams aether como grietas de poder, ojos facetados (gema viva), cuerpo sculptural/mineral
+- **Forma shapeshifteada:** Zorro 1.5× endémico de The Wilds. Imperfectamente shapeshifteado. Pelaje beige/gris con patrones geométricos sutiles (runas interpretadas como coloración). Pata delantera con cristal visible (glitch). Ojos facetados. Demasiado inteligente.
+- **Estadios como MANIFESTACIÓN:** E1 crisálida dormida, E2 despertar (forma real emerge), E3 verdad completa (cristales rojos=God-Core)
+- **Tres capas de verdad:** Mundo ve zorro extraño. Jugador (poder innato) ve teals/cristal/facetas en flashes. Quinteto nota inteligencia antinatural.
+- **Encuentro:** Accidental en misión de purga. Crisálida en nido. Bestias guardianas semi-corrompidas. Convergencia: Speck despertando + guardianas fallando + jugador presente.
+- **Bautizo:** Darro (humor enano) reconoce "opiniones" de Speck = razonamiento. Llama "speck" (mota) irónicamente — no sabe que es ser antiguo.
+- **Personalidad:** Humor pragmático-oscuro (enano). Tras 100+ años solo, wit seco. Observa lo absurdo sin buscar risa. Se comporta intencionalmente "off" como zorro (comunica su verdad a través de ironía).
+- **Protocolo del silencio:** Mundo no verbaliza la verdad sobre Speck. Quinteto sospecha pero no confronta. Jugador ve pero no dice. Primera revelación verbal = clímax.
+- **Coming-of-age:** Jugador descubre su poder en silencio, a través de flashes, sin protagonismo. Crece sin ser "el elegido" — es descubrimiento callado.
+
+**Archivos actualizados:**
+- `Speck.md` — especificación completa redireccionada
+- `Briefs de Concept Art.md` §5 — E1 brief escrito y ejecutado (NB Pro), E2/E3 pendientes
+
+**Concept art en progreso:**
+- E1 (Warden crisálida) — generado 2026-07-23 NB Pro, VALIDADO visualmente
+- Forma shapeshifteada (zorro) — pendiente generación
+
+**Lecciones:**
+1. Speck es ser de 100+ años, solo, observando universo caer — su humor refleja eso
+2. El shapeshifting falla porque despierta, no por debilidad permanente
+3. El jugador se descubre a sí mismo EN SILENCIO, paralelo a Speck despertando
+4. El nombre "speck" es irónico cósmico — mota insignificante que es en realidad lo opuesto
+
+---
+
 ## [2026-07-23] design/production | 3 keyframes de acciones (links de pivotes) + 1 video teaser COMPLETADOS
 **Sesión de producción visual — concept art estático + video.**
 

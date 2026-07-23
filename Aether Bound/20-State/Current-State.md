@@ -171,10 +171,16 @@ updated: 2026-07-23
 ## Hechos vigentes
 
 - **Branch actual:** `feat/c6-anatomy-rework` (ventana de rework de anatomía/
-  gráficos en curso desde la Fase 1; detalle histórico completo en
-  [[Current-State-Historico]] y [[LOG]]). Playtest permanente:
-  `Start-Playtest-Greybox.bat`. Gates permanentes: `autotest_combat.gd`,
+  gráficos + redireccionamiento narrativo de Speck en curso desde la Fase 1;
+  detalle histórico completo en [[Current-State-Historico]] y [[LOG]]). Playtest
+  permanente: `Start-Playtest-Greybox.bat`. Gates permanentes: `autotest_combat.gd`,
   `autotest_springboard.gd`.
+- **REDIRECCIONAMIENTO SPECK (2026-07-23):** Speck dejó de ser "mascota ajolotl"
+  → ahora es **último Warden cristalino superviviente** de civilización perdida.
+  Shapeshifteada imperfectamente como zorro. Encuentro accidental en misión de
+  purga. Protocolo del silencio. Humor pragmático (enano). Poder innato del
+  jugador revela verdad en flashes silenciosos. Coming-of-age narrativo.
+  E1 brief ejecutado, E2/E3 pendientes.
 - **Motor: GODOT CONFIRMADO** (ADR-002).
 - **Bloqueos:** ninguno.
 - **Deuda técnica visible:** pies sin IK y ROM enano/elfo (C4 restante);
