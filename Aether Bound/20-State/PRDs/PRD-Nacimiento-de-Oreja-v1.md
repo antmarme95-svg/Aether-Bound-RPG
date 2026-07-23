@@ -1,5 +1,5 @@
 ---
-status: en curso (paso 1 humano CERRADO con VoBo al 74%, pasos 2-3 pendientes)
+status: en curso (pasos 1-2 CERRADOS con VoBo, paso 3 pendiente)
 created: 2026-07-22
 updated: 2026-07-22
 owner: Boris (director) / orquestador
@@ -151,3 +151,25 @@ mesh). Decisión separada del tuning de parámetros.
 
 **Corolarios para los pasos 2 y 3:** los valores de partida son los del humano
 ya medido, NO los del fallback neutro (que midió 55% portado 1:1).
+
+### Paso 2 — Enano/Ironblooded + helper ✅ CERRADO (2026-07-22, VoBo de Boris)
+
+**Fidelidad: 70%** (umbral 70%). Trayectoria QA imparcial: 63%→70%.
+
+**Helper `_build_ear`** factorizado (`character_rig.gd:117`): método de instancia
+con defaults = valores del humano cerrado al 74%. `_build_ear(side, parent, mat,
+{})` reproduce la oreja humana exacta; el enano pasa un dict con 13 overrides.
+Gate pixel-idéntico del humano verificado visualmente.
+
+**Reparametrización enana** (vs humano): pabellón más ancho/corto (`scale
+0.72/0.95/0.85` vs `0.58/1.45/0.75`), radio mayor (0.032 vs 0.030), orejas más
+pegadas al cráneo (`rot_z_mul -0.15` vs `-0.06`), lóbulo más grande y carnoso
+(`r=0.016`, escala uniforme `0.65`), hélix más grueso (`outer=0.026`). El QA
+confirmó que la oreja lee como enana ("un jugador vería la diferencia").
+
+**Hallazgos cerrados:** proporción alto:ancho (CRITICAL→resuelto), ángulo de
+separación excesivo (CRITICAL→resuelto), lóbulo sin gota (MEDIUM→resuelto).
+
+**Techo de la técnica:** estructura interna (concha/antihelix) y transición
+anterior abrupta requieren más geometría o cambio de shader. Mismo techo que
+el humano.

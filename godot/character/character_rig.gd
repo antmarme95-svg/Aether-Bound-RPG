@@ -114,6 +114,45 @@ static func _disc_mesh(r: float, mat: Material) -> MeshInstance3D:
 	mi.material_override = mat
 	return mi
 
+# ---- ear (3-piece: pabellón + lóbulo + hélix) ----
+# Defaults = valores del humano cerrado al 74% (paso 1, nacimiento de oreja).
+func _build_ear(side: int, parent: Node3D, mat: Material, p: Dictionary) -> void:
+	var ear = _sphere_mesh(p.get("pab_r", 0.030), mat)
+	ear.scale = p.get("pab_scale", Vector3(0.58, 1.45, 0.75))
+	ear.rotation.x = p.get("rot_x", -0.15)
+	ear.rotation.z = float(side) * p.get("rot_z_mul", -0.06)
+	ear.position = Vector3(
+		side * p.get("pab_x", 0.130),
+		p.get("pab_y", 0.0),
+		p.get("pab_z", -0.024))
+	_add_outline_pass(ear, Color("#f2b186"), 0.02)
+	parent.add_child(ear)
+
+	var lobe = _sphere_mesh(p.get("lobe_r", 0.012), mat)
+	lobe.scale = p.get("lobe_scale", Vector3(0.55, 0.75, 0.55))
+	lobe.position = Vector3(
+		side * p.get("lobe_x", 0.126),
+		p.get("lobe_y", -0.042),
+		p.get("lobe_z", -0.020))
+	_add_outline_pass(lobe, Color("#f2b186"), 0.02)
+	parent.add_child(lobe)
+
+	var helix = MeshInstance3D.new()
+	var tmesh = TorusMesh.new()
+	tmesh.inner_radius = p.get("helix_inner", 0.011)
+	tmesh.outer_radius = p.get("helix_outer", 0.021)
+	helix.mesh = tmesh
+	helix.material_override = mat
+	helix.scale = p.get("helix_scale", Vector3(1.0, 1.45, 0.9))
+	helix.rotation.z = PI / 2.0
+	helix.rotation.x = p.get("rot_x", -0.15)
+	helix.position = Vector3(
+		side * p.get("helix_x", 0.140),
+		p.get("helix_y", 0.004),
+		p.get("helix_z", -0.025))
+	_add_outline_pass(helix, Color("#f2b186"), 0.02)
+	parent.add_child(helix)
+
 # ----------------------------------------------------------------
 # Scene nodes (mirrors JS property names where possible)
 # ----------------------------------------------------------------
@@ -3074,40 +3113,7 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# Eso es cambio de enfoque (primitiva embebida más oscura, vertex-color
 		# o malla propia), no otra vuelta de parámetros.
 		for side in [-1, 1]:
-			# Pabellón: masa madre — las otras dos se posicionan respecto de él.
-			var ear = _sphere_mesh(0.030, skin_mat)
-			ear.scale = Vector3(0.58, 1.45, 0.75)   # semi-elipse vertical
-			ear.rotation.x = -0.15                  # leve inclinación atrás
-			ear.rotation.z = float(side) * -0.06
-			ear.position = Vector3(side * 0.130, 0.0, -0.024)
-			_add_outline_pass(ear, Color("#f2b186"), 0.02)
-			feature_slot.add_child(ear)
-
-			# Lóbulo: bulto colgando bajo el pabellón, con overlap real contra
-			# él — da el quiebre lóbulo/pabellón que el resto de la cara ya
-			# tiene (mandíbula/pómulo/nariz).
-			var lobe = _sphere_mesh(0.012, skin_mat)
-			lobe.scale = Vector3(0.55, 0.75, 0.55)
-			lobe.position = Vector3(side * 0.126, -0.042, -0.020)
-			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
-			feature_slot.add_child(lobe)
-
-			# Hélix: toro aplastado semi-hundido (anillo en el plano YZ, hueco
-			# hacia ±X). El borde exterior emerge en rampa y el hueco deja ver
-			# la elipse de abajo como concha — sin esto la oreja de perfil
-			# vuelve a leer como óvalo plano.
-			var helix = MeshInstance3D.new()
-			var tmesh = TorusMesh.new()
-			tmesh.inner_radius = 0.011
-			tmesh.outer_radius = 0.021
-			helix.mesh = tmesh
-			helix.material_override = skin_mat
-			helix.scale = Vector3(1.0, 1.45, 0.9)
-			helix.rotation.z = PI / 2.0
-			helix.rotation.x = -0.15
-			helix.position = Vector3(side * 0.140, 0.004, -0.025)
-			_add_outline_pass(helix, Color("#f2b186"), 0.02)
-			feature_slot.add_child(helix)
+			_build_ear(side, feature_slot, skin_mat, {})
 
 	elif id == "ironblooded":
 		# ---- Ironblooded: compact round ears + heat glow + sparks ----
@@ -3115,15 +3121,22 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# desconocido caía aquí con armadura de forja incluida. Un origin
 		# fuera del canon ahora deja el cuerpo neutral CON OREJAS, abajo.)
 		for side in [-1, 1]:
-			var ear = MeshInstance3D.new()
-			var smesh = SphereMesh.new()
-			smesh.radius = 0.032
-			smesh.height = 0.064
-			ear.mesh = smesh
-			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.148, 0.0, 0.0)
-			_add_outline_pass(ear, Color("#f2b186"), 0.02)
-			feature_slot.add_child(ear)
+			_build_ear(side, feature_slot, skin_mat, {
+				"pab_r": 0.032,
+				"pab_scale": Vector3(0.72, 0.95, 0.85),
+				"pab_x": 0.130,
+				"pab_z": -0.024,
+				"rot_z_mul": -0.15,
+				"lobe_r": 0.016,
+				"lobe_scale": Vector3(0.65, 0.65, 0.65),
+				"lobe_x": 0.126,
+				"lobe_y": -0.034,
+				"lobe_z": -0.020,
+				"helix_outer": 0.026,
+				"helix_scale": Vector3(1.0, 1.00, 0.9),
+				"helix_x": 0.140,
+				"helix_z": -0.025,
+			})
 
 		# Warm body tint: leather clothing reads rust/amber so the ironblooded silhouette
 		# reads warm at distance (not just via the low-contrast rim).

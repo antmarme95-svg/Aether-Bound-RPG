@@ -1,5 +1,28 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] feature | Nacimiento de oreja enano + helper — paso 2 CERRADO (70%, VoBo de Boris)
+Ejecutado el paso 2 de [[PRD-Nacimiento-de-Oreja-v1]]: helper `_build_ear`
+factorizado + rama `ironblooded` de `character_rig.gd`.
+
+**Helper `_build_ear`** (`:117`): defaults = valores del humano cerrado al 74%.
+Humano migrado a `_build_ear(side, feature_slot, skin_mat, {})` — verificado
+visualmente idéntico. Elfo sin regresión (banco corrido, verificado).
+
+**Enano reparametrizado** (13 overrides): pabellón más ancho/corto (`scale
+0.72/0.95/0.85`), radio 0.032, orejas pegadas al cráneo (`rot_z_mul -0.15`),
+lóbulo carnoso (`r=0.016`, uniforme), hélix grueso (`outer=0.026`).
+
+QA imparcial (mismo agente, 2 rondas): **63%→70%**. Desglose R2: costura 74,
+proporción 70, estructura 65, lectura 65, tinta 78. Los dos CRITICAL de R1
+(proporción alto:ancho + ángulo de separación) resueltos. El QA confirma: "lee
+como oreja de enano, la reparametrización racial se nota". Techo de 3 primitivas
+declarado (mismo que el humano). Gates `test_core.gd` ALL_PASS.
+
+**Nota técnica:** el banco (`tmp_anatomy.gd`) requiere el separador `--` antes
+de `--autotest=` para que `OS.get_cmdline_user_args()` lo reciba. Sin él, Godot
+arranca la escena principal y se cuelga en "GameDirector booted". Lección
+añadida al conocimiento del proceso, no al código.
+
 ## [2026-07-22] feature | Nacimiento de oreja humano — paso 1 CERRADO (74%, VoBo de Boris)
 Ejecutado el paso 1 de [[PRD-Nacimiento-de-Oreja-v1]]: rama `miststalker` de
 `character_rig.gd`. Se reemplazó la esfera desnuda (1 pieza, 4.3% de
