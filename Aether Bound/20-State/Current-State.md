@@ -193,4 +193,57 @@ updated: 2026-07-23
   (confirmado con `git check-ignore`). Detalle completo en [[LOG]] y
   `../VAULT-STARTER.md` v2.
 
+## Pendientes narrativos / lore (2026-07-23)
+
+**Personajes — gaps abiertos:**
+- **Biografías completas de Los 9 Pivotes** — el archivo tiene la tabla;
+  arcos por acto, naming definitivo y diseño visual marcados ❓
+- **Dinámica Roen/Valen/Darro con cada Pivote** — los 3 son fijos pero
+  su relación específica con cada uno de los 9 cambia por celda; sin documentar
+- **Roen, Valen, Darro fichas:** ✅ RESUELTO 2026-07-23
+
+**Locations sin ficha:**
+- **The First Wound** — cráter del clímax final, cementerio de God-Cores;
+  mencionado en [[El Mundo y la Muda]] y [[La Rueda]] pero sin ficha propia
+  ni keyframe visual
+- **Sunken Archive** — donde se recupera el Fragmento de la Verdad
+  ([[Estructura Dramática]]); sin ficha ni descripción física
+
+**Finales — gaps menores:**
+- Estado post-final jugable (hay créditos pero ¿qué hay después?)
+- Duración de epílogos de Los 4 Finales
+- Variantes C3 vivo/muerto en Finales 2 y 3
+
+---
+
+## Pendientes de concept art / estilísticos (2026-07-23)
+
+**NB Pro — prompts listos, pendientes de generar:**
+
+*Personajes nuevos:*
+- Roen (Humano Vanguard, fronterizo curtido)
+- Valen (Elfo Strategist, pelo negro, piel blanca acromática)
+- Darro (Enano Duelist, ligero, tatuaje incompleto)
+- Quinteto grupal ×2 (Humano Duelist + Dagna / Elfa Duelist + Maren)
+
+*Links faltantes:*
+- **Guided Avalanche** (Sereth + Torgan) — ⭐ ARRANQUE MAÑANA
+- Riposte Runner (Iven + Elfo Vanguard)
+- Warforging (Vekka + Humano Vanguard)
+
+*Keyframes de mundo:*
+- Stillwood (ciudad élfica — Stillspire)
+- Ignis Reach / Emberdeep (ciudad enana volcánica)
+- Driftmarket (mercado flotante, tres razas)
+- Frontera Mistbound (borde Wilds/civilización, niebla)
+- The Wilds — interior bajo el dosel
+- The Wilds — noche con corrupción activa (La Muda)
+- The Wilds — Las Arterias (caminos de energía teal)
+- The Wilds — ruinas antiguas con God-Core al fondo
+
+**Higgsfield — re-shoots pendientes:**
+- Arcane Ballistics: Sereth aparece como elfa — re-shoot con prompt
+  corregido (Sereth masculino, robes grises, adjuntar Sereth-elfo.png)
+- Speck sneak peek: prompt listo, nunca mandado
+
 **Historial de estados:** ver [[LOG]] y [[Current-State-Historico]].
