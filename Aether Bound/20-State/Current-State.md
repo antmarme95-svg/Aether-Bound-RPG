@@ -1,12 +1,18 @@
 ---
 status: vivo
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Current State
 
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
+
+- **➡️ SESIÓN 2026-07-22/23 — FRENTE DE CONCEPT ART:** sesión completa de
+  producción visual con NB Pro e Higgsfield. Ver barrido completo abajo.
+  Punto de arranque mañana: **keyframe de Guided Avalanche (Sereth + Enano
+  Duelist / Torgan)** — el link que falta como still de NB Pro, y el de mayor
+  peso narrativo pendiente.
 
 - **Boris rechazó la ronda 2 de ajustes** ("Todavía no me gustan") y
   encargó traducir su propia spec anatómica (triángulo curvo tipo sable,
