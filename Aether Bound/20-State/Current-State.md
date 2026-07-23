@@ -218,36 +218,18 @@ updated: 2026-07-23
 
 ## Estado de concept art (2026-07-23)
 
-**✅ COMPLETADO esta sesión:**
+**✅ COMPLETADO ESTA SESIÓN (2026-07-23):**
 
-*Personajes nuevos:*
-- `Roen (The Kindred).png` — Humano Vanguard, fronterizo curtido
-- `Valen (The Counterpoint).png` — Elfo Strategist, pelo negro, piel blanca
-- `Darro (The Spark).png` — Enano Duelist, ligero, tatuaje incompleto
-- `Quinteto Humano+Dagna.png` — campamento nocturno en The Wilds
-- `Quinteto elfa+Maren.png` — acantilado al amanecer
+*NB Pro — Links/Acciones de Pivotes:*
+- `Guided Avalanche.jpeg` — Sereth (elfo) + Torgan (enano duelist). Gravedad doblada, carga curvada. Evaluated: ✅ space-warping mechanic crystal clear, character fidelity perfect, style Sable×BotW locked.
+- `Riposte Runner.jpeg` — Iven (humano acróbata) + Elfo Vanguard. Parry-redirect como vector de lanzamiento. Evaluated: ✅ parry-to-flank momentum line explicit, synchronization perfect, Higgsfield style coherent.
 
-*Keyframes de mundo:*
-- `Stillwood (ciudad élfica orgánica).png`
-- `Ignis Reach (territorio enano volcánico).png`
-- `Driftmarket (mercado flotante).png`
-- `Mistbound Frontier.png`
-- `Interior de The Wilds.png`
-- `Noche con Muda The Wilds.png`
-- `Arterias The Wilds.png`
-- `Ruinas The Wilds.png`
+*Higgsfield — Links/Acciones + Creature:*
+- `Warforging.png` — Vekka (enana ingeniera) + Humano Vanguard. Módulos atornillados mid-combate. Evaluated: ✅ forge-light saturation perfect, module installation mechanic clear, trust & coordination visible.
+- `Speck sneak peek.mp4` — viñeta cinematográfica del primer encuentro/descubrimiento. Generated: ✅ Subido. Evaluation pending (ffmpeg setup incomplete).
 
-*Higgsfield re-shoots:*
-- `Arcane Ballistics.mp4` — Sereth corregido (masculino)
-- `Weaver´s Net.mp4` — Nyael con traje correcto
-- `Seismic Springboard (2).mp4` — versión corregida (Dagna + energía ámbar)
-
-**❌ Pendiente — NB Pro:**
-- **Guided Avalanche** (Sereth + Torgan) — ⭐ ARRANQUE MAÑANA
-- Riposte Runner (Iven + Elfo Vanguard) — prompt listo
-- Warforging (Vekka + Humano Vanguard) — prompt listo
-
-**❌ Pendiente — Higgsfield:**
-- Speck sneak peek — prompt listo, nunca mandado
+**Pendiente de evaluación (ffmpeg setup):**
+- Videos existentes: `Arcane Ballistics.mp4`, `Weaver's Net.mp4`, `Seismic Springboard (2).mp4` — re-shoots Higgsfield
+- `Speck sneak peek.mp4` — nuevo asset
 
 **Historial de estados:** ver [[LOG]] y [[Current-State-Historico]].

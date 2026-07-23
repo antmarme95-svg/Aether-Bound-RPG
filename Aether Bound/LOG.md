@@ -1,5 +1,42 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-23] design/production | 3 keyframes de acciones (links de pivotes) + 1 video teaser COMPLETADOS
+**Sesión de producción visual — concept art estático + video.**
+
+### Guided Avalanche (Sereth + Torgan) — NB Pro
+**Asset:** `Guided Avalanche.jpeg`. Mecánica: "Sereth dobla gravedad/terreno para curvar la carga imparable de Torgan."
+
+Composición cinemática: Sereth (elfo manipulador) izquierda, canalizando poder con manos extendidas. Torgan (enano duelist, 4.5 cabezas, trapezio) centro-derecha en postura de carga potente. Entre ellos: círculos concéntricos de gravedad/espacio doblado alargando la trayectoria de Torgan. Hay blanco separado (silueta brillante) dentro del efecto donde impacta. Bosque envolvente, luz natural.
+
+**Evaluación:** ✅ Mecánica crystal-clear (distorsión de espacio comunica el doblez sin ser literal). Caracterización correcta (etéreo manipulador vs. bruto embestidor). Proporción relativa elf/dwarf correcta. Estilo Sable×BotW locked (ligne claire + hand-painted watercolor, low saturation excepto efecto tealmente). **VALIDADO sin iteraciones.**
+
+### Riposte Runner (Iven + Elfo Vanguard) — NB Pro
+**Asset:** `Riposte Runner.jpeg`. Mecánica: "Tu parry-redirect es su vector de lanzamiento al flanco."
+
+Composición: Elfo Vanguard standing (8 cabezas, vertical, orejas atrás) con blade en postura de parry. Iven (humano 7.5 cabezas, acróbata) airborne en arco lateral perfecto, wraps oscuros, capa ondeando. Línea de fuerza tealmente fluye del parry blade hacia Iven — redirección limpida. Cañón con rocas, sunlight diagonal.
+
+**Evaluación:** ✅ Línea de fuerza más explícita que Guided Avalanche (blade→cuerpo). Sincronización perfecta (defensa=offense). Tamaño relativo correcto. Estilo coherente Sable×BotW. **VALIDADO sin iteraciones.**
+
+### Warforging (Vekka + Humano Vanguard) — Higgsfield
+**Asset:** `Warforging.png`. Mecánica: "Te atornilla módulos en combate: cada uno cambia tu verbo de brawler."
+
+Composición: Humano Vanguard wide-leg brawler stance (7.5 cabezas, center). Vekka (enana 4.5 cabezas, trapezio) arriba-derecha con goggles enormes de ingeniera, wrench activo atornillando módulo masivo y brillante directamente EN el pecho del humano. Sparks y forge-light ámbar/naranja exploten. Pernos dispersos en suelo, llamas en muros (contexto taller/forja).
+
+**Evaluación:** ✅ Mecánica literal y visual (módulo siendo instalado = "rig siendo upgradado"). Trust implícito (humano permite mid-combate). Saturación ámbar perfecta (forge-light > resto). Estilo Higgsfield coherente con serie (ligeramente más graphic que NB Pro pero sigue Sable×BotW). **VALIDADO sin iteraciones.**
+
+### Speck Sneak Peek — Higgsfield (video)
+**Asset:** `Speck sneak peek.mp4`. Prompt: viñeta cinematográfica de primer encuentro/descubrimiento. Criatura salamandra-axolotl pale-mint con seams teal aether, gill-antennae erizables, ojos cálido-oscuros. Caverna oscura, shaft de luz reveladora. Mood: tierno, antiguo, unsettling (belleza + peligro).
+
+**Status:** ✅ Generado y subido. Evaluación pending (ffmpeg setup incomplete).
+
+### Vídeos pendientes de evaluación
+- `Arcane Ballistics.mp4`, `Weaver's Net.mp4`, `Seismic Springboard (2).mp4` (re-shoots Higgsfield previos)
+- `Speck sneak peek.mp4` (nuevo)
+
+**Notas técnicas:** ffmpeg instalado vía winget (v8.1.2), PATH aún no sincronizado en shell actual. Evaluación de video postponed.
+
+---
+
 ## [2026-07-22] feature | Nacimiento de oreja élfico pabellón — paso 3 CERRADO (78%, VoBo provisional)
 Ejecutado el paso 3 de [[PRD-Nacimiento-de-Oreja-v1]]: pabellón élfico (`ear_pab`
 SphereMesh hermana de `ear_body` en `feature_slot`, r=0.035, scale 0.50/1.40/0.80,
