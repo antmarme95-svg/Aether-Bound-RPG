@@ -128,10 +128,10 @@
   propio pendiente): "nacimiento" de oreja (bug compartido humano/enano —
   esfera pegada sin lóbulo/hélix; el elfo le falta pabellón visible) —
   detalle en [[Current-State]]/[[LOG]]. Sigue pendiente ROM por raza.
-- [[PRD-Nacimiento-de-Oreja-v1]] (`20-State/PRDs/`) — **en curso
-  (2026-07-22)**: pasos 1-2 CERRADOS con VoBo. Humano 74% (4 rondas QA),
-  enano 70% (2 rondas QA) + helper `_build_ear` factorizado. Techo de 3
-  primitivas declarado para ambas razas. Queda paso 3 (pabellón élfico).
+- [[PRD-Nacimiento-de-Oreja-v1]] (`20-State/PRDs/`) — **CERRADO (2026-07-22)**: 
+  pasos 1-3 CERRADOS con VoBo. Humano 74% (4 rondas QA), enano 70% (2 rondas QA) 
+  + helper `_build_ear` factorizado, elfo 78% (2 rondas QA) + pabellón SphereMesh. 
+  Transición de nacimiento orgánica en 3 razas, techo de 3 primitivas declarado.
   Anti-objetivo duro: no reabrir la oreja de elfo (75%, con VoBo).
 - [[PRD-Catalogo-Peinados-v1]] (`20-State/PRDs/`) — **draft (2026-07-19)**:
   catálogo 6-8 estilos × 2 géneros × 3 razas para el creador de personaje

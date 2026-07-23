@@ -3026,6 +3026,17 @@ func _build_origin_features(origin: Dictionary) -> void:
 			helix.position = Vector3(0.005, -0.038, 0.004)
 			_add_outline_pass(helix, Color("#f2b186"), 0.02)
 			ear_body.add_child(helix)
+
+			var ear_pab = _sphere_mesh(0.035, skin_mat)
+			ear_pab.scale = Vector3(0.50, 1.40, 0.80)
+			ear_pab.rotation.x = -0.30
+			ear_pab.rotation.z = float(side) * -0.12
+			ear_pab.position = Vector3(
+				side * 0.148,
+				0.024,
+				0.006)
+			_add_outline_pass(ear_pab, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear_pab)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")
 
 	elif id == "miststalker":

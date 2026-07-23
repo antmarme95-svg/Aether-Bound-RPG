@@ -1,5 +1,5 @@
 ---
-status: en curso (pasos 1-2 CERRADOS con VoBo, paso 3 pendiente)
+status: CERRADO (pasos 1-3 CERRADOS con VoBo)
 created: 2026-07-22
 updated: 2026-07-22
 owner: Boris (director) / orquestador
@@ -173,3 +173,28 @@ separación excesivo (CRITICAL→resuelto), lóbulo sin gota (MEDIUM→resuelto)
 **Techo de la técnica:** estructura interna (concha/antihelix) y transición
 anterior abrupta requieren más geometría o cambio de shader. Mismo techo que
 el humano.
+
+### Paso 3 — Elfo/Aetherborn + pabellón ✅ CERRADO (2026-07-22, VoBo provisional de Boris)
+
+**Fidelidad: 78%** (umbral 70%). Trayectoria QA imparcial: 74%→78%.
+
+**Pieza nueva: `ear_pab` (SphereMesh hermana de `ear_body` en `feature_slot`)**
+Posicionada en la zona donde el cono sale del cráneo, sin seguir el eje de la
+oreja (orientación independiente). Valores finales: r=0.035, scale(0.50, 1.40,
+0.80), rot.x=-0.30, rot.z=-0.12*side, pos=(side*0.148, 0.024, 0.006). El cono
+del elfo (body, tip, helix) se queda sin cambio — anti-objetivo duro respetado.
+
+**Ronda 1 (74%):** Hallazgo de MEDIUM — pabellón leía como bump separado
+(silueta "bump-then-cone" en 3/4) y borde inferior delgado en frontal.
+
+**Ronda 2 (78%):** Fixes aplicados — pabellón elongado (scale.y 1.10→1.40,
+rot.x -0.10→-0.30) para que fluya hacia el cono en lugar de leerse como forma
+separada; bajado (pos.y 0.032→0.024) para cubrir transición inferior. Ambos
+MEDIUM cerrados. Solo quedan 3 LOWs (inflexión sutil, tinta Sobel sistémica,
+asimetría render mínima — invisible a distancia de juego).
+
+**Verificación de no-regresión:** Humano pixel-idéntico al cierre del paso 1.
+Enano pixel-idéntico al cierre del paso 2. Cono élfico intacto (eje, largo,
+punta sin cambio).
+
+**Gates:** `test_core.gd` ALL_PASS. VoBo provisional de Boris al 78%.

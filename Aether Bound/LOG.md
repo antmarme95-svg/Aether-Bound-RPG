@@ -1,5 +1,23 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-22] feature | Nacimiento de oreja élfico pabellón — paso 3 CERRADO (78%, VoBo provisional)
+Ejecutado el paso 3 de [[PRD-Nacimiento-de-Oreja-v1]]: pabellón élfico (`ear_pab`
+SphereMesh hermana de `ear_body` en `feature_slot`, r=0.035, scale 0.50/1.40/0.80,
+rot.x -0.30, pos 0.148/0.024/0.006) añadido a la rama `aetherborn` de
+`character_rig.gd`.
+
+**Ronda 1 (74%):** Dos MEDIUM hallados — pabellón leía como bump separado en 3/4
+(silueta "bump-then-cone"), borde inferior delgado en frontal.
+
+**Ronda 2 (78%):** Pabellón elongado (scale.y 1.10→1.40, rot.x -0.10→-0.30) para
+fluir hacia el cono; bajado (pos.y 0.032→0.024) para cubrir inferior. Ambos MEDIUM
+cerrados. Solo quedan 3 LOWs (inflexión sutil, tinta Sobel sistémica, asimetría
+render — ninguno visible a distancia de juego).
+
+Cono élfico intacto (eje 28°/20°, largo ~0.167, punta sin toque — anti-objetivo
+respetado). No-regresión: humano 74% pixel-idéntico, enano 70% pixel-idéntico.
+Gates ALL_PASS. VoBo provisional de Boris.
+
 ## [2026-07-22] feature | Nacimiento de oreja enano + helper — paso 2 CERRADO (70%, VoBo de Boris)
 Ejecutado el paso 2 de [[PRD-Nacimiento-de-Oreja-v1]]: helper `_build_ear`
 factorizado + rama `ironblooded` de `character_rig.gd`.

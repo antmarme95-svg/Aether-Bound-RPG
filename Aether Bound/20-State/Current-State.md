@@ -38,15 +38,14 @@ updated: 2026-07-22
   sub-ronda. Detalle completo en [[LOG]]. **VoBo de Boris sobre el 75%:
   conforme con el resultado** ("Sí, dale, así queda") — cierra la ronda
   10 de la oreja de elfo.
-- **➡️ NACIMIENTO DE OREJA — pasos 1-2 CERRADOS (2026-07-22, VoBo):**
-  [[PRD-Nacimiento-de-Oreja-v1]] en curso. Paso 1 humano: 74% (4 rondas
-  QA). Paso 2 enano + helper `_build_ear` factorizado: 70% (2 rondas QA).
-  El QA confirma que la reparametrización racial se nota ("lee como enano").
-  Techo de 3 primitivas declarado para ambas razas (concha/antihelix
-  imposibles, arco sin tinta agotado). Gates ALL_PASS, sin regresión en
-  elfo. **Queda paso 3 (pabellón élfico) — NO ejecutar sin señal de
-  Boris.** Anti-objetivo duro: **no reabrir la oreja de elfo** (cerrada
-  al 75% con VoBo).
+- **✅ NACIMIENTO DE OREJA — pasos 1-3 CERRADOS (2026-07-22, VoBo de Boris):**
+  [[PRD-Nacimiento-de-Oreja-v1]] CERRADO. Paso 1 humano: 74% (4 rondas QA).
+  Paso 2 enano + helper `_build_ear`: 70% (2 rondas QA, reparametrización
+  racial visible). Paso 3 elfo + pabellón: 78% (2 rondas QA, dos MEDIUM
+  resueltos). El nacimiento lee como transición orgánica en las 3 razas
+  (no "cono pegado"). Techo de 3 primitivas declarado (concha/antihelix
+  imposibles). Gates ALL_PASS, sin regresión. Anti-objetivo duro respetado:
+  cono élfico intacto (eje, largo, punta sin toque).
 - **Sesión 2026-07-21 cerró el frente 1
   (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
   [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de
