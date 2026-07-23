@@ -32,9 +32,12 @@ Nomenclatura aprobada 2026-07-22.
 Concept art de los tres pendiente (NB Pro, prompts generados 2026-07-22 en sesión de arte).
 Diseño visual: distinguir Valen de Sereth (pelo oscuro, ropa de viajero) y Darro de Torgan (más ligero, expresión abierta).
 
-**Matchmaking orgánico:** el juego lee tu celda y asigna el quinteto
-(dinámica Han Solo–Chewbacca). El Pivote nunca es fijo: es función del
-jugador — su antítesis y némesis final ([[Los 9 Pivotes]]).
+**C1, C2 y C4 son personajes FIJOS** (decisión de diseño 2026-07-23):
+[[Roen]], [[Valen]] y [[Darro]] tienen identidad, historia y arco propios —
+independientes de la celda del jugador. Esto permite desarrollarles
+personalidad profunda y arcos narrativos específicos.
+El Pivote (C3) sigue siendo la única variable — asignado por celda
+([[Los 9 Pivotes]]).
 
 **Constantes del Pivote:** (1) nunca de tu raza, rol co-dependiente del tuyo;
 (2) te enseña la virtud que tu cultura no tiene y su traición usa esa virtud
