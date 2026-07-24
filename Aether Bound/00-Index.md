@@ -21,6 +21,7 @@
 
 - [[Visión y Pilares]] — la frase de visión y los 4 filtros de toda decisión.
 - [[El Mundo y la Muda]] — lore público vs. la revelación: God-Cores = cadáveres de Wardens; la Muda inconclusa.
+- [[Geografía y Ciudades]] — mapeo completo: 3 reinos + ciudades secundarias + zonas neutras + beats por acto + viajes.
 - [[Estructura Dramática]] — 3 actos + nudo del Fragmento + traición por convicción + gancho de 3 polos.
 - [[Las Tres Razas]] — Elfos/Enanos/Humanos: temperamento, hábitat, por qué nadie quiere a Speck.
 - [[La Rueda]] — mapa macro: cubo (Wilds), aro (3 reinos), 3 arterias co-op, Driftmarket, Sunken Archive, First Wound.
