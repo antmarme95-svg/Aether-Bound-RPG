@@ -140,6 +140,192 @@ updated: 2026-07-23
 
 ## Zonas Neutras / Secundarias
 
+---
+
+## THE WILDS — Puntos de Interés (Cubo Explorable)
+
+> El corazón del juego: bosque melancólico + ruinas antiguas + asentamientos fantasma + landmarks naturales.
+> El jugador puede explorar libremente dentro de los actos, descubriendo capas narrativas.
+
+### Mapa Visual de The Wilds
+
+```
+        NORTH (Stillwood entrada via Gloomvault)
+               │
+        ┌──────┼──────┐
+        │      │      │
+    WEST│      │      │EAST
+   (Riv-│      │      │(Ignis
+    er) │   THE WILDS │entrada via
+        │      │      │Cinder A.)
+        └──────┼──────┘
+               │
+        SOUTH (The First Wound)
+        
+CUADRANTES:
+NW: Ruinas de Aethelgard + Rio Mayor
+NE: Ruinas de Emberdeep + Montaña Central  
+SW: Asentamientos Humanos + Lago Espejo
+SE: Santuarios Élficos + Grieta del Aether
+CENTER: El Nido + campamento base
+BOTTOM: The First Wound (cementerio God-Cores)
+```
+
+### A) RUINAS ANTIGUAS (Warden Civilization)
+
+#### **The Shattered Spire** (NE — Cuadrante Este)
+- Torre de observatorio Warden colapsada (70% destruida)
+- Conexión narrativa: Valen estudió escrituras aquí hace 200 años
+- Mecanismo: Escalada vertical progresiva + puzzle de luz Aether
+- Loot: Fragmento de cristal (billete de entrada a Sunken Archive)
+- Enemigos: Bestias que guardan ruinas (bestias-Warden híbridas)
+- Momento de Speck: Aquí Speck ve su propia "forma fantasma" en reflejos
+
+#### **The Echoing Archive** (NW — Cuadrante Oeste)
+- Bóveda de almacenamiento Warden (semisubterránea)
+- Conexión narrativa: Donde se guardaban registros de La Muda
+- Mecanismo: Dungeon corto, acústica extraña (reverb infinito)
+- Loot: Mapa antiguo (muestra posición de otros God-Cores)
+- Enemigos: Guardianes automáticos dormidos (activables)
+- Momento de Speck: Speck reconoce símbolos, reacciona con miedo
+
+#### **The God's Throne** (Center, near El Nido)
+- Santuario Warden en ruinas (asiento de poder antiguo)
+- Conexión narrativa: Donde líderes Warden se reunían
+- Mecanismo: Puzzle social (Valen puede "leer" inscripciones)
+- Loot: Codex antiguo (añade diálogos sobre historia)
+- Enemigos: Bestias élite (God-touched)
+- Momento de Speck: Speck entiende que era reina/leadership
+
+### B) ASENTAMIENTOS ABANDONADOS
+
+#### **Riverstone Settlement** (NW — Río Mayor)
+- Pueblo humano abandonado (50 años atrás)
+- Conexión narrativa: Evacuado cuando corrupción llegó
+- Mecanismo: Exploración visual, historias por entorno
+- Loot: Notas de diarios, reliquias personales (narrativa ambiental)
+- Enemigos: Bestias débiles (habitan abandonadas)
+- Dinámicas: Si Roen está, comenta sobre caída; si Maren, reconoce gente que negoció aquí
+
+#### **Ironforge Outpost** (East — Cinder Ascent base)
+- Campamento enano fallido (exploración hace 30 años)
+- Conexión narrativa: Intento de expansión que colapsó
+- Mecanismo: Equipamiento enano para leer (Darro/Vekka identifican)
+- Loot: Planos de forja, herramientas antiguas
+- Enemigos: Bestias que anidar en cuevas
+- Dinámicas: Vekka o Dargo reconocen apellidos, hacen cortos comentarios
+
+#### **Stillwood Sanctuary** (NE — Árboles muertos)
+- Monasterio élfico abandonado (curvas muertas, árboles calcificados)
+- Conexión narrativa: Lugar de retiro que quedó atrapado en corrupción
+- Mecanismo: Atmósfera de abandono, luz morada/corrupta
+- Loot: Arcos antiguos, símbolos de ritualidad
+- Enemigos: Bestias mutadas (ex-habitantes?)
+- Dinámicas: Valen o Lyris comentan sobre pérdida cultural
+
+### C) LANDMARKS NATURALES
+
+#### **Lake of Mirrors** (SW — Cuadrante Suroeste)
+- Lago cristalino que refleja cielo corrompido
+- Conexión narrativa: Belleza trágica, contrasta luz/corrupción
+- Mecanismo: Espacio contemplativo, puzzle de reflexión (¿Speck se ve aquí?)
+- Loot: Recursos de agua limpia (cura envenenamientos)
+- Enemigos: Bestias acuáticas menores (no aggressive si no provocas)
+- Dinámicas: Escena bonita donde el jugador descansa (mecánica de campamento)
+
+#### **The Monolith** (Center — Montaña Central)
+- Piedra vertical masiva (100+ metros), origen desconocido
+- Conexión narrativa: Marcador de The First Wound (norte-sur axis)
+- Mecanismo: Ascenso de vista (panorama del mapa)
+- Loot: Vista 360° del mundo (debloquea iconografía en mapa)
+- Enemigos: Bestias voladoras (Lyris puede cazarlas aquí)
+- Dinámicas: Punto de "revelación" donde ves The First Wound a lo lejos
+
+#### **The Shattered Cascade** (NE — Cascada)
+- Cascada masiva con saltos múltiples
+- Conexión narrativa: Río que alimenta Rivermeet nace aquí
+- Mecanismo: Co-op puzzle (cruzar cascada, plataformas mojadas resbaladizas)
+- Loot: Recursos de agua, minerales raros
+- Enemigos: Bestias de agua (teleportean por espuma)
+- Dinámicas: Si Roen/Maren juntos, comentan sobre origen del río de Rivermeet
+
+#### **The Ossuary Grove** (South, before First Wound)
+- Bosque de árboles muertos, huesos dispersos (antiguo cementerio?)
+- Conexión narrativa: ¿Aquí murieron otros Wardens?
+- Mecanismo: Atmósfera de desesperación, audio acústica vacía
+- Loot: Cristales frágiles (pueden romper, material frágil)
+- Enemigos: Bestias espectrales (menos sólidas, evasivas)
+- Dinámicas: Speck aquí tiene "flashback" de otros de su especie muriendo
+
+### D) DUNGEONS SECUNDARIOS
+
+#### **The Hollow Deep** (East — Cueva conectada a Cinder Ascent)
+- Caverna extensa con múltiples niveles
+- Conexión narrativa: Túnel alternativo a Ignis Reach (avoid Cinder Ascent)
+- Mecanismo: Mini-dungeon corto (15-20 min), sin jefe final
+- Loot: Recursos enanos, forja portátil (crafting point)
+- Enemigos: Bestias de cueva (ojos luminosos, evasivas en oscuridad)
+- Dinámicas: Si llevas Strategist puede "mapear" (reduce desorientación)
+
+#### **The Rift** (Center-East — Grieta del Aether)
+- Grieta vertical profunda con radiación Aether
+- Conexión narrativa: Donde la corrupción "filtra" desde abajo
+- Mecanismo: Descenso peligroso (HP drena lentamente, Aether exposure)
+- Loot: Cristales de Aether puro (combustible raro, component avanzado)
+- Enemigos: Aberraciones de Aether (no-bestias, seres imposibles)
+- Dinámicas: Valen advierte sobre peligro; Sereth está fascinado
+
+#### **The Submerged Halls** (SW — Acceso via río subterráneo)
+- Ruinas bajo el agua, parcialmente inundadas
+- Conexión narrativa: Antiguos pasillos de Warden (acceso alternativo a Sunken Archive?)
+- Mecanismo: Medio-acuático (movimiento restringido, oxígeno limitado)
+- Loot: Artefactos de Warden (equipo mágico avanzado)
+- Enemigos: Bestias acuáticas inteligentes (coordinadas, tácticas)
+- Dinámicas: Roen puede "leer" escrituras de seguridad (es guardia)
+
+### E) PUNTOS NARRATIVOS
+
+#### **The Warden's Rest** (Center — base improvisada)
+- Ruina pequeña donde el grupo establece campamento base
+- Conexión narrativa: Espacio seguro entre misiones
+- Mecanismo: Hub de descanso, punto de reunión para Momentos de Speck
+- Dinámicas: 
+  - Fogata donde el grupo descansa
+  - Donde se tejen nuevos bonds
+  - Donde Speck observa desde lejos
+  - Donde pueden ocurrir ciertos diálogos privados
+
+#### **The Battlefield** (SW — evidencia antigua)
+- Llanura con restos de antigua batalla (100 años atrás?)
+- Conexión narrativa: Evidencia de la guerra que masacró Wardens
+- Mecanismo: Narrativa ambiental (esqueletos, armas, cristales rotos)
+- Loot: Fragmentos de historia (Valen puede interpretar escena)
+- Enemigos: Bestias que habitan (carroñeras)
+- Dinámicas: 
+  - Valen revela que aquí pasó "algo importante"
+  - Sereth calcula números de muertos (genocidio)
+  - Speck reconoce entierro de su especie
+
+#### **The Observation Point** (North, near Stillwood)
+- Torre natural de piedra con vista de ciclos Aether
+- Conexión narrativa: Donde Valen "estudia" movimientos de Aether
+- Mecanismo: Escena contemplativa, revelaciones sobre lore
+- Dinámicas:
+  - Valen puede "leer" Aether patterns desde aquí
+  - Si llevas a Sereth, debate sobre cálculos
+  - Si llevas a Lyris, ella ve "drones" de Aether moviéndose (invisible a otros)
+
+#### **Speck's First Glimpse Site** (East, random spawn)
+- Ubicación donde alguien vio a Speck hace meses (¿Lyris? ¿Roen?)
+- Conexión narrativa: Pista sobre movimientos previos de Speck
+- Mecanismo: Encuentro aleatorio con NPC o bestia que "confirma" avistamiento
+- Dinámicas:
+  - Alguien describe a "criatura pequeña pero rara"
+  - Speck reacciona con reconocimiento (flash visual)
+  - Jugador intuye que Speck no es animal normal
+
+---
+
 ### THE DRIFTMARKET (Ciudad Flotante — Centro)
 - **Ubicación:** Suspendida sobre The Wilds, accesible desde los 3 reinos
 - **Función:** Mercado negro, terreno franco entre reinos
