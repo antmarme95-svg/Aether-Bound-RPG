@@ -1,5 +1,48 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | IVEN potenciado: pobreza estructural + pérdida de origen (Sael)
+
+**Disparador:** al mapear qué pivotes aún no tenían contexto político/social
+(Maren e Iven, humanos), Boris pidió recordar la traición de Iven y
+potenciarla desde su origen de pobreza y mortalidad — no agregar Casa
+política (no le corresponde), sino profundizar la textura de clase que ya
+tenía implícita.
+
+**Cambio de eje:** el asentamiento de Iven **nunca fue una comunidad sana
+que luego se enfermó** — fue pobre y de alta mortalidad crónica desde
+siempre. La corrupción del Aether (hace 5 años) no creó la crisis, la
+**aceleró**. Esto conecta con [[Estructura Política]]: "la frontera no es
+prioridad" es política de generaciones del Consejo/Regentado, no frase
+nueva.
+
+**Nueva pérdida de origen:** a los 9 años, la hermana menor de Iven (Sael,
+5 años) murió de fiebre simple porque no había medicina suficiente para las
+2 personas que la necesitaban esa semana — los adultos eligieron a quién
+dársela, y no fue a ella. Iven no culpa a nadie por esa decisión (sabe que
+fue correcta con los recursos que había) — **eso es lo que más lo rompe.**
+Aprendió a los 9 años que amar a alguien no siempre alcanza para salvarlo.
+
+**Consecuencia narrativa:** la "elección imposible" con Speck deja de ser un
+dilema moral abstracto que enfrenta por primera vez — es **la más grande de
+una vida entera haciendo triage.** Se convirtió en protector no por
+heroísmo, sino por la determinación de nunca más ser quien decide sin poder
+salvar a ambos. Explica también por qué confía en un trato tan obviamente
+predatorio del Consejo: quien creció en pobreza estructural sabe que cuando
+el poder ofrece cualquier salida, la tomas — la alternativa es muerte
+garantizada, no riesgo.
+
+**Eco añadido al clímax:** Iven menciona a Sael explícitamente al momento de
+traicionar ("Tenía nueve años la primera vez que alguien decidió a quién
+salvar delante de mí...") — cierra el círculo con la línea privada final.
+
+**Archivo actualizado:** `Iven-Ficha-Expandida-v1.md` (Esencia, biografía
+completa reescrita, clímax, línea privada, Notas Narrativas).
+
+**Pendiente:** Maren sigue sin contexto político/social propio — próximo
+frente.
+
+---
+
 ## [2026-07-24] narrative | ESTRUCTURA POLÍTICA élfica COMPLETA: Lyris + Nyael
 
 **Continuación directa** del paquete de Estructura Política — quedaba

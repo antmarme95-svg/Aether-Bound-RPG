@@ -19,6 +19,13 @@ Acróbata, duelist de movimiento y gracia — humano que vive en presente porque
 
 Iven es el único de los Pivotes donde la traición NO tiene respuesta correcta. Ambas opciones son justas.
 
+**Lo que la vuelve más oscura:** no es la primera vez que Iven elige quién
+vive. Creció haciendo triage — quién come, quién recibe la poca medicina que
+hay, a quién se puede ayudar y a quién no. La "elección imposible" con Speck
+no es nueva para él; es la misma lógica de escasez que aplicó toda su vida,
+ahora a escala mayor y con más en juego. No es un dilema moral abstracto que
+enfrenta por primera vez — es **reflejo de supervivencia**, casi mecánico.
+
 **Arquetipos resonantes:** Ned Stark (honor vs. gente que ama), el soldado que debe elegir entre su unidad y su familia, Theon Greyjoy (dos hogares, ambos reclaman).
 
 ---
@@ -27,29 +34,68 @@ Iven es el único de los Pivotes donde la traición NO tiene respuesta correcta.
 
 ### Asentamiento Fronterizo (Infancia/Adolescencia, edades 0-25)
 
-Nacido en pequeño asentamiento fronterizo — no es ciudad, es **supervivencia.** Comunidad de 200-300 personas, humanos principalmente, algunos elfos, algunos enanos.
+Nacido en pequeño asentamiento fronterizo — no es ciudad, es **supervivencia
+crónica.** Comunidad de 200-300 personas, humanos principalmente, algunos
+elfos, algunos enanos. **Nunca fue una comunidad sana que luego se enfermó
+— fue pobre y de alta mortalidad desde siempre.** Sin médicos propios, sin
+infraestructura, sin prioridad para el Consejo (Aethelgard/Rivermeet — ver
+[[Estructura Política]]: "la frontera no es prioridad" no es frase nueva del
+Consejo, es política de generaciones). La gente moría joven de hambre e
+infecciones simples mucho antes de que el Aether se corrompiera. La
+corrupción no creó la crisis — **aceleró una que ya existía.**
 
-Frontera significa: **no hay seguridad.** Los nidos de bestias llegan cada temporada. La corrupción del Aether avanza lentamente. Las civilizaciones grandes (Consejo, reinos) olvidan que existen.
+Frontera significa: **no hay seguridad.** Los nidos de bestias llegan cada
+temporada. Las civilizaciones grandes olvidan que existen — deliberadamente,
+por costo, no por accidente.
 
-Iven creció conociendo que **mañana no está garantizado.** Eso enseña a vivir en presente con urgencia.
+Iven creció conociendo que **mañana no está garantizado.** Eso enseña a
+vivir en presente con urgencia. También enseña algo más duro: **a elegir.**
 
-**Infancia:** Asentamiento lo crió como tribu. Todos los adultos eran padres. Todos los niños eran hermanos. No había lujo de "tu gente vs mi gente" — era todo nosotros.
+**Infancia:** Asentamiento lo crió como tribu. Todos los adultos eran
+padres. Todos los niños eran hermanos. No había lujo de "tu gente vs mi
+gente" — era todo nosotros. Pero tribu pobre significa recursos que nunca
+alcanzan para todos.
 
-A los 10 años, las bestias atacaron. Primeros muertos. Iven lo vio.
+**A los 9 años, Iven tuvo una hermana menor, Sael, de 5.** Fiebre simple —
+del tipo que en Rivermeet se cura con una tarde de atención médica. En el
+asentamiento no había medicina para las dos personas que la necesitaban esa
+semana. Los adultos eligieron a quién dársela. Sael no fue la elegida. Murió
+en tres días.
 
-A los 15, entrenó como Duelist. Acróbata porque la frontera requiere movimiento rápido, adaptación. No fortaleza lenta.
+**Iven no culpa a nadie por esa decisión — eso es lo que lo rompe más.**
+Sabe que fue la elección correcta con los recursos que había. Sabe que
+alguien más también murió de no recibirla si se la hubieran dado a ella.
+Aprendió, a los 9 años, que amar a alguien no siempre alcanza para
+salvarlo — que a veces amar significa elegir quién vive.
+
+A los 10 años, las bestias atacaron. Más muertos. Iven ya sabía lo que era
+perder gente — esto solo confirmó el patrón.
+
+A los 15, entrenó como Duelist. Acróbata porque la frontera requiere
+movimiento rápido, adaptación. No fortaleza lenta. **Se convirtió en
+protector no por heroísmo — por la determinación de nunca más ser quien
+decide sin poder salvar a ambos.**
 
 ### Años de Supervivencia (edades 25-40, presente)
 
-Iven se convirtió en **protector del asentamiento.** No oficial — simplemente el tipo que peleaba cuando bestias llegaban. El tipo que iba a buscar agua cuando era peligroso.
+Iven se convirtió en **protector del asentamiento.** No oficial —
+simplemente el tipo que peleaba cuando bestias llegaban. El tipo que iba a
+buscar agua cuando era peligroso. El tipo que, sin decirlo, seguía haciendo
+triage silencioso cada vez que los recursos no alcanzaban — que ya era
+seguido, en menor escala, desde antes de la corrupción.
 
-Hace 5 años, **corrupción del Aether aceleró en la zona.**
+Hace 5 años, **la corrupción del Aether aceleró en la zona** — de crisis
+crónica a catástrofe abierta. El Aether corrupto comenzó a envenenar pozos
+que ya eran escasos. Los cultivos que ya rendían poco fallaron por completo.
+La fauna, ya agresiva por el hambre de la región, se volvió letal. La
+comunidad que ya moría lentamente empezó a morir rápido.
 
-No fue gradual — fue catastrófico. El Aether corrupto comenzó a envenenar pozos. Los cultivos fallaron. La fauna se volvió más agresiva. La comunidad comenzó a morir.
+Iven vio gente que crió con él — niños, abuelos — desmoronarse de hambre,
+enfermedad, corrupción. **La misma muerte de siempre, solo que ahora a
+velocidad que no daba tiempo ni siquiera para triage.**
 
-Iven vio gente que crió con él — niños, abuelos — desmoronarse de hambre, enfermedad, corrupción.
-
-**Hace 2 años:** Iven fue a las ciudades grandes. Pidió ayuda. El Consejo de humanos escuchó. Respondieron:
+**Hace 2 años:** Iven fue a las ciudades grandes. Pidió ayuda. El Consejo de
+humanos escuchó. Respondieron:
 
 *"No hay recursos. La frontera no es prioridad. Pero... hay solución."*
 
@@ -252,6 +298,12 @@ Jugador: *"¿Eso lo hace mejor?"*
 
 Iven: *"No. Pero es verdad."*
 
+Un segundo de silencio. Luego, más bajo, casi para sí mismo:
+
+Iven: *"Tenía nueve años la primera vez que alguien decidió a quién salvar
+delante de mí. No fui yo quien decidió esa vez. Ahora sí soy yo. Pensé que
+sería más fácil siendo yo quien elige. No lo es."*
+
 **Línea de traición:**
 *"You'd trade her for strangers? I'm trading her for everyone I've ever known. They're my people. I can't let them die. Even for her. Even for you."*
 
@@ -425,7 +477,10 @@ Y eso es lo que rompe a Darro — que Iven **tiene razón**, pero la razón no l
 - Alguien en **conflicto genuino** entre dos amores válidos
 - El Pivote donde AMBAS traición y lealtad son correctas moralmente
 - Capaz de traicionar al grupo Y amarlos genuinamente porque el dilema es real
+- Alguien formado por **pobreza estructural y mortalidad crónica**, no por
+  un giro trágico repentino — la elección con Speck no es la primera vez que
+  hace triage, es la más grande de una vida entera haciéndolo
 
 **Línea privada de Iven (nunca dicha aloud):**
-*"Mi asentamiento es mi gente. El grupo es también mi gente. Cuando te pides elegir entre dos formas de amar, ¿cuál eliges? Yo elegí mi gente primero. Eso fue correcto — eran mío desde infancia. Pero también fue traición — porque el grupo también eran mío desde hace meses. No hay elección buena aquí. Solo hay elecciones que lastiman diferente. Y yo elegí la que mata menos gente. Pero mató de todas formas. Eso es lo que me mata."*
+*"Mi asentamiento es mi gente. El grupo es también mi gente. Cuando te piden elegir entre dos formas de amar, ¿cuál eliges? Yo elegí mi gente primero. Eso fue correcto — eran mío desde infancia. Pero también fue traición — porque el grupo también eran mío desde hace meses. No hay elección buena aquí. Solo hay elecciones que lastiman diferente. Y yo elegí la que mata menos gente. Pero mató de todas formas. Eso es lo que me mata. Tenía nueve años cuando aprendí que amar a alguien no siempre alcanza para salvarlo. Pensé que ya sabía vivir con eso. Resulta que solo había practicado con apuestas más chicas."*
 

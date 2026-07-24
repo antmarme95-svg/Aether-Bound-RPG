@@ -56,6 +56,19 @@ updated: 2026-07-24
   **Siguiente frente:** Maren e Iven (humanos) sin Casa/contexto político —
   a construir con Boris, sin semilla propia todavía (a diferencia de Bram).
 
+- **✅ SESIÓN 2026-07-24 (parte 4) — IVEN: POBREZA ESTRUCTURAL + PÉRDIDA DE
+  ORIGEN:** Su asentamiento redefinido como pobre/alta mortalidad crónica
+  desde siempre (no crisis reciente) — la corrupción de Aether aceleró una
+  condición ya existente, conecta con [[Estructura Política]] ("la frontera
+  no es prioridad" = política de generaciones). Nueva pérdida de origen: su
+  hermana menor Sael murió a los 5 años (Iven tenía 9) por falta de
+  medicina — no fue elegida en un triage familiar. Esto reencuadra su
+  traición: no es la primera vez que "elige quién vive", es la más grande de
+  una vida entera haciendo triage — casi reflejo de supervivencia, no dilema
+  moral nuevo. Eco explícito de Sael añadido al clímax y a la línea privada.
+  Detalle en [[LOG]].
+  **Siguiente frente:** Maren sigue sin contexto político/social propio.
+
 - **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
   Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 
   (Fragmento) + asunción de destino con gracia divina (F1/F4) vs. agencia robada 
