@@ -373,6 +373,26 @@ Política]]: "Voice of the Council", no "Rey"). Los 3 embajadores del Council
 deben leer como **diplomáticos/burócratas de alto nivel**, no guerreros ni
 realeza — ropa formal de embajada, no armadura ni corona.
 
+**⚠️ Adjuntar el fenotipo racial correspondiente (hallazgo QA 2026-07-24):**
+todo brief que abre con *"Use the [race] phenotype as the exact anatomy and
+proportion reference"* asume una imagen adjunta — sin ella, NB2 no tiene
+ancla visual real y el texto solo no basta (causa probable de la falla de
+proporción en Ithessa/Borran v1, ver [[LOG]]). Archivos existentes en
+`90-Raw/concept/`:
+
+| Brief | Personaje | Adjuntar |
+|---|---|---|
+| 9a / 9a-v2 | Reina Ithessa | `fenotipo-elfa-V2.png` |
+| 9b / 9b-v2 | Rey Borran | `fenotipo-enano-varon-v1.png` |
+| 9c | Regente Edrick | `fenotipo-humano-v1.png` |
+| 9d | Embajador Cyrion | `fenotipo-elfo-V2.png` |
+| 9e | Embajador Kadrun | `fenotipo-enano-varon-v1.png` |
+| 9f | Consejera Merrit Vance | `fenotipo-humana-V1.png` |
+
+Los prompts v2 (9a-v2, 9b-v2) ya no dependen del adjunto — la proporción
+está reescrita directo en el texto como regla #1 — pero adjuntar igual
+refuerza, no contradice.
+
 ### 9a — Reina Ithessa (Stillwood)
 
 555 años — mayor que Valen/Sereth (180-250) pero más joven que el Círculo de
