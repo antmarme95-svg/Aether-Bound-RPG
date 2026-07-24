@@ -7,11 +7,20 @@ updated: 2026-07-23
 # Dagna — C3 Pivote (Humano Duelist Jugador)
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Vanguard  
-**Origen:** Clan de Forja, Ignis Reach  
+**Origen:** Subclán vasallo del Gran Clan de Forja, Ignis Reach  
 **Edad aparente:** 90-110 años (madura, veterana de protección)  
 **Arquetipo de Traición:** Ley del clan vs. Promesa personal  
 
 ---
+
+## Afiliación de Clan (canon [[Estructura Política]])
+
+Dagna **no es del Gran Clan de Forja directamente** — pertenece a un subclán
+que le debe lealtad/servicio al clan real. Esto vuelve su cadena de
+obligación de **dos eslabones, no uno**: ella obedece a su subclán, y su
+subclán a su vez obedece al Gran Clan. Cuando "el clan ordena," en realidad
+la orden vino de arriba, pasó por su subclán, y llegó a ella ya como mandato
+absoluto — sin que ella tenga forma de cuestionar el eslabón intermedio.
 
 ## Esencia
 
@@ -19,7 +28,7 @@ Vanguard muralla — cuerpo como fortaleza que protege a todos. **La montaña.**
 
 La traición de Dagna es la más devastadora porque es **traición de la única mujer a quien Roen confió completamente.** Dagna es espejo de Roen — ambos Vanguards, ambos protectores — pero ella elige clan sobre grupo.
 
-El dilema de Dagna: ley del clan ordena que proteja sangre de clan. El grupo no es sangre. Sangre gana.
+El dilema de Dagna: ley del clan ordena que proteja sangre de clan. El grupo no es sangre. Sangre gana. Y ni siquiera es sangre *directa* — es lealtad heredada a un clan que gobierna al suyo.
 
 **Arquetipos resonantes:** Catelyn Stark (clan vs grupo), el soldado que regresa a tribu.
 
@@ -27,19 +36,30 @@ El dilema de Dagna: ley del clan ordena que proteja sangre de clan. El grupo no 
 
 ## Biografía
 
-### Clan de Forja: Protectora Designada (edades 0-80)
+### Subclán: Protectora Designada (edades 0-80)
 
-Nacida en clan de forja enano. Su rol fue predeterminado: **Vanguard.** El muro entre clan y amenazas externas.
+Nacida en un subclán vasallo, deudor de servicio al Gran Clan de Forja desde
+hace generaciones — la clase de deuda que ningún subclán recuerda haber
+contraído voluntariamente, pero que nadie cuestiona. Su rol fue
+predeterminado: **Vanguard.** El muro entre su gente y las amenazas externas.
 
-Cumplió 60 años en ese rol. Protegió a su clan contra bestias, contra hambruna, contra colapso.
+Cumplió 60 años en ese rol. Protegió a su subclán contra bestias, contra
+hambruna, contra colapso — y, indirectamente, protegió también los intereses
+del Gran Clan, que su subclán sirve.
 
-**Ley del Clan:** El deber al clan es absoluto. Es lo único que importa. Sacrifica cualquier cosa por clan.
+**Ley del Clan:** El deber es absoluto, en dos niveles — al subclán primero,
+y a través de él, al Gran Clan. Es lo único que importa. Sacrifica cualquier
+cosa por ambos.
 
 ### Encargo Especial (últimos 10 años)
 
-Hace 10 años, el Consejo contactó al clan: *"Envíen a protectora. El mundo requiere defensor. Si sirve bien, el clan recibe recursos, oro, posición. Cinco años de servicio."*
+Hace 10 años, el Gran Clan de Forja contactó al subclán de Dagna: *"Envíen a
+protectora. El mundo requiere defensor. Si sirve bien, el subclán recibe
+recursos, oro, posición ante nosotros. Cinco años de servicio."* Una orden
+del Gran Clan, transmitida como mandato del propio subclán — así es como
+siempre llega.
 
-El clan decidió: envía a Dagna.
+El subclán decidió: envía a Dagna.
 
 Dagna no cuestionó. **Es enana. Clan ordena, Dagna obedece.**
 
@@ -53,35 +73,53 @@ Dagna dijo sí. **Por primera vez, eligió sobre clan.**
 
 ### Presente: La Orden del Clan
 
-Hace 1 año, el clan contactó: *"Dagna. El mundo tiene variable que amenaza al clan. Confundirá el Aether, debilitará nuestro territorio, causará caída de poder. Debes tomar la variable."*
+Hace 1 año, su subclán contactó: *"Dagna. El Gran Clan de Forja identificó
+una variable que amenaza el territorio. Confundirá el Aether, debilitará
+nuestra posición ante ellos, causará caída de poder. Debes tomar la
+variable."*
 
 Dagna: *"¿Quién es?"*
 
-Clan: *"Irrelevante. Es amenaza. Clan ordena."*
+Subclán: *"Irrelevante. Es amenaza. El Gran Clan ordenó. Nosotros ordenamos.
+Cumples."*
 
-**Dagna siente el peso de dos promesas.** Una al clan, una al jugador.
+**Dagna siente el peso de dos promesas.** Una a la cadena de clanes que la
+crió y la define, una al jugador.
 
-No puede honrar ambas.
+No puede honrar ambas. Y ni siquiera puede negociar con la fuente real de la
+orden — nunca habla directamente con el Gran Clan, solo con su subclán, que
+tampoco puede negarse.
 
 ---
 
 ## Cómo lo Ve Darro (Enano, Conocimiento Previo)
 
-**Contexto:** Darro es Enano Duelist de Emberdeep (rechazado del gremio). Dagna es Enana Vanguard de Clan de Forja — máxima autoridad enana en protección.
+**Contexto:** Darro es Enano Duelist de Emberdeep, rechazado del Gran Clan de
+Forja de joven. Dagna nunca fue rechazada — pero tampoco fue nunca elegida
+para ser del Gran Clan: nació ya en un subclán vasallo, sirviéndolo desde
+antes de nacer. Ni rechazo ni elección — herencia.
 
-Cuando Dagna se une al grupo, Darro la reconoce: *"Dagna. Montaña del Clan de Forja."*
+Cuando Dagna se une al grupo, Darro la reconoce: *"Dagna. De uno de los
+subclanes del Gran Clan."*
 
 Dagna: *"Darro. Duelist solo."*
 
-Darro: *"Así es. ¿Cómo cae una maestra del clan al grupo de un desconocido?"*
+Darro: *"Así es. ¿Cómo cae la protectora de un subclán al grupo de un
+desconocido?"*
 
-Dagna: *"Porque el desconocido preguntó si quería quedarse. Por primera vez, elegí sobre clan."*
+Dagna: *"Porque el desconocido preguntó si quería quedarse. Por primera vez,
+elegí sobre el subclán."*
 
-Darro: *"Eso es peligroso, enana. El clan siempre llama."*
+Darro: *"Eso es peligroso, enana. El Gran Clan siempre llama — y tu subclán
+llama por ellos."*
 
 Dagna: *"Sé."*
 
-**Primera impresión:** Darro ve a la protectora que hace lo que él no pudo — elegir fuera del sistema que rechazó a uno pero eligió a la otra. Hay hermandad silenciosa entre rechazado y elegida.
+**Primera impresión:** Darro ve a alguien que técnicamente nunca fue
+rechazada como él, pero que tampoco eligió su lugar — nació atada a una
+cadena de mando que ni siquiera es la suya de origen. Hay una hermandad
+distinta a la que tiene con Torgan: no es "ambos rechazados," es "ninguno de
+los dos eligió el sistema que nos define."
 
 **Cuando traiciona:** Darro es quien primero **entiende por qué actúa**. No porque le duela menos — porque entiende que es Ley del Clan, inquebrantable como montaña.
 

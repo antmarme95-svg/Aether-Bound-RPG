@@ -7,11 +7,20 @@ updated: 2026-07-23
 # Vekka — C3 Pivote (Humano Vanguard Jugador)
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Strategist  
-**Origen:** Gremio Forjero, Ignis Reach  
+**Origen:** Gran Clan de Forja (clan real), Ignis Reach  
 **Edad aparente:** 80-100 años (maestra de gremio)  
 **Arquetipo de Traición:** Deber de gremio vs. Promesa personal  
 
 ---
+
+## Afiliación de Clan (canon [[Estructura Política]])
+
+Vekka es **100% Gran Clan de Forja** — no un gremio aparte de la corona, es
+el clan real mismo. Su autoridad como Maestra no es solo técnica: **es
+autoridad de Estado.** Cuando el gremio le ordena desmontar algo, la orden
+viene directamente del poder central de Ignis Reach — el mismo cuerpo que
+gobierna junto al Rey Borran. No hay apelación posible, porque no hay nadie
+por encima a quien apelar salvo la corona misma.
 
 ## Esencia
 
@@ -45,15 +54,18 @@ Vekka aceptó. **Porque enano no cuestiona deber de gremio.** Deber supersede to
 
 ## Cómo lo Ve Darro (Enano, Conocimiento Previo)
 
-**Contexto:** Darro fue rechazado por el gremio forjero (aprendizaje incompleto). Vekka es Maestra del Gremio — la máxima autoridad que lo rechazó.
+**Contexto:** Darro fue rechazado por el Gran Clan de Forja de joven
+(aprendizaje incompleto — el mismo rechazo que compartió con Torgan). Vekka
+es Maestra **del clan real mismo** — no una autoridad adyacente, sino la
+máxima autoridad técnica del sistema que lo expulsó.
 
-Cuando Vekka se une al grupo, Darro la reconoce inmediatamente: *"Vekka. Maestra."*
+Cuando Vekka se une al grupo, Darro la reconoce inmediatamente: *"Vekka. Maestra del Gran Clan."*
 
 Vekka: *"Darro. No esperaba verte aquí."*
 
-Darro: *"¿Dónde más iría un aprendiz rechazado?"*
+Darro: *"¿Dónde más iría un aprendiz rechazado? Al menos Torgan encontró otro clan. A mí no me quiso nadie."*
 
-**Primera impresión:** Darro ve a la mujer enana que representa todo lo que lo expulsó — honor del gremio, perfección técnica, deber sobre persona. Pero también ve a maestra que **entiende por qué lo rechazó.** Era verdad enana.
+**Primera impresión:** Darro ve a la mujer enana que representa todo lo que lo expulsó — honor del gremio, perfección técnica, deber sobre persona, **y pertenencia plena al sistema que a él lo escupió sin siquiera ofrecerle un lugar menor.** Pero también ve a maestra que **entiende por qué lo rechazó.** Era verdad enana.
 
 Hay dolor en ese reconocimiento, pero NO hay resentimiento.
 

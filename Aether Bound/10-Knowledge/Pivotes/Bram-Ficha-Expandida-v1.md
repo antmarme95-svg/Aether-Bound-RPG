@@ -7,7 +7,7 @@ updated: 2026-07-23
 # Bram — C3 Pivote (Enano Strategist Jugador)
 
 **Raza / Rol:** Humano (the Restless) / Vanguard  
-**Origen:** Frontera Este (sin nombre, zona de guerra permanente)  
+**Origen:** Casa Thorne, Rivermeet (huyó a la Frontera Este a los 15)  
 **Edad aparente:** 55-65 años (aparentemente gastado por 20+ años de combate)  
 **Arquetipo de Traición:** Agotamiento expresado como deserción  
 
@@ -23,15 +23,52 @@ La traición de Bram es la más desgarradora porque no viene de malicia ni cálc
 
 ---
 
+## Afiliación de Casa (canon [[Estructura Política]])
+
+Bram nació en **Casa Thorne**, familia con historia diplomática/de Consejo
+en Rivermeet — el tipo de sangre que hubiera significado corte, negociación,
+papeleo. A los 15, en vez de tomar el camino esperado, **huyó** — se alistó
+en una compañía mercenaria de la Frontera Este, el trabajo más lejano posible
+de un salón político. No fue rechazo de su familia; fue rechazo del *camino*
+que su familia representaba.
+
+20 años después, sigue siendo "el muro de todos" — y hay una lectura nueva en
+eso: toda su vida tuvo una puerta política fácil disponible y la rechazó por
+el camino duro. Ahora, agotado, finalmente quiere una puerta que sea *suya*,
+no la que Casa Thorne le hubiera dado gratis. Cortó lazos hace 20 años — sin
+protección de linaje, solo su contrato de mercenario. Es posible que conozca
+al **Regente Edrick Ashcombe**: dos hombres de Casas políticas de Rivermeet,
+uno que se quedó en el juego, otro que huyó de él.
+
+---
+
 ## Biografía Pre-Aventura
 
-### Frontera Este: Reclutamiento (edades 0-20)
+### Casa Thorne: La Huida (edades 0-15)
 
-Nacido en frontera este — zona de guerra permanente entre asentamientos humanos y expansión de The Wilds. Infancia fue **supervivencia bajo fuego constante.**
+Nacido en Rivermeet, en Casa Thorne — no la más poderosa de las Casas del
+Consejo, pero sí una con asiento reconocido, generaciones de consejeros y
+mediadores. Se esperaba que Bram, como los Thorne antes que él, aprendiera
+retórica, protocolo, la paciencia fría de la política.
 
-A los 15, fue reclutado (¿voluntariamente? Técnicamente. ¿Realmente? No había alternativa.) por compañía mercenaria que el Consejo usaba como primera línea de defensa.
+Bram odiaba todo eso. No por rebeldía — por instinto. Prefería el peso de
+algo real en las manos a la palabra bien elegida. A los 15, sin decir nada a
+su familia, se fue a la Frontera Este y se alistó en la primera compañía
+mercenaria que lo aceptó.
 
-Bram fue bueno. Muy bueno. Cuerpo masivo, reflexos rápidos, umbral de dolor alto — cualidades de guerrero de línea frontal.
+**No volvió a usar el apellido Thorne desde entonces.** Para el resto del
+mundo — incluso para Roen, incluso para el jugador — es solo Bram.
+
+### Frontera Este: Reclutamiento (edades 15-20)
+
+La Frontera Este — zona de guerra permanente entre asentamientos humanos y
+expansión de The Wilds — se convirtió en su hogar real. Infancia terminó de
+golpe: **supervivencia bajo fuego constante,** exactamente lo opuesto a los
+salones que dejó atrás.
+
+Bram fue bueno. Muy bueno. Cuerpo masivo, reflexos rápidos, umbral de dolor
+alto — cualidades de guerrero de línea frontal. Nadie ahí sabía ni le
+importaba que llevara sangre de Casa Thorne.
 
 ### 20 Años de Pared (edades 20-55, presente)
 
@@ -77,7 +114,8 @@ Cuando Bram se une al grupo, Roen lo reconoce: *"Frontera este. Compañía de Br
 
 Bram: *"Consejo dijo que te conocía."*
 
-Roen: *"Sé tu nombre. No sé tu historia."*
+Roen: *"Sé tu nombre. No sé tu historia."* (Roen no sabe de Casa Thorne — pocos
+lo saben. Bram enterró ese apellido hace 20 años.)
 
 Bram: *"Es la misma historia. Muro que se cansa."*
 

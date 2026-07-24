@@ -23,15 +23,43 @@ La traición no es decisión — es **cumplimiento de promesa anterior.**
 
 ---
 
+## Afiliación de Clan (canon [[Estructura Política]])
+
+**Torgan está fuera del Gran Clan de Forja** — el clan real de Ignis Reach.
+De joven intentó entrar como aprendiz al Gran Clan (el mismo camino que
+intentó Darro) y **fue rechazado.** Su Juramento de Forja de 55 años NO fue
+jurado al clan que lo rechazó — fue jurado a un clan propio, menor, donde
+encontró pertenencia después del rechazo. Eso vuelve el juramento MÁS
+preciado, no menos: es la lealtad que eligió después de que la lealtad
+"prestigiosa" lo escupiera.
+
 ## Biografía Pre-Aventura
 
-### Emberdeep: El Aprendizaje (edades 0-40)
+### Emberdeep: El Rechazo, Luego el Aprendizaje (edades 0-40)
 
-Nacido en Emberdeep, forja suprema de Ignis Reach. Familia de guerreros — no forjeros. Sus antepasados fueron duelists de gremio, protectores de forja.
+Nacido en Emberdeep, cerca de la forja suprema de Ignis Reach. Familia de
+guerreros — no forjeros. Sus antepasados fueron duelists de gremio,
+protectores de forja, pero **sin sangre en el Gran Clan de Forja.**
 
-Torgan fue criado para ser **arma del gremio.** Entrenamiento desde los 5 años. Disciplina, lucha cuerpo-a-cuerpo, reflejos.
+A los 15, Torgan solicitó aprendizaje formal en el Gran Clan de Forja — el
+camino prestigioso, el que hubiera significado tatuaje real, servicio a la
+corona. **Fue rechazado.** Sin explicación más allá de "no hay lugar." El
+mismo rechazo, el mismo año, casi el mismo día que un tal Darro.
 
-**A los 20:** Completó aprendizaje de gremio. Recibió el Tatuaje Completo — patrón ámbar/dorado que corre por ambos brazos. Es marca de maestría enana: promesa de que servirá al gremio de por vida.
+Nunca hablaron entonces. Pero Torgan recuerda haber visto a otro enano joven
+saliendo de la misma sala, con la misma cara.
+
+Torgan fue criado, después del rechazo, por un **clan menor de guerreros** —
+gente que también servía a la forja, pero sin la sangre ni el prestigio del
+Gran Clan. Ahí sí lo aceptaron. Entrenamiento desde los 16. Disciplina, lucha
+cuerpo-a-cuerpo, reflejos — **arma de un clan que no necesitaba ser el más
+grande para exigir lealtad total.**
+
+**A los 20:** Completó aprendizaje de su clan (no el Gran Clan). Recibió el
+Tatuaje Completo — patrón ámbar/dorado que corre por ambos brazos. No es la
+marca del Gran Clan de Forja, es la marca de **su** clan — pero para Torgan,
+después del rechazo, significa aún más: es la promesa de que alguien lo
+quiso lo suficiente para tatuarlo con su nombre.
 
 **Lo que el tatuaje significa:** Juramento formal. No es decoración. Es **contrato escrito en piel.**
 
@@ -71,21 +99,32 @@ Ambos no pueden ser verdaderos.
 
 ## Cómo lo Ve Darro (Enano, Conocimiento Previo)
 
-**Contexto:** Darro es de Emberdeep también — ex-aprendiz del gremio. Conoce a Torgan de nombre. Maestro duelist. Veterano. Alguien que "nunca cuestiona."
+**Contexto:** Darro y Torgan comparten algo que ninguno de los dos dice en
+voz alta al principio: **fueron rechazados el mismo año por el mismo Gran
+Clan de Forja.** Darro nunca encontró otro clan que lo aceptara — se quedó
+fuera de todo. Torgan sí — encontró un clan menor, se tatuó, juró.
 
 Cuando Torgan se une al grupo, Darro lo reconoce: *"Torgan. El famoso. El del Tatuaje Completo."*
 
-Torgan: *"Darro. Escuché que saliste del gremio."*
+Torgan: *"Darro. Escuché que saliste del gremio."* (No especifica cuál —
+ambos saben que habla del Gran Clan, el que los rechazó a los dos.)
 
 Darro: *"Gremio y yo tuvimos diferencias. ¿Tú?"*
 
-Torgan: *"El gremio y yo tenemos acuerdos. Diferentes."*
+Torgan: *"A mí ni me dejaron entrar. Encontré otro camino."*
 
-**Primera impresión:** Darro ve a alguien que eligió la cadena. Lo respeta pero no lo entiende.
+**Ese es el momento donde se reconocen de verdad** — no como "el exitoso" y
+"el fracasado," sino como dos rechazados que el mismo sistema escupió el
+mismo año, y que terminaron en lugares distintos por pura suerte de a quién
+más conocieron después.
 
-**Cuando traiciona:** Darro dice: *"Sabía que esto venía. El tatuaje obliga. Gremio siempre cobra."*
+**Primera impresión:** Darro ve a alguien que encontró la pertenencia que a
+él se le negó — no envidia, es más complicado que eso. Respeto genuino
+mezclado con una tristeza que no nombra.
 
-No es amargo de Darro — es reconocimiento. Ambos son de la misma forja. Torgan simplemente eligió diferente.
+**Cuando traiciona:** Darro dice: *"Sabía que esto venía. El tatuaje obliga. No el Gran Clan — el tuyo. Pero igual obliga."*
+
+No es amargo — es reconocimiento. Ambos fueron escupidos por el mismo lugar. Torgan simplemente tuvo la suerte de que otro clan lo quisiera.
 
 ---
 
@@ -355,14 +394,15 @@ Conversación sobre el Juramento: Valen pregunta si es variable mutable. Torgan:
 
 **Cuando traiciona:** Valen: *"No calculé bien. El Juramento era variable que superaba mis modelos. Eso es interesante."*
 
-### Torgan + Darro (Ambos Enanos — Elecciones Opuestas)
+### Torgan + Darro (Mismo Rechazo, Caminos Distintos)
 
-**Primera impresión:** Darro ve a Torgan como la versión de sí mismo que no eligió. Torgan ve a Darro como enano que se atrevió a cuestionar.
+**Primera impresión:** Darro ve a Torgan como la versión de sí mismo que sí encontró clan después del rechazo. Torgan ve a Darro como el espejo de lo que le pudo haber tocado si nadie más lo hubiera aceptado.
 
-*"Saliste del gremio."*  
-*"Tú no."*  
-*"El gremio me crió. No puedo negar eso."*  
-*"Yo tampoco. Solo niego lo que hicieron conmigo."*
+*"El Gran Clan nos rechazó a los dos el mismo año."*  
+*"Y tú encontraste otro. Yo no."*  
+*"Suerte. Nada más. Pudo ser al revés."*  
+*"No me consuela."*  
+*"No debería."*
 
 **Tensión:** Darro pregunta si Torgan se arrepiente. Torgan: *"Cada día. Pero arrepentimiento no es razón para romper promesa."*
 

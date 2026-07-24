@@ -23,6 +23,17 @@ La traición de Sereth es la más compleja porque no es desprecio disfrazado de 
 
 ---
 
+## Afiliación de Academia (canon [[Estructura Política]])
+
+Sereth es producto de la **Academia Real** — tradición aplicada al servicio
+de la Corona: "el cálculo sirve al Estado." A diferencia de la Academia
+Élfica (donde estudió Valen), que entrena para observar sin intervenir, la
+Academia Real entrena explícitamente para **actuar** — incluso manipular —
+en nombre del bien mayor calculado. Esto no es un defecto de carácter de
+Sereth: es literalmente lo que le enseñaron que era correcto desde niño en
+palacio. Explica por qué manipula "por el bien mayor" sin culpa — así lo
+entrenaron a pensar, generación tras generación de consejeros de Corte.
+
 ## Biografía Pre-Aventura
 
 ### The Stillspire: Política (Infancia/Adolescencia, edades 0-80)
@@ -65,19 +76,36 @@ Pero Sereth **no es frío al respecto.** Reconoce el costo. La ama precisamente 
 
 ## Cómo lo Ve Valen (Elfo, Conocimiento Previo)
 
-**Contexto:** Valen y Sereth son ambos Strategists élficos de The Stillspire. Se cruzan en archivos hace décadas. Se respetan intelectualmente pero con tensión — Valen es observador honesto, Sereth es manipulador honesto.
+**Contexto:** Valen y Sereth son ambos Strategists élficos de The Stillspire —
+pero de **escuelas rivales.** Valen es Academia Élfica (observar sin
+intervenir); Sereth es Academia Real (actuar por cálculo, al servicio de la
+Corona). No es solo diferencia de método — es diferencia de para quién
+trabajan: Valen no responde a nadie, Sereth responde, en última instancia, a
+la Reina Ithessa y su corte. Se cruzan en archivos hace décadas — Valen
+investigando ciclos por su cuenta, Sereth investigando ciclos porque el
+palacio se lo pidió.
 
-Cuando Sereth se une al grupo, Valen lo reconoce: *"Sereth. He visto tus predicciones. Sofisticadas."*
+Cuando Sereth se une al grupo, Valen lo reconoce: *"Sereth. Academia Real.
+He visto tus predicciones. Sofisticadas — y convenientes para quien las
+encargó."*
 
-Sereth: *"He visto las tuyas. Más honestas, menos completas."*
+Sereth: *"He visto las tuyas. Más honestas, menos completas. Y sin nadie que
+te pida rendir cuentas por ellas."*
 
 Valen: *"Honestidad tiene valor."*
 
-Sereth: *"También tiene precio. Yo elegí pagar diferente."*
+Sereth: *"También tiene precio. Yo elegí pagar diferente — y elegí a quién
+le rindo cuentas por ese precio. Tú no le rindes cuentas a nadie. Eso también
+es una elección, Valen. No la llames neutralidad."*
 
-**Primera impresión:** Valen ve a alguien que manipula versiones de lo que él observa. Sereth ve a alguien que rechaza manipulación por principio.
+**Primera impresión:** Valen ve a alguien que manipula versiones de lo que él
+observa, formado por una academia que existe específicamente para producir
+gente así. Sereth ve a alguien que rechaza manipulación por principio, pero
+solo porque su academia le permitió el lujo de nunca tener que rendir
+cuentas a una Corona.
 
-Hay respeto. También hay fricción irreconciliable.
+Hay respeto. También hay fricción irreconciliable — dos productos de la
+misma ciudad, entrenados por instituciones que se desprecian mutuamente.
 
 **Cuando traiciona:** Valen dice: *"Tres meses atrás tu distribución de Stillspire contactos cambió. Comenzaste a reportar a consejeros. Calculé esta trayectoria entonces."*
 

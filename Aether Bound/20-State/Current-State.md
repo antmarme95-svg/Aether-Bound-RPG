@@ -28,6 +28,22 @@ updated: 2026-07-24
   texto — requiere regeneración cuando se itere el asset visual (brief fuente
   ya corregido).
 
+- **✅ SESIÓN 2026-07-24 (parte 2) — ESTRUCTURA POLÍTICA DE LAS 3 RAZAS:**
+  Nuevo documento canónico [[Estructura Política]]. **Elfos:** Reina Ithessa
+  (555 años, bebé durante el cataclismo) + Círculo de los Vivos (<5 elfos con
+  memoria directa) + 2 Academias (Élfica de los Sabios / Real al servicio de
+  la Corona). **Enanos:** Rey Borran (bisnieto directo, sucesión ritual) + el
+  Gran Clan de Forja ES el clan real, con 3 niveles entre pivotes (Vekka 100%
+  clan real / Dagna subclán vasallo / Torgan rechazado, clan menor propio).
+  **Humanos:** sin dinastía estable (6-8 Casas en 550 años), Regente Edrick
+  Ashcombe (no Rey), Triune Council en Rivermeet como autoridad real
+  continua. Apellidos exclusivos de cultura humana (no todos los usan en la
+  práctica). **Fichas actualizadas:** Torgan, Dagna, Vekka (clanes) + Valen,
+  Sereth (academias, rivalidad de escuelas) + Bram (Casa Thorne, huyó a los
+  15 del camino político). Detalle completo en [[LOG]].
+  **Pendiente:** afiliación de Academia para Lyris/Nyael (abierto, no
+  urgente).
+
 - **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
   Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 
   (Fragmento) + asunción de destino con gracia divina (F1/F4) vs. agencia robada 

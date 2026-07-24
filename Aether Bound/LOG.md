@@ -1,5 +1,57 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | ESTRUCTURA POLÍTICA de las 3 razas + fichas actualizadas
+
+**Disparador:** continuación directa de la sesión de retcon del cataclismo —
+Boris pidió mapear cómo se gobierna cada reino, con 3 semillas: Reina Elfa
+joven que era bebé durante el cataclismo, Rey Enano de línea directa
+(nieto/bisnieto), Rey Humano sin línea recta (varios golpes/guerras civiles).
+
+**Nuevo documento canónico:** `10-Knowledge/Estructura Política.md`
+
+- **Elfos:** Reina Ithessa, 555 años (tenía ~5 durante el cataclismo). El
+  Círculo de los Vivos (<5 elfos que sí eran adultos jóvenes entonces) tiene
+  autoridad moral informal que la Reina no puede reclamar. Dos Academias:
+  **Élfica** (de los Sabios — observar sin intervenir, de aquí sale el
+  Círculo) y **Real** (al servicio de la Corona — el cálculo sirve al
+  Estado).
+- **Enanos:** Rey Borran, bisnieto directo del Rey del cataclismo — sucesión
+  = ritual sagrado, sin disputa. El **Gran Clan de Forja ES el clan real**
+  (no un gremio aparte). Estructura de 3 niveles entre pivotes: Vekka (100%
+  clan real) / Dagna (subclán vasallo, cadena de obligación de 2 eslabones) /
+  Torgan (rechazado del clan real de joven, juró lealtad a un clan menor
+  después)
+- **Humanos:** sin dinastía estable — 6-8 Casas distintas en 550 años.
+  **Regente Edrick Ashcombe** (no "Rey" — cargo precario, "Voice of the
+  Council"). El Triune Council en Rivermeet es la autoridad real continua.
+  **Apellidos solo en cultura humana** (elfos no los necesitan por longevidad,
+  enanos ya tienen el Clan como equivalente) — pero no todos los humanos los
+  usan en la práctica (campesinado/tropa rasa no, nobleza sí)
+
+**Fichas actualizadas con la nueva estructura:**
+- `Torgan-Ficha-Expandida-v1.md` — reescrita la biografía temprana: rechazado
+  del Gran Clan de Forja el mismo año que Darro, encontró pertenencia en un
+  clan menor después. "Cómo lo ve Darro" reescrito para reflejar el rechazo
+  compartido
+- `Dagna-Ficha-Expandida-v1.md` — reescrita como subclán vasallo (no clan
+  real directo), cadena de obligación de 2 eslabones. "Cómo lo ve Darro"
+  ajustado
+- `Vekka-Ficha-Expandida-v1.md` — confirmada como 100% Gran Clan de Forja,
+  su autoridad de Maestra es autoridad de Estado. "Cómo lo ve Darro" ajustado
+- `Valen-Ficha-Expandida-v1.md` (ficha fija) — nueva sección de afiliación:
+  Academia Élfica, explica por qué observa sin actuar
+- `Sereth-Ficha-Expandida-v1.md` — nueva sección de afiliación: Academia
+  Real. "Cómo lo Ve Valen" reescrito como rivalidad de escuelas de
+  pensamiento, no solo personalidades distintas
+- `Bram-Ficha-Expandida-v1.md` — nuevo origen: Casa Thorne de Rivermeet, huyó
+  a los 15 en vez de tomar el camino político esperado. Nueva sección de
+  afiliación + ajuste en "Cómo lo ve Roen"
+
+**Pendiente:** Lyris y Nyael (ambas Stillspire) no tienen afiliación de
+Academia definida — abierto para sesión futura si se vuelve relevante.
+
+---
+
 ## [2026-07-24] retcon/design | CATACLISMO: 100 → 550 años + longevidad de razas + niveles de conocimiento
 
 **Disparador:** revisión del mapa del mundo (Boris) — Rivendell/Imladris para
