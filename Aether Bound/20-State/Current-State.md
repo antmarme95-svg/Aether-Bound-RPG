@@ -227,10 +227,10 @@ updated: 2026-07-23
 - **Momentos de Persona de Speck** (~7 escenas narrativas sin UI) — mencionadas pero no escritas
 - **Diálogos de Bautizo (Darro nombrando Speck)** — narrativa locked pero escena no scripted
 
-**✅ PERSONAJES — LOS 9 PIVOTES (2026-07-23):**
-- **✅ Fichas Narrativas Expandidas COMPLETAS:** Maren, Torgan, Iven, Sereth, Bram, Lyris, Nyael, Vekka, Dagna
+**✅ PERSONAJES — LOS 9 PIVOTES + 3 FIJOS (2026-07-23):**
+- **✅ Fichas Narrativas Expandidas COMPLETAS (9 Pivotes):** Maren, Torgan, Iven, Sereth, Bram, Lyris, Nyael, Vekka, Dagna
   - Biografía pre-aventura única por Pivote
-  - Cómo lo ve Personaje Fijo (misma raza): Conocimiento Previo
+  - Cómo lo ve Personaje Fijo (misma raza): Conocimiento Previo (Roen→3 Humanos, Valen→3 Elfos, Darro→3 Enanos)
   - Encuentro con jugador específico por cell (raza/rol)
   - Arco 3-actos completo (Lealtad → Comunidad → Desilusión)
   - Clímax + traición (9 patrones narrativos distintos)
@@ -239,6 +239,15 @@ updated: 2026-07-23
   - Dinámicas con Roen/Valen/Darro
   - Diseño visual ratificado + arma/técnica
 - **✅ Roen, Valen, Darro fichas:** Concepto completo con encuentros personalizados (18 total)
+
+**✅ WORLDBUILDING — GEOGRAFÍA Y CIUDADES (2026-07-23):**
+- **✅ 3 Reinos mapeados:** Aethelgard (Rivermeet, Mistbound Frontier, Iven's Settlement) / Ignis Reach (Emberdeep, Ember Workshops) / Stillwood (The Stillspire, Sky Watchtowers)
+- **✅ Zonas Neutras/Secundarias:** The Driftmarket (hub flotante), Sunken Archive (bóveda clímax), The First Wound (cementerio final)
+- **✅ Beats narrativos por acto:** Acto 1 (tu gajo) / Acto 2 (3 sub-actos, rueda completa) / Acto 3 (clímax + 4 finales)
+- **✅ Arterias de conexión:** River Road (co-op Tank/Strategist) / Cinder Ascent (escalada) / Gloomvault (oscuridad)
+- **✅ Personajes mapeados a ciudades:** tabla completa origen→ciudad
+- **✅ Tiempos de viaje estimados:** Rivermeet↔Emberdeep 30-40min, Emberdeep↔Stillwood 45-60min, etc.
+- **Pendiente:** Fast travel diegético (barcazas Driftmarket, túneles enanos)
 
 **Worldbuilding — Cultura/Lore:**
 - **Culturas por raza** — Aether-Born/Iron-Blooded/Restless existen narrativamente pero NO tienen ceremonia/idioma/costumbre documentadas
