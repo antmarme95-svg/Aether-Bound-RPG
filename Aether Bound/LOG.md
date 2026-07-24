@@ -1,5 +1,51 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design/QA | Ithessa + Borran (NB2): QA imparcial + prompts reforzados
+
+**Disparador:** Boris generó Reina Ithessa, Rey Borran y Regente Edrick con
+los briefs §9a/9b/9c en NB2 y pasó las 3 imágenes para evaluación.
+
+**Evaluación contra brief + Art Bible:**
+
+**Problema sistémico (las 3 imágenes):** estilo desviado de Sable×BotW —
+sombreado en gradiente suave, línea de tinta tipo vector limpio, sin grano
+de papel visible, sin bandas cel de 3-4 escalones con dry-brush jitter. Más
+cerca de "ilustración de videojuego pulida/semi-anime" que de acuarela
+lavada — negativo explícito del Art Bible.
+
+**🔴 CRITICAL — Reina Ithessa:**
+1. Corona metálica presente pese al negativo explícito ("no separate metal
+   crown" — la regalía debía ser el propio cabello trenzado)
+2. Silueta no lee como el ancla élfica (hombreras anchas, proporción de
+   fantasía estándar en vez de línea vertical continua de 8 cabezas)
+3. Marcas teal extendidas por mejillas como pintura facial (brief pedía
+   grabados discretos solo en clavícula/antebrazos/sienes)
+
+**🔴 CRITICAL — Rey Borran:**
+1. Proporción enana ROTA — lee como vikingo humano grande (~5-6 cabezas),
+   no como el trapezoide de 4.5 cabezas blindado en canon (Dagna/Torgan/
+   Vekka ya lo respetan en imágenes previas)
+2. Corona genérica sin motivo de martillo/forja
+
+**🟡 MEDIUM — Regente Edrick:** el más cercano al brief (cadena de oficio en
+vez de corona ✅, sin regalía real ✅) — solo le pesa el problema sistémico
+de estilo. Aprobado con reserva menor, sin necesidad de reroll.
+
+**Acción:** 2 prompts reforzados nuevos (§9a-v2, §9b-v2) en `Briefs de
+Concept Art.md`, mismo patrón que blindó la proporción enana en el brief 2c
+("the proportions are the single most important rule"):
+- Ithessa v2: silueta reforzada en positivo (8 cabezas, sin hombreras),
+  regalía sin metal reforzada en positivo Y negativo, marcas relocalizadas
+  explícitamente fuera de la cara, negativos de estilo mucho más agresivos
+  (no smooth gradient, no vector linework, no anime finish)
+- Borran v2: proporción enana reforzada como regla #1 (4.5 cabezas,
+  trapezoide, NOT viking-human build), corona con motivo de martillo
+  explícito, mismos negativos de estilo agresivos
+
+**Pendiente:** Boris corre los 2 prompts v2 en NB2, se re-evalúa.
+
+---
+
 ## [2026-07-24] design | Briefs de concept art: Gobernantes + Triune Council (NB2)
 
 **Disparador:** antes de arrancar guión/diálogos, Boris quiere generar
