@@ -41,19 +41,30 @@ updated: 2026-07-23
 ### 1. AETHELGARD (Reino Humano — Oeste)
 
 **Capital / Ciudad Principal:**
-- **Rivermeet** — ciudad fluvial sobre confluencia de ríos
+- **Rivermeet** — ciudad fluvial sobre confluencia de ríos, **asentada directamente
+  sobre River Road, en el límite real con The Wilds**
   - Sede del Triune Council (poder político)
   - Mercado comercial central
   - Origen de diplomacia con otras razas
   - Donde Maren negoció hace 2 años (conoce a jugador)
   - Arquitectura: puentes de madera/piedra, molinería, comercial
+  - **Es, en la práctica, la verdadera "puerta de frontera" de Aethelgard** —
+    ahí termina la civilización organizada y empieza River Road hacia The Wilds
 
 **Asentamientos Secundarios:**
-- **Mistbound Frontier** — región limítrofe noroeste (no ciudad, sino franja)
-  - Donde Roen fue guardia del Consejo (frontera contra bestias)
+- **Mistbound Frontier** — **no es la frontera con The Wilds, sino tierra
+  interior remota** de Aethelgard, más allá de Rivermeet (sur-oeste profundo,
+  lejos del río). Menos "borde del mapa mágico" y más "borde del mapa
+  civilizado": ahí el Consejo pierde control administrativo, no porque colinde
+  con bestias de Aether sino porque está demasiado lejos de todo.
+  - Donde Roen fue guardia del Consejo (puesto de vigilancia interior, no
+    trinchera contra The Wilds)
   - Donde Roen eligió renunciar
   - Arquitectura: fuertes, postas de vigilancia, simplicidad defensiva
-  - Clima: ventoso, árido comparado con Rivermeet
+  - Clima: ventoso, árido — contraste con la humedad fluvial de Rivermeet
+  - **Corrección de mapa:** en el macro-mapa debe leerse detrás/lejos de
+    Rivermeet, nunca pegado a The Wilds — Rivermeet es quien toca la frontera
+    real
   
 - **Iven's Settlement** (nombre sin confirmar) — asentamiento rural moribundo
   - Iven es su guardian/protector
@@ -108,33 +119,68 @@ updated: 2026-07-23
 
 ### 3. STILLWOOD (Reino Elfo — Norte)
 
+**Concepto de transición (Rivendell/Imladris):** Stillwood **no es un reino
+separado de The Wilds por una frontera dura — es su continuación natural
+llevada al extremo.** No hay muro ni corte: el mismo bosque de The Wilds se
+va **cerrando y elevando** progresivamente hacia el norte. Los árboles se
+vuelven más juntos, más altos, más viejos; el terreno sube en elevación
+constante; el bosque empieza a sentirse como **laberinto vertical** (ya no
+caminas entre árboles, subes entre ellos). Gloomvault es el punto donde ese
+proceso se vuelve denso y oscuro; Stillwood es donde culmina: el bosque más
+verde, más alto, más frondoso de todo el mapa — y por ser la parte más alta,
+**es también donde el agua cae**: la elevación genera una cadena de cascadas
+que definen la identidad visual del reino (Rivendell/Imladris: arquitectura
+élfica tallada directamente en/alrededor de caídas de agua, puentes que cruzan
+cascadas, terrazas escalonadas siguiendo el desnivel).
+
 **Capital / Ciudad Principal:**
-- **The Stillspire** — ciudad élfica suspendida en la copa de árboles gigantes
+- **The Stillspire** — ciudad élfica suspendida en la copa de árboles gigantes,
+  **construida en la cabecera de la cadena de cascadas** (el punto más alto
+  del bosque)
   - Centro de conocimiento élfico
   - Donde Valen reside (observador de ciclos)
   - Donde Sereth vive en biblioteca
   - Donde Lyris fue entrenada (cazadora de frontera)
   - Donde Nyael entrena en círculos de ejecución
   - Acceso: muro de enredaderas (mecánica de locomoción, [[Locomoción]])
-  - Arquitectura: orgánica viva, integrada a árboles, puentes naturales, luces Aether verde/teal
-  - Clima: bosque denso, constante crepúsculo (dosel cierra luz)
+  - Arquitectura: orgánica viva, integrada a árboles Y a las cascadas mismas —
+    puentes naturales que cruzan caídas de agua, terrazas talladas en piedra
+    húmeda cubierta de musgo, puentes naturales, luces Aether verde/teal
+  - Clima: bosque denso, constante crepúsculo (dosel cierra luz), neblina de
+    cascada permanente
+
+- **The Ascending Falls** — cadena de cascadas escalonadas que sube desde
+  Gloomvault hasta la base de The Stillspire (landmark nuevo, distinto de
+  The Shattered Cascade que está en The Wilds propiamente)
+  - Conexión narrativa: el "camino de agua" que los elfos siguen para subir
+    al reino — ceremonial, no solo funcional
+  - Mecanismo: ascenso vertical por múltiples niveles (co-op o solo con
+    locomoción avanzada), plataformas tras la cortina de agua
+  - Visual: terrazas de piedra cubiertas de musgo, puentes de raíz cruzando
+    cada caída, luz Aether teal reflejada en el agua
+  - Dinámicas: Lyris/Valen/Sereth/Nyael reconocen cada nivel como "casa"
 
 **Asentamientos Secundarios:**
-- **Stillwood Settlements** (dispersos en bosque)
-  - Pequeños pueblos entre árboles
+- **Stillwood Settlements** (dispersos en las terrazas del bosque ascendente)
+  - Pequeños pueblos entre árboles, algunos literalmente sobre las cascadas
   - Donde elfos menos vinculados a Stillspire viven
   - Cultura agrícola / silvestre
 
-- **Sky Watchtowers** (frontera aérea norte)
+- **Sky Watchtowers** (frontera aérea norte, más allá de Stillspire)
   - Donde Lyris patrulla como cazadora
   - Defensa contra incursiones bestiales desde norte
   - Observatorios de patrones de Aether
 
 **Geografía Física:**
-- Bosque denso de árboles gigantes
-- Acceso via Gloomvault (bosque profundo oscuro)
-- Clima: perpetuo semi-oscuridad, lluvia frecuente
-- Aether visible como luces verdes/teales entre follaje
+- Bosque denso de árboles gigantes, en **gradiente continuo de elevación**
+  desde Gloomvault (nivel de The Wilds) hasta Stillspire (punto más alto)
+- Acceso via Gloomvault (bosque profundo oscuro — el tramo bajo/oscuro de la
+  misma transición, antes de que suba y se abra en verde)
+- Clima: perpetuo semi-oscuridad en Gloomvault → luz filtrada verde/dorada
+  según se asciende → claridad relativa en Stillspire (por encima del dosel
+  más bajo)
+- Aether visible como luces verdes/teales entre follaje, intensificándose
+  cerca del agua de las cascadas
 
 ---
 
@@ -234,12 +280,31 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Dinámicas: Escena bonita donde el jugador descansa (mecánica de campamento)
 
 #### **The Monolith** (Center — Montaña Central)
-- Piedra vertical masiva (100+ metros), origen desconocido
-- Conexión narrativa: Marcador de The First Wound (norte-sur axis)
-- Mecanismo: Ascenso de vista (panorama del mapa)
-- Loot: Vista 360° del mundo (debloquea iconografía en mapa)
+- Piedra vertical masiva (100+ metros). **Sin revelación — misterio
+  deliberadamente sin resolver** (no es Warden Waystone, no conecta
+  mecánicamente con The First Wound; ese peso cósmico lo carga solo The First
+  Wound, no hace falta duplicarlo)
+- Detalle único: tiene una **inscripción tallada en un idioma que nadie en el
+  Quinteto reconoce** — ni siquiera Valen, que reconoce casi todo lo demás.
+  No hay traducción in-game; el jugador nunca sabrá con certeza qué dice
+- Conexión narrativa: en algún punto de la historia (recomendado: Acto 2, de
+  paso, sin forzar la escena), **Valen menciona la leyenda** que rodea al
+  Monolith — no un dato verificado, un rumor que él mismo desconfía de repetir:
+  - Valen: *"Hay una leyenda sobre esto. Dice que la inscripción significa algo
+    como 'lo que estaba antes de nosotros' — nadie sabe si es literal o
+    poético. Lo que sí sabemos con certeza: **este monolito está aquí desde
+    antes de que los elfos llegáramos a este mundo.** Y nosotros creíamos ser
+    los más antiguos."*
+  - Esto siembra sin responder: ni el jugador ni Valen saben si "antes de los
+    elfos" significa Wardens, algo aún más viejo, o simple erosión geológica
+    con una leyenda inventada encima. Se queda así — Sable no explica cada roca
+- Mecanismo: Ascenso de vista (panorama del mapa), sin mecánica de "lectura"
+  ni cambio de color por acto
+- Loot: Vista 360° del mundo (desbloquea iconografía en mapa)
 - Enemigos: Bestias voladoras (Lyris puede cazarlas aquí)
-- Dinámicas: Punto de "revelación" donde ves The First Wound a lo lejos
+- Dinámicas: la línea de Valen es la ÚNICA pieza de lore que existe sobre el
+  Monolith — no hay más pistas en ningún otro POI. Es intencional que se
+  quede como pregunta abierta
 
 #### **The Shattered Cascade** (NE — Cascada)
 - Cascada masiva con saltos múltiples
@@ -296,7 +361,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
   - Donde pueden ocurrir ciertos diálogos privados
 
 #### **The Battlefield** (SW — evidencia antigua)
-- Llanura con restos de antigua batalla (100 años atrás?)
+- Llanura con restos de antigua batalla (~550 años atrás)
 - Conexión narrativa: Evidencia de la guerra que masacró Wardens
 - Mecanismo: Narrativa ambiental (esqueletos, armas, cristales rotos)
 - Loot: Fragmentos de historia (Valen puede interpretar escena)
@@ -530,7 +595,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
   - Cada personaje tiene línea aquí (Valen/Sereth/Roen perspectives)
 
 #### **The Scar of Breaking** (South, approach to First Wound)
-- Cicatriz física del cataclismo hace 100 años (terrain is WRONG)
+- Cicatriz física del cataclismo hace ~550 años (terrain is WRONG)
 - Mecanismo: suelo fracturado, geometría impossible
 - Dinámicas:
   - Sereth calcula: "impacto = civilización erased. Población pre-Muda ≈ millions"
@@ -559,7 +624,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Tumba subterránea del último Warden caído
 - Mecanismo: ritual site, emotional weight
 - Dinámicas:
-  - Speck aquí entiende soledad (estaba sola 100 años)
+  - Speck aquí entiende soledad (estaba sola 550+ años)
   - Ritual de duelo (Speck behaves different after)
   - Valen: "she was alone. That's why we found you."
 
@@ -580,6 +645,45 @@ BOTTOM: The First Wound (cementerio God-Cores)
   - Valen: "no debemos entrar. Not yet. Maybe never."
   - Foreshadowing: "hay más. Capas que no comprendemos aún."
   - Speck: reconoce (es "security seal" de su civilization)
+
+---
+
+### M) TORRES DE GUARDIA POR RAZA (Frontera de cada reino dentro de The Wilds)
+
+> Cada reino mantiene un puesto de vigilancia en su punto de entrada a The
+> Wilds — no en su propio territorio, sino ya del lado salvaje. Arquitectura
+> distinta por raza, todas mirando hacia el centro (El Nido / The Monolith).
+
+#### **Aethelgard Watch** (West — junto a River Road, entrada desde Rivermeet)
+- Arquitectura humana: madera + piedra, banderas del Triune Council desteñidas
+  por intemperie, construcción funcional/militar (no ornamental)
+- Función: puesto de registro de "purgas" — humanos llevan bitácora de qué
+  nidos fueron limpiados (burocracia hasta en la frontera salvaje)
+- Guarnición: rotativa, moral baja, soldados jóvenes o castigados
+- Dinámicas: Roen reconoce el protocolo (fue este puesto, en otra vida);
+  Maren puede usar Standing para pasar sin registro
+
+#### **Ignis Reach Watch** (East — junto a Cinder Ascent, entrada desde Emberdeep)
+- Arquitectura enana: piedra maciza tallada directamente en la ladera, forjas
+  pequeñas activas (calor visible), rejas de hierro trabajado, geometría
+  angular y permanente (construida para durar siglos, no para rotar personal)
+- Función: control de tráfico minero + primera línea contra bestias que bajan
+  de la montaña
+- Guarnición: fija, la misma familia/clan por generaciones
+- Dinámicas: Torgan/Vekka/Dagna reconocen el puesto (posible pariente
+  destacado ahí); Darro tiene historia incómoda (aquí lo vieron rechazado)
+
+#### **Stillwood Watch** (North — junto a The Ascending Falls, entrada desde Gloomvault)
+- Arquitectura élfica: no es "torre" en el sentido humano/enano — es una
+  plataforma viva integrada a un árbol centenario, crecida más que construida,
+  casi invisible desde el suelo (camuflaje natural, no defensivo por muros
+  sino por discreción)
+- Función: observación silenciosa, no confrontación — los elfos vigilan sin
+  intervenir salvo que sea estrictamente necesario
+  - Guarnición: uno o dos centinelas, cambio de turno silencioso
+- Dinámicas: Lyris considera este su territorio real (más que Stillspire);
+  Nyael puede haber pasado por aquí sin ser vista ni por los propios elfos;
+  Valen: "vigilamos, pero rara vez actuamos. Ese es el problema."
 
 ---
 
@@ -615,7 +719,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - **Función:** Cementerio de God-Cores (cadáveres de Wardens muertos)
 - **Mecánica:** Zona final del juego, clímax + 4 finales
 - **Arquitectura:** Ruinas, cristales rotos, Aether rojo/corrupto, paisaje de desolación
-- **Significado:** Donde la Muda se rompió hace ~100 años
+- **Significado:** Donde la Muda se rompió hace ~550 años
 - **Clima:** Tormenta de Aether perpetua, peligro constante
 
 ---

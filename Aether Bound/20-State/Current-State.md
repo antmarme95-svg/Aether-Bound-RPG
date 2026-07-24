@@ -1,12 +1,32 @@
 ---
 status: vivo
-updated: 2026-07-23
+updated: 2026-07-24
 ---
 
 # Current State
 
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
+
+- **✅ SESIÓN 2026-07-24 — RETCON CATACLISMO + MAPA DEL MUNDO REFINADO:**
+  Mapa del mundo generado en NB Pro (Tolkien × Sable × BotW, 45+ POI) revisado
+  por Boris — detonó corrección de canon: **cataclismo movido de 100 a ~550
+  años atrás**, techo de vida élfico fijado en 650-700 años (Eragon-style, no
+  inmortalidad Tolkien), nueva sección **Los Tres Niveles de Conocimiento**
+  en [[El Mundo y la Muda]] (elfos ~5-10% memoria directa / enanos tradición
+  oral ritualizada / humanos folclore regional deformado). Speck: soledad
+  100+→**550+ años**. Tabla de longevidad nueva en [[Las Tres Razas]] (elfos
+  650-700 / enanos ~200-250 / humanos ~70-90). Detalle completo en [[LOG]].
+  **Otros ajustes de mapa:** Mistbound reposicionado (tierra interior remota,
+  no frontera con The Wilds — Rivermeet es la puerta real vía River Road);
+  The Monolith sin revelación mecánica (se descartó "Warden Waystone", queda
+  solo una leyenda ambigua de Valen + Warden's Crypt debajo sin confirmación
+  verbal); 3 Torres de Guardia nuevas por raza en cada entrada a The Wilds;
+  Stillwood redefinido como continuación orgánica de The Wilds en elevación
+  (Rivendell/Imladris) con cascada nueva The Ascending Falls.
+  **Pendiente:** el PNG del mapa ya generado tiene "100 years" horneado en
+  texto — requiere regeneración cuando se itere el asset visual (brief fuente
+  ya corregido).
 
 - **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
   Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 

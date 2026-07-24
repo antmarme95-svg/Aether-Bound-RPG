@@ -1,6 +1,6 @@
 ---
-status: redireccionado
-source: "GDD §2.4 + redireccionamiento narrativo 2026-07-23"
+status: redireccionado + visual-locked
+source: "GDD §2.4 + redireccionamiento narrativo + diseño visual 2026-07-23"
 updated: 2026-07-23
 ---
 
@@ -11,7 +11,7 @@ dioses para cuidar el Aether (sabor Horizon Zero Dawn — arqueología viviente)
 El secreto que reescribe el lore: [[El Mundo y la Muda]].
 
 **Esencia:** Superviviente de una era perdida. No es "criatura" — es **tecnología
-biológica antigua que fue diseñada, no evolucionada**. Lleva 100+ años solo,
+biológica antigua que fue diseñada, no evolucionada**. Lleva 550+ años sola,
 shapeshifteada como zorro endémico de The Wilds. Tiene el sentido del humor
 pragmático de un enano (seco, oscuro, sabio tras siglos) — es el último testigo
 del universo quebrantarse.
@@ -19,6 +19,10 @@ del universo quebrantarse.
 **Giro Grogu:** emocionalmente es una cría despertando, pero carga la **memoria
 de especie** — a veces sabe algo imposible de la era de los dioses. No es el
 bebé de un animal; es la infancia de un guardián menor de mantenimiento.
+
+**Narrativa del jugador:** El viaje no es ver a Speck CRECER, sino ver al jugador
+DESCUBRIR quién es realmente. Tres flashes progresivos revelan la verdad bajo el
+disfraz de zorro — sin verbalizar, sin confrontación, en silencio acumulativo.
 
 ## Encuentro & Shapeshifting
 
@@ -29,10 +33,10 @@ teal presentes pero visibles como "manchas" para el mundo. **Pata delantera
 izquierda:** estructura cristalina visible (glitch del shapeshifting). **Ojos:**
 facetados, gem-like, demasiado inteligentes.
 
-**Por qué el shapeshifting falla:** Speck fue colocada en crisálida hace años
-por bestias guardianas. Después de 100+ años, la corrupción del Aether la está
-despertando lentamente. El shapeshifting requiere plena consciencia — mientras
-despierta, falla inconsistentemente.
+**Por qué el shapeshifting falla:** Speck fue colocada en crisálida por bestias
+guardianas poco después del cataclismo. Después de 550+ años, la corrupción
+del Aether la está despertando lentamente. El shapeshifting requiere plena
+consciencia — mientras despierta, falla inconsistentemente.
 
 **El encuentro:** Eres contratado para "purgar nidos y apagar God-Cores" en The
 Wilds ([[Estructura Dramática]]). Llega a un nido. Las bestias guardianas están
@@ -59,13 +63,35 @@ La inteligencia se hace innegable. La calma es antinatural. La mirada te
 *conoce* — ya no es animal, es ser. Nadie lo dice en voz alta ([[protocolo del
 silencio]]).
 
-## Tres estadios (crece en una partida) — Manifestación, no crecimiento
+**Capa 4 — Lo que revela el Fragmento (clímax — la verdad impuesta):**
+El Fragmento activa en The First Wound. Speck reacciona involuntariamente: hive 
+mind forzado. Jade pálido → Rojo God-Core. E1 → E3. Es **trigger del dispositivo**, 
+no elección.
 
-| Estadio | Acto | Narrativa | Gameplay |
+**Pero entonces Speck elige.** En los finales donde vive (F1, F4), ella no permanece 
+como víctima circunstancial. Asume su destino con gracia divina: **"Soy lo que siempre 
+fui. Y acepto el rol que me corresponde."** Anciana Warden despertando a su propósito 
+milenario. En F2 y F3 (donde muere/es encadenada), esa agencia le es robada — ahí SÍ 
+es pura víctima. Pero donde puede elegir, elige con dignidad.
+
+## Un estadio de revelación — La verdad es una
+
+Speck no crece. **El viaje es descubrimiento del JUGADOR, no transformación de Speck.**
+
+La forma Warden real existe desde el inicio, shapeshifteada como zorro. El "estadio" 
+es la **progresión de cómo el jugador la ve**, no cómo ella cambia:
+
+| Fase visual | Acto | Narrativa | Gameplay |
 |---|---|---|---|
-| **1 — Crisálida** | 1 | Shapeshifteada, dormida, guardiana | Pasiva; radar diegético (olfatea Aether, se eriza) |
-| **2 — Despertar** | 2 | Shapeshifting se rompe parcialmente, verdadera forma emerge lentamente | **Fuente de acoplamientos nuevos**: puentea interfaces + links con jugador |
-| **3 — Espejo** | Nudo→Clímax | Forma Warden adulta real (no puede mentir más), cristales rojos God-Core | Post-traición: puentea versión *degradada* del link perdido — agridulce |
+| **Zorro shapeshifted** | 1 | Ilusión completa. El mundo ve "zorro extraño de The Wilds" | Pasiva; radar diegético (olfatea Aether) |
+| **Flashes 1-3** | 1→2 | Descubrimiento silencioso. Tu poder revela seams aether → pata cristal → ojos facetas | **Progresión privada** (el Quinteto no ve lo que ves) |
+| **Forma Warden E1 (jade)** | 2→Clímax | La verdad completa revelada. Speck SIEMPRE fue esto — el shapeshifting simplemente ocultaba | Verdadera naturaleza: **guardiana de eras perdidas** |
+| **Forma God-Core E3 (rojo)** | Clímax | **Involuntario.** Fragmento se activa → Speck reacciona por hive mind forzado. No elige transformarse. Es víctima del dispositivo. | Poder del Fragmento impone la verdad final sin consentimiento |
+
+**No hay "crecimiento"** — hay **desvelamiento**. Speck es Warden adulto, milenario, 
+desde el inicio. El shapeshifting es defensa, no etapa. E1→E3 en clímax es **reacción 
+forzada al Fragmento**, no evolución. Cuando lo ves sin velo, ves quién siempre fue — 
+pero Speck no controla ese momento.
 
 ## El bautizo
 
@@ -82,7 +108,7 @@ vínculo.**
 
 ## Personalidad & Humor
 
-**Sentido del humor:** Pragmático-oscuro, como enano. Tras 100+ años solo
+**Sentido del humor:** Pragmático-oscuro, como enano. Tras 550+ años sola
 observando la civilización caer, tiene wit seco y comprensión de lo absurdo.
 No busca risa — observa y comunica mediante ironía. Ejemplos:
 - Inclina la cabeza cuando algo es particularmente ridículo ("¿en serio?")

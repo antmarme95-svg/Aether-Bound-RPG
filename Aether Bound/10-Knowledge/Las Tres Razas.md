@@ -17,6 +17,14 @@ Eje de personalidad tipo Avatar: TLA. Nombres canónicos en [[Nomenclatura]].
 **Por qué ninguna quiere a [[Speck]]:** los elfos la ven como abominación
 mágica; los enanos como tecnología impura; los humanos como botín.
 
+**Longevidad (calibrada 2026-07-24 contra [[El Mundo y la Muda]]):**
+
+| Raza | Vida máxima aprox. | Nota |
+|---|---|---|
+| **Elfos** | 650-700 años | No inmortales (a diferencia de Tolkien) — longevidad finita extrema, más cerca del registro de Eragon. Permite que ~5-10% de los elfos vivos hoy hayan presenciado el cataclismo de hace 550 años. |
+| **Enanos** | ~200-250 años | Suficientemente largo para el peso cultural de juramentos de décadas (ver [[Los 9 Pivotes]]), pero corto frente a 550 años — **ningún enano vivo presenció el cataclismo**, se conserva solo por tradición oral. |
+| **Humanos** | ~70-90 años | Rango real-world estándar — genera ~18-22 generaciones de distancia con el cataclismo, suficiente para que se vuelva folclore irreconocible entre regiones. |
+
 **Mapeo con el prototipo** ([[Inventario del Prototipo]]): Aether-Born→Elfos y
 Iron-Blooded→Enanos intactos; el kit Mist-Stalker se reinterpreta como **the
 Mistbound**, subcultura humana fronteriza del Driftmarket.

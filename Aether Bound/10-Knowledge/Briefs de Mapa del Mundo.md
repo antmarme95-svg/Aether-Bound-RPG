@@ -185,7 +185,7 @@ Representa así:
 ### The First Wound
 - Ubicación: sur, cementerio masivo
 - Visual: Cristales rotos gigantes, radiancia roja/púrpura
-- Nota: "God-Core Cemetery — The Scar of Breaking (100 years)"
+- Nota: "God-Core Cemetery — The Scar of Breaking (~550 years)"
 - Escala: Ocupar 1/5 del alto del mapa
 
 ---

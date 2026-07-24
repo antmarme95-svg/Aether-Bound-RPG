@@ -1,5 +1,76 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] retcon/design | CATACLISMO: 100 → 550 años + longevidad de razas + niveles de conocimiento
+
+**Disparador:** revisión del mapa del mundo (Boris) — Rivendell/Imladris para
+Stillwood, torres de guardia por raza, ambigüedad del Monolith, y una
+pregunta que destapó una inconsistencia de canon: con el cataclismo a "100
+años" y elfos viviendo 180-250+ años (ya establecido en fichas de Pivotes),
+40-50% de los elfos vivos habrían presenciado la guerra directamente —
+rompía la intención de que fuera un evento semi-mítico.
+
+**Decisión (Boris):** mover el cataclismo a **~550 años atrás** y fijar el
+techo de vida élfico en **650-700 años** (no inmortalidad tipo Tolkien —
+longevidad finita extrema, más cerca del registro de Eragon). Con esos
+números, solo ~5-10% de los elfos vivos hoy (los que ya rondaban 550+ años
+en aquel entonces) presenciaron el evento.
+
+**Consecuencia — Los Tres Niveles de Conocimiento** (nuevo, en [[El Mundo y
+la Muda]]):
+- **Elfos:** ~5-10% con memoria directa + biblioteca de Stillspire — escolar
+  y personal a la vez
+- **Enanos:** nadie vivo (550 años excede cualquier vida enana, ~200-250)
+  pero tradición oral ritualizada — *"la montaña no olvida, y el enano es la
+  montaña"*
+- **Humanos:** nadie vivo, ni memoria institucional confiable (~18-22
+  generaciones de deriva) — folclore regional deformado, tipo La Llorona/Lago
+  Ness, sin versión autoritativa
+
+**Consecuencia para Speck:** su soledad pasa de "100+ años" a **"550+ años"**
+— coincide con el cataclismo mismo (fue sellada en crisálida poco después de
+la guerra por bestias guardianas, y la corrupción del Aether recién ahora,
+550+ años después, la está despertando).
+
+**Archivos actualizados:**
+- `10-Knowledge/El Mundo y la Muda.md` — cifra base 100→550, sección nueva
+  "Los Tres Niveles de Conocimiento"
+- `10-Knowledge/Las Tres Razas.md` — tabla de longevidad nueva (elfos
+  650-700, enanos ~200-250, humanos ~70-90)
+- `10-Knowledge/Speck.md` — 3 menciones "100+ años" → "550+ años"
+- `10-Knowledge/Geografía y Ciudades.md` — 4 menciones actualizadas (The
+  Battlefield, The Scar of Breaking ×2, Warden's Crypt)
+- `10-Knowledge/Briefs de Mapa del Mundo.md` — nota de mapa actualizada
+
+**Pendiente:** el mapa YA GENERADO (NB Pro, ver sesión 2026-07-23) tiene el
+texto "The Scar of Breaking (100 years)" horneado en el PNG — no se puede
+editar vía markdown, requiere regeneración cuando se itere el asset visual.
+No urgente (el brief fuente ya está corregido para la próxima iteración).
+
+**Otros ajustes de la misma revisión (Boris, sesión 2026-07-24):**
+1. Mistbound Frontier reposicionado — Rivermeet es la verdadera "puerta de
+   frontera" con The Wilds (asentada en River Road); Mistbound es tierra
+   interior remota, lejos del río, donde el Consejo pierde control
+   administrativo (no por bestias, por distancia)
+2. The Monolith: se descartó la propuesta de "Warden Waystone" (duplicaba la
+   función cósmica de The First Wound). Queda como misterio sin resolución
+   mecánica — solo una línea de Valen citando una leyenda élfica ambigua
+   ("esto está aquí desde antes de que los elfos llegáramos") + Warden's
+   Crypt debajo (conexión que el juego nunca confirma verbalmente,
+   storytelling ambiental puro)
+3. Confirmado: El Nido sigue funcionando 1:1 con la iteración actual de Speck
+   (crisálida + bestias guardianas semi-corrompidas, ver Speck.md líneas
+   41-46) — sin conflicto
+4. Nuevas: 3 Torres de Guardia por raza (Aethelgard Watch, Ignis Reach Watch,
+   Stillwood Watch), una en cada entrada a The Wilds, arquitectura distinta
+   por cultura
+5. Stillwood redefinido como continuación orgánica de The Wilds (no frontera
+   dura) — el bosque sube en elevación y se cierra progresivamente desde
+   Gloomvault hasta Stillspire, con una cadena de cascadas nueva (**The
+   Ascending Falls**, referencia Rivendell/Imladris) definiendo la
+   arquitectura del reino
+
+---
+
 ## [2026-07-23] narrative | FICHAS NARRATIVAS EXPANDIDAS: Los 9 Pivotes (C3) COMPLETOS
 **Sesión de profundización narrativa — desarrollo completo de personajes traidores.**
 
