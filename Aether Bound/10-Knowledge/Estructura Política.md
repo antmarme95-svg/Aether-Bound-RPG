@@ -33,7 +33,7 @@ generacional literal, con siglos de diferencia real entre ambos bandos.
 longeva, la Reina simplemente sigue siendo Reina. Contraste directo con la
 inestabilidad humana.
 
-### Las Dos Academias
+### Las Dos Academias — y lo que queda Fuera de Ambas
 
 - **Academia Élfica (de los Sabios)** — tradición contemplativa: "observar
   sin intervenir". De aquí sale el Consejo de Sabios y, por extensión, el
@@ -42,11 +42,24 @@ inestabilidad humana.
 - **Academia Real** — tradición aplicada al servicio de la Corona: "el
   cálculo sirve al Estado". **Sereth** es producto de esta academia — explica
   por qué manipula "por el bien mayor" sin culpa: así lo entrenaron a pensar.
+  - **Brazo encubierto de la Academia Real:** operativos negables al
+    servicio directo de la Corona, oficialmente inexistentes. **Nyael** es
+    producto de este brazo — Sereth y Nyael son, sin saberlo el uno del
+    otro hasta cruzarse en el grupo, dos caras de la misma maquinaria de
+    Estado: uno persuade, la otra ejecuta.
+- **Fuera de ambas Academias — el Alto Mando de Frontera:** tercer track, no
+  académico, puramente militar/práctico. Coordina defensa territorial sin
+  filosofía política ni contemplativa detrás. **Lyris** pertenece aquí —
+  nunca fue rechazada de una Academia, nunca la invitaron a la conversación
+  siquiera. Su familia siempre estuvo del lado práctico de la sociedad
+  élfica, no del intelectual.
 
-Valen y Sereth no son solo dos elfos parecidos — son **dos productos de
-escuelas rivales de pensamiento**, uno entrenado para observar, el otro para
-actuar (incluso manipulando). Ver dinámica completa en
-[[Sereth-Ficha-Expandida-v1|Sereth]].
+Valen, Sereth, Nyael y Lyris no son solo cuatro elfos con personalidades
+distintas — son **productos de tres instituciones rivales** (Sabios / Corona
+visible / Corona encubierta) más una completamente ajena al juego político
+(Frontera). Ver dinámicas completas en
+[[Sereth-Ficha-Expandida-v1|Sereth]], [[Nyael-Ficha-Expandida-v1|Nyael]] y
+[[Lyris-Ficha-Expandida-v1|Lyris]].
 
 ---
 

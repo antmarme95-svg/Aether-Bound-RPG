@@ -1,5 +1,49 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | ESTRUCTURA POLÍTICA élfica COMPLETA: Lyris + Nyael
+
+**Continuación directa** del paquete de Estructura Política — quedaba
+pendiente afiliación para Lyris y Nyael (las 2 elfas sin institución
+definida).
+
+**Decisiones:**
+- **Lyris:** NO pertenece a ninguna Academia — tercer track élfico no
+  académico, el **Alto Mando de Frontera** (coordinación militar/práctica de
+  defensa territorial). Nunca fue rechazada de una Academia — nunca la
+  invitaron a la conversación siquiera. Explica su frialdad como aislamiento
+  estructural heredado, no solo temperamento.
+- **Nyael:** SÍ pertenece a la Academia Real — como **brazo encubierto**,
+  operativos negables de la Corona que oficialmente no existen. Esto la
+  convierte en la contraparte oscura de Sereth: **dos productos de la misma
+  maquinaria de Estado** (Sereth persuade, Nyael ejecuta). Su traición
+  ("I could not wait") se lee ahora como el primer acto de juicio propio en
+  una vida entera de obediencia a una institución que ni siquiera admite
+  tenerla.
+
+**Mapa élfico completo (4 pivotes/fijos con institución definida):**
+
+| Elfo | Institución |
+|---|---|
+| Valen (fijo) | Academia Élfica (Sabios) |
+| Sereth | Academia Real (Corona, visible) |
+| Nyael | Academia Real (Corona, encubierto) |
+| Lyris | Fuera del sistema — Alto Mando de Frontera |
+
+**Archivos actualizados:**
+- `Lyris-Ficha-Expandida-v1.md` — nueva sección de afiliación, "Stillspire"
+  reemplazado por "Alto Mando de Frontera" donde da órdenes, "Cómo lo Ve
+  Valen" ajustado (auto-exilio de Valen vs. nunca-invitada de Lyris)
+- `Nyael-Ficha-Expandida-v1.md` — nueva sección de afiliación (brazo
+  encubierto de Academia Real), "Cómo lo Ve Valen" ajustado
+- `Estructura Política.md` — sección de Academias expandida con el brazo
+  encubierto + el track de Frontera
+
+**Pendiente:** Maren e Iven (humanos) sin Casa/contexto político definido —
+próximo frente, a construir junto con Boris (sin semilla propia todavía,
+a diferencia de Bram).
+
+---
+
 ## [2026-07-24] narrative | ESTRUCTURA POLÍTICA de las 3 razas + fichas actualizadas
 
 **Disparador:** continuación directa de la sesión de retcon del cataclismo —

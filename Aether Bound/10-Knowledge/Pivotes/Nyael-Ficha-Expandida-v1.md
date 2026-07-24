@@ -23,11 +23,28 @@ La traición de Nyael es la más devastadora porque **no hay confrontación.** S
 
 ---
 
+## Afiliación (canon [[Estructura Política]])
+
+Los "círculos de The Stillspire" que entrenaron a Nyael **no son una
+institución aparte — son el brazo encubierto de la Academia Real,**
+operativos negables al servicio directo de la Corona. Oficialmente no
+existen. Nyael y **Sereth** son, sin saberlo el uno del otro hasta que se
+cruzan en el grupo, **dos productos de la misma maquinaria de Estado:**
+Sereth persuade, negocia, calcula en salones; Nyael ejecuta lo que el cálculo
+concluye, en silencio, sin que la Corona tenga que ensuciarse las manos ni
+reconocer la orden.
+
+Esto vuelve su traición más punzante: cuando actúa "antes de tiempo" ("I
+could not wait"), no es solo ruptura de disciplina personal — **es el primer
+acto de juicio propio en una vida entera de obediencia a una institución que
+ni siquiera admite tenerla.**
+
 ## Biografía Pre-Aventura
 
 ### The Stillspire: La Sombra (edades 0-100)
 
-Nacida en círculos de The Stillspire dedicados a **ejecución perfecta.** No assassinato — ejecución. Hay diferencia: asesino mata por encargo, ejecutor mata porque la muerte es resultado inevitable de verdades no confrontadas.
+Nacida y reclutada de niña por los círculos encubiertos de la Academia Real
+dedicados a **ejecución perfecta.** No assassinato — ejecución. Hay diferencia: asesino mata por encargo, ejecutor mata porque la muerte es resultado inevitable de verdades no confrontadas.
 
 Nyael fue entrenada desde niña para ser **invisible.** No literalmente (aunque técnicas llegan cerca). Invisible en el sentido de no dejar rastro emocional, no dejar rastro físico, no dejar rastro mental.
 
@@ -57,9 +74,15 @@ Nyael aceptó. Porque Nyael acepta siempre. No cuestiona.
 
 ## Cómo lo Ve Valen (Elfo, Conocimiento Previo)
 
-**Contexto:** Valen es observador que mira desde lejos. Nyael es observadora que mira desde dentro. Ambos de The Stillspire en los márgenes.
+**Contexto:** Valen es Academia Élfica — observa desde fuera de cualquier
+cadena de mando. Nyael es el brazo encubierto de la Academia Real — observa
+desde dentro de la Corona misma, aunque la Corona nunca lo admitiría. Ambos
+son "sombras" de Stillspire, pero por razones institucionales opuestas.
 
-Valen sabe que Nyael existe. Nunca se han hablado. Pero Valen ha visto las notas. Valen **comprende lo que Nyael hace.**
+Valen sabe que Nyael existe. Nunca se han hablado — los círculos que
+entrenaron a Nyael no reconocen su propia existencia ante nadie, ni siquiera
+ante otros elfos poderosos. Pero Valen ha visto las notas. Valen **comprende
+lo que Nyael hace, y sospecha para quién realmente trabaja.**
 
 Cuando Nyael llega al grupo (sin ser invitada, simplemente está), Valen la nota: *"La sombra de Stillspire."*
 

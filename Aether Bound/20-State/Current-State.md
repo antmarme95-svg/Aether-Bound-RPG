@@ -44,6 +44,18 @@ updated: 2026-07-24
   **Pendiente:** afiliación de Academia para Lyris/Nyael (abierto, no
   urgente).
 
+- **✅ SESIÓN 2026-07-24 (parte 3) — ESTRUCTURA POLÍTICA ÉLFICA COMPLETA:**
+  Lyris → fuera de ambas Academias, tercer track no académico: **Alto Mando
+  de Frontera** (nunca la invitaron a la conversación intelectual, no es que
+  la rechazaron). Nyael → **brazo encubierto de la Academia Real**,
+  operativos negables de la Corona — contraparte oscura de Sereth (persuade
+  vs. ejecuta), misma maquinaria de Estado. Mapa élfico completo: Valen
+  (Élfica) / Sereth (Real visible) / Nyael (Real encubierto) / Lyris (fuera
+  del sistema). Fichas de Lyris y Nyael actualizadas + [[Estructura
+  Política]] expandida. Detalle en [[LOG]].
+  **Siguiente frente:** Maren e Iven (humanos) sin Casa/contexto político —
+  a construir con Boris, sin semilla propia todavía (a diferencia de Bram).
+
 - **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
   Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 
   (Fragmento) + asunción de destino con gracia divina (F1/F4) vs. agencia robada 

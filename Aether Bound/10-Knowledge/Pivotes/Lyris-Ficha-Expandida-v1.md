@@ -23,11 +23,34 @@ La traición de Lyris es la más fría porque no viene de frialdad calculada com
 
 ---
 
+## Afiliación (canon [[Estructura Política]])
+
+Lyris **no pertenece a ninguna de las dos Academias.** La sociedad élfica
+tiene un tercer track, no académico: **los clanes de frontera/cazadores**,
+completamente fuera del eje Élfica (Sabios) vs. Real (Corona). Nunca la
+rechazaron de una Academia — **nunca la invitaron a la conversación
+siquiera.** Su familia siempre estuvo del lado práctico, no intelectual, de
+la sociedad élfica.
+
+Reporta al **Alto Mando de Frontera** — coordinación práctica de defensa
+territorial, separado de ambas Academias pero técnicamente bajo autoridad
+de la Corona (alguien tiene que coordinar la frontera). No es la maquinaria
+encubierta que usa a Nyael, ni el cálculo político de Sereth — es
+simplemente **cadena de mando militar**, sin filosofía detrás.
+
+Esto le da explicación sistémica a su frialdad: no es que Lyris rechazó
+pertenecer a algo — es que su gente nunca estuvo en la mesa donde se discute
+el "por qué" de nada. Solo reciben coordenadas. Ella hace lo mismo, sin
+cuestionar, porque es lo único que su tradición le enseñó a hacer.
+
 ## Biografía Pre-Aventura
 
 ### The Stillspire: Rechazo (edades 0-80)
 
-Nacida en The Stillspire pero **fuera de círculos políticos.** Familia fue cazadores de frontera aérea — no investigadores, no políticos. Rastreadores.
+Nacida cerca de The Stillspire pero **fuera de círculos políticos y
+académicos por completo.** Familia fue cazadores de frontera aérea — no
+investigadores, no políticos, no Academia. Rastreadores, generación tras
+generación, del Alto Mando de Frontera.
 
 Lyris fue entrenada desde niña para **leer el cielo.** No metafóricamente — literalmente. Rastrear movimiento de bestias, patrones de viento, cambios de presión de Aether que preceden tormentas o corrupción.
 
@@ -41,15 +64,15 @@ Lyris trabajó de cazadora para The Stillspire — protegiendo frontera aérea d
 
 90 años rastreando. 90 años sin formar vínculos. 90 años siendo útil precisamente porque no le importaba.
 
-Hace 10 años, The Stillspire hizo pregunta: *"¿Puedes seguir siendo útil?"*
+Hace 10 años, el Alto Mando de Frontera hizo pregunta: *"¿Puedes seguir siendo útil?"*
 
 Lyris: *"Siempre."*
 
-Stillspire: *"Hay variable que necesitamos rastreada. Está en The Wilds. Si la ubicas, nos decis. El resto, nosotros lo hacemos."*
+Alto Mando: *"Hay variable que necesitamos rastreada. Está en The Wilds. Si la ubicas, nos decis. El resto, nosotros lo hacemos."*
 
 Lyris: *"¿Qué es variable?"*
 
-Stillspire: *"Algo que no puede seguir existiendo. Pero no es tu preocupación."*
+Alto Mando: *"Algo que no puede seguir existiendo. Pero no es tu preocupación."*
 
 Lyris aceptó. No preguntó por qué. Lyris nunca pregunta por qué — solo acepta coordenadas, patrón de movimiento, objetivo.
 
@@ -67,9 +90,14 @@ Lyris: *"Soy rastreadora. He estado siguiendo tu movimiento. No es secreto — s
 
 ## Cómo lo Ve Valen (Elfo, Conocimiento Previo)
 
-**Contexto:** Valen es Estratega que observa ciclos. Lyris es Rastreadora que observa patrones del cielo. Ambos de The Stillspire en márgenes.
+**Contexto:** Valen es Academia Élfica. Lyris nunca pisó ninguna Academia — es
+del Alto Mando de Frontera, la tercera vía práctica de la sociedad élfica.
+Ambos están en márgenes, pero por razones opuestas: Valen se auto-exilió del
+centro; a Lyris nunca la invitaron al centro.
 
-Valen sabe que Lyris existe. Nunca se han hablado directamente. Pero Valen ha visto su obra — bestias rastreadas, amenazas neutralizadas sin drama, sin rastro emocional.
+Valen sabe que Lyris existe. Nunca se han hablado directamente — no hay
+motivo institucional para que se crucen. Pero Valen ha visto su obra —
+bestias rastreadas, amenazas neutralizadas sin drama, sin rastro emocional.
 
 Cuando Lyris se une al grupo, Valen la nota inmediatamente: *"La cazadora del cielo."*
 
