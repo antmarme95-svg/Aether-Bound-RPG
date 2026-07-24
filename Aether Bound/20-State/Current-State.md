@@ -67,7 +67,19 @@ updated: 2026-07-24
   una vida entera haciendo triage — casi reflejo de supervivencia, no dilema
   moral nuevo. Eco explícito de Sael añadido al clímax y a la línea privada.
   Detalle en [[LOG]].
-  **Siguiente frente:** Maren sigue sin contexto político/social propio.
+- **✅ SESIÓN 2026-07-24 (parte 5) — MAREN: CONSORCIO DE MERCADO. MAPEO
+  POLÍTICO DE LOS 9 PIVOTES + 3 FIJOS 100% COMPLETO:** Maren es Jefa de
+  Operaciones del Consorcio de Mercado — tercer centro de poder humano
+  (junto Regente/Triune Council), práctico no político, sobrevive a cambios
+  de Regente porque el comercio no puede parar. Completa el trío de poder
+  humano: Bram (heredado, rechazado) / Iven (ausente, pobreza) / Maren
+  (ganado, competencia). Clímax ajustado: la contacta el Triune Council
+  directamente, no el Regente — necesitan quien pueda ejecutar, no solo
+  decretar. **Con esto, los 12 personajes con rol narrativo (9 Pivotes +
+  Roen/Valen/Darro) tienen origen institucional/social definido — ver tabla
+  completa en [[LOG]] y [[Estructura Política]].**
+  **Siguiente frente:** guión/diálogos por actos (worldbuilding político y
+  geográfico ya están completos y listos para usarse como fuente).
 
 - **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
   Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 

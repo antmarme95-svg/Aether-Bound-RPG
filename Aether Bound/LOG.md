@@ -1,5 +1,62 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | MAREN: Consorcio de Mercado — CIERRA el mapeo político de los 9 Pivotes
+
+**Disparador:** último pivote sin contexto político/social propio. Su ficha
+ya tenía la pieza sin nombrarla como tal: "Jefa de Operaciones de
+Aethelgard hace 10 años."
+
+**Decisión:** Maren es Jefa de Operaciones del **Consorcio de Mercado** —
+tercer centro de poder humano (junto al Regente y el Triune Council), no
+político sino práctico. Con el trono tan inestable (6-8 Casas en 550 años),
+el comercio tiene que seguir funcionando sin importar quién gobierne — el
+Consorcio se volvió, de facto, institución casi permanente. Maren sobrevivió
+ya a 2 cambios de Regente sin perder el cargo.
+
+**Tercer tipo de poder humano completado:**
+- Bram → poder heredado (Casa Thorne) que **rechazó**
+- Iven → poder **ausente** (pobreza estructural, sin ningún tipo de poder)
+- Maren → poder **ganado** (hija de gente común, escaló por pura competencia)
+
+**Consecuencia en el clímax:** quien la contacta para ejecutar el sacrificio
+ya no es "el Consejo" genérico, es el **Triune Council directamente** — no
+el Regente. Reconocen que decretar no basta, necesitan quien pueda
+*ejecutar* — ahí es donde el poder del Consorcio pesa más que cualquier
+Casa de turno.
+
+**Archivos actualizados:**
+- `Maren-Ficha-Expandida-v1.md` — nueva sección de afiliación, biografía
+  ajustada, escena de contacto en clímax (Triune Council, no Consejo
+  genérico), "Cómo la ve Roen" ajustado
+- `Estructura Política.md` — nueva sección "El Consorcio de Mercado"
+
+---
+
+## ✅ MAPEO POLÍTICO DE LOS 9 PIVOTES + 3 FIJOS — COMPLETO
+
+Con Maren, se cierra el frente abierto desde el retcon del cataclismo
+(100→550 años). Los 12 personajes con rol narrativo (9 Pivotes + Roen/Valen/
+Darro) tienen ahora origen institucional/social definido:
+
+| Personaje | Raza | Institución/Origen social |
+|---|---|---|
+| Valen (fijo) | Elfo | Academia Élfica (Sabios) |
+| Roen (fijo) | Humano | Ex-guardia del Consejo, Mistbound |
+| Darro (fijo) | Enano | Rechazado del Gran Clan de joven |
+| Maren | Humana | Consorcio de Mercado (poder ganado) |
+| Torgan | Enano | Rechazado del Gran Clan, clan menor propio |
+| Iven | Humano | Pobreza estructural (pérdida de origen: Sael) |
+| Sereth | Elfo | Academia Real (Corona, visible) |
+| Bram | Humano | Casa Thorne (poder heredado, rechazado) |
+| Lyris | Elfa | Fuera del sistema — Alto Mando de Frontera |
+| Nyael | Elfa | Academia Real (Corona, encubierto) |
+| Vekka | Enana | Gran Clan de Forja (100%, clan real) |
+| Dagna | Enana | Subclán vasallo del Gran Clan de Forja |
+
+**Ver [[Estructura Política]] para el documento canónico completo.**
+
+---
+
 ## [2026-07-24] narrative | IVEN potenciado: pobreza estructural + pérdida de origen (Sael)
 
 **Disparador:** al mapear qué pivotes aún no tenían contexto político/social

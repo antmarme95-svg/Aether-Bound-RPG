@@ -19,6 +19,30 @@ Gadgeteer táctica, ingeniera de soluciones improbables. Construye puentes entre
 
 ---
 
+## Afiliación (canon [[Estructura Política]])
+
+Maren es **Jefa de Operaciones del Consorcio de Mercado** — el cuerpo
+comercial que mantiene viva la economía de Aethelgard sin importar qué Casa
+ocupe el Regentado esta década. Con un trono tan inestable (6-8 Casas en 550
+años, ver [[Estructura Política]]), el Consorcio se volvió, de facto, una
+institución casi permanente: **las Casas suben y caen; el comercio tiene que
+seguir funcionando.**
+
+A diferencia de **Bram** (Casa Thorne, poder heredado que rechazó) o de
+**Iven** (pobreza estructural, sin poder alguno), Maren representa un tercer
+tipo de poder humano: **ganado, no heredado ni ausente.** Hija de un
+ingeniero de acueductos y una negociadora de rutas — gente común, no
+nobleza — escaló hasta autoridad real por pura competencia.
+
+Cuando el Triune Council necesita **ejecutar** el plan de sacrificio (no
+solo decretarlo), pasa por ella — el Regente puede ordenar, pero solo el
+Consorcio puede movilizar los recursos y la logística para que realmente
+ocurra. Su autoridad es práctica, no política. Pero en el sistema roto de
+Aethelgard, el poder práctico podría ser el único tipo que sobrevive
+confiablemente al caos del trono.
+
+---
+
 ## Biografía Pre-Aventura
 
 ### Aethelgard: Mercado Fluvial (Infancia/Adolescencia, edades 0-30)
@@ -27,13 +51,18 @@ Nacida en Aethelgard, la ciudad mercado fluvial donde el Aether se compra/vende 
 
 Creció en mundo donde **las cosas tienen precio.** No cruelmente — pragmáticamente. El agua cuesta Aether. El Aether compra seguridad. La seguridad permite comercio. El comercio permite vida.
 
-Maren aprendió a **pensar en sistemas.** A los 12 años, notó ineficiencia en rutas de distribución y lo mencionó. A los 15, le pidieron que la arreglara. A los 20, era negociadora menor del consorcio de mercado.
+Maren aprendió a **pensar en sistemas.** A los 12 años, notó ineficiencia en rutas de distribución y lo mencionó. A los 15, le pidieron que la arreglara. A los 20, era negociadora menor del **Consorcio de Mercado** — sin apellido de Casa, sin padrinos, solo resultados medibles.
 
 **Personalidad:** Cálida pero medida. Sonríe fácil, pero siempre en contexto. Chistes sobre matemática. Empatía que es exacta, no derramada.
 
-### Ingeniera del Consorcio de Mercado (edades 30-45, presente)
+### Jefa de Operaciones del Consorcio (edades 30-45, presente)
 
-Ascendió a **Jefe de Operaciones** de Aethelgard hace 10 años. Responsable de que la ciudad funcione: rutas, distribución, negociaciones con otras ciudades.
+Ascendió a **Jefa de Operaciones** del Consorcio de Mercado hace 10 años —
+el puesto de mayor poder práctico al que alguien sin sangre de Casa puede
+llegar en Aethelgard. Responsable de que la ciudad funcione: rutas,
+distribución, negociaciones con otras ciudades. Ha sobrevivido ya a **dos
+cambios de Regente** sin perder su cargo — prueba viva de que el Consorcio
+pesa más que cualquier Casa de turno.
 
 **Durante estos años:** Maren vio patrones. El Aether corrupto que llega de The Wilds hace que los sistemas sean frágiles. Un año malo de corrupción = crisis comercial. Predijo esto hace 5 años. El consorcio no la escuchó.
 
@@ -47,7 +76,7 @@ Hace 6 meses, Maren confirmó su predicción: **la Muda aceleró.** El Aether co
 
 Cálculo nuevo: Aethelgard tiene 3-5 años antes de no poder sostener población. Sin intervención externa, la ciudad muere.
 
-**Única solución conocida (clasificada):** El Consejo ofrece plan — sacrificar variable crítica para salvar ciudad. Maren vio el plan. Supo exactamente qué variable era.
+**Única solución conocida (clasificada):** El Triune Council ofrece plan — sacrificar variable crítica para salvar ciudad. Se lo trae a ella directamente, no al Regente — saben que sin el Consorcio, el plan es solo papel. Maren vio el plan. Supo exactamente qué variable era.
 
 Fue cuando decidió: *"Voy a amar todo lo que pueda. Y luego voy a hacer matemática."*
 
@@ -55,7 +84,13 @@ Fue cuando decidió: *"Voy a amar todo lo que pueda. Y luego voy a hacer matemá
 
 ## Cómo la Ve Roen (Humano, Conocimiento Previo)
 
-**Contexto:** Roen fue guardia del Consejo durante 15 años. Cruzó con Maren en negociaciones comerciales entre frontera y Aethelgard. La conoce como "esa ingeniera que siempre tiene números".
+**Contexto:** Roen fue guardia del Consejo durante 15 años — vio pasar 2
+Regentes distintos mientras servía. Cruzó con Maren en negociaciones
+comerciales entre frontera y Aethelgard. La conoce como "esa ingeniera que
+siempre tiene números" — y también sabe algo que pocos guardias comunes
+notarían: **que ella sobrevivió a más cambios de gobierno que casi
+cualquier noble.** Eso le dice a Roen todo lo que necesita saber sobre cuán
+peligrosamente competente es.
 
 **Primera impresión de Roen:** Mujer inteligente, peligrosamente racional, pero caliente. Roen reconoce el tipo: **humano que ama con lógica.**
 
@@ -176,7 +211,7 @@ El Fragmento se activa. Speck reacciona. La verdad emerge.
 
 **Maren ya sabe todo esto.** Ha sabido por semanas. Ha estado esperando este momento.
 
-El Consejo de Aethelgard la contacta (hay agentes en The First Wound): *"Es ahora. Trae el Fragmento. Salva la ciudad."*
+El **Triune Council** la contacta directamente (hay agentes en The First Wound) — no el Regente, no una Casa. Saben que decretar no basta; necesitan a alguien que pueda *ejecutar*. Necesitan a Maren: *"Es ahora. Trae el Fragmento. Salva la ciudad."*
 
 Maren mira al jugador.
 

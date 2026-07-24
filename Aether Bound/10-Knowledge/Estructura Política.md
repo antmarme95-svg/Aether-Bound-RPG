@@ -112,6 +112,17 @@ humanos gobiernan su propia ciudad con un trono débil, pero el Council
 internacional (con representación de las 3 razas) sigue funcionando por
 encima de esa inestabilidad.
 
+**El Consorcio de Mercado** es el tercer centro de poder humano — no
+político, práctico. El cuerpo comercial que mantiene viva la economía de
+Aethelgard sin importar qué Casa ocupe el Regentado esta década: las Casas
+suben y caen, el comercio tiene que seguir funcionando. Se volvió, de facto,
+institución casi permanente. **Maren** ([[Maren-Ficha-Expandida-v1|Maren]]),
+su Jefa de Operaciones, representa un tercer tipo de poder humano — ganado,
+no heredado (Bram) ni ausente (Iven): hija de gente común, escaló por pura
+competencia. Cuando el Triune Council necesita *ejecutar* un plan, no solo
+decretarlo, pasa por el Consorcio — el Regente puede ordenar, pero solo el
+Consorcio puede movilizar los recursos reales.
+
 **Conexión con Maren:** su negociación de hace 2 años ([[Maren-Ficha-Expandida-v1]])
 fue con este gobierno inestable — explica por qué el acuerdo se siente
 frágil: ¿sigue en pie el mismo Regentado, o ya cambió otra vez?
