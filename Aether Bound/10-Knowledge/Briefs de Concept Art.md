@@ -477,6 +477,20 @@ en su registro diplomático, no artesanal.
 Use the dwarf phenotype as the exact anatomy and proportion reference — a trapezoid silhouette nearly as wide as tall, exactly 4.5 heads tall, massive trapezius and shoulders swallowing the neck, wide barrel torso, enormous hands, very short thick limbs, low planted center of gravity — but design a specific named character: "Ambassador Kadrun", a senior dwarf of the Great Forging Clan posted for life as his king's formal representative in a foreign human capital — dignified diplomat, not a working smith. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: heavy brow, broad jaw, a neatly groomed formal beard (shorter and more precisely trimmed than a working smith's, threaded with fewer but finer forge-iron rings) — composed, formally polite, immovable patience. Hair: iron-grey, pulled back tight and formal. Skin: warm bronze tones with soot shading, less soot-stained than a working forger's — this is a court dwarf, not a shop-floor one. Amber geometric guild tattoos on both forearms, the Great Forging Clan's mark rendered in a fine formal style. Clothing: formal ambassadorial dress rather than smith's gear — a structured dark-iron-grey coat with gold clan-crest clasps, no apron or work tools, medieval aetherpunk with restrained ember-colored trim at the cuffs. Carries no weapon, only a small ceremonial clan seal on a chain. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: formal, immovable, quietly proud — clan authority wearing a diplomat's coat. Negative: no tall or slender body, no human proportions, no comedic caricature dwarf, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no work apron or smith tools, no weapon.
 ```
 
+### 9e-v2 — Embajador Kadrun (REVISADO — corrige texto filtrado en imagen, QA 2026-07-24)
+
+**Hallazgo de la v1 (NB2):** el prompt se filtró como texto renderizado
+dentro de la propia imagen (bloque de instrucciones visible, con palabras
+corrompidas: "waterco-shading", "ceshading", "jitterd jittered", "Noo work
+tools") — glitch de generación, probablemente por densidad/longitud del
+prompt original. Reescrito en prosa más corta y natural, negativos como
+oraciones simples en vez de una lista larga tras "Negative:" — mismo
+contenido, menos denso.
+
+```
+Full-body character concept sheet, front view and side view, of a dwarf ambassador named Kadrun, on a plain warm paper background. He has a wide trapezoid body, exactly four and a half heads tall, with massive shoulders that swallow his neck, a broad barrel chest, enormous hands, and very short thick arms and legs — squat, wide, and low to the ground, nothing like a tall human build. His face has a heavy brow and broad jaw, framed by a neatly trimmed grey beard threaded with a few fine forge-iron rings — calm, formally polite, patient. His grey hair is pulled back tight. His skin is warm bronze with light soot shading. Fine amber geometric guild tattoos mark both forearms. He wears a structured dark iron-grey formal coat with gold clan-crest clasps and warm ember-colored trim at the cuffs — no apron, no tools, no weapon, just a small ceremonial clan seal on a chain around his neck. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No tall or slender body. No human proportions. No comedic caricature dwarf. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow. No apron or smith tools. No weapon.
+```
+
 ### 9f — Consejera Merrit Vance (asiento humano del Triune Council)
 
 El asiento más volátil de los 3 — se gana por consenso de Casas + Consorcio

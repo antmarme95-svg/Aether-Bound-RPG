@@ -1,5 +1,57 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design/QA | Council completo (Cyrion/Kadrun/Vance) + re-QA Ithessa/Borran v2
+
+**Ronda 2 de evaluación** — Boris pasó Ithessa v2, Borran v2, y los 3
+embajadores del Council (Cyrion, Kadrun, Vance).
+
+**✅ Reina Ithessa v2 — APROBADA con nota menor.** Los 2 CRITICAL de la v1
+quedaron resueltos: corona metálica eliminada (cabello trenzado como
+regalía, tal como pedía el brief) y marcas faciales eliminadas (grabados
+discretos en cuello/clavícula, no pintura de mejillas). 🟡 Nota menor: la
+silueta sigue sin leer tan alargada/8-cabezas como el canon extremo
+(Valen/Sereth), pero mejoró mucho al quitar las hombreras. No bloqueante.
+
+**🟡 Rey Borran v2 — mejoró, no cierra.** Ya no lee "vikingo humano" (barba
+trenzada, tatuajes de forja, manto correctos), pero la proporción trapezoide
+de 4.5 cabezas sigue sin cerrar — cabeza proporcionalmente chica para el
+cuerpo, brazos/piernas no leen tan cortos/gruesos como el canon exige. El
+framing verbal de proporción sigue perdiendo contra el sesgo del modelo
+hacia "rey grande y musculoso". **Pendiente:** un 3er intento con ancla
+numérica más agresiva (ej. "la cabeza ocupa casi 1/4 de la altura total") si
+Boris quiere seguir iterando.
+
+**✅ Embajador Cyrion — APROBADO.** Silueta élfica correcta (vertical,
+angosta, 8 cabezas se lee bien), rostro y ropa diplomática coinciden con el
+brief.
+
+**✅ Consejera Merrit Vance — APROBADA con nota menor.** Hombros
+estructurados sin ser armadura, rostro afilado, vestimenta correcta. 🟡 El
+arma se ve más espada que "abrecartas ceremonial" — no bloqueante.
+
+**🔴 Embajador Kadrun — FALLA TÉCNICA, no de contenido.** El prompt se
+filtró como texto renderizado dentro de la propia imagen (bloque de
+instrucciones visible, palabras corrompidas: "waterco-shading", "ceshading",
+"jitterd jittered", "Noo work tools") — glitch de generación, probablemente
+por densidad/longitud del prompt original (mismo patrón denso que los demás
+briefs §9). **Acción:** nuevo prompt §9e-v2, reescrito en prosa más corta y
+natural, negativos como oraciones simples en vez de lista larga tras
+"Negative:" — mismo contenido, menos denso, para evitar el trigger de
+texto-en-imagen.
+
+**Problema sistémico persistente (todos):** el acabado acuarela Sable×BotW
+(grano de papel, bandas cel con dry-brush jitter) sigue sin aparecer en
+ningún resultado de NB2 — se lee como ilustración digital pulida con
+sombreado en degradé. Los negativos agregados en la ronda anterior no lo
+revirtieron. **Empieza a oler a techo de la técnica en NB2** para este tipo
+de contenido — si persiste después de Kadrun v2, vale la pena que Boris
+decida si acepta el resultado (corrección de contenido > fidelidad de
+textura para NPCs secundarios) o declara el techo formalmente.
+
+**Archivo:** `Briefs de Concept Art.md` §9e-v2 (Kadrun reescrito).
+
+---
+
 ## [2026-07-24] design/QA | Ithessa + Borran (NB2): QA imparcial + prompts reforzados
 
 **Disparador:** Boris generó Reina Ithessa, Rey Borran y Regente Edrick con
