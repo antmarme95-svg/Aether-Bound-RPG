@@ -8,11 +8,22 @@ updated: 2026-07-23
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-- **➡️ SESIÓN 2026-07-22/23 — FRENTE DE CONCEPT ART:** sesión completa de
-  producción visual con NB Pro e Higgsfield. Ver barrido completo abajo.
-  Punto de arranque mañana: **keyframe de Guided Avalanche (Sereth + Enano
-  Duelist / Torgan)** — el link que falta como still de NB Pro, y el de mayor
-  peso narrativo pendiente.
+- **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
+  Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 
+  (Fragmento) + asunción de destino con gracia divina (F1/F4) vs. agencia robada 
+  (F2/F3). **Todos 4 finales concept art GENERADOS Y RATIFICADOS (95-100%):**
+  - E3 F1 (The Guided Molt): majestuosa, propósito, luz cálida ✅
+  - E3 F2 (The Long Winter): monumento muerto, desolación, fría ✅
+  - E3 F3 (The Conqueror's Clause): prisionera, trauma, cadenas ✅
+  - E3 F4 (The Warden's Choice): God-Core vivo, libre, eternidad cálida ✅
+  
+  **Golden Scene keyframes completados (4 landmarks visuales):**
+  - The Wilds Dawn (existe) ✅
+  - The Wilds Dusk (existe) ✅
+  - Rivermeet (generado, ratificado 95%+) ✅
+  - God-Core Night (generado, ratificado 100%) ✅
+  
+  Siguiente: **Decisión roadmap post-NB Pro** (Trailer? Cutscenes? Banda sonora?)
 
 - **Boris rechazó la ronda 2 de ajustes** ("Todavía no me gustan") y
   encargó traducir su propia spec anatómica (triángulo curvo tipo sable,
@@ -201,41 +212,87 @@ updated: 2026-07-23
 
 ## Pendientes narrativos / lore (2026-07-23)
 
-**Personajes — gaps abiertos:**
-- **Biografías completas de Los 9 Pivotes** — el archivo tiene la tabla;
-  arcos por acto, naming definitivo y diseño visual marcados ❓
-- **Dinámica Roen/Valen/Darro con cada Pivote** — los 3 son fijos pero
-  su relación específica con cada uno de los 9 cambia por celda; sin documentar
-- **Roen, Valen, Darro fichas:** ✅ RESUELTO 2026-07-23
+**Speck — 100% COMPLETO (cierre 2026-07-23):**
+- ✅ Narrativa redireccionada (mascota → último Warden) + asunción de destino
+- ✅ E1 Warden (Trueform Speck translucent) LOCKED
+- ✅ Forma zorro (Shapeshifted Speck + Flashes) LOCKED
+- ✅ E3 F1 (The Guided Molt) GENERADO + RATIFICADO 100%
+- ✅ E3 F2 (The Long Winter) GENERADO + RATIFICADO 95%+
+- ✅ E3 F3 (The Conqueror's Clause) GENERADO + RATIFICADO 95%+
+- ✅ E3 F4 (The Warden's Choice) GENERADO + RATIFICADO 100%
 
-**Locations sin ficha:**
-- **The First Wound** — cráter del clímax final, cementerio de God-Cores;
-  mencionado en [[El Mundo y la Muda]] y [[La Rueda]] pero sin ficha propia
-  ni keyframe visual
-- **Sunken Archive** — donde se recupera el Fragmento de la Verdad
-  ([[Estructura Dramática]]); sin ficha ni descripción física
+**GUIÓN / NARRATIVA ESTRUCTURA — GAPS CRÍTICOS:**
+- **Guión completo por actos** — GDD §1.2 tiene estructura dramática pero NO hay diálogos/escenas
+- **Voz narrativa definida** — ¿Narrador? ¿First person? ¿Silent protagonist? ¿Cuán verbose vs. environmental?
+- **Momentos de Persona de Speck** (~7 escenas narrativas sin UI) — mencionadas pero no escritas
+- **Diálogos de Bautizo (Darro nombrando Speck)** — narrativa locked pero escena no scripted
 
-**Finales — gaps menores:**
-- Estado post-final jugable (hay créditos pero ¿qué hay después?)
-- Duración de epílogos de Los 4 Finales
-- Variantes C3 vivo/muerto en Finales 2 y 3
+**✅ PERSONAJES — LOS 9 PIVOTES (2026-07-23):**
+- **✅ Fichas Narrativas Expandidas COMPLETAS:** Maren, Torgan, Iven, Sereth, Bram, Lyris, Nyael, Vekka, Dagna
+  - Biografía pre-aventura única por Pivote
+  - Cómo lo ve Personaje Fijo (misma raza): Conocimiento Previo
+  - Encuentro con jugador específico por cell (raza/rol)
+  - Arco 3-actos completo (Lealtad → Comunidad → Desilusión)
+  - Clímax + traición (9 patrones narrativos distintos)
+  - 4 Epílogos por Final (Perdón/Muerte/Encadenamiento/Síntesis)
+  - Línea canónica + línea privada
+  - Dinámicas con Roen/Valen/Darro
+  - Diseño visual ratificado + arma/técnica
+- **✅ Roen, Valen, Darro fichas:** Concepto completo con encuentros personalizados (18 total)
+
+**Worldbuilding — Cultura/Lore:**
+- **Culturas por raza** — Aether-Born/Iron-Blooded/Restless existen narrativamente pero NO tienen ceremonia/idioma/costumbre documentadas
+- **Lore de civilización Warden perdida** — menciona en [[El Mundo y la Muda]] pero NO hay historia pre-caída detallada
+- **Regla de los Tres Reinos movilizan ejércitos** — mencionada en clímax pero estrategia/alianzas no mapeadas
+
+**Locations — fichas narrativas incompletas:**
+- **The First Wound** — cráter clímax, cementerio God-Cores; existe keyframe visual (God-Core Night) pero sin descripción física/ficha lore completa
+- **Sunken Archive** — recupera Fragmento; sin ficha ni descripción física
+- **The Wilds interior/ecosystem** — zona de inicio pero descrip¿ción ecosistema no mapeada
+
+**Finales — scripting incompleto:**
+- **Los 4 Finales — diálogos/cinemática** — existen visuals pero NO scripted el "cómo ves cada final" (qué dice el jugador/Quinteto?)
+- **Estado post-final jugable** — hay créditos pero post-game state no definido
+- **Variantes C3 vivo/muerto en Finales 2-3** — mencionadas pero no impacto narrativo mapeado
+
+**POSPUESTO (Post-Lore):**
+- ❌ Trailer formal (requiere guión sólido primero)
+- ❌ Cutscenes cinemáticas (requiere script + dirección narrativa)
+- ❌ Banda sonora tema principal (después de alpha gameplay)
 
 ---
 
 ## Estado de concept art (2026-07-23)
 
-**✅ COMPLETADO ESTA SESIÓN (2026-07-23):**
+**✅ SPECK — REDIRECCIONAMIENTO + FINALES COMPLETOS (2026-07-23):**
+- `Trueform Speck translucent.png` (E1 Warden) — RATIFICADO, LOCKED
+- `Shapeshifted Speck.png` + Flashes 1-3 (zorro) — EXISTE, RATIFICADO
+- `Speck - Awakened Warden Form / The Guided Molt` (E3 F1) — GENERADO, RATIFICADO 100%
+- `Speck - Imprisoned Warden Form Final 3` (E3 F2) — GENERADO, RATIFICADO 95%+
+- `Speck - Imprisoned Warden Form - Traumatized` (E3 F3) — GENERADO, RATIFICADO 95%+
+- `Speck - Ancient Warden Form / Final 4 Aether Renacido` (E3 F4) — GENERADO, RATIFICADO 100%
+- **Narrativa:** Redireccionamiento completo documentado en [[Speck.md]] y [[Briefs de Concept Art]] §5
 
-*NB Pro — Links/Acciones de Pivotes:*
-- `Guided Avalanche.jpeg` — Sereth (elfo) + Torgan (enano duelist). Gravedad doblada, carga curvada. Evaluated: ✅ space-warping mechanic crystal clear, character fidelity perfect, style Sable×BotW locked.
-- `Riposte Runner.jpeg` — Iven (humano acróbata) + Elfo Vanguard. Parry-redirect como vector de lanzamiento. Evaluated: ✅ parry-to-flank momentum line explicit, synchronization perfect, Higgsfield style coherent.
+**COMPLETADO (2026-07-22/23) — NB PRO + HIGGSFIELD:**
 
-*Higgsfield — Links/Acciones + Creature:*
-- `Warforging.png` — Vekka (enana ingeniera) + Humano Vanguard. Módulos atornillados mid-combate. Evaluated: ✅ forge-light saturation perfect, module installation mechanic clear, trust & coordination visible.
-- `Speck sneak peek.mp4` — viñeta cinematográfica del primer encuentro/descubrimiento. Generated: ✅ Subido. Evaluation pending (ffmpeg setup incomplete).
+*NB Pro — Finales Speck (sesión 2026-07-23):*
+- `Speck - Awakened Warden Form` (F1) — ✅ GENERADO, RATIFICADO 100%
+- `Speck - Imprisoned Warden Form Final 2 The Long Winter` — ✅ GENERADO, RATIFICADO 95%+
+- `Speck - Imprisoned Warden Form Final 3 Traumatized` — ✅ GENERADO, RATIFICADO 95%+
+- `Speck - Ancient Warden Form Final 4 Aether Renacido` — ✅ GENERADO, RATIFICADO 100%
+- `Rivermeet keyframe` — ✅ GENERADO, RATIFICADO 95%+
+- `God-Core Night keyframe` — ✅ GENERADO, RATIFICADO 100%
+
+*NB Pro — Links/Acciones Pivotes (2026-07-22):*
+- `Guided Avalanche.jpeg` — Sereth (elfo) + Torgan (enano duelist). ✅ Evaluated
+- `Riposte Runner.jpeg` — Iven (humano acróbata) + Elfo Vanguard. ✅ Evaluated
+
+*Higgsfield — Links/Acciones + Creature (2026-07-22):*
+- `Warforging.png` — Vekka (enana ingeniera) + Humano Vanguard. ✅ Evaluated
+- `Speck sneak peek.mp4` — Evaluation pending (ffmpeg setup)
 
 **Pendiente de evaluación (ffmpeg setup):**
-- Videos existentes: `Arcane Ballistics.mp4`, `Weaver's Net.mp4`, `Seismic Springboard (2).mp4` — re-shoots Higgsfield
-- `Speck sneak peek.mp4` — nuevo asset
+- Videos Higgsfield: `Arcane Ballistics.mp4`, `Weaver's Net.mp4`, `Seismic Springboard (2).mp4`
+- `Speck sneak peek.mp4`
 
-**Historial de estados:** ver [[LOG]] y [[Current-State-Historico]].
+**Historial:** [[LOG]] y [[Current-State-Historico]].

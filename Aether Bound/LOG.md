@@ -1,7 +1,100 @@
 # LOG — bitácora append-only del Vault
 
-## [2026-07-23] design | REDIRECCIONAMIENTO NARRATIVO COMPLETO: Speck de ajolote a Warden Cristalino
-**Sesión guionística — análisis + redireccionamiento temático de Speck.**
+## [2026-07-23] narrative | FICHAS NARRATIVAS EXPANDIDAS: Los 9 Pivotes (C3) COMPLETOS
+**Sesión de profundización narrativa — desarrollo completo de personajes traidores.**
+
+**Scope:** Creación de 9 fichas narrativas expandidas (una por cada Pivote — C3 variable por cell raza×rol).
+
+**Método:** Ficha expandida por Pivote incluye:
+- Biografía pre-aventura única
+- "Cómo lo ve" personaje fijo de misma raza (Conocimiento Previo)
+- Encuentro específico con jugador (contexto race/role/gender)
+- Arco 3-actos completo (Lealtad → Comunidad → Desilusión)
+- Escena de clímax + traición (patrón narrativo único)
+- 4 Epílogos distintos por Final (Perdón/Muerte/Encadenamiento/Síntesis)
+- Línea canónica (diálogo de traición)
+- Línea privada (introspección)
+- Dinámicas con Roen/Valen/Darro
+- Diseño visual + arma/técnica
+- Notas sobre por qué este Pivote importa
+
+**Pivotes Completados:**
+
+1. **Maren** (Humana Strategist) → vista por Roen
+   - Traición: Cálculo frío (ciudad no sobrevive sin sacrificio de Speck)
+   - Línea: "I can love her and still do the math"
+   - Patrón: Amor genuino + matemática implacable (no son contradicción)
+
+2. **Torgan** (Enano Duelist) → visto por Darro
+   - Traición: Juramento de Forja (55 años) supersede grupo
+   - Línea: "An oath doesn't care how I feel about you"
+   - Patrón: Dolor real + obligación inescapable (enana)
+
+3. **Iven** (Humano Duelist) → visto por Roen
+   - Traición: Dilema genuino (salvar asentamiento vs jugador)
+   - Línea: "You'd trade her for strangers? I'm trading her for everyone I've ever known"
+   - Patrón: ÚNICA opción donde ambas decisiones son moralmente válidas
+
+4. **Sereth** (Elfo Strategist) → visto por Valen
+   - Traición: Manipulación amorosa + verdad calculada
+   - Línea: "Millions against one. This is me being stubborn about millions"
+   - Patrón: Ama genuinamente pero reshapea verdad para conseguir resultado "óptimo"
+
+5. **Bram** (Humano Vanguard) → visto por Roen
+   - Traición: RECHAZA traición a pesar de incentivo (burnout exhausto)
+   - Línea: "I've been everybody's wall. Just once, let me be the door"
+   - Patrón: ÚNICO Pivote que potencialmente se niega (corazón > lógica)
+
+6. **Lyris** (Elfa Duelist) → vista por Valen (CORRECCIÓN: era Darro)
+   - Traición: Lógica fría sin emoción
+   - Línea: "You were my stillness. Be still now. The world needs sky, not earth"
+   - Patrón: Incapaz de sentir / convencida que sentir es debilidad
+
+7. **Nyael** (Elfa Duelist) → vista por Valen
+   - Traición: Ausencia total (solo nota deixada, sin confrontación)
+   - Línea: "You taught me to set the trap and wait. I could not wait"
+   - Patrón: Ejecutora perfecta / respeta a objetivo ejecutándolo sin drama
+
+8. **Vekka** (Enana Strategist) → vista por Bram (dinámicas, no "Conocimiento Previo")
+   - Traición: Dogma del gremio (desmonta lo que construyó con amor)
+   - Línea: "I built you. Forgive me for finishing the job"
+   - Patrón: Llora mientras actúa / deber enano sin escape
+
+9. **Dagna** (Enana Vanguard) → vista por Roen (dinámicas, no "Conocimiento Previo")
+   - Traición: Ley del clan (sangre > grupo)
+   - Línea: "The mountain doesn't forgive. And I am the mountain's"
+   - Patrón: **ÚNICA que quiebra genuinamente a Roen** porque lo respeta más
+
+**Decisiones de diseño validadas:**
+- 9 patrones narrativos de traición DISTINTOS (no repetición)
+- Cada traición tiene contexto moral válido (no villanos simples)
+- Conocimiento Previo mapea: mismo-raza fijo ve mismo-raza Pivote
+- Encuentro varía por cell (raza/rol del jugador) — 18 encuentros únicos totales
+- 4 Finales con epílogos distinto por cada Pivote
+
+**Correcciones en sesión:**
+- Lyris "Cómo lo ve Darro" → cambiado a "Cómo lo Ve Valen" (ambas elfas)
+
+**Archivos creados/actualizados:**
+- `Aether Bound/10-Knowledge/Pivotes/Maren-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Torgan-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Iven-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Sereth-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Bram-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Lyris-Ficha-Expandida-v1.md` (corregida)
+- `Aether Bound/10-Knowledge/Pivotes/Nyael-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Vekka-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Dagna-Ficha-Expandida-v1.md`
+
+**Lecciones aplicadas:**
+1. Traición = dilema sin escape, nunca villanía sin matices
+2. Patrón de "Conocimiento Previo" (mismo-raza) requiere revisión de qué pares son "fijos de misma raza"
+3. Cada línea canónica debe resonar en toda la partida del jugador (memoria de cierre)
+
+---
+
+## [2026-07-23] design | REDIRECCIONAMIENTO + DISEÑO VISUAL COMPLETO: Speck de ajolote a Warden Cristalino
+**Sesión guionística + diseño iterativo — análisis temático + visual lock-down de Speck.**
 
 **Problema identificado:** Speck (axolotl mascota-like) no se sentía coherente en universo de tres razas humanoides. El "ajolote" leía como mascota/Genshin, no como ser antiguo.
 
@@ -33,6 +126,34 @@
 2. El shapeshifting falla porque despierta, no por debilidad permanente
 3. El jugador se descubre a sí mismo EN SILENCIO, paralelo a Speck despertando
 4. El nombre "speck" es irónico cósmico — mota insignificante que es en realidad lo opuesto
+
+---
+
+## [2026-07-23] design/production | DISEÑO VISUAL SPECK COMPLETO: Zorro + 3 Flashes + E1 Warden EN GENERACIÓN
+
+**Concepto art completado:**
+- ✅ Zorro shapeshifted: rojo-naranja natural, seams gris-casi-blanco, runas beige, pata cristal translúcido, ojos amber facetados
+- ✅ Flash 1 (Revelación aether): Seams gris → TEALS BRILLANTES
+- ✅ Flash 2 (Revelación mineral): Pata → TRANSLÚCIDA CRISTALINA + venas cristales visibles
+- ✅ Flash 3 (Revelación consciencia): Ojos → FACETAS GEM-LIKE + síntesis acumulativa (todos 3 flashes visibles simultáneamente)
+- 🔄 E1 Warden (en generación NB Pro): jade pálido casi-blanco translúcido, patas esmeralda pálido (conexión tierra), ojos dorados profundos, runas ORO BRILLANTE, seams aether flujo uniforme, orejas pétalos translúcidos, atmósfera "arqueología vivida"
+
+**Decisiones narrativas cerradas:**
+- UN estadio de revelación (no 3 estadios E1/E2/E3) — Speck es Warden adulto desde inicio, shapeshifting es defensa
+- Tres capas de verdad: Mundo ve zorro, Jugador ve flashes, Quinteto ve inteligencia antinatural
+- Protocolo del silencio: la verdad nunca se verbaliza hasta clímax
+- Coming-of-age del jugador, no de Speck — descubrimiento silencioso en flashes
+- Humor pragmático-enano (seco, oscuro, sabio)
+
+**Iteraciones de diseño visual:**
+- Zorro: color natural rojo-naranja vs beige (✅ rojo-naranja gana)
+- Orejas Warden: Opción 5 (runas doradas) vs Opción 3 (pétalos) → ✅ Opción 3 + translúcido (balance elegancia + poder)
+- Paleta E1: azul-marino opaco vs jade pálido → ✅ jade pálido casi-blanco (luminoso, antiguo)
+- Patas E1: directas vs esmeralda pálida → ✅ esmeralda pálida (alusión tierra, aspecto divino)
+- Runas E1: sutiles vs brillantes → ✅ brillantes visibles/prominentes (dios-lenguaje despierto)
+- Translucidez E1: uniforme vs variable → ✅ variable (orejas + extremidades más translúcidas)
+
+**Briefs finales archivados:** Zorro shapeshifted (v1), Flashes 1-3 (síntesis), E1 Warden (v1 jade-esmeralda spec)
 
 ---
 
@@ -3926,3 +4047,135 @@ transparente → invisible a screen_texture); quads de post van en pase
 transparente; absf/abs en inferencias GDScript.
 **Ronda 2 abierta (gaps):** calidez+rayos del dawn · core como racimo de
 cristal · árboles nudosos sin costuras · bandas cel visibles.
+
+## [2026-07-23] design/narrative | COMPACTACIÓN + BRIEFS E3 × 4 FINALES — Speck redireccionamiento cierre
+
+**Contexto:** Sesión anterior completó E1 Warden concept (NB Pro, ratificado). 
+Esta sesión: compactación de [[Briefs de Concept Art]] + refinamiento narrativo 
+de transformación de Speck en clímax.
+
+**Refinamiento narrativo (crítico):**
+- **Cambio:** Fragmento de la Verdad activa en The First Wound → Speck reacciona 
+involuntariamente (hive mind forzado). NO es decisión de Speck; es trigger del dispositivo.
+- **PERO:** En finales donde Speck vive (F1 Guided Molt, F4 Warden's Choice), ella 
+asume su destino con **gracia divina**. No permanece víctima circunstancial. Es 
+anciana Warden aceptando su rol milenario.
+- **Implicación:** E1 → E3 (jade → rojo God-Core) es involuntario, pero Speck elige 
+su rol post-transformación. En F2/F3 (muere/encadena), esa agencia le es robada.
+
+**Briefs completados:**
+- **5a — E1 Warden (ratificado):** especificación vieja reescrita con specs finales 
+de imagen (jade pálido translúcido, orejas pétalos Opción 3, runas oro brillante, 
+patas esmeralda pálido, seams aether uniforme). Archivo: 
+`speck-estadio1-warden-crisalis-v1.png` LOCKED.
+- **5b — E2 (descartado):** Decisión de saltear E2. Zorro → E1 (descubrimiento 
+silencioso) → E3 (clímax involuntario).
+- **5c.1 — E3 Final 1 (The Guided Molt):** Criatura viva, asume rol sanadora, 
+luz cálida + propósito, gracia divina.
+- **5c.2 — E3 Final 2 (The Long Winter):** God-Core muerto/dormido, monumento 
+frío, víctima.
+- **5c.3 — E3 Final 3 (The Conqueror's Clause):** Criatura viva encadenada, 
+prisionera, trauma, víctima de tu voluntad.
+- **5c.4 — E3 Final 4 (The Warden's Choice):** God-Core vivo consciente, calcificada 
+en paz, majestuosa, libre, elegida.
+- **Forma Shapeshifteada (zorro):** Brief completado. Zorro 1.5× endémico, glitches 
+sutiles (seams teal, pata cristalina, ojos facetados, patrones geométricos), 
+imperfección legible.
+
+**Archivos actualizados:**
+- `[[Speck.md]]` — Sección "Un estadio de revelación" + "Tres capas de verdad" 
+reescritas. Narrativa transversal: transformación involuntaria → asunción de destino 
+(F1/F4) vs. agencia robada (F2/F3).
+- `[[Briefs de Concept Art.md]]` — §5 completo: E1 (locked) · E2 (descartado) · 
+E3×4 finales (briefs ratificados) · Forma zorro (brief completado).
+
+**Lecciones narrativas:**
+1. Involuntaridad + dignidad = tragedia griega. Speck no elige despertar, pero 
+elige cómo vivir después.
+2. Los 4 finales no varían solo en gameplay sino en agencia de Speck: F1/F4 la 
+dejan elegir; F2/F3 la despojans.
+3. E3 como God-Core literal (no solo criatura) añade peso ontológico a F2/F4 — 
+es transformación existencial, no visual.
+
+**Pendiente:**
+- E3 concept art generación (si Boris lo pide) — tenemos 4 briefs listos.
+- Forma zorro concept art generación (si Boris lo pide) — brief completado.
+- E3 evaluación contra specs cuando regrese art.
+
+**Checkpoint:** Barrido de [[Briefs de Concept Art]] completado. [[Speck.md]] 
+narrativamente coherente. [[Current-State.md]] y [[LOG.md]] actualizados.
+
+## [2026-07-23] production/art | FINALES + GOLDEN SCENES COMPLETADOS — sesión NB Pro cierre
+
+**Contexto:** Sesión anterior completó briefs de E3 para 4 finales + 2 keyframes adicionales. Esta sesión: generación completa en NB Pro de todos los assets.
+
+**FINALES SPECK E3 (4 concept sheets completados):**
+
+**Final 1 — The Guided Molt (criatura viva, propósito):**
+- Asset: `Speck - Awakened Warden Form The Guided Molt`
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 100%
+- Especificación: Criatura cuadrúpeda, jade rojo translúcido, orejas pétalos rojo, ojos ambar cálidos + conscientes, runas oro brillantes activas, seams aether flujo cálido rojo-ámbar, postura majestuosa serena, luz dorada-ámbar de propósito
+- Narrativa: Speck asume rol sanadora, acepta destino con gracia divina, ready to guide the Muda
+- Evaluación: Majestuosa-serena, luz cálida vs. frío de F2/F3 perfecta
+
+**Final 2 — The Long Winter (God-Core muerto, monumento):**
+- Asset: `Speck - Imprisoned Warden Form Final 2 The Long Winter` (landscape keyframe)
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 95%+
+- Especificación: Landscape The First Wound cementerio (desolado, vastedad), Speck como God-Core muerto cristalizado, monumento reconocible pero inerte, ojos congelados, runas dormidas, seams dim, luz fría gris-azul funereal, grupo humano miniatura en distancia, postura mineralized exhaustion
+- Narrativa: Speck muere/es entregada, víctima del clímax, agencia robada
+- Evaluación: Monumento frio-muerte, solemnidad, pérdida absoluta, comunicación visual sin diálogo
+
+**Final 3 — The Conqueror's Clause (criatura viva encadenada):**
+- Asset: `Speck - Imprisoned Warden Form Final 3 Traumatized` (character sheet)
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 95%+
+- Especificación: Criatura cuadrúpeda (reference F1 + cadenas), God-Core rojo con cristales CRACKED/fractured, cadenas oro-bronce pesadas + mágicas constraining limbs/torso/neck, ojos hollow ambar, runas suprimidas, seams atenuados por peso, luz fría aislante, postura submission/defeat
+- Narrativa: Speck prisionera de tu voluntad, traición, trauma, agencia robada
+- Evaluación: Prisionería visible + peso + trauma, hollow betrayal en ojos, cadenas PESAN visualmente
+
+**Final 4 — The Warden's Choice (God-Core vivo consciente):**
+- Asset: `Speck - Ancient Warden Form Final 4 Aether Renacido` (landscape keyframe)
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 100%
+- Especificación: Landscape The First Wound cementerio (dawn/aurora dorada), Speck como God-Core VIVO radiante en plataforma elevada, nombre SPECK tallado en base, ojos ambar CÁLIDOS conscientes awake, runas oro brillantes activas gloriosas, seams aether flujo cálido rojo-ámbar visible, postura quiet strength calm majestic, grupo humano pequeño abajo en veneración, luz dorada-ámbar warm purpose fulfilled, monumento AND guardian viva
+- Narrativa: Speck elige calcificarse en God-Core vivo, síntesis ganada, agencia restaurada, eternidad consciente
+- Evaluación: 100% capstone visual del juego, contrastea F2 (fría muerte) perfectamente, inner glow cálido = paz completa
+
+**GOLDEN SCENE KEYFRAMES (4 landscapes monumentales):**
+
+**Rivermeet Keyframe (capital humana):**
+- Asset: `Rivermeet keyframe`
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 95%+
+- Especificación: Ciudad fluvial golden hour (tarde/atardecer), río como protagonista (ancho, slow, glinting), terraced riverside bluffs, timber-frame architecture, cloth awnings ochre/rust, floating markets, docks, rope bridges, smoke from forges, foreground marketplace con silhouettes humanas, middle city proper ink+watercolor Sable×BotW, background bluffs silhoueta pálida aerial perspective, luz ambar bajo horizonte long warm shadows
+- Narrativa: Contraste a The Wilds (vastedad solitaria), comunidad humanidad commerce pero tone melancólico idéntico (Restless spirit)
+- Evaluación: Segundo golden scene landscape, establece coherencia visual ubicaciones, río realmente protagonista
+
+**God-Core Night Keyframe (cementerio nocturno):**
+- Asset: `God-Core Night keyframe`
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 100%
+- Especificación: Underground/highland cemetery vast, deep blue-violet starlit night (no moon), massive crystalline prismático God-Core formations justing como tombstones/sleeping giants, red crystal glowing internally DEEP SATURATED RED pulsing faintly, long geometric shadows crisp sharp (cast by red light), perspective elevada (looking DOWN at sleeping gods), foreground cores silhouetted contra own glow (backlighting perfecto), middle fade to ruby con distance, far distance absolute darkness infinito, cracked stone ground (visible catástrofe/batalla), ink grey/negro flat cel 3-4 bands, paleta greys + deep blues + RED saturado único color intenso, watercolor grain visible, Sable night palette
+- Narrativa: Cemetery of ancient gods waiting dormant, no es muerte (F2) sino vigilia dormida
+- Evaluación: Third golden scene landscape perfecto, composición elevada comunica "gaze upon sleeping gods", infinidad cósmica
+
+**Lecciones técnicas de generación:**
+1. Referencias imagen funcionan PERFECTO para mantener anatomía (F1 → F3 encadenada usó F1 como base)
+2. Candados anti-humanoid triple explícitos necesarios para NB Pro
+3. Keyframes narrativos (F2/F4 como landscape) comunican más que character sheets en clímax
+4. Paleta de luz (cálida vs. fría) es comunicación emocional instantánea sin diálogo
+5. Cracked/fractured crystal = trauma visible en estructura, no requiere animación
+
+**Análisis tríada de finales:**
+- F1 (Guided Molt): aceptación cálida + renovación (Muda guiada con vínculo)
+- F2 (Long Winter): muerte fría + pérdida (sacrificio, agencia robada)
+- F3 (Conqueror's Clause): prisión fría + traición (ownership, agencia robada)
+- F4 (Warden's Choice): eternidad cálida + paz (síntesis ganada, agencia elegida)
+
+**Visual binary tríada:**
+- Warm (F1/F4) = agencia + vida = gracia divina + síntesis
+- Cold (F2/F3) = victimhood = desolación + trauma
+- Pero TODOS orejas pétalos + ojos amber = Speck sigue siendo Speck incluso traumatizada
+
+**Vault actualizado:**
+- [[Briefs de Concept Art]] §5 COMPLETO con 6 assets ratificados (E3 F1-F4 + Rivermeet + God-Core Night)
+- [[Current-State.md]] checkpoint final: 100% Speck + 4 Golden Scenes completados
+- [[Speck.md]] narrativamente coherente (transformación involuntaria + asunción destino)
+
+**Siguiente fase:** Decisión roadmap post-NB Pro (Trailer formal? Cutscenes clímax? Banda sonora tema?) y evaluación de inversión Higgsfield/audio.
