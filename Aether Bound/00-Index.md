@@ -27,6 +27,7 @@
 - [[Speck]] — la última Warden: 3 estadios, giro Grogu, bautizo, Momentos de Persona.
 - [[El Quinteto]] — jugador + C1 afín + C2 opuesto + C3 pivote + C4 chispa (+Speck); matchmaking orgánico.
 - [[Los 9 Pivotes]] — matriz y fichas v0: Maren/Torgan/Iven/Sereth/Bram/Lyris/Dagna/Nyael/Vekka.
+- **[[10-Knowledge/Pivotes/]] — 9 fichas narrativas expandidas COMPLETAS (2026-07-23):** Maren / Torgan / Iven / Sereth / Bram / Lyris / Nyael / Vekka / Dagna. Incluye: bio pre-aventura, Conocimiento Previo (fijo ve Pivote), encuentro player-único, arco 3-actos, traición, 4 epílogos, línea canónica/privada, dinámicas, diseño visual.
 - [[Acoplamientos]] — roles de co-dependencia sin ultimates; parejas fundadoras; tutorial geográfico.
 - [[Los 9 Links del Pivote]] — Skipping Stone…Warforging: qué hace cada uno y qué duele al perderlo.
 - [[Bond y el Bond Vacío]] — el único botón de vínculo; el beat del miembro fantasma; la Link Cam.
