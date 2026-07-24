@@ -354,6 +354,91 @@ Bible]] (mismo protocolo que el resto de este documento), guardar como
 relativa, nunca inventar el número) mandíbula, separación de ojos,
 proyección de nariz, mentón y posición/tamaño de oreja en las 4 vistas.
 
+## 9 — Gobernantes y Triune Council (Estructura Política, B12)
+
+**Contexto:** [[Estructura Política]] define 3 reinos + un cuerpo
+supra-racial de 3 asientos. Generados con **Nano Banana 2** (no Pro —
+prompts ajustados a un solo turno, sin depender de re-roll iterativo
+multi-imagen). Cada brief usa el fenotipo racial ya ratificado (briefs 1/2c/3)
+como ancla de anatomía/proporción y agrega regalía + edad + personalidad
+específica del cargo. Destino: `90-Raw/concept/` — `reina-ithessa-v1.png`,
+`rey-borran-v1.png`, `regente-edrick-ashcombe-v1.png`,
+`embajador-cyrion-v1.png`, `embajador-kadrun-v1.png`,
+`consejera-merrit-vance-v1.png`.
+
+**Nota de diseño transversal:** Reina y Rey deben leer como **gobernantes
+legítimos** (regalía plena, autoridad tranquila); el Regente Edrick debe leer
+**deliberadamente menos regio** — cargo precario, no sangre real ([[Estructura
+Política]]: "Voice of the Council", no "Rey"). Los 3 embajadores del Council
+deben leer como **diplomáticos/burócratas de alto nivel**, no guerreros ni
+realeza — ropa formal de embajada, no armadura ni corona.
+
+### 9a — Reina Ithessa (Stillwood)
+
+555 años — mayor que Valen/Sereth (180-250) pero más joven que el Círculo de
+los Vivos (570-700+, vivieron el cataclismo como adultos). Debe leer como
+elfa madura y digna, no como anciana frágil ni como joven ingenua — gobierna
+hace siglos pero carga el peso de no ser la máxima autoridad moral de su
+propio reino.
+
+```
+Use the elf phenotype as the exact anatomy and proportion reference — silhouette reads as one continuous vertical line, roughly 8 heads tall, narrow sloped shoulders, long neck, long limbs, flexible posture held high, long ears sweeping backward — but design a specific named character: "Queen Ithessa", ruler of an ancient elven forest kingdom, mature and dignified, centuries old but not frail — regal composure earned over a long, steady reign, not youthful innocence. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: high cheekbones, large almond eyes with a calm, measuring gaze — the expression of someone who has ruled long enough to be patient, but who carries a quiet awareness that she is not the oldest wisdom in her own court. Hair: very long, silver-white with the faintest residual warmth of youth at the roots, styled in an elaborate braided coronet that becomes her crown — no separate metal crown, the hair itself is the regalia. Skin: cold pale tones with a faint lavender undertone. Glowing pale-teal aether engravings traced across the collarbone, forearms and temples, denser and more ornamental than a common elf's — a queen's mark. Clothing: a long flowing formal gown in deep forest green and silver, structured shoulders that echo tree-bark texture, medieval aetherpunk with organic brass filigree at the hems, a small ceremonial staff of pale wood inlaid with teal aether veins held loosely at her side. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: quiet, steady authority — a ruler who governs the present without claiming ownership of the past. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no heavy armor, no separate metal crown, no frail elderly appearance, no youthful/childlike appearance.
+```
+
+### 9b — Rey Borran (Ignis Reach)
+
+Bisnieto directo del Rey del cataclismo — sucesión ritual, sin disputa. Debe
+leer como enano de mediana edad ya asentado en el trono (no joven heredero
+inseguro), con regalía que fusiona corona y forja — el Gran Clan de Forja
+**es** el trono, no un cuerpo separado.
+
+```
+Use the dwarf phenotype as the exact anatomy and proportion reference — a trapezoid silhouette nearly as wide as tall, exactly 4.5 heads tall, massive trapezius and shoulders swallowing the neck, wide barrel torso, enormous hands, very short thick limbs, low planted center of gravity, immovable stance — but design a specific named character: "King Borran", ruler of a dwarven mountain kingdom, mature and settled in his reign, great-grandson of the king who lived through the ancient cataclysm — carries inherited ceremonial memory with total confidence, not insecurity. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: heavy brow, broad jaw, a thick braided beard woven with small forge-iron rings and rune-stamped clasps — the beard itself reads as a chronicle of his lineage. Hair: dark iron-grey, pulled back beneath a low crown that is forged, not gemmed — a simple heavy band of dark iron and gold inlay shaped like overlapping hammer-strikes, fused seamlessly with the aesthetic of the Great Forging Clan rather than looking like a separate royal ornament. Skin: warm bronze tones with soot shading. Amber geometric guild-and-crown tattoos on both forearms, denser than a common smith's. Clothing: ceremonial forge-plate over practical smith-king garb — dark iron pauldrons chased with gold, a heavy fur-lined mantle in deep ember red and black, medieval aetherpunk with faint warm ember accents glowing at the seams. Holds a ceremonial war-hammer/scepter hybrid, more symbol than weapon, resting head-down on the ground. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: immovable, generational certainty — a mountain that has always had a king. Negative: no tall or slender body, no human proportions, no comedic caricature dwarf, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no gemstone-heavy crown, no young/insecure posture.
+```
+
+### 9c — Regente Edrick Ashcombe (Aethelgard)
+
+**Diferencia deliberada de los dos anteriores:** sin sangre real, cargo
+precario ("Voice of the Council" — [[Estructura Política]]). Debe leer
+administrativo/burocrático, no monárquico — nervioso bajo la compostura,
+consciente de que su Casa podría caer como las anteriores.
+
+```
+Use the human phenotype as the exact anatomy and proportion reference — balanced athletic proportions, roughly 7.5 heads tall, individual and imperfect features typical of the most physically diverse race — but design a specific named character: "Regent Edrick Ashcombe", the current civil administrator of a human river-trade city, NOT a hereditary king — his authority is political and precarious, not born. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: middle-aged, sharp intelligent features, a carefully neutral courtroom expression that doesn't fully hide an undercurrent of calculation and mild anxiety — the face of a man who knows his position could collapse like the ones before him. Hair: dark brown streaked with early grey, cropped short and precisely groomed. Skin: mid-range human tone, city-pale rather than weathered. Clothing: formal administrative robes of office in deep river-blue and muted gold, layered and structured like a magistrate's or high clerk's dress rather than a king's — NO crown; instead a heavy chain-of-office pendant bearing the seal of the Council, worn over the chest as his only symbol of authority. Carries a sealed scroll-case and a single ornate signet ring, medieval aetherpunk river-city tailoring with brass clasp details. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: composed but precarious — power borrowed, not owned. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no crown, no royal regalia, no heavy armor, no beast-folk features.
+```
+
+### 9d — Embajador Cyrion (asiento élfico del Triune Council)
+
+Nombramiento de larga permanencia — décadas en Rivermeet representando a la
+Reina Ithessa. Diplomático veterano, distinto en tono de Sereth (más joven,
+cortesano) y de Valen (académico contemplativo) — este es poder político
+puro, ejercido con paciencia élfica.
+
+```
+Use the elf phenotype as the exact anatomy and proportion reference — silhouette reads as one continuous vertical line, roughly 8 heads tall, narrow sloped shoulders, long neck, long limbs, flexible posture, long ears sweeping backward — but design a specific named character: "Ambassador Cyrion", a veteran elven diplomat who has represented his queen's court in a foreign human capital for decades. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: high cheekbones, narrow jaw, an almost unreadable diplomat's calm — eyes that assess everything and reveal nothing, the patience of someone who has outlasted several human governments already. Hair: pale silver-blond, sleek and precisely tied back in a low formal knot, no loose strands — nothing left to chance. Skin: cold pale tones with a faint lavender undertone. Faint pale-teal aether engravings at the collarbone, understated and formal rather than ornamental. Clothing: severe formal diplomatic robes in muted slate-grey and deep teal, structured and minimal, cut for a foreign court rather than his own — no weapons visible, a small formal seal-ring is his only ornament. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: patient, permanent, watchful — a fixture of the court he serves in, not a visitor. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no weapons, no heavy armor, no royal crown.
+```
+
+### 9e — Embajador Kadrun (asiento enano del Triune Council)
+
+Cargo casi hereditario dentro del Gran Clan de Forja — formal, no de trabajo.
+Distinto en tono de Vekka (maestra técnica en su taller) — este es Gran Clan
+en su registro diplomático, no artesanal.
+
+```
+Use the dwarf phenotype as the exact anatomy and proportion reference — a trapezoid silhouette nearly as wide as tall, exactly 4.5 heads tall, massive trapezius and shoulders swallowing the neck, wide barrel torso, enormous hands, very short thick limbs, low planted center of gravity — but design a specific named character: "Ambassador Kadrun", a senior dwarf of the Great Forging Clan posted for life as his king's formal representative in a foreign human capital — dignified diplomat, not a working smith. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: heavy brow, broad jaw, a neatly groomed formal beard (shorter and more precisely trimmed than a working smith's, threaded with fewer but finer forge-iron rings) — composed, formally polite, immovable patience. Hair: iron-grey, pulled back tight and formal. Skin: warm bronze tones with soot shading, less soot-stained than a working forger's — this is a court dwarf, not a shop-floor one. Amber geometric guild tattoos on both forearms, the Great Forging Clan's mark rendered in a fine formal style. Clothing: formal ambassadorial dress rather than smith's gear — a structured dark-iron-grey coat with gold clan-crest clasps, no apron or work tools, medieval aetherpunk with restrained ember-colored trim at the cuffs. Carries no weapon, only a small ceremonial clan seal on a chain. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: formal, immovable, quietly proud — clan authority wearing a diplomat's coat. Negative: no tall or slender body, no human proportions, no comedic caricature dwarf, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no work apron or smith tools, no weapon.
+```
+
+### 9f — Consejera Merrit Vance (asiento humano del Triune Council)
+
+El asiento más volátil de los 3 — se gana por consenso de Casas + Consorcio
+de Mercado, no por sangre. Debe leer más afilada y políticamente agresiva que
+el Regente Edrick — alguien que escaló para llegar aquí y sabe que puede
+perderlo.
+
+```
+Use the human phenotype as the exact anatomy and proportion reference — balanced athletic proportions, roughly 7.5 heads tall, individual and imperfect features typical of the most physically diverse race — but design a specific named character: "Councilor Merrit Vance", the current human seat-holder of a supra-racial diplomatic council, a political operator who won her seat through negotiation and consensus rather than birthright — sharper and more visibly ambitious than a hereditary noble, aware her position can be lost as easily as it was gained. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: sharp intelligent features, a composed public smile that doesn't quite reach watchful eyes, the look of someone always reading the room for the next shift in power. Hair: dark, pulled back in a severe practical style with a few precise loose strands, no softness wasted on vanity. Skin: mid-range human tone, city-pale. Clothing: sharply tailored formal court dress in deep wine-red and charcoal, structured shoulders that read as armor without being armor, layered river-city formal wear, medieval aetherpunk with fine brass clasp details — more overtly powerful and less bureaucratic-grey than a court clerk's robes. Carries a slim ceremonial letter-opener/dagger hybrid at her belt, symbolic more than practical. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: sharp, hungry, precarious — power she fought for and knows how to lose. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no crown or royal regalia, no heavy armor, no beast-folk features.
+```
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

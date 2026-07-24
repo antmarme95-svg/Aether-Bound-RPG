@@ -1,5 +1,45 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design | Briefs de concept art: Gobernantes + Triune Council (NB2)
+
+**Disparador:** antes de arrancar guión/diálogos, Boris quiere generar
+concept art de las figuras políticas definidas en [[Estructura Política]] —
+ya no tiene acceso a NB Pro, usa **Nano Banana 2** (prompts ajustados a un
+solo turno, sin depender de re-roll iterativo multi-imagen).
+
+**6 briefs nuevos** en `Briefs de Concept Art.md` §9, cada uno con el
+fenotipo racial ya ratificado (elfo 8 cabezas / enano 4.5 trapezoide / humano
+7.5 atlético) como ancla de anatomía + regalía y personalidad específica del
+cargo:
+
+- **9a — Reina Ithessa** (Stillwood): 555 años, madura pero no la más vieja
+  del reino — la corona es su propio cabello trenzado, sin corona metálica
+  separada (regalía orgánica élfica)
+- **9b — Rey Borran** (Ignis Reach): bisnieto directo, corona forjada
+  fusionada con la estética del Gran Clan (no ornamento separado) — certeza
+  generacional
+- **9c — Regente Edrick Ashcombe** (Aethelgard): **deliberadamente menos
+  regio** que los otros 2 — sin corona, cadena de oficio en vez de regalía,
+  composición nerviosa bajo la compostura (cargo precario, no sangre real)
+- **9d — Embajador Cyrion** (asiento élfico del Council): diplomático de
+  décadas, paciencia élfica ejercida como poder político puro
+- **9e — Embajador Kadrun** (asiento enano del Council): Gran Clan en
+  registro diplomático, no artesanal — distinto en tono de Vekka
+- **9f — Consejera Merrit Vance** (asiento humano del Council): la más
+  afilada y visiblemente ambiciosa de los 3 gobernantes/embajadores — ganó
+  su asiento, sabe que puede perderlo
+
+**Nota de diseño transversal documentada:** Reina/Rey deben leer como
+gobernantes legítimos (regalía plena); Edrick debe leer administrativo, no
+monárquico; los 3 embajadores deben leer diplomáticos/burócratas, no
+guerreros ni realeza.
+
+**Archivo:** `Briefs de Concept Art.md` §9 (nueva sección, mismo bloque de
+estilo compartido que el resto del documento: Sable × BotW, negativos
+Genshin/PBR/anime/neon).
+
+---
+
 ## [2026-07-24] lint | Higiene de contexto — Current-State recortado (3ra vez)
 
 **Disparador:** cierre de sesión. `check_vault.py` marcó `Current-State.md`

@@ -21,6 +21,16 @@ updated: 2026-07-24
   geografía, política, Council) en [[Current-State-Historico]] y [[LOG]].
   **Siguiente frente:** guión y diálogos por actos.
 
+- **✅ SESIÓN 2026-07-24 (parte 7) — BRIEFS DE CONCEPT ART: GOBERNANTES +
+  TRIUNE COUNCIL:** 6 prompts nuevos en [[Briefs de Concept Art]] §9, para
+  generar con **Nano Banana 2** (Boris perdió acceso a NB Pro): Reina
+  Ithessa, Rey Borran, Regente Edrick Ashcombe, Embajador Cyrion, Embajador
+  Kadrun, Consejera Merrit Vance. Cada uno usa el fenotipo racial ya
+  ratificado como ancla + regalía/personalidad específica del cargo (Reina/
+  Rey regios, Edrick deliberadamente menos regio — cargo precario, los 3
+  embajadores diplomáticos no guerreros). **Pendiente:** generar y evaluar
+  contra los 5 ejes del [[Art Bible]] cuando Boris corra los prompts.
+
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
   concept art generados y ratificados (95-100%); Golden Scene keyframes
