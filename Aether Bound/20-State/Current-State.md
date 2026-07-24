@@ -240,14 +240,37 @@ updated: 2026-07-23
   - Diseño visual ratificado + arma/técnica
 - **✅ Roen, Valen, Darro fichas:** Concepto completo con encuentros personalizados (18 total)
 
-**✅ WORLDBUILDING — GEOGRAFÍA Y CIUDADES (2026-07-23):**
-- **✅ 3 Reinos mapeados:** Aethelgard (Rivermeet, Mistbound Frontier, Iven's Settlement) / Ignis Reach (Emberdeep, Ember Workshops) / Stillwood (The Stillspire, Sky Watchtowers)
-- **✅ Zonas Neutras/Secundarias:** The Driftmarket (hub flotante), Sunken Archive (bóveda clímax), The First Wound (cementerio final)
-- **✅ Beats narrativos por acto:** Acto 1 (tu gajo) / Acto 2 (3 sub-actos, rueda completa) / Acto 3 (clímax + 4 finales)
-- **✅ Arterias de conexión:** River Road (co-op Tank/Strategist) / Cinder Ascent (escalada) / Gloomvault (oscuridad)
-- **✅ Personajes mapeados a ciudades:** tabla completa origen→ciudad
-- **✅ Tiempos de viaje estimados:** Rivermeet↔Emberdeep 30-40min, Emberdeep↔Stillwood 45-60min, etc.
-- **Pendiente:** Fast travel diegético (barcazas Driftmarket, túneles enanos)
+**✅ WORLDBUILDING — GEOGRAFÍA Y CIUDADES + THE WILDS COMPLETO (2026-07-23):**
+
+**3 Reinos:**
+- ✅ Aethelgard (Rivermeet, Mistbound Frontier, Iven's Settlement)
+- ✅ Ignis Reach (Emberdeep, Ember Workshops)
+- ✅ Stillwood (The Stillspire, Sky Watchtowers)
+
+**The Wilds — 45+ POI (Points of Interest):**
+- ✅ Ruinas Antiguas (3): The Shattered Spire, The Echoing Archive, The God's Throne
+- ✅ Asentamientos Abandonados (3): Riverstone, Ironforge Outpost, Stillwood Sanctuary
+- ✅ Landmarks Naturales (4): Lake of Mirrors, The Monolith, Shattered Cascade, Ossuary Grove
+- ✅ Dungeons Secundarios (3): The Hollow Deep, The Rift, Submerged Halls
+- ✅ Puntos Narrativos (4): Warden's Rest, The Battlefield, Observation Point, Speck's First Glimpse
+- ✅ Santuarios por Raza (3): Shrine of First Hammer (enano), Grove of Cycles (élfico), Vigil of Broken Oath (humano)
+- ✅ Poder Aether (3): The Aether Well, The Crystal Heart, The Fountain of Echoes
+- ✅ Lugares Privados Pivotes (10): Roen/Maren/Torgan/Iven/Sereth/Bram/Lyris/Nyael/Vekka/Dagna
+- ✅ Bosses Menores (4): Crowned Leviathan, Burning Shepherd, Mirror Stalker, Aether Wyrm
+- ✅ Vistas Narrativas (2): World's Crown, Scar of Breaking
+- ✅ Refugios (3): Hermit's Cave, Bandits' Hideout, Warden's Crypt
+- ✅ Interdimensional (2): The Mirror Pool, The Closed Door
+
+**Beats narrativos por acto:**
+- ✅ Acto 1 (tu gajo) — Desfiladeros + El Nido
+- ✅ Acto 2 (rueda completa) — 3 sub-actos (Rivermeet / Emberdeep / Stillwood) + Interludios Driftmarket
+- ✅ Acto 3 (clímax) — Sunken Archive → The First Wound → 4 Finales
+
+**Conectividad:**
+- ✅ Arterias de conexión: River Road / Cinder Ascent / Gloomvault
+- ✅ Personajes mapeados a ciudades
+- ✅ Tiempos de viaje estimados
+- ✅ Pendiente: Fast travel diegético (barcazas, túneles)
 
 **Worldbuilding — Cultura/Lore:**
 - **Culturas por raza** — Aether-Born/Iron-Blooded/Restless existen narrativamente pero NO tienen ceremonia/idioma/costumbre documentadas
