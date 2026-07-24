@@ -21,15 +21,23 @@ updated: 2026-07-24
   geografía, política, Council) en [[Current-State-Historico]] y [[LOG]].
   **Siguiente frente:** guión y diálogos por actos.
 
-- **✅ SESIÓN 2026-07-24 (parte 7) — BRIEFS DE CONCEPT ART: GOBERNANTES +
-  TRIUNE COUNCIL:** 6 prompts nuevos en [[Briefs de Concept Art]] §9, para
-  generar con **Nano Banana 2** (Boris perdió acceso a NB Pro): Reina
-  Ithessa, Rey Borran, Regente Edrick Ashcombe, Embajador Cyrion, Embajador
-  Kadrun, Consejera Merrit Vance. Cada uno usa el fenotipo racial ya
-  ratificado como ancla + regalía/personalidad específica del cargo (Reina/
-  Rey regios, Edrick deliberadamente menos regio — cargo precario, los 3
-  embajadores diplomáticos no guerreros). **Pendiente:** generar y evaluar
-  contra los 5 ejes del [[Art Bible]] cuando Boris corra los prompts.
+- **🟡 SESIÓN 2026-07-24 (parte 7) — CONCEPT ART GOBERNANTES + TRIUNE
+  COUNCIL (NB2), en curso — QA por rondas:** 6 briefs en [[Briefs de Concept
+  Art]] §9 (Nano Banana 2, Boris sin acceso a NB Pro). Estado tras 3 rondas
+  de QA:
+  - ✅ **Aprobados:** Ithessa v2, Regente Edrick, Embajador Cyrion,
+    Embajador Kadrun v2, Consejera Merrit Vance (notas menores en Vance/
+    Ithessa, no bloqueantes)
+  - 🔴 **Pendiente:** Rey Borran — 2 intentos no cerraron la proporción
+    trapezoide de 4.5 cabezas (sigue leyendo más grande/humano de lo
+    debido). Hallazgo metodológico: Kadrun se resolvió reescribiendo el
+    prompt en prosa corta en vez de una oración densa — mismo enfoque
+    recomendado para el próximo intento de Borran (no solo ancla numérica)
+  - ⚠️ **Problema sistémico en todos:** el acabado acuarela Sable×BotW
+    (grano de papel, bandas cel dry-brush) no aparece en ningún resultado
+    de NB2 pese a negativos reforzados — posible techo de la técnica para
+    este tipo de contenido, a decidir por Boris si persiste.
+  Detalle completo de las 3 rondas en [[LOG]].
 
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales

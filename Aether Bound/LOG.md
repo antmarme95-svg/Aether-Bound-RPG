@@ -1,5 +1,30 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design/QA | Embajador Kadrun v2 — APROBADO (corrige texto filtrado Y proporción)
+
+**Ronda 3:** Boris corrió el prompt §9e-v2 (prosa corta, negativos como
+oraciones simples). Resultado: **✅ APROBADO** — sin texto filtrado (el
+glitch de la v1 desapareció por completo) Y la proporción trapezoide se ve
+notablemente más cerca del canon de 4.5 cabezas que cualquier resultado
+anterior del batch — torso ancho, piernas cortas, cabeza proporcionalmente
+grande respecto al cuerpo. Sello ceremonial, cuffs con acento ember,
+tatuajes de clan — todo coincide con el brief.
+
+**Hallazgo metodológico (relevante para Borran, que sigue sin cerrar):** el
+mismo cambio de formato (prosa corta y natural en vez de una oración densa
+cargada de vocabulario técnico de estilo + negativos en lista larga tras
+"Negative:") pareció mejorar TANTO el glitch de texto COMO la fidelidad de
+proporción en el mismo prompt. Hipótesis: cuando el prompt es muy denso, el
+modelo pierde precisión de anatomía compitiendo con la carga de instrucción
+de estilo en la misma oración. **Recomendación para el próximo intento de
+Borran:** aplicar el mismo formato de prosa corta (como en 9e-v2), no solo
+agregar un ancla numérica de proporción.
+
+**Con esto, el Council completo queda:** Cyrion ✅ / Kadrun ✅ / Vance ✅
+(nota menor). Solo Borran sigue pendiente de una versión que cierre.
+
+---
+
 ## [2026-07-24] design/QA | Council completo (Cyrion/Kadrun/Vance) + re-QA Ithessa/Borran v2
 
 **Ronda 2 de evaluación** — Boris pasó Ithessa v2, Borran v2, y los 3
