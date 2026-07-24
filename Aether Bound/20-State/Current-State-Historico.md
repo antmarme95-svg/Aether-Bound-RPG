@@ -18,6 +18,346 @@ updated: 2026-07-16
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
+## [2026-07-24] Higiene de contexto — relato movido aquí VERBATIM (3ra vez)
+
+> `Current-State.md` volvió a crecer con narrativa sesión-por-sesión desde
+> el 2026-07-17 (sin recorte desde entonces) hasta el 2026-07-24 —
+> `check_vault.py` marcó el archivo 3,615t sobre su techo blando (aunque el
+> vault seguía 🟢 VERDE en conjunto). Todo el relato de esas sesiones
+> (rework de anatomía 07-17→07-22, redireccionamiento de Speck 07-23, y el
+> paquete completo de worldbuilding narrativo 07-24: retcon del cataclismo,
+> geografía/The Wilds, estructura política de las 3 razas, Triune Council)
+> se mueve aquí VERBATIM. Current-State.md queda recortado a solo lo
+> vigente. El registro append-only autoritativo sigue siendo [[LOG]].
+
+- **✅ SESIÓN 2026-07-24 — RETCON CATACLISMO + MAPA DEL MUNDO REFINADO:**
+  Mapa del mundo generado en NB Pro (Tolkien × Sable × BotW, 45+ POI) revisado
+  por Boris — detonó corrección de canon: **cataclismo movido de 100 a ~550
+  años atrás**, techo de vida élfico fijado en 650-700 años (Eragon-style, no
+  inmortalidad Tolkien), nueva sección **Los Tres Niveles de Conocimiento**
+  en [[El Mundo y la Muda]] (elfos ~5-10% memoria directa / enanos tradición
+  oral ritualizada / humanos folclore regional deformado). Speck: soledad
+  100+→**550+ años**. Tabla de longevidad nueva en [[Las Tres Razas]] (elfos
+  650-700 / enanos ~200-250 / humanos ~70-90). Detalle completo en [[LOG]].
+  **Otros ajustes de mapa:** Mistbound reposicionado (tierra interior remota,
+  no frontera con The Wilds — Rivermeet es la puerta real vía River Road);
+  The Monolith sin revelación mecánica (se descartó "Warden Waystone", queda
+  solo una leyenda ambigua de Valen + Warden's Crypt debajo sin confirmación
+  verbal); 3 Torres de Guardia nuevas por raza en cada entrada a The Wilds;
+  Stillwood redefinido como continuación orgánica de The Wilds en elevación
+  (Rivendell/Imladris) con cascada nueva The Ascending Falls.
+  **Pendiente:** el PNG del mapa ya generado tiene "100 years" horneado en
+  texto — requiere regeneración cuando se itere el asset visual (brief fuente
+  ya corregido).
+
+- **✅ SESIÓN 2026-07-24 (parte 2) — ESTRUCTURA POLÍTICA DE LAS 3 RAZAS:**
+  Nuevo documento canónico [[Estructura Política]]. **Elfos:** Reina Ithessa
+  (555 años, bebé durante el cataclismo) + Círculo de los Vivos (<5 elfos con
+  memoria directa) + 2 Academias (Élfica de los Sabios / Real al servicio de
+  la Corona). **Enanos:** Rey Borran (bisnieto directo, sucesión ritual) + el
+  Gran Clan de Forja ES el clan real, con 3 niveles entre pivotes (Vekka 100%
+  clan real / Dagna subclán vasallo / Torgan rechazado, clan menor propio).
+  **Humanos:** sin dinastía estable (6-8 Casas en 550 años), Regente Edrick
+  Ashcombe (no Rey), Triune Council en Rivermeet como autoridad real
+  continua. Apellidos exclusivos de cultura humana (no todos los usan en la
+  práctica). **Fichas actualizadas:** Torgan, Dagna, Vekka (clanes) + Valen,
+  Sereth (academias, rivalidad de escuelas) + Bram (Casa Thorne, huyó a los
+  15 del camino político). Detalle completo en [[LOG]].
+  **Pendiente:** afiliación de Academia para Lyris/Nyael (abierto, no
+  urgente).
+
+- **✅ SESIÓN 2026-07-24 (parte 3) — ESTRUCTURA POLÍTICA ÉLFICA COMPLETA:**
+  Lyris → fuera de ambas Academias, tercer track no académico: **Alto Mando
+  de Frontera** (nunca la invitaron a la conversación intelectual, no es que
+  la rechazaron). Nyael → **brazo encubierto de la Academia Real**,
+  operativos negables de la Corona — contraparte oscura de Sereth (persuade
+  vs. ejecuta), misma maquinaria de Estado. Mapa élfico completo: Valen
+  (Élfica) / Sereth (Real visible) / Nyael (Real encubierto) / Lyris (fuera
+  del sistema). Fichas de Lyris y Nyael actualizadas + [[Estructura
+  Política]] expandida. Detalle en [[LOG]].
+  **Siguiente frente:** Maren e Iven (humanos) sin Casa/contexto político —
+  a construir con Boris, sin semilla propia todavía (a diferencia de Bram).
+
+- **✅ SESIÓN 2026-07-24 (parte 4) — IVEN: POBREZA ESTRUCTURAL + PÉRDIDA DE
+  ORIGEN:** Su asentamiento redefinido como pobre/alta mortalidad crónica
+  desde siempre (no crisis reciente) — la corrupción de Aether aceleró una
+  condición ya existente, conecta con [[Estructura Política]] ("la frontera
+  no es prioridad" = política de generaciones). Nueva pérdida de origen: su
+  hermana menor Sael murió a los 5 años (Iven tenía 9) por falta de
+  medicina — no fue elegida en un triage familiar. Esto reencuadra su
+  traición: no es la primera vez que "elige quién vive", es la más grande de
+  una vida entera haciendo triage — casi reflejo de supervivencia, no dilema
+  moral nuevo. Eco explícito de Sael añadido al clímax y a la línea privada.
+  Detalle en [[LOG]].
+- **✅ SESIÓN 2026-07-24 (parte 5) — MAREN: CONSORCIO DE MERCADO. MAPEO
+  POLÍTICO DE LOS 9 PIVOTES + 3 FIJOS 100% COMPLETO:** Maren es Jefa de
+  Operaciones del Consorcio de Mercado — tercer centro de poder humano
+  (junto Regente/Triune Council), práctico no político, sobrevive a cambios
+  de Regente porque el comercio no puede parar. Completa el trío de poder
+  humano: Bram (heredado, rechazado) / Iven (ausente, pobreza) / Maren
+  (ganado, competencia). Clímax ajustado: la contacta el Triune Council
+  directamente, no el Regente — necesitan quien pueda ejecutar, no solo
+  decretar. **Con esto, los 12 personajes con rol narrativo (9 Pivotes +
+  Roen/Valen/Darro) tienen origen institucional/social definido — ver tabla
+  completa en [[LOG]] y [[Estructura Política]].**
+  **Siguiente frente:** guión/diálogos por actos (worldbuilding político y
+  geográfico ya están completos y listos para usarse como fuente).
+
+- **✅ SESIÓN 2026-07-24 (parte 6) — TRIUNE COUNCIL DEFINIDO:** Cuerpo
+  supra-racial con 3 asientos (uno por raza, embajadores/representantes
+  permanentes, NO los monarcas en persona), sede en Rivermeet por
+  conveniencia geográfica. Titulares: Embajador Cyrion (élfico), Embajador
+  Kadrun (enano), Consejera Merrit Vance (humano, el más volátil). **Hallazgo
+  central:** el Council es candidato a antagonista institucional real — nació
+  gestionando la corrupción del cataclismo, su poder depende de que la
+  crisis NO se resuelva. Explica por qué las 9 órdenes de traición convergen
+  desde 3 cadenas de poder distintas (Gran Clan de Forja / Academia Real /
+  Consorcio de Mercado) en el mismo cuerpo — una sola estrategia disuelta en
+  3 idiomas institucionales. La inestabilidad del trono humano le conviene
+  al Council (mayoría natural de 2-contra-1 sin oposición coordinada).
+  Detalle completo en [[LOG]] y [[Estructura Política]].
+  **Con esto, el layer político-institucional completo del juego queda
+  cerrado:** 3 reinos + Council supra-racial + origen social de los 12
+  personajes narrativos.
+
+- **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
+  Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 
+  (Fragmento) + asunción de destino con gracia divina (F1/F4) vs. agencia robada 
+  (F2/F3). **Todos 4 finales concept art GENERADOS Y RATIFICADOS (95-100%):**
+  - E3 F1 (The Guided Molt): majestuosa, propósito, luz cálida ✅
+  - E3 F2 (The Long Winter): monumento muerto, desolación, fría ✅
+  - E3 F3 (The Conqueror's Clause): prisionera, trauma, cadenas ✅
+  - E3 F4 (The Warden's Choice): God-Core vivo, libre, eternidad cálida ✅
+  
+  **Golden Scene keyframes completados (4 landmarks visuales):**
+  - The Wilds Dawn (existe) ✅
+  - The Wilds Dusk (existe) ✅
+  - Rivermeet (generado, ratificado 95%+) ✅
+  - God-Core Night (generado, ratificado 100%) ✅
+  
+  Siguiente: **Decisión roadmap post-NB Pro** (Trailer? Cutscenes? Banda sonora?)
+
+- **Boris rechazó la ronda 2 de ajustes** ("Todavía no me gustan") y
+  encargó traducir su propia spec anatómica (triángulo curvo tipo sable,
+  eje 20-40° atrás, proporción 1.5-2× oreja humana MISMO grosor, punta
+  50-70° redondeada) contra Zelda TotK/Frieren a un plan técnico, vía un
+  **subagente Opus dedicado**. Decisiones que tomó Boris sobre el plan:
+  recortar a la proporción 1.5-2× (revierte el ancho de las 2 rondas
+  previas), variante **Zelda puro**, técnica = **composición de
+  primitivas sólidas** (no reintentar el loft, ya falló 3 veces).
+- **✅ REWORK EJECUTADO (2026-07-22, ronda 9):** cono de un solo taper
+  reemplazado por 4 masas (cuerpo + punta + base + hélix, las 3 últimas
+  hijas del cuerpo para alineación garantizada). Diagnóstico nuevo del
+  subagente: el cono medía 3.1× la oreja humana del rig, muy por encima
+  del 1.5-2× pedido — ahora ≈1.8× (largo total ≈0.14).
+- **✅ QA imparcial corrido (protocolo [[QA Loop]], mismo agente
+  re-invocado 2 veces): 35-40%→55-60%→75%.** Ronda 9 midió CRITICAL en
+  el eje (leía casi lateral, sin rake). Sub-ronda 1 resolvió proporción y
+  costura (55-60%) pero el eje persistió. Diagnóstico descartó bug de
+  cálculo (verificado con matrices `Basis` explícitas) — la causa real
+  era que la oreja venía "casi horizontal" por decisión de las rondas
+  4-5; al re-mirar las referencias con el hallazgo en mente, ambas
+  muestran la oreja apuntando hacia ARRIBA. **Boris reabrió esa decisión**
+  y se subió la elevación (~28° arriba + ~20° atrás, construcción directa
+  de dirección en vez de ángulos Euler encadenados) → **75%, sin
+  CRITICAL abierto**. Quedan 2 hallazgos menores: MEDIUM (verificar
+  cuando el pelo definitivo reemplace el placeholder — riesgo de que
+  tape la punta) y LOW (ángulo 5-6° por encima del techo de 40° pedido,
+  sin impacto visual reportado). Gates `test_core.gd` ALL_PASS en cada
+  sub-ronda. Detalle completo en [[LOG]]. **VoBo de Boris sobre el 75%:
+  conforme con el resultado** ("Sí, dale, así queda") — cierra la ronda
+  10 de la oreja de elfo.
+- **✅ NACIMIENTO DE OREJA — pasos 1-3 CERRADOS (2026-07-22, VoBo de Boris):**
+  [[PRD-Nacimiento-de-Oreja-v1]] CERRADO. Paso 1 humano: 74% (4 rondas QA).
+  Paso 2 enano + helper `_build_ear`: 70% (2 rondas QA, reparametrización
+  racial visible). Paso 3 elfo + pabellón: 78% (2 rondas QA, dos MEDIUM
+  resueltos). El nacimiento lee como transición orgánica en las 3 razas
+  (no "cono pegado"). Techo de 3 primitivas declarado (concha/antihelix
+  imposibles). Gates ALL_PASS, sin regresión. Anti-objetivo duro respetado:
+  cono élfico intacto (eje, largo, punta sin toque).
+- **Sesión 2026-07-21 cerró el frente 1
+  (hombro→torso+cintura) y frente 2 (C4 pies IK), y en
+  [[PRD-C6b-Enano-Elfo-v1]] ejecutó DOS pasadas: (1) piloto de
+  PROPORCIONES (campo `"proportions"` por origin: `limb_len`/
+  `shoulder_x`/`neck_len`/`head_scale`/`hand_scale`, reutiliza hooks de
+  escala existentes) — enano 4.49 cabezas / elfo 8.17 (objetivos 4.5/8.0);
+  (2) geometría nueva de OREJA élfica (alargada + barrida hacia atrás,
+  antes leía como nudo horizontal) y MANDÍBULA/CEJA por raza (campo
+  `"face"`: `jaw_width`/`jaw_depth`/`brow_scale`/`brow_y` — enano frente
+  pesada/mandíbula ancha, elfo mandíbula fina). Gates ALL_PASS en ambas
+  pasadas, cero regresión humano/miststalker (proportions/face vacío).
+  Detalle completo en [[LOG]]. **Queda VoBo de Boris sobre TODO C6b hasta
+  ahora antes de seguir con ROM por raza.**
+  Capturas guardadas para VoBo en `godot/test_out/`:
+  `anatomy_dwarf_full_front/_side.png`, `anatomy_dwarf_face/_34/_profile.png`,
+  `anatomy_elf_full_front/_side.png`, `anatomy_elf_face/_34/_profile.png`
+  (banco corrido con `ANATOMY_ORIGIN=ironblooded|aetherborn` +
+  `ANATOMY_HAIR=8` para juzgar oreja/mandíbula sin el peinado tapando —
+  ambos env vars nuevos y reutilizables en `tmp_anatomy.gd`, mismo patrón
+  que `DIAG_*`). `anatomy_face*.png`/`anatomy_full_*.png` normales
+  restaurados al humano baseline (7.35 cabezas).
+  Chip aparte (fuera de C6b, YA EN EJECUCIÓN por el director en otra
+  sesión): cámara de close-up rota en `autotest_classes.gd` (preexistente,
+  confirmado con `git stash`, NO introducida por C6b).
+  **Ronda 2-3 de oreja élfica (mismo día + 2026-07-22):** Boris pasó 2
+  referencias nuevas (Frieren + Zelda TotK, en `Downloads/`) — reemplazan
+  el criterio de la lámina de concept art para este rasgo. Ajuste manual
+  (2 rondas) + **QA imparcial formal** (protocolo [[QA Loop]], mismo
+  agente re-invocado): 40%→60-65% de fidelidad medida. CRITICAL (ángulo),
+  HIGH (punta roma), MEDIUM (base gruesa) RESUELTOS y verificados por
+  píxel por el propio QA.
+  **Experimento de "hoja compuesta" (mismo día, 2026-07-22): CERRADO,
+  revertido.** Se probó `HairLibrary._loft`/`_lock` (curva+radios, el
+  reemplazo vigente de la técnica de pelo vieja) para el hallazgo de
+  silueta "hoja" que el QA marcó como techo del cono — 3 rondas con QA
+  de por medio, las 3 midieron PEOR que el cono (40%→45%→45-50% vs
+  60-65%). Revertido al cono (mejor estado medido); nueva Lección
+  documentada (loft puede leer peor que un cono simple en rasgos chicos/
+  cortos). Gates ALL_PASS.
+  **Ajuste puntual (mismo día):** Boris pidió base 25% más ancha sobre
+  el cono ya validado — `bottom_radius` 0.019→0.024, sin tocar ángulo/
+  largo/punta. Verificado en banco, gates ALL_PASS. **Estado final de la
+  oreja: cono con base más ancha, sobre el 60-65% ya medido (cambio
+  puntual sin nueva medición de QA — pendiente si Boris quiere
+  re-medir).**
+- **Sesión 2026-07-19 ejecutó: mini-ronda de quiebres de mandíbula ✅,
+  GRUPO C ✅, piloto de loft (FASE 3 pelo) ✅-detenido-en-regla. Queda del
+  día:**
+  0. **✅ MANDÍBULA: VoBo RATIFICADO por Boris (2026-07-20)** — la mini-
+     ronda de quiebres queda PERMANENTE (ya no es temporal). Cierra ese
+     frente; la cara vuelve solo en la ronda de ajustes finales.
+  1. **PELO: frontier crop reconstruido** (jerarquía de 3 pasadas del
+     libro; defecto de "dientes" ELIMINADO, sin cuenco trasero, nuca
+     corta con piel, color castaño correcto). Set fresco en
+     `godot/test_out/` (anatomy_face*.png). **PELO REFINADO en MÚLTIPLES
+     rondas (07-19/20):** quiebres suavizados, taper, fade completo
+     (temporales/patillas/nuca/costado como BANDAS continuas + casquete
+     elipsoide, nunca tiras — corolario en [[Principios de Anatomía 3D]]);
+     reestructura por jerarquía de 3 pasadas del libro; patilla suelta
+     eliminada (decisión de Boris); roseta de nuca rota; nacimiento con
+     espaciado irregular; nuca baja subdividida. **Último QA de ZONAS vs
+     referencia de cráneo (07-20):** coinciden patilla/oreja/occipucio/
+     nuca; hueco de coronilla-frontal tapado ~95% con bandas que hugean
+     (pinhole residual de PIEL solo visible a 3× zoom — confirmado por
+     diagnóstico de color; se paró tras 3 intentos por regla del Vault).
+     Gates ALL_PASS. **Pendiente artístico menor:** pinhole de coronilla
+     + nacimiento algo despareja. **Siguiente frente:** última ronda de
+     AJUSTES DE CARA (el VoBo de mandíbula era TEMPORAL, se cierra con el
+     pelo puesto) — a criterio de Boris.
+     - **Herramienta nueva reutilizable:** `HairLibrary._on_skull(x,y,
+       lift,back)` da el punto de la superficie del cráneo REAL — TODO
+       peinado futuro del [[PRD-Catalogo-Peinados-v1]] se autora con
+       ella, no a ojo (3 rondas se perdieron por semiejes inventados).
+     - **Bug de shader cerrado:** `hair_mat.rim_strength` 0.18→0.04
+       (el rim azul bañaba las tiras finas completas — causa del "tinte
+       azulado" que venía desde el piloto).
+  2. **Grupo C EJECUTADO (07-19):** jueces canónicos nuevos — rostro
+     34%, torso 32% (manos 70% quedó de la serie anterior). Baselines
+     de la serie NUEVA (no comparables con 48-57%/38-55% de jueces
+     previos, varianza ±10-17). Hallazgos accionables que sobrevivieron
+     el arbitraje: boca-cápsula (20%), mentón-cuboide en perfil,
+     hombro→torso y cintura recta. El presupuesto de subagentes es
+     ventana de 5h (confirmado) — sondear antes de asumir espera.
+  - **Registro:** fases y backlog con estado en
+    [[PRD-Reescritura-Escultura-Rig-v1]]; narrativa del día en [[LOG]].
+  - **Decisiones de estilo vigentes:** regla de tinta
+    `edge_threshold=1.00` (VoBo con A/B); anillos de codo/hombro =
+    estilo toon aceptado salvo veto; hombros no escalan con el build
+    (por diseño, pivotes fijos).
+  - **Metodología (ver [[Lecciones]]):** color de diagnóstico; 4 vistas
+    + close-ups + zoom antes de cerrar; solape en 3 ejes entre padres
+    distintos; caja para bordes, rampa/tangente para que el Sobel no
+    recorte; masas del torso = hijas de `torso`/`waist`.
+  - **Orden acordado con Boris (2026-07-20):** (1) hallazgos restantes
+    del grupo C — hombro→torso y cintura recta; (2) C4 — pies IK/ROM;
+    (3) [[PRD-C6b-Enano-Elfo-v1]] (cuerpo+ROM enano/elfo, AMPLIADO a
+    incluir catálogo de peinados + marca cultural por raza, con plan de
+    optimización de tokens). Catálogo de peinados humano
+    ([[PRD-Catalogo-Peinados-v1]]) y Fase 4b (warpaint) del
+    [[PRD-Rework-Modelado-Personajes-v2]] quedan POSPUESTOS — Boris:
+    "no creo que sea prioridad ahorita" (son trabajo de catálogo, no
+    frente urgente). **No arrancar nada de esto sin señal explícita de
+    Boris** (pidió verificar alineación primero, sin ejecutar).
+- **Fases 1-2 del [[PRD-Rework-Modelado-Personajes-v2]] quedaron
+  SUPERSEDED** por R2/R3 (nota de estado en el propio PRD); sus Fases 3
+  (pelo/loft) y 4 (boca-color/warpaint) siguen vigentes para DESPUÉS de la
+  reescritura. [[Fase5-Cara-Propuesta-DRAFT]] queda absorbida
+  conceptualmente por R1 (la lámina de rostro que le faltaba ya existe:
+  [[fenotipo-humano-rostro-v1]]).
+
+- **✅ PERSONAJES — LOS 9 PIVOTES + 3 FIJOS (2026-07-23):**
+  - **✅ Fichas Narrativas Expandidas COMPLETAS (9 Pivotes):** Maren, Torgan, Iven, Sereth, Bram, Lyris, Nyael, Vekka, Dagna
+    - Biografía pre-aventura única por Pivote
+    - Cómo lo ve Personaje Fijo (misma raza): Conocimiento Previo (Roen→3 Humanos, Valen→3 Elfos, Darro→3 Enanos)
+    - Encuentro con jugador específico por cell (raza/rol)
+    - Arco 3-actos completo (Lealtad → Comunidad → Desilusión)
+    - Clímax + traición (9 patrones narrativos distintos)
+    - 4 Epílogos por Final (Perdón/Muerte/Encadenamiento/Síntesis)
+    - Línea canónica + línea privada
+    - Dinámicas con Roen/Valen/Darro
+    - Diseño visual ratificado + arma/técnica
+  - **✅ Roen, Valen, Darro fichas:** Concepto completo con encuentros personalizados (18 total)
+
+- **✅ WORLDBUILDING — GEOGRAFÍA Y CIUDADES + THE WILDS COMPLETO (2026-07-23):**
+
+  **3 Reinos:**
+  - ✅ Aethelgard (Rivermeet, Mistbound Frontier, Iven's Settlement)
+  - ✅ Ignis Reach (Emberdeep, Ember Workshops)
+  - ✅ Stillwood (The Stillspire, Sky Watchtowers)
+
+  **The Wilds — 45+ POI (Points of Interest):**
+  - ✅ Ruinas Antiguas (3): The Shattered Spire, The Echoing Archive, The God's Throne
+  - ✅ Asentamientos Abandonados (3): Riverstone, Ironforge Outpost, Stillwood Sanctuary
+  - ✅ Landmarks Naturales (4): Lake of Mirrors, The Monolith, Shattered Cascade, Ossuary Grove
+  - ✅ Dungeons Secundarios (3): The Hollow Deep, The Rift, Submerged Halls
+  - ✅ Puntos Narrativos (4): Warden's Rest, The Battlefield, Observation Point, Speck's First Glimpse
+  - ✅ Santuarios por Raza (3): Shrine of First Hammer (enano), Grove of Cycles (élfico), Vigil of Broken Oath (humano)
+  - ✅ Poder Aether (3): The Aether Well, The Crystal Heart, The Fountain of Echoes
+  - ✅ Lugares Privados Pivotes (10): Roen/Maren/Torgan/Iven/Sereth/Bram/Lyris/Nyael/Vekka/Dagna
+  - ✅ Bosses Menores (4): Crowned Leviathan, Burning Shepherd, Mirror Stalker, Aether Wyrm
+  - ✅ Vistas Narrativas (2): World's Crown, Scar of Breaking
+  - ✅ Refugios (3): Hermit's Cave, Bandits' Hideout, Warden's Crypt
+  - ✅ Interdimensional (2): The Mirror Pool, The Closed Door
+
+  **Beats narrativos por acto:**
+  - ✅ Acto 1 (tu gajo) — Desfiladeros + El Nido
+  - ✅ Acto 2 (rueda completa) — 3 sub-actos (Rivermeet / Emberdeep / Stillwood) + Interludios Driftmarket
+  - ✅ Acto 3 (clímax) — Sunken Archive → The First Wound → 4 Finales
+
+  **Conectividad:**
+  - ✅ Arterias de conexión: River Road / Cinder Ascent / Gloomvault
+  - ✅ Personajes mapeados a ciudades
+  - ✅ Tiempos de viaje estimados
+
+- **✅ SPECK — REDIRECCIONAMIENTO + FINALES COMPLETOS (2026-07-23):**
+  - `Trueform Speck translucent.png` (E1 Warden) — RATIFICADO, LOCKED
+  - `Shapeshifted Speck.png` + Flashes 1-3 (zorro) — EXISTE, RATIFICADO
+  - `Speck - Awakened Warden Form / The Guided Molt` (E3 F1) — GENERADO, RATIFICADO 100%
+  - `Speck - Imprisoned Warden Form Final 3` (E3 F2) — GENERADO, RATIFICADO 95%+
+  - `Speck - Imprisoned Warden Form - Traumatized` (E3 F3) — GENERADO, RATIFICADO 95%+
+  - `Speck - Ancient Warden Form / Final 4 Aether Renacido` (E3 F4) — GENERADO, RATIFICADO 100%
+  - **Narrativa:** Redireccionamiento completo documentado en [[Speck.md]] y [[Briefs de Concept Art]] §5
+
+  **COMPLETADO (2026-07-22/23) — NB PRO + HIGGSFIELD:**
+
+  *NB Pro — Finales Speck (sesión 2026-07-23):*
+  - `Speck - Awakened Warden Form` (F1) — ✅ GENERADO, RATIFICADO 100%
+  - `Speck - Imprisoned Warden Form Final 2 The Long Winter` — ✅ GENERADO, RATIFICADO 95%+
+  - `Speck - Imprisoned Warden Form Final 3 Traumatized` — ✅ GENERADO, RATIFICADO 95%+
+  - `Speck - Ancient Warden Form Final 4 Aether Renacido` — ✅ GENERADO, RATIFICADO 100%
+  - `Rivermeet keyframe` — ✅ GENERADO, RATIFICADO 95%+
+  - `God-Core Night keyframe` — ✅ GENERADO, RATIFICADO 100%
+
+  *NB Pro — Links/Acciones Pivotes (2026-07-22):*
+  - `Guided Avalanche.jpeg` — Sereth (elfo) + Torgan (enano duelist). ✅ Evaluated
+  - `Riposte Runner.jpeg` — Iven (humano acróbata) + Elfo Vanguard. ✅ Evaluated
+
+  *Higgsfield — Links/Acciones + Creature (2026-07-22):*
+  - `Warforging.png` — Vekka (enana ingeniera) + Humano Vanguard. ✅ Evaluated
+  - `Speck sneak peek.mp4` — Evaluation pending (ffmpeg setup)
+
+---
+
 - **➡️ ARRANQUE DE LA PRÓXIMA SESIÓN (2026-07-16, actualizado tras análisis
   técnico + QA visual pedido por Boris — LEER ANTES DE TOCAR GEOMETRÍA):**
   Boris pidió un análisis con 2 subagentes (técnico: lee shaders/pipeline;

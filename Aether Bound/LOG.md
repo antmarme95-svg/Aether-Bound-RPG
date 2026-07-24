@@ -1,5 +1,27 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] lint | Higiene de contexto — Current-State recortado (3ra vez)
+
+**Disparador:** cierre de sesión. `check_vault.py` marcó `Current-State.md`
+3,615t sobre su techo blando (6,615t total) — había crecido sin recorte
+desde el 2026-07-17, acumulando narrativa de: rework de anatomía (07-17→
+07-22), redireccionamiento de Speck (07-23), y las 6 partes del paquete de
+worldbuilding político de hoy (07-24).
+
+**Acción:** todo el relato sesión-por-sesión (verbatim, sin editar
+contenido) se movió a [[Current-State-Historico]], siguiendo el patrón ya
+establecido (2 higienes previas el 2026-07-16). `Current-State.md` quedó
+recortado a solo: arranque de sesión actual, Hechos vigentes, y Pendientes
+narrativos/lore genuinamente abiertos (los bloques ✅ completados se movieron
+también).
+
+**Resultado medido:**
+- `Current-State.md`: 6,615t → **1,466t** (bien bajo el techo blando)
+- Arranque de sesión total: ~6,912t → **~1,763t**
+- Vault sigue 🟢 VERDE (ya lo estaba, pero con mucho más margen ahora)
+
+---
+
 ## [2026-07-24] narrative | TRIUNE COUNCIL definido — antagonista institucional del layer político
 
 **Disparador:** con el mapeo político de los 9 Pivotes cerrado, Boris pidió
