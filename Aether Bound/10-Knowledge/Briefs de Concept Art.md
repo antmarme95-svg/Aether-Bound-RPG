@@ -111,79 +111,177 @@ Warden interpretadas como "coloración rara"). Seams teal presentes. Pata
 delantera izquierda con cristal visible (glitch del shapeshifting). Ojos
 facetados. Comportamiento demasiado inteligente.
 
-### 5a — Speck E1, Crisálida/Forma Warden (GENERADO 2026-07-23, NB Pro)
+### 5a — Speck E1, Crisálida/Forma Warden (GENERADO 2026-07-23, NB Pro) ✅
 
-**Especificación:** Speck en crisálida, forma Warden real (no shapeshifteada).
-Superviviente de civilización Warden — tecnología biológica diseñada, no
-evolucionada.
+**Especificación final RATIFICADA 2026-07-23:** Speck en forma Warden real
+(no shapeshifteada), cuerpo de bio-constructo crystallino. Superviviente de
+civilización Warden — tecnología biológica diseñada, no evolucionada. Paleta
+jade pálido casi-blanco translúcido (no obsidiana). Orejas pétalos translúcidos
+(Opción 3, elegancia divina). Runas oro brillante visible + activas. Patas
+esmeralda pálido casi-blanco (conexión tierra). Seams aether flujo uniforme
+(teals + ambers). Translucidez variable (orejas + extremidades más translúcidas).
+Atmósfera: arqueología vivida, luminosa, antigua, triste, poderosa.
+
+**Brief ejecutado:**
 
 ```
-Creature concept sheet of "Speck" stage one, the crisalis form: a small bio-construct, 
-living relic of a lost Warden civilization. Not an axolotl — a deliberate creation. 
-Small enough to carry, form reads as sculptural, semi-geological. Body is pale translucent 
-flesh with visible crystalline structures veined beneath like mineral growth. The crystal 
-patterns are angular, geometric — evidence of design, not nature. External gill-like 
-structures are thin, faceted, almost insectoid — they catch light like quartz. Dark warm 
-eyes are faceted, gem-like, reflecting an ancient consciousness. Faint teal aether seams 
-glow very softly along spine and limbs, like cracks where power is contained but dormant. 
-Subtle geometric runes are etched or branded across the body in thin lines — symbols of 
-a civilization, but they are DARK/INACTIVE, not yet awakened. Stubby thick limbs, posture 
-suggests something coiled, waiting. Small vignette: she rests in a palm, ancient and small. 
-Mood: mysterious, precious, unsettling — a relic that should not exist. Art style: 
-hand-painted graphic novel watercolor, ligne claire with mineral/crystalline detail work, 
-flat cel shading in 3–4 bands, low saturation palette with only teal aether seams and 
-faint copper/bronze tones for the runes. Visible paper grain. No Genshin mascot look — 
-this is ancient technology, not a pet.
+Creature concept sheet, front view and side view, of "Speck" — stage one, the 
+ancient Warden form (not an axolotl, not a natural creature). A small bio-construct, 
+living relic of a lost divine civilization, small enough to carry in two hands. Form 
+reads as sculptural, semi-geological, deliberate design. Body is pale translucent 
+jade-green flesh with visible crystalline structures veined beneath like mineral 
+growth — the crystal patterns are angular, geometric, evidence of conscious design 
+not evolution. Ears are thin translucent petal-like structures, faceted like quartz, 
+sweeping back elegantly and catching light. Eyes are dark amber, deeply faceted and 
+gem-like, reflecting an ancient consciousness with sad weight. Forearms and paws are 
+a slightly deeper esmeralda-pale green, almost-white, suggesting earth-connection and 
+divine aspect. Golden geometric runes are etched across the chest, flanks and upper 
+legs — active and brilliant, god-script glowing faintly (evidence the Warden is 
+awakening). Seams of aether glow in uniform flow: teals and ambers brilliantly 
+visible as cracks where power flows through the crystalline body. The translucidez 
+is variable: ears nearly ghostly, extremities clearly transparent, core slightly 
+more opaque. Posture suggests something ancient coiled and waiting, wise, tired. 
+Stubby thick-proportioned limbs. Small vignette: she rests in a palm, luminous and 
+small, a relic from ages before. Mood: mysterious, precious, luminous, unsettling 
+— ancient technology that should not exist. Atmosphere: lived-in archaeology, 
+luminous, ancient, sad, powerful. Art style: hand-painted graphic novel watercolor, 
+ligne claire with mineral/crystalline detail, flat cel shading 3–4 bands, low 
+saturation palette with golden runes and teal+amber aether seams brilliant against 
+the pale jade. Visible paper grain. Blend of Sable ligne claire × Breath of the 
+Wild impressionist color. Negative: no Genshin mascot look, no opaque dark obsidian, 
+no muted runes, no photorealism, no anime cel shading, no neon glow except golden 
+runes and aether seams.
 ```
 
-**Archivos:** `speck-estadio1-warden-crisalis-v1.png` (RATIFICADO 2026-07-23)
+**Archivos:** `speck-estadio1-warden-crisalis-v1.png` (RATIFICADO 2026-07-23 POR BORIS)
 
-### 5b — Speck E2, Despertar (PENDIENTE — brief a escribir)
+### 5b — Speck E2, Despertar (BRIEF RATIFICADO 2026-07-23) — DESCARTADO
 
-**Especificación:** Estadio 2 — forma real emergiendolentamente, shapeshifting se
-rompe parcialmente. El cuerpo Warden comienza a mostrar bajo el disfraz.
+**Nota 2026-07-23:** Decisión de Boris — saltear E2. Los 4 Finales muestran E3 (God-Core) 
+en variaciones narrativas. Zorro → E1 (descubrimiento silencioso) → E3 (clímax: Fragmento 
+activa, Speck reacciona involuntariamente). No hay E2 intermediario.
 
-BRIEF PENDIENTE (escribir post-E1 validation).
+### 5c — Speck E3, Verdad Completa (BRIEF BASE — Variaciones por Final)
 
-### 5c — Speck E3, Espejo/Verdad Completa (PENDIENTE — brief a escribir)
+**Especificación:** Clímax en The First Wound. Fragmento activa → Speck reacciona 
+involuntariamente (hive mind forzado). Jade pálido se revela como rojo God-Core.
 
-**Especificación:** Estadio 3 — forma Warden adulta completamente despierta,
-cristales rojos God-Core, no más shapeshifting.
+**Narrativa transversal:** La transformación es involuntaria. PERO en finales donde 
+vive (F1, F4), Speck asume su destino con gracia divina — no permanece como víctima 
+circunstancial. Es anciana Warden aceptando su rol milenario. En F2/F3 (muerte/cadenas), 
+esa agencia le es robada.
 
-BRIEF PENDIENTE (escribir post-E1 validation).
+**Base visual común a todos los finales:**
+Cristales rojos saturados (misma geometría que God-Cores del mundo). Seams aether 
+rojo-ámbar brillantes. Ojos amber facetados con peso/consciencia antigua. Patas 
+rojo-esmeralda. Runas oro activas. Orejas pétalos rojo translúcido. **Lo crítico:** 
+retiene humanidad en los ojos/postura. Sigue siendo Speck — pero ahora sin velo, 
+sin defensa.
 
-### Forma Shapeshifteada (E1→E2, coexiste con Estadios Warden)
+**Briefs específicos por final a continuación.**
 
-**Especificación:** La forma que ve el mundo (menos el jugador con su poder).
-Zorro endémico de The Wilds, imperfectamente shapeshifteado por Speck mientras
-despierta lentamente.
+#### **5c.1 — Final 1: The Guided Molt — E3 Viva, Aceptación y Propósito**
 
-BRIEF PENDIENTE — será generado como asset separado (concepto de zorro).
+```
+Creature concept sheet, front view and side view, of "Speck" at the end of Final 1, 
+The Guided Molt: the moment where involuntary transformation becomes accepted purpose. 
+She stands as a living Warden creature in her true red God-Core form — jade pálido 
+revealed as vivid translucent red crystalline body. She radiates warm light: deep 
+saturated red crystals gleam along spine, crest, flanks and legs with the exact geometry 
+of the God-Core formations, alive with energy. Aether seams glow in warm ámbar and teal, 
+flowing like living blood through the lattice. Petal-like ears are translucent red, 
+elegant, catching light like stained glass. Eyes remain dark amber, faceted, now warm 
+with acceptance and ancient purpose — not happiness, but grave dignity. The golden runes 
+blaze across her body, active and glorious, god-script awakened. Posture is calm, steady, 
+serene and purposeful — she has accepted her ancient role. She stands beside the player 
+as equal, ready to guide the Muda. The light around her is warm amber and soft red, 
+healing light, not danger. She reads as: *"I am old. I remember. I will tend what I must."* 
+Small vignette: her crest branches glow, tendrils of light extending outward as if 
+mending something broken in the world. Mood: luminous, purposeful, majestic, grave 
+compassion — the healer-guardian accepting her ancient duty. Atmosphere: renewal, 
+warmth, ancient power channeled for good, grace divina. Art style: hand-painted graphic 
+novel watercolor, ligne claire, flat cel shading 3–4 bands, saturated red and warm 
+amber dominant, low saturation elsewhere, visible paper grain. Blend of Sable × Breath 
+of the Wild with luminosity. Negative: no darkness, no victim expression, no passivity, 
+no cold light, no photorealism, no neon glow beyond natural aether brilliance.
+```
+
+#### **5c.2 — Final 2: The Long Winter — E3 como God-Core Muerto, Monumento Frío ✅**
+
+**Archivo:** `Speck - Imprisoned Warden Form Final 3` (GENERADO 2026-07-23, imagen pasada)
+
+**Evaluación:** ✅ 95%+ PASS — Landscape keyframe The First Wound cementerio (desolado, monumento muerto, luz fría gris-azul, Speck reconocible pero cristalizada, ojos congelados, runas dormidas, seams atenuados). Composición épica: Speck miniaturizada por vastedad, humano pequeño en distancia mirando. Paleta desaturada excepto rojo muted. Atmósfera: solemnidad, pérdida absoluta, funeral. **Capstone visual de desolación.**
+
+#### **5c.3 — Final 3: The Conqueror's Clause — E3 Viva, Encadenada y Prisionera**
+
+```
+Creature concept sheet, front view and side view, of "Speck" in Final 3, The Conqueror's 
+Clause: the moment of imprisonment and betrayal. She stands as a living Warden creature, 
+transformed by the Fragmento's forced reaction, but now bound in heavy crystalline chains — 
+thick geometric lattices of dark amber-tinted crystal wrapping around her limbs, torso, 
+and neck, anchoring her in place. Her body is deep saturated red God-Core crystal, same 
+geometry as the cores, but the translucent red is visibly cracked and fractured — trauma 
+visible in the structure. The aether seams glow dimly, faintly, the red-ámbar light 
+suppressed by the chains' magical weight. Her petal-like ears are drooped, translucent 
+red but folded, exhausted. Eyes are still dark amber and faceted, but hollow — ancient 
+consciousness imprisoned, looking at the viewer with infinite sad betrayal. The golden 
+runes are barely visible, dimmed, as if the chains suppress the god-script. Posture is 
+sitting or standing in submission, weight dragging, no resistance left — she has stopped 
+trying. The chains glow faintly with cold blue-amber light, magical binding. Small 
+vignette: she sits alone, chains casting long geometric shadows, the light cold and 
+isolating. Mood: imprisoned, traumatized, betrayed, hollow — the beloved friend turned 
+possession. Atmosphere: cold, isolating, cruel, the weight of ownership. Art style: 
+hand-painted graphic novel watercolor, ligne claire, flat cel shading 3–4 bands, 
+desaturated red with emphasis on grey chains and cold blue accents, visible paper grain. 
+Blend of Sable × Breath of the Wild with darker, colder palette. Negative: no warmth, 
+no freedom, no gentle posture, no active runes, no flowing seams, no hope — must read 
+as defeat and ownership, not majesty.
+```
+
+#### **5c.4 — Final 4: The Warden's Choice — E3 como God-Core Vivo, Elegida y Majestuosa ✅**
+
+**Archivo:** `Speck - Ancient Warden Form Final 4 Aether Renacido` (GENERADO 2026-07-23, imagen pasada)
+
+**Evaluación:** ✅ 100% PASS — Capstone visual absoluto. Landscape keyframe The First Wound cementerio (dawn light dorado-ámbar CÁLIDO, Speck radiante en plataforma elevada, God-Cores rojos alrededor pero ella destaca VIVA, nombre SPECK tallado en base, grupo humano pequeño abajo en veneración). Ojos amber CÁLIDOS y conscientes (opuesto a F2 congelados). Runas oro BRILLANTES activas. Seams aether flujo cálido rojo-ámbar. Postura: quiet strength, calm, majestic. Luz dorada = purpose fulfilled, renewal, peace absoluta. Contrasta perfectamente F2 (fría muerte) vs. F4 (cálida eternidad). **ESTE ES EL FINAL VISUAL DEL JUEGO.**
+
+### Forma Shapeshifteada — Zorro (E1→E2, coexiste con Estadios Warden) — BRIEF RATIFICADO 2026-07-23
+
+**Especificación:** La forma que ve el mundo (menos el jugador con su poder innato).
+Zorro endémico de The Wilds, 1.5× tamaño normal, imperfectamente shapeshifteado por
+Speck mientras despierta lentamente. El shapeshifting falla inconsistentemente: seams
+teal visibles como "manchas", pata delantera izquierda translúcida (glitch), patrones
+geométricos sutiles (runas dormidas), ojos facetados demasiado inteligentes. Propósito:
+el mundo ve "zorro extraño"; el jugador con poder innato ve la verdad bajo el velo.
+
+**Brief:**
+
+```
+Full-body character concept sheet, front view and side view, of "Speck" in fox form 
+— the imperfect shapeshifted disguise of an ancient Warden. An endemic fox of The Wilds, 
+scaled 1.5× normal size, with an unusual demeanor and physical glitches that mark the 
+disguise as slowly failing. Fur is reddish-orange natural fox coloring, but with subtle 
+geometric patterns traced faintly across the body — runic shapes, too regular to be 
+natural, suggesting divine design beneath the illusion. The fur texture should read as 
+natural but slightly *off*, as if light sometimes catches it wrong. Seams glow faintly 
+in muted teal-grey in places the fur should be uniform — visible as "strange patches" to 
+the casual observer, but readable as aether seams to those with power. Left foreleg 
+deviates: the structure is noticeably more translucent and crystalline, catching light 
+like quartz — a glitch in the shapeshifting that can't quite hide. Eyes are large, 
+faceted like gems, too intelligent and ancient for a simple fox — the eyes betray the 
+truth even as the form lies. Posture is relaxed but deliberate, slightly uncanny in its 
+awareness and grace. Vignette: the fox sits calmly, observing — a sense of witness and 
+waiting. Mood: strange, slightly unsettling, alien intelligence behind fox eyes, 
+beautiful in an eerie way. Art style: hand-painted graphic novel watercolor, ligne 
+claire with natural fox anatomy detail, flat cel shading 3–4 bands, low saturation warm 
+palette with subtle teal-grey seams and geometric rune patterns visible, natural fox 
+coloring. Visible paper grain. Blend of Sable × Breath of the Wild. Negative: no 
+cartoony mascot cuteness, no Genshin aesthetic, no loss of fox anatomy, no anime style, 
+no bright neon seams or runes (keep them subtle/muted), no humanoid features, no animal 
+ears that read as magical — they must look like natural fox ears.
+```
+
 Referencia narrativa: ver [[Speck]] sección "Encuentro & Shapeshifting".
 
-**[fallback histórico] 5b-v3 — proporciones E2 por edición (adjuntar `speck-estadio2-vinculo-v1.png`):**
-
-```
-Keep this exact creature, face, eyes, seams, frills and art style. She stays a QUADRUPED salamander walking on four legs with animal anatomy — absolutely not humanoid, not bipedal, no human-like torso or shoulders, never standing on two legs. Fix only her body proportions for this growth stage: stretch her into a lean, gangly adolescent quadruped — longer legs and tail, limbs slightly too long and awkward for her frame, narrower cheeks, body raised higher off the ground, like a young wolf-sized salamander mid-step. Add a simple grey human silhouette standing beside her for scale: on all fours, her back reaches the human's waist. Negative: no bipedal stance, no humanoid body, no human proportions.
-```
-
-**[fallback histórico] 5c-v3 — proporciones E3 por edición (adjuntar `speck-estadio3-espejo-v1.png`):**
-
-```
-Keep this exact creature, face, eyes, red crystals and art style. She stays a QUADRUPED salamander walking on four legs with animal anatomy — absolutely not humanoid, not bipedal, no human-like torso, never standing on two legs. Fix only her body proportions for the final stage: a lean, elegant, quietly majestic adult quadruped — long graceful neck, sweeping tail, slender strong legs, no chibi plumpness, carrying herself with calm poise but pure salamander anatomy. Add a simple grey human silhouette standing beside her for scale: on all fours, her back reaches the human's chest, slightly larger than a wolf. Negative: no bipedal stance, no humanoid body, no human proportions, no dragon, no raptor.
-```
-
-**5b — edición sobre 5a aprobada:**
-
-```
-Keep this exact creature design, style, paper background and sheet layout — but grow her to stage two, the adolescent: now wolf-sized, gangly and awkward, limbs slightly too long for her body, caught mid-step; the teal aether seams glow brighter and branch across her sides, the gill-antennae are longer and more expressive, and small bridge-like arcs of teal light connect the spines of her crest. Same eyes, same silhouette DNA, same tender clumsy personality — just bigger and in-between. In the side vignette, replace the sneeze with her extending a bridge of light from her crest toward an unseen companion.
-```
-
-**5c — edición sobre 5b aprobada (+ adjuntar keyframe dawn como referencia del cristal):**
-
-```
-Keep this exact creature design, style, paper background and sheet layout — but grow her to stage three, the mirror: the same creature now lean and quietly majestic, slightly larger than a wolf; her patterns have crystallized — deep saturated red crystal formations grow along her spine and crest, with the exact same crystalline geometry as the red God-Core formation in the attached landscape reference. Beautiful and unsettling at once: a beloved friend wearing the colors of danger. Her warm dark eyes and gentle posture stay unchanged — the tragedy is that she is still herself. The teal aether seams now flicker between teal and red. In the side vignette, she imitates the stance of a tall absent companion.
-```
 
 ## 6 — Sprite sheet de grumos de follaje (golden scene / assets de árbol)
 
@@ -202,6 +300,22 @@ Destino: `foliage-clumps-v1.png` → recortar un grumo (o varios) → PNG con
 alpha en `godot/rendering/foliage_clump.png`. El sprite debe pintarse en tonos
 claros casi-blancos con verdor sutil: el color final lo pone `albedo_color`
 del preset (dawn/dusk lo tiñen distinto).
+
+## 6b — Rivermeet Keyframe (Golden Scene variante ciudad, B11)
+
+**Archivo:** `Rivermeet keyframe` (GENERADO 2026-07-23, imagen pasada)
+
+**Especificación:** Capital humana Aethelgard/Rivermeet, vista cinematic golden hour (tarde/atardecer). Río como protagonista (ancho, slow, glinting, refleja luz). Terraced riverside bluffs, arquitectura timber-frame, cloth awnings ochre/rust. Mercados flotantes, docks, puentes colgantes de cuerda. Foreground: marketplace con silhouettes humanas (escala). Middle: ciudad proper, ink+watercolor Sable×BotW. Background: bluffs lejanos en silhoueta pálida, aerial perspective. Luz: ambar bajo horizonte, long warm shadows. Mood: commerce + community BUT melancholic (the Restless spirit). Paleta: washed, low-saturation excepto golden light. 
+
+**Evaluación:** ✅ 95%+ PASS — Contraste perfecto a The Wilds (vastedad solitaria). Comunica civilización, humanidad, commerce pero con tono melancólico idéntico al juego. Río es realmente protagonista. Puentes cuerda = ingenio humano. Escala íntima (dock) pero épica (cityscape). **Second golden scene landscape, establece coherencia visual de ubicaciones.**
+
+## 6c — God-Core Night Keyframe (Golden Scene variante cementerio nocturno, B11)
+
+**Archivo:** `God-Core Night` (GENERADO 2026-07-23, imagen pasada)
+
+**Especificación:** Vast underground/highland cemetery de God-Cores, night. Deep blue-violet sky starlit, no moon. Massive crystalline God-Core formations (prismáticas, geométricas) justing from stone como tombstones/sleeping giants. Red crystal structures con internal glow DEEP SATURATED RED (pulsing faintly). Long geometric shadows crisp + sharp (cast by red light). Composition: empty space protagonista, perspective elevada (looking DOWN at sleeping gods). Foreground: 2-3 cores massive silhouetted contra own glow (backlighting). Middle: cores fade to ruby con distance. Far: absolute darkness, infinito. Cracked stone ground (batalla/catástrofe visible). Ink linework gris/negro, flat cel 3-4 bands. Paleta: greys + deep blues + RED saturado único color intenso. Watercolor grain. Sable night palette. Mood: solemnity, dread, awe — "cemetery of gods, waiting."
+
+**Evaluación:** ✅ 100% PASS — Third golden scene landscape PERFECTO. Composición elevada comunica "gazing upon sleeping gods". Cracked ground = trauma visible. Red glow único color = maximum saturation rule. Contrasta F2 (muerte fría daylight) vs. Night (vigilia dormida starlight). Infinidad + silhouettes = escala cósmica. **Capstone de los 4 landscapes monumentales.**
 
 ## 7 — Dagna (Pivote del slice, B1)
 
