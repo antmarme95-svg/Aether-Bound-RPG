@@ -324,6 +324,263 @@ BOTTOM: The First Wound (cementerio God-Cores)
   - Speck reacciona con reconocimiento (flash visual)
   - Jugador intuye que Speck no es animal normal
 
+### F) SANTUARIOS POR RAZA (Templos antiguos de convivencia pre-Muda)
+
+#### **Shrine of the First Hammer** (Center-East, near monolith)
+- Templo enano a la forja primordial (arquitectura de piedra viva)
+- Conexión narrativa: Donde enanos hacían juramentos eternos
+- Mecanismo: Altar antiguo con inscripciones de votos
+- Loot: Rúnicas de poder (enano-forjadas, stat boost)
+- Enemigos: Guardianes automáticos dormidos
+- Dinámicas:
+  - Vekka: reconoce símbolos, comprende peso del deber
+  - Torgan: aquí hizo su juramento de 55 años (lo ve grabado)
+  - Dagna: aquí renovaría votos al clan (escena emocional)
+
+#### **Grove of Cycles** (North-East, connecting Stillwood)
+- Templo élfico a los ciclos antiguos (árboles vivos, arquitectura orgánica)
+- Conexión narrativa: Donde elfos observan Muda desde hace eras
+- Mecanismo: Círculos de poder, manuscritos vivos (hojas que escriben)
+- Loot: Conocimiento de ciclos (Aether pattern maps)
+- Enemigos: Bestias vivas que custodiaban (now corrupted)
+- Dinámicas:
+  - Valen: "aquí aprendí a leer ciclos" (origin story)
+  - Sereth: manuscritos antiguos, calcula con precision
+  - Lyris: sabe donde cazaba (territorio propio)
+
+#### **Vigil of the Broken Oath** (West, border Mistbound)
+- Templo humano al honor/promesas (piedra inscrita, muros vandalizados)
+- Conexión narrativa: Donde Roen juró lealtad al Consejo
+- Mecanismo: Altar defaced, símbolos borrados (por Mistbound rebels?)
+- Loot: Fragmento de inscripción de Roen's oath (lore item)
+- Enemigos: Bestias sin guardianes (templo abandonado)
+- Dinámicas:
+  - Roen: "estuve aquí. Fue diferente." (regret visual)
+  - Maren: reconoce inscripciones políticas (Standing origins)
+  - Bram: "tantos juramentos rotos aquí"
+
+### G) PUNTOS DE PODER AETHER (Filtraciones primordiales del Aether)
+
+#### **The Aether Well** (Center-South, before First Wound)
+- Geiser de Aether puro que bota cada 30 segundos
+- Conexión narrativa: Punto donde la Muda "respira"
+- Mecanismo: Puedes cosechar recursos (timed, dangerous)
+- Loot: Aether Crystal (tier máximo), purified essence
+- Hazard: standing in geiser = Aether burn (HP drain, visual distortion)
+- Dinámicas:
+  - Speck aquí: respira naturalmente (recovery animation)
+  - Sereth: calcula "la Muda despierta desde aquí"
+  - Valen: "punto de no retorno cercano"
+
+#### **The Crystal Heart** (Center-West, glowing visible far)
+- Cristal de Aether gigante vivo (pulsating, color variable)
+- Conexión narrativa: Último corazón de Warden civilization
+- Mecanismo: Mineable pero regenera lentamente (respeto recurso limitado)
+- Loot: Aether shards (crafting component de tier máximo)
+- Ability: Valen puede meditar aquí (temporary +20% Aether perception)
+- Dinámicas:
+  - Visual: visible desde lejos (brújula narrativa)
+  - Speck: aquí vibra (reconoce "home frequency")
+  - Sereth: "la frecuencia es anómala"
+
+#### **The Fountain of Echoes** (North-Central, near observation point)
+- Fuente de agua limpia que once sanó, now corrupted
+- Conexión narrativa: Fue sanador Warden (now poisoned by Muda)
+- Mecanismo: Cura HP pero da "Aether Delirium" status (6 min)
+- Efecto: Visiones, movimiento erratic, audio distorted
+- Dinámicas:
+  - Speck: aquí ve sus "otros selves" (identity crisis)
+  - Valen: "no toquen, está desnaturalizado"
+  - Bram: "podría limpiarla? No. Sabría mal."
+
+### H) LUGARES PRIVADOS DE LOS PIVOTES (Donde cada uno fue roto/reclutado)
+
+#### **Roen's Vigil Post** (West, edge of Mistbound)
+- Ruina pequeña de puesto de guardia (Consejo colors faded)
+- Conexión narrativa: Donde Roen renunció
+- Mecanismo: Espacio vacío, melancólico (poco loot)
+- Dinámicas:
+  - Roen vuelve aquí en silencio (contemplation)
+  - Roen: "no debería haber venido"
+  - Solo Roen puede activar "memoria" (flashback sequence)
+
+#### **Maren's Negotiation Table** (West, old diplomatic camp)
+- Restos de campamento formal (chairs, maps, cold hearth)
+- Conexión narrativa: Donde Maren negoció hace 2 años
+- Mecanismo: Lore items (diplomatic letters, trade agreements)
+- Dinámicas:
+  - Maren: "fueron días diferentes"
+  - Maren: aquí decidió no quedarse con humanos
+
+#### **Torgan's Rejected Forge** (East, near Ironforge Outpost)
+- Forge abandonada donde aprendices fueron rechazados
+- Conexión narrativa: Donde Torgan fue expulsado del gremio
+- Mecanismo: Nombres grabados en paredes (Darro's name visible)
+- Dinámicas:
+  - Torgan: evita venir
+  - Darro: aquí también fue rechazado
+  - Ambos enanos: silencio cuando pasan
+
+#### **Iven's First Defense** (West border, village ruins)
+- Ruinas de pueblo con monumento improvisado
+- Conexión narrativa: Donde Iven protegió su asentamiento primera vez
+- Mecanismo: Tumbas de caídos (nombres gravados)
+- Dinámicas:
+  - Iven: aquí rompe (no pudo salvarlos todos)
+  - Si llevas a Iven: escena emocional forzada
+  - Diálogo: "estos nombres... no debería volver"
+
+#### **Sereth's Study Bower** (North, hidden alcove)
+- Refugio oculto entre árboles, rodeado de manuscritos antiguos
+- Conexión narrativa: Donde Sereth calcula en soledad
+- Mecanismo: Libros vivos, notas matemáticas en corteza
+- Dinámicas:
+  - Sereth aquí es contemplativo (raro, vulnerable)
+  - Sereth: "solía venir aquí para pensar sin ser observado"
+  - Valen: "sé de este lugar. Respeto tu privacidad"
+
+#### **Bram's Last Stand** (Center, scorched earth)
+- Llanura quemada con cruces improvisadas y armaduras oxidadas
+- Conexión narrativa: Donde su compañía mercenaria fue masacrada
+- Mecanismo: Tumbas de soldados (nombre de Bram's fallen junto)
+- Loot: Mercenary insignia (equipment token)
+- Dinámicas:
+  - Bram: llora aquí (única vez vulnerabilidad directa)
+  - Bram: "no debería volver"
+  - Roen: reconoce a algunos soldados caídos
+
+#### **Lyris's Hunting Peak** (North-East, high cliff)
+- Peñasco con nidos de bestias cazadas (bones, feathers)
+- Conexión narrativa: Su territorio de caza personal
+- Mecanismo: Raptor nests, high winds (mecánica de movimiento)
+- Dinámicas:
+  - Lyris aquí se relaja (única place where defenses down)
+  - Lyris: "este era mi cielo"
+  - Lyris: viento familiar, verdad en altitud
+
+#### **Nyael's Silent Monument** (South, hidden from path)
+- Monumento de piedra con nombre grabado (objetivo ejecutado)
+- Conexión narrativa: Donde Nyael completó "última" misión años atrás
+- Mecanismo: Nombre es person que amaba (implied) — moral weight
+- Dinámicas:
+  - Nyael aquí confronta moralidad (rare)
+  - Nyael: "hice lo correcto. Aún duele."
+  - Valen: si está: "su muerte fue...?" / Nyael: "necesaria"
+
+#### **Vekka's Lost Workshop** (East, collapsed structure)
+- Forge anterior que colapsó (herramientas everywhere, metal bent)
+- Conexión narrativa: Donde forjó para personas (no por gremio order)
+- Mecanismo: Loot de equipo antiguo (quizá reconoces armas viejas)
+- Dinámicas:
+  - Vekka: siente culpa profunda
+  - Vekka: "les hice armas. No pude salvarlos con las armas"
+  - Dargo: reconoce esta forja (estudia con Vekka aquí)
+
+#### **Dagna's Clan Stone** (East-Central, in The Wilds)
+- Monolito de piedra enana con símbolos de clan (real clan stone, not in cave)
+- Conexión narrativa: Donde Dagna renueva votos de lealtad (ritual)
+- Mecanismo: Ritual site (puede meditar / renew stats)
+- Dinámicas:
+  - Dagna aquí: elige entre clan y grupo (escena de decision)
+  - Dagna: "el clan está en mi sangre"
+  - Si llevas 2+ enanos: reconocimiento tribal
+
+### I) BOSSES MENORES / BESTIAS ALFA (Hitos de progresión)
+
+#### **The Crowned Leviathan** (Lake of Mirrors, underwater)
+- Bestia gigante acuática (serpiente/whale hybrid)
+- Mecanismo: Combate en agua (restricted movement)
+- Loot: Leviathan scales (tier 2 armor component)
+- Dinámicas:
+  - Lyris: "he cazado éstas. Raro ver aquí."
+  - Valen: calcula tamaño (ancient specimen)
+
+#### **The Burning Shepherd** (Ossuary Grove, center)
+- Bestia híbrida fuego+sombra (defends skeletal remains)
+- Mecanismo: Dual-phase (fire phase / shadow phase)
+- Loot: Shepherd's horn (instrument, Speck reacts)
+- Dinámicas:
+  - Speck: aquí reconoce "guardian" (protects dead like it would)
+  - Sereth: "inteligencia casi... sentient"
+
+#### **The Mirror Stalker** (Echoing Archive, interior)
+- Bestia que copia tus movimientos (reflection mechanic)
+- Mecanismo: tienes que "outsmart" tu reflection
+- Loot: Mirror shard (crafting, reveals hidden paths)
+- Dinámicas:
+  - Valen: "it learns. Not just mimics."
+  - Speck: aquí ve su "true self" (identity moment)
+
+#### **The Aether Wyrm** (The Rift, semi-corporeal)
+- Serpiente pura Aether (vuelo, invisibilidad, phase)
+- Mecanismo: can't be fully hit (need special strat)
+- Loot: Aether scale (rarest crafting material)
+- Dinámicas:
+  - Sereth: "no debería existir. Pero existe."
+  - Speck: aquí tiene "kinship" (mismo Aether)
+
+### J) PUNTOS DE VISTA NARRATIVA (Escala épica / Revelación)
+
+#### **The World's Crown** (The Monolith, peak accessible late game)
+- Pico más alto de The Wilds (ascenso rewards massive vista)
+- Mecanismo: 360° vista de todos 3 reinos simultáneamente
+- Dinámicas:
+  - Si Acto 3: ves The First Wound despertando (visual spectacle)
+  - Momento: "ahora entiendes la escala de lo que está en juego"
+  - Cada personaje tiene línea aquí (Valen/Sereth/Roen perspectives)
+
+#### **The Scar of Breaking** (South, approach to First Wound)
+- Cicatriz física del cataclismo hace 100 años (terrain is WRONG)
+- Mecanismo: suelo fracturado, geometría impossible
+- Dinámicas:
+  - Sereth calcula: "impacto = civilización erased. Población pre-Muda ≈ millions"
+  - Valen: "esto fue deliberado. Alguien rompió la Muda a propósito"
+  - Speck: aquí siente "muerte de hermanos"
+
+### K) REFUGIOS ADICIONALES (NPCs / Descanso)
+
+#### **Hermit's Cave** (West side, hidden)
+- Cueva pequeña con ermitaño élfico (300+ años, recluso)
+- Conexión narrativa: único sobreviviente de cierta era
+- Mecanismo: vende información por Standing (expensive)
+- Dinámicas:
+  - Valen: conoce al hermitaño (respeto mutuo)
+  - Hermitaño: "he visto dos mudas. Esta es la tercera..."
+
+#### **Bandits' Hideout** (Center-West, Mistbound culture)
+- Refugio neutral de bandidos/rebels Mistbound
+- Mecanismo: no hostil si no atrapas gente; black market
+- Dinámicas:
+  - Bram puede negotiate (conoce gente aquí)
+  - Roen: incomodo (traidor a Consejo = aliado a Mistbound?)
+  - Info sobre Consejo's darker operations
+
+#### **Warden's Crypt** (Hidden, under The Monolith)
+- Tumba subterránea del último Warden caído
+- Mecanismo: ritual site, emotional weight
+- Dinámicas:
+  - Speck aquí entiende soledad (estaba sola 100 años)
+  - Ritual de duelo (Speck behaves different after)
+  - Valen: "she was alone. That's why we found you."
+
+### L) PUNTOS INTERDIMENSIONALES (Donde Muda filtra realidades)
+
+#### **The Mirror Pool** (South of Lake, separate hidden pool)
+- Agua que muestra "otro mundo" (corrupted reflection)
+- Mecanismo: ves reflejo de civilización alternativa
+- Dinámicas:
+  - Speck aquí entiende: "esto es lo que pasaría si yo muero"
+  - Sereth: "probability cascade. Futures collapse if she dies"
+  - Valen: "sabemos que esto es verdad. Por eso lucha el grupo"
+
+#### **The Closed Door** (Center, impossible geometry)
+- Arquitectura Warden que desafía realidad (door exists in 4D?)
+- Mecanismo: no se abre (no key exists), hint only
+- Dinámicas:
+  - Valen: "no debemos entrar. Not yet. Maybe never."
+  - Foreshadowing: "hay más. Capas que no comprendemos aún."
+  - Speck: reconoce (es "security seal" de su civilization)
+
 ---
 
 ### THE DRIFTMARKET (Ciudad Flotante — Centro)
