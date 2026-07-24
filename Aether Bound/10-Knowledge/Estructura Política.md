@@ -155,6 +155,83 @@ de él.
 
 ---
 
+## El Triune Council — la Institución Supra-Racial
+
+**Fundado hace ~550 años**, en el momento mismo de la tregua que terminó la
+guerra de los dioses ([[El Mundo y la Muda]]). No es un reino ni pertenece a
+ninguna raza — es el cuerpo que nació **gestionando el desastre del
+cataclismo**: purgas de The Wilds, distribución de Aether corrupto entre los
+3 reinos, arbitraje de disputas inter-raciales. 550 años después, sigue
+siendo la autoridad continua más estable del mundo — más estable que
+cualquier trono humano, y con más alcance práctico día a día que la Corona
+élfica o enana, que gobiernan puertas adentro de sus propios reinos.
+
+### Estructura: 3 asientos, sin empates posibles
+
+El Council tiene **exactamente 3 miembros con voto — uno por raza.** No hay
+cuarto asiento, no hay presidente con voto de desempate: con número impar y
+tres partes, **nunca hay bloqueo.** Cada decisión termina en mayoría de 2
+contra 1. Cada embajador puede tener staff/asesores menores, pero el poder
+real vive en esas 3 personas.
+
+**Sede en Rivermeet** — no por peso político humano (que es el más débil de
+los tres), sino por conveniencia geográfica: ciudad fluvial, ya hub
+comercial, accesible desde los 3 reinos por igual. Terreno neutral por
+practicidad, no por mérito humano.
+
+| Asiento | Cómo se llena | Quién vive dónde | Titular actual |
+|---|---|---|---|
+| **Élfico** | Embajador designado por la Reina Ithessa, típicamente graduado de Academia Real | Reina se queda en The Stillspire; el embajador vive en Rivermeet a tiempo completo | **Embajador Cyrion** — décadas en el puesto, nombramiento estable propio de la longevidad élfica |
+| **Enano** | Embajador designado por el Rey Borran / Gran Clan de Forja | Rey se queda en Emberdeep; el embajador vive en Rivermeet | **Embajador Kadrun** — cargo casi hereditario dentro del Gran Clan, tan estable como la sucesión misma del trono enano |
+| **Humano** | NO es el Regente — se negocia/gana por consenso entre Casas + Consorcio de Mercado | Ya vive en su propia ciudad | **Consejera Merrit Vance** — el asiento más volátil de los tres, cambia de manos con cada reconfiguración de poder en Rivermeet |
+
+**Asimetría deliberada:** los embajadores élfico y enano son nombramientos
+de **largo plazo**, casi permanentes — coherente con la longevidad y
+estabilidad institucional de sus culturas. El asiento humano, en cambio,
+vive literalmente en su propia casa pero es **el más inestable de los
+tres** — irónico: quien está en su propio territorio es quien menos control
+estable tiene sobre su silla.
+
+### Por qué el Council prefiere el statu quo
+
+El Council no gestiona una crisis temporal — **gestiona SU razón de
+existir.** Su poder está construido enteramente sobre la corrupción
+administrada del Aether: purgas, distribución, arbitraje. Si la Muda se
+completa y el mundo sana de verdad, el cuerpo de poder de emergencia que es
+el Council **se vuelve obsoleto.**
+
+Esto no es villanía de caricatura — es interés institucional puro. Y explica
+algo que de otro modo sería coincidencia narrativa sospechosa: **casi todas
+las órdenes de traición hacia los 9 Pivotes vienen de instituciones
+distintas pero conectadas al mismo cuerpo:**
+
+- Torgan/Vekka/Dagna → Gran Clan de Forja → Rey Borran → **Embajador Kadrun**
+- Sereth/Nyael → Academia Real → Reina Ithessa → **Embajador Cyrion**
+- Maren → Consorcio de Mercado → **Triune Council directamente**
+
+No es que 9 personas decidieron traicionar por separado — es que **una sola
+institución supra-racial coordina la misma estrategia a través de 3 cadenas
+de poder distintas.** El Council nunca dice "sacrifiquen a Speck" en un solo
+comunicado — la orden se disuelve en 3 idiomas institucionales distintos
+(deber de clan, cálculo de Estado, necesidad económica) y llega a 9 personas
+que nunca se enteran de que están ejecutando la misma estrategia.
+
+### La ventaja de la inestabilidad humana
+
+El asiento humano volátil no es un accidente que el Council simplemente
+tolera — **le conviene.** Con 2 votos estables (élfico + enano) formando
+mayoría natural casi siempre, y un tercer asiento que cambia de manos
+constantemente y nunca logra construir bloque propio, **el Council rara vez
+enfrenta oposición coordinada.** Un trono humano fuerte y unificado sería la
+única fuerza capaz de cuestionar al Council desde adentro — y un trono
+humano fuerte nunca termina de consolidarse. Si eso es negligencia,
+manipulación activa, o simplemente conveniencia que nadie se molesta en
+corregir, es pregunta abierta — pero el patrón de 550 años (6-8 Casas
+caídas) beneficia sistemáticamente a quien ya tiene el poder repartido entre
+los otros dos asientos.
+
+---
+
 ## Resumen de Nombres Canónicos
 
 | Reino | Gobernante | Título | Estructura de poder |
@@ -162,3 +239,11 @@ de él.
 | Stillwood | Reina Ithessa | Reina (555 años) | Corona + Círculo de los Vivos (informal, moral) |
 | Ignis Reach | Rey Borran | Rey (bisnieto del Rey del cataclismo) | Corona + Gran Clan de Forja (mismo cuerpo) |
 | Aethelgard | Edrick Ashcombe | Regente ("Voice of the Council") | Regentado inestable + Triune Council (autoridad real) |
+
+**Triune Council (supra-racial, sede Rivermeet):**
+
+| Asiento | Titular | Legitimidad |
+|---|---|---|
+| Élfico | Embajador Cyrion | Designado por la Reina Ithessa, larga permanencia |
+| Enano | Embajador Kadrun | Designado por el Rey Borran/Gran Clan de Forja, casi hereditario |
+| Humano | Consejera Merrit Vance | Consenso de Casas + Consorcio de Mercado, el más volátil de los 3 |

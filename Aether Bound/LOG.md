@@ -1,5 +1,59 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | TRIUNE COUNCIL definido — antagonista institucional del layer político
+
+**Disparador:** con el mapeo político de los 9 Pivotes cerrado, Boris pidió
+desarrollar el Triune Council en sí — mencionado desde el inicio del Vault
+pero nunca estructurado como cuerpo real.
+
+**Hallazgo central (propuesto y confirmado):** el Council no es solo
+burocracia de fondo — es candidato a **antagonista institucional real** del
+layer político. Nació hace 550 años gestionando la corrupción del
+cataclismo (la "tregua" ya mencionada en [[El Mundo y la Muda]]); su poder
+depende de que la crisis siga administrada, no resuelta. Si la Muda se
+completa y el mundo sana, el Council se vuelve obsoleto — interés
+institucional, no villanía de caricatura.
+
+**Esto explica sin coincidencia sospechosa** por qué las 9 órdenes de
+traición vienen de 3 cadenas de poder distintas que convergen en el mismo
+cuerpo: Gran Clan de Forja → Rey Borran → Embajador enano; Academia Real →
+Reina Ithessa → Embajador élfico; Consorcio de Mercado → Triune Council
+directamente (Maren). Una sola estrategia, disuelta en 3 idiomas
+institucionales, ejecutada por 9 personas que nunca se enteran de que son
+parte del mismo plan.
+
+**Estructura decidida:**
+- **3 asientos con voto, uno por raza** — nunca hay empate (mayoría de 2
+  contra 1 siempre)
+- **Sede en Rivermeet** por conveniencia geográfica/comercial, no por peso
+  político humano (que es el más débil de los 3)
+- **Corrección de Boris:** los asientos NO son los monarcas en persona (no
+  tendría sentido que Reina Ithessa/Rey Borran vivan en Rivermeet) — son
+  **embajadores/representantes permanentes**, designados por sus Coronas,
+  que sí viven en Rivermeet a tiempo completo
+- **Asimetría deliberada:** asientos élfico y enano = nombramientos
+  estables/largo plazo (coherente con longevidad y permanencia culturales);
+  asiento humano = el más volátil de los 3, cambia con cada reconfiguración
+  de poder en Rivermeet — irónico, es el único que vive en su propia casa
+- **La inestabilidad humana le conviene al Council:** con 2 votos estables
+  formando mayoría natural, el Council rara vez enfrenta oposición
+  coordinada — un trono humano fuerte sería la única fuerza capaz de
+  cuestionarlo desde adentro, y nunca termina de consolidarse
+
+**Titulares actuales (nombrados):**
+- Élfico: **Embajador Cyrion**
+- Enano: **Embajador Kadrun**
+- Humano: **Consejera Merrit Vance**
+
+**Archivos actualizados:**
+- `Estructura Política.md` — nueva sección completa "El Triune Council — la
+  Institución Supra-Racial" + tabla de titulares en el resumen final
+- `El Mundo y la Muda.md` — 2 enlaces nuevos hacia Estructura Política
+  (mención original del Council + nueva nota sobre por qué las 9 traiciones
+  convergen)
+
+---
+
 ## [2026-07-24] narrative | MAREN: Consorcio de Mercado — CIERRA el mapeo político de los 9 Pivotes
 
 **Disparador:** último pivote sin contexto político/social propio. Su ficha

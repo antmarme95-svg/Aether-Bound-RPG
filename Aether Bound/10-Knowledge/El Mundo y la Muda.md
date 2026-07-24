@@ -8,8 +8,10 @@ updated: 2026-07-04
 
 **Lo que el mundo cree:** hace ~550 años una guerra de dioses destruyó el
 orden antiguo ("la Era del Gran Cisma Arcano"). La tregua la lidera el Triune
-Council ([[Nomenclatura]]). En The Wilds, los **God-Cores** (núcleos de dioses
-muertos) supuran Aether corrupto y enloquecen a la fauna.
+Council ([[Nomenclatura]], estructura completa en [[Estructura Política]]:
+3 asientos supra-raciales, fundado en el momento mismo de esta tregua). En
+The Wilds, los **God-Cores** (núcleos de dioses muertos) supuran Aether
+corrupto y enloquecen a la fauna.
 
 **Por qué 550 años (no 100):** la cifra está calibrada contra la longevidad de
 las 3 razas ([[Las Tres Razas]]) para producir 3 relaciones distintas con el
@@ -43,6 +45,15 @@ Cada core que el jugador destruyó en el Acto 1 era un cuerpo.
 podría borrar la civilización actual. Esa lectura divide al grupo y detona la
 traición ([[Los 9 Pivotes]], [[Estructura Dramática]]). Los 4 desenlaces
 posibles: [[Los 4 Finales]].
+
+**Por qué las 9 traiciones no son coincidencia:** el Triune Council nació
+gestionando esta misma corrupción — su poder depende de que la crisis siga
+administrada, no resuelta ([[Estructura Política]] §"Por qué el Council
+prefiere el statu quo"). Las órdenes hacia los 9 Pivotes vienen de 3 cadenas
+de poder distintas (Gran Clan de Forja, Academia Real, Consorcio de
+Mercado) que convergen todas en el mismo Council — una sola estrategia
+disuelta en 3 idiomas institucionales, ejecutada por 9 personas que nunca se
+enteran de que son parte del mismo plan.
 
 **Estética:** aetherpunk medieval — magia cruda (Aether) como combustible
 tecnológico en naturaleza exuberante. Dirección visual: [[Art Bible]].

@@ -81,6 +81,23 @@ updated: 2026-07-24
   **Siguiente frente:** guión/diálogos por actos (worldbuilding político y
   geográfico ya están completos y listos para usarse como fuente).
 
+- **✅ SESIÓN 2026-07-24 (parte 6) — TRIUNE COUNCIL DEFINIDO:** Cuerpo
+  supra-racial con 3 asientos (uno por raza, embajadores/representantes
+  permanentes, NO los monarcas en persona), sede en Rivermeet por
+  conveniencia geográfica. Titulares: Embajador Cyrion (élfico), Embajador
+  Kadrun (enano), Consejera Merrit Vance (humano, el más volátil). **Hallazgo
+  central:** el Council es candidato a antagonista institucional real — nació
+  gestionando la corrupción del cataclismo, su poder depende de que la
+  crisis NO se resuelva. Explica por qué las 9 órdenes de traición convergen
+  desde 3 cadenas de poder distintas (Gran Clan de Forja / Academia Real /
+  Consorcio de Mercado) en el mismo cuerpo — una sola estrategia disuelta en
+  3 idiomas institucionales. La inestabilidad del trono humano le conviene
+  al Council (mayoría natural de 2-contra-1 sin oposición coordinada).
+  Detalle completo en [[LOG]] y [[Estructura Política]].
+  **Con esto, el layer político-institucional completo del juego queda
+  cerrado:** 3 reinos + Council supra-racial + origen social de los 12
+  personajes narrativos.
+
 - **✅ SESIÓN 2026-07-23 — SPECK + FINALES + GOLDEN SCENES COMPLETO:**
   Redireccionamiento narrativo de Speck CERRADO. Transformación involuntaria 
   (Fragmento) + asunción de destino con gracia divina (F1/F4) vs. agencia robada 
