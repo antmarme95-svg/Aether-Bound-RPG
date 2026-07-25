@@ -7,7 +7,7 @@ updated: 2026-07-23
 # Bram — C3 Pivote (Enano Strategist Jugador)
 
 **Raza / Rol:** Humano (the Restless) / Vanguard  
-**Origen:** Casa Thorne, Rivermeet (huyó a la Frontera Este a los 15)  
+**Origen:** House Thorne, Rivermeet (huyó a la Frontera Este a los 15)  
 **Edad aparente:** 55-65 años (aparentemente gastado por 20+ años de combate)  
 **Arquetipo de Traición:** Agotamiento expresado como deserción  
 
@@ -25,7 +25,7 @@ La traición de Bram es la más desgarradora porque no viene de malicia ni cálc
 
 ## Afiliación de Casa (canon [[Estructura Política]])
 
-Bram nació en **Casa Thorne**, familia con historia diplomática/de Consejo
+Bram nació en **House Thorne**, familia con historia diplomática/de Consejo
 en Rivermeet — el tipo de sangre que hubiera significado corte, negociación,
 papeleo. A los 15, en vez de tomar el camino esperado, **huyó** — se alistó
 en una compañía mercenaria de la Frontera Este, el trabajo más lejano posible
@@ -35,18 +35,18 @@ que su familia representaba.
 20 años después, sigue siendo "el muro de todos" — y hay una lectura nueva en
 eso: toda su vida tuvo una puerta política fácil disponible y la rechazó por
 el camino duro. Ahora, agotado, finalmente quiere una puerta que sea *suya*,
-no la que Casa Thorne le hubiera dado gratis. Cortó lazos hace 20 años — sin
+no la que House Thorne le hubiera dado gratis. Cortó lazos hace 20 años — sin
 protección de linaje, solo su contrato de mercenario. Es posible que conozca
-al **Regente Edrick Ashcombe**: dos hombres de Casas políticas de Rivermeet,
+al **Regent Edrick Ashcombe**: dos hombres de Houses políticas de Rivermeet,
 uno que se quedó en el juego, otro que huyó de él.
 
 ---
 
 ## Biografía Pre-Aventura
 
-### Casa Thorne: La Huida (edades 0-15)
+### House Thorne: La Huida (edades 0-15)
 
-Nacido en Rivermeet, en Casa Thorne — no la más poderosa de las Casas del
+Nacido en Rivermeet, en House Thorne — no la más poderosa de las Houses del
 Consejo, pero sí una con asiento reconocido, generaciones de consejeros y
 mediadores. Se esperaba que Bram, como los Thorne antes que él, aprendiera
 retórica, protocolo, la paciencia fría de la política.
@@ -68,7 +68,7 @@ salones que dejó atrás.
 
 Bram fue bueno. Muy bueno. Cuerpo masivo, reflexos rápidos, umbral de dolor
 alto — cualidades de guerrero de línea frontal. Nadie ahí sabía ni le
-importaba que llevara sangre de Casa Thorne.
+importaba que llevara sangre de House Thorne.
 
 ### 20 Años de Pared (edades 20-55, presente)
 
@@ -114,7 +114,7 @@ Cuando Bram se une al grupo, Roen lo reconoce: *"Frontera este. Compañía de Br
 
 Bram: *"Consejo dijo que te conocía."*
 
-Roen: *"Sé tu nombre. No sé tu historia."* (Roen no sabe de Casa Thorne — pocos
+Roen: *"Sé tu nombre. No sé tu historia."* (Roen no sabe de House Thorne — pocos
 lo saben. Bram enterró ese apellido hace 20 años.)
 
 Bram: *"Es la misma historia. Muro que se cansa."*

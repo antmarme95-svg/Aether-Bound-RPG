@@ -21,22 +21,22 @@ Gadgeteer táctica, ingeniera de soluciones improbables. Construye puentes entre
 
 ## Afiliación (canon [[Estructura Política]])
 
-Maren es **Jefa de Operaciones del Consorcio de Mercado** — el cuerpo
-comercial que mantiene viva la economía de Aethelgard sin importar qué Casa
-ocupe el Regentado esta década. Con un trono tan inestable (6-8 Casas en 550
-años, ver [[Estructura Política]]), el Consorcio se volvió, de facto, una
-institución casi permanente: **las Casas suben y caen; el comercio tiene que
+Maren es **Jefa de Operaciones del Trade Consortium** — el cuerpo
+comercial que mantiene viva la economía de Aethelgard sin importar qué House
+ocupe el Regency esta década. Con un trono tan inestable (6-8 Houses en 550
+años, ver [[Estructura Política]]), el Consortium se volvió, de facto, una
+institución casi permanente: **las Houses suben y caen; el comercio tiene que
 seguir funcionando.**
 
-A diferencia de **Bram** (Casa Thorne, poder heredado que rechazó) o de
+A diferencia de **Bram** (House Thorne, poder heredado que rechazó) o de
 **Iven** (pobreza estructural, sin poder alguno), Maren representa un tercer
 tipo de poder humano: **ganado, no heredado ni ausente.** Hija de un
 ingeniero de acueductos y una negociadora de rutas — gente común, no
 nobleza — escaló hasta autoridad real por pura competencia.
 
 Cuando el Triune Council necesita **ejecutar** el plan de sacrificio (no
-solo decretarlo), pasa por ella — el Regente puede ordenar, pero solo el
-Consorcio puede movilizar los recursos y la logística para que realmente
+solo decretarlo), pasa por ella — el Regent puede ordenar, pero solo el
+Consortium puede movilizar los recursos y la logística para que realmente
 ocurra. Su autoridad es práctica, no política. Pero en el sistema roto de
 Aethelgard, el poder práctico podría ser el único tipo que sobrevive
 confiablemente al caos del trono.
@@ -51,20 +51,20 @@ Nacida en Aethelgard, la ciudad mercado fluvial donde el Aether se compra/vende 
 
 Creció en mundo donde **las cosas tienen precio.** No cruelmente — pragmáticamente. El agua cuesta Aether. El Aether compra seguridad. La seguridad permite comercio. El comercio permite vida.
 
-Maren aprendió a **pensar en sistemas.** A los 12 años, notó ineficiencia en rutas de distribución y lo mencionó. A los 15, le pidieron que la arreglara. A los 20, era negociadora menor del **Consorcio de Mercado** — sin apellido de Casa, sin padrinos, solo resultados medibles.
+Maren aprendió a **pensar en sistemas.** A los 12 años, notó ineficiencia en rutas de distribución y lo mencionó. A los 15, le pidieron que la arreglara. A los 20, era negociadora menor del **Trade Consortium** — sin apellido de House, sin padrinos, solo resultados medibles.
 
 **Personalidad:** Cálida pero medida. Sonríe fácil, pero siempre en contexto. Chistes sobre matemática. Empatía que es exacta, no derramada.
 
-### Jefa de Operaciones del Consorcio (edades 30-45, presente)
+### Jefa de Operaciones del Consortium (edades 30-45, presente)
 
-Ascendió a **Jefa de Operaciones** del Consorcio de Mercado hace 10 años —
-el puesto de mayor poder práctico al que alguien sin sangre de Casa puede
+Ascendió a **Jefa de Operaciones** del Trade Consortium hace 10 años —
+el puesto de mayor poder práctico al que alguien sin sangre de House puede
 llegar en Aethelgard. Responsable de que la ciudad funcione: rutas,
 distribución, negociaciones con otras ciudades. Ha sobrevivido ya a **dos
-cambios de Regente** sin perder su cargo — prueba viva de que el Consorcio
-pesa más que cualquier Casa de turno.
+cambios de Regent** sin perder su cargo — prueba viva de que el Consortium
+pesa más que cualquier House de turno.
 
-**Durante estos años:** Maren vio patrones. El Aether corrupto que llega de The Wilds hace que los sistemas sean frágiles. Un año malo de corrupción = crisis comercial. Predijo esto hace 5 años. El consorcio no la escuchó.
+**Durante estos años:** Maren vio patrones. El Aether corrupto que llega de The Wilds hace que los sistemas sean frágiles. Un año malo de corrupción = crisis comercial. Predijo esto hace 5 años. El Consortium no la escuchó.
 
 **Hace 2 años:** Conoció al jugador (Elfo Duelist). Fue negociación comercial que derivó en amistad. Maren **calculó exactamente cuánto podía amar sin perder función.**
 
@@ -76,7 +76,7 @@ Hace 6 meses, Maren confirmó su predicción: **la Muda aceleró.** El Aether co
 
 Cálculo nuevo: Aethelgard tiene 3-5 años antes de no poder sostener población. Sin intervención externa, la ciudad muere.
 
-**Única solución conocida (clasificada):** El Triune Council ofrece plan — sacrificar variable crítica para salvar ciudad. Se lo trae a ella directamente, no al Regente — saben que sin el Consorcio, el plan es solo papel. Maren vio el plan. Supo exactamente qué variable era.
+**Única solución conocida (clasificada):** El Triune Council ofrece plan — sacrificar variable crítica para salvar ciudad. Se lo trae a ella directamente, no al Regent — saben que sin el Consortium, el plan es solo papel. Maren vio el plan. Supo exactamente qué variable era.
 
 Fue cuando decidió: *"Voy a amar todo lo que pueda. Y luego voy a hacer matemática."*
 
@@ -85,7 +85,7 @@ Fue cuando decidió: *"Voy a amar todo lo que pueda. Y luego voy a hacer matemá
 ## Cómo la Ve Roen (Humano, Conocimiento Previo)
 
 **Contexto:** Roen fue guardia del Consejo durante 15 años — vio pasar 2
-Regentes distintos mientras servía. Cruzó con Maren en negociaciones
+Regents distintos mientras servía. Cruzó con Maren en negociaciones
 comerciales entre frontera y Aethelgard. La conoce como "esa ingeniera que
 siempre tiene números" — y también sabe algo que pocos guardias comunes
 notarían: **que ella sobrevivió a más cambios de gobierno que casi
@@ -94,7 +94,7 @@ peligrosamente competente es.
 
 **Primera impresión de Roen:** Mujer inteligente, peligrosamente racional, pero caliente. Roen reconoce el tipo: **humano que ama con lógica.**
 
-Cuando Maren se une al grupo, Roen la saluda: *"Maren del consorcio. Pensé que estarías en Aethelgard."*
+Cuando Maren se une al grupo, Roen la saluda: *"Maren del Consortium. Pensé que estarías en Aethelgard."*
 
 Maren: *"Estoy. Pero también aquí."* (Frase típica de ella — en múltiples lugares mentalmente.)
 
@@ -211,7 +211,7 @@ El Fragmento se activa. Speck reacciona. La verdad emerge.
 
 **Maren ya sabe todo esto.** Ha sabido por semanas. Ha estado esperando este momento.
 
-El **Triune Council** la contacta directamente (hay agentes en The First Wound) — no el Regente, no una Casa. Saben que decretar no basta; necesitan a alguien que pueda *ejecutar*. Necesitan a Maren: *"Es ahora. Trae el Fragmento. Salva la ciudad."*
+El **Triune Council** la contacta directamente (hay agentes en The First Wound) — no el Regent, no una House. Saben que decretar no basta; necesitan a alguien que pueda *ejecutar*. Necesitan a Maren: *"Es ahora. Trae el Fragmento. Salva la ciudad."*
 
 Maren mira al jugador.
 

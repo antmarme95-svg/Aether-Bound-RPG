@@ -32,7 +32,7 @@ rechazaron de una Academia — **nunca la invitaron a la conversación
 siquiera.** Su familia siempre estuvo del lado práctico, no intelectual, de
 la sociedad élfica.
 
-Reporta al **Alto Mando de Frontera** — coordinación práctica de defensa
+Reporta al **Frontier High Command** — coordinación práctica de defensa
 territorial, separado de ambas Academias pero técnicamente bajo autoridad
 de la Corona (alguien tiene que coordinar la frontera). No es la maquinaria
 encubierta que usa a Nyael, ni el cálculo político de Sereth — es
@@ -50,7 +50,7 @@ cuestionar, porque es lo único que su tradición le enseñó a hacer.
 Nacida cerca de The Stillspire pero **fuera de círculos políticos y
 académicos por completo.** Familia fue cazadores de frontera aérea — no
 investigadores, no políticos, no Academia. Rastreadores, generación tras
-generación, del Alto Mando de Frontera.
+generación, del Frontier High Command.
 
 Lyris fue entrenada desde niña para **leer el cielo.** No metafóricamente — literalmente. Rastrear movimiento de bestias, patrones de viento, cambios de presión de Aether que preceden tormentas o corrupción.
 
@@ -64,15 +64,15 @@ Lyris trabajó de cazadora para The Stillspire — protegiendo frontera aérea d
 
 90 años rastreando. 90 años sin formar vínculos. 90 años siendo útil precisamente porque no le importaba.
 
-Hace 10 años, el Alto Mando de Frontera hizo pregunta: *"¿Puedes seguir siendo útil?"*
+Hace 10 años, el Frontier High Command hizo pregunta: *"¿Puedes seguir siendo útil?"*
 
 Lyris: *"Siempre."*
 
-Alto Mando: *"Hay variable que necesitamos rastreada. Está en The Wilds. Si la ubicas, nos decis. El resto, nosotros lo hacemos."*
+Frontier High Command: *"Hay variable que necesitamos rastreada. Está en The Wilds. Si la ubicas, nos decis. El resto, nosotros lo hacemos."*
 
 Lyris: *"¿Qué es variable?"*
 
-Alto Mando: *"Algo que no puede seguir existiendo. Pero no es tu preocupación."*
+Frontier High Command: *"Algo que no puede seguir existiendo. Pero no es tu preocupación."*
 
 Lyris aceptó. No preguntó por qué. Lyris nunca pregunta por qué — solo acepta coordenadas, patrón de movimiento, objetivo.
 
@@ -90,8 +90,8 @@ Lyris: *"Soy rastreadora. He estado siguiendo tu movimiento. No es secreto — s
 
 ## Cómo lo Ve Valen (Elfo, Conocimiento Previo)
 
-**Contexto:** Valen es Academia Élfica. Lyris nunca pisó ninguna Academia — es
-del Alto Mando de Frontera, la tercera vía práctica de la sociedad élfica.
+**Contexto:** Valen es Academy of Sages. Lyris nunca pisó ninguna Academia — es
+del Frontier High Command, la tercera vía práctica de la sociedad élfica.
 Ambos están en márgenes, pero por razones opuestas: Valen se auto-exilió del
 centro; a Lyris nunca la invitaron al centro.
 

@@ -26,7 +26,7 @@ La traición de Nyael es la más devastadora porque **no hay confrontación.** S
 ## Afiliación (canon [[Estructura Política]])
 
 Los "círculos de The Stillspire" que entrenaron a Nyael **no son una
-institución aparte — son el brazo encubierto de la Academia Real,**
+institución aparte — son el brazo encubierto de la Royal Academy,**
 operativos negables al servicio directo de la Corona. Oficialmente no
 existen. Nyael y **Sereth** son, sin saberlo el uno del otro hasta que se
 cruzan en el grupo, **dos productos de la misma maquinaria de Estado:**
@@ -43,7 +43,7 @@ ni siquiera admite tenerla.**
 
 ### The Stillspire: La Sombra (edades 0-100)
 
-Nacida y reclutada de niña por los círculos encubiertos de la Academia Real
+Nacida y reclutada de niña por los círculos encubiertos de la Royal Academy
 dedicados a **ejecución perfecta.** No assassinato — ejecución. Hay diferencia: asesino mata por encargo, ejecutor mata porque la muerte es resultado inevitable de verdades no confrontadas.
 
 Nyael fue entrenada desde niña para ser **invisible.** No literalmente (aunque técnicas llegan cerca). Invisible en el sentido de no dejar rastro emocional, no dejar rastro físico, no dejar rastro mental.
@@ -74,8 +74,8 @@ Nyael aceptó. Porque Nyael acepta siempre. No cuestiona.
 
 ## Cómo lo Ve Valen (Elfo, Conocimiento Previo)
 
-**Contexto:** Valen es Academia Élfica — observa desde fuera de cualquier
-cadena de mando. Nyael es el brazo encubierto de la Academia Real — observa
+**Contexto:** Valen es Academy of Sages — observa desde fuera de cualquier
+cadena de mando. Nyael es el brazo encubierto de la Royal Academy — observa
 desde dentro de la Corona misma, aunque la Corona nunca lo admitiría. Ambos
 son "sombras" de Stillspire, pero por razones institucionales opuestas.
 

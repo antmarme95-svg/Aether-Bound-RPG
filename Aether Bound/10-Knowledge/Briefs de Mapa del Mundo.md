@@ -141,7 +141,7 @@ Representa así:
 **Ciudades principales:**
 - Emberdeep — caverna subterránea (vertical)
   - Visual: acceso de cueva, arquitectura geométrica angular
-  - Nota: "Gran Clan de Forja"
+  - Nota: "Great Forging Clan"
 - Ember Workshops — talleres dispersos
 - Cinder Ascent Base — puesto militar (paso montaña)
 

@@ -7,7 +7,7 @@ updated: 2026-07-23
 # Vekka — C3 Pivote (Humano Vanguard Jugador)
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Strategist  
-**Origen:** Gran Clan de Forja (clan real), Ignis Reach  
+**Origen:** the Great Forging Clan (clan real), Ignis Reach  
 **Edad aparente:** 80-100 años (maestra de gremio)  
 **Arquetipo de Traición:** Deber de gremio vs. Promesa personal  
 
@@ -15,11 +15,11 @@ updated: 2026-07-23
 
 ## Afiliación de Clan (canon [[Estructura Política]])
 
-Vekka es **100% Gran Clan de Forja** — no un gremio aparte de la corona, es
+Vekka es **100% the Great Forging Clan** — no un gremio aparte de la corona, es
 el clan real mismo. Su autoridad como Maestra no es solo técnica: **es
 autoridad de Estado.** Cuando el gremio le ordena desmontar algo, la orden
 viene directamente del poder central de Ignis Reach — el mismo cuerpo que
-gobierna junto al Rey Borran. No hay apelación posible, porque no hay nadie
+gobierna junto a King Borran. No hay apelación posible, porque no hay nadie
 por encima a quien apelar salvo la corona misma.
 
 ## Esencia
@@ -54,12 +54,12 @@ Vekka aceptó. **Porque enano no cuestiona deber de gremio.** Deber supersede to
 
 ## Cómo lo Ve Darro (Enano, Conocimiento Previo)
 
-**Contexto:** Darro fue rechazado por el Gran Clan de Forja de joven
+**Contexto:** Darro fue rechazado por el the Great Forging Clan de joven
 (aprendizaje incompleto — el mismo rechazo que compartió con Torgan). Vekka
 es Maestra **del clan real mismo** — no una autoridad adyacente, sino la
 máxima autoridad técnica del sistema que lo expulsó.
 
-Cuando Vekka se une al grupo, Darro la reconoce inmediatamente: *"Vekka. Maestra del Gran Clan."*
+Cuando Vekka se une al grupo, Darro la reconoce inmediatamente: *"Vekka. Maestra de the Great Forging Clan."*
 
 Vekka: *"Darro. No esperaba verte aquí."*
 

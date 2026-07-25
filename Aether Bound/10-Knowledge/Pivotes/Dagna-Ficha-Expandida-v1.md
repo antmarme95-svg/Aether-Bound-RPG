@@ -7,7 +7,7 @@ updated: 2026-07-23
 # Dagna — C3 Pivote (Humano Duelist Jugador)
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Vanguard  
-**Origen:** Subclán vasallo del Gran Clan de Forja, Ignis Reach  
+**Origen:** Subclán vasallo del Great Forging Clan, Ignis Reach  
 **Edad aparente:** 90-110 años (madura, veterana de protección)  
 **Arquetipo de Traición:** Ley del clan vs. Promesa personal  
 
@@ -15,10 +15,10 @@ updated: 2026-07-23
 
 ## Afiliación de Clan (canon [[Estructura Política]])
 
-Dagna **no es del Gran Clan de Forja directamente** — pertenece a un subclán
+Dagna **no es del Great Forging Clan directamente** — pertenece a un subclán
 que le debe lealtad/servicio al clan real. Esto vuelve su cadena de
 obligación de **dos eslabones, no uno**: ella obedece a su subclán, y su
-subclán a su vez obedece al Gran Clan. Cuando "el clan ordena," en realidad
+subclán a su vez obedece al Great Forging Clan. Cuando "el clan ordena," en realidad
 la orden vino de arriba, pasó por su subclán, y llegó a ella ya como mandato
 absoluto — sin que ella tenga forma de cuestionar el eslabón intermedio.
 
@@ -38,25 +38,25 @@ El dilema de Dagna: ley del clan ordena que proteja sangre de clan. El grupo no 
 
 ### Subclán: Protectora Designada (edades 0-80)
 
-Nacida en un subclán vasallo, deudor de servicio al Gran Clan de Forja desde
+Nacida en un subclán vasallo, deudor de servicio al Great Forging Clan desde
 hace generaciones — la clase de deuda que ningún subclán recuerda haber
 contraído voluntariamente, pero que nadie cuestiona. Su rol fue
 predeterminado: **Vanguard.** El muro entre su gente y las amenazas externas.
 
 Cumplió 60 años en ese rol. Protegió a su subclán contra bestias, contra
 hambruna, contra colapso — y, indirectamente, protegió también los intereses
-del Gran Clan, que su subclán sirve.
+del Great Forging Clan, que su subclán sirve.
 
 **Ley del Clan:** El deber es absoluto, en dos niveles — al subclán primero,
-y a través de él, al Gran Clan. Es lo único que importa. Sacrifica cualquier
+y a través de él, al Great Forging Clan. Es lo único que importa. Sacrifica cualquier
 cosa por ambos.
 
 ### Encargo Especial (últimos 10 años)
 
-Hace 10 años, el Gran Clan de Forja contactó al subclán de Dagna: *"Envíen a
+Hace 10 años, el Great Forging Clan contactó al subclán de Dagna: *"Envíen a
 protectora. El mundo requiere defensor. Si sirve bien, el subclán recibe
 recursos, oro, posición ante nosotros. Cinco años de servicio."* Una orden
-del Gran Clan, transmitida como mandato del propio subclán — así es como
+del Great Forging Clan, transmitida como mandato del propio subclán — así es como
 siempre llega.
 
 El subclán decidió: envía a Dagna.
@@ -73,34 +73,34 @@ Dagna dijo sí. **Por primera vez, eligió sobre clan.**
 
 ### Presente: La Orden del Clan
 
-Hace 1 año, su subclán contactó: *"Dagna. El Gran Clan de Forja identificó
+Hace 1 año, su subclán contactó: *"Dagna. El Great Forging Clan identificó
 una variable que amenaza el territorio. Confundirá el Aether, debilitará
 nuestra posición ante ellos, causará caída de poder. Debes tomar la
 variable."*
 
 Dagna: *"¿Quién es?"*
 
-Subclán: *"Irrelevante. Es amenaza. El Gran Clan ordenó. Nosotros ordenamos.
+Subclán: *"Irrelevante. Es amenaza. El Great Forging Clan ordenó. Nosotros ordenamos.
 Cumples."*
 
 **Dagna siente el peso de dos promesas.** Una a la cadena de clanes que la
 crió y la define, una al jugador.
 
 No puede honrar ambas. Y ni siquiera puede negociar con la fuente real de la
-orden — nunca habla directamente con el Gran Clan, solo con su subclán, que
+orden — nunca habla directamente con el Great Forging Clan, solo con su subclán, que
 tampoco puede negarse.
 
 ---
 
 ## Cómo lo Ve Darro (Enano, Conocimiento Previo)
 
-**Contexto:** Darro es Enano Duelist de Emberdeep, rechazado del Gran Clan de
+**Contexto:** Darro es Enano Duelist de Emberdeep, rechazado del Great Forging Clan de
 Forja de joven. Dagna nunca fue rechazada — pero tampoco fue nunca elegida
-para ser del Gran Clan: nació ya en un subclán vasallo, sirviéndolo desde
+para ser del Great Forging Clan: nació ya en un subclán vasallo, sirviéndolo desde
 antes de nacer. Ni rechazo ni elección — herencia.
 
 Cuando Dagna se une al grupo, Darro la reconoce: *"Dagna. De uno de los
-subclanes del Gran Clan."*
+subclanes del Great Forging Clan."*
 
 Dagna: *"Darro. Duelist solo."*
 
@@ -110,7 +110,7 @@ desconocido?"*
 Dagna: *"Porque el desconocido preguntó si quería quedarse. Por primera vez,
 elegí sobre el subclán."*
 
-Darro: *"Eso es peligroso, enana. El Gran Clan siempre llama — y tu subclán
+Darro: *"Eso es peligroso, enana. El Great Forging Clan siempre llama — y tu subclán
 llama por ellos."*
 
 Dagna: *"Sé."*

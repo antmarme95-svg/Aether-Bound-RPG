@@ -26,3 +26,24 @@ se llama Bond y el juego Bound. *"Speck" reservado para marketing/tráiler.*
 Idioma primario del juego: inglés. Rename en repo COMPLETADO (C1, 2026-07-05):
 título de ventana, boot prints y README ya dicen AETHER BOUND; los
 identificadores internos del prototipo retienen el nombre viejo adrede.
+
+## Estructura política ([[Estructura Política]]) — decisión 2026-07-24
+
+A partir de esta fecha, **todo nombre propio de institución/título/casa se
+crea o retraduce en inglés** — el vault sigue en español, pero los nombres
+propios siguen la regla ya vigente (the Aether-Born, the Triune Council):
+más globales, más estándar, idioma primario del juego.
+
+| Cosa | Nombre canónico | Nota |
+|---|---|---|
+| Autoridad moral élfica (testigos del cataclismo) | **The Elder Circle** | Originalmente 5, hoy 4 (uno murió hace 10 años); sin asiento formal — [[Estructura Política]] |
+| Academia élfica contemplativa | **the Academy of Sages** | De aquí sale The Elder Circle; Valen es discípulo |
+| Academia élfica de la Corona | **the Royal Academy** | Sereth (visible) y Nyael (brazo encubierto) |
+| Clan real enano | **the Great Forging Clan** | Es el clan real, no un gremio aparte |
+| Coordinación militar de frontera élfica | **Frontier High Command** | Fuera de ambas Academias; Lyris |
+| Cuerpo comercial humano | **the Trade Consortium** | Maren es su Jefa de Operaciones |
+| Casa política humana | **House [Apellido]** | Ej. House Ashcombe (Regente), House Thorne (Bram) |
+| Título de gobernante humano | **Regent** | No "King" — cargo precario, "Voice of the Council" |
+| Título de gobernante élfica | **Queen** | Queen Ithessa |
+| Título de gobernante enano | **King** | King Borran |
+| Título de embajador del Council | **Ambassador** / **Councilor** | Ambassador Cyrion/Kadrun (élfico/enano), Councilor Merrit Vance (humano) |

@@ -25,16 +25,16 @@ El que pregunta lo que nadie quiere que se pregunte. No por crueldad — porque 
 
 ## Afiliación de Academia (canon [[Estructura Política]])
 
-Valen es discípulo de la **Academia Élfica** (de los Sabios) — tradición
-contemplativa: "observar sin intervenir." De esta academia sale el Consejo
-de Sabios y, por extensión, el **Círculo de los Vivos** (los menos de 5
-elfos que presenciaron el cataclismo hace ~550 años). Esto explica su
+Valen es discípulo de la **Academy of Sages** (de los Sabios) — tradición
+contemplativa: "observar sin intervenir." De esta academia sale, por
+extensión, **The Elder Circle** (los 4 elfos que presenciaron el cataclismo
+hace ~550 años — originalmente 5, uno murió hace 10 años). Esto explica su
 biografía completa: por qué acumula conocimiento sin actuar sobre él, por
 qué "guardó el cálculo" en vez de intervenir — no es solo su temperamento,
-**es su formación.** La Academia Élfica no entrena para cambiar el patrón;
+**es su formación.** La Academy of Sages no entrena para cambiar el patrón;
 entrena para verlo con claridad total y sobrevivirlo en silencio.
 
-Esto lo pone en contraste directo con **Sereth** (Academia Real, entrenada
+Esto lo pone en contraste directo con **Sereth** (Royal Academy, entrenada
 para actuar "por el bien mayor" sin culpa) — dos productos de escuelas
 rivales de pensamiento. Ver dinámica completa en
 [[Sereth-Ficha-Expandida-v1|Sereth]].

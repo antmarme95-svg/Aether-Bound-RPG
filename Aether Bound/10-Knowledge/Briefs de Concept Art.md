@@ -367,7 +367,7 @@ específica del cargo. Destino: `90-Raw/concept/` — `reina-ithessa-v1.png`,
 `consejera-merrit-vance-v1.png`.
 
 **Nota de diseño transversal:** Reina y Rey deben leer como **gobernantes
-legítimos** (regalía plena, autoridad tranquila); el Regente Edrick debe leer
+legítimos** (regalía plena, autoridad tranquila); el Regent Edrick debe leer
 **deliberadamente menos regio** — cargo precario, no sangre real ([[Estructura
 Política]]: "Voice of the Council", no "Rey"). Los 3 embajadores del Council
 deben leer como **diplomáticos/burócratas de alto nivel**, no guerreros ni
@@ -382,9 +382,9 @@ proporción en Ithessa/Borran v1, ver [[LOG]]). Archivos existentes en
 
 | Brief | Personaje | Adjuntar |
 |---|---|---|
-| 9a / 9a-v2 | Reina Ithessa | `fenotipo-elfa-V2.png` |
-| 9b / 9b-v2 | Rey Borran | `fenotipo-enano-varon-v1.png` |
-| 9c | Regente Edrick | `fenotipo-humano-v1.png` |
+| 9a / 9a-v2 | Queen Ithessa | `fenotipo-elfa-V2.png` |
+| 9b / 9b-v2 | King Borran | `fenotipo-enano-varon-v1.png` |
+| 9c | Regent Edrick | `fenotipo-humano-v1.png` |
 | 9d | Embajador Cyrion | `fenotipo-elfo-V2.png` |
 | 9e | Embajador Kadrun | `fenotipo-enano-varon-v1.png` |
 | 9f | Consejera Merrit Vance | `fenotipo-humana-V1.png` |
@@ -393,7 +393,7 @@ Los prompts v2 (9a-v2, 9b-v2) ya no dependen del adjunto — la proporción
 está reescrita directo en el texto como regla #1 — pero adjuntar igual
 refuerza, no contradice.
 
-### 9a — Reina Ithessa (Stillwood)
+### 9a — Queen Ithessa (Stillwood)
 
 555 años — mayor que Valen/Sereth (180-250) pero más joven que el Círculo de
 los Vivos (570-700+, vivieron el cataclismo como adultos). Debe leer como
@@ -405,7 +405,7 @@ propio reino.
 Use the elf phenotype as the exact anatomy and proportion reference — silhouette reads as one continuous vertical line, roughly 8 heads tall, narrow sloped shoulders, long neck, long limbs, flexible posture held high, long ears sweeping backward — but design a specific named character: "Queen Ithessa", ruler of an ancient elven forest kingdom, mature and dignified, centuries old but not frail — regal composure earned over a long, steady reign, not youthful innocence. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: high cheekbones, large almond eyes with a calm, measuring gaze — the expression of someone who has ruled long enough to be patient, but who carries a quiet awareness that she is not the oldest wisdom in her own court. Hair: very long, silver-white with the faintest residual warmth of youth at the roots, styled in an elaborate braided coronet that becomes her crown — no separate metal crown, the hair itself is the regalia. Skin: cold pale tones with a faint lavender undertone. Glowing pale-teal aether engravings traced across the collarbone, forearms and temples, denser and more ornamental than a common elf's — a queen's mark. Clothing: a long flowing formal gown in deep forest green and silver, structured shoulders that echo tree-bark texture, medieval aetherpunk with organic brass filigree at the hems, a small ceremonial staff of pale wood inlaid with teal aether veins held loosely at her side. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: quiet, steady authority — a ruler who governs the present without claiming ownership of the past. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no heavy armor, no separate metal crown, no frail elderly appearance, no youthful/childlike appearance.
 ```
 
-### 9a-v2 — Reina Ithessa (REVISADO — corrige corona/silueta/estilo, QA 2026-07-24)
+### 9a-v2 — Queen Ithessa (REVISADO — corrige corona/silueta/estilo, QA 2026-07-24)
 
 **Hallazgos de la v1 (NB2):** corona metálica presente pese al negativo
 explícito; silueta no leyó como el ancla élfica (hombreras anchas, proporción
@@ -420,18 +420,18 @@ relocalizadas, negativos de estilo mucho más agresivos.
 Full-body character concept sheet, front view and side view, of "Queen Ithessa", ruler of an ancient elven forest kingdom, on a plain warm paper background. The silhouette is the single most important rule: she reads as one continuous unbroken vertical line, exactly 8 heads tall, narrow sloped shoulders with NO pauldrons or shoulder armor breaking the line, a long slender neck, long thin limbs, willowy and elongated — NOT a standard fantasy body, NOT broad-shouldered, every part of her reads tall and narrow. Long pointed ears sweep backward continuing the line of the skull. Face: high cheekbones, large almond eyes with a calm measuring gaze, fine narrow jaw — mature and dignified, centuries old but not frail. Hair: very long, silver-white, elaborately braided and coiled directly on top of her own head into a crown shape — the braided hair itself IS the crown, there is no metal, no gemstones, no separate headpiece of any kind sitting on top of or woven into the hair. Skin: cold pale tones with a faint lavender undertone, smooth and unmarked on the cheeks and forehead — the face has NO glowing patterns, NO teal markings, NO face paint of any kind. Faint glowing pale-teal aether engravings appear ONLY on the collarbone and forearms, thin delicate filigree lines, not a dense pattern. Clothing: a long flowing formal gown in deep forest green and silver with soft draped fabric shoulders (fabric only, no rigid armor plates), medieval aetherpunk organic brass filigree at the hem, a slender pale wood ceremonial staff inlaid with teal aether veins held loosely at her side. Art style: this must look like a traditional hand-painted watercolor illustration on textured paper — visible rough watercolor paper grain across the entire image, crisp black ink linework with slightly uneven hand-drawn line weight, flat cel shading in only 3-4 distinct light bands with soft dry-brush jittered edges between them, NOT a smooth gradient. Washed, low-saturation, slightly muted watercolor palette. Style blend of the game Sable's ligne claire flat graphic shapes and Breath of the Wild's soft impressionist color. Negative: no metal crown, no tiara, no gemstone headpiece, no jewelry on the head besides braided hair, no face paint, no facial markings on cheeks or forehead, no shoulder armor or pauldrons, no broad shoulders, no standard/average fantasy body proportions, no short or stocky body, no smooth airbrushed digital gradient shading, no clean vector-style linework, no glossy modern video-game splash art finish, no anime illustration style, no Genshin Impact candy saturation, no photorealism or PBR rendering, no neon glow, no heavy armor, no frail elderly appearance, no youthful/childlike appearance.
 ```
 
-### 9b — Rey Borran (Ignis Reach)
+### 9b — King Borran (Ignis Reach)
 
 Bisnieto directo del Rey del cataclismo — sucesión ritual, sin disputa. Debe
 leer como enano de mediana edad ya asentado en el trono (no joven heredero
-inseguro), con regalía que fusiona corona y forja — el Gran Clan de Forja
+inseguro), con regalía que fusiona corona y forja — el Great Forging Clan
 **es** el trono, no un cuerpo separado.
 
 ```
 Use the dwarf phenotype as the exact anatomy and proportion reference — a trapezoid silhouette nearly as wide as tall, exactly 4.5 heads tall, massive trapezius and shoulders swallowing the neck, wide barrel torso, enormous hands, very short thick limbs, low planted center of gravity, immovable stance — but design a specific named character: "King Borran", ruler of a dwarven mountain kingdom, mature and settled in his reign, great-grandson of the king who lived through the ancient cataclysm — carries inherited ceremonial memory with total confidence, not insecurity. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: heavy brow, broad jaw, a thick braided beard woven with small forge-iron rings and rune-stamped clasps — the beard itself reads as a chronicle of his lineage. Hair: dark iron-grey, pulled back beneath a low crown that is forged, not gemmed — a simple heavy band of dark iron and gold inlay shaped like overlapping hammer-strikes, fused seamlessly with the aesthetic of the Great Forging Clan rather than looking like a separate royal ornament. Skin: warm bronze tones with soot shading. Amber geometric guild-and-crown tattoos on both forearms, denser than a common smith's. Clothing: ceremonial forge-plate over practical smith-king garb — dark iron pauldrons chased with gold, a heavy fur-lined mantle in deep ember red and black, medieval aetherpunk with faint warm ember accents glowing at the seams. Holds a ceremonial war-hammer/scepter hybrid, more symbol than weapon, resting head-down on the ground. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: immovable, generational certainty — a mountain that has always had a king. Negative: no tall or slender body, no human proportions, no comedic caricature dwarf, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no gemstone-heavy crown, no young/insecure posture.
 ```
 
-### 9b-v2 — Rey Borran (REVISADO — corrige proporción/estilo, QA 2026-07-24)
+### 9b-v2 — King Borran (REVISADO — corrige proporción/estilo, QA 2026-07-24)
 
 **🟡 ESTADO: PROVISIONAL.** v2 mejoró (ya no lee "vikingo humano") pero la
 proporción trapezoide de 4.5 cabezas sigue sin cerrar del todo — Boris
@@ -451,7 +451,7 @@ negativos de estilo agresivos.
 Full-body character concept sheet, front view and side view, of "King Borran", ruler of a dwarven mountain kingdom, on a plain warm paper background. The proportions are the single most important rule: he is exactly 4.5 heads tall, a trapezoid silhouette nearly as wide as he is tall, with a massive trapezius and shoulders so wide they swallow the neck entirely, a wide barrel torso, enormous hands, very short thick arms and legs, and a low planted center of gravity — immovable, built like a load-bearing wall, NOT a tall human viking build. He is NOT tall, NOT athletic, NOT broad-in-a-human-way — every limb is short and thick, the total height barely clears a human's waist. Face: heavy brow, broad jaw, a thick braided grey beard woven with small forge-iron rings and rune-stamped clasps — the beard itself reads as a chronicle of his lineage. Hair: dark iron-grey, pulled back beneath a crown that is clearly forged metal, not gemmed — a heavy band of dark iron with raised gold inlay in a repeating overlapping hammer-strike chevron pattern, visibly fused in style with forge-craft rather than looking like a jeweled royal ornament. Skin: warm bronze tones with soot shading. Amber geometric guild-and-crown tattoos on both forearms. Clothing: ceremonial forge-plate over practical smith-king garb sized to his short thick frame — dark iron pauldrons chased with gold sitting on his massive shoulders, a heavy fur-lined mantle in deep ember red and black, medieval aetherpunk with faint warm ember accents glowing at the seams. Holds a ceremonial war-hammer/scepter hybrid at rest, head resting on the ground, in a relaxed formal stance rather than a battle-ready one. Art style: this must look like a traditional hand-painted watercolor illustration on textured paper — visible rough watercolor paper grain across the entire image, crisp black ink linework with slightly uneven hand-drawn line weight, flat cel shading in only 3-4 distinct light bands with soft dry-brush jittered edges between them, NOT a smooth gradient. Washed, low-saturation, slightly muted watercolor palette. Style blend of the game Sable's ligne claire flat graphic shapes and Breath of the Wild's soft impressionist color. Negative: no tall body, no human proportions, no viking-human build, no long or average-length arms and legs, no slender build, no comedic caricature dwarf, no gemstone-heavy crown, no plain unadorned crown, no battle-ready aggressive stance, no smooth airbrushed digital gradient shading, no clean vector-style linework, no glossy modern video-game splash art finish, no anime illustration style, no Genshin Impact candy saturation, no photorealism or PBR rendering, no neon glow.
 ```
 
-### 9c — Regente Edrick Ashcombe (Aethelgard)
+### 9c — Regent Edrick Ashcombe (Aethelgard)
 
 **Diferencia deliberada de los dos anteriores:** sin sangre real, cargo
 precario ("Voice of the Council" — [[Estructura Política]]). Debe leer
@@ -465,7 +465,7 @@ Use the human phenotype as the exact anatomy and proportion reference — balanc
 ### 9d — Embajador Cyrion (asiento élfico del Triune Council)
 
 Nombramiento de larga permanencia — décadas en Rivermeet representando a la
-Reina Ithessa. Diplomático veterano, distinto en tono de Sereth (más joven,
+Queen Ithessa. Diplomático veterano, distinto en tono de Sereth (más joven,
 cortesano) y de Valen (académico contemplativo) — este es poder político
 puro, ejercido con paciencia élfica.
 
@@ -475,7 +475,7 @@ Use the elf phenotype as the exact anatomy and proportion reference — silhouet
 
 ### 9e — Embajador Kadrun (asiento enano del Triune Council)
 
-Cargo casi hereditario dentro del Gran Clan de Forja — formal, no de trabajo.
+Cargo casi hereditario dentro del Great Forging Clan — formal, no de trabajo.
 Distinto en tono de Vekka (maestra técnica en su taller) — este es Gran Clan
 en su registro diplomático, no artesanal.
 
@@ -501,7 +501,7 @@ Full-body character concept sheet, front view and side view, of a dwarf ambassad
 
 El asiento más volátil de los 3 — se gana por consenso de Casas + Consorcio
 de Mercado, no por sangre. Debe leer más afilada y políticamente agresiva que
-el Regente Edrick — alguien que escaló para llegar aquí y sabe que puede
+el Regent Edrick — alguien que escaló para llegar aquí y sabe que puede
 perderlo.
 
 ```

@@ -50,8 +50,8 @@ posibles: [[Los 4 Finales]].
 gestionando esta misma corrupción — su poder depende de que la crisis siga
 administrada, no resuelta ([[Estructura Política]] §"Por qué el Council
 prefiere el statu quo"). Las órdenes hacia los 9 Pivotes vienen de 3 cadenas
-de poder distintas (Gran Clan de Forja, Academia Real, Consorcio de
-Mercado) que convergen todas en el mismo Council — una sola estrategia
+de poder distintas (Great Forging Clan, Royal Academy, Trade Consortium)
+que convergen todas en el mismo Council — una sola estrategia
 disuelta en 3 idiomas institucionales, ejecutada por 9 personas que nunca se
 enteran de que son parte del mismo plan.
 

@@ -24,7 +24,7 @@
 - [[Geografía y Ciudades]] — mapeo completo: 3 reinos + ciudades secundarias + zonas neutras + beats por acto + viajes.
 - [[Estructura Dramática]] — 3 actos + nudo del Fragmento + traición por convicción + gancho de 3 polos.
 - [[Las Tres Razas]] — Elfos/Enanos/Humanos: temperamento, hábitat, por qué nadie quiere a Speck. Incluye tabla de longevidad (elfos 650-700 / enanos ~200-250 / humanos ~70-90).
-- [[Estructura Política]] — cómo se gobierna cada reino: Reina Ithessa + Círculo de los Vivos + 2 Academias (elfos); Rey Borran + Gran Clan de Forja (enanos); Regente Edrick Ashcombe + Triune Council (humanos, sin dinastía estable).
+- [[Estructura Política]] — cómo se gobierna cada reino: Queen Ithessa + The Elder Circle + 2 Academias (elfos); King Borran + Great Forging Clan (enanos); Regent Edrick Ashcombe + Triune Council (humanos, sin dinastía estable). Nombres propios en inglés — ver [[Nomenclatura]].
 - [[La Rueda]] — mapa macro: cubo (Wilds), aro (3 reinos), 3 arterias co-op, Driftmarket, Sunken Archive, First Wound.
 - [[Speck]] — la última Warden: 3 estadios, giro Grogu, bautizo, Momentos de Persona.
 - [[El Quinteto]] — jugador + C1 afín + C2 opuesto + C3 pivote + C4 chispa (+Speck); matchmaking orgánico.

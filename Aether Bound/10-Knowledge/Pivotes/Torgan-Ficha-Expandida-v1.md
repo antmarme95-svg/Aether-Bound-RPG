@@ -25,8 +25,8 @@ La traición no es decisión — es **cumplimiento de promesa anterior.**
 
 ## Afiliación de Clan (canon [[Estructura Política]])
 
-**Torgan está fuera del Gran Clan de Forja** — el clan real de Ignis Reach.
-De joven intentó entrar como aprendiz al Gran Clan (el mismo camino que
+**Torgan está fuera de the Great Forging Clan** — el clan real de Ignis Reach.
+De joven intentó entrar como aprendiz al Clan (el mismo camino que
 intentó Darro) y **fue rechazado.** Su Juramento de Forja de 55 años NO fue
 jurado al clan que lo rechazó — fue jurado a un clan propio, menor, donde
 encontró pertenencia después del rechazo. Eso vuelve el juramento MÁS
@@ -39,9 +39,9 @@ preciado, no menos: es la lealtad que eligió después de que la lealtad
 
 Nacido en Emberdeep, cerca de la forja suprema de Ignis Reach. Familia de
 guerreros — no forjeros. Sus antepasados fueron duelists de gremio,
-protectores de forja, pero **sin sangre en el Gran Clan de Forja.**
+protectores de forja, pero **sin sangre en the Great Forging Clan.**
 
-A los 15, Torgan solicitó aprendizaje formal en el Gran Clan de Forja — el
+A los 15, Torgan solicitó aprendizaje formal en the Great Forging Clan — el
 camino prestigioso, el que hubiera significado tatuaje real, servicio a la
 corona. **Fue rechazado.** Sin explicación más allá de "no hay lugar." El
 mismo rechazo, el mismo año, casi el mismo día que un tal Darro.
@@ -50,16 +50,16 @@ Nunca hablaron entonces. Pero Torgan recuerda haber visto a otro enano joven
 saliendo de la misma sala, con la misma cara.
 
 Torgan fue criado, después del rechazo, por un **clan menor de guerreros** —
-gente que también servía a la forja, pero sin la sangre ni el prestigio del
-Gran Clan. Ahí sí lo aceptaron. Entrenamiento desde los 16. Disciplina, lucha
-cuerpo-a-cuerpo, reflejos — **arma de un clan que no necesitaba ser el más
-grande para exigir lealtad total.**
+gente que también servía a la forja, pero sin la sangre ni el prestigio de
+the Great Forging Clan. Ahí sí lo aceptaron. Entrenamiento desde los 16.
+Disciplina, lucha cuerpo-a-cuerpo, reflejos — **arma de un clan que no
+necesitaba ser el más grande para exigir lealtad total.**
 
-**A los 20:** Completó aprendizaje de su clan (no el Gran Clan). Recibió el
-Tatuaje Completo — patrón ámbar/dorado que corre por ambos brazos. No es la
-marca del Gran Clan de Forja, es la marca de **su** clan — pero para Torgan,
-después del rechazo, significa aún más: es la promesa de que alguien lo
-quiso lo suficiente para tatuarlo con su nombre.
+**A los 20:** Completó aprendizaje de su clan (no the Great Forging Clan).
+Recibió el Tatuaje Completo — patrón ámbar/dorado que corre por ambos
+brazos. No es la marca de the Great Forging Clan, es la marca de **su**
+clan — pero para Torgan, después del rechazo, significa aún más: es la
+promesa de que alguien lo quiso lo suficiente para tatuarlo con su nombre.
 
 **Lo que el tatuaje significa:** Juramento formal. No es decoración. Es **contrato escrito en piel.**
 
@@ -100,14 +100,14 @@ Ambos no pueden ser verdaderos.
 ## Cómo lo Ve Darro (Enano, Conocimiento Previo)
 
 **Contexto:** Darro y Torgan comparten algo que ninguno de los dos dice en
-voz alta al principio: **fueron rechazados el mismo año por el mismo Gran
-Clan de Forja.** Darro nunca encontró otro clan que lo aceptara — se quedó
+voz alta al principio: **fueron rechazados el mismo año por the Great
+Forging Clan.** Darro nunca encontró otro clan que lo aceptara — se quedó
 fuera de todo. Torgan sí — encontró un clan menor, se tatuó, juró.
 
 Cuando Torgan se une al grupo, Darro lo reconoce: *"Torgan. El famoso. El del Tatuaje Completo."*
 
 Torgan: *"Darro. Escuché que saliste del gremio."* (No especifica cuál —
-ambos saben que habla del Gran Clan, el que los rechazó a los dos.)
+ambos saben que habla de the Great Forging Clan, el que los rechazó a los dos.)
 
 Darro: *"Gremio y yo tuvimos diferencias. ¿Tú?"*
 
@@ -122,7 +122,7 @@ más conocieron después.
 él se le negó — no envidia, es más complicado que eso. Respeto genuino
 mezclado con una tristeza que no nombra.
 
-**Cuando traiciona:** Darro dice: *"Sabía que esto venía. El tatuaje obliga. No el Gran Clan — el tuyo. Pero igual obliga."*
+**Cuando traiciona:** Darro dice: *"Sabía que esto venía. El tatuaje obliga. No the Great Forging Clan — el tuyo. Pero igual obliga."*
 
 No es amargo — es reconocimiento. Ambos fueron escupidos por el mismo lugar. Torgan simplemente tuvo la suerte de que otro clan lo quisiera.
 
@@ -398,7 +398,7 @@ Conversación sobre el Juramento: Valen pregunta si es variable mutable. Torgan:
 
 **Primera impresión:** Darro ve a Torgan como la versión de sí mismo que sí encontró clan después del rechazo. Torgan ve a Darro como el espejo de lo que le pudo haber tocado si nadie más lo hubiera aceptado.
 
-*"El Gran Clan nos rechazó a los dos el mismo año."*  
+*"The Great Forging Clan nos rechazó a los dos el mismo año."*  
 *"Y tú encontraste otro. Yo no."*  
 *"Suerte. Nada más. Pudo ser al revés."*  
 *"No me consuela."*  

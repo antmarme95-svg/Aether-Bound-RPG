@@ -1,5 +1,62 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] retcon/canon | Retraducción a inglés de nombres propios institucionales
+
+**Disparador:** al retomar el Círculo de los Vivos ("The Elder Circle" —
+Boris pidió ese tono), surgió la decisión de estandarizar: **todo nombre
+propio de institución/título/casa se crea o retraduce en inglés de ahora en
+más** — el vault sigue en español, pero nombres propios siguen la regla ya
+vigente para the Aether-Born / the Iron-Blooded / the Restless / the Triune
+Council (más globales, más estándar, idioma primario del juego según
+[[Nomenclatura]]). Boris eligió explícitamente retraducir también lo ya
+escrito, no solo lo nuevo.
+
+**Retraducciones aplicadas:**
+- Círculo de los Vivos → **The Elder Circle**
+- Gran Clan de Forja → **the Great Forging Clan**
+- Academia Élfica (de los Sabios) → **the Academy of Sages**
+- Academia Real → **the Royal Academy**
+- Alto Mando de Frontera → **Frontier High Command**
+- Consorcio de Mercado → **the Trade Consortium**
+- Casa Thorne / Casa Ashcombe → **House Thorne** / **House Ashcombe**
+- Reina Ithessa / Rey Borran / Regente Edrick → **Queen Ithessa** / **King
+  Borran** / **Regent Edrick**
+- Regentado → **Regency**
+
+**Regla de estilo fijada:** en prosa española embebida, se usa artículo
+español + nombre propio SIN "the" duplicado (ej. "el Great Forging Clan",
+no "el the Great Forging Clan") — mismo patrón que ya regía "el Triune
+Council". "The" se conserva solo en la tabla canónica de [[Nomenclatura]] y
+en citas de diálogo en inglés puro.
+
+**Archivos actualizados (17):** `Nomenclatura.md` (nueva sección con tabla
+de 10 términos nuevos), `Estructura Política.md` (reescrito completo),
+`El Mundo y la Muda.md`, `Geografía y Ciudades.md`, `Briefs de Concept
+Art.md`, `Briefs de Mapa del Mundo.md`, `00-Index.md`, `Current-State.md`,
++ 9 fichas (Torgan, Dagna, Vekka, Sereth, Nyael, Valen, Lyris, Bram, Maren).
+
+**Deliberadamente NO tocado:** `LOG.md` (append-only, nunca se reescribe
+historia) y `Current-State-Historico.md` (archivo, snapshot congelado de
+sesiones pasadas) — retienen los nombres en español como estaban en el
+momento de esas sesiones.
+
+**Nuevo detalle de The Elder Circle (además de la retraducción):**
+originalmente 5 elfos que vivieron el cataclismo como adultos jóvenes hace
+~550 años — **ahora 4**, el quinto murió de vejez natural hace 10 años.
+Deliberadamente 4 (número par), no 3 como el Triune Council — a diferencia
+del Council, The Elder Circle no vota decisiones, es un grupo de testigos
+que a veces coincide y a veces no, sin mecanismo de resolución. Confirmado
+también: **Ambassador Cyrion NO es miembro** de The Elder Circle — es
+Royal Academy, diplomático de carrera, cargo formal; mantener separado el
+poder institucional (Corona/Council/Academias) de la autoridad de memoria
+directa (The Elder Circle, sin cargo alguno) preserva la tensión narrativa
+entre ambos.
+
+**Pendiente:** nombres individuales de los 4 miembros de The Elder Circle —
+próximo frente de esta misma sesión.
+
+---
+
 ## [2026-07-24] design | Cierre de sesión — inventario de elenco + backlog de personajes sin desarrollar
 
 **Disparador:** cierre de sesión. Con el elenco de grupo (13) y las figuras

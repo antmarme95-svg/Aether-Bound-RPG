@@ -25,10 +25,10 @@ La traición de Sereth es la más compleja porque no es desprecio disfrazado de 
 
 ## Afiliación de Academia (canon [[Estructura Política]])
 
-Sereth es producto de la **Academia Real** — tradición aplicada al servicio
-de la Corona: "el cálculo sirve al Estado." A diferencia de la Academia
-Élfica (donde estudió Valen), que entrena para observar sin intervenir, la
-Academia Real entrena explícitamente para **actuar** — incluso manipular —
+Sereth es producto de la **Royal Academy** — tradición aplicada al servicio
+de la Corona: "el cálculo sirve al Estado." A diferencia de la Academy of
+Sages (donde estudió Valen), que entrena para observar sin intervenir, la
+Royal Academy entrena explícitamente para **actuar** — incluso manipular —
 en nombre del bien mayor calculado. Esto no es un defecto de carácter de
 Sereth: es literalmente lo que le enseñaron que era correcto desde niño en
 palacio. Explica por qué manipula "por el bien mayor" sin culpa — así lo
@@ -77,15 +77,15 @@ Pero Sereth **no es frío al respecto.** Reconoce el costo. La ama precisamente 
 ## Cómo lo Ve Valen (Elfo, Conocimiento Previo)
 
 **Contexto:** Valen y Sereth son ambos Strategists élficos de The Stillspire —
-pero de **escuelas rivales.** Valen es Academia Élfica (observar sin
-intervenir); Sereth es Academia Real (actuar por cálculo, al servicio de la
+pero de **escuelas rivales.** Valen es Academy of Sages (observar sin
+intervenir); Sereth es Royal Academy (actuar por cálculo, al servicio de la
 Corona). No es solo diferencia de método — es diferencia de para quién
 trabajan: Valen no responde a nadie, Sereth responde, en última instancia, a
-la Reina Ithessa y su corte. Se cruzan en archivos hace décadas — Valen
+la Queen Ithessa y su corte. Se cruzan en archivos hace décadas — Valen
 investigando ciclos por su cuenta, Sereth investigando ciclos porque el
 palacio se lo pidió.
 
-Cuando Sereth se une al grupo, Valen lo reconoce: *"Sereth. Academia Real.
+Cuando Sereth se une al grupo, Valen lo reconoce: *"Sereth. Royal Academy.
 He visto tus predicciones. Sofisticadas — y convenientes para quien las
 encargó."*
 

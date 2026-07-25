@@ -90,7 +90,7 @@ updated: 2026-07-23
 
 **Capital / Ciudad Principal:**
 - **Emberdeep** — caverna subterránea excavada verticalmente
-  - Sede del Gran Clan de Forja
+  - Sede del Great Forging Clan
   - Múltiples niveles (profundidad del poder)
   - Donde Vekka es Maestra del Gremio
   - Donde Torgan y Dagna pertenecen al Clan de Forja
