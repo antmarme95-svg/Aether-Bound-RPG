@@ -5099,3 +5099,13 @@ Integrado como §6d en Briefs de Concept Art.md. Actualizado 90-Raw/concept/CATA
 **Confirmado — arte de combos (§I del catálogo):** son el sistema real de vínculos/combos de los Pivotes (Arcane Ballistics, Skyhook, Mobile Foundry, etc.), no legacy. Pendiente de evaluación conjunta en sesión futura; no tiene doc propio en `10-Knowledge/` todavía.
 
 **Pendiente:** escenas de traición legacy (§J del catálogo) sin revisar. Driftmarket sin re-correr.
+
+## [2026-07-24] session/close | Cierre de sesión — migración Current-State + pendientes del lunes 27
+
+Sesión cerrada. Current-State.md migrado (partes 7-16 → Current-State-Historico.md, Current-State reescrito y recortado). Vault limpio, check_vault 🟢 verde tras migración.
+
+**Pendientes formalizados para lunes 27 de julio:**
+1. QA de congruencia del Vault (sintaxis + semántica) con Opus
+2. QA narrativo con Opus (consistencia dramática de los 9 patrones de traición, epílogos de los 4 Finales, peso de The Reckoning, impacto de Speck-Warden en fichas existentes)
+
+Todos los demás pendientes documentados en Current-State.md §Pendientes.

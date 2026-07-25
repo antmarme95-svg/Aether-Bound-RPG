@@ -1766,3 +1766,37 @@ updated: 2026-07-16
   actuales); si algo deja de ser "lo que sigue" y pasa a ser "lo que ya
   pasó", se mueve a [[Current-State-Historico]] o vive solo en [[LOG]] —
   no se acumula aquí.
+
+---
+
+## Bloque 2026-07-24 (sesión 2) — Elenco político + concept art §10 + catalogación 90-Raw
+
+### Parte 7 — Concept art gobernantes + Triune Council (§9) CERRADO
+6 briefs en Briefs de Concept Art §9 (NB2). Estado final tras 3 rondas de QA: ✅ Ithessa v2, Regent Edrick, Ambassador Cyrion, Ambassador Kadrun v2, Councilor Merrit Vance (notas menores, no bloqueantes). 🟡 King Borran PROVISIONAL — 2 intentos no cerraron proporción trapezoide 4.5 cabezas. Hallazgo: prompt en prosa corta resuelve el glitch (ya probado con Kadrun v2). Problema sistémico NB2: acabado acuarela Sable×BotW no aparece en character sheets — posible techo de la técnica.
+
+### Parte 8 — Inventario de elenco + backlog de personajes sin desarrollar
+13 personajes de grupo + 6 figuras políticas completos. Identificados pendientes: The Elder Circle (resuelto mismo día), rival político de Edrick (resuelto mismo día), cabeza de the Academy of Sages (baja prioridad, abierto).
+
+### Parte 9 — Retraducción a inglés de nombres propios institucionales
+Decisión Boris: todo nombre propio de institución/título/casa en inglés. 17 archivos actualizados vía sed + fixes manuales de doble-artículo. Regla fijada: nunca combinar artículo español + "the" inglés (→ "del the X" → "del Great Forging Clan").
+
+### Parte 10 — The Elder Circle: 4 miembros nombrados
+Threnn (guerrero, statu quo) / Ilyara (sanadora, dejar Muda completarse) / Maelys (testigo rota, oráculo) / Corwyn (político, control informal sobre Queen Ithessa). Thessaly †, hace 10 años. Se reúnen en Grove of Cycles. Regla fijada: desacuerdo pasivo-agresivo puramente élfico — nunca pierden compostura.
+
+### Parte 11 — Lady Isolde Marrow: rival político de Edrick
+House Marrow. Busca restaurar Corona hereditaria real — amenaza doble a Edrick y al Triune Council mismo. Línea canónica: "Ashcombe borrows the throne every decade. I intend to keep it." Ganchos: respaldo mercenario (Bram), presión al Trade Consortium (Maren).
+
+### Parte 12 — The Bound Five + Old Tobin Hale + The Reckoning
+"El Quinteto" → The Bound Five (retraducido en 22 archivos). Harbormaster Tobin Hale: único personaje de poder sin agenda oculta. The Reckoning: nuevo beat pre-clímax en Driftmarket — (1) Tobin da the Wanderer's Goggles al jugador (revelación de poder innato, sin resolución completa), (3) Tobin advierte en privado que el Council mueve algo para entregar a Speck.
+
+### Parte 13 — Briefs de concept art: elenco político nuevo (§10)
+6 briefs en Briefs de Concept Art §10 — Isolde Marrow, Tobin Hale, Threnn, Ilyara, Maelys, Corwyn. Formato de prosa corta. Elder Circle con nota: deben leer más viejos que cualquier elfo ya generado.
+
+### Parte 14 — QA §10: 5/6 aprobados + regla anti-texto en imagen
+✅ Corwyn, Maelys (mejor resultado), Tobin Hale, Isolde Marrow. 🟡 Threnn (marcas aether muy brillantes, sin cinturón vacío visible). 🔴 Ilyara — glitch de caption corrupto. Regla fijada: "no text, no labels, no captions, no annotations, no diagram-style callouts" — aplica a todo brief futuro.
+
+### Parte 15 — Ilyara re-corrida: §10 CERRADO 6/6
+Ilyara aprobada con el negativo estándar. Cero glitch. §10 completo.
+
+### Parte 16 — Catalogación de 90-Raw/concept + QA de ciudades con Haiku
+~45 archivos renombrados a kebab-case. King Borran v2 resuelto por timestamp. Legacy archivado en _legacy/ (El Nido pre-redirect, Finales pre-reset, speck rework). Aether Bound universe.png = mapa maestro completo pero con texto corrupto → referencia interna imperfecta por ahora; plan de spec exhaustiva en Briefs de Mapa del Mundo.md. Arte de combos de Pivotes (Arcane Ballistics, Skyhook, etc.) confirmado como sistema real de vínculos — pendiente evaluación conjunta. QA de 5 keyframes de ciudad con agente Haiku: Emberdeep ✅, Stillspire ✅, Mistbound Frontier ✅, Rivermeet daylight 🟡, Driftmarket 🔴 (caption de texto quemado). Integrado en Briefs de Concept Art §6d. Catálogo en [[90-Raw/concept/CATALOGO]].
