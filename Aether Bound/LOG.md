@@ -5053,3 +5053,13 @@ narrativamente coherente. [[Current-State.md]] y [[LOG.md]] actualizados.
 - [[Speck.md]] narrativamente coherente (transformación involuntaria + asunción destino)
 
 **Siguiente fase:** Decisión roadmap post-NB Pro (Trailer formal? Cutscenes clímax? Banda sonora tema?) y evaluación de inversión Higgsfield/audio.
+
+## [2026-07-24] design/QA | Ilyara re-corrida — glitch de texto RESUELTO, §10 completo 6/6
+
+**Contexto:** Ilyara había salido con el bug de caption corrupto ("CLAIER OF DEEPLY COMPASSIONATE...") pese a usar el formato de prosa corta ya corregido. Se agregó la regla estándar "no text, no labels, no captions, no annotations, no diagram-style callouts" al negativo del prompt y se re-corrió sin más cambios.
+
+**Resultado:** ✅ APROBADA. Cero texto/caption visible en la imagen. Silueta élfica alta y esbelta correcta, pelo plateado, vejez visible en rostro, tatuajes/marcas en antebrazos, bolsa de hierbas en cintura, paleta verde salvia + crema, acuarela Sable×BotW sin anime/PBR/neón. 🟡 nota menor: sin marcador de aether visible (no era requisito duro).
+
+**Cierre §10 (elenco político nuevo):** 6/6 aprobados — Corwyn ✅, Maelys ✅ (mejor resultado), Tobin ✅, Isolde ✅, Threnn 🟡 (notas menores), Ilyara ✅ (tras re-corrida).
+
+**Conclusión técnica:** confirma que el glitch de texto corrupto en NB2 es mitigable de forma confiable agregando el negativo estándar explícito, incluso cuando el formato de prosa corta por sí solo no bastó en un caso puntual.

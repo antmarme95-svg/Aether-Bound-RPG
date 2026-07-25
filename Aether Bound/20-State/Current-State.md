@@ -140,6 +140,16 @@ updated: 2026-07-24
     Aplica a todo brief futuro. Detalle completo en [[LOG]].
   **Pendiente:** re-correr Ilyara.
 
+- **✅ SESIÓN 2026-07-24 (parte 15) — ILYARA RE-CORRIDA: §10 CERRADO
+  6/6:** Boris re-corrió Ilyara con el prompt actualizado (regla
+  anti-texto agregada). ✅ **Aprobada** — cero texto/caption corrupto,
+  silueta élfica correcta, pelo plateado, vejez visible, tatuajes/marcas
+  en antebrazos, bolsa de hierbas, paleta verde salvia + crema, acuarela
+  Sable×BotW limpia. 🟡 nota menor: sin marcador de aether visible (no
+  bloqueante). **§10 completo: 6/6 aprobados.** Confirma que la regla
+  estándar del negativo resuelve el glitch de forma confiable. Detalle en
+  [[LOG]].
+
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
   concept art generados y ratificados (95-100%); Golden Scene keyframes
