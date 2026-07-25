@@ -433,6 +433,12 @@ Use the dwarf phenotype as the exact anatomy and proportion reference — a trap
 
 ### 9b-v2 — Rey Borran (REVISADO — corrige proporción/estilo, QA 2026-07-24)
 
+**🟡 ESTADO: PROVISIONAL.** v2 mejoró (ya no lee "vikingo humano") pero la
+proporción trapezoide de 4.5 cabezas sigue sin cerrar del todo — Boris
+decidió dejarlo así por ahora, no bloquea el frente. Si se retoma: aplicar
+el mismo formato de prosa corta que resolvió Kadrun en 9e-v2 (ver [[LOG]]),
+no solo reforzar la proporción en una oración densa.
+
 **Hallazgos de la v1 (NB2):** proporción enana ROTA — leyó como vikingo
 humano grande (~5-6 cabezas), no como el trapezoide de 4.5 cabezas blindado
 en el canon (Dagna/Torgan/Vekka lo respetan); corona genérica sin motivo de
