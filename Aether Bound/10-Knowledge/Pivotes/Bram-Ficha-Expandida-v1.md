@@ -38,7 +38,10 @@ el camino duro. Ahora, agotado, finalmente quiere una puerta que sea *suya*,
 no la que House Thorne le hubiera dado gratis. Cortó lazos hace 20 años — sin
 protección de linaje, solo su contrato de mercenario. Es posible que conozca
 al **Regent Edrick Ashcombe**: dos hombres de Houses políticas de Rivermeet,
-uno que se quedó en el juego, otro que huyó de él.
+uno que se quedó en el juego, otro que huyó de él. **Nota de canon:** su
+tipo de compañía mercenaria es exactamente el respaldo militar que **Lady
+Isolde Marrow** (rival de Edrick, [[Estructura Política]]) busca cortejar
+para su ascenso — posible gancho narrativo si se retoma su historia.
 
 ---
 

@@ -1,5 +1,44 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | Lady Isolde Marrow — rival político de Regent Edrick
+
+**Disparador:** último ítem del backlog de personajes con peso real —
+darle cara individual a "6-8 Houses cayeron en 550 años".
+
+**Diseño:** no es solo "otra House más" — quiere terminar con el Regentado
+mismo y restaurar una Corona hereditaria real, lo que la vuelve amenaza
+tanto para Edrick como para el **Triune Council** (un trono humano
+consolidado rompe la mayoría 2-contra-1 que hoy le conviene al Council,
+"La ventaja de la inestabilidad humana").
+
+**Lady Isolde Marrow (House Marrow):**
+- Contraste con Edrick: carismática, confiada, populista vs. administrativo,
+  nervioso, cauteloso
+- Reclamo: linaje que dice predatar incluso a House Ashcombe — verificable o
+  no, la gente quiere creerlo tras 550 años de gobernantes de turno
+- Base de poder: Houses menores cansadas del ciclo + respaldo militar/
+  mercenario de frontera
+- Línea canónica: *"Ashcombe borrows the throne every decade. I intend to
+  keep it."*
+
+**2 ganchos narrativos abiertos, no desarrollados aún:**
+- **Con Bram:** su tipo de compañía mercenaria es exactamente el respaldo
+  militar que Isolde busca cortejar
+- **Con Maren:** corteja al Trade Consortium para que respalde su ascenso —
+  presión directa sobre alguien que se define por mantenerse "práctica, no
+  política". Ignorarla también es una posición
+
+**Archivos actualizados:** `Estructura Política.md` (nueva sección "El
+Rival" + tabla resumen + conexión Maren), `Bram-Ficha-Expandida-v1.md` y
+`Maren-Ficha-Expandida-v1.md` (notas de conexión breves, sin reescribir sus
+arcos).
+
+**Con esto, el backlog de personajes sin desarrollar queda cerrado por
+completo** — salvo la pregunta abierta de baja prioridad sobre si la cabeza
+de the Academy of Sages es distinta de The Elder Circle.
+
+---
+
 ## [2026-07-24] narrative | The Elder Circle — 4 miembros nombrados + regla de personaje élfica
 
 **Disparador:** continuación directa de la retraducción a inglés — con

@@ -160,6 +160,42 @@ tradicional, sino un cargo más precario y burocrático ("Voice of the
 Council"), reflejo de que la corona humana ya no tiene legitimidad sólida.
 Gobierna más por consenso de mercaderes/nobles que por sangre.
 
+### El Rival — Lady Isolde Marrow (House Marrow)
+
+Le da cara individual a "6-8 Houses cayeron en 550 años" — no es la próxima
+Regente precaria más, es algo distinto y más peligroso: **quiere terminar
+con el Regentado mismo y restaurar una Corona hereditaria real.**
+
+**Contraste directo con Edrick:** él es administrativo, nervioso, cauteloso
+— gobierna por consenso porque no tiene otra opción. Isolde es carismática,
+confiada, populista — "mujer del pueblo" contra "burócrata prestado".
+
+**Reclamo:** House Marrow dice tener linaje que predata incluso a House
+Ashcombe — leyenda de sangre real "verdadera", sin necesidad de que sea
+verificable: la gente quiere creerlo después de 550 años de gobernantes de
+turno.
+
+**Base de poder:** Houses menores cansadas del ciclo de Regentados +
+respaldo militar/mercenario de la frontera (posible fricción con el mundo
+de **Bram** — compañías mercenarias como la que él comandó son exactamente
+el tipo de apoyo que Isolde busca cortejar).
+
+**Presión sobre Maren:** corteja activamente al Trade Consortium para que
+respalde su ascenso — presión política directa sobre alguien que se define
+por mantenerse práctica, no política. Maren no puede ignorarla fácilmente:
+ignorar a Isolde es una posición política en sí misma, lo que Maren
+justamente evita.
+
+**Por qué es amenaza real, no solo para Edrick sino para el Council:** si
+Isolde logra coronarse (no solo ser Regente), sería el primer trono humano
+consolidado en siglos — rompiendo la mayoría natural de 2-contra-1 que hoy
+le conviene al Council ("La ventaja de la inestabilidad humana" arriba). El
+Council tiene, sin decirlo nunca en voz alta, interés directo en que Isolde
+fracase.
+
+**Línea canónica:** *"Ashcombe borrows the throne every decade. I intend to
+keep it."*
+
 **El Triune Council con sede en Rivermeet** es, en la práctica, la
 **autoridad continua real** — más estable que cualquier Regent de turno. Los
 humanos gobiernan su propia ciudad con un trono débil, pero el Council
@@ -179,7 +215,11 @@ Consortium puede movilizar los recursos reales.
 
 **Conexión con Maren:** su negociación de hace 2 años ([[Maren-Ficha-Expandida-v1]])
 fue con este gobierno inestable — explica por qué el acuerdo se siente
-frágil: ¿sigue en pie el mismo Regency, o ya cambió otra vez?
+frágil: ¿sigue en pie el mismo Regency, o ya cambió otra vez? Y ahora hay
+presión nueva: **Lady Isolde Marrow** corteja activamente al Trade
+Consortium para que respalde su ascenso — Maren no puede seguir siendo
+puramente "práctica, no política" indefinidamente si Isolde sigue
+insistiendo. Ignorarla también es una posición.
 
 ### Apellidos — solo en la cultura humana
 
@@ -292,7 +332,7 @@ los otros dos asientos.
 |---|---|---|---|
 | Stillwood | Queen Ithessa | Queen (555 años) | Corona + The Elder Circle (informal, moral) |
 | Ignis Reach | King Borran | King (bisnieto del Rey del cataclismo) | Corona + Great Forging Clan (mismo cuerpo) |
-| Aethelgard | Regent Edrick Ashcombe | Regent ("Voice of the Council") | Regency inestable + Triune Council (autoridad real) |
+| Aethelgard | Regent Edrick Ashcombe | Regent ("Voice of the Council") | Regency inestable + Triune Council (autoridad real) — rival: **Lady Isolde Marrow** (House Marrow), busca Corona hereditaria |
 
 **Triune Council (supra-racial, sede Rivermeet):**
 

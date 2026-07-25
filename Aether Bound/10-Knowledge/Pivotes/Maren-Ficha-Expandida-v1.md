@@ -41,6 +41,13 @@ ocurra. Su autoridad es práctica, no política. Pero en el sistema roto de
 Aethelgard, el poder práctico podría ser el único tipo que sobrevive
 confiablemente al caos del trono.
 
+**Presión política nueva:** **Lady Isolde Marrow** ([[Estructura Política]]
+— rival de Edrick, busca restaurar Corona hereditaria) corteja activamente
+al Consortium para que respalde su ascenso. Maren no puede seguir siendo
+puramente "práctica, no política" si Isolde insiste — ignorarla también es
+una posición. Gancho narrativo abierto, no desarrollado aún en la ficha
+principal.
+
 ---
 
 ## Biografía Pre-Aventura

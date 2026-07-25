@@ -50,8 +50,10 @@ updated: 2026-07-24
     10 años, mediadora de consenso). Desacuerdo pasivo-agresivo, nunca
     pierden compostura — regla de personaje élfica. Se reúnen en Grove of
     Cycles. Ver detalle abajo (parte 9).
-  - 🟡 Rival político de turno para el Regent Edrick (da cara a "6-8 Houses
-    cayeron en 550 años", hoy solo texto)
+  - ✅ **Rival político de Edrick** — RESUELTO mismo día: **Lady Isolde
+    Marrow** (House Marrow), busca Corona hereditaria real (no solo
+    Regency) — amenaza tanto a Edrick como al Triune Council mismo. Ver
+    detalle abajo (parte 11).
   - 🟡 Cabeza de la Academy of Sages (¿es The Elder Circle mismo, o una
     figura distinta? sin resolver)
   - 🟢 NPCs de locaciones puntuales (ermitaño de Hermit's Cave, líder de
@@ -83,6 +85,19 @@ updated: 2026-07-24
   **Con esto, el backlog de personajes sin desarrollar queda: solo rival
   político de Edrick y cabeza de Academy of Sages pendientes (baja
   prioridad).**
+
+- **✅ SESIÓN 2026-07-24 (parte 11) — LADY ISOLDE MARROW: RIVAL POLÍTICO DE
+  EDRICK:** House Marrow, busca terminar el Regentado y restaurar Corona
+  hereditaria real — amenaza doble: a Edrick directamente, y al Triune
+  Council indirectamente (un trono humano consolidado rompe la mayoría
+  2-contra-1 que hoy le conviene al Council). Carismática/populista, opuesto
+  a Edrick administrativo/nervioso. Línea canónica: *"Ashcombe borrows the
+  throne every decade. I intend to keep it."* 2 ganchos abiertos: respaldo
+  militar/mercenario (fricción con el mundo de Bram) + presión sobre Maren
+  para que el Trade Consortium la respalde. Detalle en [[LOG]].
+  **Con esto, el backlog de personajes sin desarrollar queda cerrado por
+  completo** salvo la pregunta de baja prioridad sobre la cabeza de the
+  Academy of Sages.
 
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
