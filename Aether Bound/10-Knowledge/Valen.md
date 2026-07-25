@@ -8,7 +8,7 @@ updated: 2026-07-23
 
 **Raza / Rol:** Elfo (the Aether-Born) / Strategist
 **Origen:** The Stillspire
-**Slot en [[El Quinteto]]:** C2 — El Opuesto
+**Slot en [[El Bound Five]]:** C2 — El Opuesto
 
 ## Esencia
 

@@ -8,7 +8,7 @@ updated: 2026-07-23
 
 **Raza / Rol:** Enano (the Iron-Blooded) / Duelist
 **Origen:** Emberdeep, Ignis Reach
-**Slot en [[El Quinteto]]:** C4 — La Chispa
+**Slot en [[El Bound Five]]:** C4 — La Chispa
 
 ## Esencia
 

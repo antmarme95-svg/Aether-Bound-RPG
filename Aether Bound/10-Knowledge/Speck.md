@@ -58,7 +58,7 @@ Flashes ocasionales donde ves la verdad bajo el disfraz:
 - Los ojos son **facetas de gema viva, no brillo animal**
 Estos flashes no son "revelación", son **destellos de tu poder anti-ilusión**.
 
-**Capa 3 — Lo que descubre el Quinteto (por convivencia):**
+**Capa 3 — Lo que descubre el Bound Five (por convivencia):**
 La inteligencia se hace innegable. La calma es antinatural. La mirada te
 *conoce* — ya no es animal, es ser. Nadie lo dice en voz alta ([[protocolo del
 silencio]]).
@@ -84,7 +84,7 @@ es la **progresión de cómo el jugador la ve**, no cómo ella cambia:
 | Fase visual | Acto | Narrativa | Gameplay |
 |---|---|---|---|
 | **Zorro shapeshifted** | 1 | Ilusión completa. El mundo ve "zorro extraño de The Wilds" | Pasiva; radar diegético (olfatea Aether) |
-| **Flashes 1-3** | 1→2 | Descubrimiento silencioso. Tu poder revela seams aether → pata cristal → ojos facetas | **Progresión privada** (el Quinteto no ve lo que ves) |
+| **Flashes 1-3** | 1→2 | Descubrimiento silencioso. Tu poder revela seams aether → pata cristal → ojos facetas | **Progresión privada** (el Bound Five no ve lo que ves) |
 | **Forma Warden E1 (jade)** | 2→Clímax | La verdad completa revelada. Speck SIEMPRE fue esto — el shapeshifting simplemente ocultaba | Verdadera naturaleza: **guardiana de eras perdidas** |
 | **Forma God-Core E3 (rojo)** | Clímax | **Involuntario.** Fragmento se activa → Speck reacciona por hive mind forzado. No elige transformarse. Es víctima del dispositivo. | Poder del Fragmento impone la verdad final sin consentimiento |
 
@@ -95,10 +95,10 @@ pero Speck no controla ese momento.
 
 ## El bautizo
 
-Lo nombra Darro (C4 Enano Duelist, [[El Quinteto]]): *"It's nothing but a
+Lo nombra Darro (C4 Enano Duelist, [[El Bound Five]]): *"It's nothing but a
 speck with opinions."*
 
-**Contexto:** El Quinteto ha visto comportamientos antinatural-inteligentes.
+**Contexto:** El Bound Five ha visto comportamientos antinatural-inteligentes.
 Darro reconoce que Speck razona — que tiene intenciones, que entiende.
 **Pero es solo... un zorro extraño.** Darro hace la observación burlona (conexión
 de humor enano con humor pragmático de Speck). Un solo nombre canónico, **nueve

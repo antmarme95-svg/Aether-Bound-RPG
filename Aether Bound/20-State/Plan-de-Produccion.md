@@ -111,7 +111,7 @@ Objetivo: **el slice shippeable al criterio de éxito.**
 
 ## Qué se difiere explícitamente (post-slice)
 
-B1 (8 fichas), B2 (Quinteto), B3 (Momentos de Persona/Standing), B4
+B1 (8 fichas), B2 (Bound Five), B3 (Momentos de Persona/Standing), B4
 (desambiguación — el slice tiene 1 companion), B5 (Rueda logística), B6
 (finales), B7 (progresión), B8 completo (dirección de audio), C3 más allá
 del mínimo del slice, export a consolas (partner externo).

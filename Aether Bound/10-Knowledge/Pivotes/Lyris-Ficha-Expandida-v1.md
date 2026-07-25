@@ -183,7 +183,7 @@ No es promesa emocional. Es oferta funcional.
 
 Roen llega. Valen aparece. Maren aparece. Torgan aparece. Sereth aparece. Darro aparece. Bram aparece.
 
-El Quinteto + 2 se forma.
+El Bound Five + 2 se forma.
 
 **Lyris aquí está en rol de observadora:**
 - Vuela arriba, siempre viendo
@@ -200,7 +200,7 @@ Con otros: distancia profesional. Útil. Nada más.
 
 ### La Rueda Completa
 
-El Quinteto viaja. Lyris vuela sobre, siempre vigilante.
+El Bound Five viaja. Lyris vuela sobre, siempre vigilante.
 
 Cada noche reporta secretamente a Stillspire: *"Variable se mueve según patrón X. Grupo muestra dinámica Y. Recomiendo acción en punto Z."*
 

@@ -213,7 +213,7 @@ Roen llega. Roen lo reconoce. Iven siente el momento incómodo.
 
 Maren, Valen, Torgan, Darro llegan.
 
-El Quinteto se forma.
+El Bound Five se forma.
 
 **Iven aquí está en rol imposible:**
 - Es compañero genuino (lo es)
@@ -230,7 +230,7 @@ Con Roen: incómodo. Roen ve que algo no encaja.
 
 ### La Rueda Completa
 
-El Quinteto viaja. Iven camina con ellos. Pero internamente, **Iven está en guerra.**
+El Bound Five viaja. Iven camina con ellos. Pero internamente, **Iven está en guerra.**
 
 Cada noche, contacta con Consejo: *"¿Llegó instrucción?"*
 

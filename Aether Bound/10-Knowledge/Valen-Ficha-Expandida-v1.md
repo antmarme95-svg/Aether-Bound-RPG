@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Elfo (the Aether-Born) / Strategist  
 **Origen:** The Stillspire  
 **Edad aparente:** 180-250 años (joven para un elfo, pero ha visto suficientes Mudas)  
-**Slot en [[El Quinteto]]:** C2 — El Opuesto  
+**Slot en [[El Bound Five]]:** C2 — El Opuesto  
 
 ---
 
@@ -170,7 +170,7 @@ El Pivote siente que está siendo **pesado en una balanza invisible.** Valen no 
 
 ### Escena 1: La Rueda Completa (Patrón Visible)
 
-El Quinteto viaja La Rueda. Valen no "viaja" — **observa datos caminando**.
+El Bound Five viaja La Rueda. Valen no "viaja" — **observa datos caminando**.
 
 **Valen en La Rueda:**
 - En Aethelgard (ciudad humana): nota tanques de Aether. Calcula dependencia.

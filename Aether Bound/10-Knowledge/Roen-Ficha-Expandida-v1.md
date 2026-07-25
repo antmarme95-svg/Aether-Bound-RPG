@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Humano (the Restless) / Vanguard  
 **Origen:** Frontera Mistbound  
 **Edad aparente:** 35-40 años  
-**Slot en [[El Quinteto]]:** C1 — El Afín  
+**Slot en [[El Bound Five]]:** C1 — El Afín  
 
 ---
 
@@ -137,11 +137,11 @@ Los primeros diálogos entre Roen y el Pivote **definen la química del grupo**.
 
 ---
 
-## Arco Acto 2 — Comunidad (La Rueda, Speck, el Quinteto se Forma)
+## Arco Acto 2 — Comunidad (La Rueda, Speck, el Bound Five se Forma)
 
 ### Escena 1: La Rueda Completa (Viaje, 3-4 actos del juego)
 
-El Quinteto viaja el aro de La Rueda, tocando las tres ciudades (humana, élfica, enana) y The Wilds en el corazón.
+El Bound Five viaja el aro de La Rueda, tocando las tres ciudades (humana, élfica, enana) y The Wilds en el corazón.
 
 **Roen en La Rueda:**
 - En cada ciudad, Roen ve cómo su propia cultura explota The Wilds.

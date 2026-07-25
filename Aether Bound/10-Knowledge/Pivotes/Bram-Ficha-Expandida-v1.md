@@ -198,7 +198,7 @@ Es promesa. Es **lo que Bram siempre dice.** Pero esta vez, cuando lo dice, hay 
 
 Roen llega. Valen aparece. Maren aparece. Torgan aparece. Sereth aparece. Darro aparece.
 
-El Quinteto se forma. Bram es el séptimo.
+El Bound Five se forma. Bram es el séptimo.
 
 **Bram aquí asume rol de protector del grupo:**
 - Se posiciona estratégicamente en campamento (siempre vigilante)
@@ -217,7 +217,7 @@ Con Darro: Bram bromea cuando Darro bromea, pero hay **peso debajo.** Darro lo n
 
 ### La Rueda Completa
 
-El Quinteto viaja. Bram camina con ellos. Pero internamente, **Bram está contando los días.**
+El Bound Five viaja. Bram camina con ellos. Pero internamente, **Bram está contando los días.**
 
 Cada noche, contacta en secreto con Consejo: *"¿Llegó confirmación?"*
 

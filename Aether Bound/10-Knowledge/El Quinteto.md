@@ -1,10 +1,16 @@
 ---
 status: ratificado
 source: "GDD §3.1"
-updated: 2026-07-04
+updated: 2026-07-24
 ---
-Los 
-# El Quinteto Disfuncional
+
+# The Bound Five (El Quinteto Disfuncional)
+
+**Nombre canónico en inglés: The Bound Five** (decisión 2026-07-24, ver
+[[Nomenclatura]]) — conecta directo con el título del juego: *AETHER
+BOUND* = atado por el Aether, atado por el vínculo (Bond), rumbo ("bound
+for") a The Wilds. Nombrar al grupo así hace que el título describa
+literalmente a quiénes protagonizan la historia.
 
 **5 contando al jugador** + [[Speck]] como +1 no-combatiente que se vuelve
 puente. La matriz de roles (1 Vanguard / 2 Duelists / 2 Strategists) se

@@ -12,6 +12,7 @@ se llama Bond y el juego Bound. *"Speck" reservado para marketing/tráiler.*
 
 | Cosa | Nombre canónico | Nota |
 |---|---|---|
+| **El grupo protagonista** | **The Bound Five** | Decisión 2026-07-24 — conecta directo con el título: *AETHER BOUND* = atado por el Aether, atado por el vínculo (Bond), rumbo ("bound for") a The Wilds. El nombre del grupo describe literalmente el título del juego. Antes "El Quinteto" — ver [[El Quinteto]] |
 | Cultura élfica | **the Aether-Born** | Reuso del prototipo |
 | Cultura enana | **the Iron-Blooded** | Reuso del prototipo |
 | Cultura humana | **the Restless** | Los elfos los llaman *"the Brief"* |
@@ -47,3 +48,6 @@ más globales, más estándar, idioma primario del juego.
 | Título de gobernante élfica | **Queen** | Queen Ithessa |
 | Título de gobernante enano | **King** | King Borran |
 | Título de embajador del Council | **Ambassador** / **Councilor** | Ambassador Cyrion/Kadrun (élfico/enano), Councilor Merrit Vance (humano) |
+| Rival político de Edrick | **Lady Isolde Marrow** (House Marrow) | Busca Corona hereditaria real, no Regency — amenaza también al Council |
+| "Rey" informal del Driftmarket | **Harbormaster Tobin Hale** ("Old Tobin") | Sin título nobiliario — controla el comercio del Driftmarket por reputación, no corrupción; único personaje de poder sin agenda oculta |
+| Regalo de Tobin al jugador | **the Wanderer's Goggles** | Lentes/goggles de un extraño del pasado de Tobin con "la misma mirada" — detona que el jugador entienda su poder innato |

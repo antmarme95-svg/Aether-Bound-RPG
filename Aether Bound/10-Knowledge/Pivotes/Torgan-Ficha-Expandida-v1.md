@@ -194,7 +194,7 @@ Es acto de amor. Torgan da al jugador un momento donde la decisión es genuina, 
 
 Roen llega. Darro lo reconoce. Valen aparece. Maren aparece.
 
-El Quinteto se forma.
+El Bound Five se forma.
 
 **Torgan aquí está en rol imposible:**
 - Debe ser compañero genuino (lo es)
@@ -213,7 +213,7 @@ Con Roen/Valen/Maren: estratégico. Torgan aprende de ellos, calcula cómo funci
 
 ### La Rueda Completa
 
-El Quinteto viaja. Torgan camina con ellos. Pero internamente, **Torgan está en guerra.**
+El Bound Five viaja. Torgan camina con ellos. Pero internamente, **Torgan está en guerra.**
 
 Cada noche, cuando acampa, consulta en secreto con mensajeros del Consejo: *"¿Llegó instrucción?"*
 

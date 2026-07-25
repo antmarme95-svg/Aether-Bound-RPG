@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Enano (the Iron-Blooded) / Duelist  
 **Origen:** Emberdeep, Ignis Reach  
 **Edad aparente:** 45-65 años (joven para enano, adulto completo pero sin cicatrices de edad)  
-**Slot en [[El Quinteto]]:** C4 — La Chispa  
+**Slot en [[El Bound Five]]:** C4 — La Chispa  
 
 ---
 
@@ -171,7 +171,7 @@ Con Pivotes fríos, Darro reduce bromas pero **mantiene energía**. Con Pivotes 
 
 ### Escena 1: La Rueda Completa (Darro Sostiene la Respiración)
 
-El Quinteto viaja La Rueda — lugares pesados, verdades pesadas.
+El Bound Five viaja La Rueda — lugares pesados, verdades pesadas.
 
 **Darro en La Rueda:**
 - Bromea MÁS mientras las cosas se ponen MÁS SERIAS.

@@ -158,7 +158,7 @@ Promesa silenciosa.
 
 ### Escena: El Primero (Aceptación del Grupo — Sombra Integrada)
 
-El Quinteto + otros se forma.
+El Bound Five + otros se forma.
 
 **Nyael aquí es presencia silenciosa:**
 - Nunca habla excepto si es necesario
@@ -173,7 +173,7 @@ Con el jugador: reconocimiento mutuo de que ella conoce TODO sobre él y elige n
 
 ### La Rueda Completa
 
-El Quinteto viaja. Nyael camina con ellos. Pero Nyael **está observando punto específico en futuro.**
+El Bound Five viaja. Nyael camina con ellos. Pero Nyael **está observando punto específico en futuro.**
 
 Cada noche reporta secretamente a Stillspire: *"Variable permanece en patrón X. Grupo muestra cohesión Y. Recomiendo acción en The First Wound cuando variables alineen."*
 

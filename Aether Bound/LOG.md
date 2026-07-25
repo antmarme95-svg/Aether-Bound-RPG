@@ -1,5 +1,85 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative/retcon | The Bound Five (renombre) + Old Tobin Hale + The Reckoning
+
+**Disparador:** al escribir a Lady Isolde Marrow, Boris identificó un hueco
+más — una figura "rey informal" del Driftmarket, no nobiliaria, dueña de
+facto del comercio pero por reputación, no corrupción, muy querida, que
+ayuda al jugador en algún punto. Eso escaló a una restructuración de acto:
+el arco de preparación pre-clímax pasa a vivir en el Driftmarket.
+
+### Renombre: El Quinteto → The Bound Five
+
+Boris preguntó nombre en inglés para "El Quinteto" — se evaluaron 4
+opciones (The Bound Five / The Five / The Quintet / The Fivefold). Elegida
+**The Bound Five** por trabajo temático extra: conecta directo con el
+título del juego (*AETHER BOUND* = atado por el Aether/Bond/rumbo a The
+Wilds) — el nombre del grupo describe literalmente el título.
+
+**Alcance confirmado por Boris: retraducción completa, no gradual.**
+22 archivos actualizados (todas las fichas de Pivotes/fijos, docs de
+worldbuilding, Current-State, 00-Index) — mismo criterio que la
+retraducción institucional de antes. Deliberadamente NO tocados: LOG.md y
+`.obsidian/workspace.json` (config de app, no contenido).
+
+### Old Tobin Hale — Harbormaster del Driftmarket
+
+**Concepto central:** el único personaje de poder sin agenda oculta en todo
+el elenco político. El Council tiene interés institucional oculto, Isolde
+Marrow calcula su ascenso, hasta Maren tiene que jugar política pese a
+querer evitarlo — Tobin ayuda porque puede, no porque calcula.
+
+- Sin título nobiliario, sin sangre de House — controla derechos de
+  atraque/rutas comerciales/flujo económico del Driftmarket por
+  **reputación**, no corrupción
+- Empezó como contrabandista/refugiado él mismo, décadas atrás
+- Querido porque nunca engaña, da crédito a quien lo necesita, protege
+  refugiados sin preguntar de qué huyen
+- Encarna "Bond sobre Standing" — no le importa el rango oficial, solo la
+  decencia
+- Línea canónica: *"I don't care who you were before you got here. I care
+  what you do while you're standing on my docks."*
+- Posible conexión: vouches por Darro desde antes, explica por qué C4 se
+  recluta ahí con naturalidad
+
+### The Reckoning — restructuración de Acto 2→3
+
+**Decisión de Boris:** el arco de preparación antes del clímax, y las
+decisiones que cambian el rumbo de la historia, deben vivir en el
+Driftmarket — no como "interludio menor" sino como su propio beat
+estructural entre el cierre de los 3 sub-actos de Acto 2 y el arranque de
+Acto 3.
+
+**Por qué funciona:** el Driftmarket es el único territorio neutral, fuera
+del control de Council/Corona/Consortium — el único lugar donde el grupo
+puede prepararse sin que nadie tenga agenda oculta sobre ellos.
+
+**Beat 1 — Advertencia de Tobin (privada, solo al jugador, no a The Bound
+Five entero):** Tobin, vía su red de información del mercado negro, avisa
+que algo se mueve en canales del Council para entregar a Speck — sin saber
+quién de la tripulación carga esa orden. Agencia real del jugador: ¿confronta
+a su Pivote? ¿confía en Speck? ¿observa en silencio? Define cómo el jugador
+*vive* la traición, no si la evita.
+
+**Beat 2 — the Wanderer's Goggles:** Tobin le da al jugador unos lentes de
+latón viejos que pertenecieron a un extraño de su pasado con "la misma
+mirada". No es upgrade mecánico — es revelación narrativa de que el poder
+innato del jugador (los flashes que revelan la verdad de Speck) es la clave
+de todo. Deliberadamente sin resolución completa (mismo principio que The
+Monolith) — ni Tobin ni el jugador entienden del todo qué es el poder, y el
+extraño de la historia nunca se nombra.
+
+Cierra con la **última escena de unidad genuina de The Bound Five** antes
+de que la traición los rompa.
+
+**Archivos actualizados:** `Nomenclatura.md` (3 entradas nuevas: The Bound
+Five, Tobin Hale, the Wanderer's Goggles), `El Quinteto.md` (título +
+contenido), `Geografía y Ciudades.md` (sección Tobin + beat The Reckoning
+completo + tabla resumen), + 22 archivos con el renombre Quinteto→Bound
+Five.
+
+---
+
 ## [2026-07-24] narrative | Lady Isolde Marrow — rival político de Regent Edrick
 
 **Disparador:** último ítem del backlog de personajes con peso real —

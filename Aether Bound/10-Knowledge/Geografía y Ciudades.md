@@ -285,7 +285,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
   mecánicamente con The First Wound; ese peso cósmico lo carga solo The First
   Wound, no hace falta duplicarlo)
 - Detalle único: tiene una **inscripción tallada en un idioma que nadie en el
-  Quinteto reconoce** — ni siquiera Valen, que reconoce casi todo lo demás.
+  Bound Five reconoce** — ni siquiera Valen, que reconoce casi todo lo demás.
   No hay traducción in-game; el jugador nunca sabrá con certeza qué dice
 - Conexión narrativa: en algún punto de la historia (recomendado: Acto 2, de
   paso, sin forzar la escena), **Valen menciona la leyenda** que rodea al
@@ -696,6 +696,32 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - **Arquitectura:** Plataformas flotantes, velas de tela, mercado caótico
 - **Política:** Neutral pero compleja (deuda, favores, crédito mercante)
 
+#### Harbormaster Tobin Hale — "Old Tobin"
+
+**El único personaje de poder sin agenda oculta en todo el juego.** Sin
+título nobiliario, sin sangre de House — pero controla derechos de
+atraque, rutas comerciales, y prácticamente el flujo económico completo
+del Driftmarket. No por corrupción: por reputación. Empezó como
+contrabandista/refugiado él mismo, décadas atrás, y construyó su fortuna
+con honestidad radical.
+
+**Por qué es querido:** nunca engaña. Da crédito a quien lo necesita.
+Protege refugiados y desertores sin preguntar de qué huyen — el
+Driftmarket es refugio en parte *por él*. Encarna "Bond sobre Standing":
+no le importa el rango oficial de nadie, solo si es decente con la gente
+— coherente con la tensión que ya define al Driftmarket.
+
+**Contraste con el resto del elenco político:** el Council tiene interés
+institucional oculto, Isolde Marrow calcula su ascenso, hasta Maren tiene
+que jugar política pese a querer evitarlo. Tobin es la excepción — ayuda
+porque puede, no porque calcula.
+
+**Línea canónica:** *"I don't care who you were before you got here. I
+care what you do while you're standing on my docks."*
+
+**Conexión con Darro:** posiblemente vouches por él desde antes — explica
+por qué el Driftmarket es donde C4 se recluta con naturalidad.
+
 ### MISTBOUND FRONTIER (Región Humana Limítrofe — Noroeste)
 - **Ubicación:** Frontera noroeste más allá de Aethelgard, tierra de nadie
 - **No es ciudad, es franja:** puesto tras puesto defensivo
@@ -862,6 +888,61 @@ BOTTOM: The First Wound (cementerio God-Cores)
 
 ---
 
+### THE RECKONING — Preparación Pre-Clímax en The Driftmarket
+
+**No es un descanso — es el último acto de preparación antes de que todo se
+rompa.** Ocurre después de cerrar los 3 sub-actos de Acto 2 (los 3 reinos
+completos), antes de arrancar Acto 3 (Sunken Archive → First Wound). The
+Driftmarket es el único territorio neutral, fuera del control de Council/
+Corona/Consortium — el único lugar donde The Bound Five puede prepararse
+sin que nadie tenga agenda oculta sobre ellos.
+
+**Beat 1 — La advertencia de Tobin (privada, no al grupo entero):**
+
+Harbormaster Tobin Hale aparta al jugador solo — no a The Bound Five
+completo. Más potente dramáticamente: el jugador carga el peso solo, tiene
+que decidir qué hacer con la información antes de que lleguen a la traición.
+
+> **Tobin:** *"I hear things on these docks nobody says out loud in a
+> palace. Word's moving through Council channels — someone's arranging to
+> hand the creature over. I don't know who on your crew's carrying that
+> order. I don't want to know. But you should."*
+
+**Agencia del jugador:** ¿confronta a su Pivote directamente? ¿confía en
+Speck y le cuenta? ¿se lo guarda y observa en silencio hasta el clímax? No
+hay una respuesta correcta — esto define cómo el jugador *vive* la traición
+cuando llega, no si la evita.
+
+**Beat 2 — The Wanderer's Goggles:**
+
+Tobin le da al jugador **the Wanderer's Goggles** — unos lentes/goggles
+viejos, de latón, que pertenecieron a un extraño que pasó por sus muelles
+décadas atrás. Tobin nunca entendió qué era esa persona — solo que "miraba
+las cosas distinto, como si viera a través de algo que el resto no podía."
+Reconoce la misma mirada en el jugador, probablemente porque notó (sin
+decirlo) los flashes silenciosos con los que el jugador ve la verdad bajo
+el disfraz de Speck durante sus visitas al mercado.
+
+**No es un upgrade mecánico — es una revelación narrativa.** Mucho más
+fuerte viniendo del único personaje sin agenda institucional: Tobin no
+valida el poder del jugador como haría una Academia (variable a explotar)
+— lo valida humanamente.
+
+> **Tobin:** *"I don't know what you are. I know what I saw. And what I saw
+> was someone who sees true, in a world that mostly doesn't want to."*
+
+**Deliberadamente sin resolución completa** (mismo principio que The
+Monolith — [[Estructura Política]]): ni Tobin ni el jugador entienden del
+todo qué es el poder innato. El extraño de la historia de Tobin nunca se
+nombra ni se explica — misterio que queda abierto.
+
+**Última escena de unidad del grupo:** antes de que la traición rompa The
+Bound Five, este es el último momento donde los cinco (+Speck) están
+genuinamente juntos, sin sospecha activa todavía — el Bond más fuerte del
+juego, justo antes de que se quiebre.
+
+---
+
 ### ACTO 3: El Centro del Centro (Clímax)
 **Duración:** ~30-45 min
 
@@ -888,7 +969,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 **Beats:**
 - Fragmento activado = The First Wound se despierta
 - God-Cores se despiertan, Aether crudo se suelta
-- Quinteto se divide (traición)
+- Bound Five se divide (traición)
 - Jugador persigue o es perseguido
 - Showdown final con Pivote
 - Speck's true form revealed
@@ -959,6 +1040,11 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - **Neutral Ground:** Donde Standing no aplica igual
 - **C4 Recruitment:** Darro se une formalmente aquí
 - **Speck Moments:** 7 interacciones silenciosas entre reinos
+- **Old Tobin:** único personaje de poder sin agenda oculta — controla el
+  comercio por reputación, no corrupción
+- **The Reckoning:** preparación pre-clímax — advertencia de Tobin sobre el
+  Council + the Wanderer's Goggles (revelación del poder innato del
+  jugador) — última unidad de The Bound Five antes de la traición
 
 ### The Sunken Archive
 - **Revelation Site:** Donde se descubre que Cores = Wardens

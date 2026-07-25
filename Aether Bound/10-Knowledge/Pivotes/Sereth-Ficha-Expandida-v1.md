@@ -193,7 +193,7 @@ No es consejo — es recordatorio de peso.
 
 Roen llega. Valen aparece. Maren aparece. Torgan aparece. Darro aparece.
 
-El Quinteto se forma.
+El Bound Five se forma.
 
 **Sereth aquí está en rol de observador inteligente:**
 - Estudia a cada miembro
@@ -210,7 +210,7 @@ Con Valen: interacción intelectual tensa. Ambos notan que el otro está modelan
 
 ### La Rueda Completa
 
-El Quinteto viaja. Sereth observa. Pero su observación **tiene propósito.**
+El Bound Five viaja. Sereth observa. Pero su observación **tiene propósito.**
 
 En cada ciudad, Sereth recopila datos:
 - Aethelgard: estructura económica dependiente de Aether

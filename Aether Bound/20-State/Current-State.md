@@ -99,6 +99,21 @@ updated: 2026-07-24
   completo** salvo la pregunta de baja prioridad sobre la cabeza de the
   Academy of Sages.
 
+- **✅ SESIÓN 2026-07-24 (parte 12) — THE BOUND FIVE (renombre) + OLD TOBIN
+  HALE + THE RECKONING:** "El Quinteto" renombrado a **The Bound Five**
+  (conecta con el título AETHER BOUND) — retraducido en 22 archivos,
+  alcance completo confirmado por Boris. Nuevo personaje: **Harbormaster
+  Tobin Hale**, "Old Tobin" — único personaje de poder sin agenda oculta,
+  controla el comercio del Driftmarket por reputación, no corrupción.
+  **Nuevo beat estructural "The Reckoning":** el arco de preparación
+  pre-clímax se traslada al Driftmarket (territorio neutral, entre Acto 2 y
+  Acto 3) — Tobin advierte en privado al jugador que el Council mueve algo
+  para entregar a Speck, y le da **the Wanderer's Goggles** (revelación
+  narrativa de que el poder innato del jugador es la clave de todo, sin
+  resolución completa — mismo principio que The Monolith). Cierra con la
+  última unidad genuina de The Bound Five antes de la traición. Detalle en
+  [[LOG]] y [[Geografía y Ciudades]].
+
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
   concept art generados y ratificados (95-100%); Golden Scene keyframes
@@ -161,7 +176,7 @@ worldbuilding de soporte ya está listo):**
 - **The Wilds interior/ecosystem** — zona de inicio pero descripción ecosistema no mapeada
 
 **Finales — scripting incompleto:**
-- **Los 4 Finales — diálogos/cinemática** — existen visuals pero NO scripted el "cómo ves cada final" (qué dice el jugador/Quinteto?)
+- **Los 4 Finales — diálogos/cinemática** — existen visuals pero NO scripted el "cómo ves cada final" (qué dice el jugador/Bound Five?)
 - **Estado post-final jugable** — hay créditos pero post-game state no definido
 - **Variantes C3 vivo/muerto en Finales 2-3** — mencionadas pero no impacto narrativo mapeado
 
