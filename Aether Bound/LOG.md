@@ -1,5 +1,39 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design | Cierre de sesión — inventario de elenco + backlog de personajes sin desarrollar
+
+**Disparador:** cierre de sesión. Con el elenco de grupo (13) y las figuras
+políticas (6) completos, Boris preguntó qué personajes faltan — se armó
+inventario contra todo el vault (docs de lore + `90-Raw/concept/`).
+
+**Completo, confirmado:**
+- 13 personajes de grupo: Roen/Valen/Darro (fijos) + Maren/Torgan/Iven/
+  Sereth/Bram/Lyris/Nyael/Vekka/Dagna (9 Pivotes) + Speck — fichas y arte
+- 6 figuras políticas: Reina Ithessa/Rey Borran/Regente Edrick (gobernantes)
+  + Embajador Cyrion/Embajador Kadrun/Consejera Merrit Vance (Triune
+  Council) — arte completo (Borran provisional, ver entrada anterior)
+
+**Pendiente (marcado como backlog, no se desarrolla esta sesión):**
+1. **🔴 El Círculo de los Vivos** ([[Estructura Política]]) — prioridad más
+   alta. <5 elfos que vivieron el cataclismo hace ~550 años, autoridad moral
+   que rivaliza con la Reina Ithessa, pieza central de "Los Tres Niveles de
+   Conocimiento" ([[El Mundo y la Muda]]). Existen como concepto grupal con
+   fricción narrativa ya escrita (choque generacional con la Reina) pero sin
+   nombres, caras, ni cantidad exacta definida.
+2. **🟡 Rival político del Regente Edrick** — daría cara individual a "6-8
+   Casas cayeron en 550 años" (hoy solo estadística en [[Estructura
+   Política]])
+3. **🟡 Cabeza de la Academia Élfica** — sin resolver si es el Círculo mismo
+   o una figura administrativa distinta
+4. **🟢 NPCs de locaciones** (ermitaño Hermit's Cave, líder Bandits'
+   Hideout) — baja prioridad, solo si ganan diálogo real en guión
+5. **🟢 Antagonista individual** — no existe; el "villano" es institucional
+   (Triune Council), posible decisión de diseño intencional, no gap
+
+**Archivo:** `Current-State.md` (sección nueva, parte 8 de la sesión).
+
+---
+
 ## [2026-07-24] design/QA | Embajador Kadrun v2 — APROBADO (corrige texto filtrado Y proporción)
 
 **Ronda 3:** Boris corrió el prompt §9e-v2 (prosa corta, negativos como

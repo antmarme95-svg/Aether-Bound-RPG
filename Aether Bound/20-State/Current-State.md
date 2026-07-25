@@ -40,6 +40,28 @@ updated: 2026-07-24
     diseño/lore, no asset final).
   Detalle completo de las 3 rondas en [[LOG]].
 
+- **✅ SESIÓN 2026-07-24 (parte 8) — INVENTARIO DE ELENCO + BACKLOG DE
+  PERSONAJES SIN DESARROLLAR:** Con los 13 personajes de grupo (3 fijos + 9
+  Pivotes + Speck) y las 6 figuras políticas (3 gobernantes + 3 embajadores
+  del Council) completos, se armó inventario de quién quedó mencionado sin
+  ficha/rostro:
+  - 🔴 **El Círculo de los Vivos** ([[Estructura Política]]) — <5 elfos que
+    vivieron el cataclismo, autoridad moral rival de la Reina Ithessa,
+    ligados directamente a "Los Tres Niveles de Conocimiento"
+    ([[El Mundo y la Muda]]). Hoy son concepto grupal sin nombres, caras, ni
+    cantidad exacta. **El más importante de los pendientes** — le falta
+    peso individual a una pieza que ya tiene fricción narrativa escrita.
+  - 🟡 Rival político de turno para el Regente Edrick (da cara a "6-8 Casas
+    cayeron en 550 años", hoy solo texto)
+  - 🟡 Cabeza de la Academia Élfica (¿es el Círculo mismo, o una figura
+    distinta? sin resolver)
+  - 🟢 NPCs de locaciones puntuales (ermitaño de Hermit's Cave, líder de
+    Bandits' Hideout) — bajo, solo si ganan escena de diálogo real
+  - 🟢 Antagonista individual — no existe, posiblemente intencional (el
+    "villano" es institucional: el Triune Council)
+  **Siguiente frente (cuando se retome):** desarrollar el Círculo de los
+  Vivos primero — nombres, cuántos son exactamente, quién dice qué.
+
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
   concept art generados y ratificados (95-100%); Golden Scene keyframes
