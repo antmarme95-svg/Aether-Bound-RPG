@@ -113,6 +113,11 @@ updated: 2026-07-24
   resolución completa — mismo principio que The Monolith). Cierra con la
   última unidad genuina de The Bound Five antes de la traición. Detalle en
   [[LOG]] y [[Geografía y Ciudades]].
+  **Pendiente (próxima sesión):** concept art (briefs NB2) de los
+  personajes políticos nuevos sin arte todavía — Lady Isolde Marrow,
+  Harbormaster Tobin Hale, y los 4 de The Elder Circle (Threnn/Ilyara/
+  Maelys/Corwyn). Mismo formato que [[Briefs de Concept Art]] §9 (fenotipo
+  racial como ancla + regalía/personalidad del cargo).
 
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
