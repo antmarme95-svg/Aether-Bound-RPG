@@ -1,5 +1,70 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design/QA | §10 generado — 5/6 aprobados + regla nueva anti-texto-en-imagen
+
+**Ronda de QA de los 6 briefs de §10** (Isolde Marrow, Tobin Hale, Threnn,
+Ilyara, Maelys, Corwyn) — Boris pasó las 6 imágenes generadas en NB2.
+
+**✅ Corwyn — Aprobado.** Cabello plateado en moño formal, sonrisa
+confiada/calculadora, marcas teal discretas en el cuello ("understated"
+como pedía el brief), anillo de plata único visible. Sin violaciones.
+
+**✅ Maelys — Aprobado, el mejor logrado.** Cabello plateado suelto/
+enredado tapando parte de la cara, chal gris envolvente, postura
+encorvada/distante, mirada hacia abajo (cerca de "mirar a través de").
+Captura el tono roto perfectamente.
+
+**✅ Harbormaster Tobin Hale — Aprobado.** Abrigo desgastado y remendado,
+barba gris, expresión cansada pero cálida, botas gastadas, cinturón
+práctico. Detalles nuevos coherentes no especificados en el brief:
+astrolabio colgante, catalejo de latón. 🟡 Nota menor: el brief pedía
+"dispersión de pequeños amuletos de décadas de comerciantes/refugiados"
+(detalle emocional central) — quedó reducido a un solo colgante, no
+bloqueante.
+
+**✅ Lady Isolde Marrow — Aprobada, muy fuerte.** Cabello auburn con
+soltura, sonrisa confiada, outfit burgundy/bronce con broches de latón
+(match casi exacto al brief), escudo de House Marrow en el pecho, anillo
+heredado con grabado mostrado en detalle, sin corona (correcto).
+
+**🟡 Threnn — Aprobado con nota menor.** Expresión estoica de guerrero muy
+bien lograda. 2 desviaciones menores: marcas de aether demasiado
+brillantes (brief pedía "dimmer... as if faded", acá leen como mago
+activo); no se ve el cinturón de espada vacío ni la cicatriz del
+antebrazo (mangas los tapan). No bloqueante.
+
+**🔴 Ilyara — Falla técnica, mismo glitch que Kadrun v1.** Texto filtrado
+dentro de la imagen: caption corrompido *"ILYARA SILVER CALM, CLAIER OF
+DEEPLY COMPASSIONATE, AND CLEARLY CARRY OLD GRIEF AND WISDOM WITHOUT NO
+BITTERNESS."* (palabras corruptas, doble negativo gramatical). El diseño
+del personaje en sí, ignorando el texto, coincide bien con el brief
+(robes verde salvia, bolsa de hierbas, tatuaje de antebrazo, rostro
+compasivo). Conclusión: el formato de prosa corta que resolvió Kadrun no
+garantiza 0% de glitch — hay un componente de azar en NB2, no es 100%
+determinístico por prompt.
+
+**Hallazgo adicional — etiquetas de texto limpias (no glitch):** en Tobin
+e Isolde aparecieron etiquetas de texto BIEN escritas (nombres de piezas
+como "Astrolabe"/"Anchor Coat", listas de negativos) — un formato de
+"hoja de spec anotada" que NB2 elige a veces, DISTINTO del bug de texto
+corrompido. No arruina el diseño pero no es lo pedido (concept sheet
+limpio). **Decisión de Boris:** agregar negativo estándar para evitarlo
+por default, útil para cuando las láminas se usen para medir proporción.
+
+**Acción — regla nueva agregada al bloque de estilo compartido:**
+*"no text, no labels, no captions, no annotations, no diagram-style
+callouts"* — agregado a los 6 prompts de §10 (incluyendo el de Ilyara que
+hay que re-correr) y documentado como regla estándar para todo brief
+futuro.
+
+**Archivo:** `Briefs de Concept Art.md` — nueva regla en el bloque de
+estilo compartido (línea ~14) + negativo agregado a los 6 prompts de §10.
+
+**Pendiente:** re-correr Ilyara (prompt ya actualizado con el negativo
+nuevo, sin otros cambios — el diseño en sí ya estaba bien).
+
+---
+
 ## [2026-07-24] design | Briefs de concept art del elenco político nuevo (§10)
 
 **Disparador:** en vez de dejarlo en backlog para la próxima sesión, Boris

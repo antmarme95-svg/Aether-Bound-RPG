@@ -123,6 +123,23 @@ updated: 2026-07-24
   que cualquier elfo ya generado (canas totales, quietud pesada). Listos
   para correr en NB2. Detalle en [[LOG]].
 
+- **✅ SESIÓN 2026-07-24 (parte 14) — QA §10: 5/6 APROBADOS + REGLA
+  ANTI-TEXTO-EN-IMAGEN:** Boris corrió los 6 prompts en NB2.
+  - ✅ **Aprobados:** Corwyn, Maelys (el mejor logrado), Harbormaster Tobin
+    Hale, Lady Isolde Marrow (nota menor en Tobin: faltó la dispersión de
+    amuletos del brief, no bloqueante)
+  - 🟡 **Threnn — aprobado con nota menor:** marcas de aether muy
+    brillantes (brief pedía "faded"), sin cinturón de espada vacío visible
+  - 🔴 **Ilyara — falla técnica** (mismo glitch de texto filtrado que
+    Kadrun v1: caption corrompido en la imagen). Diseño del personaje en
+    sí correcto. **Prompt ya actualizado, listo para re-correr.**
+  - **Regla nueva fijada:** *"no text, no labels, no captions, no
+    annotations, no diagram-style callouts"* agregada al bloque de estilo
+    compartido — Tobin/Isolde mostraron etiquetas *limpias* (no glitch,
+    formato "hoja de spec" que NB2 elige a veces) que no eran lo pedido.
+    Aplica a todo brief futuro. Detalle completo en [[LOG]].
+  **Pendiente:** re-correr Ilyara.
+
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
   concept art generados y ratificados (95-100%); Golden Scene keyframes
