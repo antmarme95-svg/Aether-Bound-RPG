@@ -508,6 +508,74 @@ perderlo.
 Use the human phenotype as the exact anatomy and proportion reference — balanced athletic proportions, roughly 7.5 heads tall, individual and imperfect features typical of the most physically diverse race — but design a specific named character: "Councilor Merrit Vance", the current human seat-holder of a supra-racial diplomatic council, a political operator who won her seat through negotiation and consensus rather than birthright — sharper and more visibly ambitious than a hereditary noble, aware her position can be lost as easily as it was gained. Full-body character concept sheet, front view and side view, on a plain warm paper background. Face: sharp intelligent features, a composed public smile that doesn't quite reach watchful eyes, the look of someone always reading the room for the next shift in power. Hair: dark, pulled back in a severe practical style with a few precise loose strands, no softness wasted on vanity. Skin: mid-range human tone, city-pale. Clothing: sharply tailored formal court dress in deep wine-red and charcoal, structured shoulders that read as armor without being armor, layered river-city formal wear, medieval aetherpunk with fine brass clasp details — more overtly powerful and less bureaucratic-grey than a court clerk's robes. Carries a slim ceremonial letter-opener/dagger hybrid at her belt, symbolic more than practical. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of the game Sable's ligne claire and Breath of the Wild's soft impressionist color. Mood: sharp, hungry, precarious — power she fought for and knows how to lose. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow, no crown or royal regalia, no heavy armor, no beast-folk features.
 ```
 
+## 10 — Elenco político nuevo (Isolde Marrow, Tobin Hale, The Elder Circle)
+
+**Formato:** prosa corta y natural, no oraciones densas con "Use the X
+phenotype as the exact anatomy and proportion reference" — ese formato
+causó texto filtrado dentro de la imagen y peor fidelidad de proporción en
+la ronda de QA anterior (ver [[LOG]], Kadrun v1→v2). Este formato replica
+lo que sí funcionó: prosa breve, proporción como primera frase, negativos
+como oraciones cortas al final. **Recomendado adjuntar** el fenotipo
+correspondiente igual (tabla en §9) — refuerza, no contradice.
+
+**Destino en `90-Raw/concept/`:** `isolde-marrow-v1.png` ·
+`tobin-hale-v1.png` · `threnn-v1.png` · `ilyara-v1.png` · `maelys-v1.png` ·
+`corwyn-v1.png`. Adjuntar `fenotipo-humana-V1.png` (10a, mujer),
+`fenotipo-humano-v1.png` (10b, varón), `fenotipo-elfo-V2.png` (Threnn/
+Corwyn, varones), `fenotipo-elfa-V2.png` (Ilyara/Maelys, mujeres).
+
+### 10a — Lady Isolde Marrow (House Marrow, rival de Regent Edrick)
+
+Contraste directo con Edrick: carismática, confiada, populista — sin
+corona (no la tiene, todavía), pero con presencia que sugiere que la
+merece. [[Estructura Política]].
+
+```
+Full-body character concept sheet, front view and side view, of a human noblewoman named Isolde Marrow, on a plain warm paper background. She has balanced athletic proportions, roughly seven and a half heads tall, standing with confident open posture and a direct, magnetic gaze — nothing like a cautious bureaucrat, everything like someone who expects to be followed. Her face is sharp and warm at once, mid-thirties, a winning half-smile that reads as genuine charisma rather than practiced diplomacy. Her hair is dark auburn, styled elegantly but practically, loose enough to move. Her skin is a warm mid-range human tone. She wears a fitted traveling-court hybrid outfit — rich burgundy and deep bronze fabric cut for movement, not court stillness, medieval aetherpunk with brass clasp details. No crown, no formal chain of office — instead a single heirloom ring with worn, ancient engraving, and a small House Marrow crest brooch, both clearly older than anything she could have commissioned herself, hinting at a lineage she claims predates the current throne. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No crown or royal regalia. No heavy armor. No photorealism or PBR rendering. No anime cel shading. No candy-bright saturation. No neon glow. No beast-folk features.
+```
+
+### 10b — Harbormaster Tobin Hale ("Old Tobin", Driftmarket)
+
+Sin sangre de House, sin corrupción — poder ganado por reputación durante
+décadas. Debe leer humilde y cálido pese a controlar el comercio del
+Driftmarket. [[Geografía y Ciudades]].
+
+```
+Full-body character concept sheet, front view and side view, of a human harbormaster named Tobin Hale, on a plain warm paper background. He has balanced but weathered proportions, roughly seven and a half heads tall, in his sixties, with a warm, welcoming stance rather than an imposing one — despite his real economic power, nothing about him reads wealthy or noble. His face is deeply lined and sun-weathered, kind eyes with decades of patience in them, a easy half-smile, thick grey-white beard and hair, practical and unstyled. His skin is a warm tan, roughened by years of sea air. He wears a heavy, well-worn wool coat over practical dockworker's clothing, sleeves rolled, faint ember-brown and sea-blue tones, medieval aetherpunk with small brass fittings — the coat's lapels covered in a scattering of small tokens and charms, gifts from decades of traders and refugees he helped, each different, none matching, a quiet record of a life of small honest kindnesses. Carries a battered leather logbook under one arm. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No wealthy or noble clothing. No crown or regalia. No heavy armor. No photorealism or PBR rendering. No anime cel shading. No candy-bright saturation. No neon glow.
+```
+
+### 10c — The Elder Circle (4 briefs, mismo tratamiento de edad extrema)
+
+**Nota transversal:** los 4 deben leer visiblemente más viejos que
+cualquier otro elfo ya generado (Valen/Sereth/Lyris/Nyael/Cyrion, todos
+180-250 años) — se acercan al techo de vida élfico (650-700). Canas
+totales (raro en elfos), quietud pesada en la postura, piel aún más
+translúcida por la edad. [[Estructura Política]].
+
+#### Threnn — el guerrero que proteger el statu quo a cualquier costo
+
+```
+Full-body character concept sheet, front view and side view, of an ancient elf named Threnn, on a plain warm paper background. His silhouette still reads as one continuous vertical line, roughly eight heads tall, narrow sloped shoulders, long limbs — but carried with the stillness and weight of extreme age, centuries beyond a typical elf. His hair is fully silver-white, unusually so even for an elf, pulled back severely. His face is stern, weathered by time rather than sun, deep quiet lines around eyes that have seen war — heavy, unmoving expression, a soldier who never stopped being one. His skin is pale with a cold undertone, visibly more translucent and aged than a young elf's. Faint pale-teal aether engravings trace his collarbone, dimmer than a young elf's, as if faded with time. He wears simple, age-worn robes in muted iron-grey and deep green, no ornamentation except a single old scar across one forearm and a plain sword-belt worn empty — a warrior's habit outliving the need for a weapon. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No youthful appearance. No bright or dark hair color, silver-white only. No heavy armor. No photorealism or PBR rendering. No anime cel shading. No neon glow.
+```
+
+#### Ilyara — la sanadora que cree que la Muda debe completarse
+
+```
+Full-body character concept sheet, front view and side view, of an ancient elf healer named Ilyara, on a plain warm paper background. Her silhouette reads as one continuous vertical line, roughly eight heads tall, narrow sloped shoulders, long limbs, but held with the gentle stillness of extreme age. Her hair is fully silver-white, loose and simple. Her face is calm and deeply compassionate, soft lines of age around eyes that carry old grief without bitterness — a healer who has seen the worst of what bodies and hearts can survive. Her skin is pale, cold-toned, visibly translucent with age, fine pale-teal aether engravings faded along her forearms and hands. She wears simple flowing healer's robes in soft sage-green and bone-white, unadorned, sleeves pushed back, a small pouch of dried herbs at her belt. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No youthful appearance. No bright hair color, silver-white only. No heavy armor or weapons. No photorealism or PBR rendering. No anime cel shading. No neon glow.
+```
+
+#### Maelys — la testigo rota, casi no habla
+
+```
+Full-body character concept sheet, front view and side view, of an ancient elf named Maelys, on a plain warm paper background. Her silhouette reads as one continuous vertical line, roughly eight heads tall, narrow sloped shoulders, long limbs, but drawn inward, distant, as if partly elsewhere. Her hair is fully silver-white, unkempt, falling loosely over part of her face. Her expression is unreadable and haunted, eyes slightly unfocused, looking through the viewer rather than at them — the stillness of someone who witnessed something she has never named. Her skin is very pale, almost ghostly translucent, faint pale-teal aether markings barely visible, as if fading away. She wears simple, undyed grey-white robes, plain and unadorned, a thin shawl pulled loosely around her shoulders as if for comfort rather than warmth. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No youthful appearance. No bright hair color, silver-white only. No confident or alert posture. No heavy armor or weapons. No photorealism or PBR rendering. No anime cel shading. No neon glow.
+```
+
+#### Corwyn — el más político de los cuatro
+
+```
+Full-body character concept sheet, front view and side view, of an ancient elf named Corwyn, on a plain warm paper background. His silhouette reads as one continuous vertical line, roughly eight heads tall, narrow sloped shoulders, long limbs, held with poised, composed confidence despite his great age. His hair is fully silver-white, sleek and precisely groomed, tied back in a formal knot. His face is sharp and composed, faint knowing smile, calculating eyes that miss nothing — a courtier's face that never fully retired from the court. His skin is pale, cold-toned, visibly aged but well-kept. Faint pale-teal aether engravings trace his collarbone, understated. He wears well-tailored formal robes in muted slate-blue and silver, more refined and court-adjacent than the other Elder Circle members, a single understated silver ring his only ornament. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No youthful appearance. No bright hair color, silver-white only. No heavy armor or weapons. No photorealism or PBR rendering. No anime cel shading. No neon glow.
+```
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

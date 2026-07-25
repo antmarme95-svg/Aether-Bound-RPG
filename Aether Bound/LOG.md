@@ -1,5 +1,41 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design | Briefs de concept art del elenco político nuevo (§10)
+
+**Disparador:** en vez de dejarlo en backlog para la próxima sesión, Boris
+pidió escribir los briefs de una vez.
+
+**6 briefs nuevos** en `Briefs de Concept Art.md` §10: Lady Isolde Marrow,
+Harbormaster Tobin Hale, y los 4 de The Elder Circle (Threnn/Ilyara/Maelys/
+Corwyn).
+
+**Cambio de formato deliberado:** en vez de repetir la fórmula "Use the X
+phenotype as the exact anatomy and proportion reference" del §9 original
+(que causó el glitch de texto filtrado en Kadrun v1 y peor fidelidad de
+proporción), estos 6 usan directamente el formato de prosa corta que
+resolvió ambos problemas en Kadrun v2 — proporción como primera frase,
+negativos como oraciones cortas al final, sin la carga de vocabulario
+técnico denso en una sola oración.
+
+**Nota transversal para The Elder Circle:** los 4 deben leer visiblemente
+más viejos que cualquier otro elfo ya generado (Valen/Sereth/Lyris/Nyael/
+Cyrion, todos 180-250 años) — se acercan al techo de vida élfico (650-700).
+Canas totales (raro en elfos), quietud pesada en la postura, piel aún más
+translúcida por la edad. Cada uno con detalle específico de su arquetipo:
+Threnn (guerrero, cinturón de espada vacío), Ilyara (sanadora, bolsa de
+hierbas), Maelys (rota, mirada que atraviesa al espectador), Corwyn
+(cortesano, anillo de plata único).
+
+**Destino:** `90-Raw/concept/` — `isolde-marrow-v1.png`,
+`tobin-hale-v1.png`, `threnn-v1.png`, `ilyara-v1.png`, `maelys-v1.png`,
+`corwyn-v1.png`. Tabla de fenotipos a adjuntar incluida en el doc.
+
+**Con esto, el pendiente de concept art marcado al cierre de la sesión
+anterior queda resuelto — listo para que Boris corra los 6 prompts en
+NB2.**
+
+---
+
 ## [2026-07-24] narrative/retcon | The Bound Five (renombre) + Old Tobin Hale + The Reckoning
 
 **Disparador:** al escribir a Lady Isolde Marrow, Boris identificó un hueco
