@@ -1,8 +1,21 @@
 ---
-status: ready-for-generation
+status: generado-referencia-imperfecta
 source: "Geografía y Ciudades + Art Bible"
-updated: 2026-07-23
+updated: 2026-07-24
 ---
+
+**🟡 ESTADO (2026-07-24):** Se corrió una vez → `90-Raw/concept/Aether Bound
+universe.png`. Resultado: composición y ubicaciones correctas (confirma
+Rivermeet como Triune Council Seat, Grove of Cycles visible), pero texto
+corrupto en varias etiquetas (typos tipo "CROVE OF CYCLES", "Vicil of the
+Broken Oath", "The Rerelation"). **Decisión de Boris: tratarlo como
+referencia interna imperfecta, no re-correr todavía.** Plan: seguir
+documentando el mapa por escrito a medida que avanza el worldbuilding
+(este archivo + Geografía y Ciudades.md), y cuando el mapa esté
+completo/estable (meta: próxima semana o cuando cierre el frente de
+worldbuilding), escribir una descripción exhaustiva final — para
+re-generar con AI o para que Boris lo dibuje a mano si ningún generador
+da el resultado esperado.
 
 # Brief: Mapa del Mundo de Aether Bound
 

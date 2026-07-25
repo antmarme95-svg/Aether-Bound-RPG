@@ -326,6 +326,35 @@ del preset (dawn/dusk lo tiñen distinto).
 
 **Evaluación:** ✅ 100% PASS — Third golden scene landscape PERFECTO. Composición elevada comunica "gazing upon sleeping gods". Cracked ground = trauma visible. Red glow único color = maximum saturation rule. Contrasta F2 (muerte fría daylight) vs. Night (vigilia dormida starlight). Infinidad + silhouettes = escala cósmica. **Capstone de los 4 landscapes monumentales.**
 
+## 6d — Keyframes de capital (QA retroactivo, agente Haiku, 2026-07-24)
+
+Material generado en sesión previa, sin brief formal escrito, evaluado
+retroactivamente contra Geografía y Ciudades.md por un agente de QA. 4/5
+aprobados.
+
+**`rivermeet-keyframe-daylight-v2.png`** — 🟡 aprobada, toma diurna
+complementaria al keyframe golden-hour ya ratificado en §6b (misma ciudad,
+distinta hora del día — no redundante).
+
+**`emberdeep-keyframe-forges-v1.png`** — ✅ excelente. Capital enana:
+excavación vertical, múltiples niveles, forjas + Aether azul, atmósfera
+"metal caliente", arquitectura industrial enana.
+
+**`stillspire-keyframe-canopies-v1.png`** — ✅ muy buena. Capital élfica:
+ciudad suspendida en copas gigantes, arquitectura orgánica integrada a
+árboles y cascadas, luces Aether verde/teal, referencia Rivendell/Imladris
+cubierta.
+
+**`mistbound-frontier-sentinel-post-v1.png`** — ✅ buena. Franja fronteriza
+(no ciudad), postas defensivas simples, clima árido, cultura mercenaria
+pragmática.
+
+**`Driftmarket (mercado flotante).png`** — 🔴 sin renombrar, lore/estilo
+correctos PERO tiene un caption de texto quemado en la imagen
+("DRIFTMARKET – FLOATING MARKET..."), incumple la regla estándar
+anti-texto (ver §10). Candidata a re-corrida con esa regla aplicada; no se
+re-corrió todavía.
+
 ## 7 — Dagna (Pivote del slice, B1)
 
 Referencia adjunta: `fenotipo-enana-v2.png` (ancla de anatomía/proporción).
@@ -442,11 +471,14 @@ Use the dwarf phenotype as the exact anatomy and proportion reference — a trap
 
 ### 9b-v2 — King Borran (REVISADO — corrige proporción/estilo, QA 2026-07-24)
 
-**🟡 ESTADO: PROVISIONAL.** v2 mejoró (ya no lee "vikingo humano") pero la
-proporción trapezoide de 4.5 cabezas sigue sin cerrar del todo — Boris
-decidió dejarlo así por ahora, no bloquea el frente. Si se retoma: aplicar
-el mismo formato de prosa corta que resolvió Kadrun en 9e-v2 (ver [[LOG]]),
-no solo reforzar la proporción en una oración densa.
+**🟡 ESTADO: PROVISIONAL.** Hay dos re-rolls de este prompt archivados en
+`90-Raw/concept/`: uno intermedio (con la nota menor de más abajo, ahora en
+`_legacy/king-borran-v2-superseded.png`) y uno posterior, corrido después de
+esa nota — **`king-borran-v2.png` es el vigente**, por ser el último que
+Boris generó (2026-07-24). No tiene QA formal registrado todavía; sigue sin
+bloquear el frente. Si se retoma: aplicar el mismo formato de prosa corta que
+resolvió Kadrun en 9e-v2 (ver [[LOG]]), no solo reforzar la proporción en una
+oración densa.
 
 **Hallazgos de la v1 (NB2):** proporción enana ROTA — leyó como vikingo
 humano grande (~5-6 cabezas), no como el trapezoide de 4.5 cabezas blindado

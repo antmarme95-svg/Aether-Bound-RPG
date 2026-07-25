@@ -5063,3 +5063,39 @@ narrativamente coherente. [[Current-State.md]] y [[LOG.md]] actualizados.
 **Cierre §10 (elenco político nuevo):** 6/6 aprobados — Corwyn ✅, Maelys ✅ (mejor resultado), Tobin ✅, Isolde ✅, Threnn 🟡 (notas menores), Ilyara ✅ (tras re-corrida).
 
 **Conclusión técnica:** confirma que el glitch de texto corrupto en NB2 es mitigable de forma confiable agregando el negativo estándar explícito, incluso cuando el formato de prosa corta por sí solo no bastó en un caso puntual.
+
+## [2026-07-24] design/vault-hygiene | Catalogación de 90-Raw/concept sin trackear
+
+**Contexto:** material generado en sesiones previas que ayer (sesión con Haiku) no fue reconocido/procesado quedó suelto en `90-Raw/concept/` con nombres en español/Title Case, mezclado con legacy pre-reset. Se catalogó todo en `90-Raw/concept/CATALOGO.md`.
+
+**Resuelto y renombrado a kebab-case (categorías A-F, ~45 archivos):** gobernantes/Triune Council (§9), elenco político nuevo (§10), 9 Pivotes, Fijos (Roen/Valen/Darro), grupo Bound Five, Speck (shapeshifted/trueform/comparativas).
+
+**Duplicado King Borran resuelto:** existían dos re-rolls de la revisión v2 ("King Borran revisado.png" y "Rey Borran revisado.png"). Por timestamp de archivo, "King Borran revisado.png" (20:49) es posterior al que recibió la nota menor de QA — es el vigente. Renombrado a `king-borran-v2.png`; el otro archivado en `_legacy/king-borran-v2-superseded.png`. Brief §9b-v2 actualizado en Briefs de Concept Art.md.
+
+**Legacy archivado en `_legacy/`:** material confirmado pre-reset GDD v2 — "El Nido.png" (huevo/ajolotl, diseño pre-redirect de Speck), "Final 1_sacrificio_silencioso.png" y "Final 4_aether_renacido.png" (paleta gris, título/tono no coincide con Finales canon actuales), rework jpeg de Speck. Criterio: archivar, no borrar (útil como historial).
+
+**Hallazgo — mapa maestro:** `Aether Bound universe.png` es una corrida completa del brief en `Briefs de Mapa del Mundo.md` — resuelve dudas de lore (Rivermeet = Triune Council Seat, confirma Grove of Cycles) pero con texto corrupto en varias etiquetas. Decisión: queda como referencia interna imperfecta; no se re-corre ahora. Plan documentado en la cabecera de ese brief: seguir documentando el mapa por escrito y escribir spec exhaustiva cuando el frente de worldbuilding cierre (AI o dibujo a mano de Boris).
+
+**Hallazgo — arte de combos:** 9 archivos (Arcane Ballistics, Mobile Foundry, Skyhook, The Weaver's Net, Skipping Stone, Riposte Runner, Guided Avalanche, Warforging, Seismic Springboard + videos) son el sistema de vínculos/combos de los Pivotes por par de rol — confirmado real, no legacy, pendiente evaluación conjunta en sesión futura.
+
+**Pendiente:** QA de las 5 ciudades/regiones sin procesar (Aethelgard/Rivermeet, Ignis Reach/Emberdeep, Stillwood/Stillspire, Mistbound Frontier, Driftmarket) lanzado con agente Haiku en background — resultado pendiente. Escenas de traición legacy (§J del catálogo) sin revisar.
+
+Detalle completo, tabla por archivo y estado de cada categoría: [[90-Raw/concept/CATALOGO]].
+
+## [2026-07-24] design/QA | 5 keyframes de ciudad — QA retroactivo con agente Haiku, 4/5 aprobados
+
+Boris confirmó viabilidad de usar un agente en Haiku para QA de imágenes contra criterio de texto (lore + estilo) — resultado: 4/5 aprobados y renombrados, coherente con la calidad esperada.
+
+- ✅ **Emberdeep** (`emberdeep-keyframe-forges-v1.png`) — excelente, excavación vertical + forjas + Aether azul.
+- ✅ **The Stillspire** (`stillspire-keyframe-canopies-v1.png`) — muy buena, ciudad en copas + cascadas + Aether verde/teal.
+- ✅ **Mistbound Frontier** (`mistbound-frontier-sentinel-post-v1.png`) — buena, postas defensivas + clima árido.
+- 🟡 **Rivermeet** (`rivermeet-keyframe-daylight-v2.png`) — aprobada, toma diurna complementaria al golden-hour ya ratificado (§6b), no redundante.
+- 🔴 **Driftmarket** — rechazada por técnica: caption de texto quemado en la imagen ("DRIFTMARKET – FLOATING MARKET..."), mismo tipo de falla que Ilyara/Kadrun v1. No se renombró, queda con nombre original. Candidata a re-corrida con la regla anti-texto ya estándar.
+
+Integrado como §6d en Briefs de Concept Art.md. Actualizado 90-Raw/concept/CATALOGO.md.
+
+**Decisión sobre el mapa maestro (`Aether Bound universe.png`):** Boris decide tratarlo como referencia interna imperfecta por ahora — no re-correr. Plan: seguir documentando el mapa por escrito a medida que avanza el worldbuilding, y cuando el frente cierre (meta: próxima semana), escribir una spec exhaustiva para re-generar con AI o para que Boris lo dibuje a mano. Nota de plan agregada a la cabecera de `Briefs de Mapa del Mundo.md`.
+
+**Confirmado — arte de combos (§I del catálogo):** son el sistema real de vínculos/combos de los Pivotes (Arcane Ballistics, Skyhook, Mobile Foundry, etc.), no legacy. Pendiente de evaluación conjunta en sesión futura; no tiene doc propio en `10-Knowledge/` todavía.
+
+**Pendiente:** escenas de traición legacy (§J del catálogo) sin revisar. Driftmarket sin re-correr.

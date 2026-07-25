@@ -150,6 +150,28 @@ updated: 2026-07-24
   estándar del negativo resuelve el glitch de forma confiable. Detalle en
   [[LOG]].
 
+- **✅ SESIÓN 2026-07-24 (parte 16) — CATALOGACIÓN DE 90-RAW/CONCEPT SIN
+  TRACKEAR:** ~45 archivos renombrados a kebab-case (gobernantes, elenco
+  político §10, 9 Pivotes, Fijos, grupo Bound Five, Speck). Duplicado King
+  Borran v2 resuelto por timestamp (`king-borran-v2.png` vigente, el otro a
+  `_legacy/`). Legacy pre-reset GDD v2 archivado (`El Nido` = Speck
+  pre-redirect, 2 Finales viejos). **Hallazgo:** `Aether Bound universe.png`
+  es el mapa maestro completo del brief en [[Briefs de Mapa del Mundo]] —
+  confirma Rivermeet = Triune Council Seat y Grove of Cycles, pero con texto
+  corrupto en etiquetas. Decisión: queda como referencia interna imperfecta,
+  no se re-corre; plan de spec exhaustiva documentado en la cabecera de ese
+  brief. **Hallazgo:** 9 archivos de arte de combos (Arcane Ballistics,
+  Skyhook, Mobile Foundry, etc.) son el sistema de vínculos de los Pivotes,
+  confirmado real, pendiente de evaluación conjunta futura.
+  **QA completado (agente Haiku):** 4/5 keyframes de ciudad aprobados y
+  renombrados — Emberdeep ✅, The Stillspire ✅, Mistbound Frontier ✅,
+  Rivermeet daylight 🟡 (complementa golden-hour ya ratificado). Driftmarket
+  🔴 rechazada — caption de texto quemado en la imagen, misma familia de
+  bug que Ilyara/Kadrun v1, candidata a re-corrida. Integrado en Briefs de
+  Concept Art.md §6d. **Pendiente:** re-correr Driftmarket, revisar escenas
+  de traición legacy (§J del catálogo). Catálogo completo en
+  [[90-Raw/concept/CATALOGO]]. Detalle en [[LOG]].
+
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
   concept art generados y ratificados (95-100%); Golden Scene keyframes
