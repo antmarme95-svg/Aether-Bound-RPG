@@ -1,5 +1,62 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] narrative | The Elder Circle — 4 miembros nombrados + regla de personaje élfica
+
+**Disparador:** continuación directa de la retraducción a inglés — con
+"The Elder Circle" ya nombrado, Boris pidió avanzar con los 4 miembros
+individuales.
+
+**Propuesta y confirmación:** 4 arquetipos distintos de reacción a haber
+presenciado el genocidio de los Wardens (no 4 versiones del mismo "anciano
+sabio"):
+
+- **Threnn** (m) — comandante/guerrero que luchó (y falló) contra la
+  masacre. Hoy: proteger el statu quo a cualquier costo — tantos murieron
+  construyendo esta civilización, aunque sea sobre una mentira, que no la
+  va a dejar caer por Speck.
+- **Ilyara** (f) — sanadora que vio el costo físico de la masacre de
+  primera mano. Hoy: dejar que la Muda se complete — sanar es imperativo
+  moral, sin importar el costo a la civilización actual.
+- **Maelys** (f) — presente pero rota, vio algo que nunca ha nombrado. Hoy:
+  casi no habla — es la voz-oráculo del grupo, impredecible, a veces la
+  más certera.
+- **Corwyn** (m) — el más político de los cuatro, mantuvo conexión con la
+  corte incluso entonces. Hoy: sin bando fijo — funciona como control
+  informal sobre Queen Ithessa, sin tener asiento.
+
+**El quinto — Thessaly** (murió de vejez natural hace 10 años): era quien
+mediaba consenso entre los otros cuatro. Con su muerte, el Círculo perdió
+su única voz de equilibrio.
+
+**Regla de personaje fijada (nota de Boris, importante para guión futuro):**
+su desacuerdo es **pasivo-agresivo, puramente élfico** — nunca pierden
+serenidad ni compostura, nunca hay grito ni discusión abierta. Se nota en
+la elección de palabras, en silencios calculados, en "honestidad" que es en
+realidad la forma más afilada de desacuerdo. Los diferencia tanto del
+Triune Council (2-contra-1 mecánico, frío) como de cualquier conflicto
+humano (visceral, directo) — es el único tipo de conflicto que se siente
+exclusivamente élfico.
+
+**Lugar de reunión:** Grove of Cycles (templo élfico ya establecido en
+[[Geografía y Ciudades]], fuente de the Academy of Sages) — conecta
+directamente con la institución que ya define su ethos contemplativo.
+
+**Diálogo de ejemplo documentado** (referencia de tono para guión):
+Threnn/Ilyara intercambian argumentos sin alzar la voz sobre si dejar
+completar la Muda; Maelys rompe un silencio largo con una frase mínima;
+Corwyn cierra con ironía seca sobre lo "diplomáticos" que son todos.
+
+**Archivo actualizado:** `Estructura Política.md` — sección "The Elder
+Circle" expandida con los 4 miembros, Thessaly, regla de tono, lugar de
+reunión y diálogo de ejemplo. Tabla resumen final también actualizada.
+
+**Con esto, el backlog de personajes sin desarrollar del cierre de sesión
+anterior queda resuelto en su ítem más importante.** Quedan pendientes de
+baja/media prioridad: rival político de Edrick, cabeza de the Academy of
+Sages (si es distinta de The Elder Circle).
+
+---
+
 ## [2026-07-24] retcon/canon | Retraducción a inglés de nombres propios institucionales
 
 **Disparador:** al retomar el Círculo de los Vivos ("The Elder Circle" —

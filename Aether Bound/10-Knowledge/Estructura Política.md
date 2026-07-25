@@ -32,6 +32,52 @@ nunca hay empate), The Elder Circle no es un cuerpo que vota decisiones; es
 un grupo de testigos que a veces coincide y a veces no, sin mecanismo de
 resolución. El número par refuerza que esto es autoridad moral, no gobierno.
 
+**Se reúnen en Grove of Cycles** (templo élfico ya establecido en
+[[Geografía y Ciudades]], fuente de la Academy of Sages) — no por obligación
+formal, sino porque es el único lugar donde los 4 siguen coincidiendo sin
+tener que decidirlo.
+
+**Tono de desacuerdo — regla de personaje (canon 2026-07-24):** nunca pierden
+serenidad ni compostura. El desacuerdo entre ellos es **pasivo-agresivo,
+puramente élfico** — cortante bajo capas de cortesía perfecta, nunca un grito,
+nunca una discusión abierta. Se nota en la elección de palabras, en silencios
+calculados, en "honestidad" que es en realidad la forma más afilada de
+desacuerdo. Esto los diferencia del Triune Council (2-contra-1 mecánico,
+frío) y de cualquier conflicto humano (visceral, directo) — el suyo es el
+único tipo de conflicto que se siente exclusivamente élfico.
+
+### Los 4 Miembros
+
+| Nombre | Rol durante el cataclismo | Postura hoy |
+|---|---|---|
+| **Threnn** (m) | Comandante/guerrero — luchó (y falló) contra la masacre de los Wardens | **Proteger el statu quo a cualquier costo.** Tantos murieron construyendo esta civilización — aunque sea sobre una mentira — que no la va a dejar caer por Speck |
+| **Ilyara** (f) | Sanadora — vio el costo físico de la masacre de primera mano, trató a los sobrevivientes | **Dejar que la Muda se complete.** Cree que sanar es imperativo moral, sin importar el costo a la civilización actual |
+| **Maelys** (f) | Presente pero rota — vio algo en el momento del cataclismo que nunca ha nombrado, ni entonces ni ahora | **Casi no habla.** Cuando lo hace, todos escuchan — es la voz-oráculo del grupo, impredecible, a veces la más certera |
+| **Corwyn** (m) | El más político de los cuatro, mantuvo conexión con la corte incluso entonces | **Sin bando fijo.** Funciona como control informal sobre Queen Ithessa — sin tener asiento, sin necesitarlo |
+
+**El quinto — Thessaly** (murió hace 10 años, vejez natural): era quien
+mediaba consenso entre los otros cuatro. Con su muerte, The Elder Circle
+perdió su única voz de equilibrio — el desacuerdo pasivo-agresivo que hoy
+los define es, en parte, lo que queda cuando nadie suaviza la conversación.
+Los 4 restantes la mencionan rara vez, y siempre con el mismo silencio
+después.
+
+**Ejemplo de tono (referencia para guión):**
+
+> **Threnn:** *"La Muda se rompió una vez. Sabemos exactamente qué cuesta
+> dejar que lo intente de nuevo."*
+>
+> **Ilyara:** *"También sabemos qué costó detenerla. Threnn recuerda la
+> lucha. Yo recuerdo lo que vino después de la lucha."*
+>
+> **Maelys:** *(silencio largo)* *"...No importa lo que ninguno de nosotros
+> prefiera."*
+>
+> **Corwyn:** *"Qué diplomáticos, discutiendo sin alzar la voz. La Queen
+> estaría orgullosa."*
+
+Nadie grita. Nadie cede. Eso es The Elder Circle.
+
 **Fricción estructural:** la Queen, más joven y pragmática, puede querer
 avanzar/cambiar política; The Elder Circle frena por reverencia al pasado —
 choque generacional literal, con siglos de diferencia real entre ambos
@@ -256,9 +302,17 @@ los otros dos asientos.
 | Enano | Ambassador Kadrun | Designado por King Borran/Great Forging Clan, casi hereditario |
 | Humano | Councilor Merrit Vance | Consenso de Houses + Trade Consortium, el más volátil de los 3 |
 
-**The Elder Circle (Stillwood, sin asiento formal):**
+**The Elder Circle (Stillwood, sin asiento formal, se reúnen en Grove of Cycles):**
 
 Originalmente 5 elfos que vivieron el cataclismo como adultos jóvenes hace
-~550 años — **hoy 4**, uno murió de vejez natural hace 10 años. Sin nombres
-individuales aún (backlog — [[Current-State]]). Autoridad moral pura, sin
-voto ni cargo, en fricción generacional constante con Queen Ithessa.
+~550 años — **hoy 4**, Thessaly murió de vejez natural hace 10 años.
+Autoridad moral pura, sin voto ni cargo, en fricción generacional constante
+con Queen Ithessa. Desacuerdo pasivo-agresivo, nunca pierden compostura.
+
+| Miembro | Rol en el cataclismo | Postura hoy |
+|---|---|---|
+| Threnn | Comandante/guerrero | Proteger el statu quo a cualquier costo |
+| Ilyara | Sanadora | Dejar que la Muda se complete |
+| Maelys | Testigo roto, casi no habla | Voz-oráculo, impredecible |
+| Corwyn | El más político | Sin bando fijo, control informal sobre la Queen |
+| *Thessaly (†, hace 10 años)* | *Mediadora de consenso* | *Su ausencia agudizó el desacuerdo* |

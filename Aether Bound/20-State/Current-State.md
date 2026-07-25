@@ -45,12 +45,11 @@ updated: 2026-07-24
   Pivotes + Speck) y las 6 figuras políticas (3 gobernantes + 3 embajadores
   del Council) completos, se armó inventario de quién quedó mencionado sin
   ficha/rostro:
-  - 🔴 **The Elder Circle** ([[Estructura Política]]) — <5 elfos que
-    vivieron el cataclismo, autoridad moral rival de Queen Ithessa,
-    ligados directamente a "Los Tres Niveles de Conocimiento"
-    ([[El Mundo y la Muda]]). Hoy son concepto grupal sin nombres, caras, ni
-    cantidad exacta. **El más importante de los pendientes** — le falta
-    peso individual a una pieza que ya tiene fricción narrativa escrita.
+  - ✅ **The Elder Circle** ([[Estructura Política]]) — RESUELTO mismo día:
+    4 miembros nombrados (Threnn/Ilyara/Maelys/Corwyn) + Thessaly (†, hace
+    10 años, mediadora de consenso). Desacuerdo pasivo-agresivo, nunca
+    pierden compostura — regla de personaje élfica. Se reúnen en Grove of
+    Cycles. Ver detalle abajo (parte 9).
   - 🟡 Rival político de turno para el Regent Edrick (da cara a "6-8 Houses
     cayeron en 550 años", hoy solo texto)
   - 🟡 Cabeza de la Academy of Sages (¿es The Elder Circle mismo, o una
@@ -59,8 +58,31 @@ updated: 2026-07-24
     Bandits' Hideout) — bajo, solo si ganan escena de diálogo real
   - 🟢 Antagonista individual — no existe, posiblemente intencional (el
     "villano" es institucional: el Triune Council)
-  **Siguiente frente (cuando se retome):** desarrollar el Círculo de los
-  Vivos primero — nombres, cuántos son exactamente, quién dice qué.
+
+- **✅ SESIÓN 2026-07-24 (parte 9) — RETRADUCCIÓN A INGLÉS DE NOMBRES
+  PROPIOS INSTITUCIONALES:** Decisión de Boris — todo nombre propio de
+  institución/título/casa se crea o retraduce en inglés de ahora en más
+  (idioma primario del juego, [[Nomenclatura]]). 17 archivos actualizados:
+  Círculo de los Vivos→The Elder Circle, Gran Clan de Forja→the Great
+  Forging Clan, Academia Élfica→the Academy of Sages, Academia Real→the
+  Royal Academy, Alto Mando de Frontera→Frontier High Command, Consorcio de
+  Mercado→the Trade Consortium, Casa X→House X, Reina/Rey/Regente→Queen/
+  King/Regent. LOG.md y Current-State-Historico deliberadamente NO
+  tocados (snapshot histórico). Detalle en [[LOG]].
+
+- **✅ SESIÓN 2026-07-24 (parte 10) — THE ELDER CIRCLE: 4 MIEMBROS
+  NOMBRADOS:** Threnn (guerrero, proteger statu quo) / Ilyara (sanadora,
+  dejar que la Muda se complete) / Maelys (testigo roto, voz-oráculo,
+  casi no habla) / Corwyn (el más político, control informal sobre Queen
+  Ithessa). Quinto miembro **Thessaly** murió de vejez natural hace 10
+  años — era la mediadora de consenso del grupo, su ausencia agudizó el
+  desacuerdo. Se reúnen en Grove of Cycles. **Regla de personaje fijada:**
+  desacuerdo pasivo-agresivo puramente élfico — nunca pierden serenidad ni
+  compostura, el conflicto se nota en la elección de palabras, no en el
+  tono. Diálogo de ejemplo documentado en [[Estructura Política]].
+  **Con esto, el backlog de personajes sin desarrollar queda: solo rival
+  político de Edrick y cabeza de Academy of Sages pendientes (baja
+  prioridad).**
 
 - **Speck — narrativa + diseño visual 100% COMPLETO** (2026-07-23):
   redireccionamiento mascota→último Warden cristalino cerrado; 4 Finales
