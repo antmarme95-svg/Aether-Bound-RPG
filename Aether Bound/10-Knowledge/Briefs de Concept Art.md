@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "[[Fenotipos y Creación de Personaje]] + [[Art Bible]] (destilados a prompt); RATIFICADO por el director 2026-07-08 (sus outputs — fenotipos/keyframes/Speck/foliage/Dagna — ya son canon en 90-Raw/concept/). Página viva: los briefs de los 8 pivotes restantes se AÑADEN sin desratificar lo probado."
-updated: 2026-07-08
+updated: 2026-07-27
 ---
 
 # Briefs de Concept Art — Fenotipos
@@ -460,7 +460,7 @@ Full-body character concept sheet, front view and side view, of "Queen Ithessa",
 
 ### 9b — King Borran (Ignis Reach)
 
-Bisnieto directo del Rey del cataclismo — sucesión ritual, sin disputa. Debe
+Tataranieto directo del Rey del cataclismo — sucesión ritual, sin disputa. Debe
 leer como enano de mediana edad ya asentado en el trono (no joven heredero
 inseguro), con regalía que fusiona corona y forja — el Great Forging Clan
 **es** el trono, no un cuerpo separado.
@@ -517,7 +517,7 @@ Use the elf phenotype as the exact anatomy and proportion reference — silhouet
 ### 9e — Embajador Kadrun (asiento enano del Triune Council)
 
 Cargo casi hereditario dentro del Great Forging Clan — formal, no de trabajo.
-Distinto en tono de Vekka (maestra técnica en su taller) — este es Gran Clan
+Distinto en tono de Vekka (maestra técnica en su taller) — este es the Great Forging Clan
 en su registro diplomático, no artesanal.
 
 ```

@@ -22,8 +22,8 @@ oficialmente, pero **no puede ser la máxima autoridad moral sobre lo que
 pasó** — no lo vivió.
 
 **The Elder Circle:** originalmente 5 elfos vivos que eran adultos jóvenes
-durante el cataclismo (rondaban ya los 550+ años en aquel entonces — ver
-[[Las Tres Razas]], techo de vida élfico 650-700) — **ahora 4**, el quinto
+durante el cataclismo (aproximadamente 20-150 años en la escala élfica cuando ocurrió; hoy rondan los 570-700 años — ver
+[[Las Tres Razas]]) — **ahora 4**, el quinto
 murió de vejez natural hace 10 años. Sin título de gobierno formal, pero con
 autoridad casi religiosa — son la última conexión viva con la verdad de lo
 que pasó. La reina gobierna el presente; ellos son memoria viva del pasado.
@@ -119,14 +119,14 @@ visible / Corona encubierta) más una completamente ajena al juego político
 
 ## Enanos (the Iron-Blooded) — The Ignis Reach
 
-**King Borran**, nieto o bisnieto directo del Rey que gobernaba durante el
-cataclismo — línea de sangre ininterrumpida, exactamente como esperarías de
+**King Borran**, tataranieto directo del Rey que gobernaba durante el
+cataclismo (4 generaciones — vida enana 200-250 años sobre 550 años del cataclismo) — línea de sangre ininterrumpida, exactamente como esperarías de
 *"la montaña no olvida, y el enano es la montaña"* ([[El Mundo y la Muda]]).
 
 **Sucesión enana = ritual sagrado, no política.** No hay golpes, no hay
 disputa — el heredero se conoce desde el nacimiento, criado explícitamente
 para el trono. King Borran heredó una versión ya deformada del recuerdo
-directo (no lo vivió, pero su bisabuelo sí) — en cultura enana eso se
+directo (no lo vivió, pero su tatarabuelo sí) — en cultura enana eso se
 transmite con precisión casi litúrgica. El King probablemente puede recitar
 el relato del cataclismo palabra por palabra, aunque nunca lo vivió.
 
@@ -331,7 +331,7 @@ los otros dos asientos.
 | Reino | Gobernante | Título | Estructura de poder |
 |---|---|---|---|
 | Stillwood | Queen Ithessa | Queen (555 años) | Corona + The Elder Circle (informal, moral) |
-| Ignis Reach | King Borran | King (bisnieto del Rey del cataclismo) | Corona + Great Forging Clan (mismo cuerpo) |
+| Ignis Reach | King Borran | King (tataranieto del Rey del cataclismo) | Corona + Great Forging Clan (mismo cuerpo) |
 | Aethelgard | Regent Edrick Ashcombe | Regent ("Voice of the Council") | Regency inestable + Triune Council (autoridad real) — rival: **Lady Isolde Marrow** (House Marrow), busca Corona hereditaria |
 
 **Triune Council (supra-racial, sede Rivermeet):**

@@ -11,7 +11,7 @@ updated: 2026-07-04
 God-Cores. Incidente incitante: las "bestias" del nido eran guardianas de la
 crisálida de [[Speck]]. Eliges no matar al último espécimen → prófugo.
 
-**Acto 2 — Comunidad.** Se forma [[El Bound Five]]. Viajar el aro de
+**Acto 2 — Comunidad.** Se forma [[The Bound Five]]. Viajar el aro de
 [[La Rueda]] revela que **tu propia cultura degrada el ecosistema**. Arco
 Fellowship (LotR) con fricción (Vox Machina).
 

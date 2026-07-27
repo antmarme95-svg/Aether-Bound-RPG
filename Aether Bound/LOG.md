@@ -5178,3 +5178,29 @@ Retomo tras el cierre parcial anterior. Estrategia: 1 agente Opus 5 secuencial (
 **Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ (9/9). Pendientes ordenados: Fase 2 (Sonnet 5, propagación fijos + The Reckoning + Momentos de Persona + Wanderer's Goggles reaparición), Fase 3 (Haiku 4.5, lint mecánico + renames + typos), Fase 4 (re-corrida de los 2 QAs para verificar 0 CRÍTICOS).
 
 **Estrategia validada:** 1 agente Opus 5 a la vez → 0 server errors esta vuelta, ambas fichas al primer intento. Costo: 84k + 123k tokens = ~207k para cerrar Fase 1.
+
+## [2026-07-27] sprint/QA-reparación | Fase 3 CERRADA — Lint mecánico Haiku (orden invertido 3→2)
+
+Decisión previa: invertir orden original 2→3 y ejecutar Fase 3 primero. Razones: cambios mecánicos verificables con grep (barato + confiable), base limpia para Fase 2 antes de que Sonnet 5 escriba contenido nuevo.
+
+**Ejecución:** 1 agente Haiku 4.5, 10 sub-pasos secuenciales con grep entre cada uno. Costo: ~150k tokens.
+
+**Cambios aplicados:**
+- **Rename:** `El Quinteto.md` → `The Bound Five.md` (git mv). 10 archivos con `[[El Bound Five]]` actualizados. 2 archivos con `[[El Quinteto]]` residual convertidos a `[[The Bound Five|El Quinteto]]` (alias visible).
+- **Longevidad élfica:** Estructura Política:24-26 y El Mundo y la Muda:27 — "rondaban ya los 550+ años en aquel entonces" → "eran adultos jóvenes (~20-150 años) cuando ocurrió; hoy rondan los 570-700 años". Plus fix "bisabuelo" → "tatarabuelo" en línea consistente.
+- **King Borran genealogía:** "nieto o bisnieto" → **tataranieto directo** (Estructura Política:122, :334; Briefs de Concept Art:463). Aritmética coherente: vida enana 200-250 años sobre 550 años del cataclismo = 4 generaciones.
+- **Contradicciones de origen resueltas:**
+  - Tabla Geografía y Ciudades:1077-1081 reorganizada: Bram → Rivermeet (House Thorne), Iven → Iven's Settlement (asentamiento fronterizo), Roen → sub-fila Mistbound de Aethelgard.
+  - Mistbound Frontier macro-mapa (:33) y Zonas Neutras (:725-728): reescritos consistentes con §55-67 — Mistbound es tierra interior remota del oeste profundo, NO primera línea contra bestias.
+- **Nombres institucionales residuales:** "Maestra del Gremio" → "Guild Master de the Great Forging Clan" (Geografía y Ciudades:96). "Gran Clan" → "the Great Forging Clan" (Briefs de Concept Art:520).
+- **Typos:** deixada→dejada, assassinato→asesinato, appecia→aprecia (2), Localizé→Localicé, Misbound→Mistbound, Socópata→Sociópata, sabará→sabrá, recostruir→reconstruir, began visiting→empezó a visitar, Dargo→Darro (2 residuales que Haiku no captó, corregidos en verificación independiente).
+- **Género de Speck en Darro-Ficha:** femenino uniforme (línea 307 "His name is Speck" → "Her name is Speck"; línea 212 "esto pequeño es mío" → "esta pequeña es mía").
+- **Frontmatters actualizados:** El Mundo y la Muda (2026-07-04→2026-07-27), Geografía y Ciudades (2026-07-23→2026-07-27), Briefs de Concept Art (2026-07-08→2026-07-27).
+
+**Verificación end-to-end (todos = 0):** `[[El Bound Five]]`, `[[El Quinteto]]`, `[[protocolo del silencio]]`, "rondaban ya los 550", nombres institucionales sin traducir, doble artículo (del the/al the/en el the/por el the), typos (post-corrección de Dargo). check_vault 🟢 verde.
+
+**Fuera de scope (queda para Fase 2):** desambiguación de "el Consejo" (Triune Council vs Great Forging Clan vs consejo del clan menor — requiere juicio de contexto que Sonnet 5 lee mejor).
+
+**Lección de proceso:** Haiku es confiable en el patrón general pero puede saltarse residuos aislados (los 2 "Dargo" en Geografía no fueron detectados por su verificación interna). La verificación grep independiente post-agente es indispensable.
+
+**Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ + Fase 3 ✅. Pendientes: Fase 2 (Sonnet 5, propagación semántica) + Fase 4 (re-corrida QAs).

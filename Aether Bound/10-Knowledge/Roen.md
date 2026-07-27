@@ -8,7 +8,7 @@ updated: 2026-07-23
 
 **Raza / Rol:** Humano (the Restless) / Vanguard
 **Origen:** Frontera Mistbound
-**Slot en [[El Bound Five]]:** C1 — El Afín
+**Slot en [[The Bound Five]]:** C1 — El Afín
 
 ## Esencia
 

@@ -95,7 +95,7 @@ pero Speck no controla ese momento.
 
 ## El bautizo
 
-Lo nombra Darro (C4 Enano Duelist, [[El Bound Five]]): *"It's nothing but a
+Lo nombra Darro (C4 Enano Duelist, [[The Bound Five]]): *"It's nothing but a
 speck with opinions."*
 
 **Contexto:** El Bound Five ha visto comportamientos antinatural-inteligentes.

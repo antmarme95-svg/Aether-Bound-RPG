@@ -387,7 +387,7 @@ No hay sorpresa en Valen. Solo verificación de patrón.
 
 ### Maren + Darro (Diferentes Roles, Energía Opuesta)
 
-**Primera impresión:** Darro hace broma sobre "ingeniera fría". Maren sonríe — appecia que Darro vea la frialdad sin juzgarla.
+**Primera impresión:** Darro hace broma sobre "ingeniera fría". Maren sonríe — aprecia que Darro vea la frialdad sin juzgarla.
 
 *"Eres tipo que construye con números."*  
 *"Eres tipo que destruye con bromas. Extraño equilibrio."*

@@ -450,11 +450,11 @@ Conversación sobre asentamiento: Valen pregunta si es variable sostenible. Iven
 
 Valen: *"Exactamente. Números que puedo medir."*
 
-**Cuando traiciona:** Valen: *"Tres meses atrás began visiting contactos del Consejo. Calculé esto entonces. También esperé estar equivocado."*
+**Cuando traiciona:** Valen: *"Tres meses atrás empezó a visitar contactos del Consejo. Calculé esto entonces. También esperé estar equivocado."*
 
 ### Iven + Darro (Energía Opuesta)
 
-**Primera impresión:** Darro hace broma sobre "acróbata gracioso". Iven sonríe — appecia que Darro vea la gracia sin ser condescendiente.
+**Primera impresión:** Darro hace broma sobre "acróbata gracioso". Iven sonríe — aprecia que Darro vea la gracia sin ser condescendiente.
 
 *"Eres tipo que vive en presente."*  
 *"Porque frontera enseña que mañana no existe."*  

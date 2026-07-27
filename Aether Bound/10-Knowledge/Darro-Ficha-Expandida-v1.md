@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Enano (the Iron-Blooded) / Duelist  
 **Origen:** Emberdeep, Ignis Reach  
 **Edad aparente:** 45-65 años (joven para enano, adulto completo pero sin cicatrices de edad)  
-**Slot en [[El Bound Five]]:** C4 — La Chispa  
+**Slot en [[The Bound Five]]:** C4 — La Chispa  
 
 ---
 
@@ -209,7 +209,7 @@ Hacia final de Acto 2, la verdad comienza a filtrarse. Speck es llave de Muda. L
 
 Se vuelve **hiperprotector** de repente. Bromea MÁS pero duerme MENOS. Siempre está cerca de Speck. Siempre vigilante.
 
-Darro: "No sé de Mudas ni ciclos, hermano. Sé que esto pequeño es **mío** — bueno, nuestro. Es Speck. Nadie lo toca."
+Darro: "No sé de Mudas ni ciclos, hermano. Sé que esta pequeña es **mía** — bueno, nuestra. Es Speck. Nadie la toca."
 
 ---
 
@@ -304,7 +304,7 @@ Años después, Darro es el que cuenta historias de "el día que nombramos a Spe
 
 ## Línea Canónica
 
-*"His name is Speck. I don't care what you think of the name. His name is Speck."*
+*"Her name is Speck. I don't care what you think of the name. Her name is Speck."*
 
 **Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Consejo, el Pivote, incluso el jugador si lo considera sacrificar.
 

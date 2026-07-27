@@ -373,7 +373,7 @@ Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de 
 **Lyris NO es:**
 - Villana cruel
 - Incapaz de sentir nunca nada
-- Socópata sin remedio
+- Sociópata sin remedio
 
 **Lyris SÍ es:**
 - Alguien que **eligió distancia porque es más seguro**

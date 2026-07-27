@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Elfo (the Aether-Born) / Strategist  
 **Origen:** The Stillspire  
 **Edad aparente:** 180-250 años (joven para un elfo, pero ha visto suficientes Mudas)  
-**Slot en [[El Bound Five]]:** C2 — El Opuesto  
+**Slot en [[The Bound Five]]:** C2 — El Opuesto  
 
 ---
 

@@ -12,7 +12,7 @@ se llama Bond y el juego Bound. *"Speck" reservado para marketing/tráiler.*
 
 | Cosa | Nombre canónico | Nota |
 |---|---|---|
-| **El grupo protagonista** | **The Bound Five** | Decisión 2026-07-24 — conecta directo con el título: *AETHER BOUND* = atado por el Aether, atado por el vínculo (Bond), rumbo ("bound for") a The Wilds. El nombre del grupo describe literalmente el título del juego. Antes "El Quinteto" — ver [[El Quinteto]] |
+| **El grupo protagonista** | **The Bound Five** | Decisión 2026-07-24 — conecta directo con el título: *AETHER BOUND* = atado por el Aether, atado por el vínculo (Bond), rumbo ("bound for") a The Wilds. El nombre del grupo describe literalmente el título del juego. Antes "El Quinteto" — ver [[The Bound Five|El Quinteto]] |
 | Cultura élfica | **the Aether-Born** | Reuso del prototipo |
 | Cultura enana | **the Iron-Blooded** | Reuso del prototipo |
 | Cultura humana | **the Restless** | Los elfos los llaman *"the Brief"* |

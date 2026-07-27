@@ -145,7 +145,7 @@ Cuando el jugador finalmente decide, Bram dice: *"Sea lo que sea, cubro tu espal
 
 ### Escena: El Primero (Aceptación del Grupo)
 
-Roen ya está en el grupo. Valen aparece. Darro se integra en Driftmarket. Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[El Quinteto]]).
+Roen ya está en el grupo. Valen aparece. Darro se integra en Driftmarket. Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[The Bound Five|El Quinteto]]).
 
 **Bram aquí asume rol de protector del grupo:**
 - Se posiciona estratégicamente en campamento (siempre vigilante)

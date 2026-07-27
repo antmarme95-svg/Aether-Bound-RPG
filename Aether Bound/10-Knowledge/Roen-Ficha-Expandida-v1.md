@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Humano (the Restless) / Vanguard  
 **Origen:** Frontera Mistbound  
 **Edad aparente:** 35-40 años  
-**Slot en [[El Bound Five]]:** C1 — El Afín  
+**Slot en [[The Bound Five]]:** C1 — El Afín  
 
 ---
 

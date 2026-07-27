@@ -21,9 +21,18 @@ updated: 2026-07-27
   - Maren, Sereth, Iven (Aritmética/Manipulación — Sereth movido a manipulación pura, Iven con Council mintiendo)
   - Torgan, Vekka, Dagna (Deber Institucional — Torgan aritmética 55 años + cadena resuelta; **Vekka reescritura completa** con Darro como "flawed forging viviente" + superlativo "la traición más precisa"; **Dagna reescritura mayor** con entrada Roen+Dagna canónica que canoniza que Dagna quiebra a Roen — no Lyris — y sección duplicada eliminada)
   - Bram, Lyris, Nyael (Rechazo/Ausencia + institucional — Bram canon NO traiciona con mecanismo del "segundo agente")
-- **🔴 Fase 2 sin arrancar** — Sonnet 5, propagación mecánica + cross-cutting (Roen/Valen/Darro fichas, Estructura Política, El Mundo y la Muda, Speck.md, El Quinteto.md)
-- **🔴 Fase 3 sin arrancar** — Haiku 4.5, lint mecánico verificable (renombrar El Quinteto→The Bound Five, retraducciones "el Consejo" con desambiguación, typos, cross-refs)
-- **🔴 Fase 4 sin arrancar** — verificación end-to-end con los 2 QA re-corridos
+- **✅ Fase 3 completa** (invertido orden 2↔3) — Haiku 4.5, lint mecánico:
+  - `El Quinteto.md` → `The Bound Five.md` (rename + 10 cross-refs actualizados)
+  - Longevidad élfica corregida (Estructura Política + El Mundo y la Muda: hoy 570-700 años, cataclismo hace ~550 años)
+  - King Borran genealogía → tataranieto (4 generaciones, coherente con vida enana 200-250 años)
+  - Contradicciones de origen resueltas: Bram → Rivermeet (House Thorne), Iven → Iven's Settlement, Mistbound Frontier = tierra interior no fronteriza
+  - "Maestra del Gremio" → Guild Master de the Great Forging Clan; "Gran Clan" → the Great Forging Clan
+  - Typos: deixada, assassinato, appecia, Localizé, Misbound, Socópata, sabará, recostruir, began visiting, Dargo (2) — todos corregidos
+  - Género de Speck femenino uniforme en Darro-Ficha
+  - Frontmatters actualizados
+  - Todos los greps de verificación = 0
+- **🔴 Fase 2 pendiente** — Sonnet 5, propagación semántica + cross-cutting (Roen/Valen/Darro fichas con entrada Roen+Dagna reflejada, corrección "Roen quebrado por Lyris" → Dagna, integración The Reckoning en 9 fichas, Momentos de Persona con reacción del Pivote, reaparición Wanderer's Goggles, desambiguación de "el Consejo" con contexto)
+- **🔴 Fase 4 pendiente** — verificación end-to-end con re-corrida de los 2 QAs (criterio: 0 CRÍTICOS)
 
 **Worldbuilding narrativo previo:** COMPLETO como fuente para guión (3 reinos + Triune Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning + 12 personajes con fichas + Speck).
 

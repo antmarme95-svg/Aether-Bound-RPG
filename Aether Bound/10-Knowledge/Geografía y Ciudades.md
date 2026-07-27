@@ -1,7 +1,7 @@
 ---
 status: draft
 source: "Compilación fichas de personajes + La Rueda + Estructura Dramática"
-updated: 2026-07-23
+updated: 2026-07-27
 ---
 
 # Geografía y Ciudades de Aether Bound
@@ -30,7 +30,7 @@ updated: 2026-07-23
     
     [NEUTRAL ZONES]
     • THE DRIFTMARKET (flotante, central-accesible desde los 3 reinos)
-    • MISTBOUND FRONTIER (región limítrofe humana, noroeste)
+    • MISTBOUND FRONTIER (región interior humana, oeste profundo)
     • THE SUNKEN ARCHIVE (subterráneo, acceso desde The Wilds)
 ```
 
@@ -92,7 +92,7 @@ updated: 2026-07-23
 - **Emberdeep** — caverna subterránea excavada verticalmente
   - Sede del Great Forging Clan
   - Múltiples niveles (profundidad del poder)
-  - Donde Vekka es Maestra del Gremio
+  - Donde Vekka es Guild Master de the Great Forging Clan
   - Donde Torgan y Dagna pertenecen al Clan de Forja
   - Arquitectura: piedra viva, forjas, luz de Aether azul, geometría angular
   - Clima: subterráneo, calor geotérmico, "olor a metal caliente"
@@ -259,7 +259,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Mecanismo: Equipamiento enano para leer (Darro/Vekka identifican)
 - Loot: Planos de forja, herramientas antiguas
 - Enemigos: Bestias que anidar en cuevas
-- Dinámicas: Vekka o Dargo reconocen apellidos, hacen cortos comentarios
+- Dinámicas: Vekka o Darro reconocen apellidos, hacen cortos comentarios
 
 #### **Stillwood Sanctuary** (NE — Árboles muertos)
 - Monasterio élfico abandonado (curvas muertas, árboles calcificados)
@@ -539,7 +539,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Dinámicas:
   - Vekka: siente culpa profunda
   - Vekka: "les hice armas. No pude salvarlos con las armas"
-  - Dargo: reconoce esta forja (estudia con Vekka aquí)
+  - Darro: reconoce esta forja (estudia con Vekka aquí)
 
 #### **Dagna's Clan Stone** (East-Central, in The Wilds)
 - Monolito de piedra enana con símbolos de clan (real clan stone, not in cave)
@@ -722,10 +722,10 @@ care what you do while you're standing on my docks."*
 **Conexión con Darro:** posiblemente vouches por él desde antes — explica
 por qué el Driftmarket es donde C4 se recluta con naturalidad.
 
-### MISTBOUND FRONTIER (Región Humana Limítrofe — Noroeste)
-- **Ubicación:** Frontera noroeste más allá de Aethelgard, tierra de nadie
-- **No es ciudad, es franja:** puesto tras puesto defensivo
-- **Función:** Primera línea contra bestias de The Wilds
+### MISTBOUND FRONTIER (Región Humana Interior — Oeste Profundo)
+- **Ubicación:** Tierra interior remota de Aethelgard, más allá de Rivermeet (sur-oeste profundo), lejos del río
+- **No es ciudad, es franja:** puesto tras puesto de vigilancia interior
+- **Función:** Donde el Consejo pierde control administrativo por distancia, no por cercanía a The Wilds
 - **Habitantes:** Soldados, guardias, mercenarios, gente de baja Standing
 - **Origen de Roen:** Fue guardia aquí antes de renunciar
 - **Cultura:** Brutal, pragmática, baja política (no interesa Standing)
@@ -755,7 +755,7 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 **Ubicación:** Primer paso de tu arteria de origen (template con 3 skins)
 
 **Versión Humana (Aethelgard):**
-- Paso por Misbound Frontier inicial
+- Paso por Mistbound Frontier inicial
 - Encuentro con bestias menores
 - Introducción a Standing (puesto militar)
 
@@ -1074,11 +1074,11 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 | Región | Ciudad | Personajes Nacidos Ahí | Visitado en Acto |
 |---|---|---|---|
-| **Aethelgard** | Rivermeet | Maren, Iven | 2A (humano) |
+| **Aethelgard** | Rivermeet | Maren, Bram (House Thorne) | 2A (humano) |
+| | Iven's Settlement | Iven | 2A (humano) |
 | | Mistbound | Roen | Tutorial |
 | **Ignis Reach** | Emberdeep | Torgan, Dagna, Vekka | 2B (enano) |
 | **Stillwood** | The Stillspire | Valen, Sereth, Lyris, Nyael | 2C (elfo) |
-| **Neutral** | The Driftmarket | Bram (mercenary) | 2 (interludios) |
 | **Underground** | Sunken Archive | — | 3 (clímax) |
 | **Central** | The First Wound | — | 3 (final) |
 | **The Wilds** | El Nido | Speck | 1, 2 (returns) |
