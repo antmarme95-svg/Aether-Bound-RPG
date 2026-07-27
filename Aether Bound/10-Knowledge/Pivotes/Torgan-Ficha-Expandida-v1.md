@@ -1,7 +1,7 @@
 ---
-status: draft
-source: "Sesión 2026-07-23 — Pivotes Narrativa Expandida"
-updated: 2026-07-23
+status: ratificado
+source: "Sesión 2026-07-27 — QA fase 1, arquetipo Deber Institucional"
+updated: 2026-07-27
 ---
 
 # Torgan — C3 Pivote (Elfo Strategist Jugador)
@@ -32,6 +32,23 @@ jurado al clan que lo rechazó — fue jurado a un clan propio, menor, donde
 encontró pertenencia después del rechazo. Eso vuelve el juramento MÁS
 preciado, no menos: es la lealtad que eligió después de que la lealtad
 "prestigiosa" lo escupiera.
+
+**Cadena de mando (3 eslabones, no directa):** cuando el Triune Council
+necesita algo de Torgan, la orden **no le llega directa.** Baja así:
+Ambassador Kadrun → the Great Forging Clan → **el consejo de su clan menor**
+→ Torgan. Tres eslabones. Torgan responde solo al último — el consejo de su
+clan menor — pero ese consejo no puede negar una orden que ya bajó por la
+cadena porque su propia existencia como clan menor depende de estar en buenos
+términos con the Great Forging Clan. Por eso Torgan puede cumplir "el
+Juramento" y no sentir que traiciona a nadie: el Juramento es a su clan
+menor, y su clan menor le pide obedecer. La cadena entera lo blinda de tener
+que mirar a Kadrun a la cara.
+
+**Nota canónica (corrección a [[Estructura Política]]):** el resumen de
+Estructura Política pone a Torgan en la cadena directa del clan real
+(*"Torgan/Vekka/Dagna → Great Forging Clan → King Borran → Ambassador
+Kadrun"*). Esta ficha corrige: Torgan tiene un eslabón intermedio (su clan
+menor). El resumen sirve como taquigrafía; la ficha manda para escena.
 
 ## Biografía Pre-Aventura
 
@@ -67,19 +84,33 @@ Promesa específica: *"Protegeré la forja y sus intereses. Hasta la muerte de m
 
 ### Años de Servicio (edades 40-75)
 
-Torgan sirvió. Fue bueno. Fue leal. Fue **exactamente lo que el gremio necesitaba** — duelist imparable, sin cuestionamientos, sin reservas.
+Torgan sirvió. Fue bueno. Fue leal. Fue **exactamente lo que su clan menor
+necesitaba** — duelist imparable, sin cuestionamientos, sin reservas.
 
 **Hasta hace 3 años.**
 
-Hace 3 años, el Consejo del Gremio le encargó una **Misión Clasificada.** No especificó detalles. Solo dijo:
+Hace 3 años, el consejo de su clan menor le encargó una **Misión
+Clasificada.** No dijeron de dónde bajó la orden — Torgan sabe leer entre
+líneas: si el clan menor no da fuente, es que la fuente es the Great Forging
+Clan (que a su vez recibió el pedido de Ambassador Kadrun por parte del
+Triune Council). Tres eslabones, y solo el último tiene cara.
 
-*"Hay variable que amenaza el gremio. Será llevada al Consejo cuando sea identificada. Tu rol: localizarla y entregarla. El gremio necesita esto."*
+*"Hay variable que amenaza intereses del Clan. Será llevada al Consejo del
+Clan menor cuando sea identificada. Tu rol: localizarla y entregarla."*
 
-Torgan no cuestionó. **Eso es ser enano.** Cuestionamientos son para después de completar el deber.
+Torgan no cuestionó. **Eso es ser enano.** Cuestionamientos son para después
+de completar el deber. Y los cuestionamientos, aun después, no se hacen
+subiendo la cadena — se hacen consigo mismo, en silencio.
 
-**Búsqueda:** Pasó 3 años rastreando a través de The Wilds, ciudades, mercados. Finalmente, hace algunos meses, identificó la variable: **Speck.** Criatura con Aether anómalo. Peligrosa potencial.
+**Búsqueda:** Pasó 3 años rastreando a través de The Wilds, ciudades,
+mercados. Finalmente, hace algunos meses, identificó la variable: **Speck.**
+Criatura con Aether anómalo. Peligrosa potencial.
 
-Informe al Consejo. Respuesta: *"Espera instrucciones. La variable estará en The Wilds. Cuando se localice, trae la variable y lo que la rodea. El Consejo lo usará."*
+Informe al consejo del clan menor. Respuesta transmitida palabra por palabra
+desde arriba: *"Espera instrucciones. La variable estará en The Wilds.
+Cuando se localice, trae la variable y lo que la rodea. El Consejo lo
+usará."* Torgan reconoce el registro — no es voz de su clan menor, es voz de
+Kadrun traducida a dos idiomas.
 
 ### Presente: El Dilema Sin Opción
 
@@ -142,13 +173,13 @@ Conversación derivó en cena, viaje conjunta, confianza. El jugador vio en Torg
 
 **Amistad profunda pero no romantic.** Respeto de guerrero a estratega.
 
-**La complicación:** Hace 2 meses, Torgan reportó al Consejo: *"Localizé la variable. Está con compañero, elfo. Entiende su importancia."*
+**La complicación:** Hace 2 meses, Torgan reportó a su clan menor: *"Localicé la variable. Está con compañero, elfo. Entiende su importancia."*
 
-Consejo: *"¿Te convierte en problema?"*
+Clan menor (repitiendo textual desde arriba): *"¿Te convierte en problema?"*
 
 Torgan: *"No. Completaré el deber cuando llegue el momento. Pero... espero que no llegue."*
 
-Consejo: *"La esperanza no es factor. Cumplirás."*
+Clan menor: *"La esperanza no es factor. Cumplirás."*
 
 **Eso fue la última comunicación.**
 

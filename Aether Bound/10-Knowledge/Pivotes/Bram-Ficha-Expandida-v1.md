@@ -1,47 +1,35 @@
 ---
-status: draft
-source: "Sesión 2026-07-23 — Pivotes Narrativa Expandida"
-updated: 2026-07-23
+status: ratificado
+source: "Sesión 2026-07-27 — reescritura mayor: Bram NO traiciona (canon nuevo)"
+updated: 2026-07-27
 ---
 
 # Bram — C3 Pivote (Enano Strategist Jugador)
 
-**Raza / Rol:** Humano (the Restless) / Vanguard  
-**Origen:** House Thorne, Rivermeet (huyó a la Frontera Este a los 15)  
-**Edad aparente:** 55-65 años (aparentemente gastado por 20+ años de combate)  
-**Arquetipo de Traición:** Agotamiento expresado como deserción  
+**Raza / Rol:** Humano (the Restless) / Vanguard
+**Origen:** House Thorne, Rivermeet (huyó a los 15 a Mistbound Frontier)
+**Edad aparente:** 55-65 años (gastado por cuarenta años de servicio ajeno)
+**Arquetipo de Traición:** Rechazo activo — **el único Pivote que rehúsa**. Superlativo: **el único rechazo activo** del elenco (ver [[Los 4 Finales]] — fila Rechazo/Ausencia).
 
 ---
 
 ## Esencia
 
-Vanguard brawler — cuerpo como escudo, músculo como promesa de protección. Pero **lleva 20 años diciéndole "no" a su propio cuerpo.** La traición no es decisión inteligente. Es **colapso.** Es momento donde el muro se cansa de sostenerse a sí mismo.
+Vanguard brawler — cuerpo como escudo, músculo como promesa de protección. Pero **lleva cuarenta años diciéndole "sí" a órdenes ajenas.** Su quiebre no es traición ni cálculo ni deber. Es el momento en que el muro, en el último corredor, decide **no cargar la carga que se le paga por cargar.** No confesión heroica: agotamiento. La primera vez en cuarenta años que Bram cobra por hacer algo y no lo hace.
 
-La traición de Bram es la más desgarradora porque no viene de malicia ni cálculo ni deber — viene de **ruptura emocional pura.**
+Bram es la excepción intencional del elenco. Ocho Pivotes traicionan; Bram rechaza. Su superlativo no compite con nadie porque es el único que hace esto.
 
-**Arquetipos resonantes:** El soldado que ve el final, el guardaespaldas que finalmente pone el arma, Jaime antes de la redención.
+**Arquetipos resonantes:** el soldado que ve el final del turno, el guardaespaldas que finalmente pone el arma sobre la mesa, Jaime cuando finalmente elige mal contra la corriente correcta.
 
 ---
 
 ## Afiliación de Casa (canon [[Estructura Política]])
 
-Bram nació en **House Thorne**, familia con historia diplomática/de Consejo
-en Rivermeet — el tipo de sangre que hubiera significado corte, negociación,
-papeleo. A los 15, en vez de tomar el camino esperado, **huyó** — se alistó
-en una compañía mercenaria de la Frontera Este, el trabajo más lejano posible
-de un salón político. No fue rechazo de su familia; fue rechazo del *camino*
-que su familia representaba.
+Bram nació en **House Thorne**, familia con historia diplomática en Rivermeet — el tipo de sangre que hubiera significado corte, negociación, papeleo hereditario. A los 15, en vez de aceptar el camino, **huyó** — cruzó la ciudad de noche, cortó el apellido, y se alistó en la primera compañía mercenaria que aceptaba menores en **Mistbound Frontier**, la franja humana remota al noroeste ([[Geografía y Ciudades]] §Mistbound). Cortó lazos hace **cuarenta años, no veinte** — la aritmética es fija: 15 años cuando se fue, 55-65 hoy. Todas las referencias antiguas a "hace 20 años" pertenecen a una versión previa de esta ficha y están corregidas.
 
-20 años después, sigue siendo "el muro de todos" — y hay una lectura nueva en
-eso: toda su vida tuvo una puerta política fácil disponible y la rechazó por
-el camino duro. Ahora, agotado, finalmente quiere una puerta que sea *suya*,
-no la que House Thorne le hubiera dado gratis. Cortó lazos hace 20 años — sin
-protección de linaje, solo su contrato de mercenario. Es posible que conozca
-al **Regent Edrick Ashcombe**: dos hombres de Houses políticas de Rivermeet,
-uno que se quedó en el juego, otro que huyó de él. **Nota de canon:** su
-tipo de compañía mercenaria es exactamente el respaldo militar que **Lady
-Isolde Marrow** (rival de Edrick, [[Estructura Política]]) busca cortejar
-para su ascenso — posible gancho narrativo si se retoma su historia.
+No fue rechazo de su familia; fue rechazo del *camino* que su familia representaba. Cuarenta años después, sigue siendo "el muro de todos", y por primera vez alguien le ofrece una salida que **no** viene de House Thorne — viene del Council, viene por contrato, viene con precio explícito. Se especula (sin confirmación) que aún queda alguien en House Thorne que sabe dónde está y calla. Posible que conozca al **Regent Edrick Ashcombe**: dos hombres de Houses políticas de Rivermeet, uno que se quedó en el juego, otro que huyó de él. Su tipo de compañía mercenaria es exactamente el respaldo militar que **Lady Isolde Marrow** ([[Estructura Política]]) busca cortejar para su ascenso — gancho abierto, no desarrollado.
+
+**Nota de cadena:** en su ruta, Bram **no** trabaja para ninguna institución élfica ni enana intermediaria. Trabaja por contrato directo con **the Triune Council** — puro mercenariado, sin lealtad institucional. El Council lo eligió justamente por eso: Bram no tiene juramento que romper, solo tiene precio.
 
 ---
 
@@ -49,344 +37,309 @@ para su ascenso — posible gancho narrativo si se retoma su historia.
 
 ### House Thorne: La Huida (edades 0-15)
 
-Nacido en Rivermeet, en House Thorne — no la más poderosa de las Houses del
-Consejo, pero sí una con asiento reconocido, generaciones de consejeros y
-mediadores. Se esperaba que Bram, como los Thorne antes que él, aprendiera
-retórica, protocolo, la paciencia fría de la política.
+Nacido en Rivermeet, en House Thorne — no la más poderosa de las Houses del Council, pero sí una con asiento reconocido, generaciones de consejeros y mediadores. Se esperaba que Bram, como los Thorne antes que él, aprendiera retórica, protocolo, la paciencia fría de la política.
 
-Bram odiaba todo eso. No por rebeldía — por instinto. Prefería el peso de
-algo real en las manos a la palabra bien elegida. A los 15, sin decir nada a
-su familia, se fue a la Frontera Este y se alistó en la primera compañía
-mercenaria que lo aceptó.
+Bram odiaba todo eso. No por rebeldía — por instinto. Prefería el peso de algo real en las manos a la palabra bien elegida. A los 15, sin decir nada a su familia, se fue a **Mistbound Frontier** y se alistó en la primera compañía mercenaria que lo aceptó.
 
-**No volvió a usar el apellido Thorne desde entonces.** Para el resto del
-mundo — incluso para Roen, incluso para el jugador — es solo Bram.
+**No volvió a usar el apellido Thorne desde entonces.** Para el resto del mundo — incluso para Roen, incluso para el jugador — es solo Bram.
 
-### Frontera Este: Reclutamiento (edades 15-20)
+### Mistbound Frontier: Cuarenta años de escolta (edades 15-55+)
 
-La Frontera Este — zona de guerra permanente entre asentamientos humanos y
-expansión de The Wilds — se convirtió en su hogar real. Infancia terminó de
-golpe: **supervivencia bajo fuego constante,** exactamente lo opuesto a los
-salones que dejó atrás.
+Mistbound Frontier — franja humana lejana al noroeste, no la trinchera contra The Wilds sino la tierra donde el Council pierde control administrativo por pura distancia — se convirtió en su hogar real. Infancia terminó de golpe: **escoltas de convoy, defensas de fuertes menores, contratos privados** contra bestias que bajaban de laderas y contra bandidos que sabían aprovechar el hueco de autoridad.
 
-Bram fue bueno. Muy bueno. Cuerpo masivo, reflexos rápidos, umbral de dolor
-alto — cualidades de guerrero de línea frontal. Nadie ahí sabía ni le
-importaba que llevara sangre de House Thorne.
+Bram fue bueno. Muy bueno. Cuerpo masivo, reflejos rápidos, umbral de dolor alto. Fue ascendido a **líder de compañía** dos veces — dos compañías distintas, en dos décadas distintas, ambas disueltas cuando el contrato terminó y nadie renovó. Nunca ganó una guerra propia; solo escoltó las de otros. Fronteras humanas se defienden en pedazos, no en frentes.
 
-### 20 Años de Pared (edades 20-55, presente)
+Cuarenta años absorbiendo daño para que caravanas llegaran a Rivermeet, para que pueblos de tres casas siguieran teniendo tres casas la siguiente estación, para que nobles menores pudieran seguir cobrando renta a distancia. Cada batalla dejaba marca. Cada muerte se almacenaba en algún lugar del cuerpo donde no cicatriza.
 
-Bram pasó **20 años siendo el muro.**
+**Hace 10-15 años:** Bram intentó formalmente retirarse por primera vez. El puesto local le dijo lo que siempre le dicen a los buenos: *"Necesitamos gente como tú. Un contrato más."* Bram continuó. Después de ese punto perdió la cuenta de cuántos "un contrato más" firmó.
 
-Cada batalla: era el primero en avanzar, el que se llevaba los golpes que otros no querían recibir, el que sostenía línea cuando se rompía.
+**Nunca abandonó a nadie que le pagara.** Es la única cosa que ha hecho consistentemente en cuarenta años.
 
-Fue ascendido a **líder de compañía.** No por carisma — por capacidad de absorber daño y seguir peleando.
+### Presente: El contrato del Council
 
-Sus hombres lo respetaban porque **literalmente se interponía entre ellos y muerte.**
+Hace ~1 año, un mensajero directo del **Triune Council** — no un intermediario, no una cadena, un mensajero con sello — contactó a Bram en un fuerte de Mistbound. Ofreció un contrato individual, no de compañía. Bram solo. Pago fuera de mercado.
 
-Pero cada batalla dejaba marca. Cada herida se sumaba. Cada muerte que veía — de sus hombres, de enemigos — se almacenaba en algún lugar del cuerpo donde no se cicatriza.
+*"Localiza a un grupo pequeño que va a moverse por The Wilds. Cuídalos como si te importaran. Cuando llegue el momento, en un lugar específico que sabremos indicarte, tomas una cosa que ellos cargan y la sacas por otra ruta. Entrega en superficie. Sin preguntas."*
 
-**Hace 5 años:** Bram pidió **retiro formal.** El Consejo rechazó. Dijo: *"Necesitamos gente como tú. Hay contratos pendientes."*
+Bram preguntó qué era "la cosa". Le dijeron que no era su asunto. Aceptó igual — era el contrato mejor pagado que había visto en cuarenta años. No sabía que era Speck. No lo supo hasta el nido. Aun ahí, no le importó de forma que se pareciera a moralidad — le importó de la forma en que le importa un peso extra en el cinturón.
 
-Bram continuó. Porque desertar hubiera significado abandonar a su compañía. Y Bram **nunca abandona gente.**
-
-### Presente: El Colapso Esperando
-
-Hace 2 años, el Consejo contactó a Bram: *"Hay trabajo especial. Pagamos bien. Libertad completa para tu compañía después — pueden retirarse, pueden quedarse, tu decisión."*
-
-**Por primera vez, Bram vio salida.**
-
-No porque desertara por cobardía. Sino porque finalmente le ofrecían **permitir a otros vivir sin él como muro.**
-
-Aceptó el trabajo. Pero el trabajo fue vago: *"Localizar variable. Cuando sea tiempo, ayudar a extraerla."*
-
-Bram no sabía que era Speck.
-
-Hace meses, el Consejo fue específico: *"La variable está con grupo en The Wilds. Cuando se active, tomas la variable. A cambio, libertad de tu compañía. Garantizado por contrato."*
-
-**Eso fue el anzuelo.**
-
-No fue tentación de poder o dinero. Fue promesa de **poder finalmente descansar.**
+El Council eligió a Bram con precisión: no tiene lealtad institucional, no tiene familia extendida presionable, no tiene juramento de forja ni de academia ni de clan. Solo tiene contrato. Y contrato es cosa que se cumple.
 
 ---
 
 ## Cómo lo Ve Roen (Humano, Conocimiento Previo)
 
-**Contexto:** Roen fue guardia del Consejo durante 15 años. Conoce a Bram de reportes — compañía mercenaria con historial de eficiencia brutal. Ambos hombres del Consejo, pero en extremos opuestos: Roen renunció, Bram no puede.
+**Contexto:** Roen también sirvió en **Mistbound Frontier** — fue guardia del Council allí durante 15 años antes de renunciar ([[Geografía y Ciudades]] §Mistbound). No fueron amigos, no fueron parte de la misma compañía, pero se cruzaron en fuertes, en cantinas, en registros. Roen reconoce el nombre "Bram" desde antes de esta aventura: reputación de escolta que no se rinde, línea que se mantiene sola cuando el resto se rompe.
 
-Cuando Bram se une al grupo, Roen lo reconoce: *"Frontera este. Compañía de Bram."*
+**La lectura privada de Roen** (5-10 líneas de subtexto que la escena no explicita pero que colorea cada intercambio):
 
-Bram: *"Consejo dijo que te conocía."*
+Roen ve a Bram y ve *la versión de mí que no supo cuándo parar*. Ambos empezaron en la frontera, ambos absorbieron peso ajeno por años, ambos fueron ascendidos por resistencia y no por talento. La diferencia: Roen renunció a los 15 años de servicio, en el mismo fuerte donde ahora todavía patrullan los reemplazos. Bram nunca renunció — o intentó, y no lo dejaron, y siguió por costumbre. Cuando Roen lo mira, ve la advertencia física de lo que pudo haber sido. No hay lástima; hay reconocimiento de un mecanismo peligroso. Roen sabe que un cuerpo que lleva ese peso tanto tiempo puede hacer dos cosas al final: aguantar hasta caer o aguantar hasta rehusar. Ninguna de las dos deja al hombre igual.
 
-Roen: *"Sé tu nombre. No sé tu historia."* (Roen no sabe de House Thorne — pocos
-lo saben. Bram enterró ese apellido hace 20 años.)
+Bram, por su parte, ve a Roen como *el que tuvo la suerte de saber cuándo parar*. Sin resentimiento — con reconocimiento. Roen es prueba viva de que existe la puerta; Bram nunca supo dónde estaba la suya. Cuando el jugador contrata a Bram y Roen ya está en el grupo, Bram no se sorprende — sabía que Roen sobrevivió a la frontera. Le da respeto silencioso: *"Tú saliste. Yo no supe."*
 
-Bram: *"Es la misma historia. Muro que se cansa."*
+**Cuando el grupo se forma:**
 
-**Primera impresión:** Roen ve a versión de sí mismo que continuó en lugar de dejar. Hay compasión. También hay peso — **Roen sabe exactamente lo que Bram está cargando.**
+> **Roen:** *"Bram. Mistbound. Compañía escolta."*
+>
+> **Bram:** *"Fuerte del norte. Recuerdo. Nunca hablamos."*
+>
+> **Roen:** *"Nunca hicimos falta."*
+>
+> **Bram:** *(medio segundo de pausa)* *"Todavía no."*
 
-**Cuando traiciona:** Roen dice: *"Llevabas 20 años rompiéndote por encargo. Finalmente alguien te ofreció permitir romper. No puedo culparte por aceptar."*
+Ni saludo cálido ni saludo tenso. Reconocimiento profesional entre dos hombres que compartieron un clima.
 
-No es absolvimiento. Es **reconocimiento de límite humano.**
+**Cuando Bram rechaza en el corredor:** Roen es el primero en entender lo que acaba de pasar. No dice nada durante segundos. Después, en voz baja: *"Cuarenta años cobrando por lo que te decían. Primera vez que cobras por algo que no puedes hacer. Lo sé porque casi me pasa a mí. La diferencia es que yo me fui antes."*
+
+Bram: *"Tú eres el afortunado, entonces."*
+
+Roen: *"No. Solo el que se cansó primero."*
 
 ---
 
 ## Encuentro con Jugador (Enano Strategist) — Contexto Específico
 
-**Primer encuentro (hace ~8 meses):** El jugador estaba buscando mercenario confiable para frontera. Fue recomendado a Bram. Se encuentran en cantina de frontera.
+**Primer encuentro (hace ~4 meses):** El jugador contrata escolta para una ruta peligrosa en **Mistbound Frontier**. Uno de los nombres que le recomiendan es Bram — veterano, caro, no negocia el precio. El jugador acepta. Se encuentran en una cantina de fuerte fronterizo. No hay ceremonia; hay una mesa, un contrato, y un apretón de manos.
 
-Conversación sobre liderazgo: el jugador pregunta cómo Bram mantiene compañía unida después de 20 años. Bram responde con verdad brutal:
+Bram: *"Ruta, tiempo, y qué cargas."*
 
-Bram: *"No la mantengo unida. La mantengo viva. Eso es diferente."*
+Jugador: *"[detalles de la misión]."*
 
-Jugador: *"¿Eso es suficiente?"*
+Bram: *"Está bien. Empezamos mañana."*
 
-Bram: *"Tiene que serlo."*
+Sin conversación de más. Otro trabajo, otra semana. Para el jugador es un mercenario más; para Bram es un cliente más.
 
-Contratación fue profesional — el jugador necesitaba guerrero, Bram necesitaba contrato que pagara bien. Pero durante contrato, **algo pasó:**
+**Lo que pasa en la ruta** es lo que no pasa en la mayoría de las rutas: el jugador **trata a Bram como persona.** Le pregunta cosas que no son operativas — de dónde es, si duerme bien, si le duele la rodilla que arrastra. Bram responde corto pero responde. En el tercer campamento, el jugador le sirve la cena antes de servirse a sí mismo. Bram lo nota. En el quinto, cuando cae un intento de emboscada, el jugador lo cubre a él, no al revés. Bram nunca ha estado en el otro lado del muro. Se queda pensando toda la noche en eso, sin decirlo.
 
-Bram vio al jugador (Enano Strategist) **liderar sin ser frío.** El jugador cuidaba a la gente pero también les permitía elegir. Liderazgo sin sacrificio de principios.
+Cuando termina el contrato, Bram no se va. Le pregunta al jugador si necesita a alguien más. El jugador dice que sí. Bram se queda por una razón que no formularía en voz alta: es la primera persona en años que lo trata como persona en vez de como recurso. Sigue cobrando — porque eso es lo que Bram hace — pero la tarifa se vuelve secundaria.
 
-Bram nunca tuvo eso. Su liderazgo era **sacrificio de principios para permitir que otros vivieran.**
+**No romance.** Respeto de líderes, y del lado de Bram, algo más blando que no tiene nombre.
 
-Se hicieron amigos. No romance — **respeto mutuo de líderes.**
-
-Hace 3 meses, Bram mencionó privadamente al jugador: *"Voy a retirarme pronto. Consejo me ofrece salida. Estoy considerando tomarla."*
-
-Jugador: *"¿Qué tipo de salida?"*
-
-Bram: *"La que requiere una última cosa."*
-
-Bram no fue específico. Pero **plantó la semilla.**
+Semanas después, cuando llega el contrato del Council, Bram acepta sin decirle al jugador. No porque planee traicionarlo — porque el pago es el pago, y "cuidar del grupo" es exactamente lo que ya está haciendo. El día en que el Council le pida "toma la cosa y sácala por otra ruta", Bram todavía no sabe qué va a hacer. Solo sabe que va a cargar el peso hasta averiguarlo.
 
 ---
 
-## Arco Acto 1 — Lealtad (Cuerpo Cansado)
+## Arco Acto 1 — Lealtad (Cumple sin entusiasmo)
 
 ### Escena: El Encuentro (Peso Visible)
 
-El jugador está en The Wilds con contrato del Consejo. Bram está ahí porque lo pidió el jugador.
+El jugador está en The Wilds. Bram cumple: camina, escolta, cobra. Bond débil — Bram no invierte, el jugador no fuerza. Es escolta y cliente que se caen bien.
 
-Bram: *"De nuevo juntos. Bien."* (Es lo que siempre dice. Pero esta vez hay cansancio audible.)
+Bram: *"De nuevo juntos. Bien."* (Lo que siempre dice. Hay cansancio audible.)
 
 Jugador: *"¿Estás bien?"*
 
-Bram: *"Siempre."* (Mentira que ambos creen porque es mentira de soldado.)
+Bram: *"Siempre."* (Mentira que ambos aceptan porque es mentira de soldado.)
 
-**En combate:** Bram pelea como siempre — es máquina de guerra. Pero hay **hesitación nueva.** Momento donde parece que considera quedarse fuera de la línea frontal.
+**En combate:** Bram pelea como siempre — economía de veterano. Nada de heroísmo, nada de sacrificio innecesario. Se pone entre el jugador y el daño porque para eso lo contrataron, no por afecto. Aún.
 
-Cuando el jugador lo nota, Bram dice: *"Estoy viejo. Es todo."*
+### Escena: El Nido de Speck (Instinto de Protector, contenido)
 
-(No es edad. Es cansancio.)
+Llegan al nido. Crisálida. Bestias guardianas. El jugador decide salvar o destruir.
 
----
+Bram lo mira. Primera reacción, dicha en voz alta: *"No es mi problema."*
 
-### Escena: El Nido de Speck (Instinto de Protector)
+Segunda reacción, no dicha: cuando el grupo hace campamento las dos noches siguientes, Bram vigila a Speck sin decírselo a nadie. Se levanta antes que el guardia de turno, camina al perímetro donde duerme Speck, se queda de pie diez minutos, vuelve a acostarse. Dos noches seguidas. Roen lo nota la segunda noche. No comenta.
 
-Llegan al nido. Crisálida.
+Cuando el jugador finalmente decide, Bram dice: *"Sea lo que sea, cubro tu espalda."* Es promesa. Es lo que Bram siempre dice. Esta vez hay grieta en la voz.
 
-**Bram ve la crisálida.**
+### Escena: El Primero (Aceptación del Grupo)
 
-Su primer instinto es **protector.** Este pequeño ser, vulnerable, en nido lleno de peligro — Bram quiere sacarlo del fuego.
-
-Cuando el jugador decide salvar o destruir, Bram dice: *"Sea lo que sea, yo cubro tu espalda."*
-
-Es promesa. Es **lo que Bram siempre dice.** Pero esta vez, cuando lo dice, hay grieta en voz — porque Bram sabe que esta promesa podría ser la que lo quiebre finalmente.
-
----
-
-### Escena: El Primero (Aceptación del Grupo — Muro Entre Mundos)
-
-Roen llega. Valen aparece. Maren aparece. Torgan aparece. Sereth aparece. Darro aparece.
-
-El Bound Five se forma. Bram es el séptimo.
+Roen ya está en el grupo. Valen aparece. Darro se integra en Driftmarket. Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[El Quinteto]]).
 
 **Bram aquí asume rol de protector del grupo:**
 - Se posiciona estratégicamente en campamento (siempre vigilante)
-- Es quien se ofrece para primeras guardias (nunca duerme completo)
-- Es quien se interpone entre conflictos grupales (mediador silencioso)
+- Se ofrece para primeras guardias (nunca duerme completo)
+- Se interpone entre conflictos grupales (mediador silencioso)
 
-Con el jugador: completamente leal. Pero la lealtad **se siente pesada.** Como si Bram estuviera sosteniendo muro que finalmente le falla.
+Con Roen: cortesía profesional de dos veteranos. Sin nostalgia.
+Con Valen: silencio respetuoso — Bram no entiende lo que Valen calcula, no pregunta.
+Con Darro: Bram bromea cuando Darro bromea, pero hay peso debajo. Darro lo nota y baja un poco el volumen cuando Bram está cerca. Nadie dice nada.
 
-Con Roen: interacción cómoda. Ambos hombres que conocen lo que significa ser muro. Se entienden sin palabras.
-
-Con Darro: Bram bromea cuando Darro bromea, pero hay **peso debajo.** Darro lo nota.
+Con el jugador: la relación se va cargando de a poco. Bram sigue cobrando, pero ya no cuenta los días.
 
 ---
 
-## Arco Acto 2 — Comunidad (El Muro Grieta, Oferta Llega)
+## Arco Acto 2 — Comunidad (Historias que no había contado)
 
 ### La Rueda Completa
 
-El Bound Five viaja. Bram camina con ellos. Pero internamente, **Bram está contando los días.**
+The Bound Five viaja los tres reinos. Bram, que ha caminado casi todos los caminos humanos y ninguno de los otros dos, se sorprende cada dos días. Emberdeep le impresiona en silencio; The Stillspire lo incomoda por altura; Rivermeet lo tensa porque es Rivermeet.
 
-Cada noche, contacta en secreto con Consejo: *"¿Llegó confirmación?"*
+Internamente, Bram sigue conectado al Council por señal cifrada que llega en formatos que solo él sabe leer: mensajes cortos que dicen "espera" o "pronto". No responde salvo cuando se le pide confirmación de posición. Nadie lo nota.
 
-Respuesta: *"Espera. Cuando Fragmento se active, daremos orden final. Tu libertad está garantizada."*
+En privado, alrededor del fuego, después de dos meses de camino, Bram empieza a contar cosas que no había contado en cuarenta años. Cortas. Historias de escolta. Nombres de compañeros muertos. Un chiste viejo de fuerte. El jugador las escucha sin forzar. Bram nunca contó estas cosas ni a los hombres que las vivieron con él — es raro que salgan ahora, con un grupo que no conoce el mapa mental de lo que describe. Lo raro es exactamente el punto: por primera vez en cuarenta años, hay alguien que escucha sin necesitarlo profesionalmente.
 
-### Speck Despierta
+### Sub-Acto 2A: Rivermeet (evita a House Thorne)
 
-Speck revela inteligencia. Bram lo ve.
+En Rivermeet, Bram **evita activamente** el ala de la ciudad donde vive House Thorne. Cambia rutas, propone rodeos, sugiere cantinas más lejanas. El jugador lo nota. Bram no explica. Cuando el jugador insiste — *"¿Hay algo aquí que no quieres cruzar?"* — Bram responde: *"Vieja historia. No es de esta aventura."* Cierra la puerta con la misma cortesía con que House Thorne le enseñó a cerrar puertas hace cuarenta años.
 
-Y **por primera vez en 20 años, Bram quiere un futuro donde proteger a alguien más.**
+### Grove of Cycles (a mitad del Acto 2)
 
-Bram nunca pensó en futuro. Era siempre presente — siguiente batalla, siguiente supervivencia. Pero Speck, pequeño ser viviente con consciencia, despierta algo en Bram que pensaba muerto:
+Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket.
 
-**Deseo de que alguien viva después de que él se vaya.**
+**Bram no participa del debate.** Se sienta al fondo, contra una raíz baja, mazo apoyado en el suelo. Los cuatro elfos discuten como si él no estuviera — o eso parece.
 
-Conversación privada (posiblemente nunca explicitada):
+**Threnn**, **Ilyara** y **Corwyn** no lo miran. Para ellos, Bram es escenario. **Maelys** sí lo mira, una vez, en el momento en que el debate se atasca. La mirada dura menos de un segundo. Bram le devuelve la mirada corta. Después Maelys vuelve a mirar el techo.
 
-Jugador: *"Speck te gusta."*
+**Disparadores para el encuentro individual** ([[Grove of Cycles — Escena del Acto 2]] §5): Bram no dispara acercamiento — no habla, no toma postura. Pero si **Ilyara** se acerca al jugador y el jugador está lejos de Bram, Ilyara puede pasar antes por él en el camino y dejar una línea corta: *"Cargas peso viejo. No lo apoyes contra árbol nuevo — el árbol es más joven que tú."* Bram no responde. Ilyara sigue. Si **Maelys** se acerca al jugador por Vector C, puede detenerse antes frente a Bram y decirle, sin sentarse: *"Tú ya elegiste. Ellos aún no."* Se retira. Bram no entiende la frase hasta el corredor del Archive, semanas después.
 
-Bram: *"Alguien debe protegerla."*
+**A la salida del Grove:** el grupo sale tenso, sin comentar el debate. Bram es el único que hace un chiste — corto, malo, sobre elfos y hojas. Nadie se ríe. Darro lo intenta y no le sale. Bram acepta el silencio; el intento era el punto, no el chiste.
 
-Jugador: *"¿No es eso lo que siempre haces?"*
+### La orden del Council llega antes del Archive
 
-Bram: *"Sí. Pero esta vez... siento que importa diferente."*
+Al final del Acto 2, en el Driftmarket, la señal cifrada del Council se vuelve específica: *"La cosa que buscamos está con el grupo. En el Sunken Archive, en el corredor de ascenso, la cargas por otra ruta. Extracción en superficie. Cumples el contrato, cobras el resto."*
 
-(Porque con su compañía, Bram protegía para que otros pudieran hacer su trabajo. Con Speck, quiere proteger para que **ella** pueda simplemente existir.)
-
-### La Verdad Filtra
-
-Hacia el final de Acto 2, el Fragmento se aproxima. Consejo envía mensaje:
-
-*"Orden final llegará en The First Wound. Tu libertad depende de esto. Veinte años de deuda, cancelados. Tu compañía libre. Es el trato."*
-
-Bram lee el mensaje.
-
-**Y por primera vez, considera rechazarlo.**
-
-No por moralidad — Bram no es moralista. Es porque **por primera vez en 20 años, tiene algo que proteger que no es su compañía.**
-
-Tiene al jugador. Tiene a Speck. Tiene al grupo.
-
-Pero también tiene compañía — cien hombres que dependen de su decisión. Si rechaza el trato, ¿qué les pasa?
+Bram lee el mensaje en su fuero interno. No dice nada. Duerme mal esa noche. Al amanecer, cuando el grupo se prepara para bajar, Bram guarda el mazo con la misma calma de siempre y camina detrás de Roen como cualquier otro día. Nadie nota nada.
 
 ---
 
-## Nudo → Clímax: La Traición y el Colapso
+## The Reckoning — Variante Bram
 
-### Escena: The First Wound (Clímax Emocional)
+Ver [[Geografía y Ciudades]] §THE RECKONING. En la ruta Bram, **Tobin no oye una orden a ejecutarse — oye que the Triune Council busca *"un segundo"*.** Alguien más está siendo activado en la sombra. Tobin no sabe quién es el segundo, no sabe que Bram ya recibió su propia orden, no sabe si Bram va a cumplirla o no. Solo sabe que hay actividad duplicada donde debería haber una sola pieza.
 
-El Fragmento se activa. Speck reacciona. La verdad emerge.
+Tobin le pasa el dato al jugador en la oficina trasera. La escena queda así de sesgada: el jugador entra al Archive sabiendo que el Council mueve piezas de más, pero **no sabiendo** que su Pivote asignado (Bram) ya intuye que no va a ejecutar. La pregunta del jugador durante el descenso no es "¿me va a traicionar Bram?" — es "¿por qué el Council necesita dos?"
 
-El Consejo, a través de contacto en The First Wound, da orden: *"Ahora. Toma la variable. Tu libertad está lista."*
-
-**Bram no actúa.**
-
-Por primera vez en 20 años, Bram **no obedece orden.**
-
-Se queda plantado. Mira a Speck. Mira al jugador. Mira al grupo.
-
-Y dice: *"No."*
-
-Simple. Una palabra.
-
-Consejo responde (mensaje cifrado): *"¿Qué?"*
-
-Bram: *"No. No voy a hacerlo. Mi compañía está libre de todas formas. Usé mis ahorros para comprar su libertad. Se lo anuncié hace una semana. Ustedes no son propietarios de ellos."*
-
-(Bram planeó esto. Gastó todo lo que ahorró en 20 años en libertad de su compañía.)
-
-Consejo: *"Violaste contrato. Hay consecuencias."*
-
-Bram: *"Sé. Estoy listo."*
-
-**Pero entonces el jugador actúa.** Maren actúa. Torgan actúa. Sereth actúa.
-
-**El grupo comienza a romperse.**
-
-Y Bram grita: *"¡¡¡NO!!!"*
-
-Porque ahora Bram comprende: **rechazó su libertad para nada.** El grupo se traiciona de todas formas.
-
-Es el momento donde Bram **finalmente se quiebra.**
-
-No es grito de guerra. Es grito de dolor.
-
-**Línea de traición (pero es rechazo de traición):**
-*"I've been everybody's wall. Just once, I wanted to be the door. But you won't even let me do that. Fine. I'm still the wall. I'll always be the wall."*
-
-Bram se coloca entre el grupo en conflicto y The First Wound — literalmente interponiéndose como escudo, incluso ahora.
+En la cena de la última noche en Driftmarket (ver [[Geografía y Ciudades]] §Beat 3 — variante Bram), Bram no levanta el vaso primero. Cuando lo hace es tarde y sin mirar a nadie. Después de que el grupo se retira a dormir, Bram se queda con el jugador un momento y pregunta: *"Si alguien más recibiera la orden que a mí me dieron... ¿tú qué crees que haría?"* El jugador no sabe todavía que Bram rechazó. La pregunta queda flotando. Al amanecer, en el corredor del Archive, tendrá sentido.
 
 ---
 
-## Arco Acto 3 — Desilusión (El Muro se Sostiene)
+## Nudo → Clímax: La traición-que-no-ocurre
 
-### Persecución (Pero Bram no corre)
+### Sub-beat 1-2 (Approach + Interior Archive)
 
-El grupo no persigue a Bram. Bram es quien se queda.
+El grupo desciende al Sunken Archive. Bram no comenta la ruta — la memorizó cuando el Council se la mandó. En el interior, cuerpos calcificados de la civilización Warden, inscripciones que Valen no puede leer, el Fragmento en el pedestal.
 
-No por deber. Por **acto final de protección** — Bram intenta sostener el grupo unido mientras se desmorona internamente.
+El jugador se pone the Wanderer's Goggles y ve la proyección Warden — el símbolo geométrico coincide con el patrón del pelaje de Speck ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Bram no ve la proyección** (los Goggles son privados). Lo que Bram ve es la cara del jugador cuando mira. No sabe qué mira; entiende que es algo grande. Un veterano de cuarenta años reconoce cuándo alguien acaba de recibir un peso nuevo. Bram siente, sin verlo, que "algo está pasando". No pregunta.
 
-Conversación clave:
+Su reacción visible en el Archive: se acerca a Speck sin ostentación, la mira una vez completa — beige, cristal debajo del pelaje que Bram no puede ver pero que su instinto le pinta — y aparta la mirada. En ese aparte, Bram decide algo que aún no se dice a sí mismo.
 
-**Jugador:** *"¿Por qué no te fuiste?"*
+### Sub-beat 3: Traición-que-no-ocurre en el corredor
 
-**Bram:** *"Porque alguien tiene que sostener el muro. Si todos nos vamos, se desmorona completamente. Al menos así hay alguna estructura."*
+El grupo empieza el ascenso hacia la superficie por el último corredor. Es un tramo largo y estrecho, con nichos laterales donde alguien podría desviarse. **Aquí ocurre la escena canónica de Bram — 20-30 líneas que la ficha desarrolla porque es el corazón del personaje:**
 
-**Roen:** *"Sacrificaste tu salida."*
+Bram se retrasa cinco pasos. Pretexto menor — revisar una inscripción, cubrir la retaguardia. Cuando el resto voltea, Bram tiene a Speck en brazos. La cargó de Roen sin resistencia, con la misma calma con la que carga cualquier peso. El grupo se congela — todos piensan lo mismo, incluso el jugador. Todos piensan que Bram va a huir por la ruta lateral.
 
-**Bram:** *"He sacrificado todo en 20 años. Una salida más no hace diferencia."*
+Bram no huye. Camina de vuelta hacia el jugador. Le devuelve a Speck, con las dos manos, como se devuelve una cosa que uno reconoce que no es suya. La escena tarda diez segundos completos porque Bram no se apura. Nadie interrumpe.
 
-**Darro:** *"¿Eso es vida?"*
+> **Bram:** *"Me pidieron que la cargue afuera por otra ruta. No voy a hacerlo."*
+>
+> *(Silencio. Roen es el primero en entender. Valen es el segundo. Darro tarda tres segundos más.)*
+>
+> **Jugador:** *"¿Cuándo te lo pidieron?"*
+>
+> **Bram:** *"Hace un año. Los detalles hace dos meses. La orden confirmada anoche. Iba a hacerlo hasta hace cinco minutos."*
+>
+> **Jugador:** *"¿Y qué cambió hace cinco minutos?"*
+>
+> **Bram:** *(pausa larga. Mira a Speck en las manos del jugador. Vuelve al jugador)* *"Nada. No cambió nada. Solo... no puedo."*
+>
+> *(Otro silencio. Bram elabora — no como confesión, como quien explica un cálculo que a él mismo le sorprendió.)*
+>
+> **Bram:** *"Llevo cuarenta años haciendo lo que me pagan. Es la primera vez que me pagan por hacer algo que no puedo hacer. No sé si es porque envejecí, o porque me acostumbré a que ustedes me consideraran gente. No importa. No voy a hacerlo."*
+>
+> **Roen:** *(sin subir la voz)* *"Sabes lo que sigue. El Council no acepta rechazos."*
+>
+> **Bram:** *"Sé. Es su problema, no el mío. Yo ya cumplí mi parte hasta donde puedo cumplir."*
+>
+> **Jugador:** *"¿Por qué ahora?"*
+>
+> **Bram:** *(medio segundo. Mira al jugador directo)* *"He sido el muro de todos por cuarenta años. Solo una vez, déjenme ser la puerta."*
 
-**Bram:** *"No. Pero es lo que hago."*
+**Línea canónica:** *"I've been everybody's wall. Just once, let me be the door."*
 
-### The First Wound (Clímax Emocional)
+La línea sale ahí. No como grito épico — como resolución callada de un hombre que ya decidió y solo lo está diciendo en voz alta porque el grupo necesita oírlo.
 
-Se desmorona todo. El grupo está roto. Bram permanece de pie porque **literalmente no sabe cómo caer.**
+El grupo sale del Archive **intacto**. Speck en brazos del jugador. Bram detrás, sin apurar el paso.
 
-**La decisión es del jugador.**
+### Sub-beat 4a: Afuera espera el segundo agente
+
+Cuando el grupo emerge a la superficie, un mensajero enano de bajo perfil — **NPC nuevo, alguien que el jugador no conocía** — se acerca a Torgan (o al enano fijo/Pivote más cercano si Torgan no está) con un mensaje sellado del **Great Forging Clan**. La orden, envuelta en lenguaje ritual, es la que Bram acaba de rechazar: tomar a Speck, entregarla en superficie por otra ruta.
+
+**El Council ya movió otra pieza al ver que Bram tardaba.** La advertencia de Tobin en Driftmarket (*"un segundo"*) se materializa en tiempo real. El grupo entiende, con un segundo de retraso, que el plan del Council no dependía de Bram — dependía de **cualquier** ejecutor. Bram no salvó a Speck rechazando; solo redistribuyó el problema.
+
+La traición mecánica ocurre igual, por otras manos. El segundo agente activa la escena de captura — puede ejecutarla ahí mismo en la boca del Archive, o huir con Speck si el grupo se dispersa un segundo, dependiendo de qué tan cohesivos vengan los Bonds del Acto 2. Es un traidor sin arco: no lo conocíamos, no le debíamos nada, no hay revelación emocional en él. Su función es puramente mecánica — mover a Speck al cráter para que el clímax siga ocurriendo.
+
+**Bram no persigue con nostalgia.** Persigue con el mazo. Es la primera vez en la aventura que Bram cambia de rol: ya no es escolta pagado, es aliado. La distinción, para él, es enorme, y no la va a decir en voz alta.
+
+### Sub-beat 4b: Persecución hacia The First Wound
+
+Ver [[Geografía y Ciudades]] §Acto 3 sub-beat 4. El grupo persigue al segundo agente por The Wilds hacia el cráter. Bram es el **único Pivote que se queda en Acto 3 completo** — no huye, no traiciona, no es cazado. Está del lado del jugador desde el corredor hasta el cráter.
+
+**Rol de Bram en la persecución:** Vanguard, como siempre. Se pone entre el jugador y el peligro físico. Carga el peso emocional que Roen no puede sostener solo — cuando Roen se ancla, Bram carga. En un momento específico, cerca de The Scar of Breaking, cuando el grupo pierde momentáneamente al segundo agente, Bram organiza el reagrupamiento sin dar órdenes explícitas: mira a Roen, mira al jugador, hace un gesto corto con la mano. Es el liderazgo que nunca ejerció formalmente en cuarenta años porque nadie se lo dejó.
+
+Conversaciones en la persecución:
+
+**Jugador (mientras corren):** *"¿El Council va a venir por ti?"*
+**Bram:** *"Sí. No hoy."*
+**Jugador:** *"¿Y cuando venga?"*
+**Bram:** *"Ya veremos si sigo respirando cuando venga."*
+
+**Roen (en un cuello de botella):** *"No tienes que estar aquí. Ya rechazaste."*
+**Bram:** *"Rechacé llevármela. No rechacé al grupo. Son cosas distintas."*
+
+**Darro (breve, cuando pueden):** *"Bram, si sobrevivimos, te invito la primera cerveza."*
+**Bram:** *"Trato."*
+
+### Sub-beat 5: Quiebre en The First Wound
+
+Se alcanza al segundo agente en el borde del cráter. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
+
+**Rol de Bram en el cráter:** cuando cualquier amenaza física se acerca a Speck — una bestia despierta, el segundo agente en su último movimiento, un desprendimiento de terreno — Bram se pone entre Speck y la amenaza. Reflejo de cuarenta años. No es decisión heroica: es el cuerpo antes de la mente. En un momento específico, Bram se lleva un golpe que iba para Speck. No cae. Se sostiene con el mazo apoyado en el suelo. Roen lo mira y no dice nada.
+
+**Bram no toma la decisión del final** — la toma el jugador. Lo que Bram hace es mantener a Speck físicamente protegida hasta que el jugador elija. Después, se retira dos pasos y espera.
 
 ---
 
-## Finales — Variantes por Decisión
+## Finales — 5 Variantes según Matriz Rechazo/Ausencia
 
-### Final 1: The Guided Molt (Perdón — Si Perdonas a Bram)
+Ver [[Los 4 Finales]] — Bram ocupa la fila "Rechazo / Ausencia". Cada final es la traducción de su celda a voz Bram, sin contradecir ninguna otra celda de su fila.
 
-Bram es... ¿perdonado? Eso no tiene sentido en la mente de Bram. Bram **nunca se perdonó a sí mismo.**
+### F1 — The Guided Molt (Speck completa la Muda)
 
-**Epílogo:** Bram regresa con el grupo. Continúa siendo el muro. Pero esta vez, **permite que otros lo sostengan a él ocasionalmente.**
+Bram vive. La Muda cierra sobre sí misma. Los God-Cores dejan de responder. El paisaje del cráter cambia de raíz.
 
-Es cambio mínimo. Pero para Bram, es revolución.
+**Epílogo:** Bram termina el juego en paz por primera vez en cuarenta años. Regresa a Rivermeet — no al ala de House Thorne, no al ala del Council, a un barrio bajo cerca del río. Consigue trabajo pequeño (descarga de barcazas, seguridad de mercado nocturno — algo que un veterano de sesenta y pico puede hacer sin quebrarse). No lleva mazo. La pulsera de cuerda con los nombres tallados sigue en la muñeca, pero ya no la toca cada noche. Le llega, semanas después, un mensajero del Council con una moneda cara y una advertencia — Bram devuelve la moneda y no responde. No pasa nada más. El Council ya perdió; su venganza sería redundante.
 
-Años después, cuando todo se resuelve, Bram finalmente **permite que su compañía le diga:** *"Descansa. Ya hiciste suficiente."*
+Muere de viejo, unos años después. Su compañía original (los que quedan) manda a un enviado al funeral. El jugador manda a otro. Ninguno de los dos se cruza con Roen ahí, pero los tres saben.
 
-Bram descansa. No es alegría. Es paz.
+### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Último pensamiento de Bram: *"Veinte años como muro. Finalmente permito que otros construyan estructura. Es suficiente."*
+Bram **no ejecutó** — no aplica directo. El segundo agente cumplió. Speck viaja al Council, viva, y los God-Cores se apagan.
 
-### Final 2: The Long Winter (Muerte — Si Bram Muere)
+**Epílogo:** Bram vive con **una culpa nueva** — la de no haber traicionado antes. Racionalización dolorosa: *"Si yo hubiera cumplido en el corredor, el Council no habría activado al segundo. Yo la hubiera cargado hasta la superficie sin persecución, sin daño colateral, sin la escena del cráter. Quizás Speck no habría llegado tan rota. Quizás la 'custodia digna' que prometieron era menos mentira si la ejecutaba yo."*
 
-Bram muere haciéndose a un lado — no por heroísmo, sino porque **finalmente su cuerpo se rinde.**
+Todo eso es falso — el Council mentía igual — pero Bram no puede saberlo. Vive con la duda. Sigue en Rivermeet, sigue haciendo trabajo pequeño, sigue callando. La pulsera se tensa cada noche.
 
-**Epílogo:** Su compañía, libre como prometió, vive. Pero Bram no está para verlo.
+Es peor que F1 porque F1 le dio paz. F2a le dio una duda que no cierra. Bram, acostumbrado a la culpa de cuarenta años de servicio, absorbe esta también — con la diferencia de que esta se la puso él mismo, no un contrato.
 
-El jugador encuentra nota que Bram escribió hace años y dejó con su teniente:
+### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-*"Si muero antes de verlos libres, diles que fue la única cosa que hice bien. Que valió la pena los veinte años."*
+Bram vive. Speck no llegó viva al final — combate accidental, herida acumulada, o el Fragmento la sobrecargó antes de que nadie decidiera. Nadie gana.
 
-### Final 3: The Conqueror's Clause (Encadenamiento — Si Bram es Capturado)
+**Epílogo:** Bram vive con la **misma culpa duplicada** de F2a. *"Si yo hubiera cumplido, quizás Speck hubiera llegado viva a algún lugar. Quizás mi ejecución habría sido menos violenta que la del segundo agente. Quizás."* Falso, otra vez — la Fragmento no se controla, la persecución no es rescatable por delicadeza — pero Bram no puede saberlo.
 
-Bram es capturado. Encadenado. **Al mismo Consejo que pensaba lo tenía esclavizado.**
+Se retira a un pueblo pequeño de Mistbound Frontier, no a Rivermeet. Ahí, en el clima ventoso y árido que conoció a los quince años, muere unos años después. La pulsera se queda en el cajón del último cuarto que rentó. Un mesonero la encuentra, no sabe quién es, la tira. Nadie visita la tumba.
 
-**Epílogo:** Bram vuelve a ser muro. Pero ahora el muro es **explícitamente prisión.**
+### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Años después, muere prisionero. Su compañía, que compró con sus ahorros, vive libre. Eso es la única cosa que lo sostiene — saber que aunque él esté encadenado, ellos no.
+Bram **nunca te siguió tan lejos.** Se va antes del cráter — específicamente, en el momento en que el jugador decide cruzar el borde hacia el core central. No hay ceremonia, no hay discurso, no hay confrontación. Bram deja el equipo que el jugador le dio (armadura menor, mazo secundario, ración de campamento) en el suelo, apilado con orden militar, y camina en dirección opuesta.
 
-### Final 4: The Warden's Choice (Síntesis — Si Speck Elige)
+No es traición ni deserción — es rechazo, que es lo único que Bram sabe hacer desde el corredor. Rechazó al Council y rechaza al jugador con el mismo mecanismo.
 
-Speck elige. El mundo se transforma.
+**Epílogo:** Bram desaparece. No vuelve a Rivermeet, no vuelve a Mistbound. Alguien lo ve en un fuerte perdido meses después, un año quizás; después no lo ve nadie. Es el epílogo más corto de los cinco porque Bram, en F3, ya no es narrable. Un hombre que rechazó dos veces no vuelve a ser útil como personaje.
 
-**Epílogo:** Bram **finalmente se retira.** No porque lo ordene alguien — porque él elige.
+### F4 — The Warden's Choice (síntesis — final verdadero)
 
-Por primera vez en vida de Bram, **hace algo porque lo quiere, no porque es necesario.**
+Speck elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
 
-Se va a pequeño lugar. Construye casa (lentamente, sin prisa). Busca paz.
+**Epílogo:** Bram **se queda por elección propia — único final donde lo hace.** Es el mejor destino posible para Bram y es canon exclusivo de F4 ([[Los 4 Finales]] §matriz — celda Rechazo/Ausencia × F4). No se queda como empleado, no como escolta, no como contratado por nadie. Se queda porque quiere.
 
-Su compañía visita a veces. El jugador visita a veces. Bram sonríe — cosa rara.
+Elige asentarse cerca del cráter transformado — no dentro, no en Rivermeet, en el borde donde el nuevo paisaje empieza. Ayuda a construir el primer campamento estable de los peregrinos que van a ver el core central de Speck. No cobra. Cuando le preguntan por qué, responde: *"Cuarenta años cobrando. Prefiero unos cuantos gratis."*
 
-Último pensamiento de Bram: *"Veinte años siendo el muro. Veinte años más siendo la puerta. Es balance."*
+El jugador lo visita ocasionalmente. Bram sonríe — cosa rara. La pulsera con los nombres talladados sigue en la muñeca, pero ahora la lleva más suelta. Le agrega, una noche, un nombre más en el nudo interior — no se lo dice a nadie, y el nombre no es el de un caído. Es el nombre del jugador.
+
+Último pensamiento (no dicho, no narrado, sembrado): *"Cuarenta años siendo el muro. El resto de la vida siendo la puerta. Balance."*
 
 ---
 
@@ -394,72 +347,58 @@ Su compañía visita a veces. El jugador visita a veces. Bram sonríe — cosa r
 
 *"I've been everybody's wall. Just once, let me be the door."*
 
-**Contexto:** El deseo de Bram no es ser héroe o traidor. Es simplemente **dejar de ser indispensable.**
+**Contexto:** el deseo de Bram no es ser héroe ni traidor. Es simplemente **dejar de cargar la carga que se le paga por cargar.** La línea funciona solo bajo el canon nuevo (Bram no traiciona) — bajo cualquier lectura donde Bram ejecutara el contrato, la línea se rompe.
 
 ---
 
 ## Dinámicas con Roen, Valen y Darro
 
-### Bram + Roen (Ambos Humanos — Caminos Bifurcados)
+### Bram + Roen (Ambos Humanos — Mistbound compartido)
 
-**Primera impresión:** Roen ve a sí mismo de hace 15 años. Bram ve a la versión de sí mismo que renunció.
+**Primera impresión:** ver §"Cómo lo Ve Roen" arriba. Reconocimiento profesional entre dos hombres que compartieron un clima; sin nostalgia, sin resentimiento.
 
-*"¿Por qué viniste si no querías estar aquí?"*  
-*"¿Quién dijo que no quería? Solo dije que tenía duda."*  
-*"Yo no tenía esa opción."*
+**Tensión:** Roen entiende exactamente lo que Bram carga porque él mismo casi lo cargó. No lo dice hasta que Bram rechaza. En el camino, cuando se cruzan alrededor del fuego, hablan poco. Cuando hablan es sobre cosas menores: la calidad del pan de fuerte, un nombre común de teniente, el año en que un puesto se cayó.
 
-**Tensión:** Roen pregunta si Bram podría dejar de ser muro. Bram: *"No. Eso soy."*
-
-Roen: *"Eso es lo que yo pensaba también."*
-
-**Cuando rechaza traicionar:** Roen dice: *"Compraste libertad de tu compañía. Luego rechazas tu propia libertad. Eso es sacrificio que no necesitas."*
-
-Bram: *"Pero es sacrificio que puedo hacer."*
+**Cuando Bram rechaza en el corredor:** ver diálogo arriba. Roen es el primero en entender, y su reacción es reconocimiento, no absolución.
 
 ### Bram + Valen (Soldado vs. Observador)
 
 **Primera impresión:** Valen ve a alguien que actúa sin calcular. Bram ve a alguien que observa sin actuar.
 
-Conversación sobre decisiones: Valen pregunta si Bram piensa antes de atacar. Bram: *"No. Defensa no tiene tiempo para pensamiento."*
+Conversación una noche en Emberdeep: Valen le pregunta a Bram si piensa antes de atacar. Bram: *"No. Defensa no tiene tiempo para pensamiento."* Valen: *"Exactamente. Por eso guerreros como tú cargan más peso — los calculadores como yo disipamos responsabilidad en ecuaciones."*
 
-Valen: *"Exactamente. Por eso guerreros como tú cargan más peso. Calculadores como yo podemos disipar responsabilidad en ecuaciones."*
+**Tensión:** respeto mutuo sobre diferencia irreconciliable. Valen nunca le pregunta a Bram sobre House Thorne (Valen no lo sabe; si lo intuyera, no preguntaría por decoro élfico).
 
-**Tensión:** Hay respeto mutuo porque reconocen diferencia irreconciliable.
-
-**Cuando rechaza traicionar:** Valen: *"Tu cálculo fue más simple que el mío. Amabas más de lo que temías. Eso es tipo diferente de valentía."*
+**Cuando Bram rechaza:** Valen dice, en el corredor, tras el silencio: *"Tu cálculo fue el más simple que he visto. Un veterano de cuarenta años decidiendo en cinco minutos. Impresionante."* Bram: *"No fue cálculo. Fue cansancio."* Valen: *"En un veterano de cuarenta años, es la misma cosa."*
 
 ### Bram + Darro (Peso vs. Ligereza)
 
 **Primera impresión:** Darro ve a alguien que carga peso. Bram ve a alguien que no tiene que cargar.
 
-*"¿Por qué eres tan serio?"*  
-*"Porque alguien tiene que serlo."*  
-*"Eso es deprimiente, hermano."*  
+*"¿Por qué eres tan serio?"*
+*"Porque alguien tiene que serlo."*
+*"Eso es deprimiente, hermano."*
 *"Sí. Pero es verdad."*
 
-**Tensión:** Darro intenta hacerlo bromear. Bram intenta no ser peso para otros.
+**Tensión:** Darro intenta hacerlo reír; a veces le sale, a veces no. Bram intenta no ser peso para otros. Cuando Bram baja la guardia en Acto 2 y cuenta historias viejas, Darro es el que más escucha — sin bromear, con seriedad rara.
 
-**Cuando rechaza traicionar:** Darro abraza a Bram — cosa rara de Darro.
+**Cuando Bram rechaza:** Darro tarda tres segundos más que Roen y Valen en entender. Cuando entiende, abraza a Bram — cosa rara. *"Gracias por no llevártela. Sé que te iba a costar."* Bram: *"Costó. No importa."* Darro: *"Sí importa."*
 
-*"Gracias por no abandonarnos. Sé que querías."*
-
-Bram: *"Siempre quiero. Pero alguien tiene que sostenerse."*
-
-Darro: *"Ya no. Ahora sostenemos juntos."*
+En el epílogo F4, Darro es el que va más seguido a visitar a Bram en el campamento del cráter. Le lleva cerveza, se queda una noche, se va al día siguiente sin discurso.
 
 ---
 
 ## Diseño Visual Ratificado
 
-- Humano masculino, 6'2", complexión masiva y sólida (no grasa, puro músculo denso)
+- Humano masculino, 6'2", complexión masiva y sólida (no grasa, puro músculo denso, empezando a ceder por la edad — más lento que antes)
 - Cabello castaño grisáceo, cortado corto y práctico (sin tiempo para vanidad)
-- Piel bronceada de frontera, **cubierta de cicatrices visibles** — brazos, cuello, frente
-- Ojos marrones, pero con líneas profundas de cansancio alrededor
-- **Postura:** Erguida incluso en cansancio, peso plantado, listo para combate incluso dormido
-- **Movimiento:** Lento pero intencionado, economía de movimiento de veterano
-- **Gear:** Ropa práctica de soldado en grises/negros, refuerzos de cuero sobre puntos críticos, sin armadura pesada (movilidad > protección)
-- **Arma:** Mazo de dos manos (arma de brawler, impacto puro), daga de sidearm
-- **Adorno único:** Pulsera de cuerda tejida en muñeca izquierda — tiene nombre de cada soldado que perdió tallado en ella. Nunca se la quita.
+- Piel bronceada de frontera, **cubierta de cicatrices visibles** — brazos, cuello, frente, mano izquierda con un dedo torcido de una fractura vieja mal soldada
+- Ojos marrones, con líneas profundas de cansancio alrededor — no cansancio de una noche, cansancio de cuarenta años
+- **Postura:** erguida incluso en cansancio, peso plantado, listo para combate incluso dormido. En Acto 3, ligeramente más relajada — como si el rechazo del corredor le hubiera aflojado una tensión invisible
+- **Movimiento:** lento pero intencionado, economía de movimiento de veterano
+- **Gear:** ropa práctica de soldado en grises/negros, refuerzos de cuero sobre puntos críticos, sin armadura pesada (movilidad > protección)
+- **Arma:** mazo de dos manos (arma de brawler, impacto puro), daga de sidearm
+- **Adorno único:** pulsera de cuerda tejida en muñeca izquierda — tiene el nombre de cada soldado que perdió tallado en ella. Cuarenta años de nombres. Nunca se la quita. En F4, agrega un nombre más al nudo interior; no dice cuál.
 
 ---
 
@@ -469,12 +408,12 @@ Darro: *"Ya no. Ahora sostenemos juntos."*
 - Villano
 - Cobarde
 - Incapaz de amar genuinamente
+- Traidor (por primera vez, con canon nuevo: es la excepción del elenco)
 
 **Bram SÍ es:**
 - Alguien quebrado por **servicio sostenido**, no por evento específico
-- Capaz de rechazar su propia libertad por otros
-- El Pivote que **potencialmente NO traiciona** — o traiciona por agotamiento tan profundo que es casi suicidio
+- Capaz de rechazar un contrato después de cuarenta años de cumplirlos
+- **El único Pivote que rehúsa** — la excepción intencional del elenco
 
 **Línea privada de Bram (nunca dicha aloud):**
-*"Veinte años diciéndole a mi cuerpo que continue. Veinte años siendo la cosa que otros esconden detrás. Veinte años sin permitir que nadie vea cuánto duele. El Consejo me ofreció salida — libertad para mi compañía, libertad para mí. Y cuando finalmente tenía salida, no pude tomarla porque el grupo me necesitaba. Eso no es nobleza. Es enfermedad. Pero es mi enfermedad. Y si esta enfermedad significa que otros pueden vivir, entonces cargaré la enfermedad. Siempre. Porque no sé ser otra cosa que muro. Y los muros no descansan. Los muros simplemente esperan a que se desmoronen."*
-
+*"Cuarenta años diciéndole a mi cuerpo que continue. Cuarenta años siendo la cosa que otros esconden detrás. Cuarenta años cobrando por hacer lo que me pedían. El Council me ofreció un contrato más — el mejor de todos, el que me hubiera dado retiro por escrito — y por primera vez no pude cerrar la mano. No es que sea mejor persona ahora. Es que este grupo me consideró gente, y a los sesenta uno se acostumbra a lo bueno más rápido que a los quince. La puerta era esta: dejar de ser útil. No me sale bien. Todavía cargo el peso en el cráter, todavía me pongo entre Speck y lo que venga. Pero al menos, esta vez, no lo cargué porque me pagaron. Lo cargué porque quise. Eso es la puerta."*

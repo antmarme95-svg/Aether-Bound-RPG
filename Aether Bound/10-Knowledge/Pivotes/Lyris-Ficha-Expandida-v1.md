@@ -1,7 +1,7 @@
 ---
-status: draft
-source: "Sesión 2026-07-23 — Pivotes Narrativa Expandida"
-updated: 2026-07-23
+status: ratificado
+source: "Sesión 2026-07-27 — QA fase 1, arquetipo Rechazo/Ausencia"
+updated: 2026-07-27
 ---
 
 # Lyris — C3 Pivote (Enano Vanguard Jugador)
@@ -9,7 +9,7 @@ updated: 2026-07-23
 **Raza / Rol:** Elfa (the Aether-Born) / Duelist  
 **Origen:** The Stillspire (pero fuera de ciudad, en frontera aérea)  
 **Edad aparente:** 170-200 años (joven para elfa, cazadora)  
-**Arquetipo de Traición:** Lógica fría expresada con calma quirúrgica  
+**Arquetipo de Traición:** Lógica fría expresada con calma quirúrgica. Superlativo: **la más fría** — sentir y suprimir, no ausencia de sentimiento (ver [[Los 4 Finales]] — fila Rechazo/Ausencia).  
 
 ---
 
@@ -43,9 +43,20 @@ pertenecer a algo — es que su gente nunca estuvo en la mesa donde se discute
 el "por qué" de nada. Solo reciben coordenadas. Ella hace lo mismo, sin
 cuestionar, porque es lo único que su tradición le enseñó a hacer.
 
+**Cadena hasta el Council:** Frontier High Command → escolta aérea de
+frontera → Lyris. En su ruta, **the Triune Council usa el propio Frontier
+High Command como canal encubierto** — la orden de captura llega por el
+mismo aparato militar bajo el que Lyris siempre operó, empaquetada como
+"objetivo prioritario de frontera". Ni Lyris ni su cadena inmediata saben
+que la orden nace en Rivermeet, no en Stillspire — el Council opera con
+negabilidad, y Frontier High Command es un intermediario limpio porque
+técnicamente reporta a la Corona élfica, no al Council humano. Lyris no lo
+descubre en la aventura. Traiciona pensando que sirve a su cadena; en la
+práctica sirve al Council.
+
 ## Biografía Pre-Aventura
 
-### The Stillspire: Rechazo (edades 0-80)
+### The Frontier High Command: Rechazo (edades 0-80)
 
 Nacida cerca de The Stillspire pero **fuera de círculos políticos y
 académicos por completo.** Familia fue cazadores de frontera aérea — no
@@ -60,7 +71,7 @@ A los 40 años, Lyris era rastreadora suprema — podía predecir movimiento de 
 
 ### Años de Frontera Aérea (edades 80-170)
 
-Lyris trabajó de cazadora para The Stillspire — protegiendo frontera aérea de incursiones de bestias. Fue trabajo solitario. Fue trabajo que la mantuvo **mental y emocionalmente alejada** de la ciudad que protegía.
+Lyris trabajó de cazadora para **Frontier High Command** — protegiendo frontera aérea de incursiones de bestias. Fue trabajo solitario. Fue trabajo que la mantuvo **mental y emocionalmente alejada** de la ciudad que protegía.
 
 90 años rastreando. 90 años sin formar vínculos. 90 años siendo útil precisamente porque no le importaba.
 
@@ -171,7 +182,7 @@ Llegan al nido. Crisálida.
 
 **Lyris ve la crisálida.**
 
-Reconoce inmediatamente: esto es lo que Stillspire mencionó. Variable.
+Reconoce inmediatamente: esto es lo que Frontier High Command mencionó. Variable.
 
 Cuando el jugador decide salvar o destruir, Lyris dice: *"Cualquiera sea la decisión, requiere movimiento. Yo facilito."*
 
@@ -202,9 +213,9 @@ Con otros: distancia profesional. Útil. Nada más.
 
 El Bound Five viaja. Lyris vuela sobre, siempre vigilante.
 
-Cada noche reporta secretamente a Stillspire: *"Variable se mueve según patrón X. Grupo muestra dinámica Y. Recomiendo acción en punto Z."*
+Cada noche reporta secretamente por señal atmosférica a **Frontier High Command** (sin saber que la orden fue plantada por the Triune Council): *"Variable se mueve según patrón X. Grupo muestra dinámica Y. Recomiendo acción en punto Z."*
 
-Stillspire: *"Continúa rastreando. Acción vendrá."*
+Frontier High Command: *"Continúa rastreando. Acción vendrá."*
 
 ### Speck Despierta
 
@@ -214,52 +225,60 @@ Speck revela inteligencia.
 
 Lyris casi—casi—se permite fascinar. Pero se detiene a sí misma. No puede permitir fascinación.
 
+### Grove of Cycles (a mitad del Acto 2)
+
+Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Lyris **incómoda en interior** — cuarenta y cinco años sin techo sobre la cabeza pasan factura. Se queda cerca de la salida sur, contra un árbol, con la vista alta hacia el follaje. Rastrea el techo de hojas por costumbre, buscando una salida de emergencia aérea que en el Grove no existe.
+
+**No participa del debate.** Los cuatro elfos hablan como si ella no estuviera. Ilyara la mira una vez, larga, en el momento en que menciona "sangrar por lo ajeno". Lyris asiente sin abrir la boca — es lo único que dice en toda la escena. Threnn, Corwyn y Maelys no la buscan; Lyris no dispara ninguno de los cuatro disparadores del encuentro individual ([[Grove of Cycles — Escena del Acto 2]] §5). Sale del Grove tan silenciosa como entró, pero con un dato nuevo: los cuatro élderes discuten variables que Frontier High Command nunca discute. Le pesa un segundo. Se sacude el peso al salir. Vuela quince metros arriba del grupo el resto del trayecto a Driftmarket.
+
 ---
 
-## Nudo → Clímax: La Traición Cantada
+## Nudo → Clímax: La Traición al Salir del Archive
 
-### Escena: The First Wound (Clímax Emocional)
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Lyris **no traiciona en el cráter** — traiciona **al salir del Sunken Archive**. El descenso, la persecución aérea y el cierre en First Wound son consecuencias.
 
-El Fragmento se activa. Speck reacciona. La verdad emerge.
+### Sub-beat 1-2: Approach + Interior Archive
 
-Stillspire da orden (mensaje cifrado en viento — Lyris lo lee en presión atmosférica): *"Ahora. Trae la variable."*
+El grupo desciende al Archive. Lyris incómoda en subterráneo — no vuela, no ve cielo, no lee viento. Camina con el grupo por primera vez desde que se conocieron. Solo Valen lo nota. No comenta.
 
-**Lyris actúa.**
+En el interior, cuerpos calcificados de la civilización Warden. **Reacción visible de Lyris: silencio.** Ve los cadáveres, ve las inscripciones que Valen no puede leer, no comenta ni una palabra. Pero hace algo más grande que un comentario — **deja de volar durante todo el interior del Archive.** Camina en el suelo con el grupo desde la entrada hasta la salida. Es el gesto de respeto más grande que Lyris ha ofrecido en la aventura, quizás en su vida entera. Solo Valen lo lee correctamente. Los demás asumen que es tema técnico (aire viciado, techo bajo). Valen sabe que no.
 
-Desciende. Toma a Speck. Asciende — listo.
+El jugador se pone the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2) — símbolo geométrico que coincide con el pelaje de Speck. **Lyris no ve la proyección** (los Goggles son privados; los flashes son invisibles incluso desde el aire). Lo que Lyris ve es la cara del jugador. No le cambia el patrón — el patrón es más viejo que la piedad. Ya estaba activo antes del Archive.
 
-**El jugador lo ve.**
+### Sub-beat 3: Traición al salir del Archive
 
-*"Lyris. No."*
+En el último corredor de ascenso, Lyris se retrasa cinco pasos. Cuando el grupo voltea, tiene a Speck en brazos y una ruta lateral que sube por una grieta natural — pequeña, vertical, exactamente del ancho para que suba sola y no la sigan.
 
-Lyris desciende una última vez. Mira al jugador a los ojos. Por primera vez, **dice verdad incómoda.**
+El **mensaje cifrado** llega por la primera corriente de aire real que Lyris siente desde que entró al Archive — Frontier High Command lo mandó horas atrás y ella lo lee en la presión atmosférica del corredor: *"Ahora. Trae la variable."* Lyris no sabe que la orden fue plantada por el Council; obedece a la cadena que conoce.
 
-Lyris: *"Eras stillness. Eras razón para estar en tierra. Pero la tierra te destruirá. El cielo es verdad. Y la verdad requiere sacrificio."*
+Antes de subir, Lyris desciende un metro y mira al jugador a los ojos. Por primera vez, dice verdad incómoda:
 
-Jugador: *"¿Me usaste?"*
-
-Lyris: *"No. Eras útil. También eras verdadero. Ambas cosas pueden ser."*
+> **Lyris:** *"Eras stillness. Eras razón para estar en tierra. Pero la tierra te destruirá. El cielo es verdad. Y la verdad requiere sacrificio."*
+>
+> **Jugador:** *"¿Me usaste?"*
+>
+> **Lyris:** *"No. Eras útil. También eras verdadero. Ambas cosas pueden ser."*
 
 **Línea de traición:**
 *"You were my stillness. Be still now. The world needs sky, not earth. I choose sky."*
 
-Lyris se va volando. Con Speck. Sin mirar atrás.
+Sube por la grieta. En cuestión de segundos está en la superficie, con Speck. En el aire.
 
 ---
 
-## Arco Acto 3 — Desilusión (La Persecución Aérea)
+## Arco Acto 3 — Persecución Aérea y Quiebre en el Cráter
 
-### Persecución
+Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → Traición al salir → Persecución → Quiebre en First Wound. Lyris cubre los cinco sub-beats; su decisión de traicionar ya ocurrió al salir del Archive.
 
-El grupo no puede seguir a Lyris al cielo. Pero Lyris **permite que intenten.**
+### Sub-beat 4: Persecución hacia The First Wound
 
-No por compasión. Por **elegancia.** Una caza debe darse la oportunidad.
+El grupo no puede seguir a Lyris al cielo directo — pero Lyris es **más rápida que cualquiera** en el aire, y usa esa ventaja sin ceremonia. No permite acercamientos por elegancia; los permite porque no representan amenaza. Vuela alto, en ruta directa al cráter, dejando al grupo perseguir por tierra en desnivel roto.
 
 Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 **Jugador:** *"¿¡POR QUÉ!?"*
 
-**Lyris:** *"Porque Stillspire lo requiere. Porque variable es peligro. Porque lógica no miente."*
+**Lyris:** *"Porque Frontier High Command lo requiere. Porque variable es peligro. Porque lógica no miente."* (No sabe que la orden fue plantada por el Council; cumple una cadena militar que cree limpia.)
 
 **Darro:** *"¡¡¡ERAS AMIGA!!!"*
 
@@ -269,45 +288,53 @@ Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 **Lyris:** *"Sentir es luxuría de tierra. El cielo requiere claridad."*
 
-### The First Wound (Clímax Emocional)
+### Sub-beat 5: Quiebre en The First Wound
 
-Se alcanza a Lyris — o casi. Está en el límite entre tierra y cielo, aérea pero vulnerable.
+Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. La aritmética que Lyris trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
+
+**No cruza al core central** — no es F3, no toma poder para sí. Sostiene a Speck y espera la orden siguiente que Frontier High Command no manda porque el Council mismo perdió el hilo del plan al llegar a este punto.
 
 **La decisión es del jugador.**
 
 ---
 
-## Finales — Variantes por Decisión
+## Finales — 5 Variantes según Matriz Rechazo/Ausencia
 
-### Final 1: The Guided Molt (Perdón)
+Ver [[Los 4 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bram, con lectura propia. Cada final es la traducción de su celda a voz Lyris, sin contradecir ninguna otra celda de su fila.
 
-Lyris es alcanzada pero no capturada. El jugador le ofrece perdón.
+### F1 — The Guided Molt (Speck completa la Muda)
 
-Lyris: *"No hay nada que perdonar. Actué según patrón."*
+Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
-Pero cuando Speck elige, cuando el mundo cambia, Lyris **finalmente baja.** No por obligación. Porque el patrón cambió.
+**Epílogo:** cuando finalmente se retira, no regresa a Stillspire ni a los Sky Watchtowers. Cambia territorio: se instala en una franja aérea sobre Mistbound Frontier — lejos de la cadena de Frontier High Command, lejos de todo. Ocasionalmente el jugador la ve como un punto contra el cielo, sin bajar. Nunca vuelve a hablar. Sigue viva, sigue volando, sigue sola. El patrón cambió; ella no.
 
-**Epílogo:** Lyris permanece con el grupo años después. Sigue siendo distante, pero ahora **permite que otros vean el cielo a través de sus ojos.** Enseña.
+### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-### Final 2: The Long Winter (Muerte)
+Lyris cumple. Traiciona, huye por aire, entrega a Speck en el punto acordado. No hay furia, no hay explicación, no hay confrontación.
 
-Lyris muere peleando — no por heroísmo, sino porque el jugador la alcanzó y ella decidió que si caía, caería airosa.
+**Se aparta con calma que hiere.** Después de entregar, asciende y no vuelve. El jugador la ve una vez más semanas después, en distancia — patrullando otra ruta al norte de Stillwood, cumpliendo un contrato distinto de Frontier High Command. No baja. No hace señal. Lyris no rompió con el jugador con palabras; simplemente cambió de patrón, y en su gramática esa es la ruptura más completa posible.
 
-**Epílogo:** Stillspire aprende que Lyris no volvió. Envían nueva rastreadora. El ciclo continúa.
+Ella asciende dentro de la cadena militar — Frontier High Command reconoce su ejecución impecable, le asigna franja más amplia, más autonomía. El Council recibe a Speck y ni siquiera pronuncia el nombre de Lyris; para ellos fue "el activo de la cadena élfica que respondió como se esperaba".
 
-### Final 3: The Conqueror's Clause (Encadenamiento)
+### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-Lyris es capturada. **Esta es la peor muerte para ella** — estar atada a tierra.
+**Lyris desaparece.** No hay cuerpo, no hay nota, no hay comunicación a Frontier High Command reportando el resultado. Podría haber caído en la persecución, podría haber renunciado, podría haber elegido no volver. El vacío es el epílogo.
 
-**Epílogo:** Lyris pasa años prisionera, mirando el cielo a través de rendijas. Nunca vuelve a volar. Muere de corazón roto, aunque nunca lo admita verbalmente.
+Frontier High Command marca su expediente como "no retornada"; envían nueva rastreadora. El ciclo continúa. El Council, más arriba, tacha una línea de un registro que nadie verá. Nadie del Bound Five sabe si Lyris está viva. Nunca lo sabrán. Es exactamente el tipo de silencio que Lyris habría diseñado si hubiera diseñado un final propio.
 
-### Final 4: The Warden's Choice (Síntesis)
+### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Speck elige. El Aether cambia. El cielo mismo se transforma.
+Lyris **no aparece en el epílogo.** Se va antes del cráter — literalmente asciende y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida.
 
-Lyris vuela sobre el nuevo mundo. Ve que todo cambió. Que su lógica era **incompleta.**
+Años después, si el jugador convertido en tirano intenta rastrearla, no la encuentra — Lyris es rastreadora, sabe cómo no ser rastreada. Su ausencia es más completa que la de cualquier otro compañero que huyó de F3: nunca deja huella. Es como si Lyris nunca hubiera bajado del cielo, retroactivamente.
 
-**Epílogo:** Lyris regresa con el grupo — no por perdón, sino porque el patrón ahora la incluye. El cielo y la tierra se conectaron. Ella vuela entre ambos.
+### F4 — The Warden's Choice (síntesis)
+
+Speck elige. El Aether comienza a sanar. El cielo mismo cambia — corrientes nuevas, presiones que Lyris nunca había leído, el patrón atmosférico se reescribe.
+
+**Lyris regresa con el grupo — el patrón ahora la incluye.** Cambio mínimo pero real: vuela más bajo, aterriza más seguido, pasa noches enteras en el campamento en vez de en los riscos. No se vuelve cálida — sigue siendo silenciosa, sigue calculando patrones antes de hablar — pero está **dentro del círculo** del grupo por primera vez. Cambio de patrón, no de personalidad.
+
+Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de campamento, se sienta al lado del jugador sin motivo aparente. Se queda hasta el amanecer. No hablan. Al amanecer despega. Vuelve la noche siguiente. Ese es su epílogo: presencia repetida donde antes había ausencia.
 
 ---
 

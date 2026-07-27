@@ -5109,3 +5109,45 @@ Sesión cerrada. Current-State.md migrado (partes 7-16 → Current-State-Histori
 2. QA narrativo con Opus (consistencia dramática de los 9 patrones de traición, epílogos de los 4 Finales, peso de The Reckoning, impacto de Speck-Warden en fichas existentes)
 
 Todos los demás pendientes documentados en Current-State.md §Pendientes.
+
+## [2026-07-27] sprint/QA-reparación | 2 QAs con Opus + Fase 0 completa + Fase 1 al 78%
+
+**QAs ejecutados con Opus:**
+- QA de congruencia (sintaxis + semántica): 10 CRÍTICOS · 18 IMPORTANTES · 20 MENORES. Causa raíz: 9 fichas de Pivote + Geografía y Ciudades con `updated: 2026-07-23`, un día antes del retcon de nombres en inglés. Nunca pasaron por la retraducción.
+- QA narrativo (dramática): 4 bloqueos duros identificados — ubicación de la traición (Sunken Archive vs First Wound), eje de los 4 Finales (destino de Speck vs destino del Pivote), ¿Bram traiciona?, relación Roen-Dagna faltante.
+
+**Decisiones de Boris para el sprint:**
+1. Traición: AMBOS — mecánica al salir del Archive → persecución → quiebre en First Wound.
+2. Bram: NO traiciona (excepción intencional).
+3. F2: partir en F2a (Speck entregada) / F2b (Speck muerta) — desbloquea el peor destino de Torgan.
+4. Elder Circle: escena grupal en Grove of Cycles (Acto 2) + encuentro individual por afinidad emergente.
+
+**Plan aprobado:** 4 fases (Opus arquitecto → Opus reescritura fichas ×3 paralelos → Sonnet propagación → Haiku lint). Referencia: `~/.claude/plans/cozy-floating-unicorn.md`.
+
+**Fase 0 completa** (Opus 5 arquitecto narrativo):
+- `Los 4 Finales.md` reescrito a 5 finales con matriz 5×3 canónica.
+- `Grove of Cycles — Escena del Acto 2.md` nuevo — 3 vectores diegéticos, debate del Elder Circle con 10+ intercambios en tono pasivo-agresivo élfico, encuentro individual por afinidad emergente.
+- `Geografía y Ciudades.md §ACTO 3` reescrito a 5 sub-beats.
+- `Geografía y Ciudades.md §THE RECKONING` con tabla Tobin corregida (señala a fijos C1/C2/C4 según raza del Pivote real, no a Pivotes inactivos — corrección de un error mío importante que Boris identificó). Wanderer's Goggles ajustados a 40+ años (Tobin joven, no sabio).
+- Higiene: "la Queen"/"el Regent"/"el Ambassador" residuales corregidos a título en español (regente, reina) o nombre propio en inglés sin artículo (Queen Ithessa, Regent Edrick).
+
+**Fase 1 parcial (7/9 fichas + Los 9 Pivotes.md):**
+- Maren ✅ (F2a/F2b desglosados, beat Warden, superlativo "la más peligrosa por cálculo puro", Rivermeet corregido)
+- Torgan ✅ (aritmética unificada 55 años, cadena de mando resuelta, F2b como peor destino canónico)
+- Sereth ✅ (reescritura mayor — eje movido de aritmética a manipulación pura, "conducción respetuosa" desde Royal Academy, línea canónica nueva "No te llevé a esta decisión. Te llevé a la persona que la toma.", superlativo "la traición más íntima")
+- Iven ✅ (Council mintiendo sobre la promesa; F2b devastador: asentamiento muere lentamente; F1 vs F4 diferenciados por culpa vs propósito)
+- Bram ✅ (reescritura mayor con canon "NO traiciona" — mecanismo del segundo agente integrado, aritmética 40 años, Mistbound Frontier en vez de "Frontera Este", único Pivote presente en Acto 3 completo)
+- Lyris ✅ (Frontier High Command en vez de Stillspire como cuerpo de mando, F1/F4 diferenciados)
+- Nyael ✅ (línea canónica nueva: jugador es alumno, no maestro; ejecutar→entregar viva; brazo encubierto de Royal Academy; género neutro; F4 vuelve como alumna)
+- `Los 9 Pivotes.md` ✅ (fila de Bram actualizada al canon nuevo)
+
+**Fase 1 pendiente (2/9):**
+- Vekka: reescritura completa (139→~450 líneas). Agente B falló con server error después de completar Torgan.
+- Dagna: reescritura mayor (242→~450, eliminar sección duplicada, agregar entrada Roen+Dagna canónica). Agente B falló antes de tocarla.
+
+**Retos técnicos de la sesión:**
+- 3 Opus 5 concurrentes rompieron el límite de sesión (5h) en el primer intento.
+- Server errors mid-response en 3 lanzamientos posteriores — probable saturación del backend.
+- Estrategia que funcionó: relanzar de a 2 con la Maren-Ficha completa como plantilla de referencia (aceleró y homogeneizó el output). Aun así 1 de los 2 falló al escribir Vekka+Dagna.
+
+**Fases 2/3/4:** sin arrancar. Pendientes para sesión siguiente después de cerrar Vekka+Dagna.

@@ -1,15 +1,15 @@
 ---
-status: draft
-source: "Sesión 2026-07-23 — Pivotes Narrativa Expandida"
-updated: 2026-07-23
+status: ratificado
+source: "Sesión 2026-07-27 — QA fase 1, arquetipo Deber Institucional"
+updated: 2026-07-27
 ---
 
 # Nyael — C3 Pivote (Humano Strategist Jugador)
 
 **Raza / Rol:** Elfa (the Aether-Born) / Duelist  
-**Origen:** The Stillspire (círculos de asesinos/cazadores)  
+**Origen:** The Stillspire — reclutada de niña por el brazo encubierto de the Royal Academy  
 **Edad aparente:** 180-210 años (adulta, veterana)  
-**Arquetipo de Traición:** Ausencia — no confrontación, solo nota deixada  
+**Arquetipo de Traición:** Ausencia — no confrontación, solo nota dejada. Superlativo: **la traición como ausencia** — única del elenco que no confronta (ver [[Los 4 Finales]] — fila Deber Institucional).  
 
 ---
 
@@ -39,12 +39,19 @@ could not wait"), no es solo ruptura de disciplina personal — **es el primer
 acto de juicio propio en una vida entera de obediencia a una institución que
 ni siquiera admite tenerla.**
 
+**La orden real que recibe:** *entregar viva*, no ejecutar. El Council
+necesita a Speck viva para su plan (matar a Speck no sana el Aether — es la
+mentira que se le da a Iven; a Nyael, como operativa del brazo encubierto,
+se le da la verdad operacional: captura y entrega en custodia). Toda
+referencia previa a "orden de ejecución" en esta ficha se lee ahora como
+orden de **captura y entrega en custodia** — ejecutar sería fracaso.
+
 ## Biografía Pre-Aventura
 
-### The Stillspire: La Sombra (edades 0-100)
+### The Stillspire: La Sombra (edades 0-100) — reclutada por el brazo encubierto de the Royal Academy
 
 Nacida y reclutada de niña por los círculos encubiertos de la Royal Academy
-dedicados a **ejecución perfecta.** No assassinato — ejecución. Hay diferencia: asesino mata por encargo, ejecutor mata porque la muerte es resultado inevitable de verdades no confrontadas.
+dedicados a **ejecución perfecta.** No asesinato — ejecución. Hay diferencia: asesino mata por encargo, ejecutor mata porque la muerte es resultado inevitable de verdades no confrontadas.
 
 Nyael fue entrenada desde niña para ser **invisible.** No literalmente (aunque técnicas llegan cerca). Invisible en el sentido de no dejar rastro emocional, no dejar rastro físico, no dejar rastro mental.
 
@@ -58,17 +65,17 @@ Pero Nyael desarrolló **costumbre rara:** después de cada ejecución exitosa, 
 
 Las notas nunca decían por qué. Solo decían: *"fue necesario."*
 
-Esto quebrantaba reglas de The Stillspire (no dejar rastro, no personalizar) pero era **marca de Nyael.** La reconocían por las notas, no por cuerpos.
+Esto quebrantaba reglas del brazo encubierto (no dejar rastro, no personalizar) pero era **marca de Nyael.** La reconocían por las notas, no por cuerpos.
 
 ### Presente: El Encargo
 
-Hace 1 año, The Stillspire la contactó: *"Hay variable. Estará con grupo en The Wilds. Cuando llegue el momento, ejecuta. Después, nota. Patrón usual."*
+Hace 1 año, el **brazo encubierto de the Royal Academy** — sección negable, sin firma, ejecuta operaciones que la Academia no reconoce públicamente — la contactó: *"Hay variable. Estará con grupo en The Wilds. Cuando llegue el momento, **la capturas y la entregas viva en custodia**. Después, nota. Patrón usual."*
 
 Nyael: *"¿Quién es variable?"*
 
-Stillspire: *"Irrelevante. Es variable."*
+Brazo encubierto: *"Irrelevante. Es variable. Y viva es requisito operativo — muerta no cumple."*
 
-Nyael aceptó. Porque Nyael acepta siempre. No cuestiona.
+Nyael aceptó. Porque Nyael acepta siempre. No cuestiona. Registra internamente el cambio de perfil de la orden (nunca antes había recibido "capturar viva"; su currículo es de ejecución) y lo procesa como afinación técnica más, no como pregunta.
 
 ---
 
@@ -77,14 +84,16 @@ Nyael aceptó. Porque Nyael acepta siempre. No cuestiona.
 **Contexto:** Valen es Academy of Sages — observa desde fuera de cualquier
 cadena de mando. Nyael es el brazo encubierto de la Royal Academy — observa
 desde dentro de la Corona misma, aunque la Corona nunca lo admitiría. Ambos
-son "sombras" de Stillspire, pero por razones institucionales opuestas.
+son "sombras" del aparato élfico, pero por razones institucionales opuestas.
 
 Valen sabe que Nyael existe. Nunca se han hablado — los círculos que
 entrenaron a Nyael no reconocen su propia existencia ante nadie, ni siquiera
 ante otros elfos poderosos. Pero Valen ha visto las notas. Valen **comprende
-lo que Nyael hace, y sospecha para quién realmente trabaja.**
+lo que Nyael hace, y sospecha para quién realmente trabaja** — el brazo
+encubierto de the Royal Academy, aunque ni él lo llamaría por ese nombre en
+voz alta.
 
-Cuando Nyael llega al grupo (sin ser invitada, simplemente está), Valen la nota: *"La sombra de Stillspire."*
+Cuando Nyael llega al grupo (sin ser invitada, simplemente está), Valen la nota: *"La sombra de la Corona."*
 
 Nyael: *"Observador de ciclos."*
 
@@ -138,7 +147,7 @@ Nyael: *"Nombre es irrelevante. Función es: observar. Estoy aquí."*
 
 Cuando el jugador pelea a su lado, Nyael nota: *"Tu técnica tiene patrón. Segundos 2-4 eres letal. Segundos 5-7 eres vulnerable. Aprenderás."*
 
-(Idéntico a Lyris pero dicho sin emociones. Lyris lo dice como dato. Nyael lo dice como profecía.)
+Nyael lo dice como profecía — no evalúa, augura.
 
 ---
 
@@ -175,9 +184,9 @@ Con el jugador: reconocimiento mutuo de que ella conoce TODO sobre él y elige n
 
 El Bound Five viaja. Nyael camina con ellos. Pero Nyael **está observando punto específico en futuro.**
 
-Cada noche reporta secretamente a Stillspire: *"Variable permanece en patrón X. Grupo muestra cohesión Y. Recomiendo acción en The First Wound cuando variables alineen."*
+Cada noche reporta secretamente al brazo encubierto de the Royal Academy: *"Variable permanece en patrón X. Grupo muestra cohesión Y. Recomiendo captura al salir del Sunken Archive."*
 
-Stillspire: *"Confirma cuando sea tiempo de ejecutar."*
+Brazo encubierto: *"Confirma cuando sea tiempo de capturar. Recordatorio: viva es requisito."*
 
 ### Speck Despierta
 
@@ -185,116 +194,149 @@ Speck revela inteligencia.
 
 Nyael lo ve. Nyael siente — por primera vez en vida, Nyael siente algo hacia objetivo. **Compasión.** O al menos, reconocimiento de que Speck es consciente de la muerte que viene.
 
-Nyael considera: ¿ejecutar ahora, mientras es inocente? ¿O esperar?
+Nyael considera: ¿capturar ahora, mientras es inocente? ¿O esperar al punto de máxima cohesión del grupo, para que la ausencia sea la evidencia?
 
-Elige esperar. Porque Nyael **ama la precisión de momento exacto.** Y el momento exacto es cuando el jugador más ama, cuando el grupo es más vulnerable, cuando la muerte será más devastadora.
+Elige esperar. Porque Nyael **ama la precisión del momento exacto.** Y el momento exacto es cuando el jugador más ama, cuando el grupo es más vulnerable, cuando la sustracción de Speck será más devastadora precisamente por no verse.
 
 Nyael no es cruel. Es **perfeccionista.**
 
+### Grove of Cycles (a mitad del Acto 2)
+
+Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Nyael entra sin hacer ruido — el Grove es de los pocos lugares donde su silencio no se distingue del silencio del sitio. Se sienta contra una raíz, medio metro detrás del grupo, mazo de dagas guardado. Los cuatro elfos no la miran directo. Threnn la nota — tarda un segundo más de lo debido en el saludo. Corwyn sonríe con la boca cerrada hacia ella una vez, en el silencio que sigue al primer intercambio con Ilyara. Reconocimiento profesional: Corwyn sabe para quién trabaja Nyael sin que nadie se lo haya dicho.
+
+**No participa del debate.** Pero cuando Maelys dice *"De quien está aquí y no se ha nombrado"*, Nyael cierra los ojos un segundo — el único gesto que hará en toda la escena. Es la primera vez que alguien nombra públicamente el peso de Speck, y Nyael lleva un año con el peso de Speck en la agenda. No dispara ninguno de los cuatro disparadores del encuentro individual ([[Grove of Cycles — Escena del Acto 2]] §5); su silencio es más silencioso que el de Maelys, y Maelys no se acerca a alguien más silencioso que ella. Sale del Grove como entró. Pero esa noche, en el campamento, mira a Speck cinco minutos completos sin moverse. Nadie lo nota excepto Valen.
+
 ---
 
-## Nudo → Clímax: La Traición Sin Confrontación
+## Nudo → Clímax: La Traición Sin Confrontación (al salir del Archive)
 
-### Escena: The First Wound (Clímax Emocional)
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Nyael **no traiciona en el cráter** — la captura ocurre **al salir del Sunken Archive**. La persecución asincrónica y la ausencia en First Wound son consecuencias.
 
-El Fragmento se activa. Speck reacciona.
+### Sub-beat 1-2: Approach + Interior Archive
 
-Stillspire da orden: *"Ejecuta ahora."*
+El grupo desciende al Archive. Nyael se mueve sin sonido — ya conocía la ruta, la memorizó en registros del brazo encubierto meses atrás.
 
-Pero Nyael **no va donde está el grupo.** Nyael va donde Speck será vulnerable.
+En el interior, cuerpos calcificados de la civilización Warden. **Reacción visible de Nyael: es la que menos tiempo pasa en el Archive.** Entra, escanea, sale. No lee inscripciones (no puede), no examina cadáveres, no toca cristales. Ve todo, no comenta. Su reacción emocional al Archive es privada y no se transcribe — Nyael es la que menos rastro deja incluso en su propio proceso interno.
 
-Toma a Speck con eficiencia quirúrgica. Después, desaparece.
+Antes de salir, hace algo que nadie le ha visto hacer con nadie: **acaricia el cuello de Speck una vez.** Un segundo. La palma sobre el pelaje beige, después la mano vuelve al costado. Es el gesto más íntimo que Nyael ha ofrecido en su vida — despedida silenciosa a un objetivo que va a capturar en horas. Speck no reacciona. Solo el jugador ve el gesto, si tiene los Goggles puestos en el ángulo correcto; si no, ni el jugador lo ve. Es un beat privado incluso dentro de la ficha.
 
-**El jugador nunca la ve actuar.** Solo ve que Speck se va. Solo después descubre la nota:
+El jugador se pone the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Nyael no ve la proyección** (los Goggles son privados; Nyael, aun habiendo observado al jugador semanas antes, no accede a los flashes). Su plan no cambia. La revelación Warden no es dato operativo — es contexto emocional del jugador, y Nyael no opera con contexto emocional ajeno.
 
-*"You taught me to set the trap and wait. I waited. I could not wait for you to act. So I acted first. Forgive me for graduating the lesson."*
+### Sub-beat 3: Captura al salir del Archive
 
-**Línea de traición:**
-*"You taught me to set the trap and wait. I could not wait."*
+En el corredor de ascenso, Nyael se retrasa medio paso — no cinco, medio. La ventaja de Nyael sobre cualquier otro Pivote es que no necesita distancia para desaparecer. Cuando el grupo voltea, **Nyael no está y Speck no está.** No hay ruta lateral visible, no hay señal de forcejeo. Simplemente ausencia.
+
+El mensaje del brazo encubierto llegó horas antes por señal muerta que solo Nyael sabe leer: *"Ahora. Captura viva. Extracción por ruta 7."*
+
+Nyael toma a Speck con eficiencia quirúrgica — inconsciente por técnica de presión, no herida, no drogada; viva y transportable, como la orden pide. Sale del Archive por rutas que ella misma diseñó meses antes en reconocimiento previo. No hay confrontación, no hay palabras, no hay línea de traición gritada. Solo hueco donde había dos figuras.
+
+**El jugador nunca la ve actuar.** Solo ve que Speck se va. Solo después, en un nicho de la pared del corredor, descubre la nota — pluma corta, tinta gris:
+
+> *"I set traps my teacher would have waited on. She's older than you'll ever be. She was also wrong. Forgive me for graduating without her permission — or yours."*
+
+**Línea canónica** (nueva, reemplaza la anterior en la que el jugador figuraba como maestro/a):
+
+*"I set traps my teacher would have waited on. She's older than you'll ever be. She was also wrong."*
+
+La línea nombra implícitamente a una **maestra anterior** — la instructora del brazo encubierto que entrenó a Nyael cien años atrás, a quien Nyael no traiciona ejecutando, sino **actuando antes del momento que su maestra hubiera elegido.** El jugador no es maestro de Nyael; el jugador es la razón nueva por la que Nyael, por primera vez en su vida, adelanta un tiempo que su tradición dice que hay que esperar. En términos de la mecánica emocional: aprendizaje entre pares, no maestro→alumno.
 
 **No hay drama. No hay confrontación. Solo eficiencia, nota, y ausencia.**
 
----
+### Sub-beat 4: Persecución asincrónica
 
-## Arco Acto 3 — Desilusión (La Persecución de Sombra)
+El grupo no puede perseguir a Nyael en línea recta. Nyael **deja rastros deliberados** — no porque quiera ser atrapada, sino porque respeta al grupo lo suficiente para permitir el intento. Rastros mínimos: una huella parcial en tierra húmeda, un trapo cortado del pañuelo de Speck, una marca de daga en la corteza de un árbol. Rutas que solo Nyael conoce (mapeadas meses atrás en reconocimiento previo).
 
-### Persecución
+Conversación nunca es directa. Solo notas encontradas a lo largo de la persecución:
 
-El grupo no puede perseguir a Nyael. ¿Cómo persigues a alguien que es sombra?
+> *"You are slow. Could have taken her three times without you noticing. Did not, because you were still learning to look."*
+>
+> *"Your pattern shows growth. Am pleased. This makes the necessary ending harder."*
+>
+> *"Know that I do not honor the order that gave me this task. I honor that you and I once shared quiet. Best companion, worst outcome."*
 
-Pero Nyael **deja rastros deliberados.** No porque quiera ser atrapada. Sino porque **respeta al grupo lo suficiente para permitir intentó.**
+Las notas ya no llaman "maestro" al jugador — reconocen aprendizaje entre pares, no jerarquía de enseñanza.
 
-Conversación nunca es directa. Solo notas encontradas:
+### Sub-beat 5: Ausencia en The First Wound
 
-*"You are slow. Could have killed you three times before campfire. Did not because you are still learning."*
+Nyael **no aparece en el borde del cráter con el jugador.** La confrontación es asincrónica — cuando el grupo alcanza el punto donde debería estar el Pivote sosteniendo a la variable, Nyael no está. Solo nota:
 
-*"Your pattern shows growth. Am pleased. This makes necessary ending harder."*
+> *"Was time to leave. To stay would be dishonor to the quiet we shared. Go. Live. Do not follow. I will not be findable."*
 
-*"Know that I honor your training. Best student, worst outcome."*
-
-### The First Wound (Clímax Emocional)
-
-Se alcanza a Nyael — o se supone. Pero cuando la alcanzan, **descubren que Nyael ya se fue.**
-
-Solo nota: *"Was time to leave. To stay would be dishonor to what you taught. Go. Live. Do not follow."*
-
-**Nunca hay confrontación final. Nunca hay batalla. Solo... ausencia.**
+**Nunca hay confrontación final. Nunca hay batalla. Solo ausencia** — patrón canónico de Nyael, refuerzo del arquetipo. La decisión que sigue es del jugador, sin Pivote presente para complicarla.
 
 **La decisión es del jugador.**
 
 ---
 
-## Finales — Variantes por Decisión
+## Finales — 5 Variantes según Matriz Deber Institucional
 
-### Final 1: The Guided Molt (Perdón)
+Ver [[Los 4 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con Torgan, Iven y Dagna, con lectura propia (ausencia como método). Cada final es la traducción de su celda a voz Nyael, sin contradecir ninguna otra celda de su fila.
 
-Nyael lee nota de perdón del jugador.
+### F1 — The Guided Molt (Speck completa la Muda)
 
-Permanece en el mundo. Pero como **protector en las sombras**, no como miembro del grupo.
+Nyael escribe una **segunda nota, más corta**, y desaparece antes de que amanezca en el cráter. La primera nota (la del corredor) explicó la captura; la segunda no explica nada — es un renglón: *"You chose well. I will not come back to say it in person."*
 
-**Epílogo:** Años después, el jugador descubre que cada vez que estuvo en peligro, Nyael estuvo en sombras. Protegiéndola. Sin pedirlo. Definitiva redención.
+**Epílogo:** desaparece del mapa institucional. El brazo encubierto de the Royal Academy la marca como "no retornada"; no envían reemplazo — no había reemplazo, Nyael era el único activo con ese perfil. Años después, el jugador ocasionalmente encuentra en su habitación una nota que no recuerda haber recibido — una línea, gris, dejada mientras dormía. Nunca la ve entregar; nunca la ve. La presencia es la ausencia repetida.
 
-### Final 2: The Long Winter (Muerte)
+### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Nyael es encontrada. Se permite ser encontrada.
+Nyael **entrega a Speck viva cumpliendo la orden real que recibió.** No hay complicación técnica: Speck llega en custodia, en el estado exacto que el brazo encubierto pidió, dentro del plazo. Ejecución perfecta según los parámetros institucionales.
 
-Conversación final: *"Was good lesson. Thank you."*
+**Pero Nyael sabe que el Council mintió** sobre "custodia digna" — es mentira administrativa. En el Reckoning, oyó lo suficiente en las señales muertas para intuir que la palabra "custodia" cubría cosas que ninguna instrucción operativa dice en voz alta. Vive **en el limbo entre haber cumplido y haber sido usada.** El brazo encubierto la felicita, le asigna nueva ruta, la orden siguiente. Nyael la acepta y no la ejecuta — la deja pasar. No renuncia; simplemente deja de responder a las señales. Al año, el brazo encubierto la marca como "en estado de reasignación indefinida". Al segundo año, la marcan como "no retornada". Al tercero, alguien encuentra una daga suya clavada en la puerta de la oficina de la maestra que la entrenó — sin nota. La maestra, que sigue viva, entiende.
 
-Muere en paz, enseñando hasta el último momento.
+### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-### Final 3: The Conqueror's Clause (Encadenamiento)
+Si Speck muere accidentalmente en la ruta 7 (herida acumulada, técnica de presión mal calibrada, o el Fragmento la sobrecarga antes de que Nyael pueda entregarla), **Nyael no vuelve.** No al grupo, no al brazo encubierto, no a Stillspire, no a ningún registro.
 
-Nyael es capturada. 
+**Nota post-mortem** llega semanas después al último campamento del jugador — corta, sin explicación, solo un plano detallado de la ruta 7 que iba a usar para entregarla viva, con anotaciones técnicas sobre por qué esa ruta era la más segura para transportar sin lastimar. El jugador entiende, al recibirla, que **la muerte no era el plan** — nunca fue el plan. Nyael no adjunta disculpa. La ruta es la disculpa.
 
-**Esta es la peor muerte** — estar encadenada cuando el arte es libertad de movimiento.
+Nyael desaparece del mapa. Nadie sabe si vive. Es exactamente el tipo de silencio que Nyael diseñaría si diseñara un final propio — y por eso es su peor final: incluso el desaparecer se vuelve indistinguible de la ejecución que su tradición espera de ella.
 
-Pero incluso prisionera, **Nyael enseña.** Enseña a otros prisioneros cómo moverse sin ser visto. Enseña a guardias técnica de distracción. Enseña sin parar.
+### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-### Final 4: The Warden's Choice (Síntesis)
+Nyael **desaparece antes de que amanezca.** No confronta — su patrón no permite confrontación. Cuando el jugador cruza el borde del cráter hacia el core central y toma el poder para sí, Nyael, que se había quedado a distancia observando la decisión, se retira sin dejar nota esta vez. El silencio es el silencio total: ni rastros, ni pistas, ni notas encontradas semanas después.
 
-Speck elige. El mundo cambia.
+Es la única vez que Nyael **no escribe.** Escribir sería reconocer que la decisión del jugador merece explicación; el silencio total es su forma más precisa de decir *"esto no lo comento."* Años después, si el jugador tirano la busca, no la encuentra. Nyael sabe cómo no ser encontrada mejor que nadie que la busque.
 
-Nyael ve el nuevo mundo y reconoce: **la traición era enseñanza.** Todo fue lección.
+### F4 — The Warden's Choice (síntesis)
 
-**Epílogo:** Nyael continúa existiendo en sombras pero ahora **como maestra, no como ejecutora.** Enseña la próxima generación que la muerte no es respuesta, sino pregunta.
+Speck elige. El Aether comienza a sanar.
+
+**Nyael reaparece** — no como Pivote, no como enemiga, no como asesina redimida. **Como alumna que vuelve al jugador (ahora reconocido como quien le enseñó algo que su maestra original no supo enseñarle) para preguntar qué aprendió.** Esta es la reinversión del arco: durante toda la aventura Nyael proyectó al jugador como par; en F4, con el nuevo paradigma del mundo, Nyael reconoce que el jugador le enseñó algo específico — cuándo **no** actuar — que su maestra centenaria del brazo encubierto nunca supo enseñar porque su maestra vivía en un régimen que solo enseñaba cuándo actuar.
+
+**Escena del regreso (breve):**
+
+Meses después del cráter, en un campamento tranquilo cualquiera. El jugador está solo alrededor de un fuego bajo. Nyael aparece — literalmente aparece, donde antes no había nadie. Se sienta al otro lado del fuego sin pedir permiso. No trae daga visible. No trae nota.
+
+> **Nyael:** *"You knew when not to move. I need to learn how you knew."*
+>
+> **Jugador:** *"[respuesta del jugador — variable según decisiones]"*
+>
+> **Nyael:** *"That is not enough. I will come back. Do not look for me."*
+
+Se retira. Regresa meses después, misma escena, otra pregunta. Es su forma de estudiar: intervalos largos, preguntas cortas, respuestas que digiere en silencio. Nunca se une al grupo. Nunca se queda a dormir. Es alumna sin aula.
+
+El jugador la ve, con el tiempo, dejar de necesitar la maestra centenaria del brazo encubierto — no por rebeldía, por reemplazo natural. Es el epílogo más blando que Nyael puede tener sin dejar de ser Nyael.
 
 ---
 
 ## Línea Canónica
 
-*"You taught me to set the trap and wait. I could not wait."*
+*"I set traps my teacher would have waited on. She's older than you'll ever be. She was also wrong."*
 
-**Contexto:** El momento de Nyael donde **excede al maestro** y, en exceder, traiciona el principio básico de lo que aprendió.
+**Contexto:** El momento de Nyael donde **rompe con la maestra centenaria del brazo encubierto** que la formó — no con el jugador, no con Stillspire, no con la Corona. Con la mujer específica que le enseñó a esperar. El jugador es la razón nueva por la que Nyael, por primera vez en cien años de servicio, se atreve a decir en voz alta que su tradición estuvo equivocada — pero no es maestro de Nyael. Es par. La lección no bajó; se compartió lateralmente.
+
+**Nota histórica:** la versión previa de esta línea (*"You taught me to set the trap and wait. I could not wait."*) hacía al jugador maestro de Nyael, lo cual contradice la aritmética del personaje (180-210 años, 200 ejecuciones, entrenada desde niña por una institución centenaria). Reemplazada 2026-07-27.
 
 ---
 
 ## Dinámicas
 
-**Nyael + Valen:** Dos observadores. Pero Valen observa para entender. Nyael observa para ejecutar. Tensión profunda.
+**Nyael + Valen:** Dos observadores. Pero Valen observa para entender; Nyael observa para actuar en silencio. Tensión profunda: Valen es el único del grupo que **sabe** para quién trabaja Nyael, y no la delata — regla élfica de no acusar sin evidencia formal.
 
-**Nyael + Roen:** Soldado y ejecutora. Roen protege. Nyael mata. Pero Roen ve en Nyael a alguien que **conoce el peso.**
+**Nyael + Roen:** Soldado y sombra. Roen protege visiblemente; Nyael actúa sin ser vista. Roen ve en Nyael a alguien que **conoce el peso** de cargar órdenes ajenas — reconoce el mecanismo aunque no comparte el oficio.
 
-**Nyael + Darro:** Humor vs. Silencio. Darro bromea, Nyael no responde. Pero respeto mutuo de que ambos usan distancia como mecanismo.
+**Nyael + Darro:** Humor vs. Silencio. Darro bromea, Nyael no responde. Pero respeto mutuo — ambos usan distancia como mecanismo, con estéticas opuestas.
 
 ---
 
@@ -318,10 +360,10 @@ Nyael ve el nuevo mundo y reconoce: **la traición era enseñanza.** Todo fue le
 - Asesina por dinero
 
 **Nyael SÍ es:**
-- Ejecutora que respeta tanto sus objetivos que los mata sin drama
-- Capaz de amar pero solo como **enseñanza, no como vínculo**
-- El Pivote donde la traición es tan perfecta que casi no es traición
+- Operativa que respeta tanto sus objetivos que los captura sin drama (y los ejecutó, en cien años previos, con el mismo respeto)
+- Capaz de amar pero solo como **compañía silenciosa, no como vínculo declarado**
+- El Pivote donde la traición es tan perfecta que casi no es traición — **la única traición como ausencia**
 
-**Línea privada:**
-*"Ejecuté 200 blancos. Cada uno merecía muerte. El jugador mereció vida. Pero The Stillspire no ordena vida. Entonces ejecuté con precisión. Pero dejé nota: porque merecía saber que fue arte, no accidente. La muerte es respeto cuando es hecha bien."*
+**Línea privada de Nyael (nunca dicha aloud):**
+*"Ejecuté 200 blancos en cien años. Cada uno merecía la ejecución que le di — precisa, sin drama, con nota. Al jugador me pidieron capturarlo — no, a Speck, siempre a Speck; el jugador solo era el sitio donde Speck vivía. Pero por primera vez en cien años, mi maestra me hubiera dicho 'espera' y yo no esperé. Actué antes. No para complacer al Council. Para complacer algo más viejo que la orden y más nuevo que mi maestra — el hecho de que quien cuida a Speck ha estado quieto en mi presencia sin pedirme nada, y esa quietud fue una lección que mi maestra centenaria no supo darme. La traición no fue traición. Fue la primera vez que decidí yo. Que Speck viva o muera después de la entrega no está en mi mano. Que la nota exista, sí."*
 

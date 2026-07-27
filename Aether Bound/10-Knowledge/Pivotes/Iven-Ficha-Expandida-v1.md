@@ -1,15 +1,25 @@
 ---
-status: draft
-source: "Sesión 2026-07-23 — Pivotes Narrativa Expandida"
-updated: 2026-07-23
+status: ratificado
+source: "Sesión 2026-07-27 — QA fase 1, arquetipo Deber Institucional (rework parcial)"
+updated: 2026-07-27
 ---
 
 # Iven — C3 Pivote (Elfo Vanguard Jugador)
 
 **Raza / Rol:** Humano (the Restless) / Duelist  
-**Origen:** Asentamiento Fronterizo (sin nombre, pequeño, anónimo)  
+**Origen:** Iven's Settlement (asentamiento fronterizo de Aethelgard, más allá de Rivermeet — ver [[Geografía y Ciudades]])  
 **Edad aparente:** 35-45 años  
-**Arquetipo de Traición:** Amor local vs. Amor grupal — ambos genuinos, en guerra  
+**Arquetipo de Traición:** Deber Institucional en su variante más devastadora — cree servir a los suyos, y **the Triune Council le miente**. Superlativo: **el único Pivote a quien la institución que lo activa lo engaña por diseño** (ver [[Los 4 Finales]]).
+
+---
+
+## Nota narrativa clave (leer antes del arco)
+
+**La promesa que Iven cree es falsa.** El Triune Council le prometió que sacrificar a Speck produciría un remedio que sanaría a su asentamiento fronterizo. Esa promesa contradice el lore ratificado ([[El Mundo y la Muda]]): lo que sana el Aether no es la muerte de la Warden — es su **maduración**. El Council lo sabe. Iven no.
+
+Iven no está corrompido. Iven es **el arquetipo puro del Deber Institucional traicionado por la institución misma**: hace exactamente lo que la institución le pidió, creyendo lo que la institución le dijo, y la institución sabe todo el tiempo que la promesa era imposible. Encaja con la lectura política canónica: el Council necesita la crisis administrada, no resuelta (ver [[Estructura Política]]).
+
+Todas las referencias siguientes a "la promesa del Council" se mantienen literales — Iven las cree, y por eso traiciona. El lector/diseñador debe recordar que **esa promesa no existe**.
 
 ---
 
@@ -94,30 +104,31 @@ Iven vio gente que crió con él — niños, abuelos — desmoronarse de hambre,
 enfermedad, corrupción. **La misma muerte de siempre, solo que ahora a
 velocidad que no daba tiempo ni siquiera para triage.**
 
-**Hace 2 años:** Iven fue a las ciudades grandes. Pidió ayuda. El Consejo de
-humanos escuchó. Respondieron:
+**Hace 2 años:** Iven fue a las ciudades grandes. Pidió ayuda. **The Triune Council** lo escuchó. Respondieron:
 
 *"No hay recursos. La frontera no es prioridad. Pero... hay solución."*
 
 *"¿Cuál?"*
 
-*"Hay criatura en The Wilds. Extraña. Si se sacrifica al Consejo, podemos usar su Aether para crear remedio. Purificará la zona."*
+*"Hay una criatura en The Wilds. Extraña. Si se sacrifica al Council, podemos usar su Aether para crear un remedio. Purificará la zona."*
 
 Iven: *"¿Dónde?"*
 
-Consejo: *"Espera. Enviaremos agentes. Cuando sea localizada, traeremos el remedio. Pero necesitaremos que ayudes."*
+Council: *"Espera. Enviaremos agentes. Cuando sea localizada, traeremos el remedio. Pero necesitaremos que ayudes."*
 
 **Eso fue promesa.**
 
-El Consejo nunca dijo el nombre de la criatura. Iven no sabía que era Speck.
+El Council nunca dijo el nombre de la criatura. Iven no sabía que era Speck.
+
+**Diagnóstico (no visible a Iven):** la promesa es falsa. El Council sabe — por sus propios investigadores, cruzados con [[El Mundo y la Muda]] — que matar a Speck no sana el Aether; lo que sana es su maduración. La oferta a Iven es un instrumento: necesitaban un humano fronterizo con motivo real para infiltrar el grupo del jugador, y la promesa hecha a alguien desesperado se sostiene sola durante meses. Iven va a ejecutar creyendo que salva a su gente. No la salva.
 
 ---
 
 ## Cómo lo Ve Roen (Humano, Conocimiento Previo)
 
-**Contexto:** Roen fue guardia del Consejo durante 15 años. Conoce los asentamientos fronterizos — ha estado en varios. Conoce a Iven de vista, de reportes.
+**Contexto:** Roen fue guardia del Council durante 15 años. Conoce los asentamientos fronterizos — ha estado en varios. Conoce a Iven de vista, de reportes.
 
-Cuando Iven se une al grupo, Roen lo reconoce: *"Frontera. Asentamiento del norte."*
+Cuando Iven se une al grupo, Roen lo reconoce: *"Frontera. Asentamiento fronterizo."*
 
 Iven: *"Conoces la frontera."*
 
@@ -129,7 +140,7 @@ Roen: *"Porque guardar gente que el Consejo olvida es trabajo que nunca termina.
 
 **Primera impresión:** Roen ve a alguien que aún guarda. Iven ve a alguien que dejó de guardar. Hay tensión silenciosa — ¿quién eligió bien?
 
-**Cuando traiciona:** Roen dice: *"Sabía que pasaría. El Consejo te prometió salvar tu asentamiento. Eso siempre te ganará."*
+**Cuando traiciona:** Roen dice: *"Sabía que pasaría. El Council te prometió salvar tu asentamiento. Eso siempre te ganará."* (Roen no sospecha aún que la promesa era falsa. Lo descubrirá en el epílogo, según final.)
 
 No es con ira. Es con **reconocimiento de límite.**
 
@@ -149,15 +160,15 @@ Conversación derivó en amistad rápida — diferente rol pero misma responsabi
 
 Iven vio en el jugador a alguien que **entiende la carga de proteger**, no solo el acto de pelear.
 
-**La complicación:** Hace 3 meses, el Consejo contactó a Iven: *"Localizamos la criatura. Está con grupo en The Wilds. Pronto tendremos oportunidad de tomarla."*
+**La complicación:** Hace 3 meses, the Triune Council contactó a Iven: *"Localizamos la criatura. Está con un grupo en The Wilds. Pronto tendremos oportunidad de tomarla."*
 
 Iven: *"¿Con quién viaja?"*
 
-Consejo: *"Gente. Algunos importantes."*
+Council: *"Gente. Algunos importantes."*
 
 Iven: *"¿Amigos?"*
 
-Consejo: *"Probablemente."*
+Council: *"Probablemente."*
 
 Iven sospechó. Pero no preguntó más. **Porque conocer los detalles hubiera hecho más difícil lo que tenía que hacer.**
 
@@ -232,7 +243,7 @@ Con Roen: incómodo. Roen ve que algo no encaja.
 
 El Bound Five viaja. Iven camina con ellos. Pero internamente, **Iven está en guerra.**
 
-Cada noche, contacta con Consejo: *"¿Llegó instrucción?"*
+Cada noche, contacta con the Triune Council: *"¿Llegó instrucción?"*
 
 Respuesta: *"Espera. Cuando sea el momento, enviaremos orden. Pronto."*
 
@@ -256,9 +267,23 @@ Iven: *"Siempre. Pero también estoy aquí. Ambas cosas son verdad."*
 
 (Es el dilema de Iven en una frase.)
 
+### Grove of Cycles (a mitad del Acto 2)
+
+Ver [[Grove of Cycles — Escena del Acto 2]]. Iven es **el más silencioso durante el debate del Elder Circle.** No habla. No participa. Escucha a Threnn, Ilyara, Corwyn y Maelys discutir en la cortesía absoluta que caracteriza a los elfos, y en su cabeza cada argumento se le traduce a nombres específicos de su asentamiento: gente que va a morir mientras cuatro elfos, en un bosque que no está corrupto, discuten teorías.
+
+**Ilyara lo mira una vez.** Solo una. Durante la línea de Threnn sobre "no pagar el precio de la cura", Ilyara gira los ojos brevemente hacia Iven — y Iven siente, sin querer, que ella le lee la culpa como si fuera texto. Iven aparta la mirada. Ilyara no vuelve a mirarlo en el resto del debate.
+
+Si el Tether con Ilyara se disparó (jugador sacrificó Standing por curar corrupción, o intervino en algo que no le tocaba), Ilyara se acerca a Iven fuera del debate — no al jugador, a Iven. Única escena donde Iven habla de su asentamiento **en voz alta y a un desconocido**. No confiesa lo del Council. Habla de Sael, de los pozos envenenados, del cansancio. Ilyara escucha sin dar consejo. Cuando termina, le dice: *"No sanas a tu gente entregando a otra. Lo que estás por hacer no es lo que crees que es."* Iven no le responde. Ella se retira.
+
+Iven sale del Grove con una piedra nueva en el estómago que no sabe nombrar. La va a olvidar durante el descenso a Driftmarket. Se le va a volver a acordar en el Archive, tarde.
+
+### The Reckoning (Driftmarket)
+
+Ver [[Geografía y Ciudades]] §THE RECKONING. En la ruta Iven, Tobin oye un pago del Consortium disfrazado de subsidio agrícola a un asentamiento fronterizo, y por error se lo atribuye a **Roen** (el único humano del grupo que sabe cómo se ven los pagos del Council por dentro). Si el jugador confronta a Roen antes del Archive, ese Bond se rompe con un compañero inocente. Iven no lo desmiente — no puede sin autoincriminarse — pero al ver la escena de confrontación, algo se le rompe por dentro. Sabe que lo que él está por hacer va a tener este mismo peso, multiplicado.
+
 ### La Verdad Filtra
 
-Hacia el final de Acto 2, el Fragmento se aproxima. Consejo envía mensaje:
+Hacia el final de Acto 2, el Fragmento se aproxima. The Triune Council envía mensaje:
 
 *"Cuando el Fragmento se active, Speck reaccionará. Cuando eso pase, trae la criatura al punto de extracción. No hay espacio para demora. Tu asentamiento depende de esto."*
 

@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-24
+updated: 2026-07-27
 ---
 
 # Current State
@@ -8,15 +8,28 @@ updated: 2026-07-24
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-## Estado general (2026-07-24, cierre de sesión)
+## Estado general (2026-07-27, cierre de sesión)
 
-**Worldbuilding narrativo:** COMPLETO como fuente para guión. 3 reinos + Triune
-Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning
-+ 12 personajes de grupo con fichas expandidas + Speck → todo documentado en
-`10-Knowledge/`. El siguiente frente real es escribir guión y diálogos por actos.
+**Sprint de reparación de QA post-lunes 27:** ejecutados los 2 QA con Opus (congruencia + narrativo). Plan de 4 fases aprobado (`~/.claude/plans/cozy-floating-unicorn.md`). Estado del sprint:
 
-**Concept art:** catalogado y trackeado por primera vez en un commit limpio. Ver
-`90-Raw/concept/CATALOGO.md` para el índice completo.
+- **✅ Fase 0 completa** — 4 documentos-fuente reescritos:
+  - `Los 4 Finales.md` → 5 finales (F1/F2a/F2b/F3/F4) con matriz 5×3
+  - `Grove of Cycles — Escena del Acto 2.md` (nuevo) con debate del Elder Circle
+  - `Geografía y Ciudades.md §ACTO 3` reescrito a 5 sub-beats
+  - `Geografía y Ciudades.md §THE RECKONING` con tabla Tobin corregida (señala a fijos C1/C2/C4, no a Pivotes inactivos) + Wanderer's Goggles 40+ años
+- **🟡 Fase 1 al 78%** — 7/9 fichas de Pivote reescritas al canon nuevo:
+  - ✅ Maren, Sereth, Iven (arquetipo Aritmética/Manipulación — Sereth movido a manipulación pura, Iven con Council mintiendo)
+  - ✅ Torgan (aritmética unificada 55 años, cadena de mando resuelta)
+  - ✅ Bram, Lyris, Nyael (arquetipo Rechazo/Ausencia + institucional — Bram canon NO traiciona con mecanismo del "segundo agente")
+  - ✅ `Los 9 Pivotes.md` (fila de Bram actualizada al canon nuevo)
+  - 🔴 **Vekka y Dagna PENDIENTES** — Agente B falló con server errors 2 veces; requieren reescritura mayor (Vekka completa 139→~450 líneas; Dagna 242→~450 con arco por acto + entrada Roen+Dagna canónica)
+- **🔴 Fase 2 sin arrancar** — Sonnet 5, propagación mecánica + cross-cutting (Roen/Valen/Darro fichas, Estructura Política, El Mundo y la Muda, Speck.md, El Quinteto.md)
+- **🔴 Fase 3 sin arrancar** — Haiku 4.5, lint mecánico verificable (renombrar El Quinteto→The Bound Five, retraducciones "el Consejo" con desambiguación, typos, cross-refs)
+- **🔴 Fase 4 sin arrancar** — verificación end-to-end con los 2 QA re-corridos
+
+**Worldbuilding narrativo previo:** COMPLETO como fuente para guión (3 reinos + Triune Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning + 12 personajes con fichas + Speck).
+
+**Concept art:** catalogado y trackeado. Ver `90-Raw/concept/CATALOGO.md`.
 - §9 (gobernantes + Council): 5/6 ✅, King Borran 🟡 provisional
 - §10 (elenco político nuevo): 6/6 ✅ cerrado
 - §6d (keyframes ciudades, QA retroactivo): Emberdeep/Stillspire/Mistbound ✅, Rivermeet daylight 🟡, Driftmarket 🔴 (pendiente re-corrida)
@@ -40,11 +53,13 @@ Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning
 
 ## Pendientes — ordenados por fecha
 
-### 🗓 Lunes 27 de julio
+### 🗓 Próxima sesión — retomar sprint de reparación
 
-1. **QA de congruencia del Vault (sintaxis y semántica) con Opus** — revisar que todos los docs de `10-Knowledge/` sean internamente consistentes: nombres propios en inglés correctos, cross-references válidas, sin contradicciones de lore entre fichas y los docs de estructura. Arrancar con Geografía/Ciudades, Estructura Política, El Mundo y la Muda, fichas de Pivotes.
+**Bloqueo pendiente (Fase 1):** Vekka + Dagna. Ambos son reescritura mayor porque:
+- **Vekka** hoy tiene 139 líneas sin arco por acto, sin persecución, sin Acto 3 real, y 4 finales de una línea que no mencionan a Speck. Necesita ~450 líneas al nivel de las otras 7 fichas. Instrucciones detalladas en el plan `~/.claude/plans/cozy-floating-unicorn.md`.
+- **Dagna** hoy tiene 242 líneas con sección "Roen y la Quiebre" duplicada verbatim y sin arco por acto claro. Necesita reescritura + entrada Roen+Dagna canónica (canonizar que Dagna es quien quiebra a Roen, no Lyris — corrección al hallazgo del QA narrativo).
 
-2. **QA narrativo con Opus** — revisión dramática del arco completo: ¿Los 9 patrones de traición son distintos entre sí (ninguno se pisa)? ¿Los epílogos de los 4 Finales son coherentes con la posición de cada Pivote? ¿The Reckoning tiene el peso dramático correcto antes del clímax? ¿Speck como Warden cambia algo en las fichas existentes que aún no se actualizó?
+**Después de Vekka+Dagna:** arrancar Fase 2 (Sonnet 5, propagación mecánica + cross-cutting sobre Roen/Valen/Darro/Estructura Política/etc.), Fase 3 (Haiku 4.5, lint verificable), Fase 4 (verificación end-to-end con los 2 QA re-corridos).
 
 ### 🔜 Próximas sesiones (sin fecha fija)
 
