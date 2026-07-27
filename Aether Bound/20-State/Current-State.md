@@ -55,12 +55,23 @@ Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning
 - QA de las **4 variantes de The Wilds** sin procesar (`Arterias`, `Interior`, `Noche con Muda`, `Ruinas`)
 - Evaluar **videos Higgsfield** (bloqueo técnico ffmpeg activo): `Arcane Ballistics.mp4`, `Las Tres Razas.mp4`, `El Mundo.mp4`, `SKYHOOK.mp4`, `Seismic Springboard (2).mp4`, `Speck video.mp4`, `THE WEAVER'S NET.mp4`
 - **King Borran** 🟡 — si se retoma: reescribir el prompt en prosa corta (mismo formato que resolvió Kadrun v2)
+- **The Wanderer's Goggles — brief NB2 pendiente.** Único item con peso dramático propio (entregado por Tobin en The Reckoning, revelan proyecciones Warden en el Sunken Archive, parte del gate compuesto de F4). Diseño canónico: latón viejo, lentes ambar-doradas, correa de cuero desgastada por 40+ años de guarda en el cajón de Tobin. Instrumento sin adornos — se ven exactamente como lo que son. Referencia estilo: mismo tratamiento que asset props de Sable/BotW (baja saturación, linework nítido, textura visible). Es el primer item del vault con brief propio — probablemente inaugura una carpeta de "props narrativos" para futuros items diegéticos (Fragmento, God-Cores individualizados, etc.).
 
-**Keyframes faltantes (sin brief escrito todavía):**
-- Torres de guardia (Aethelgard Watch / Ignis Reach Watch / Stillwood Watch)
-- Lugar de reunión del Triune Council (Rivermeet — el mapa maestro lo confirma, falta keyframe dedicado)
-- Grove of Cycles (Elder Circle — existe en el mapa, sin keyframe)
-- Sunken Archive, The First Wound (cráter final, diferente al God-Core Night ya ratificado)
+**Keyframes faltantes (sin brief escrito todavía) — pendiente Boris (2026-07-27):** escribir briefs NB2 para los spots del mapa que faltan. Priorizar los que se citan en el guión ya escrito (Grove of Cycles, Sunken Archive, First Wound son de Acto 2/3 y ya tienen escenas ratificadas).
+- **Prioridad alta** (citados en el guión escrito):
+  - Sunken Archive (interior con cadáveres calcificados + proyecciones Warden — Acto 3 §2)
+  - The First Wound (cráter climático — diferente al keyframe God-Core Night ya ratificado, este es del clímax jugable con el core central respondiendo a Speck)
+  - Grove of Cycles (interior del templo élfico donde ocurre la escena del Elder Circle)
+  - Interior de la oficina de Tobin en The Driftmarket (escena de The Reckoning con los Wanderer's Goggles)
+- **Prioridad media** (mundo abierto, exploración):
+  - Torres de guardia por raza (Aethelgard Watch / Ignis Reach Watch / Stillwood Watch)
+  - Rivermeet Triune Council Seat (interior de sesión del Council)
+  - Interior Emberdeep detallado (forjas activas, múltiples niveles)
+  - The Ascending Falls (cadena de cascadas Gloomvault → Stillspire)
+- **Prioridad baja** (color / POIs secundarios):
+  - Iven's Settlement (asentamiento moribundo)
+  - Mistbound Frontier (postas defensivas — hay keyframe aprobado, pero puede complementarse)
+  - POIs de The Wilds sueltos según necesidad narrativa
 
 **Narrativa / guión (próximo frente real):**
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
@@ -77,6 +88,9 @@ Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning
 - Estrategia militar de los 3 reinos en el clímax
 - The First Wound (ficha lore completa), Sunken Archive (ficha lore)
 - Cabeza de the Academy of Sages (baja prioridad)
+
+**Fichas de personaje pendientes (2026-07-27):**
+- **Old Tobin Hale — ficha expandida.** Solo aparece descrito en `Geografía y Ciudades §The Driftmarket` y en `Briefs de Concept Art §10b`. La escena de The Reckoning acaba de darle un peso dramático mayor (custodio inconsciente de los Wanderer's Goggles hace 40+ años) y necesita biografía formal para escribir su diálogo y las variantes por Pivote. Estimado: 1 ficha corta (~200-300 líneas), mismo formato que fichas de fijos pero más contenida (no tiene arco de traición).
 
 **Mapa del mundo:**
 - `Aether Bound universe.png` = referencia interna imperfecta (texto corrupto en etiquetas). Plan: documentar el mapa por escrito a medida que avanza el worldbuilding → cuando cierre el frente, escribir spec exhaustiva para re-generar con AI o dibujo a mano. Ver cabecera de [[Briefs de Mapa del Mundo]].

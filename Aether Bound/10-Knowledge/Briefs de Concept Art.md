@@ -405,7 +405,7 @@ específica del cargo. Destino: `90-Raw/concept/` — `reina-ithessa-v1.png`,
 `consejera-merrit-vance-v1.png`.
 
 **Nota de diseño transversal:** Reina y Rey deben leer como **gobernantes
-legítimos** (regalía plena, autoridad tranquila); el Regent Edrick debe leer
+legítimos** (regalía plena, autoridad tranquila); Regent Edrick debe leer
 **deliberadamente menos regio** — cargo precario, no sangre real ([[Estructura
 Política]]: "Voice of the Council", no "Rey"). Los 3 embajadores del Council
 deben leer como **diplomáticos/burócratas de alto nivel**, no guerreros ni
@@ -542,7 +542,7 @@ Full-body character concept sheet, front view and side view, of a dwarf ambassad
 
 El asiento más volátil de los 3 — se gana por consenso de Casas + Consorcio
 de Mercado, no por sangre. Debe leer más afilada y políticamente agresiva que
-el Regent Edrick — alguien que escaló para llegar aquí y sabe que puede
+Regent Edrick — alguien que escaló para llegar aquí y sabe que puede
 perderlo.
 
 ```

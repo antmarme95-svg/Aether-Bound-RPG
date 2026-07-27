@@ -890,90 +890,162 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 
 ### THE RECKONING — Preparación Pre-Clímax en The Driftmarket
 
-**No es un descanso — es el último acto de preparación antes de que todo se
-rompa.** Ocurre después de cerrar los 3 sub-actos de Acto 2 (los 3 reinos
-completos), antes de arrancar Acto 3 (Sunken Archive → First Wound). The
-Driftmarket es el único territorio neutral, fuera del control de Council/
-Corona/Consortium — el único lugar donde The Bound Five puede prepararse
-sin que nadie tenga agenda oculta sobre ellos.
+**Contexto:** ocurre después de cerrar los tres sub-actos regionales del Acto 2 Y después de la escena en Grove of Cycles ([[Grove of Cycles — Escena del Acto 2]]). Antes de bajar al Sunken Archive. The Bound Five llega al Driftmarket cargando dos cosas que nadie nombra: la advertencia sembrada por Maelys y el silencio que Speck arrastra desde el Grove. The Driftmarket es el único territorio fuera del control de Council/Corona/Consortium — el único lugar donde Tobin puede decir en voz alta lo que va a decir.
 
-**Beat 1 — La advertencia de Tobin (privada, no al grupo entero):**
+---
 
-Harbormaster Tobin Hale aparta al jugador solo — no a The Bound Five
-completo. Más potente dramáticamente: el jugador carga el peso solo, tiene
-que decidir qué hacer con la información antes de que lleguen a la traición.
+**Beat 1 — La advertencia de Tobin (privada, específica, y trampa)**
 
-> **Tobin:** *"I hear things on these docks nobody says out loud in a
-> palace. Word's moving through Council channels — someone's arranging to
-> hand the creature over. I don't know who on your crew's carrying that
-> order. I don't want to know. But you should."*
+Harbormaster Tobin Hale aparta al jugador solo — no al grupo entero. La escena ocurre en la oficina trasera del muelle, con la puerta cerrada. Tobin no da un aviso genérico. Da un **dato concreto** — nombre, fecha de embarque, pago registrado en libros, manifiesto de carga, o mensajero visto en tal fecha en tal muelle — que apunta directo a un Pivote específico.
 
-**Agencia del jugador:** ¿confronta a su Pivote directamente? ¿confía en
-Speck y le cuenta? ¿se lo guarda y observa en silencio hasta el clímax? No
-hay una respuesta correcta — esto define cómo el jugador *vive* la traición
-cuando llega, no si la evita.
+**El dato apunta a un FIJO — no a un Pivote inactivo.**
 
-**Beat 2 — The Wanderer's Goggles:**
+Los otros 8 Pivotes no existen en la partida actual (una celda = un Pivote). El error de Tobin cae necesariamente sobre uno de los tres fijos: **Roen (C1), Valen (C2) o Darro (C4)** — los únicos otros compañeros que el jugador conoce. Tobin no oye "the Triune Council" en el trato: oye un fragmento del idioma institucional que corresponde a la **raza** del Pivote real, y como la única persona del grupo que Tobin ubica hablando ese idioma es el fijo de esa raza, señala al fijo. Es un error honesto de un hombre honesto trabajando con información parcial. El jugador puede confrontar a la persona que Tobin señaló *antes* de que llegue la traición real — y romper un Bond fijo (Roen/Valen/Darro) por su propia mano, con un compañero inocente y central, en base a información que sonaba sólida.
 
-Tobin le da al jugador **the Wanderer's Goggles** — unos lentes/goggles
-viejos, de latón, que pertenecieron a un extraño que pasó por sus muelles
-décadas atrás. Tobin nunca entendió qué era esa persona — solo que "miraba
-las cosas distinto, como si viera a través de algo que el resto no podía."
-Reconoce la misma mirada en el jugador, probablemente porque notó (sin
-decirlo) los flashes silenciosos con los que el jugador ve la verdad bajo
-el disfraz de Speck durante sus visitas al mercado.
+**Qué oye Tobin — según Pivote activo** (el que realmente va a traicionar):
 
-**No es un upgrade mecánico — es una revelación narrativa.** Mucho más
-fuerte viniendo del único personaje sin agenda institucional: Tobin no
-valida el poder del jugador como haría una Academia (variable a explotar)
-— lo valida humanamente.
+| Pivote activo | Raza del Pivote | Lo que Tobin oye (fragmento en idioma institucional) | Fijo al que Tobin señala por error |
+|---|---|---|---|
+| **Maren** | Humana | Manifiesto del Trade Consortium con carga sin declarar, ruta a Rivermeet | **Roen** — humano con formación en el aparato del Council (ex-guardia Mistbound, reconoce ese idioma) |
+| **Iven** | Humano | Pago del Consortium disfrazado de subsidio agrícola a un asentamiento fronterizo | **Roen** — el único humano del grupo que sabe cómo se ven los pagos del Council por dentro |
+| **Bram** | Humano | *(variante distinta — ver más abajo)* | *(N/A)* |
+| **Sereth** | Elfo | Pago negable en oro tallado con marca de Royal Academy | **Valen** — elfo, discípulo de the Academy of Sages, círculos académicos superpuestos. Especialmente cruel: Valen es fijo, no traicionará, y confrontarlo rompe el Bond más analítico del grupo |
+| **Lyris** | Elfa | Nota de Frontier High Command con instrucciones de ruta hacia el Archive | **Valen** — el único elfo del grupo, familiar con la burocracia élfica |
+| **Nyael** | Elfa | Instrucción del brazo encubierto de Royal Academy, sin firma | **Valen** — el único elfo del grupo (Tobin no distingue Academy of Sages de Royal Academy — para él las dos son "asuntos de elfos con papeles") |
+| **Torgan** | Enano | Mensajero del Great Forging Clan grabando un juramento nuevo | **Darro** — enano hijo de forja, aprendiz rechazado del Clan; Tobin sabe que reconocería el idioma ritual |
+| **Dagna** | Enana | Renovación de votos del subclán vasallo, orden implícita de "unmaking" | **Darro** — enano con familia atada al Clan, único del grupo que "hablaría con un mensajero enano sin traducción" |
+| **Vekka** | Enana | Bitácora del Great Forging Clan con orden de *"unmaking a flawed forging"* | **Darro** — enano rechazado del gremio, único del grupo que reconocería la jerga técnica |
 
-> **Tobin:** *"I don't know what you are. I know what I saw. And what I saw
-> was someone who sees true, in a world that mostly doesn't want to."*
+**Patrón:** el error de Tobin siempre cae sobre el fijo de la misma raza que el Pivote real. Esto no es simplificación — es exactamente por qué el error es creíble: Tobin escucha un idioma institucional, y confía en que solo la persona que lo habla naturalmente puede estar detrás. La ironía dramática es que las instituciones son 3 y las razas son 3, y el Council explota justo eso.
 
-**Deliberadamente sin resolución completa** (mismo principio que The
-Monolith — [[Estructura Política]]): ni Tobin ni el jugador entienden del
-todo qué es el poder innato. El extraño de la historia de Tobin nunca se
-nombra ni se explica — misterio que queda abierto.
+**Diálogo:**
 
-**Última escena de unidad del grupo:** antes de que la traición rompa The
-Bound Five, este es el último momento donde los cinco (+Speck) están
-genuinamente juntos, sin sospecha activa todavía — el Bond más fuerte del
-juego, justo antes de que se quiebre.
+> **Tobin:** *"Cierra la puerta. No te sientes, esto es rápido."*
+>
+> *(El jugador cierra la puerta.)*
+>
+> **Tobin:** *"Escucho cosas en estos muelles que nadie repite en un palacio. Hay algo moviéndose por canales que no deberían tocarse entre sí. Alguien de los tuyos está cargando una orden."*
+>
+> **Jugador:** *"¿Quién?"*
+>
+> **Tobin:** *"No sé el nombre. Sé el idioma. [SLOT — descripción específica del fragmento oído, según tabla arriba]. Solo una persona en tu grupo habla ese idioma."*
+>
+> **Jugador:** *"[nombre del Pivote que Tobin señala por error]."*
+>
+> **Tobin:** *(pausa larga)* *"...Podría ser. Yo escucho manifiestos, no corazones. Lo que hagas con esto es tuyo."*
+>
+> **Jugador:** *"¿Estás seguro?"*
+>
+> **Tobin:** *"No. Estoy seguro de que alguien va a hacer algo. No estoy seguro de quién. Pero prefiero equivocarme diciéndote a acertar callándome."*
+
+Tobin no miente ni exagera — es la lectura honesta de un hombre sin acceso al Council. Su honestidad es lo que hace posible el error. Y el error es lo que le da al jugador agencia real: puede confrontar, guardar silencio, o consultar con Speck (flash privado — el jugador puede leer una reacción de Speck si el Tether con ella es alto, pero Speck no sabe más que él).
+
+**Variante Bram:** en la ruta Bram, Tobin no oye una orden a ejecutarse — oye que el Council busca *"un segundo"*. Es decir, alguien más está siendo activado en la sombra porque Bram ya rechazó. Tobin no sabe quién es el segundo, y no sabe que Bram rechazó — solo sabe que hay actividad duplicada donde debería haber una sola pieza. El jugador entra al Archive con la incertidumbre de que su Pivote asignado (Bram) puede *no* ser el traidor real, sin saber quién es el segundo. Este beat prepara la variante del Sunken Archive: Bram rechaza en el corredor y afuera espera el segundo agente.
+
+---
+
+**Beat 2 — The Wanderer's Goggles**
+
+Tobin abre un cajón y saca un objeto envuelto en tela. Lo deja sobre la mesa. Cuando el jugador lo desenvuelve: unos goggles/lentes viejos de latón, lentes ambar-doradas, correa de cuero desgastada por décadas de uso. No brillan. No hacen ruido. Se ven exactamente como lo que son — un instrumento viejo.
+
+> **Tobin:** *"Eran de un tipo que pasó por mis muelles hace más de cuarenta años. Yo era joven — todavía apilaba cajas, todavía creía que este puerto se dejaba entender. No sé qué era. Nunca supe. Vino, se quedó tres inviernos, y se fue sin decir a dónde. Miraba las cosas como si viera algo que los demás no. No hablaba mucho. Cuando se fue, dejó esto en el cajón de mi oficina, dentro de un sobre con mi nombre. Nunca me dijo por qué eran para mí. Tardé décadas en entender por qué no los usé yo — no era mi vista la que servía."*
+>
+> **Jugador:** *"¿Por qué me los das a mí?"*
+>
+> **Tobin:** *"Porque llevas dos meses viniendo a estos muelles y he visto cómo miras a esa zorra que carga tu grupo. Miras como él miraba. No sé lo que eres. Sé lo que vi. Y lo que vi fue a alguien que ve verdadero, en un mundo que en su mayoría no quiere ver."*
+
+Tobin le entrega los Goggles con esa línea. **No dice ni sugiere** que el poder del jugador sea la clave de nada. No lo llama "elegido". No le da contexto Warden ni institucional. Solo le entrega un instrumento y una validación humana — la única validación que el jugador va a recibir en todo el juego sobre lo que ha estado viendo en privado.
+
+**Cómo se activan y qué se ve por primera vez:**
+
+El jugador se pone los Goggles ahí mismo, en la oficina de Tobin. Se activan al hacer contacto con la piel — no hay UI, no hay tutorial. Cuando el jugador mira alrededor por primera vez, la oficina se ve casi igual — casi. Sobre las cosas de Tobin hay una capa débil, dorada-pálida, de lectura del Aether: en las manos de Tobin (que ha manipulado bienes de todos los reinos por décadas) hay residuo tenue de tres colores distintos. En el aire, corrientes suaves donde ha pasado gente reciente. En la pared, una mancha antigua que no está ahí sin los Goggles — es de cuando el extraño vivió aquí.
+
+Nada de esto explica nada. No se activa una barra de habilidad. **Aún no revela nada específico sobre Speck** — eso se guarda para el Sunken Archive. Aquí, en Driftmarket, los Goggles solo confirman al jugador que lo que ha estado viendo en privado es real y tiene una lectura consistente. Es validación técnica de una validación humana.
+
+Cuando el jugador se los quita, la oficina vuelve a la normalidad. Tobin no pregunta qué vio. *"Son tuyos. Úsalos o no. Yo no los usaría hasta que los necesitara."*
+
+**Deliberadamente sin resolución completa** — mismo principio que The Monolith. El extraño no se nombra. La procedencia no se explica. El instrumento funciona sin manual.
+
+---
+
+**Beat 3 — La última cena (que no es de unidad)**
+
+El grupo cena junto en una taberna de Driftmarket antes de partir hacia el Archive. La descripción **no** es "última escena de unidad genuina sin sospecha" — eso es falso. Valen y Roen sospechan explícitamente desde el final del sub-acto 2C. Speck se comporta distinta desde el Grove. Y ahora el jugador carga un dato que no ha compartido.
+
+Lo que la escena realmente es: **cinco personas sonriendo, dos de las cuales ya saben algo, y una tercera con información que aún no ha decidido qué hacer con ella.** Es la escena más incómoda del juego disfrazada de brindis.
+
+> **Darro:** *(levantando el vaso)* *"Por los que aguantan. Por los que no."*
+>
+> **Roen:** *(sonríe corto, choca el vaso)* *"Por los que llegaron hasta acá."*
+>
+> **Valen:** *(no levanta el vaso todavía)* *"Por los que aún pueden volver."*
+>
+> *(pausa. El Pivote real levanta el vaso primero — sin decir nada.)*
+>
+> **Pivote:** *(al jugador, mirándolo directo)* *"Por ti."*
+>
+> **Jugador:** *(depende de si ya confrontó al Pivote equivocado — si sí, este brindis lo destroza; si no, lo sostiene sin saber que lo va a recordar en el corredor del Archive)*
+>
+> **Darro:** *(rompiendo el silencio)* *"Bien, bien. Menos poesía, más cerveza. Speck, ¿tú brindas?"*
+>
+> *(Speck no se mueve. Los mira uno por uno, se detiene en el Pivote real un segundo más que en los otros, y baja la cabeza. Solo el jugador lo nota — flash privado si Tether con Speck es alto.)*
+
+La escena cierra sin resolver. Nadie confiesa. Nadie confronta. Se acuestan temprano — al amanecer bajan al Archive.
+
+---
+
+**Variante Bram (última cena):**
+
+Con Bram como Pivote activo, el brindis funciona igual salvo por Bram: es él quien no levanta el vaso primero, y cuando lo hace es tarde y sin mirar a nadie. Después de la cena, cuando el grupo se retira a dormir, Bram se queda con el jugador un momento — no confiesa, pero pregunta algo específico: *"Si alguien más recibiera la orden que a mí me dieron... ¿tú qué crees que haría?"* El jugador no sabe todavía que Bram ya rechazó. La pregunta queda flotando. Al amanecer, en el corredor del Archive, tendrá sentido.
+
+Los siguientes 3-5 beats de la ruta Bram están marcados por esta incertidumbre: el jugador entra al Archive con la sensación de que Bram sabe algo que no está diciendo, y con la advertencia de Tobin sobre "un segundo" resonando encima. La traición mecánica no ocurre en el corredor — pero afuera espera el segundo agente, y el jugador entiende recién ahí, en tiempo real, qué era lo que Bram le estaba preguntando.
 
 ---
 
 ### ACTO 3: El Centro del Centro (Clímax)
-**Duración:** ~30-45 min
 
-**Locaciones:**
-1. **The Sunken Archive**
-   - Descenso hacia Fragmento
-   - Descubrimiento de verdad sobre God-Cores (Wardens)
-   - Activación del Fragmento
-   - LA TRAICIÓN (Pivote actúa aquí)
-   - Escape while pursued
+**Duración:** ~45-60 min. **Estructura:** 5 sub-beats en cadena continua — sin puntos de guardado clásicos entre ellos, sin regreso posible al Acto 2. Todo lo que se sembró en Grove of Cycles ([[Grove of Cycles — Escena del Acto 2]]) y en The Reckoning florece o se quiebra aquí.
 
-2. **The First Wound (Cementerio)**
-   - Entrada al cráter
-   - Confrontación final con todos los God-Cores visibles
-   - Enfrentamiento con Pivote (si persecución)
-   - Clímax emocional y mecánico
+#### 1. Approach al Sunken Archive
 
-3. **Lugar del Destino (varies by Final)**
-   - F1: Donde Speck despierta ("Guided Molt")
-   - F2: Donde Speck muere ("Long Winter")
-   - F3: Donde Speck es capturado ("Conqueror's Clause")
-   - F4: Donde Speck elige ("Warden's Choice")
+El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. Los flashes del jugador se han vuelto más frecuentes en los últimos beats — cristal debajo del pelaje beige, facetas donde deberían haber ojos — pero siguen siendo privados (canon en [[Speck]] §Capa 2), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
 
-**Beats:**
-- Fragmento activado = The First Wound se despierta
-- God-Cores se despiertan, Aether crudo se suelta
-- Bound Five se divide (traición)
-- Jugador persigue o es perseguido
-- Showdown final con Pivote
-- Speck's true form revealed
-- 4 finales mecánicamente divergentes
+#### 2. Interior del Archive
+
+Bóveda Warden. Geometría imposible, cristal dormido, silencio con reverberación. El grupo camina por corredores que Valen intenta leer y no puede — el idioma es de otro estrato, más antiguo que cualquier cosa en The Stillspire. Al centro está el Fragmento, en un pedestal. Alrededor, tallados en las paredes, cadáveres calcificados en formación ritual — no ornamentos, cuerpos. Sereth (o Valen si Sereth es Pivote) hace la lectura: la civilización Warden no adoraba God-Cores, **los enterraba**. Los God-Cores son sus muertos. Cada core que el grupo destruyó en el Acto 1 era un cadáver profanado.
+
+El jugador se pone the Wanderer's Goggles aquí — segundo uso desde The Reckoning. A través de los lentes, las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — el último Warden vivo grabó su duelo en el Aether, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — que Valen no puede traducir sin los lentes — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
+
+El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarrollará; lo que este documento fija es el espacio: Valen se sienta en el suelo. Darro deja caer un chiste que muere en el aire. Roen mira a Speck y no aparta la mirada. Speck permanece quieta, como si supiera que la mirada la ubica.
+
+#### 3. Traición mecánica al salir del Archive
+
+Fría, rápida, sin épica. El grupo empieza el ascenso hacia la superficie. En el último corredor, el Pivote se separa — pretexto menor (revisar una inscripción, cubrir la retaguardia, cualquier cosa que suene razonable durante tres segundos). Cuando el resto voltea, el Pivote tiene a Speck. Ruta lateral, salida secundaria, sin diálogo largo. El grupo queda desarmado momentáneamente — no golpeado, **desalojado**. El Pivote no explica; explicar es Acto 4. Aquí solo actúa. Si el jugador rompió el Bond equivocado en Driftmarket, la traición cae doblemente: perdió al Pivote real Y al que confrontó por error.
+
+**Variante Bram:** en la ruta Bram, este sub-beat no ocurre. En el corredor, Bram frena. Toma a Speck en brazos, sí — pero para devolverla al jugador. *"Me pidieron que la cargue afuera por otra ruta. No voy a hacerlo."* No confesión heroica: agotamiento. El grupo sale intacto. Pero afuera del Archive los espera un mensajero del Great Forging Clan que buscó específicamente a Torgan — el Council ya movió su segunda pieza. La advertencia de Tobin del Reckoning (variante Bram) se materializa en tiempo real: **un segundo Pivote está siendo activado en la sombra**, y el hecho de que Bram rechazó no salvó el plan del Council, solo lo redistribuyó. El Acto 3 se abre igual, con un traidor distinto — o con un enemigo directo del Council interceptándolos si el segundo agente falla en llegar a tiempo. Bram vive el Acto 3 sabiendo que su rechazo no fue suficiente.
+
+#### 4. Persecución hacia The First Wound
+
+El corazón del Acto 3. El Pivote (o el segundo agente, en ruta Bram) huye por The Wilds hacia el cráter cargando a Speck; el jugador y los 2-3 fijos restantes persiguen. Este tramo dura lo suficiente para que la palabra "traición" pierda su sabor de sorpresa y se vuelva geografía compartida.
+
+Las pistas dramáticas que emergen aquí:
+- **Aliados momentáneos**: dependiendo de decisiones del Acto 2, pueden aparecer figuras que ayudan a interceptar — un contingente pequeño de Aethelgard Watch si Roen mantuvo su Bond con el puesto, un centinela de Stillwood Watch si Valen intercedió, un mercenario suelto de la vieja compañía de Bram. Nunca resuelven el clímax; solo mueven el tablero medio metro.
+- **Decisiones del jugador sobre el Pivote antes del cráter**: dos o tres puntos donde el jugador puede elegir entre alcanzar y neutralizar al Pivote en la persecución (final más rápido, más cruel) o dejar que llegue al cráter para hablar (final más largo, más doloroso, único que permite F4). Estas decisiones no se anuncian con UI — se juegan con el botón de Bond (rehusarlo es una decisión).
+- **Los Bonds acumulados se prueban aquí**: los 2-3 fijos restantes reaccionan a la persecución según su Tether. Roen carga peso emocional que no descarga; Valen ofrece lectura filosófica que suena a evasión; Darro insiste en bromas que fallan y luego pide perdón. Si el Bond con alguno cayó en el Acto 2, ese fijo pierde una línea completa aquí — su silencio es la penalidad.
+
+El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometría del suelo se rompe, y en el horizonte empieza a verse el cráter latir. El grupo llega al borde de The First Wound cuando el sol se pone.
+
+#### 5. Quiebre final en The First Wound (cráter, God-Core cemetery)
+
+Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
+
+Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 4 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, retroceder es F2, quedarse quieto lo suficiente para que Speck hable primero es F4.
+
+Los detalles del acto final quedan abstractos aquí — cada final los interpreta distinto y cada ficha de Pivote escribirá su variación. Lo que este documento fija: **el cráter es el escenario único de la decisión**, no hay clímax repartido en dos locaciones, y ningún Pivote decide por el jugador. El Pivote llegó cargando a Speck; el jugador decide qué pasa después.
+
+#### 6. Nota transversal — Grove of Cycles florece aquí
+
+Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycles — Escena del Acto 2]]) tienen razón parcial en este cráter, y ninguno tiene toda la razón. Threnn tuvo razón en que dejar la Muda completarse cuesta civilizaciones (F1 lo confirma, con belleza y con luto). Ilyara tuvo razón en que no sanar es su propia forma de violencia (F2b lo confirma, con tragedia sin retorno). Corwyn tuvo razón en que negociar administradamente compra tiempo (F2a lo confirma, con sabor a decepción). Maelys — la que casi no habló — tuvo razón en que ninguna preferencia importa hasta que Speck elige (F4 lo confirma, y es el único final que la cita literalmente). El jugador nunca les debe una respuesta; el juego se las da en el cráter.
 
 ---
 

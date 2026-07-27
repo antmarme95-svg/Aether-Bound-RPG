@@ -26,7 +26,7 @@ durante el cataclismo (rondaban ya los 550+ años en aquel entonces — ver
 [[Las Tres Razas]], techo de vida élfico 650-700) — **ahora 4**, el quinto
 murió de vejez natural hace 10 años. Sin título de gobierno formal, pero con
 autoridad casi religiosa — son la última conexión viva con la verdad de lo
-que pasó. La Queen gobierna el presente; ellos son memoria viva del pasado.
+que pasó. La reina gobierna el presente; ellos son memoria viva del pasado.
 **Deliberadamente 4, no 3** — a diferencia del Triune Council (3 asientos,
 nunca hay empate), The Elder Circle no es un cuerpo que vota decisiones; es
 un grupo de testigos que a veces coincide y a veces no, sin mecanismo de
@@ -73,18 +73,18 @@ después.
 > **Maelys:** *(silencio largo)* *"...No importa lo que ninguno de nosotros
 > prefiera."*
 >
-> **Corwyn:** *"Qué diplomáticos, discutiendo sin alzar la voz. La Queen
+> **Corwyn:** *"Qué diplomáticos, discutiendo sin alzar la voz. La reina
 > estaría orgullosa."*
 
 Nadie grita. Nadie cede. Eso es The Elder Circle.
 
-**Fricción estructural:** la Queen, más joven y pragmática, puede querer
+**Fricción estructural:** la reina, más joven y pragmática, puede querer
 avanzar/cambiar política; The Elder Circle frena por reverencia al pasado —
 choque generacional literal, con siglos de diferencia real entre ambos
 bandos.
 
 **Sucesión:** no hay urgencia de sucesión activa en siglos — al ser tan
-longeva, la Queen simplemente sigue siendo Queen. Contraste directo con la
+longeva, la reina simplemente sigue siendo la reina. Contraste directo con la
 inestabilidad humana.
 
 ### Las Dos Academias — y lo que queda Fuera de Ambas
@@ -210,7 +210,7 @@ institución casi permanente. **Maren** ([[Maren-Ficha-Expandida-v1|Maren]]),
 su Jefa de Operaciones, representa un tercer tipo de poder humano — ganado,
 no heredado (Bram) ni ausente (Iven): hija de gente común, escaló por pura
 competencia. Cuando el Triune Council necesita *ejecutar* un plan, no solo
-decretarlo, pasa por el Consortium — el Regent puede ordenar, pero solo el
+decretarlo, pasa por el Consortium — el regente puede ordenar, pero solo el
 Consortium puede movilizar los recursos reales.
 
 **Conexión con Maren:** su negociación de hace 2 años ([[Maren-Ficha-Expandida-v1]])
@@ -277,7 +277,7 @@ practicidad, no por mérito humano.
 |---|---|---|---|
 | **Élfico** | Embajador designado por Queen Ithessa, típicamente graduado de Royal Academy | Queen se queda en The Stillspire; el embajador vive en Rivermeet a tiempo completo | **Ambassador Cyrion** — décadas en el puesto, nombramiento estable propio de la longevidad élfica |
 | **Enano** | Embajador designado por King Borran / Great Forging Clan | King se queda en Emberdeep; el embajador vive en Rivermeet | **Ambassador Kadrun** — cargo casi hereditario dentro del Clan, tan estable como la sucesión misma del trono enano |
-| **Humano** | NO es el Regent — se negocia/gana por consenso entre Houses + Trade Consortium | Ya vive en su propia ciudad | **Councilor Merrit Vance** — el asiento más volátil de los tres, cambia de manos con cada reconfiguración de poder en Rivermeet |
+| **Humano** | NO es regente — se negocia/gana por consenso entre Houses + Trade Consortium | Ya vive en su propia ciudad | **Councilor Merrit Vance** — el asiento más volátil de los tres, cambia de manos con cada reconfiguración de poder en Rivermeet |
 
 **Asimetría deliberada:** los embajadores élfico y enano son nombramientos
 de **largo plazo**, casi permanentes — coherente con la longevidad y
@@ -354,5 +354,5 @@ con Queen Ithessa. Desacuerdo pasivo-agresivo, nunca pierden compostura.
 | Threnn | Comandante/guerrero | Proteger el statu quo a cualquier costo |
 | Ilyara | Sanadora | Dejar que la Muda se complete |
 | Maelys | Testigo roto, casi no habla | Voz-oráculo, impredecible |
-| Corwyn | El más político | Sin bando fijo, control informal sobre la Queen |
+| Corwyn | El más político | Sin bando fijo, control informal sobre la reina |
 | *Thessaly (†, hace 10 años)* | *Mediadora de consenso* | *Su ausencia agudizó el desacuerdo* |

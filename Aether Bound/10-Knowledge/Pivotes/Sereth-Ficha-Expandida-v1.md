@@ -81,7 +81,7 @@ pero de **escuelas rivales.** Valen es Academy of Sages (observar sin
 intervenir); Sereth es Royal Academy (actuar por cálculo, al servicio de la
 Corona). No es solo diferencia de método — es diferencia de para quién
 trabajan: Valen no responde a nadie, Sereth responde, en última instancia, a
-la Queen Ithessa y su corte. Se cruzan en archivos hace décadas — Valen
+Queen Ithessa y su corte. Se cruzan en archivos hace décadas — Valen
 investigando ciclos por su cuenta, Sereth investigando ciclos porque el
 palacio se lo pidió.
 
