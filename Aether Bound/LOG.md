@@ -5151,3 +5151,30 @@ Todos los demás pendientes documentados en Current-State.md §Pendientes.
 - Estrategia que funcionó: relanzar de a 2 con la Maren-Ficha completa como plantilla de referencia (aceleró y homogeneizó el output). Aun así 1 de los 2 falló al escribir Vekka+Dagna.
 
 **Fases 2/3/4:** sin arrancar. Pendientes para sesión siguiente después de cerrar Vekka+Dagna.
+
+## [2026-07-27] sprint/QA-reparación | Fase 1 CERRADA — Vekka + Dagna reescritas (9/9 Pivotes ratificados)
+
+Retomo tras el cierre parcial anterior. Estrategia: 1 agente Opus 5 secuencial (no paralelo — los server errors en la sesión previa vinieron de saturación con 2-3 concurrentes). Plan enfocado guardado en `~/.claude/plans/cozy-floating-unicorn.md`.
+
+**Vekka** (Enana Strategist — Guild Master de the Great Forging Clan):
+- Reescritura completa 139 → 459 líneas siguiendo plantilla Maren.
+- Bio unificada: 60 años en la forja (eliminada inconsistencia 60/80), 50 años como Guild Master, formó a Darro hace ~30 años y lo rechazó sin explicación — Darro es su "flawed forging viviente" (3 capas: respeto forzado, resentimiento, silencio nunca explicado).
+- Traición REAL en el cráter: llega primero, desmonta el core central en silencio metódico, Speck viva pero inmovilizada con arnés técnico. Línea canónica *"I built you. Forgive me for finishing the job."* se dispara ahí. Roen deduce la señal (arnés técnico) desde Acto 1.
+- Beat Warden en Archive: *"Los apilaron con precisión ceremonial. Sabían lo que hacían."* — respeto por otros artesanos, pero traiciona igual porque el respeto no altera el dogma.
+- 5 epílogos por matriz Deber Institucional. F4: reconoce por primera vez que el gremio se equivocaba en el diagnóstico (no en el dogma) — Speck era obra en proceso, no forja mal hecha.
+- Superlativo: **"la traición más precisa"** — no colisiona con las 8 restantes.
+
+**Dagna** (Enana Vanguard — subclán vasallo Deepstone):
+- Reescritura mayor 242 → 478 líneas siguiendo plantilla Maren.
+- Sección duplicada "Roen y la Quiebre" ELIMINADA — el vínculo Roen+Dagna aparece ahora en una sola instancia integrada, distribuida entre "Cómo la Ve Roen" (subtexto tácito, escena "No tuve tu opción"), quiebre en el cráter, y sección dedicada en Dinámicas.
+- Fechas unificadas en 10 años (contacto Great Forging Clan) + 5 años (servicio continuo con jugador). Eliminada ambigüedad "hace 6 años".
+- Entrada Roen+Dagna canónica: **canoniza que es Dagna quien quiebra a Roen, no Lyris** (corrección al hallazgo del QA narrativo). Escena del escudo caído explicitada como gesto físico silencioso, no lloro dramático.
+- Beat Warden propio: toca el suelo, no un cadáver — *"Los enterraron para arriba. No están descansando. Están vigilando."* Primera vez que dice algo poético.
+- Traición: la única que llora en el acto, la que camina en vez de huir, la única que abraza a Speck antes de entregarla, la persecución más corta del elenco.
+- 5 epílogos. F2b: renuncia al clan por primera vez en la historia del subclán Deepstone. F4: subclán la libera como acto de reconocimiento a la síntesis; vuelve al grupo.
+- Grove of Cycles: encuentro individual más corto del juego con Maelys (hoja del Grove intacta en F4).
+- Superlativo: **"la traición que rompe al ancla"** — solo ella hace esto.
+
+**Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ (9/9). Pendientes ordenados: Fase 2 (Sonnet 5, propagación fijos + The Reckoning + Momentos de Persona + Wanderer's Goggles reaparición), Fase 3 (Haiku 4.5, lint mecánico + renames + typos), Fase 4 (re-corrida de los 2 QAs para verificar 0 CRÍTICOS).
+
+**Estrategia validada:** 1 agente Opus 5 a la vez → 0 server errors esta vuelta, ambas fichas al primer intento. Costo: 84k + 123k tokens = ~207k para cerrar Fase 1.

@@ -17,12 +17,10 @@ updated: 2026-07-27
   - `Grove of Cycles — Escena del Acto 2.md` (nuevo) con debate del Elder Circle
   - `Geografía y Ciudades.md §ACTO 3` reescrito a 5 sub-beats
   - `Geografía y Ciudades.md §THE RECKONING` con tabla Tobin corregida (señala a fijos C1/C2/C4, no a Pivotes inactivos) + Wanderer's Goggles 40+ años
-- **🟡 Fase 1 al 78%** — 7/9 fichas de Pivote reescritas al canon nuevo:
-  - ✅ Maren, Sereth, Iven (arquetipo Aritmética/Manipulación — Sereth movido a manipulación pura, Iven con Council mintiendo)
-  - ✅ Torgan (aritmética unificada 55 años, cadena de mando resuelta)
-  - ✅ Bram, Lyris, Nyael (arquetipo Rechazo/Ausencia + institucional — Bram canon NO traiciona con mecanismo del "segundo agente")
-  - ✅ `Los 9 Pivotes.md` (fila de Bram actualizada al canon nuevo)
-  - 🔴 **Vekka y Dagna PENDIENTES** — Agente B falló con server errors 2 veces; requieren reescritura mayor (Vekka completa 139→~450 líneas; Dagna 242→~450 con arco por acto + entrada Roen+Dagna canónica)
+- **✅ Fase 1 al 100%** — 9/9 fichas de Pivote reescritas al canon nuevo + `Los 9 Pivotes.md`:
+  - Maren, Sereth, Iven (Aritmética/Manipulación — Sereth movido a manipulación pura, Iven con Council mintiendo)
+  - Torgan, Vekka, Dagna (Deber Institucional — Torgan aritmética 55 años + cadena resuelta; **Vekka reescritura completa** con Darro como "flawed forging viviente" + superlativo "la traición más precisa"; **Dagna reescritura mayor** con entrada Roen+Dagna canónica que canoniza que Dagna quiebra a Roen — no Lyris — y sección duplicada eliminada)
+  - Bram, Lyris, Nyael (Rechazo/Ausencia + institucional — Bram canon NO traiciona con mecanismo del "segundo agente")
 - **🔴 Fase 2 sin arrancar** — Sonnet 5, propagación mecánica + cross-cutting (Roen/Valen/Darro fichas, Estructura Política, El Mundo y la Muda, Speck.md, El Quinteto.md)
 - **🔴 Fase 3 sin arrancar** — Haiku 4.5, lint mecánico verificable (renombrar El Quinteto→The Bound Five, retraducciones "el Consejo" con desambiguación, typos, cross-refs)
 - **🔴 Fase 4 sin arrancar** — verificación end-to-end con los 2 QA re-corridos
@@ -53,13 +51,28 @@ updated: 2026-07-27
 
 ## Pendientes — ordenados por fecha
 
-### 🗓 Próxima sesión — retomar sprint de reparación
+### 🗓 Próxima sesión — retomar sprint desde Fase 2
 
-**Bloqueo pendiente (Fase 1):** Vekka + Dagna. Ambos son reescritura mayor porque:
-- **Vekka** hoy tiene 139 líneas sin arco por acto, sin persecución, sin Acto 3 real, y 4 finales de una línea que no mencionan a Speck. Necesita ~450 líneas al nivel de las otras 7 fichas. Instrucciones detalladas en el plan `~/.claude/plans/cozy-floating-unicorn.md`.
-- **Dagna** hoy tiene 242 líneas con sección "Roen y la Quiebre" duplicada verbatim y sin arco por acto claro. Necesita reescritura + entrada Roen+Dagna canónica (canonizar que Dagna es quien quiebra a Roen, no Lyris — corrección al hallazgo del QA narrativo).
+**Fase 1 CERRADA (2026-07-27):** 9/9 fichas de Pivote ratificadas.
 
-**Después de Vekka+Dagna:** arrancar Fase 2 (Sonnet 5, propagación mecánica + cross-cutting sobre Roen/Valen/Darro/Estructura Política/etc.), Fase 3 (Haiku 4.5, lint verificable), Fase 4 (verificación end-to-end con los 2 QA re-corridos).
+**Fase 2 pendiente (Sonnet 5) — propagación mecánica + cross-cutting:**
+- Fichas de fijos Roen/Valen/Darro con entrada Roen+Dagna reflejada (canonizar en Roen-ficha que quien lo quiebra es Dagna, no Lyris — corrección al hallazgo del QA narrativo, ya canonizada en Dagna-ficha)
+- Integración de The Reckoning en las 9 fichas (Tobin da dato accionable, Bond fijo roto por confrontación al fijo equivocado)
+- Momentos de Persona con reacción del Pivote activo
+- Reaparición de los Wanderer's Goggles en Sunken Archive y gate de F4
+- Corrección línea Roen sobre flashes (canon: privados/invisibles)
+- Corrección línea Iven sobre "asentamiento del norte" (norte es Stillwood, elfo — Iven's Settlement es humano)
+- Contradicciones directas: Bram→Rivermeet (no Driftmarket), King Borran "tataranieto" (no nieto/bisnieto), Maren usa "Rivermeet" no "Aethelgard" para ciudad
+
+**Fase 3 pendiente (Haiku 4.5) — lint mecánico verificable:**
+- Rename `El Quinteto.md` → `The Bound Five.md` + fix cross-refs `[[El Bound Five]]` en ~10 archivos
+- Retraducciones institucionales pendientes (con desambiguación de "el Consejo" en fichas legacy)
+- Typos y residuos de idioma (deixada→dejada, assassinato→asesinato, appecia→aprecia, Localizé→Localicé, Misbound→Mistbound, Socópata→Sociópata, sabará→sabrá, recostruir→reconstruir, cazador→cazar, nide→nidos, began visiting→empezó a visitar, "Dargo"→Darro)
+- Aritmética de edades pendiente en fichas no reescritas (Bram sí lo tocó; verificar residuos)
+- Cross-refs rotas (`[[protocolo del silencio]]` en Speck.md)
+- Longevidad élfica (Estructura Política + El Mundo y la Muda: "rondaban ya los 550+ años en aquel entonces" → "eran adultos jóvenes (~20-150 años) cuando ocurrió; hoy rondan los 570-700")
+
+**Fase 4 pendiente:** verificación end-to-end con re-corrida de los 2 QAs (Opus para narrativo, Haiku para congruencia). Criterio: 0 CRÍTICOS en ambos reportes.
 
 ### 🔜 Próximas sesiones (sin fecha fija)
 
