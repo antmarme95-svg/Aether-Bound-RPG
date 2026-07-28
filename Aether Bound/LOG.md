@@ -5240,3 +5240,27 @@ Decisión previa: invertir orden original 2→3 y ejecutar Fase 3 primero. Razon
 **Nota abierta:** Sonnet flagged 2 residuos en Sereth-Ficha (línea 364-365, diálogo sobre renuncia de Roen) fuera del alcance del prompt. Verificación posterior confirma que YA no hay residuos ahí — Sonnet los resolvió pero no lo registró correctamente en el reporte.
 
 **Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ + Fase 2 ✅ + Fase 3 ✅. Único pendiente: Fase 4 (re-corrida de los 2 QAs con Opus para verificar 0 CRÍTICOS restantes).
+
+## [2026-07-27] session/close | Cierre de sesión — sprint QA al 78% (Fases 0/1/2/3 ✅, Fase 4 pendiente)
+
+Rutina de cierre ejecutada:
+- Cross-refs residuales del rename `The Bound Five` capturados fuera de `10-Knowledge/`: `00-Index.md` (línea 30) y `20-State/Task-Board.md` (fila B2) actualizados.
+- Current-State reescrito: sección "próxima sesión" simplificada — solo Fase 4 pendiente. Las 3 fases previas ya están registradas arriba en el mismo doc.
+- LOG con esta entrada de cierre.
+
+**Estado final del sprint QA:**
+| Fase | Modelo | Commit | Estado |
+|---|---|---|---|
+| 0 (docs-fuente) | Opus 5 | 7b4dbe6 | ✅ |
+| 1 (7/9 fichas) | Opus 5 ×3 paralelos | 7b4dbe6 + 379a7a4 | ✅ parcial |
+| 1 (Vekka+Dagna) | Opus 5 secuencial | 51dba0c | ✅ (9/9) |
+| 3 (lint mecánico) | Haiku 4.5 | 1bf1fec | ✅ |
+| 2 (semántica) | Sonnet 5 | 16588b1 | ✅ |
+| 4 (verificación) | Opus 5 (mañana) | — | 🔴 |
+
+**Lecciones de proceso validadas:**
+- 3 agentes Opus 5 en paralelo → server errors (backend saturado). 1 agente Opus a la vez → 0 errores.
+- Maren-Ficha como plantilla de referencia acelera output y homogeneiza estilo en agentes posteriores.
+- Verificación grep independiente post-agente indispensable (Haiku dejó 2 "Dargo" residuales que el reporte interno no captó).
+- Sonnet 5 (Fase 2) manejó bien un solo prompt exhaustivo con 7 sub-pasos secuenciales — más eficiente que 2 agentes en paralelo para el mismo trabajo.
+- Orden invertido 3→2 (Haiku antes que Sonnet) funcionó — Fase 2 escribió sobre base limpia sin necesidad de re-lint.

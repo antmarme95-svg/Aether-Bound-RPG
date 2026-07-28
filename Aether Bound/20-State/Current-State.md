@@ -66,28 +66,17 @@ updated: 2026-07-27
 
 ## Pendientes — ordenados por fecha
 
-### 🗓 Próxima sesión — retomar sprint desde Fase 2
+### 🗓 Próxima sesión — cierre del sprint QA (Fase 4)
 
-**Fase 1 CERRADA (2026-07-27):** 9/9 fichas de Pivote ratificadas.
+**Sprint QA 78% completo al cierre de 2026-07-27:** Fases 0, 1, 2 y 3 ratificadas (ver commits `7b4dbe6`, `51dba0c`, `1bf1fec`, `16588b1`). Único frente restante para cerrar el sprint completo:
 
-**Fase 2 pendiente (Sonnet 5) — propagación mecánica + cross-cutting:**
-- Fichas de fijos Roen/Valen/Darro con entrada Roen+Dagna reflejada (canonizar en Roen-ficha que quien lo quiebra es Dagna, no Lyris — corrección al hallazgo del QA narrativo, ya canonizada en Dagna-ficha)
-- Integración de The Reckoning en las 9 fichas (Tobin da dato accionable, Bond fijo roto por confrontación al fijo equivocado)
-- Momentos de Persona con reacción del Pivote activo
-- Reaparición de los Wanderer's Goggles en Sunken Archive y gate de F4
-- Corrección línea Roen sobre flashes (canon: privados/invisibles)
-- Corrección línea Iven sobre "asentamiento del norte" (norte es Stillwood, elfo — Iven's Settlement es humano)
-- Contradicciones directas: Bram→Rivermeet (no Driftmarket), King Borran "tataranieto" (no nieto/bisnieto), Maren usa "Rivermeet" no "Aethelgard" para ciudad
+**Fase 4 — Verificación end-to-end con re-corrida de los 2 QAs:**
+- Re-correr **QA de congruencia** (Haiku 4.5 o Opus según presupuesto): mismo prompt del original, contra el vault actual. Criterio: los 10 CRÍTICOS + 18 IMPORTANTES del reporte original deben estar resueltos (marcar cada uno ✅/🟡/🔴). Se esperan solo hallazgos MENORES o nuevos que Fases 0-3 no anticiparon.
+- Re-correr **QA narrativo** (Opus 5): mismo prompt del original, con instrucción explícita de verificar los 4 bloqueos duros resueltos (Archive→First Wound, eje 5 finales, Bram NO traiciona, Roen quebrado por Dagna) y los críticos creativos (Sereth vs Maren diferenciados, beat Warden en 9 fichas, Iven+Council mintiendo, poder innato del jugador consistente).
+- Ambos QAs deben devolver **0 CRÍTICOS** para declarar el sprint cerrado.
+- Si aparecen nuevos hallazgos: decidir si son parche corto en la misma sesión o si abren un sprint pequeño de seguimiento.
 
-**Fase 3 pendiente (Haiku 4.5) — lint mecánico verificable:**
-- Rename `El Quinteto.md` → `The Bound Five.md` + fix cross-refs `[[El Bound Five]]` en ~10 archivos
-- Retraducciones institucionales pendientes (con desambiguación de "el Consejo" en fichas legacy)
-- Typos y residuos de idioma (deixada→dejada, assassinato→asesinato, appecia→aprecia, Localizé→Localicé, Misbound→Mistbound, Socópata→Sociópata, sabará→sabrá, recostruir→reconstruir, cazador→cazar, nide→nidos, began visiting→empezó a visitar, "Dargo"→Darro)
-- Aritmética de edades pendiente en fichas no reescritas (Bram sí lo tocó; verificar residuos)
-- Cross-refs rotas (`[[protocolo del silencio]]` en Speck.md)
-- Longevidad élfica (Estructura Política + El Mundo y la Muda: "rondaban ya los 550+ años en aquel entonces" → "eran adultos jóvenes (~20-150 años) cuando ocurrió; hoy rondan los 570-700")
-
-**Fase 4 pendiente:** verificación end-to-end con re-corrida de los 2 QAs (Opus para narrativo, Haiku para congruencia). Criterio: 0 CRÍTICOS en ambos reportes.
+**Nota estratégica:** el sprint dejó al vault listo como fuente para el próximo frente real — **guión y diálogos por actos**. Después de Fase 4, no hay razón técnica para postergar más el guión.
 
 ### 🔜 Próximas sesiones (sin fecha fija)
 
