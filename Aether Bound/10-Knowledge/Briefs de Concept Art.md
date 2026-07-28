@@ -641,13 +641,33 @@ Batch escrito por Haiku 4.5 siguiendo las plantillas de §6d/§10 (formato prosa
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No glossy magical aura. No dramatic lighting or shadow. No ornamental jewelry styling. No smooth polished metal look. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.3 — Sunken Archive (interior)
+### 11.3 — Sunken Archive (interior) — v1, SUPERADO
 
 **Archivo destino:** `sunken-archive-interior-v1.png`
 
 **Especificación:** Bóveda subterránea Warden — geometría imposible, ángulos que desafían perspectiva. Cristal dormido embebido en las paredes emitiendo luz azul pálido. Corredor central que desciende suavemente hacia un pedestal al fondo. El Fragmento reposando en el pedestal como objeto de reverencia silenciosa. Flanqueando todo el corredor: cadáveres calcificados dispuestos en formación ritual — cuerpos apilados con precisión ceremonial en los nichos de las paredes, no mezclados, no hecatombe. Mismos símbolos geométricos de la piel de Speck tallados sutilmente en los cuerpos (marcas Warden). Escala interior masiva pero íntima — el Bound Five cabría holgadamente, pero se sentirían pequeños. Iluminación: cristal azul dormido únicamente, sin fuente cálida. Silencio implícito, reverberación pesada. Composición: perspectiva desde la entrada mirando hacia el pedestal y el Fragmento, cadáveres calcificados en profundidad suave, sin gore, no aterradora — ceremoniosa. Mood: reverencia con peso, descubrimiento silencioso, tumba antigua ratificada.
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No bright saturation. No neon glow. No zombie/necromancy aesthetic. No gore or visceral detail. No ominous shadow play. No glossy polish. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+**QA v1 (2026-07-27):** 🔴 rechazada. Se leyó como catacumba egipcia con momias vendadas en repisas apiladas — rompe la identidad Warden de los cuerpos (deberían ser reconocibles como los mismos God-Cores que despiertan en el cráter, no una necrópolis genérica). Geometría gótica regular sin la sensación de "ángulos que no cierran". Fragmento perdido al fondo, sin ser foco dominante.
+
+### 11.3-v2 — Sunken Archive (interior) — REVISADO, RATIFICADO ✅
+
+**Archivo destino:** `sunken-archive-interior-v2.png`
+
+**Especificación:** Bóveda subterránea Warden. Corredor central largo con perspectiva profunda hacia un pedestal al fondo que sostiene **el Fragmento — foco emisivo dominante, luz azul-jade fría que jala el ojo por todo el recorrido**. Geometría de la bóveda deliberadamente imposible: arcos angulares que no cierran perfecto, ángulos ligeramente desalineados, sensación de arquitectura hecha por una civilización que no razonaba con nuestra geometría.
+
+Los flancos del corredor NO son repisas apiladas. Son **cuerpos calcificados fundidos a la piedra viva de las paredes**, en formación ritual vertical (como si hubieran sido enterrados de pie, brazos cruzados, integrados a la roca). De cada cuerpo emerge **cristal prismático azul-jade** — piel-vuelta-mineral, mismo patrón geométrico que se ve en el pelaje de Speck (canon Speck §Capa 2). Esto los identifica visualmente como God-Cores en estado dormido: los mismos cadáveres que despiertan en el cráter del Acto 3 sub-beat 5.
+
+Las paredes tienen inscripciones marginales apenas visibles al ojo desnudo — patrones sutiles que se pierden en la textura de la piedra, pistas de una capa oculta que los Wanderer's Goggles revelarán (canon: proyecciones Warden residuales solo visibles con Goggles).
+
+Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplandor jade emisivo del Fragmento al fondo. No hay fuente cálida. Composición: vista desde la entrada del corredor mirando hacia el pedestal, cuerpos-cristal verticales alineados a los flancos, silencio con reverberación implícita.
+
+**Negativos:** No mummies. No wrapped bodies. No egyptian catacomb aesthetic. No shelved rows of corpses. No gothic cathedral arches with perfect symmetry. No administrative/library layout. No warm lighting. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+**QA v2 (2026-07-27):** ✅ **Ratificada.** Resuelve el problema dramático central — los cuerpos-cristal con brazos cruzados fundidos a la piedra se leen inequívocamente como Wardens/God-Cores dormidos, no como momias. Fragmento como foco emisivo dominante funciona perfecto, jala el ojo por todo el corredor. Sin momias, sin catacumba egipcia, sin repisas administrativas — todo resuelto.
+
+🟡 **Nota menor no bloqueante:** la geometría "imposible" no se cumplió del todo — la bóveda salió como nave gótica catedralicia perfectamente simétrica (crucería, arcos apuntados regulares, columnas idénticas), en vez de "ángulos que no cierran". Es hermoso pero se lee como arquitectura humana medieval, no alienígena. No traiciona el canon dramático (la identidad Warden de los cuerpos, que era el hallazgo crítico, sí quedó resuelta), así que no bloquea la ratificación — mismo nivel de nota que Threnn en el elenco político. **Si se re-corre en el futuro:** forzar más asimetría (arcos desalineados, apoyos irregulares) para reforzar la sensación de geometría alienígena.
 
 ### 11.4 — The First Wound (clímax jugable, diferente del keyframe §6c nocturno)
 

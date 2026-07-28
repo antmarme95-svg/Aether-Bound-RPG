@@ -5295,3 +5295,19 @@ Batch escrito por 1 agente Haiku 4.5 (~87k tokens, ~3 min). Modelo elegido expl�
 **Estado:** batch listo para NB2. Boris decide el orden de corrida — no todos a la vez.
 
 **Costo del batch:** 87k tokens (Haiku). El costo real grande viene después al correr los 14 prompts en NB2 (fuera de esta sesión).
+
+## [2026-07-27] concept-art/QA | Sunken Archive — v1 rechazada, v2 ratificada (§11.3)
+
+Primera corrida real de los 14 briefs nuevos (§11). Resultado: 1 rechazo + 1 iteración exitosa.
+
+**v1 (`sunken-archive-interior-v1.png`):** 🔴 rechazada. Se leyó como catacumba egipcia — momias vendadas en repisas apiladas horizontales. Rompía la identidad Warden de los cuerpos: deberían ser reconocibles como los mismos God-Cores que despiertan en el cráter del Acto 3, no una necrópolis genérica. Geometría gótica regular sin la sensación de "ángulos que no cierran" pedida en el brief. Fragmento perdido al fondo, sin ser foco dominante.
+
+**Diagnóstico:** el brief original describía "cadáveres calcificados" de forma ambigua — no especificaba que el cristal debía emerger visiblemente de los cuerpos como marca de identidad Warden, ni que el Fragmento debía ser el foco emisivo dominante de la composición.
+
+**v2 (`sunken-archive-interior-v2.png`):** ✅ ratificada. Brief reescrito con: cuerpos fundidos a la piedra con cristal prismático azul-jade emergiendo (mismo patrón geométrico del pelaje de Speck), brazos cruzados en formación ritual vertical, Fragmento como foco emisivo dominante que jala el ojo por el corredor, inscripciones marginales apenas visibles (siembra la capa que los Wanderer's Goggles revelarán), negativos explícitos anti-momia/anti-catacumba-egipcia/anti-repisas.
+
+**Resultado:** resuelve el problema dramático central — identidad Warden de los cuerpos inequívoca. 🟡 **Nota menor no bloqueante:** la bóveda salió como nave gótica catedralicia simétrica en vez de "geometría alienígena que no cierra" — decorativo pero no traiciona el canon. Mismo nivel que la nota de Threnn en el elenco político. Si se re-corre: forzar asimetría en los arcos.
+
+**Vault:** §11.3 actualizado en `Briefs de Concept Art.md` — v1 marcada SUPERADO con nota de rechazo, v2 con especificación completa + nota QA ratificada. Sigue el mismo patrón de revisiones usado en §9 (Ithessa, Kadrun) y §10 (Ilyara).
+
+**Pendiente:** guardar `sunken-archive-interior-v2.png` en `90-Raw/concept/` (Boris tiene la imagen del lado de NB2, falta bajarla al repo).
