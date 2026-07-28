@@ -5328,3 +5328,25 @@ Segunda corrida real de los 14 briefs del §11. Resultado: aprobada en el primer
 **Vault:** §11.5 actualizado con nota QA, ratificado. Sigue el mismo patrón de documentación que Sunken Archive.
 
 **Pendiente:** guardar `grove-of-cycles-interior-v1.png` en `90-Raw/concept/`.
+
+## [2026-07-27] concept-art/QA | Cierre del batch §11 — 14/14 briefs corridos y QA'd
+
+Boris corrió los 14 briefs pendientes en NB2 y las 14 imágenes llegaron a `90-Raw/concept/` (2 ya QA'd en sesiones previas — Sunken Archive v2, Grove of Cycles). Se completó el QA de las 12 restantes.
+
+**Resultado: 13/14 ratificadas, 1 con iteración exitosa (Sunken Archive, ya documentada).**
+
+Aprobadas directo:
+- **Driftmarket v2** — resuelve el caption quemado de v1, cero texto.
+- **Wanderer's Goggles** — primer item con brief propio, salió excelente: latón oxidado, lentes ambar, correa de cuero desgastada, reference sheet de 4 vistas.
+- **The First Wound** — core central pulsando jade, cores despertando, 5 siluetas del grupo para escala. 🟡 nota menor: cores se leen como cristales/orbes a esa distancia, no como cuerpos — coherente con la vista aérea pedida.
+- **Oficina de Tobin** — ver nota de proceso abajo.
+- **3 Torres de Guardia** (Aethelgard/Ignis Reach/Stillwood Watch) — las 3 con identidad racial fuerte y diferenciada; Stillwood la más lograda (silueta vertical exagerada, integración orgánica al árbol).
+- **Rivermeet Council Chamber** — 3 asientos con diseño racial distinto, mármol frío institucional.
+- **Emberdeep vertical** — múltiples niveles, forjas + Aether azul, complementa bien al keyframe ya ratificado en §6d.
+- **Ascending Falls** — tríptico narrativo del ascenso Gloomvault→Stillspire, solución creativa no anticipada en el brief. 🟡 nota menor: puentes de piedra/madera en vez de raíz.
+- **Iven's Settlement** — panorámica de declive agrícola, mood logrado con precisión.
+- **Mistbound interior** — posta defensiva austera y funcional.
+
+**Nota de proceso importante — falso rechazo corregido:** inicialmente marqué la oficina de Tobin como 🔴 rechazada por un mapa con "Driftmarket" legible en la pared, aplicando la regla anti-texto de forma demasiado literal. Boris corrigió: el texto en un objeto in-world (mapa colgado, carta, libro) es contenido diegético, no el glitch de caption/spec-sheet que la regla anti-texto fue diseñada para prevenir (el problema histórico era texto flotando SOBRE la imagen como watermark/label, no texto dentro de un objeto de la escena). **Se actualiza el criterio de QA:** la regla anti-texto aplica a artefactos de generación, no a texto narrativamente justificado. Documentado en la cabecera de §11 para futuras rondas de QA.
+
+**Estado:** batch §11 completamente cerrado — 14/14 briefs escritos, corridos, QA'd, ratificados y guardados en el vault. Próximo frente de concept art (sin fecha fija): escenas de traición legacy, set de arte de combos, videos Higgsfield.

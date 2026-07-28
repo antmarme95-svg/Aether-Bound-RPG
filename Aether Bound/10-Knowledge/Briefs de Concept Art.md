@@ -625,7 +625,13 @@ Batch escrito por Haiku 4.5 siguiendo las plantillas de §6d/§10 (formato prosa
 
 **Nueva convención de archivos:** el §11.2 (Wanderer's Goggles) inaugura una carpeta `90-Raw/concept/props/` para items diegéticos futuros (Fragmento, God-Cores individualizados, etc.).
 
-### 11.1 — Driftmarket re-corrida
+**✅ CERRADO (2026-07-27) — 14/14 corridas y QA'd, 13/14 ratificadas al primer o segundo intento:**
+- **13 ratificadas directo:** Driftmarket v2, Wanderer's Goggles, First Wound, Grove of Cycles, Oficina de Tobin, las 3 Torres de Guardia, Rivermeet Council Chamber, Emberdeep vertical, Ascending Falls, Iven's Settlement, Mistbound interior.
+- **1 con iteración:** Sunken Archive — v1 rechazada (leyó como catacumba egipcia con momias), v2 ratificada.
+- **Lección de proceso:** un rechazo inicial de la oficina de Tobin fue revertido — el texto en un mapa colgado en la pared es contenido diegético de un objeto in-world, no un caption/label inyectado por NB2. La regla anti-texto aplica a artefactos de generación (spec-sheets, captions flotantes), no a texto narrativamente justificado dentro de la escena (mapas, cartas, libros que un personaje tendría).
+- Detalle de QA por brief en cada sub-sección abajo.
+
+### 11.1 — Driftmarket re-corrida — RATIFICADO ✅
 
 **Archivo destino:** `driftmarket-keyframe-v2.png`
 
@@ -633,13 +639,17 @@ Batch escrito por Haiku 4.5 siguiendo las plantillas de §6d/§10 (formato prosa
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No smooth airbrushed digital gradient shading. No clean vector-style linework. No glossy modern video-game splash art finish. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.2 — The Wanderer's Goggles (item — prop narrativo)
+**QA (2026-07-27):** ✅ **Ratificada.** Resuelve el problema que hundió v1 (caption quemado) — cero texto en la imagen. Plataformas flotantes con puentes de cadena, velas ochre-rust, luces Aether teal filtrando entre mástiles, mercado con mercaderes visibles, atmósfera crepuscular. Coincide con el brief punto por punto.
+
+### 11.2 — The Wanderer's Goggles (item — prop narrativo) — RATIFICADO ✅
 
 **Archivo destino:** `props/wanderer-goggles-v1.png`
 
 **Especificación:** Props reference sheet de unos goggles/lentes viejos de latón, guardados 40+ años en el cajón de Tobin Hale. Lentes ambar-doradas ligeramente empañadas de edad. Correa de cuero desgastada, con marcas de pliegue. Instrumento sin adornos — se ven exactamente como lo que son, herramienta útil, no artefacto ceremonial. Composición: vista frontal, vista lateral, detalle cerrado de la correa y el mecanismo de ajuste en los flancos. Sin brillo dramático. Sin aura mágica visible. Latón oxidado visible en los bordes. Textura de cuero deteriorado pero íntegro. Background blanco/papel cálido. Mood: humildad, funcionamiento, 40 años de espera en silencio.
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No glossy magical aura. No dramatic lighting or shadow. No ornamental jewelry styling. No smooth polished metal look. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+**QA (2026-07-27):** ✅ **Ratificada. Es el primer item con brief propio y salió excelente en el primer intento.** Latón viejo con pátina verde de oxidación, lentes ambar-doradas, correa de cuero desgastada y agrietada — exactamente el instrumento humilde y funcional que pedía el brief. Reference sheet con 4 vistas, sin brillo mágico, sin ornamentos. Inaugura la carpeta `90-Raw/concept/props/` con buen precedente de calidad.
 
 ### 11.3 — Sunken Archive (interior) — v1, SUPERADO
 
@@ -669,13 +679,15 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 🟡 **Nota menor no bloqueante:** la geometría "imposible" no se cumplió del todo — la bóveda salió como nave gótica catedralicia perfectamente simétrica (crucería, arcos apuntados regulares, columnas idénticas), en vez de "ángulos que no cierran". Es hermoso pero se lee como arquitectura humana medieval, no alienígena. No traiciona el canon dramático (la identidad Warden de los cuerpos, que era el hallazgo crítico, sí quedó resuelta), así que no bloquea la ratificación — mismo nivel de nota que Threnn en el elenco político. **Si se re-corre en el futuro:** forzar más asimetría (arcos desalineados, apoyos irregulares) para reforzar la sensación de geometría alienígena.
 
-### 11.4 — The First Wound (clímax jugable, diferente del keyframe §6c nocturno)
+### 11.4 — The First Wound (clímax jugable, diferente del keyframe §6c nocturno) — RATIFICADO ✅
 
 **Archivo destino:** `first-wound-climax-v1.png`
 
 **Especificación:** Cráter masivo al centro absoluto de The Wilds. **Sol poniéndose** — contraste deliberado con §6c nocturno (God-Core Night es vigilia dormida, esto es vigilia despierta). Cielo naranja-rosado en gradiente teal. Dos anillos de God-Cores calcificados en formación circular alrededor del cráter — el anillo interior más compacto, el exterior más disperso. El core central en el fondo (piso del cráter) — **el más grande, pulsando en frecuencia jade vivo**, respondiendo a Speck que está por llegar. Otros cores despertando alrededor en baja intensidad, cada uno con pulso propio, frecuencias ligeramente distintas (visualizar como variantes de verde-jade). Cracked stone ground radiando desde el centro en grietas nuevas. Borde del cráter visible como línea literal en foreground (moral boundary). Foreground: small silhouette del Bound Five en el borde opuesto del cráter para escala — apenas visibles. Composición: vista elevada ligeramente desde el borde, mirando hacia abajo y adentro del cráter, core central pequeño pero claro en la profundidad. Mood: umbral, decisión inminente, escala cósmica desperta.
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No neon glow. No excessive brightness. No chaotic energy visual. No humanoid figures at scale. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+**QA (2026-07-27):** ✅ **Ratificada.** Cráter con core central pulsando jade rodeado de cores menores despertando, grietas irradiando del centro, cielo naranja-rosado en ocaso, 5 siluetas del grupo en el borde para escala. Composición fuerte, mood de umbral y decisión logrado. 🟡 Nota menor no bloqueante: a esta distancia los cores se leen más como cristales/orbes que como cuerpos reconocibles — coherente con la vista aérea amplia pedida, no traiciona el canon.
 
 ### 11.5 — Grove of Cycles (interior del templo) — RATIFICADO ✅
 
@@ -689,7 +701,7 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 🟡 **Notas menores no bloqueantes:** (1) el Aether verde-teal se lee como un wisp/cinta localizado y protagónico en vez de fluir difuso por el follaje — desviación de tono, no de canon. (2) La luz salió más oliva/crema desaturada que "dorada" — dentro del rango de la paleta watercolor ya establecida. (3) Hay marcas pequeñas en las ramas superiores que podrían ser el "Warden script escribiéndose" pedido en el brief, o un residuo del glitch de texto de NB2 — ambiguo a esta resolución. Boris decidió no re-correr; si en producción se necesita mirar de cerca, resolver puntualmente entonces.
 
-### 11.6 — Interior de la oficina de Tobin (The Driftmarket)
+### 11.6 — Interior de la oficina de Tobin (The Driftmarket) — RATIFICADO ✅
 
 **Archivo destino:** `tobin-office-interior-v1.png`
 
@@ -697,7 +709,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No magical Aether ornamentation. No ostentatious wealth. No pristine modern office. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.7a — Aethelgard Watch (torre de guardia humana)
+**QA (2026-07-27):** ✅ **Ratificada.** Escritorio rústico con papeles, pluma, mapas del Driftmarket clavados en la pared, ventana con luz cálida de atardecer, banca de visitas, puerta cerrada, cajón entreabierto con las siluetas de los Goggles. Nota de proceso: el mapa en la pared tiene texto legible ("Driftmarket"), pero es contenido diegético de un objeto in-world (un mapa colgado), no un caption/label inyectado por NB2 sobre la imagen — distinto del glitch que rompió Ilyara/Kadrun/Driftmarket v1. La regla anti-texto aplica a artefactos de generación, no a texto narrativamente justificado dentro de la escena.
+
+### 11.7a — Aethelgard Watch (torre de guardia humana) — RATIFICADO ✅
 
 **Archivo destino:** `aethelgard-watch-v1.png`
 
@@ -705,7 +719,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No fantastical architecture. No elaborate heraldry. No unrealistic proportions. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.7b — Ignis Reach Watch (torre de guardia enana)
+**QA (2026-07-27):** ✅ **Ratificada.** Piedra y madera, banderas desteñidas, braseros con humo visible, guardias humanos en la cima, río visible hacia Rivermeet al fondo, tono ochre-atardecer. Sin texto, sin problemas de estilo.
+
+### 11.7b — Ignis Reach Watch (torre de guardia enana) — RATIFICADO ✅
 
 **Archivo destino:** `ignis-reach-watch-v1.png`
 
@@ -713,7 +729,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No tall or slender proportions. No fantasy-standard tower. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.7c — Stillwood Watch (torre de guardia élfica)
+**QA (2026-07-27):** ✅ **Ratificada.** Excavada en roca volcánica, geometría angular, chimeneas con humo caliente, guardias enanos de proporción correcta (silueta ancha y compacta). Los símbolos rúnicos en la fachada son runas decorativas del Great Forging Clan, no texto legible en alfabeto latino — no violan la regla anti-texto.
+
+### 11.7c — Stillwood Watch (torre de guardia élfica) — RATIFICADO ✅
 
 **Archivo destino:** `stillwood-watch-v1.png`
 
@@ -721,7 +739,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No human proportions. No stone castle tower aesthetic. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.8 — Rivermeet Triune Council Seat (interior de sala de sesión)
+**QA (2026-07-27):** ✅ **Ratificada.** La más fuerte de las 3 torres — integrada orgánicamente al árbol, plataformas curvadas verticales, luces Aether teal en balcones, silueta esbelta y mucho más alta que las otras dos (como pedía el brief), cascadas al fondo, guardia élfico en descenso controlado con cuerda.
+
+### 11.8 — Rivermeet Triune Council Seat (interior de sala de sesión) — RATIFICADO ✅
 
 **Archivo destino:** `rivermeet-council-chamber-v1.png`
 
@@ -729,7 +749,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No ornate gold decoration. No throne-room grandeur. No crowded gathering. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.9 — Interior Emberdeep detallado (complemento a §6d)
+**QA (2026-07-27):** ✅ **Ratificada.** 3 asientos con diseño distinto por raza (madera rústica humana, metal geométrico enano, curva orgánica élfica) en semicírculo, mármol claro, vitrales austeros, frisos de piedra con las 3 razas al fondo. Fría e institucional, contrasta bien con el resto de Rivermeet. Sin texto.
+
+### 11.9 — Interior Emberdeep detallado (complemento a §6d) — RATIFICADO ✅
 
 **Archivo destino:** `emberdeep-interior-vertical-v1.png`
 
@@ -737,7 +759,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No unrealistic scale. No overly mystical Aether overload. No clean modern industrial look. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.10 — The Ascending Falls (Gloomvault → Stillspire)
+**QA (2026-07-27):** ✅ **Ratificada.** Múltiples niveles conectados por puentes de piedra, forjas activas en al menos 2 niveles, mezcla de luz cálida de forja con Aether azul filtrando desde arriba, símbolos de yunque/engranaje del Great Forging Clan tallados en columnas (decorativos, no texto), escala masiva con figuras enanas diminutas para dar profundidad. Complementa muy bien al keyframe de forjas ya ratificado en §6d.
+
+### 11.10 — The Ascending Falls (Gloomvault → Stillspire) — RATIFICADO ✅
 
 **Archivo destino:** `ascending-falls-v1.png`
 
@@ -745,7 +769,9 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No mystical crystal formations. No artificial carved stone visible. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.11 — Iven's Settlement (asentamiento moribundo)
+**QA (2026-07-27):** ✅ **Ratificada.** Tríptico narrativo mostrando el ascenso completo: panel 1 Gloomvault (luz cálida), panel 3 base de The Stillspire visible en la lejanía brumosa. Terrazas de piedra musgosa, puentes cruzando cada caída, luz teal reflejada en el agua. 🟡 Nota menor no bloqueante: los puentes se ven más de piedra/madera tallada que "de raíz" como pedía el brief — no afecta la lectura general.
+
+### 11.11 — Iven's Settlement (asentamiento moribundo) — RATIFICADO ✅
 
 **Archivo destino:** `ivens-settlement-v1.png`
 
@@ -753,13 +779,17 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No post-apocalyptic ruin. No dramatic decay. No corpses or gore. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.12 — Mistbound Frontier complemento (interior de posta defensiva)
+**QA (2026-07-27):** ✅ **Ratificada.** Panorámica desde la colina exactamente como pedía el brief: casas de granja en distintos grados de deterioro, campos grisáceos sin producir, figura sentada en un umbral (agotamiento), única chimenea humeando (la casa de Iven), sol poniéndose. Mood de pérdida gradual y dignidad en el declive logrado con precisión.
+
+### 11.12 — Mistbound Frontier complemento (interior de posta defensiva) — RATIFICADO ✅
 
 **Archivo destino:** `mistbound-post-interior-v1.png`
 
 **Especificación:** Interior de una posta defensiva de Mistbound Frontier (tierra interior remota, árida). Complemento al keyframe aprobado de vista externa. Cuarto simple, funcional, austero — sin ostentación. Mesa larga con mapas de patrulla (tinta desteñida, rutas marcadas a mano). Armas colgadas en rack de hierro (espadas, lanzas, escudos — equipo bien mantenido pero usado). Catre simple con manta gris-marrón. Brasero central con hierro de cocina, humo saliendo limpio por chimenea rústica. Ventana pequeña con contraventana de madera (no vidrio). Aire seco, olor de metal y humo contenido. 2-3 guardias humanos en descanso o revisando mapas (proporción 7.5 cabezas, uno de ellos posiblemente Roen joven — nota de color, no obligatorio, apenas sugerido). Arquitectura de piedra local sin pulir, vigas de madera. Luz de brasero (naranja débil). Composición: interior desde la puerta, mesa central con mapas prominentes, brasero al fondo, guardias en pose de descanso o trabajo. Mood: puesto de vigilancia funcional, 15 años de Roen en este tipo de espacios, sin gloria, servicio mecánico.
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No romantic soldier aesthetic. No ostentatious tapestry. No unrealistic medieval militaria. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+**QA (2026-07-27):** ✅ **Ratificada.** Mesa con mapa de patrulla, armas colgadas en rack, catre con manta gris, ventana con contraventana, chimenea con humo, 4 guardias humanos (uno leído como posible Roen joven, nota de color válida). Austero y funcional, coherente con el interior aprobado del brief.
 
 ## Notas de uso
 
