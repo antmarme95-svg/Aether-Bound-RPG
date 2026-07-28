@@ -617,6 +617,126 @@ Full-body character concept sheet, front view and side view, of an ancient elf n
 Full-body character concept sheet, front view and side view, of an ancient elf named Corwyn, on a plain warm paper background. His silhouette reads as one continuous vertical line, roughly eight heads tall, narrow sloped shoulders, long limbs, held with poised, composed confidence despite his great age. His hair is fully silver-white, sleek and precisely groomed, tied back in a formal knot. His face is sharp and composed, faint knowing smile, calculating eyes that miss nothing — a courtier's face that never fully retired from the court. His skin is pale, cold-toned, visibly aged but well-kept. Faint pale-teal aether engravings trace his collarbone, understated. He wears well-tailored formal robes in muted slate-blue and silver, more refined and court-adjacent than the other Elder Circle members, a single understated silver ring his only ornament. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No youthful appearance. No bright hair color, silver-white only. No heavy armor or weapons. No photorealism or PBR rendering. No anime cel shading. No neon glow. No text, no labels, no captions, no annotations, no diagram-style callouts.
 ```
 
+## 11 — Briefs pendientes 2026-07-27 (item Wanderer's Goggles + 13 keyframes de lugar)
+
+Batch escrito por Haiku 4.5 siguiendo las plantillas de §6d/§10 (formato prosa corta, regla anti-texto obligatoria). Boris decide el orden de corrida en NB2 — este batch documenta los 14 prompts listos para ejecutar.
+
+**Nota:** el §11.7 (torres de guardia) se separa en 11.7a/b/c porque cada raza es visualmente muy distinta.
+
+**Nueva convención de archivos:** el §11.2 (Wanderer's Goggles) inaugura una carpeta `90-Raw/concept/props/` para items diegéticos futuros (Fragmento, God-Cores individualizados, etc.).
+
+### 11.1 — Driftmarket re-corrida
+
+**Archivo destino:** `driftmarket-keyframe-v2.png`
+
+**Especificación:** Ciudad flotante suspendida sobre The Wilds, plataformas de madera rústica conectadas por puentes de cadena y cuerda. Velas de tela ochre-rust llenan el cielo, batidas por viento constante. Mercado caótico en el nivel bajo: silhouettes de mercaderes, nómadas, mesas de comercio, canastas, bolsas colgantes. Luces teal-azulada de Aether despierto (no corrupto) filtrándose entre los mástiles. Atmósfera crepuscular cálida, como una tarde que nunca termina del todo. Agua visible muy abajo — oscura, en movimiento. Composición: vista elevada desde un ángulo de 45°, Driftmarket al centro-izquierda, río/The Wilds extendiéndose abajo. Mood: comercio honesto, refugio flotante, ajetreo controlado.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No smooth airbrushed digital gradient shading. No clean vector-style linework. No glossy modern video-game splash art finish. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.2 — The Wanderer's Goggles (item — prop narrativo)
+
+**Archivo destino:** `props/wanderer-goggles-v1.png`
+
+**Especificación:** Props reference sheet de unos goggles/lentes viejos de latón, guardados 40+ años en el cajón de Tobin Hale. Lentes ambar-doradas ligeramente empañadas de edad. Correa de cuero desgastada, con marcas de pliegue. Instrumento sin adornos — se ven exactamente como lo que son, herramienta útil, no artefacto ceremonial. Composición: vista frontal, vista lateral, detalle cerrado de la correa y el mecanismo de ajuste en los flancos. Sin brillo dramático. Sin aura mágica visible. Latón oxidado visible en los bordes. Textura de cuero deteriorado pero íntegro. Background blanco/papel cálido. Mood: humildad, funcionamiento, 40 años de espera en silencio.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No glossy magical aura. No dramatic lighting or shadow. No ornamental jewelry styling. No smooth polished metal look. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.3 — Sunken Archive (interior)
+
+**Archivo destino:** `sunken-archive-interior-v1.png`
+
+**Especificación:** Bóveda subterránea Warden — geometría imposible, ángulos que desafían perspectiva. Cristal dormido embebido en las paredes emitiendo luz azul pálido. Corredor central que desciende suavemente hacia un pedestal al fondo. El Fragmento reposando en el pedestal como objeto de reverencia silenciosa. Flanqueando todo el corredor: cadáveres calcificados dispuestos en formación ritual — cuerpos apilados con precisión ceremonial en los nichos de las paredes, no mezclados, no hecatombe. Mismos símbolos geométricos de la piel de Speck tallados sutilmente en los cuerpos (marcas Warden). Escala interior masiva pero íntima — el Bound Five cabría holgadamente, pero se sentirían pequeños. Iluminación: cristal azul dormido únicamente, sin fuente cálida. Silencio implícito, reverberación pesada. Composición: perspectiva desde la entrada mirando hacia el pedestal y el Fragmento, cadáveres calcificados en profundidad suave, sin gore, no aterradora — ceremoniosa. Mood: reverencia con peso, descubrimiento silencioso, tumba antigua ratificada.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No bright saturation. No neon glow. No zombie/necromancy aesthetic. No gore or visceral detail. No ominous shadow play. No glossy polish. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.4 — The First Wound (clímax jugable, diferente del keyframe §6c nocturno)
+
+**Archivo destino:** `first-wound-climax-v1.png`
+
+**Especificación:** Cráter masivo al centro absoluto de The Wilds. **Sol poniéndose** — contraste deliberado con §6c nocturno (God-Core Night es vigilia dormida, esto es vigilia despierta). Cielo naranja-rosado en gradiente teal. Dos anillos de God-Cores calcificados en formación circular alrededor del cráter — el anillo interior más compacto, el exterior más disperso. El core central en el fondo (piso del cráter) — **el más grande, pulsando en frecuencia jade vivo**, respondiendo a Speck que está por llegar. Otros cores despertando alrededor en baja intensidad, cada uno con pulso propio, frecuencias ligeramente distintas (visualizar como variantes de verde-jade). Cracked stone ground radiando desde el centro en grietas nuevas. Borde del cráter visible como línea literal en foreground (moral boundary). Foreground: small silhouette del Bound Five en el borde opuesto del cráter para escala — apenas visibles. Composición: vista elevada ligeramente desde el borde, mirando hacia abajo y adentro del cráter, core central pequeño pero claro en la profundidad. Mood: umbral, decisión inminente, escala cósmica desperta.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No neon glow. No excessive brightness. No chaotic energy visual. No humanoid figures at scale. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.5 — Grove of Cycles (interior del templo)
+
+**Archivo destino:** `grove-of-cycles-interior-v1.png`
+
+**Especificación:** Interior del templo élfico donde The Elder Circle se reúne en debate. Árboles vivos creciendo en formación arquitectónica — troncos que se alzan como columnas, ramas que se entrelazan formando bóveda natural. Hojas visiblemente en movimiento suave, escritura sutil en la textura de las hojas (Warden script antigua, escribiéndose y borrándose en tiempo real — demasiado pequeño para leer, pero claro que *algo* está escribiendo). Silencio profundo, sin aves, sin viento: composición espaciosa. Aether verde-teal suave fluyendo entre el follaje sin corrupción — contraste absoluto con clima político del Acto 2. Cuatro figuras élficas ancianas apenas sugeridas en la profundidad (Elder Circle) — siluetas tranquilas, no dinámicas. Piso de raíces entrelazadas, musgo tenue, naturaleza cultivada no silvestre. Iluminación: luz filtrando verde-dorada a través del dosel superior, sin sombras duras. Composición: vista desde el borde sur (entrada) mirando hacia la profundidad de la bóveda natural, Elder Circle en la lejanía suave. Mood: pausado, ceremonial, fuera del tiempo.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No harsh shadows. No bustling activity. No visible readable text on leaves. No glossy modern forest. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.6 — Interior de la oficina de Tobin (The Driftmarket)
+
+**Archivo destino:** `tobin-office-interior-v1.png`
+
+**Especificación:** Oficina trasera del muelle en The Driftmarket. Rústica, honesta, sin ostentación — espacio de trabajo, no de lujo. Escritorio de madera trabajada (no pulida, con historia visible) con papeles, manifiestos de carga, tintero de cerámica, pluma desgastada. Cajón entreabierto en el escritorio (donde vivieron 40+ años los Wanderer's Goggles — apenas sugerido, no explícito). Puerta cerrada al fondo del escritorio (foreground o middle-ground). Ventana pequeña en la pared izquierda dando al muelle exterior, luz cálida oro-ambar entrando (atardecer). Pared con mapas viejos del Driftmarket clavados sin ornamentación. Sillón simple de madera para visitas (deben caber 2 personas cómodamente — Tobin y el jugador). Sin elementos aetherpunk visibles — Tobin no negocia con Aether. Cesto de papeles usado. Vaso de metal con residuo. Composición: vista desde detrás del escritorio hacia la puerta cerrada, ventana iluminando suavemente. Mood: refugio honesto, lugar de decisión privada, 40+ años de custodio callado.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No magical Aether ornamentation. No ostentatious wealth. No pristine modern office. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.7a — Aethelgard Watch (torre de guardia humana)
+
+**Archivo destino:** `aethelgard-watch-v1.png`
+
+**Especificación:** Torre de guardia humana en la frontera oeste de The Wilds, junto a River Road (entrada desde Rivermeet). Arquitectura humana medieval: piedra local cortada sin pulido, marcos de madera trabajada, techos inclinados de tejas. Banderas del Triune Council colgando desteñidas (material degradado por viento). Silueta funcional, no ornamental — 2-3 pisos de altura, compacta. Braseros encendidos en la cima, humo visible contra el cielo. Guardias humanos visibles patrullando (2-3 siluetas a escala), normales en proporción humana 7.5 cabezas. Puertas de madera reforzada, rastrillo de hierro. Ambientes cálido-atardecer, tonos ochre, marrón, herrumbre. Contraste suave con la naturaleza salvaje de The Wilds. Composición: vista externa desde la senda que llega desde Rivermeet, torre al centro-derecha medio-plano, río visible borroso al fondo. Mood: vigilancia funcional, guardia cansada, deber mecánico.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No fantastical architecture. No elaborate heraldry. No unrealistic proportions. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.7b — Ignis Reach Watch (torre de guardia enana)
+
+**Archivo destino:** `ignis-reach-watch-v1.png`
+
+**Especificación:** Torre de guardia enana en la frontera este de The Wilds, junto a Cinder Ascent (entrada desde Emberdeep). Arquitectura enana: excavada parcialmente *en* la piedra volcánica roja-negra, muros de roca integrada. Geometría angular dominante — no curvas. Símbolos rúnicos del Great Forging Clan tallados profundamente en la fachada (3-4 rúnicos destacados, claramente legibles). Chimeneas y respiraderos activos mostrando humo caliente ascendente. Escala compacta y densa — más ancha que alta, construida para durar siglos. Braseros de forja permanentemente encendidos (visible el brillo naranja débil en las ventanas). Guardias enanos (2-3 siluetas, proporción canónica 4.5 cabezas, pequeños pero robustos). Ambiente rojizo-cálido, vapor sutil, olor implícito de metal y fuego. Composición: vista externa desde el paso montañoso, torre semi-integrada al muro rocoso, geometría angular de la roca continuando la geometría de la torre. Mood: forja permanente, vigilancia técnica, solidez enana ratificada.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No tall or slender proportions. No fantasy-standard tower. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.7c — Stillwood Watch (torre de guardia élfica)
+
+**Archivo destino:** `stillwood-watch-v1.png`
+
+**Especificación:** Torre de guardia élfica en la frontera norte de The Wilds, junto a The Ascending Falls (entrada desde Gloomvault). Arquitectura élfica: integrada orgánicamente a árboles colosales, plataformas de madera curvada que crecen de los troncos (no carpintería apilada, sino crecimiento cultivado). Luces Aether teal en balcones y barandillas. Silueta esbelta y vertical exagerada — mucho más alta que las otras dos torres, ascendiendo entre el dosel. Madera teñida naturalmente, sin pintura. Guardias élficos (2-3 siluetas, proporción canónica 8 cabezas, uno posiblemente en vuelo controlado o ascenso por cuerda). Ambiente crepuscular verde-teal, neblina de cascada permanente en background. Agua cayendo visible en profundidad. Vegetación densa en flancos, helechos gigantes, musgo. Silencio implícito. Composición: vista externa desde abajo mirando hacia arriba, torre ascendiendo entre árboles, cascadas de The Ascending Falls visibles de fondo borroso. Mood: observación silenciosa, vigilancia éterea, discreción élfica.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No human proportions. No stone castle tower aesthetic. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.8 — Rivermeet Triune Council Seat (interior de sala de sesión)
+
+**Archivo destino:** `rivermeet-council-chamber-v1.png`
+
+**Especificación:** Interior de la sala donde el Triune Council sesiona formalmente en Rivermeet. Tres asientos en semicírculo (abierto hacia la sala) — cada asiento reflejando sutilmente la arquitectura de su raza sin dominancia de ninguno. Asiento humano: madera río-teñida con cojines. Asiento enano: piedra angular con plata incrustada. Asiento élfico: madera curvada con teal Aether grabado sutilmente. Techo alto con vitrales austeros (no pictóricos, geométricos — símbolos de las 3 razas sin jerarquía). Columnas de piedra clara pulida. Piso de mármol blanco-gris en patrón de 3 sectores. Sin público — sesión privada. Luz entra de arriba (vitrales), suave, monumental. Contraste absoluto con el resto de Rivermeet (comercial, cálido, ribereño) — esta sala es institucional, ceremonial, más fría. Sin elementos aetherpunk exagerados — el poder aquí es administrativo y política, no arcano. Frisos discretos en las paredes (historiografía de los 3 reinos, demasiado pequeño para leer). Composición: vista desde la entrada central mirando hacia los 3 asientos vacíos en semicírculo, iluminación desde arriba. Mood: institucionalidad, peso histórico, ausencia de presencia.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No ornate gold decoration. No throne-room grandeur. No crowded gathering. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.9 — Interior Emberdeep detallado (complemento a §6d)
+
+**Archivo destino:** `emberdeep-interior-vertical-v1.png`
+
+**Especificación:** Interior de Emberdeep visto en corte vertical, complementando el keyframe de forjas ya aprobado. Múltiples niveles conectados por escaleras talladas en piedra y ascensores de piedra (plataformas que descienden). Forjas activas visibles en al menos 2-3 niveles (luz naranja-cálido radiando). Luz de forja (naranja intenso) mezclada con luz Aether azul-fría en los niveles superiores. Geometría angular enana dominando toda la arquitectura — columnas talladas angularmente, arcos que no son suaves. Símbolos del Great Forging Clan tallados profundamente en columnas (repetidos, claros). Caverna se pierde en profundidad descendente y arriba. Escala interior masiva — el ojo pierde la geometría a cierta profundidad. Guardias y artesanos enanos apenas visibles en varios niveles (proporción canónica 4.5 cabezas). Vapor de forja ascendiendo desde niveles inferiores. Composición: vista desde un balcón superior mirando hacia abajo hacia la profundidad de la caverna, múltiples niveles visible en perspectiva, infinidad abajo. Mood: industria perpetua, solidez monumental, corazón de civilización enana ratificada.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No unrealistic scale. No overly mystical Aether overload. No clean modern industrial look. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.10 — The Ascending Falls (Gloomvault → Stillspire)
+
+**Archivo destino:** `ascending-falls-v1.png`
+
+**Especificación:** Cadena de cascadas escalonadas que sube desde Gloomvault hasta la base de The Stillspire. Terrazas naturales de piedra cubiertas de musgo suave verde. Agua clara descendiendo en múltiples niveles (al menos 3-4 cascadas escalonadas hacia arriba). Puentes de raíz/madera curvada cruzando cada caída, gris-café desteñidos por agua perpetua. Luz Aether teal reflejada en el agua, suave no dramática. Vegetación densa en flancos — árboles élficos colosales, helechos gigantes, flores silvestres teal-pálidas. Referencia visual: Rivendell/Imladris — arquitectura élfica tallada en y alrededor del agua, integrada orgánica. Neblina permanente de cascada (fino spray, no opaco). Ambiente crepuscular con dosel arriba filtrando luz verde-dorada. The Stillspire apenas sugerido en la lejanía superior (escala épica). Sonido implícito: agua constante, viento suave. Composición: vista desde la base (lado de Gloomvault) mirando hacia arriba a lo largo de la cadena, cascadas ascendiendo, Stillspire perdido en la lejanía brumosa superior. Mood: ascenso de peregrinaje, belleza élfica, transición líquida.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No mystical crystal formations. No artificial carved stone visible. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.11 — Iven's Settlement (asentamiento moribundo)
+
+**Archivo destino:** `ivens-settlement-v1.png`
+
+**Especificación:** Asentamiento fronterizo humano muriendo lentamente por corrupción de Aether. Casas rústicas de granja (piedra y madera, techos de paja parcialmente restaurados), algunas ya abandonadas, puertas cerradas. Campos que ya no producen (tierra grisácea, cultivos marchitos en estado liminal — ni vivos ni completamente muertos). Pastura en declive. Silueta triste al atardecer. Chimenea de la casa principal (donde vive Iven) apenas humeando (fuego bajo, sin vitalidad). Población invisible — nadie caminando. Un par de figuras sentadas en umbrales (agotamiento visual, no acción). Monumento o piedra de memoria cerca de la aldea. Tono agrícola/humano rústico, cálido pero extinguiéndose. Contraste visual con Rivermeet (próspera): Iven's Settlement se ve ~5-10 años atrás en el tiempo por deterioro lento. Aether corrupto *muy* sutil en el aire como bruma malva-grisácea fina, apenas perceptible. Composición: vista panorámica desde una colina cercana, asentamiento en el valle, sol poniéndose atrás. Mood: silencio, pérdida gradual, dignidad en declive, amor a lo que se desmorona.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No post-apocalyptic ruin. No dramatic decay. No corpses or gore. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+### 11.12 — Mistbound Frontier complemento (interior de posta defensiva)
+
+**Archivo destino:** `mistbound-post-interior-v1.png`
+
+**Especificación:** Interior de una posta defensiva de Mistbound Frontier (tierra interior remota, árida). Complemento al keyframe aprobado de vista externa. Cuarto simple, funcional, austero — sin ostentación. Mesa larga con mapas de patrulla (tinta desteñida, rutas marcadas a mano). Armas colgadas en rack de hierro (espadas, lanzas, escudos — equipo bien mantenido pero usado). Catre simple con manta gris-marrón. Brasero central con hierro de cocina, humo saliendo limpio por chimenea rústica. Ventana pequeña con contraventana de madera (no vidrio). Aire seco, olor de metal y humo contenido. 2-3 guardias humanos en descanso o revisando mapas (proporción 7.5 cabezas, uno de ellos posiblemente Roen joven — nota de color, no obligatorio, apenas sugerido). Arquitectura de piedra local sin pulir, vigas de madera. Luz de brasero (naranja débil). Composición: interior desde la puerta, mesa central con mapas prominentes, brasero al fondo, guardias en pose de descanso o trabajo. Mood: puesto de vigilancia funcional, 15 años de Roen en este tipo de espacios, sin gloria, servicio mecánico.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No romantic soldier aesthetic. No ostentatious tapestry. No unrealistic medieval militaria. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe

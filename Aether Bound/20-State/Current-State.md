@@ -81,29 +81,15 @@ updated: 2026-07-27
 ### 🔜 Próximas sesiones (sin fecha fija)
 
 **Concept art pendiente:**
-- Re-correr **Driftmarket** en NB2 con regla anti-texto (caption quemado en la imagen)
+- **✅ 14 briefs NB2 nuevos escritos (2026-07-27)** en [[Briefs de Concept Art]] §11 (Haiku 4.5). Batch completo listo para correr en NB2 al ritmo que Boris quiera. Cubre: Driftmarket re-corrida, Wanderer's Goggles (item — inaugura carpeta `90-Raw/concept/props/`), Sunken Archive interior, First Wound clímax jugable, Grove of Cycles interior, oficina de Tobin, 3 torres de guardia (Aethelgard/Ignis Reach/Stillwood Watch), Rivermeet Council Chamber, Emberdeep vertical, Ascending Falls, Iven's Settlement, Mistbound Frontier interior. Todos con regla anti-texto + estilo maestro canónico.
 - Revisar las **4 escenas de traición** (`Traición_Dagna.png`, `La traición ejecutada.png`, `El primer viso de la muda.png`, `El Último Vínculo.png`) — confirmar si son legacy o canon, decidir si archivar o catalogar
 - Evaluar el **set de arte de combos** como conjunto (Arcane Ballistics, Skyhook, Mobile Foundry, Weaver's Net, Skipping Stone, Riposte Runner, Guided Avalanche, Warforging, Seismic Springboard + videos) — no tienen doc en `10-Knowledge/` todavía
 - QA de las **4 variantes de The Wilds** sin procesar (`Arterias`, `Interior`, `Noche con Muda`, `Ruinas`)
 - Evaluar **videos Higgsfield** (bloqueo técnico ffmpeg activo): `Arcane Ballistics.mp4`, `Las Tres Razas.mp4`, `El Mundo.mp4`, `SKYHOOK.mp4`, `Seismic Springboard (2).mp4`, `Speck video.mp4`, `THE WEAVER'S NET.mp4`
 - **King Borran** 🟡 — si se retoma: reescribir el prompt en prosa corta (mismo formato que resolvió Kadrun v2)
-- **The Wanderer's Goggles — brief NB2 pendiente.** Único item con peso dramático propio (entregado por Tobin en The Reckoning, revelan proyecciones Warden en el Sunken Archive, parte del gate compuesto de F4). Diseño canónico: latón viejo, lentes ambar-doradas, correa de cuero desgastada por 40+ años de guarda en el cajón de Tobin. Instrumento sin adornos — se ven exactamente como lo que son. Referencia estilo: mismo tratamiento que asset props de Sable/BotW (baja saturación, linework nítido, textura visible). Es el primer item del vault con brief propio — probablemente inaugura una carpeta de "props narrativos" para futuros items diegéticos (Fragmento, God-Cores individualizados, etc.).
 
-**Keyframes faltantes (sin brief escrito todavía) — pendiente Boris (2026-07-27):** escribir briefs NB2 para los spots del mapa que faltan. Priorizar los que se citan en el guión ya escrito (Grove of Cycles, Sunken Archive, First Wound son de Acto 2/3 y ya tienen escenas ratificadas).
-- **Prioridad alta** (citados en el guión escrito):
-  - Sunken Archive (interior con cadáveres calcificados + proyecciones Warden — Acto 3 §2)
-  - The First Wound (cráter climático — diferente al keyframe God-Core Night ya ratificado, este es del clímax jugable con el core central respondiendo a Speck)
-  - Grove of Cycles (interior del templo élfico donde ocurre la escena del Elder Circle)
-  - Interior de la oficina de Tobin en The Driftmarket (escena de The Reckoning con los Wanderer's Goggles)
-- **Prioridad media** (mundo abierto, exploración):
-  - Torres de guardia por raza (Aethelgard Watch / Ignis Reach Watch / Stillwood Watch)
-  - Rivermeet Triune Council Seat (interior de sesión del Council)
-  - Interior Emberdeep detallado (forjas activas, múltiples niveles)
-  - The Ascending Falls (cadena de cascadas Gloomvault → Stillspire)
-- **Prioridad baja** (color / POIs secundarios):
-  - Iven's Settlement (asentamiento moribundo)
-  - Mistbound Frontier (postas defensivas — hay keyframe aprobado, pero puede complementarse)
-  - POIs de The Wilds sueltos según necesidad narrativa
+**Keyframes faltantes de brief (2026-07-27):** ✅ **14 briefs escritos** (ver arriba, §11 de Briefs de Concept Art). Pendiente solamente correr los 14 en NB2 y hacer QA de resultados. Único brief que sigue faltando por escribir:
+- **POIs de The Wilds sueltos** según necesidad narrativa (no listados aún, van cuando aparezcan en el guión).
 
 **Narrativa / guión (próximo frente real):**
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)

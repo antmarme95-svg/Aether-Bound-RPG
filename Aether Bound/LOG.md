@@ -5264,3 +5264,34 @@ Rutina de cierre ejecutada:
 - Verificación grep independiente post-agente indispensable (Haiku dejó 2 "Dargo" residuales que el reporte interno no captó).
 - Sonnet 5 (Fase 2) manejó bien un solo prompt exhaustivo con 7 sub-pasos secuenciales — más eficiente que 2 agentes en paralelo para el mismo trabajo.
 - Orden invertido 3→2 (Haiku antes que Sonnet) funcionó — Fase 2 escribió sobre base limpia sin necesidad de re-lint.
+
+## [2026-07-27] concept-art/briefs | 14 briefs NB2 nuevos (§11) — item + keyframes de lugar
+
+Batch escrito por 1 agente Haiku 4.5 (~87k tokens, ~3 min). Modelo elegido explícitamente por costo/beneficio: los briefs son texto prescriptivo con plantillas §6b/§6c/§6d/§9a-v2/§10a/§10b ya validadas — Sonnet/Opus habría sido overkill.
+
+**Sección §11 agregada** a `Briefs de Concept Art.md` con 14 sub-briefs (los 12 originales del pendiente, con torres de guardia dividida en 11.7a/b/c por raza):
+
+1. **11.1** — Driftmarket re-corrida (v2 sin caption quemado, regla anti-texto reforzada)
+2. **11.2** — The Wanderer's Goggles (**primer item con brief propio, inaugura carpeta `90-Raw/concept/props/`** para items diegéticos futuros)
+3. **11.3** — Sunken Archive interior (bóveda Warden + cadáveres calcificados + Fragmento)
+4. **11.4** — The First Wound clímax jugable (atardecer, core central pulsando frecuencia jade, distinto del keyframe nocturno §6c)
+5. **11.5** — Grove of Cycles interior (templo élfico Elder Circle)
+6. **11.6** — Oficina de Tobin (interior íntimo, escena de The Reckoning)
+7. **11.7a/b/c** — Torres de guardia por raza (Aethelgard/Ignis Reach/Stillwood Watch)
+8. **11.8** — Rivermeet Triune Council Chamber (3 asientos semicírculo)
+9. **11.9** — Emberdeep vertical (complemento §6d, múltiples niveles)
+10. **11.10** — The Ascending Falls (Gloomvault → Stillspire, Rivendell-like)
+11. **11.11** — Iven's Settlement (asentamiento moribundo por corrupción Aether)
+12. **11.12** — Mistbound Frontier interior (posta defensiva — canon corregido Fase 3: tierra interior remota, NO fronterizo con The Wilds)
+
+**Reglas transversales aplicadas y verificadas:**
+- Formato prosa corta (patrón §10 con 6/6 aprobados)
+- Cada sub-brief con archivo destino kebab-case (ej. `sunken-archive-interior-v1.png`)
+- Cada sub-brief con **negativos específicos + estilo estándar + regla anti-texto obligatoria** al final ("no text, no labels, no captions, no annotations, no diagram-style callouts") — verificado 14/14
+- Estilo maestro: hand-painted graphic novel watercolor, Sable × BotW, cel shading 3-4 bandas, paper grain
+- Nombres canónicos en inglés respetados (Triune Council, Great Forging Clan, etc.)
+- Cross-references al lore canónico integrados (Tobin 40+ años Goggles, cadáveres Warden calcificados, Elder Circle debate)
+
+**Estado:** batch listo para NB2. Boris decide el orden de corrida — no todos a la vez.
+
+**Costo del batch:** 87k tokens (Haiku). El costo real grande viene después al correr los 14 prompts en NB2 (fuera de esta sesión).
