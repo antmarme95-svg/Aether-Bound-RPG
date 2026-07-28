@@ -186,7 +186,8 @@
   cara, bilateral en torso) — decisión pendiente de Boris.
 - [[Propuesta-Recursos-de-Modelado]] — **RATIFICADA 2026-07-12**: 5 recursos para subir el techo del pipeline procedural de personajes (triplanar, loft/perfil, gradientes, banding MToon, iteración) + 3 ajustes al plan de rework C6/M10 de la sesión paralela; loft = mini-loop pre-C6b.
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
-- [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene.
+- [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene. ⚠️ Parcialmente superada por ADR-003.
+- [[ADR-003 Reset de desarrollo y motor]] — 🔴 **ABIERTA Y BLOQUEANTE** (2026-07-28): hard reset de código + revisión Godot→Unity. **No se toca código hasta cerrarla.** 5 criterios en orden: slice → plataforma → alcance v1 → motor → inventario.
 
 ## 30-Loops (cómo trabajar)
 

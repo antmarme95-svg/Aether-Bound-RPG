@@ -5438,3 +5438,45 @@ Boris pidió dejar los Bloques B y C de la Fase 5 documentados como pendientes y
 **Higiene ejecutada:** Current-State estaba en 4,392t (+1,392 sobre techo blando). El relato completo de las fases 0-4 del sprint se migró a `Current-State-Historico.md` — ya vivía con más detalle en LOG, así que no se pierde nada. Current-State quedó en **3,322t** con estado compacto + los 2 bloques pendientes detallados (que son largos a propósito). Arranque de sesión: **3,619 tokens** 🟢.
 
 También se limpió la sección "Próxima sesión" que seguía apuntando a Fase 4 (ya ejecutada).
+
+## [2026-07-28] design/marketing | §12 — Key art + 3 mockups de UI (briefs escritos)
+
+Primer batch de material de **marca y producto**, no de mundo. 4 briefs escritos directo (Opus 5) en `Briefs de Concept Art.md §12`.
+
+**Decisiones del director:**
+- Poster: enfoque **"el grupo frente a la escala del mundo"** (descartados: Speck como centro emocional, la traición como tesis visual, Speck + God-Core)
+- Mockups: menú principal, creación de personaje, pantalla de Tether (descartado el HUD de exploración)
+
+**Regla nueva de texto para mockups de UI** (canonizada en §12): los mockups necesitan texto, lo que choca con la regla anti-texto de §10. Resolución: **el título `AETHER BOUND` va como texto real** (2 palabras, alto valor de marca, NB2 lo acierta); **todo lo demás va como placeholder visual** (barras/bloques de tinta). El mockup comunica composición, jerarquía y tono — no copy final. Se mantiene la excepción diegética de §11.6 (texto que es contenido de un objeto del mundo).
+
+**Restricción de diseño aplicada a los 3 mockups:** el vault ya tenía dos reglas de filosofía de UI que nadie había cruzado con concept art — `Art Bible` ("transición diegética, **sin UI**") y `The Bound Five` ("autónomos + un botón, **cero menús**"). Los briefs las hacen explícitas: **UI mínima, diegética y pintada** — nunca cajas de vidrio, paneles flotantes ni iconografía de MMO. Los negativos de los 3 mockups las blindan.
+
+**Briefs:**
+- **12.1 Key Art** (`marketing/key-art-poster-v1.png`, carpeta nueva) — The Bound Five de espaldas en un promontorio, First Wound como herida de luz jade en el horizonte, escala épica de silueta. Configuración canónica de referencia (arco Humano Duelist: jugador + Roen + Valen + Dagna + Darro). **Speck es la única figura que no mira al horizonte: mira al espectador.** Espacio compositivo reservado para el logo (que NO se genera aquí).
+- **12.2 Menú principal** (`ui/main-menu-mockup-v1.png`, carpeta nueva) — título en serif de tinta dibujada a mano, 5 barras de placeholder para opciones, sin cajas ni bordes: el texto flota sobre la pintura como anotación en cuaderno. Speck opcional en el borde inferior.
+- **12.3 Creación de personaje** (`ui/character-creation-mockup-v1.png`) — grilla 3×3 de la Matriz Raza × Rol con las 3 siluetas raciales en pose neutra comparable (8 / 4.5 / 7.5 cabezas), iconos de rol pintados a mano, celda seleccionada con mancha de acuarela en vez de borde. *"No debe sentirse como un configurador — debe sentirse como abrir un libro y elegir de quién va a ser esta historia."*
+- **12.4 Pantalla de Tether** (`ui/tether-screen-mockup-v1.png`) — 5 retratos en semicírculo con Speck al centro, tiers como marcas de tinta (no barras de progreso), líneas de conexión de grosor variable con **una rota a la mitad** (sugiere el Bond vacío sin explicarlo), franja inferior con 7 espacios para los Momentos de Persona. *"Una página de diario donde alguien lleva cuenta de a quién ha dejado entrar."*
+
+Listos para correr en NB2.
+
+## [2026-07-28] decision/ADR-003 | 🔴 BLOQUEO: reset de desarrollo + revisión de motor
+
+El director planteó dos movimientos: **hard/full reset de código y renders**, y **revisar la decisión de motor** (intuición de que Unity encaja mejor que Godot). Pidió opinión y registro como punto crítico bloqueante.
+
+**Creado `ADR-003 Reset de desarrollo y motor` en estado ABIERTO — BLOQUEANTE.** Supersede parcialmente a ADR-002.
+
+**Mi análisis registrado en el ADR:**
+
+- **Sobre el hard reset — de acuerdo.** El código se arquitecturó para un prototipo técnico; el proyecto hoy es un juego narrativo con 9 rutas, 5 finales y un sistema donde la intimidad ES el árbol de habilidades. **Matiz crítico: reset del código, NO del conocimiento** — `Lecciones`, `Benchmark Biomecánico`, `Art Bible`, PRDs cerrados y todo `10-Knowledge/` son el activo caro; el código es lo barato de reproducir.
+
+- **Sobre el motor — ADR-002 no está equivocado en lo que evaluó** (la golden scene probó que Godot renderiza el look, con 7-9× de margen). Pero **evaluó paisaje, no personajes animados**, y el proyecto se movió hacia donde Godot es más débil: rigging procedural (ROM por raza, foot IK tipo HZD, combos trifásicos tipo Sifu). No es casualidad que la deuda técnica abierta sea exactamente eso. Otros argumentos nuevos: consolas (Godot necesita partner externo; ADR-002 lo difirió a "producción tardía"), volumen narrativo (herramientas de branching más maduras en Unity), y el precedente directo de que **Sable se hizo en Unity**.
+
+- **Observación sobre acoplamiento de decisiones:** si el hard reset se ejecuta, el argumento "ya tenemos código en Godot" desaparece y el costo de migrar baja casi a cero. Por eso las dos decisiones se contaminan y hay que resolverlas en orden.
+
+- **El riesgo que ningún motor resuelve (lo más importante del análisis):** el alcance narrativo creció más rápido que la capacidad de producción. **9 Pivotes × 5 finales × 9 celdas es alcance de estudio mediano.** La pregunta de mayor valor no es "¿Unity o Godot?" sino **"¿cuál es el vertical slice mínimo que prueba que este juego funciona?"**
+
+**Secuencia recomendada:** definir slice → definir plataforma → definir alcance v1 → elegir motor **contra el slice** (reconstruir una escena en ambos y medir tiempo real, no specs) → resetear código. En ese orden la decisión de motor casi se toma sola, igual que ADR-002 en su momento.
+
+**Consecuencias mientras esté abierto:** ❌ no se escribe código de producción (frente C del Task-Board congelado); ✅ worldbuilding, guión, concept art, mockups de UI y diseño en papel siguen desbloqueados.
+
+Enlazado desde `Current-State` (bloque de bloqueo activo al inicio) y `00-Index`.

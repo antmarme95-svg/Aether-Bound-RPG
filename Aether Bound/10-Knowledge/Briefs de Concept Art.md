@@ -791,6 +791,110 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **QA (2026-07-27):** ✅ **Ratificada.** Mesa con mapa de patrulla, armas colgadas en rack, catre con manta gris, ventana con contraventana, chimenea con humo, 4 guardias humanos (uno leído como posible Roen joven, nota de color válida). Austero y funcional, coherente con el interior aprobado del brief.
 
+## 12 — Key art y mockups de UI (2026-07-28)
+
+Primer batch de material de **marca y producto**, no de mundo. Cuatro briefs: 1 poster + 3 pantallas de UI.
+
+### Regla nueva de texto para mockups de UI
+
+Los mockups de UI necesitan texto, lo que choca con la regla anti-texto estándar (§10). Resolución canónica:
+
+- **El título `AETHER BOUND` va como texto real** — 2 palabras, alto valor de marca, NB2 lo acierta con fiabilidad razonable.
+- **Todo lo demás va como placeholder visual**: barras, bloques o líneas donde iría el copy. El mockup comunica **composición, jerarquía y tono**, no el copy final. Esto evita que NB2 invente texto corrupto en 6 opciones de menú y arruine una imagen que por lo demás sirve.
+- **Excepción diegética** (canon §11.6, oficina de Tobin): si el texto es contenido de un objeto del mundo dentro de la escena, se permite.
+
+### Filosofía de UI del proyecto (restricción de diseño, no opcional)
+
+Dos reglas ya ratificadas condicionan estos mockups:
+- [[Art Bible]]: *"transición diegética al viajar arteria→ciudad, **sin UI**"*
+- [[The Bound Five]]: *"autónomos + un botón, **cero menús**"*
+
+**La UI de Aether Bound es mínima, diegética y pintada** — nunca cajas de vidrio, nunca paneles flotantes con bordes duros, nunca iconografía de MMO. Si un elemento puede vivir en el mundo en vez de encima de él, vive en el mundo.
+
+---
+
+### 12.1 — Poster / Key Art
+
+**Archivo destino:** `marketing/key-art-poster-v1.png` (inaugura `90-Raw/concept/marketing/`)
+
+**Especificación:** Poster vertical del juego. **The Bound Five de espaldas**, en el borde de un promontorio, mirando hacia The Wilds con The First Wound apenas visible en la lejanía como una herida de luz jade en el horizonte. Escala épica de silueta — las cinco figuras son pequeñas contra el paisaje, ocupando el tercio inferior; el mundo ocupa el resto.
+
+**Composición del grupo** (configuración canónica de referencia, [[The Bound Five]] — arco Humano Duelist): el jugador humano al centro, ligeramente adelantado; **Roen** a su izquierda (humano Vanguard, escudo a la espalda, proporción 7.5 cabezas); **Valen** a la derecha (elfo Strategist, esbelto, 8 cabezas); **Dagna** al extremo izquierdo (enana Vanguard, trapezoide compacto, 4.5 cabezas, escudo pesado); **Darro** al extremo derecho (enano Duelist, más ligero que Dagna, 4.5 cabezas). **Speck** — forma zorro beige — sentada junto al jugador, la única figura que no mira al horizonte: mira hacia el espectador.
+
+Cielo de atardecer en gradiente naranja-rosado hacia teal en lo alto. Perspectiva aérea marcada: el fondo se lava en azul pastel plano (regla de Art Bible). Grano de papel visible en toda la composición. Tinta negra nítida en las siluetas del grupo, agrisándose con la distancia hasta desaparecer en el horizonte.
+
+**Espacio compositivo reservado** para el logo en el tercio superior — zona de cielo limpio, sin elementos que compitan. El logo NO se genera aquí (se compone después).
+
+Mood: melancolía gráfica, umbral, cinco personas antes de la decisión que las va a separar. Silencio.
+
+**Negativos:** No text, no title, no logo, no labels, no captions. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No heroic action poses. No characters facing the camera. No weapons drawn. No dramatic lens flare. No modern movie-poster collage layout.
+
+---
+
+### 12.2 — Menú principal (title screen)
+
+**Archivo destino:** `ui/main-menu-mockup-v1.png` (inaugura `90-Raw/concept/ui/`)
+
+**Especificación:** Mockup de pantalla de título, formato 16:9 horizontal. Fondo: keyframe pictórico a pantalla completa — una vista de The Wilds al amanecer con niebla baja, tratada como pintura de acuarela, ligeramente desaturada para no competir con la UI. Composición del fondo pensada para dejar el tercio izquierdo relativamente vacío.
+
+**Título `AETHER BOUND`** en el tercio superior izquierdo: tipografía serif con carácter de tinta dibujada a mano — no pulida, con irregularidad de trazo visible. Color tinta oscura, no dorado ni metálico. Escala grande pero contenida.
+
+**Opciones de menú** debajo del título, en columna vertical alineada a la izquierda: **cinco líneas horizontales de placeholder** (barras suaves de tinta, sin letras), la primera ligeramente más marcada para indicar selección activa. Sin cajas, sin botones, sin bordes, sin fondos translúcidos — el texto flota directamente sobre la pintura, como anotación en un cuaderno.
+
+Elemento diegético opcional: una pequeña silueta de Speck (forma zorro) sentada en el borde inferior del encuadre, mirando hacia el título. Casi imperceptible.
+
+Mood: quietud antes del viaje. Una pintura que espera.
+
+**Negativos:** No UI panels. No glass or translucent boxes. No borders or frames around menu items. No modern game UI iconography. No drop shadows on text. No gradient buttons. No hover glow effects. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No readable menu option text — placeholder bars only.
+
+---
+
+### 12.3 — Creación de personaje (Matriz Raza × Rol)
+
+**Archivo destino:** `ui/character-creation-mockup-v1.png`
+
+**Especificación:** Mockup de la pantalla de creación, formato 16:9. Estructura: **grilla de 3×3** — tres razas en filas, tres roles en columnas ([[Matriz Raza x Rol]]).
+
+**Eje de razas** (filas, ilustradas con siluetas de cuerpo entero a la izquierda de cada fila): **the Aether-Born** (elfo, 8 cabezas, esbelto, marcas de aether tenues), **the Iron-Blooded** (enano, 4.5 cabezas, trapezoide, ancho), **the Restless** (humano, 7.5 cabezas, atlético). Las tres siluetas en la misma pose neutra para que la comparación de proporción sea legible — es una lámina de elección, no de acción.
+
+**Eje de roles** (columnas, indicadas con iconos pintados a mano, no vectoriales): Vanguard (una forma de escudo), Duelist (una hoja curva), Strategist (una forma geométrica angular). Iconos de tinta sobre papel, con irregularidad de trazo.
+
+**Celda seleccionada:** una de las nueve intersecciones marcada con un resaltado suave de acuarela (mancha de color lavada, no un borde ni un glow). Sin cajas alrededor de las celdas — la grilla se sugiere con líneas de tinta finas e imperfectas, como cuadrícula dibujada a mano.
+
+**Zona derecha:** espacio reservado para el retrato del personaje resultante, ocupado en el mockup por una silueta de cuerpo entero en la raza/rol seleccionada, sobre fondo de papel limpio.
+
+**Placeholders de texto:** barras de tinta donde irían los nombres de raza, rol y descripción. Sin letras legibles salvo el título de pantalla, que también va como barra.
+
+Mood: elección con peso. La pantalla no debe sentirse como un configurador — debe sentirse como abrir un libro y elegir de quién va a ser esta historia.
+
+**Negativos:** No text labels on races or roles — placeholder bars only. No UI panels or cards. No glass or translucent boxes. No vector-style icons. No modern character-creator sliders. No stat bars or numeric displays. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow.
+
+---
+
+### 12.4 — Pantalla de Tether (vínculos)
+
+**Archivo destino:** `ui/tether-screen-mockup-v1.png`
+
+**Especificación:** Mockup de la pantalla de vínculos ([[The Tether]]), formato 16:9. **Es la UI más narrativa del juego** — muestra la profundidad de relación con cada compañero, y esa profundidad *es* el árbol de habilidades.
+
+Estructura: **cinco retratos en semicírculo** — los 4 compañeros (Roen, Valen, el Pivote, Darro) más Speck en el centro, ligeramente adelantada y más pequeña. Retratos pintados en acuarela, busto, con el fondo de cada uno desvaneciéndose en papel.
+
+**Indicador de tier** bajo cada retrato: tres marcas de tinta horizontales (T1/T2/T3), llenas o vacías según el nivel del vínculo. Marcas dibujadas a mano, no barras de progreso rectangulares. Un compañero con dos marcas llenas, otro con tres, otro con una — para que la lectura de estados distintos sea evidente.
+
+**Líneas de conexión** desde el centro (donde está Speck) hacia cada retrato: trazos de tinta suaves, de grosor variable según la fuerza del vínculo. Algunas líneas más marcadas, otra apenas visible. **Una de las líneas está rota o interrumpida a la mitad** — sugiere el Bond vacío sin explicarlo.
+
+**Zona inferior:** franja horizontal con **siete pequeños espacios de marca** para los Momentos de Persona de Speck, la mayoría vacíos, dos o tres llenos con un símbolo de tinta simple. Sin explicación, sin números.
+
+Fondo: papel cálido con grano visible, sin ilustración compitiendo.
+
+**Placeholders de texto:** barras de tinta donde irían los nombres de compañeros. Sin letras legibles.
+
+Mood: íntimo, como una página de diario donde alguien lleva cuenta de a quién ha dejado entrar. No es una pantalla de estadísticas.
+
+**Negativos:** No text names — placeholder bars only. No rectangular progress bars. No percentage or numeric displays. No UI panels, cards or glass boxes. No skill-tree node graphics. No RPG stat sheet layout. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow.
+
+---
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe
