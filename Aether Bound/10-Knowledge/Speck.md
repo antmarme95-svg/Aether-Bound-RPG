@@ -12,13 +12,9 @@ El secreto que reescribe el lore: [[El Mundo y la Muda]].
 
 **Esencia:** Superviviente de una era perdida. No es "criatura" — es **tecnología
 biológica antigua que fue diseñada, no evolucionada**. Lleva 550+ años sola,
-shapeshifteada como zorro endémico de The Wilds. Tiene el sentido del humor
+shapeshifteada como zorro endémico de The Wilds como método de auto-protección. Tiene el sentido del humor
 pragmático de un enano (seco, oscuro, sabio tras siglos) — es el último testigo
 del universo quebrantarse.
-
-**Giro Grogu:** emocionalmente es una cría despertando, pero carga la **memoria
-de especie** — a veces sabe algo imposible de la era de los dioses. No es el
-bebé de un animal; es la infancia de un guardián menor de mantenimiento.
 
 **Narrativa del jugador:** El viaje no es ver a Speck CRECER, sino ver al jugador
 DESCUBRIR quién es realmente. Tres flashes progresivos revelan la verdad bajo el
@@ -27,11 +23,13 @@ disfraz de zorro — sin verbalizar, sin confrontación, en silencio acumulativo
 ## Encuentro & Shapeshifting
 
 **Forma shapeshifteada (imperfecta):** Zorro 1.5× tamaño normal, endémico de
-The Wilds. Pelaje en tonos beige/gris mineral con **patrones geométricos
-sutiles** (runas Warden dormidas, interpretadas como coloración rara). Seams
-teal presentes pero visibles como "manchas" para el mundo. **Pata delantera
-izquierda:** estructura cristalina visible (glitch del shapeshifting). **Ojos:**
-facetados, gem-like, demasiado inteligentes.
+The Wilds. Pelaje en tonos rojo/naranja con **patrones geométricos
+sutiles** (runas Warden dormidas, interpretadas como coloración rara) beige. Seams
+teal presentes pero visibles como "manchas" blancas para el mundo. **Pata delantera
+izquierda:** estructura cristalina apenas visible (glitch del shapeshifting). **Ojos:**
+facetados y naranjas, gem-like, demasiado inteligentes.
+
+**Nota:** El resto de zorros endémicos tienen los ojos marrones, casi negros
 
 **Por qué el shapeshifting falla:** Speck fue colocada en crisálida por bestias
 guardianas poco después del cataclismo. Después de 550+ años, la corrupción

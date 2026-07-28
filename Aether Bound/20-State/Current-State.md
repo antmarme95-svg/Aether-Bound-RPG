@@ -45,6 +45,17 @@ updated: 2026-07-27
 
 **Worldbuilding narrativo previo:** COMPLETO como fuente para guión (3 reinos + Triune Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning + 12 personajes con fichas + Speck).
 
+---
+
+## 🟡 Ediciones directas de Boris pendientes de procesar (2026-07-28)
+
+Boris editó 4 archivos en Obsidian fuera de la conversación con Claude, con preguntas explícitas para retomar:
+
+- **`Nomenclatura.md`** — nota directa: *"revisar control de cambios porque agregué a propósito ciertos puntos."* Adiciones: Lady Isolde Marrow ahora es **tatara-tataranieta del último rey** (refuerza su reclamo a la Corona hereditaria — verificar consistencia con la genealogía de King Borran, ADR/Estructura Política); the Wanderer's Goggles se vuelven **accesorio no retirable** una vez usado por primera vez (verificar consistencia con Los 5 Finales §F4 y con Geografía §The Reckoning).
+- **`Speck.md`** — cambios sin pregunta explícita, revisar intención: pelaje de beige/gris mineral → rojo/naranja (quedó un "beige" residual al final de la oración, posible edición a medias — confirmar con Boris); ojos a facetados-naranjas con nota nueva de que los zorros normales de The Wilds los tienen café-casi-negro (buen detalle de distinción visual); **se eliminó por completo la sección "Giro Grogu"** (memoria de especie / "es la infancia de un guardián menor de mantenimiento") — confirmar si fue intencional o accidental, porque otros documentos podrían asumir ese lore.
+- **`The Bound Five.md`** — pregunta de diseño: los Bonds no deben ser solo jugador↔Pivote — desarrollar bonds/links propios para **Roen, Darro y Valen** a partir de su raza/rol. El Bond del Pivote es el más útil narrativamente conforme avanzan los actos (construye "dramatismo silencioso"), pero se necesita un mecanismo donde los 9 bonds totales sean protagonistas por igual, sin importar qué celda (raza/rol) elige el jugador. **Es una pregunta de sistema, no solo de contenido** — probablemente toca `The Tether` y `Bond y el Bond Vacío` también.
+- **`Principios de Anatomía 3D.md`** — Boris pegó un dump extenso sin formatear de investigación biomecánica de DOF (grados de libertad): complejo escapulotorácico (+3 DOF), miembro superior completo (10 DOF), complejo de pelvis (+3 DOF), miembro inferior (9 DOF), columna vertebral por regiones (72 DOF total: cervical 21 + torácica 36 + lumbar 15), mano (21-24 DOF), y una sección sobre el trade-off DOF vs. costo de cómputo en videojuegos (IK, rigging, ragdolls). Pide incorporarlo a la **documentación técnica agnóstica de motor** — probablemente amerita reestructurarlo en tablas/secciones legibles en vez de dejarlo como bloque de texto corrido. Nota: esto es insumo de referencia, no bloqueado por ADR-003 (es documentación, no código).
+
 **Concept art:** catalogado y trackeado. Ver `90-Raw/concept/CATALOGO.md`.
 - §9 (gobernantes + Council): 5/6 ✅, King Borran 🟡 provisional
 - §10 (elenco político nuevo): 6/6 ✅ cerrado

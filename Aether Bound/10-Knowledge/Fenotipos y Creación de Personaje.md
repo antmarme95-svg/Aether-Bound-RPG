@@ -19,13 +19,13 @@ intocable. Los sliders comparten UI pero **cada raza re-rangea cada slider**
 
 ## Fenotipo canónico por raza
 
-| | **Elfo (Aether-Born)** | **Enano (Iron-Blooded)** | **Humano (the Restless)** |
-|---|---|---|---|
-| **Silueta** | Una línea continua: vertical, sin interrupciones | Un trapecio: más ancho que alto en lectura | La referencia atlética; se lee "neutral" contra los otros dos |
-| **Esqueleto (fijo)** | Palancas largas, hombros estrechos caídos, cuello largo, dedos largos | Palancas cortas, trapecio masivo, cuello hundido, manos enormes, centro bajo | Proporción media versátil ([[Movilidad Realista]]: el ROM de referencia) |
-| **Cabeza** | Orejas largas hacia atrás (continúan la línea), ojos grandes tilt alto, pómulos altos, mandíbula fina | Frente pesada, mandíbula ancha, nariz con historia | Máxima variación individual — la raza joven es la más diversa |
-| **Piel** | Fríos pálidos + lavanda aether-marked | Bronces cálidos + gris ceniza forge-touched | El rango humano completo (paleta más ancha); mist-mint como tono raro fronterizo |
-| **Marca cultural** | **Patrones de Aether luminosos** (el slider `arcaneMod` re-mapeado: venas de mana → grabados) | **Tatuajes de gremio + inlays de metal**; el slot facial es mayor (ver abajo) | **Warpaint/escarificación Mistbound** (fronterizos); cosmética de ciudad para el resto |
+|                      | **Elfo (Aether-Born)**                                                                                | **Enano (Iron-Blooded)**                                                      | **Humano (the Restless)**                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Silueta**          | Una línea continua: vertical, sin interrupciones                                                      | Un trapecio: más ancho que alto en lectura                                    | La referencia atlética; se lee "neutral" contra los otros dos                          |
+| **Esqueleto (fijo)** | Palancas largas, hombros estrechos caídos, cuello largo, dedos largos                                 | Palancas cortas, trapecio masivo, cuello hundido, manos enormes, centro bajo  | Proporción media versátil ([[Movilidad Realista]]: el ROM de referencia)               |
+| **Cabeza**           | Orejas largas hacia atrás (continúan la línea), ojos grandes tilt alto, pómulos altos, mandíbula fina | Frente pesada, mandíbula ancha, nariz con historia                            | Máxima variación individual — la raza joven es la más diversa                          |
+| **Piel**             | Fríos pálidos + lavanda aether-marked                                                                 | Bronces cálidos + gris ceniza forge-touched                                   | El rango humano completo (paleta más ancha); mist-mint como tono raro fronterizo       |
+| **Marca cultural**   | **Patrones de Aether luminosos** (el slider `arcaneMod` re-mapeado: venas de mana → grabados)         | **Tatuajes de gremio + inlays de metal**; el slot facial es mayor (ver abajo) | **Warpaint/escarificación Mistbound** (fronterizos); cosmética de ciudad para el resto |
 
 ## Decisiones ratificadas (2026-07-04)
 

@@ -5480,3 +5480,18 @@ El director planteó dos movimientos: **hard/full reset de código y renders**, 
 **Consecuencias mientras esté abierto:** ❌ no se escribe código de producción (frente C del Task-Board congelado); ✅ worldbuilding, guión, concept art, mockups de UI y diseño en papel siguen desbloqueados.
 
 Enlazado desde `Current-State` (bloque de bloqueo activo al inicio) y `00-Index`.
+
+## [2026-07-28] session/close | Poster V2 pasado al vault + 4 ediciones directas de Boris registradas
+
+**Poster V2:** Boris pasó el brief actualizado (vista panorámica desde The Monolith, sin Speck) al vault él mismo como §12.2, renumerando el resto de §12 (menú→12.3, creación→12.4, Tether→12.5). Lo enriqueció con detalle de elevación, degradado bosque→volcánico hacia el este, y proporciones explícitas de las 5 figuras del grupo (2 elfos 8 cabezas, 2 humanos 7.5, 1 enano 4.5). Sin cambios necesarios de mi parte — quedó consistente con la geografía canónica.
+
+**4 ediciones directas de Boris en Obsidian (fuera de conversación), registradas como pendientes en Current-State:**
+
+- **`Nomenclatura.md`** — Isolde Marrow ahora tatara-tataranieta del último rey (verificar consistencia genealógica); Wanderer's Goggles se vuelven accesorio no retirable tras primer uso (verificar contra Los 5 Finales §F4). Boris dejó nota explícita pidiendo revisión de control de cambios.
+- **`Speck.md`** — pelaje a rojo/naranja (con un "beige" residual, posible edición a medias), ojos facetados-naranjas + nota de que zorros normales son café-casi-negro. **Se eliminó la sección "Giro Grogu"** (memoria de especie) — sin marcar si fue intencional.
+- **`The Bound Five.md`** — pregunta de sistema: diseñar bonds propios para Roen/Darro/Valen (no solo el Pivote), con mecanismo donde los 9 bonds totales sean protagonistas parejo sin importar la celda del jugador. Toca también The Tether y Bond y el Bond Vacío.
+- **`Principios de Anatomía 3D.md`** — dump extenso de investigación de DOF biomecánico (hombro, cadera, columna 72 DOF, mano 21-24 DOF, trade-offs de rigging/IK/ragdolls) pendiente de reestructurar en la documentación técnica agnóstica.
+
+**Nota de alcance:** ninguna de las 4 ediciones fue procesada esta sesión — solo verificadas, categorizadas y registradas. Es contenido/diseño real, no housekeeping de cierre.
+
+Current-State creció a 4,007t (+1,007 sobre techo blando) por el detalle necesario para no perder las preguntas de Boris. check_vault sigue 🟢 (4,304t de arranque). Candidato a higiene en la próxima sesión si sigue creciendo.

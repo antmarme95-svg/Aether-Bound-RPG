@@ -61,3 +61,9 @@ Vínculos y progresión de intimidad: [[The Tether]].
 
 **Pendiente (❓):** tablas de C1/C2/C4 por celda de jugador + sus links (y los
 links directos de Speck estadio 2). → Task-Board.
+
+
+**Preguntas/Dudas Toño a Claude:** 
+
+*Links/Bonds:* Los bonds no deben suceder únicamente entre jugador y pivote, debemos desarrollar los bonds/links fijos de Roen, Darro y Valen. Siempre a partir de su raza y rol. Todos los links son útiles pero conforme van avanzando los actos, el bond más útil es el del pivote, esto construye dramatismo silencioso. Debemos idear un mecanismo narrativo y de worldbuilding donde los 9 bonds son protagonistas y la experiencia del jugador sea la misma sin importar el personaje (raza/rol) que escoge.
+

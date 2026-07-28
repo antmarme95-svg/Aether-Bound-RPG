@@ -35,19 +35,21 @@ crea o retraduce en inglés** — el vault sigue en español, pero los nombres
 propios siguen la regla ya vigente (the Aether-Born, the Triune Council):
 más globales, más estándar, idioma primario del juego.
 
-| Cosa | Nombre canónico | Nota |
-|---|---|---|
-| Autoridad moral élfica (testigos del cataclismo) | **The Elder Circle** | Originalmente 5, hoy 4 (uno murió hace 10 años); sin asiento formal — [[Estructura Política]] |
-| Academia élfica contemplativa | **the Academy of Sages** | De aquí sale The Elder Circle; Valen es discípulo |
-| Academia élfica de la Corona | **the Royal Academy** | Sereth (visible) y Nyael (brazo encubierto) |
-| Clan real enano | **the Great Forging Clan** | Es el clan real, no un gremio aparte |
-| Coordinación militar de frontera élfica | **Frontier High Command** | Fuera de ambas Academias; Lyris |
-| Cuerpo comercial humano | **the Trade Consortium** | Maren es su Jefa de Operaciones |
-| Casa política humana | **House [Apellido]** | Ej. House Ashcombe (Regente), House Thorne (Bram) |
-| Título de gobernante humano | **Regent** | No "King" — cargo precario, "Voice of the Council" |
-| Título de gobernante élfica | **Queen** | Queen Ithessa |
-| Título de gobernante enano | **King** | King Borran |
-| Título de embajador del Council | **Ambassador** / **Councilor** | Ambassador Cyrion/Kadrun (élfico/enano), Councilor Merrit Vance (humano) |
-| Rival político de Edrick | **Lady Isolde Marrow** (House Marrow) | Busca Corona hereditaria real, no Regency — amenaza también al Council |
-| "Rey" informal del Driftmarket | **Harbormaster Tobin Hale** ("Old Tobin") | Sin título nobiliario — controla el comercio del Driftmarket por reputación, no corrupción; único personaje de poder sin agenda oculta |
-| Regalo de Tobin al jugador | **the Wanderer's Goggles** | Lentes/goggles de un extraño del pasado de Tobin con "la misma mirada" — detona que el jugador entienda su poder innato |
+| Cosa                                             | Nombre canónico                           | Nota                                                                                                                                                                                                                   |
+| ------------------------------------------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Autoridad moral élfica (testigos del cataclismo) | **The Elder Circle**                      | Originalmente 5, hoy 4 (uno murió hace 10 años); sin asiento formal — [[Estructura Política]]                                                                                                                          |
+| Academia élfica contemplativa                    | **the Academy of Sages**                  | De aquí sale The Elder Circle; Valen es discípulo                                                                                                                                                                      |
+| Academia élfica de la Corona                     | **the Royal Academy**                     | Sereth (visible) y Nyael (brazo encubierto)                                                                                                                                                                            |
+| Clan real enano                                  | **the Great Forging Clan**                | Es el clan real, no un gremio aparte                                                                                                                                                                                   |
+| Coordinación militar de frontera élfica          | **Frontier High Command**                 | Fuera de ambas Academias; Lyris                                                                                                                                                                                        |
+| Cuerpo comercial humano                          | **the Trade Consortium**                  | Maren es su Jefa de Operaciones                                                                                                                                                                                        |
+| Casa política humana                             | **House [Apellido]**                      | Ej. House Ashcombe (Regente), House Thorne (Bram)                                                                                                                                                                      |
+| Título de gobernante humano                      | **Regent**                                | No "King" — cargo precario, "Voice of the Council"                                                                                                                                                                     |
+| Título de gobernante élfica                      | **Queen**                                 | Queen Ithessa                                                                                                                                                                                                          |
+| Título de gobernante enano                       | **King**                                  | King Borran                                                                                                                                                                                                            |
+| Título de embajador del Council                  | **Ambassador** / **Councilor**            | Ambassador Cyrion/Kadrun (élfico/enano), Councilor Merrit Vance (humano)                                                                                                                                               |
+| Rival político de Edrick                         | **Lady Isolde Marrow** (House Marrow)     | Busca Corona hereditaria real, no Regency — amenaza también al Council. Tatara-tataranieta del último rey.                                                                                                             |
+| "Rey" informal del Driftmarket                   | **Harbormaster Tobin Hale** ("Old Tobin") | Sin título nobiliario — controla el comercio del Driftmarket por reputación, no corrupción; único personaje de poder sin agenda oculta                                                                                 |
+| Regalo de Tobin al jugador                       | **the Wanderer's Goggles**                | Lentes/goggles de un extraño del pasado de Tobin con "la misma mirada" — detona que el jugador entienda su poder innato. Una vez que los usa por primera vez, se queda como objeto/accesorio no retirable del jugador. |
+**Preguntas/Dudas Toño a Claude:**
+*Cambios en las tablas:* revisar control de cambios porque agregué a propósito ciertos puntos.

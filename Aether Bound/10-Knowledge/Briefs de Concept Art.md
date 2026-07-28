@@ -813,7 +813,7 @@ Dos reglas ya ratificadas condicionan estos mockups:
 
 ---
 
-### 12.1 — Poster / Key Art
+### 12.1 — Poster / Key Art (V1)
 
 **Archivo destino:** `marketing/key-art-poster-v1.png` (inaugura `90-Raw/concept/marketing/`)
 
@@ -831,9 +831,40 @@ Mood: melancolía gráfica, umbral, cinco personas antes de la decisión que las
 
 ---
 
-### 12.2 — Menú principal (title screen)
+### 12.2 — Poster / Key Art (V2)
 
-**Archivo destino:** `ui/main-menu-mockup-v1.png` (inaugura `90-Raw/concept/ui/`)
+**Archivo destino:** `marketing_key-art-poster-v2.png`
+
+**Especificación:** Poster vertical. **The Bound Five de pie en la cima de The Monolith** — la piedra vertical masiva de 100+ metros en el centro exacto de The Wilds, el punto más alto del mapa. Vista panorámica de 300° abriéndose ante ellos: el peak del Monolith como plataforma rocosa natural, con el mundo entero extendiéndose abajo y alrededor.
+
+**Zona cercana (Centro/Centro-Sur, apenas visible en la base del encuadre, aún dentro de la niebla):** siluetas apenas sugeridas de The Aether Well (un geiser tenue de luz), ruinas Warden dispersas en el terreno inmediato bajo el Monolith, tratadas como manchas de tinta lejanas, no detalladas, casi perdidas en la bruma.
+
+**Horizonte, tres franjas separadas por la curvatura del panorama:**
+
+- **Izquierda (oeste y suroeste (extremo del poster)):** River Road serpenteando rodeada de árboles y flora (primordialmente boscoso) como una cinta plateada hacia una silueta lejana de **Rivermeet/Aethelgard** — perfil de puentes y tejados apenas legible contra el cielo.
+- **Izquierda (noroeste):** espacio negativo, elevación que empieza a subir, totalmente boscoso.
+- **Centro-fondo (norte):** el dosel oscuro de **Gloomvault** cerrándose hacia arriba (cerro/montaña), y sobre él, en la bruma más alta, la silueta vertical de **The Stillspire** asomando entre los árboles.
+- **Derecha (este y suroeste (extremo del poster)):** el paso de **Cinder Ascent**, primero totalmente boscoso y mientras más se acerca al este, convirtiéndose en árido, totalmente subiendo hacia terreno volcánico rojizo, con el resplandor tenue de **Ignis Reach/Emberdeep** como una luz cálida bajo la montaña.
+
+**Sur — deliberadamente ausente.** The First Wound no se muestra: el grupo está de espaldas a esa dirección, o el propio cuerpo del Monolith bloquea la vista hacia el sur. Ningún indicio de cráter ni luz jade en el horizonte — se guarda para más adelante.
+
+**El grupo:** los 5 en el borde de la cima rocosa, de espaldas al espectador, mirando hacia el panorama de los tres reinos: dos elfos (8 cabezas de alto, Una línea continua: vertical, sin interrupciones), dos humanos (7.5 cabezas de alto, apariencia neutral, atléticos) y un enano (4.5 cabezas de alto, trapecio, sin cuello). **El espacio donde antes estaba Speck queda vacío** — un hueco de composición entre las figuras que un ojo atento nota, sin que se explique.
+
+Cielo amplio ocupando más de la mitad del encuadre — gradiente de teal en lo alto a naranja-rosado en el horizonte, con las tres franjas de reino bajo la línea de niebla que se difumina a partir del naranja-rosado. Perspectiva aérea marcada (Art Bible): cada franja de horizonte más pálida y azulada que la anterior. Grano de papel visible. Tinta negra nítida en el grupo y la roca del Monolith, agrisándose con la distancia.
+
+**Espacio compositivo reservado para el logo** en el tercio superior del cielo — zona limpia sin elementos que compitan.
+
+Mood: cinco personas en el techo del mundo, viendo todo lo que está en juego a la vez — y todavía sin saber hacia dónde va a terminar la historia.
+
+**Negativos:** No Speck, no fox silhouette. No text, no title, no logo, no labels, no captions. No visible crater or jade light on the horizon (no First Wound). No readable city detail — silhouettes only. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No heroic action poses. No characters facing the camera. No weapons drawn. No dramatic lens flare. No modern movie-poster collage layout.
+
+---
+
+---
+
+### 12.3 — Menú principal (title screen)
+
+**Archivo destino:** `ui_main-menu-mockup-v1.png` (inaugura `90-Raw/concept/ui/`)
 
 **Especificación:** Mockup de pantalla de título, formato 16:9 horizontal. Fondo: keyframe pictórico a pantalla completa — una vista de The Wilds al amanecer con niebla baja, tratada como pintura de acuarela, ligeramente desaturada para no competir con la UI. Composición del fondo pensada para dejar el tercio izquierdo relativamente vacío.
 
@@ -849,9 +880,9 @@ Mood: quietud antes del viaje. Una pintura que espera.
 
 ---
 
-### 12.3 — Creación de personaje (Matriz Raza × Rol)
+### 12.4 — Creación de personaje (Matriz Raza × Rol)
 
-**Archivo destino:** `ui/character-creation-mockup-v1.png`
+**Archivo destino:** `ui_character-creation-mockup-v1.png`
 
 **Especificación:** Mockup de la pantalla de creación, formato 16:9. Estructura: **grilla de 3×3** — tres razas en filas, tres roles en columnas ([[Matriz Raza x Rol]]).
 
@@ -871,9 +902,9 @@ Mood: elección con peso. La pantalla no debe sentirse como un configurador — 
 
 ---
 
-### 12.4 — Pantalla de Tether (vínculos)
+### 12.5 — Pantalla de Tether (vínculos)
 
-**Archivo destino:** `ui/tether-screen-mockup-v1.png`
+**Archivo destino:** `ui_tether-screen-mockup-v1.png`
 
 **Especificación:** Mockup de la pantalla de vínculos ([[The Tether]]), formato 16:9. **Es la UI más narrativa del juego** — muestra la profundidad de relación con cada compañero, y esa profundidad *es* el árbol de habilidades.
 
@@ -881,7 +912,7 @@ Estructura: **cinco retratos en semicírculo** — los 4 compañeros (Roen, Vale
 
 **Indicador de tier** bajo cada retrato: tres marcas de tinta horizontales (T1/T2/T3), llenas o vacías según el nivel del vínculo. Marcas dibujadas a mano, no barras de progreso rectangulares. Un compañero con dos marcas llenas, otro con tres, otro con una — para que la lectura de estados distintos sea evidente.
 
-**Líneas de conexión** desde el centro (donde está Speck) hacia cada retrato: trazos de tinta suaves, de grosor variable según la fuerza del vínculo. Algunas líneas más marcadas, otra apenas visible. **Una de las líneas está rota o interrumpida a la mitad** — sugiere el Bond vacío sin explicarlo.
+**Líneas de conexión** desde el centro (donde está Speck en forma de zorro rojo/naranja) hacia cada retrato: trazos de tinta suaves, de grosor variable según la fuerza del vínculo. Algunas líneas más marcadas, otra apenas visible. **Una de las líneas está rota o interrumpida a la mitad** — sugiere el Bond vacío sin explicarlo.
 
 **Zona inferior:** franja horizontal con **siete pequeños espacios de marca** para los Momentos de Persona de Speck, la mayoría vacíos, dos o tres llenos con un símbolo de tinta simple. Sin explicación, sin números.
 
