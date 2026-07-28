@@ -14,9 +14,9 @@ provisionales hasta el pase de naming. Sus links firma: [[Los 9 Links del Pivote
 
 | Jugador | Pivote | Te enseña | Quiebre | Línea |
 |---|---|---|---|---|
-| Elfo Duelist | **Maren** — Humana Strategist (gadgeteer fluvial) | Calidez, improvisación | Descifra el Fragmento y hace las cuentas: su ciudad no sobrevive una Muda salvaje; vende el plan al Consejo | *"I can love her and still do the math."* |
+| Elfo Duelist | **Maren** — Humana Strategist (gadgeteer fluvial) | Calidez, improvisación | Descifra el Fragmento y hace las cuentas: su ciudad no sobrevive una Muda salvaje; vende el plan al Triune Council | *"I can love her and still do the math."* |
 | Elfo Strategist | **Torgan** — Enano Duelist (misil humano) | La palabra empeñada | Un Juramento de Forja anterior al grupo lo obliga; no discute, cumple | *"An oath doesn't care how I feel about you."* |
-| Elfo Vanguard | **Iven** — Humano Duelist (acróbata) | Espontaneidad, apetito de vivir | Su asentamiento muere de corrupción; el Consejo ofrece la cura por Speck. Traiciona por los suyos | *"You'd trade her for strangers? I'm trading her for everyone I've ever known."* |
+| Elfo Vanguard | **Iven** — Humano Duelist (acróbata) | Espontaneidad, apetito de vivir | Su asentamiento muere de corrupción; el Triune Council ofrece la cura por Speck. Traiciona por los suyos | *"You'd trade her for strangers? I'm trading her for everyone I've ever known."* |
 | Enano Duelist | **Sereth** — Elfo Strategist (manipulador) | Perspectiva, soltar la terquedad | Aritmética pura dicha con afecto | *"Millions against one. …This is me being stubborn about millions."* |
 | Enano Strategist | **Bram** — Humano Vanguard (brawler) | Riesgo, humor | Agotamiento tras cuarenta años de servicio; the Triune Council le paga por entregar a Speck y él **rechaza** — único Pivote que rehúsa. El Council activa un segundo agente en la sombra. | *"I've been everybody's wall. Just once, let me be the door."* |
 | Enano Vanguard | **Lyris** — Elfa Duelist (trazadora aérea) | Ligereza — el muro mira el cielo | Lógica fría con calma que hiere más que un grito | *"You were my stillness. Be still now."* |

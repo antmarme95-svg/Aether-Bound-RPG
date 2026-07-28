@@ -1,7 +1,7 @@
 ---
 status: draft
 source: "Sesión 2026-07-23 — Expansión narrativa"
-updated: 2026-07-23
+updated: 2026-07-27
 ---
 
 # Darro — C4, La Chispa (Ficha Narrativa Expandida)
@@ -81,7 +81,7 @@ A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón)
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
-| **Duelist** | Soldado del Consejo en bar fronterizo, bebiendo porque acaba de fallar misión importante. Darro estaba ahí por dinero (mercenario de paso). Se burlaron ambos del Consejo. Darro: *"Te vi bebiendo tu vergüenza. Pensé, este tipo entiende. Te pedí una cerveza. Dos horas después decidimos matar algo juntos — parecía mejor idea que seguir solos."* | Veterana expulsada por género, en bar en medio de la nada. Darro la vio y notó: alguien como él, sin tribu. Se burlaron juntos del sistema. Darro: *"Eras veterana sin lugar. Yo era aprendiz sin lugar. Hicimos broma sobre lo patético. Algo en eso fue honesto. Me quedé."* |
+| **Duelist** | Soldado del Triune Council en bar fronterizo, bebiendo porque acaba de fallar misión importante. Darro estaba ahí por dinero (mercenario de paso). Se burlaron ambos del Council. Darro: *"Te vi bebiendo tu vergüenza. Pensé, este tipo entiende. Te pedí una cerveza. Dos horas después decidimos matar algo juntos — parecía mejor idea que seguir solos."* | Veterana expulsada por género, en bar en medio de la nada. Darro la vio y notó: alguien como él, sin tribu. Se burlaron juntos del sistema. Darro: *"Eras veterana sin lugar. Yo era aprendiz sin lugar. Hicimos broma sobre lo patético. Algo en eso fue honesto. Me quedé."* |
 | **Vanguard** | Guardia fronterizo que desertó, culpable. En bar tratando de ser invisible. Darro lo notó — ese peso es visible. Se burlaron del "deber". Darro: *"Te vi cargando algo en los hombros. Pregunté qué era. Dijiste 'nada'. Menti igual. Nos emborrachamos en mentiras similares. Cuando te fuiste de ese bar, fue más llevadero."* | Guardiana que falló, cargando muerte. Darro la vio y no intentó sacar del pozo — simplemente se sentó en el pozo con ella. Darro: *"No tenía respuestas. Tú tampoco. Así que bebimos. Luego pareció mejor pelear algo que llorar algo. Decidimos intentar pelear."* |
 | **Strategist** | Consejero cuyo cálculo falló. Darro lo vio anotando números obsesivamente en bar, como si pudiera revertir error con matemática. Darro interrumpió con broma. Consejero sonrió por primera vez en semanas. Darro: *"Estabas intentando resolver por cálculo lo que necesitaba perdón. Hice broma. Sonreíste. Pensé, este tipo necesita quién le recuerde que no todo es aritmética."* | Política rechazada, sola en bar. Darro notó: mujer en poder, ahora sin lugar. Complicidad automática. Darro: *"Tuviste poder. Te lo quitaron. Yo tuve destino, me lo quité. Ambos sabemos qué se siente ser inútil en tu propia cultura. Eso vale cerveza. Vale companía."* |
 
@@ -115,11 +115,11 @@ A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón)
 
 ### Escena 1: El Encuentro (Primeros 20 minutos)
 
-El jugador está en The Wilds con contrato del Consejo. Darro está aquí porque... bueno, la versión cambia. Mercenario pasando. Huyendo de algo. Buscando dinero. La historia es diferente cada vez y siempre divertida.
+El jugador está en The Wilds con contrato del Triune Council. Darro está aquí porque... bueno, la versión cambia. Mercenario pasando. Huyendo de algo. Buscando dinero. La historia es diferente cada vez y siempre divertida.
 
 **Darro en esta escena:**
 - Energía. Mucho movimiento. Sonrisa constante.
-- Bromea sobre ABSOLUTAMENTE TODO — el nido, el peligro, el Consejo.
+- Bromea sobre ABSOLUTAMENTE TODO — el nido, el peligro, el Triune Council.
 - Es bueno peleando. Mejor que esperarías para alguien tan burlón.
 - Cuando el jugador mata la primera bestia, Darro aplaude: "¡Excelente! Eso fue casi competencia de gremio."
 
@@ -175,7 +175,7 @@ El Bound Five viaja La Rueda — lugares pesados, verdades pesadas.
 
 **Darro en La Rueda:**
 - Bromea MÁS mientras las cosas se ponen MÁS SERIAS.
-- En Aethelgard, hace broma sobre tanques Aether: "¿Esto es magia o es que el Consejo simplemente quiso tanques gigantes?"
+- En Aethelgard, hace broma sobre tanques Aether: "¿Esto es magia o es que el Triune Council simplemente quiso tanques gigantes?"
 - En Stillspire, bromea sobre elfos: "¿Cuántos siglos de estudio se necesitan para ver así de triste?"
 - En Ignis Reach, bromea sobre su propio gremio: "Hermano, me veo MÁS destruido que una forja enana."
 
@@ -210,6 +210,14 @@ Hacia final de Acto 2, la verdad comienza a filtrarse. Speck es llave de Muda. L
 Se vuelve **hiperprotector** de repente. Bromea MÁS pero duerme MENOS. Siempre está cerca de Speck. Siempre vigilante.
 
 Darro: "No sé de Mudas ni ciclos, hermano. Sé que esta pequeña es **mía** — bueno, nuestra. Es Speck. Nadie la toca."
+
+### The Reckoning en The Driftmarket — cuando Tobin lo señala por error
+
+Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, Harbormaster Tobin Hale aparta al jugador solo en su oficina y da un dato concreto sobre un fragmento de idioma institucional que oyó en los muelles. Cuando el Pivote activo es enano (Torgan, Dagna o Vekka), Tobin no distingue el idioma ritual del Great Forging Clan del idioma del clan menor o del subclán vasallo — para él es todo "asuntos de enanos con juramentos". La única persona del grupo que reconocería ese idioma, para Tobin, es **Darro** — enano, hijo de forja, aprendiz rechazado del mismo Clan. Tobin señala a Darro por error.
+
+**Si el jugador confronta a Darro con la sospecha:** es la única vez en el juego donde Darro no tiene broma lista. Se queda en silencio un segundo — raro en él — y después contesta sin la energía habitual: *"¿Yo? Hermano, a mí ni me dejaron entrar. ¿Qué juramento iba a tener?"* No es indignación teatral. Es la culpa técnica de ser señalado sin haber hecho nada, agravada por el hecho de que el rechazo del Clan es la herida más vieja y más real que Darro carga — y ahora esa herida se usa en su contra por error, no por nadie que la conozca de verdad. Si el jugador insiste, Darro no se defiende más — se aparta del grupo un rato, algo que casi nunca hace. Vuelve cuando el verdadero Pivote actúa y confirma que no era él.
+
+**Si el jugador no lo confronta pero la sospecha queda en el aire:** Darro la siente igual — nota las miradas, nota el silencio distinto de Roen o Valen. No pregunta qué le dijo Tobin. Hace una broma más floja de lo normal, algo que Darro mismo nota y no puede explicar.
 
 ---
 
@@ -306,7 +314,7 @@ Años después, Darro es el que cuenta historias de "el día que nombramos a Spe
 
 *"Her name is Speck. I don't care what you think of the name. Her name is Speck."*
 
-**Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Consejo, el Pivote, incluso el jugador si lo considera sacrificar.
+**Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Triune Council, el Pivote, incluso el jugador si lo considera sacrificar.
 
 No es argumento. Es **declaración de promesa.**
 
@@ -365,6 +373,8 @@ No es argumento. Es **declaración de promesa.**
 - Darro: *"¿Por qué te sostienes en momentos donde podrías caer? Todos tenemos cosas que hacemos."*
 
 **Momento clave:** Cuando Darro llora por Speck/Pivote, Roen lo deja llorar. No intenta arreglarlo. Simplemente está. Darro después dice: *"Gracias por no hacer broma de mi llanto."* Roen: *"El llanto es honesto. Tú eres honesto. Sigue siendo Darro."*
+
+**La escena más grande de Darro en todo el juego (ruta Dagna):** cuando Dagna es el Pivote y entrega a Speck en el cráter, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. Es, de todo el elenco, el único momento donde Darro — el que siempre tiene frase — se queda sin ninguna. Que sea justo él quien elige el silencio es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
 
 ### Darro + Valen
 **Energía:** Valen es información pesada. Darro es humor ligero. Parecen opuestos.

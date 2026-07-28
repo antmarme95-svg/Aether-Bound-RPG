@@ -26,7 +26,7 @@ cada una con el cataclismo define qué tan sólida (o deformada) es su versión.
 |---|---|---|---|---|
 | **1** | **Elfos** | ~5-10%, los más viejos (eran adultos jóvenes, aproximadamente 20-150 años en la escala élfica, cuando ocurrió el cataclismo; hoy rondan los 570-700 años, [[Las Tres Razas]]) | Biblioteca de The Stillspire + memoria viva de esos ancianos | Escolar pero también *personal* — un elfo joven puede literalmente preguntarle a un anciano vivo que lo vivió |
 | **2** | **Enanos** | Nadie vivo (550 años excede cualquier vida enana) | Tradición oral **ritualizada**, transmitida generación a generación con precisión deliberada — no es anécdota, es herencia sagrada | *"La montaña no olvida, y el enano es la montaña."* Se hereda, no se cuestiona |
-| **3** | **Humanos** | Nadie vivo, ni memoria institucional confiable (~18-22 generaciones de deriva) | Folclore regional, versiones contradictorias entre ciudades, papeleo perdido/quemado/reescrito pese a la burocracia del Consejo | Mito popular deformado, sin autoridad única — el equivalente humano a La Llorona o el Lago Ness: cada región tiene SU versión, ninguna es "la correcta" |
+| **3** | **Humanos** | Nadie vivo, ni memoria institucional confiable (~18-22 generaciones de deriva) | Folclore regional, versiones contradictorias entre ciudades, papeleo perdido/quemado/reescrito pese a la burocracia del Triune Council | Mito popular deformado, sin autoridad única — el equivalente humano a La Llorona o el Lago Ness: cada región tiene SU versión, ninguna es "la correcta" |
 
 **Consecuencia narrativa:** la palabra "Warden" no existe en el conocimiento
 público de ninguna raza. Solo sobrevive, deformada y no confirmada, en textos

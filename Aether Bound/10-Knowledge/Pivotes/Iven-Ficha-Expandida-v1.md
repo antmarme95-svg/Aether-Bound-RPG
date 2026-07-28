@@ -48,9 +48,9 @@ Nacido en pequeño asentamiento fronterizo — no es ciudad, es **supervivencia
 crónica.** Comunidad de 200-300 personas, humanos principalmente, algunos
 elfos, algunos enanos. **Nunca fue una comunidad sana que luego se enfermó
 — fue pobre y de alta mortalidad desde siempre.** Sin médicos propios, sin
-infraestructura, sin prioridad para el Consejo (Aethelgard/Rivermeet — ver
+infraestructura, sin prioridad para el Triune Council (Aethelgard/Rivermeet — ver
 [[Estructura Política]]: "la frontera no es prioridad" no es frase nueva del
-Consejo, es política de generaciones). La gente moría joven de hambre e
+Triune Council, es política de generaciones). La gente moría joven de hambre e
 infecciones simples mucho antes de que el Aether se corrompiera. La
 corrupción no creó la crisis — **aceleró una que ya existía.**
 
@@ -136,7 +136,7 @@ Roen: *"La guardé durante años. Luego dejé de hacerlo."*
 
 Iven: *"Razón?"*
 
-Roen: *"Porque guardar gente que el Consejo olvida es trabajo que nunca termina."*
+Roen: *"Porque guardar gente que el Council olvida es trabajo que nunca termina."*
 
 **Primera impresión:** Roen ve a alguien que aún guarda. Iven ve a alguien que dejó de guardar. Hay tensión silenciosa — ¿quién eligió bien?
 
@@ -178,13 +178,13 @@ Iven sospechó. Pero no preguntó más. **Porque conocer los detalles hubiera he
 
 ### Escena: El Encuentro (Reconocimiento Doloroso)
 
-El jugador está en The Wilds con contrato del Consejo. Iven está ahí porque lo pidió el jugador (¿coincidencia? Parcialmente — Iven navegó para que fuera coincidencia).
+El jugador está en The Wilds con contrato del Triune Council. Iven está ahí porque lo pidió el jugador (¿coincidencia? Parcialmente — Iven navegó para que fuera coincidencia).
 
 Iven: *"Qué sorpresa. Viniste a The Wilds."*
 
 Jugador: *"Contrato. ¿Tú?"*
 
-Iven: *"También contrato. Consejo me pidió que viniera."* (Es verdad. También es incompleta.)
+Iven: *"También contrato. El Council me pidió que viniera."* (Es verdad. También es incompleta.)
 
 Jugador: *"¿Para qué?"*
 
@@ -208,7 +208,7 @@ Llegan al nido. Crisálida.
 
 **Iven ve la crisálida.**
 
-Reconoce — no porque supiera que sería así, sino porque **siente que es la variable que el Consejo mencionó.** Su cuerpo lo sabe antes que su mente lo confirme.
+Reconoce — no porque supiera que sería así, sino porque **siente que es la variable que el Council mencionó.** Su cuerpo lo sabe antes que su mente lo confirme.
 
 Cuando el jugador decide salvar o destruir, Iven dice: *"Tu decisión. La respeto."*
 
@@ -228,7 +228,7 @@ El Bound Five se forma.
 
 **Iven aquí está en rol imposible:**
 - Es compañero genuino (lo es)
-- Sabe que el Consejo lo espía a través de él (está siendo usado)
+- Sabe que el Council lo espía a través de él (está siendo usado)
 - Sabe que cuando llegue la orden, debe elegir entre grupo y asentamiento
 
 Con el jugador: **completamente honesto emocionalmente.** No hay engaño en ese nivel. Respeta profundamente al jugador como Vanguard.
@@ -303,7 +303,7 @@ Y en este momento, Iven **sabe que no hay opción que lo deje limpio.** Elegir e
 
 El Fragmento se activa. Speck reacciona. La verdad emerge.
 
-El Consejo, a través de contacto en The First Wound, da orden: *"Ahora. Trae la criatura. Tu pueblo está esperando."*
+El Council, a través de contacto en The First Wound, da orden: *"Ahora. Trae la criatura. Tu pueblo está esperando."*
 
 **Iven actúa.**
 
@@ -313,7 +313,7 @@ Toma a Speck. No es violento — es desgarrador.
 
 *"Iven. ¿¡QUÉ!?"*
 
-Iven: *"Lo siento. Hace meses el Consejo me prometió salvar mi asentamiento si traía la criatura. Debí decirte. No lo hice porque... porque quería este tiempo contigo sin saber."*
+Iven: *"Lo siento. Hace meses el Council me prometió salvar mi asentamiento si traía la criatura. Debí decirte. No lo hice porque... porque quería este tiempo contigo sin saber."*
 
 Jugador: *"¿¡Sabías TODO ESTE TIEMPO!?"*
 
@@ -358,7 +358,7 @@ Conversación clave:
 
 ### The First Wound (Clímax Emocional)
 
-Se alcanza a Iven. El Consejo necesita Speck. Iven está entre dos fuegos.
+Se alcanza a Iven. El Council necesita Speck. Iven está entre dos fuegos.
 
 **La decisión es del jugador.**
 
@@ -404,7 +404,7 @@ Años después, Iven se escapa. Busca su asentamiento. Encuentra ruinas. Se sien
 
 Speck elige la Muda Parcial. El Aether comienza a sanar globalmente.
 
-Iven está libre. El Consejo no necesita el sacrificio. El asentamiento **recibe sanación natural.**
+Iven está libre. El Council no necesita el sacrificio. El asentamiento **recibe sanación natural.**
 
 **Epílogo:** Iven regresa al grupo. No como penitencia, sino como **elección genuina**.
 
@@ -436,7 +436,7 @@ Años después, Iven lleva compañeros de asentamiento a conocer al grupo. Const
 
 **Tensión:** Roen pregunta si Iven puede traicionar al grupo. Iven: *"Depende. ¿Podría tú traicionar tu consciencia por frontera que una vez guardaste?"*
 
-**Cuando traiciona:** Roen dice: *"Lo viste venir. El Consejo te prometió lo imposible. Sabía que acabarías aquí."*
+**Cuando traiciona:** Roen dice: *"Lo viste venir. El Council te prometió lo imposible. Sabía que acabarías aquí."*
 
 Pero luego, más suavemente: *"Tu gente. Está bien. Hiciste lo que pudiste."*
 
@@ -450,7 +450,7 @@ Conversación sobre asentamiento: Valen pregunta si es variable sostenible. Iven
 
 Valen: *"Exactamente. Números que puedo medir."*
 
-**Cuando traiciona:** Valen: *"Tres meses atrás empezó a visitar contactos del Consejo. Calculé esto entonces. También esperé estar equivocado."*
+**Cuando traiciona:** Valen: *"Tres meses atrás empezó a visitar contactos del Council. Calculé esto entonces. También esperé estar equivocado."*
 
 ### Iven + Darro (Energía Opuesta)
 
@@ -461,7 +461,7 @@ Valen: *"Exactamente. Números que puedo medir."*
 *"Eso es triste, hermano."*  
 *"Es verdad."*
 
-**Tensión:** Darro pregunta si Iven está "bien". Iven: *"Preocupado. Consejo me pidió ayuda. Pero el tipo de ayuda que podría destruir amigos."*
+**Tensión:** Darro pregunta si Iven está "bien". Iven: *"Preocupado. El Council me pidió ayuda. Pero el tipo de ayuda que podría destruir amigos."*
 
 Darro lo ve entonces — ve el dilema. Pero no confronta.
 

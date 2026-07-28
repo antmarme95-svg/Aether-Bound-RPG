@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "Sesión 2026-07-24 — mapeo de lore por raza"
-updated: 2026-07-24
+updated: 2026-07-27
 ---
 
 # Estructura Política de las 3 Razas
@@ -237,7 +237,7 @@ exista en el papel — no es inconsistencia con las fichas ya escritas, es
 información que simplemente no se había revelado.
 
 **Excepción — Bram Thorne** ([[Bram-Ficha-Expandida-v1|Bram]]): viene de
-**House Thorne**, familia con historia diplomática/de Consejo en Rivermeet. En
+**House Thorne**, familia con historia diplomática/de Triune Council en Rivermeet. En
 vez del camino esperado (corte, negociación), se alistó como soldado joven —
 el hijo que "desperdició" su apellido en el barro en vez de usarlo en los
 salones. 20 años de mercenario después, sigue siendo "el muro de todos"

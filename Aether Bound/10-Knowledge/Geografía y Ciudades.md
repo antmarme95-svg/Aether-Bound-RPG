@@ -55,9 +55,9 @@ updated: 2026-07-27
 - **Mistbound Frontier** — **no es la frontera con The Wilds, sino tierra
   interior remota** de Aethelgard, más allá de Rivermeet (sur-oeste profundo,
   lejos del río). Menos "borde del mapa mágico" y más "borde del mapa
-  civilizado": ahí el Consejo pierde control administrativo, no porque colinde
+  civilizado": ahí el Triune Council pierde control administrativo, no porque colinde
   con bestias de Aether sino porque está demasiado lejos de todo.
-  - Donde Roen fue guardia del Consejo (puesto de vigilancia interior, no
+  - Donde Roen fue guardia del Triune Council (puesto de vigilancia interior, no
     trinchera contra The Wilds)
   - Donde Roen eligió renunciar
   - Arquitectura: fuertes, postas de vigilancia, simplicidad defensiva
@@ -415,7 +415,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 
 #### **Vigil of the Broken Oath** (West, border Mistbound)
 - Templo humano al honor/promesas (piedra inscrita, muros vandalizados)
-- Conexión narrativa: Donde Roen juró lealtad al Consejo
+- Conexión narrativa: Donde Roen juró lealtad al Triune Council
 - Mecanismo: Altar defaced, símbolos borrados (por Mistbound rebels?)
 - Loot: Fragmento de inscripción de Roen's oath (lore item)
 - Enemigos: Bestias sin guardianes (templo abandonado)
@@ -461,7 +461,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 ### H) LUGARES PRIVADOS DE LOS PIVOTES (Donde cada uno fue roto/reclutado)
 
 #### **Roen's Vigil Post** (West, edge of Mistbound)
-- Ruina pequeña de puesto de guardia (Consejo colors faded)
+- Ruina pequeña de puesto de guardia (Triune Council colors faded)
 - Conexión narrativa: Donde Roen renunció
 - Mecanismo: Espacio vacío, melancólico (poco loot)
 - Dinámicas:
@@ -617,8 +617,8 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Mecanismo: no hostil si no atrapas gente; black market
 - Dinámicas:
   - Bram puede negotiate (conoce gente aquí)
-  - Roen: incomodo (traidor a Consejo = aliado a Mistbound?)
-  - Info sobre Consejo's darker operations
+  - Roen: incomodo (traidor al Triune Council = aliado a Mistbound?)
+  - Info sobre las operaciones más oscuras del Triune Council
 
 #### **Warden's Crypt** (Hidden, under The Monolith)
 - Tumba subterránea del último Warden caído
@@ -725,7 +725,7 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 ### MISTBOUND FRONTIER (Región Humana Interior — Oeste Profundo)
 - **Ubicación:** Tierra interior remota de Aethelgard, más allá de Rivermeet (sur-oeste profundo), lejos del río
 - **No es ciudad, es franja:** puesto tras puesto de vigilancia interior
-- **Función:** Donde el Consejo pierde control administrativo por distancia, no por cercanía a The Wilds
+- **Función:** Donde el Triune Council pierde control administrativo por distancia, no por cercanía a The Wilds
 - **Habitantes:** Soldados, guardias, mercenarios, gente de baja Standing
 - **Origen de Roen:** Fue guardia aquí antes de renunciar
 - **Cultura:** Brutal, pragmática, baja política (no interesa Standing)
@@ -791,7 +791,7 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
    - Primer God-Core destruido
 
 **Beats:**
-- Razón para salir (Consejo ordena purga / standing decae)
+- Razón para salir (Triune Council ordena purga / standing decae)
 - Encuentro con Speck
 - Primer aliado (C1 o C2, depende de raza)
 - Primer jefe: bestia corrupta guardiana
@@ -1088,7 +1088,7 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 ## Notas de Narrativa por Locación
 
 ### Mistbound Frontier
-- **Roen's Refusal:** Donde Roen renunció al Consejo
+- **Roen's Refusal:** Donde Roen renunció al Triune Council
 - **Culture:** Baja política, Standing irrelevante
 - **Mechanical:** Primera introducción a Standing system (se gasta rápido)
 

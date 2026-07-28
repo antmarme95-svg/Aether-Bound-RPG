@@ -5204,3 +5204,39 @@ Decisión previa: invertir orden original 2→3 y ejecutar Fase 3 primero. Razon
 **Lección de proceso:** Haiku es confiable en el patrón general pero puede saltarse residuos aislados (los 2 "Dargo" en Geografía no fueron detectados por su verificación interna). La verificación grep independiente post-agente es indispensable.
 
 **Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ + Fase 3 ✅. Pendientes: Fase 2 (Sonnet 5, propagación semántica) + Fase 4 (re-corrida QAs).
+
+## [2026-07-27] sprint/QA-reparación | Fase 2 CERRADA — Propagación semántica Sonnet 5
+
+Última fase de contenido antes de la verificación final (Fase 4). Ejecutada por 1 agente Sonnet 5 con 7 sub-pasos secuenciales — ~300k tokens, ~10 min. Cero errores de sesión ni server.
+
+**Correcciones críticas aplicadas:**
+
+- **Roen-Ficha (3 fixes):**
+  - Línea 157 corregida: Roen ya no "ve a través de los flashes del jugador" (contradecía canon Speck §Capa 2). Ahora *intuye* por la quietud de Speck y el silencio del jugador — canon reafirmado explícitamente en el párrafo.
+  - Línea 275 corregida: Lyris ahora "repliega" a Roen (no lo quiebra). Referencia cruzada a Dagna como la única que lo rompe genuinamente.
+  - Entrada canónica "Roen + Dagna" agregada a Dinámicas con el Pivote (equivalente a las 8 entradas existentes). Refleja el vínculo canonizado desde Dagna-Ficha en Fase 1: "No tuve tu opción", escena del escudo caído, resolución del hallazgo del QA narrativo original.
+
+- **Torgan-Ficha y Lyris-Ficha:** integración de The Reckoning (0 y 1 hit previos → 5 y 4 hits post). Tobin señala a Darro erróneamente para el Pivote enano; a Valen para el elfo. Escenas breves de reacción del Pivote.
+
+- **Valen-Ficha:** nuevas secciones Grove of Cycles (Vector A: intercede si Tether T2+) y Sunken Archive (lectura de inscripción Warden — sustituye a Sereth cuando este es Pivote).
+
+- **Darro-Ficha:** sección The Reckoning (cuando lo señalan por error) + beat "la escena más grande de Darro" (se sienta junto a Roen post-traición de Dagna, sin palabras).
+
+- **Speck.md:** párrafo "El Pivote como testigo natural" en §Momentos de Persona — canonizando que la traición pesa más si el jugador trató a Speck como persona.
+
+**Desambiguación de "el Consejo" (sub-paso más grande):** ~50 hits en 17 archivos resueltos con juicio de contexto. Cero residuos ambiguos post-fase. Distribución:
+- **~42 → the Triune Council** (Roen 8, Iven 12, Valen 6, Darro 5, Torgan 5, Geografía 7, Dagna-Ficha 4, Maren-Ficha 3, etc.)
+- **2 → the Great Forging Clan** (Torgan epílogos)
+- **8 → el consejo del clan menor de Torgan** (canon 3 eslabones de cadena de mando)
+- **3 → sin cambio** (glosario Nomenclatura + "Consejo de Deepstone" ya scoped)
+
+**Verificación end-to-end confirmada:**
+- `grep -rE "\bel Consejo\b|\bdel Consejo\b" 10-Knowledge/ | grep -v "Nomenclatura\|Deepstone\|clan menor" | wc -l` = 0
+- Roen "flashes" línea 157: intuye, no ve ✓
+- Roen: 8 menciones de Dagna ✓
+- Torgan Reckoning: 5 hits; Lyris: 4 hits ✓
+- check_vault 🟢 verde (3,169 tokens de arranque)
+
+**Nota abierta:** Sonnet flagged 2 residuos en Sereth-Ficha (línea 364-365, diálogo sobre renuncia de Roen) fuera del alcance del prompt. Verificación posterior confirma que YA no hay residuos ahí — Sonnet los resolvió pero no lo registró correctamente en el reporte.
+
+**Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ + Fase 2 ✅ + Fase 3 ✅. Único pendiente: Fase 4 (re-corrida de los 2 QAs con Opus para verificar 0 CRÍTICOS restantes).

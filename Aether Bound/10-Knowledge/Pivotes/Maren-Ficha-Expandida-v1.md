@@ -91,7 +91,7 @@ Fue cuando decidió: *"Voy a amar todo lo que pueda. Y luego voy a hacer matemá
 
 ## Cómo la Ve Roen (Humano, Conocimiento Previo)
 
-**Contexto:** Roen fue guardia del Consejo durante 15 años — vio pasar 2
+**Contexto:** Roen fue guardia del Triune Council durante 15 años — vio pasar 2
 regentes distintos mientras servía. Cruzó con Maren en negociaciones
 comerciales entre frontera y Rivermeet. La conoce como "esa ingeniera que
 siempre tiene números" — y también sabe algo que pocos guardias comunes
@@ -137,7 +137,7 @@ Pero lo amaba. Eso es lo que hace el cálculo de Maren tan devastador — **amab
 
 ### Escena: El Encuentro (En The Wilds, Reconocimiento)
 
-El jugador está en The Wilds, contrato del Consejo. Maren está ahí porque la buscó el jugador (¿coincidencia? no).
+El jugador está en The Wilds, contrato del Triune Council. Maren está ahí porque la buscó el jugador (¿coincidencia? no).
 
 Maren: *"Hablaste de purgar The Wilds. Vino a asegurarse de que no murieras siendo tonto."*
 
@@ -364,7 +364,7 @@ Años después, Rivermeet es modelo de sostenibilidad. Maren no se lo apunta com
 
 ### Maren + Roen (Ambos Humanos — Conocimiento Previo)
 
-**Primera impresión:** Roen la reconoce de Consejo. Maren lo reconoce de rumores (guardia que renunció).
+**Primera impresión:** Roen la reconoce del Triune Council. Maren lo reconoce de rumores (guardia que renunció).
 
 *"Roen. Escuché que te fuiste."*  
 *"Escuché que te quedaste. Menos sorprendente."*

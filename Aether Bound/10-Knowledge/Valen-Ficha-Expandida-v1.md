@@ -1,7 +1,7 @@
 ---
 status: draft
 source: "Sesión 2026-07-23 — Expansión narrativa"
-updated: 2026-07-23
+updated: 2026-07-27
 ---
 
 # Valen — C2, El Opuesto (Ficha Narrativa Expandida)
@@ -73,7 +73,7 @@ Eso fue hace 30 años.
 
 Valen vagabundea desde entonces. No es mercenario ni aventurero — es **observador cuya observación lo aísla.**
 
-Sabe cosas que no puede decir sin ser peligroso. Sabe verdades que rompen alianzas. Sabe que el Consejo está construido sobre ignorancia consensuada.
+Sabe cosas que no puede decir sin ser peligroso. Sabe verdades que rompen alianzas. Sabe que el Triune Council está construido sobre ignorancia consensuada.
 
 **No es amargo.** Es simplemente presente de que **toda verdad es un precio**, y la mayoría de la gente no quiere pagar.
 
@@ -87,9 +87,9 @@ Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una var
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
-| **Duelist** | Soldado del Consejo viendo grietas en el sistema. Valen lo estudió para predecir si cuestionaría. Encuentro: Valen llega "casualmente" cuando el soldado está al borde de desertar. Valen: *"Te vi en los registros del Consejo. Eras variable de interés — soldado disciplinado al borde de la pregunta. He venido a ver si harías la pregunta correcta."* | Veterana del ejército Consejo, rechazada por género pero ascendida por habilidad — patrón raro. Valen la estudió como excepción estadística. Encuentro: deliberadamente la busca. Valen: *"Eres anomalía en los registros del Consejo. Ascendida donde otros caen. He venido para ver si eres excepción o si el sistema simplemente es mejor escondiéndose en cifras."* |
-| **Vanguard** | Protector fronterizo, viendo que sus ordenes vienen de cálculos que no lo incluyen. Valen investigaba el patrón de fracturas fronterizas. Lo vio a ti. Valen: *"Proteges una línea que la ciudad no ve. He visto tus reportes — notas lo que los políticos no quieren notar. Vine para ver si actuarías sobre ello."* | Guardiana que protege territorio, ve que el Consejo venderá eso mismo territorio. Valen tiene datos. Encuentro: Valen llega con información que confirma su sospecha. Valen: *"Sé lo que vienen por tu tierra. Sé que nadie te preparó para ello. Vine porque el conocimiento sin herramientas es crueldad — iba a ser ambas, pero quería intentar la bondad primero."* |
-| **Strategist** | Consejero del Consejo, cuyos cálculos Valen ha estado verificando en secreto. Valen quería ver si las verdades ocultas lo quebrarían. Encuentro casual que no es casual. Valen: *"He revisado tus memorandos privados — los que se "pierden". Tus números son honestos. Vine porque un calculador honesto es raro, y raro significa vulnerable."* | Política/asesora cuya influencia Valen necesita neutralizar o aliarse. Estudio de Valen revela ella También sabe demasiado. Encuentro: Valen la busca. Valen: *"Eres la única en tu círculo que mide en términos de décadas, no años. Reconozco eso porque es raro. Vine para confirmar si lo que sabes te hace cómplice o rebelde."* |
+| **Duelist** | Soldado del Triune Council viendo grietas en el sistema. Valen lo estudió para predecir si cuestionaría. Encuentro: Valen llega "casualmente" cuando el soldado está al borde de desertar. Valen: *"Te vi en los registros del Council. Eras variable de interés — soldado disciplinado al borde de la pregunta. He venido a ver si harías la pregunta correcta."* | Veterana del ejército del Council, rechazada por género pero ascendida por habilidad — patrón raro. Valen la estudió como excepción estadística. Encuentro: deliberadamente la busca. Valen: *"Eres anomalía en los registros del Council. Ascendida donde otros caen. He venido para ver si eres excepción o si el sistema simplemente es mejor escondiéndose en cifras."* |
+| **Vanguard** | Protector fronterizo, viendo que sus ordenes vienen de cálculos que no lo incluyen. Valen investigaba el patrón de fracturas fronterizas. Lo vio a ti. Valen: *"Proteges una línea que la ciudad no ve. He visto tus reportes — notas lo que los políticos no quieren notar. Vine para ver si actuarías sobre ello."* | Guardiana que protege territorio, ve que el Council venderá eso mismo territorio. Valen tiene datos. Encuentro: Valen llega con información que confirma su sospecha. Valen: *"Sé lo que vienen por tu tierra. Sé que nadie te preparó para ello. Vine porque el conocimiento sin herramientas es crueldad — iba a ser ambas, pero quería intentar la bondad primero."* |
+| **Strategist** | Consejero del Triune Council, cuyos cálculos Valen ha estado verificando en secreto. Valen quería ver si las verdades ocultas lo quebrarían. Encuentro casual que no es casual. Valen: *"He revisado tus memorandos privados — los que se "pierden". Tus números son honestos. Vine porque un calculador honesto es raro, y raro significa vulnerable."* | Política/asesora cuya influencia Valen necesita neutralizar o aliarse. Estudio de Valen revela ella También sabe demasiado. Encuentro: Valen la busca. Valen: *"Eres la única en tu círculo que mide en términos de décadas, no años. Reconozco eso porque es raro. Vine para confirmar si lo que sabes te hace cómplice o rebelde."* |
 
 ---
 
@@ -121,7 +121,7 @@ Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una var
 
 ### Escena 1: El Encuentro (Primeros 20 minutos)
 
-El jugador está haciendo el contrato del Consejo, purgar The Wilds. Valen está ahí — no por el mismo motivo que Roen (Roen vino porque lo llamaste). Valen vino **porque calculó que serías variable importante**.
+El jugador está haciendo el contrato del Triune Council, purgar The Wilds. Valen está ahí — no por el mismo motivo que Roen (Roen vino porque lo llamaste). Valen vino **porque calculó que serías variable importante**.
 
 **Valen en esta escena:**
 - Frío. Eficiente. No sociable.
@@ -207,6 +207,16 @@ No de golpe. Lentamente. En conversaciones privadas, fragmento por fragmento.
 El jugador: "¿Entonces debemos destruirla?"
 
 Valen: *"No. Quiero decir: debes elegir entre lo que amas y lo que es correcto. Eso es lo que significa ser consciente. Eso es el precio del conocimiento."*
+
+### Grove of Cycles (a mitad del Acto 2)
+
+Ver [[Grove of Cycles — Escena del Acto 2]]. Si el Tether del jugador con Valen está en T2+, es **Valen quien pide al grupo desviarse a Grove of Cycles** antes de bajar a The Driftmarket — Vector A canónico. No explica del todo por qué: *"Hay gente que necesita ver algo, aunque no sepan que lo están viendo."* Es la única vez en el juego donde Valen inicia una desviación de ruta sin que se la pidan — coherente con su formación en la Academy of Sages, la misma de la que salen los 4 miembros de The Elder Circle que van a encontrar ahí.
+
+Dentro del Grove, Valen reconoce el lugar como propio: *"Aquí aprendí a leer ciclos."* Escucha el debate de los cuatro élderes en silencio casi total — es la única conversación del juego donde Valen, el que siempre tiene el dato, no interviene ni una vez. Se limita a observar cómo Threnn, Ilyara, Corwyn y Maelys llegan a las mismas fracturas que él lleva 30 años cargando solo. Si el jugador guardó silencio durante el debate (uno de los disparadores del encuentro individual), es **Maelys** quien busca a Valen después — reconocimiento entre dos que saben que la respuesta no les pertenece.
+
+### Sunken Archive — la lectura de la inscripción Warden
+
+Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — corresponde normalmente a **Sereth**. Cuando Sereth es el Pivote activo (y por tanto no está disponible para esa lectura sin comprometer la escena, o el diseño prefiere que no sea la voz que la ofrece), **es Valen quien hace la lectura** en su lugar. Reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador se pone the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo del último Warden — Valen no ve la proyección (los Goggles son estrictamente privados, [[Speck]] §Capa 2), solo ve la cara del jugador cambiar, y no pregunta qué vio.
 
 ---
 

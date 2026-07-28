@@ -231,6 +231,14 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove ante
 
 **No participa del debate.** Los cuatro elfos hablan como si ella no estuviera. Ilyara la mira una vez, larga, en el momento en que menciona "sangrar por lo ajeno". Lyris asiente sin abrir la boca — es lo único que dice en toda la escena. Threnn, Corwyn y Maelys no la buscan; Lyris no dispara ninguno de los cuatro disparadores del encuentro individual ([[Grove of Cycles — Escena del Acto 2]] §5). Sale del Grove tan silenciosa como entró, pero con un dato nuevo: los cuatro élderes discuten variables que Frontier High Command nunca discute. Le pesa un segundo. Se sacude el peso al salir. Vuela quince metros arriba del grupo el resto del trayecto a Driftmarket.
 
+### The Reckoning en The Driftmarket
+
+Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, el grupo pasa por The Driftmarket y Harbormaster Tobin Hale aparta al jugador solo. Con Lyris como Pivote activo, Tobin oye una nota de Frontier High Command con instrucciones de ruta hacia el Archive — fragmento del idioma militar de frontera. La única elfa del grupo que Tobin ubica hablando esa burocracia es **Valen**, el único elfo fijo; Tobin no distingue Academy of Sages de Frontier High Command — para él son "asuntos de elfos con papeles". Señala a Valen por error.
+
+**Reacción de Lyris:** indiferencia visible. No defiende a Valen con vehemencia ni lo acusa con interés — se limita a observar la escena desde una distancia calculada, como observa todo. Si el jugador confronta a Valen, Lyris no interviene; si el jugador decide no confrontar, tampoco comenta. Por fuera, es la misma ausencia de reacción que ofrece a cualquier evento que no altere su patrón.
+
+Por dentro, calcula algo específico: **el jugador todavía no la sospecha a ella.** El error de Tobin cae sobre el elfo equivocado, y eso significa que su propia ruta hacia el cráter sigue limpia. No es alivio — Lyris no siente alivio como los demás lo sienten — es una actualización de datos, la misma frialdad con que ajusta una ruta de vuelo cuando cambia el viento. Es el momento más cerca que Lyris está, en toda la aventura, de reconocer en privado que su traición todavía puede ejecutarse sin obstáculos.
+
 ---
 
 ## Nudo → Clímax: La Traición al Salir del Archive

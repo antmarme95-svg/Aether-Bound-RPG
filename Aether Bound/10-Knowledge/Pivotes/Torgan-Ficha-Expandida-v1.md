@@ -95,8 +95,8 @@ líneas: si el clan menor no da fuente, es que la fuente es the Great Forging
 Clan (que a su vez recibió el pedido de Ambassador Kadrun por parte del
 Triune Council). Tres eslabones, y solo el último tiene cara.
 
-*"Hay variable que amenaza intereses del Clan. Será llevada al Consejo del
-Clan menor cuando sea identificada. Tu rol: localizarla y entregarla."*
+*"Hay variable que amenaza intereses del Clan. Será llevada al consejo del
+clan menor cuando sea identificada. Tu rol: localizarla y entregarla."*
 
 Torgan no cuestionó. **Eso es ser enano.** Cuestionamientos son para después
 de completar el deber. Y los cuestionamientos, aun después, no se hacen
@@ -108,7 +108,7 @@ Criatura con Aether anómalo. Peligrosa potencial.
 
 Informe al consejo del clan menor. Respuesta transmitida palabra por palabra
 desde arriba: *"Espera instrucciones. La variable estará en The Wilds.
-Cuando se localice, trae la variable y lo que la rodea. El Consejo lo
+Cuando se localice, trae la variable y lo que la rodea. El Triune Council la
 usará."* Torgan reconoce el registro — no es voz de su clan menor, es voz de
 Kadrun traducida a dos idiomas.
 
@@ -122,7 +122,7 @@ Elfo Strategist. Inteligente, honorable a su manera. Torgan lo respetó inmediat
 
 Y el jugador amó a Speck.
 
-**El conflicto:** Torgan debe entregar Speck al Consejo (Juramento de 55 años). Pero Torgan ama al jugador (amistad de meses). 
+**El conflicto:** Torgan debe entregar Speck al consejo de su clan menor (Juramento de 55 años). Pero Torgan ama al jugador (amistad de meses). 
 
 Ambos no pueden ser verdaderos.
 
@@ -189,7 +189,7 @@ Clan menor: *"La esperanza no es factor. Cumplirás."*
 
 ### Escena: El Encuentro (Reconocimiento Silencioso)
 
-El jugador está en The Wilds con contrato del Consejo. Torgan está ahí porque lo buscó el jugador (¿coincidencia? No — Torgan planeó esto hace meses).
+El jugador está en The Wilds con contrato del Triune Council. Torgan está ahí porque lo buscó el jugador (¿coincidencia? No — Torgan planeó esto hace meses).
 
 Torgan: *"Qué sorpresa encontrarte aquí."* (Mentira. Sabía exactamente dónde sería el jugador.)
 
@@ -209,13 +209,13 @@ Llegan al nido. Bestias guardianas. Crisálida.
 
 **Torgan ve la crisálida.**
 
-Reconoce inmediatamente: esta es la variable. Esta es lo que el Consejo quiere.
+Reconoce inmediatamente: esta es la variable. Esta es lo que el Clan quiere.
 
 **Pero mantiene silencio.**
 
 Cuando el jugador decide salvar o destruir, Torgan dice: *"Tuya es la decisión. Sea cual sea, te seguiré."*
 
-**Mentira.** Torgan ya sabe que no puede seguirlo. Ya sabe que el Consejo lo llamará. Pero en este momento, en este nido, Torgan **permite al jugador elegir sin conocer el costo.**
+**Mentira.** Torgan ya sabe que no puede seguirlo. Ya sabe que su clan menor lo llamará. Pero en este momento, en este nido, Torgan **permite al jugador elegir sin conocer el costo.**
 
 Es acto de amor. Torgan da al jugador un momento donde la decisión es genuina, no contaminada por conocimiento de lo que viene.
 
@@ -229,7 +229,7 @@ El Bound Five se forma.
 
 **Torgan aquí está en rol imposible:**
 - Debe ser compañero genuino (lo es)
-- Debe reportar al Consejo en secreto (lo hace — hay mercaderes que llevan mensajes)
+- Debe reportar a su clan menor en secreto (lo hace — hay mercaderes que llevan mensajes)
 - Debe prepararse para tomar a Speck cuando llegue el momento (se prepara)
 
 Con el jugador: **completamente honesto emocionalmente.** No hay engaño en ese nivel. Ama al jugador como compañero de armas.
@@ -246,9 +246,9 @@ Con Roen/Valen/Maren: estratégico. Torgan aprende de ellos, calcula cómo funci
 
 El Bound Five viaja. Torgan camina con ellos. Pero internamente, **Torgan está en guerra.**
 
-Cada noche, cuando acampa, consulta en secreto con mensajeros del Consejo: *"¿Llegó instrucción?"*
+Cada noche, cuando acampa, consulta en secreto con mensajeros de su clan menor: *"¿Llegó instrucción?"*
 
-Respuesta: *"Espera. El Consejo está evaluando. Cuando Speck esté en posición vulnerable, daremos orden."*
+Respuesta: *"Espera. El Clan está evaluando. Cuando Speck esté en posición vulnerable, daremos orden."*
 
 ### Speck Despierta
 
@@ -266,9 +266,9 @@ Torgan: *"Siempre."* (Mentira. Verdad. Ambas simultáneamente.)
 
 ### La Verdad Filtra
 
-Hacia el final de Acto 2, el Fragmento se aproxima. Consejo envía mensaje final:
+Hacia el final de Acto 2, el Fragmento se aproxima. El clan menor envía mensaje final:
 
-*"Cuando el Fragmento se active, Speck reaccionará. En ese momento, toma la variable y trae al Consejo. No hay espacio para demora. El deber es absoluto."*
+*"Cuando el Fragmento se active, Speck reaccionará. En ese momento, toma la variable y trae al Clan. No hay espacio para demora. El deber es absoluto."*
 
 Torgan lee el mensaje.
 
@@ -278,6 +278,16 @@ Mira a Speck calmado.
 
 Y en este momento, Torgan **entiende que no hay salida.** Cualquier otra cosa que haga sería traición a su Juramento. Y para enano, Juramento es más que vida.
 
+### The Reckoning en The Driftmarket
+
+Ver [[Geografía y Ciudades]] §THE RECKONING. El grupo pasa por The Driftmarket antes de bajar al Sunken Archive, y Harbormaster Tobin Hale aparta al jugador solo. Con Torgan como Pivote activo, lo que Tobin oye es un mensajero del Great Forging Clan grabando un juramento nuevo — fragmento del idioma ritual enano. Tobin no conoce a Torgan lo suficiente como para reconocer su voz institucional; la única persona del grupo que Tobin ubica hablando ese idioma es **Darro**, el otro enano, hijo de forja y aprendiz rechazado del mismo Clan. Tobin señala a Darro por error.
+
+**Si el jugador confronta a Darro con la advertencia de Tobin:** Torgan presencia la escena en silencio pesado. No interviene, no corrige, no dice "no es él" — porque decirlo sería admitir que sabe de qué está hablando Tobin, y admitir eso es adelantar su propia sentencia. Es la culpa técnica que Torgan carga el resto del tramo hasta el Archive: dejar que acusen al hombre equivocado, sabiendo que el hombre correcto es él, y no decir nada. Cuando Darro se defiende (confundido, dolido, sin entender de dónde salió la sospecha), Torgan observa con la cara más quieta que ha puesto en toda la aventura. Si el jugador le pregunta directamente a Torgan qué opina, responde solo: *"Darro no tiene nada que esconder. Eso debería bastar."* Verdad literal, blindaje moral perfecto — y una frase que, releída después de su propia traición, se vuelve casi cruel.
+
+**Si el jugador se guarda la información sin confrontar a nadie:** Torgan lo intuye igual, por la tensión nueva que se instala en el grupo entre Driftmarket y el Archive. No pregunta qué le dijo Tobin. Pero camina más cerca de Darro que de costumbre esas horas, como quien hace guardia silenciosa sobre un error que no cometió pero que permitió.
+
+Ninguna de las dos rutas cambia el desenlace: el Juramento ya estaba decidido antes de que Tobin abriera la boca. Pero ambas rutas son las últimas horas donde Torgan pudo hablar y no lo hizo.
+
 ---
 
 ## Nudo → Clímax: La Traición y el Deber
@@ -286,7 +296,7 @@ Y en este momento, Torgan **entiende que no hay salida.** Cualquier otra cosa qu
 
 El Fragmento se activa. Speck reacciona. La verdad emerge.
 
-El Consejo, a través de un mensajero en The First Wound, da orden final: *"Ahora. Trae la variable."*
+El clan menor, a través de un mensajero en The First Wound, da orden final: *"Ahora. Trae la variable."*
 
 **Torgan actúa.**
 
@@ -333,7 +343,7 @@ Conversación clave:
 
 ### The First Wound (Clímax Emocional)
 
-Se alcanza a Torgan. El Consejo necesita Speck. El Juramento está casi cumplido.
+Se alcanza a Torgan. Su clan necesita Speck. El Juramento está casi cumplido.
 
 **La decisión es del jugador.**
 
@@ -345,11 +355,11 @@ Se alcanza a Torgan. El Consejo necesita Speck. El Juramento está casi cumplido
 
 Torgan es indultado. Pero **el Juramento permanece.**
 
-El Consejo del Gremio nunca acepta su regreso. Torgan vive años después como **enano sin tribu** — el peor destino posible.
+El Great Forging Clan nunca acepta su regreso. Torgan vive años después como **enano sin tribu** — el peor destino posible.
 
 **Epílogo:** Torgan se queda con el jugador. Viaja con el grupo. Pero lleva peso invisible — es enano que quebró Juramento. Otros enanos lo evitan.
 
-Años después, cuando Speck elige la Muda Parcial, el Consejo finalmente lo contacta: *"Tu Juramento se vuelve irrelevante. El mundo cambió. Eres libre."*
+Años después, cuando Speck elige la Muda Parcial, el consejo de su clan menor finalmente lo contacta: *"Tu Juramento se vuelve irrelevante. El mundo cambió. Eres libre."*
 
 Torgan no siente libertad — siente alivio de un peso que lo definió.
 
@@ -359,7 +369,7 @@ Torgan no siente libertad — siente alivio de un peso que lo definió.
 
 Torgan muere cumpliendo el Juramento — protegiendo a Speck en combate final, o en enfrentamiento con el grupo.
 
-**Epílogo:** El Consejo recibe el cuerpo. Lo honran formalmente como maestro. El Juramento fue completado hasta la muerte.
+**Epílogo:** Su clan recibe el cuerpo. Lo honran formalmente como maestro. El Juramento fue completado hasta la muerte.
 
 Pero Darro — Darro quien lo conocía — nunca vuelve a Emberdeep. No puede ver el monumento del enano que eligió deber sobre amor.
 
@@ -371,13 +381,13 @@ Torgan es capturado. El jugador lo encadena — no por justicia, sino por contro
 
 Esto es **la peor muerte posible para enano.** Tener promesa incumplida.
 
-Años después, Torgan se escapa. No para venganza — simplemente para **terminar el Juramento de alguna forma.** Busca al Consejo. Busca a Speck. Busca cierre.
+Años después, Torgan se escapa. No para venganza — simplemente para **terminar el Juramento de alguna forma.** Busca a su clan. Busca a Speck. Busca cierre.
 
 Nunca lo encuentra. Muere persiguiendo promesa incumplida.
 
 ### Final 4: The Warden's Choice (Síntesis — Si Speck Elige)
 
-Speck elige la Muda Parcial. El Consejo del Gremio pierde interés en variable que ahora es irrelevante.
+Speck elige la Muda Parcial. El Great Forging Clan pierde interés en variable que ahora es irrelevante.
 
 Torgan está libre.
 
@@ -407,7 +417,7 @@ Años después, Torgan elige quedarse con el grupo. No por deber, sino porque **
 
 **Primera impresión:** Roen respeta a alguien que entiende deber. Torgan respeta a alguien que renunció a deber.
 
-*"Dejaste el Consejo."*  
+*"Dejaste el Triune Council."*  
 *"Elegí mi consciencia sobre orden."*  
 *"Yo no tengo esa opción. Mi opción fue hacer la promesa."*
 

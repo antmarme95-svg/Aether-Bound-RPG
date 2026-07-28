@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "GDD §5.2"
-updated: 2026-07-04
+updated: 2026-07-27
 ---
 
 # The Tether (sistema de vínculos)
@@ -11,7 +11,7 @@ visibles en tensión + un contador oculto.
 
 ## A. Contract Standing (beneficio propio)
 
-Tu posición ante tu reino y el Consejo. Sube cumpliendo cláusulas (reportar
+Tu posición ante tu reino y el Triune Council. Sube cumpliendo cláusulas (reportar
 cores, entregar especímenes). Compra equipo, salvoconductos, estatus legal.
 *UI diegética: el pergamino del Contrato con cláusulas selladas*
 ([[Progresión y Contrato]]). Muchas acciones que suben Standing **cuestan

@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "GDD §3.1b/3.1c (ficha v0 aprobada) + Design Loop 2026-07-04 (ratificada por el director; concept art pendiente); pareja del slice: [[Slice of Bond]]"
-updated: 2026-07-04
+updated: 2026-07-27
 ---
 
 # Dagna — la Muralla (Pivote del Humano Duelist)
@@ -35,9 +35,9 @@ pequeñas, y un humor seco que solo aparece cuando algo le importa.
 
 Canon: C3 aparece cuando te vuelves prófugo — *el único que elige ayudar a un
 fugitivo*. Propuesta: Dagna presencia (a distancia) tu incidente del Nido. El
-Consejo te declara violador de contrato; ella lee lo contrario — **rompiste
+Triune Council te declara violador de contrato; ella lee lo contrario — **rompiste
 un papel por mantener una fe**. Para una guardiana de puertas, eso es
-lealtad en su forma más pura. Te da la espalda al pregón del Consejo y te
+lealtad en su forma más pura. Te da la espalda al pregón del Triune Council y te
 abre paso. Primera línea: *"You kept the wrong promise. That's still
 keeping."*
 

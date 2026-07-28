@@ -31,7 +31,13 @@ updated: 2026-07-27
   - Género de Speck femenino uniforme en Darro-Ficha
   - Frontmatters actualizados
   - Todos los greps de verificación = 0
-- **🔴 Fase 2 pendiente** — Sonnet 5, propagación semántica + cross-cutting (Roen/Valen/Darro fichas con entrada Roen+Dagna reflejada, corrección "Roen quebrado por Lyris" → Dagna, integración The Reckoning en 9 fichas, Momentos de Persona con reacción del Pivote, reaparición Wanderer's Goggles, desambiguación de "el Consejo" con contexto)
+- **✅ Fase 2 completa** — Sonnet 5, propagación semántica + cross-cutting:
+  - Roen-Ficha: entrada Roen+Dagna canónica agregada (8 menciones); línea de flashes corregida (Roen intuye, no ve — canon Speck §Capa 2); Lyris "repliega" a Roen, Dagna "rompe genuinamente" (corrige contradicción)
+  - Torgan y Lyris: The Reckoning integrado (Tobin señala a Darro para Torgan, a Valen para Lyris)
+  - Valen-Ficha: Grove of Cycles Vector A + lectura de inscripción Warden en Sunken Archive
+  - Darro-Ficha: The Reckoning (Tobin lo señala por error cuando el Pivote es enano) + escena del escudo caído de Roen (ruta Dagna)
+  - Speck.md: párrafo "El Pivote como testigo natural" en §Momentos de Persona
+  - **Desambiguación "el Consejo":** ~50 hits en 17 archivos resueltos → 0 residuales ambiguos. Distribución: ~42 → the Triune Council, 2 → the Great Forging Clan, 8 → el consejo del clan menor de Torgan, 3 glosario/scoped sin cambio
 - **🔴 Fase 4 pendiente** — verificación end-to-end con re-corrida de los 2 QAs (criterio: 0 CRÍTICOS)
 
 **Worldbuilding narrativo previo:** COMPLETO como fuente para guión (3 reinos + Triune Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning + 12 personajes con fichas + Speck).

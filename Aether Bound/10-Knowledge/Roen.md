@@ -1,7 +1,7 @@
 ---
 status: draft
 source: "Sesión de diseño 2026-07-23"
-updated: 2026-07-23
+updated: 2026-07-27
 ---
 
 # Roen — C1, El Afín
@@ -18,7 +18,7 @@ el que nadie quiere decepcionar. El grupo funciona porque él está ahí.
 ## Historia
 
 Fue guardia del Triune Council durante quince años: suficiente para ver
-cómo el Consejo toma decisiones y quiénes pagan el precio de ellas.
+cómo el Triune Council toma decisiones y quiénes pagan el precio de ellas.
 Renunció. No con drama — dejó el escudo en la puerta y salió.
 
 Creció en la frontera Mistbound, donde la relación con The Wilds no es

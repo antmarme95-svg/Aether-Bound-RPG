@@ -88,11 +88,11 @@ Dagna no volvió a preguntar. Sabe leer entre líneas — la variable es lo que 
 
 ## Cómo la Ve Roen (Humano, Conocimiento Previo) — Bloque Crítico
 
-**Contexto:** Roen no conoce a Dagna de antes formalmente — no cruzó con Deepstone en sus quince años de servicio al Consejo. Pero la reconoce por reputación cuando la ve: enana Vanguard, escolta contratada, subclán vasallo. Roen sabe leer un escudo pesado desde treinta pasos, y sabe qué tipo de enana lleva las marcas de Deepstone en el borde.
+**Contexto:** Roen no conoce a Dagna de antes formalmente — no cruzó con Deepstone en sus quince años de servicio al Triune Council. Pero la reconoce por reputación cuando la ve: enana Vanguard, escolta contratada, subclán vasallo. Roen sabe leer un escudo pesado desde treinta pasos, y sabe qué tipo de enana lleva las marcas de Deepstone en el borde.
 
 Lo que Roen ve, sin embargo, no es la reputación. Es algo más íntimo, y este es el corazón dramático de la ficha entera:
 
-**La herida definitoria de Roen es haber dejado su puesto en Mistbound.** Renunció al Consejo, se fue, dejó a los suyos. Es lo que carga desde hace años. Es la razón por la que se vuelve al grupo — no perdón exactamente, algo más parecido a "un puesto nuevo para no ser el que se fue del anterior".
+**La herida definitoria de Roen es haber dejado su puesto en Mistbound.** Renunció al Triune Council, se fue, dejó a los suyos. Es lo que carga desde hace años. Es la razón por la que se vuelve al grupo — no perdón exactamente, algo más parecido a "un puesto nuevo para no ser el que se fue del anterior".
 
 **Dagna es literalmente la persona que nunca abandonó el suyo.**
 
@@ -116,7 +116,7 @@ Este bloque se canoniza aquí. Corrige el hallazgo intermedio del QA narrativo q
 
 **No hay primer encuentro dramático.** Es la única ficha del elenco donde el vínculo con el jugador **ya existe desde antes del inicio del juego.** Dagna ha sido escolta contratada del jugador durante **cinco años continuos.** Han hecho contratos juntos, han acampado juntos, se han cubierto la espalda cientos de veces. Es confianza construida en el silencio del oficio, no en el diálogo.
 
-**El "encuentro" del arranque del juego** es simplemente reunirse en The Wilds al comienzo del contrato del Consejo. Dagna llega al punto acordado un día antes que el jugador, ya con el escudo listo. Cuando el jugador aparece, Dagna asiente una vez. Es todo. Cinco años de trabajo cabe en ese asentimiento.
+**El "encuentro" del arranque del juego** es simplemente reunirse en The Wilds al comienzo del contrato del Triune Council. Dagna llega al punto acordado un día antes que el jugador, ya con el escudo listo. Cuando el jugador aparece, Dagna asiente una vez. Es todo. Cinco años de trabajo cabe en ese asentimiento.
 
 **El jugador la da por descontada.** Es el paralelo exacto con Roen: así como Roen daba por descontado su puesto en Mistbound antes de dejarlo, el jugador da por descontado a Dagna. Está ahí. Siempre está ahí. Es la muralla. No se piensa en la muralla hasta que cae.
 
@@ -384,7 +384,7 @@ Este es el corazón dramático de toda la ficha, ya desplegado arriba en "Cómo 
 
 **Lo que Dagna sabe sin verbalizar:** que Roen la respeta más que a cualquiera del grupo porque ella hizo lo que él no pudo. Que ese respeto es real y le pesa. Que cuando ella lo traicione, la traición va a romperlo — no por la traición, sino porque la traición viene de la persona que Roen usa internamente como prueba de que el puesto se podía aguantar. Cuando Dagna se lo lleva, Roen pierde la prueba.
 
-**Por qué es la única que puede quebrarlo:** Lyris puede doblarlo (traición fría, política), pero Roen la lee como Roen lee cualquier orden vieja del Consejo — con desconfianza automática, con distancia. Sereth puede herirlo íntimamente. Maren puede desilusionarlo con el cálculo. **Solo Dagna lo rompe,** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
+**Por qué es la única que puede quebrarlo:** Lyris puede doblarlo (traición fría, política), pero Roen la lee como Roen lee cualquier orden vieja del Triune Council — con desconfianza automática, con distancia. Sereth puede herirlo íntimamente. Maren puede desilusionarlo con el cálculo. **Solo Dagna lo rompe,** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
 
 **La escena del escudo caído** es la manifestación física de ese quiebre. No es el escudo del combate — es el escudo del puesto, el peso que Roen recogió para probarse que todavía servía como muralla. Cuando Dagna se va con Speck y con la prueba, Roen no tiene más razón para cargarlo.
 

@@ -382,7 +382,7 @@ Ver [[Los 4 Finales]].
 **Primera impresión:** Roen la reconoce como autoridad técnica del clan real. Vekka reconoce a Roen como "el que sabe cuándo detenerse" — capacidad que Vekka misma nunca ha aprendido, y que respeta con una envidia contenida.
 
 *"Guild Master."*
-*"Roen. Escuché que dejaste el Consejo."*
+*"Roen. Escuché que dejaste el Triune Council."*
 *"Escuché que sigues en el yunque."*
 *"El yunque no me suelta."*
 

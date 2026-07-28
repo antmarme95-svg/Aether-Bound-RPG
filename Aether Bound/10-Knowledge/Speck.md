@@ -1,7 +1,7 @@
 ---
 status: redireccionado + visual-locked
 source: "GDD §2.4 + redireccionamiento narrativo + diseño visual 2026-07-23"
-updated: 2026-07-23
+updated: 2026-07-27
 ---
 
 # Speck — Último Warden
@@ -103,7 +103,7 @@ Darro reconoce que Speck razona — que tiene intenciones, que entiende.
 **Pero es solo... un zorro extraño.** Darro hace la observación burlona (conexión
 de humor enano con humor pragmático de Speck). Un solo nombre canónico, **nueve
 escenas de bautizo distintas** (varía el C4 según quinteto). En el endgame el
-Consejo la llama "the Warden"; el grupo insiste en "Speck" — **el nombre es el
+Triune Council la llama "the Warden"; el grupo insiste en "Speck" — **el nombre es el
 vínculo.**
 
 ## Personalidad & Humor
@@ -120,6 +120,17 @@ No busca risa — observa y comunica mediante ironía. Ejemplos:
 
 ~7 escenas fijas donde la tratas como herramienta, mascota o persona.
 Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 4 Finales]]).
+
+**El Pivote como testigo natural:** de las nueve personas del grupo, el
+Pivote activo es quien más tiempo pasa observando cómo el jugador trata a
+Speck — no por diseño narrativo forzado, sino porque el Pivote es, en casi
+toda ruta, quien camina más cerca del jugador durante los Momentos de
+Persona. Si el jugador trata a Speck consistentemente como persona (no como
+herramienta ni mascota), la traición del Pivote le cuesta más — no cambia el
+gate mecánico de ningún final, pero sí el peso dramático de la escena de
+traición: el Pivote sabe, mejor que nadie del grupo, exactamente qué está
+rompiendo. El detalle específico por Pivote no se fija aquí — queda abierto
+para que cada ficha lo desarrolle si el director lo pide.
 
 ## Diseño visual (EN REDIRECCIONAMIENTO — 2026-07-23)
 
