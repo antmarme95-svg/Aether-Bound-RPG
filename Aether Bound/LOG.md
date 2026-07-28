@@ -5395,3 +5395,33 @@ Primer bloque de la Fase 5 (cierre real del sprint). Va primero porque fija el c
 **Verificación:** 0 cross-refs viejos vivos · archivo renombrado · 0 conteos en texto · Nyael 6/6 bajo Deber Institucional, 0 bajo Rechazo/Ausencia · check_vault 🟢 verde (2,996 tokens).
 
 **Costo:** ~10k tokens (D1+D2, directo) + 98k (D3, Haiku).
+
+## [2026-07-28] sprint/QA-Fase5-A | Bloque A — Torgan e Iven reescritas (9/9 Pivotes migrados)
+
+Segundo bloque de la Fase 5. Cierra el hueco de cobertura más grande del sprint anterior: las 2 fichas que Fase 1 nunca tocó. **Con esto las 9 fichas de Pivote están al canon nuevo.**
+
+Estrategia: 1 agente Opus 5 a la vez, secuencial (la que dio 0 server errors con Vekka y Dagna). Torgan primero, luego Iven usando a Torgan como plantilla adicional.
+
+**TORGAN (485 → 579 líneas):**
+- **Acto 3 migrado** a los 5 sub-beats. Traición en el corredor de salida del Archive, ya no en el cráter. Persecución diferenciada: corre pero **se detiene tres veces a contestar** — la más conversada del elenco. En el cráter no entrega a Speck: la sostiene en el punto medio y deja decidir al jugador.
+- **F2b sin suavizar** (el canon lo exigía explícitamente): se borró el "su clan recibe el cuerpo, lo honran como maestro, el Juramento fue completado". Ahora es juramento **incumplido** — ni roto ni cumplido, se le murió en las manos. El tallador baja la herramienta y se va; el altar queda con un hueco liso que generaciones después nadie sabe explicar; funeral sin recitación del Juramento; Darro no va.
+- **Beat Warden** = reconoce **oficio y linaje**: el "descanso en círculo" (maestro al centro, aprendices alrededor, manos hacia adentro) y las firmas talladas bajo cada cuerpo. Saluda la piedra con la palma abierta en vez de golpearla. Diferenciado de Vekka (técnica) y Dagna (posición ritual). Tic físico canónico nuevo (pulgar recorriendo el tatuaje) que aparece exactamente 3 veces y ata el beat Warden con el clímax.
+- **Aritmética unificada en 55 años**, declarada "fija, no negociable" en la biografía. Cero residuos de "sesenta años" / "treinta años libre" / "vida de 90".
+- **Cadena de mando resuelta sin disputa:** la nota ya no dice "esta ficha corrige a Estructura Política". Ahora explica que el resumen es la ruta vista desde arriba (donde nace la orden) y la ficha desde abajo (donde aterriza) — el clan menor no cambia el origen, lo **oculta**. Es el diseño de "la orden se disuelve en idiomas institucionales".
+- **Rechazo de Darro a versión Vekka:** Torgan conserva su rechazo a los 15 en la puerta, pero ya no es "el mismo día que Darro". Conoce el caso Darro de oídas años después, como advertencia que circula en Emberdeep (*"ser aceptado no es ser seguro"*).
+- **Sección nueva — Torgan como segundo agente de la ruta Bram:** mismo juramento, misma cadena de 3 eslabones, sobre un grupo del que no forma parte y una criatura que nunca vio. **Sin los dos años de afecto que lo harían doler.** Su tesis: en su propia ruta el Juramento pelea contra el cariño y gana con esfuerzo visible; en la ruta Bram no encuentra resistencia, y ahí se ve que siempre fue un mecanismo al que el cariño solo le ponía ruido.
+- Superlativo consolidado: **el juramento sin escape** — las tres puertas están cerradas (cumplir lo destruye, no cumplir lo borra, y la tercera opción es su peor final).
+
+**IVEN (511 → 767 líneas):**
+- **Acto 3 migrado** a los 5 sub-beats. **Persecución más rápida y desesperada del elenco** — la única sin una sola parada, la única con diálogo gritado a distancia; cruza por arriba lo que el grupo cruza por abajo (es acróbata, y cada minuto es un día menos para su gente). Un solo medio segundo de duda: Roen le pide un nombre y no tiene ninguno.
+- **Mentira del Council explícita:** §Nota narrativa clave reescrita en términos absolutos ("FALSA, y el Council lo sabe desde el primer día"), anclada a `El Mundo y la Muda` + `Estructura Política §statu quo`, con regla de escritura para el guionista: **el Council nunca confirma la mentira en escena**. Sección nueva **§Las tres grietas** — Ilyara en el Grove, el pago-en-dinero que oye Tobin, la deducción vía Goggles — puntos donde el jugador *podría* detectar la inconsistencia sin marcador de UI. No cancelan la traición, cambian el epílogo.
+- **F2b corregido frontalmente:** decía "su asentamiento recibe el remedio, vive, años después prospera". Ahora **muere lentamente durante años** — Iven entierra a todos con sus manos sabiendo que fue la variable que aceleró todo. Sin línea final.
+- **F1 ≠ F4 resueltos:** F1 = la Muda era la cura, su gente vive **a pesar de él**, vive con culpa. F4 = entiende el sacrificio parcial antes que nadie, se queda como **testigo de la tercera vía**, vive con propósito. Explícito en el texto.
+- **Beat Warden — el más emocional de los 9:** se cae de rodillas (única vez que su cuerpo de acróbata falla), reconoce **el duelo** (las manos cerradas una por una, los cuerpos mirando hacia adentro como su pueblo entierra), y después la segunda ola: cada God-Core del Acto 1 era una tumba profanada. **Único de los nueve que llora en escena.** El jugador lo ve por los Goggles; Iven no sabe que lo ven.
+- **Superlativo con el roce contra Dagna resuelto:** Dagna es la más justificable **institucionalmente** (hay estatuto que señalar); Iven es la que **no tiene lado correcto** — no invoca sistema, señala gente, y el jugador tampoco tiene posición superior desde donde hablar. Segundo piso: el dilema ni siquiera era real.
+
+**Verificación (ambas):** eje viejo 0 hits · F2a/F2b presentes · headcount corregido con cita a The Bound Five · sin "Muda Parcial" en F1 · traición al salir del Archive · cita a `[[Los 5 Finales]]`. check_vault 🟢 (3,645 tokens — creciendo, monitorear).
+
+**Costo:** 152k (Torgan) + 128k (Iven) = ~280k tokens.
+
+**Pendiente de Fase 5:** Bloque B (Roen/Valen/Darro, Sonnet 5) y Bloque C (lint final, Haiku 4.5).
