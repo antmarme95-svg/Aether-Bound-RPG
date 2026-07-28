@@ -5311,3 +5311,20 @@ Primera corrida real de los 14 briefs nuevos (§11). Resultado: 1 rechazo + 1 it
 **Vault:** §11.3 actualizado en `Briefs de Concept Art.md` — v1 marcada SUPERADO con nota de rechazo, v2 con especificación completa + nota QA ratificada. Sigue el mismo patrón de revisiones usado en §9 (Ithessa, Kadrun) y §10 (Ilyara).
 
 **Pendiente:** guardar `sunken-archive-interior-v2.png` en `90-Raw/concept/` (Boris tiene la imagen del lado de NB2, falta bajarla al repo).
+
+## [2026-07-27] concept-art/QA | Grove of Cycles — ratificada sin re-corrida (§11.5)
+
+Segunda corrida real de los 14 briefs del §11. Resultado: aprobada en el primer intento, sin necesidad de v2.
+
+**Resultado visual:** interior de un túnel-catedral de árboles vivos entrelazados, sosteniéndose sin arquitectura construida visible. Lectura más fiel al espíritu canónico ("sigue siendo el templo que fue durante milenios") que una interpretación literal de salón con columnas — la primera reacción fue que el resultado superó la expectativa mental previa a verla.
+
+**Contra el brief:** silencio, raíces entrelazadas, mood ceremonial-atemporal logrados con precisión. Conteo inicial de figuras del Elder Circle marcado como error (3 en vez de 4) fue corregido tras revisión de Boris — las 4 figuras sí están presentes.
+
+**Notas menores no bloqueantes:**
+- Aether verde-teal se lee como wisp/cinta localizado en vez de fluir difuso por el follaje.
+- Luz salió más oliva/crema que "dorada" — dentro del rango de paleta ya establecida.
+- Marcas ambiguas en ramas superiores: podría ser el "Warden script escribiéndose" pedido explícitamente en el brief, o un residuo del glitch de texto de NB2 ya conocido de sesiones anteriores. No se resolvió la ambigüedad — Boris decidió no re-correr y resolver puntualmente si hace falta en producción.
+
+**Vault:** §11.5 actualizado con nota QA, ratificado. Sigue el mismo patrón de documentación que Sunken Archive.
+
+**Pendiente:** guardar `grove-of-cycles-interior-v1.png` en `90-Raw/concept/`.

@@ -677,13 +677,17 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No neon glow. No excessive brightness. No chaotic energy visual. No humanoid figures at scale. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
-### 11.5 — Grove of Cycles (interior del templo)
+### 11.5 — Grove of Cycles (interior del templo) — RATIFICADO ✅
 
 **Archivo destino:** `grove-of-cycles-interior-v1.png`
 
 **Especificación:** Interior del templo élfico donde The Elder Circle se reúne en debate. Árboles vivos creciendo en formación arquitectónica — troncos que se alzan como columnas, ramas que se entrelazan formando bóveda natural. Hojas visiblemente en movimiento suave, escritura sutil en la textura de las hojas (Warden script antigua, escribiéndose y borrándose en tiempo real — demasiado pequeño para leer, pero claro que *algo* está escribiendo). Silencio profundo, sin aves, sin viento: composición espaciosa. Aether verde-teal suave fluyendo entre el follaje sin corrupción — contraste absoluto con clima político del Acto 2. Cuatro figuras élficas ancianas apenas sugeridas en la profundidad (Elder Circle) — siluetas tranquilas, no dinámicas. Piso de raíces entrelazadas, musgo tenue, naturaleza cultivada no silvestre. Iluminación: luz filtrando verde-dorada a través del dosel superior, sin sombras duras. Composición: vista desde el borde sur (entrada) mirando hacia la profundidad de la bóveda natural, Elder Circle en la lejanía suave. Mood: pausado, ceremonial, fuera del tiempo.
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No harsh shadows. No bustling activity. No visible readable text on leaves. No glossy modern forest. No text, no labels, no captions, no annotations, no diagram-style callouts.
+
+**QA (2026-07-27):** ✅ **Ratificada, sin re-corrida.** Resultado mejor que lo esperado: túnel-catedral de árboles vivos entrelazados que se sostiene solo, sin arquitectura construida visible — más fiel al espíritu canónico ("sigue siendo el templo que fue durante milenios") que una lectura literal de "salón con columnas". Silencio, raíces entrelazadas y mood ceremonial-atemporal logrados con precisión. Las 4 figuras del Elder Circle confirmadas presentes en la profundidad (conteo inicial erróneo corregido tras revisión).
+
+🟡 **Notas menores no bloqueantes:** (1) el Aether verde-teal se lee como un wisp/cinta localizado y protagónico en vez de fluir difuso por el follaje — desviación de tono, no de canon. (2) La luz salió más oliva/crema desaturada que "dorada" — dentro del rango de la paleta watercolor ya establecida. (3) Hay marcas pequeñas en las ramas superiores que podrían ser el "Warden script escribiéndose" pedido en el brief, o un residuo del glitch de texto de NB2 — ambiguo a esta resolución. Boris decidió no re-correr; si en producción se necesita mirar de cerca, resolver puntualmente entonces.
 
 ### 11.6 — Interior de la oficina de Tobin (The Driftmarket)
 
