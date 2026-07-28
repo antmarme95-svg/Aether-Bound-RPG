@@ -34,7 +34,7 @@ responde nadie.**
    tonalidad.
 
 El sting de dos notas es el leitmotiv del juego entero; cada final cierra con
-su propio eco de este lenguaje ([[Los 4 Finales]]). El cordón trenzado del
+su propio eco de este lenguaje ([[Los 5 Finales]]). El cordón trenzado del
 botón es la UI de [[The Tether]].
 
 **Pendiente (❓):** ¿ping/marca manual opcional? ¿A quién mapea Bond con dos

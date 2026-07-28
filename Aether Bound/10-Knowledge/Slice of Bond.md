@@ -74,7 +74,7 @@ con ella; picas Bond; nadie golpea el suelo.
 [[The Bound Five]] (los otros 8 Pivotes), marcas del Strategist
 (`MarkMultiplier` neutro), economía de Standing, momentos de Persona de
 Speck como sistema (Speck aparece scriptado en el cold open), Driftmarket,
-[[Los 4 Finales]].
+[[Los 5 Finales]].
 
 ### Duración objetivo y criterio de éxito
 

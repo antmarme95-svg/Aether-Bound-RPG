@@ -38,7 +38,7 @@
 - [[Combate]] — 4 componentes + HitPayload; marcas como datos; parry racial; verbos 3×3.
 - [[Movilidad Realista]] — mandato §4.3: constraints + IK + ROM por raza; el esqueleto manda.
 - [[Progresión y Contrato]] — el Contrato que te persigue; loop principal.
-- [[Los 4 Finales]] — Guided Molt / Long Winter / Conqueror's Clause / Warden's Choice + ecos Bond.
+- [[Los 5 Finales]] — Guided Molt / Long Winter (Handed Over · Fallen) / Conqueror's Clause / Warden's Choice + ecos Bond.
 - [[The Tether]] — Contract Standing vs. Bond por compañero (T1–T3) + Momentos de Persona.
 - [[Art Bible]] — "Melancolía Gráfica": Sable×BotW×Hinterberg, regla espacial, pipeline 4 capas.
 - [[Nomenclatura]] — AETHER BOUND y todos los nombres canónicos sellados.

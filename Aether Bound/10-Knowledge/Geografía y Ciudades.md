@@ -743,7 +743,7 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 ### THE FIRST WOUND (Cráter Final — Centro)
 - **Ubicación:** Centro absoluto de The Wilds, cráter masivo
 - **Función:** Cementerio de God-Cores (cadáveres de Wardens muertos)
-- **Mecánica:** Zona final del juego, clímax + 4 finales
+- **Mecánica:** Zona final del juego, clímax + 5 finales
 - **Arquitectura:** Ruinas, cristales rotos, Aether rojo/corrupto, paisaje de desolación
 - **Significado:** Donde la Muda se rompió hace ~550 años
 - **Clima:** Tormenta de Aether perpetua, peligro constante
@@ -1039,7 +1039,7 @@ El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometrí
 
 Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
 
-Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 4 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, retroceder es F2, quedarse quieto lo suficiente para que Speck hable primero es F4.
+Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, retroceder es F2, quedarse quieto lo suficiente para que Speck hable primero es F4.
 
 Los detalles del acto final quedan abstractos aquí — cada final los interpreta distinto y cada ficha de Pivote escribirá su variación. Lo que este documento fija: **el cráter es el escenario único de la decisión**, no hay clímax repartido en dos locaciones, y ningún Pivote decide por el jugador. El Pivote llegó cargando a Speck; el jugador decide qué pasa después.
 
@@ -1125,6 +1125,6 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 ### The First Wound
 - **Spectacle:** Cementerio de Wardens adultos calcificados
-- **Final Arena:** Donde ocurren los 4 finales
+- **Final Arena:** Donde ocurren los 5 finales
 - **Aether Storm:** Peligro ambiental constante
 

@@ -38,7 +38,18 @@ updated: 2026-07-27
   - Darro-Ficha: The Reckoning (Tobin lo señala por error cuando el Pivote es enano) + escena del escudo caído de Roen (ruta Dagna)
   - Speck.md: párrafo "El Pivote como testigo natural" en §Momentos de Persona
   - **Desambiguación "el Consejo":** ~50 hits en 17 archivos resueltos → 0 residuales ambiguos. Distribución: ~42 → the Triune Council, 2 → the Great Forging Clan, 8 → el consejo del clan menor de Torgan, 3 glosario/scoped sin cambio
-- **🔴 Fase 4 pendiente** — verificación end-to-end con re-corrida de los 2 QAs (criterio: 0 CRÍTICOS)
+- **✅ Fase 4 completa** — los 2 QAs re-corridos. Resultado: **21 CRÍTICOS · 24 IMPORTANTES · 17 MENORES** combinados. Diagnóstico: el sprint fue excelente en calidad pero **incompleto en cobertura** — Fase 1 cubrió 7/9 fichas (Torgan e Iven nunca se reescribieron), Fase 2 nunca tocó las secciones de finales de Roen/Valen/Darro. Confirmado resuelto: nomenclatura, doble artículo, cataclismo, longevidad élfica, King Borran, rename, Roen+Dagna, flashes privados, Sereth≠Maren, Vekka/Dagna al nivel de las mejores.
+- **🟡 FASE 5 EN CURSO** — cierre real del sprint. Plan en `~/.claude/plans/cozy-floating-unicorn.md`. 4 bloques:
+  - **✅ Bloque D completo (2026-07-28)** — canon "los 9 Pivotes existen simultáneamente" documentado en [[Los 9 Pivotes]] (principio + regla de aparición como NPCs externos + caso canónico Torgan-como-segundo-agente-de-Bram + rejugabilidad); nota de headcount inviolable en [[The Bound Five]]; matriz de finales corregida (celda F2a de Deber Institucional reconciliada con Dagna/Vekka/Lyris, Nyael movida de Rechazo/Ausencia a Deber Institucional en las 5 viñetas); rename `Los 4 Finales.md` → `Los 5 Finales.md` con 29 cross-refs en 19 archivos + 4 conteos en texto.
+  - **🔴 Bloque A pendiente** (Opus 5, 2 corridas secuenciales) — reescritura mayor de **Torgan** e **Iven**: migrar a los 5 sub-beats de Acto 3, eje de 5 finales, beat Warden, headcount, F2b de Torgan sin suavizar, aritmética 55 años, rechazo de Darro versión Vekka.
+  - **🔴 Bloque B pendiente** (Sonnet 5, 1 corrida) — propagación a **Roen/Valen/Darro**: Bram no traiciona, eje de 5 finales, cosmología de Valen como creencia errónea, tablas de dinámicas (6 de 9 entradas con raza/rol falsos).
+  - **🔴 Bloque C pendiente** (Haiku 4.5, 1 corrida) — lint final: headcount en Lyris (8 personas)/Sereth (7)/Nyael, sync de `Los 9 Pivotes` (líneas canónicas de Sereth y Nyael), timeline (Archive Acto 3, Grove tras 3 sub-actos), Bram 40 años, typos.
+
+**Decisiones de lore tomadas por Boris (2026-07-28), aplicables a los Bloques A/B/C:**
+- **Los 9 Pivotes existen simultáneamente** en el mundo; solo 1 conoce al jugador (ya documentado en Bloque D)
+- **Rechazo de Darro:** versión Vekka — fue su aprendiz ~30 años atrás, le enseñó 2 años, al tercero lo rechazó del programa formal en persona y nunca le explicó por qué
+- **Cosmología de Valen:** su creencia en "Mudas cada 300 años" es **errónea** — la enseña the Academy of Sages, y descubrirlo es un beat del personaje. Se conserva el texto, cambia el marco
+- **Timeline:** Sunken Archive = Acto 3; Grove of Cycles tras cerrar **los 3** sub-actos; 4 God-Cores destruidos antes del Grove
 
 **Worldbuilding narrativo previo:** COMPLETO como fuente para guión (3 reinos + Triune Council + The Elder Circle + Lady Isolde Marrow + Old Tobin Hale + The Reckoning + 12 personajes con fichas + Speck).
 

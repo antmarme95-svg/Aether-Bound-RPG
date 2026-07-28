@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Humano (the Restless) / Vanguard
 **Origen:** House Thorne, Rivermeet (huyó a los 15 a Mistbound Frontier)
 **Edad aparente:** 55-65 años (gastado por cuarenta años de servicio ajeno)
-**Arquetipo de Traición:** Rechazo activo — **el único Pivote que rehúsa**. Superlativo: **el único rechazo activo** del elenco (ver [[Los 4 Finales]] — fila Rechazo/Ausencia).
+**Arquetipo de Traición:** Rechazo activo — **el único Pivote que rehúsa**. Superlativo: **el único rechazo activo** del elenco (ver [[Los 5 Finales]] — fila Rechazo/Ausencia).
 
 ---
 
@@ -293,7 +293,7 @@ Se alcanza al segundo agente en el borde del cráter. El Fragmento se activa. Lo
 
 ## Finales — 5 Variantes según Matriz Rechazo/Ausencia
 
-Ver [[Los 4 Finales]] — Bram ocupa la fila "Rechazo / Ausencia". Cada final es la traducción de su celda a voz Bram, sin contradecir ninguna otra celda de su fila.
+Ver [[Los 5 Finales]] — Bram ocupa la fila "Rechazo / Ausencia". Cada final es la traducción de su celda a voz Bram, sin contradecir ninguna otra celda de su fila.
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
@@ -333,7 +333,7 @@ No es traición ni deserción — es rechazo, que es lo único que Bram sabe hac
 
 Speck elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
 
-**Epílogo:** Bram **se queda por elección propia — único final donde lo hace.** Es el mejor destino posible para Bram y es canon exclusivo de F4 ([[Los 4 Finales]] §matriz — celda Rechazo/Ausencia × F4). No se queda como empleado, no como escolta, no como contratado por nadie. Se queda porque quiere.
+**Epílogo:** Bram **se queda por elección propia — único final donde lo hace.** Es el mejor destino posible para Bram y es canon exclusivo de F4 ([[Los 5 Finales]] §matriz — celda Rechazo/Ausencia × F4). No se queda como empleado, no como escolta, no como contratado por nadie. Se queda porque quiere.
 
 Elige asentarse cerca del cráter transformado — no dentro, no en Rivermeet, en el borde donde el nuevo paisaje empieza. Ayuda a construir el primer campamento estable de los peregrinos que van a ver el core central de Speck. No cobra. Cuando le preguntan por qué, responde: *"Cuarenta años cobrando. Prefiero unos cuantos gratis."*
 

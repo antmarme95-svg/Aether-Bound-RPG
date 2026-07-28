@@ -28,7 +28,7 @@ updated: 2026-07-10
 | B3 | Lista definitiva de ~7 Momentos de Persona + economía de Standing + contenido ruta Conqueror | ⬜ | [[The Tether]], [[Speck]] |
 | B4 | Desambiguación de Bond con dos links posibles; ¿ping opcional? | ⬜ | [[Bond y el Bond Vacío]] |
 | B5 | Asentamientos secundarios; tiempos de viaje; fast travel diegético | ⬜ | [[La Rueda]] |
-| B6 | Estado post-final jugable; epílogos; variantes C3 vivo/muerto en finales 2–3 | ⬜ | [[Los 4 Finales]] |
+| B6 | Estado post-final jugable; epílogos; variantes C3 vivo/muerto en finales 2–3 | ⬜ | [[Los 5 Finales]] |
 | B7 | Progresión de personaje (skills/equipo/crafting) | ⬜ | [[Progresión y Contrato]] |
 | B8 | Dirección de audio/música (semilla: sting de dos notas) | ⬜ | [[Bond y el Bond Vacío]] |
 | B9 | Diseño visual de Speck (3 estadios) + re-naming de sub-estilos VFX | 🔄 arte ✅ | [[Speck]] — diseño visual RATIFICADO (trilogía en `90-Raw/concept/`); solo falta el re-naming de sub-estilos VFX |

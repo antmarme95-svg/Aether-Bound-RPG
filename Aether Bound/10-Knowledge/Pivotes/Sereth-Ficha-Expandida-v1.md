@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Elfo (the Aether-Born) / Strategist  
 **Origen:** The Stillspire  
 **Edad aparente:** 200-250 años (adulto para elfo, pero joven en experiencia política)  
-**Arquetipo de Traición:** Manipulación pura — el afecto es sincero **y** es el instrumento. Superlativo: **la traición más íntima** — nadie conoce al jugador mejor que él, y esa lectura es lo que le permitió llevarlo, paso a paso, a la persona que toma la decisión final (ver [[Los 4 Finales]]).
+**Arquetipo de Traición:** Manipulación pura — el afecto es sincero **y** es el instrumento. Superlativo: **la traición más íntima** — nadie conoce al jugador mejor que él, y esa lectura es lo que le permitió llevarlo, paso a paso, a la persona que toma la decisión final (ver [[Los 5 Finales]]).
 
 ---
 
@@ -297,7 +297,7 @@ Se queda en el borde. No se acerca al core. No hace nada más. **La decisión es
 
 ## Finales — 5 Variantes según Matriz Aritmética/Manipulación
 
-Ver [[Los 4 Finales]] — Sereth ocupa la fila "Aritmética/Manipulación". Cada final es la traducción de su celda a voz Sereth, sin contradecir ninguna otra celda de su fila.
+Ver [[Los 5 Finales]] — Sereth ocupa la fila "Aritmética/Manipulación". Cada final es la traducción de su celda a voz Sereth, sin contradecir ninguna otra celda de su fila.
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 

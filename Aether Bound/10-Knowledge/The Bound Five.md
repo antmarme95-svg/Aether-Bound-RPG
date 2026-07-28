@@ -45,6 +45,12 @@ personalidad profunda y arcos narrativos específicos.
 El Pivote (C3) sigue siendo la única variable — asignado por celda
 ([[Los 9 Pivotes]]).
 
+**El headcount de 5 es inviolable** (canon 2026-07-28): los otros ocho Pivotes
+existen simultáneamente en el mundo y pueden aparecer en escena como NPCs
+externos, pero **nunca como miembros del grupo** — no se sientan a la mesa, no
+participan de las dinámicas internas, no aparecen en las escenas de formación.
+Cinco personas + Speck, siempre. Ver [[Los 9 Pivotes]] §Canon.
+
 **Constantes del Pivote:** (1) nunca de tu raza, rol co-dependiente del tuyo;
 (2) te enseña la virtud que tu cultura no tiene y su traición usa esa virtud
 en tu contra; (3) el sabor de la traición lo dicta su raza — Humano =

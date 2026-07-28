@@ -22,8 +22,8 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* sobrevive, quebrado. Ve la Muda completarse y entiende que sus cuentas eran correctas E insuficientes. No pide perdón.
-- *Deber Institucional:* muere o desaparece — la orden fracasó, y el arquetipo del deber no puede vivir con un juramento reventado. Los que sobreviven se autoexilian.
-- *Rechazo/Ausencia:* Bram termina el juego en paz por primera vez en veinte años. Nyael escribe una segunda nota, más corta, y desaparece antes de que amanezca en el cráter.
+- *Deber Institucional:* muere o desaparece — la orden fracasó, y el arquetipo del deber no puede vivir con un juramento reventado. Los que sobreviven se autoexilian. Nyael escribe una segunda nota, más corta, y desaparece antes de que amanezca en el cráter.
+- *Rechazo/Ausencia:* Bram termina el juego en paz por primera vez en cuarenta años.
 
 ---
 
@@ -39,8 +39,8 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* asciende. Recibe reconocimiento formal del Council. Se aparta del jugador con cortesía.
-- *Deber Institucional:* cumple. Regresa a su clan/juramento sin resolución emocional. Los enanos vuelven a Emberdeep; nadie brinda.
-- *Rechazo/Ausencia:* no aplica — Bram nunca ejecutó, y Nyael, si es Pivote, este final la deja en un limbo (entregó a Speck a Stillspire viva, cumpliendo la orden real que recibió — pero sabe que el Council mintió sobre "custodia digna").
+- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: entregó a Speck viva al brazo encubierto de the Royal Academy, cumpliendo la orden real que recibió — pero sabe que el Council mintió sobre "custodia digna".
+- *Rechazo/Ausencia:* no aplica a Bram — nunca ejecutó. Lyris se aparta del grupo con calma que hiere.
 
 ---
 
@@ -58,8 +58,8 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* colapso interno. Sereth/Maren descubren que sus cuentas incluían "Speck viva" como variable — sin ella, el resultado no cuadra.
-- *Deber Institucional:* Torgan (ver arriba); Vekka desmonta el equipo del jugador por última vez, en silencio, y se retira del oficio; Dagna renuncia al clan por primera vez en la historia registrada del subclán.
-- *Rechazo/Ausencia:* si Nyael es Pivote, aquí es donde su "ausencia" se vuelve literal — no aparece en el cráter, y su nota post-mortem llega semanas después.
+- *Deber Institucional:* Torgan (ver arriba); Vekka desmonta el equipo del jugador por última vez, en silencio, y se retira del oficio; Dagna renuncia al clan por primera vez en la historia registrada del subclán. Nyael lleva su "ausencia" al literal — no aparece en el cráter, y su nota post-mortem llega semanas después.
+- *Rechazo/Ausencia:* Bram vive con culpa por no haber traicionado antes; Lyris desaparece sin cuerpo ni nota.
 
 ---
 
@@ -75,8 +75,8 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* se te une, en teoría. En la práctica, calcula tu caída desde el primer mes.
-- *Deber Institucional:* imposible — el arquetipo no puede convivir con esta ruta. Se va o muere confrontándote en el cráter mismo.
-- *Rechazo/Ausencia:* Bram nunca te siguió tan lejos. Nyael desaparece antes de que amanezca.
+- *Deber Institucional:* imposible — el arquetipo no puede convivir con esta ruta. Se va o muere confrontándote en el cráter mismo. Nyael desaparece antes de que amanezca, sin nota: es la única vez que no deja una.
+- *Rechazo/Ausencia:* Bram nunca te siguió tan lejos. Lyris no aparece en el epílogo.
 
 ---
 
@@ -95,8 +95,8 @@ Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un Go
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* se reintegra si el jugador lo perdonó en la persecución. No pide perdón en voz alta — cambia sus cuentas.
-- *Deber Institucional:* Torgan renegocia su Juramento con su clan menor (única lectura ritual que lo permite). Dagna es liberada por su subclán como acto de reconocimiento a la síntesis.
-- *Rechazo/Ausencia:* Bram se queda. Es el único final donde Bram se queda por elección propia y no por deber. Nyael reaparece — no como Pivote, como alumna que vuelve al jugador (su maestro/a) para preguntar qué aprendió.
+- *Deber Institucional:* Torgan renegocia su Juramento con su clan menor (única lectura ritual que lo permite). Dagna es liberada por su subclán como acto de reconocimiento a la síntesis. Nyael reaparece — no como Pivote, sino como alumna que vuelve al jugador (su par, no su maestro) para preguntar qué aprendió.
+- *Rechazo/Ausencia:* Bram se queda. Es el único final donde Bram se queda por elección propia y no por deber. Lyris regresa con el grupo — el patrón ahora la incluye.
 
 ---
 
@@ -107,7 +107,7 @@ Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, p
 | Final | Aritmética / Manipulación (Maren, Sereth, Vekka) | Deber Institucional (Torgan, Iven, Dagna, Nyael) | Rechazo / Ausencia (Bram, Lyris) |
 |---|---|---|---|
 | **F1 Guided Molt** | Sobrevive quebrado, no pide perdón | Muere o se autoexilia — juramento reventado sin cierre | Bram en paz por primera vez; Lyris se queda quieta en su cielo |
-| **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple, regresa sin resolución emocional | Bram no aplica; Lyris se aparta del grupo con calma que hiere |
+| **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda | Bram no aplica; Lyris se aparta del grupo con calma que hiere |
 | **F2b Fallen** | Colapso interno — sus cuentas ya no cuadran | **Torgan: peor final canónico** (juramento incumplido, no roto); Dagna renuncia al clan; Nyael escribe la última nota | Bram vive con culpa por no haber traicionado antes; Lyris desaparece |
 | **F3 Conqueror** | Se te une, calcula tu caída | Imposible — muere confrontándote o se va sin volver | Bram nunca te siguió tan lejos; Lyris no aparece en el epílogo |
 | **F4 Warden's Choice** | Se reintegra si lo perdonaste; cambia sus cuentas | Torgan renegocia juramento; Dagna es liberada por su subclán; **Nyael vuelve como alumna** | **Bram se queda por elección propia — único final donde lo hace** |

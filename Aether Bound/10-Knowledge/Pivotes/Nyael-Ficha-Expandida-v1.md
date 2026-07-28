@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Elfa (the Aether-Born) / Duelist  
 **Origen:** The Stillspire — reclutada de niña por el brazo encubierto de the Royal Academy  
 **Edad aparente:** 180-210 años (adulta, veterana)  
-**Arquetipo de Traición:** Ausencia — no confrontación, solo nota dejada. Superlativo: **la traición como ausencia** — única del elenco que no confronta (ver [[Los 4 Finales]] — fila Deber Institucional).  
+**Arquetipo de Traición:** Ausencia — no confrontación, solo nota dejada. Superlativo: **la traición como ausencia** — única del elenco que no confronta (ver [[Los 5 Finales]] — fila Deber Institucional).  
 
 ---
 
@@ -270,7 +270,7 @@ Nyael **no aparece en el borde del cráter con el jugador.** La confrontación e
 
 ## Finales — 5 Variantes según Matriz Deber Institucional
 
-Ver [[Los 4 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con Torgan, Iven y Dagna, con lectura propia (ausencia como método). Cada final es la traducción de su celda a voz Nyael, sin contradecir ninguna otra celda de su fila.
+Ver [[Los 5 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con Torgan, Iven y Dagna, con lectura propia (ausencia como método). Cada final es la traducción de su celda a voz Nyael, sin contradecir ninguna otra celda de su fila.
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 

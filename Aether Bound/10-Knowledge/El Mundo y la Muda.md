@@ -43,8 +43,8 @@ Cada core que el jugador destruyó en el Acto 1 era un cuerpo.
 
 **El dilema:** si Speck madura, terminará la Muda — sanaría el ecosistema y
 podría borrar la civilización actual. Esa lectura divide al grupo y detona la
-traición ([[Los 9 Pivotes]], [[Estructura Dramática]]). Los 4 desenlaces
-posibles: [[Los 4 Finales]].
+traición ([[Los 9 Pivotes]], [[Estructura Dramática]]). Los 5 desenlaces
+posibles: [[Los 5 Finales]].
 
 **Por qué las 9 traiciones no son coincidencia:** el Triune Council nació
 gestionando esta misma corrupción — su poder depende de que la crisis siga

@@ -23,7 +23,7 @@ metroidvania-lite por [[Acoplamientos|links]], no por llaves.
 | **Gloomvault** (arteria) | Bosque profundo, visibilidad nula | Co-op: el Strategist lleva la luz — el peor lugar para perderlo |
 | **The Driftmarket** | Ciudad flotante neutral, mercado negro (reusa "Nómadas de la Niebla" → Mistbound) | Terreno franco; recluta de C4; Standing vs Bond de frente |
 | **The Sunken Archive** | Bóveda de la civilización de los dioses | Dungeon del Fragmento; la traición ocurre al salir |
-| **The First Wound** | Cementerio de God-Cores ([[El Mundo y la Muda]]) | Zona final: clímax + [[Los 4 Finales]] |
+| **The First Wound** | Cementerio de God-Cores ([[El Mundo y la Muda]]) | Zona final: clímax + [[Los 5 Finales]] |
 
 **Los Desfiladeros de Zephyr** (tutorial) = primer tramo de *tu* arteria de
 origen: un template, tres skins culturales.

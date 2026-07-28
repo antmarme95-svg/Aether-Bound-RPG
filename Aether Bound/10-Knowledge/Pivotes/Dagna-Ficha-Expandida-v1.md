@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Enana (the Iron-Blooded) / Vanguard
 **Origen:** Subclán vasallo **Deepstone**, vasallo del Great Forging Clan (Ignis Reach)
 **Edad aparente:** 90-100 años (veterana, ~60 años en el rol de muralla)
-**Arquetipo de Traición:** Deber Institucional — cadena de vasallaje interiorizada como piedra. Superlativo: **la traición que rompe al ancla** (ver [[Los 4 Finales]]).
+**Arquetipo de Traición:** Deber Institucional — cadena de vasallaje interiorizada como piedra. Superlativo: **la traición que rompe al ancla** (ver [[Los 5 Finales]]).
 
 ---
 
@@ -306,7 +306,7 @@ El jugador lo nota. Darro lo nota. Nadie más. Dagna no ve el escudo caer — ya
 
 ## Finales — 5 Variantes según Matriz Deber Institucional
 
-Ver [[Los 4 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Dagna, sin contradecir ninguna otra celda de su fila (Torgan, Iven, Nyael).
+Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Dagna, sin contradecir ninguna otra celda de su fila (Torgan, Iven, Nyael).
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 

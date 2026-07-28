@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Humano (the Restless) / Duelist  
 **Origen:** Iven's Settlement (asentamiento fronterizo de Aethelgard, más allá de Rivermeet — ver [[Geografía y Ciudades]])  
 **Edad aparente:** 35-45 años  
-**Arquetipo de Traición:** Deber Institucional en su variante más devastadora — cree servir a los suyos, y **the Triune Council le miente**. Superlativo: **el único Pivote a quien la institución que lo activa lo engaña por diseño** (ver [[Los 4 Finales]]).
+**Arquetipo de Traición:** Deber Institucional en su variante más devastadora — cree servir a los suyos, y **the Triune Council le miente**. Superlativo: **el único Pivote a quien la institución que lo activa lo engaña por diseño** (ver [[Los 5 Finales]]).
 
 ---
 

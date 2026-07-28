@@ -119,7 +119,7 @@ No busca risa — observa y comunica mediante ironía. Ejemplos:
 ## Momentos de Persona (oculto)
 
 ~7 escenas fijas donde la tratas como herramienta, mascota o persona.
-Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 4 Finales]]).
+Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 5 Finales]]).
 
 **El Pivote como testigo natural:** de las nueve personas del grupo, el
 Pivote activo es quien más tiempo pasa observando cómo el jugador trata a

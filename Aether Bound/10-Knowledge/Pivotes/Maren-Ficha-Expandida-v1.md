@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Humana (the Restless) / Strategist  
 **Origen:** Rivermeet, capital fluvial del reino de Aethelgard  
 **Edad aparente:** 45-55 años  
-**Arquetipo de Traición:** Aritmética pura — millones sobre uno, sin manipulación previa. Superlativo: **la más peligrosa por cálculo puro** (ver [[Los 4 Finales]]).  
+**Arquetipo de Traición:** Aritmética pura — millones sobre uno, sin manipulación previa. Superlativo: **la más peligrosa por cálculo puro** (ver [[Los 5 Finales]]).  
 
 ---
 
@@ -302,7 +302,7 @@ Se alcanza a Maren en el borde del cráter. Fragmento está activado. Speck est�
 
 ## Finales — 5 Variantes según Matriz Aritmética/Manipulación
 
-Ver [[Los 4 Finales]] — Maren ocupa la fila "Aritmética/Manipulación". Cada final es la traducción de su celda a voz Maren, sin contradecir ninguna otra celda de su fila.
+Ver [[Los 5 Finales]] — Maren ocupa la fila "Aritmética/Manipulación". Cada final es la traducción de su celda a voz Maren, sin contradecir ninguna otra celda de su fila.
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 

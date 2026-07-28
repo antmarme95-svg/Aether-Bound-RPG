@@ -5350,3 +5350,48 @@ Aprobadas directo:
 **Nota de proceso importante — falso rechazo corregido:** inicialmente marqué la oficina de Tobin como 🔴 rechazada por un mapa con "Driftmarket" legible en la pared, aplicando la regla anti-texto de forma demasiado literal. Boris corrigió: el texto en un objeto in-world (mapa colgado, carta, libro) es contenido diegético, no el glitch de caption/spec-sheet que la regla anti-texto fue diseñada para prevenir (el problema histórico era texto flotando SOBRE la imagen como watermark/label, no texto dentro de un objeto de la escena). **Se actualiza el criterio de QA:** la regla anti-texto aplica a artefactos de generación, no a texto narrativamente justificado. Documentado en la cabecera de §11 para futuras rondas de QA.
 
 **Estado:** batch §11 completamente cerrado — 14/14 briefs escritos, corridos, QA'd, ratificados y guardados en el vault. Próximo frente de concept art (sin fecha fija): escenas de traición legacy, set de arte de combos, videos Higgsfield.
+
+## [2026-07-28] sprint/QA-Fase4 | Re-corrida de los 2 QAs — cobertura incompleta confirmada
+
+Ejecutada la Fase 4 del sprint QA: los 2 QAs re-corridos con Opus 5 en paralelo contra el vault post-sprint.
+
+**Resultado combinado: 21 CRÍTICOS · 24 IMPORTANTES · 17 MENORES** — pero son ~8 agujeros de cobertura vistos desde dos ángulos, no 21 problemas distintos.
+
+**Confirmado resuelto (validación limpia en ambos QAs):**
+- Nomenclatura institucional en inglés (0 residuos salvo 1 en Sereth), doble artículo (0 hits), cataclismo ~550 años, longevidad élfica coherente, King Borran tataranieto (3/3), rename The Bound Five sin enlaces rotos
+- **Roen+Dagna** canonizado sin fisuras en ambas fichas
+- **Flashes privados** — el arreglo más limpio del sprint; las 6 fichas migradas usan el recurso "ven al jugador ver"
+- **Sereth ≠ Maren** — el rework funcionó, mecanismos completamente distintos
+- **Vekka y Dagna** pasaron de las fichas más pobres a estar entre las 3 mejores del vault
+- **Beat Warden** presente en 6/9 fichas y no repetitivo — cada Pivote reacciona desde su oficio
+
+**Diagnóstico del sprint anterior:** Fase 0 y Fase 3 se ejecutaron al 100%. **Fase 1 cubrió 7 de 9 fichas** — Torgan e Iven nunca se reescribieron. **Fase 2 cubrió Roen+Dagna y el Reckoning** pero nunca tocó las secciones de finales ni las tablas de dinámicas de Roen/Valen/Darro. El efecto es peor que antes del sprint: ahora los documentos-fuente afirman un canon que 4 fichas contradicen frontalmente.
+
+**Error propio corregido:** en el resumen del QA narrativo cité como "acierto elegante" una escena de Sereth donde le hace una pregunta-sonda al jugador "con Maren delante". Boris señaló que Sereth y Maren nunca coexisten (Pivotes de celdas distintas). Verificado: es el bug de headcount C-3 en 3 lugares de la ficha de Sereth (líneas 156, 174, 396). Repetí el hallazgo del agente sin contrastarlo contra la regla de headcount que nosotros mismos fijamos.
+
+## [2026-07-28] sprint/QA-Fase5-D | Bloque D — canon 9 Pivotes simultáneos + fix matriz + rename
+
+Primer bloque de la Fase 5 (cierre real del sprint). Va primero porque fija el canon que los Bloques A/B/C van a citar, y hace el rename antes de que nadie escriba cross-refs al nombre viejo.
+
+**Decisiones de Boris que habilitaron el bloque:**
+1. **Segundo agente de Bram → los 9 Pivotes existen simultáneamente en el mundo.** Solo 1 conoce al jugador; los otros 8 siguen sus vidas en paralelo. Torgan como segundo agente funciona porque *existe*, no porque sea un deus ex machina.
+2. Alcance de documentación: **medio** (principio + reglas de aparición).
+
+**D1 — Canon nuevo (Opus 5, directo):**
+- `Los 9 Pivotes.md`: sección nueva con el principio, la **regla de aparición** (los no-activos pueden aparecer como NPCs externos, **nunca** como miembros del Bound Five — esta es la regla que impide repetir el bug de headcount), el caso canónico Torgan/Bram, la implicación de rejugabilidad ("cada celda cambia qué vida paralela conociste"), y un pendiente abierto declarado (qué hace cada Pivote no-activo durante la partida — se define en el guión).
+- `The Bound Five.md`: nota de **headcount inviolable** (5 + Speck, siempre) con puntero al canon.
+
+**D2 — Fix de la matriz de finales (Opus 5, directo):**
+- **Celda F2a / Deber Institucional** reconciliada: Dagna, Vekka y Lyris llegaron independientemente a "ascenso" donde la matriz decía "cumple sin resolución emocional". Tres fichas coincidiendo = lectura natural, no error. Nueva redacción: *"Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda."*
+- **Nyael movida a Deber Institucional** en las 5 viñetas del cuerpo (F1/F2a/F2b/F3/F4). La matriz ya la ponía ahí y su ficha lo citaba así; las viñetas la tenían bajo Rechazo/Ausencia. Criterio: el arquetipo se define por **motivación** (obedece al brazo encubierto de the Royal Academy), no por **método** (la ausencia es su superlativo, no su columna).
+- De paso, 2 fixes del QA: "veinte años"→"cuarenta" en el epílogo F1 de Bram (C-12), y "Stillspire"→"brazo encubierto de the Royal Academy" en F2a de Nyael (M-6).
+
+**D3 — Rename (Haiku 4.5):**
+- `git mv Los 4 Finales.md → Los 5 Finales.md`
+- 29 cross-refs actualizados en 19 archivos vivos
+- `LOG.md` y `Current-State-Historico.md` **deliberadamente no tocados** (append-only, SCHEMA §78) — queda 1 hit histórico esperado
+- 4 conteos "4 finales" en texto corregidos (`El Mundo y la Muda`, `Geografía` ×2, `00-Index` con el split F2a/F2b explícito)
+
+**Verificación:** 0 cross-refs viejos vivos · archivo renombrado · 0 conteos en texto · Nyael 6/6 bajo Deber Institucional, 0 bajo Rechazo/Ausencia · check_vault 🟢 verde (2,996 tokens).
+
+**Costo:** ~10k tokens (D1+D2, directo) + 98k (D3, Haiku).

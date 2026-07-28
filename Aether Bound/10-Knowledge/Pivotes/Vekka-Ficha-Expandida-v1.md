@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Enana (the Iron-Blooded) / Strategist
 **Origen:** Ignis Reach — Guild Master del Great Forging Clan (clan real)
 **Edad aparente:** 80-100 años (maestra de gremio, ~60 años en la forja)
-**Arquetipo de Traición:** Deber Institucional — dogma del gremio aplicado con las manos. Superlativo: **la traición más precisa** (ver [[Los 4 Finales]]).
+**Arquetipo de Traición:** Deber Institucional — dogma del gremio aplicado con las manos. Superlativo: **la traición más precisa** (ver [[Los 5 Finales]]).
 
 ---
 
@@ -307,7 +307,7 @@ Es la traición más fría del elenco. No aritmética como Maren, no manipulaci�
 
 ## Finales — 5 Variantes según Matriz Deber Institucional
 
-Ver [[Los 4 Finales]] — Vekka ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Vekka.
+Ver [[Los 5 Finales]] — Vekka ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Vekka.
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
@@ -363,7 +363,7 @@ Vekka se queda en el cráter días. Estudia el God-Core vivo. Toma notas. Toca l
 
 Vive los últimos años enseñando a aprendices jóvenes del clan **una regla nueva**, que ella nunca formaliza pero que los aprendices repiten después: *"Antes de desmontar, mira si la pieza todavía está creciendo."* No dice de dónde le vino la regla. Los aprendices no preguntan.
 
-Ver [[Los 4 Finales]].
+Ver [[Los 5 Finales]].
 
 ---
 

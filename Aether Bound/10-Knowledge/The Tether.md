@@ -35,7 +35,7 @@ por acto. Tope de bond por acto.
 ## C. Momentos de Persona de Speck (oculto)
 
 ~7 escenas fijas: herramienta, mascota o persona. Sin UI — la personitud no
-se cuantifica. Gate del Final 4 ([[Los 4 Finales]]): mayoría "persona" + ≥2
+se cuantifica. Gate del Final 4 ([[Los 5 Finales]]): mayoría "persona" + ≥2
 compañeros vivos en T2+.
 
 **Pendiente (❓):** lista definitiva de los ~7 momentos; economía exacta de

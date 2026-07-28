@@ -9,7 +9,7 @@ updated: 2026-07-27
 **Raza / Rol:** Elfa (the Aether-Born) / Duelist  
 **Origen:** The Stillspire (pero fuera de ciudad, en frontera aérea)  
 **Edad aparente:** 170-200 años (joven para elfa, cazadora)  
-**Arquetipo de Traición:** Lógica fría expresada con calma quirúrgica. Superlativo: **la más fría** — sentir y suprimir, no ausencia de sentimiento (ver [[Los 4 Finales]] — fila Rechazo/Ausencia).  
+**Arquetipo de Traición:** Lógica fría expresada con calma quirúrgica. Superlativo: **la más fría** — sentir y suprimir, no ausencia de sentimiento (ver [[Los 5 Finales]] — fila Rechazo/Ausencia).  
 
 ---
 
@@ -308,7 +308,7 @@ Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite e
 
 ## Finales — 5 Variantes según Matriz Rechazo/Ausencia
 
-Ver [[Los 4 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bram, con lectura propia. Cada final es la traducción de su celda a voz Lyris, sin contradecir ninguna otra celda de su fila.
+Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bram, con lectura propia. Cada final es la traducción de su celda a voz Lyris, sin contradecir ninguna otra celda de su fila.
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
