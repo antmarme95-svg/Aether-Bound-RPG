@@ -8,44 +8,34 @@ updated: 2026-07-27
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-## Estado general (2026-07-27, cierre de sesión)
+## Estado general (2026-07-28)
 
-**Sprint de reparación de QA post-lunes 27:** ejecutados los 2 QA con Opus (congruencia + narrativo). Plan de 4 fases aprobado (`~/.claude/plans/cozy-floating-unicorn.md`). Estado del sprint:
+**Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck + toda la estructura política y geográfica están escritos. El vault soporta escribir guión en cuanto cierre el sprint QA.
 
-- **✅ Fase 0 completa** — 4 documentos-fuente reescritos:
-  - `Los 4 Finales.md` → 5 finales (F1/F2a/F2b/F3/F4) con matriz 5×3
-  - `Grove of Cycles — Escena del Acto 2.md` (nuevo) con debate del Elder Circle
-  - `Geografía y Ciudades.md §ACTO 3` reescrito a 5 sub-beats
-  - `Geografía y Ciudades.md §THE RECKONING` con tabla Tobin corregida (señala a fijos C1/C2/C4, no a Pivotes inactivos) + Wanderer's Goggles 40+ años
-- **✅ Fase 1 al 100%** — 9/9 fichas de Pivote reescritas al canon nuevo + `Los 9 Pivotes.md`:
-  - Maren, Sereth, Iven (Aritmética/Manipulación — Sereth movido a manipulación pura, Iven con Council mintiendo)
-  - Torgan, Vekka, Dagna (Deber Institucional — Torgan aritmética 55 años + cadena resuelta; **Vekka reescritura completa** con Darro como "flawed forging viviente" + superlativo "la traición más precisa"; **Dagna reescritura mayor** con entrada Roen+Dagna canónica que canoniza que Dagna quiebra a Roen — no Lyris — y sección duplicada eliminada)
-  - Bram, Lyris, Nyael (Rechazo/Ausencia + institucional — Bram canon NO traiciona con mecanismo del "segundo agente")
-- **✅ Fase 3 completa** (invertido orden 2↔3) — Haiku 4.5, lint mecánico:
-  - `El Quinteto.md` → `The Bound Five.md` (rename + 10 cross-refs actualizados)
-  - Longevidad élfica corregida (Estructura Política + El Mundo y la Muda: hoy 570-700 años, cataclismo hace ~550 años)
-  - King Borran genealogía → tataranieto (4 generaciones, coherente con vida enana 200-250 años)
-  - Contradicciones de origen resueltas: Bram → Rivermeet (House Thorne), Iven → Iven's Settlement, Mistbound Frontier = tierra interior no fronteriza
-  - "Maestra del Gremio" → Guild Master de the Great Forging Clan; "Gran Clan" → the Great Forging Clan
-  - Typos: deixada, assassinato, appecia, Localizé, Misbound, Socópata, sabará, recostruir, began visiting, Dargo (2) — todos corregidos
-  - Género de Speck femenino uniforme en Darro-Ficha
-  - Frontmatters actualizados
-  - Todos los greps de verificación = 0
-- **✅ Fase 2 completa** — Sonnet 5, propagación semántica + cross-cutting:
-  - Roen-Ficha: entrada Roen+Dagna canónica agregada (8 menciones); línea de flashes corregida (Roen intuye, no ve — canon Speck §Capa 2); Lyris "repliega" a Roen, Dagna "rompe genuinamente" (corrige contradicción)
-  - Torgan y Lyris: The Reckoning integrado (Tobin señala a Darro para Torgan, a Valen para Lyris)
-  - Valen-Ficha: Grove of Cycles Vector A + lectura de inscripción Warden en Sunken Archive
-  - Darro-Ficha: The Reckoning (Tobin lo señala por error cuando el Pivote es enano) + escena del escudo caído de Roen (ruta Dagna)
-  - Speck.md: párrafo "El Pivote como testigo natural" en §Momentos de Persona
-  - **Desambiguación "el Consejo":** ~50 hits en 17 archivos resueltos → 0 residuales ambiguos. Distribución: ~42 → the Triune Council, 2 → the Great Forging Clan, 8 → el consejo del clan menor de Torgan, 3 glosario/scoped sin cambio
-- **✅ Fase 4 completa** — los 2 QAs re-corridos. Resultado: **21 CRÍTICOS · 24 IMPORTANTES · 17 MENORES** combinados. Diagnóstico: el sprint fue excelente en calidad pero **incompleto en cobertura** — Fase 1 cubrió 7/9 fichas (Torgan e Iven nunca se reescribieron), Fase 2 nunca tocó las secciones de finales de Roen/Valen/Darro. Confirmado resuelto: nomenclatura, doble artículo, cataclismo, longevidad élfica, King Borran, rename, Roen+Dagna, flashes privados, Sereth≠Maren, Vekka/Dagna al nivel de las mejores.
-- **🟡 FASE 5 EN CURSO** — cierre real del sprint. Plan en `~/.claude/plans/cozy-floating-unicorn.md`. 4 bloques:
-  - **✅ Bloque D completo (2026-07-28)** — canon "los 9 Pivotes existen simultáneamente" documentado en [[Los 9 Pivotes]] (principio + regla de aparición como NPCs externos + caso canónico Torgan-como-segundo-agente-de-Bram + rejugabilidad); nota de headcount inviolable en [[The Bound Five]]; matriz de finales corregida (celda F2a de Deber Institucional reconciliada con Dagna/Vekka/Lyris, Nyael movida de Rechazo/Ausencia a Deber Institucional en las 5 viñetas); rename `Los 4 Finales.md` → `Los 5 Finales.md` con 29 cross-refs en 19 archivos + 4 conteos en texto.
-  - **✅ Bloque A completo (2026-07-28)** — **Torgan** (485→579 líneas) e **Iven** (511→767 líneas) reescritas al canon nuevo. Con esto las **9/9 fichas de Pivote** están migradas. Ambas: 5 sub-beats de Acto 3 (traición al salir del Archive), eje de 5 finales, beat Warden diferenciado, headcount corregido, cita a [[Los 5 Finales]].
-    - **Torgan:** F2b sin suavizar (juramento *incumplido*, altar con hueco liso, Darro no va al funeral); beat Warden = reconoce oficio y linaje ("descanso en círculo"); aritmética unificada en 55 años; "gremio"→"clan menor"; cadena de mando resuelta sin disputa (la orden vista desde arriba vs desde abajo); rechazo de Darro a versión Vekka; **sección nueva de Torgan como segundo agente de la ruta Bram**.
-    - **Iven:** mentira del Council explícita e imposible de malinterpretar (+ §Las tres grietas donde el jugador *podría* detectarla); F2b corregido (el asentamiento **muere lentamente**, ya no "prospera"); F1≠F4 (culpa vs propósito); beat Warden = reconoce el duelo, **único de los 9 que llora en escena**; persecución más rápida del elenco, sin una sola parada; "asentamiento del norte"→fronterizo.
-  - **🔴 Bloque B pendiente** (Sonnet 5, 1 corrida) — propagación a **Roen/Valen/Darro**: Bram no traiciona, eje de 5 finales, cosmología de Valen como creencia errónea, tablas de dinámicas (6 de 9 entradas con raza/rol falsos).
-  - **🔴 Bloque C pendiente** (Haiku 4.5, 1 corrida) — lint final: headcount en Lyris (8 personas)/Sereth (7)/Nyael, sync de `Los 9 Pivotes` (líneas canónicas de Sereth y Nyael), timeline (Archive Acto 3, Grove tras 3 sub-actos), Bram 40 años, typos.
+**Sprint QA de reparación — Fase 5 en curso, 2 bloques restantes.** Relato completo de las fases 0-4 migrado a [[Current-State-Historico]] (2026-07-28); detalle operativo en [[LOG]]. Plan: `~/.claude/plans/cozy-floating-unicorn.md`.
+
+- **✅ Fases 0-4 completas** — documentos-fuente reescritos (5 finales + Grove of Cycles + Acto 3 en 5 sub-beats + Reckoning), 9/9 fichas de Pivote al canon, lint mecánico, propagación semántica, y re-corrida de verificación que reveló los huecos de cobertura que la Fase 5 está cerrando.
+- **✅ Fase 5 Bloque D** — canon "los 9 Pivotes existen simultáneamente" + regla de aparición como NPCs externos + caso Torgan/Bram; matriz de finales corregida; rename a `Los 5 Finales.md` (29 cross-refs).
+- **✅ Fase 5 Bloque A** — Torgan (485→579 líneas) e Iven (511→767) reescritas. **9/9 fichas de Pivote migradas.** Torgan: F2b sin suavizar, beat Warden de oficio y linaje, aritmética 55 años, sección de segundo agente de la ruta Bram. Iven: mentira del Council explícita + §Las tres grietas, F2b corregido (el asentamiento muere), F1≠F4, único de los 9 que llora en escena.
+  - **🔴 Bloque B pendiente** (Sonnet 5, 1 corrida) — propagación a las 3 fichas de fijos **Roen / Valen / Darro**, que Fase 2 nunca tocó en sus secciones de finales:
+    - **Bram no traiciona** — las 3 lo hacen traicionar o rendirse. `Roen:270` ("Cuando Bram acepta la oferta del Triune Council… *I get it. Goodbye.*"), `Valen:329` ("Cuando Bram se rinde… *Twenty years of drainage*"), `Darro:348` ("Cuando Bram se rinde… *Veinte años es mucho*"). Reescribir al beat del corredor del Archive, tomando el diálogo ya canonizado en `Bram-Ficha:356-388`. De paso corrige la aritmética: son **cuarenta** años, no veinte.
+    - **Migrar al eje de 5 finales** — las 3 conservan el bloque viejo (Final 1 Perdón / Final 2 Muerte / Final 3 Encadenamiento / Final 4 Síntesis = destino del Pivote). Debe ser destino de Speck, con F2a/F2b.
+    - **Roen:** separar el beat de traición (Archive) del quiebre (cráter) — hoy `:175-196` los colapsa en First Wound. Aritmética de edad rota (`:11` dice 35-40; `:72` "edades 25-40" + `:84` "5 años presente" = 45).
+    - **Valen:** reencuadrar su cosmología como **creencia errónea** (decisión de Boris — cree en "Mudas cada 300 años, última hace 110" porque lo enseña the Academy of Sages; está equivocado, y descubrirlo es un beat). Conservar el texto, cambiar el marco. Aritmética: `:11` dice 180-250 años pero `:191` dice "hace 300 años"; alterna 250 y 200.
+    - **Darro:** rechazo del gremio a **versión Vekka** (decisión de Boris — fue su aprendiz ~30 años atrás, 2 años de enseñanza, ella lo rechazó en persona sin explicar). Hoy `:44-57` dice otra cosa (aceptado a los 30, aislamiento gradual, sin Vekka). Género de Speck femenino (`:184`, `:263`).
+    - **Tablas de dinámicas:** 6 de 9 entradas tienen raza/rol falsos, idénticos en Roen y Valen. Ej. *"Roen + Lyris (Enana Duelist)"* — Lyris es **Elfa**, y la celda del jugador es Enano Vanguard. Mismo error en Nyael, Bram, Sereth.
+  - **🔴 Bloque C pendiente** (Haiku 4.5, 1 corrida) — lint final, todo verificable con grep:
+    - **Headcount >5** en 3 fichas: `Lyris:195-197` (**8 personas**, el peor caso), `Sereth:156` (7) + su cena "con Maren delante" `:174` + comparación con Maren `:396`, `Nyael:170` ("El Bound Five **+ otros**").
+    - **Sync de `Los 9 Pivotes.md`:** línea 20 describe a Sereth con el arquetipo y la línea canónica **de Maren** ("Aritmética pura… *Millions against one*"); debe ser *"No te llevé a esta decisión. Te llevé a la persona que la toma."* Línea 24 tiene la línea vieja de Nyael ("You taught me to set the trap…"), reemplazada en su ficha por *"I set traps my teacher would have waited on…"*.
+    - **Timeline:** `Geografía:739` dice Sunken Archive = Acto 2 → debe ser **Acto 3**. `Grove:9` dice "dos de los tres sub-actos" → debe ser **los tres** (así cuadra el conteo de 4 God-Cores).
+    - **Bram 40 años:** residuos de "veinte años" en `Estructura Política:239-246`.
+    - **Sereth "el Consejo"** (`:364-365`) — último residuo ambiguo de Fase 2.
+    - **`Los 5 Finales`:** `Geografía:1042` dice "retroceder es F2" → desambiguar F2a/F2b.
+    - **Mistbound orientación:** `Bram:30,48` dice "noroeste", `Geografía` dice "oeste profundo".
+    - **`Geografía:96`** pone a Torgan y Dagna en "el Clan de Forja" — contradice sus fichas (Torgan en clan menor, Dagna en subclán Deepstone).
+    - **Menores:** género de Speck en Darro, "Roen ve las manos de Vekka temblar" (Vekka no tiembla — su única grieta visible es un segundo con los ojos cerrados), fórmula "por primera vez en la historia registrada" repetida 3 veces.
+
+  **Reportes completos de los 2 QAs de Fase 4** (con líneas exactas y citas textuales): ver entrada del 2026-07-28 en [[LOG]].
 
 **Decisiones de lore tomadas por Boris (2026-07-28), aplicables a los Bloques A/B/C:**
 - **Los 9 Pivotes existen simultáneamente** en el mundo; solo 1 conoce al jugador (ya documentado en Bloque D)
@@ -79,17 +69,13 @@ updated: 2026-07-27
 
 ## Pendientes — ordenados por fecha
 
-### 🗓 Próxima sesión — cierre del sprint QA (Fase 4)
+### 🗓 Próxima sesión — cerrar Fase 5 (Bloques B y C)
 
-**Sprint QA 78% completo al cierre de 2026-07-27:** Fases 0, 1, 2 y 3 ratificadas (ver commits `7b4dbe6`, `51dba0c`, `1bf1fec`, `16588b1`). Único frente restante para cerrar el sprint completo:
+Los 2 bloques restantes están detallados arriba con líneas exactas y citas textuales. Orden recomendado: **B primero** (Sonnet 5, contenido semántico), **C después** (Haiku 4.5, lint que barre también lo que B pueda dejar).
 
-**Fase 4 — Verificación end-to-end con re-corrida de los 2 QAs:**
-- Re-correr **QA de congruencia** (Haiku 4.5 o Opus según presupuesto): mismo prompt del original, contra el vault actual. Criterio: los 10 CRÍTICOS + 18 IMPORTANTES del reporte original deben estar resueltos (marcar cada uno ✅/🟡/🔴). Se esperan solo hallazgos MENORES o nuevos que Fases 0-3 no anticiparon.
-- Re-correr **QA narrativo** (Opus 5): mismo prompt del original, con instrucción explícita de verificar los 4 bloqueos duros resueltos (Archive→First Wound, eje 5 finales, Bram NO traiciona, Roen quebrado por Dagna) y los críticos creativos (Sereth vs Maren diferenciados, beat Warden en 9 fichas, Iven+Council mintiendo, poder innato del jugador consistente).
-- Ambos QAs deben devolver **0 CRÍTICOS** para declarar el sprint cerrado.
-- Si aparecen nuevos hallazgos: decidir si son parche corto en la misma sesión o si abren un sprint pequeño de seguimiento.
+Al cerrar B y C: **re-correr los 2 QAs una última vez** (criterio 0 CRÍTICOS) para declarar el sprint terminado.
 
-**Nota estratégica:** el sprint dejó al vault listo como fuente para el próximo frente real — **guión y diálogos por actos**. Después de Fase 4, no hay razón técnica para postergar más el guión.
+**Nota estratégica:** con el sprint cerrado, el próximo frente real es **guión y diálogos por actos** — no queda razón técnica para postergarlo.
 
 ### 🔜 Próximas sesiones (sin fecha fija)
 

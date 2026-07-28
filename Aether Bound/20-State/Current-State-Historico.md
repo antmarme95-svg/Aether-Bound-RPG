@@ -1800,3 +1800,49 @@ Ilyara aprobada con el negativo estándar. Cero glitch. §10 completo.
 
 ### Parte 16 — Catalogación de 90-Raw/concept + QA de ciudades con Haiku
 ~45 archivos renombrados a kebab-case. King Borran v2 resuelto por timestamp. Legacy archivado en _legacy/ (El Nido pre-redirect, Finales pre-reset, speck rework). Aether Bound universe.png = mapa maestro completo pero con texto corrupto → referencia interna imperfecta por ahora; plan de spec exhaustiva en Briefs de Mapa del Mundo.md. Arte de combos de Pivotes (Arcane Ballistics, Skyhook, etc.) confirmado como sistema real de vínculos — pendiente evaluación conjunta. QA de 5 keyframes de ciudad con agente Haiku: Emberdeep ✅, Stillspire ✅, Mistbound Frontier ✅, Rivermeet daylight 🟡, Driftmarket 🔴 (caption de texto quemado). Integrado en Briefs de Concept Art §6d. Catálogo en [[90-Raw/concept/CATALOGO]].
+
+---
+
+## Sprint QA de reparación (2026-07-27 → 2026-07-28) — relato completo
+
+Migrado desde Current-State el 2026-07-28 por higiene de contexto. Detalle operativo completo en [[LOG]].
+
+**Origen:** los 2 QAs del lunes 27 (congruencia + narrativo, ambos con Opus) encontraron 10 CRÍTICOS · 18 IMPORTANTES · 20 MENORES + 4 bloqueos duros narrativos. Plan de 4 fases aprobado.
+
+### Fase 0 — Documentos-fuente (Opus 5)
+- `Los 4 Finales.md` → **5 finales** (F1/F2a/F2b/F3/F4) con matriz de diferenciación 5×3
+- `Grove of Cycles — Escena del Acto 2.md` (nuevo) con el debate del Elder Circle, 3 vectores diegéticos, encuentro individual por afinidad emergente
+- `Geografía y Ciudades.md §ACTO 3` reescrito a 5 sub-beats (Approach → Archive → traición al salir → persecución → quiebre en el cráter)
+- `§THE RECKONING` reforzado: tabla de Tobin corregida (señala a fijos C1/C2/C4 según raza del Pivote real, no a Pivotes inactivos) + Wanderer's Goggles con 40+ años de guarda
+
+### Fase 1 — 9 fichas de Pivote (Opus 5)
+Cubrió 7/9 en la primera pasada; Vekka y Dagna se cerraron después con 1 agente secuencial; Torgan e Iven quedaron para la Fase 5.
+- **Sereth** movido de aritmética (que calcaba a Maren) a **manipulación pura** — "conducción respetuosa" de la Royal Academy, siembra preguntas durante un año
+- **Vekka** reescritura completa 139→459 líneas — Darro como su "flawed forging viviente"
+- **Dagna** reescritura mayor 242→478 — entrada Roen+Dagna canónica, sección duplicada eliminada
+- **Bram** canon nuevo: NO traiciona, con el mecanismo del "segundo agente"
+- **Nyael** línea canónica nueva (el jugador es su par, no su maestro); ejecutar→entregar viva
+
+### Fase 3 — Lint mecánico (Haiku 4.5), ejecutada antes que Fase 2
+- `El Quinteto.md` → `The Bound Five.md` + 10 cross-refs
+- Longevidad élfica corregida (hoy 570-700 años; eran adultos jóvenes durante el cataclismo)
+- King Borran → **tataranieto** (4 generaciones sobre 550 años, coherente con vida enana)
+- Contradicciones de origen: Bram → Rivermeet, Iven → su asentamiento, Mistbound = tierra interior
+- ~10 typos + frontmatters
+
+### Fase 2 — Propagación semántica (Sonnet 5)
+- **Roen-Ficha:** entrada Roen+Dagna canónica; flashes corregidos (intuye, no ve); Lyris "repliega" vs Dagna "rompe"
+- Reckoning integrado en Torgan y Lyris; Valen con Grove of Cycles + lectura Warden; Darro con la escena del escudo caído
+- **Desambiguación de "el Consejo":** ~50 hits en 17 archivos → the Triune Council (42) / the Great Forging Clan (2) / consejo del clan menor (8) / glosario (3)
+
+### Fase 4 — Re-corrida de los 2 QAs
+**Resultado: 21 CRÍTICOS · 24 IMPORTANTES · 17 MENORES combinados** — pero ~8 agujeros de cobertura vistos desde dos ángulos, no 21 problemas distintos.
+
+Diagnóstico: el sprint fue **excelente en calidad, incompleto en cobertura**. Fase 0 y Fase 3 al 100%; Fase 1 cubrió 7/9 fichas; Fase 2 nunca tocó las secciones de finales de Roen/Valen/Darro.
+
+Confirmado resuelto: nomenclatura, doble artículo, cataclismo, longevidad élfica, King Borran, rename, Roen+Dagna, flashes privados, Sereth≠Maren, Vekka/Dagna entre las 3 mejores fichas del vault, beat Warden presente y no repetitivo en 6/9.
+
+### Fase 5 — Cierre real (en curso al momento de la migración)
+- **Bloque D ✅** — canon "los 9 Pivotes existen simultáneamente" (decisión de Boris) + regla de aparición como NPCs externos + caso Torgan/Bram; matriz corregida (F2a de Deber Institucional, Nyael movida de columna); rename `Los 5 Finales.md` con 29 cross-refs
+- **Bloque A ✅** — Torgan (485→579) e Iven (511→767) reescritas; **9/9 fichas de Pivote migradas**
+- Bloques B y C quedaron pendientes — ver Current-State vigente

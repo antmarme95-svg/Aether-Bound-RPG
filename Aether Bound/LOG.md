@@ -5425,3 +5425,16 @@ Estrategia: 1 agente Opus 5 a la vez, secuencial (la que dio 0 server errors con
 **Costo:** 152k (Torgan) + 128k (Iven) = ~280k tokens.
 
 **Pendiente de Fase 5:** Bloque B (Roen/Valen/Darro, Sonnet 5) y Bloque C (lint final, Haiku 4.5).
+
+## [2026-07-28] vault/higiene | Migración de Current-State + Bloques B y C documentados para retomar
+
+Boris pidió dejar los Bloques B y C de la Fase 5 documentados como pendientes y cambiar de tema.
+
+**Detallado en Current-State para retomar sin contexto:** ambos bloques quedaron con líneas exactas y citas textuales de los reportes de QA — qué archivo, qué línea, qué dice hoy y qué debe decir. La próxima sesión puede arrancar sin re-derivar los hallazgos.
+
+- **Bloque B** (Sonnet 5): Roen/Valen/Darro — Bram no traiciona (3 fichas lo contradicen con cita exacta), migración al eje de 5 finales, cosmología de Valen como creencia errónea, rechazo de Darro versión Vekka, tablas de dinámicas con 6/9 entradas de raza/rol falsas, aritméticas de edad rotas en Roen y Valen.
+- **Bloque C** (Haiku 4.5): headcount >5 en Lyris (8 personas)/Sereth (7 + la cena con Maren)/Nyael, sync de `Los 9 Pivotes` (líneas canónicas viejas de Sereth y Nyael), timeline (Archive Acto 3, Grove tras 3 sub-actos), Bram 40 años, "el Consejo" residual en Sereth, orientación de Mistbound, Torgan/Dagna mal ubicados en `Geografía:96`, menores.
+
+**Higiene ejecutada:** Current-State estaba en 4,392t (+1,392 sobre techo blando). El relato completo de las fases 0-4 del sprint se migró a `Current-State-Historico.md` — ya vivía con más detalle en LOG, así que no se pierde nada. Current-State quedó en **3,322t** con estado compacto + los 2 bloques pendientes detallados (que son largos a propósito). Arranque de sesión: **3,619 tokens** 🟢.
+
+También se limpió la sección "Próxima sesión" que seguía apuntando a Fase 4 (ya ejecutada).
