@@ -24,27 +24,36 @@ updated: 2026-07-29
 - **Longevidad de los 3 fijos** alineada a [[Las Tres Razas]]; **Darro a ~63 años** (sincronizado al canon de "hace ~30 años" que ya estaba en 6 lugares); **Valen no presenció ninguna Muda** y el "110 años" quedó marcado como error de la Academy.
 - **Goggles no retirables** propagado: las 9 fichas + Valen dejaron de decir "se pone los Goggles" en el Archive. Se conserva el primer uso en la oficina de Tobin, donde ahora **no salen** al intentar quitárselos.
 
-**Dos contradicciones raíz que el QA no había reportado, encontradas en esta sesión:** `Speck.md` era la fuente del crítico de Darro F1 (no una línea suelta), y el gate de F4 en `Los 5 Finales:88` colisionaba con la siembra de F2b en `Grove:68`. Más un residuo del gate viejo en `Iven:592`, hallado en el barrido post-fix. Confirma la nota de método: **corregir sin barrer todas las menciones no cierra nada.**
+**Cronología de las Mudas — verificada limpia.** Ninguna Muda se ha completado en 550 años. Las tres afirmaciones que decían lo contrario quedaron marcadas como **error heredado de the Academy**, no borradas: `Valen:58` (los ancianos y sus "cuatro Mudas" — era la fuente del "cinco Mudas"), `Valen:52` (el "110 años") y `Geografía:613` (el ermitaño, que ahora vio dos **falsas alarmas** y por eso es testigo del error de registro). Aritmética de Valen verificada: 140 → 180 → 200 → presente 230.
 
-**3 críticos EXTRA encontrados en el barrido objetivo del cierre** (ninguno estaba en el reporte de la 3ª ronda), todos del mismo patrón "corregir sin barrer la clase completa":
-- `Valen:58` — los ancianos: *"The Stillspire ha sobrevivido cuatro Mudas"*. Era **la fuente** del "cinco Mudas". Marcada como cosmología heredada falsa.
-- `Geografía:613` — ermitaño: *"he visto dos mudas"*. Reescrito: vio dos **falsas alarmas** asentadas como Mudas en los archivos élficos. Lo vuelve testigo del error de registro y explica el respeto mutuo con Valen.
-- `Torgan:11` — "75-80 años" contra `:66`, que fija 75 y se declara no negociable. Alineado a 75.
+## 4ª RE-CORRIDA QA — CORRIDA (2026-07-29). 18 críticos, 17 cerrados
 
-**Aritmética de Valen verificada:** hallazgos a los 140 → 40 años solo (180) → God-Core hace 30 años (200) → presente 230. Cierra con el encabezado "edades 100-180".
+Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruencia.** Commits `7550a7d`, `ad3bde7`.
 
-### 🔴 SIN COMMITEAR (2026-07-29)
+### Decisiones de canon de Boris en esta ronda
 
-**Todos los cambios de esta sesión están en disco y sin commitear.** El clasificador de Opus quedó fuera de servicio a mitad de sesión y bloqueó Bash, PowerShell y el Agent tool (lectura y edición seguían funcionando). Consecuencias para la próxima sesión:
+- **Costo de F1 = colapso tecnológico, NO exterminio.** Nueva sección `Los 5 Finales §El costo de F1`, con 3 prohibiciones obligatorias para los 12 epílogos F1. Muere la tecnología Aether y la legitimidad de toda institución que vivía del recurso; sobrevive la gente, empobrecida. **F1 no es mejor que F4:** F1 funde la civilización de golpe, F4 la deja adaptarse y cobra a Speck.
+- **Gate de F1 = Pivote neutralizado antes del cráter + no intervenir.** Eliminada la rama "hablar con Speck", que era el verbo de F4. F1 es el único final cuya acción de cráter es la ausencia de acción **con nadie más capaz de actuar** — de ahí el requisito del Pivote.
+- **Gate de F4 = 2 condiciones** (mayoría "persona" en Momentos + ≥2 compañeros T2+). Eliminada la condición de Goggles/flashes: por no retirables y estar en rieles, el 100% de las partidas la cumplía. Alineado con `The Tether §Gate del Final 4`.
+- **`Dagna.md` archivada** a `90-Raw/Dagna-ficha-v0-ARCHIVADA.md`. Contradecía a la expandida en origen, apellido y reclutamiento. Migrados antes los tiers del Springboard a [[Los 9 Links del Pivote]].
+- **Matriz de roles fija eliminada** de `The Bound Five`. 1V/2D/2S solo cerraba en 4 de 9 celdas. El balance de combate se verifica **por celda**.
+- **`Geografía y Ciudades` = fuente primaria única de ubicaciones.** Los cuadrantes de `Briefs de Mapa` quedan **derivados** y no se editan a mano.
 
-1. **El commit incluye también los 16 archivos que ya venían modificados** de la sesión anterior — el baseline del Sprint 0 nunca pudo correr, así que los dos conjuntos de cambios están mezclados. Revisar el diff antes de commitear.
-2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Prompts descritos en el plan; lanzarlos con **Opus, en frío, en paralelo** (dramática + congruencia).
+### Fuente única nueva
 
-**Nota de método para los QAs:** que un barrido objetivo de 20 minutos sacara 3 críticos nuevos confirma que el cuello de botella no es el QA sino el barrido. Pedirles explícitamente que traten cada dato como una **clase de menciones**, no como una línea suelta.
+`Nomenclatura §the Wanderer's Goggles` — no retirables + estrictamente privados + **no son gate**. Antes la privacidad no tenía fuente y se re-enunciaba en 9 fichas citando `§Capa 2`, que no la contiene.
 
 ### 🔜 Único pendiente para cerrar el sprint
 
-**4ª re-corrida QA — 2 subagentes Opus en frío** (dramática + congruencia), sin contexto de los fixes para que no validen su propio trabajo. **Criterio de cierre: 0 críticos.** Si aparecen críticos nuevos, se repite el ciclo con el subconjunto afectado.
+**11 epílogos F1 restantes** bajo la nueva regla de costo (hecho: Iven, el peor caso — su gente sobrevive porque la periferia nunca fue Aether-dependiente, mientras cae el centro que la ignoraba). Faltan: Maren, Torgan, Sereth, Bram, Lyris, Nyael, Vekka, Dagna, Roen, Valen, Darro.
+
+Las tres prohibiciones a aplicar en cada uno: ninguna institución Aether-dependiente operando con normalidad; nadie concluye que la Muda salió gratis; el Aether sana **de golpe** y eso es parte del costo.
+
+**Después de eso: 5ª re-corrida QA.** El criterio de cierre sigue siendo 0 críticos, y las 4 rondas anteriores dicen que va a haber una 5ª.
+
+### Nota de método (confirmada por 3ª y 4ª ronda)
+
+El cuello de botella no es el QA, es el **barrido**. Esta ronda: la longevidad humana quedó en 2/3 de la clase (la ronda anterior arregló elfos y enanos y saltó la fila HUMANO en las 3 fichas); el género de Speck se corrigió en `Darro-Ficha` y quedó intacto en `Darro.md`; la aritmética de Lyris llevaba **dos rondas reportada** sin corregirse, con una cifra en diálogo. Ver [[Lecciones]].
 
 Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, y se abre la pregunta de bonds de fijos (abajo).
 
