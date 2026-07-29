@@ -17,23 +17,19 @@ updated: 2026-07-27
 - **✅ Fases 0-4 completas** — documentos-fuente reescritos (5 finales + Grove of Cycles + Acto 3 en 5 sub-beats + Reckoning), 9/9 fichas de Pivote al canon, lint mecánico, propagación semántica, y re-corrida de verificación que reveló los huecos de cobertura que la Fase 5 está cerrando.
 - **✅ Fase 5 Bloque D** — canon "los 9 Pivotes existen simultáneamente" + regla de aparición como NPCs externos + caso Torgan/Bram; matriz de finales corregida; rename a `Los 5 Finales.md` (29 cross-refs).
 - **✅ Fase 5 Bloque A** — Torgan (485→579 líneas) e Iven (511→767) reescritas. **9/9 fichas de Pivote migradas.** Torgan: F2b sin suavizar, beat Warden de oficio y linaje, aritmética 55 años, sección de segundo agente de la ruta Bram. Iven: mentira del Council explícita + §Las tres grietas, F2b corregido (el asentamiento muere), F1≠F4, único de los 9 que llora en escena.
-  - **🔴 Bloque B pendiente** (Sonnet 5, 1 corrida) — propagación a las 3 fichas de fijos **Roen / Valen / Darro**, que Fase 2 nunca tocó en sus secciones de finales:
-    - **Bram no traiciona** — las 3 lo hacen traicionar o rendirse. `Roen:270` ("Cuando Bram acepta la oferta del Triune Council… *I get it. Goodbye.*"), `Valen:329` ("Cuando Bram se rinde… *Twenty years of drainage*"), `Darro:348` ("Cuando Bram se rinde… *Veinte años es mucho*"). Reescribir al beat del corredor del Archive, tomando el diálogo ya canonizado en `Bram-Ficha:356-388`. De paso corrige la aritmética: son **cuarenta** años, no veinte.
-    - **Migrar al eje de 5 finales** — las 3 conservan el bloque viejo (Final 1 Perdón / Final 2 Muerte / Final 3 Encadenamiento / Final 4 Síntesis = destino del Pivote). Debe ser destino de Speck, con F2a/F2b.
-    - **Roen:** separar el beat de traición (Archive) del quiebre (cráter) — hoy `:175-196` los colapsa en First Wound. Aritmética de edad rota (`:11` dice 35-40; `:72` "edades 25-40" + `:84` "5 años presente" = 45).
-    - **Valen:** reencuadrar su cosmología como **creencia errónea** (decisión de Boris — cree en "Mudas cada 300 años, última hace 110" porque lo enseña the Academy of Sages; está equivocado, y descubrirlo es un beat). Conservar el texto, cambiar el marco. Aritmética: `:11` dice 180-250 años pero `:191` dice "hace 300 años"; alterna 250 y 200.
-    - **Darro:** rechazo del gremio a **versión Vekka** (decisión de Boris — fue su aprendiz ~30 años atrás, 2 años de enseñanza, ella lo rechazó en persona sin explicar). Hoy `:44-57` dice otra cosa (aceptado a los 30, aislamiento gradual, sin Vekka). Género de Speck femenino (`:184`, `:263`).
-    - **Tablas de dinámicas:** 6 de 9 entradas tienen raza/rol falsos, idénticos en Roen y Valen. Ej. *"Roen + Lyris (Enana Duelist)"* — Lyris es **Elfa**, y la celda del jugador es Enano Vanguard. Mismo error en Nyael, Bram, Sereth.
-  - **🔴 Bloque C pendiente** (Haiku 4.5, 1 corrida) — lint final, todo verificable con grep:
-    - **Headcount >5** en 3 fichas: `Lyris:195-197` (**8 personas**, el peor caso), `Sereth:156` (7) + su cena "con Maren delante" `:174` + comparación con Maren `:396`, `Nyael:170` ("El Bound Five **+ otros**").
-    - **Sync de `Los 9 Pivotes.md`:** línea 20 describe a Sereth con el arquetipo y la línea canónica **de Maren** ("Aritmética pura… *Millions against one*"); debe ser *"No te llevé a esta decisión. Te llevé a la persona que la toma."* Línea 24 tiene la línea vieja de Nyael ("You taught me to set the trap…"), reemplazada en su ficha por *"I set traps my teacher would have waited on…"*.
-    - **Timeline:** `Geografía:739` dice Sunken Archive = Acto 2 → debe ser **Acto 3**. `Grove:9` dice "dos de los tres sub-actos" → debe ser **los tres** (así cuadra el conteo de 4 God-Cores).
-    - **Bram 40 años:** residuos de "veinte años" en `Estructura Política:239-246`.
-    - **Sereth "el Consejo"** (`:364-365`) — último residuo ambiguo de Fase 2.
-    - **`Los 5 Finales`:** `Geografía:1042` dice "retroceder es F2" → desambiguar F2a/F2b.
-    - **Mistbound orientación:** `Bram:30,48` dice "noroeste", `Geografía` dice "oeste profundo".
-    - **`Geografía:96`** pone a Torgan y Dagna en "el Clan de Forja" — contradice sus fichas (Torgan en clan menor, Dagna en subclán Deepstone).
-    - **Menores:** género de Speck en Darro, "Roen ve las manos de Vekka temblar" (Vekka no tiembla — su única grieta visible es un segundo con los ojos cerrados), fórmula "por primera vez en la historia registrada" repetida 3 veces.
+  - **✅ Fase 5 Bloque B (2026-07-28)** — propagación completa a Roen/Valen/Darro. Bram ya no traiciona en las 3 fichas (beat del corredor del Archive, aritmética 40 años); las 3 migradas al eje de 5 finales (F1/F2a/F2b/F3/F4, destino de Speck); Roen separa traición (Archive) de quiebre (cráter) + edad corregida a 45; Valen con cosmología reencuadrada como creencia errónea de la Academy (beat en Grove of Cycles) + edad estandarizada a 230; Darro con rechazo-versión-Vekka (aprendiz 30 años atrás, 2 años, rechazo sin explicar) + sección Darro+Vekka reescrita + género de Speck corregido. Tablas de dinámicas: 7/9 entradas de raza/rol falsas corregidas en las 3 fichas (más de las 6 reportadas — Maren/Torgan/Iven también estaban mal). Detalle completo en [[LOG]].
+  - **✅ Fase 5 Bloque C (2026-07-28)** — lint final cerrado. Headcount corregido en Lyris/Sereth/Nyael (solo Roen+Valen+Darro+Pivote, sin otros Pivotes en escena — consistente con "solo 1 conoce al jugador"); `Los 9 Pivotes.md` resincronizado (línea de Sereth y de Nyael ya no cruzadas); Sunken Archive = Acto 3; Grove of Cycles tras los 3 sub-actos; Bram 40 años en Estructura Política; Sereth "Royal Academy" en vez de "el Consejo" ambiguo; Geografía F2a/F2b desambiguado; Mistbound "suroeste profundo" en las 2 fichas; Torgan/Dagna ya no comparten "Clan de Forja" en Geografía; Vekka ya no tiembla (Roen); fórmula "primera vez en la historia registrada" desduplicada. **Sprint QA de reparación — Fase 5 CERRADA.** Detalle completo en [[LOG]].
+
+- **🔴 Re-corrida de verificación (2026-07-28) — EL SPRINT NO CIERRA.** Los 2 QAs re-corridos en frío con Opus 5: **7 CRÍTICOS de congruencia + 5 de dramática.** Reporte completo en [[LOG]].
+  - **✅ Validado limpio:** cero residuos del esquema viejo de finales en las 9 fichas; Bram no traiciona (consistente en 9 apariciones); Speck femenina (0 errores); raza/rol de los 9 correcta; timeline consistente. Los 9 Pivotes son genuinamente distintos — Torgan e Iven declarados listos para diálogo sin más trabajo.
+  - **✅ 6 de los 7 críticos de congruencia YA CORREGIDOS** en la misma sesión. **Varios eran errores míos de los Bloques B/C** (corregir encabezados sin leer el cuerpo debajo; dar archivos por cerrados tras arreglar la primera ocurrencia sin barrer el resto). Detalle honesto en [[LOG]].
+  - **✅ C1 CERRADO (2026-07-28) — decisión de Boris.** Torgan es el segundo agente de la ruta Bram, actuando él mismo por su propia cadena de mando — no un mensajero anónimo. Corregido en `Bram-Ficha` (sub-beat 4a) y `Geografía` (§Acto 3 sub-beat 3), alineados con `Los 9 Pivotes` y la sección dedicada en `Torgan-Ficha`. **Los 7 críticos de congruencia quedan en 0.**
+  - **✅ D1 CERRADO (2026-07-28) — decisión de Boris.** Roen, Valen y Darro tienen ahora un **pico** (quiebre más hondo, ligado a un Pivote) y **2 versiones suaves** (una por cada otra fila de arquetipo de [[Los 5 Finales]]), en vez de arco solo-en-1-ruta. Roen: pico Dagna (sin cambios) + suave Sereth + suave Lyris. Darro: pico Vekka + suave Lyris + suave Dagna (**gap real encontrado: no existía entrada "Darro + Dagna"**, agregada). Valen: pico nuevo Nyael (espejo de su propia falla — observar sin intervenir) + suave Sereth. Detalle en [[LOG]].
+  - **✅ D2 CERRADO (2026-07-28) — decisión de Boris.** F4 ya no se llama "final verdadero" (etiqueta descriptiva nueva: "el único con consentimiento de Speck"). Costo real agregado: Speck no vuelve con el grupo, la calcificación es permanente — el jugador rompe su propio Bond por elección. Sabor explícito: agridulce, misma familia sonora que F2b, no victoria limpia. Detalle en [[LOG]].
+  - **✅ D3 CERRADO (2026-07-28) — decisión de Boris.** Los 7 Momentos de Persona escritos en `Speck.md` (antes: frase-placeholder). Cada uno es Speck actuando primero, por su cuenta, con lectura ambigua herramienta/mascota/persona — el Vector C del Grove (ya existente) es ahora el Momento 6 oficial, molde del resto. Colateral: residual "beige" (paleta vieja) limpiado en 4 archivos. Detalle en [[LOG]].
+  - **✅ D4 CERRADO (2026-07-28) — decisión de Boris.** La ruta Nyael tiene antagonista funcional en el cráter: el pulso del core no distingue quién carga a Speck, así que su "ruta 7" se rompe ahí igual que le rompería a cualquiera. Nyael sigue sin reaparecer nunca (ausencia total intacta); quien el jugador enfrenta es el equipo de extracción institucional que ella activó. F2a y F3 de su ficha reescritos para no contradecir esto. Detalle en [[LOG]].
+  - **✅ D5 CERRADO (2026-07-28) — decisión de Boris. LOS 12 CRÍTICOS EN 0.** F2b ya no se abre por timeout — ahora es elección activa: el jugador intenta arrancarle a Speck por la fuerza y el forcejeo sobrecarga el Fragmento. Propagado a Geografía y a las 2 fichas (Bram, Nyael) que tenían lenguaje pasivo residual. Detalle en [[LOG]].
+  - **Patrón de fondo (ambos QAs coinciden):** lo grave está **fuera** de las fichas de Pivote, en los documentos que las citan — `Geografía`, `Estructura Política` y las 3 fichas de fijos quedaron pre-rework mientras las 9 fichas avanzaban. **El próximo pase debe ser de propagación hacia afuera, no de más profundidad hacia adentro.**
 
   **Reportes completos de los 2 QAs de Fase 4** (con líneas exactas y citas textuales): ver entrada del 2026-07-28 en [[LOG]].
 
@@ -60,6 +56,8 @@ Boris editó 4 archivos en Obsidian fuera de la conversación con Claude, con pr
 - §9 (gobernantes + Council): 5/6 ✅, King Borran 🟡 provisional
 - §10 (elenco político nuevo): 6/6 ✅ cerrado
 - §6d (keyframes ciudades, QA retroactivo): Emberdeep/Stillspire/Mistbound ✅, Rivermeet daylight 🟡, Driftmarket 🔴 (pendiente re-corrida)
+- §L (UI Mockups, 2026-07-28): 3/3 ✅ aprobados (character-creation, main-menu, tether-screen); main-menu 🟡 ajuste visual menor
+- §M (Marketing, 2026-07-28): 🟡 key-art-poster v2 genera v2 (tone → cozy-fantasy, Speck + Iron-Blooded presencia)
 - Fenotipos / Speck / Finales: renombrados y trackeados
 
 **Motor:** GODOT confirmado (ADR-002). Branch: `feat/c6-anatomy-rework`.
@@ -94,11 +92,15 @@ Boris editó 4 archivos en Obsidian fuera de la conversación con Claude, con pr
 
 ## Pendientes — ordenados por fecha
 
-### 🗓 Próxima sesión — cerrar Fase 5 (Bloques B y C)
+### 🗓 Próxima sesión — re-correr los 2 QAs una última vez (criterio de cierre real)
 
-Los 2 bloques restantes están detallados arriba con líneas exactas y citas textuales. Orden recomendado: **B primero** (Sonnet 5, contenido semántico), **C después** (Haiku 4.5, lint que barre también lo que B pueda dejar).
+**Los 12 críticos (7 congruencia + 5 dramática) están en 0** (2026-07-28: C1, D1, D2, D3, D4, D5 todos cerrados — detalle completo en [[LOG]]). No queda ninguna decisión de diseño pendiente de Boris para este sprint.
 
-Al cerrar B y C: **re-correr los 2 QAs una última vez** (criterio 0 CRÍTICOS) para declarar el sprint terminado.
+Falta solo **re-correr los 2 QAs en frío contra el estado actual del vault** — es la tercera re-corrida (Fase 4 original → verificación C1-C7/D1-D5 → esta). Si dan 0 CRÍTICOS, el sprint QA de reparación queda formalmente cerrado y el frente siguiente es **guión y diálogos por actos**, sin bloqueos pendientes.
+
+Después de esas 6: un **pase de propagación hacia afuera** (Geografía, Estructura Política, las 3 fichas de fijos) + rework de Lyris (la ficha más débil por margen grande, con la esencia contradictoria en 3 lugares) + los 14 importantes / 11 menores listados en [[LOG]].
+
+**Nota de método (lección de esta sesión):** corregir encabezados sin leer el cuerpo debajo, y dar un archivo por cerrado tras arreglar la primera ocurrencia de un patrón, produjo 6 hallazgos evitables. Todo fix de lint debe barrer el archivo entero por patrón, no por línea reportada.
 
 **Nota estratégica:** con el sprint cerrado, el próximo frente real es **guión y diálogos por actos** — no queda razón técnica para postergarlo.
 

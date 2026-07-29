@@ -110,6 +110,26 @@ antes de archivar.
 
 Sin cambios — bloqueo técnico conocido (ffmpeg).
 
+## 🆕 L) UI Mockups / Interfaces (2026-07-28)
+
+Diseño de interfaz / pantallas jugables:
+
+| Archivo | Identidad | Estado |
+|---|---|---|
+| `ui_character-creation-mockup-v1.png` | Tabla Raza × Rol (9 celdas), preview de personaje | ✅ review (2026-07-28) |
+| `ui_main-menu-mockup-v1.png` | Main menu — árboles, atmósfera neblinosa | ✅ review (2026-07-28) |
+| `ui_tether-screen-mockup-v1.png` | Pantalla Tether — 4 personajes + Speck, Persona Moments | ✅ review (2026-07-28) |
+
+Documentación: `90-Raw/ui/REVIEW-2026-07-28.md` (review issues + severidad).
+
+## 🆕 M) Marketing / Key Art (2026-07-28)
+
+Artwork para promoción y marketing:
+
+| Archivo | Identidad | Estado |
+|---|---|---|
+| `marketing-key-art-poster-v2.png` | Poster épico (5 personajes, acantilado flotante, ocaso) | 🟡 review (2026-07-28) — feeling/prompt medianamente acertados, pendiente alineación con art bible v2 |
+
 ---
 
 ## Preguntas abiertas restantes

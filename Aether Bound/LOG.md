@@ -5495,3 +5495,187 @@ Enlazado desde `Current-State` (bloque de bloqueo activo al inicio) y `00-Index`
 **Nota de alcance:** ninguna de las 4 ediciones fue procesada esta sesión — solo verificadas, categorizadas y registradas. Es contenido/diseño real, no housekeeping de cierre.
 
 Current-State creció a 4,007t (+1,007 sobre techo blando) por el detalle necesario para no perder las preguntas de Boris. check_vault sigue 🟢 (4,304t de arranque). Candidato a higiene en la próxima sesión si sigue creciendo.
+
+## [2026-07-28] sprint/QA-Fase5-B | Bloque B CERRADO — propagación a Roen/Valen/Darro
+
+**Bram no traiciona (propagación completa):** las 3 fichas de fijos (Roen, Valen, Darro) tenían la traición/rendición vieja de Bram en sus tablas de dinámica (`Roen:270`, `Valen:329`, `Darro:348`). Reescritas al beat del corredor del Archive: Bram rechaza la oferta del Council, no la acepta ni se rinde. Diálogo tomado del ya canonizado en `Bram-Ficha:356-388`. Aritmética corregida de "veinte años" a **cuarenta** en las 3 fichas.
+
+**Migración al eje de 5 finales:** las secciones "Arco Acto 3" de Roen/Valen/Darro usaban el bloque viejo (Final 1 Perdón/Final 2 Muerte/Final 3 Encadenamiento/Final 4 Síntesis = destino del Pivote). Reescritas contra [[Los 5 Finales]] — el eje es el destino de **Speck** (F1 Guided Molt / F2a Handed Over / F2b Fallen / F3 Conqueror's Clause / F4 Warden's Choice), el Pivote como consecuencia.
+
+**Roen:** aritmética de edad rota corregida (25+15+5 = 45, no "35-40"). Beat de traición (Archive) separado del quiebre (cráter) — antes colapsados en un solo "First Wound"; ahora dos escenas: corredor del Archive (Acto 3, donde se revela la intención del Pivote) y el cráter (donde actúa).
+
+**Valen:** aritmética de edad estandarizada a 230 años (antes alternaba 180-250/200/250/300 en distintas menciones). **Cosmología reencuadrada como creencia errónea** (decisión de Boris): la cifra "cada 300 años" que Valen cargó toda su vida es la que enseña the Academy of Sages, sin revisión desde antes del cataclismo — Valen la desmonta en el debate del Grove of Cycles, no en su infancia. El cálculo sustantivo (God-Cores = cadáveres, Speck = llave) sigue siendo correcto; el marco temporal en que creció, no.
+
+**Darro:** rechazo del gremio reescrito a **versión Vekka** (decisión de Boris) — fue su aprendiz ~30 años atrás, ella le enseñó 2 años, lo rechazó del programa formal en persona al tercer año sin explicar por qué. Verificado contra `Vekka-Ficha:46-90`, ya consistente. Añadida sección "Darro + Vekka" completa en dinámicas (antes trataba el encuentro como si fueran extraños). Género de Speck corregido a femenino en 2 menciones residuales.
+
+**Tablas de dinámicas — raza/rol falsos corregidos en las 3 fichas (Roen, Valen, Darro), 7 de 9 entradas, más de las 6 reportadas en el QA original:** Bram (Duelist→**Vanguard**), Sereth (Duelist→**Strategist**), Nyael (Humana Vanguard→**Elfa Duelist**), Lyris (Enana Duelist→**Elfa Duelist**), Maren (Elfo Duelist→**Humana Strategist**), Torgan (Elfo Strategist→**Enano Duelist**), Iven (Elfo Vanguard→**Humano Duelist**). Solo Vekka y Dagna ya estaban correctas. La causa raíz: los encabezados copiaban la "celda de jugador" del formato de ficha del Pivote en vez de su raza/rol real.
+
+**Pendiente:** re-correr los 2 QAs de Fase 4 tras cerrar Bloque C (criterio 0 CRÍTICOS) para declarar el sprint terminado. Bloque C sigue detallado en el historial de [[Current-State]] del 2026-07-28.
+
+## [2026-07-28] sprint/QA-Fase5-C | Bloque C CERRADO — lint final, Fase 5 completa
+
+**Headcount >5 corregido en 3 fichas.** Las escenas "El Primero" de Lyris, Sereth y Nyael listaban a los 8 Pivotes no-activos apareciendo junto al grupo ("Roen llega. Valen aparece. Maren aparece. Torgan aparece. Sereth aparece..."), violando el canon de Bloque D (el grupo son siempre 5: Jugador+Roen+Valen+Pivote activo+Darro). Recortadas a solo Roen/Valen/Darro. También corregidas dos referencias cruzadas indebidas dentro de la ficha de Sereth: "cena con Maren delante" → cena del grupo (sin nombrar a Maren, que no puede estar presente en la misma partida); "Darro no grita como con Maren" → sin la comparación cross-run.
+
+**`Los 9 Pivotes.md` resincronizado:** la fila de Sereth citaba la línea canónica de Maren ("Millions against one...") — reemplazada por la línea real de Sereth (*"No te llevé a esta decisión. Te llevé a la persona que la toma."*). La fila de Nyael tenía una línea vieja no ratificada — reemplazada por la línea canónica actual de su ficha (*"I set traps my teacher would have waited on..."*).
+
+**Timeline:** Sunken Archive reclasificado Acto 2→**Acto 3** en Geografía (consistente con la decisión de Boris del 2026-07-28). Grove of Cycles corregido de "dos de los tres sub-actos" a **los tres** — así cuadra el conteo de 4 God-Cores destruidos antes del Grove.
+
+**Aritmética Bram:** "20 años de mercenario" / "cortó lazos hace 20 años" en Estructura Política §239-246 → **40 años**, consistente con el resto de la ficha.
+
+**Sereth "el Consejo":** diálogo ambiguo con Roen ("Renunciaste al Consejo") reescrito a "Dejaste la Royal Academy" — Sereth es producto de la Royal Academy, no del Triune Council; la ambigüedad venía de Fase 2.
+
+**Los 5 Finales / Geografía:** "cruzar el borde es F3, retroceder es F2" → desambiguado a **F2a o F2b** según si Speck llega viva o muere en el intento.
+
+**Mistbound:** orientación unificada a **suroeste profundo** en la ficha de Bram (decía "noroeste") y en Geografía §Origen de Bram (mismo error, ambas corregidas) — consistente con las 2 menciones ya correctas en el resto de Geografía.
+
+**Geografía §Emberdeep:96:** "Torgan y Dagna pertenecen al Clan de Forja" contradecía sus fichas — corregido a "Torgan pertenece a un clan menor; Dagna al subclán vasallo Deepstone".
+
+**Menores:** "Roen ve las manos de Vekka temblar" (Roen-Ficha) contradice el canon de Vekka (su única grieta visible es cerrar los ojos un segundo, nunca temblar) — corregido. Fórmula "por primera vez en la historia registrada" aparecía idéntica 3 veces (Los 5 Finales/Dagna, Dagna-Ficha, Sereth-Ficha) — desduplicada en 2 de las 3 apariciones, conservada la de Dagna-Ficha como versión canónica.
+
+**Sprint QA de reparación — Fase 5 completa (Bloques A, B, C, D cerrados).** Pendiente: re-correr los 2 QAs de Fase 4 (criterio 0 CRÍTICOS) para declarar el sprint formalmente terminado. Nota: esta corrida se hizo con el modelo Sonnet 5 de la sesión — Boris pidió Haiku vía `/model`, pero ese comando no está disponible en este entorno no interactivo; se avisó y se continuó con el modelo activo.
+
+## [2026-07-28] sprint/QA-verificación | Re-corrida de los 2 QAs — EL SPRINT NO CIERRA (12 CRÍTICOS)
+
+Los 2 QAs re-corridos con Opus 5 en paralelo, en frío (sin decirles qué se había arreglado, para evitar sesgo de confirmación). **Criterio de cierre = 0 CRÍTICOS. Resultado: 7 críticos de congruencia + 5 de dramática.** El sprint QA de reparación **no cierra**.
+
+### Lo que sí quedó validado limpio (ambos QAs)
+
+- **Los 5 epílogos × 9 fichas:** cero residuos del esquema viejo (Perdón/Muerte/Encadenamiento/Síntesis) en todo el vault. La migración de Bloques A/B funcionó.
+- **Bram no traiciona:** consistente en las 5 menciones de su ficha, en `Los 9 Pivotes`, en `Los 5 Finales` y en Geografía. Aritmética de 40 años consistente en las 9 apariciones.
+- **Speck femenina:** cero ocurrencias de "él/lo" en todo `10-Knowledge/`.
+- **Raza/rol de los 9:** los nueve encabezados coinciden con la matriz maestra.
+- **Timeline:** Sunken Archive = Acto 3 en las 9 fichas; 4 God-Cores antes del Grove; cataclismo ~550 años consistente.
+- **Dramática:** los 9 Pivotes son genuinamente distintos — ninguno repite el beat de otro; los 3 enanos separados con precisión (elegí la cadena / nací en ella / soy la cadena). F2a vs F2b sostenido sin una sola contradicción en las 9 fichas. Torgan e Iven declarados listos para diálogo sin más trabajo.
+
+### 🔴 Errores propios introducidos o no detectados en Bloques B y C
+
+**Causa raíz de mi parte: hice correcciones a nivel de encabezado sin leer el cuerpo del texto debajo, y di archivos por cerrados tras arreglar la primera ocurrencia de un patrón sin barrer el resto del archivo.** Hallazgos que son míos, no del material previo:
+
+- `Roen:279` — **texto que yo escribí en Bloque B** decía que el Council "le ofrece a Bram la salida — rechazar el contrato, quedarse con lo que queda de su compañía". Invertido: el Council le ofrece el *trabajo*; la salida se la da Bram rechazando. Además sus dos compañías fueron disueltas, no le queda ninguna. **Corregido.**
+- `Darro:44` — **texto que yo escribí en Bloque B** presentaba el quiebre de Vekka con el Dogma como hecho biográfico previo a la campaña. Vekka nunca rompe con el Dogma en la línea base (es su identidad entera); el único quiebre ocurre en los epílogos F2b/F4. **Corregido.**
+- `Roen:267` y `Darro:358,360` — corregí los encabezados de las tablas de dinámicas a la raza/rol correcta, pero dejé el cuerpo contradiciéndolos ("Dos Vanguards" para Iven que es Duelist; "dos enanos que ven diferente" y "duele viniendo de compañero enano" para Lyris que es Elfa). **Corregidos.**
+- `Grove:15` — corregí el gate a "los tres sub-actos" en la línea 9 y dejé la línea 15 diciendo "el segundo sub-acto regional". Dos gates incompatibles a seis líneas de distancia. **Corregido.**
+- `Bram:48` — corregí "noroeste"→"suroeste profundo" en la línea 28 y dejé la 48 con el error. **Corregido.**
+- `Darro:359` — la línea de tensión con Lyris era copia literal de la entrada Valen+Lyris, y contradecía a Lyris (que no bromea). **Reescrita.**
+
+### 🔴 CRÍTICOS de congruencia pendientes
+
+- **C1 (BLOQUEANTE, requiere decisión de Boris) — el "segundo agente" de la ruta Bram tiene 3 versiones incompatibles.** `Los 9 Pivotes:32-38` y `Torgan:377` dicen que el segundo agente **es Torgan**, que toma a Speck él mismo. `Bram:257` dice que es **un mensajero enano anónimo** que le entrega orden sellada "a Torgan (o al enano fijo/Pivote más cercano si Torgan no está)" — ese paréntesis convertiría a **Darro** en ejecutor del Council. `Geografía:1025` dice que el mensajero "buscó específicamente a Torgan". Agravante: `Bram:261` describe al segundo agente como "no lo conocíamos, no le debíamos nada", que describe a un NPC anónimo, no a Torgan. **Nadie puede escribir la salida del Archive en la ruta Bram hasta que esto se decida.**
+- **C2, C3, C4, C5, C6, C7 — corregidos en esta sesión** (ver bloque de errores propios arriba, más `Geografía:1015` que ponía a Sereth como lector por defecto en las 9 partidas, y `Vekka:459` que autorizaba explícitamente dos Pivotes en el grupo).
+
+### 🔴 CRÍTICOS de dramática pendientes (los 5 son decisiones de diseño de Boris)
+
+- **D1 — Roen y Darro solo tienen arco en la ruta Dagna; en las otras 8 son cámaras de eco.** Y está canonizado explícitamente ("A Roen lo rompe Dagna, no Torgan" aparece literal en Torgan, Iven y Dagna). El escudo caído de Roen y la escena más grande de Darro viven ambas en la celda Humano Duelist. Contradice `The Bound Five:68` ("la experiencia del jugador sea la misma sin importar el personaje que escoge"). **Propuesta del QA:** darles quiebre por *arquetipo* (Aritmética / Deber / Rechazo), no por Pivote — 3 versiones del escudo caído en vez de 1, ~6 escenas nuevas que salvan 7 rutas. Presupuesto sugerido: reciclar los 54 encuentros por celda de Roen/Valen/Darro, de los que el jugador ve exactamente uno.
+- **D2 — F4 etiquetado "final verdadero" y los 9 Pivotes mejoran ahí.** Es el mejor final para todos los personajes, para el mundo, el único con consentimiento de Speck, y no cuesta nada. Los otros 4 dejan de ser alternativas morales y pasan a ser fracasos de ejecución. **Propuesta:** borrar la palabra "verdadero" del canon + darle a F4 un costo real que ningún otro final tenga (el propio Grove ya tiene el argumento: la cura cuesta civilizaciones).
+- **D3 — Speck sigue siendo MacGuffin.** No hay una sola escena escrita donde haga algo que la vuelva querible; su personalidad está en viñetas de dirección, nunca dramatizada. Los ~7 Momentos de Persona (que son el gate de F4) están sin diseñar. Borrar el "Giro Grogu" quitó la capa de interioridad. Si el jugador no la quiere, las 5 respuestas del clímax dan igual. **Propuesta:** escribir los 7 Momentos ANTES del guión de actos, no después.
+- **D4 — Dos rutas llegan al clímax sin Pivote funcional.** Bram (el segundo agente es, textual, "un traidor sin arco… función puramente mecánica" — ver C1) y Nyael (no aparece en el cráter; la ficha nunca resuelve quién lleva a Speck ahí ni cómo llega el jugador).
+- **D5 — F2b se abre por pasividad (timeout) y carga los 5 mejores epílogos del material.** El jugador lo leerá como castigo por dudar, no como tragedia — y la tragedia requiere elección. **Propuesta:** que F2b tenga una elección activa que lo produzca (ej. el jugador fuerza el forcejeo y la sobrecarga del Fragmento mata a Speck), con el timeout como ruta secundaria al mismo final.
+
+### Patrón de fondo señalado por ambos QAs
+
+**Casi todo lo grave está fuera de las fichas de Pivote y dentro de los documentos que las citan.** `Geografía y Ciudades`, `Estructura Política` y las 3 fichas de fijos quedaron en estado pre-rework mientras las 9 fichas avanzaban. 5 de los 7 críticos de congruencia y 6 de los 14 importantes son residuo de esa asimetría. **El próximo pase debe ser de propagación hacia afuera, no de más profundidad hacia adentro.**
+
+### Importantes/menores registrados (no corregidos aún)
+
+14 importantes + 11 menores del QA de congruencia, con archivo:línea y cita. Los de mayor peso: aritmética de Lyris rota en 3 cifras (170/90/45 años); esencia de Lyris contradictoria en 3 lugares ("incapaz de sentir" vs. el superlativo ratificado "siente y suprime"); Sereth muriendo de viejo a los ~205 cuando los elfos viven 650-700; Nyael con 80 vs 100 años de servicio; encabezados biográficos de Vekka y Dagna que no cuadran con sus edades; `Estructura Política` con 3 residuos pre-rework (cadena de mando de Vekka, eslabones de Dagna, "Torgan y Darro rechazados juntos"); Valen en femenino en `Vekka:401`; voseo argentino en `Lyris:82`. Del QA dramático: colisión del superlativo "la más fría" entre Lyris y Vekka; **Lyris es la ficha más débil por margen grande y necesita rework mayor**; 3 personajes mueren con la misma imagen en F2b; la traición usa el mismo blocking 9 veces.
+
+## [2026-07-28] sprint/QA-verificación | C1 CERRADO — Torgan es el segundo agente, sin mensajero anónimo
+
+**Decisión de Boris:** resolver C1, el único crítico bloqueante que impedía escribir la salida del Archive en la ruta Bram.
+
+Tres fuentes (`Los 9 Pivotes:32-38`, `Torgan-Ficha:369-381` — sección dedicada completa "Torgan como Segundo Agente de la Ruta Bram", y `Geografía:1025`) ya eran consistentes entre sí: **Torgan es el segundo agente y actúa él mismo**, activado por su propia cadena de mando (clan menor → Great Forging Clan), sin conocer al grupo ni a Speck. El outlier era `Bram-Ficha:255-261`, que inventaba un "mensajero enano de bajo perfil — NPC nuevo" entregando la orden "a Torgan (o al enano fijo/Pivote más cercano si Torgan no está)" — ese paréntesis habría convertido a **Darro** en ejecutor del Council, rompiendo headcount y canon simultáneamente.
+
+**Corregido:** `Bram-Ficha` sub-beat 4a reescrito para que Torgan aparezca directamente (sin intermediario), con referencia cruzada a su propia sección dedicada. `Geografía:1025` alineada — ya no habla de "un mensajero que buscó a Torgan" sino de Torgan mismo, activado por su cadena de mando.
+
+**Los 12 críticos del sprint quedan en: 0 de congruencia (C1-C7 todos cerrados), 5 de dramática (D1-D5, pendientes — son decisiones de diseño, no lint).** El sprint QA de reparación sigue sin poder declararse cerrado hasta resolver D1-D5, pero **ya no hay ningún bloqueante que impida empezar a escribir guión en 8 de las 9 rutas** (todas salvo Nyael, cuyo clímax sigue sin resolver — D4).
+
+## [2026-07-28] sprint/QA-verificación | D1 CERRADO — Roen, Valen y Darro con quiebre propio por arquetipo
+
+**Decisión de Boris:** Dagna sigue siendo el techo emocional de Roen (no se empareja hacia abajo); en cambio, cada fijo recibe un **pico** (su quiebre más hondo, ligado a un Pivote específico) y **dos versiones más suaves** — una por cada una de las otras 2 filas de arquetipo de [[Los 5 Finales]] (Aritmética/Manipulación: Maren, Sereth, Vekka · Deber Institucional: Torgan, Iven, Dagna, Nyael · Rechazo/Ausencia: Bram, Lyris). Así los 9 Pivotes siguen sin ser intercambiables entre sí, pero ninguna de las 9 rutas deja a los 3 fijos como pura cámara de eco.
+
+**Mapeo ejecutado:**
+
+- **Roen** — pico: **Dagna** (Deber Institucional, sin cambios, sigue siendo "la que lo rompe más hondo"). Suave-Aritmética: **Sereth** (`Roen:274`) — reescrito para registrar como quiebre real, "la que más cerca llega de romperlo" de las ocho no-Dagna. Suave-Rechazo/Ausencia: **Lyris** (`Roen:284`) — antes decía explícitamente "Roen no se quiebra aquí, se repliega"; reescrito para que sea un quiebre propio y real, más liviano que Dagna pero no un repliegue. Ajustada la entrada de Dagna (`Roen:296,304`) y el espejo en `Dagna-Ficha:387` para que digan "la que lo rompe más hondo" en vez de "la única que lo rompe" — ya no es cierto que sea la única.
+
+- **Darro** — pico: **Vekka** (Aritmética/Manipulación) — ya era la escena más suave que tiene Darro en todo el juego (el abrazo); ahora marcada explícitamente como su quiebre más hondo (`Darro:375`). Suave-Rechazo/Ausencia: **Lyris** (`Darro:360`) — ya tenía shock genuino, marcada como su versión suave. Suave-Deber Institucional: **Dagna** — **gap real encontrado en el proceso: no existía entrada "Darro + Dagna"** en la tabla de dinámicas (8 de 9 Pivotes cubiertos, faltaba ella). Agregada (`Darro:363-370`): Darro se sienta junto a Roen en el cráter sin decir nada — su propio quiebre suave es elegir el silencio de otro antes que el suyo.
+
+- **Valen** — pico nuevo: **Nyael** (`Valen:345-349`) — reescrita de una viñeta plana a el reconocimiento más hondo de su arco: Nyael observa sin intervenir, el mismo entrenamiento de la Academy of Sages que a Valen le enseñaron como virtud y que él mismo practica con Speck y con el jugador. Verla traicionar así es verse desde afuera. Suave-Aritmética: **Sereth** (`Valen:333`) — nota agregada de que es un segundo lugar, más frío que Nyael.
+
+**Nota de proceso:** el pase reveló un gap real (Darro sin entrada para Dagna) que ninguno de los 2 QAs había señalado — quedó expuesto recién al construir la matriz de picos/suaves de forma sistemática. Vale la pena tenerlo en cuenta: los gaps de "falta contenido" son más difíciles de detectar por QA que las contradicciones, porque no hay texto que contradecir.
+
+**D1 CERRADO.** Quedan D2 (F4 "final verdadero"), D3 (Momentos de Persona de Speck), D4 (clímax de la ruta Nyael) y D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D2 CERRADO — F4 pierde la etiqueta "verdadero" y gana un costo real
+
+**Problema:** `Los 5 Finales.md:83` etiquetaba F4 *"síntesis — final verdadero, ganado"*. Los 9 Pivotes mejoran ahí sin excepción, es el único con consentimiento de Speck, y no costaba nada — lo que convertía a los otros 4 finales en fracasos de ejecución en vez de alternativas morales.
+
+**Corregido:**
+- Etiqueta cambiada a *"síntesis — el único con consentimiento de Speck"* (descriptiva, no jerárquica). Mismo cambio propagado a `Bram-Ficha:332`, que citaba la etiqueta vieja.
+- **Costo agregado, consistente con canon existente:** Speck no vuelve con el grupo — la calcificación en F4 es permanente, ella se queda en el cráter para siempre. Es el único final donde el jugador rompe su propio Bond por elección, sabiendo lo que suelta. Ilyara ya había sembrado el argumento en el Grove (*"sanar el Aether cuesta algo"*) pero atado solo a F1 — F4 ahora paga el mismo principio en otra moneda: en F1 el costo es civilizaciones, en F4 es una sola vida que el jugador llegó a querer.
+- **Sabor explícito agregado:** agridulce, no triunfal — misma familia sonora del eco Bond/Link Cam que F2b, no una victoria limpia. La única diferencia entre F4 y F2b es que en F4 la pérdida tuvo consentimiento.
+
+**No se tocó la matriz 5×3 ni las 9 fichas de Pivote** — el cambio es puramente en el marco de F4 (`Los 5 Finales.md`), las reacciones de cada arquetipo en esa fila siguen siendo válidas tal como están escritas.
+
+**D2 CERRADO.** Quedan D3 (Momentos de Persona de Speck), D4 (clímax de la ruta Nyael) y D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D3 CERRADO — los 7 Momentos de Persona escritos
+
+**Problema:** `Speck.md §Momentos de Persona` era una frase-placeholder ("~7 escenas fijas... el detalle específico no se fija aquí") sin una sola escena escrita, pese a ser el gate mecánico de F4 y — según el QA narrativo — la única vía real para que Speck deje de ser MacGuffin.
+
+**Diseño aplicado:** cada Momento no es al jugador reaccionando a Speck — es **Speck actuando primero**, sin que nadie se lo pida, con una acción ambigua entre 3 lecturas (herramienta / mascota / persona). El molde es el Vector C del Grove ya existente (gira la cabeza al noreste, no se mueve 20 segundos) — el QA lo señaló como la mejor escena no reconocida como tal; ahora es oficialmente el **Momento 6**, con los otros 6 escritos alrededor del mismo molde:
+
+1. Acto 1 — se detiene antes del nido, sin que nadie le pida nada (orejas planas, se niega a avanzar).
+2. Acto 1 — en el bautizo, inclina la cabeza hacia Darro específicamente, no hacia el chiste.
+3. Acto 1→2 — tras el primer flash privado del jugador, sostiene la mirada más de lo normal y la rompe ella primero.
+4. Acto 2 — se retrae de un NPC que la toca sin permiso, gruñido deliberado, no reflejo.
+5. Acto 2 — se comporta distinto específicamente cerca del Pivote activo, antes de la traición.
+6. Acto 2 — Grove of Cycles, Vector C (ya existente, re-clasificado).
+7. Acto 3 — antes de The Reckoning, se adelanta y elige un camino por su cuenta — la única vez que dirige en vez de seguir.
+
+Cada uno documentado con las 3 lecturas posibles (herramienta/mascota/persona) para que el sistema pueda evaluar sin UI, consistente con el diseño ya fijado ("sin UI deliberadamente").
+
+**Colateral resuelto de paso:** el residual "beige" que el QA de congruencia había marcado como menor en 4 archivos (`Speck.md` ×2, `Bram-Ficha:215`, `Nyael-Ficha:221`, `Geografía:1011`) — quedó de la paleta vieja de Speck (pre-retcon a rojo/naranja). Corregido en los 5 puntos (se dejó sin tocar `Briefs de Concept Art.md`, que es fuente congelada de prompts ya corridos en NB2).
+
+**D3 CERRADO.** Quedan D4 (clímax de la ruta Nyael) y D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D4 CERRADO — la ruta Nyael tiene antagonista funcional en el cráter
+
+**Problema:** `Nyael:259-265` decía textual "Nunca hay confrontación final. Nunca hay batalla. Solo ausencia" — la ficha nunca resolvía quién lleva a Speck al cráter ni cómo el jugador llega a una decisión física ahí. Contradecía la arquitectura fija de `Los 5 Finales:9` ("el clímax físico… abre el abanico") y `Geografía:1040` ("El Pivote llega al centro con Speck").
+
+**Diseño aplicado (distinto del de Bram/C1 a propósito — Nyael no falla, tiene éxito, así que la solución no podía ser "otro Pivote actúa"):** el pulso del core central que responde a Speck **no distingue quién la carga** — cualquier intento de sacarla de The Wilds central se rompe en el mismo punto, para cualquiera. La "ruta 7" de Nyael, diseñada para una extracción limpia, se rompe ahí. Ella personalmente ya no está — su ausencia total sigue intacta, patrón preservado — pero quien el jugador encuentra en el borde es **el equipo de extracción institucional del brazo encubierto** que ella activó: operativos sin nombre, sin arco, la maquinaria funcionando sin ella. No son un segundo Pivote (eso ya se usó en Bram/C1); son antagonismo institucional puro, consistente con el propio arquetipo de Nyael.
+
+**Corregido:**
+- `Nyael-Ficha` sub-beat 5 reescrito: Speck imposible de transportar más allá del cráter, equipo de extracción como antagonista físico, Nyael nunca reaparece.
+- `Geografía:1044` — variante Nyael agregada, mismo patrón que ya tenía la variante Bram.
+- **F2a de Nyael reescrito:** antes decía que ella entregaba a Speck viva "sin complicación técnica" fuera de escena — ahora es el jugador quien, en el cráter, elige no interponerse y deja que el equipo de extracción complete la entrega. Es el único de los 9 Pivotes donde el jugador mismo cierra la traición que el Pivote empezó.
+- **F3 de Nyael reescrito:** antes la tenía "a distancia observando la decisión" en el cráter — contradecía su ausencia total recién establecida. Ahora es al equipo de extracción a quien el jugador aparta; el reporte le llega a Nyael por otra vía, sin que ella esté presente.
+
+**D4 CERRADO.** Queda solo D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D5 CERRADO — F2b pasa de timeout a elección activa. LOS 12 CRÍTICOS EN 0.
+
+**Problema:** `Los 5 Finales:49` definía el gate de F2b como *"se abre cuando el jugador no elige a tiempo"* — un timeout. El QA narrativo señaló que un jugador lee eso como castigo por dudar, no como tragedia, y que F2b carga los 5 mejores epílogos del material (Torgan, Iven, Dagna, Vekka, Maren) detrás de la peor puerta de entrada.
+
+**Corregido:** el gate ahora es una **elección activa**: el jugador intenta arrancarle a Speck por la fuerza al Pivote (o al equipo de extracción, ruta Nyael) en vez de negociar, esperar, o retirarse — el forcejeo sobrecarga el Fragmento, que reacciona a fuerza física cerca del core, no a inacción. Congelarse demasiado tiempo puede llegar al mismo resultado por la misma vía física, pero queda como ruta secundaria, no como definición del final. Propagado a `Geografía:1042` (la mecánica del borde del cráter ahora liga F2b al forcejeo, no a "retroceder") y a las 2 fichas que describían el trigger con lenguaje pasivo residual: `Bram-Ficha` ("el Fragmento la sobrecargó antes de que nadie decidiera" → forcejeo explícito) y `Nyael-Ficha` (mismo ajuste, ligado al equipo de extracción de D4). Las otras 7 fichas ya describían solo el epílogo sin especificar el trigger, así que no necesitaron cambios.
+
+**D5 CERRADO. Los 12 críticos del sprint (7 de congruencia + 5 de dramática) quedan en 0.**
+
+## [2026-07-28] design/UI-mockups | 4 brief concepts generados + review archivado
+
+**Generación de 4 mockups de UI y key art** (2026-07-28 ~02:00-02:30):
+
+1. **`ui-character-creation-mockup-v1.png`** ✅ — Tabla Raza × Rol (9 celdas), preview de personaje. Estructura clara, navegable. **Issue menor:** barras T1/T2/T3 bloqueadas — necesita claridad de qué miden (stat? tether?). **Severidad:** MEDIUM. **Estado:** aprobado.
+
+2. **`ui-main-menu-mockup-v1.png`** 🟡 — Pantalla principal: título "AETHER BOUND" + árboles acuarela neblinosos. Atmósfera acertada pero falta elemento narrativo que lo "ancle" a Aether Bound (Speck o detalle de First Wound). **Severidad:** MEDIUM. **Estado:** aprobado con ajuste visual.
+
+3. **`ui-tether-screen-mockup-v1.png`** ✅ — Mecánica Tether: 4 personajes en vértices + Speck centro, Persona Moments en base. Excelente comunicación visual del sistema. **Verificación pendiente:** símbolos Ω/✱ en `Speck.md` §7. **Estado:** aprobado.
+
+4. **`marketing-key-art-poster-v2.png`** 🟡 → **v2 generada** — Poster épico (5 personajes, acantilado), feeling/prompt medianamente acertados pero **tone mismatch vs art bible**: parece heroic-fantasy (aventura épica) cuando el producto es cozy-fantasy (Bonds, Speck como companion). Enano muy pequeño pierde presencia. Falta Speck o elemento que lo identifique como Aether Bound vs generic fantasy. **Severidad:** CRITICAL. **Plan:** re-generar v2 con brief enfatizando cozy-fantasy + Speck visible/implied + peso visual Iron-Blooded.
+
+**Review archivado:** `90-Raw/ui/REVIEW-2026-07-28.md` (issues por severidad, % fidelidad, próximos pasos).
+
+**CATALOGO.md actualizado:** §L (UI Mockups, 3/3) + §M (Marketing, 🟡 v2 pending).
+
+**Current-State.md actualizado:** sección Concept art con nuevo status.
+
+**Próximo paso:** re-correr los 2 QAs de Fase 4 una última vez, en frío, contra el estado actual del vault — es el criterio de cierre real del sprint. Si pasan con 0 CRÍTICOS, el sprint QA de reparación queda formalmente cerrado después de 3 re-corridas (Fase 4 original, verificación C1-C7/D1-D5, esta última).
