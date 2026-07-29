@@ -220,7 +220,7 @@ Es la única ternura que Dagna ofrece a los Warden — reconocer que los suyos v
 
 ### Sub-beat: la revelación de los Wanderer's Goggles
 
-El jugador se pone los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket, que **señala a Darro como el "Pivote" cuando el Pivote real es enana** — la ironía canónica del Reckoning). Aparece la proyección: **"Warden"** junto al símbolo geométrico que coincide con el patrón bajo el pelaje de Speck.
+El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket, que **señala a Darro como el "Pivote" cuando el Pivote real es enana** — la ironía canónica del Reckoning). Aparece la proyección: **"Warden"** junto al símbolo geométrico que coincide con el patrón bajo el pelaje de Speck.
 
 **Los Goggles son privados.** Solo el jugador ve. Dagna no ve nada, no le importa lo que vio el jugador, no recalcula. Ella ya sabía que iba a tomar a Speck sin importar lo que apareciera en el Archive. La revelación no toca su ecuación porque nunca hubo ecuación — hubo orden.
 
@@ -384,7 +384,7 @@ Este es el corazón dramático de toda la ficha, ya desplegado arriba en "Cómo 
 
 **Lo que Dagna sabe sin verbalizar:** que Roen la respeta más que a cualquiera del grupo porque ella hizo lo que él no pudo. Que ese respeto es real y le pesa. Que cuando ella lo traicione, la traición va a romperlo — no por la traición, sino porque la traición viene de la persona que Roen usa internamente como prueba de que el puesto se podía aguantar. Cuando Dagna se lo lleva, Roen pierde la prueba.
 
-**Por qué es la única que puede quebrarlo:** Lyris puede doblarlo (traición fría, política), pero Roen la lee como Roen lee cualquier orden vieja del Triune Council — con desconfianza automática, con distancia. Sereth puede herirlo íntimamente. Maren puede desilusionarlo con el cálculo. **Solo Dagna lo rompe,** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
+**Por qué es la que lo quiebra más hondo:** Sereth y Lyris también lo rompen — de verdad, no solo lo doblan (ver [[Roen-Ficha-Expandida-v1|Roen]] §Dinámicas con el Pivote) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. **Dagna lo rompe más hondo que cualquiera de las dos,** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
 
 **La escena del escudo caído** es la manifestación física de ese quiebre. No es el escudo del combate — es el escudo del puesto, el peso que Roen recogió para probarse que todavía servía como muralla. Cuando Dagna se va con Speck y con la prueba, Roen no tiene más razón para cargarlo.
 

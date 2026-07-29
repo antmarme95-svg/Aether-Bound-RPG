@@ -167,7 +167,7 @@ Promesa silenciosa.
 
 ### Escena: El Primero (Aceptación del Grupo — Sombra Integrada)
 
-El Bound Five + otros se forma.
+El Bound Five se forma.
 
 **Nyael aquí es presencia silenciosa:**
 - Nunca habla excepto si es necesario
@@ -218,9 +218,9 @@ El grupo desciende al Archive. Nyael se mueve sin sonido — ya conocía la ruta
 
 En el interior, cuerpos calcificados de la civilización Warden. **Reacción visible de Nyael: es la que menos tiempo pasa en el Archive.** Entra, escanea, sale. No lee inscripciones (no puede), no examina cadáveres, no toca cristales. Ve todo, no comenta. Su reacción emocional al Archive es privada y no se transcribe — Nyael es la que menos rastro deja incluso en su propio proceso interno.
 
-Antes de salir, hace algo que nadie le ha visto hacer con nadie: **acaricia el cuello de Speck una vez.** Un segundo. La palma sobre el pelaje beige, después la mano vuelve al costado. Es el gesto más íntimo que Nyael ha ofrecido en su vida — despedida silenciosa a un objetivo que va a capturar en horas. Speck no reacciona. Solo el jugador ve el gesto, si tiene los Goggles puestos en el ángulo correcto; si no, ni el jugador lo ve. Es un beat privado incluso dentro de la ficha.
+Antes de salir, hace algo que nadie le ha visto hacer con nadie: **acaricia el cuello de Speck una vez.** Un segundo. La palma sobre el pelaje, después la mano vuelve al costado. Es el gesto más íntimo que Nyael ha ofrecido en su vida — despedida silenciosa a un objetivo que va a capturar en horas. Speck no reacciona. Solo el jugador ve el gesto, si tiene los Goggles puestos en el ángulo correcto; si no, ni el jugador lo ve. Es un beat privado incluso dentro de la ficha.
 
-El jugador se pone the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Nyael no ve la proyección** (los Goggles son privados; Nyael, aun habiendo observado al jugador semanas antes, no accede a los flashes). Su plan no cambia. La revelación Warden no es dato operativo — es contexto emocional del jugador, y Nyael no opera con contexto emocional ajeno.
+El jugador mira a través de the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Nyael no ve la proyección** (los Goggles son privados; Nyael, aun habiendo observado al jugador semanas antes, no accede a los flashes). Su plan no cambia. La revelación Warden no es dato operativo — es contexto emocional del jugador, y Nyael no opera con contexto emocional ajeno.
 
 ### Sub-beat 3: Captura al salir del Archive
 
@@ -256,13 +256,15 @@ Conversación nunca es directa. Solo notas encontradas a lo largo de la persecuc
 
 Las notas ya no llaman "maestro" al jugador — reconocen aprendizaje entre pares, no jerarquía de enseñanza.
 
-### Sub-beat 5: Ausencia en The First Wound
+### Sub-beat 5: Ausencia en The First Wound — y quién sí está
 
-Nyael **no aparece en el borde del cráter con el jugador.** La confrontación es asincrónica — cuando el grupo alcanza el punto donde debería estar el Pivote sosteniendo a la variable, Nyael no está. Solo nota:
+Nyael **no aparece en el borde del cráter con el jugador.** Ella personalmente ya no está en la persecución — cumplió, entregó, se retiró. Pero Speck sí llega al cráter, y esto no es elección de nadie: en cuanto el grupo se acerca a The Wilds central, el core que responde a ella empieza a pulsar (canon en [[Geografía y Ciudades]] §Acto 3 sub-beat 5), y Speck se vuelve, literalmente, imposible de transportar en línea recta — tira hacia el centro con una fuerza que ninguna técnica de contención está diseñada para vencer. La ruta 7 de Nyael, diseñada meses antes para una extracción tranquila, se rompe exactamente en el mismo punto donde se rompería para cualquiera: el cráter reclama a Speck sin importar quién la cargue.
 
-> *"Was time to leave. To stay would be dishonor to the quiet we shared. Go. Live. Do not follow. I will not be findable."*
+**Quien el grupo encuentra en el borde no es Nyael — es el equipo de extracción del brazo encubierto**, dos o tres operativos institucionales, entrenados por la misma escuela de Nyael pero sin su historia, sin su nombre, sin línea de traición que decir. No son villanos con arco: son la maquinaria que Nyael puso en marcha, funcionando sin ella. Intentan completar la entrega frente al pulso del core, y fallan por la misma razón que Nyael habría fallado — Speck no se deja transportar más allá de ese punto.
 
-**Nunca hay confrontación final. Nunca hay batalla. Solo ausencia** — patrón canónico de Nyael, refuerzo del arquetipo. La decisión que sigue es del jugador, sin Pivote presente para complicarla.
+*"Was time to leave. To stay would be dishonor to the quiet we shared. Go. Live. Do not follow. I will not be findable."* — la última nota de Nyael, encontrada por el jugador antes de llegar al borde, ya anticipa esto: ella sabía que no necesitaba estar ahí para que el mecanismo terminara de girar.
+
+**Nyael nunca vuelve a aparecer. Pero el cráter no queda vacío.** El jugador toma la decisión final ([[Los 5 Finales]]) frente al equipo de extracción, no frente a Nyael — la ausencia sigue siendo total para ella, y la escena sigue siendo funcional para el jugador.
 
 **La decisión es del jugador.**
 
@@ -280,13 +282,13 @@ Nyael escribe una **segunda nota, más corta**, y desaparece antes de que amanez
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Nyael **entrega a Speck viva cumpliendo la orden real que recibió.** No hay complicación técnica: Speck llega en custodia, en el estado exacto que el brazo encubierto pidió, dentro del plazo. Ejecución perfecta según los parámetros institucionales.
+**El equipo de extracción cumple la orden que Nyael puso en marcha** (ver §sub-beat 5 — ella misma ya no está presente). El jugador llega al borde y ve al equipo trabado exactamente donde `§sub-beat 5` dijo que se trabarían: con el pulso activo, Speck no se deja mover, y ninguna técnica de contención lo resuelve. Lo que desatasca la escena no es fuerza — es la entrega. El jugador elige no interponerse, Speck es cedida en vez de arrebatada, y el hive mind se corta; recién entonces el equipo puede llevársela ([[Speck]] §Capa 5). Speck llega en custodia, en el estado exacto que el brazo encubierto pidió. Ejecución perfecta según los parámetros institucionales — pero completada por el jugador, no arrebatada por Nyael. Es el único de los 9 Pivotes donde el jugador mismo cierra la traición que el Pivote empezó.
 
 **Pero Nyael sabe que el Council mintió** sobre "custodia digna" — es mentira administrativa. En el Reckoning, oyó lo suficiente en las señales muertas para intuir que la palabra "custodia" cubría cosas que ninguna instrucción operativa dice en voz alta. Vive **en el limbo entre haber cumplido y haber sido usada.** El brazo encubierto la felicita, le asigna nueva ruta, la orden siguiente. Nyael la acepta y no la ejecuta — la deja pasar. No renuncia; simplemente deja de responder a las señales. Al año, el brazo encubierto la marca como "en estado de reasignación indefinida". Al segundo año, la marcan como "no retornada". Al tercero, alguien encuentra una daga suya clavada en la puerta de la oficina de la maestra que la entrenó — sin nota. La maestra, que sigue viva, entiende.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-Si Speck muere accidentalmente en la ruta 7 (herida acumulada, técnica de presión mal calibrada, o el Fragmento la sobrecarga antes de que Nyael pueda entregarla), **Nyael no vuelve.** No al grupo, no al brazo encubierto, no a Stillspire, no a ningún registro.
+Si el jugador, al llegar al borde y encontrar al equipo de extracción (ver §sub-beat 5), intenta arrancarle a Speck por la fuerza en vez de esperar o negociar, el forcejeo sobrecarga el Fragmento y la mata — la misma mecánica que en cualquier otra ruta ([[Los 5 Finales]] §F2b). **Nyael no vuelve.** No al grupo, no al brazo encubierto, no a Stillspire, no a ningún registro.
 
 **Nota post-mortem** llega semanas después al último campamento del jugador — corta, sin explicación, solo un plano detallado de la ruta 7 que iba a usar para entregarla viva, con anotaciones técnicas sobre por qué esa ruta era la más segura para transportar sin lastimar. El jugador entiende, al recibirla, que **la muerte no era el plan** — nunca fue el plan. Nyael no adjunta disculpa. La ruta es la disculpa.
 
@@ -294,7 +296,7 @@ Nyael desaparece del mapa. Nadie sabe si vive. Es exactamente el tipo de silenci
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Nyael **desaparece antes de que amanezca.** No confronta — su patrón no permite confrontación. Cuando el jugador cruza el borde del cráter hacia el core central y toma el poder para sí, Nyael, que se había quedado a distancia observando la decisión, se retira sin dejar nota esta vez. El silencio es el silencio total: ni rastros, ni pistas, ni notas encontradas semanas después.
+Nyael **desaparece antes de que amanezca — nunca vuelve, ni siquiera al borde del cráter** (ver §sub-beat 5). No confronta — su patrón no permite confrontación. Cuando el jugador cruza el borde hacia el core central y toma el poder para sí, es al equipo de extracción a quien aparta o somete, no a ella. En algún punto de la cadena institucional, el reporte de lo ocurrido le llega a Nyael de todos modos — y esta vez no deja nota. El silencio es el silencio total: ni rastros, ni pistas, ni notas encontradas semanas después.
 
 Es la única vez que Nyael **no escribe.** Escribir sería reconocer que la decisión del jugador merece explicación; el silencio total es su forma más precisa de decir *"esto no lo comento."* Años después, si el jugador tirano la busca, no la encuentra. Nyael sabe cómo no ser encontrada mejor que nadie que la busque.
 

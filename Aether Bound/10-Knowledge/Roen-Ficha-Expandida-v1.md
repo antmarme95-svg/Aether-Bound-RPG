@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Humano (the Restless) / Vanguard  
 **Origen:** Frontera Mistbound  
-**Edad aparente:** 35-40 años  
+**Edad aparente:** 45 años  
 **Slot en [[The Bound Five]]:** C1 — El Afín  
 
 ---
@@ -37,7 +37,7 @@ Roen conoce al jugador en un **momento de fracaso cultural específico**. No sie
 
 ---
 
-**ELFO** (viven 150+ años, escala antigua — el elfo vio crecer a Roen, o Roen presenció su antiguo fracaso):
+**ELFO** (viven 650-700 años — ver [[Las Tres Razas]]; escala antigua: los 45 años de Roen caben enteros en un tramo joven de vida élfica — el elfo la vio crecer de principio a fin, o Roen alcanzó a presenciar uno de sus fracasos):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -47,7 +47,7 @@ Roen conoce al jugador en un **momento de fracaso cultural específico**. No sie
 
 ---
 
-**ENANO** (viven ~60-120 años, escala media — Roen estuvo en forjas, montañas, ciudades enanas):
+**ENANO** (viven ~200-250 años — ver [[Las Tres Razas]]; escala larga frente a la de Roen: un enano de 60 sigue siendo joven, y aun así ya vivió más que ella):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -172,20 +172,25 @@ Hacia el final de Acto 2, el Fragmento se acerca (Sunken Archive), y Roen comien
 
 ---
 
-## Nudo → Clímax: El Fragmento y la Traición
+## Nudo → Clímax: El Corredor del Archive y el Cráter
 
-### Escena: The First Wound (Clímax físico)
+### Escena 1: El corredor del Sunken Archive (Acto 3 — la traición se revela)
 
-El Fragmento se activa. Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado). La verdad emerge: Speck es la llave de la Muda. Su maduración borraría la civilización.
-
-**El Pivote decide.** Su traición sale a la luz — no como "giro de tuerca", sino como **conclusión de toda su lógica anterior**. 
+En el corredor del Archive, con la lectura Warden hecha y la oferta del Triune Council sobre la mesa, la intención de cada Pivote queda expuesta — no como "giro de tuerca", sino como **conclusión de toda su lógica anterior**.
 
 - Maren hizo las cuentas. Su ciudad no sobrevive.
 - Torgan cumple su Juramento anterior.
 - Iven sacrifica a los desconocidos por los suyos.
+- Bram, en cambio, rechaza — ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §Dinámicas con Roen, Valen y Darro.
 - etc.
 
-**Roen y el momento de traición:**
+**Roen en el corredor:** observa, no interviene. Es aquí donde entiende — antes de que nadie más lo diga en voz alta — qué va a pasar en el cráter.
+
+### Escena 2: The First Wound, en el cráter (el quiebre)
+
+El Fragmento se activa. Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado). El Pivote actúa sobre lo que ya reveló en el corredor: se lleva el Fragmento y a Speck.
+
+**Roen y el momento del quiebre:**
 
 Roen **no intenta detenerlo.** No porque sea débil, sino porque **entiende**. Ve exactamente por qué el Pivote actúa. Y honra esa comprensión incluso mientras lo rechaza.
 
@@ -212,24 +217,28 @@ Con cada Pivote, la persecución toma sabor distinto:
 
 El Pivote actúa finalmente (intenta destruir Speck, entregarla, lo que sea). 
 
-**La decisión es del jugador.** ¿Salva al Pivote? ¿Lo perdona? ¿Lo mata?
+**La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia de esa decisión, no como elección aislada.
 
 **Roen en cada final:**
 
-#### **Final 1: The Guided Molt (Perdón)**
-Si perdonas al Pivote, Roen es quien primero extiende la mano — no porque haya olvidado, sino porque **Roen conoce el peso de las decisiones imposibles.** Su línea:
+#### **F1 — The Guided Molt (Speck termina la Muda sin intervención)**
+Roen es quien primero extiende la mano hacia lo que queda del grupo — no porque haya olvidado nada, sino porque **Roen conoce el peso de las decisiones imposibles.** Su línea:
 *"He estado donde estás. El arrepentimiento es el precio. Espero que valga."*
 
-#### **Final 2: The Long Winter (Muerte)**
-Si el Pivote muere, Roen es quien **mantiene la vigilia.** Se sienta junto al cuerpo sin hablar. Después, cuando todo se acaba, dice:
+#### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
+Roen es quien **mantiene la vigilia** — no sobre un cuerpo, sino sobre el silencio que deja el grupo al disolverse. No hay muerte que llorar, solo tiempo comprado a costa de Speck. Su línea, fría para lo que es él:
+*"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando compra tiempo en vez de justicia."*
+
+#### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
+Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo que queda sin hablar. Después, cuando todo se acaba, dice:
 *"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando se equivocan."*
 
-#### **Final 3: The Conqueror's Clause (Encadenamiento)**
-Si lo encadenas, Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha. Años después, si el jugador sale del juego, encontrará una nota:
+#### **F3 — The Conqueror's Clause (el jugador encadena a Speck por beneficio propio)**
+Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso — la despedida ritual descrita en [[Los 5 Finales]]. Años después, si el jugador sale del juego, encontrará una nota:
 *"I've buried people I should've protected. I'm not doing that again."*
 
-#### **Final 4: The Warden's Choice (Síntesis)**
-Si aceptas a Speck como lo que es y ella elige su rol, Roen es quien **ve el futuro.** Su línea final:
+#### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
+Roen es quien **ve el futuro.** Su línea final:
 *"This is what guarding looks like. Not what you own — what you honor."*
 
 ---
@@ -244,37 +253,37 @@ Si aceptas a Speck como lo que es y ella elige su rol, Roen es quien **ve el fut
 
 ## Dinámicas con el Pivote (Por Pareja)
 
-### Roen + Maren (Elfo Duelist → Ella)
+### Roen + Maren (Humana Strategist → Ella)
 **Primera impresión:** Roen ve a alguien pragmático, gadgets en lugar de misticismo. Le gusta. Se confían tácticas.  
 **Tensión:** Cuando Maren comienza a "calcular", Roen ve el momento exacto donde la humanidad abandona la ecuación. Es incómodo.  
 **Traición:** Maren le explica su lógica. Roen comprende cada número. Y aun así la rechaza. *"Las ciudades no son números."*
 
-### Roen + Torgan (Elfo Strategist → Él)
+### Roen + Torgan (Enano Duelist → Él)
 **Primera impresión:** Roen respeta el deber. Torgan respeta la lealtad. Conectan.  
 **Tensión:** Torgan menciona su Juramento anterior. Roen pregunta (silenciosamente) si ese Juramento pesa más que este grupo.  
 **Traición:** Cuando Torgan lo honra eligiendo el Juramento, Roen asiente. *"Un hombre es su palabra. Entiendo."* No lo perdona — lo respeta.
 
-### Roen + Iven (Elfo Vanguard → Él)
-**Primera impresión:** Dos Vanguards, energía similar. Iven es más joven, audaz donde Roen es cauteloso.  
+### Roen + Iven (Humano Duelist → Él)
+**Primera impresión:** Roles opuestos, misma responsabilidad — Roen es muro, Iven es velocidad. Iven es más joven, audaz donde Roen es cauteloso.  
 **Tensión:** Iven quiere salvar su asentamiento. Roen ve el precio. Intenta preparar a Iven para que ese precio no sea Speck.  
 **Traición:** Cuando Iven elige a su pueblo, Roen dice solo: *"Te entiendo. No te perdono."*
 
-### Roen + Sereth (Elfo Duelist → Él)
+### Roen + Sereth (Elfo Strategist → Él)
 **Primera impresión:** Sereth es calculador, sutil. Roen ve las capas. Desconfía un poco, pero respeta el juego.  
 **Tensión:** Sereth manipula ligeramente el grupo. Roen lo nota. Nunca lo explica — solo lo ve.  
-**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello. Es la traición más honesta. *"I see you. I still won't let you do this."*
+**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello. Es la traición más honesta. *"I see you. I still won't let you do this."* Es, de las ocho traiciones que no son la de Dagna, la que más cerca llega de romperlo — no porque Sereth calcule como el Triune Council que mató a los niños de su asentamiento, sino porque **ama** como el Triune Council nunca amó, y aun así llega al mismo lugar. Roen se queda un momento largo sin decir nada más. No es el quiebre de Dagna — es su sombra.
 
-### Roen + Bram (Humano Duelist → Él)
+### Roen + Bram (Humano Vanguard → Él)
 **Primera impresión:** Dos humanos de culturas distintas. Bram de guerras, Roen de fronteras. Entienden cansancio similar.  
-**Tensión:** Bram empieza a rendirse bajo el peso. Roen ve el colapso llegar. Intenta sostenerlo.  
-**Traición:** Cuando Bram acepta la oferta del Triune Council ("libertad para tu compañía"), Roen comprende perfectamente. *"I get it. I really do. Goodbye."*
+**Tensión:** Bram empieza a ceder bajo el peso de cuarenta años cargando la compañía de otros. Roen ve el colapso llegar. Intenta sostenerlo.  
+**El corredor del Archive:** cuando Bram rechaza la orden que el Council le pagó por ejecutar, Roen es el primero en entender, y su reacción es reconocimiento, no absolución. *"I get it. I really do."* No es despedida — Bram no se va. Es la confirmación silenciosa de que cuarenta años de cargar a otros no necesitan terminar en traición para terminar.
 
-### Roen + Lyris (Enana Duelist → Ella)
+### Roen + Lyris (Elfa Duelist → Ella)
 **Primera impresión:** Lyris es ligera, aérea. Roen es tierra. Se complementan naturalmente.  
 **Tensión:** Lyris ama con lógica fría. Cuando la verdad llega, ella no siente pánico — siente claridad. Roen ve eso y lo teme.  
-**Traición:** *"You were my stillness. Be still now."* Lyris lo dice con calma. La frialdad exacta de esa calma es lo que duele — no rabia, no urgencia, solo la certeza tranquila de alguien que ya decidió hace tiempo. Roen no se quiebra aquí: se repliega, sostiene el escudo con más fuerza, y guarda la frase para más adelante. (El quiebre real de Roen queda reservado para la traición de [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] — ver entrada dedicada más abajo.)
+**Traición:** *"You were my stillness. Be still now."* Lyris lo dice con calma. La frialdad exacta de esa calma es lo que duele — no rabia, no urgencia, solo la certeza tranquila de alguien que ya decidió hace tiempo. Roen se queda muy quieto — no el silencio que sostiene al jugador, sino uno que no sabe qué hacer con las manos. Es su propio quiebre, en otra clave: no el peso de un puesto que sí se pudo aguantar (eso es Dagna, más abajo), sino el peso de haber confundido calma con paz. Más suave que el quiebre de Dagna, pero real — no repliegue, ruptura pequeña.
 
-### Roen + Nyael (Humana Vanguard → Ella)
+### Roen + Nyael (Elfa Duelist → Ella)
 **Primera impresión:** Nyael es la sombra del grupo, precisa. Roen confía en gente precisa.  
 **Tensión:** Nyael no avisa. Roen lo siente en el silencio.  
 **Traición:** La traición de Nyael es ausencia. Una nota. Roen relee esa nota infinitas veces.
@@ -282,9 +291,9 @@ Si aceptas a Speck como lo que es y ella elige su rol, Roen es quien **ve el fut
 ### Roen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Vekka construye. Roen protege. Trabajan bien juntos.  
 **Tensión:** Vekka menciona el Dogma del Gremio. Roen pregunta si eso incluye desmontarlo a él.  
-**Traición:** Cuando Vekka lo hace, literalmente desmonta su equipo. Roen ve las manos de Vekka temblar. *"I built you. Forgive me for finishing the job."* Roen lo perdona en silencio — pero se va.
+**Traición:** Cuando Vekka lo hace, literalmente desmonta su equipo. Roen ve a Vekka cerrar los ojos un segundo — la única grieta visible que ella permite. *"I built you. Forgive me for finishing the job."* Roen lo perdona en silencio — pero se va.
 
-### Roen + Dagna (Enana Vanguard → Ella) — la única que lo rompe
+### Roen + Dagna (Enana Vanguard → Ella) — la que lo rompe más hondo
 
 **Primera impresión:** Roen no conoce a Dagna de antes, pero la reconoce por reputación en cuanto la ve: enana Vanguard, escolta contratada, subclán vasallo. Sabe leer un escudo pesado desde treinta pasos. Lo que ve, sin embargo, no es la reputación — es algo más íntimo. Dagna es, literalmente, la persona que hizo lo que Roen no pudo: sirvió sesenta años en un puesto que no eligió, sin abandonarlo nunca. Roen la respeta más que a nadie del grupo por eso.
 
@@ -292,7 +301,7 @@ Si aceptas a Speck como lo que es y ella elige su rol, Roen es quien **ve el fut
 
 **La escena del Acto 1:** en una guardia nocturna compartida, Roen pregunta, casi sin voz: *"¿Cómo aguantaste sesenta años en el mismo puesto?"* Dagna contesta: *"No tuve tu opción."* No es reproche. Es constatación. Pero Roen carga esa frase el resto del juego — reaparece cada vez que duda, en el cráter, en el final.
 
-**La traición de Dagna es la única que quiebra a Roen genuinamente.** Las otras ocho lo hieren o lo doblan (Lyris lo repliega con frialdad, Sereth lo hiere íntimamente, Maren lo desilusiona con el cálculo); esta lo rompe, porque Dagna es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba.
+**La traición de Dagna es la que quiebra a Roen más hondo.** Sereth y Lyris también lo rompen — de verdad, no solo lo hieren (ver sus entradas arriba) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
 
 **El gesto físico:** en el cráter, cuando Dagna ya entregó a Speck al mensajero de Deepstone, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático — es un gesto pequeño y silencioso: el brazo se afloja, el escudo se desliza, cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
 

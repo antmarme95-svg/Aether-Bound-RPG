@@ -6,13 +6,13 @@ updated: 2026-07-27
 
 # Grove of Cycles — Escena del Acto 2
 
-> La única escena del juego donde The Elder Circle entra al arco jugable. Ocurre a mitad del Acto 2, después de completar dos de los tres sub-actos regionales, antes de The Reckoning. Es la última puerta abierta antes de que la traición se vuelva inevitable.
+> La única escena del juego donde The Elder Circle entra al arco jugable. Ocurre a mitad del Acto 2, después de completar los tres sub-actos regionales, antes de The Reckoning. Es la última puerta abierta antes de que la traición se vuelva inevitable.
 
 ---
 
 ## 1. Cuándo ocurre
 
-Al final del sub-acto Stillwood — **o** al terminar el segundo sub-acto regional si Stillwood fue el primero. En cualquier ruta, la escena cae en el punto exacto donde el jugador ya vio corrupción en dos reinos y aún no ha vuelto a The Driftmarket para The Reckoning. El grupo lleva a Speck consigo, y Speck lleva casi un acto completo comportándose de forma que Roen y Valen han notado sin comentar (protocolo del silencio, [[Speck]]).
+Al cerrar el **tercer** sub-acto regional, sea cual sea el orden en que el jugador los recorrió. En cualquier ruta, la escena cae en el punto exacto donde el jugador ya vio corrupción en los tres reinos y aún no ha vuelto a The Driftmarket para The Reckoning. El grupo lleva a Speck consigo, y Speck lleva casi un acto completo comportándose de forma que Roen y Valen han notado sin comentar (protocolo del silencio, [[Speck]]).
 
 Antes de esta escena: cuarto God-Core destruido. Después de esta escena: descenso a The Driftmarket para The Reckoning. No hay side content posible entre Grove y Driftmarket — el juego cierra la exploración libre por primera vez desde el Acto 1.
 
@@ -65,7 +65,7 @@ Cada uno siembra una semilla que apunta a uno de los 5 finales. El debate no men
 - **Ilyara → F1 Guided Molt** (sanar aunque cueste civilizaciones).
 - **Corwyn → F2a también, con lectura política** (gestión, no solución) — pero también inicia la lectura que hace posible **F3** (la crisis como recurso administrable *para uno mismo*).
 - **Maelys → F4 Warden's Choice** (única voz que apunta a preguntarle a Speck en vez de decidir por ella).
-- **La discusión completa como fracaso conjunto → F2b Fallen** (si el jugador se congela sin decidir, esta escena queda como el diagnóstico de por qué).
+- **La discusión completa como fracaso conjunto → F2b Fallen** (si en el cráter el jugador termina arrancándole a Speck de las manos al Pivote, esta escena queda como el diagnóstico de por qué: cuatro élderes que sabían más que nadie tampoco encontraron una salida negociada, y el jugador hereda esa desesperación). **Congelarse no siembra F2b** — la parálisis en el cráter desemboca en F2a, porque el Pivote entrega por defecto (ver [[Los 5 Finales]] §F2a).
 
 **Vector C bonus:** si el jugador llegó por Vector C (Speck lo trajo), Maelys tiene una línea adicional al final del debate: *"Ya lo hicieron antes. Escogieron por ella. Miren cómo terminó."* Los otros tres se callan. Ninguno la contradice.
 

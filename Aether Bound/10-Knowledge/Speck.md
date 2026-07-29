@@ -43,7 +43,7 @@ Encuentras la crisálida con Speck dentro — debería destruirla, pero no lo ha
 **No es destino, es convergencia:** Speck despertando, guardianas fallando, tú
 en el lugar correcto en el momento correcto.
 
-## Tres capas de verdad
+## Las capas de verdad
 
 **Capa 1 — Lo que ve el mundo:**
 "Zorro extraño de The Wilds. Inteligente. Demasiado calmado. Comportamiento
@@ -66,11 +66,51 @@ El Fragmento activa en The First Wound. Speck reacciona involuntariamente: hive
 mind forzado. Jade pálido → Rojo God-Core. E1 → E3. Es **trigger del dispositivo**, 
 no elección.
 
-**Pero entonces Speck elige.** En los finales donde vive (F1, F4), ella no permanece 
-como víctima circunstancial. Asume su destino con gracia divina: **"Soy lo que siempre 
-fui. Y acepto el rol que me corresponde."** Anciana Warden despertando a su propósito 
-milenario. En F2 y F3 (donde muere/es encadenada), esa agencia le es robada — ahí SÍ 
-es pura víctima. Pero donde puede elegir, elige con dignidad.
+**Lo que viene después no es igual en todos los finales.** Speck no recupera la
+iniciativa por el solo hecho de sobrevivir: recupera exactamente la parte que el jugador
+le devuelve. Son tres grados distintos, y confundirlos es el error más fácil de cometer
+al escribir epílogos.
+
+- **Le preguntan (F4):** el único final donde alguien le dirige la pregunta. Speck
+  responde, y lo que responde es la Muda parcial. Eso es **consentimiento** — hubo una
+  pregunta y hubo una respuesta.
+- **Deciden por ella y ella acepta (F1):** nadie le pregunta nada. El jugador la deja
+  terminar, y Speck asume lo que viene sin resistirse: **"Soy lo que siempre fui. Y
+  acepto el rol que me corresponde."** Anciana Warden despertando a su propósito
+  milenario. Eso es **aceptación**, no elección — dignidad frente a una decisión ajena.
+  Desde afuera se parece al consentimiento, y ahí está la trampa del final: F1 se siente
+  generoso porque Speck no protesta.
+- **Se la arrebatan (F2a, F2b, F3):** muere, es transportada o es encadenada. Ni pregunta
+  ni aceptación — ahí SÍ es pura víctima.
+
+**Regla de escritura:** ninguna ficha puede hacer que Speck "elija" en F1. El verbo de F1
+es *aceptar*; el de F4 es *responder*. Colapsarlos borra lo único que distingue a F4
+(ver [[Los 5 Finales]] §F4).
+
+**Capa 5 — Lo que el Fragmento *hace* (regla física — canon primario):**
+Esta sección es la **fuente única** de la regla. Ningún otro documento debe enunciarla por
+su cuenta; todos deben citar aquí.
+
+El Fragmento no castiga la duda ni el tiempo. Sobrecarga por **transferencia de fuerza
+mecánica sobre Speck a corta distancia de un core activo.** Tirar de ella, arrancarla de
+unas manos, forcejear: la fuerza entra por el cuerpo de Speck, encuentra el Fragmento
+acoplado al pulso del core, y no tiene por dónde salir.
+
+Lo que se deriva de esto — y no debe reescribirse como regla aparte en ningún archivo:
+
+- **Esperar no la mata.** Ni la inacción, ni el silencio, ni el tiempo de exposición.
+- **Cederla no la mata.** Una entrega —Speck soltada, no arrebatada— no transfiere fuerza.
+  Es por eso que F2a la deja viva.
+- **Arrebatarla la mata.** Es el gate de F2b, y la única vía por la que Speck muere en el
+  cráter.
+- **El tirón del cráter cede cuando el pulso se corta.** Mientras los God-Cores pulsan,
+  Speck no puede ser transportada lejos del centro sin importar quién la cargue. La
+  entrega corta el hive mind, y recién entonces se la puede mover — el transporte de F2a
+  es posible *porque* hubo entrega, no a pesar de ella (ver [[Los 5 Finales]] §F2a y
+  [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §sub-beat 5).
+
+Fuera del cráter, con los cores en reposo, Speck resiste manipulación física como
+cualquier criatura de su tamaño. La regla es de **proximidad al pulso**, no de fragilidad.
 
 ## Un estadio de revelación — La verdad es una
 

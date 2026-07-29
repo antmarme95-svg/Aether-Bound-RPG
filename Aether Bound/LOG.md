@@ -5720,3 +5720,141 @@ Los 3 fixes de la 2ª re-corrida siguen en pie: Speck actora en los Momentos de 
 Los críticos de esta 3ª ronda cambian de naturaleza respecto a la 2ª: ya no son huecos de cobertura (algo no escrito), son **contradicciones archivo-contra-archivo** (Darro vs Vekka, Nyael consigo misma, F2b vs su propia fuente citada) y **ediciones/fixes que no se propagaron a todas sus menciones** (longevidad de fijos, Valen-Mudas, Isolde). Varios están interconectados: fijar Isolde toca worldbuilding (construir el Último Reino); fijar longevidad/Valen-Mudas toca la timeline general de los 3 fijos; fijar Darro toca 2 fichas simultáneamente.
 
 **Decisión de Boris (2026-07-28 noche):** sesión de diseño mañana para resolver los 8 críticos + la pregunta abierta de bonds fijos en `The Bound Five.md`. Nada se toca hasta entonces. Current-State actualizado con la agenda completa.
+
+---
+
+## [2026-07-29] design/QA | Sesión de diseño — 8 críticos + 3 MEDIUM resueltos; 2 contradicciones raíz que el QA no había visto
+
+Sesión de diseño de la agenda fijada anoche. Plan de abordaje con asignación de modelos por
+sprint en `~/.claude/plans/haz-un-plan-de-dazzling-lemur.md`.
+
+### Hallazgos nuevos durante la exploración (no estaban en el reporte de la 3ª ronda)
+
+1. **`Speck.md:69-73` era la fuente real del crítico de Darro F1.** Declaraba que Speck "elige
+   con dignidad" en **F1 y F4**, contra `Los 5 Finales:83,94,96` que reserva el consentimiento
+   solo para F4. Arreglar la línea de Darro sin tocar `Speck.md` habría reintroducido el crítico
+   en la siguiente ficha que escribiera un epílogo F1.
+2. **Colisión de gates F2b/F4.** `Los 5 Finales:88` definía F4 como *"quedarse quieto en el
+   cráter en vez de decidir"* — el mismo verbo que `Grove:68` usaba para sembrar F2b. El MEDIUM
+   del Grove no era de arrastre: era una colisión de gates entre dos finales opuestos.
+3. **La cita rota era un bucle circular, no un enlace muerto.** `Los 5 Finales:49` → `Speck
+   §Capa 4` (inexistente) y `Geografía:1042` → `Los 5 Finales §F2b`. Ningún documento del vault
+   enunciaba la regla como canon primario.
+
+### Decisiones de Boris
+
+- **Agencia en F1:** manda `Los 5 Finales`. F4 es el único con consentimiento; en F1 Speck
+  **acepta sin ser preguntada**. Vocabulario fijado: el verbo de F1 es *aceptar*, el de F4 es
+  *responder*.
+- **Regla del Fragmento:** sobrecarga por **transferencia de fuerza mecánica a corta distancia
+  de un core activo**. Ni el tiempo ni la inacción la dañan. Vive en **`Speck.md` §Capa 5**, nueva
+  y declarada fuente única.
+- **Transporte de Speck (F2a vs Nyael):** *la entrega corta el pulso.* El tirón del cráter es
+  absoluto solo mientras los God-Cores pulsan; ceder a Speck corta el hive mind y recién entonces
+  es transportable. No inventa canon — `Los 5 Finales:32` ya decía que el pulso se corta en F2a;
+  ahora es la causa del transporte, no un efecto suelto. Salva el texto de `Nyael:261`.
+- **Gates:** quietud informada (termina en pregunta) = F4; forcejeo = F2b; **parálisis = F2a**,
+  porque el Pivote entrega por defecto. No decidir no es neutral: hace ganar a la institución.
+- **Isolde Marrow:** degradada a reclamo/leyenda. El "Último Reino" pasa a Pendientes como ítem
+  de worldbuilding propio, sin bloquear el cierre del sprint.
+- **Bonds de fijos:** después de cerrar el QA, no en paralelo.
+
+### Cambios aplicados
+
+**Canon nuevo (`Speck.md`):** §Capa 4 reescrita con los tres grados de agencia (le preguntan F4 /
+deciden por ella y acepta F1 / se la arrebatan F2a-F2b-F3) + regla de escritura explícita para
+epílogos. **§Capa 5 nueva** con la regla física y sus 4 derivaciones. Encabezado "Tres capas de
+verdad" → "Las capas de verdad" (tenía 4 capas desde antes; ahora 5).
+
+**`Los 5 Finales`:** cita de F2b apunta a §Capa 5 real; se eliminó la ruta secundaria por timeout
+("el forcejeo es la única vía"); F2a declarada final por defecto de la parálisis y con el
+transporte explicado por el cese del pulso; gate 3 de F4 pasa de "quedarse quieto" a "callarse
+para preguntar", con párrafo nuevo que separa la quietud de F4 de la parálisis de F2a.
+
+**`Geografía y Ciudades`:** `:1042` deja de enunciar la regla por su cuenta y cita §Capa 5 como
+fuente única; `:965` reescrito — **los Goggles no salen** (el jugador intenta quitárselos y no
+puede; línea nueva de Tobin sobre el extraño anterior); `:1017` deja de decir "segundo uso".
+
+**`Grove of Cycles:68`:** F2b resembrado como forcejeo; se declara explícitamente que congelarse
+**no** siembra F2b sino F2a.
+
+**Darro:** F1 reescrito — Darro ya no dice que Speck eligió, sino que nota que *no peleó* y que
+nadie le preguntó, él incluido. F2b: eliminado *"al menos sé que la promesa era real. Seguimos"*;
+el epílogo ahora no cierra, con nota de que ninguna versión puede dar consuelo. Aritmética
+sincronizada al canon de **~30 años**: edad ~63 (era banda 45-65 con presente en 39-45),
+"Aprendizaje Truncado" 30-33, "Salida de Emberdeep" 33→presente, y párrafo nuevo que cubre los
+25 años sin narrar entre los 38 y los 63 (y los usa para explicar por qué el rechazo no se le curó).
+
+**Nyael:285:** reescrito — el equipo se traba donde `§sub-beat 5` dice; lo que desatasca la escena
+es la entrega, no la fuerza. Ya no inventa el "consentimiento del jugador".
+
+**Valen:** *"He visto tu tipo caer cinco veces en cinco Mudas"* → autoridad archivística (*"He
+leído tu caso cinco veces, con cinco nombres distintos"*); `:11` explicita que no presenció
+ninguna Muda; el **110 años queda marcado como error de la Academy** en `:52` y `:217` (las dos
+puntas de su medición eran falsas); el anillo de `:389` se vuelve un objeto que conmemora un
+evento que nunca ocurrió — y que no se quita después del Archive.
+
+**Longevidad (6 líneas / 3 fichas):** Roen `:40,:50`, Valen `:96,:106`, Darro `:90,:100` alineadas
+a `Las Tres Razas` (elfos 650-700, enanos ~200-250), con la consecuencia de escala reescrita en
+cada caso, no solo la cifra sustituida.
+
+**`Nomenclatura:51`:** Isolde pasa de afirmación a reclamo de House Marrow, con nota de que el
+vault no ratifica ese trono y que el título humano registrado nunca fue "King".
+
+**Goggles (cubeta b — 10 líneas):** *"El jugador se pone los Goggles"* en el Sunken Archive → *"mira
+a través de"* en las 9 fichas de Pivote + Valen. Se conserva `Geografía:961` (el primer uso en la
+oficina de Tobin, que sí es un acto de ponérselos). Total de menciones auditadas: 43 en 14 archivos.
+
+**`Iven:592`:** residuo del gate viejo de F4 ("quedado quieto lo suficiente para que Speck hable
+primero") → hacerle la pregunta, con nota de que la quietud sin pregunta es F2a. **Este residuo no
+estaba en el reporte del QA** — salió del barrido post-fix.
+
+### Verificación
+
+Barrido de grep de los 8 datos corregidos: **0 residuos** (único hit es el primer uso legítimo de
+los Goggles). Verificado además que el error de F1 **no se propagó**: los 22 "Speck elige" del vault
+están todos en secciones F4, donde el verbo es correcto. `check_vault.py` 🟢 verde, arranque ~5,125t.
+
+### 3 críticos extra, encontrados en el barrido objetivo del cierre
+
+Ninguno estaba en el reporte de la 3ª ronda. Mismo patrón que el resto: una corrección previa que
+no barrió la clase completa de menciones.
+
+- **`Valen:58`** — los ancianos de Stillspire: *"The Stillspire ha sobrevivido cuatro Mudas.
+  Sobreviviremos la quinta."* **Era la fuente del "cinco Mudas" de `:100`** que se corrigió más
+  temprano en esta misma sesión. Marcada explícitamente como cosmología heredada de the Academy,
+  con el beat de que la negativa que Valen recibió a los 140 se apoyaba en un recuento inexistente.
+- **`Geografía:613`** — ermitaño élfico de Hermit's Cave: *"he visto dos mudas. Esta es la
+  tercera…"*. Imposible (ninguna Muda completada en 550 años). Reescrito: vio **dos falsas
+  alarmas** que los archivos élficos asentaron como Mudas. Queda como testigo vivo del error de
+  registro que Valen descubre en el Grove — y da razón concreta al "respeto mutuo" con Valen que
+  la ficha ya afirmaba sin fundamentar.
+- **`Torgan:11`** — "Edad aparente: 75-80 años" contra `:66`, que fija la aritmética en 75 y se
+  declara "no negociable". Alineado a 75.
+
+**Verificado además:** la aritmética de Valen cierra (hallazgos a los 140 → 40 años solo, 180 →
+God-Core hace 30 años, 200 → presente 230, coherente con el encabezado "edades 100-180"). Las 17
+citas `§Capa` del vault resuelven todas a secciones existentes con el contenido que el citante
+afirma.
+
+### 🔴 Cierre de sesión sin commit — leer antes de retomar
+
+**Nada de esta sesión quedó commiteado.** El clasificador de Opus cayó a mitad de sesión y bloqueó
+Bash, PowerShell y el Agent tool; lectura y edición siguieron operativas, así que todos los
+cambios están en disco. Dos consecuencias:
+
+1. **El Sprint 0 (baseline) nunca corrió**, así que los cambios de hoy están mezclados en el
+   working tree con los 16 archivos que ya venían modificados de la sesión del 07-28. Revisar el
+   diff antes de commitear.
+2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
+   (dramática + congruencia).
+
+### Pendiente inmediato
+
+**4ª re-corrida QA con 2 subagentes Opus en frío** — criterio real de cierre del sprint. No se
+declara cerrado sin 0 críticos.
+
+**Nota de método:** que un barrido objetivo de ~20 minutos al final de la sesión sacara 3 críticos
+nuevos indica que el cuello de botella del sprint no es el QA sino el **barrido**. A los QAs de la
+4ª hay que pedirles explícitamente que traten cada dato como una **clase de menciones** y no como
+una línea suelta.

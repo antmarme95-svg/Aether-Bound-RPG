@@ -236,7 +236,7 @@ En el interior, cuerpos calcificados de la civilización Warden. Valen intenta l
 
 ### Sub-beat: la revelación de los Wanderer's Goggles
 
-El jugador se pone los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket). Aparece una proyección: la palabra **"Warden"** flotando junto a un símbolo geométrico. El símbolo coincide, línea por línea, con el patrón grabado bajo el pelaje de Speck.
+El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket). Aparece una proyección: la palabra **"Warden"** flotando junto a un símbolo geométrico. El símbolo coincide, línea por línea, con el patrón grabado bajo el pelaje de Speck.
 
 **Los Goggles son privados.** Solo el jugador ve la proyección. Maren no ve nada — solo ve los símbolos superficiales grabados en la piedra, los mismos que Valen no puede traducir. Pero el jugador sí ve, y Maren ve al jugador ver.
 

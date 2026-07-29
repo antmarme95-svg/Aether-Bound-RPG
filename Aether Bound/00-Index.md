@@ -26,7 +26,7 @@
 - [[Las Tres Razas]] — Elfos/Enanos/Humanos: temperamento, hábitat, por qué nadie quiere a Speck. Incluye tabla de longevidad (elfos 650-700 / enanos ~200-250 / humanos ~70-90).
 - [[Estructura Política]] — cómo se gobierna cada reino: Queen Ithessa + The Elder Circle + 2 Academias (elfos); King Borran + Great Forging Clan (enanos); Regent Edrick Ashcombe + Triune Council (humanos, sin dinastía estable). Nombres propios en inglés — ver [[Nomenclatura]].
 - [[La Rueda]] — mapa macro: cubo (Wilds), aro (3 reinos), 3 arterias co-op, Driftmarket, Sunken Archive, First Wound.
-- [[Speck]] — la última Warden: 3 estadios, giro Grogu, bautizo, Momentos de Persona.
+- [[Speck]] — la última Warden: un estadio de revelación (no crece, se revela), bautizo, Momentos de Persona. **§Capa 5 = fuente única de la regla física del Fragmento**; §Capa 4 = los 3 grados de agencia de Speck por final.
 - [[The Bound Five]] — jugador + C1 afín + C2 opuesto + C3 pivote + C4 chispa (+Speck); matchmaking orgánico.
 - [[Los 9 Pivotes]] — matriz y fichas v0: Maren/Torgan/Iven/Sereth/Bram/Lyris/Dagna/Nyael/Vekka.
 - **[[10-Knowledge/Pivotes/]] — 9 fichas narrativas expandidas COMPLETAS (2026-07-23):** Maren / Torgan / Iven / Sereth / Bram / Lyris / Nyael / Vekka / Dagna. Incluye: bio pre-aventura, Conocimiento Previo (fijo ve Pivote), encuentro player-único, arco 3-actos, traición, 4 epílogos, línea canónica/privada, dinámicas, diseño visual.

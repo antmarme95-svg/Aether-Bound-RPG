@@ -29,7 +29,9 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ### F2a — The Long Winter: Handed Over *(Speck entregada viva al Council)*
 
-**Gate:** jugador entrega a Speck viva al Pivote o al mensajero del Council en el cráter. Speck no muere — es transportada. Los God-Cores dejan de pulsar; el hive mind se corta.
+**Gate:** jugador entrega a Speck viva al Pivote o al mensajero del Council en el cráter. Speck no muere — es cedida, y por eso puede ser transportada: la entrega corta el hive mind y los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
+
+**Es también el final por defecto de la parálisis.** Si el jugador no decide nada en el cráter, el Pivote completa la entrega por él. No hacer nada no es neutral: hace ganar a la institución.
 
 **Línea canónica:** *"Un recurso administrado no es un futuro. Pero mañana amanece."*
 
@@ -46,7 +48,9 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ### F2b — The Long Winter: Fallen *(Speck muere en el intento)*
 
-**Gate:** durante el clímax en el cráter, Speck muere — combate accidental, herida acumulada de la persecución, o el Fragmento la sobrecarga antes de que nadie decida nada. Es el final "más pasivo" — se abre cuando el jugador no elige a tiempo.
+**Gate:** el jugador **intenta arrancarle a Speck por la fuerza** al Pivote (o al equipo de extracción, en la ruta Nyael) en vez de negociar la entrega, esperar, o retirarse — el forcejeo sobrecarga el Fragmento y la mata en el intento. Es una elección activa con consecuencia trágica, no un timeout: el jugador *hizo algo*, y lo que hizo fue precisamente lo que no debía hacerse en presencia del Fragmento ([[Speck]] §Capa 5 — la sobrecarga es por transferencia de fuerza mecánica cerca de un core activo; ni el tiempo ni la inacción la dañan).
+
+**El forcejeo es la única vía.** Esperar no mata a Speck, y congelarse tampoco: si el jugador no actúa, el Pivote completa la entrega y el final es **F2a**, no este. F2b requiere que la mano que la arranca sea la del jugador.
 
 **Línea canónica:** *"Nadie ganó. Nadie ganaba nunca."*
 
@@ -58,7 +62,7 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* colapso interno. Sereth/Maren descubren que sus cuentas incluían "Speck viva" como variable — sin ella, el resultado no cuadra.
-- *Deber Institucional:* Torgan (ver arriba); Vekka desmonta el equipo del jugador por última vez, en silencio, y se retira del oficio; Dagna renuncia al clan por primera vez en la historia registrada del subclán. Nyael lleva su "ausencia" al literal — no aparece en el cráter, y su nota post-mortem llega semanas después.
+- *Deber Institucional:* Torgan (ver arriba); Vekka desmonta el equipo del jugador por última vez, en silencio, y se retira del oficio; Dagna renuncia al clan — un evento sin precedente registrado en el subclán Deepstone. Nyael lleva su "ausencia" al literal — no aparece en el cráter, y su nota post-mortem llega semanas después.
 - *Rechazo/Ausencia:* Bram vive con culpa por no haber traicionado antes; Lyris desaparece sin cuerpo ni nota.
 
 ---
@@ -80,18 +84,24 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ---
 
-### F4 — The Warden's Choice *(síntesis — final verdadero, ganado)*
+### F4 — The Warden's Choice *(síntesis — el único con consentimiento de Speck)*
 
 **Gate compuesto:**
 1. Mayoría "persona" en los ~7 Momentos de Persona de Speck.
 2. ≥2 compañeros en Tether T2+ ([[The Tether]]).
-3. **Uso significativo de the Wanderer's Goggles antes del cráter** — definido como: haber usado los Goggles en el Sunken Archive para ver la proyección Warden Y haber presenciado ≥3 flashes privados del jugador ([[Speck]] §Capa 2) antes de The Reckoning. Los Goggles no revelan a Speck en el Archive; revelan **el duelo del último Warden vivo**, y ese es el único contexto emocional que permite al jugador quedarse quieto en el cráter en vez de decidir.
+3. **Uso significativo de the Wanderer's Goggles antes del cráter** — definido como: haber usado los Goggles en el Sunken Archive para ver la proyección Warden Y haber presenciado ≥3 flashes privados del jugador ([[Speck]] §Capa 2) antes de The Reckoning. Los Goggles no revelan a Speck en el Archive; revelan **el duelo del último Warden vivo**, y ese es el único contexto emocional que permite al jugador **callarse para preguntar** en vez de decidir por ella.
+
+**La quietud de F4 no es la parálisis de F2a.** Son gestos idénticos por fuera y opuestos por dentro: el jugador que no decide nada deja que el Pivote entregue a Speck (F2a); el jugador que llega con este contexto guarda silencio *porque va a hacer una pregunta*, y la hace. Lo que separa los dos finales no es cuánto tarda en moverse, sino si esa pausa termina en una pregunta.
 
 **Línea canónica:** *"¿Qué quieres tú?"* — el jugador es el primero en preguntarle a Speck en lugar de decidir por ella.
 
 Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un God-Core vivo, dentro del cráter, sin necesidad de que el Fragmento la fuerce. La transformación E1→E3 sigue ocurriendo, pero esta vez con consentimiento — su cuerpo se vuelve el punto de equilibrio entre la Muda completada y la civilización preservada. El Aether sana lentamente, no de golpe. Las civilizaciones no colapsan; se adaptan.
 
-**Eco Bond/Link Cam:** años después, Bond responde un sting débil de dos notas — la melodía del Bond vacío, completada en otra tonalidad. El Council la bautiza oficialmente "the Warden"; The Bound Five talla **SPECK** en la base del core. El nombre gana.
+**El costo — por qué esto no es "ganar":** Speck no vuelve con el grupo. La calcificación es permanente: el zorro que jugó, que hizo Momentos de Persona, que Darro nombró, **se queda en el cráter para siempre.** El jugador consiguió lo único de los 5 finales donde a Speck se le pregunta qué quiere — y lo que ella quiere es una forma en la que ya no puede acompañarlos. Es el único final donde el jugador rompe su propio Bond por elección, no por tragedia externa, sabiendo exactamente lo que está soltando. Ilyara ya lo dijo en el Grove sin nombrarlo: sanar el Aether cuesta algo, siempre — en F1 cuesta civilizaciones enteras; en F4 el precio se paga en una sola vida que el jugador llegó a querer.
+
+**Sabor:** agridulce, no triunfal. El mundo mejora. El jugador pierde a su amiga de todos modos — solo que esta vez la pérdida tuvo su consentimiento, y eso es lo único que lo distingue de F2b.
+
+**Eco Bond/Link Cam:** años después, Bond responde un sting débil de dos notas — la melodía del Bond vacío, completada en otra tonalidad, la misma familia sonora que F2b, no una victoria limpia. El Council la bautiza oficialmente "the Warden"; The Bound Five talla **SPECK** en la base del core, porque el nombre es lo único que se llevan de vuelta.
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* se reintegra si el jugador lo perdonó en la persecución. No pide perdón en voz alta — cambia sus cuentas.

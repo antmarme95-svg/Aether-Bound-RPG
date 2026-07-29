@@ -25,7 +25,7 @@ Bram es la excepción intencional del elenco. Ocho Pivotes traicionan; Bram rech
 
 ## Afiliación de Casa (canon [[Estructura Política]])
 
-Bram nació en **House Thorne**, familia con historia diplomática en Rivermeet — el tipo de sangre que hubiera significado corte, negociación, papeleo hereditario. A los 15, en vez de aceptar el camino, **huyó** — cruzó la ciudad de noche, cortó el apellido, y se alistó en la primera compañía mercenaria que aceptaba menores en **Mistbound Frontier**, la franja humana remota al noroeste ([[Geografía y Ciudades]] §Mistbound). Cortó lazos hace **cuarenta años, no veinte** — la aritmética es fija: 15 años cuando se fue, 55-65 hoy. Todas las referencias antiguas a "hace 20 años" pertenecen a una versión previa de esta ficha y están corregidas.
+Bram nació en **House Thorne**, familia con historia diplomática en Rivermeet — el tipo de sangre que hubiera significado corte, negociación, papeleo hereditario. A los 15, en vez de aceptar el camino, **huyó** — cruzó la ciudad de noche, cortó el apellido, y se alistó en la primera compañía mercenaria que aceptaba menores en **Mistbound Frontier**, la franja humana remota al suroeste profundo ([[Geografía y Ciudades]] §Mistbound). Cortó lazos hace **cuarenta años, no veinte** — la aritmética es fija: 15 años cuando se fue, 55-65 hoy. Todas las referencias antiguas a "hace 20 años" pertenecen a una versión previa de esta ficha y están corregidas.
 
 No fue rechazo de su familia; fue rechazo del *camino* que su familia representaba. Cuarenta años después, sigue siendo "el muro de todos", y por primera vez alguien le ofrece una salida que **no** viene de House Thorne — viene del Council, viene por contrato, viene con precio explícito. Se especula (sin confirmación) que aún queda alguien en House Thorne que sabe dónde está y calla. Posible que conozca al **Regent Edrick Ashcombe**: dos hombres de Houses políticas de Rivermeet, uno que se quedó en el juego, otro que huyó de él. Su tipo de compañía mercenaria es exactamente el respaldo militar que **Lady Isolde Marrow** ([[Estructura Política]]) busca cortejar para su ascenso — gancho abierto, no desarrollado.
 
@@ -45,7 +45,7 @@ Bram odiaba todo eso. No por rebeldía — por instinto. Prefería el peso de al
 
 ### Mistbound Frontier: Cuarenta años de escolta (edades 15-55+)
 
-Mistbound Frontier — franja humana lejana al noroeste, no la trinchera contra The Wilds sino la tierra donde el Council pierde control administrativo por pura distancia — se convirtió en su hogar real. Infancia terminó de golpe: **escoltas de convoy, defensas de fuertes menores, contratos privados** contra bestias que bajaban de laderas y contra bandidos que sabían aprovechar el hueco de autoridad.
+Mistbound Frontier — franja humana lejana al suroeste profundo, no la trinchera contra The Wilds sino la tierra donde el Council pierde control administrativo por pura distancia — se convirtió en su hogar real. Infancia terminó de golpe: **escoltas de convoy, defensas de fuertes menores, contratos privados** contra bestias que bajaban de laderas y contra bandidos que sabían aprovechar el hueco de autoridad.
 
 Bram fue bueno. Muy bueno. Cuerpo masivo, reflejos rápidos, umbral de dolor alto. Fue ascendido a **líder de compañía** dos veces — dos compañías distintas, en dos décadas distintas, ambas disueltas cuando el contrato terminó y nadie renovó. Nunca ganó una guerra propia; solo escoltó las de otros. Fronteras humanas se defienden en pedazos, no en frentes.
 
@@ -210,9 +210,9 @@ En la cena de la última noche en Driftmarket (ver [[Geografía y Ciudades]] §B
 
 El grupo desciende al Sunken Archive. Bram no comenta la ruta — la memorizó cuando el Council se la mandó. En el interior, cuerpos calcificados de la civilización Warden, inscripciones que Valen no puede leer, el Fragmento en el pedestal.
 
-El jugador se pone the Wanderer's Goggles y ve la proyección Warden — el símbolo geométrico coincide con el patrón del pelaje de Speck ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Bram no ve la proyección** (los Goggles son privados). Lo que Bram ve es la cara del jugador cuando mira. No sabe qué mira; entiende que es algo grande. Un veterano de cuarenta años reconoce cuándo alguien acaba de recibir un peso nuevo. Bram siente, sin verlo, que "algo está pasando". No pregunta.
+El jugador mira a través de the Wanderer's Goggles y ve la proyección Warden — el símbolo geométrico coincide con el patrón del pelaje de Speck ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Bram no ve la proyección** (los Goggles son privados). Lo que Bram ve es la cara del jugador cuando mira. No sabe qué mira; entiende que es algo grande. Un veterano de cuarenta años reconoce cuándo alguien acaba de recibir un peso nuevo. Bram siente, sin verlo, que "algo está pasando". No pregunta.
 
-Su reacción visible en el Archive: se acerca a Speck sin ostentación, la mira una vez completa — beige, cristal debajo del pelaje que Bram no puede ver pero que su instinto le pinta — y aparta la mirada. En ese aparte, Bram decide algo que aún no se dice a sí mismo.
+Su reacción visible en el Archive: se acerca a Speck sin ostentación, la mira una vez completa — cristal debajo del pelaje que Bram no puede ver pero que su instinto le pinta — y aparta la mirada. En ese aparte, Bram decide algo que aún no se dice a sí mismo.
 
 ### Sub-beat 3: Traición-que-no-ocurre en el corredor
 
@@ -254,11 +254,11 @@ El grupo sale del Archive **intacto**. Speck en brazos del jugador. Bram detrás
 
 ### Sub-beat 4a: Afuera espera el segundo agente
 
-Cuando el grupo emerge a la superficie, un mensajero enano de bajo perfil — **NPC nuevo, alguien que el jugador no conocía** — se acerca a Torgan (o al enano fijo/Pivote más cercano si Torgan no está) con un mensaje sellado del **Great Forging Clan**. La orden, envuelta en lenguaje ritual, es la que Bram acaba de rechazar: tomar a Speck, entregarla en superficie por otra ruta.
+Cuando el grupo emerge a la superficie, **Torgan** ya está ahí — no un mensajero, no un intermediario. La orden que Bram acaba de rechazar le llegó a él por su propia cadena de mando (su clan menor, presionándolo desde antes de que este grupo existiera). Ver [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram" para la escena completa desde su lado — es una vida paralela que intersecta la del jugador en el peor momento posible, no un NPC improvisado.
 
-**El Council ya movió otra pieza al ver que Bram tardaba.** La advertencia de Tobin en Driftmarket (*"un segundo"*) se materializa en tiempo real. El grupo entiende, con un segundo de retraso, que el plan del Council no dependía de Bram — dependía de **cualquier** ejecutor. Bram no salvó a Speck rechazando; solo redistribuyó el problema.
+**El Council ya había movido otra pieza mientras Bram dudaba.** La advertencia de Tobin en Driftmarket (*"un segundo"*) se materializa en tiempo real. El grupo entiende, con un segundo de retraso, que el plan del Council no dependía de Bram — dependía de **cualquier** ejecutor con Juramento. Bram no salvó a Speck rechazando; solo redistribuyó el problema.
 
-La traición mecánica ocurre igual, por otras manos. El segundo agente activa la escena de captura — puede ejecutarla ahí mismo en la boca del Archive, o huir con Speck si el grupo se dispersa un segundo, dependiendo de qué tan cohesivos vengan los Bonds del Acto 2. Es un traidor sin arco: no lo conocíamos, no le debíamos nada, no hay revelación emocional en él. Su función es puramente mecánica — mover a Speck al cráter para que el clímax siga ocurriendo.
+La traición mecánica ocurre igual, por otras manos. Torgan activa la escena de captura — puede ejecutarla ahí mismo en la boca del Archive, o huir con Speck si el grupo se dispersa un segundo, dependiendo de qué tan cohesivos vengan los Bonds del Acto 2. Para el grupo de esta ruta, que nunca lo conoció, es "el enano del sello" — un traidor sin arco visible, sin discurso, sin revelación emocional compartida. Pero Torgan sí sabe exactamente lo que está haciendo (ver su ficha): es la versión más fría y limpia de su propio Juramento, sin ninguno de los dos años de afecto que en su propia ruta le harían doler.
 
 **Bram no persigue con nostalgia.** Persigue con el mazo. Es la primera vez en la aventura que Bram cambia de rol: ya no es escolta pagado, es aliado. La distinción, para él, es enorme, y no la va a decir en voz alta.
 
@@ -315,7 +315,7 @@ Es peor que F1 porque F1 le dio paz. F2a le dio una duda que no cierra. Bram, ac
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-Bram vive. Speck no llegó viva al final — combate accidental, herida acumulada, o el Fragmento la sobrecargó antes de que nadie decidiera. Nadie gana.
+Bram vive. Speck no llegó viva al final — el jugador intentó arrancarla por la fuerza del segundo agente (o del punto de entrega, si ya había sido tomada) en vez de esperar o negociar, y el forcejeo sobrecargó el Fragmento. Nadie gana.
 
 **Epílogo:** Bram vive con la **misma culpa duplicada** de F2a. *"Si yo hubiera cumplido, quizás Speck hubiera llegado viva a algún lugar. Quizás mi ejecución habría sido menos violenta que la del segundo agente. Quizás."* Falso, otra vez — la Fragmento no se controla, la persecución no es rescatable por delicadeza — pero Bram no puede saberlo.
 
@@ -329,7 +329,7 @@ No es traición ni deserción — es rechazo, que es lo único que Bram sabe hac
 
 **Epílogo:** Bram desaparece. No vuelve a Rivermeet, no vuelve a Mistbound. Alguien lo ve en un fuerte perdido meses después, un año quizás; después no lo ve nadie. Es el epílogo más corto de los cinco porque Bram, en F3, ya no es narrable. Un hombre que rechazó dos veces no vuelve a ser útil como personaje.
 
-### F4 — The Warden's Choice (síntesis — final verdadero)
+### F4 — The Warden's Choice (síntesis — el único con consentimiento de Speck)
 
 Speck elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
 

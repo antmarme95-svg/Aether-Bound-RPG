@@ -240,9 +240,9 @@ información que simplemente no se había revelado.
 **House Thorne**, familia con historia diplomática/de Triune Council en Rivermeet. En
 vez del camino esperado (corte, negociación), se alistó como soldado joven —
 el hijo que "desperdició" su apellido en el barro en vez de usarlo en los
-salones. 20 años de mercenario después, sigue siendo "el muro de todos"
+salones. 40 años de mercenario después, sigue siendo "el muro de todos"
 precisamente porque rechazó el camino fácil que su sangre le ofrecía. Cortó
-lazos con su House hace 20 años — sin protección de linaje, solo su contrato
+lazos con su House hace 40 años — sin protección de linaje, solo su contrato
 de mercenario. Es posible que conozca al Regent Edrick Ashcombe: dos hombres
 de Houses políticas de Rivermeet, uno que se quedó en el juego, otro que huyó
 de él.

@@ -8,7 +8,7 @@ updated: 2026-07-28
 
 **Raza / Rol:** Enano (the Iron-Blooded) / Duelist
 **Origen:** Emberdeep, Ignis Reach — clan menor de guerreros, vasallo de facto del Great Forging Clan
-**Edad aparente:** 75-80 años (veterano; tatuado a los 20, 55 años de Juramento)
+**Edad:** 75 años (veterano; tatuado a los 20, 55 años de Juramento — aritmética fija, ver §Aritmética canónica)
 **Arquetipo de Traición:** Deber Institucional — juramento personal anterior al grupo. Superlativo: **el juramento sin escape** (ver [[Los 5 Finales]]).
 
 ---
@@ -268,7 +268,7 @@ Y **traiciona igual.** Ese es el punto exacto de su arquetipo: el Juramento no f
 
 ### Sub-beat: la revelación de los Wanderer's Goggles
 
-El jugador se pone los Goggles (regalo de Tobin en Driftmarket). Aparece la proyección: la palabra **"Warden"** junto a un símbolo geométrico que coincide, línea por línea, con el patrón bajo el pelaje de Speck.
+El jugador mira las paredes a través de los Goggles (regalo de Tobin en Driftmarket). Aparece la proyección: la palabra **"Warden"** junto a un símbolo geométrico que coincide, línea por línea, con el patrón bajo el pelaje de Speck.
 
 **Los Goggles son privados.** Torgan no ve nada ([[Speck]] §Capa 2). Lo que ve es **al jugador ver**: el hombro que se contrae, el medio paso atrás, la mandíbula. Torgan reconoce el gesto porque lo ha visto en gente que acaba de recibir noticia de una muerte.
 

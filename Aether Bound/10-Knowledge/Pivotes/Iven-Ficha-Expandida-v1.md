@@ -368,7 +368,7 @@ Ese es el punto exacto de su arquetipo. Doscientas personas se siguen muriendo m
 
 ### Sub-beat: la revelación de los Wanderer's Goggles
 
-El jugador se pone los Goggles (regalo de Tobin en Driftmarket). Aparece la proyección: la palabra **"Warden"** junto a un símbolo geométrico que coincide, línea por línea, con el patrón bajo el pelaje de Speck.
+El jugador mira las paredes a través de los Goggles (regalo de Tobin en Driftmarket). Aparece la proyección: la palabra **"Warden"** junto a un símbolo geométrico que coincide, línea por línea, con el patrón bajo el pelaje de Speck.
 
 **Los Goggles son privados.** Iven no ve nada ([[Speck]] §Capa 2). Está sentado contra la pared, mirando al suelo.
 
@@ -589,7 +589,7 @@ Si se va: camina fuera del cráter sin mirar atrás, y no llega al asentamiento.
 
 ### F4 — The Warden's Choice (Speck elige la Muda parcial — síntesis)
 
-Requiere que el jugador haya **alcanzado a Iven y no lo haya matado**, y que se haya quedado quieto lo suficiente para que Speck hable primero. Speck elige: se calcifica voluntariamente en el core central. El Aether sana **lentamente**, no de golpe. Las civilizaciones no colapsan; se adaptan.
+Requiere que el jugador haya **alcanzado a Iven y no lo haya matado**, y que en el cráter le haya **hecho la pregunta a Speck** en vez de decidir por ella ([[Los 5 Finales]] §F4 — no basta con no moverse: la quietud sin pregunta es F2a). Speck responde, y lo que responde es la Muda parcial: se calcifica voluntariamente en el core central. El Aether sana **lentamente**, no de golpe. Las civilizaciones no colapsan; se adaptan.
 
 **Iven es, de los nueve, quien mejor entiende lo que acaba de pasar — y lo entiende antes que nadie en el cráter, incluido el jugador.**
 

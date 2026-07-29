@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Elfo (the Aether-Born) / Strategist  
 **Origen:** The Stillspire  
-**Edad aparente:** 180-250 años (joven para un elfo, pero ha visto suficientes Mudas)  
+**Edad aparente:** 230 años (joven para un elfo — ninguna Muda se ha completado en 550 años, así que no presenció ninguna; todo lo que sabe de ellas lo sabe leído)  
 **Slot en [[The Bound Five]]:** C2 — El Opuesto  
 
 ---
@@ -47,15 +47,17 @@ rivales de pensamiento. Ver dinámica completa en
 
 Nació en la biblioteca viva de The Stillspire, la ciudad élfica donde se guardan los registros de todas las Mudas. Su familia fueron archivistas — no guerreros, no políticos, sino **observadores de ciclos**.
 
-Valen creció rodeado de **patrones**. Mientras otros elfos veían historia, Valen vio matemática. Las Mudas no eran eventos aleatorios — eran ciclos. Aproximadamente cada 300 años, el Aether se rebalanceaba, destruía civilizaciones, reiniciaba. Los registros mostraban esto.
+Valen creció rodeado de **patrones**. Mientras otros elfos veían historia, Valen vio matemática. Las Mudas no eran eventos aleatorios — eran ciclos. Aproximadamente cada 300 años, el Aether se rebalanceaba, destruía civilizaciones, reiniciaba. Los registros mostraban esto. **Esto es lo que enseña the Academy of Sages — y está equivocado.** Valen lo aprendió como verdad de infancia, sin cuestionarlo, porque venía de la misma tradición contemplativa que formó todo su método (ver §Afiliación de Academia arriba).
 
-**Infancia:** Lectura, cálculo, silencio. Sus padres lo querían archivista como ellos. Valen hizo eso. Pero mientras copiaba registros antiguos, vio algo: **los ciclos se aceleraban.** La última Muda fue hace 110 años, no 300. El patrón se rompía.
+**Infancia:** Lectura, cálculo, silencio. Sus padres lo querían archivista como ellos. Valen hizo eso. Pero mientras copiaba registros antiguos, vio algo: **los ciclos se aceleraban.** Según los registros de la Academy, la última Muda había sido 110 años atrás, no 300. El patrón se rompía — o eso creyó. **Las dos cifras son erróneas y las dos vienen de la Academy:** ni el período de 300 años es real, ni hubo Muda alguna hace 110 años (la última se rompió hace ~550 — ver [[Geografía y Ciudades]] §The Wilds y [[El Mundo y la Muda]]). Valen no cuestionó ninguna de las dos en la infancia; construyó su vida entera sobre una aceleración que medía ruido de archivo contra una base inventada. Descubrirlo es un beat posterior, no de infancia (ver §Grove of Cycles).
 
 ### Salida de The Stillspire (Juventud Tardía, edades 100-180)
 
 A los 140 años, Valen trajo sus hallazgos a los ancianos de Stillspire. Propuesta: investigar por qué el ciclo se aceleró. Pregunta de fondo: ¿podemos detenerlo?
 
-**Respuesta de los ancianos:** "Los ciclos son inevitables. The Stillspire ha sobrevivido cuatro Mudas. Sobreviviremos la quinta."
+**Respuesta de los ancianos:** *"Los ciclos son inevitables. The Stillspire ha sobrevivido cuatro Mudas. Sobreviviremos la quinta."*
+
+**La frase es falsa y hay que escribirla sabiéndolo.** Ninguna Muda se ha completado en 550 años ([[El Mundo y la Muda]]): esas "cuatro Mudas" son la misma cosmología heredada de the Academy of Sages que Valen desmonta en el Grove (§Grove of Cycles). Los ancianos no mienten — repiten. Es el beat que hace que la escena duela dos veces: la primera vez Valen escucha una negativa, y doscientos años después descubre que la negativa se apoyaba en un recuento que nunca existió.
 
 Valen comprendió que no querían saber más. No porque fueran ignorantes, sino porque **el conocimiento sin capacidad de actuar es tortura.**
 
@@ -93,17 +95,17 @@ Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una var
 
 ---
 
-**ELFO** (viven 150+ años, escala élfica — Valen potencialmente vio al jugador crecer, o calcula que será pieza clave):
+**ELFO** (viven 650-700 años — ver [[Las Tres Razas]]; misma escala que Valen, que a 230 es un par joven: potencialmente lo vio crecer, o calcula que será pieza clave):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
-| **Duelist** | Guerrero élfico de linaje antiguo, probablemente de Stillspire o cercano. Valen lo conoce hace décadas. Valen no "lo sacó" — simplemente le ofreció contexto hace años, plantó una pregunta. Encuentro: Valen regresa porque el tiempo de la pregunta llegó. Valen: *"Hace 60 años te mostré ciertos registros. Sabía que tardaran en destruirte. He vuelto porque el plazo se agota."* | Guerrera élfica cuyo honor es precisamente el que el sistema élfico sacrificará. Valen tiene 200+ años de registros que prueban el patrón. Encuentro premeditado. Valen: *"He visto tu tipo caer cinco veces en cinco Mudas. El sistema no cambia. Vine porque esta vez, alguien necesita escoger diferente."* |
+| **Duelist** | Guerrero élfico de linaje antiguo, probablemente de Stillspire o cercano. Valen lo conoce hace décadas. Valen no "lo sacó" — simplemente le ofreció contexto hace años, plantó una pregunta. Encuentro: Valen regresa porque el tiempo de la pregunta llegó. Valen: *"Hace 60 años te mostré ciertos registros. Sabía que tardaran en destruirte. He vuelto porque el plazo se agota."* | Guerrera élfica cuyo honor es precisamente el que el sistema élfico sacrificará. Valen tiene 200+ años de registros que prueban el patrón. Encuentro premeditado. Valen: *"He leído tu caso cinco veces, con cinco nombres distintos, en cinco archivos que nadie volvió a abrir. El sistema no cambia. Vine porque esta vez alguien necesita escoger diferente."* |
 | **Vanguard** | Guardián élfico cuyas órdenes vienen de cálculos que Valen escribió — NO SABE esto. Valen estudió si el Guardián cuestionaría sus órdenes. Encuentro: cuando el momento llega, Valen está ahí. Valen: *"Tus órdenes vienen de cálculos de hace 70 años. Yo escribí algunos. Vine porque mereces saber quién está coreografiando tu lealtad."* | Protectora de un lugar sagrado, que Valen ha calculado será destruido en X años. Valen le ofrece conocimiento maldito. Encuentro: deliberado. Valen: *"El lugar que proteges — lo he visto caer en los modelos futuros. Vine a ofrecerte información para que no caiga sorprendida."* |
 | **Strategist** | Estratega élfico que piensa como Valen — raro. Posiblemente se cruzaron en bibliotecas. Valen lo respeta y eso es incómodo (Valen no respeta fácil). Encuentro: reconocimiento mutuo. Valen: *"Lees los ciclos como yo. Eso significa sabes lo que viene. Vine porque la gente que sabe está sola. He estado 200 años solo. No quería que fuera otro siglo."* | Estratega élfica, tal vez rival intelectual de Valen en el pasado. Valen necesita saber de qué lado estará ella cuando la verdad llegue. Encuentro: confrontación disfrazada de alianza. Valen: *"Siempre fuiste más inteligente que yo en los detalles. Vine porque voy a necesitar quién vea lo que debo perder de vista."* |
 
 ---
 
-**ENANO** (viven ~60-120 años, escala enana visible pero acelerada para Valen — el enano probablemente un "niño" de 40-60 años):
+**ENANO** (viven ~200-250 años — ver [[Las Tres Razas]]; un tercio de la vida élfica, así que para Valen el ritmo enano corre rápido sin ser breve — el enano probablemente un adulto joven de 40-60 años):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -188,7 +190,7 @@ Este no es un God-Core dormido. Es un **Warden vivo.** Su modelo de hace 30 año
 
 **Valen no lo vocaliza.** Solo mira a Speck con expresión que sabe demasiado.
 
-Darro nota: "¿Por qué miras a Speck como si la conocieras?" Valen: "Porque he conocido su especie en registros hace 300 años. La reconozco."
+Darro nota: "¿Por qué miras a Speck como si la conocieras?" Valen: "Porque he conocido su especie en registros de hace 200 años. La reconozco."
 
 ### Escena 3: La Verdad Comienza a Filtrarse (Cálculo Final)
 
@@ -214,9 +216,11 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. Si el Tether del jugador con Vale
 
 Dentro del Grove, Valen reconoce el lugar como propio: *"Aquí aprendí a leer ciclos."* Escucha el debate de los cuatro élderes en silencio casi total — es la única conversación del juego donde Valen, el que siempre tiene el dato, no interviene ni una vez. Se limita a observar cómo Threnn, Ilyara, Corwyn y Maelys llegan a las mismas fracturas que él lleva 30 años cargando solo. Si el jugador guardó silencio durante el debate (uno de los disparadores del encuentro individual), es **Maelys** quien busca a Valen después — reconocimiento entre dos que saben que la respuesta no les pertenece.
 
+**El beat de la cifra errónea:** es en este debate donde Valen escucha, de boca de uno de los élderes, que el "cada 300 años" que la Academy enseña a cada aprendiz no es un dato observado — es una cifra redondeada, transmitida sin revisión desde antes del cataclismo, para dar a los archivistas jóvenes una sensación de orden. Nadie mintió a propósito; nadie tampoco la corrigió nunca. Valen pasó 200 años calculando aceleraciones sobre una base que nunca fue sólida. No lo dice en voz alta en el Grove. Lo carga en silencio hasta el Sunken Archive, donde la inscripción Warden confirma que el verdadero patrón nunca tuvo período fijo — cada Muda llega cuando un Warden muere o madura, no por calendario. El texto de sus cálculos (Aether corrompido, God-Cores como cadáveres, Speck como llave) sigue siendo correcto — el marco temporal en el que Valen creció era el que estaba mal. **Y cae con él la otra cifra:** no hubo Muda hace 110 años. Ese registro que Valen leyó de niño, el que le dio la carrera entera, era un asiento de archivo mal fechado. Las dos puntas de su medición —el período y el último evento— eran de la Academy, y ninguna de las dos existió.
+
 ### Sunken Archive — la lectura de la inscripción Warden
 
-Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — corresponde normalmente a **Sereth**. Cuando Sereth es el Pivote activo (y por tanto no está disponible para esa lectura sin comprometer la escena, o el diseño prefiere que no sea la voz que la ofrece), **es Valen quien hace la lectura** en su lugar. Reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador se pone the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo del último Warden — Valen no ve la proyección (los Goggles son estrictamente privados, [[Speck]] §Capa 2), solo ve la cara del jugador cambiar, y no pregunta qué vio.
+Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — corresponde normalmente a **Sereth**. Cuando Sereth es el Pivote activo (y por tanto no está disponible para esa lectura sin comprometer la escena, o el diseño prefiere que no sea la voz que la ofrece), **es Valen quien hace la lectura** en su lugar. Reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador mira a través de the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo del último Warden — Valen no ve la proyección (los Goggles son estrictamente privados, [[Speck]] §Capa 2), solo ve la cara del jugador cambiar, y no pregunta qué vio.
 
 ---
 
@@ -258,38 +262,45 @@ Proporciona datos: dónde fue el Pivote, qué recursos necesitará, qué ruta el
 
 El Pivote actúa finalmente.
 
-**La decisión es del jugador.** ¿Salva al Pivote? ¿Lo perdona? ¿Lo mata?
+**La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
 **Valen en cada final:**
 
-#### **Final 1: The Guided Molt (Perdón)**
-Si perdonas al Pivote, Valen es quien **verifica las consecuencias**.
+#### **F1 — The Guided Molt (Speck termina la Muda sin intervención)**
+Valen es quien **verifica las consecuencias**.
 
 *"Your mercy has logic. The Pivot carries guilt — that will drive certain choices for decades. You've not forgiven without cost."*
 
 No es validador como Roen. Es **confirmador de realidad.**
 
-#### **Final 2: The Long Winter (Muerte)**
-Si el Pivote muere, Valen es quien **computa el precio**.
+#### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
+Valen es quien **computa el precio del tiempo comprado**.
+
+*"One variable removed from the field, not from the world. The system shifts. You didn't solve this — you postponed it, at her cost."*
+
+Frío. Honesto. Sin malicia.
+
+#### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
+Valen es quien **computa el precio final**.
 
 *"One variable removed. The system shifts. This was inevitable after the Fragment was taken. You didn't choose this — you chose seconds before this."*
 
 Frío. Honesto. Sin malicia.
 
-#### **Final 3: The Conqueror's Clause (Encadenamiento)**
-Si lo encadenas a Speck como posesión, Valen es quien **ve la contradicción**.
+#### **F3 — The Conqueror's Clause (el jugador encadena a Speck por beneficio propio)**
+Valen es quien **ve la contradicción**.
 
 *"You know she isn't yours. Speck isn't property. You know this."* Pausa. *"I won't help you forget that."*
 
-Valen se va. Pero no con drama. Con nota escrita: su trabajo terminó, su información fue consumida, no hay más valor en estar aquí.
+Valen se va. Pero no con drama. Con nota escrita, sin firmar — su trabajo terminó, su información fue consumida, no hay más valor en estar aquí.
 
-#### **Final 4: The Warden's Choice (Síntesis)**
-Si aceptas a Speck como lo que es, Valen es quien **confirma la nueva estructura**.
+#### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
+Valen es quien **confirma la nueva estructura**.
 
 *"The Molt completes. The pattern breaks. I no longer have registros for this future. That is both terrifying and... novel."*
 
 Su línea final:
-*"For the first time in 250 years, I cannot calculate what comes next. That is the price of change. I'm not sure if I'm grateful."*
+*"For the first time in 230 years, I cannot calculate what comes next. That is the price of change. I'm not sure if I'm grateful."*
 
 ---
 
@@ -303,40 +314,40 @@ Su línea final:
 
 ## Dinámicas con el Pivote (Por Pareja)
 
-### Valen + Maren (Elfo Duelist → Ella)
+### Valen + Maren (Humana Strategist → Ella)
 **Primera impresión:** Maren hace cálculos. Valen hace cálculos. Se entienden matemáticamente pero no emocionalmente.  
 **Tensión:** Cuando Maren comienza a "solucionar" el dilema de Speck en números, Valen la mira. *"¿Incluiste el costo humano en tu ecuación?"* No es pregunta — es verificación.  
 **Traición:** Cuando Maren elige matemáticamente, Valen dice: *"I calculated this path three weeks ago. I hoped you wouldn't take it."*
 
-### Valen + Torgan (Elfo Strategist → Él)
+### Valen + Torgan (Enano Duelist → Él)
 **Primera impresión:** Estrategia élfica vs. deber enano. Valen ve la estructura de sacrificio en Torgan — es patrón que ha visto antes.  
 **Tensión:** Valen pregunta sobre el Juramento. Torgan resiste. Valen: *"I'm not judging. I'm predicting. They're different."*  
 **Traición:** Cuando Torgan elige el Juramento, Valen asiente. *"As expected. Your people's chains are older than mine."*
 
-### Valen + Iven (Elfo Vanguard → Él)
+### Valen + Iven (Humano Duelist → Él)
 **Primera impresión:** Dos razas, mismo rol. Valen nota que Iven ama su asentamiento más que el grupo. Ese peso es medible.  
 **Tensión:** Valen menciona el dilema. Iven: "¿No confías en mí?" Valen: "I trust your logic perfectly. That's the problem."  
 **Traición:** Cuando Iven elige a su pueblo, Valen no habla. Simplemente: *"As calculated."*
 
-### Valen + Sereth (Elfo Duelist → Él)
+### Valen + Sereth (Elfo Strategist → Él)
 **Primera impresión:** Elfo manipulador vs. elfo observador. Hay tensión inteligencia-a-inteligencia.  
 **Tensión:** Valen ve a Sereth manipular sutilmente. Nunca lo confronta — simplemente deja que Sereth sepa que lo ve.  
-**Traición:** Cuando Sereth actúa, Valen: *"You solved for victory. I solved for sustainability. We were always divergent."*
+**Traición:** Cuando Sereth actúa, Valen: *"You solved for victory. I solved for sustainability. We were always divergent."* Más frío que su quiebre con Nyael — Sereth calcula distinto, no calla igual — pero es el segundo momento donde Valen reconoce a un igual en el fracaso.
 
-### Valen + Bram (Humano Duelist → Él)
+### Valen + Bram (Humano Vanguard → Él)
 **Primera impresión:** Bram es humano, medidas de corta escala. Valen lo ve como "insecto con intención".  
-**Tensión:** Bram pregunta por qué Valen actúa como si todo estuviera predeterminado. Valen: *"Because 200 years shows patterns. You have 40 more years to see them too."*  
-**Traición:** Cuando Bram se rinde, Valen muestra extraña compasión: *"Your exhaustion is mathematical. Twenty years of drainage. That ends today."* No es validación — es diagnóstico de finitud.
+**Tensión:** Bram pregunta por qué Valen actúa como si todo estuviera predeterminado. Valen: *"Because 230 years shows patterns. You have a few more decades to see them too."*  
+**El corredor del Archive:** cuando Bram rechaza la oferta del Council, Valen dice, tras el silencio: *"Tu cálculo fue el más simple que he visto. Un veterano de cuarenta años decidiendo en cinco minutos. Impresionante."* Bram: *"No fue cálculo. Fue cansancio."* Valen: *"En un veterano de cuarenta años, es la misma cosa."* No es validación — es diagnóstico de finitud, dicho con el único registro de calidez que Valen permite.
 
-### Valen + Lyris (Enana Duelist → Ella)
+### Valen + Lyris (Elfa Duelist → Ella)
 **Primera impresión:** Lyris es ligera, Valen es pesado. Pero Lyris piensa claro — eso conecta.  
 **Tensión:** Lyris bromea sobre los "registros antiguos" de Valen. Valen: *"Humor as escape. Expected."*  
 **Traición:** Cuando Lyris actúa con lógica fría, Valen la respeta extrañamente: *"You solved without sentiment. Correct."* No la perdona — la reconoce como igual.
 
-### Valen + Nyael (Humana Vanguard → Ella)
+### Valen + Nyael (Elfa Duelist → Ella) — la que lo rompe más hondo
 **Primera impresión:** Nyael es la sombra. Valen puede ser sombra. Complicidad silenciosa.  
-**Tensión:** Valen sabe lo que Nyael está considerando semanas antes.  
-**Traición:** Nyael no dice nada, solo se va. Valen la deja ir. *"The cleanest betrayals are silent ones."*
+**Tensión:** Valen sabe lo que Nyael está considerando semanas antes. No dice nada — la misma decisión que tomó con Speck, con el jugador, con cada verdad que "guardó el cálculo" en vez de intervenir.  
+**Traición:** Nyael no dice nada, solo se va. Valen la deja ir. *"The cleanest betrayals are silent ones."* Pausa larga. *"I would know."* Es el reconocimiento más hondo de todo su arco: Nyael no es una calculadora fría como Sereth ni una ejecutora institucional como Torgan — es **observación pura eligiendo no intervenir**, exactamente el entrenamiento de la Academy of Sages que a Valen le enseñaron como virtud. Verla hacerlo es verse a sí mismo desde afuera, sin la excusa de los 230 años que usa con todos los demás.
 
 ### Valen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Otra Strategist. Vekka construye, Valen calcula. Dinámicas de respeto mutuo raro.  
@@ -361,7 +372,7 @@ No es deuda. Es **reconocimiento de diferencia de rol.**
 **Dinámicas:** Darro bromea. Valen ofrece datos. Parecen opuestos, pero...
 
 Darro: *"¿Cuál es el chiste, Valen? ¿Por qué todo es tan serio?"*  
-Valen: *"Because in 200 years of patterns, I've seen endings. You have not. That's the difference."*
+Valen: *"Because in 230 years of patterns, I've seen endings. You have not. That's the difference."*
 
 Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de verdad. Verdad sin escape es prisión.
 
@@ -377,7 +388,7 @@ Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de ve
 - Grabados teal en cuello y esternón — más contenidos que fenotipo base (él es académico, no guerrero)
 - Abrigo largo de viajero en slate-grey estructurado — nunca robes ceremoniales
 - Postura: erguida, manos a menudo guardadas o en gesto de reflexión
-- **Adorno personal único:** anillo de plata élfico grabado con fecha (aniversario de última Muda conocida — 110 años atrás)
+- **Adorno personal único:** anillo de plata élfico grabado con fecha — el aniversario de la "última Muda" según los registros de la Academy, 110 años atrás. **La fecha es falsa** (§Grove of Cycles / §Sunken Archive): Valen lleva doscientos años usando un anillo que conmemora un evento que nunca ocurrió, y no lo sabe hasta el Acto 3. Después del Archive, no se lo quita.
 
 ---
 
@@ -398,5 +409,5 @@ Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de ve
 No es tu amigo. Es tu **brújula de realidad**. Te dice lo que es verdad incluso cuando no quieres escuchar. Especialmente cuando no quieres.
 
 **Línea privada de Valen (nunca dicha aloud):**
-*"He visto civilizaciones caer porque nadie se atrevió a decir la verdad. Dije la verdad. Nadie pudo cambiar nada de todos modos. Esa es la lección que 250 años enseña: el conocimiento sin poder es espectador de la tragedia. Y aún así, sigo calculando. Porque si no calculo, ¿quién?"*
+*"He visto civilizaciones caer porque nadie se atrevió a decir la verdad. Dije la verdad. Nadie pudo cambiar nada de todos modos. Esa es la lección que 230 años enseña: el conocimiento sin poder es espectador de la tragedia. Y aún así, sigo calculando. Porque si no calculo, ¿quién?"*
 

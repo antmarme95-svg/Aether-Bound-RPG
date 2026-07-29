@@ -192,9 +192,9 @@ No es promesa emocional. Es oferta funcional.
 
 ### Escena: El Primero (Aceptación del Grupo — Asimetría)
 
-Roen llega. Valen aparece. Maren aparece. Torgan aparece. Sereth aparece. Darro aparece. Bram aparece.
+Roen llega. Valen aparece. Darro aparece.
 
-El Bound Five + 2 se forma.
+El Bound Five se forma.
 
 **Lyris aquí está en rol de observadora:**
 - Vuela arriba, siempre viendo
@@ -251,7 +251,7 @@ El grupo desciende al Archive. Lyris incómoda en subterráneo — no vuela, no 
 
 En el interior, cuerpos calcificados de la civilización Warden. **Reacción visible de Lyris: silencio.** Ve los cadáveres, ve las inscripciones que Valen no puede leer, no comenta ni una palabra. Pero hace algo más grande que un comentario — **deja de volar durante todo el interior del Archive.** Camina en el suelo con el grupo desde la entrada hasta la salida. Es el gesto de respeto más grande que Lyris ha ofrecido en la aventura, quizás en su vida entera. Solo Valen lo lee correctamente. Los demás asumen que es tema técnico (aire viciado, techo bajo). Valen sabe que no.
 
-El jugador se pone the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2) — símbolo geométrico que coincide con el pelaje de Speck. **Lyris no ve la proyección** (los Goggles son privados; los flashes son invisibles incluso desde el aire). Lo que Lyris ve es la cara del jugador. No le cambia el patrón — el patrón es más viejo que la piedad. Ya estaba activo antes del Archive.
+El jugador mira a través de the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2) — símbolo geométrico que coincide con el pelaje de Speck. **Lyris no ve la proyección** (los Goggles son privados; los flashes son invisibles incluso desde el aire). Lo que Lyris ve es la cara del jugador. No le cambia el patrón — el patrón es más viejo que la piedad. Ya estaba activo antes del Archive.
 
 ### Sub-beat 3: Traición al salir del Archive
 

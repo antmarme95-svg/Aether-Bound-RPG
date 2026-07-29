@@ -153,7 +153,7 @@ Cuando el jugador decide salvar o destruir, Sereth dice: *"Cualquiera sea tu ele
 
 ### Escena: El Primero (Aceptación del Grupo — Investigación Activa)
 
-Roen llega. Valen aparece. Maren aparece. Torgan aparece. Darro aparece. El Bound Five se forma.
+Roen llega. Valen aparece. Darro aparece. El Bound Five se forma.
 
 Sereth aquí está en rol de observador cortés: estudia a cada miembro, mapea sus disparadores, empieza a modelar cómo cada uno pesará en el jugador durante los próximos meses. Su prioridad no es el grupo — es la **relación del jugador con cada miembro del grupo.** Necesita saber qué voz el jugador escucha con más facilidad y cuál con más desconfianza. En el cráter, cada una de esas voces contará.
 
@@ -171,7 +171,7 @@ El Bound Five viaja. Sereth observa. Y siembra.
 
 **Siembras concretas en Acto 2 (ejemplos ratificados, cada uno pertenece a un sub-acto):**
 
-1. **Sub-acto 2A (Rivermeet):** en una cena con Maren delante, Sereth le pregunta al jugador — casual, en la sobremesa — *"¿Qué crees que hace más daño: el que traiciona por convicción, o el que traiciona por afecto?"* El jugador dice algo. Sereth asiente sin argumentar. La pregunta se queda. (Objetivo: preparar al jugador para que, en el cráter, sepa distinguir el arquetipo de Sereth del de Maren — y sepa cuál es peor.)
+1. **Sub-acto 2A (Rivermeet):** en una cena del grupo, Sereth le pregunta al jugador — casual, en la sobremesa — *"¿Qué crees que hace más daño: el que traiciona por convicción, o el que traiciona por afecto?"* El jugador dice algo. Sereth asiente sin argumentar. La pregunta se queda. (Objetivo: preparar al jugador para que, en el cráter, sepa distinguir entre traicionar por convicción y traicionar por afecto — y sepa cuál es peor.)
 
 2. **Sub-acto 2B (Emberdeep):** al ver la forja de Vekka, Sereth comenta — con Torgan cerca — *"Los enanos honran los juramentos aunque hayan sido dados por ignorancia. Es una forma de belleza."* El jugador (enano) recibe eso como cumplido a su cultura. (Objetivo: instalar la idea de que **cumplir lo que uno prometió pesa más que lo que uno sabía al prometerlo** — útil en el cráter para que el jugador se sostenga en su decisión aunque descubra que fue conducido.)
 
@@ -223,7 +223,7 @@ Lo lee sin titubear.
 
 Y aquí está el detalle emocional: Sereth mira a Speck **largo tiempo antes de moverse.** No es actuación. Es despedida. Puede querer a Speck sinceramente **y** llevársela; los dos verbos coexisten en su arquitectura interna, porque su escuela le enseñó desde niño que amar no exige coincidir con lo que amas. Speck no lo mira de vuelta. Sereth le acaricia el borde del pelaje con dos dedos. Nadie del grupo interpreta el gesto correctamente en ese momento — parece afecto compartido. Es, en realidad, el único momento del juego donde Sereth **se despide de una persona que no va a volver a ver.**
 
-El jugador se pone the Wanderer's Goggles y ve la proyección residual — el duelo del último Warden vivo, la palabra Warden ampliada, el símbolo confirmado bajo el pelaje. Sereth no ve nada de eso (los Goggles son privados). Pero ve al jugador ver, y ese es dato suficiente.
+El jugador mira a través de the Wanderer's Goggles y ve la proyección residual — el duelo del último Warden vivo, la palabra Warden ampliada, el símbolo confirmado bajo el pelaje. Sereth no ve nada de eso (los Goggles son privados). Pero ve al jugador ver, y ese es dato suficiente.
 
 En su cabeza, en ese instante, la línea sería (si la dijera — no la dice):
 
@@ -341,7 +341,7 @@ Este final requiere que el jugador haya **perdonado** a Sereth en la persecució
 
 Con perdón: Speck elige. Sereth ve, en tiempo real, algo que su escuela no cataloga — **una persona que no fue conducida, decidiendo con autoridad propia.** Es el único final donde Sereth aprende algo. No es que su método haya sido incorrecto en abstracto; es que **existe una categoría de persona a la que la lectura larga no se puede aplicar sin destruirla como categoría.** Speck es esa persona.
 
-**Epílogo:** Sereth se reintegra al grupo — no al Council, no a la Royal Academy. Renuncia a su escuela por primera vez en la historia registrada del linaje familiar. Aprende, lentamente y con torpeza (para un consejero de 200 años, es humillante), a **preguntar sin sembrar.** Sus primeras preguntas al jugador después del cráter suenan mal — se nota que aún no le sale. El jugador las recibe con paciencia, porque también le duele oírlas mal.
+**Epílogo:** Sereth se reintegra al grupo — no al Council, no a la Royal Academy. Renuncia a su escuela — algo que ningún consejero de su linaje familiar había hecho antes. Aprende, lentamente y con torpeza (para un consejero de 200 años, es humillante), a **preguntar sin sembrar.** Sus primeras preguntas al jugador después del cráter suenan mal — se nota que aún no le sale. El jugador las recibe con paciencia, porque también le duele oírlas mal.
 
 En años, Sereth se convierte en consejero de Stillwood **diferente**: uno cuyo método público es "pregunto y no sé la respuesta". Es más lento, más impreciso, más cálido de una forma nueva. Único final donde **aprende a preguntar sin manipular** — literal, no metáfora. Su tratado privado del F1/F2b nunca se escribe aquí; en su lugar, deja notas sueltas al jugador, sin firma, con preguntas abiertas que no van a ninguna parte. El jugador las guarda todas.
 
@@ -361,8 +361,8 @@ En años, Sereth se convierte en consejero de Stillwood **diferente**: uno cuyo 
 
 **Primera impresión:** Roen ve a alguien que trabaja en instituciones desde adentro. Sereth ve a alguien que renunció a instituciones por conciencia.
 
-*"Renunciaste al Consejo."*  
-*"El Consejo renuncia a gente. Yo simplemente lo hice primero."*  
+*"Dejaste la Royal Academy."*  
+*"La Academy no deja ir a nadie. Yo simplemente elegí no volver a presentarme."*  
 *"¿Sin conducción de salida?"*  
 *"Al revés. Conduje mi propia conciencia para permitirme irme. Más difícil."*
 
@@ -393,7 +393,7 @@ Sereth: *"Eso es cálculo enano, no cálculo élfico. Eso es lo que subestimé."
 
 **Tensión:** Darro pregunta si Sereth puede ser honesto. Sereth: *"Puedo. Solo que la honestidad es herramienta también, como todo."*
 
-**Cuando traiciona:** Darro **no grita como con Maren**. Simplemente dice:
+**Cuando traiciona:** Darro **no grita**. Simplemente dice:
 
 *"Sabía que eras conductor. No sabía que usarías amor como herramienta."*
 

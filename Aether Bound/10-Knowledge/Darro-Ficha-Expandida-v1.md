@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Enano (the Iron-Blooded) / Duelist  
 **Origen:** Emberdeep, Ignis Reach  
-**Edad aparente:** 45-65 años (joven para enano, adulto completo pero sin cicatrices de edad)  
+**Edad:** ~63 años (joven para enano bajo el canon de ~200-250 de [[Las Tres Razas]] — adulto completo, sin cicatrices de edad). La cifra no es libre: se deriva de haber sido aprendiz de Vekka a los 30 y de que ese rechazo fue **hace ~30 años** (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §Darro).  
 **Slot en [[The Bound Five]]:** C4 — La Chispa  
 
 ---
@@ -39,23 +39,23 @@ Respondía con **humor.** Bromas en la forja. Imitaciones de maestros. Subversi�
 
 Los adultos lo toleraban porque era "joven" y "sin malicia". Pero notaban: Darro no era serio como los otros enanos. Darro cuestionaba con humor en lugar de cuestionan con fuerza.
 
-### Aprendizaje Truncado (edades 30-40)
+### Aprendizaje Truncado (edades 30-33)
 
-A los 30, fue aceptado como aprendiz formal del gremio. Tatuaje ámbar en el antebrazo — primer símbolo, un solo glifo, el comienzo del patrón que se completa a maestría.
+A los 30, Darro fue tomado como aprendiz personal de **Vekka** — ya entonces maestra reconocida del gremio. Tatuaje ámbar en el antebrazo — primer símbolo, un solo glifo, el comienzo del patrón que se completa a maestría.
 
-**Expectativa:** 20 años más de aprendizaje disciplinado.
+**Expectativa:** años de aprendizaje disciplinado bajo su tutela directa.
 
-**Lo que pasó:** Darro trabajó 7 años. Fue excepcional técnicamente — rápido, intuitivo, buenas manos. Pero culturalmente era problema. Se reía en momentos serios. Cuestionaba la jerarquía. No mostraba respeto por los patrones de sucesión.
+**Lo que pasó:** Vekka le enseñó dos años. Darro fue excepcional técnicamente — rápido, intuitivo, buenas manos. Pero culturalmente era problema para el gremio que ella representaba. Se reía en momentos serios. Cuestionaba la jerarquía. No mostraba respeto por los patrones de sucesión.
 
-A los 37, **incidente no totalmente claro.** La versión de Darro cambia cada vez que la cuenta (obviamente bromista). Pero la verdad: cometió error en forja. Pieza importante, arruinada. Culpa suya.
+Al tercer año, sin previo aviso ni explicación, Vekka lo rechazó del programa formal — en persona, cara a cara, sin ceremonia y sin dar razones. Darro le preguntó por qué. Ella no contestó. Se dio media vuelta y volvió al horno.
 
-**Castigo del gremio:** No expulsión formal — algo peor. **Aislamiento.** Se le prohibió forjar. Se le prohibió usar el horno. Se le dijo que volvería cuando hubiera "comprendido la gravedad".
+**Castigo del gremio:** No fue expulsión pública — algo peor. **Aislamiento.** Se le prohibió forjar bajo cualquier otro maestro. Se le dijo, por terceros, que "la maestra Vekka no explica sus rechazos, y nadie pregunta dos veces."
 
-Eso fue un eufemismo para: "Eres un riesgo de irreverencia. Vamos a esperar hasta que la edad te doma."
+Darro esperó 2 años, en parte por si Vekka cambiaba de idea. Nunca lo hizo, ni volvió a dirigirle la palabra directamente. En esos 2 años, vio la realidad: **nunca iba a cambiar lo suficiente.** El gremio no quería enano que riese. Quería máquina enano. Y la persona que mejor lo sabía — porque lo había visto de cerca dos años — decidió no darle ni la cortesía de una razón.
 
-Darro esperó 2 años. En esos 2 años, vio la realidad: **nunca iba a cambiar lo suficiente.** El gremio no quería enano que riese. Quería máquina enano.
+**Nota narrativa:** este rechazo es el motivo por el que, cuando Darro se reencuentra con Vekka como Pivote décadas después, la escena carga un peso que va más allá del arquetipo de "maestra distante" — es la persona específica que lo dejó fuera sin explicarse jamás. Ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] para la escena desde su lado.
 
-### Salida de Emberdeep (edades 39-45, presente)
+### Salida de Emberdeep (edad 33 → presente, ~63)
 
 Darro se fue. No espectacularmente. Simplemente... se fue un día. Llevó sus hachas cortas (arma de Duelist, no de forja), dinero ahorrado, y ropa. El tatuaje incompleto en el antebrazo — marca de aprendiz que nunca se completó — lo llevaba como **recordatorio de fracaso personal o sistema roto, dependiendo de a quién le preguntaras.**
 
@@ -66,6 +66,8 @@ Bebía. No desastradamente, pero sí regularmente.
 **El agujero en su vida:** Darro descubrió que **sin la forja, no tenía identidad.** Se suponía que debía ser "maestro forjero". Sin eso, ¿qué era? Simplemente enano borracho con hachas cortas.
 
 Pasó 5 años así. Sin destino claro. Sin gremio. Sin propósito.
+
+**Y después pasó el resto.** De los 38 a los 63 —**veinticinco años**, casi la mitad de su vida adulta— Darro hizo variaciones del mismo trabajo: escoltas, contratos cortos, ninguno en Ignis Reach. Aprendió a caer bien rápido y a irse antes de que hiciera falta explicarse. Esos veinticinco años son la razón por la que su humor está tan pulido: no es carácter, es oficio. Y son también por qué el rechazo de Vekka no se le curó — no lo procesó, lo dejó atrás caminando, y treinta años después ella aparece en el grupo y el asunto sigue exactamente donde lo dejó.
 
 **Nota de fondo:** Darro es alguien sin tribu. El gremio lo rechazó (o él los rechazó, pero el resultado es lo mismo). Los aventureros son demasiado humanos/elfos para él. Vagar solo es ser invisible.
 
@@ -87,7 +89,7 @@ A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón)
 
 ---
 
-**ELFO** (viven 150+ años, pero Darro no está equipado para medir escala élfica — lo ve como "persona antigua"):
+**ELFO** (viven 650-700 años — ver [[Las Tres Razas]]; casi el triple de una vida enana, y Darro no está equipado para medir eso — lo ve como "persona antigua" y ahí se le termina la escala):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -97,7 +99,7 @@ A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón)
 
 ---
 
-**ENANO** (viven ~60-120 años, escala familiar para Darro — pero aún así, diferencia cultural):
+**ENANO** (viven ~200-250 años — ver [[Las Tres Razas]]; su propia escala, la única que Darro lee sin traducir — pero aún así, diferencia cultural):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -181,7 +183,7 @@ El Bound Five viaja La Rueda — lugares pesados, verdades pesadas.
 
 **¿Por qué?** Porque el grupo necesita respirar. Roen sostiene emocionalmente. Valen da verdad. **Darro da respiro.**
 
-**Con Speck:** Durante La Rueda, Speck crece más consciente. Darro es quien pasa más tiempo **solo jugando con él.** No entrenando, no investigando — **simplemente siendo.**
+**Con Speck:** Durante La Rueda, Speck crece más consciente. Darro es quien pasa más tiempo **solo jugando con ella.** No entrenando, no investigando — **simplemente siendo.**
 
 Darro habla a Speck como si Speck entendiese: "¿Escuchas estos elfos pomposos? Adorable. Recuérdame enseñarte a burlarte de ellos."
 
@@ -268,30 +270,37 @@ Darro **lidera la búsqueda.** No tácicamente como Valen, no emocionalmente com
 
 El Pivote actúa finalmente.
 
-**La decisión es del jugador.** ¿Salvas al Pivote? ¿Lo perdona? ¿Lo mata?
+**La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
 **Darro en cada final:**
 
-#### **Final 1: The Guided Molt (Perdón)**
-Si perdonas al Pivote, Darro es quien **cuestiona tu perdón.**
+#### **F1 — The Guided Molt (Speck termina la Muda sin intervención)**
+Darro es quien **cuestiona la decisión primero.**
 
-*"¿Lo perdonas? ¿Simple? Hermano, ese tipo trató de robar lo que es sagrado."*
+*"¿La dejas terminar? ¿Así, sin más? Hermano, es la promesa más grande que hice y la más grande que rompo."*
 
-Pero después, cuando ve a Speck aceptar su rol — cuando Speck elige — Darro llora otra vez.
+Pero después, cuando ve lo que Speck se vuelve — cuando ve que ella no se resiste, que asume lo que viene sin una sola queja — Darro llora otra vez. No porque entienda. Porque le parece que alguien debería haberle preguntado y nadie lo hizo, ni él ([[Speck]] §Capa 4 — en F1 Speck acepta; nadie la consultó).
 
-*"Okay. Entiendo. Speck eligió. Nombre honra elección. Yo... yo confío."*
+*"Ella no peleó. ¿Viste? No peleó."* Pausa. *"Nadie le preguntó nada. Yo tampoco. Le puse nombre y no le pregunté nada."*
 
-#### **Final 2: The Long Winter (Muerte)**
-Si el Pivote muere, Darro es quien **lo llora de forma complicada.**
+#### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
+Darro es quien **no puede perdonar la entrega, aunque la entienda.**
 
-El Pivote fue traidor. El Pivote pagó. Pero Darro **lloró a alguien.** Eso pesa.
+*"Está viva. Ya sé. Debería alegrarme. Pero la vendiste, hermano. Con papeles y todo. Eso también es una forma de perderla."*
 
-*"Speck está perdida. Tú estás vacío. Él está muerto. ¿Todos ganamos algo?"*
+No hay muerte que llorar. Solo la promesa incumplida a medias — la peor clase, porque nadie puede consolarlo con "al menos no sufrió".
 
-Pero luego: "Cuando matar se siente como derrota, probablemente tomaste la decisión correcta. Seguimos."
+#### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
+Si Speck muere, Darro es quien **la llora sin metáfora.**
 
-#### **Final 3: The Conqueror's Clause (Encadenamiento)**
-Si lo encadenas, Darro es quien **rechaza tu justicia.**
+El Pivote actuó. Speck pagó. Darro **perdió a alguien.** Eso pesa distinto a perder una pelea.
+
+*"Speck está perdida. Tú estás vacío. Nombre no protegió nada. ¿Todos ganamos algo?"*
+
+No hay un "pero luego". Darro no cierra la escena. Se queda ahí con la pregunta abierta y nadie la contesta — ni él, ni el jugador, ni el juego. **Ninguna versión de este epílogo puede darle consuelo, ni a él ni al jugador** ([[Los 5 Finales]] §F2b — tragedia pura, ningún beat de "aprendimos algo").
+
+#### **F3 — The Conqueror's Clause (el jugador encadena a Speck por beneficio propio)**
+Darro es quien **rechaza tu justicia.**
 
 *"Speck no es trofeo. Prisión no es victoria. Esto es... hermano, esto es peor que perderla. La tienes y está muerta por ello."*
 
@@ -299,8 +308,8 @@ Darro se va. Es lo más devastador posible viniendo de él. No grita — simplem
 
 Años después, nota que Darro nunca volvió.
 
-#### **Final 4: The Warden's Choice (Síntesis)**
-Si aceptas a Speck como lo que es, Darro es quien **celebra de verdad.**
+#### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
+Darro es quien **celebra de verdad.**
 
 *"SPECK VIVE. SPECK ELIGE. NOMBRE SIGUE SIENDO PROMESA."*
 
@@ -322,45 +331,57 @@ No es argumento. Es **declaración de promesa.**
 
 ## Dinámicas con el Pivote (Por Pareja)
 
-### Darro + Maren (Elfo Duelist → Ella)
+### Darro + Maren (Humana Strategist → Ella)
 **Primera impresión:** Maren es táctica, tiene gadgets. Darro la bromea. Ella responde con humor seco. Conexión.  
 **Tensión:** Cuando Maren empieza a "calcular" qué sacrificar (incluyendo Speck), Darro pregunta: "¿Dónde estoy yo en tu ecuación?" No es amenaza — es pregunta honesta.  
 **Traición:** Cuando Maren actúa, Darro: *"Las personas calculadas, cuando deciden — deciden completo. Eso da miedo."* Pero después: *"Prometiste algo. Speck era eso. Rompiste tu palabra. Eso se honra con justicia, no perdón."*
 
-### Darro + Torgan (Elfo Strategist → Él)
+### Darro + Torgan (Enano Duelist → Él)
 **Primera impresión:** Torgan es serio, marcado por Juramento. Darro respeta eso — es como su aprendizaje sin terminar, pero completo.  
 **Tensión:** Darro pregunta sobre el Juramento. Torgan explica. Darro: *"Entiendo. Cadenas que elegiste son las más fuertes."*  
 **Traición:** Cuando Torgan actúa, Darro acepta: *"Un hombre es su palabra. Honro eso. También te lucho por ello."*
 
-### Darro + Iven (Elfo Vanguard → Él)
+### Darro + Iven (Humano Duelist → Él)
 **Primera impresión:** Dos Vanguards, energía similar. Darro lo ve como hermano de rol diferente.  
 **Tensión:** Iven menciona su asentamiento. Darro: *"Amor a casa es hermoso. También es jaula."* Pregunta si Iven puede elegir.  
 **Traición:** Cuando Iven elige a su pueblo, Darro: *"Te entiendo. No te disculpes por amar. Solo... Speck también merecía amor."*
 
-### Darro + Sereth (Elfo Duelist → Él)
+### Darro + Sereth (Elfo Strategist → Él)
 **Primera impresión:** Sereth es manipulador, sutil. Darro lo ve y bromea sobre ello. Sereth sonríe — respeta la observación.  
 **Tensión:** Darro: *"Eres más listo que tú mismo. Eso es problema."*  
 **Traición:** Cuando Sereth actúa con afecto sorprendente, Darro queda confuso. *"¿Lo hiciste porque debías o porque necesitabas? Diferencia importa."* Pero no obtiene respuesta clara.
 
-### Darro + Bram (Humano Duelist → Él)
+### Darro + Bram (Humano Vanguard → Él)
 **Primera impresión:** Bram es soldado veterano, Darro es ex-aprendiz. Diferente trasfondo pero mismo peso.  
 **Tensión:** Darro pregunta: *"¿Cuándo fue que dejó de importar?"* (sobre el valor del trabajo). Bram no tiene respuesta clara.  
-**Traición:** Cuando Bram se rinde, Darro: *"Veinte años es mucho. Pero Speck tiene el resto de la vida de dolor si pierdes ahora. Piénsalo."* No funciona. Darro lo reconoce — a veces, la gente está rota de verdad.
+**El corredor del Archive:** cuando Bram rechaza la oferta del Council, Darro tarda tres segundos más que Roen y Valen en entender. Cuando entiende, abraza a Bram — cosa rara. *"Gracias por no llevártela. Sé que te iba a costar."* Bram: *"Costó. No importa."* Darro: *"Sí importa."* Cuarenta años cargando el peso de otros, y elige no cargar este. Darro lo honra sin necesitar explicárselo dos veces.
 
-### Darro + Lyris (Enana Duelist → Ella)
-**Primera impresión:** Lyris es ligera, aérea. Darro es tierra. Conexión extraña pero genuina — dos enanos que ven diferente.  
-**Tensión:** Lyris bromea sobre los registros. Darro: *"El humor es escape. Pero escape no es solución."* Pero lo dice con amor.  
-**Traición:** Cuando Lyris actúa con lógica fría, Darro queda shockeado de verdad. *"Pensé que al menos tú eras más que cálculo."* Duele viniendo de compañero enano.
+### Darro + Lyris (Elfa Duelist → Ella)
+**Primera impresión:** Lyris es ligera, aérea. Darro es tierra. Conexión extraña pero genuina — dos criaturas que miran el mundo desde alturas opuestas.  
+**Tensión:** Darro bromea; Lyris lo toma literalmente, cada vez. Darro descubre que eso le da más risa que si le siguiera el chiste, y deja de intentar hacerla reír a propósito.  
+**Traición:** Cuando Lyris actúa con lógica fría, Darro queda shockeado de verdad. *"Pensé que al menos tú eras más que cálculo."* Duele porque la creía honesta, no calculadora. Es el quiebre suave de Darro para el arquetipo Rechazo/Ausencia — más liviano que lo que le pasa con Vekka, pero real: la primera vez en la campaña que Darro se equivoca sobre alguien y lo nota.
 
-### Darro + Nyael (Humana Vanguard → Ella)
+### Darro + Dagna (Enana Vanguard → Ella)
+**Primera impresión:** dos enanos de mundos distintos — Darro sin clan, Dagna sin haber dejado el suyo nunca. No se conocen de antes, pero Darro reconoce el peso de un vasallaje que él mismo esquivó huyendo.
+
+**Tensión:** Darro bromea menos con Dagna que con cualquier otro del grupo — no porque ella lo pida, sino porque siente que las bromas rebotarían contra algo demasiado sólido. Es el único Pivote frente al que Darro se calla antes de que se lo pidan.
+
+**Traición — el quiebre suave de Darro para Deber Institucional:** cuando Dagna entrega a Speck en el cráter, Darro no grita como con las demás. Se acerca, se sienta en el suelo junto a Roen (ver [[#Darro + Roen]] abajo para la escena completa) y baja su propia arma. No es su quiebre más hondo — ese es Vekka — pero es el único momento donde Darro elige el silencio de otro antes que el suyo propio: se calla porque entiende que la escena no es sobre él.
+
+### Darro + Nyael (Elfa Duelist → Ella)
 **Primera impresión:** Nyael es sombra. Darro es luz. Extraña balance.  
 **Tensión:** Darro pregunta constantemente si está bien. Nyael siempre dice que sí. Darro no cree.  
 **Traición:** Cuando Nyael se va silenciosamente, Darro es quien relee la nota una y otra vez. *"¿Esperaste que supiera sin decir? Ese es el problema del silencio — los que aman no pueden salvarte de ello."*
 
-### Darro + Vekka (Enana Strategist → Ella)
-**Primera impresión:** Vekka construye, Darro destruye/arregla. Complicidad de ingeniero.  
-**Tensión:** Vekka menciona el Dogma del Gremio. Darro: *"¿Incluye desmontar personas? Porque eso es lo que harás."* Pregunta honesta.  
-**Traición:** Cuando Vekka desmonta el equipo del jugador, Darro está en el acto — viendo a Vekka llorar mientras lo hace. *"Construiste con corazón. Destruyes con razón. Ambas te destrozan."* Abraza a Vekka después. Único momento donde Darro es completamente suave.
+### Darro + Vekka (Enana Strategist → Ella) — su antigua maestra
+
+**No es primer encuentro.** Vekka fue la maestra de Darro hace ~30 años — lo tomó como aprendiz, le enseñó dos años, y al tercero lo rechazó del programa formal del Great Forging Clan en persona, sin explicación (ver §Aprendizaje Truncado arriba y [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §Cómo la Ve Darro). Cuando Vekka se une al grupo, Darro la reconoce a diez pasos. Se para más recto. Dice *"Guild Master"* — nunca su nombre.
+
+**Tensión:** treinta años de silencio no resuelto. Ninguno lo nombra directamente frente al grupo. Vekka nunca le corrige la técnica — sería reabrir el taller. Darro nunca le pide consejo — sería aceptar que sigue siendo su maestra.
+
+**Traición:** cuando Vekka desmonta el equipo del jugador por última vez, Darro reconoce el gesto en su propio cuerpo — es el mismo con que lo desmontó a él, treinta años atrás. Darro es quien siempre grita; en este momento se queda mudo, la única vez en la campaña. Después, si el jugador lo acompaña, Darro dice una sola cosa: *"Ahora sé por qué me despidió. Es porque sabía que iba a doler menos rápido que si me quedaba."* No es toda la verdad, pero es lo único que puede sostener sin romperse.
+
+**Este es el quiebre más hondo de Darro en todo el elenco de arquetipo Aritmética/Manipulación** — Maren y Sereth pueden dolerle (ver abajo), pero solo Vekka fue, literalmente, la persona que lo desmontó primero. Es la única traición donde Darro no tiene chiste ni siquiera de reserva.
 
 ---
 

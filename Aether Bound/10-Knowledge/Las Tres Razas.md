@@ -3,7 +3,7 @@ status: ratificado
 source: "GDD §2.2"
 updated: 2026-07-04
 ---
-
+C
 # Las Tres Razas
 
 Eje de personalidad tipo Avatar: TLA. Nombres canónicos en [[Nomenclatura]].

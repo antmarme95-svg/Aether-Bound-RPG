@@ -93,7 +93,7 @@ updated: 2026-07-27
   - Sede del Great Forging Clan
   - Múltiples niveles (profundidad del poder)
   - Donde Vekka es Guild Master de the Great Forging Clan
-  - Donde Torgan y Dagna pertenecen al Clan de Forja
+  - Torgan pertenece a un clan menor (no al Great Forging Clan); Dagna pertenece al subclán vasallo Deepstone
   - Arquitectura: piedra viva, forjas, luz de Aether azul, geometría angular
   - Clima: subterráneo, calor geotérmico, "olor a metal caliente"
 
@@ -610,7 +610,7 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Mecanismo: vende información por Standing (expensive)
 - Dinámicas:
   - Valen: conoce al hermitaño (respeto mutuo)
-  - Hermitaño: "he visto dos mudas. Esta es la tercera..."
+  - Hermitaño: *"Dos veces vi al Aether ponerse así. Las dos veces me dijeron que era la Muda. Las dos veces se apagó sola."* — **no vio dos Mudas** (ninguna se ha completado en 550 años); vio dos falsas alarmas que los archivos élficos asentaron como si fueran Mudas. Es testigo vivo del error de registro que Valen descubre en el Grove, y por eso el respeto entre ellos es mutuo: el ermitaño lo supo primero y nadie le creyó.
 
 #### **Bandits' Hideout** (Center-West, Mistbound culture)
 - Refugio neutral de bandidos/rebels Mistbound
@@ -736,7 +736,7 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 - **Ubicación:** Bajo The Wilds, acceso desde grieta/caverna
 - **Función:** Bóveda de la civilización de Wardens perdida
 - **Contenido:** Fragmento del God-Core (activador de clímax)
-- **Mecánica:** Dungeon del Acto 2, donde la traición ocurre al salir
+- **Mecánica:** Dungeon del Acto 3, donde la traición ocurre al salir
 - **Arquitectura:** Ruinas de civilización avanzada, cristales, geometría imposible, Aether dormido
 - **Clima:** Subterráneo, frío, luz de Aether blanca/azul pálido
 
@@ -962,7 +962,7 @@ El jugador se pone los Goggles ahí mismo, en la oficina de Tobin. Se activan al
 
 Nada de esto explica nada. No se activa una barra de habilidad. **Aún no revela nada específico sobre Speck** — eso se guarda para el Sunken Archive. Aquí, en Driftmarket, los Goggles solo confirman al jugador que lo que ha estado viendo en privado es real y tiene una lectura consistente. Es validación técnica de una validación humana.
 
-Cuando el jugador se los quita, la oficina vuelve a la normalidad. Tobin no pregunta qué vio. *"Son tuyos. Úsalos o no. Yo no los usaría hasta que los necesitara."*
+El jugador va a quitárselos y **no salen.** No aprietan, no están pegados — simplemente dejaron de ser un objeto que se pone y se saca (ver [[Nomenclatura]] — accesorio no retirable tras el primer uso). La capa dorada se queda encima de todo lo que mire desde ahora, y va a seguir ahí hasta los créditos. Tobin lo ve intentarlo y no se sorprende, ni pregunta qué vio. *"Al que los tenía antes tampoco se le salían. Nunca me dijo si eso le pareció bueno."*
 
 **Deliberadamente sin resolución completa** — mismo principio que The Monolith. El extraño no se nombra. La procedencia no se explica. El instrumento funciona sin manual.
 
@@ -1008,13 +1008,13 @@ Los siguientes 3-5 beats de la ruta Bram están marcados por esta incertidumbre:
 
 #### 1. Approach al Sunken Archive
 
-El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. Los flashes del jugador se han vuelto más frecuentes en los últimos beats — cristal debajo del pelaje beige, facetas donde deberían haber ojos — pero siguen siendo privados (canon en [[Speck]] §Capa 2), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
+El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. Los flashes del jugador se han vuelto más frecuentes en los últimos beats — cristal debajo del pelaje, facetas donde deberían haber ojos — pero siguen siendo privados (canon en [[Speck]] §Capa 2), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
 
 #### 2. Interior del Archive
 
-Bóveda Warden. Geometría imposible, cristal dormido, silencio con reverberación. El grupo camina por corredores que Valen intenta leer y no puede — el idioma es de otro estrato, más antiguo que cualquier cosa en The Stillspire. Al centro está el Fragmento, en un pedestal. Alrededor, tallados en las paredes, cadáveres calcificados en formación ritual — no ornamentos, cuerpos. Sereth (o Valen si Sereth es Pivote) hace la lectura: la civilización Warden no adoraba God-Cores, **los enterraba**. Los God-Cores son sus muertos. Cada core que el grupo destruyó en el Acto 1 era un cadáver profanado.
+Bóveda Warden. Geometría imposible, cristal dormido, silencio con reverberación. El grupo camina por corredores que Valen intenta leer y no puede — el idioma es de otro estrato, más antiguo que cualquier cosa en The Stillspire. Al centro está el Fragmento, en un pedestal. Alrededor, tallados en las paredes, cadáveres calcificados en formación ritual — no ornamentos, cuerpos. Valen hace la lectura — o **Sereth**, si Sereth es el Pivote activo de esa partida (beat exclusivo de su ruta, ver [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] §sub-beat 2): la civilización Warden no adoraba God-Cores, **los enterraba**. Los God-Cores son sus muertos. Cada core que el grupo destruyó en el Acto 1 era un cadáver profanado.
 
-El jugador se pone the Wanderer's Goggles aquí — segundo uso desde The Reckoning. A través de los lentes, las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — el último Warden vivo grabó su duelo en el Aether, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — que Valen no puede traducir sin los lentes — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
+Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jugador no se los pone: los lleva puestos desde The Reckoning y no se los ha podido quitar (ver [[Nomenclatura]]). Lo que cambia no es el gesto, es el lugar — en la oficina de Tobin la lectura dorada era ruido bonito sobre objetos cotidianos; acá las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — el último Warden vivo grabó su duelo en el Aether, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — que Valen no puede traducir sin los lentes — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
 
 El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarrollará; lo que este documento fija es el espacio: Valen se sienta en el suelo. Darro deja caer un chiste que muere en el aire. Roen mira a Speck y no aparta la mirada. Speck permanece quieta, como si supiera que la mirada la ubica.
 
@@ -1022,7 +1022,7 @@ El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarr
 
 Fría, rápida, sin épica. El grupo empieza el ascenso hacia la superficie. En el último corredor, el Pivote se separa — pretexto menor (revisar una inscripción, cubrir la retaguardia, cualquier cosa que suene razonable durante tres segundos). Cuando el resto voltea, el Pivote tiene a Speck. Ruta lateral, salida secundaria, sin diálogo largo. El grupo queda desarmado momentáneamente — no golpeado, **desalojado**. El Pivote no explica; explicar es Acto 4. Aquí solo actúa. Si el jugador rompió el Bond equivocado en Driftmarket, la traición cae doblemente: perdió al Pivote real Y al que confrontó por error.
 
-**Variante Bram:** en la ruta Bram, este sub-beat no ocurre. En el corredor, Bram frena. Toma a Speck en brazos, sí — pero para devolverla al jugador. *"Me pidieron que la cargue afuera por otra ruta. No voy a hacerlo."* No confesión heroica: agotamiento. El grupo sale intacto. Pero afuera del Archive los espera un mensajero del Great Forging Clan que buscó específicamente a Torgan — el Council ya movió su segunda pieza. La advertencia de Tobin del Reckoning (variante Bram) se materializa en tiempo real: **un segundo Pivote está siendo activado en la sombra**, y el hecho de que Bram rechazó no salvó el plan del Council, solo lo redistribuyó. El Acto 3 se abre igual, con un traidor distinto — o con un enemigo directo del Council interceptándolos si el segundo agente falla en llegar a tiempo. Bram vive el Acto 3 sabiendo que su rechazo no fue suficiente.
+**Variante Bram:** en la ruta Bram, este sub-beat no ocurre. En el corredor, Bram frena. Toma a Speck en brazos, sí — pero para devolverla al jugador. *"Me pidieron que la cargue afuera por otra ruta. No voy a hacerlo."* No confesión heroica: agotamiento. El grupo sale intacto. Pero afuera del Archive espera **Torgan** — activado por su propia cadena de mando (Great Forging Clan), no por un mensajero que lo busca a él: es el Council recurriendo a cualquier ejecutor con Juramento vigente, y Torgan ya estaba disponible. Ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 4a y [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram" para la escena completa. La advertencia de Tobin del Reckoning (variante Bram) se materializa en tiempo real: **un segundo Pivote está siendo activado en la sombra**, y el hecho de que Bram rechazó no salvó el plan del Council, solo lo redistribuyó. El Acto 3 se abre igual, con un traidor distinto. Bram vive el Acto 3 sabiendo que su rechazo no fue suficiente.
 
 #### 4. Persecución hacia The First Wound
 
@@ -1039,9 +1039,11 @@ El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometrí
 
 Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
 
-Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, retroceder es F2, quedarse quieto lo suficiente para que Speck hable primero es F4.
+Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el Pivote entrega por defecto —, y **preguntarle a Speck qué quiere** es F4. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta.
 
 Los detalles del acto final quedan abstractos aquí — cada final los interpreta distinto y cada ficha de Pivote escribirá su variación. Lo que este documento fija: **el cráter es el escenario único de la decisión**, no hay clímax repartido en dos locaciones, y ningún Pivote decide por el jugador. El Pivote llegó cargando a Speck; el jugador decide qué pasa después.
+
+**Variante Nyael:** el pulso del core central no distingue quién carga a Speck — cualquier intento de transportarla más allá de este punto se rompe igual. En la ruta Nyael, ella misma ya no está presente (ver [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §sub-beat 5); quien el jugador encuentra en el borde es el equipo de extracción institucional que ella activó, deteniéndose por la misma fuerza que detendría a cualquiera. La decisión final ocurre igual, frente a ellos en vez de frente a Nyael.
 
 #### 6. Nota transversal — Grove of Cycles florece aquí
 

@@ -201,7 +201,7 @@ Es el momento más frío de la ficha antes del clímax: Vekka **respeta a los Wa
 
 ### Sub-beat: la revelación de los Wanderer's Goggles
 
-El jugador se pone los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket, quien señala a Darro como el "Pivote" cuando el Pivote real es enana). Aparece una proyección: la palabra **"Warden"** flotando junto a un símbolo geométrico. El símbolo coincide, línea por línea, con el patrón grabado bajo el pelaje de Speck.
+El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket, quien señala a Darro como el "Pivote" cuando el Pivote real es enana). Aparece una proyección: la palabra **"Warden"** flotando junto a un símbolo geométrico. El símbolo coincide, línea por línea, con el patrón grabado bajo el pelaje de Speck.
 
 **Los Goggles son privados.** Solo el jugador ve la proyección. Vekka no ve nada. Pero Vekka **ve al jugador ver** — y Vekka reconoce técnica antes que emoción. Ve el ángulo de la mandíbula, la contracción del hombro, el segundo en que el jugador retrocede medio paso. Todo eso es información legible.
 
@@ -456,4 +456,4 @@ Ver `90-Raw/concept/vekka-v1.png`.
 
 2. **¿El cuaderno técnico de Vekka aparece como coleccionable en Acto 3?** Contiene sesenta días de observaciones sobre Speck — arqueológicas, técnicas, filosóficas al final. Si el jugador lo recupera después del cráter, ¿es lore item legible, o solo se referencia? En F4 el cuaderno está sobre la mesa del círculo interno — ¿accesible narrativamente?
 
-3. **¿Vekka tiene relación con Torgan pre-campaña?** Torgan es de clan menor vasallo; Vekka es del clan real. Ambos comparten el vocabulario del dogma. Si se encuentran en el grupo (posible en algunas configuraciones del Bound Five), ¿se reconocen como pares, como maestra y subordinado, o simplemente como dos enanos que trabajan bajo la misma corona? Gancho abierto.
+3. **¿Vekka tiene relación con Torgan pre-campaña?** Torgan es de clan menor vasallo; Vekka es del clan real. Ambos comparten el vocabulario del dogma. Si el guión los cruza alguna vez como NPCs externos (nunca ambos en el grupo — [[The Bound Five]] §headcount), ¿se reconocen como pares, como maestra y subordinado, o simplemente como dos enanos que trabajan bajo la misma corona? Gancho abierto.
