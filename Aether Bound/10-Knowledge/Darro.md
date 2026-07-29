@@ -30,7 +30,7 @@ sido en mucho tiempo, y le gustó cómo se sentía.
 
 ## Speck
 
-Darro fue el primero en tocar el huevo. El nombre "Speck" lo puso él,
+Darro fue el primero en tocar la crisálida. El nombre "Speck" lo puso él,
 en el peor momento posible con la peor justificación posible, y lo
 defiende con convicción total ante cualquiera que lo cuestione.
 Tiene con Speck la relación más cercana del grupo después del jugador —
@@ -55,8 +55,8 @@ llora después cuando cree que nadie mira.
 
 ## Línea canónica
 
-*"His name is Speck. I don't care what you think of the name.
-His name is Speck."*
+*"Her name is Speck. I don't care what you think of the name.
+Her name is Speck."*
 
 ## Diseño visual
 

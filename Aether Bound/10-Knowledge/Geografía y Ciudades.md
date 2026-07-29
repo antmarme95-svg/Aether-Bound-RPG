@@ -406,12 +406,13 @@ BOTTOM: The First Wound (cementerio God-Cores)
 - Templo élfico a los ciclos antiguos (árboles vivos, arquitectura orgánica)
 - Conexión narrativa: Donde elfos observan Muda desde hace eras
 - Mecanismo: Círculos de poder, manuscritos vivos (hojas que escriben)
-- Loot: Conocimiento de ciclos (Aether pattern maps)
-- Enemigos: Bestias vivas que custodiaban (now corrupted)
+- **NO es dungeon. No hay enemigos, no hay loot, no hay combate.** El Grove es uno de los pocos lugares del mapa donde **el Aether no está corrupto** — sigue siendo el templo de observación que fue durante milenios, en silencio profundo, sin que lleguen los sonidos del bosque ([[Grove of Cycles — Escena del Acto 2]] §Por qué el grupo llega ahí, que es la fuente primaria de este lugar). Las bestias que lo custodiaban siguen vivas y **sin corromper**: no atacan, observan. Es exactamente el contraste que hace legible el resto del mapa.
+- Es además el único lugar donde los 4 miembros del Elder Circle siguen coincidiendo ([[Estructura Política]] §El Elder Circle) — imposible si estuviera infestado
+- Contenido: el debate del Acto 2 (Threnn / Ilyara / Corwyn / Maelys), círculos de poder, manuscritos vivos
 - Dinámicas:
   - Valen: "aquí aprendí a leer ciclos" (origin story)
-  - Sereth: manuscritos antiguos, calcula con precision
-  - Lyris: sabe donde cazaba (territorio propio)
+  - Sereth: manuscritos antiguos, calcula con precisión
+  - Lyris: reconoce el aire y las térmicas del noreste, pero **no cazaba acá** — su territorio son las Sky Watchtowers al norte de The Stillspire (§Sky Watchtowers). Lo que dice es que nunca voló sobre un sitio tan callado
 
 #### **Vigil of the Broken Oath** (West, border Mistbound)
 - Templo humano al honor/promesas (piedra inscrita, muros vandalizados)
@@ -477,14 +478,16 @@ BOTTOM: The First Wound (cementerio God-Cores)
   - Maren: "fueron días diferentes"
   - Maren: aquí decidió no quedarse con humanos
 
-#### **Torgan's Rejected Forge** (East, near Ironforge Outpost)
-- Forge abandonada donde aprendices fueron rechazados
-- Conexión narrativa: Donde Torgan fue expulsado del gremio
-- Mecanismo: Nombres grabados en paredes (Darro's name visible)
+#### **The Rejected Forge** (East, near Ironforge Outpost)
+- Forja de aprendices abandonada hace décadas, en territorio enano periférico
+- **Ni el rechazo de Torgan ni el de Darro ocurrieron aquí.** Los dos ocurrieron en **Emberdeep**, en años distintos y de formas distintas: a Torgan lo rechazó *un registro y un escribiente que no levantó la vista*, a los 15, hace ~60 años ([[Pivotes/Torgan-Ficha-Expandida-v1]] §Aritmética canónica); a Darro lo rechazó **Vekka en persona, cara a cara**, hace ~30 años ([[Darro-Ficha-Expandida-v1]]). No se conocieron de jóvenes y no fueron rechazados el mismo día.
+- **Y ninguno de los dos rechazos fue público.** El de Darro fue aislamiento, no expulsión con ceremonia; el de Torgan fue un trámite. Ningún muro los registra en ninguna parte — es precisamente lo que los vuelve irresolubles.
+- Conexión narrativa: el lugar no es su historia, es su **clase**. Muros con nombres de aprendices que no llegaron, ninguno de ellos el de ellos dos. Funciona como eco genérico: el sistema enano rechaza a mucha gente y no guarda memoria de casi ninguno.
+- Mecanismo: nombres grabados de aprendices anónimos (ninguno legible como Torgan ni Darro)
 - Dinámicas:
-  - Torgan: evita venir
-  - Darro: aquí también fue rechazado
-  - Ambos enanos: silencio cuando pasan
+  - Torgan: evita venir. No comenta por qué
+  - Darro: bromea una vez, mal, y no vuelve a hablar en todo el tramo
+  - Ambos enanos: silencio cuando pasan — por lo que el lugar representa, no por lo que les pasó ahí
 
 #### **Iven's First Defense** (West border, village ruins)
 - Ruinas de pueblo con monumento improvisado
@@ -740,8 +743,8 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 - **Arquitectura:** Ruinas de civilización avanzada, cristales, geometría imposible, Aether dormido
 - **Clima:** Subterráneo, frío, luz de Aether blanca/azul pálido
 
-### THE FIRST WOUND (Cráter Final — Centro)
-- **Ubicación:** Centro absoluto de The Wilds, cráter masivo
+### THE FIRST WOUND (Cráter Final — Sur)
+- **Ubicación:** extremo **sur** de The Wilds, cráter masivo. **Este archivo es la fuente primaria de ubicaciones** — coincide con §Cuadrantes (*"BOTTOM: The First Wound"*), con los POIs de aproximación (Ossuary Grove *South, before First Wound*; The Scar of Breaking *South*) y con [[Briefs de Mapa del Mundo]] §SOUTH
 - **Función:** Cementerio de God-Cores (cadáveres de Wardens muertos)
 - **Mecánica:** Zona final del juego, clímax + 5 finales
 - **Arquitectura:** Ruinas, cristales rotos, Aether rojo/corrupto, paisaje de desolación
@@ -1014,7 +1017,7 @@ El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es
 
 Bóveda Warden. Geometría imposible, cristal dormido, silencio con reverberación. El grupo camina por corredores que Valen intenta leer y no puede — el idioma es de otro estrato, más antiguo que cualquier cosa en The Stillspire. Al centro está el Fragmento, en un pedestal. Alrededor, tallados en las paredes, cadáveres calcificados en formación ritual — no ornamentos, cuerpos. Valen hace la lectura — o **Sereth**, si Sereth es el Pivote activo de esa partida (beat exclusivo de su ruta, ver [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] §sub-beat 2): la civilización Warden no adoraba God-Cores, **los enterraba**. Los God-Cores son sus muertos. Cada core que el grupo destruyó en el Acto 1 era un cadáver profanado.
 
-Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jugador no se los pone: los lleva puestos desde The Reckoning y no se los ha podido quitar (ver [[Nomenclatura]]). Lo que cambia no es el gesto, es el lugar — en la oficina de Tobin la lectura dorada era ruido bonito sobre objetos cotidianos; acá las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — el último Warden vivo grabó su duelo en el Aether, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — que Valen no puede traducir sin los lentes — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
+Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jugador no se los pone: los lleva puestos desde The Reckoning y no se los ha podido quitar (ver [[Nomenclatura]]). Lo que cambia no es el gesto, es el lugar — en la oficina de Tobin la lectura dorada era ruido bonito sobre objetos cotidianos; acá las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — **Speck misma** grabó su duelo en el Aether, milenios antes de que alguien la llamara Speck, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — que Valen no puede traducir sin los lentes — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
 
 El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarrollará; lo que este documento fija es el espacio: Valen se sienta en el suelo. Darro deja caer un chiste que muere en el aire. Roen mira a Speck y no aparta la mirada. Speck permanece quieta, como si supiera que la mirada la ubica.
 
@@ -1082,7 +1085,7 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 | **Ignis Reach** | Emberdeep | Torgan, Dagna, Vekka | 2B (enano) |
 | **Stillwood** | The Stillspire | Valen, Sereth, Lyris, Nyael | 2C (elfo) |
 | **Underground** | Sunken Archive | — | 3 (clímax) |
-| **Central** | The First Wound | — | 3 (final) |
+| **Sur** | The First Wound | — | 3 (final) |
 | **The Wilds** | El Nido | Speck | 1, 2 (returns) |
 
 ---
@@ -1101,7 +1104,8 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 ### Emberdeep
 - **Vekka's Mastery:** Controla la forja central
-- **Torgan's Shame:** Donde fue rechazado como aprendiz (como Darro)
+- **Torgan's Shame:** la puerta del Great Forging Clan donde lo rechazaron a los 15 — un registro y un escribiente, hace ~60 años
+- **Darro's Shame:** el taller de Vekka, donde ella lo rechazó en persona hace ~30 años. **Otro lugar, otro año, otra forma** — el rechazo de Darro tuvo cara; el de Torgan no
 - **Dagna's Loyalty:** Donde el clan ordena su actuar
 
 ### The Stillspire

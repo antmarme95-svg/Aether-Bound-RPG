@@ -270,7 +270,7 @@ Y **traiciona igual.** Ese es el punto exacto de su arquetipo: el Juramento no f
 
 El jugador mira las paredes a través de los Goggles (regalo de Tobin en Driftmarket). Aparece la proyección: la palabra **"Warden"** junto a un símbolo geométrico que coincide, línea por línea, con el patrón bajo el pelaje de Speck.
 
-**Los Goggles son privados.** Torgan no ve nada ([[Speck]] §Capa 2). Lo que ve es **al jugador ver**: el hombro que se contrae, el medio paso atrás, la mandíbula. Torgan reconoce el gesto porque lo ha visto en gente que acaba de recibir noticia de una muerte.
+**Los Goggles son privados.** Torgan no ve nada ([[Nomenclatura]] §the Wanderer's Goggles). Lo que ve es **al jugador ver**: el hombro que se contrae, el medio paso atrás, la mandíbula. Torgan reconoce el gesto porque lo ha visto en gente que acaba de recibir noticia de una muerte.
 
 No se acerca. No pregunta. Hace una sola cosa: **se pasa el pulgar por el antebrazo izquierdo, siguiendo la línea del tatuaje**, de la muñeca al codo. Es un tic que nadie del grupo le ha visto en tres meses y que va a repetir exactamente dos veces más en toda la campaña.
 

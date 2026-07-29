@@ -14,11 +14,32 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
-**Gate:** Speck alcanza forma Warden completa y el jugador la deja terminar la Muda sin intervenir. Requiere que en la persecución el jugador haya elegido "alcanzar al Pivote y neutralizarlo antes del cráter" o "hablar con Speck primero al llegar" — no requiere Tether alto.
+**Gate:** dos condiciones, en este orden.
+1. **El Pivote quedó neutralizado antes del cráter** — alcanzado en la persecución y detenido. Es indispensable: mientras el Pivote pueda actuar, la inacción del jugador resuelve a F2a, porque el Pivote completa la entrega ([[Geografía y Ciudades]] §ACTO 3 sub-beat 5).
+2. **El jugador no interviene en el cráter.** No cruza hacia el core, no forcejea, no pregunta. Se queda fuera y deja que la Muda termine.
+
+No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar al Pivote primero: es lo que convierte la quietud en una decisión en vez de un descuido.
+
+**F1 no usa el verbo de F4.** No hay rama de "hablar con Speck primero": preguntarle qué quiere es F4 y solo F4 ([[Speck]] §Capa 4 — el verbo de F1 es *aceptar*, el de F4 es *responder*). El jugador de F1 decide por Speck; que ella lo asuma con gracia no lo convierte en consentimiento.
 
 **Línea canónica:** *"Termínala. Nosotros aprenderemos a vivir con lo que quede."*
 
 **Eco Bond/Link Cam:** el anclaje se vuelve un multi-link — cada Bond llama a todos los sobrevivientes a la vez. El inverso exacto del Bond vacío. Speck no responde al llamado — se volvió el llamado.
+
+#### El costo de F1 — qué significa exactamente "cuesta civilizaciones"
+
+**Definición canónica, obligatoria para los 12 epílogos F1.** La Muda completada sana el Aether y con ello **apaga el Aether corrupto que era el combustible de todo.** Lo que colapsa es el orden tecnológico y económico construido sobre él; lo que no colapsa son las poblaciones.
+
+**Muere:** la tecnología Aether (tanques, forjas industriales, aeronaves, el arnés de Vekka, las minas de Ignis Reach), la economía que la sostenía, y la legitimidad de toda institución cuyo poder venía de administrar el recurso — the Triune Council pierde su razón de ser, el Great Forging Clan su monopolio, la Royal Academy su objeto de estudio.
+
+**Sobrevive:** la gente. Empobrecida, desplazada, aprendiendo oficios pre-Aether de cero, y en muchos casos amarga. Las tres razas siguen existiendo; sus civilizaciones, tal como el juego las mostró durante 40 horas, no.
+
+**Regla de escritura para los epílogos F1 — las tres prohibiciones:**
+1. **Ninguna institución Aether-dependiente puede aparecer operando con normalidad.** Nada de Councils despachando mensajeros de rutina, Academies tramitando renuncias, gremios llevando registros. Pueden aparecer como cascarones, en disolución, o discutiendo qué son ahora.
+2. **Nadie puede concluir que la Muda salió gratis.** La línea de `Iven` — *"su gente habría vivido igual"* — es exactamente lo prohibido: la gente vive, el mundo que conocían no.
+3. **El Aether sana de golpe, y eso es parte del costo.** No hay transición administrada. La diferencia con F4 es precisamente esa: allá el Aether sana lento y las civilizaciones tienen tiempo de adaptarse; acá se les cae encima en una generación.
+
+**Por eso F1 no es estrictamente mejor que F4.** F1 sana el mundo y funde la civilización; F4 sana el mundo más despacio, la civilización se adapta, y el precio es Speck. Son costos incomparables, no una escala.
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* sobrevive, quebrado. Ve la Muda completarse y entiende que sus cuentas eran correctas E insuficientes. No pide perdón.
@@ -86,10 +107,15 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ### F4 — The Warden's Choice *(síntesis — el único con consentimiento de Speck)*
 
-**Gate compuesto:**
-1. Mayoría "persona" en los ~7 Momentos de Persona de Speck.
+**Gate compuesto — 2 condiciones, ambas discriminantes:**
+1. Mayoría "persona" en los Momentos de Persona de Speck.
 2. ≥2 compañeros en Tether T2+ ([[The Tether]]).
-3. **Uso significativo de the Wanderer's Goggles antes del cráter** — definido como: haber usado los Goggles en el Sunken Archive para ver la proyección Warden Y haber presenciado ≥3 flashes privados del jugador ([[Speck]] §Capa 2) antes de The Reckoning. Los Goggles no revelan a Speck en el Archive; revelan **el duelo del último Warden vivo**, y ese es el único contexto emocional que permite al jugador **callarse para preguntar** en vez de decidir por ella.
+
+Coincide con [[The Tether]] §Gate del Final 4 — **son la misma regla y no debe divergir.**
+
+**Por qué el gate no incluye los Goggles ni los flashes.** Ambas cosas le pasan a todo jugador: los Goggles **no son retirables** desde The Reckoning ([[Nomenclatura]] — objeto no retirable) y los tres flashes están en la ruta principal ([[Speck]] §Capa 2). Una condición que el 100% de las partidas cumple no gatea nada. Los Goggles y los flashes son **contexto emocional**, no requisito: explican por qué el jugador *podría* preguntar. Lo que decide si pregunta son los dos sistemas que él sí maneja — cómo trató a Speck y cuánto se acercó a su gente.
+
+**Lo que los Goggles sí revelan en el Archive:** a Speck. El símbolo bajo el pelaje coincide sin lugar a duda ([[Geografía y Ciudades]] §Sunken Archive), y las 9 fichas de Pivote registran esa identificación. No es "el duelo de otro Warden": es el duelo **de ella**, milenios antes de que el jugador la llamara Speck.
 
 **La quietud de F4 no es la parálisis de F2a.** Son gestos idénticos por fuera y opuestos por dentro: el jugador que no decide nada deja que el Pivote entregue a Speck (F2a); el jugador que llega con este contexto guarda silencio *porque va a hacer una pregunta*, y la hace. Lo que separa los dos finales no es cuánto tarda en moverse, sino si esa pausa termina en una pregunta.
 
@@ -97,7 +123,7 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un God-Core vivo, dentro del cráter, sin necesidad de que el Fragmento la fuerce. La transformación E1→E3 sigue ocurriendo, pero esta vez con consentimiento — su cuerpo se vuelve el punto de equilibrio entre la Muda completada y la civilización preservada. El Aether sana lentamente, no de golpe. Las civilizaciones no colapsan; se adaptan.
 
-**El costo — por qué esto no es "ganar":** Speck no vuelve con el grupo. La calcificación es permanente: el zorro que jugó, que hizo Momentos de Persona, que Darro nombró, **se queda en el cráter para siempre.** El jugador consiguió lo único de los 5 finales donde a Speck se le pregunta qué quiere — y lo que ella quiere es una forma en la que ya no puede acompañarlos. Es el único final donde el jugador rompe su propio Bond por elección, no por tragedia externa, sabiendo exactamente lo que está soltando. Ilyara ya lo dijo en el Grove sin nombrarlo: sanar el Aether cuesta algo, siempre — en F1 cuesta civilizaciones enteras; en F4 el precio se paga en una sola vida que el jugador llegó a querer.
+**El costo — por qué esto no es "ganar":** Speck no vuelve con el grupo. La calcificación es permanente: la criatura que jugó, que hizo Momentos de Persona, que Darro nombró, **se queda en el cráter para siempre.** El jugador consiguió lo único de los 5 finales donde a Speck se le pregunta qué quiere — y lo que ella quiere es una forma en la que ya no puede acompañarlos. Es el único final donde el jugador rompe su propio Bond por elección, no por tragedia externa, sabiendo exactamente lo que está soltando. Ilyara ya lo dijo en el Grove sin nombrarlo: sanar el Aether cuesta algo, siempre — en F1 el precio lo paga el mundo entero (ver §El costo de F1); en F4 se paga en una sola vida que el jugador llegó a querer.
 
 **Sabor:** agridulce, no triunfal. El mundo mejora. El jugador pierde a su amiga de todos modos — solo que esta vez la pérdida tuvo su consentimiento, y eso es lo único que lo distingue de F2b.
 

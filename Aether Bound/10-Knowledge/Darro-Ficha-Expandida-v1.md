@@ -79,7 +79,7 @@ Darro NO llega por razón noble. Llega **por accidente, ebrio, o buscando dinero
 
 A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón), Darro **estaba ahí de casualidad** y decidió quedarse porque era mejor que estar solo.
 
-**HUMANO** (viven ~50-80 años, timescale relatable para Darro):
+**HUMANO** (viven ~70-90 años, timescale relatable para Darro):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|

@@ -85,7 +85,7 @@ Sabe cosas que no puede decir sin ser peligroso. Sabe verdades que rompen alianz
 
 Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una variable importante en sus cálculos. A veces Valen llegó a ti por **investigación**. A veces llegaste tú a él por **accidente**. A veces ha estado **observándote durante años**.
 
-**HUMANO** (viven ~50-80 años, timescale visible para Valen):
+**HUMANO** (viven ~70-90 años, timescale visible para Valen):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -220,7 +220,7 @@ Dentro del Grove, Valen reconoce el lugar como propio: *"Aquí aprendí a leer c
 
 ### Sunken Archive — la lectura de la inscripción Warden
 
-Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — corresponde normalmente a **Sereth**. Cuando Sereth es el Pivote activo (y por tanto no está disponible para esa lectura sin comprometer la escena, o el diseño prefiere que no sea la voz que la ofrece), **es Valen quien hace la lectura** en su lugar. Reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador mira a través de the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo del último Warden — Valen no ve la proyección (los Goggles son estrictamente privados, [[Speck]] §Capa 2), solo ve la cara del jugador cambiar, y no pregunta qué vio.
+Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — corresponde normalmente a **Sereth**. Cuando Sereth es el Pivote activo (y por tanto no está disponible para esa lectura sin comprometer la escena, o el diseño prefiere que no sea la voz que la ofrece), **es Valen quien hace la lectura** en su lugar. Reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador mira a través de the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo de la última Warden — que es Speck misma — Valen no ve la proyección (los Goggles son estrictamente privados, [[Nomenclatura]] §the Wanderer's Goggles), solo ve la cara del jugador cambiar, y no pregunta qué vio.
 
 ---
 

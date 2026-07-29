@@ -129,7 +129,7 @@ Material dramático central. **Ninguna de las tres tiene marcador, prompt de UI 
 
 **Grieta 2 — The Reckoning, Driftmarket.** Tobin describe lo que oyó: **un pago del Consortium disfrazado de subsidio agrícola a un asentamiento fronterizo.** Es dinero. No es un cargamento de reactivo, no es un equipo de purga, no es un convoy médico. **Si el Council de verdad estuviera preparando un remedio, el movimiento logístico sería visible en los muelles de Driftmarket** — y no lo es. Lo único que se mueve es efectivo. El jugador tiene delante la forma exacta de la mentira y la va a leer como prueba de la traición, que es lo que Tobin quería que leyera. Ironía completa: el dato correcto, interpretado en la dirección correcta, y aun así se pierde la parte que salvaba a alguien.
 
-**Grieta 3 — Sunken Archive, con los Goggles puestos.** La proyección Warden establece que los God-Cores son cadáveres y que la corrupción es la Muda inconclusa ([[El Mundo y la Muda]]). De ahí se deduce en un paso que matar a la última Warden **no puede** sanar nada. El jugador tiene esa deducción en la mano **minutos antes** de que Iven la tome en el corredor. Los Goggles son privados ([[Speck]] §Capa 2): Iven no ve nada. Pero el jugador puede decírselo con palabras, y el diseño debe permitirlo — es la única ventana real de persuasión de toda la ruta.
+**Grieta 3 — Sunken Archive, con los Goggles puestos.** La proyección Warden establece que los God-Cores son cadáveres y que la corrupción es la Muda inconclusa ([[El Mundo y la Muda]]). De ahí se deduce en un paso que matar a la última Warden **no puede** sanar nada. El jugador tiene esa deducción en la mano **minutos antes** de que Iven la tome en el corredor. Los Goggles son privados ([[Nomenclatura]] §the Wanderer's Goggles): Iven no ve nada. Pero el jugador puede decírselo con palabras, y el diseño debe permitirlo — es la única ventana real de persuasión de toda la ruta.
 
 **Regla:** ninguna de las tres grietas cancela la traición por sí sola. Iven lleva dos años sosteniéndose sobre esa promesa; no la suelta por un argumento. Lo que cambian es **el epílogo** — cuánto tarda en entenderlo, y si lo entiende de boca de alguien que lo quería o de boca del silencio.
 
@@ -370,13 +370,13 @@ Ese es el punto exacto de su arquetipo. Doscientas personas se siguen muriendo m
 
 El jugador mira las paredes a través de los Goggles (regalo de Tobin en Driftmarket). Aparece la proyección: la palabra **"Warden"** junto a un símbolo geométrico que coincide, línea por línea, con el patrón bajo el pelaje de Speck.
 
-**Los Goggles son privados.** Iven no ve nada ([[Speck]] §Capa 2). Está sentado contra la pared, mirando al suelo.
+**Los Goggles son privados.** Iven no ve nada ([[Nomenclatura]] §the Wanderer's Goggles). Está sentado contra la pared, mirando al suelo.
 
 **→ Grieta 3.** El jugador tiene ahora la deducción completa: los cores son cadáveres, la corrupción es la Muda inconclusa, matar a la última Warden no sana nada. **Iven está a cuatro metros y todavía se puede hablar con él.** Si el jugador se lo dice — con lo que tenga, sin pruebas, con la voz que le salga — es la única ventana real de persuasión de toda la ruta. No cancela la traición. Cambia el epílogo.
 
 Si el jugador no dice nada, no pasa nada. Iven se levanta solo, se sacude el polvo, y empieza a caminar hacia el corredor de salida.
 
-**Detalle canónico:** si el jugador tiene los Goggles puestos cuando Iven camina hacia el corredor, lo ve **desde atrás, llorando**, con la lectura Aether encima temblándole alrededor de las manos. Iven no sabe que lo están viendo. Es lo último que el jugador ve de él antes de la traición, y está diseñado para que lo recuerde en el cráter.
+**Detalle canónico:** cuando Iven camina hacia el corredor, el jugador lo ve **desde atrás, llorando**, con la lectura Aether encima temblándole alrededor de las manos. Iven no sabe que lo están viendo. Es lo último que el jugador ve de él antes de la traición, y está diseñado para que lo recuerde en el cráter.
 
 ### Sub-beat 3: la traición al salir del Archive
 

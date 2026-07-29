@@ -223,7 +223,7 @@ Lo lee sin titubear.
 
 Y aquí está el detalle emocional: Sereth mira a Speck **largo tiempo antes de moverse.** No es actuación. Es despedida. Puede querer a Speck sinceramente **y** llevársela; los dos verbos coexisten en su arquitectura interna, porque su escuela le enseñó desde niño que amar no exige coincidir con lo que amas. Speck no lo mira de vuelta. Sereth le acaricia el borde del pelaje con dos dedos. Nadie del grupo interpreta el gesto correctamente en ese momento — parece afecto compartido. Es, en realidad, el único momento del juego donde Sereth **se despide de una persona que no va a volver a ver.**
 
-El jugador mira a través de the Wanderer's Goggles y ve la proyección residual — el duelo del último Warden vivo, la palabra Warden ampliada, el símbolo confirmado bajo el pelaje. Sereth no ve nada de eso (los Goggles son privados). Pero ve al jugador ver, y ese es dato suficiente.
+El jugador mira a través de the Wanderer's Goggles y ve la proyección residual — el duelo de la última Warden, la palabra Warden ampliada, el símbolo confirmado bajo el pelaje. Es el duelo **de Speck**, grabado milenios antes de que alguien la llamara Speck. Sereth no ve nada de eso (los Goggles son privados, [[Nomenclatura]] §the Wanderer's Goggles). Pero ve al jugador ver, y ese es dato suficiente.
 
 En su cabeza, en ese instante, la línea sería (si la dijera — no la dice):
 

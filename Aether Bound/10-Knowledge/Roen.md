@@ -51,7 +51,7 @@ Su función más importante ocurre cuando el Pivote se va.
 ## Diseño visual
 
 Humano masculino, 7.5 cabezas, Vanguard bulk (arch_xz 1.30).
-Rostro curtido, 35-40 años en apariencia. Cicatrices y líneas de
+Rostro curtido, 45 años (su edad real — no leer más joven). Cicatrices y líneas de
 expresión. Gear de frontera en tierra-tones — cuero remachado,
 capa pesada. Warpaint verde geométrico en pómulo o mandíbula,
 long-faded. Arma de dos manos a la espalda (hacha de guerra

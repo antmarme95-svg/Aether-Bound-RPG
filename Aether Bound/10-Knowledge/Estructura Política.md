@@ -140,7 +140,7 @@ centros de poder que conviven por tradición pero no siempre están alineados.
 |---|---|---|
 | **Vekka** | 100% Great Forging Clan (clan real) | Su autoridad como Maestra ES autoridad real, no solo técnica — cuando desarma lo que construyó por orden del gremio, obedece directamente al poder central |
 | **Dagna** | Subclán vasallo de Great Forging Clan | Cadena de obligación de dos eslabones, no uno: obedece a su clan, que a su vez debe lealtad al clan real — encaja con que su traición sea la más "justa" de las 9 |
-| **Torgan** | Fuera del clan real — rechazado como aprendiz (junto con Darro) | Su Juramento de Forja de 55 años NO fue jurado al clan que lo rechazó — fue jurado a un clan propio/menor donde encontró pertenencia después del rechazo. Vuelve el juramento MÁS preciado, no menos |
+| **Torgan** | Fuera del clan real — rechazado como aprendiz a los 15, en años distintos y por vías distintas que Darro (no juntos, no el mismo día) | Su Juramento de Forja de 55 años NO fue jurado al clan que lo rechazó — fue jurado a un clan propio/menor donde encontró pertenencia después del rechazo. Vuelve el juramento MÁS preciado, no menos |
 
 **Consecuencia para "Cómo lo ve Darro":** Darro y Torgan comparten rechazo
 del mismo sistema (ambos fuera del clan real); Vekka y Dagna representan dos

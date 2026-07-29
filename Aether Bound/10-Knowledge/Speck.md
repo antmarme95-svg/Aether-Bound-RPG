@@ -4,7 +4,7 @@ source: "GDD §2.4 + redireccionamiento narrativo + diseño visual 2026-07-23"
 updated: 2026-07-27
 ---
 
-# Speck — Último Warden
+# Speck — La Última Warden
 
 La última **Warden**: constructo biológico creado por la civilización de los
 dioses para cuidar el Aether (sabor Horizon Zero Dawn — arqueología viviente).
@@ -126,7 +126,7 @@ es la **progresión de cómo el jugador la ve**, no cómo ella cambia:
 | **Forma Warden E1 (jade)** | 2→Clímax | La verdad completa revelada. Speck SIEMPRE fue esto — el shapeshifting simplemente ocultaba | Verdadera naturaleza: **guardiana de eras perdidas** |
 | **Forma God-Core E3 (rojo)** | Clímax | **Involuntario.** Fragmento se activa → Speck reacciona por hive mind forzado. No elige transformarse. Es víctima del dispositivo. | Poder del Fragmento impone la verdad final sin consentimiento |
 
-**No hay "crecimiento"** — hay **desvelamiento**. Speck es Warden adulto, milenario, 
+**No hay "crecimiento"** — hay **desvelamiento**. Speck es Warden adulta, milenaria, 
 desde el inicio. El shapeshifting es defensa, no etapa. E1→E3 en clímax es **reacción 
 forzada al Fragmento**, no evolución. Cuando lo ves sin velo, ves quién siempre fue — 
 pero Speck no controla ese momento.

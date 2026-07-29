@@ -27,7 +27,7 @@ El corazón emocional del grupo. No el más inteligente ni el más fuerte — el
 
 Roen conoce al jugador en un **momento de fracaso cultural específico**. No siempre es "rescate" — a veces el jugador lo vio primero. La escala y naturaleza del encuentro cambia según raza, rol y género.
 
-**HUMANO** (viven ~50-80 años, timeline reciente):
+**HUMANO** (viven ~70-90 años, timeline reciente):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -37,17 +37,17 @@ Roen conoce al jugador en un **momento de fracaso cultural específico**. No sie
 
 ---
 
-**ELFO** (viven 650-700 años — ver [[Las Tres Razas]]; escala antigua: los 45 años de Roen caben enteros en un tramo joven de vida élfica — el elfo la vio crecer de principio a fin, o Roen alcanzó a presenciar uno de sus fracasos):
+**ELFO** (viven 650-700 años — ver [[Las Tres Razas]]; escala antigua: los 45 años de Roen caben enteros en un tramo joven de vida élfica — el elfo lo vio crecer de principio a fin, o Roen alcanzó a presenciar uno de sus fracasos):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
-| **Duelist** | Antiguo guerrero, honor quebrado por cambio de era. TE vio a ti hace 40-50 años joven en frontera, reconoció tu integridad. Roen: *"Te vi hace 40 años cuando eras joven. Ya sabías lo que significa estar plantado. Volví porque ese conocimiento no muere."* | Guerrera cuyo linaje fue borrado por política, no destreza. Roen vio tu nombre ser quitado. Roen: *"Vi lo que tu gente hizo contigo — borraron tu nombre. Ese tipo de muerte lenta la reconozco. Vine porque tu silencio parecía permanente."* |
+| **Duelist** | Antiguo guerrero, honor quebrado por cambio de era. TE vio a ti hace 20 años joven en frontera, reconoció tu integridad (Roen tenía 25 y empezaba como guardia del Council). Roen: *"Te vi hace veinte años cuando eras joven. Ya sabías lo que significa estar plantado. Volví porque ese conocimiento no muere."* | Guerrera cuyo linaje fue borrado por política, no destreza. Roen vio tu nombre ser quitado. Roen: *"Vi lo que tu gente hizo contigo — borraron tu nombre. Ese tipo de muerte lenta la reconozco. Vine porque tu silencio parecía permanente."* |
 | **Vanguard** | Guardián fracasado, dejó morir algo sagrado. Roen presenció el sitio después. Roen: *"Fallaste en proteger. Eso te destruyó. He visto esa muerte en vida. Vine porque fallar no borra lo que intentaste."* | Protectora de lugar destruido. Roen la vio en ruinas, sabiendo su gente la culparía. Roen: *"Estabas en las ruinas. Tu pueblo iba a olvidarte. Vine porque necesitabas que alguien honrara lo que intentaste, aunque fracasara."* |
 | **Strategist** | Calculador de Mudas, sus predicciones fueron ignoradas. Roen lo encontró en estudio, cargando culpa de razón. Roen: *"Sabías. Viste venir lo que rechazaban. Ahora cargas haber tenido razón — eso es la maldición. Vine porque el conocimiento solo no salva."* | Lideresa cuyas órdenes tuvieron consecuencias imprevistas. Roen vio su arrepentimiento silencioso (los elfos no lo verbalizan). Roen: *"Los elfos no se perdonan — ni siquiera a sí mismos. Vi tu culpa válida. Vine porque el perdón a veces viene de afuera."* |
 
 ---
 
-**ENANO** (viven ~200-250 años — ver [[Las Tres Razas]]; escala larga frente a la de Roen: un enano de 60 sigue siendo joven, y aun así ya vivió más que ella):
+**ENANO** (viven ~200-250 años — ver [[Las Tres Razas]]; escala larga frente a la de Roen: un enano de 60 sigue siendo joven, y aun así ya vivió más que él):
 
 | Rol | ♂ Masculino | ♀ Femenino |
 |---|---|---|
@@ -67,7 +67,7 @@ Nació en un puesto fronterizo entre The Wilds y las ciudades humanas — lugar 
 
 Su padre fue guardián fronterizo. No fue héroe — fue alguien que se plantaba cada mañana sabiendo que quizá no volvería. Roen lo vio hacer eso todos los días. Cuando su padre murió en una purgación (Roen tenía 12 años), nadie lo dramaturzó: el trabajo siguió. Eso fue la lección.
 
-**Marca cultural:** Warpaint fronterizo geométrico verde — personal, no oficial. Lo lleva desde los 15 años. Nunca lo ha quitado, aunque hace 15+ años que no vive en la frontera. Long-faded ahora. Es la única conexión visible a su origen.
+**Marca cultural:** Warpaint fronterizo geométrico verde — personal, no oficial. Lo lleva desde los 15 años. Nunca lo ha quitado, aunque hace 5 años que no vive en la frontera (sirvió allí como guardia del Council de los 25 a los 40 y renunció a los 40 — ver §Años de Guardia). Long-faded ahora. Es la única conexión visible a su origen.
 
 ### Años de Guardia del Triune Council (15 años, edades 25-40)
 
@@ -310,9 +310,9 @@ Roen es quien **ve el futuro.** Su línea final:
 ## Diseño Visual Ratificado
 
 - Humano masculino, 7.5 cabezas, complexión atlética plantada (arch_xz 1.30)
-- Rostro curtido, 35-40 años en apariencia, cicatrices pequeñas (vida de frontera, no batalla épica)
+- Rostro curtido, 45 años (su edad real — no leer más joven), cicatrices pequeñas (vida de frontera, no batalla épica)
 - Líneas de expresión — ha sonreído, ha llorado, ha decidido cosas duras
-- **Warpaint fronterizo verde geométrico** en pómulo o mandíbula, long-faded (15+ años sin retoque)
+- **Warpaint fronterizo verde geométrico** en pómulo o mandíbula, long-faded (5+ años sin retoque)
 - Gear de frontera: cuero remachado, capa pesada en tonos tierra, botas de marcha
 - Arma de dos manos a la espalda (hacha de guerra o maza + escudo pequeño)
 - **Adorno personal único:** un anillo de cobre en la mano izquierda — de su padre, primer guardia

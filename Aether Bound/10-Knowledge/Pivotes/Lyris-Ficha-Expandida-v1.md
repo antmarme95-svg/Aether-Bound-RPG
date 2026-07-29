@@ -8,7 +8,10 @@ updated: 2026-07-27
 
 **Raza / Rol:** Elfa (the Aether-Born) / Duelist  
 **Origen:** The Stillspire (pero fuera de ciudad, en frontera aérea)  
-**Edad aparente:** 170-200 años (joven para elfa, cazadora)  
+**Edad:** 180 años (joven para elfa, cazadora)
+
+**Aritmética canónica de la ficha (fija, no negociable):** vuelo de frontera de los **80 a los 170** = **90 años en el aire**. La pregunta del Frontier High Command fue **hace 10 años**, a los 170. Edad hoy: **180**. Toda cifra distinta (170 años volando, 45 años sin techo, "170-200") es residuo de versiones anteriores y está corregida aquí.
+
 **Arquetipo de Traición:** Lógica fría expresada con calma quirúrgica. Superlativo: **la más fría** — sentir y suprimir, no ausencia de sentimiento (ver [[Los 5 Finales]] — fila Rechazo/Ausencia).  
 
 ---
@@ -227,7 +230,7 @@ Lyris casi—casi—se permite fascinar. Pero se detiene a sí misma. No puede p
 
 ### Grove of Cycles (a mitad del Acto 2)
 
-Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Lyris **incómoda en interior** — cuarenta y cinco años sin techo sobre la cabeza pasan factura. Se queda cerca de la salida sur, contra un árbol, con la vista alta hacia el follaje. Rastrea el techo de hojas por costumbre, buscando una salida de emergencia aérea que en el Grove no existe.
+Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Lyris **incómoda en interior** — noventa años sin techo sobre la cabeza pasan factura. Se queda cerca de la salida sur, contra un árbol, con la vista alta hacia el follaje. Rastrea el techo de hojas por costumbre, buscando una salida de emergencia aérea que en el Grove no existe.
 
 **No participa del debate.** Los cuatro elfos hablan como si ella no estuviera. Ilyara la mira una vez, larga, en el momento en que menciona "sangrar por lo ajeno". Lyris asiente sin abrir la boca — es lo único que dice en toda la escena. Threnn, Corwyn y Maelys no la buscan; Lyris no dispara ninguno de los cuatro disparadores del encuentro individual ([[Grove of Cycles — Escena del Acto 2]] §5). Sale del Grove tan silenciosa como entró, pero con un dato nuevo: los cuatro élderes discuten variables que Frontier High Command nunca discute. Le pesa un segundo. Se sacude el peso al salir. Vuela quince metros arriba del grupo el resto del trayecto a Driftmarket.
 
@@ -389,5 +392,5 @@ Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de 
 - El Pivote donde la traición viene de **honestidad pura sin filtro emocional**
 
 **Línea privada:**
-*"Volé 170 años sin tocar tierra. Luego bajé y conocí stillness. Conocí alguien que hacía que tierra fuera hermosa. Pero la tierra es carga. Y yo no cargo cosas. Vuelvo al cielo. El cielo es verdad. Y la verdad es sola."*
+*"Volé noventa años sin tocar tierra. Luego bajé y conocí stillness. Conocí alguien que hacía que tierra fuera hermosa. Pero la tierra es carga. Y yo no cargo cosas. Vuelvo al cielo. El cielo es verdad. Y la verdad es sola."*
 

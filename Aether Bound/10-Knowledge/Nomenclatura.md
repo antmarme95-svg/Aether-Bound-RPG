@@ -51,5 +51,14 @@ más globales, más estándar, idioma primario del juego.
 | Rival político de Edrick                         | **Lady Isolde Marrow** (House Marrow)     | Busca Corona hereditaria real, no Regency — amenaza también al Council. **House Marrow proclama** que desciende del último trono humano anterior a las Regencias; el reclamo es leyenda, no genealogía verificable (ver [[Estructura Política]] §Humanos). El vault no ratifica que ese trono haya existido, y el título humano registrado nunca fue "King" (fila de arriba) — la fuerza política del reclamo está en que la gente quiera creerlo, no en que sea cierto.                                                                                                             |
 | "Rey" informal del Driftmarket                   | **Harbormaster Tobin Hale** ("Old Tobin") | Sin título nobiliario — controla el comercio del Driftmarket por reputación, no corrupción; único personaje de poder sin agenda oculta                                                                                 |
 | Regalo de Tobin al jugador                       | **the Wanderer's Goggles**                | Lentes/goggles de un extraño del pasado de Tobin con "la misma mirada" — detona que el jugador entienda su poder innato. Una vez que los usa por primera vez, se queda como objeto/accesorio no retirable del jugador. |
+
+### the Wanderer's Goggles — reglas del objeto (fuente única)
+
+**Esta sección es la fuente única de las tres reglas de los Goggles. Ningún otro documento debe enunciarlas por su cuenta — cítenla.**
+
+1. **No retirables.** El jugador se los pone una vez, en la oficina de Tobin, y desde ese momento son parte de él. No hay gesto de ponérselos ni de quitárselos en ninguna escena posterior — ni siquiera en el Archive ni en el cráter. Toda condicional del tipo "si el jugador tiene los Goggles puestos" es inválida.
+2. **Estrictamente privados.** Lo que revelan lo ve **solo el jugador**. Ningún compañero, Pivote ni NPC ve la capa Warden, las proyecciones residuales ni las inscripciones marginales — Valen tampoco, y él es quien más cerca está de poder leerlas. Lo que los demás ven es la cara del jugador cambiar. Esta privacidad es la razón estructural por la que el jugador carga la revelación en soledad durante todo el Acto 3.
+3. **No son un gate.** Por ser no retirables, todo jugador los tiene desde The Reckoning: no pueden condicionar ningún final ni ninguna rama. Son contexto emocional, nunca requisito ([[Los 5 Finales]] §F4).
+
 **Preguntas/Dudas Toño a Claude:**
 *Cambios en las tablas:* revisar control de cambios porque agregué a propósito ciertos puntos.

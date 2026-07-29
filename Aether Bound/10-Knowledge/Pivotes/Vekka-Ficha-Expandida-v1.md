@@ -333,11 +333,13 @@ Si se cruza con el jugador años después en Ignis Reach, no evita el contacto. 
 
 Este es el final donde Vekka **rompe con el oficio.**
 
-La operación se descarrila en el cráter — Speck muere antes de ser entregada, el mensajero llega tarde, o llega y encuentra un cuerpo sin la contención requerida. En la lógica del gremio, esto es peor que F1: la operación no falló por interrupción externa, falló **por mala ejecución.** La forja se rompió sobre el yunque.
+Speck muere en el cráter por la única vía por la que puede morir ahí: **el jugador se la arranca por la fuerza**, y el Fragmento se sobrecarga (regla física en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia). El mensajero del gremio llega y encuentra un cuerpo sin la contención requerida.
+
+**Y el gremio se lo carga a ella de todos modos.** Ahí está lo que la rompe: Vekka sabe perfectamente que la mano no fue la suya, y el dogma del oficio no admite ese descargo — una pieza que se quiebra en el yunque es responsabilidad del maestro que la sostenía, sin importar quién la golpeó. Es peor que F1: allá la operación se interrumpió desde fuera, aquí la lógica que ella pasó cincuenta años interiorizando la declara culpable de algo que no hizo, y ella no tiene con qué discutirlo porque **la lógica es suya.** La forja se rompió sobre el yunque.
 
 **Epílogo:** Vekka desmonta el equipo del jugador **por última vez, en silencio, en un taller vacío.** Cada pieza que ella misma reparó en Emberdeep vuelve al yunque, y esta vez no se rearma. Es su ruptura personal — el oficio le falló, y ella ya no puede sostener el oficio.
 
-Después de eso, **nunca vuelve a levantar una herramienta.** Cuelga el martillo pesado en la pared del taller donde entrenó a Darro hace treinta años. Cierra el taller. Se muda al cuarto trasero de una posada en las afueras de Ignis Reach. Muere de vieja, sola, sin haber tocado metal en años. En el cuaderno pequeño no anota nada nuevo — las últimas páginas quedan vacías.
+Después de eso, **nunca vuelve a levantar una herramienta.** Cuelga el martillo pesado en la pared del taller donde entrenó a Darro hace treinta años. Cierra el taller. Se muda al cuarto trasero de una posada en las afueras de Emberdeep. Muere de vieja, sola, sin haber tocado metal en años. En el cuaderno pequeño no anota nada nuevo — las últimas páginas quedan vacías.
 
 La diferencia con F2a es total: allá cumplió y ascendió, aquí ejecutó y perdió el oficio. Su arquetipo no sobrevive a una operación mal cerrada — no porque tenga conciencia moral, sino porque **el gremio interiorizado le retira el permiso de seguir siendo maestra.**
 
@@ -345,7 +347,7 @@ La diferencia con F2a es total: allá cumplió y ascendió, aquí ejecutó y per
 
 **Imposible para Vekka.** El arquetipo del dogma no puede vivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la operación — la deja abierta indefinidamente. Y una forja incompleta que camina con un tirano es peor que una forja incompleta que camina sola.
 
-Vekka **no se une** al régimen del jugador. No se ofrece a operar. En el cráter, cuando ve que el jugador intenta tomar el poder para sí, **abandona el arnés y va contra él con el martillo pesado.** Muere confrontándolo, o el jugador la deja irse — no importa. Si se va, camina hacia Ignis Reach a informar al gremio que la operación no se completó y que la variable está en manos hostiles. Muere en el camino, o llega y es despedida sin ceremonia, o simplemente desaparece del registro.
+Vekka **no se une** al régimen del jugador. No se ofrece a operar. En el cráter, cuando ve que el jugador intenta tomar el poder para sí, **abandona el arnés y va contra él con el martillo pesado.** Muere confrontándolo, o el jugador la deja irse — no importa. Si se va, camina hacia Emberdeep a informar al gremio que la operación no se completó y que la variable está en manos hostiles. Muere en el camino, o llega y es despedida sin ceremonia, o simplemente desaparece del registro.
 
 No hay epílogo compartido. Vekka no puede estar en un mundo donde la variable no se cerró. Se saca del cuadro.
 

@@ -310,9 +310,9 @@ Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final 
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa. La orden de Deepstone quedó cumplida a medias — la variable fue entregada, pero el Great Forging Clan no obtuvo el resultado que esperaba. En la lógica del deber institucional, esto es una orden reventada sin cierre ritual.
+Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
 
-**Epílogo:** Dagna **renuncia al subclán Deepstone y se autoexilia.** No hay ceremonia. Deja el escudo pesado en el altar del subclán y sale de Ignis Reach a pie. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
+**Epílogo:** Dagna **deserta.** Es la distinción que importa: no renuncia — renunciar es un acto formal que exige presentarse ante el consejo y decirlo, y para eso haría falta un informe que ella no puede escribir. Deja el escudo pesado en el altar del subclán, no avisa a nadie, y sale de Emberdeep a pie. En los papeles sigue siendo Deepstone. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
 
 Años después, un mensajero cuenta haber visto a una enana canosa con marcas de Deepstone borradas del cinturón, sirviendo como escolta silenciosa de una caravana en el norte lejano. No sonríe. No habla. No es nombre reconocido. Puede ser ella o puede no serlo. Deepstone no reclama el rumor.
 
@@ -330,13 +330,15 @@ Dagna cumple. Entrega a Speck viva al mensajero de Deepstone en el cráter. Los 
 
 Este es el final donde Dagna **rompe con Deepstone.**
 
-Speck muere en el cráter antes de ser entregada — combate accidental, herida acumulada, el Fragmento la sobrecarga. El mensajero de Deepstone llega y encuentra un cadáver. La orden se ejecutó sin resultado. La variable no está viva, no está entregada, no cumple lo que el Great Forging Clan pidió a través del subclán.
+Speck muere en el cráter antes de ser entregada, por la única vía por la que puede morir ahí: **el jugador se la arranca por la fuerza** a Dagna o al mensajero, y el Fragmento se sobrecarga (regla física en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia). El mensajero de Deepstone llega y encuentra un cadáver.
+
+Lo que quiebra a Dagna no es la muerte: es que **la mano fue la del jugador.** Cinco años de oficio con Roen, y el cierre de todo es una vanguard viendo cómo la persona a la que escoltó rompe lo que ella tenía orden de proteger. No lo dice. No hace falta. La orden se ejecutó sin resultado. La variable no está viva, no está entregada, no cumple lo que el Great Forging Clan pidió a través del subclán.
 
 **Epílogo:** Dagna **renuncia al subclán Deepstone por primera vez en la historia registrada del subclán.** Es un evento histórico en la política enana. Los archivos internos de Deepstone no tienen precedente de una vanguard vasalla renunciando; la palabra formal para el acto no existe, y el consejo tiene que inventarla.
 
 Antes de renunciar, Dagna se queda **en el cráter, cuidando el cuerpo muerto de Speck,** hasta que llega el equipo del Triune Council a llevárselo. Días. Sin dormir, sin comer más de lo mínimo, escudo apoyado en la piedra, sentada al lado del cuerpo. Nadie la mueve. El jugador puede quedarse con ella o irse — Dagna no comenta.
 
-Cuando el equipo del Council llega, Dagna se pone de pie, deja el escudo en el suelo al lado del cuerpo, y camina hacia Ignis Reach a pie. Entrega la renuncia al consejo de Deepstone en persona, sin más palabras que *"No sigo aquí."* Sale del edificio del subclán y desaparece.
+Cuando el equipo del Council llega, Dagna se pone de pie, deja el escudo en el suelo al lado del cuerpo, y camina hacia Emberdeep a pie. Entrega la renuncia al consejo de Deepstone en persona, sin más palabras que *"No sigo aquí."* Sale del edificio del subclán y desaparece.
 
 Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas. Puede haber muerto de vieja en un cuarto de renta como Vekka en su propio F2b, o puede haber muerto en la primera nevada del año. Deepstone no busca cuerpo.
 

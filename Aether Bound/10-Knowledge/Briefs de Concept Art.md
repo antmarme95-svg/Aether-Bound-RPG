@@ -105,7 +105,7 @@ vacío protagonista y rojo = máxima saturación del frame ([[Art Bible]]).
 
 ## 5 — Speck: los 3 estadios + Forma shapeshifteada (B9)
 
-**Redireccionamiento 2026-07-23:** Speck es último Warden, no criatura natural.
+**Redireccionamiento 2026-07-23:** Speck es la última Warden, no criatura natural.
 Forma base = **Warden cristalino + runas Warden + translúcido**, no salamandra.
 Los 3 estadios son **manifestación del despertar**, no crecimiento animal. 
 
@@ -683,7 +683,7 @@ Iluminación: cristales embebidos en la bóveda (azul pálido dormido) + resplan
 
 **Archivo destino:** `first-wound-climax-v1.png`
 
-**Especificación:** Cráter masivo al centro absoluto de The Wilds. **Sol poniéndose** — contraste deliberado con §6c nocturno (God-Core Night es vigilia dormida, esto es vigilia despierta). Cielo naranja-rosado en gradiente teal. Dos anillos de God-Cores calcificados en formación circular alrededor del cráter — el anillo interior más compacto, el exterior más disperso. El core central en el fondo (piso del cráter) — **el más grande, pulsando en frecuencia jade vivo**, respondiendo a Speck que está por llegar. Otros cores despertando alrededor en baja intensidad, cada uno con pulso propio, frecuencias ligeramente distintas (visualizar como variantes de verde-jade). Cracked stone ground radiando desde el centro en grietas nuevas. Borde del cráter visible como línea literal en foreground (moral boundary). Foreground: small silhouette del Bound Five en el borde opuesto del cráter para escala — apenas visibles. Composición: vista elevada ligeramente desde el borde, mirando hacia abajo y adentro del cráter, core central pequeño pero claro en la profundidad. Mood: umbral, decisión inminente, escala cósmica desperta.
+**Especificación:** Cráter masivo al extremo **sur** de The Wilds. **Sol poniéndose** — contraste deliberado con §6c nocturno (God-Core Night es vigilia dormida, esto es vigilia despierta). Cielo naranja-rosado en gradiente teal. Dos anillos de God-Cores calcificados en formación circular alrededor del cráter — el anillo interior más compacto, el exterior más disperso. El core central en el fondo (piso del cráter) — **el más grande, pulsando en frecuencia jade vivo**, respondiendo a Speck que está por llegar. Otros cores despertando alrededor en baja intensidad, cada uno con pulso propio, frecuencias ligeramente distintas (visualizar como variantes de verde-jade). Cracked stone ground radiando desde el centro en grietas nuevas. Borde del cráter visible como línea literal en foreground (moral boundary). Foreground: small silhouette del Bound Five en el borde opuesto del cráter para escala — apenas visibles. Composición: vista elevada ligeramente desde el borde, mirando hacia abajo y adentro del cráter, core central pequeño pero claro en la profundidad. Mood: umbral, decisión inminente, escala cósmica desperta.
 
 **Negativos:** No photorealism or PBR rendering. No anime cel shading. No neon glow. No excessive brightness. No chaotic energy visual. No humanoid figures at scale. No text, no labels, no captions, no annotations, no diagram-style callouts.
 
