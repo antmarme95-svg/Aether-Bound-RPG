@@ -222,7 +222,7 @@ Es la única ternura que Dagna ofrece a los Warden — reconocer que los suyos v
 
 El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket, que **señala a Darro como el "Pivote" cuando el Pivote real es enana** — la ironía canónica del Reckoning). Aparece la proyección: **"Warden"** junto al símbolo geométrico que coincide con el patrón bajo el pelaje de Speck.
 
-**Los Goggles son privados.** Solo el jugador ve. Dagna no ve nada, no le importa lo que vio el jugador, no recalcula. Ella ya sabía que iba a tomar a Speck sin importar lo que apareciera en el Archive. La revelación no toca su ecuación porque nunca hubo ecuación — hubo orden.
+**Los Goggles son privados** ([[Nomenclatura]] §the Wanderer's Goggles). Solo el jugador ve. Dagna no ve nada, no le importa lo que vio el jugador, no recalcula. Ella ya sabía que iba a tomar a Speck sin importar lo que apareciera en el Archive. La revelación no toca su ecuación porque nunca hubo ecuación — hubo orden.
 
 Lo único que Dagna hace en ese momento es ajustar el escudo. Ni siquiera mira al jugador. **Ese desapego es el rasgo del arquetipo aplicado a su forma más pura:** el deber institucional no negocia con revelaciones.
 

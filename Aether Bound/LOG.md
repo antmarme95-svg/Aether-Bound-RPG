@@ -5849,6 +5849,48 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### Herramienta nueva: `check_canon.py` + skill `canon-qa` (2026-07-29)
+
+**Diagnóstico que la motiva:** de los 18 críticos de la 4ª re-corrida, **10 eran
+mecánicos** — citas rotas, aritmética que no cerraba, clases de menciones
+barridas a dos tercios, reglas de fuente única re-enunciadas. Se estaba usando un
+LLM (~234k tokens, 14 min, no reproducible) para el trabajo de un linter, y encima
+el LLM olvidaba parte de la clase: la longevidad humana quedó en 2/3 y la
+aritmética de Lyris pasó **dos rondas reportada** sin cerrarse.
+
+- **`Aether Bound/scripts/check_canon.py`** — hermano de `check_vault.py` (ese
+  audita peso, este consistencia). 10 clases: wikilinks rotos, citas `§` a
+  secciones inexistentes, violaciones de fuente única, `hace N años` imposible
+  contra la edad declarada, encabezados `(edades A-B)` que no encierran sus datos,
+  longevidad contra `Las Tres Razas`, epítetos de género, reinos usados como
+  ciudades caminables, POIs con cuadrantes divergentes, y cifras en diálogo (INFO).
+  Exit 1 si hay críticos → usable como gate.
+- **Skill `canon-qa`** (`.claude/skills/canon-qa/`) — orden no negociable: linter
+  hasta 0 críticos → subagentes en frío **solo** para juicio → fixes a la fuente
+  con re-grep → checkpoint → re-corrida.
+- **[[QA de Canon Loop]]** — registro del método en el vault, como puntero a la
+  skill (no se duplica el procedimiento: dos copias de una regla es justo la clase
+  de error que el loop caza).
+- **CLAUDE.md reglas 7 y 8** — linter antes de subagentes; todo fix va a la fuente.
+
+**Primera corrida: 85 hallazgos brutos → 9 críticos reales** tras afinar cuatro
+falsos positivos del script (índice de wikilinks sin sufijos de ruta, citas
+compuestas tipo `§ACTO 3 sub-beat 5`, secciones citadas entre comillas, y
+precedencia de alias de cuadrante). Los 9 corregidos:
+
+- **3 violaciones de fuente única que ningún subagente reportó** — `Dagna:225`,
+  `Maren:241`, `Vekka:206` decían "Los Goggles son privados" sin citar
+  `Nomenclatura §the Wanderer's Goggles`
+- `The Tether` — "Gate del Final 4" era prosa inline, ahora es sección citable y
+  alineada con `Los 5 Finales §F4` (con el "vivos" divergente marcado como
+  pendiente de ratificar)
+- Citas rotas: `Geografía:752` (§SOUTH, que yo mismo rompí al regenerar los
+  cuadrantes), `Speck:192` (§Vectores diegéticos)
+- `Geografía:632` — "el último Warden caído" ambiguo con Speck viva
+- `Current-State:97` y `PRD-007:3` — género y ref a la ficha archivada
+
+**Estado: `check_canon.py` en 0 críticos / 0 MEDIUM, `check_vault.py` 🟢 (~3,4k).**
+
 ### Pendiente inmediato
 
 **4ª re-corrida QA con 2 subagentes Opus en frío** — criterio real de cierre del sprint. No se

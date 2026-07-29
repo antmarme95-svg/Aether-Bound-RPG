@@ -35,13 +35,10 @@ Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruenc
 - **Costo de F1 = colapso tecnológico, NO exterminio.** Nueva sección `Los 5 Finales §El costo de F1`, con 3 prohibiciones obligatorias para los 12 epílogos F1. Muere la tecnología Aether y la legitimidad de toda institución que vivía del recurso; sobrevive la gente, empobrecida. **F1 no es mejor que F4:** F1 funde la civilización de golpe, F4 la deja adaptarse y cobra a Speck.
 - **Gate de F1 = Pivote neutralizado antes del cráter + no intervenir.** Eliminada la rama "hablar con Speck", que era el verbo de F4. F1 es el único final cuya acción de cráter es la ausencia de acción **con nadie más capaz de actuar** — de ahí el requisito del Pivote.
 - **Gate de F4 = 2 condiciones** (mayoría "persona" en Momentos + ≥2 compañeros T2+). Eliminada la condición de Goggles/flashes: por no retirables y estar en rieles, el 100% de las partidas la cumplía. Alineado con `The Tether §Gate del Final 4`.
-- **`Dagna.md` archivada** a `90-Raw/Dagna-ficha-v0-ARCHIVADA.md`. Contradecía a la expandida en origen, apellido y reclutamiento. Migrados antes los tiers del Springboard a [[Los 9 Links del Pivote]].
-- **Matriz de roles fija eliminada** de `The Bound Five`. 1V/2D/2S solo cerraba en 4 de 9 celdas. El balance de combate se verifica **por celda**.
-- **`Geografía y Ciudades` = fuente primaria única de ubicaciones.** Los cuadrantes de `Briefs de Mapa` quedan **derivados** y no se editan a mano.
-
-### Fuente única nueva
-
-`Nomenclatura §the Wanderer's Goggles` — no retirables + estrictamente privados + **no son gate**. Antes la privacidad no tenía fuente y se re-enunciaba en 9 fichas citando `§Capa 2`, que no la contiene.
+- **`Dagna.md` archivada** a `90-Raw/`. Contradecía a la expandida en origen, apellido y reclutamiento; los tiers del Springboard se migraron antes a [[Los 9 Links del Pivote]].
+- **Matriz de roles fija eliminada** de `The Bound Five` (1V/2D/2S cerraba en 4 de 9 celdas). El balance se verifica **por celda**.
+- **`Geografía y Ciudades` = fuente primaria única de ubicaciones.** Los cuadrantes de `Briefs de Mapa` son **derivados**, no se editan a mano.
+- **Fuente única nueva: `Nomenclatura §the Wanderer's Goggles`** — no retirables + estrictamente privados + **no son gate**.
 
 ### 🔜 Único pendiente para cerrar el sprint
 
@@ -51,9 +48,24 @@ Las tres prohibiciones a aplicar en cada uno: ninguna institución Aether-depend
 
 **Después de eso: 5ª re-corrida QA.** El criterio de cierre sigue siendo 0 críticos, y las 4 rondas anteriores dicen que va a haber una 5ª.
 
-### Nota de método (confirmada por 3ª y 4ª ronda)
+### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 
-El cuello de botella no es el QA, es el **barrido**. Esta ronda: la longevidad humana quedó en 2/3 de la clase (la ronda anterior arregló elfos y enanos y saltó la fila HUMANO en las 3 fichas); el género de Speck se corrigió en `Darro-Ficha` y quedó intacto en `Darro.md`; la aritmética de Lyris llevaba **dos rondas reportada** sin corregirse, con una cifra en diálogo. Ver [[Lecciones]].
+```
+python "Aether Bound/scripts/check_canon.py"
+```
+
+Audita **consistencia** en 10 clases mecánicas (citas `§`, wikilinks, fuente
+única, aritmética de edades, longevidad, género, reinos, cuadrantes, cifras en
+diálogo). Exit 1 si hay críticos. Método: skill `canon-qa` / [[QA de Canon Loop]].
+
+**Orden no negociable:** linter en 0 → subagentes en frío solo para juicio →
+fixes **a la fuente** con re-grep → checkpoint → re-corrida. En su primera
+corrida encontró 3 violaciones de fuente única que ningún subagente reportó.
+Clase determinista nueva = chequeo nuevo en el linter, antes de delegarla.
+
+### Nota de método
+
+El cuello de botella no es el QA, es el **barrido**: la longevidad humana quedó en 2/3 de la clase, el género de Speck se arregló en `Darro-Ficha` y no en `Darro.md`, y Lyris llevaba dos rondas reportada. De ahí salió el linter. Ver [[Lecciones]] y [[QA de Canon Loop]].
 
 Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, y se abre la pregunta de bonds de fijos (abajo).
 
@@ -94,7 +106,7 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 ## Hechos vigentes
 
 - **Branch:** `feat/c6-anatomy-rework`. Playtest: `Start-Playtest-Greybox.bat`. Gates: `autotest_combat.gd`, `autotest_springboard.gd`. **Congelados por ADR-003.**
-- **Speck:** último Warden cristalino superviviente, shapeshifteada como zorro. Narrativa + diseño visual 100% completo. Detalle en [[Current-State-Historico]].
+- **Speck:** la última Warden cristalina superviviente, shapeshifteada como zorro. Narrativa + diseño visual 100% completo. Detalle en [[Current-State-Historico]].
 - **Anatomía/rework (C6):** oreja élfica 75%, nacimiento de oreja 74/70/78%. Queda: ROM por raza (C4), pies sin IK.
 - **Motor:** GODOT confirmado (ADR-002), en revisión por ADR-003.
 - **Deuda técnica visible:** pies sin IK, ROM enano/elfo (C4 restante), mesh de bloques = etapa.

@@ -17,3 +17,11 @@
    `@import` salvo lo indispensable en CADA sesión. Auditoría de peso:
    `Aether Bound/scripts/check_vault.py` (semáforo 🟢<10k/🟡10-30k/🔴>30k
    tokens). Si sale 🟡/🔴, es trabajo del Lint Loop aunque nada falte.
+7. **Antes de auditar canon con subagentes, correr el linter:**
+   `python "Aether Bound/scripts/check_canon.py"` (exit 1 si hay críticos).
+   Barre lo mecánico — citas rotas, aritmética, fuente única, clases
+   incompletas. Los subagentes de QA se reservan para lo que exige juicio.
+   Método completo: skill `canon-qa` / [[QA de Canon Loop]].
+8. **Todo fix de canon va a la FUENTE del dato, no a la línea reportada.**
+   Grep de la clase completa de menciones en todo el vault antes de cerrarlo.
+   Cuatro rondas de QA fallaron por corregir líneas sueltas.

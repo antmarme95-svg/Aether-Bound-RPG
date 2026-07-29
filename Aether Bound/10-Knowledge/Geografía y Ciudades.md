@@ -629,7 +629,8 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   - Info sobre las operaciones más oscuras del Triune Council
 
 #### **Warden's Crypt** (Hidden, under The Monolith)
-- Tumba subterránea del último Warden caído
+- Tumba subterránea de **uno** de los Wardens caídos (no de Speck — ella es la
+  última Warden y está viva; los God-Cores del cráter son los demás cadáveres)
 - Mecanismo: ritual site, emotional weight
 - Dinámicas:
   - Speck aquí entiende soledad (estaba sola 550+ años)
@@ -749,7 +750,7 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 - **Clima:** Subterráneo, frío, luz de Aether blanca/azul pálido
 
 ### THE FIRST WOUND (Cráter Final — Sur)
-- **Ubicación:** extremo **sur** de The Wilds, cráter masivo. **Este archivo es la fuente primaria de ubicaciones** — coincide con §Cuadrantes (*"BOTTOM: The First Wound"*), con los POIs de aproximación (Ossuary Grove *South, before First Wound*; The Scar of Breaking *South*) y con [[Briefs de Mapa del Mundo]] §SOUTH
+- **Ubicación:** extremo **sur** de The Wilds, cráter masivo. **Este archivo es la fuente primaria de ubicaciones** — coincide con §Cuadrantes (*"BOTTOM: The First Wound"*), con los POIs de aproximación (Ossuary Grove *South, before First Wound*; The Scar of Breaking *South*) y con [[Briefs de Mapa del Mundo]] §EXTREMO SUR
 - **Función:** Cementerio de God-Cores (cadáveres de Wardens muertos)
 - **Mecánica:** Zona final del juego, clímax + 5 finales
 - **Arquitectura:** Ruinas, cristales rotos, Aether rojo/corrupto, paisaje de desolación

@@ -13,7 +13,10 @@
   propio Vault adjuntándolo a su Claude Code. Generado 2026-07-13,
   fusionado con `project-context` (auditoría de tokens, niveles
   equipo/privado, puentes) el 2026-07-20.
-- `scripts/check_vault.py` — auditoría de peso de arranque del Vault
+- `scripts/check_vault.py` — auditoría de **peso** de arranque del Vault
+- `scripts/check_canon.py` — auditoría de **consistencia** del canon (citas,
+  aritmética, fuente única, clases incompletas). Correr ANTES de gastar
+  subagentes de QA; exit 1 si hay críticos
   (SCHEMA §8): semáforo de tokens, `@imports`, niveles equipo/privado,
   detección individual/colaborativo. Solo lectura.
 
@@ -29,7 +32,7 @@
 - [[Speck]] — la última Warden: un estadio de revelación (no crece, se revela), bautizo, Momentos de Persona. **§Capa 5 = fuente única de la regla física del Fragmento**; §Capa 4 = los 3 grados de agencia de Speck por final.
 - [[The Bound Five]] — jugador + C1 afín + C2 opuesto + C3 pivote + C4 chispa (+Speck); matchmaking orgánico.
 - [[Los 9 Pivotes]] — matriz y fichas v0: Maren/Torgan/Iven/Sereth/Bram/Lyris/Dagna/Nyael/Vekka.
-- **[[10-Knowledge/Pivotes/]] — 9 fichas narrativas expandidas COMPLETAS (2026-07-23):** Maren / Torgan / Iven / Sereth / Bram / Lyris / Nyael / Vekka / Dagna. Incluye: bio pre-aventura, Conocimiento Previo (fijo ve Pivote), encuentro player-único, arco 3-actos, traición, 4 epílogos, línea canónica/privada, dinámicas, diseño visual.
+- **`10-Knowledge/Pivotes/` — 9 fichas narrativas expandidas COMPLETAS (2026-07-23):** [[Pivotes/Maren-Ficha-Expandida-v1|Maren]] / [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] / [[Pivotes/Iven-Ficha-Expandida-v1|Iven]] / [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] / [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] / [[Pivotes/Lyris-Ficha-Expandida-v1|Lyris]] / [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] / [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] / [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]]. Incluye: bio pre-aventura, Conocimiento Previo (fijo ve Pivote), encuentro player-único, arco 3-actos, traición, **5 epílogos** (F1/F2a/F2b/F3/F4), línea canónica/privada, dinámicas, diseño visual.
 - [[Acoplamientos]] — roles de co-dependencia sin ultimates; parejas fundadoras; tutorial geográfico.
 - [[Los 9 Links del Pivote]] — Skipping Stone…Warforging: qué hace cada uno y qué duele al perderlo.
 - [[Bond y el Bond Vacío]] — el único botón de vínculo; el beat del miembro fantasma; la Link Cam.
@@ -196,6 +199,9 @@
 - [[Feature Loop]] — spec ratificada → implementación → gates QA → sync.
 - [[Playtest Loop]] — montage → tuning → aceptación del director.
 - [[Lint Loop]] — salud del vault: contradicciones, huérfanas, status, index.
+- [[QA de Canon Loop]] — consistencia de **canon textual**: linter primero
+  (`check_canon.py`), subagentes en frío solo para juicio, fixes a la fuente.
+  Skill ejecutable: `canon-qa`.
 - [[QA Loop]] — subagente QA imparcial mide fidelidad vs. lámina RAW +
   subagente PRD traduce el veredicto a plan ejecutable; itera código↔QA↔PRD
   hasta un % objetivo o el techo real de la técnica. Nace de la Fase C

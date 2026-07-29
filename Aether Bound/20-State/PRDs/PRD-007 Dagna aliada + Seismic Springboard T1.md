@@ -1,6 +1,6 @@
 ---
 status: ratificado
-source: "[[Slice of Bond]] (A2b ratificado) + [[Dagna]] + [[Los 9 Links del Pivote]] + [[Acoplamientos]] + [[Game Feel Bible]] (ratificadas); Fase 1 del [[Plan-de-Produccion]]; Design Loop 2026-07-08 — RATIFICADO por el director (2 ejes + 4 detalles)"
+source: "[[Slice of Bond]] (A2b ratificado) + [[Pivotes/Dagna-Ficha-Expandida-v1]] + [[Los 9 Links del Pivote]] + [[Acoplamientos]] + [[Game Feel Bible]] (ratificadas); Fase 1 del [[Plan-de-Produccion]]; Design Loop 2026-07-08 — RATIFICADO por el director (2 ejes + 4 detalles)"
 updated: 2026-07-08
 ---
 

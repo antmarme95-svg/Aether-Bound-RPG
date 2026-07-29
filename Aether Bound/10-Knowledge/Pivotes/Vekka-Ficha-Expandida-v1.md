@@ -203,7 +203,7 @@ Es el momento más frío de la ficha antes del clímax: Vekka **respeta a los Wa
 
 El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] §THE RECKONING — regalo de Tobin en Driftmarket, quien señala a Darro como el "Pivote" cuando el Pivote real es enana). Aparece una proyección: la palabra **"Warden"** flotando junto a un símbolo geométrico. El símbolo coincide, línea por línea, con el patrón grabado bajo el pelaje de Speck.
 
-**Los Goggles son privados.** Solo el jugador ve la proyección. Vekka no ve nada. Pero Vekka **ve al jugador ver** — y Vekka reconoce técnica antes que emoción. Ve el ángulo de la mandíbula, la contracción del hombro, el segundo en que el jugador retrocede medio paso. Todo eso es información legible.
+**Los Goggles son privados** ([[Nomenclatura]] §the Wanderer's Goggles). Solo el jugador ve la proyección. Vekka no ve nada. Pero Vekka **ve al jugador ver** — y Vekka reconoce técnica antes que emoción. Ve el ángulo de la mandíbula, la contracción del hombro, el segundo en que el jugador retrocede medio paso. Todo eso es información legible.
 
 Vekka no se acerca. No pregunta. Simplemente cierra el cuaderno pequeño que estaba sosteniendo — el gesto del cierre es lo único que cambia en su cuerpo — y ajusta la correa del arnés técnico en el hombro derecho. Dos gestos mínimos. Nadie los nota salvo, quizás, Valen.
 
