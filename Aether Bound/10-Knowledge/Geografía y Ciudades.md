@@ -209,13 +209,18 @@ cascadas, terrazas escalonadas siguiendo el desnivel).
         SOUTH (The First Wound)
         
 CUADRANTES:
-NW: Ruinas de Aethelgard + Rio Mayor
-NE: Ruinas de Emberdeep + Montaña Central  
-SW: Asentamientos Humanos + Lago Espejo
-SE: Santuarios Élficos + Grieta del Aether
-CENTER: El Nido + campamento base
-BOTTOM: The First Wound (cementerio God-Cores)
+NW/OESTE: Ruinas de Aethelgard + Rio Mayor + The Echoing Archive
+NE/ESTE:  Base del Cinder Ascent (ruinas enanas) + Stillwood
+          Sanctuary + Grove of Cycles (santuario elfico)
+SW:       Lago Espejo + Submerged Halls + campos de batalla
+NORTE:    Observation Point + Sereth's Study Bower + Fountain of Echoes
+CENTER:   El Nido + The Monolith (Montana Central) + campamento base
+          + The Rift (Center-East) + The Aether Well (Center-South)
+SUR:      Ossuary Grove + The Scar of Breaking
+BOTTOM:   The First Wound (cementerio God-Cores)
 ```
+
+**Los encabezados de POI de este archivo son la fuente primaria única de ubicaciones.** La tabla de arriba y las listas por cuadrante de [[Briefs de Mapa del Mundo]] son **derivadas**: si un POI se mueve, se mueve en su encabezado aquí y después se regeneran las dos. Editar las derivadas a mano fue la causa de que ~16 POIs quedaran con dos cuadrantes distintos.
 
 ### A) RUINAS ANTIGUAS (Warden Civilization)
 
@@ -880,9 +885,9 @@ por qué el Driftmarket es donde C4 se recluta con naturalidad.
 
 **Entre reinos:**
 - Descanso en **The Driftmarket**
-- Reclutamiento de C4 (Darro formalizado aquí)
 - Mecánica de Standing vs Bond
-- ~7 Momentos de Persona de Speck (interacciones silenciosas)
+- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, ya en Acto 3). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido y el bautizo en Acto 1, el primer flash, La Rueda, el Pivote y el Grove en Acto 2. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
+- **Darro no se recluta aquí.** Ya está en el grupo desde el primer campamento del Acto 1 (§ACTO 1 — Primer campamento); fue el primero en tocar la crisálida y quien nombró a Speck
 
 **Cada reino ofrece vista del pecado del vecino:**
 - Desde Rivermeet: ves corrupción en Ignis Reach
@@ -1062,11 +1067,13 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 - **Rutas aéreas de Lyris:** si Lyris es viva (Final 1/4)
 
 ### Tiempos de Viaje (Estimados)
-- Rivermeet ↔ Emberdeep: 30-40 min caminando (o barcaza + Cinder Ascent)
-- Emberdeep ↔ Stillwood: 45-60 min caminando (o Gloomvault directo)
-- Stillwood ↔ Rivermeet: 50-70 min caminando (o Gloomvault + River Road)
-- Cualquier Reino ↔ The Driftmarket: 20-30 min (flotante, acceso central)
-- Rivermeet ↔ The First Wound: 90+ min (a través de The Wilds)
+**Topología: es una rueda, no una malla.** Los tres reinos **no se conectan entre sí directamente.** Cada uno tiene un solo radio que entra a The Wilds — River Road desde Aethelgard, Cinder Ascent desde Ignis Reach, Gloomvault desde Stillwood — y los tres radios se cruzan en **The Driftmarket**. Todo viaje reino↔reino son dos radios pasando por el hub. Los tiempos de abajo se derivan de eso y no deben contradecirlo.
+
+- Cualquier Reino ↔ The Driftmarket: **20-30 min** (un radio; camino transitado)
+- Rivermeet ↔ Emberdeep: **50-60 min** (River Road + Cinder Ascent, vía Driftmarket)
+- Emberdeep ↔ Stillwood: **50-60 min** (Cinder Ascent + Gloomvault, vía Driftmarket)
+- Stillwood ↔ Rivermeet: **50-70 min** (Gloomvault + River Road, vía Driftmarket)
+- Cualquier Reino ↔ The First Wound: **90+ min** — y la diferencia no es distancia, es **terreno**: el cráter está en el extremo sur, fuera de todo radio, y el último tramo se hace por interior sin camino. Es la razón diegética de que el Acto 3 se sienta como una expedición y no como un viaje.
 
 ### Strategic Positioning
 - **The Wilds es el núcleo:** acceso a todo desde cualquier reino
@@ -1116,8 +1123,8 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 ### The Driftmarket
 - **Neutral Ground:** Donde Standing no aplica igual
-- **C4 Recruitment:** Darro se une formalmente aquí
-- **Speck Moments:** 7 interacciones silenciosas entre reinos
+- **Tobin's Office:** donde entrega the Wanderer's Goggles (§ACTO 2 Interludios)
+- **Un** Momento de Persona en el camino hacia acá — los demás están repartidos por todo el juego ([[Speck]] §Momentos de Persona)
 - **Old Tobin:** único personaje de poder sin agenda oculta — controla el
   comercio por reputación, no corrupción
 - **The Reckoning:** preparación pre-clímax — advertencia de Tobin sobre el

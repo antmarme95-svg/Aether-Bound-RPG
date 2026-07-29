@@ -171,7 +171,10 @@ No hay contador visible ni el jugador se entera del gate. El sistema evalúa,
 Momento a Momento, si la respuesta del jugador trató la acción de Speck como
 **herramienta** (la usa y sigue), **mascota** (la consuela/celebra sin
 preguntarle nada) o **persona** (le da tiempo, la deja terminar su gesto,
-actúa distinto por lo que ella hizo). Mayoría "persona" en los ~7 = gate de F4
+actúa distinto por lo que ella hizo). Mayoría "persona" en los Momentos
+**disponibles en esa partida** = gate de F4. No se calcula sobre un total fijo
+de 7: el Momento 6 es el Vector C del Grove y solo existe si el jugador pasó su
+sub-gate, así que en la mayoría de las partidas son 6
 ([[The Tether]], [[Los 5 Finales]]).
 
 **Los 7 Momentos:**

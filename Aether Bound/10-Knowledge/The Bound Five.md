@@ -13,16 +13,19 @@ for") a The Wilds. Nombrar al grupo así hace que el título describa
 literalmente a quiénes protagonizan la historia.
 
 **5 contando al jugador** + [[Speck]] como +1 no-combatiente que se vuelve
-puente. La matriz de roles (1 Vanguard / 2 Duelists / 2 Strategists) se
-reparte entre los cinco incluyéndote.
+puente.
+
+**No hay matriz de roles fija.** La composición del grupo **varía según la celda del jugador** y no se promete constante. La regla anterior (1 Vanguard / 2 Duelists / 2 Strategists) era residuo de cuando los 5 slots eran libres: con C1, C2 y C4 fijos (Roen Vanguard, Valen Strategist, Darro Duelist), solo 4 de las 9 celdas podían cumplirla — fallaba incluso el arco de referencia, Humano Duelist + Dagna. **El balance de combate se verifica por celda, no se hereda de una promesa global.**
 
 | Slot | Función narrativa | Función mecánica |
 |---|---|---|
 | **Jugador** | Define raza + rol | Celda de la [[Matriz Raza x Rol]] |
-| **C1 — El Afín** | Misma cultura; confianza | Complementa tu rol |
-| **C2 — El Opuesto** | Choque cultural total | Rol/estilo antagónico |
+| **C1 — Roen** (fijo) | Corazón del grupo; el que nadie quiere decepcionar | Vanguard — ancla defensiva en todas las celdas |
+| **C2 — Valen** (fijo) | Dice las verdades incómodas | Strategist — lectura y control en todas las celdas |
 | **C3 — El Pivote** | Tu mano derecha; **el futuro traidor** | El mejor acoplamiento contigo — su partida rompe tu forma de jugar |
-| **C4 — La Chispa** | Comic relief; bautiza a Speck | Completa la matriz de roles |
+| **C4 — Darro** (fijo) | Comic relief; bautiza a Speck | Duelist — presión cuerpo a cuerpo en todas las celdas |
+
+**Los ejes de afinidad tampoco son fijos.** C1 no es "misma cultura" ni C2 "choque cultural total": Roen es humano y Valen elfo en las 9 celdas, así que la relación cultural con el jugador cambia por celda. Lo que sí es constante es la **función emocional** — Roen es el afín por temperamento, Valen el opuesto por temperamento — y las variantes de encuentro por raza están escritas ficha por ficha ([[Roen-Ficha-Expandida-v1]] tiene las 18).
 
 ## Arquetipos canónicos (arco de referencia: Humano Duelist + Dagna)
 

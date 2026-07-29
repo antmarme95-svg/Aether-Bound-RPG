@@ -24,7 +24,11 @@ Tres vectores posibles, dependiendo de decisiones previas:
 
 **Vector B — Convocatoria formal.** Si el Standing élfico está alto (o si el Pivote activo es élfico y Ambassador Cyrion ya movió pieza), llega un mensajero de Stillspire con una convocatoria en pergamino: The Elder Circle quiere ver al Bound Five. La convocatoria es cortesía absoluta y presión total — la marca élfica.
 
-**Vector C — Speck.** Si el jugador ha tenido ≥4 flashes privados de la verdad Warden bajo el disfraz, y ha tratado a Speck como persona en al menos 3 Momentos de Persona, entonces en el descanso previo a bajar a Driftmarket, Speck hace algo que solo el jugador ve: gira la cabeza hacia el noreste — hacia Grove of Cycles — y no la mueve por 20 segundos completos. **Flash privado**, invisible al grupo. El jugador puede seguir la dirección o no; si la sigue y guía al grupo hacia allá, los otros no preguntan por qué. Este vector desbloquea una línea extra de Maelys en el debate.
+**Vector C — Speck.** Si el jugador ha tratado a Speck **como persona en al menos 3 Momentos de Persona**, entonces en el descanso previo a bajar a Driftmarket, Speck hace algo que solo el jugador ve: gira la cabeza hacia el noreste — hacia Grove of Cycles — y no la mueve por 20 segundos completos. **Flash privado**, invisible al grupo. El jugador puede seguir la dirección o no; si la sigue y guía al grupo hacia allá, los otros no preguntan por qué. Este vector desbloquea una línea extra de Maelys en el debate.
+
+**Por qué el gate de Vector C no cuenta flashes.** Los flashes son **exactamente tres** y están en la ruta principal ([[Speck]] §Capa 2 — tabla de fases): pedir ≥4 lo volvía inalcanzable, y pedir ≥3 lo volvería automático. Lo único que discrimina de verdad es cómo el jugador trató a Speck, así que el gate corre solo sobre los Momentos de Persona. Es la misma corrección que se aplicó al gate de F4 ([[Los 5 Finales]] §F4).
+
+**Nota de dependencia — leer antes de tocar el conteo de Momentos.** El **Momento de Persona 6 *es* el evento de este Vector C** ([[Speck]] §Momentos de Persona). O sea: el Momento 6 solo existe si el jugador ya pasó el sub-gate de 3 Momentos previos, con meta de diseño de que ≤25% de los jugadores lleguen por acá. Consecuencia: en la mayoría de las partidas hay **6 Momentos, no 7**, y todo gate que hable de "mayoría en los Momentos de Persona" debe calcularse sobre los Momentos **efectivamente disponibles en esa partida**, no sobre un total fijo de 7.
 
 ## 3. La entrada al Grove
 

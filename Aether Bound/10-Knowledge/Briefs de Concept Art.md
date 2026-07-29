@@ -359,7 +359,7 @@ re-corrió todavía.
 
 Referencia adjunta: `fenotipo-enana-v2.png` (ancla de anatomía/proporción).
 Plants visuales: cuña miniatura en la trenza izquierda (el objeto firma de
-[[Dagna]] a la vista todo el slice), hombreras-compuerta (gremio legible a
+[[Pivotes/Dagna-Ficha-Expandida-v1]] a la vista todo el slice), hombreras-compuerta (gremio legible a
 3m), martillo-ariete (abre puertas, no mata). Destino: `dagna-v1.png`.
 
 ```

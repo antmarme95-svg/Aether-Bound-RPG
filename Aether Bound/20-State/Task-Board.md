@@ -23,7 +23,7 @@ updated: 2026-07-10
 
 | ID | Tarea | Status | Página afectada |
 |---|---|---|---|
-| B1 | Fichas completas de los 9 Pivotes (bio, arco, visual) + naming definitivo | 🔄 1/9 | [[Dagna]] COMPLETA (ficha ratificada + `dagna-v1.png` canónica); **in-engine ✅ 2026-07-07: pipeline lámina→config→rig probado** (`data/characters.gd` + `character/character_signature.gd`, sonda `tmp_dagna`) — molde replicable; pendiente visto bueno estético del director. Quedan 8 fichas |
+| B1 | Fichas completas de los 9 Pivotes (bio, arco, visual) + naming definitivo | 🔄 1/9 | [[Pivotes/Dagna-Ficha-Expandida-v1]] COMPLETA (+ `dagna-v2.png` canónica; la v0 y `dagna-v1.png` quedaron archivadas); **in-engine ✅ 2026-07-07: pipeline lámina→config→rig probado** (`data/characters.gd` + `character/character_signature.gd`, sonda `tmp_dagna`) — molde replicable; pendiente visto bueno estético del director. Quedan 8 fichas |
 | B2 | Tablas de C1/C2/C4 por celda + sus links + links directos de Speck E2 | ⬜ | [[The Bound Five]] |
 | B3 | Lista definitiva de ~7 Momentos de Persona + economía de Standing + contenido ruta Conqueror | ⬜ | [[The Tether]], [[Speck]] |
 | B4 | Desambiguación de Bond con dos links posibles; ¿ping opcional? | ⬜ | [[Bond y el Bond Vacío]] |

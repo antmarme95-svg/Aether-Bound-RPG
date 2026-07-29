@@ -87,4 +87,4 @@ todo lo demás funcione.
 
 Desglose del alcance ratificado en PRDs de implementación (Feature Loops);
 B10 (Game Feel Bible) alimenta el feel del Springboard; guion de la camp
-scene del ritual (ver [[Dagna]]). → Task-Board.
+scene del ritual (ver [[Los 9 Links del Pivote]] §Tiers T3). → Task-Board.

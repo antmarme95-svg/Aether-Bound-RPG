@@ -67,66 +67,79 @@ Representa así:
 
 ## THE WILDS — Distribución de 45+ POI
 
-**Cuadrantes (distribuir POI así):**
+> ⚠️ **SECCIÓN DERIVADA — NO EDITAR A MANO.**
+> La fuente primaria única de ubicaciones es **[[Geografía y Ciudades]]**, en el
+> encabezado de cada POI. Esta lista se **regenera** desde ahí (última
+> regeneración: 2026-07-29). Si un POI se mueve, se mueve en `Geografía` y
+> después se regenera esto. Editar aquí a mano fue la causa de que ~16 POIs
+> quedaran asignados a dos cuadrantes distintos durante varias rondas de QA.
 
-### NW (Noroeste — entrada desde Rivermeet)
-- Lake of Mirrors (punto central SW)
-- Riverstone Settlement (ruinas, pueblo abandonado)
-- Hermit's Cave (pequeña, escondida en bosque)
+### NW / Oeste (entrada desde Rivermeet — Aethelgard)
+- The Echoing Archive (bóveda subterránea, entrada visible) — *y The Mirror Stalker, su hazard interior*
+- Riverstone Settlement (ruinas, pueblo abandonado, río mayor)
 - Vigil of the Broken Oath (templo humano, defaced)
-- Bandits' Hideout (neutral, hidden)
+- Roen's Vigil Post (puesto de guardia, borde Mistbound)
+- Maren's Negotiation Table (campamento diplomático viejo)
+- Iven's First Defense (ruinas de pueblo, monumento improvisado)
+- Hermit's Cave (pequeña, escondida en bosque)
+- Aethelgard Watch (junto a River Road)
 - **Visual:** Paisaje abierto, río mayor, llanuras con ruinas dispersas
 
-### NE (Noreste — entrada desde Stillwood/Cinder Ascent)
+### NE / Este (entrada desde Stillwood y Cinder Ascent — Ignis Reach)
 - The Shattered Spire (torre observable en altura, prominente)
-- Grove of Cycles (templo élfico, arquitectura orgánica)
-- Lyris's Hunting Peak (peñasco alto, nests de bestias)
-- Observation Point (torre natural de piedra)
-- **Visual:** Terreno montañoso, árboles altos, arquitectura élfica
-
-### SW (Suroeste — entre reinos)
-- Shattered Cascade (cascada masiva, multi-level)
-- The Submerged Halls (acceso desde río subterráneo, señal de agua)
-- Ironforge Outpost (ruinas enanas, herramientas oxidadas)
-- Bram's Last Stand (llanura quemada con cruces)
-- The Mirror Pool (lago pequeño, escondido, agua "reflejante")
-- **Visual:** Mezcla montaña/llanura, agua prominente, cicatrices de batalla
-
-### SE (Sureste — cinder ascent base)
-- The Hollow Deep (caverna entrada, oscura)
-- The Rift (grieta vertical, radiante)
-- Shrine of the First Hammer (templo enano, piedra maciza)
+- The Shattered Cascade (cascada masiva, multi-level)
 - Stillwood Sanctuary (monasterio élfico abandonado, árboles muertos)
-- **Visual:** Volcánico/geotérmico, cavernas, geometría mineral
+- Grove of Cycles (templo élfico, arquitectura orgánica — **sin corromper, no es dungeon**)
+- Lyris's Hunting Peak (peñasco alto, nests de bestias)
+- Ironforge Outpost (ruinas enanas, herramientas oxidadas — base del Cinder Ascent)
+- The Hollow Deep (caverna, conectada a Cinder Ascent)
+- Vekka's Lost Workshop (estructura colapsada)
+- The Rejected Forge (forja de aprendices abandonada)
+- Speck's First Glimpse Site (marcador pequeño, random spawn)
+- Ignis Reach Watch (junto a Cinder Ascent)
+- **Visual:** Terreno montañoso, árboles altos, volcánico/geotérmico hacia el sur del cuadrante
 
-### CENTER (Centro — zona de máxima actividad)
-- The Monolith (piedra vertical masiva, silueta icónica)
-- The Warden's Rest (ruina pequeña, campamento)
-- El Nido (crisálida Speck, área natural especial — verde/bioluminiscencia)
-- The Aether Well (geiser radiante, centro visual)
-- The God's Throne (santuario Warden, ruinas majestuosas)
+### SW (Suroeste — agua)
+- Lake of Mirrors (lago mayor) — *y The Crowned Leviathan, su bestia acuática*
+- The Submerged Halls (acceso desde río subterráneo)
+- The Battlefield (evidencia antigua de batalla)
+- The Mirror Pool (lago pequeño escondido, al sur del Lake of Mirrors)
+- **Visual:** Agua prominente, cicatrices de batalla
+
+### NORTE
+- The Observation Point (torre natural de piedra, cerca de Stillwood)
 - Sereth's Study Bower (refugio entre árboles, manuscritos)
-- Speck's First Glimpse Site (marcador pequeño)
-- The Echoing Archive (bóveda subterránea, entrada visible)
-- Warden's Crypt (subterráneo, under The Monolith, acceso visible)
-- The Closed Door (arquitectura imposible, pequeña anotación)
+- The Fountain of Echoes (North-Central)
+- Stillwood Watch (junto a The Ascending Falls)
+- **Visual:** Arquitectura élfica, follaje alto
+
+### CENTRO
+- The Monolith (piedra vertical masiva, silueta icónica) — *y The World's Crown en su cima; Warden's Crypt debajo*
+- El Nido (crisálida de Speck, área natural especial — verde/bioluminiscencia)
+- The God's Throne (santuario Warden, ruinas majestuosas, cerca de El Nido)
+- The Warden's Rest (ruina pequeña, campamento)
+- Bram's Last Stand (llanura quemada)
+- The Closed Door (arquitectura imposible, anotación pequeña)
+- The Crystal Heart (Center-West, brillo visible de lejos)
+- Bandits' Hideout (Center-West)
+- The Rift (Center-East, grieta vertical radiante) — *y The Aether Wyrm, su bestia semi-corpórea*
+- Shrine of the First Hammer (Center-East, templo enano, piedra maciza)
+- Dagna's Clan Stone (East-Central)
+- The Aether Well (Center-South, geiser radiante)
 - **Visual:** Máxima densidad narrativa, landmarks variopintos
 
-### SOUTH (Sur — transición a The First Wound)
-- The Ossuary Grove (bosque de huesos, árboles calcificados)
+### SUR (transición a The First Wound)
+- The Ossuary Grove (bosque de huesos, árboles calcificados) — *y The Burning Shepherd en su centro*
 - The Scar of Breaking (cicatriz del terreno, geometría wrong)
-- The Burning Shepherd (bestia, hazard visual)
-- The Crowned Leviathan (lago, bestia acuática)
-- The Mirror Stalker (caverna interior, hazard)
-- The Aether Wyrm (rift area)
+- Nyael's Silent Monument (escondido del camino)
 - **Visual:** Desolación progresiva, corrupción visible, transición a horror
 
-### BOTTOM (Fondo del mapa)
-- **The First Wound** — cementerio masivo de God-Cores
+### EXTREMO SUR — The First Wound
+- **The First Wound** — cementerio masivo de God-Cores, **cráter final**
   - Cristales rotos gigantes
   - Aether radiante (rojo/púrpura)
   - Escala épica (ocupar 20% del mapa en altura)
-  - Visible desde The Monolith (north-to-south visual hierarchy)
+  - Visible desde The Monolith (jerarquía visual norte→sur)
 
 ---
 

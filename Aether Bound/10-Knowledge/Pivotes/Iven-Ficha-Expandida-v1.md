@@ -515,13 +515,15 @@ Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epíl
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad, en todas partes, incluida la zona del asentamiento.
+Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
 
-**Y ahí está la crueldad exacta de este final: la Muda era la cura.** Si Iven no hubiera hecho absolutamente nada — si se hubiera quedado sentado en su asentamiento dos años esperando — su gente habría vivido igual. Traicionó a las cinco personas que lo querían **para conseguir un resultado que iba a ocurrir solo.**
+**Y ahí está la crueldad exacta de este final: la Muda era la cura, y para su gente era gratis.** El asentamiento de Iven nunca fue Aether-dependiente — era la periferia que el Council no cableó porque no valía la inversión. No tenían nada que se pudiera apagar. Si Iven se hubiera quedado sentado dos años esperando, **su gente habría vivido igual, y mejor.** Traicionó a las cinco personas que lo querían para conseguir un resultado que iba a ocurrir solo.
 
-**Epílogo:** Iven sobrevive (si cayó en el cráter, cayó ahí y no hay más). Vuelve al asentamiento a pie, tardando el doble de lo necesario.
+**Epílogo:** Iven sobrevive (si cayó en el cráter, cayó ahí y no hay más). Vuelve al asentamiento a pie, tardando el doble de lo necesario. Cruza de vuelta un país que no reconoce: caravanas detenidas sin combustible, una fundición apagada con la gente todavía sentada enfrente, funcionarios del Council discutiendo a gritos qué son ahora. Nadie lo detiene. Nadie tiene tiempo de detener a nadie.
 
-Encuentra los pozos limpiándose. Los cultivos volviendo. Los niños que iban a morir ese invierno, sin morirse. **Su gente sobrevive a pesar de él, no gracias a él**, y son la única gente del mundo que nunca lo va a saber. Lo reciben como al que fue a las ciudades y volvió; alguien le dice que el agua cambió hace unas semanas y le pregunta si él tuvo algo que ver. Iven contesta que no. Es lo más honesto que dice en toda su vida.
+Y llega al asentamiento y encuentra los pozos limpiándose, los cultivos volviendo, los niños que iban a morir ese invierno sin morirse. **La periferia hereda el mundo** — no porque haya ganado, sino porque era la única que no tenía nada que perder. Su gente sobrevive **a pesar de él, no gracias a él**, y son la única gente del mundo que nunca lo va a saber. Lo reciben como al que fue a las ciudades y volvió; alguien le dice que el agua cambió hace unas semanas y le pregunta si él tuvo algo que ver. Iven contesta que no. Es lo más honesto que dice en toda su vida.
+
+**Y el remate político, que Iven nunca formula en voz alta:** las instituciones que le negaron ayuda durante años se están cayendo, y el agua le llegó igual. Nada de eso lo consuela. Un hombre que traicionó por nada tampoco puede cobrar una venganza que no buscó.
 
 **No vuelve a buscar al grupo. No pide perdón — no puede.** Pedir perdón implicaría poder explicar por qué lo hizo, y ya no existe ningún porqué: se le evaporó el motivo y quedó solo el acto. Un hombre que traicionó por nada no tiene discurso disponible.
 

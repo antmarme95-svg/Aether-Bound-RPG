@@ -22,6 +22,16 @@ combate *y* traversal; su pérdida es la orfandad mecánica de
 | Humano Strategist + Nyael | **The Weaver's Net** | Tú tiendes redes de Aether; ella las atraviesa y electrifica sus hojas | Trampas que nadie atraviesa |
 | Humano Vanguard + Vekka | **Warforging** | Te atornilla módulos en combate: cada uno cambia tu verbo de brawler | Los desmonta al irse: pierdes verbos del cuerpo |
 
+### Tiers por Tether — Seismic Springboard (Dagna), único link con tiers escritos
+
+Molde de referencia para los 8 restantes. Escala por tier de [[The Tether]]:
+
+- **T1 — Springboard:** su golpe de suelo crea la onda; triple salto / impulso imposible. Base técnica ya viva en el prototipo ([[PRD-007 Dagna aliada + Seismic Springboard T1]]).
+- **T2 — Fault Line:** la onda se vuelve **direccional** — una fisura que corre por el suelo y te lanza *en carrera*, encadenando con el slide (momentum de PRD-005).
+- **T3 — The Mountain's Answer:** ella responde tu llamada **en el aire** — segundo pulso vertical que te relanza en pleno vuelo, más escena firma (la noche en que te enseña el ritual de tocar la tierra).
+
+**Objeto firma y regla T3:** la **Primera Cuña** — la cuña de hierro de su juramento, que todo guardián clava donde monta su guardia definitiva. En la traición la clava en la roca del nido. Si llegaste a T3, junto a la cuña deja **su martillo**: eligió la ley, pero te heredó la puerta (regla T3 de [[The Tether]] — la traición con bond alto deja algo atrás).
+
 **Regla post-traición:** [[Speck]] (estadio 3) puentea una versión
 *degradada* del link — funciona distinto, se siente distinto, nunca es igual
 de bueno. Agridulce por diseño. El momento diseñado del reencuentro con el
