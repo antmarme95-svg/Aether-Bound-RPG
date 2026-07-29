@@ -24,7 +24,7 @@ disfraz de zorro — sin verbalizar, sin confrontación, en silencio acumulativo
 
 **Forma shapeshifteada (imperfecta):** Zorro 1.5× tamaño normal, endémico de
 The Wilds. Pelaje en tonos rojo/naranja con **patrones geométricos
-sutiles** (runas Warden dormidas, interpretadas como coloración rara) beige. Seams
+sutiles** (runas Warden dormidas, interpretadas como coloración rara). Seams
 teal presentes pero visibles como "manchas" blancas para el mundo. **Pata delantera
 izquierda:** estructura cristalina apenas visible (glitch del shapeshifting). **Ojos:**
 facetados y naranjas, gem-like, demasiado inteligentes.
@@ -74,7 +74,7 @@ es pura víctima. Pero donde puede elegir, elige con dignidad.
 
 ## Un estadio de revelación — La verdad es una
 
-Speck no crece. **El viaje es descubrimiento del JUGADOR, no transformación de Speck.**
+**Speck no crece. No hay infancia, adolescencia, o madurez.** El viaje es **descubrimiento del JUGADOR**, no transformación de Speck. Ella es Warden anciana desde el primer encuentro — 550+ años despierta bajo disfraz de zorro, no una criatura juvenil aprendiendo el mundo.
 
 La forma Warden real existe desde el inicio, shapeshifteada como zorro. El "estadio" 
 es la **progresión de cómo el jugador la ve**, no cómo ella cambia:
@@ -116,8 +116,39 @@ No busca risa — observa y comunica mediante ironía. Ejemplos:
 
 ## Momentos de Persona (oculto)
 
-~7 escenas fijas donde la tratas como herramienta, mascota o persona.
-Sin UI deliberadamente. Gate del Final 4 ([[The Tether]], [[Los 5 Finales]]).
+**Regla de diseño (fijada 2026-07-28, respuesta al hallazgo D3 del QA narrativo):**
+cada Momento no es una escena donde el jugador reacciona a Speck — es una escena
+donde **Speck actúa primero**, por su cuenta, sin que nadie se lo pida, y esa
+acción es ambigua: puede leerse como reflejo animal, como gesto de mascota
+afectuosa, o como elección de alguien con criterio propio. Sin UI, sin marcador,
+sin diálogo — el jugador no elige una opción, elige cómo *responde* a lo que
+ella ya hizo. Es la misma lógica que ya funcionaba en el Vector C del Grove
+(gira la cabeza al noreste y no la mueve por 20 segundos): eso NO fue un
+Momento de Persona con nombre propio hasta ahora — se re-clasifica como el
+Momento 6, porque ya cumplía el molde antes de que el molde existiera.
+
+No hay contador visible ni el jugador se entera del gate. El sistema evalúa,
+Momento a Momento, si la respuesta del jugador trató la acción de Speck como
+**herramienta** (la usa y sigue), **mascota** (la consuela/celebra sin
+preguntarle nada) o **persona** (le da tiempo, la deja terminar su gesto,
+actúa distinto por lo que ella hizo). Mayoría "persona" en los ~7 = gate de F4
+([[The Tether]], [[Los 5 Finales]]).
+
+**Los 7 Momentos:**
+
+1. **Acto 1 — El nido, antes de que nadie le pida nada.** Segundos antes de que el grupo doble una esquina hacia una bestia semi-corrompida, Speck se detiene sola, orejas planas, y no avanza — no ladra, no huye, simplemente se niega a seguir caminando. Herramienta: el jugador la lee como sensor de Aether y avanza igual, confiando en el dato. Mascota: alguien la carga para "protegerla" del peligro que ella misma señaló. Persona: el grupo cambia de ruta porque ella dijo que no. Las tres lecturas son razonables — solo una la trata como alguien con criterio, no como instrumento o cría asustada.
+
+2. **Acto 1 — El bautizo, el instante después del nombre.** Cuando Darro dice *"It's nothing but a speck with opinions"*, hay medio segundo de silencio antes de que el grupo ría. En ese medio segundo, Speck inclina la cabeza — su gesto de ironía, ya establecido (§Personalidad & Humor) — directo a Darro, no al vacío. Herramienta: nadie lo nota, la escena sigue. Mascota: alguien dice "aww" y la acaricia por el gesto "gracioso". Persona: el jugador es quien nota que le respondió a Darro específicamente, no al chiste en general — que entendió quién lo dijo.
+
+3. **Acto 1→2 — Después del primer flash privado del jugador.** La primera vez que el jugador la ve sin el velo (seams aether, no pelaje), Speck nota que la están mirando distinto — un instante donde ella devuelve la mirada más tiempo del que un zorro sostendría contacto visual, y después rompe el contacto primero. Herramienta: el jugador sigue caminando, fue "un momento raro". Mascota: el jugador la abraza, asumiendo que necesita consuelo. Persona: el jugador no hace nada — la deja romper el contacto a su propio ritmo, sin invadir el momento que claramente es de ella.
+
+4. **Acto 2 — La Rueda, una ciudad cualquiera.** Un NPC (comerciante, curioso, funcionario menor) intenta tocarla o examinarla de cerca sin permiso — la clase de gesto que cualquiera haría con un zorro raro. Speck se retrae con un gruñido bajo, deliberado, sostenido — no el reflejo instantáneo de un animal asustado, sino algo más parecido a un límite. Herramienta: el jugador la calma para que el NPC pueda terminar de examinarla (hay valor narrativo/comercial en dejarlo). Mascota: el jugador la aparta y la consuela como a una cría asustada. Persona: el jugador se para entre ella y el NPC sin tocarla a ella tampoco — lee el gruñido como un "no" y lo respeta sin gestionarlo.
+
+5. **Acto 2 — con el Pivote, antes de la traición.** En algún punto de La Rueda, Speck se comporta distinto específicamente cerca del Pivote activo — se aleja un paso de más, o se queda mirándolo fijo más tiempo del que mira a cualquier otro. Nadie sabe si es el hive-mind naciente reaccionando a la intención del Pivote, o simplemente que un animal percibe tensión antes que las personas. Herramienta: se anota como "dato" sin mencionarlo al Pivote. Mascota: se le resta importancia como capricho de mascota. Persona: alguien —el jugador, o el Pivote mismo— le pregunta en voz alta, aunque ella no pueda contestar con palabras, qué es lo que ve.
+
+6. **Acto 2 — Grove of Cycles, Vector C** (ya escrito, ver [[Grove of Cycles — Escena del Acto 2]] §Vectores diegéticos). Gira la cabeza al noreste y no la mueve por 20 segundos completos, sin que nada en el entorno lo justifique. Es el Momento más puro del set — el molde del que salieron los otros seis.
+
+7. **Acto 3 — antes de The Reckoning, la única vez que ella dirige.** Frente a dos caminos hacia The Driftmarket, Speck se adelanta y toma uno por su cuenta — la primera vez en todo el juego que camina *delante* del grupo en vez de seguirlo, y elige. No es el camino más corto ni el más seguro. Herramienta: el grupo la sigue porque "conoce el terreno mejor". Mascota: alguien la carga de vuelta a la ruta "correcta". Persona: el grupo toma su camino sin necesidad de una razón — confía en que ella decidió por algo, aunque no puedan preguntarle qué.
 
 **El Pivote como testigo natural:** de las nueve personas del grupo, el
 Pivote activo es quien más tiempo pasa observando cómo el jugador trata a
@@ -140,7 +171,7 @@ para que cada ficha lo desarrolle si el director lo pide.
 - Ojos: facetados, gem-like, reflectivos (consciencia antigua)
 - E1→E2→E3 = manifestación/despertar, no crecimiento animal
 
-**Forma shapeshifteada:** Zorro endémico, pelaje beige/gris con patrones
+**Forma shapeshifteada:** Zorro endémico, pelaje rojo/naranja con patrones
 geométricos, pata cristalina, ojos facetados, seams teal visible.
 
 **Referencias en generación:** Concept art E1 (forma Warden crisálida) + forma
