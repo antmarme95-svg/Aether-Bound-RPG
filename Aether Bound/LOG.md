@@ -5679,3 +5679,44 @@ Cada uno documentado con las 3 lecturas posibles (herramienta/mascota/persona) p
 **Current-State.md actualizado:** sección Concept art con nuevo status.
 
 **Próximo paso:** re-correr los 2 QAs de Fase 4 una última vez, en frío, contra el estado actual del vault — es el criterio de cierre real del sprint. Si pasan con 0 CRÍTICOS, el sprint QA de reparación queda formalmente cerrado después de 3 re-corridas (Fase 4 original, verificación C1-C7/D1-D5, esta última).
+
+## [2026-07-28] sprint/QA-verificación | Tercera re-corrida (post-ediciones-directas) — 8 CRÍTICOS nuevos, sprint sigue abierto
+
+**Contexto:** tras procesar las ediciones directas de Boris (Nomenclatura: Isolde linaje + Goggles no-retirables; Speck: Giro Grogu eliminado), se lanzaron los 2 QAs de verificación en frío con **Opus**, contra el estado actual completo del vault. Es la tercera re-corrida (Fase 4 original → C1-C7/D1-D5 → esta).
+
+**Resultado: no sale limpio. 4 CRÍTICOS de dramática (+1 MEDIUM) + 4 CRÍTICOS de congruencia (+2 MEDIUM).**
+
+### Validado limpio (re-confirmado)
+Los 3 fixes de la 2ª re-corrida siguen en pie: Speck actora en los Momentos de Persona (`Speck.md:119-128`), F2b como elección activa (`Los 5 Finales:49`, replicado en Bram:318/Nyael:291), Nyael con antagonista funcional (equipo de extracción, `Nyael:263`). También limpio: Bram no traiciona (Roen:184/279, Valen:338, Darro:355, Geografía:943/1025), Speck femenina (0 residuos), Speck como Warden anciana sin residuos de "criatura joven", los 9 Pivotes existen simultáneamente/solo 1 conoce al jugador (`Los 9 Pivotes:25-38`), Raza×Rol de los 9 correcta, Roen 45 con aritmética interna cuadrada.
+
+### CRÍTICOS de dramática
+
+1. **Darro F1 (`Darro-Ficha-Expandida-v1.md:280-282`)** — *"cuando entiende que ella eligió esto […] 'Speck eligió. Nombre honra elección.'"* Colapsa la distinción central de F4: `Los 5 Finales:83,96` titula F4 "el único con consentimiento de Speck" y remata que el consentimiento "es lo único que lo distingue de F2b". Si en F1 Speck también "eligió", F4 pierde su superlativo. Raíz en `Speck.md:70-73` ("en F1, F4 […] asume su destino con gracia divina") que agrupa ambos finales bajo la misma agencia — F1 debe ser aceptación sin ser preguntada; F4, la única vez que se le pregunta.
+
+2. **Darro F2b (`Darro-Ficha-Expandida-v1.md:298`)** — *"al menos sé que la promesa era real. Seguimos."* Viola `Los 5 Finales:55`: F2b es "tragedia pura […] ningún beat de 'aprendimos algo'". Roen y Valen respetan la regla en sus propios epílogos F2b (`Roen:234`, `Valen:284`); solo Darro la rompe.
+
+3. **Nyael F2a (`Nyael-Ficha-Expandida-v1.md:285` vs `:261`)** — `:261` establece que Speck es "imposible de transportar […] sin importar quién la cargue" (es lo que sostiene la ausencia total de Nyael). `:285` (F2a) introduce que Speck "no puede ser movida sin el consentimiento del propio jugador" — una llave que `:261` niega. Las dos reglas no pueden ser verdad a la vez; la ruta Nyael pierde F2a o pierde su mecanismo de ausencia.
+
+4. **Cita rota (`Los 5 Finales.md:49`)** — apunta a *"[[Speck]] §Capa 4 — el Fragmento reacciona a fuerza física cerca del core, no a inacción"*, pero `Speck.md` §Capa 4 (`:64-73`) no contiene esa regla (solo describe la activación del Fragmento en The First Wound). La regla que hace de F2b agencia y no timeout —el fix central de la 2ª re-corrida— se apoya en una fuente inexistente.
+
+**MEDIUM:** `Grove of Cycles — Escena del Acto 2.md:68` sigue anclando F2b a que "el jugador se congela sin decidir" — desalineado con `Los 5 Finales:49`, que degradó el congelamiento a ruta secundaria. La escena que siembra los 5 finales en Acto 2 telegrafía el gate equivocado.
+
+### CRÍTICOS de congruencia
+
+5. **Darro/Vekka aritmética (`Darro-Ficha-Expandida-v1.md:44` vs `:376`, espejado en `Vekka-Ficha-Expandida-v1.md:46,54,72,86,88`)** — `:44` sitúa el aprendizaje "a los 30" con el presente en edades 39-45 (rechazo hace ~12 años); `:376` y toda la ficha de Vekka dicen "hace ~30 años". El mismo archivo de Darro se contradice a sí mismo.
+
+6. **Longevidad de los 3 fijos (`Roen-Ficha:40,50`, `Valen-Ficha:96,106`, `Darro-Ficha:90,100`)** — las 3 fichas afirman "elfos viven 150+ años" / "enanos ~60-120 años", contra el canon de `Las Tres Razas:24-25` (elfos 650-700, enanos 200-250). Con "150+" Valen a 230 sería anciano en vez de "joven para un elfo" como dice su propia ficha. Patrón ya señalado en la 2ª re-corrida: fijos pre-rework.
+
+7. **Valen "vio cinco Mudas" (`Valen-Ficha:100`, refuerzo en `:11`)** — *"He visto tu tipo caer cinco veces en cinco Mudas."* Imposible bajo cualquier marco: ninguna Muda se ha completado en los últimos 550 años (`El Mundo y la Muda`). No es la creencia errónea de la Academy ya resuelta (esa es sobre la periodicidad) — es una experiencia personal declarada que no pudo ocurrir.
+
+8. **Isolde Marrow "tatara-tataranieta del último rey" (`Nomenclatura.md:51` vs `Estructura Política.md:154,175,190`)** — 3 choques: (a) Estructura Política dice que su sangre real es "leyenda, sin necesidad de ser verificable" — Nomenclatura la afirma como hecho; (b) 5 generaciones ≈125-150 años humanos, pero el "último rey" debería preceder 550 años de Regencias (6-8 dinastías distintas); (c) `Nomenclatura:47` sella que el título humano nunca fue "King" y no existe ningún "último rey" documentado en el vault. Ya estaba marcado como worldbuilding gap en la sesión de procesamiento de ediciones, pero el cambio quedó aplicado como canon — la contradicción está viva.
+
+**MEDIUM (Goggles):** `Geografía:1017` + 9 fichas de Pivote (Bram:213, Dagna:223, Iven:371, Lyris:254, Maren:239, Nyael:223, Sereth:226, Torgan:271) describen "el jugador se pone los Goggles" repetidamente, incluyendo un "segundo uso" explícito en el Archive — pero Nomenclatura los declara no-retirables desde el primer uso en Driftmarket. No rompe el gate de F4, pero el lenguaje narrativo en 10 archivos asume que se los quita.
+
+**MEDIUM (Valen-110-años):** `Valen-Ficha:52` — "la última Muda fue hace 110 años, no 300" sigue afirmándose como dato válido (`:217`: "el texto de sus cálculos sigue siendo correcto"), pero choca con `Geografía:748` (Muda rota hace ~550 años). Falta marcar el 110 explícitamente como parte del error de la Academy.
+
+### Diagnóstico de fondo
+
+Los críticos de esta 3ª ronda cambian de naturaleza respecto a la 2ª: ya no son huecos de cobertura (algo no escrito), son **contradicciones archivo-contra-archivo** (Darro vs Vekka, Nyael consigo misma, F2b vs su propia fuente citada) y **ediciones/fixes que no se propagaron a todas sus menciones** (longevidad de fijos, Valen-Mudas, Isolde). Varios están interconectados: fijar Isolde toca worldbuilding (construir el Último Reino); fijar longevidad/Valen-Mudas toca la timeline general de los 3 fijos; fijar Darro toca 2 fichas simultáneamente.
+
+**Decisión de Boris (2026-07-28 noche):** sesión de diseño mañana para resolver los 8 críticos + la pregunta abierta de bonds fijos en `The Bound Five.md`. Nada se toca hasta entonces. Current-State actualizado con la agenda completa.
