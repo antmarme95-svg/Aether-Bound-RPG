@@ -43,10 +43,12 @@
 - [[Progresión y Contrato]] — el Contrato que te persigue; loop principal.
 - [[Los 5 Finales]] — Guided Molt / Long Winter (Handed Over · Fallen) / Conqueror's Clause / Warden's Choice + ecos Bond.
 - [[The Tether]] — Contract Standing vs. Bond por compañero (T1–T3) + Momentos de Persona.
+- [[Grove of Cycles — Escena del Acto 2]] — el debate del Elder Circle (Threnn/Ilyara/Corwyn/Maelys) que siembra los finales; fuente primaria de por qué el grupo llega ahí y del Vector C (gate: mayoría "persona" en los Momentos de Persona, sin conteo de flashes).
 - [[Art Bible]] — "Melancolía Gráfica": Sable×BotW×Hinterberg, regla espacial, pipeline 4 capas.
 - [[Nomenclatura]] — AETHER BOUND y todos los nombres canónicos sellados.
 - [[Inventario del Prototipo]] — qué se conserva, re-usa o reemplaza del build Godot.
 - [[Catálogo Técnico Godot]] — librerías/técnicas de Godot 4.6 priorizadas para el proyecto; confirma en código que los 5 recursos de [[Propuesta-Recursos-de-Modelado]] (loft, banding, triplanar) siguen SIN ejecutar; suma `CompositorEffect` (Alta, deuda técnica del post manual) y descarta CSG/compute shaders/plugins de pelo con evidencia.
+- [[Benchmark-Musculatura-Torso]] — rúbrica de aceptación para músculo esculpido en el rig procedural (torso sin playera + piernas). Canon visual: [[Art Bible]] + lámina fenotipo-humano-v1. `status: borrador`.
 - [[Principios de Anatomía 3D]] — minado de "Anatomy for 3D Artists" (157 páginas, 5 subagentes, 2026-07-16): torso en 3 masas (caja torácica 2/3 + cintura + pelvis 1/3), cintura escapular como bloque separado, sistema de mitades sucesivas para nudillos, pelo = masa completa primero + variación anti-paralelismo entre mechones. Insumo directo para `SHOULDER_X`/manos/pelo, nada aplicado aún en código.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres.
 - [[Briefs de Concept Art]] — prompts Nano Banana 2 (fenotipos/keyframes/Speck/foliage/Dagna) + notas de pipeline; ratificada 2026-07-08 (sus outputs ya son canon). Página viva: se añaden los 8 pivotes restantes.

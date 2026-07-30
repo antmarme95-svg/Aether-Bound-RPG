@@ -16,19 +16,7 @@ updated: 2026-07-29
 
 **✅ 3ª re-corrida cerrada.** Canon fijado (detalle en [[LOG]]): agencia de Speck en 3 grados (`Speck.md §Capa 4`); regla del Fragmento fuente única (`Speck.md §Capa 5` — esperar no mata, ceder no mata, **arrebatar sí**); transporte corta el pulso; gates (pregunta=F4, forcejeo=F2b, **parálisis=F2a**); Isolde=reclamo de House Marrow; longevidad alineada; Goggles no retirables; Mudas ninguna completada en 550 años (error heredado marcado, no borrado).
 
-## 4ª RE-CORRIDA QA — CORRIDA (2026-07-29). 18 críticos, 17 cerrados
-
-Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruencia.** Commits `7550a7d`, `ad3bde7`.
-
-### Canon fijado en la 4ª ronda
-
-- **Costo de F1 = colapso tecnológico, NO exterminio** (`Los 5 Finales §El costo de F1`, con 3 prohibiciones obligatorias para los 12 epílogos). Muere la tecnología Aether y la legitimidad de toda institución que vivía del recurso; sobrevive la gente, empobrecida. **F1 no es mejor que F4:** funde la civilización de golpe; F4 la deja adaptarse y cobra a Speck.
-- **Gate de F4 = 2 condiciones** (mayoría "persona" + ≥2 compañeros T2+). Fuera Goggles/flashes: el 100% de las partidas los cumplía.
-- **Matriz de roles fija eliminada** de `The Bound Five`; el balance se verifica **por celda**.
-- **`Geografía y Ciudades` = fuente primaria única de ubicaciones**; los cuadrantes de `Briefs de Mapa` son derivados y no se editan a mano.
-- **Fuente única nueva: `Nomenclatura §the Wanderer's Goggles`** — no retirables + privados + **no son gate**.
-
-**Los 12 epílogos F1 reescritos** bajo la regla de costo, y el costo mejoró el beat en casi todos (detalle en [[LOG]]): Vekka hace bisagras que en el mundo nuevo **son el oficio** y lo vive como degradación; Lyris es la única que ve el apagón completo desde el aire; Nyael queda "no retornada" para siempre porque el registro murió antes que ella; a Darro se le apaga **la forja que lo rechazó**.
+**✅ 4ª re-corrida cerrada (18→17).** Commits `7550a7d`, `ad3bde7`. Canon fijado (detalle en [[LOG]]): costo de F1 = colapso tecnológico NO exterminio (`Los 5 Finales §El costo de F1`, F1 no es mejor que F4); gate de F4 = 2 condiciones (fuera Goggles/flashes); matriz de roles fija eliminada; `Geografía` = fuente primaria de ubicaciones; Goggles fuente única en `Nomenclatura`. **Los 12 epílogos F1 reescritos** bajo la regla de costo — mejoró el beat en casi todos (Vekka, Lyris, Nyael, Darro).
 
 ## 5ª RE-CORRIDA QA — CORRIDA (2026-07-29). 15 críticos, 13 cerrados
 
@@ -58,9 +46,10 @@ Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruenc
 python "Aether Bound/scripts/check_canon.py"
 ```
 
-Audita **consistencia** en 10 clases mecánicas (citas `§`, wikilinks, fuente
-única, aritmética de edades, longevidad, género, reinos, cuadrantes, cifras en
-diálogo). Exit 1 si hay críticos. Método: skill `canon-qa` / [[QA de Canon Loop]].
+Audita **consistencia** en 12 clases mecánicas (citas `§`, wikilinks, fuente
+única, aritmética de edades, longevidad, género, reinos, cuadrantes, diálogo,
+**fichas duplicadas**, **huérfanos de índice**). Exit 1 si hay críticos. Método:
+skill `canon-qa` / [[QA de Canon Loop]].
 
 **Orden no negociable:** linter en 0 → subagentes en frío solo para juicio →
 fixes **a la fuente** con re-grep → checkpoint → re-corrida. En su primera
@@ -114,12 +103,13 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 
 ## Pendientes
 
-### 🔍 Optimización de tokens pendiente de evaluar
-`Current-State.md` se pasa del techo blando (3,000t) casi cada sesión y hay que comprimirlo a mano al cierre — el chequeo con `check_vault.py` es reactivo, no preventivo. Evaluar automatizar el corte (mover a [[LOG]] apenas una sección deja de ser inmediata, no cuando ya sobró).
-
 ### 🗓 Inmediato
-- **5ª re-corrida QA** (ver arriba) — único criterio de cierre del sprint.
+- **6ª re-corrida QA** (ver arriba) — único criterio de cierre del sprint.
 - **Pregunta de bonds de fijos** de `The Bound Five.md` — arranca al cerrar el QA.
+
+### Herramientas — estado
+✅ Hook que corre `check_vault.py` al editar `Current-State.md` (2026-07-29) — compresión en el mismo turno, no reactiva.
+✅ `check_canon.py` +2 clases (2026-07-29): `duplicados` (CRITICAL, hoy en 0) y `indice` (INFO, cerró 2 huérfanos).
 
 ### Worldbuilding — abierto
 - **El Último Reino humano pre-Regencias** (nuevo, 2026-07-29): construir backwards qué fue, cuándo cayó y cómo cuadra con 550 años de Regencias. Hoy el reclamo de House Marrow es leyenda deliberadamente no verificable, así que **no bloquea nada** — pero si se quiere hacer canon, hay que escribirlo.
@@ -139,8 +129,8 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 - **Old Tobin Hale — ficha expandida.** Solo aparece en `Geografía y Ciudades §The Driftmarket` y `Briefs de Concept Art §10b`. The Reckoning le dio peso dramático mayor (custodio inconsciente de los Goggles hace 40+ años) y ahora también una línea propia sobre el extraño anterior (`Geografía:965`, nueva 07-29). Estimado: ficha corta ~200-300 líneas, sin arco de traición.
 
 ### Concept art pendiente
-- **Rehacer el set de finales §5c** (F1/F4 se ven igual; 5c.2 es pre-split) — ver arriba
-- Revisar las 4 escenas de traición (¿legacy o canon?); set de combos sin doc; QA de las 4 variantes de The Wilds; videos Higgsfield (bloqueo ffmpeg); King Borran 🟡 con prompt en prosa corta; POIs sueltos cuando aparezcan en el guión
+- **§5c finales:** 5c.1 (F1) ya OK con el asset viejo; falta escribir 5c.4 (F4) y 5c.2/F2a — ver arriba
+- Revisar las 4 escenas de traición (¿legacy o canon?); set de combos sin doc; QA de las 4 variantes de The Wilds; videos Higgsfield (bloqueo ffmpeg); King Borran 🟡; POIs sueltos cuando aparezcan en el guión
 
 ### Mapa del mundo
 `Aether Bound universe.png` = referencia interna imperfecta (texto corrupto en etiquetas). Plan: documentar por escrito a medida que avanza el worldbuilding → al cerrar el frente, escribir spec exhaustiva. Ver cabecera de [[Briefs de Mapa del Mundo]].

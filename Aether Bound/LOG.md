@@ -5849,6 +5849,28 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### `check_canon.py` +2 clases: duplicados e índice (2026-07-29)
+
+Pregunta de Boris tras el hook de peso: *"¿algún otro script .py que sea buena
+idea implementar?"* Respuesta: sí, la clase que ya costó 4 fichas archivadas.
+
+- **`duplicados` (CRITICAL).** Detecta dos archivos de `10-Knowledge/` con el
+  mismo nombre de personaje en carpetas distintas — la heurística es pelar
+  sufijos de versión (`-v1`, `-Ficha-Expandida`) del nombre de archivo y agrupar
+  por stem normalizado. `Darro.md` y `Pivotes/Darro-Ficha-Expandida-v1.md`
+  colapsan al mismo stem `darro`, en carpetas distintas → hallazgo. Hace
+  cumplir mecánicamente la regla "una sola fuente viva por personaje" que quedó
+  escrita en `00-Index` tras archivar Dagna/Darro/Roen/Valen. **Hoy en 0**
+  (verificado con test directo del stem: la lógica sí detecta el patrón).
+- **`indice` (INFO).** Archivos de `10-Knowledge/` que ningún wikilink de
+  `00-Index.md` referencia — huérfanos o simplemente sin indexar. Primera
+  corrida encontró 2, ambos reales (verificado con grep, no falsos positivos):
+  `Benchmark-Musculatura-Torso.md` y `Grove of Cycles — Escena del Acto 2.md`.
+  Los dos ya quedaron indexados en esta sesión.
+
+**Estado:** `check_canon.py` ahora en 12 clases, 0 críticos. Actualizada la
+skill `canon-qa` con las dos clases nuevas.
+
 ### 5c.1 (F1) regenerado con ancla vulpina — PASS aproximado (2026-07-29)
 
 El primer intento de regenerar la lámina de F1 (tras corregir el brief en la 5ª

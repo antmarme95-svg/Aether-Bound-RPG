@@ -4,10 +4,11 @@
 Hermano de `check_vault.py`: ese audita **peso** de arranque, este audita
 **consistencia de hechos**. Solo lectura.
 
-Existe porque cuatro rondas de QA con subagentes LLM fallaron en la misma
+Existe porque cinco rondas de QA con subagentes LLM fallaron en la misma
 clase de errores: citas rotas, aritmética que no cierra, clases de menciones
-barridas a dos tercios, y reglas declaradas "fuente única" re-enunciadas por
-otros archivos. Todo eso es determinista — no necesita juicio, necesita un
+barridas a dos tercios, reglas declaradas "fuente única" re-enunciadas por
+otros archivos, y fichas cortas que duplican (y contradicen) a su versión
+expandida. Todo eso es determinista — no necesita juicio, necesita un
 script que nunca olvide un tercio de una clase.
 
 **Regla de oro:** este linter barre lo MECÁNICO. Los subagentes de QA en frío
@@ -121,9 +122,14 @@ RE_RAZA_TABLA = re.compile(
     r"\|\s*\*\*(Elfos|Enanos|Humanos)\*\*\s*\|\s*~?(\d{2,4})\s*[-–]\s*(\d{2,4})\s*años", re.IGNORECASE)
 RE_DIALOGO = re.compile(r"\*\"(.+?)\"\*", re.DOTALL)
 RE_POI = re.compile(r"^####\s+\*\*(.+?)\*\*\s*\((.+?)\)\s*$")
+# Sufijos de versión/formato que no cambian de QUIÉN habla el archivo — pelarlos
+# es lo que permite detectar "Darro.md" y "Darro-Ficha-Expandida-v1.md" como el
+# mismo personaje en dos archivos.
+RE_SUFIJO_V = re.compile(r"-v\d+$", re.IGNORECASE)
+RE_SUFIJO_FICHA = re.compile(r"-Ficha-Expandida$", re.IGNORECASE)
 
 CLASES = ["links", "citas", "fuente-unica", "edades", "rangos", "longevidad",
-          "genero", "reinos", "cuadrantes", "dialogo"]
+          "genero", "reinos", "cuadrantes", "dialogo", "duplicados", "indice"]
 
 
 def norm(s):
@@ -472,6 +478,63 @@ def check_dialogo(docs, f):
                         f"verificar a mano: un número mal en diálogo llega al guion")
 
 
+def _personaje_stem(rel):
+    """Nombre de personaje sin sufijo de versión/ficha, normalizado."""
+    base = os.path.basename(rel)[:-3]
+    base = RE_SUFIJO_V.sub("", base)
+    base = RE_SUFIJO_FICHA.sub("", base)
+    base = RE_SUFIJO_V.sub("", base)  # por si el sufijo -vN queda antes del pelado
+    return norm(base)
+
+
+def check_duplicados(docs, f):
+    """Dos archivos de 10-Knowledge con el mismo nombre de personaje en
+    carpetas distintas = fuente viva partida en dos. Es la clase que costó
+    4 fichas archivadas (Dagna, Darro, Roen, Valen) en dos rondas de QA —
+    ahora hay una regla explícita en 00-Index ("una sola fuente viva por
+    personaje") y esto la hace cumplir mecánicamente."""
+    grupos = {}
+    for rel, doc in docs.items():
+        if doc["append_only"] or not rel.startswith("10-Knowledge/"):
+            continue
+        stem = _personaje_stem(rel)
+        if len(stem) < 3:
+            continue
+        grupos.setdefault(stem, []).append(rel)
+    for stem, archivos in grupos.items():
+        carpetas = {os.path.dirname(a) for a in archivos}
+        if len(archivos) > 1 and len(carpetas) > 1:
+            primero = sorted(archivos)[0]
+            add(f, "CRITICAL", "duplicados", primero, 0,
+                f"posible ficha duplicada — mismo personaje en carpetas distintas: "
+                f"{', '.join(sorted(archivos))}. Regla del vault: una sola fuente "
+                f"viva por personaje (ver 00-Index)")
+
+
+def check_indice(docs, idx, f):
+    """Archivos de 10-Knowledge que 00-Index.md no referencia con ningún
+    wikilink — huérfanos, o simplemente falta indexarlos. Los enlaces ROTOS
+    de 00-Index ya los reporta 'links'; esto es lo complementario: enlaces
+    que deberían existir y no existen."""
+    index_doc = docs.get("00-Index.md")
+    if not index_doc:
+        return
+    referenciados = set()
+    for ln in index_doc["lines"]:
+        for target in RE_WIKILINK.findall(ln):
+            t = target.strip()
+            if not t or t.endswith("/"):
+                continue
+            key = norm(t[:-3] if t.lower().endswith(".md") else t)
+            referenciados.update(idx.get(key, []))
+    for rel, doc in docs.items():
+        if doc["append_only"] or not rel.startswith("10-Knowledge/"):
+            continue
+        if rel not in referenciados:
+            add(f, "INFO", "indice", rel, 0,
+                "no está referenciado desde 00-Index.md — huérfano, o falta indexarlo")
+
+
 CHEQUEOS = {
     "links": lambda d, i, f: check_links(d, i, f),
     "citas": lambda d, i, f: check_citas(d, i, f),
@@ -483,6 +546,8 @@ CHEQUEOS = {
     "reinos": lambda d, i, f: check_reinos(d, f),
     "cuadrantes": lambda d, i, f: check_cuadrantes(d, f),
     "dialogo": lambda d, i, f: check_dialogo(d, f),
+    "duplicados": lambda d, i, f: check_duplicados(d, f),
+    "indice": lambda d, i, f: check_indice(d, i, f),
 }
 
 ORDEN_NIVEL = {"CRITICAL": 0, "MEDIUM": 1, "INFO": 2}

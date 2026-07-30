@@ -28,8 +28,10 @@ Clases que cubre: wikilinks rotos, citas `§` a secciones inexistentes,
 violaciones de fuente única, `hace N años` imposible contra la edad declarada,
 encabezados `(edades A-B)` que no encierran sus datos, longevidad contra
 `Las Tres Razas`, epítetos con género incorrecto, reinos usados como ciudades
-caminables, POIs con cuadrantes divergentes, y cifras dentro de diálogo (INFO —
-verificar a mano, son las más caras de equivocar).
+caminables, POIs con cuadrantes divergentes, cifras dentro de diálogo (INFO —
+verificar a mano, son las más caras de equivocar), **fichas duplicadas** (mismo
+personaje en dos archivos de carpetas distintas — la clase que costó 4 fichas
+archivadas) y **huérfanos de `00-Index.md`** (INFO).
 
 Exit code 1 si hay CRITICAL. **No spawnees ningún subagente hasta que dé 0.**
 Cada crítico que el linter encuentra es un crítico que no hay que pagarle a un
