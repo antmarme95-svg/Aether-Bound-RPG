@@ -5952,9 +5952,14 @@ Valen nunca accede a esa capa, punto); Lyris F2a entregaba a Speck "en el
 punto acordado" fuera del cráter, imposible por la regla física de
 `Speck.md §Capa 5`; Dagna F1 elidía el beat de neutralización.
 
-**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~3,4k).
-**No cerrado — falta la decisión de Boris sobre C4/Iven, y después la 7ª
-re-corrida.**
+**C4/Iven — decisión de Boris (2026-07-30): excepción intencional.** Iven
+se queda rompiendo la fila Deber Institucional en F1/F2a; es el único de
+los 4 cuya institución le mintió activamente para reclutarlo. Registrado en
+`Los 5 Finales §matriz` como excepción declarada, para que ningún QA futuro
+la vuelva a reportar como crítico.
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~3,4k). Los 9
+críticos de la 6ª ronda quedan todos cerrados. **Falta la 7ª re-corrida.**
 
 **Pendiente sin tocar, de menor prioridad:** `Los 9 Links del Pivote`/ficha
 de Bram no anotan la excepción del Bond invertido; 3 epílogos F4 (Maren,

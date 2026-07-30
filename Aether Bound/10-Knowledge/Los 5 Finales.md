@@ -157,6 +157,8 @@ Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, p
 
 **Regla para las 9 fichas:** cada epílogo debe expandir su celda de la matriz sin contradecir ninguna otra celda de su fila. Cada Pivote tiene 5 epílogos, uno por final.
 
+**Excepción declarada e intencional — Iven, fila Deber Institucional.** Es el único de los 4 (junto a Torgan, Dagna, Nyael) cuya institución le mintió activamente para reclutarlo (*"Deber Institucional en su variante envenenada"*, [[Pivotes/Iven-Ficha-Expandida-v1]]). Por eso su F1 no es "muere o se autoexilia" (sobrevive, querido, en su asentamiento) y su F2a no es "asciende sin celebración" (queda tolerado, no querido, sin institución que lo ascienda — su lealtad nunca fue a un clan o academia, sino a un pueblo). **Decisión de Boris (2026-07-30): la excepción se queda así, no se reescribe para calzar con la fila.** Ningún QA futuro debe reportarla como crítico.
+
 Rejugabilidad: el género emocional del clímax varía por Pivote ([[Los 9 Pivotes]]); los finales, por filosofía.
 
 **Pendiente (❓):** estado post-final jugable; duración de epílogos; variantes C3 vivo/muerto en 2a/2b/3. → Task-Board.

@@ -28,9 +28,7 @@ updated: 2026-07-29
 
 **Cerrados:** gate de F1 reescrito sin contradicción (el punto exacto queda abstracto por diseño, cada ficha lo interpreta); Lyris F1/F3 alineadas a su propio sub-beat 5; Nyael y Bram F1 ahora mencionan a su agente sustituto (equipo de extracción / Torgan); premisa "sin reloj autónomo" bajada a la fuente real (`El Mundo y la Muda.md`, no solo a `Los 5 Finales`); ítem huérfano de `Bond y el Bond Vacío` reubicado; **Bound Five formado en Acto 1** propagado a `Geografía` y `Estructura Dramática` (decían Acto 2, las 11 fichas ya decían Acto 1); topología "rueda, no malla" reforzada (Geografía tenía 4 líneas describiendo conexión directa reino-reino); Momento de Persona 7 corregido a Acto 2; matriz de "3 cadenas de poder" con las 2 excepciones (Lyris, Bram); mecanismo de activación de Torgan alineado; gate de F4 con el calificador de Momentos disponibles; "sabor de traición por raza" corregido a "por arquetipo"; referencia rota de `5c.2b` y `CATALOGO.md` desactualizado.
 
-### 🔴 Pendiente — decisión de Boris
-
-**C4 — Iven rompe la fila "Deber Institucional" de la matriz en 2 de sus 5 celdas.** En F1 sobrevive querido en su asentamiento (la fila exige "muere o se autoexilia"); en F2a es "tolerado, no querido" sin ascenso (la fila exige "asciende sin celebración"). Su propia ficha ya se declara *"Deber Institucional en su variante envenenada"* — **¿la excepción es intencional** (Iven es el único cuya institución le mintió, y por eso su fila no puede leerse igual) **o hay que reescribir sus epílogos F1/F2a para que calcen**? No lo decidí por él; es un llamado de diseño, no un fix mecánico.
+**✅ C4 resuelto — decisión de Boris (2026-07-30): excepción intencional.** Iven se queda rompiendo la fila "Deber Institucional" en F1/F2a; es el único de los 4 cuya institución le mintió activamente. Registrado en `Los 5 Finales §matriz` como excepción declarada — ningún QA futuro debe reportarla como crítico.
 
 ### Pendientes menores, sin bloquear el cierre
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond invertido (solo vive en `Bond y el Bond Vacío.md`).
@@ -39,8 +37,7 @@ updated: 2026-07-29
 
 ### 🔜 Pendiente para cerrar el sprint
 
-1. **Decisión de Boris sobre C4/Iven** (arriba).
-2. **7ª re-corrida QA.** Criterio: 0 críticos.
+**7ª re-corrida QA.** Criterio: 0 críticos. Los 9 críticos de la 6ª quedaron todos cerrados.
 
 ### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 
