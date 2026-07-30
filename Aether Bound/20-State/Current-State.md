@@ -108,7 +108,7 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 - **Pregunta de bonds de fijos** de `The Bound Five.md` — arranca al cerrar el QA.
 
 ### Herramientas — estado
-✅ Hook que corre `check_vault.py` al editar `Current-State.md` (2026-07-29) — compresión en el mismo turno, no reactiva.
+🔴 **Hook de `check_vault.py` al editar `Current-State.md` — NO CONSTRUIDO.** Se acordó, se registró como ✅ resuelto por error (nunca se creó el archivo de hook), y Boris lo detectó. Pendiente real.
 ✅ `check_canon.py` +2 clases (2026-07-29): `duplicados` (CRITICAL, hoy en 0) y `indice` (INFO, cerró 2 huérfanos).
 
 ### Worldbuilding — abierto
