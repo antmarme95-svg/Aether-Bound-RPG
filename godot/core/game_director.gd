@@ -11,6 +11,12 @@ const _CombatArena = preload("res://scenes/combat_arena.gd")
 const _SpawnSpec   = preload("res://gameplay/spawn_spec.gd")
 # PRD-007 alcance 0: Dagna aliada (--ally=dagna).
 const _AllyDagna   = preload("res://gameplay/ally_dagna.gd")
+# Fase Migración de Ropa (2026-07-13): el cuerpo base ya no fabrica ropa
+# fosilizada — el jugador SIEMPRE debe salir vestido (nunca desnudo en el
+# flujo real del juego). build_frontier() es idempotente: se re-llama tras
+# cada apply_phenotype/apply_archetype para que la faja/cinturón sigan el
+# build vigente (peso, clase).
+const _CharacterOutfit = preload("res://character/character_outfit.gd")
 
 # ---- child nodes ----
 var _cam: Camera3D
@@ -149,6 +155,7 @@ func _state_creation() -> Dictionary:
 			creation_ui.on_origin    = func(origin: Dictionary) -> void:
 				# Apply rig phenotype + theme accent
 				rig.apply_phenotype(save.phenotype, origin)
+				_CharacterOutfit.build_frontier(rig)
 				var theme: Dictionary = origin.get("theme", {})
 				var accent_hex: String = theme.get("accent", "#46e6ff")
 				var ac := Color(accent_hex)
@@ -159,9 +166,11 @@ func _state_creation() -> Dictionary:
 				var origin_dict: Dictionary = save.get_origin()
 				if not origin_dict.is_empty():
 					rig.apply_phenotype(save.phenotype, origin_dict)
+					_CharacterOutfit.build_frontier(rig)
 			creation_ui.on_class_selected = func(_cls: Dictionary) -> void:
 				if save.class_id != "":
 					rig.apply_archetype(save.class_id)
+					_CharacterOutfit.build_frontier(rig)
 			creation_ui.on_name      = func(_n: String) -> void: pass
 			creation_ui.on_confirm   = func(_name_text: String) -> void:
 				save.persist()
@@ -247,6 +256,7 @@ func _build_creation_stage() -> void:
 		if origin.is_empty():
 			origin = OriginsData.get_origin("aetherborn")
 		rig.apply_phenotype(ph, origin)
+		_CharacterOutfit.build_frontier(rig)
 
 func _teardown_creation_stage() -> void:
 	for light in _creation_lights:
@@ -288,6 +298,7 @@ func _state_office() -> Dictionary:
 			# Apply archetype silhouette now that class is confirmed
 			if save.class_id != "":
 				rig.apply_archetype(save.class_id)
+			_CharacterOutfit.build_frontier(rig)   # nunca desnudo en OFFICE
 
 			# Build scene
 			var office := RecruitmentOffice.new(origin)
@@ -500,6 +511,7 @@ func _state_arena() -> Dictionary:
 				controller.setup(rig, stats, passives, save, _cam)
 			if save.class_id != "":
 				rig.apply_archetype(save.class_id)
+			_CharacterOutfit.build_frontier(rig)   # nunca desnudo en ARENA
 
 			# Escena greybox.
 			var arena := _CombatArena.new(origin)

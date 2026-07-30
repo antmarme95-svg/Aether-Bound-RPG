@@ -15,7 +15,15 @@ uniform sampler2D depth_tex : hint_depth_texture, filter_nearest, repeat_disable
 // --- layer 1: ink ---
 uniform vec4 ink_color : source_color = vec4(0.10, 0.09, 0.11, 1.0);
 uniform float ink_strength : hint_range(0.0, 2.0) = 1.0;
-uniform float edge_threshold : hint_range(0.0, 2.0) = 0.30;
+// REGLA DE TINTA (2026-07-17, A/B aprobado por el director): 0.30 → 1.00.
+// A 0.30 el Sobel entintaba cualquier salto >6mm a distancia de cámara
+// cercana — cada frontera interior entre masas del rig se dibujaba como
+// contorno propio ("collage/maniquí", techo común de los QA de rostro y
+// torso). A 1.00 solo entintan saltos >~2cm: silueta, pliegues hondos
+// (mandíbula, cuello→hombro) y clumps de follaje sobreviven; las costuras
+// interiores de masas mueren. A/B contra 1.60 (sin ganancia en el cuerpo,
+// más erosión de follaje) y 0.30 (baseline) en scratchpad de la sesión.
+uniform float edge_threshold : hint_range(0.0, 2.0) = 1.00;
 uniform float edge_gain : hint_range(0.0, 24.0) = 10.0;
 uniform float ink_fade_dist : hint_range(1.0, 400.0) = 70.0; // lin depth where ink is ~gone
 
@@ -23,6 +31,12 @@ uniform float ink_fade_dist : hint_range(1.0, 400.0) = 70.0; // lin depth where 
 uniform float band_count : hint_range(2.0, 6.0) = 4.0;
 uniform float band_mix : hint_range(0.0, 1.0) = 0.45;
 uniform float band_jitter : hint_range(0.0, 0.5) = 0.10;
+// Lowest band no longer collapses to near-black: the band centres are remapped
+// into [shadow_floor, 1]. Set per hour (dawn wants soft washed shadows like the
+// keyframe → high floor; dusk keeps its moody dark → low floor). Fixes the black
+// mid-ground band where col*(q/lum) halved shadow greens that fell just under the
+// band-0 edge (the raw pass had none — the quantizer was the culprit).
+uniform float shadow_floor : hint_range(0.0, 0.6) = 0.30;
 
 // --- layer 3: air ---
 uniform vec4 aerial_color : source_color = vec4(0.73, 0.80, 0.85, 1.0);
@@ -92,10 +106,15 @@ void fragment() {
 	vec3 col = texture(screen_tex, uv).rgb;
 
 	// ---- layer 2: soft quantization with jittered band edges ----
+	// Band centres remapped into [shadow_floor, 1] so the darkest band lifts
+	// instead of pitting to black; the luminance rescale is clamped so shadows
+	// rise without blowing out highlights (keyframe: soft washed shadows).
 	float lum = dot(col, vec3(0.299, 0.587, 0.114));
 	float jn = (hash12(uv * 521.9 + tq * 7.0) - 0.5) * band_jitter;
-	float q = (floor(clamp(lum + jn, 0.0, 0.999) * band_count) + 0.5) / band_count;
-	vec3 qcol = col * (q / max(lum, 0.02));
+	float qi = (floor(clamp(lum + jn, 0.0, 0.999) * band_count) + 0.5) / band_count;
+	float q = mix(shadow_floor, 1.0, qi);
+	float qscale = clamp(q / max(lum, 0.04), 0.65, 1.9);
+	vec3 qcol = col * qscale;
 	col = mix(col, qcol, is_sky ? band_mix * 0.35 : band_mix);
 
 	// ---- layer 3: aerial perspective + glowing edges ----

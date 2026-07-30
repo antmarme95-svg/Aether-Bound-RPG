@@ -2,6 +2,10 @@
 ## One interior kit, three kingdom themes via origin.theme.propSet.
 class_name RecruitmentOffice extends Node3D
 
+# Fase Migración de Ropa (2026-07-13): el reclutador es un CharacterRig
+# visible en gameplay — debe salir vestido igual que jugador/enemigos.
+const _CharacterOutfit = preload("res://character/character_outfit.gd")
+
 const W = 12.0
 const D = 10.0
 const H = 4.6
@@ -179,6 +183,7 @@ func _build_recruiter(theme: Dictionary) -> void:
 	_recruiter.position = Vector3(0.0, 0.0, -2.75)
 	_recruiter.rotation.y = 0.0
 	_recruiter.apply_phenotype(preset, _origin)
+	_CharacterOutfit.build_frontier(_recruiter)
 
 func _build_fixtures(theme: Dictionary) -> void:
 	var pipe_glow = Color(theme.get("pipeGlow", "#46e6ff"))

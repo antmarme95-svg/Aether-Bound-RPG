@@ -31,6 +31,11 @@ const SPRINT  := 6.6
 const CROUCH  := 1.9
 const GRAVITY := 24.0
 const JUMP_V  := 8.4
+# C4 frente 2: mitad del ancho de stance (mismo offset lateral que
+# `character_rig.gd` usa para `leg.position.x = side * 0.09`) — dónde
+# medir el terreno para el foot IK; épsilon de muestreo para la normal.
+const FOOT_STANCE := 0.09
+const FOOT_NORMAL_EPS := 0.15
 # PRD-007 alcance 2: Seismic Springboard T1. Un salto DENTRO de la onda de Dagna
 # (ventana abierta) no usa el jump_force normal (8.4 → ~1.47 m): se amplifica a
 # este impulso vertical (→ ~6 m, altura "imposible" para alcanzar cornisas). El
@@ -1214,6 +1219,24 @@ func _ray_ground(ro: Vector3, rn: Vector3) -> Dictionary:
 		prev_above = above
 	return {"hit": false}
 
+# ---- C4 frente 2: normal del terreno bajo (x,z) por diferencias finitas ----
+# Terreno plano (get_height constante) da (0,1,0) — el foot IK no corrige
+# nada ahí, comportamiento idéntico al de antes de C4.
+func _terrain_normal(x: float, z: float) -> Vector3:
+	if scene == null or not scene.has_method("get_height"):
+		return Vector3.UP
+	var eps: float = FOOT_NORMAL_EPS
+	var hl: float = scene.get_height(x - eps, z)
+	var hr: float = scene.get_height(x + eps, z)
+	var hd: float = scene.get_height(x, z - eps)
+	var hu: float = scene.get_height(x, z + eps)
+	var tx := Vector3(2.0 * eps, hr - hl, 0.0)
+	var tz := Vector3(0.0, hu - hd, 2.0 * eps)
+	var n: Vector3 = tz.cross(tx)
+	if n.length() < 0.0001:
+		return Vector3.UP
+	return n.normalized()
+
 # ---- decal teal del apuntado (anillo plano en el suelo) ----
 func _show_designate_decal(pos: Vector3, in_range: bool) -> void:
 	if scene == null:
@@ -1620,6 +1643,20 @@ func update(dt: float) -> void:
 	rig.rotation.y      = facing
 	rig.set_motion(move_speed_norm, crouching, sliding)
 	# rig._process is called automatically by Godot each frame
+
+	# ---- C4 frente 2 (2026-07-21): foot IK — "pies plantados en pendiente" ----
+	# Reusa el contrato get_height() ya existente (PRD-007 alcance 4): el rig
+	# no sabe de terreno, el controller mide bajo cada pie y le pasa el dato.
+	# Escenas sin get_height (o terreno plano) quedan sin cambio de
+	# comportamiento — apply_foot_ik nunca se llama.
+	if scene.has_method("get_height") and rig.has_method("apply_foot_ik"):
+		var right := Vector3(cos(facing), 0.0, -sin(facing))
+		var l_xz := position + right * -FOOT_STANCE
+		var r_xz := position + right * FOOT_STANCE
+		var l_h: float = scene.get_height(l_xz.x, l_xz.z)
+		var r_h: float = scene.get_height(r_xz.x, r_xz.z)
+		rig.apply_foot_ik(l_h, r_h,
+				_terrain_normal(l_xz.x, l_xz.z), _terrain_normal(r_xz.x, r_xz.z))
 
 	_update_projectiles(dt)
 	stats.update(dt)

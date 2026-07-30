@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "GDD §3.1b, §3.1c (fichas aprobadas v0 — revisión final pendiente)"
-updated: 2026-07-04
+updated: 2026-07-27
 ---
 
 # Los 9 Pivotes
@@ -12,16 +12,49 @@ traiciones son **reacciones distintas a la misma verdad**
 ([[El Mundo y la Muda]]) — ninguna repite el beat de otra. Nombres
 provisionales hasta el pase de naming. Sus links firma: [[Los 9 Links del Pivote]].
 
+---
+
+## Canon: los 9 existen simultáneamente (decisión 2026-07-28)
+
+**Los 9 Pivotes no son variantes alternativas del mismo slot — son nueve personas
+reales que existen a la vez en el mundo.** La celda del jugador determina cuál de
+los nueve **lo conoce y viaja con él**. Los otros ocho siguen sus propias vidas en
+paralelo, con las mismas instituciones presionándolos, los mismos juramentos
+venciendo, la misma crisis apretándolos. Simplemente nunca se cruzaron contigo.
+
+**Regla de aparición.** Un Pivote no-activo puede aparecer en escena como **NPC
+externo** — nunca como miembro de The Bound Five. El grupo es siempre cinco
+(Jugador + Roen + Valen + Pivote activo + Darro) + Speck, sin excepción
+([[The Bound Five]]). Un Pivote no-activo puede cruzarse con el grupo, actuar
+contra él, o ser mencionado — pero no se sienta a su mesa, no participa de sus
+dinámicas internas, y no aparece en las escenas de formación del grupo.
+
+**Caso canónico — el segundo agente de la ruta Bram.** Cuando Bram rechaza la
+orden en el corredor del Sunken Archive, el Triune Council no se queda sin
+opciones: activa a otro de los nueve. Canónicamente **Torgan**, que en esa partida
+no es el Pivote del jugador pero existe igual, con su Juramento de Forja intacto y
+su clan menor presionándolo desde antes de que el grupo se formara. No es un deus
+ex machina — es una vida paralela que el jugador nunca conoció, intersectando la
+suya en el peor momento posible. Ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]].
+
+**Implicación de rejugabilidad.** Cada celda no solo cambia quién te traiciona:
+cambia **qué vida paralela conociste** y cuáles ignoraste. Los otros ocho arcos
+ocurren de todos modos, sin ti como testigo.
+
+**Pendiente (❓):** qué hace exactamente cada Pivote no-activo durante la partida
+— dónde está, si puede morir off-screen, si el jugador puede buscarlo. Se define
+cuando aparezca en el guión, no antes.
+
 | Jugador | Pivote | Te enseña | Quiebre | Línea |
 |---|---|---|---|---|
-| Elfo Duelist | **Maren** — Humana Strategist (gadgeteer fluvial) | Calidez, improvisación | Descifra el Fragmento y hace las cuentas: su ciudad no sobrevive una Muda salvaje; vende el plan al Consejo | *"I can love her and still do the math."* |
+| Elfo Duelist | **Maren** — Humana Strategist (gadgeteer fluvial) | Calidez, improvisación | Descifra el Fragmento y hace las cuentas: su ciudad no sobrevive una Muda salvaje; vende el plan al Triune Council | *"I can love her and still do the math."* |
 | Elfo Strategist | **Torgan** — Enano Duelist (misil humano) | La palabra empeñada | Un Juramento de Forja anterior al grupo lo obliga; no discute, cumple | *"An oath doesn't care how I feel about you."* |
-| Elfo Vanguard | **Iven** — Humano Duelist (acróbata) | Espontaneidad, apetito de vivir | Su asentamiento muere de corrupción; el Consejo ofrece la cura por Speck. Traiciona por los suyos | *"You'd trade her for strangers? I'm trading her for everyone I've ever known."* |
-| Enano Duelist | **Sereth** — Elfo Strategist (manipulador) | Perspectiva, soltar la terquedad | Aritmética pura dicha con afecto | *"Millions against one. …This is me being stubborn about millions."* |
-| Enano Strategist | **Bram** — Humano Vanguard (brawler) | Riesgo, humor | Agotamiento: veinte años sangrando por guerras ajenas; el Consejo le compra la libertad de su compañía | *"I've been everybody's wall. Just once, let me be the door."* |
+| Elfo Vanguard | **Iven** — Humano Duelist (acróbata) | Espontaneidad, apetito de vivir | Su asentamiento muere de corrupción; el Triune Council ofrece la cura por Speck. Traiciona por los suyos | *"You'd trade her for strangers? I'm trading her for everyone I've ever known."* |
+| Enano Duelist | **Sereth** — Elfo Strategist (manipulador) | Perspectiva, soltar la terquedad | Afecto sincero usado como instrumento de conducción | *"No te llevé a esta decisión. Te llevé a la persona que la toma."* |
+| Enano Strategist | **Bram** — Humano Vanguard (brawler) | Riesgo, humor | Agotamiento tras cuarenta años de servicio; the Triune Council le paga por entregar a Speck y él **rechaza** — único Pivote que rehúsa. El Council activa un segundo agente en la sombra. | *"I've been everybody's wall. Just once, let me be the door."* |
 | Enano Vanguard | **Lyris** — Elfa Duelist (trazadora aérea) | Ligereza — el muro mira el cielo | Lógica fría con calma que hiere más que un grito | *"You were my stillness. Be still now."* |
 | Humano Duelist | **Dagna** — Enana Vanguard (muralla) | Constancia, lealtad, raíces | La ley del clan pesa más que el nido que juró proteger; llora mientras lo hace | *"The mountain doesn't forgive. And I am the mountain's."* |
-| Humano Strategist | **Nyael** — Elfa Duelist (hoja silenciosa) | Paciencia, precisión | Ejecuta la conclusión antes de discutirla: su traición es una **ausencia** (nota encontrada) | *"You taught me to set the trap and wait. I could not wait."* |
+| Humano Strategist | **Nyael** — Elfa Duelist (hoja silenciosa) | Paciencia, precisión | Ejecuta la conclusión antes de discutirla: su traición es una **ausencia** (nota encontrada) | *"I set traps my teacher would have waited on. She's older than you'll ever be. She was also wrong."* |
 | Humano Vanguard | **Vekka** — Enana Strategist (ingeniera de gremio) | El oficio, la dignidad del detalle | Dogma del gremio: *"a flawed forging must be unmade by its maker"* — desmonta tu equipo con sus manos | *"I built you. Forgive me for finishing the job."* |
 
 La orfandad mecánica específica de cada pérdida está en
@@ -29,5 +62,8 @@ La orfandad mecánica específica de cada pérdida está en
 [[Bond y el Bond Vacío]]. Con C3 en Tether T3, la traición te quita más
 ([[The Tether]]) y su escena gana matices.
 
-**Pendiente (❓):** biografías completas, arcos por acto, diseño visual,
-naming definitivo. → Task-Board.
+**Pendiente (❓):** naming definitivo. → Task-Board.
+
+**Resueltos (2026-07-27):** biografías completas ✅, arcos por acto ✅,
+diseño visual ✅ — las 9 fichas expandidas viven en
+`Aether Bound/10-Knowledge/Pivotes/`.

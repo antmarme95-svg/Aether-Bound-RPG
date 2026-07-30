@@ -5,18 +5,25 @@
 class_name ToonMaterials extends RefCounted
 
 const SHADER_PATH = "res://rendering/toon.gdshader"
+const OPAQUE_SHADER_PATH = "res://rendering/toon_opaque.gdshader"
 const _PipelineConfig = preload("res://rendering/pipeline_config.gd")
 
 # Outline cache: key = "<hex>_<thickness>" -> StandardMaterial3D
 static var _outline_cache: Dictionary = {}
 
-# Shader resource cached after first load
+# Shader resources cached after first load
 static var _toon_shader: Shader = null
+static var _toon_opaque_shader: Shader = null
 
 static func _get_shader() -> Shader:
 	if _toon_shader == null:
 		_toon_shader = load(SHADER_PATH)
 	return _toon_shader
+
+static func _get_opaque_shader() -> Shader:
+	if _toon_opaque_shader == null:
+		_toon_opaque_shader = load(OPAQUE_SHADER_PATH)
+	return _toon_opaque_shader
 
 ## Create a flat toon material with a solid albedo color.
 static func toon_mat(color: Color) -> ShaderMaterial:
@@ -31,6 +38,27 @@ static func toon_mat(color: Color) -> ShaderMaterial:
 static func toon_mat_textured(tex: Texture2D) -> ShaderMaterial:
 	var mat = ShaderMaterial.new()
 	mat.shader = _get_shader()
+	mat.set_shader_parameter("albedo_color", Color(1, 1, 1, 1))
+	mat.set_shader_parameter("use_texture", true)
+	mat.set_shader_parameter("albedo_texture", tex)
+	_PipelineConfig.apply_to(mat)
+	return mat
+
+## Variante OPACA (C6, 2026-07-10): mismo cel, sin escritura de ALPHA — el
+## material vive en el pase opaco y el post Melancolía lo ve (Sobel = línea).
+## Es el toon del RIG y sus piezas; el toon clásico queda para el prototipo.
+static func toon_mat_opaque(color: Color) -> ShaderMaterial:
+	var mat = ShaderMaterial.new()
+	mat.shader = _get_opaque_shader()
+	mat.set_shader_parameter("albedo_color", color)
+	mat.set_shader_parameter("use_texture", false)
+	_PipelineConfig.apply_to(mat)
+	return mat
+
+## Variante opaca con textura (cabeza / warpaint atlas).
+static func toon_mat_opaque_textured(tex: Texture2D) -> ShaderMaterial:
+	var mat = ShaderMaterial.new()
+	mat.shader = _get_opaque_shader()
 	mat.set_shader_parameter("albedo_color", Color(1, 1, 1, 1))
 	mat.set_shader_parameter("use_texture", true)
 	mat.set_shader_parameter("albedo_texture", tex)

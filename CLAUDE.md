@@ -1,6 +1,6 @@
 # AETHER BOUND — reglas del repo
 
-0. **Al usuario (el director) siempre te refieres a él como "Boris".**
+0. **Al usuario (el director) siempre le contestarás iniciando por "Boris".**
 1. **Toda sesión empieza leyendo `Aether Bound/20-State/Current-State.md`.**
 2. El modelo de trabajo (capas, loops, plantillas) está en
    `Aether Bound/SCHEMA.md` — toda operación sigue un loop de
@@ -13,3 +13,15 @@
 5. Código: `godot/` es la implementación (Godot 4.6.3); `src/` (Three.js) es
    referencia congelada. Lecciones técnicas obligatorias antes de tocar
    código: `Aether Bound/20-State/Lecciones.md`.
+6. Arranque de sesión barato por diseño (SCHEMA §8): nada se auto-carga vía
+   `@import` salvo lo indispensable en CADA sesión. Auditoría de peso:
+   `Aether Bound/scripts/check_vault.py` (semáforo 🟢<10k/🟡10-30k/🔴>30k
+   tokens). Si sale 🟡/🔴, es trabajo del Lint Loop aunque nada falte.
+7. **Antes de auditar canon con subagentes, correr el linter:**
+   `python "Aether Bound/scripts/check_canon.py"` (exit 1 si hay críticos).
+   Barre lo mecánico — citas rotas, aritmética, fuente única, clases
+   incompletas. Los subagentes de QA se reservan para lo que exige juicio.
+   Método completo: skill `canon-qa` / [[QA de Canon Loop]].
+8. **Todo fix de canon va a la FUENTE del dato, no a la línea reportada.**
+   Grep de la clase completa de menciones en todo el vault antes de cerrarlo.
+   Cuatro rondas de QA fallaron por corregir líneas sueltas.

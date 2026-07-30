@@ -54,10 +54,24 @@ const ROM: Dictionary = {
 		# y is generous on purpose: today the legs are children of the hips,
 		# so pelvis rotation carries the stance with it — it models pelvis +
 		# foot-pivot as one unit (a real hitter pivots the back foot and the
-		# pelvis turns 40–60°). Tighten when feet get planted IK (C4).
+		# pelvis turns 40–60°). C4 frente 2 (2026-07-21) agregó foot IK de
+		# terreno (rodilla/tobillo, ver solve_knee_for_height/
+		# solve_ankle_level abajo) pero no toca el pivote de combate —
+		# sigue pendiente, a criterio de Boris, si separar pelvis/pie-
+		# pivote ahora que el pie SÍ tiene su propio joint.
 		"x": Vector2(-0.3, 0.3),
 		"y": Vector2(-0.7, 0.7),
 		"z": Vector2(-0.25, 0.25),
+	},
+	"ankle": {     # 2-DOF (Movilidad Realista: "muñeca/tobillo 2-DOF") — C4
+		# frente 2 (2026-07-21): nace SIN uso previo (la bota colgaba rígida
+		# del nodo knee). x = dorsiflexión(+)/plantarflexión(−) para el
+		# alcance de pendiente cuesta-arriba/abajo; z = inversión/eversión
+		# para el ladeo lateral del terreno. Rango humano conservador (no
+		# hiperextiende el estilo toon con una bota volteada de más).
+		"x": Vector2(-0.55, 0.35),
+		"y": Vector2(0.0, 0.0),
+		"z": Vector2(-0.35, 0.35),
 	},
 	"head": {
 		"x": Vector2(-0.7, 0.6),
@@ -178,6 +192,50 @@ static func segment_offset(k: float, lag: float, coil: float, release: float) ->
 		var decay: float = 3.2 - lag * 6.0            # distal decae más lento
 		var freq: float = 0.62 * (1.0 + 0.35 * whip)  # ~1 vaivén completo
 		return release * exp(-decay * u3) * cos(TAU * freq * u3)
+
+# ----------------------------------------------------------------
+# Foot IK (C4, frente 2, 2026-07-21) — "pies plantados en pendiente"
+# ([[Movilidad Realista]]). Analítico, no Skeleton3D/SkeletonIK3D: este rig
+# es 100% Node3D procedural (ver Lecciones — class_name cruzado rompe el
+# load-order en CLI), así que la IK vive aquí como el resto de la
+# biomecánica (funciones puras, sin nodos).
+#
+# Geometría fija de `character_rig.gd`: cadera→rodilla y rodilla→tobillo
+# miden 0.45 m cada uno (mismo valor, ver `knee.position.y`/`ankle.position.y`
+# en `_build()`) — mantener sincronizado si esa geometría cambia.
+# ----------------------------------------------------------------
+const LEG_SEGMENT_LEN: float = 0.45
+
+## solve_knee_for_height — cuánto debe doblarse la rodilla (además de lo que
+## ya dicta el gait) para que el tobillo alcance una altura de mundo dada,
+## SIN tocar el ángulo de cadera (la marcha/anticipación ya autorada no se
+## toca; la IK es una capa correctiva encima, como el foot IK de HZD sobre
+## mocap — "el gait procedural se profundiza a IK, no se reemplaza").
+## `hip_flex` = leg.rotation.x actual (el swing del gait, se preserva).
+## Devuelve el ángulo de rodilla SIN clampear — el llamador aplica
+## `_Biomech.clamp_node` con el ROM real (nunca hiperextiende).
+static func solve_knee_for_height(hip_flex: float, hip_world_y: float, target_world_y: float, seg_len: float = LEG_SEGMENT_LEN) -> float:
+	# down.rotated(X, θ).y == -cos(θ) (rotación estándar mano derecha) —
+	# cadera y rodilla rotan sobre el MISMO eje local X, así que sus ángulos
+	# se SUMAN (dos rotaciones sobre un eje fijo compuesto = un solo ángulo).
+	var dy: float = target_world_y - hip_world_y
+	var remaining: float = dy / seg_len + cos(hip_flex)
+	var total_angle: float = acos(clampf(-remaining, -1.0, 1.0))
+	return total_angle - hip_flex
+
+## solve_ankle_level — ángulo (x=dorsi/plantarflexión, z=inversión/eversión)
+## que nivela la suela contra la normal REAL del terreno bajo el pie.
+## `parent_global_basis` es la basis global del nodo PADRE del tobillo (la
+## rodilla ya rotada por cadera+rodilla+IK) — se necesita para expresar la
+## normal de mundo en el frame local donde vive `ankle.rotation`.
+static func solve_ankle_level(parent_global_basis: Basis, world_normal: Vector3) -> Vector2:
+	var n: Vector3 = parent_global_basis.inverse() * world_normal
+	if n.length() < 0.001:
+		return Vector2.ZERO
+	n = n.normalized()
+	var ax: float = atan2(n.z, n.y)
+	var az: float = atan2(-n.x, n.y)
+	return Vector2(ax, az)
 
 static func _ease_in_out(u: float) -> float:
 	return u * u * (3.0 - 2.0 * u)

@@ -1,5 +1,3765 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-07-24] design/QA | §10 generado — 5/6 aprobados + regla nueva anti-texto-en-imagen
+
+**Ronda de QA de los 6 briefs de §10** (Isolde Marrow, Tobin Hale, Threnn,
+Ilyara, Maelys, Corwyn) — Boris pasó las 6 imágenes generadas en NB2.
+
+**✅ Corwyn — Aprobado.** Cabello plateado en moño formal, sonrisa
+confiada/calculadora, marcas teal discretas en el cuello ("understated"
+como pedía el brief), anillo de plata único visible. Sin violaciones.
+
+**✅ Maelys — Aprobado, el mejor logrado.** Cabello plateado suelto/
+enredado tapando parte de la cara, chal gris envolvente, postura
+encorvada/distante, mirada hacia abajo (cerca de "mirar a través de").
+Captura el tono roto perfectamente.
+
+**✅ Harbormaster Tobin Hale — Aprobado.** Abrigo desgastado y remendado,
+barba gris, expresión cansada pero cálida, botas gastadas, cinturón
+práctico. Detalles nuevos coherentes no especificados en el brief:
+astrolabio colgante, catalejo de latón. 🟡 Nota menor: el brief pedía
+"dispersión de pequeños amuletos de décadas de comerciantes/refugiados"
+(detalle emocional central) — quedó reducido a un solo colgante, no
+bloqueante.
+
+**✅ Lady Isolde Marrow — Aprobada, muy fuerte.** Cabello auburn con
+soltura, sonrisa confiada, outfit burgundy/bronce con broches de latón
+(match casi exacto al brief), escudo de House Marrow en el pecho, anillo
+heredado con grabado mostrado en detalle, sin corona (correcto).
+
+**🟡 Threnn — Aprobado con nota menor.** Expresión estoica de guerrero muy
+bien lograda. 2 desviaciones menores: marcas de aether demasiado
+brillantes (brief pedía "dimmer... as if faded", acá leen como mago
+activo); no se ve el cinturón de espada vacío ni la cicatriz del
+antebrazo (mangas los tapan). No bloqueante.
+
+**🔴 Ilyara — Falla técnica, mismo glitch que Kadrun v1.** Texto filtrado
+dentro de la imagen: caption corrompido *"ILYARA SILVER CALM, CLAIER OF
+DEEPLY COMPASSIONATE, AND CLEARLY CARRY OLD GRIEF AND WISDOM WITHOUT NO
+BITTERNESS."* (palabras corruptas, doble negativo gramatical). El diseño
+del personaje en sí, ignorando el texto, coincide bien con el brief
+(robes verde salvia, bolsa de hierbas, tatuaje de antebrazo, rostro
+compasivo). Conclusión: el formato de prosa corta que resolvió Kadrun no
+garantiza 0% de glitch — hay un componente de azar en NB2, no es 100%
+determinístico por prompt.
+
+**Hallazgo adicional — etiquetas de texto limpias (no glitch):** en Tobin
+e Isolde aparecieron etiquetas de texto BIEN escritas (nombres de piezas
+como "Astrolabe"/"Anchor Coat", listas de negativos) — un formato de
+"hoja de spec anotada" que NB2 elige a veces, DISTINTO del bug de texto
+corrompido. No arruina el diseño pero no es lo pedido (concept sheet
+limpio). **Decisión de Boris:** agregar negativo estándar para evitarlo
+por default, útil para cuando las láminas se usen para medir proporción.
+
+**Acción — regla nueva agregada al bloque de estilo compartido:**
+*"no text, no labels, no captions, no annotations, no diagram-style
+callouts"* — agregado a los 6 prompts de §10 (incluyendo el de Ilyara que
+hay que re-correr) y documentado como regla estándar para todo brief
+futuro.
+
+**Archivo:** `Briefs de Concept Art.md` — nueva regla en el bloque de
+estilo compartido (línea ~14) + negativo agregado a los 6 prompts de §10.
+
+**Pendiente:** re-correr Ilyara (prompt ya actualizado con el negativo
+nuevo, sin otros cambios — el diseño en sí ya estaba bien).
+
+---
+
+## [2026-07-24] design | Briefs de concept art del elenco político nuevo (§10)
+
+**Disparador:** en vez de dejarlo en backlog para la próxima sesión, Boris
+pidió escribir los briefs de una vez.
+
+**6 briefs nuevos** en `Briefs de Concept Art.md` §10: Lady Isolde Marrow,
+Harbormaster Tobin Hale, y los 4 de The Elder Circle (Threnn/Ilyara/Maelys/
+Corwyn).
+
+**Cambio de formato deliberado:** en vez de repetir la fórmula "Use the X
+phenotype as the exact anatomy and proportion reference" del §9 original
+(que causó el glitch de texto filtrado en Kadrun v1 y peor fidelidad de
+proporción), estos 6 usan directamente el formato de prosa corta que
+resolvió ambos problemas en Kadrun v2 — proporción como primera frase,
+negativos como oraciones cortas al final, sin la carga de vocabulario
+técnico denso en una sola oración.
+
+**Nota transversal para The Elder Circle:** los 4 deben leer visiblemente
+más viejos que cualquier otro elfo ya generado (Valen/Sereth/Lyris/Nyael/
+Cyrion, todos 180-250 años) — se acercan al techo de vida élfico (650-700).
+Canas totales (raro en elfos), quietud pesada en la postura, piel aún más
+translúcida por la edad. Cada uno con detalle específico de su arquetipo:
+Threnn (guerrero, cinturón de espada vacío), Ilyara (sanadora, bolsa de
+hierbas), Maelys (rota, mirada que atraviesa al espectador), Corwyn
+(cortesano, anillo de plata único).
+
+**Destino:** `90-Raw/concept/` — `isolde-marrow-v1.png`,
+`tobin-hale-v1.png`, `threnn-v1.png`, `ilyara-v1.png`, `maelys-v1.png`,
+`corwyn-v1.png`. Tabla de fenotipos a adjuntar incluida en el doc.
+
+**Con esto, el pendiente de concept art marcado al cierre de la sesión
+anterior queda resuelto — listo para que Boris corra los 6 prompts en
+NB2.**
+
+---
+
+## [2026-07-24] narrative/retcon | The Bound Five (renombre) + Old Tobin Hale + The Reckoning
+
+**Disparador:** al escribir a Lady Isolde Marrow, Boris identificó un hueco
+más — una figura "rey informal" del Driftmarket, no nobiliaria, dueña de
+facto del comercio pero por reputación, no corrupción, muy querida, que
+ayuda al jugador en algún punto. Eso escaló a una restructuración de acto:
+el arco de preparación pre-clímax pasa a vivir en el Driftmarket.
+
+### Renombre: El Quinteto → The Bound Five
+
+Boris preguntó nombre en inglés para "El Quinteto" — se evaluaron 4
+opciones (The Bound Five / The Five / The Quintet / The Fivefold). Elegida
+**The Bound Five** por trabajo temático extra: conecta directo con el
+título del juego (*AETHER BOUND* = atado por el Aether/Bond/rumbo a The
+Wilds) — el nombre del grupo describe literalmente el título.
+
+**Alcance confirmado por Boris: retraducción completa, no gradual.**
+22 archivos actualizados (todas las fichas de Pivotes/fijos, docs de
+worldbuilding, Current-State, 00-Index) — mismo criterio que la
+retraducción institucional de antes. Deliberadamente NO tocados: LOG.md y
+`.obsidian/workspace.json` (config de app, no contenido).
+
+### Old Tobin Hale — Harbormaster del Driftmarket
+
+**Concepto central:** el único personaje de poder sin agenda oculta en todo
+el elenco político. El Council tiene interés institucional oculto, Isolde
+Marrow calcula su ascenso, hasta Maren tiene que jugar política pese a
+querer evitarlo — Tobin ayuda porque puede, no porque calcula.
+
+- Sin título nobiliario, sin sangre de House — controla derechos de
+  atraque/rutas comerciales/flujo económico del Driftmarket por
+  **reputación**, no corrupción
+- Empezó como contrabandista/refugiado él mismo, décadas atrás
+- Querido porque nunca engaña, da crédito a quien lo necesita, protege
+  refugiados sin preguntar de qué huyen
+- Encarna "Bond sobre Standing" — no le importa el rango oficial, solo la
+  decencia
+- Línea canónica: *"I don't care who you were before you got here. I care
+  what you do while you're standing on my docks."*
+- Posible conexión: vouches por Darro desde antes, explica por qué C4 se
+  recluta ahí con naturalidad
+
+### The Reckoning — restructuración de Acto 2→3
+
+**Decisión de Boris:** el arco de preparación antes del clímax, y las
+decisiones que cambian el rumbo de la historia, deben vivir en el
+Driftmarket — no como "interludio menor" sino como su propio beat
+estructural entre el cierre de los 3 sub-actos de Acto 2 y el arranque de
+Acto 3.
+
+**Por qué funciona:** el Driftmarket es el único territorio neutral, fuera
+del control de Council/Corona/Consortium — el único lugar donde el grupo
+puede prepararse sin que nadie tenga agenda oculta sobre ellos.
+
+**Beat 1 — Advertencia de Tobin (privada, solo al jugador, no a The Bound
+Five entero):** Tobin, vía su red de información del mercado negro, avisa
+que algo se mueve en canales del Council para entregar a Speck — sin saber
+quién de la tripulación carga esa orden. Agencia real del jugador: ¿confronta
+a su Pivote? ¿confía en Speck? ¿observa en silencio? Define cómo el jugador
+*vive* la traición, no si la evita.
+
+**Beat 2 — the Wanderer's Goggles:** Tobin le da al jugador unos lentes de
+latón viejos que pertenecieron a un extraño de su pasado con "la misma
+mirada". No es upgrade mecánico — es revelación narrativa de que el poder
+innato del jugador (los flashes que revelan la verdad de Speck) es la clave
+de todo. Deliberadamente sin resolución completa (mismo principio que The
+Monolith) — ni Tobin ni el jugador entienden del todo qué es el poder, y el
+extraño de la historia nunca se nombra.
+
+Cierra con la **última escena de unidad genuina de The Bound Five** antes
+de que la traición los rompa.
+
+**Archivos actualizados:** `Nomenclatura.md` (3 entradas nuevas: The Bound
+Five, Tobin Hale, the Wanderer's Goggles), `El Quinteto.md` (título +
+contenido), `Geografía y Ciudades.md` (sección Tobin + beat The Reckoning
+completo + tabla resumen), + 22 archivos con el renombre Quinteto→Bound
+Five.
+
+---
+
+## [2026-07-24] narrative | Lady Isolde Marrow — rival político de Regent Edrick
+
+**Disparador:** último ítem del backlog de personajes con peso real —
+darle cara individual a "6-8 Houses cayeron en 550 años".
+
+**Diseño:** no es solo "otra House más" — quiere terminar con el Regentado
+mismo y restaurar una Corona hereditaria real, lo que la vuelve amenaza
+tanto para Edrick como para el **Triune Council** (un trono humano
+consolidado rompe la mayoría 2-contra-1 que hoy le conviene al Council,
+"La ventaja de la inestabilidad humana").
+
+**Lady Isolde Marrow (House Marrow):**
+- Contraste con Edrick: carismática, confiada, populista vs. administrativo,
+  nervioso, cauteloso
+- Reclamo: linaje que dice predatar incluso a House Ashcombe — verificable o
+  no, la gente quiere creerlo tras 550 años de gobernantes de turno
+- Base de poder: Houses menores cansadas del ciclo + respaldo militar/
+  mercenario de frontera
+- Línea canónica: *"Ashcombe borrows the throne every decade. I intend to
+  keep it."*
+
+**2 ganchos narrativos abiertos, no desarrollados aún:**
+- **Con Bram:** su tipo de compañía mercenaria es exactamente el respaldo
+  militar que Isolde busca cortejar
+- **Con Maren:** corteja al Trade Consortium para que respalde su ascenso —
+  presión directa sobre alguien que se define por mantenerse "práctica, no
+  política". Ignorarla también es una posición
+
+**Archivos actualizados:** `Estructura Política.md` (nueva sección "El
+Rival" + tabla resumen + conexión Maren), `Bram-Ficha-Expandida-v1.md` y
+`Maren-Ficha-Expandida-v1.md` (notas de conexión breves, sin reescribir sus
+arcos).
+
+**Con esto, el backlog de personajes sin desarrollar queda cerrado por
+completo** — salvo la pregunta abierta de baja prioridad sobre si la cabeza
+de the Academy of Sages es distinta de The Elder Circle.
+
+---
+
+## [2026-07-24] narrative | The Elder Circle — 4 miembros nombrados + regla de personaje élfica
+
+**Disparador:** continuación directa de la retraducción a inglés — con
+"The Elder Circle" ya nombrado, Boris pidió avanzar con los 4 miembros
+individuales.
+
+**Propuesta y confirmación:** 4 arquetipos distintos de reacción a haber
+presenciado el genocidio de los Wardens (no 4 versiones del mismo "anciano
+sabio"):
+
+- **Threnn** (m) — comandante/guerrero que luchó (y falló) contra la
+  masacre. Hoy: proteger el statu quo a cualquier costo — tantos murieron
+  construyendo esta civilización, aunque sea sobre una mentira, que no la
+  va a dejar caer por Speck.
+- **Ilyara** (f) — sanadora que vio el costo físico de la masacre de
+  primera mano. Hoy: dejar que la Muda se complete — sanar es imperativo
+  moral, sin importar el costo a la civilización actual.
+- **Maelys** (f) — presente pero rota, vio algo que nunca ha nombrado. Hoy:
+  casi no habla — es la voz-oráculo del grupo, impredecible, a veces la
+  más certera.
+- **Corwyn** (m) — el más político de los cuatro, mantuvo conexión con la
+  corte incluso entonces. Hoy: sin bando fijo — funciona como control
+  informal sobre Queen Ithessa, sin tener asiento.
+
+**El quinto — Thessaly** (murió de vejez natural hace 10 años): era quien
+mediaba consenso entre los otros cuatro. Con su muerte, el Círculo perdió
+su única voz de equilibrio.
+
+**Regla de personaje fijada (nota de Boris, importante para guión futuro):**
+su desacuerdo es **pasivo-agresivo, puramente élfico** — nunca pierden
+serenidad ni compostura, nunca hay grito ni discusión abierta. Se nota en
+la elección de palabras, en silencios calculados, en "honestidad" que es en
+realidad la forma más afilada de desacuerdo. Los diferencia tanto del
+Triune Council (2-contra-1 mecánico, frío) como de cualquier conflicto
+humano (visceral, directo) — es el único tipo de conflicto que se siente
+exclusivamente élfico.
+
+**Lugar de reunión:** Grove of Cycles (templo élfico ya establecido en
+[[Geografía y Ciudades]], fuente de the Academy of Sages) — conecta
+directamente con la institución que ya define su ethos contemplativo.
+
+**Diálogo de ejemplo documentado** (referencia de tono para guión):
+Threnn/Ilyara intercambian argumentos sin alzar la voz sobre si dejar
+completar la Muda; Maelys rompe un silencio largo con una frase mínima;
+Corwyn cierra con ironía seca sobre lo "diplomáticos" que son todos.
+
+**Archivo actualizado:** `Estructura Política.md` — sección "The Elder
+Circle" expandida con los 4 miembros, Thessaly, regla de tono, lugar de
+reunión y diálogo de ejemplo. Tabla resumen final también actualizada.
+
+**Con esto, el backlog de personajes sin desarrollar del cierre de sesión
+anterior queda resuelto en su ítem más importante.** Quedan pendientes de
+baja/media prioridad: rival político de Edrick, cabeza de the Academy of
+Sages (si es distinta de The Elder Circle).
+
+---
+
+## [2026-07-24] retcon/canon | Retraducción a inglés de nombres propios institucionales
+
+**Disparador:** al retomar el Círculo de los Vivos ("The Elder Circle" —
+Boris pidió ese tono), surgió la decisión de estandarizar: **todo nombre
+propio de institución/título/casa se crea o retraduce en inglés de ahora en
+más** — el vault sigue en español, pero nombres propios siguen la regla ya
+vigente para the Aether-Born / the Iron-Blooded / the Restless / the Triune
+Council (más globales, más estándar, idioma primario del juego según
+[[Nomenclatura]]). Boris eligió explícitamente retraducir también lo ya
+escrito, no solo lo nuevo.
+
+**Retraducciones aplicadas:**
+- Círculo de los Vivos → **The Elder Circle**
+- Gran Clan de Forja → **the Great Forging Clan**
+- Academia Élfica (de los Sabios) → **the Academy of Sages**
+- Academia Real → **the Royal Academy**
+- Alto Mando de Frontera → **Frontier High Command**
+- Consorcio de Mercado → **the Trade Consortium**
+- Casa Thorne / Casa Ashcombe → **House Thorne** / **House Ashcombe**
+- Reina Ithessa / Rey Borran / Regente Edrick → **Queen Ithessa** / **King
+  Borran** / **Regent Edrick**
+- Regentado → **Regency**
+
+**Regla de estilo fijada:** en prosa española embebida, se usa artículo
+español + nombre propio SIN "the" duplicado (ej. "el Great Forging Clan",
+no "el the Great Forging Clan") — mismo patrón que ya regía "el Triune
+Council". "The" se conserva solo en la tabla canónica de [[Nomenclatura]] y
+en citas de diálogo en inglés puro.
+
+**Archivos actualizados (17):** `Nomenclatura.md` (nueva sección con tabla
+de 10 términos nuevos), `Estructura Política.md` (reescrito completo),
+`El Mundo y la Muda.md`, `Geografía y Ciudades.md`, `Briefs de Concept
+Art.md`, `Briefs de Mapa del Mundo.md`, `00-Index.md`, `Current-State.md`,
++ 9 fichas (Torgan, Dagna, Vekka, Sereth, Nyael, Valen, Lyris, Bram, Maren).
+
+**Deliberadamente NO tocado:** `LOG.md` (append-only, nunca se reescribe
+historia) y `Current-State-Historico.md` (archivo, snapshot congelado de
+sesiones pasadas) — retienen los nombres en español como estaban en el
+momento de esas sesiones.
+
+**Nuevo detalle de The Elder Circle (además de la retraducción):**
+originalmente 5 elfos que vivieron el cataclismo como adultos jóvenes hace
+~550 años — **ahora 4**, el quinto murió de vejez natural hace 10 años.
+Deliberadamente 4 (número par), no 3 como el Triune Council — a diferencia
+del Council, The Elder Circle no vota decisiones, es un grupo de testigos
+que a veces coincide y a veces no, sin mecanismo de resolución. Confirmado
+también: **Ambassador Cyrion NO es miembro** de The Elder Circle — es
+Royal Academy, diplomático de carrera, cargo formal; mantener separado el
+poder institucional (Corona/Council/Academias) de la autoridad de memoria
+directa (The Elder Circle, sin cargo alguno) preserva la tensión narrativa
+entre ambos.
+
+**Pendiente:** nombres individuales de los 4 miembros de The Elder Circle —
+próximo frente de esta misma sesión.
+
+---
+
+## [2026-07-24] design | Cierre de sesión — inventario de elenco + backlog de personajes sin desarrollar
+
+**Disparador:** cierre de sesión. Con el elenco de grupo (13) y las figuras
+políticas (6) completos, Boris preguntó qué personajes faltan — se armó
+inventario contra todo el vault (docs de lore + `90-Raw/concept/`).
+
+**Completo, confirmado:**
+- 13 personajes de grupo: Roen/Valen/Darro (fijos) + Maren/Torgan/Iven/
+  Sereth/Bram/Lyris/Nyael/Vekka/Dagna (9 Pivotes) + Speck — fichas y arte
+- 6 figuras políticas: Reina Ithessa/Rey Borran/Regente Edrick (gobernantes)
+  + Embajador Cyrion/Embajador Kadrun/Consejera Merrit Vance (Triune
+  Council) — arte completo (Borran provisional, ver entrada anterior)
+
+**Pendiente (marcado como backlog, no se desarrolla esta sesión):**
+1. **🔴 El Círculo de los Vivos** ([[Estructura Política]]) — prioridad más
+   alta. <5 elfos que vivieron el cataclismo hace ~550 años, autoridad moral
+   que rivaliza con la Reina Ithessa, pieza central de "Los Tres Niveles de
+   Conocimiento" ([[El Mundo y la Muda]]). Existen como concepto grupal con
+   fricción narrativa ya escrita (choque generacional con la Reina) pero sin
+   nombres, caras, ni cantidad exacta definida.
+2. **🟡 Rival político del Regente Edrick** — daría cara individual a "6-8
+   Casas cayeron en 550 años" (hoy solo estadística en [[Estructura
+   Política]])
+3. **🟡 Cabeza de la Academia Élfica** — sin resolver si es el Círculo mismo
+   o una figura administrativa distinta
+4. **🟢 NPCs de locaciones** (ermitaño Hermit's Cave, líder Bandits'
+   Hideout) — baja prioridad, solo si ganan diálogo real en guión
+5. **🟢 Antagonista individual** — no existe; el "villano" es institucional
+   (Triune Council), posible decisión de diseño intencional, no gap
+
+**Archivo:** `Current-State.md` (sección nueva, parte 8 de la sesión).
+
+---
+
+## [2026-07-24] design/QA | Embajador Kadrun v2 — APROBADO (corrige texto filtrado Y proporción)
+
+**Ronda 3:** Boris corrió el prompt §9e-v2 (prosa corta, negativos como
+oraciones simples). Resultado: **✅ APROBADO** — sin texto filtrado (el
+glitch de la v1 desapareció por completo) Y la proporción trapezoide se ve
+notablemente más cerca del canon de 4.5 cabezas que cualquier resultado
+anterior del batch — torso ancho, piernas cortas, cabeza proporcionalmente
+grande respecto al cuerpo. Sello ceremonial, cuffs con acento ember,
+tatuajes de clan — todo coincide con el brief.
+
+**Hallazgo metodológico (relevante para Borran, que sigue sin cerrar):** el
+mismo cambio de formato (prosa corta y natural en vez de una oración densa
+cargada de vocabulario técnico de estilo + negativos en lista larga tras
+"Negative:") pareció mejorar TANTO el glitch de texto COMO la fidelidad de
+proporción en el mismo prompt. Hipótesis: cuando el prompt es muy denso, el
+modelo pierde precisión de anatomía compitiendo con la carga de instrucción
+de estilo en la misma oración. **Recomendación para el próximo intento de
+Borran:** aplicar el mismo formato de prosa corta (como en 9e-v2), no solo
+agregar un ancla numérica de proporción.
+
+**Con esto, el Council completo queda:** Cyrion ✅ / Kadrun ✅ / Vance ✅
+(nota menor). Solo Borran sigue pendiente de una versión que cierre.
+
+---
+
+## [2026-07-24] design/QA | Council completo (Cyrion/Kadrun/Vance) + re-QA Ithessa/Borran v2
+
+**Ronda 2 de evaluación** — Boris pasó Ithessa v2, Borran v2, y los 3
+embajadores del Council (Cyrion, Kadrun, Vance).
+
+**✅ Reina Ithessa v2 — APROBADA con nota menor.** Los 2 CRITICAL de la v1
+quedaron resueltos: corona metálica eliminada (cabello trenzado como
+regalía, tal como pedía el brief) y marcas faciales eliminadas (grabados
+discretos en cuello/clavícula, no pintura de mejillas). 🟡 Nota menor: la
+silueta sigue sin leer tan alargada/8-cabezas como el canon extremo
+(Valen/Sereth), pero mejoró mucho al quitar las hombreras. No bloqueante.
+
+**🟡 Rey Borran v2 — mejoró, no cierra.** Ya no lee "vikingo humano" (barba
+trenzada, tatuajes de forja, manto correctos), pero la proporción trapezoide
+de 4.5 cabezas sigue sin cerrar — cabeza proporcionalmente chica para el
+cuerpo, brazos/piernas no leen tan cortos/gruesos como el canon exige. El
+framing verbal de proporción sigue perdiendo contra el sesgo del modelo
+hacia "rey grande y musculoso". **Pendiente:** un 3er intento con ancla
+numérica más agresiva (ej. "la cabeza ocupa casi 1/4 de la altura total") si
+Boris quiere seguir iterando.
+
+**✅ Embajador Cyrion — APROBADO.** Silueta élfica correcta (vertical,
+angosta, 8 cabezas se lee bien), rostro y ropa diplomática coinciden con el
+brief.
+
+**✅ Consejera Merrit Vance — APROBADA con nota menor.** Hombros
+estructurados sin ser armadura, rostro afilado, vestimenta correcta. 🟡 El
+arma se ve más espada que "abrecartas ceremonial" — no bloqueante.
+
+**🔴 Embajador Kadrun — FALLA TÉCNICA, no de contenido.** El prompt se
+filtró como texto renderizado dentro de la propia imagen (bloque de
+instrucciones visible, palabras corrompidas: "waterco-shading", "ceshading",
+"jitterd jittered", "Noo work tools") — glitch de generación, probablemente
+por densidad/longitud del prompt original (mismo patrón denso que los demás
+briefs §9). **Acción:** nuevo prompt §9e-v2, reescrito en prosa más corta y
+natural, negativos como oraciones simples en vez de lista larga tras
+"Negative:" — mismo contenido, menos denso, para evitar el trigger de
+texto-en-imagen.
+
+**Problema sistémico persistente (todos):** el acabado acuarela Sable×BotW
+(grano de papel, bandas cel con dry-brush jitter) sigue sin aparecer en
+ningún resultado de NB2 — se lee como ilustración digital pulida con
+sombreado en degradé. Los negativos agregados en la ronda anterior no lo
+revirtieron. **Empieza a oler a techo de la técnica en NB2** para este tipo
+de contenido — si persiste después de Kadrun v2, vale la pena que Boris
+decida si acepta el resultado (corrección de contenido > fidelidad de
+textura para NPCs secundarios) o declara el techo formalmente.
+
+**Archivo:** `Briefs de Concept Art.md` §9e-v2 (Kadrun reescrito).
+
+---
+
+## [2026-07-24] design/QA | Ithessa + Borran (NB2): QA imparcial + prompts reforzados
+
+**Disparador:** Boris generó Reina Ithessa, Rey Borran y Regente Edrick con
+los briefs §9a/9b/9c en NB2 y pasó las 3 imágenes para evaluación.
+
+**Evaluación contra brief + Art Bible:**
+
+**Problema sistémico (las 3 imágenes):** estilo desviado de Sable×BotW —
+sombreado en gradiente suave, línea de tinta tipo vector limpio, sin grano
+de papel visible, sin bandas cel de 3-4 escalones con dry-brush jitter. Más
+cerca de "ilustración de videojuego pulida/semi-anime" que de acuarela
+lavada — negativo explícito del Art Bible.
+
+**🔴 CRITICAL — Reina Ithessa:**
+1. Corona metálica presente pese al negativo explícito ("no separate metal
+   crown" — la regalía debía ser el propio cabello trenzado)
+2. Silueta no lee como el ancla élfica (hombreras anchas, proporción de
+   fantasía estándar en vez de línea vertical continua de 8 cabezas)
+3. Marcas teal extendidas por mejillas como pintura facial (brief pedía
+   grabados discretos solo en clavícula/antebrazos/sienes)
+
+**🔴 CRITICAL — Rey Borran:**
+1. Proporción enana ROTA — lee como vikingo humano grande (~5-6 cabezas),
+   no como el trapezoide de 4.5 cabezas blindado en canon (Dagna/Torgan/
+   Vekka ya lo respetan en imágenes previas)
+2. Corona genérica sin motivo de martillo/forja
+
+**🟡 MEDIUM — Regente Edrick:** el más cercano al brief (cadena de oficio en
+vez de corona ✅, sin regalía real ✅) — solo le pesa el problema sistémico
+de estilo. Aprobado con reserva menor, sin necesidad de reroll.
+
+**Acción:** 2 prompts reforzados nuevos (§9a-v2, §9b-v2) en `Briefs de
+Concept Art.md`, mismo patrón que blindó la proporción enana en el brief 2c
+("the proportions are the single most important rule"):
+- Ithessa v2: silueta reforzada en positivo (8 cabezas, sin hombreras),
+  regalía sin metal reforzada en positivo Y negativo, marcas relocalizadas
+  explícitamente fuera de la cara, negativos de estilo mucho más agresivos
+  (no smooth gradient, no vector linework, no anime finish)
+- Borran v2: proporción enana reforzada como regla #1 (4.5 cabezas,
+  trapezoide, NOT viking-human build), corona con motivo de martillo
+  explícito, mismos negativos de estilo agresivos
+
+**Pendiente:** Boris corre los 2 prompts v2 en NB2, se re-evalúa.
+
+---
+
+## [2026-07-24] design | Briefs de concept art: Gobernantes + Triune Council (NB2)
+
+**Disparador:** antes de arrancar guión/diálogos, Boris quiere generar
+concept art de las figuras políticas definidas en [[Estructura Política]] —
+ya no tiene acceso a NB Pro, usa **Nano Banana 2** (prompts ajustados a un
+solo turno, sin depender de re-roll iterativo multi-imagen).
+
+**6 briefs nuevos** en `Briefs de Concept Art.md` §9, cada uno con el
+fenotipo racial ya ratificado (elfo 8 cabezas / enano 4.5 trapezoide / humano
+7.5 atlético) como ancla de anatomía + regalía y personalidad específica del
+cargo:
+
+- **9a — Reina Ithessa** (Stillwood): 555 años, madura pero no la más vieja
+  del reino — la corona es su propio cabello trenzado, sin corona metálica
+  separada (regalía orgánica élfica)
+- **9b — Rey Borran** (Ignis Reach): bisnieto directo, corona forjada
+  fusionada con la estética del Gran Clan (no ornamento separado) — certeza
+  generacional
+- **9c — Regente Edrick Ashcombe** (Aethelgard): **deliberadamente menos
+  regio** que los otros 2 — sin corona, cadena de oficio en vez de regalía,
+  composición nerviosa bajo la compostura (cargo precario, no sangre real)
+- **9d — Embajador Cyrion** (asiento élfico del Council): diplomático de
+  décadas, paciencia élfica ejercida como poder político puro
+- **9e — Embajador Kadrun** (asiento enano del Council): Gran Clan en
+  registro diplomático, no artesanal — distinto en tono de Vekka
+- **9f — Consejera Merrit Vance** (asiento humano del Council): la más
+  afilada y visiblemente ambiciosa de los 3 gobernantes/embajadores — ganó
+  su asiento, sabe que puede perderlo
+
+**Nota de diseño transversal documentada:** Reina/Rey deben leer como
+gobernantes legítimos (regalía plena); Edrick debe leer administrativo, no
+monárquico; los 3 embajadores deben leer diplomáticos/burócratas, no
+guerreros ni realeza.
+
+**Archivo:** `Briefs de Concept Art.md` §9 (nueva sección, mismo bloque de
+estilo compartido que el resto del documento: Sable × BotW, negativos
+Genshin/PBR/anime/neon).
+
+---
+
+## [2026-07-24] lint | Higiene de contexto — Current-State recortado (3ra vez)
+
+**Disparador:** cierre de sesión. `check_vault.py` marcó `Current-State.md`
+3,615t sobre su techo blando (6,615t total) — había crecido sin recorte
+desde el 2026-07-17, acumulando narrativa de: rework de anatomía (07-17→
+07-22), redireccionamiento de Speck (07-23), y las 6 partes del paquete de
+worldbuilding político de hoy (07-24).
+
+**Acción:** todo el relato sesión-por-sesión (verbatim, sin editar
+contenido) se movió a [[Current-State-Historico]], siguiendo el patrón ya
+establecido (2 higienes previas el 2026-07-16). `Current-State.md` quedó
+recortado a solo: arranque de sesión actual, Hechos vigentes, y Pendientes
+narrativos/lore genuinamente abiertos (los bloques ✅ completados se movieron
+también).
+
+**Resultado medido:**
+- `Current-State.md`: 6,615t → **1,466t** (bien bajo el techo blando)
+- Arranque de sesión total: ~6,912t → **~1,763t**
+- Vault sigue 🟢 VERDE (ya lo estaba, pero con mucho más margen ahora)
+
+---
+
+## [2026-07-24] narrative | TRIUNE COUNCIL definido — antagonista institucional del layer político
+
+**Disparador:** con el mapeo político de los 9 Pivotes cerrado, Boris pidió
+desarrollar el Triune Council en sí — mencionado desde el inicio del Vault
+pero nunca estructurado como cuerpo real.
+
+**Hallazgo central (propuesto y confirmado):** el Council no es solo
+burocracia de fondo — es candidato a **antagonista institucional real** del
+layer político. Nació hace 550 años gestionando la corrupción del
+cataclismo (la "tregua" ya mencionada en [[El Mundo y la Muda]]); su poder
+depende de que la crisis siga administrada, no resuelta. Si la Muda se
+completa y el mundo sana, el Council se vuelve obsoleto — interés
+institucional, no villanía de caricatura.
+
+**Esto explica sin coincidencia sospechosa** por qué las 9 órdenes de
+traición vienen de 3 cadenas de poder distintas que convergen en el mismo
+cuerpo: Gran Clan de Forja → Rey Borran → Embajador enano; Academia Real →
+Reina Ithessa → Embajador élfico; Consorcio de Mercado → Triune Council
+directamente (Maren). Una sola estrategia, disuelta en 3 idiomas
+institucionales, ejecutada por 9 personas que nunca se enteran de que son
+parte del mismo plan.
+
+**Estructura decidida:**
+- **3 asientos con voto, uno por raza** — nunca hay empate (mayoría de 2
+  contra 1 siempre)
+- **Sede en Rivermeet** por conveniencia geográfica/comercial, no por peso
+  político humano (que es el más débil de los 3)
+- **Corrección de Boris:** los asientos NO son los monarcas en persona (no
+  tendría sentido que Reina Ithessa/Rey Borran vivan en Rivermeet) — son
+  **embajadores/representantes permanentes**, designados por sus Coronas,
+  que sí viven en Rivermeet a tiempo completo
+- **Asimetría deliberada:** asientos élfico y enano = nombramientos
+  estables/largo plazo (coherente con longevidad y permanencia culturales);
+  asiento humano = el más volátil de los 3, cambia con cada reconfiguración
+  de poder en Rivermeet — irónico, es el único que vive en su propia casa
+- **La inestabilidad humana le conviene al Council:** con 2 votos estables
+  formando mayoría natural, el Council rara vez enfrenta oposición
+  coordinada — un trono humano fuerte sería la única fuerza capaz de
+  cuestionarlo desde adentro, y nunca termina de consolidarse
+
+**Titulares actuales (nombrados):**
+- Élfico: **Embajador Cyrion**
+- Enano: **Embajador Kadrun**
+- Humano: **Consejera Merrit Vance**
+
+**Archivos actualizados:**
+- `Estructura Política.md` — nueva sección completa "El Triune Council — la
+  Institución Supra-Racial" + tabla de titulares en el resumen final
+- `El Mundo y la Muda.md` — 2 enlaces nuevos hacia Estructura Política
+  (mención original del Council + nueva nota sobre por qué las 9 traiciones
+  convergen)
+
+---
+
+## [2026-07-24] narrative | MAREN: Consorcio de Mercado — CIERRA el mapeo político de los 9 Pivotes
+
+**Disparador:** último pivote sin contexto político/social propio. Su ficha
+ya tenía la pieza sin nombrarla como tal: "Jefa de Operaciones de
+Aethelgard hace 10 años."
+
+**Decisión:** Maren es Jefa de Operaciones del **Consorcio de Mercado** —
+tercer centro de poder humano (junto al Regente y el Triune Council), no
+político sino práctico. Con el trono tan inestable (6-8 Casas en 550 años),
+el comercio tiene que seguir funcionando sin importar quién gobierne — el
+Consorcio se volvió, de facto, institución casi permanente. Maren sobrevivió
+ya a 2 cambios de Regente sin perder el cargo.
+
+**Tercer tipo de poder humano completado:**
+- Bram → poder heredado (Casa Thorne) que **rechazó**
+- Iven → poder **ausente** (pobreza estructural, sin ningún tipo de poder)
+- Maren → poder **ganado** (hija de gente común, escaló por pura competencia)
+
+**Consecuencia en el clímax:** quien la contacta para ejecutar el sacrificio
+ya no es "el Consejo" genérico, es el **Triune Council directamente** — no
+el Regente. Reconocen que decretar no basta, necesitan quien pueda
+*ejecutar* — ahí es donde el poder del Consorcio pesa más que cualquier
+Casa de turno.
+
+**Archivos actualizados:**
+- `Maren-Ficha-Expandida-v1.md` — nueva sección de afiliación, biografía
+  ajustada, escena de contacto en clímax (Triune Council, no Consejo
+  genérico), "Cómo la ve Roen" ajustado
+- `Estructura Política.md` — nueva sección "El Consorcio de Mercado"
+
+---
+
+## ✅ MAPEO POLÍTICO DE LOS 9 PIVOTES + 3 FIJOS — COMPLETO
+
+Con Maren, se cierra el frente abierto desde el retcon del cataclismo
+(100→550 años). Los 12 personajes con rol narrativo (9 Pivotes + Roen/Valen/
+Darro) tienen ahora origen institucional/social definido:
+
+| Personaje | Raza | Institución/Origen social |
+|---|---|---|
+| Valen (fijo) | Elfo | Academia Élfica (Sabios) |
+| Roen (fijo) | Humano | Ex-guardia del Consejo, Mistbound |
+| Darro (fijo) | Enano | Rechazado del Gran Clan de joven |
+| Maren | Humana | Consorcio de Mercado (poder ganado) |
+| Torgan | Enano | Rechazado del Gran Clan, clan menor propio |
+| Iven | Humano | Pobreza estructural (pérdida de origen: Sael) |
+| Sereth | Elfo | Academia Real (Corona, visible) |
+| Bram | Humano | Casa Thorne (poder heredado, rechazado) |
+| Lyris | Elfa | Fuera del sistema — Alto Mando de Frontera |
+| Nyael | Elfa | Academia Real (Corona, encubierto) |
+| Vekka | Enana | Gran Clan de Forja (100%, clan real) |
+| Dagna | Enana | Subclán vasallo del Gran Clan de Forja |
+
+**Ver [[Estructura Política]] para el documento canónico completo.**
+
+---
+
+## [2026-07-24] narrative | IVEN potenciado: pobreza estructural + pérdida de origen (Sael)
+
+**Disparador:** al mapear qué pivotes aún no tenían contexto político/social
+(Maren e Iven, humanos), Boris pidió recordar la traición de Iven y
+potenciarla desde su origen de pobreza y mortalidad — no agregar Casa
+política (no le corresponde), sino profundizar la textura de clase que ya
+tenía implícita.
+
+**Cambio de eje:** el asentamiento de Iven **nunca fue una comunidad sana
+que luego se enfermó** — fue pobre y de alta mortalidad crónica desde
+siempre. La corrupción del Aether (hace 5 años) no creó la crisis, la
+**aceleró**. Esto conecta con [[Estructura Política]]: "la frontera no es
+prioridad" es política de generaciones del Consejo/Regentado, no frase
+nueva.
+
+**Nueva pérdida de origen:** a los 9 años, la hermana menor de Iven (Sael,
+5 años) murió de fiebre simple porque no había medicina suficiente para las
+2 personas que la necesitaban esa semana — los adultos eligieron a quién
+dársela, y no fue a ella. Iven no culpa a nadie por esa decisión (sabe que
+fue correcta con los recursos que había) — **eso es lo que más lo rompe.**
+Aprendió a los 9 años que amar a alguien no siempre alcanza para salvarlo.
+
+**Consecuencia narrativa:** la "elección imposible" con Speck deja de ser un
+dilema moral abstracto que enfrenta por primera vez — es **la más grande de
+una vida entera haciendo triage.** Se convirtió en protector no por
+heroísmo, sino por la determinación de nunca más ser quien decide sin poder
+salvar a ambos. Explica también por qué confía en un trato tan obviamente
+predatorio del Consejo: quien creció en pobreza estructural sabe que cuando
+el poder ofrece cualquier salida, la tomas — la alternativa es muerte
+garantizada, no riesgo.
+
+**Eco añadido al clímax:** Iven menciona a Sael explícitamente al momento de
+traicionar ("Tenía nueve años la primera vez que alguien decidió a quién
+salvar delante de mí...") — cierra el círculo con la línea privada final.
+
+**Archivo actualizado:** `Iven-Ficha-Expandida-v1.md` (Esencia, biografía
+completa reescrita, clímax, línea privada, Notas Narrativas).
+
+**Pendiente:** Maren sigue sin contexto político/social propio — próximo
+frente.
+
+---
+
+## [2026-07-24] narrative | ESTRUCTURA POLÍTICA élfica COMPLETA: Lyris + Nyael
+
+**Continuación directa** del paquete de Estructura Política — quedaba
+pendiente afiliación para Lyris y Nyael (las 2 elfas sin institución
+definida).
+
+**Decisiones:**
+- **Lyris:** NO pertenece a ninguna Academia — tercer track élfico no
+  académico, el **Alto Mando de Frontera** (coordinación militar/práctica de
+  defensa territorial). Nunca fue rechazada de una Academia — nunca la
+  invitaron a la conversación siquiera. Explica su frialdad como aislamiento
+  estructural heredado, no solo temperamento.
+- **Nyael:** SÍ pertenece a la Academia Real — como **brazo encubierto**,
+  operativos negables de la Corona que oficialmente no existen. Esto la
+  convierte en la contraparte oscura de Sereth: **dos productos de la misma
+  maquinaria de Estado** (Sereth persuade, Nyael ejecuta). Su traición
+  ("I could not wait") se lee ahora como el primer acto de juicio propio en
+  una vida entera de obediencia a una institución que ni siquiera admite
+  tenerla.
+
+**Mapa élfico completo (4 pivotes/fijos con institución definida):**
+
+| Elfo | Institución |
+|---|---|
+| Valen (fijo) | Academia Élfica (Sabios) |
+| Sereth | Academia Real (Corona, visible) |
+| Nyael | Academia Real (Corona, encubierto) |
+| Lyris | Fuera del sistema — Alto Mando de Frontera |
+
+**Archivos actualizados:**
+- `Lyris-Ficha-Expandida-v1.md` — nueva sección de afiliación, "Stillspire"
+  reemplazado por "Alto Mando de Frontera" donde da órdenes, "Cómo lo Ve
+  Valen" ajustado (auto-exilio de Valen vs. nunca-invitada de Lyris)
+- `Nyael-Ficha-Expandida-v1.md` — nueva sección de afiliación (brazo
+  encubierto de Academia Real), "Cómo lo Ve Valen" ajustado
+- `Estructura Política.md` — sección de Academias expandida con el brazo
+  encubierto + el track de Frontera
+
+**Pendiente:** Maren e Iven (humanos) sin Casa/contexto político definido —
+próximo frente, a construir junto con Boris (sin semilla propia todavía,
+a diferencia de Bram).
+
+---
+
+## [2026-07-24] narrative | ESTRUCTURA POLÍTICA de las 3 razas + fichas actualizadas
+
+**Disparador:** continuación directa de la sesión de retcon del cataclismo —
+Boris pidió mapear cómo se gobierna cada reino, con 3 semillas: Reina Elfa
+joven que era bebé durante el cataclismo, Rey Enano de línea directa
+(nieto/bisnieto), Rey Humano sin línea recta (varios golpes/guerras civiles).
+
+**Nuevo documento canónico:** `10-Knowledge/Estructura Política.md`
+
+- **Elfos:** Reina Ithessa, 555 años (tenía ~5 durante el cataclismo). El
+  Círculo de los Vivos (<5 elfos que sí eran adultos jóvenes entonces) tiene
+  autoridad moral informal que la Reina no puede reclamar. Dos Academias:
+  **Élfica** (de los Sabios — observar sin intervenir, de aquí sale el
+  Círculo) y **Real** (al servicio de la Corona — el cálculo sirve al
+  Estado).
+- **Enanos:** Rey Borran, bisnieto directo del Rey del cataclismo — sucesión
+  = ritual sagrado, sin disputa. El **Gran Clan de Forja ES el clan real**
+  (no un gremio aparte). Estructura de 3 niveles entre pivotes: Vekka (100%
+  clan real) / Dagna (subclán vasallo, cadena de obligación de 2 eslabones) /
+  Torgan (rechazado del clan real de joven, juró lealtad a un clan menor
+  después)
+- **Humanos:** sin dinastía estable — 6-8 Casas distintas en 550 años.
+  **Regente Edrick Ashcombe** (no "Rey" — cargo precario, "Voice of the
+  Council"). El Triune Council en Rivermeet es la autoridad real continua.
+  **Apellidos solo en cultura humana** (elfos no los necesitan por longevidad,
+  enanos ya tienen el Clan como equivalente) — pero no todos los humanos los
+  usan en la práctica (campesinado/tropa rasa no, nobleza sí)
+
+**Fichas actualizadas con la nueva estructura:**
+- `Torgan-Ficha-Expandida-v1.md` — reescrita la biografía temprana: rechazado
+  del Gran Clan de Forja el mismo año que Darro, encontró pertenencia en un
+  clan menor después. "Cómo lo ve Darro" reescrito para reflejar el rechazo
+  compartido
+- `Dagna-Ficha-Expandida-v1.md` — reescrita como subclán vasallo (no clan
+  real directo), cadena de obligación de 2 eslabones. "Cómo lo ve Darro"
+  ajustado
+- `Vekka-Ficha-Expandida-v1.md` — confirmada como 100% Gran Clan de Forja,
+  su autoridad de Maestra es autoridad de Estado. "Cómo lo ve Darro" ajustado
+- `Valen-Ficha-Expandida-v1.md` (ficha fija) — nueva sección de afiliación:
+  Academia Élfica, explica por qué observa sin actuar
+- `Sereth-Ficha-Expandida-v1.md` — nueva sección de afiliación: Academia
+  Real. "Cómo lo Ve Valen" reescrito como rivalidad de escuelas de
+  pensamiento, no solo personalidades distintas
+- `Bram-Ficha-Expandida-v1.md` — nuevo origen: Casa Thorne de Rivermeet, huyó
+  a los 15 en vez de tomar el camino político esperado. Nueva sección de
+  afiliación + ajuste en "Cómo lo ve Roen"
+
+**Pendiente:** Lyris y Nyael (ambas Stillspire) no tienen afiliación de
+Academia definida — abierto para sesión futura si se vuelve relevante.
+
+---
+
+## [2026-07-24] retcon/design | CATACLISMO: 100 → 550 años + longevidad de razas + niveles de conocimiento
+
+**Disparador:** revisión del mapa del mundo (Boris) — Rivendell/Imladris para
+Stillwood, torres de guardia por raza, ambigüedad del Monolith, y una
+pregunta que destapó una inconsistencia de canon: con el cataclismo a "100
+años" y elfos viviendo 180-250+ años (ya establecido en fichas de Pivotes),
+40-50% de los elfos vivos habrían presenciado la guerra directamente —
+rompía la intención de que fuera un evento semi-mítico.
+
+**Decisión (Boris):** mover el cataclismo a **~550 años atrás** y fijar el
+techo de vida élfico en **650-700 años** (no inmortalidad tipo Tolkien —
+longevidad finita extrema, más cerca del registro de Eragon). Con esos
+números, solo ~5-10% de los elfos vivos hoy (los que ya rondaban 550+ años
+en aquel entonces) presenciaron el evento.
+
+**Consecuencia — Los Tres Niveles de Conocimiento** (nuevo, en [[El Mundo y
+la Muda]]):
+- **Elfos:** ~5-10% con memoria directa + biblioteca de Stillspire — escolar
+  y personal a la vez
+- **Enanos:** nadie vivo (550 años excede cualquier vida enana, ~200-250)
+  pero tradición oral ritualizada — *"la montaña no olvida, y el enano es la
+  montaña"*
+- **Humanos:** nadie vivo, ni memoria institucional confiable (~18-22
+  generaciones de deriva) — folclore regional deformado, tipo La Llorona/Lago
+  Ness, sin versión autoritativa
+
+**Consecuencia para Speck:** su soledad pasa de "100+ años" a **"550+ años"**
+— coincide con el cataclismo mismo (fue sellada en crisálida poco después de
+la guerra por bestias guardianas, y la corrupción del Aether recién ahora,
+550+ años después, la está despertando).
+
+**Archivos actualizados:**
+- `10-Knowledge/El Mundo y la Muda.md` — cifra base 100→550, sección nueva
+  "Los Tres Niveles de Conocimiento"
+- `10-Knowledge/Las Tres Razas.md` — tabla de longevidad nueva (elfos
+  650-700, enanos ~200-250, humanos ~70-90)
+- `10-Knowledge/Speck.md` — 3 menciones "100+ años" → "550+ años"
+- `10-Knowledge/Geografía y Ciudades.md` — 4 menciones actualizadas (The
+  Battlefield, The Scar of Breaking ×2, Warden's Crypt)
+- `10-Knowledge/Briefs de Mapa del Mundo.md` — nota de mapa actualizada
+
+**Pendiente:** el mapa YA GENERADO (NB Pro, ver sesión 2026-07-23) tiene el
+texto "The Scar of Breaking (100 years)" horneado en el PNG — no se puede
+editar vía markdown, requiere regeneración cuando se itere el asset visual.
+No urgente (el brief fuente ya está corregido para la próxima iteración).
+
+**Otros ajustes de la misma revisión (Boris, sesión 2026-07-24):**
+1. Mistbound Frontier reposicionado — Rivermeet es la verdadera "puerta de
+   frontera" con The Wilds (asentada en River Road); Mistbound es tierra
+   interior remota, lejos del río, donde el Consejo pierde control
+   administrativo (no por bestias, por distancia)
+2. The Monolith: se descartó la propuesta de "Warden Waystone" (duplicaba la
+   función cósmica de The First Wound). Queda como misterio sin resolución
+   mecánica — solo una línea de Valen citando una leyenda élfica ambigua
+   ("esto está aquí desde antes de que los elfos llegáramos") + Warden's
+   Crypt debajo (conexión que el juego nunca confirma verbalmente,
+   storytelling ambiental puro)
+3. Confirmado: El Nido sigue funcionando 1:1 con la iteración actual de Speck
+   (crisálida + bestias guardianas semi-corrompidas, ver Speck.md líneas
+   41-46) — sin conflicto
+4. Nuevas: 3 Torres de Guardia por raza (Aethelgard Watch, Ignis Reach Watch,
+   Stillwood Watch), una en cada entrada a The Wilds, arquitectura distinta
+   por cultura
+5. Stillwood redefinido como continuación orgánica de The Wilds (no frontera
+   dura) — el bosque sube en elevación y se cierra progresivamente desde
+   Gloomvault hasta Stillspire, con una cadena de cascadas nueva (**The
+   Ascending Falls**, referencia Rivendell/Imladris) definiendo la
+   arquitectura del reino
+
+---
+
+## [2026-07-23] narrative | FICHAS NARRATIVAS EXPANDIDAS: Los 9 Pivotes (C3) COMPLETOS
+**Sesión de profundización narrativa — desarrollo completo de personajes traidores.**
+
+**Scope:** Creación de 9 fichas narrativas expandidas (una por cada Pivote — C3 variable por cell raza×rol).
+
+**Método:** Ficha expandida por Pivote incluye:
+- Biografía pre-aventura única
+- "Cómo lo ve" personaje fijo de misma raza (Conocimiento Previo)
+- Encuentro específico con jugador (contexto race/role/gender)
+- Arco 3-actos completo (Lealtad → Comunidad → Desilusión)
+- Escena de clímax + traición (patrón narrativo único)
+- 4 Epílogos distintos por Final (Perdón/Muerte/Encadenamiento/Síntesis)
+- Línea canónica (diálogo de traición)
+- Línea privada (introspección)
+- Dinámicas con Roen/Valen/Darro
+- Diseño visual + arma/técnica
+- Notas sobre por qué este Pivote importa
+
+**Pivotes Completados:**
+
+1. **Maren** (Humana Strategist) → vista por Roen
+   - Traición: Cálculo frío (ciudad no sobrevive sin sacrificio de Speck)
+   - Línea: "I can love her and still do the math"
+   - Patrón: Amor genuino + matemática implacable (no son contradicción)
+
+2. **Torgan** (Enano Duelist) → visto por Darro
+   - Traición: Juramento de Forja (55 años) supersede grupo
+   - Línea: "An oath doesn't care how I feel about you"
+   - Patrón: Dolor real + obligación inescapable (enana)
+
+3. **Iven** (Humano Duelist) → visto por Roen
+   - Traición: Dilema genuino (salvar asentamiento vs jugador)
+   - Línea: "You'd trade her for strangers? I'm trading her for everyone I've ever known"
+   - Patrón: ÚNICA opción donde ambas decisiones son moralmente válidas
+
+4. **Sereth** (Elfo Strategist) → visto por Valen
+   - Traición: Manipulación amorosa + verdad calculada
+   - Línea: "Millions against one. This is me being stubborn about millions"
+   - Patrón: Ama genuinamente pero reshapea verdad para conseguir resultado "óptimo"
+
+5. **Bram** (Humano Vanguard) → visto por Roen
+   - Traición: RECHAZA traición a pesar de incentivo (burnout exhausto)
+   - Línea: "I've been everybody's wall. Just once, let me be the door"
+   - Patrón: ÚNICO Pivote que potencialmente se niega (corazón > lógica)
+
+6. **Lyris** (Elfa Duelist) → vista por Valen (CORRECCIÓN: era Darro)
+   - Traición: Lógica fría sin emoción
+   - Línea: "You were my stillness. Be still now. The world needs sky, not earth"
+   - Patrón: Incapaz de sentir / convencida que sentir es debilidad
+
+7. **Nyael** (Elfa Duelist) → vista por Valen
+   - Traición: Ausencia total (solo nota deixada, sin confrontación)
+   - Línea: "You taught me to set the trap and wait. I could not wait"
+   - Patrón: Ejecutora perfecta / respeta a objetivo ejecutándolo sin drama
+
+8. **Vekka** (Enana Strategist) → vista por Bram (dinámicas, no "Conocimiento Previo")
+   - Traición: Dogma del gremio (desmonta lo que construyó con amor)
+   - Línea: "I built you. Forgive me for finishing the job"
+   - Patrón: Llora mientras actúa / deber enano sin escape
+
+9. **Dagna** (Enana Vanguard) → vista por Roen (dinámicas, no "Conocimiento Previo")
+   - Traición: Ley del clan (sangre > grupo)
+   - Línea: "The mountain doesn't forgive. And I am the mountain's"
+   - Patrón: **ÚNICA que quiebra genuinamente a Roen** porque lo respeta más
+
+**Decisiones de diseño validadas:**
+- 9 patrones narrativos de traición DISTINTOS (no repetición)
+- Cada traición tiene contexto moral válido (no villanos simples)
+- Conocimiento Previo mapea: mismo-raza fijo ve mismo-raza Pivote
+- Encuentro varía por cell (raza/rol del jugador) — 18 encuentros únicos totales
+- 4 Finales con epílogos distinto por cada Pivote
+
+**Correcciones en sesión:**
+- Lyris "Cómo lo ve Darro" → cambiado a "Cómo lo Ve Valen" (ambas elfas)
+
+**Archivos creados/actualizados:**
+- `Aether Bound/10-Knowledge/Pivotes/Maren-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Torgan-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Iven-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Sereth-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Bram-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Lyris-Ficha-Expandida-v1.md` (corregida)
+- `Aether Bound/10-Knowledge/Pivotes/Nyael-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Vekka-Ficha-Expandida-v1.md`
+- `Aether Bound/10-Knowledge/Pivotes/Dagna-Ficha-Expandida-v1.md`
+
+**Lecciones aplicadas:**
+1. Traición = dilema sin escape, nunca villanía sin matices
+2. Patrón de "Conocimiento Previo" (mismo-raza) requiere revisión de qué pares son "fijos de misma raza"
+3. Cada línea canónica debe resonar en toda la partida del jugador (memoria de cierre)
+
+---
+
+## [2026-07-23] design | REDIRECCIONAMIENTO + DISEÑO VISUAL COMPLETO: Speck de ajolote a Warden Cristalino
+**Sesión guionística + diseño iterativo — análisis temático + visual lock-down de Speck.**
+
+**Problema identificado:** Speck (axolotl mascota-like) no se sentía coherente en universo de tres razas humanoides. El "ajolote" leía como mascota/Genshin, no como ser antiguo.
+
+**Redireccionamiento ejecutado:**
+- **De:** Salamandra/axolotl biológica (mascota)
+- **A:** Último Warden — constructo cristalino + runas (tecnología biológica diseñada, no evolucionada)
+
+**Especificación nueva RATIFICADA:**
+- **Forma Warden real:** Cristalino translúcido, runas geométricas (Warden símbolos), seams aether como grietas de poder, ojos facetados (gema viva), cuerpo sculptural/mineral
+- **Forma shapeshifteada:** Zorro 1.5× endémico de The Wilds. Imperfectamente shapeshifteado. Pelaje beige/gris con patrones geométricos sutiles (runas interpretadas como coloración). Pata delantera con cristal visible (glitch). Ojos facetados. Demasiado inteligente.
+- **Estadios como MANIFESTACIÓN:** E1 crisálida dormida, E2 despertar (forma real emerge), E3 verdad completa (cristales rojos=God-Core)
+- **Tres capas de verdad:** Mundo ve zorro extraño. Jugador (poder innato) ve teals/cristal/facetas en flashes. Quinteto nota inteligencia antinatural.
+- **Encuentro:** Accidental en misión de purga. Crisálida en nido. Bestias guardianas semi-corrompidas. Convergencia: Speck despertando + guardianas fallando + jugador presente.
+- **Bautizo:** Darro (humor enano) reconoce "opiniones" de Speck = razonamiento. Llama "speck" (mota) irónicamente — no sabe que es ser antiguo.
+- **Personalidad:** Humor pragmático-oscuro (enano). Tras 100+ años solo, wit seco. Observa lo absurdo sin buscar risa. Se comporta intencionalmente "off" como zorro (comunica su verdad a través de ironía).
+- **Protocolo del silencio:** Mundo no verbaliza la verdad sobre Speck. Quinteto sospecha pero no confronta. Jugador ve pero no dice. Primera revelación verbal = clímax.
+- **Coming-of-age:** Jugador descubre su poder en silencio, a través de flashes, sin protagonismo. Crece sin ser "el elegido" — es descubrimiento callado.
+
+**Archivos actualizados:**
+- `Speck.md` — especificación completa redireccionada
+- `Briefs de Concept Art.md` §5 — E1 brief escrito y ejecutado (NB Pro), E2/E3 pendientes
+
+**Concept art en progreso:**
+- E1 (Warden crisálida) — generado 2026-07-23 NB Pro, VALIDADO visualmente
+- Forma shapeshifteada (zorro) — pendiente generación
+
+**Lecciones:**
+1. Speck es ser de 100+ años, solo, observando universo caer — su humor refleja eso
+2. El shapeshifting falla porque despierta, no por debilidad permanente
+3. El jugador se descubre a sí mismo EN SILENCIO, paralelo a Speck despertando
+4. El nombre "speck" es irónico cósmico — mota insignificante que es en realidad lo opuesto
+
+---
+
+## [2026-07-23] design/production | DISEÑO VISUAL SPECK COMPLETO: Zorro + 3 Flashes + E1 Warden EN GENERACIÓN
+
+**Concepto art completado:**
+- ✅ Zorro shapeshifted: rojo-naranja natural, seams gris-casi-blanco, runas beige, pata cristal translúcido, ojos amber facetados
+- ✅ Flash 1 (Revelación aether): Seams gris → TEALS BRILLANTES
+- ✅ Flash 2 (Revelación mineral): Pata → TRANSLÚCIDA CRISTALINA + venas cristales visibles
+- ✅ Flash 3 (Revelación consciencia): Ojos → FACETAS GEM-LIKE + síntesis acumulativa (todos 3 flashes visibles simultáneamente)
+- 🔄 E1 Warden (en generación NB Pro): jade pálido casi-blanco translúcido, patas esmeralda pálido (conexión tierra), ojos dorados profundos, runas ORO BRILLANTE, seams aether flujo uniforme, orejas pétalos translúcidos, atmósfera "arqueología vivida"
+
+**Decisiones narrativas cerradas:**
+- UN estadio de revelación (no 3 estadios E1/E2/E3) — Speck es Warden adulto desde inicio, shapeshifting es defensa
+- Tres capas de verdad: Mundo ve zorro, Jugador ve flashes, Quinteto ve inteligencia antinatural
+- Protocolo del silencio: la verdad nunca se verbaliza hasta clímax
+- Coming-of-age del jugador, no de Speck — descubrimiento silencioso en flashes
+- Humor pragmático-enano (seco, oscuro, sabio)
+
+**Iteraciones de diseño visual:**
+- Zorro: color natural rojo-naranja vs beige (✅ rojo-naranja gana)
+- Orejas Warden: Opción 5 (runas doradas) vs Opción 3 (pétalos) → ✅ Opción 3 + translúcido (balance elegancia + poder)
+- Paleta E1: azul-marino opaco vs jade pálido → ✅ jade pálido casi-blanco (luminoso, antiguo)
+- Patas E1: directas vs esmeralda pálida → ✅ esmeralda pálida (alusión tierra, aspecto divino)
+- Runas E1: sutiles vs brillantes → ✅ brillantes visibles/prominentes (dios-lenguaje despierto)
+- Translucidez E1: uniforme vs variable → ✅ variable (orejas + extremidades más translúcidas)
+
+**Briefs finales archivados:** Zorro shapeshifted (v1), Flashes 1-3 (síntesis), E1 Warden (v1 jade-esmeralda spec)
+
+---
+
+## [2026-07-23] design/production | 3 keyframes de acciones (links de pivotes) + 1 video teaser COMPLETADOS
+**Sesión de producción visual — concept art estático + video.**
+
+### Guided Avalanche (Sereth + Torgan) — NB Pro
+**Asset:** `Guided Avalanche.jpeg`. Mecánica: "Sereth dobla gravedad/terreno para curvar la carga imparable de Torgan."
+
+Composición cinemática: Sereth (elfo manipulador) izquierda, canalizando poder con manos extendidas. Torgan (enano duelist, 4.5 cabezas, trapezio) centro-derecha en postura de carga potente. Entre ellos: círculos concéntricos de gravedad/espacio doblado alargando la trayectoria de Torgan. Hay blanco separado (silueta brillante) dentro del efecto donde impacta. Bosque envolvente, luz natural.
+
+**Evaluación:** ✅ Mecánica crystal-clear (distorsión de espacio comunica el doblez sin ser literal). Caracterización correcta (etéreo manipulador vs. bruto embestidor). Proporción relativa elf/dwarf correcta. Estilo Sable×BotW locked (ligne claire + hand-painted watercolor, low saturation excepto efecto tealmente). **VALIDADO sin iteraciones.**
+
+### Riposte Runner (Iven + Elfo Vanguard) — NB Pro
+**Asset:** `Riposte Runner.jpeg`. Mecánica: "Tu parry-redirect es su vector de lanzamiento al flanco."
+
+Composición: Elfo Vanguard standing (8 cabezas, vertical, orejas atrás) con blade en postura de parry. Iven (humano 7.5 cabezas, acróbata) airborne en arco lateral perfecto, wraps oscuros, capa ondeando. Línea de fuerza tealmente fluye del parry blade hacia Iven — redirección limpida. Cañón con rocas, sunlight diagonal.
+
+**Evaluación:** ✅ Línea de fuerza más explícita que Guided Avalanche (blade→cuerpo). Sincronización perfecta (defensa=offense). Tamaño relativo correcto. Estilo coherente Sable×BotW. **VALIDADO sin iteraciones.**
+
+### Warforging (Vekka + Humano Vanguard) — Higgsfield
+**Asset:** `Warforging.png`. Mecánica: "Te atornilla módulos en combate: cada uno cambia tu verbo de brawler."
+
+Composición: Humano Vanguard wide-leg brawler stance (7.5 cabezas, center). Vekka (enana 4.5 cabezas, trapezio) arriba-derecha con goggles enormes de ingeniera, wrench activo atornillando módulo masivo y brillante directamente EN el pecho del humano. Sparks y forge-light ámbar/naranja exploten. Pernos dispersos en suelo, llamas en muros (contexto taller/forja).
+
+**Evaluación:** ✅ Mecánica literal y visual (módulo siendo instalado = "rig siendo upgradado"). Trust implícito (humano permite mid-combate). Saturación ámbar perfecta (forge-light > resto). Estilo Higgsfield coherente con serie (ligeramente más graphic que NB Pro pero sigue Sable×BotW). **VALIDADO sin iteraciones.**
+
+### Speck Sneak Peek — Higgsfield (video)
+**Asset:** `Speck sneak peek.mp4`. Prompt: viñeta cinematográfica de primer encuentro/descubrimiento. Criatura salamandra-axolotl pale-mint con seams teal aether, gill-antennae erizables, ojos cálido-oscuros. Caverna oscura, shaft de luz reveladora. Mood: tierno, antiguo, unsettling (belleza + peligro).
+
+**Status:** ✅ Generado y subido. Evaluación pending (ffmpeg setup incomplete).
+
+### Vídeos pendientes de evaluación
+- `Arcane Ballistics.mp4`, `Weaver's Net.mp4`, `Seismic Springboard (2).mp4` (re-shoots Higgsfield previos)
+- `Speck sneak peek.mp4` (nuevo)
+
+**Notas técnicas:** ffmpeg instalado vía winget (v8.1.2), PATH aún no sincronizado en shell actual. Evaluación de video postponed.
+
+---
+
+## [2026-07-22] feature | Nacimiento de oreja élfico pabellón — paso 3 CERRADO (78%, VoBo provisional)
+Ejecutado el paso 3 de [[PRD-Nacimiento-de-Oreja-v1]]: pabellón élfico (`ear_pab`
+SphereMesh hermana de `ear_body` en `feature_slot`, r=0.035, scale 0.50/1.40/0.80,
+rot.x -0.30, pos 0.148/0.024/0.006) añadido a la rama `aetherborn` de
+`character_rig.gd`.
+
+**Ronda 1 (74%):** Dos MEDIUM hallados — pabellón leía como bump separado en 3/4
+(silueta "bump-then-cone"), borde inferior delgado en frontal.
+
+**Ronda 2 (78%):** Pabellón elongado (scale.y 1.10→1.40, rot.x -0.10→-0.30) para
+fluir hacia el cono; bajado (pos.y 0.032→0.024) para cubrir inferior. Ambos MEDIUM
+cerrados. Solo quedan 3 LOWs (inflexión sutil, tinta Sobel sistémica, asimetría
+render — ninguno visible a distancia de juego).
+
+Cono élfico intacto (eje 28°/20°, largo ~0.167, punta sin toque — anti-objetivo
+respetado). No-regresión: humano 74% pixel-idéntico, enano 70% pixel-idéntico.
+Gates ALL_PASS. VoBo provisional de Boris.
+
+## [2026-07-22] feature | Nacimiento de oreja enano + helper — paso 2 CERRADO (70%, VoBo de Boris)
+Ejecutado el paso 2 de [[PRD-Nacimiento-de-Oreja-v1]]: helper `_build_ear`
+factorizado + rama `ironblooded` de `character_rig.gd`.
+
+**Helper `_build_ear`** (`:117`): defaults = valores del humano cerrado al 74%.
+Humano migrado a `_build_ear(side, feature_slot, skin_mat, {})` — verificado
+visualmente idéntico. Elfo sin regresión (banco corrido, verificado).
+
+**Enano reparametrizado** (13 overrides): pabellón más ancho/corto (`scale
+0.72/0.95/0.85`), radio 0.032, orejas pegadas al cráneo (`rot_z_mul -0.15`),
+lóbulo carnoso (`r=0.016`, uniforme), hélix grueso (`outer=0.026`).
+
+QA imparcial (mismo agente, 2 rondas): **63%→70%**. Desglose R2: costura 74,
+proporción 70, estructura 65, lectura 65, tinta 78. Los dos CRITICAL de R1
+(proporción alto:ancho + ángulo de separación) resueltos. El QA confirma: "lee
+como oreja de enano, la reparametrización racial se nota". Techo de 3 primitivas
+declarado (mismo que el humano). Gates `test_core.gd` ALL_PASS.
+
+**Nota técnica:** el banco (`tmp_anatomy.gd`) requiere el separador `--` antes
+de `--autotest=` para que `OS.get_cmdline_user_args()` lo reciba. Sin él, Godot
+arranca la escena principal y se cuelga en "GameDirector booted". Lección
+añadida al conocimiento del proceso, no al código.
+
+## [2026-07-22] feature | Nacimiento de oreja humano — paso 1 CERRADO (74%, VoBo de Boris)
+Ejecutado el paso 1 de [[PRD-Nacimiento-de-Oreja-v1]]: rama `miststalker` de
+`character_rig.gd`. Se reemplazó la esfera desnuda (1 pieza, 4.3% de
+penetración) por 3 piezas hermanas en `feature_slot`:
+
+| Pieza | Mesh | Scale | Position (side=1) | Nota |
+|---|---|---|---|---|
+| Pabellón | `_sphere_mesh(0.030)` | `(0.58, 1.45, 0.75)` | `(0.130, 0.0, -0.024)` | rot.x=-0.15, rot.z=side*-0.06 |
+| Lóbulo | `_sphere_mesh(0.012)` | `(0.55, 0.75, 0.55)` | `(0.126, -0.042, -0.020)` | — |
+| Hélix | `TorusMesh(0.011, 0.021)` | `(1.0, 1.45, 0.9)` | `(0.140, 0.004, -0.025)` | rot.z=PI/2, rot.x=-0.15 |
+
+Trayectoria QA imparcial (subagente sin contexto, 4 rondas, mismo agente
+re-invocado): **55%→69%→71%→74%** (umbral 70%). Desglose final: costura 82,
+lectura 78, proporción 75, estructura 70, tinta 68.
+
+**Techo declarado por el QA:** el HIGH de tinta antero-superior resistió 3
+rondas de tuning en Z. La concha es imposible con primitivas convexas aditivas.
+Lo que falta requiere cambio de enfoque, no más iteración.
+
+**Correcciones al PRD durante la ejecución:** (1) penetración del fallback era
+25%, no 46% (semieje ecuatorial ≠ radio en el punto de la oreja); (2) el
+fallback neutro NO era "la referencia buena" (portado 1:1 midió 55%, dos
+defectos heredados nunca detectados); (3) helper factorizado movido al paso 2.
+
+Gates: `test_core.gd` ALL_PASS en cada ronda. Sin regresión en elfo ni enano
+(verificado por diff de píxeles: 3.4% = solo venas animadas del aether).
+
+## [2026-07-22] design | PRD del nacimiento de oreja ESCRITO (propuesto, sin ejecutar)
+Boris dio la señal de arrancar el frente detectado en la entrada de
+`investigate` de más abajo. Se escribió [[PRD-Nacimiento-de-Oreja-v1]] con el
+diagnóstico ya **medido** contra `HairLibrary.SKULL_SEMI` (0.123, 0.141,
+0.1425) en vez de descrito a ojo — la causa raíz resultó ser una sola y de
+SOLAPE, no de forma:
+
+| Rama | Penetración de la oreja en X | Piezas |
+|---|---|---|
+| Humano/Mistbound (`:2996`) | ~0.003 (≈5% de su ancho) | 1, esfera desnuda |
+| Enano (`:3012`) | ~0.007 (≈11%) | 1, esfera desnuda |
+| **Fallback neutro (`:3103`)** | **~0.011 (≈46%)** | **3: pabellón+lóbulo+hélix** |
+| Elfo (`:2904`) | sin costura dura, pero sin pabellón | 4 |
+
+El fallback ya resuelve el problema (achata la esfera en X y la hunde casi la
+mitad de su ancho) y las razas reales simplemente no lo usan. Encaja con la
+lección ya documentada de **fusión por overlap real, no por tangencia**.
+Plan en 5 pasos (helper factorizado → humano → enano → pabellón élfico →
+QA imparcial vs las 3 láminas de fenotipo), con anti-objetivo explícito de NO
+reabrir la oreja de elfo (cerrada al 75% con VoBo). Riesgo anotado: hundir el
+pabellón puede apagar la tinta del Sobel en su perímetro — verificar con zoom.
+**Estado: `propuesto`, cero código tocado — pendiente VoBo de Boris (incluido
+el umbral de fidelidad objetivo, sugerido 70%) antes de ejecutar.**
+
+## [2026-07-22] investigate | Nacimiento de oreja — bug compartido humano/enano detectado, PRD propio pendiente (NO ejecutado)
+Cerrada la ronda 10 de la oreja de elfo (75%, VoBo de Boris: "Sí, dale, así
+queda" — ver entrada siguiente), Boris marcó que el "nacimiento" de la oreja
+(la zona donde se funde con el cráneo) no lee bien en el elfo, y sospechó que
+el problema cruzaba razas. Se generaron capturas de banco de los 3 casos
+(`ANATOMY_ORIGIN=miststalker|ironblooded|aetherborn`) con zoom 4× sobre la
+zona de nacimiento para confirmar antes de tocar código:
+
+- **Humano (`miststalker`) y enano (`ironblooded`):** comparten el mismo
+  patrón — una `SphereMesh` desnuda (radius 0.030/0.032) puesta TANGENTE al
+  cráneo, sin lóbulo ni hélix, cero blending. Se ve la costura circular
+  completa en el zoom — lee "canica pegada", no oreja naciendo del cráneo.
+  Confirmado el hallazgo de Boris: es un bug real, no una impresión.
+- **Dato clave:** el rig YA TIENE una versión bien resuelta del mismo
+  problema — la rama "Origin neutro/desconocido" (fallback humano base,
+  `character_rig.gd` ~3097-3146, comentario "M9-r1"/"FASE C paso 7"/"Sprint
+  B3") tiene lóbulo colgando (`_sphere_mesh(0.012)`, overlap real) + hélix
+  hundida (`TorusMesh` semi-embebido) — exactamente el tratamiento que
+  falta en humano/enano. Parece que esa rama de fallback quedó con mejor
+  geometría que las razas reales que la reemplazan, probablemente un
+  desfase histórico entre cuándo se hizo el pulido de M9/Fase-C (contra la
+  cara neutra) y cuándo se separaron las ramas explícitas por origin (C6a).
+- **Elfo (ronda 9-10, hoy):** no tiene la costura dura de humano/enano (la
+  base-esfera nueva se funde bien), pero comparte la falta de fondo: sin
+  pabellón/concha visible en el nacimiento, solo el cono emergiendo derecho
+  del cráneo.
+
+**Decisión de Boris:** tratarlo como frente aparte con PRD propio, NO
+colarlo dentro del QA loop de la oreja de elfo de esta sesión. Sin código
+tocado — solo diagnóstico y capturas de evidencia (no versionadas,
+`test_out/` gitignored). Detalle en [[Current-State]] bajo "FRENTE NUEVO
+detectado".
+
+## [2026-07-22] qa | Oreja de elfo — ronda 10, reabre la decisión "casi horizontal": QA 35-40%→55-60%→75% — CERRADA, VoBo de Boris
+Tras la ronda 9 (ver entrada siguiente), el QA imparcial midió 35-40% y marcó
+CRITICAL el eje ("sin rake posterior, sigue leyendo lateral"). Se aplicaron 2
+sub-rondas de fix, cada una re-verificada con el MISMO agente QA
+(`SendMessage` al `agentId`, protocolo [[QA Loop]]):
+
+**Sub-ronda 1 (proporción + costura):** cuerpo/punta alargados (0.10+0.05 →
+0.115+0.06) y adelgazados (bottom_radius 0.024→0.020, medio 0.014→0.011);
+yaw subido de 0.35 a 0.70 rad; quiebre angular de la punta (~3°) eliminado
+(colineal). QA re-medido: **55-60%** — proporción y costura RESUELTOS, pero
+el CRITICAL del eje **persiste** (sigue midiendo ~75-80° desde la vertical).
+
+**Diagnóstico del eje:** se sospechó primero un bug de orden de composición
+Euler de Godot (`rotation.z` grande aplicado antes que `rotation.y`) — se
+verificó reconstruyendo el giro con matrices `Basis` explícitas
+(independiente de cualquier convención de Godot) y dio el MISMO resultado
+visual, descartando el bug de cálculo. La causa real: esta oreja quedó
+"casi horizontal" por decisión de las rondas 4-5 (validada en su momento
+contra Frieren/Zelda). Al re-mirar esas MISMAS referencias
+(`zelda_ears.jpg`, `zoom_frieren_ear_left.png`) con el hallazgo del QA en
+mente, ambas muestran la oreja apuntando claramente hacia ARRIBA, no casi-
+horizontal. **Boris reabrió la decisión de "casi horizontal".**
+
+**Sub-ronda 2 (elevación, cambio de familia de ángulo):** reemplazado el
+encadenado de 3 ángulos Euler por una construcción directa de dirección
+(elevación ~28° sobre la horizontal + barrido hacia atrás ~20°, vía
+producto cruz — sin depender de ninguna convención de composición). QA
+re-medido: **~75%**. El QA verificó independientemente la premisa contra
+las referencias antes de aceptarla (no la tomó a ciegas), confirmó que NO
+cae en el "barrido dramático hacia arriba" que rondas viejas habían
+rechazado (~44-46° de la vertical medido, moderado, lejos de los ~0-10°
+"look Vulcano" rechazado antes), y que **ya no queda ningún hallazgo
+CRITICAL abierto**. Quedan 2 hallazgos menores: MEDIUM (riesgo de que la
+punta quede tapada por el pelo definitivo cuando se reemplace el
+placeholder — verificar cuando haya geometría de pelo real) y LOW (ángulo
+5-6° por encima del techo de 40° pedido, sin impacto visual negativo
+reportado).
+
+Gates `test_core` ALL_PASS en cada sub-ronda. **Pendiente VoBo final de
+Boris** sobre el 75% — decidir si cierra aquí o se afina más.
+
+## [2026-07-22] fix | Oreja de elfo — REWORK completo ronda 9 (variante Zelda, composición de 4 masas)
+Boris rechazó el resultado de la ronda 8 ("Todavía no me gustan") y escribió
+su propia spec anatómica (triángulo curvo tipo sable, eje 20-40° hacia atrás,
+proporción 1.5-2× una oreja humana MISMO grosor, punta 50-70° redondeada)
+contra Zelda TotK + Frieren, pidiendo traducirla a plan técnico vía un
+**subagente Opus dedicado** (`subagent_type: Plan`, `model: opus`). El
+subagente verificó el código real (líneas exactas), encontró un diagnóstico
+no visto antes — el cono de la ronda 8 medía `height=0.24`, **3.1× la oreja
+humana del propio rig** (`character_rig.gd:3013-3038`, eje largo ≈0.077),
+muy por encima del 1.5-2× pedido — y propuso 3 decisiones a Boris, quien
+eligió: (1) sí recortar a la proporción 1.5-2×, (2) **Zelda puro** (no
+Frieren, no síntesis), (3) **composición de primitivas sólidas**, NO
+reintentar el loft (ya falló 3 veces, rondas 6-8).
+
+**Implementación** (`character_rig.gd`, rama `aetherborn`): reemplazado el
+cono de un solo taper por 4 masas — cuerpo (`CylinderMesh` 0.024→0.014,
+height=0.10, 6 segmentos, taper lento/borde recto) + punta (`CylinderMesh`
+0.014→0.005, height=0.05, quiebre local ~3°) + base (`SphereMesh` chico) +
+hélix (`TorusMesh` aplastado discreto), las 3 últimas hijas directas de la
+pieza cuerpo (alineación garantizada por parenting, evita el error de la
+ronda 8 donde el lóbulo se posicionó a mano con el CENTRO del cono en vez de
+su base y quedó flotando invisible). `rotation.y` NUEVO (yaw posterior ~20°,
+eje nunca tocado en rondas 1-8 — distinto del rake sagital que falló en
+rondas 1-3). Largo total ≈0.14 (≈1.8× la oreja humana).
+
+Verificado en banco visual (`ANATOMY_ORIGIN=aetherborn ANATOMY_HAIR=8`):
+de perfil ahora se lee como una oreja real con volumen (antes, el cono se
+veía "de canto"/astilla desde ese ángulo); a distancia normal de juego
+(`anatomy_full_side.png`) también es legible por primera vez (antes se
+perdía en la resolución). Gate lógico `test_core.gd` ALL_PASS, cero
+regresión. **Pendiente VoBo visual de Boris** — primera pasada de parámetros
+(offsets/quiebre/hélix) sujeta a afinar en banco si Boris pide ajustes.
+
+## [2026-07-22] fix | Oreja de elfo — base un poco más ancha (ronda 2) + lóbulo triangular nuevo
+Siguiendo el pedido de Boris de la noche anterior (ver Current-State),
+dos cambios aditivos sobre el cono ya validado (60-65%, `character_rig.gd`
+rama `aetherborn` de `_build_origin_features`), sin tocar ángulo/largo/
+punta:
+1. **Base un poco más ancha (ronda 2):** `bottom_radius` 0.024→0.027
+   (~+12%, paso más chico que el salto de 25% de ayer).
+2. **Lóbulo nuevo:** pieza chica de `PrismMesh` (prisma triangular,
+   `left_to_right=0.15` para el perfil ESCALENO pedido — mismo patrón que
+   `_wedge()` en `character_signature.gd`) colgando de la base del cono,
+   NO una "oreja llena". Primer intento de posicionamiento falló (usó
+   `ear.position`, que es el CENTRO del cono en X≈0.148, no su base en
+   X≈0.03-0.12 según altura) — el lóbulo quedó flotando invisible cerca
+   de la mandíbula (confirmado en banco). Recalculada la geometría de la
+   base real del cono (trig sobre su rotación) y reposicionado en
+   `Vector3(side*0.135, 0.015, 0.018)`: ahora se lee como un triángulo
+   chico bien pegado a la base ensanchada, visible en frente/3-4/perfil,
+   sin leer como segunda oreja.
+Verificado en banco visual (`ANATOMY_ORIGIN=aetherborn ANATOMY_HAIR=8`,
+capturas en `godot/test_out/anatomy_face*.png`) y gate lógico
+`test_core.gd` ALL_PASS (cero regresión — único bloque tocado es el de
+`aetherborn`). Sin re-medición de QA imparcial (cambio puntual, mismo
+criterio que la ronda 1 de ayer) — pendiente VoBo de Boris.
+
+## [2026-07-22] fix | Oreja de elfo — base 25% más ancha (pedido directo de Boris)
+Tras cerrar y documentar el experimento fallido de "hoja compuesta"
+(entrada anterior), Boris pidió un ajuste puntual sobre el cono ya
+validado (60-65%): base 25% más ancha. `bottom_radius` 0.019→0.024
+(`character_rig.gd`, rama `aetherborn` de `_build_origin_features`) —
+sin tocar ángulo, largo ni punta ya medidos por el QA. Verificado en
+banco: más "carne" en la raíz, mantiene el ángulo/punta correctos.
+Gates `test_core` + `autotest_biomech` ALL_PASS. Capturas actualizadas
+en `godot/test_out/anatomy_elf_face.png`/`_34.png`/`_profile.png`;
+baseline humano restaurado en `anatomy_face*.png` normales.
+
+## [2026-07-22] fix | Oreja de elfo — experimento de "hoja compuesta" con HairLibrary._loft/_lock: 3 rondas, todas peor que el cono; REVERTIDO
+Siguiendo el plan aprobado por Boris para atacar el hallazgo del QA
+anterior ("silueta de hoja compuesta, técnica de un solo cono en su
+techo"), se investigó y reusó `HairLibrary._loft`/`_lock`
+(`hair_library.gd:181`/`:277` — curva `Curve3D` + perfil de radios, el
+reemplazo VIGENTE de la técnica vieja de cadenas de cajas `_ribbon`/
+`_s_spine`, esa sí deprecada con 4º intento prohibido). Nunca antes
+usada para algo que no fuera pelo — riesgo anotado explícitamente en el
+plan.
+
+**3 rondas ejecutadas, con QA imparcial (mismo agente, `SendMessage`)
+después de cada una:**
+- Ronda 1 (4 puntos, curva sostenida en todo el largo, ~0.205 de
+  alcance): QA la comparó contra el cono → **~40-45%**, "cuerno curvo",
+  RETROCESO vs el cono (60-65%).
+- Ronda 2 (acortada a ~0.165, flick concentrado al final): QA →
+  **~40-45%** de nuevo, mismo diagnóstico ("cuerno de toro"), pidió 4
+  correcciones concretas (acortar más, colinealidad estricta raíz→2/3,
+  eje barrido hacia atrás no perpendicular, radio cayendo rápido en el
+  primer tercio).
+- Ronda 3 (las 4 correcciones aplicadas literalmente: ~0.11 de alcance,
+  P0-P1-P2 exactamente colineales con un solo vector de dirección
+  escalado, componente Z negativa real, radios 0.023→0.011 ya en el
+  primer punto): QA → **~45-50%**, TODAVÍA por debajo del cono. Nuevo
+  diagnóstico: el tramo recto quedó tan delgado que lee "alambre sin
+  volumen" y el flick final quedó tan concentrado que lee "gancho/
+  garfio", no remate de punta.
+
+**Decisión (Lección aplicada, no una 4ª ronda a ciegas):** revertido
+al cono de la ronda 4 anterior (60-65%, mejor medido) — mismo criterio
+que "sospechar del andamiaje tras 2-3 intentos": si una técnica nueva,
+correcta en teoría, mide peor en CADA ronda pese a corrección dirigida
+por QA, es señal de que no encaja a esta escala, no un problema de
+calibración. Documentado en [[Lecciones]] (nueva entrada: loft/ribbon
+puede leer peor que un cono simple en rasgos chicos y cortos).
+
+**Gates:** `test_core` + `autotest_biomech` ALL_PASS tras el revert.
+Estado final: oreja de elfo = cono de la ronda 5 anterior, 60-65% de
+fidelidad medida, sin cambios respecto a la última entrega aprobada.
+Capturas oficiales sin cambio: `godot/test_out/anatomy_elf_face.png`/
+`_34.png`/`_profile.png`. Las capturas del experimento fallido quedan en
+`anatomy_elf_face_leaf.png`/`_34_leaf.png`/`_profile_leaf.png` (no se
+borran — documentan el intento para no repetirlo sin releer esto).
+
+## [2026-07-22] qa | Oreja de elfo — QA imparcial (protocolo QA Loop) 40%→60-65%, fixes aplicados y verificados
+Boris pidió correr QA formal de la oreja (no solo VoBo directo). Protocolo
+[[QA Loop]]: subagente `general-purpose` SIN contexto de sesión, con las 2
+referencias (`frieren-ears-v0-pgvmflxgahrc1.png`, `zelda_ears.jpg`, en
+`Downloads/`) + las 3 capturas del banco (`anatomy_elf_face*.png`).
+
+**Ronda 1 del QA: ~40%.** CRITICAL — ángulo seguía leyendo "barrido
+arriba/atrás" (el clásico elfo de fantasía) pese al ajuste de la sesión
+anterior, no el ~horizontal+5-15° de las referencias. HIGH — punta roma.
+MEDIUM — base gruesa/bulbosa.
+
+**Fixes implementados (`character_rig.gd`, rama `aetherborn` de
+`_build_origin_features`):** z-tilt corregido de ~63° a ~82° desde
+vertical (ahora ~8° sobre horizontal, dentro del rango pedido);
+`rotation.x` (rake trasero) bajado de -0.15 a -0.06; `radial_segments`
+del cono bajado a 4 (mismo patrón low-poly ya usado en la nariz — lee
+como filo bajo el toon en vez de cono suave/redondeado); `bottom_radius`
+0.024→0.019 (base más fina).
+
+**Ronda 2 del QA (mismo agente, `SendMessage`): ~60-65%.** El propio QA
+midió por PÍXEL (trazó el contorno en la captura, no solo impresión
+visual) — ángulo real ≈7.7° sobre horizontal, dentro de rango. CRITICAL
+(ángulo), HIGH (punta) y MEDIUM (base gruesa) confirmados RESUELTOS.
+**Hallazgo nuevo (MEDIUM):** la silueta de Frieren/Zelda es una curva
+COMPUESTA tipo "hoja" (borde superior casi recto, inferior cóncavo,
+"flick" final más pronunciado en la punta) — nuestra oreja es un cono
+recto de taper uniforme, lee más "espina/cuerno" que "hoja". El propio
+QA lo marca como probable TECHO de la técnica actual (un solo cono/wedge)
+— resolverlo de verdad pediría más segmentos a lo largo del eje de la
+oreja para meter la curva, no un parámetro suelto. Queda como pendiente
+priorizado, no atacado esta ronda (decisión de alcance, no de tiempo:
+Boris no pidió seguir más allá del QA + fixes de esta ronda).
+
+**Gates:** `test_core` + `autotest_biomech` ALL_PASS (cambio acotado a la
+rama `aetherborn`). Capturas finales en `godot/test_out/
+anatomy_elf_face.png`/`_34.png`/`_profile.png`. Baseline humano
+restaurado en `anatomy_face*.png` normales.
+
+## [2026-07-21] fix | Oreja de elfo, ronda 2 — Boris pasó referencias nuevas (Frieren + Zelda TotK), reemplaza el criterio de la lámina de concept art
+Tras la primera pasada de la oreja élfica (ver entrada anterior, medida
+contra `fenotipo-elfo-lavanda-v1.png`: oreja larga muy barrida hacia
+atrás), Boris pidió "cambiar un poco las orejas" y, en vez de responder
+mi pregunta de dirección (AskUserQuestion rechazada), pasó DOS
+referencias visuales nuevas guardadas en `Downloads/`:
+`frieren-ears-v0-pgvmflxgahrc1.png` (oreja larga y fina, hacia AFUERA
+con ángulo leve arriba, casi sin rake trasero) y `zelda_ears.jpg` (BotW/
+TotK, misma lógica, más corta/compacta). Ambas más cercanas al norte de
+siluetas limpias del proyecto que el barrido dramático de la lámina
+vieja — se toman como el criterio nuevo para ESTE rasgo específico (no
+cambia el norte artístico general, que sigue siendo Sable×Hinterberg,
+no anime).
+
+**Plan explícito antes de tocar código** (modo plan, aprobado por
+Boris): diagnóstico de que `rotation.x` (rake trasero, -0.38 rad) era el
+principal culpable de que la oreja leyera "hacia atrás" en vez de "hacia
+afuera" — se baja a casi cero, `position.z` se adelanta.
+
+**2 rondas ejecutadas** (regla de freno del proyecto): r1 (rotation.x
+-0.08) — frente y 3/4 leen bien (afuera + leve arriba, sin el barrido de
+antes), pero el perfil quedó casi de canto (astilla fina: con
+rotation.x≈0 la oreja apunta casi puramente sobre el eje X, el mismo eje
+que mira la cámara de perfil → foreshortening). r2 (rotation.x -0.15) —
+perfil gana algo de presencia sin volver al barrido dramático; frente/
+3-4 siguen leyendo bien. **Se cierra aquí** (frente/3-4 — los ángulos de
+juego más comunes — leen bien; el perfil estricto a 90° es un ángulo
+poco frecuente en gameplay real y el foreshortening residual es
+aceptable, no vale una 3ª ronda).
+
+Gates mínimos (cambio acotado a la rama `aetherborn` de
+`_build_origin_features`, sin tocar nada más): `test_core` +
+`autotest_biomech` ALL_PASS. Capturas actualizadas:
+`godot/test_out/anatomy_elf_face.png`/`_34.png`/`_profile.png`. Baseline
+humano restaurado en `anatomy_face*.png` normales.
+
+## [2026-07-21] feature | PRD-C6b: geometría nueva — orejas de elfo + mandíbula/ceja de enano
+Continuación del piloto de C6b: primera pasada de GEOMETRÍA racial nueva
+(paso 4 del PRD, adelantado sobre orejas/mandíbula sin esperar el VoBo de
+proporciones — pedido directo de Boris).
+
+**Diagnóstico primero (Lección: medir/mirar antes de autorar):** las
+orejas del elfo (ya existían desde antes de C6b) leían como un nudo
+horizontal apenas asomando, no la oreja larga barrida hacia atrás de la
+lámina — confirmado en banco con `ANATOMY_HAIR=8` ("Shorn Scout", nuevo
+override de diagnóstico en `tmp_anatomy.gd` — el peinado default humano
+tapaba la oreja y confundía el juicio; el catálogo racial de peinados
+sigue pospuesto, esto es solo para ver la geometría).
+
+**Oreja élfica (`_build_origin_features`, rama `aetherborn`):** alargada
+0.14→0.24, z-tilt bajado de ~112° a ~66° (menos horizontal, más barrido
+hacia atrás/arriba continuando la sien), posición subida y retrasada. 2
+rondas verificadas en banco (frente + perfil + 3/4) contra
+`fenotipo-elfo-lavanda-v1.png`.
+
+**Mandíbula/ceja por raza (`character_rig.gd apply_phenotype` +
+`origins_data.gd`):** nuevo campo `"face"` por origin (`jaw_width`,
+`jaw_depth`, `brow_scale`, `brow_y`) — sesgo MULTIPLICATIVO/aditivo sobre
+el mismo rango de slider `jaw`/misma ceja compartida (el gap que
+[[Fenotipos y Creación de Personaje]] ya había anotado: "jaw/eyeTilt/
+eyeShape usan un solo rango para las 3 razas"). Enano: mandíbula +35%
+ancho/+20% profundidad, ceja +65% de tamaño y bajada (frente pesada, ojos
+hundidos) — contra `fenotipo-enano-varon-v1.png`. Elfo: mandíbula -15%/
+-10% (fina), ceja -15% (ligera) — contra `fenotipo-elfo-lavanda-v1.png`.
+`face` vacío en humano/miststalker = cero cambio.
+
+**Gates:** `test_core`, `autotest_biomech`, `autotest_footik`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`, `autotest_ui`
+ALL_PASS. Capturas guardadas en `godot/test_out/`:
+`anatomy_elf_face*.png`, `anatomy_dwarf_face*.png` (+ `_full_front/_side`
+del piloto de proporciones anterior). Baseline humano restaurado en
+`anatomy_face*.png` normales (7.35 cabezas).
+
+**Pendiente:** VoBo de Boris sobre TODO C6b hasta ahora (proporciones +
+orejas + mandíbula/ceja) antes de seguir con ROM por raza y ambos torsos
+en juego real (hoy solo verificado en el banco de anatomía).
+
+## [2026-07-21] feature | PRD-C6b arrancado: proporciones raciales enano/elfo (piloto de las 2 razas)
+Arrancado [[PRD-C6b-Enano-Elfo-v1]] tras cerrar frente 1 y frente 2. Seguido
+el orden del propio PRD: (1) mapear qué % ya resuelve `apply_phenotype` vs
+qué necesita geometría nueva, (2) medir contra la lámina ANTES de autorar,
+(3) piloto. Hallazgo del mapeo: el CUERPO enano/elfo hoy es un clon exacto
+del humano con solo un `scale` UNIFORME por `heightRange` — proporción
+(palancas largas/cortas, hombros anchos/caídos) es CERO, porque un escalado
+uniforme no puede cambiar una RATIO. Orejas/accent cultural (`_build_
+origin_features`) YA existían — el trabajo real faltante era exactamente lo
+que el PRD identificó: el cuerpo.
+
+**Implementado (reutiliza los MISMOS hooks de escala que peso/clase, sin
+geometría nueva — optimización #1 del PRD):** nuevo campo `"proportions"`
+por origin (`origins_data.gd`): `limb_len` (largo de palancas), `shoulder_x`
+(ancho de hombro), `neck_len`, `head_scale`, `hand_scale`. `character_rig.gd
+_apply_build()` los lee (default 1.0 = comportamiento humano intacto —
+`proportions` vacío en humano/miststalker, CERO cambio de comportamiento) y
+reposiciona thigh/knee/shin/calf/ankle (pierna) y upper/bicep/tricep/elbow/
+fore/forearm_mass/wrist_cap/hand (brazo) por su PROPIO eje local + shoulder_x
+sobre `SHOULDER_X`, más neck/head. **Corrección de diseño encontrada
+ANTES de romper nada:** escalar solo `leg.scale.y`/`arm.scale.y` (el nodo
+padre) parecía más simple pero genera CIZALLA con el codo/rodilla doblado
+(Godot escala en el frame local del padre ANTES de rotar) — cada segmento
+se reposiciona a mano por su propio offset en cambio. `_Biomech.
+solve_knee_for_height` (foot IK, frente 2) también actualizado para usar
+`LEG_SEGMENT_LEN * limb_len`, no la constante humana fija.
+
+**Medido en banco (`tmp_anatomy.gd`, nuevo `ANATOMY_ORIGIN=aetherborn|
+ironblooded` — reusa el patrón `DIAG_*`), NO a ojo:**
+- Enano: r1 5.34 cabezas (objetivo 4.5, canon lámina `fenotipo-enano-
+  varon-v1.png` "4.5 heads tall") → r2 4.22 (se pasó) → r3 **4.49** ✅.
+- Elfo: r1 8.78 cabezas (objetivo 8.0, lámina `fenotipo-elfo-lavanda-v1.png`
+  "8 heads tall") → r2 **8.17** ✅ (cerca, aceptable para piloto).
+
+**Hallazgo colateral (NO introducido por este trabajo, verificado con
+`git stash`):** `autotest_classes.gd` tiene una cámara de close-up rota
+preexistente (reproduce igual en el commit anterior a hoy) — chip
+delegado aparte, fuera de alcance de C6b.
+
+**Gates:** `test_core`, `autotest_biomech`, `autotest_footik`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`, `autotest_ui`,
+`autotest_classes` (smoke, sin crash en los 9 combos origen×clase) — TODOS
+ALL_PASS. Cero regresión en humano/miststalker (proportions vacío).
+
+**Pendiente (según el propio orden del PRD):** VoBo de Boris sobre estas
+proporciones ANTES de seguir a geometría nueva (orejas élficas largas
+"que continúan la línea del cráneo", frente/mandíbula pesada de enano,
+ROM por raza, peinados/marca cultural — pospuestos explícitamente por
+Boris). Este es el piloto que el PRD pedía validar antes de generalizar
+más.
+
+## [2026-07-21] feature | Frente 2 (orden Boris): C4 pies IK — nodo ankle nuevo + solver analítico de rodilla/tobillo
+Arrancado el frente 2 (C4 — pies IK/ROM) tras cerrar el frente 1. Alcance:
+"pies plantados en pendiente" ([[Movilidad Realista]] §"IK como estándar"),
+la única pieza de foot IK que el benchmark AAA marcaba pendiente (HZD,
+[[Benchmark Biomecánico]] v2). ROM enano/elfo queda para
+[[PRD-C6b-Enano-Elfo-v1]] (frente 3), fuera de este frente.
+
+**Hallazgo de partida:** la bota colgaba RÍGIDA del nodo `knee` — cero
+pivote de tobillo, así que nivelar el pie contra una pendiente era
+imposible sin importar cuánta IK se le pusiera a rodilla/cadera.
+
+**Implementado:**
+- `character_rig.gd`: nodo `ankle` nuevo (2-DOF, entre `knee` y la bota —
+  antes bota/puntera colgaban directo del knee). Con rotation=0 el mundo
+  queda IDÉNTICO a antes (solo cambia la jerarquía) — cero riesgo en
+  escenas/bancos que nunca llaman la IK nueva.
+- `rig_biomech.gd`: ROM `"ankle"` (x dorsi/plantarflexión, z inversión/
+  eversión, y=0 fijo, canon "muñeca/tobillo 2-DOF"). Dos funciones puras
+  nuevas: `solve_knee_for_height` (dado el ángulo de cadera YA autorado
+  por el gait, calcula cuánto doblar la rodilla —vía composición de dos
+  rotaciones sobre el mismo eje X, que se SUMAN— para que el tobillo
+  alcance una altura de mundo dada, sin tocar la cadera) y
+  `solve_ankle_level` (nivela la suela contra la normal real del terreno,
+  expresada en el frame local de la rodilla). Sin `Skeleton3D`/
+  `SkeletonIK3D`: este rig es 100% `Node3D` procedural (Lecciones — el
+  `class_name` cruzado rompe el load-order en CLI), la IK vive como
+  funciones puras igual que el resto de la biomecánica.
+- `CharacterRig.apply_foot_ik(l_h, r_h, l_normal, r_normal)` público:
+  el rig no sabe de terreno/escenas (mismo principio que `set_motion`) —
+  el CONSUMIDOR mide el suelo bajo cada pie con el contrato `get_height()`
+  ya existente (PRD-007 alcance 4) y se lo pasa cada frame. Sin llamarlo
+  nunca, el rig queda bit-idéntico a antes de C4.
+- `player_controller.gd`: muestrea `get_height()` bajo cada pie (offset
+  lateral = mismo `FOOT_STANCE` que `leg.position.x` en el rig) + normal
+  por diferencias finitas (`_terrain_normal`), llama `apply_foot_ik` justo
+  después de `set_motion`.
+- Corre TAMBIÉN en el frame HELD del pose-stepping en 2s (no escalonado):
+  es necesidad física (no clipping en terreno irregular), no ritmo de
+  pose — mismo criterio que los relojes de gameplay que nunca se
+  escalonan.
+
+**Gate nuevo `tests/autotest_footik.gd`** (patrón de `autotest_biomech.gd`):
+sin llamar la IK nunca → ankle en reposo (cero regresión); suelo llano →
+converge a ankle~0 sin violaciones; rampa de 20° con un pie 0.15 m más
+alto → rodilla se dobla lo justo (tobillo alcanza la altura objetivo
+dentro de tolerancia, verificado por posición global real, no solo el
+ángulo) + tobillo se inclina para nivelar, cero violaciones; agujero
+fuera de alcance (adversarial) → rodilla clampea a ROM, sin NaN. **Lección
+aplicada de entrada** (no repetida): los loops de convergencia se acotan
+por TIEMPO REAL (`_drive_ik_for(seconds, ...)`), no por conteo de frames —
+un primer intento con conteo fijo dio un falso FAIL por variar el FPS de
+la corrida.
+
+**Gates:** `test_core`, `autotest_biomech`, `autotest_footik`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice` (juego real
+completo en The Wilds con el jugador real, terreno real), `autotest_ui` —
+TODOS ALL_PASS. Screenshot de verificación visual:
+`godot/test_out/footik_slope.png` (pierna en terreno más alto dobla más
+la rodilla + tobillo inclinado, pose creíble).
+
+## [2026-07-21] fix | Frente 1 (orden Boris 07-20): hombro-esfera fundido + cintura con pellizco real
+Arrancado el frente 1 del orden acordado (hombro→torso y cintura recta,
+hallazgos CRITICAL de Grupo C 07-19). Diagnóstico por color (torso/waist/
+pelvis con `material_override` imposible de confundir + brazos ocultos,
+`DIAG_TORSO=1` nuevo en `tmp_anatomy.gd`, mismo patrón que `DIAG_AXIS`/
+`DIAG_HAND`): el pellizco de cintura SÍ existe en la malla pero es débil
+y además queda tapado por el brazo — el brazo cuelga con splay mínimo
+("roza el torso todo el trayecto", decisión anti-gorila 2026-07-13) a una
+tasa fija mientras el torso se angosta más rápido abajo, así que el ancho
+COMBINADO brazo+torso no bajaba pese a que el cilindro sí tapera.
+**Fixes:** (1) `waist` bottom_radius 0.071→0.058 (pellizco más profundo,
+gana margen real frente al brazo, no solo frente al fondo); (2) `trap_back`
+(esfera trasera del trapecio) agrandada (1.5/0.9/0.55→1.7/1.05/0.65) y
+acercada al deltoide (0.09→0.105, y 0.30→0.29, z -0.04→-0.025) para tragar
+su cuadrante trasero-superior completo — corolario de Lecciones: dos
+esferas que solo se TOCAN dejan ver el horizonte propio de cada una,
+necesitan INTERPENETRAR de verdad. **Resultado verificado en render:**
+closeup hombro-cuello ahora funde en una sola masa continua (antes: bola
+con costura de tinta clara alrededor); vista de frente ahora muestra un
+hueco real de fondo (verde) entre brazo interior y cintura + curva de
+torso visiblemente más angosta que el hombro (antes: silueta recta de
+hombro a cadera). **Gates:** `test_core`, `autotest_biomech`,
+`autotest_combat`, `autotest_springboard` ALL_PASS — cero regresión.
+Perfil (side view) seguía sin mostrar mucho pellizco tras la ronda 1.
+Herramienta nueva reutilizable: `DIAG_TORSO=1` en `tmp_anatomy.gd` (aísla
+torso/waist/pelvis + oculta brazos).
+
+**Ronda 2 (mismo día, pedido de Boris "ataca el perfil también"):**
+diagnóstico por color confirmó que el pellizco de PROFUNDIDAD (Z) era
+aún más sutil a ojo que el de ancho (X), aunque el mismo radio de
+cilindro controla ambos ejes por igual. Profundizado más: `waist`
+bottom_radius 0.058→0.048. Medido por PÍXEL (no solo a ojo — lección
+"zoom antes de cerrar"): el ancho de la franja de cintura en perfil baja
+de 54px (torso, altura hombro) a 24px (fondo de waist) = ~55% de
+reducción real, confirmando que el pellizco SÍ es genuino en las dos
+vistas (el ojo lo subestimaba por el tamaño chico de la franja visible).
+Frente sigue con hourglass limpio (no se pasó). Gates: `test_core`,
+`autotest_biomech`, `autotest_combat`, `autotest_springboard` ALL_PASS.
+**Frente 1 CERRADO** (hombro→torso + cintura recta, frente y perfil).
+Queda VoBo de Boris sobre las capturas antes de seguir con el resto del
+orden (C4 pies IK/ROM, luego C6b).
+
+## [2026-07-20] state | Python 3.12 instalado + check_vault.py verificado en corrida real + gitignore de privados wireado
+Boris pidió instalar Python (bloqueaba `check_vault.py` desde el checkpoint
+anterior). Instalado vía `winget install --id Python.Python.3.12`
+(3.12.10, oficial python.org, hash verificado por winget) en
+`%LOCALAPPDATA%\Programs\Python\Python312\`. La terminal ya abierta de la
+sesión no releyó el PATH nuevo — se usó la ruta completa del ejecutable
+para no depender de reiniciarla; lección actualizada en [[Lecciones]]
+(refinada, no acumulada: ya no dice "no instalado").
+
+Primera corrida real del script (antes solo se había estimado a mano):
+confirmó **~1,894 tokens de arranque, 🟢 VERDE**, sin `@imports`. Encontró
+dos cosas reales, no cosméticas del todo:
+1. **Mojibake de acentos** en la salida de consola de Windows (encoding no
+   UTF-8 por defecto) — arreglado forzando `sys.stdout.reconfigure(
+   encoding="utf-8")`.
+2. **Los privados opcionales (`Notas-Privadas.md`/`Bitacora-Privada.md`)
+   NO estaban protegidos en `.gitignore`** — el patrón quedó documentado en
+   SCHEMA/VAULT-STARTER §5.5 pero nunca se escribió el glob real. Se agregó
+   ahora (`Aether Bound/20-State/Notas-Privadas*` y `Bitacora-Privada*`) —
+   verificado con `git check-ignore` (no a ojo), aunque los archivos en sí
+   siguen sin crearse (nadie los ha pedido todavía).
+
+## [2026-07-20] design | SCHEMA v1.1: dieta de arranque fusionada desde `project-context` + VAULT-STARTER v2 + check_vault.py
+Boris trajo una skill externa (`project-context`, de Claude Code) con un
+playbook de optimización de contexto que el propio `VAULT-STARTER.md` no
+cubría: auditoría objetiva de cuántos tokens se pagan AL ARRANCAR una
+sesión (no cuánto cuesta ejecutar una tarea — eso es el frente separado
+del PRD-C6b de la entrada de abajo). Se fusionaron ambos métodos:
+
+- **`../VAULT-STARTER.md` → v2**, reescrito completo con: §9 "Dieta de
+  arranque" (script de auditoría embebido, semáforo 🟢<10k/🟡10-30k/🔴>30k
+  tokens, distinción autoload hard/soft/no), §5.5 niveles equipo/privado
+  (`Notas-Privadas.md`/`Bitacora-Privada.md`, gitignored con glob,
+  verificado con `git check-ignore` real), detección individual vs.
+  colaborativo vía autores de `git log`, puente opcional `AGENTS.md`.
+- **[[SCHEMA]] → v1.1**: nueva sección 8 (mismo contenido adaptado a rutas
+  reales del proyecto); [[Current-State]] gana un techo verificable
+  (~2,500-3,000 tokens) en vez de juicio a ojo.
+- **[[Lint Loop]]**: gana un 6º punto — el peso de arranque se audita
+  aparte de la completitud/coherencia del Vault (pueden fallar
+  independientemente).
+- **`Aether Bound/scripts/check_vault.py`**: script real, extraído del
+  bloque embebido en VAULT-STARTER §9.1, con el MANIFEST apuntando a las
+  rutas reales de este repo (`CLAUDE.md`, `Aether Bound/SCHEMA.md`,
+  `Current-State.md`, etc.).
+- **`CLAUDE.md`**: nueva regla 6 (arranque barato + referencia al script).
+
+**Bloqueo técnico:** no hay un intérprete de Python real instalado en esta
+máquina (solo el stub de Microsoft Store) — el script no se pudo correr
+todavía; lección documentada en [[Lecciones]]. Línea base calculada A MANO
+con `wc -c`: `CLAUDE.md` (881B≈220t, hard) + `Current-State.md`
+(5,678B≈1,420t, soft) = **~1,640 tokens de arranque → 🟢 VERDE** (sin
+`@imports` en `CLAUDE.md` — sano). Vault es **individual** (un solo autor,
+`tonom`, en el historial de los 3 archivos de contexto), así que no aplica
+todavía la restricción de "no reestructurar Current-State/LOG" de
+`project-context` — libertad total mientras siga siendo un solo director.
+
+**Pendiente de VoBo de Boris:** la nueva sección 8 del SCHEMA (status
+`ratificado` heredado del archivo, pero el contenido nuevo no ha sido
+ratificado explícitamente todavía — mismo patrón que la sección 7 cuando
+se añadió). `Notas-Privadas.md`/`Bitacora-Privada.md` NO se crearon: son
+un patrón documentado, no un archivo — se instancian solo si Boris los
+pide.
+
+## [2026-07-20] design | Mentón aceptado como estilo (S20) + orden de trabajo acordado + PRD C6b ampliado con plan de optimización de tokens
+Boris cierra la ronda de cara: mentón en 20% se ACEPTA como estilo
+(igual que anillos de codo/hombro), no se toca más por ahora. Orden
+acordado para lo que sigue: (1) hallazgos restantes de grupo C —
+hombro→torso y cintura recta; (2) C4 — pies IK/ROM; (3) C6b — enano/elfo
+reales. Catálogo de peinados humano y Fase 4b (warpaint) quedan
+POSPUESTOS ("no creo que sea prioridad ahorita" — ambos son trabajo de
+catálogo/múltiples variantes, no frente urgente).
+
+Boris preguntó si se puede optimizar el gasto de tokens para cuando
+lleguemos a C6b ("cada feature nos toma muchísimos tokens") y pidió
+armarlo como PARTE DEL PLAN, con énfasis explícito: cada raza necesita
+también su propio catálogo de peinados y marca cultural (warpaint/
+tatuajes/birth marks), no solo el cuerpo — ampliando el alcance
+histórico de C6b. Nuevo [[PRD-C6b-Enano-Elfo-v1]] registra el alcance
+ampliado (confirmado contra [[Fenotipos y Creación de Personaje]]: aether
+luminoso élfico, tatuajes de gremio + inlays de forja enanos) y 3
+optimizaciones concretas: (1) reusar `apply_phenotype` para reproporción
+racial en vez de geometría nueva donde se pueda — el costo alto de esta
+sesión fue geometría SIN precedente (loft de pelo), no reproporción;
+(2) medir superficies ANTES de autorar (lección `_on_skull`: 3 rondas
+del pelo se perdieron por semiejes de cráneo inventados); (3) delegar
+el ciclo render→zoom→diagnóstico a un subagente barato (Haiku, validar
+con 1 caso antes de generalizar) — el orquestador solo lee capturas de
+cierre de ronda y QA formales, no cada zoom intermedio de la iteración
+ciega. Nada de C6b se ejecuta todavía — Boris pidió solo verificar
+alineación, sin tocar código.
+
+## [2026-07-20] fix+stop | Mentón: 2do intento (biseles verticales) sin ganancia visible — STOP documentado, techo de técnica sobre geometría ratificada
+Boris decidió: boca queda ACEPTADA en 35% (no reabrir la estructura de
+2 labios); mentón sigue con cuidado. Segundo intento: biseles en las
+ARISTAS VERTICALES de `jaw_mesh` (mismo patrón que `chin_chamfer`, boxes
+rotados 45° pero en eje Y, inset simétrico ~8.5mm, altura 0.050 para
+enterrar tapas). Verificado en captura: SIN regresión (no reabrió tinta
+ratificada) pero TAMBIÉN sin cambio visible en frontal/3-4/perfil — el
+bisel vertical corta la esquina frontal-lateral, que en perfil recto no
+se ve (solo se vería en 3/4, donde queda oculto tras jaw_body) y en
+frontal es demasiado sutil a la escala del render. Dos intentos
+cuidadosos (bisel horizontal agrandado + bisel vertical nuevo) sobre la
+geometría ratificada, cero ganancia de lectura. Regla del Vault
+aplicada: PARAR y documentar en vez de seguir a ciegas. Conclusión: el
+mentón-cuboide en perfil (20%) es un techo de la MASA base (proporción/
+pivote del bloque `jaw_mesh`, no su acabado de bordes) — moverlo
+requeriría re-dimensionar el bloque ratificado, fuera del alcance de
+"tocar con cuidado". Queda para que Boris decida: aceptar como estilo
+(igual que los anillos de codo/hombro) o autorizar una revisión de
+proporción del bloque. Gates ALL_PASS.
+
+## [2026-07-20] fix+qa | Última ronda de cara arranca: boca 20%→35%, mentón sin cambio — decisión pendiente de Boris
+Arranque de la última ronda de ajustes de cara (objetivos grupo C: boca-
+cápsula 20%, mentón-cuboide en perfil). **BOCA:** causa raíz de "bisagra
+mecánica" era doble — (a) la cápsula protruía lo suficiente para que el
+Sobel entintara TODO su contorno (pared empinada = borde completo,
+Lecciones); (b) la comisura era una ranura corta y centrada, leía slot.
+Fix: cápsula hundida casi al ras (rampa, el Sobel ya no la recorta como
+objeto pegado) + comisura rehecha como 3 segmentos (centro ancho + 2
+esquinas que caen, down-turn de boca seria) cubriendo casi todo el
+ancho del labio. QA imparcial: 20%→**35%**. Sigue CRITICAL: una sola
+cápsula con línea central lee "pieza soldada", falta separación real
+labio sup/inf (dos volúmenes con escalón Z, la estructura que Boris
+descartó tras 8+ rondas fallidas — NO se revirtió esa decisión sin
+consultar). **MENTÓN:** se agrandó con cuidado el `chin_chamfer`
+(0.015→0.019, mismo centro, geometría RATIFICADA por Boris) — verificado
+en captura que no reabrió tinta, pero QA: el bisel es invisible a
+distancia normal de render, mentón sigue en **20%** sin cambio real.
+El techo no es de técnica: requeriría biseles en las aristas VERTICALES
+del bloque del mentón (más invasivo sobre zona congelada). Gates
+ALL_PASS. Ambas decisiones (reabrir estructura de 2 labios; biselar más
+la masa ratificada del mentón) quedan para que Boris decida.
+
+## [2026-07-20] decision+fix | Boris RATIFICA VoBo de mandíbula (permanente) + línea del nacimiento más llena; pinhole de coronilla = stop documentado
+Boris ratifica el VoBo de la mandíbula: la mini-ronda de quiebres queda
+PERMANENTE (deja de ser temporal). Ese frente cierra. Sobre el pelo,
+dos ataques a los pendientes: **(1) línea del nacimiento** — la
+recesión de sienes bajó de 0.26 a 0.16 → arco lleno y parejo de sien a
+sien (la referencia de cráneo tiene arco redondeado, no pico central
+con entradas); mejora clara en frente y 3/4. **(2) pinhole de
+coronilla** — se probó agrandar el casquete en Z (semi 0.138→0.147, que
+ahora supera al cráneo) + correrlo menos atrás, y bajar el arco de los
+mechones para que se tiendan en vez de puentear. El pinhole NO cerró:
+es un bolsillo cóncavo que la cámara de perfil mira de canto en ese
+ángulo puntual — lectura de silueta, no cobertura simple (lección del
+Vault confirmada por 3ª vez). A escala de visualización las 4 vistas
+leen totalmente cubiertas; el punto solo aparece a 3× zoom. STOP
+documentado. Gates ALL_PASS.
+
+## [2026-07-20] qa+fix | QA de ZONAS de pelo vs referencia de cráneo (pedido de Boris): hueco de coronilla + pendientes previos
+Boris pasó una referencia de cráneo rapado en 4 ángulos y pidió comparar
+las ZONAS donde vive el pelo (no el peinado ni la barba). La referencia
+es imagen pegada (no archivo), así que el orquestador hizo la comparación
+en píxel directa (regla del Vault). Zonas que YA coinciden: patilla corta
+delante de la oreja, cobertura sobre la oreja, occipucio, nuca hasta el
+cuello. Hallazgo real de ZONA: **hueco de piel en la coronilla-frontal**
+en perfil — los mechones se arquean sobre la masa base y dejan ventanas
+de cuero cabelludo. Fixes de la sesión: (a) los 2 pendientes del QA
+anterior (nuca baja subdividida con 5 mechones sobre el casquete;
+nacimiento con dx a paso irregular y anchos de rango doble), commit
+b4b1f20; (b) masa base engrosada probó ser "abultado" (vetado por Boris)
+→ revertida, y la coronilla se tapa con BANDAS que hugean el cráneo a
+lift bajo (mismo truco del fade de nuca, sin bulto) + arco de los
+mechones bajado. Diagnóstico de color (bandas en `darker`): el punto
+residual SEGUÍA tan → es piel real, un pinhole que un mechón arqueado
+abre, no un brillo. Las bandas cierran ~95%; el residual es invisible a
+escala de visualización (solo a 3× de zoom). Lección aplicada: PARAR
+tras 3 intentos razonados sobre un hueco y documentar
+([[Lecciones]]/[[Principios de Anatomía 3D]]). Gates ALL_PASS.
+
+## [2026-07-19] qa+fix | QA final del pelo (libro 35% / lámina 35%): patilla eliminada por decisión de Boris y "roseta" de nuca rota
+Tercer QA doble sobre el estado final, con la observación de Boris
+pasada como contexto ya resuelto (el mechón de patilla sobra; el
+casquete debe parar por delante de la oreja a la altura donde ese
+mechón terminaba). Veredicto: lámina 35%, método 35%. **CRITICAL 1:**
+en la vista de espalda las tiras leían una ROSETA/molinete — 5-6
+lóbulos-gota de igual tamaño y ángulo convergiendo a un punto de la
+coronilla; anti-paralelismo violado de la forma más visible. Fix:
+factores `fan` y `endy` por tira — unas convergen, otras siguen rectas
+y otras ABREN hacia afuera, con alturas de muerte dispersas.
+**CRITICAL 2:** el tercio inferior de la nuca seguía liso sin
+subdivisión (pendiente). **HIGH:** el casquete abombaba sobre la oreja
+y la dejaba "enmarcada por un agujero" — el propio QA avisó que quitar
+solo la patilla no bastaría porque el bulto viene también de arriba y
+atrás; fix: casquete angostado en X (0.126→0.121) para que la oreja
+(x≈0.136) sobresalga, menos inclinación (0.36→0.28) y centro más bajo
+para que su borde delantero baje a y≈-0.035 y dibuje la patilla, como
+pidió Boris. **Decisión de Boris ejecutada:** el mechón de patilla
+suelto se ELIMINÓ (era una segunda pieza en una zona que el casquete
+ya rodeaba). Gates ALL_PASS. Pendientes del QA: subdivisión del tercio
+inferior de la nuca y picos del nacimiento aún parejos.
+
+## [2026-07-19] feature+qa | QA doble (libro + lámina) y REESTRUCTURA del pelo: casquete elipsoide continuo, sin flequillo, volumen aplanado
+Boris: "ya cumple preliminarmente, falta quitar eso abultado para que
+se vea más fluido; corre un QA que compare vs el libro y vs RAW".
+**(1) Abultado:** el grosor RADIAL de una pieza de loft es
+radio×flatten — la masa de la coronilla iba a 0.92 y protruía ~7.5cm
+(un blob). Bajado a 0.50 (masa) y 0.38 (tiras): el ancho lateral, que
+da la cobertura, no se toca. **(2) QA doble** (juez único, dos ejes:
+página p.156 del libro + lámina): lámina 40%, método 35%, con dos
+hallazgos duros — CRITICAL "las bandas apiladas leen anillos
+concéntricos / capas de cebolla" y HIGH "los picos frontales no
+existen en la lámina". **(3) Verificación en píxel propia** (regla del
+Vault: ante un QA que describe forma, mirar la lámina uno mismo; zoom
+6× a las 3 cabezas del canon): CONFIRMADOS los dos. El frontier crop
+NO tiene flequillo — el pelo nace en una línea alta y barre arriba-
+atrás — y la nuca es UNA MASA CONTINUA hasta el cuello, no anillos.
+**(4) Reestructura:** las 3 bandas de nuca + 3 de costado por lado se
+RETIRARON y se reemplazaron por UN CASQUETE ELIPSOIDE inclinado. Un
+elipsoide abraza la esfera craneal por construcción (sin sagita, sin
+costuras, sin anillos) y se auto-recorta; la INCLINACIÓN (rot.x 0.36)
+es la clave: manda el polo inferior a la nuca (pelo bajo atrás) y sube
+el borde delantero por encima de la frente (línea del pelo alta) y por
+encima de la oreja (que el canon quiere despejada). Las puntas del
+flequillo se subieron a la línea del nacimiento. Gates ALL_PASS.
+
+## [2026-07-19] fix | Costado del cráneo cubierto (Boris marcó los huecos en azul) — 3 bandas envolventes por lado
+Boris marcó en azul sobre la captura de perfil los puntos sin pelo:
+todos caían en el PARIETAL, entre la masa de arriba y las piezas de
+nuca/patilla. Las piezas previas solo cubrían una diagonal fina, así
+que el costado quedaba al aire. Fix: 3 bandas por lado que ENVUELVEN el
+costado de frente a nuca a tres alturas (y≈0.104 / 0.062 / 0.038), con
+solape vertical entre ellas y lift escalonado (regla de la sagita).
+Detalle que importa para autorar más: las x hay que acotarlas al
+SEMIANCHO REAL del cráneo a cada altura (a y=0.105 el cráneo mide 0.092
+de semiancho, no 0.123) — pedir un x mayor da un punto fuera de la
+elipsoide y `_on_skull` lo clampea a un z falso. Se RETIRÓ la banda
+temporal vieja, redundante con las nuevas: superpuestas apilaban bordes
+y el lateral leía acolchado/mosaico (menos piezas = menos siluetas
+internas). Gates core+combat+springboard ALL_PASS. Residual: el costado
+todavía lee algo geométrico por el apilado de bandas.
+
+## [2026-07-19] fix | Fade completado: nuca hasta el cuello + patillas pegadas a la oreja (circuito cerrado) — lección de la SAGITA
+Boris sobre capturas: "la parte de abajo debería llegar cercana al
+cuello, las patillas deben pasar lo más pegado a las orejas para
+conectar con la parte de atrás". **Nuca:** baja de y 0.040 a y≈-0.048.
+NO se hizo con una banda alta única — el anillo del loft es una elipse
+PLANA, así que una banda de más de ~6cm de alto deja de abrazar el
+cráneo y flota en los bordes (calculado: a ±0.058 del eje el cráneo se
+adelanta ~1.4cm). Se APILARON 3 bandas de media altura ≤0.038 con
+solape; las costuras horizontales no dentan (los dientes venían de
+costuras VERTICALES). **Patillas:** movidas al ANCHO MÁXIMO del cráneo
+(x≈0.122, donde la superficie cae en z≈0 = justo delante de la oreja,
+que vive en z -0.057..-0.012) y bajadas a y=-0.038; antes iban a
+x 0.119/y -0.012 → z≈+0.034, o sea 4,6cm ADELANTE de la oreja y
+cortando a media oreja: ni pegadas ni conectadas. La banda de detrás de
+la oreja se extendió a y=-0.020 para cerrar el circuito patilla→oreja→
+nuca. **LECCIÓN NUEVA (2 rondas perdidas):** al apoyar una banda de
+loft sobre una superficie curva, el anillo es una CUERDA, no un arco:
+sus bordes se hunden h²/(2R) (h=media altura, R=radio del cráneo). Si
+el `lift` no supera esa sagita, el cráneo asoma por los bordes y
+aparecen HUECOS DE PIEL entre bandas (fue exactamente el defecto: lift
+2mm contra sagita 3.7mm). Fix: lift 0.007 en las bandas de nuca,
+escalonado (más afuera arriba) para que cada banda monte sobre la de
+abajo como capas. Gates core+combat+springboard ALL_PASS. Residual
+menor: las costuras entre bandas apiladas todavía se insinúan.
+
+## [2026-07-19] fix | Refinamiento de pelo pedido por Boris: quiebres suaves + taper + FADE de temporales/patillas/nuca
+Tres pedidos del director sobre el rework: (a) suavizar quiebres, (b)
+taper, (c) "no tiene nada de cabello en los temporales y patillas, ni
+en la nuca". **(a)** `sides` de las secciones del loft subido (clump
+8→14, tiras 6→12, contrastantes 5→10): a 8 lados cada faceta medía
+~2.5cm y el cel-step la marcaba como panel (el QA leía "placas/tejas").
+**(b)** TAPER real: las tiras ganan un punto extra por delante del
+nacimiento con radio w*0.22 (era w*0.55) y la irregularidad entre
+vecinas se amplificó — el corte pelo→piel dejó de ser el contorno duro
+y parejo que leía "gorro/jockey". **(c)** PASADA 0 nueva = FADE: tiras
+que hugean el cráneo en temporales (2/lado), PATILLA por delante de la
+oreja (que vive en x±0.124, z-0.034), detrás de la oreja (2/lado) y
+NUCA (7 solapadas). Cuatro rondas para calibrarlo, cada una con causa
+medida: fade en `darker` → casi negro ("garras") → tono medio; tiras
+finas y puntiagudas → borde festoneado ("dedos") → más anchas que su
+paso + puntas romas; y **`flatten` 0.45→0.15**: el grosor
+radial de una tira es radio×flatten, así que a 0.45 protruían ~14mm —
+eso es melena corta, no rapado, y por eso leían lóbulos; a 0.15 son
+cintas de ~3mm apoyadas en el cráneo. QA intermedio 58% (de 52%) pero
+con CRITICAL: patillas/nuca seguían leyendo "picos/garras sobre piel".
+**LECCIÓN QUE CERRÓ EL PROBLEMA (rondas 15-17):** el defecto no era el
+ancho, el tono ni el largo de las tiras — era que eran TIRAS. Cada
+costura entre dos tiras vecinas ES un diente, y toda pieza suelta con
+punta en esa zona lee colmillo (probado y descartado también con
+"mechitas" cortas para ablandar el filo: salieron colmillos
+triangulares). El fade se rehízo como **BANDAS CONTINUAS de una sola
+pieza**: la de nuca corre a lo ANCHO (espina horizontal → el radio del
+loft se proyecta en vertical, define el alto del rapado y no queda
+ninguna costura vertical que dentar), más una banda por lado en
+temporal y otra detrás de la oreja. Regla nueva: en zonas de fade/
+rapado, superficie continua; los mechones sueltos son solo para pelo
+largo. Gates core+combat+springboard ALL_PASS.
+
+## [2026-07-19] feature | FULL REWORK del cabello con jerarquía de 3 pasadas del libro — frontier crop reconstruido, causa raíz del "casco" resuelta
+Tras el minado dirigido, `_hair_frontier_crop` reconstruido según el
+método del libro (p.156/243): (1) UN clump madre direccional frente→
+nuca que ES el cap del domo (no concéntrico al cráneo), (2) 7 tiras que
+SIGUEN las trayectorias del clump ("la masa se parte en tiras", no
+picos pegados) + 2 laterales que exponen la oreja, (3) mechones
+contrastantes. Herramienta nueva `_on_skull(x,y,lift,back)`: devuelve
+el punto de la superficie del cráneo REAL (semiejes medidos
+0.123/0.141/0.1425 @ y=0.012) — las 3 primeras rondas fallaron por
+autorar con semiejes INVENTADOS ("copete flotante"/"mohawk hundido"),
+lección: autorar geometría de pelo contra la superficie medida, no a
+ojo. Cuatro defectos cazados en captura y resueltos: (a) winding que
+dejaba mechones huecos color cielo; (b) tinte AZUL de todas las tiras =
+rim del `toon_opaque` (fresnel^3) que en tiras finas baña el perímetro
+completo — `hair_mat.rim_strength` 0.18→0.04 SOLO en pelo (causa raíz
+del "tinte azulado" que venía desde los conos del piloto); (c) albedo
+`darker` que bajo la banda de sombra rendía casi negro-azul → clump a
+tono medio; (d) "cuenco/tonsura oscuro" trasero = pared en sombra de la
+concha re-añadida → concha RETIRADA, nuca corta que expone piel
+(lámina). Front/3-4/perfil leen pelo castaño barrido con mechones;
+nuca corta con piel. QA imparcial nuevo: **52%** (vs 38% del piloto —
+juez distinto, no comparable directo, pero: defecto de "dientes"
+ELIMINADO, sin cuenco trasero, color correcto). Residual HIGH: el
+faceting duro entre tiras lee "placas/armadura" y la línea del pelo es
+muy pareja (falta taper) — refinable dentro del método (techo estimado
+65-75%). Gates core+combat+springboard ALL_PASS. VoBo de Boris
+pendiente (su checkpoint de "cabello decente" antes de la última ronda
+de cara).
+
+## [2026-07-19] design | VoBo TEMPORAL de mandíbula + piloto de loft RECHAZADO → full rework de cabello con minado dirigido del libro
+Boris sobre la mandíbula aligerada: "funciona muy bien y visiblemente
+mejor que el principio" — VoBo temporal; la última ronda de cara se
+hará cuando el humano tenga cabello decente. El piloto de loft NO lo
+convence → full rework del cabello. Validación pedida por Boris: el
+Vault solo tenía 3 principios de pelo en [[Principios de Anatomía 3D]]
+(masa primero / anti-paralelismo / adaptación Sobel) — exactamente los
+que el piloto ya aplicó; la propia página admite que faltan las
+"pasadas intermedias de subdivisión progresiva" sin documentarlas.
+Veredicto: INSUFICIENTE → se re-abrió "Anatomy for 3D Artists" (copia
+personal en Downloads, mutool; el PDF no tiene capa de texto, se
+re-renderizaron las 157 pp a JPEG) y se lanzaron 3 mineros en paralelo
+dedicados EXCLUSIVAMENTE a pelo (pp.1-55 / 56-110 / 111-157):
+proceso de construcción, subdivisión 1ria→2ria→3ria, mechones,
+hairline, flow, silueta anti-casco, estilizado vs realista.
+
+## [2026-07-19] feature | FASE 3 pelo: loft IMPLEMENTADO y piloto ejecutado — detenido en regla de cierre con QA 38%
+Primera ejecución real del recurso ratificado 2026-07-12: `_loft`
+(Curve3D + perfil de radios → malla SurfaceTool facetada, contrato de
+ejes documentado generador+consumidor) y `_lock` en `hair_library.gd`.
+Frontier crop reconstruido con el orden del libro (masa conservada →
+16 mechones loft → 3 rebeldes, anti-paralelismo). 3 rondas: r1 puntas
+"garra" hasta la ceja; r2 acortadas/arrimadas; bug real cazado en
+captura: WINDING invertido (caras exteriores culled — mechones leían
+"V huecas" color cielo); r3 tonal (sin `darker` en flequillo — colgado
+bajo el quiff ya vive en la banda de sombra; con darker leía "agujero").
+QA imparcial de cierre: 38% (baseline de SU hilo) — mechones con punta
+real SÍ, pero conjunto "casco con dentículos": falta separación real
+entre puntas y romper el domo trasero; techo estimado 50-55%. Regla del
+PRD aplicada: DETENERSE y reportar (no iterar a ciegas). Continuación
+diseñada en [[PRD-Catalogo-Peinados-v1]] (draft nuevo: 6-8 estilos ×
+género × raza, decisión de Boris). Issue conocido anotado: tinte
+azulado del shader en piezas colgantes (preexistente con los conos).
+
+## [2026-07-19] qa | GRUPO C ejecutado — jueces canónicos nuevos: rostro 34%, torso 32% (baselines de SUS hilos)
+El presupuesto de subagentes volvió (lección confirmada: ventana de
+5h, no mensual — sondeo barato antes de asumir espera). Un juez único
+por región sobre el set fresco post-mini-ronda: ROSTRO 34% (peores:
+boca-cápsula 20%, mentón-cuboide en perfil 25%; mejores: cráneo 55%,
+orejas 45%) y TORSO 32% (CRITICAL: hombro-esfera desconectado, cintura
+sin angostamiento; techo declarado: pec/oblicuos/omóplato como forma).
+Arbitraje del orquestador sobre hallazgos: "ojos anime" DESCARTADO
+(párpado pesado A8 tiene VoBo de Boris), "triángulo verde bajo el ojo"
+DESCARTADO (warpaint Mistbound deliberado), "sin clavícula/cuello
+esfera" contradice A4/A6 verificados en píxel — se toman con pinzas.
+Números NO comparables con los 48-57%/38-55% de jueces anteriores
+(varianza entre jueces ±10-17, lección 07-17); estos son los baselines
+canónicos de la serie nueva. El VoBo de Boris sigue mandando.
+
+## [2026-07-19] fix | Mini-ronda VoBo: quiebres de mandíbula/mentón aligerados (2 rondas, causa calculada)
+Boris revisó capturas (VoBo condicional: cara "90% bien") y circuló en
+azul los quiebres de tinta en las junturas de la mandíbula. Diagnóstico
+por geometría + zoom 3× (System.Drawing): (1) la esquina frontal-interna
+de cada faceta `jaw_body` (yaw 0.40) quedaba ~4mm POR DELANTE de la cara
+frontal de la caja central — arista proud que el Sobel entintaba como
+trazo vertical junto a la comisura; (2) los fondos de las facetas
+colgaban 3.5mm bajo el fondo de la caja central — cada desnivel un jog
+en la línea de la mandíbula; (3) el chaflán B2a estaba centrado casi
+SOBRE la arista (sobresalía 9.6mm bajo el fondo y 8.6mm frente a la
+cara: fabricaba sus propios labios de tinta en vez de cortar la
+esquina). Fixes: yaw 0.40→0.30, fondos alineados al ras (-0.0275),
+faceta retraída (z 0.002→-0.003, cruce sobre la cara central =
+profundidad continua), chaflán hundido a (y-0.019, z 0.032) con inset
+~7mm/lado y puntas enterradas, goníacas agrandadas (0.9/0.7/1.05)
+envolviendo el vértice de la rama. Verificado con zoom: trazo vertical
+MUERTO, línea inferior continua, goníaco curvo en 3/4; turnaround sin
+regresiones. Gates: test_core + autotest_combat + autotest_springboard
+ALL_PASS. Queda: VoBo final de Boris sobre las capturas nuevas.
+
+## [2026-07-17] fix | Sprint GRUPO B ejecutado — labios sin frontera de material, chaflán+goníaco, oreja con hélix, rodilla/gemelo
+La "bolsa de bisel/malla" resultó atacable con primitivas + la regla de
+tinta nueva, sin malla custom: **B1** labios re-tonalizados a piel
+oscurecida (#dba07c) — la frontera dura de MATERIAL era lo único que
+seguía leyendo "curita" (la tinta ya no la dibujaba); la lectura la
+lleva la comisura, como la lámina ("labios delgados y serios"). **B2**
+chaflán de 45° en el borde inferior-frontal del mentón (parte el
+escalón de 90° en dos — vistas bajas) + esferas goníacas (el vértice de
+caja de cada rama ahora redondea como masetero). **B3** OREJA con
+hélix: toro aplastado semi-hundido en el pabellón (TorusMesh, anillo en
+YZ) — el borde emerge en rampa sin tinta propia y el hueco muestra la
+elipse de abajo como concha; el óvalo-decal de perfil murió. **B4**
+rodilla achatada lateralmente (la esfera 0.066 era más ancha que ambos
+tubos = "repisa") + gemelo más largo (entrada/salida de silueta suave).
+Los ANILLOS de codo/hombro quedan como estilo aceptado por ahora
+(el QA mismo los marcó "consistentes si son intención") — se reabren
+solo si Boris los veta en capturas. Gates ALL_PASS. Verificado en
+pixel: perfil con oreja estructurada, frente con labios finos, mentón
+chaflanado.
+
+## [2026-07-17] fix | Sprint GRUPO A COMPLETO — A8 arbitrado por Boris (párpado pesado + mentón aligerado), gates verdes
+Cierre de A8 con VoBo del director sobre captura: (a) esclerótica
+achatada (0.85→0.70) + ceja más baja/gruesa — apertura angosta = párpado
+pesado/mirada dura del canon (adiós "ojos de cachorro" del juez fresco);
+(b) bloque del mentón −13mm de profundidad recortados por la ESPALDA (la
+punta frontal calibrada y el canon del mentón no se movieron; la
+proporción subió a 7.36 cabezas). Gates ALL_PASS. Con esto el GRUPO A
+del sprint queda 9/9. Pendientes: grupo B (bisel/malla — técnica nueva)
+y grupo C (re-medición con juez canónico único).
+
+## [2026-07-17] fix | Sprint de ajustes GRUPO A ejecutado (A1-A7, A9) — queda A8 (arbitraje de cara) para Boris
+Lote de calibración sobre `character_rig.gd` + verificación por captura:
+**A1 ✓** anillo cian del cuello aetherborn muerto (rim 0.28→0.24 + el
+surco supraclavicular cerrado por A6); **A2 ✓** panza de peso máximo
+calibrada (abdomen z 0.26→0.22, lleno pero tenso); **A3 ✓ SIN CAMBIO,
+por diseño** — la cintura escapular no escala con el build porque los
+pivotes de brazo (SHOULDER_X) tampoco: la corpulencia del Vanguard la
+ponen torso+extremidades, verificado coherente en `rig_arch_vanguard`;
+**A4 ✓** espalda con pendiente ÚNICA continua (trap_back más ancha/
+afuera, tope de deltoide 1.08→1.02 — los escalones trap/delt/brazo se
+fundieron); **A5 ✓** cintura frontal más honda (fondo 0.078→0.071,
+apunta al ~77% del hombro de la lámina); **A6 ✓** streaks crema del pec
+y divot "moneda" cerrados (chest_mass +6mm, pec z −3mm); **A7 ✓** seam
+de muñeca (taper −2mm) y slivers del pulgar (apertura 0.44→0.40)
+atenuados; **A9 ✓** nota de familia sobre `tmp_dagna` (requiere boot
+con --ally). Gates `test_core`/`autotest_biomech` ALL_PASS. **A8
+pendiente de arbitraje del director** (contradicción entre jueces:
+ojos "cachorro" vs párpado pesado; mentón "profundo") — se decide con
+capturas enfrente. Grupo B (bisel/malla) y C (re-medición) sin arrancar.
+
+## [2026-07-17] feature | R4 CERRADA — integración verificada, batería completa ALL_PASS; la reescritura de la escultura queda COMPLETA, sigue sprint de ajustes
+Batería completa en verde: `test_core`, `autotest_biomech`,
+`autotest_combat`, `autotest_springboard`, `autotest_slice`,
+`autotest_ui` ALL_PASS + galería `autotest_rig` completa (3 orígenes,
+extremos de sliders, arcano full). Integraciones verificadas en pixel:
+orejas de elfo/iron/mist bien ancladas pese al cráneo retraído de R1;
+armadura ironblooded, goggles, prótesis y venas de mana en su sitio;
+outfit (faja/bandolera) asienta en la cintura nueva; Dagna (signature +
+build pesado) correcta. **Bug real de R4 cazado y arreglado:** las
+masas nuevas de pecho/espalda/abdomen no escalaban con `_apply_build` —
+en peso máximo el torso crecía y se las tragaba (el "peto" renacía,
+visible en `rig_weight_max.png`). Fix estructural: reparentadas a
+`torso`/`waist` (heredan el factor elíptico del build; sin skew porque
+no están rotadas); el neutro del banco quedó pixel-idéntico y
+weight_max ya lee pecho/panza escalados. `tmp_dagna` FAIL "sin
+controller" = limitación del banco (requiere boot con --ally), no
+regresión. El QA final de cuerpo completo se cortó por límite de gasto
+de subagentes — el backlog del sprint se consolidó desde los residuales
+documentados de los 3 QA de fase + jueces frescos + hallazgos de
+integración propios (está en [[PRD-Reescritura-Escultura-Rig-v1]]).
+Cierre real del loop: VoBo de Boris sobre capturas + sprint de ajustes
+(pedido explícito del director al arrancar R4).
+
+## [2026-07-17] feature | R3 CERRADA — manos 45%→70% (objetivo cumplido), extremidades 60%→68% (techo de primitivas)
+Manos según el libro sobre `character_rig.gd`: palma plana (0.036 de
+prof., adiós cubo-mitón) + prisma de taper nudillos→muñeca (hijo sin
+descendientes — lección: escala no uniforme del padre sesga a hijos
+rotados); dedos con bases abiertas y PUNTAS convergentes (rompen el
+mitón de frente), curl distinto por dedo, nudillos hasta la silueta
+dorsal, pulgar acortado/hundido naciendo del tenar (el end-cap
+entintado murió al caer bajo el umbral de tinta), eminencia tenar;
+muñeca encogida (su disco era más ancho que la palma nueva y leía
+burbuja — cazado con 2 pases de diagnóstico de color tras 2 edits sin
+efecto); gemelo con bulge posterior real en perfil. QA de fase (mismo
+hilo, 3 rondas): manos 45→60→70 ✓ objetivo; extremidades 60→68 con
+techo de primitivas confirmado (el gap restante es la bolsa de bisel/
+malla: anillos codo/hombro, escalón de rodilla, transición del gemelo).
+Cierre firmado por el QA condicionado a matar la isla de tinta del
+dorso izquierdo (regresión de la ronda 3) — RESUELTA (-0.020→-0.0185)
+y verificada en pixel. Gates ALL_PASS. Residuales LOW registrados en
+[[PRD-Reescritura-Escultura-Rig-v1]]. Sigue R4 (integración).
+
+## [2026-07-17] feature+lesson | REGLA DE TINTA adoptada (Sobel 0.30→1.00, VoBo con A/B) + la re-medición expone varianza entre jueces QA
+Con VoBo explícito de Boris (excepción puntual al anti-objetivo de
+shaders del PRD, decidida con A/B enfrente): `melancolia_post.gdshader`
+`edge_threshold` 0.30→1.00 — el Sobel deja de entintar saltos de
+profundidad <~2cm (las fronteras interiores entre masas del rig, causa
+raíz del techo de R1 Y R2) y conserva silueta, pliegues hondos
+(mandíbula, cuello→hombro) y clumps de follaje. A/B corrido contra 1.60
+(sin ganancia en el cuerpo, más erosión de follaje — descartado) y 0.30
+(baseline); sets guardados en scratchpad de sesión. Verificación visual
+propia: la diagonal del pecho, los arcos de pec, las costuras del mentón
+y la línea caja/abdomen MUEREN; el entorno a 30m conserva su tinta.
+Gates ALL_PASS. **La re-medición formal expuso un problema de
+metodología:** los hilos de los agentes QA de fase expiraron y los
+agentes FRESCOS midieron rostro 48% (vs 57% del hilo de fase) y torso
+38% (vs 55%), con veredictos OPUESTOS sobre la espalda ("el salto más
+grande" vs "desastre"). Arbitraje visual del orquestador: la pendiente
+cuello→hombro es real y continua; los escalones en los EXTREMOS del
+hombro (trap/deltoide/brazo apilados) también son reales. Conclusión
+registrada en [[Lecciones]]: el % de un QA-LLM solo es comparable DENTRO
+del mismo hilo de agente (varianza entre jueces ±10-17 pts); un juez
+fresco además no distingue tinta Sobel de banda oscura del cel. Los
+números del día quedan como RANGOS honestos: R1 rostro 48-57%, R2 torso
+38-55%, ambos claramente arriba de sus baselines (35% / 40%) y abajo
+del objetivo 70%. Insumos priorizados de los 4 QA consolidados en
+[[PRD-Reescritura-Escultura-Rig-v1]]. El ancla de verdad sigue siendo
+el pixel + el VoBo del director, no el número (QA Loop fase 7).
+
+## [2026-07-17] feature | R2 torso/hombros: 40% → 45% → 55% en 2 rondas de QA — freno: el techo de AMBAS fases es la regla de tinta (shader), decisión de Boris pendiente
+Reescultura R2 sobre `character_rig.gd` (5 rondas internas): clavículas-
+tubo RETIRADAS ("understated collarbones" literal de la lámina), masas
+nuevas de pecho/espalda/abdomen (elipsoides-rampa — profundidad de perfil
+real, la S completa), trapecio como RAMPA de caja (la pendiente cuello→
+hombro es ahora SILUETA, frente y espalda), deltoide gota (adiós
+hombreras-globo traseras), cintura sin escalón de radio (pellizco
+continuo), pecs subidos al frente de chest_mass. Falso CRITICAL cazado:
+la "correa diagonal" era en parte la SOMBRA de la regla de cabezas del
+banco (movida a x=-1.05 en `tmp_anatomy.gd`) — pero el QA ronda 2
+confirmó que una diagonal REAL persiste (frontera de masas trapecio/
+pecho/costado). **QA imparcial (agente propio de fase, 2 rondas): 40% →
+45% → 55%.** Espalda = el salto más grande (pendiente continua, sin
+globos). Gates ALL_PASS en cada ronda. **Techo declarado por el QA, y es
+EL MISMO de R1: el Sobel de profundidad entinta cada frontera interior
+entre masas — "una ronda dedicada a la regla de tinta (dónde sí y dónde
+no dibuja) probablemente mueva el % más que cualquier retoque de
+masas". Esa ronda toca `melancolia_post.gdshader` = anti-objetivo del
+PRD aprobado ⇒ decisión de Boris.** R2 queda en 55% commiteada y verde.
+
+## [2026-07-17] feature | R1 CERRADA en 57% (35→40→52→57, techo de primitivas alcanzado) — VoBo de ruta de Boris, sigue R2
+Boris eligió "cerrar el margen alcanzable y seguir a R2" tras el freno de
+la ronda 2. Ronda 8 de código (pómulos más acostados y menos profundos —
+la asimetría era el key offset de 15° de la cámara del banco; base de
+nariz angostada; ramas mandibulares más altas, muesca de silueta
+RESUELTA; convergencia ocular ~3.5° para la mirada en 3/4) + QA ronda 3:
+**57% final, sin regresiones, techo ~60% confirmado — "no gastar más
+rondas de ajuste; el costo/beneficio ya es negativo"**. Mejora neta de la
+fase: +22 puntos sobre el baseline (35%→57%). Gates
+`test_core`/`autotest_biomech` ALL_PASS. **Lista residual (insumo directo
+de la futura pasada con técnica nueva, guardada en
+[[PRD-Reescritura-Escultura-Rig-v1]]):** HIGH labios decal/malla sin
+borde perimetral; HIGH máscara de tinta selectiva (criterio: ninguna
+línea de tinta debe formar polígono cerrado alrededor de un rasgo); HIGH
+fusión del bloque mandibular en vistas no frontales (bisel);
+MEDIUM oreja con volumen (hélix) + quiebre goníaco biselado; LOW mirada
+3/4 residual. Lección nueva de mecanismo en [[Lecciones]] (paredes
+empinadas vs rampas bajo el Sobel de profundidad). R1 CERRADA — arranca
+R2 (torso/hombros, baseline 40%).
+
+## [2026-07-17] feature | R1 cabeza/rostro por masas: 35% → 52% en 2 rondas de QA — freno por regla del loop, decisión de Boris pendiente
+Primera pasada de la reescritura ([[PRD-Reescritura-Escultura-Rig-v1]]
+fase R1) sobre `character_rig.gd`: mandíbula como ESTRUCTURA de cajas
+(cuerpo/mentón central `jaw_mesh` — su AABB sigue siendo el mentón que
+mide el banco, slider `jaw` escala la estructura completa vía hijas — +
+2 ramas + 2 facets de cuerpo), cráneo con mitad inferior retraída (la
+coronilla intacta; la mandíbula pasa a dibujar la silueta de la cara
+baja), boca aplastada casi al ras (adiós pico de pato), raíz de nariz
+nueva, pómulos acostados sobre la normal local (rampa, no pared), ojos a
+mitad de cara (libro), glint espejado (mirada alineada), tono de labio
+rosa-tierra (absorbe la Fase 4a del PRD v2). `chin_boss`/`chin_bridge`/
+`jaw_angle` retirados. 7 rondas internas de iteración visual con los
+close-ups nuevos del banco. **QA imparcial Fable (mismo agente, 2
+rondas): 35% → 40% → 52%.** Nada empeoró; el fix de mayor impacto fue la
+silueta de mandíbula. Gates `test_core`/`autotest_biomech` ALL_PASS en
+cada ronda. **El QA declaró techo parcial de la técnica: con primitivas
+puras estima ~60% de máximo; para ≥70% hacen falta (a) labios sin borde
+perimetral (textura/vertex color/decal o máscara de tinta selectiva) y
+(b) aceptar o resolver el "cartón" del mentón visto desde ABAJO (ángulo
+que la cámara de juego casi no usa).** Alcanzable con más rondas de
+primitivas: pómulo derecho aún entintado (el izquierdo ya fundió —
+técnica probada), outline de nariz, escalón cráneo-mandíbula en silueta,
+mirada divergente en 3/4. Por regla de freno del [[QA Loop]] (máx 2
+rondas de QA sin reportar + techo declarado ⇒ decisión del director), R1
+queda EN PAUSA con el código commiteado y verde, esperando el VoBo de
+Boris sobre la ruta (cerrar el margen alcanzable ~60% y seguir a R2, o
+atacar primero la técnica nueva de labios/tinta selectiva).
+
+## [2026-07-17] design+feature | Reescritura de la escultura del rig APROBADA — PRD-Reescritura-Escultura-Rig-v1 + Fase R0 (banco confiable) CERRADA
+Tras el QA imparcial de rostro (35% vs [[fenotipo-humano-rostro-v1]], ver
+entrada anterior del día), Boris pidió plan formal y lo aprobó: reescribir
+la construcción de meshes de `character_rig.gd` desde cero, POR MASAS,
+conservando el andamiaje completo (API pública de 12 funciones, pivotes
+biomecánicos, metas, nombres de nodos/materiales, contrato con outfit/
+signature/tests — mapeado por 3 exploraciones dedicadas). Fases R0-R4 en
+[[PRD-Reescritura-Escultura-Rig-v1]] (formalizado por subagente PRD;
+Fases 1-2 del [[PRD-Rework-Modelado-Personajes-v2]] quedan superseded por
+R2/R3). **R0 ejecutada y cerrada:** (a) la cámara de perfil del banco
+quedó EXONERADA con diagnóstico empírico — lanzas de eje (DIAG_AXIS=1 en
+`tmp_anatomy.gd`) horizontales, paralelas y a longitud completa en el
+render: es un 90° real sin yaw acumulado en la cadena; la percepción de
+"sobre-rotada ~110-120°" del QA era otro síntoma de la geometría (nariz
+sin proyección + mentón huidizo = perfil sin silueta facial). (b) 3
+close-ups institucionalizados en el banco (`anatomy_closeup_chin.png`,
+`anatomy_closeup_neckshoulder.png`, `anatomy_closeup_chin_front.png`) —
+la lección del zoom deja de ser un recorte manual. (c) Baseline A/B
+pre-reescritura guardado en
+`90-Raw/reviews/baseline-pre-reescritura-rig-2026-07-17/` (14 capturas).
+Siguiente: R1 (cabeza/rostro por masas, objetivo ≥70%).
+
+## [2026-07-17] fix | CRITICAL "cuello de camisa de cartón" (Fase 1) CERRADO — el hueco real era mentón↔cuello, no mentón↔mandíbula
+Plan del día: atacar el único hallazgo CRITICAL de Fase 1 primero, protocolo
+[[QA Loop]] completo. (1) Higiene de entorno: Epic Games Launcher/EA
+Desktop corriendo, matados antes de tocar Godot (gotcha ya documentado en
+[[Lecciones]]). (2) Confirmado que `_add_outline_pass` (`character_rig.gd`)
+es un no-op — el rig NO fabrica outline por-pieza; la tinta la pone el
+Sobel de profundidad full-screen de `melancolia_post.gdshader`, sensible a
+saltos de pocos mm entre píxeles vecinos — cualquier hueco 3D real se
+entinta como borde propio, confirmando que la ruta de fix es geométrica,
+no de shader. (3) Diagnóstico de color aplicado por primera vez a la
+RELACIÓN entre piezas (no solo "cuál pieza", que ya se sabía) — magenta
+`chin_boss`/cian `jaw_mesh`/verde `neck` en `anatomy_face_34.png` — reveló
+que el hueco NO estaba entre mentón y mandíbula (esos se tocan bien de
+frente) sino entre mentón y CUELLO: `chin_boss` vive bajo `head` (escala
+×0.84, montada en `upper_spine`) mientras `neck` es un cilindro fijo
+aparte, hijo directo de `upper_spine` — el saliente frontal del mentón no
+tenía nada que lo continuara hacia la superficie lisa del cuello, salto
+real de varios cm invisible en el render completo a 1280×720 pero
+clarísimo en un recorte ampliado. (4) Primer intento de fix (bridge chico
+solo hacia la mandíbula) pasó la propia inspección visual pero el
+subagente QA imparcial (Opus, sin contexto previo) lo marcó **NO CERRADO**
+con precisión quirúrgica — señaló el bloque exacto que yo no había
+detectado a resolución completa. (5) Zoom manual (recortar+ampliar 3-4x
+con System.Drawing) sobre esa misma zona confirmó el veredicto del QA:
+había un bloque real que a tamaño natural se camufla. (6) Segundo fix:
+`chin_boss` achicado (0.058×0.032×0.055 → 0.045×0.014×0.030, preservando
+su punta frontal ya calibrada) + `chin_bridge` agrandada/estirada hasta
+tocar la superficie real de `neck`, no solo la mitad del camino. Gates
+`test_core`/`autotest_biomech` ALL_PASS. (7) Mismo subagente QA
+re-invocado (`SendMessage` al `agentId`, protocolo del [[QA Loop]]) con
+capturas + recortes ampliados nuevos → **CERRADO** en las 4 vistas,
+resolución completa y zoom. Reportó 3 hallazgos nuevos sin bloquear el
+cierre (mentón/mandíbula blandos sin masas, seam cuello-trapecio, marca
+blanca tipo corchete en el cuello — posible artefacto de UV) — anotados en
+[[PRD-Rework-Modelado-Personajes-v2]] Fase 1 para la próxima ronda. Detalle
+completo en [[PRD-Rework-Modelado-Personajes-v2]]; lección metodológica
+nueva (zoom obligatorio antes de dar un hallazgo geométrico por cerrado)
+en [[Lecciones]].
+
+## [2026-07-17] chore | Cierre de sesión — 2da higiene de contexto del día + 3 lecciones nuevas documentadas
+Boris pidió cerrar sesión con énfasis explícito en documentar aprendizajes
+para no repetir una sesión sin avance. Acciones: (1) [[Lecciones]] ganó 3
+entradas nuevas — marcar con COLOR (no ocultar) para aislar qué primitiva
+causa un defecto visual (el método de ocultar generó falsa sospecha de que
+los cambios de código no se aplicaban, hasta forzar un color para
+confirmarlo); una pieza validada solo de FRENTE puede fallar en otros
+ángulos del turnaround sin que nadie lo note (caso `chin_boss`, 6+ rondas
+de calibración, nunca antes visto en 3/4); cuando 2-3 intentos razonados
+de overlap no cierran una desconexión pese a que el cálculo 3D dice que
+debería funcionar, parar y documentar en vez de seguir ajustando a ciegas
+(puede ser un problema de lectura de silueta/Sobel en ese ángulo, no de
+overlap puro). (2) [[Current-State]] recortado por 2da vez en el mismo
+día (había vuelto a crecer a ~230 líneas tras la ronda de Fase 0/1/5) —
+el relato completo se movió VERBATIM a [[Current-State-Historico]]; el
+archivo activo queda con SOLO el arranque de la próxima sesión (Fase 1 en
+curso, QA ~40%, hallazgo abierto de `chin_boss` con sus 3 intentos
+fallidos documentados para no repetirlos) + hechos vigentes. (3) Estado
+real al cierre: Fase 1 (torso/hombros) sigue EN CURSO — CRITICAL
+`chin_boss` sin resolver, HIGH (hombros-globo, trapecio sin pendiente,
+perfil plano) y MEDIUM (cintura por línea, clavícula flotante) sin
+atacar todavía. Fase 5 (cara) con VoBo en sus 6 preguntas, pendiente solo
+de generar la lámina de rostro (brief 8). Nada bloqueado, nada roto —
+gates ALL_PASS en el último commit de código.
+
+## [2026-07-16] investigate | QA imparcial Fase 1 (~40% fidelidad) + "cardboard collar" rastreado hasta chin_boss — 2 intentos de fix sin éxito, revertido
+Con el subagente Fable QA imparcial finalmente corrido (2 intentos previos
+fallaron por límite de gasto de 5 horas, no mensual como se pensó — el
+3er intento con el mismo prompt sí completó), se obtuvo el primer veredicto
+medido de la Fase 1: **~40% de fidelidad torso/hombros.** Positivo: la
+hipertrofia del trapecio quedó genuinamente resuelta (sin "tercera
+cabeza"), la proporción global (~7.5 cabezas) aguanta, y el pipeline de
+tinta/sombreado es fiel al estilo — el problema es de fusión anatómica,
+no de shader. **CRITICAL #1 y #2** (torso "peto/cartón" + "costura
+cuello-hombro sin soldar, bloque rectangular tipo cuello de camisa")
+motivaron una investigación de campo: marcado de color pieza por pieza
+(torso, cuello, trapecio, clavícula ×2, acromion, pauldron, pec, deltoide)
+descartó las 8 primero — **el objeto real es `chin_boss` (el mentón)**,
+que en el ángulo 3/4 (`anatomy_face_34.png`) se lee desconectado de la
+mandíbula, no una pieza de hombro. Se probaron 3 variantes de overlap
+(profundidad, centro Z, alto/centro Y) — **ninguna cerró la desconexión
+visual** pese a que el cálculo de solape 3D indicaba que debía funcionar.
+Dado que `chin_boss` ya tiene 6+ rondas de calibración validadas de frente
+contra la lámina (documentadas en el propio código), se decidió NO seguir
+ajustando a ciegas (Lección: no reabrir una pieza ya validada sin
+evidencia clara de qué cambiar) — revertido a sus valores originales.
+**Queda como hallazgo abierto, sin resolver, para decisión de Boris.**
+Los demás hallazgos del QA (HIGH: hombros-globo, trapecio ahora ilegible
+en el otro sentido, perfil plano sin profundidad de pecho/curva lumbar;
+MEDIUM: cintura solo por línea dibujada, clavícula como trazos flotantes)
+**no se atacaron todavía** — la sesión se detuvo en el hallazgo del
+mentón para reportar y no seguir gastando presupuesto en ajustes sin
+evidencia. Gates `test_core`/`autotest_biomech`/`test_combat`/
+`autotest_slice`/`autotest_ui` ALL_PASS con el estado revertido (limpio,
+sin cambios netos de comportamiento respecto al commit anterior salvo
+comentarios de investigación).
+
+## [2026-07-16] fix | Mist-Stalker reconvertido a Mistbound (raza Beast-Folk → subcultura humana) en `origins_data.gd` + `character_rig.gd`
+El canon (`Las Tres Razas.md`, `Fenotipos y Creación de Personaje.md`,
+ratificados 2026-07-04) establece solo 3 razas jugables — Elfos, Enanos,
+Humanos — y que el kit Mist-Stalker se reinterpreta como **the Mistbound**,
+subcultura humana fronteriza del Driftmarket, 100% humana (sin rasgos de
+bestia). El código nunca se había actualizado: `origins_data.gd` seguía
+definiendo `"miststalker"` como tercera raza completa (tag "Beast-Folk
+Outlaw Rogues", `heightRange` propio) y `character_rig.gd` le generaba
+orejas cónicas bestiales, una cola de 6 segmentos y mechones de pelaje
+falso. Detectado por Boris en sesión paralela mientras trabajaba Fase 1 del
+rework de anatomía (nota "colateral" dejada en `00-Index.md`).
+
+**Alcance de la corrección (con 3 puntos de diseño confirmados por Boris
+antes de tocar código):**
+- `origins_data.gd`: `"miststalker"` → nombre "Mistbound", tag "Driftmarket
+  Frontier Outlaws", lore sin beastfolk, passive renombrado "Frontier
+  Instinct" (misma mecánica: velocidad en pasto/fog-sight/detección —
+  confirmado que no es exclusivamente bestial, solo se renombró el lore).
+  `heightRange` [0.9, 1.1] → **[0.9, 1.15]** (el más ancho de las 3 razas,
+  reflejando "máxima variación individual" de Fenotipos.md — confirmado por
+  Boris). Ciudad/reclutador/rival (Titan's Docks / Quill Marrow / Gilded
+  Concord) se mantuvieron como la cara Mistbound específica de esta entrada
+  (confirmado por Boris, consistente con "Driftfolk del Driftmarket" de Las
+  Tres Razas.md).
+- `character_rig.gd`: eliminada la rama completa de orejas cónicas +
+  cola de 6 esferas + mechones de pelaje falso (`_fur_slot`, ~70 líneas);
+  reemplazada por oreja humana neutra (mismo patrón esfera pequeña que ya
+  usa Iron-Blooded). Variable `_fur_slot` eliminada por no tener ya ningún
+  productor.
+- `substyles.json`: silueta de "Pack-Leader" (Vanguard de este origin) ya no
+  describe "beastfolk con pelt/fur bulk".
+- El **id interno `"miststalker"` se mantuvo sin cambios** — renombrarlo
+  arrastraría ~10 archivos de test que lo usan como string key
+  (`autotest_classes.gd`, `test_core.gd`, etc.); fuera del alcance pedido.
+  Los efectos visuales de clase (Pack-Leader wisp, Blood-Shaman siphon ring)
+  no son bestiales y se dejaron intactos.
+
+Gates verificados tras el cambio: `test_core.gd` ALL_PASS,
+`autotest_combat.gd` ALL_PASS, `autotest_springboard.gd` ALL_PASS,
+`autotest_classes.gd` (screenshots regenerados, confirmado visualmente sin
+orejas/cola/pelaje bestial). Cierra la nota "colateral" del punto 5 del
+[[Fase5-Cara-Propuesta-DRAFT]] en `00-Index.md`.
+
+## [2026-07-16] fix | Trapecio corregido: Boris detectó hipertrofia ("tres cabezas") — A/B/C comparadas, elegida B
+Boris revisó la captura de espalda del cierre de Fase 1.3 y marcó el
+trapecio como hipertrofiado ("¿no dirías que están demasiado
+hipertrofiados?") — la vista trasera mostraba literalmente "tres cabezas"
+(el trapecio de cada lado, escalado Y=1.5 en la corrección anterior, leía
+como un bulto redondo del mismo porte que la cabeza). **Admitido el error
+de proceso:** se había escalado el trapecio para que "se viera algo" tras
+confirmar que la versión original (Y=0.6) era invisible, sin medir contra
+la lámina — exactamente el atajo que la regla del proyecto ("la lámina es
+la autoridad de proporción") advierte evitar. Comparado directo contra la
+vista de espalda de `fenotipo-humano-torso-v1.png`: ahí el trapecio es una
+pendiente suave leída por sombreado, no un bulto separado. Se generaron 3
+variantes en paralelo (A 1.2/0.85/0.6, B 1.0/0.7/0.55, C 1.5/0.55/0.6 — C
+resultó tan prominente como A pese a ser más corta en Y, porque el ancho
+mayor compensaba) con captura de espalda lado a lado (PowerShell +
+System.Drawing, composición de 3 crops con etiqueta). **Boris eligió B**
+por ser la que menos lee como bulto separado — sigue habiendo un quiebre
+chico en la silueta, aceptado como necesario para que el Sobel entinte la
+masa (el sombreado solo, como en la lámina, no se lee a esta escala —
+confirmado en Fase 0). Gates ALL_PASS. Fase 1.3 se mantiene completa con
+el valor corregido.
+
+## [2026-07-16] feature | Fase 1.3 completada: acromion agregado + trapecio corrido para solapar el deltoide
+A pedido de Boris ("termina el acromion y el deltoide bajo el trapecio
+primero"), se completó lo que faltaba de 1.3. **Acromion:** `_box_mesh`
+chico y chato por lado, semi-hundido entre el borde exterior del trapecio
+y el tope del deltoide, mismo principio esfera-vs-caja ya confirmado 3
+veces en Fase C. **Overlap trapecio-deltoide:** el trapecio se corrió
+(centro 0.115→0.135, Y 0.30→0.285) para solaparse DIRECTO sobre el tope
+del deltoide — antes quedaba demasiado medial (cerca del cuello) y apenas
+tocaba el hombro. **Verificación honesta, no sobre-vendida:** en perfil el
+bulto de trapecio sigue leyéndose bien; en frente/3-4 el acromion y el
+ajuste de overlap no producen un quiebre claramente visible a esos
+ángulos de cámara (un plano en el tope del hombro se luce más desde
+arriba) — no rompió nada, pero tampoco es una mejora dramática ahí. No se
+sobre-ajustó a ciegas — queda anotado para que el QA de cierre decida si
+hace falta otra pasada. Gates ALL_PASS. Con esto, Fase 1.3 (cintura
+escapular: clavícula S + trapecio + acromion + deltoide-bajo-trapecio)
+queda completa en su primera pasada — falta el QA imparcial + VoBo de
+Boris para cerrar formalmente la fase.
+
+## [2026-07-16] feature | Fase 1 (torso/hombros) primera pasada — cintura con pellizco real, trapecio agrandado, clavícula partida en 2
+Arranque de Fase 1 tras cerrar Fase 0. **1.1 medido primero** (mandato de
+Boris): biacromial en `fenotipo-humano-torso-v1.png` medido por muestreo de
+píxeles propio (PowerShell + System.Drawing, cuadrícula de cabezas
+superpuesta sobre la regla "7.5 heads tall") — da ~2.05-2.08 cabezas,
+coincide EXACTO con lo que el render actual ya produce
+(`hombros_w=0.556m, 2.08 cabezas`). **Conclusión: `SHOULDER_X=0.21` no se
+toca** — confirma que el problema es de masas faltantes, no de ancho. La
+vista de espalda de la misma lámina muestra un trapecio real y visible,
+respaldando 1.3. Hallazgo importante al leer código: el trapecio y la
+clavícula YA EXISTÍAN (desde 2026-07-13/r3) — la premisa del PRD de que
+"no existe bloque escapular" estaba parcialmente desactualizada. El
+problema real (confirmado con captura de perfil fresca ANTES del fix: cero
+bulto de trapecio visible) era que el trapecio existente tenía escala Y
+demasiado chica (0.6, radio efectivo 0.06) para leer como masa propia —
+subida a 1.5. Captura DESPUÉS confirma un bulto con contorno propio donde
+antes había una curva lisa. Cintura (`waist`): antes copiaba EXACTO el
+radio del fondo del torso (0.11=0.11, cero pellizco, torso+cintura leían
+como un cilindro cónico continuo) — bajada a 0.095, primer paso real hacia
+el bloqueo de 3 masas (la pelvis YA es una caja, no hacía falta crearla).
+Clavícula partida en 2 cápsulas cortas con quiebre de Z (medial proa/
+lateral recesada) sugiriendo la curva en S del libro de anatomía — mejora
+más sutil que las otras dos, candidata a revisar en el QA de cierre.
+Gates `test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+`autotest_ui` ALL_PASS. Pendiente antes de cerrar la fase: acromion
+plano + deltoide-emergiendo-del-trapecio (no implementado todavía, el
+brazo sigue montado directo en `±SHOULDER_X`), QA imparcial + VoBo de
+Boris con capturas frente/perfil/3-4/espalda.
+
+## [2026-07-16] fix | Fase 0 (pipeline de tinta) ejecutada y cerrada — la premisa "personaje sin tratamiento" NO se sostuvo; fix real fue el ángulo de cámara del banco
+Arranque de la ejecución real del PRD-Rework-Modelado-Personajes-v2 tras
+el VoBo de Boris. Diagnóstico 0.1 (solo lectura): `tmp_anatomy.gd:115` SÍ
+llama `_gs.attach_post(_cam)`; el material del rig SÍ es `toon_opaque` vía
+`PipelineConfig.apply_to()` (`character_rig.gd:255`,
+`toon_materials.gd:50-56`) — sin desconexión. `ink_fade_dist=70` da
+fade≈1 a las distancias de estas capturas — no apaga nada de cerca.
+Inspección directa (zoom ×4, PowerShell + System.Drawing ante la
+ausencia de Python/ImageMagick en la máquina) de `anatomy_close.png`/
+`anatomy_face.png`/`anatomy_full_front.png` confirmó que la tinta Sobel
+SÍ entinta al personaje (silueta, cejas, nariz, boca, mandíbula,
+pectorales, comparable en peso al entorno) y que el banding SÍ existe con
+fuerza en `anatomy_full_side.png`/`anatomy_face_back.png` — **la
+afirmación del QA visual previo ("no muestra línea de tinta ni acuarela
+en absoluto") no se sostuvo contra el píxel real** (Lección ya escrita:
+"un QA de IA parafraseando una imagen es una capa de traducción con
+pérdida"). **Causa real:** las capturas "de frente" ponían la cámara
+EXACTAMENTE alineada con el eje del sol de "dawn"
+(`golden_scene.gd` PRESETS.dawn.sun_azim_deg=190 ≈ eje +Z del personaje)
+→ superficie uniformemente iluminada sin contraste que mostrar, mismo
+shader que el perfil (que sí banding bien en un ángulo distinto). La
+divergencia `golden_scene.gd:98-99` (`ambient_lift`/`rim_strength`
+hardcodeados para materiales de escena) vs `pipeline_config.gd:11,15` es
+real pero cosmética — no afecta al personaje. **Fix aplicado:**
+`tmp_anatomy.gd` — helper `_key_offset()` nuevo, rota 15° alrededor de Y
+el offset de cámara en `_frame_close()`, el shot frontal del turnaround
+de cabeza y `_frame_full_front()` (misma distancia/zoom, solo ángulo).
+Verificado visualmente (capturas regeneradas muestran volumen/sombreado
+real) + los 5 gates de la regla de sesión (`test_core`,
+`autotest_biomech`, `test_combat`, `autotest_slice`, `autotest_ui`)
+ALL_PASS. **Conclusión: el % de fidelidad medido hasta ahora (32→55%) NO
+estaba contaminado — Fase 1 (torso/hombros) puede arrancar directo, sin
+re-baseline obligatorio.** Fase 0.3 (A/B banding LINEAR) y 0.4
+(re-baseline) quedan como opcionales, no bloqueantes. Fase 0.5 (aclarar
+el rig de cápsulas en wilds_start/combat/city) sigue pendiente, sin
+investigar.
+
+## [2026-07-16] design | Fase 5 (cara) resuelta en las 6 preguntas abiertas — brief de lámina de rostro nuevo
+Boris resolvió las 6 preguntas pendientes de [[Fase5-Cara-Propuesta-DRAFT]]
+en una ronda de chat: (1) libro sí cubre cabeza/cara [ya resuelto antes],
+(2) **generar lámina de rostro nueva** (no medir solo contra reviews
+viejas), (3) esta fase toca SOLO la oreja neutra (las 3 variantes de
+origen quedan para el frente de elfo/enano), (4) SÍ verificar extremos de
+slider (`jaw`/`eyeTilt`/`eyeShape`, no solo el valor base 0.5), (5) **las 5
+partes se revisan parejo** (no solo ojos/orejas — mandíbula/mentón/nariz
+también, con el protocolo "verificar con captura fresca, tocar solo si
+aparece defecto concreto" para no reabrir a ciegas lo ya estable), (6) el
+sesgo racial de mandíbula/ojos (detectado esta misma sesión) queda FUERA
+de esta fase — entra "en cuanto empecemos con enanos y elfos", con el
+mecanismo ya propuesto en §1/§4 del borrador como insumo listo para ese
+frente futuro. Redactado brief nuevo "8 — Cabeza/rostro close-up (Humano)"
+en [[Briefs de Concept Art]], mismo formato/estilo que los briefs 1-3 ya
+ratificados: turnaround de 4 vistas a la misma escala, expresión neutra,
+pelo recogido para dejar oreja/mandíbula/pómulos visibles — pensado
+explícitamente como lámina de MEDICIÓN (método ya usado para `SHOULDER_X`),
+no de personalidad. Pendiente: generar y aprobar contra los 5 ejes del
+[[Art Bible]] antes de medir proporciones.
+
+## [2026-07-16] design | Minado completo del humano (piernas/pies/brazos/piel) + brecha racial (mandíbula/ojos) detectada + Fase 5 actualizada por subagente Fable
+Boris pidió asegurar que el minado del libro de anatomía cubriera "un rework
+completo del humano y todo el work del elfo y el enano", y encargó a un
+subagente con modelo **Fable** actualizar el borrador de Fase 5 con temas de
+orejas/ojos congruentes con el modelo 3D procedural propuesto. Minado propio
+(sin subagente, mismas 7 páginas + 3 nuevas del PDF ya localizado): agregadas
+a [[Principios de Anatomía 3D]] las secciones **Piernas y pies** (bloqueo,
+refinamiento, proporción pie≈antebrazo) y **Brazos y antebrazos** (codo,
+braquiorradial, "el brazo superior se ve corto porque el deltoides lo tapa")
+de "3D male Part 01 | Basic form"; **Piel y pliegues** (breve, aplicabilidad
+indirecta a malla continua vs. primitivas) de "Part 03 | Skin". Marcadas como
+insumo para el frente de piernas/pies (deuda técnica ya conocida, fuera de
+esta PRD), no para ejecutar ya. **Hallazgo con más impacto real:** cruzando
+[[Fenotipos y Creación de Personaje]] (ratificado 2026-07-04, tabla "rango
+racial: mismo slider, rangos distintos" para mandíbula/pómulos/tilt de ojos)
+contra `character_rig.gd:1906-1947`, se confirmó que `jaw`/`cheek`/
+`eyeTilt`/`eyeShape` usan el MISMO rango para las 3 razas — mientras que
+`heightRange` (`origins_data.gd`) y la oreja (`_build_origin_features`, 4
+ramas) SÍ son por-origen. Es una brecha real entre diseño ya ratificado y
+código, no una hipótesis. El subagente Fable (2 intentos previos fallaron por
+error 529 "Overloaded" del servidor, sin tocar el archivo; el 3er intento
+completó) actualizó [[Fase5-Cara-Propuesta-DRAFT]]: sección "Brecha real
+detectada" en §4 Ojos con propuesta de mecanismo concreto (`match
+_origin_id` desplazando la ventana del `_lerp` antes de aplicarlo, interfaz
+de slider intacta), nota equivalente en §1 Mandíbula, verificación cruzada
+en §5 Orejas (las 4 ramas ya cumplen el diseño por raza — la única brecha
+real es mandíbula/ojos, no oreja) y pregunta abierta nueva (#6: ¿el sesgo
+racial entra en esta fase o es frente aparte, dado que es código nuevo con
+validación visual propia?). De paso se detectó que `origins_data.gd` sigue
+tratando a Mist-Stalker como una raza completa (Beast-Folk, lore/pasiva/
+ciudad/rival propios) pese a que el diseño ya ratificó "Mistbound 100%
+humanos" — se separó como tarea aparte (spawn_task), fuera del alcance de
+este PRD de cara. Sigue todo como borrador, sin fusionar al PRD oficial.
+
+## [2026-07-16] design | VoBo de Boris sobre PRD-Rework-Modelado-Personajes-v2 + Fase 5 (cara) propuesta y corrección del minado
+Boris revisó los 3 puntos pendientes de ratificación del PRD y dio VoBo a
+los 3: (a) orden de fases 0→4, (b) A/B de banding LINEAR autorizado en Fase
+0.3, (c) criterio "medición manda" para `SHOULDER_X` en Fase 1 confirmado.
+Además pidió agregar una **Fase 5 nueva** (posterior a la boca): rework
+dirigido de mandíbula/ojos/nariz/mentón/orejas. Un subagente investigó y
+redactó [[Fase5-Cara-Propuesta-DRAFT]] (`20-State/PRDs/`), pero reportó
+—incorrectamente— que el libro de anatomía minado no cubre cabeza/cara en
+absoluto. **Boris corrigió esto en el acto**, señalando los capítulos
+exactos del mismo PDF: "Sculpting an archetypal figure — 3D male — Part 01
+| Basic form" §10-11 (pp.94-101, bloqueo general de cráneo/cara) y
+"Advanced 3D male — Part 01 | Head, neck, and face" de Djordje Nagulov
+(pp.116-121, capítulo completo de cabeza/cuello/expresiones). Se localizó
+el PDF en `Downloads` (383 MB, mismo archivo de la sesión anterior), se
+usó `mutool` (ya instalado) para ubicar el rango exacto de páginas
+(el PDF no tiene outline/marcadores — se ubicó renderizando muestras y
+leyendo cabeceras de capítulo) y se minaron las 7 páginas relevantes.
+Hallazgo con más señal: **principio hueso-vs-músculo** — "la cara tiene
+pocos músculos que definan forma; la mitad superior de la cabeza está
+definida por el hueso; error de principiante citado por el libro: levantar
+el borde del hueco ocular junto con las cejas, los huesos del cráneo no se
+mueven" — aplicable directo a los sliders `eyeTilt`/`eyeShape` de
+`character_rig.gd`. También confirma que la regla ya aplicada en código
+("hueco entre ojos = 1 ancho de ojo") viene efectivamente de este libro
+(§11), no de una fuente sin documentar como se pensó en la primera pasada.
+Único vacío real que persiste: el libro NO tiene proporción/estructura de
+OREJA (solo una mención tangencial de animación: "las orejas suben un poco
+al sonreír"). Agregado como sección nueva "Cabeza, cuello y cara" en
+[[Principios de Anatomía 3D]]; [[Fase5-Cara-Propuesta-DRAFT]] corregida en
+las secciones de mandíbula/ojos y en el aviso previo. Sigue como borrador
+de trabajo, NO fusionada al PRD oficial — pendiente VoBo de Boris sobre 5
+preguntas abiertas (lámina de rostro dedicada o no, alcance de las 4
+variantes de oreja por origen, verificación de extremos de slider, etc.).
+
+## [2026-07-16] design | PRD-Rework-Modelado-Personajes-v2 — instrucciones ejecutables compiladas
+Boris pidió traducir todo el conocimiento acumulado hoy (análisis
+motor-vs-ejecución, verificación de recursos sin ejecutar, minado del
+libro de anatomía) en instrucciones técnicas concretas que Sonnet pueda
+ejecutar para el rework completo de modelado de personajes. Compilado en
+[[PRD-Rework-Modelado-Personajes-v2]] con anclas de código verificadas
+por grep el mismo día (`SHOULDER_X character_rig.gd:39`, clavícula recta
+`:446-448`, waist copiando el torso `:485/1289-1293`, dedos uniformes
+`:681-702`, `_hair_frontier_crop hair_library.gd:319`,
+`toon_ramp.tres` CONSTANT). Estructura: 5 fases con dependencias — F0
+pipeline de tinta en el banco (BLOQUEANTE: los % medidos hasta hoy están
+parcialmente contaminados si el banco no aplica el post completo;
+incluye re-baseline y el A/B de banding LINEAR), F1 torso en 3 masas +
+cintura escapular como bloque propio (clavícula en S, trapecio real,
+acromion-caja; SHOULDER_X solo se mueve si la medición en píxeles de la
+lámina lo pide), F2 manos (curva de convergencia + inserción en arco +
+nudillos como masas puntuales + curl variable), F3 pelo (helper de loft
+`Curve3D`+`SurfaceTool` ratificado desde 07-12, orden invertido
+masa→mechones, anti-paralelismo adaptado al Sobel; PROHIBIDO 4º intento
+con cajas/conos), F4 menores (boca color, warpaint atlas). Reglas de
+sesión duras (Lecciones primero, gates + captura por fase, QA imparcial
+máx. 2 rondas sin reporte, no tocar pecs/barba/ROM). **Status:
+propuesto — espera VoBo de Boris en 3 puntos: orden de fases, banding
+LINEAR (look global) y el criterio lámina-primero de F1.**
+
+## [2026-07-16] lint | Higiene de contexto — Current-State.md recortado a solo el presente
+Boris pidió evaluar la skill "project-context" (higiene de archivos de
+contexto de Claude Code) y, al ver que su diagnóstico aplicaba directo a
+este Vault, pidió implementarlo. Su regla central: el archivo que se
+auto-carga en cada sesión ("status.md" en su vocabulario) debe describir
+SOLO el presente, con techo ~2,500 tokens; la historia va a un archivo
+append-only que no se auto-carga. **Diagnóstico confirmado con evidencia:**
+[[Current-State]] había llegado a 1,197 líneas / ~21,846 tokens — puro
+relato sesión-por-sesión acumulado desde el reseteo (2026-07-04), cargado
+entero en CADA arranque de sesión por la regla 1 de `CLAUDE.md`. Ya no era
+"estado actual", era el historial completo duplicando lo que [[LOG]] ya
+guarda. **Acción:** copia verbatim de todo el contenido a
+[[Current-State-Historico]] (archivo nuevo, cero pérdida de dato —
+verificado por copia exacta antes de tocar el original), luego
+`Current-State.md` se recortó a: el bloque vigente de "ARRANQUE DE LA
+PRÓXIMA SESIÓN" (con los hallazgos #0/#0.5/#0.6 de hoy) + una sección
+nueva "Hechos vigentes" (branch, motor, bloqueos, deuda técnica, riesgos
+abiertos) + punteros a [[LOG]] y [[Current-State-Historico]]. Resultado:
+~2,211 tokens (90% menos). Regla nueva documentada en `SCHEMA.md` §7 punto
+1 para que no vuelva a inflarse: lo que deja de ser "lo que sigue" se
+mueve, no se acumula. **No se instaló la skill ni su script
+`check_context.py`** (requiere Python real, no instalado en esta máquina;
+la adaptación del script queda como follow-up opcional, no bloqueante).
+
+## [2026-07-16] ingest | Minado de "Anatomy for 3D Artists" — Principios de Anatomía 3D
+Boris consiguió un libro (PDF de 366 MB, copia personal, NUNCA copiado al
+repo) sobre anatomía para modelado 3D y pidió revisarlo completo en modo
+automático. El PDF excedía el límite de extracción de texto (100 MB) por
+ser un escaneo de imagen por página a resolución de impresión —
+**se instaló `mutool` (MuPDF, vía winget, autorizado por Boris)** para
+re-renderizar las 157 páginas a JPEG legible (~1.5-2 MB c/u) sin tocar el
+archivo original. 5 subagentes en paralelo (30 páginas c/u) leyeron el
+libro completo y reportaron principios en su propia síntesis (disciplina
+de copyright: sin transcribir texto ni reproducir imágenes). Compilado en
+[[Principios de Anatomía 3D]] (`10-Knowledge/`), cruzado contra
+[[Lecciones]] y las prioridades abiertas del rework de fenotipo.
+Hallazgos con más señal: **torso** se bloquea en 3 masas (caja torácica
+2/3 + cintura deformable + pelvis 1/3, NO un cilindro continuo) con la
+cintura escapular como bloque separado y articulado — insumo directo para
+reabrir `SHOULDER_X`; **manos** tienen un sistema de proporción por
+mitades sucesivas + los dedos NUNCA rectos (curvan convergiendo al medio)
+— explica el síntoma "tabla plana"; **pelo** se bloquea como masa
+completa primero, mechones individuales al final, con variación
+deliberada anti-paralelismo entre mechones vecinos — probable causa real
+de los "2-3 lóbulos fundidos". Nota de fricción resuelta en la página: la
+recomendación del libro de "transiciones suaves" en pelo no aplica igual
+en un pipeline de línea de tinta Sobel (que necesita escalones de
+profundidad REALES para entintar mechones como trazos distintos) — se
+dejó explícito para no copiarlo ciego. **Nada de esto se aplicó todavía
+en código** — es conocimiento compilado, pendiente de ejecución cuando
+se retome `SHOULDER_X`/manos/pelo.
+
+## [2026-07-16] ingest | Quinta ronda de plugins — "Godot AI Builder" (framework + 9 skills) descartado
+Boris encontró `github.com/HubDev-AI/godot-ai-builder` (plugin de Claude
+Code + addon de editor Godot para generar juegos completos desde
+prompts) y pidió evaluarlo, primero como framework completo y luego
+9 skills sueltas que propuso como candidatas (`godot-builder`,
+`godot-director` +Opus orquestando, `godot-polish`, `godot-scene-arch`,
+`godot-player`, `godot-enemies`, `godot-physics`, `godot-effects`,
+`godot-assets`). **Framework completo: descartado** — sidecar Node.js
+(mismo criterio que ya rechazó `godot-ai`), exige el editor de Godot
+abierto (mismo costo ya marcado contraindicado para el spike de
+Beckett, sin correr todavía), `godot_install_addon` instala addons de
+forma autónoma (opuesto a la disciplina de 4 rondas de evaluación
+manual), y su protocolo de 6 fases compite con el SCHEMA/Vault ya
+funcionando. **Las 9 skills: descartadas en su mayoría por un hallazgo
+de fondo, no solo de estilo** — zip extraído a scratchpad (no
+instalado) y verificado con grep directo: la mayoría asume Godot
+**2D** (`CharacterBody2D`/`move_and_slide()`, `_draw()`, shaders
+`canvas_item`), y Aether Bound es 100% 3D con física analítica propia
+— choque de dimensión, no de arquitectura de juego. Único ítem
+rescatable: el Audio Manager Pattern de `godot-effects` (pool de
+`AudioStreamPlayer`), a confirmar contra `godot/autoload/` antes de
+portar. `godot-director` aporta solo 4 reglas sueltas de higiene
+GDScript como checklist, no su protocolo. Registrado como 5ª ronda en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`. Nada instalado.
+
+## [2026-07-16] ingest | Cuarta ronda de plugins — skill "Godot-Claude-Skills" evaluado y descartado
+Boris encontró y subió un skill de Claude Code para Godot
+(`Randroids-Dojo/Godot-Claude-Skills`, deprecated, ahora en el
+marketplace `Randroids-Dojo/skills`) pidiendo evaluación antes de
+instalar. Trae GdUnit4 (testing GDScript dentro de Godot) + PlayGodot
+(automatización tipo Playwright, requiere compilar un FORK CUSTOM del
+motor) + export web/Vercel/CI. **PlayGodot descartado**: mismo
+anti-patrón ya rechazado con LimboAI (toolchain de compilación
+injustificable) pero peor — reemplaza el binario del motor, no un
+addon; además duplica 1:1 lo que ya cubre Beckett MCP sin exigir
+compilar nada. **GdUnit4 no se adopta completo**: el harness propio de
+tests ya funciona y tiene 15+ lecciones específicas pagadas; único valor
+real detectado es un spike de 30 min para verificar si su runner
+registra autoloads en headless (limitación real y documentada de
+`--headless --script`, ver [[Lecciones]]) — no urgente, no bloqueante.
+Export web/CI: no aplica a la fase actual (desktop, sin `gh`
+autenticado). Registrado como 4ª ronda en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`. Nada instalado.
+
+## [2026-07-16] ingest | Catálogo Técnico Godot — verificación de campo + huecos nuevos
+Boris pidió revisar TODAS las librerías/técnicas de Godot y compilarlas al
+Vault con prioridad de uso, para conocer mejor la herramienta de trabajo
+tras el análisis de la sesión anterior. 2 subagentes: uno verificó en
+código (grep directo, no memoria) el estado real de los 5 recursos de
+[[Propuesta-Recursos-de-Modelado]] (ratificada 2026-07-12) — **confirmado:
+ninguno de los 5 está ejecutado en el personaje** (`character_rig.gd`
+sigue en 0 usos de `SurfaceTool`/`Curve3D`/triplanar; `toon_ramp.tres`
+sigue en `interpolation_mode=CONSTANT`, la causa exacta del banding duro
+que un benchmark ya había señalado). El otro subagente investigó con web
+search el ecosistema Godot 4.6 2026 buscando huecos no cubiertos por
+`Plugin-Evaluation-2026-07-11.md`: encontró 2 cosas nuevas de valor real —
+**`CompositorEffect`** (API nativa 4.3+ para saldar la deuda del post
+manual de `golden_scene.gd:657`, con `PPMagic` como referencia Sobel+
+Kuwahara casi 1:1) y el mecanismo técnico concreto para la "vista-esqueleto
+de debug" ya pedida (`ImmediateMesh` en el banco, más simple que un
+`EditorNode3DGizmoPlugin` completo). Confirmó con evidencia que NO vale
+la pena: CSG en runtime, compute shaders sin cuello de botella real,
+shaders de acuarela genéricos de comunidad, ningún addon nuevo de
+"humanoide procedural", ningún plugin de pelo maduro, y que Beckett
+sigue ganando sobre otros MCP servers 2026. Compilado en
+[[Catálogo Técnico Godot]] (nueva página, `10-Knowledge/`), sin duplicar
+los 2 documentos de investigación previos. **Conclusión operativa: antes
+de cualquier técnica nueva, ejecutar el Tier 0 (loft/banding/triplanar/
+gradientes/gizmo de debug) — ya ratificado desde 07-12 y nunca tocado.**
+
+## [2026-07-16] research | Análisis técnico + QA visual: ¿motor o ejecución? ¿Ghibli o Art Bible?
+Boris, honesto sobre el techo de ~50% de fidelidad o menos, pidió correr
+2 subagentes en paralelo (uno técnico leyendo shaders/pipeline sin ver
+estética, uno de QA visual mirando renders vs láminas RAW y benchmarks
+de estilo sin ver código) para saber si el techo es del motor Godot o de
+la habilidad de ejecución del equipo, y si convendría pivotar de
+"Melancolía Gráfica" a un estilo tipo Ghibli. **Veredicto convergente de
+ambos: no es el motor (Forward+ soporta bien el pipeline; las 4 capas de
+`melancolia_post.gdshader` están completas y wireadas), y no conviene
+Ghibli** (sería barato en uniforms pero quitaría la línea Sobel que hoy
+disfraza la crudeza de las primitivas procedurales del personaje — el
+entorno del propio juego ya logra el look objetivo, prueba de que el
+pipeline funciona). **Hallazgo nuevo y accionable:** el QA visual detectó
+que los renders `anatomy_*.png` (banco `tmp_anatomy.gd`) no muestran
+línea de tinta/acuarela — se leen como PBR/plástico genérico — mientras
+el entorno (`wilds_start/combat/city`) sí la muestra con el mismo
+pipeline; posible desconexión entre `attach_post`/`PipelineConfig` y la
+escena de `tmp_anatomy.gd`. Esto puede estar contaminando la medición de
+% de fidelidad de toda la ventana `feat/c6-anatomy-rework` (32→55%) — se
+registra como prioridad #0 de la próxima sesión en [[Current-State]],
+antes de reabrir `SHOULDER_X`. Hallazgo secundario sin investigar: los
+renders de gameplay (`wilds_start/combat/city`) muestran un rig de
+personaje distinto y más primitivo (cápsulas sin cara) que los renders
+`anatomy_*` — sin confirmar si es placeholder intencional o
+desincronización real entre bancos. Sesión de solo análisis, sin cambios
+de código.
+
+## [2026-07-14] ratificación | Boris autoriza reabrir SHOULDER_X/proporciones de hombro
+Al preguntarle qué decisión quedaba pendiente antes de cerrar, Boris pidió
+el contexto de la silueta de torso/hombros (mayor punto de apalancamiento
+según el QA de la ronda 55%) y **autorizó reabrir `SHOULDER_X`** — el
+pivote que varios PRDs venían dejando explícitamente como "no tocar sin
+confirmación de Boris" por el precedente de 2026-07-13 (una review vieja
+lo fosilizó +30% contradiciendo la lámina). Con esto el punto 1 del
+arranque de la próxima sesión pasa de "decisión pendiente" a "autorizado,
+ejecutar" — con la salvedad ya anotada de medir la lámina en píxeles antes
+de mover el número, mismo método que la vez que se detectó el error
+anterior.
+
+## [2026-07-14] state | Cierre de sesión — rutina §7 de SCHEMA ejecutada
+Sesión larga en `feat/c6-anatomy-rework`: PRD Rework Fenotipo (13 puntos,
+32%→42%), 2 rondas de fixes dirigidos (42%→45%→49%), PRD Geometría Nueva
+ratificado y ejecutado (pelo/torso/manos/boca, 49%→55%), y PRD Warpaint
+Personalizable (bug de doble-dibujo corregido + 3 estilos curados).
+Checklist de cierre ([[SCHEMA]] §7): (1) [[Current-State]] con bloque
+ARRANQUE DE LA PRÓXIMA SESIÓN fresco al tope, consolidando las 5
+prioridades siguientes en orden de impacto; (2) LOG con una entrada por
+operación (9 entradas esta sesión); (3) [[00-Index]] al día con los 3 PRDs
+nuevos; (4) [[Lecciones]] — 3 lecciones nuevas pagadas hoy: lookup por
+"último hijo" es frágil ante builds que agregan nodos después (bug real de
+producción, no solo de banco), una asignación estática se puede borrar
+sola si existe un sistema de settle/follow por frame, y un array de datos
+compartido entre UI y sistema técnico puede tener longitudes distintas
+(no asumir "índice inválido" sin grep completo) — más un refuerzo de la
+lección de auditar contra la lámina, extendida a paráfrasis de QA de IA;
+(5) working tree limpio, commits descriptivos, push pendiente de este
+mismo cierre; (6) todo lo reportado como terminado tiene gate verde o
+captura — nada se marcó "listo" sin evidencia.
+
+## [2026-07-14] fix | Warpaint personalizable — bug de doble-dibujo corregido, 3 estilos reales curados
+Boris aclaró que "personalizable" no es exponer el slider existente — cada
+estilo tiene que verse REALMENTE distinto y con buena pinta antes de que
+la elección del jugador tenga sentido. Al investigar se encontró un bug
+real: `_face_mark` (la "V" geométrica de Rework Fenotipo ronda 3) se
+dibujaba para CUALQUIER `warpaint_idx>0`, tapando los 5 patrones propios
+del atlas (`warpaint_atlas.gd`) — ningún índice era visualmente distinto
+de los demás. Corregido: la "V" ahora es exclusiva de `warpaint_idx==6`
+("Scout Marks"). `WARPAINTS` en `phenotype_data.gd` ganó esa 7ª entrada
+(existía en el atlas/geometría pero nunca estuvo expuesta como opción).
+Banco nuevo `tests/tmp_warpaint_gallery.gd` renderiza los 6 estilos
+aislados para evaluarlos — **3 con buena pinta (Hexbrand: glifo sutil en
+la frente; Eye of Ash: banda tipo antifaz, bold; Scout Marks: la "V",
+la más pulida) + None = 4 opciones, cumple el mínimo pedido.** 3 rotos o
+débiles: **Slash Crimson** (rayas verticales tipo camuflaje, probable
+distorsión de UV cerca de la ceja), **Tribal Tide** (invisible de frente,
+confirmado con zoom — roto, no solo débil), **Jagged Crown** (línea
+delgada casi tapada por el flequillo nuevo). Detalle completo con tabla
+y capturas en [[PRD-Warpaint-Personalizable]]. **Pendiente, fuera de esta
+sesión:** rework de las 3 funciones de atlas rotas (`_draw_pattern` casos
+1/3/5) o reemplazo por patrones geométricos nuevos; la UI de elección en
+creación de personaje sigue siendo Fase 4. QA de regresión
+(`test_core`/`test_combat`) ALL_PASS.
+
+## [2026-07-14] fix+qa | Geometría nueva ejecutada (pelo/torso/manos/boca) — 49% → 55%
+Ejecución de [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]] tras la
+ratificación de Boris. QA de regresión completo
+(`test_core`/`test_combat`/`autotest_biomech`/`autotest_slice`/
+`autotest_ui`) ALL_PASS en cada punto.
+**19. Torso:** `abs_plate` (masa elevada) ELIMINADO — el abdomen vuelve a
+ser la superficie desnuda del cilindro. `pec` aplanado (escala Z 0.5→0.32,
+X 1.4→1.7) para acercarse a "línea de pectoral" en vez de bulto.
+**20. Manos:** gap entre dedos recortado (offsets 0.025/0.010→0.0175/
+0.0058); cada dedo pasa de 1 caja + esfera-nudillo a 2 falanges
+(proximal+distal) encadenadas por un `Node3D` con rotación propia —
+quiebre de ángulo real, no bulto. Pulgar con curl mucho más agresivo
+(rotation.x −0.25→−0.55) y nacimiento más cerca del centro.
+**21. Pelo — reconstrucción completa de `_hair_frontier_crop`
+(`hair_library.gd`):** concha recortada agresivamente (scale.y 0.72→0.50,
+centro subido) para exponer nuca/orejas reales; remolino de coronilla
+nuevo (3 cajas en abanico); reemplazo de las 31 mechones-caja
+casi-fundidas por ~25 mechones-CONO (flequillo 5 + laterales 6 + corona
+3, más grandes, protrusión real vía `_cone` con la misma técnica de raíz-
+hundida/punta-afuera que la nariz). Mejora MUY visible en banco (nuca/
+orejas expuestas confirmado, ver capturas) pero el QA de esta ronda
+señala que los mechones todavía no leen como hebras individuales — se
+funden en 2-3 lóbulos redondos ("birrete/casco de natación"), objetivo
+parcialmente logrado.
+**22. Boca — Opción A ejecutada:** de 3 piezas (lip_upper/lip_lower/
+mouth_seam) a 1 sola cápsula fusionada + línea de comisura tallada
+(descentrada hacia arriba para preservar la asimetría "inferior más
+carnoso" sin una segunda masa). `lip_mat_lower` eliminado (quedó sin uso).
+**QA visual de esta ronda: 49% → 55%** (+6 — salto real pero menor al
+esperado de un cambio de geometría). El propio QA confirma 2 de 4 áreas
+resueltas en su objetivo (torso, boca-estructura) y 2 a medias (pelo —
+concha sí, mechones no; manos — quiebre sí, proporción no). **Hallazgos
+nuevos de esta ronda:** (a) parche/costura visible cuello-hombro (posible
+gap de geometría no soldada, no investigado); (b) boca lee como "herida"
+por el tono rojo-marrón oscuro, no por la forma; (c) **la silueta general
+del torso/hombros ("maniquí de tienda", sin cintura ni trapecio real) es
+ahora, según el propio QA, el mayor punto de apalancamiento para la
+próxima ronda** — más que cualquier detalle de cara/manos, y está fuera
+del alcance de este PRD (toca `SHOULDER_X`/proporciones, un punto que
+varios PRDs anteriores vienen dejando como decisión explícita de Boris,
+no ejecución automática). Warpaint sigue sin coincidir con la lámina de
+CARA (siempre existió esa discrepancia entre las dos láminas — Boris ya
+resolvió que no le preocupa, ver ratificación arriba).
+
+## [2026-07-14] ratificación | Boris aprueba geometría nueva; boca=Opción A; warpaint personalizable (Fase 4)
+Boris ratificó las 3 direcciones de [[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]
+(pelo/torso/manos) sin cambios, eligió **Opción A para la boca** (fusionar
+en una sola masa) y resolvió la nota fuera de alcance del warpaint: **no le
+preocupa la contradicción entre las dos láminas** — la versión bilateral
+actual se queda "mientras quede bien". Decisión de producto nueva: **el
+warpaint debe ser personalizable por el jugador en la creación de
+personaje**, no fijo en el fenotipo humano base. El dato ya existe
+(`PhenotypeData.PHENOTYPE_FIELDS["warpaint"]`, pick de `WARPAINTS`) — falta
+la UI de creación de personaje, que ya vive en **Fase 4** del
+[[Plan-de-Produccion]] ("Vestir y doler"). No es trabajo de la ventana C6;
+queda anotado como requisito confirmado para cuando se aborde esa UI.
+Arranca ejecución en código de pelo/torso/manos/boca.
+
+## [2026-07-14] plan | Propuesta de geometría nueva para pelo/torso/manos/boca
+Boris pidió planear la geometría nueva tras confirmar que los 18 puntos de
+ajuste de parámetros llegaron al techo (~50-55%, según el propio QA de la
+ronda 3). En vez de delegar a un QA imparcial de nuevo, el orquestador miró
+DIRECTO ambas láminas con zoom (`fenotipo-humano-v1.png` cara/pelo frente+
+espalda, `fenotipo-humano-torso-v1.png` mano/torso) — mismo principio que
+"ante conflicto, auditar contra la lámina" de [[Lecciones]]. Hallazgos que
+cambian el enfoque: (1) **pelo** — la lámina tiene nuca/laterales casi
+rapados (mucha piel expuesta) y un flequillo de 4-5 mechones INDIVIDUALES
+grandes con puntas reales, no una concha continua con 31 mechones chicos
+casi fundidos; (2) **torso** — el abdomen es CASI PLANO en la lámina, los
+"oblicuos" son literalmente 1-2 líneas de trazo sin volumen — `abs_plate`
+como masa elevada está resolviendo el problema equivocado; (3) **manos** —
+los dedos de la lámina están CASI JUNTOS (la separación se lee por la línea,
+no por el hueco físico) con un quiebre de ÁNGULO real en el nudillo, no una
+esfera-bulto; (4) **boca** — sin referencia directa en pose neutra, queda
+como decisión de Boris entre 2 direcciones. **Hallazgo colateral fuera de
+alcance:** las dos láminas dibujan el warpaint DISTINTO (asimétrico en la
+de cara, bilateral en la de torso, la ronda 3 implementó la bilateral) — ni
+un QA imparcial ni el orquestador pueden resolver esa contradicción sin que
+Boris elija cuál lámina manda. Propuesta completa en
+[[PRD-Geometria-Nueva-Pelo-Torso-Manos-Boca]]. **Código sin tocar — este
+checkpoint es de planeación, esperando ratificación antes de ejecutar.**
+
+## [2026-07-14] fix+qa | Tercera ronda: boca/warpaint/brazalete — 45% → 49%
+Boris pidió seguir con los hallazgos más baratos de la ronda del 45%.
+**16. Boca — geometría, no solo color.** El `mouth_seam` (línea de
+comisura) se había agrandado en rondas históricas para forzar visibilidad
+bajo el toon (cuando competía con la barba) — con la barba ya fuera del
+default, esa caja pasó a ser el elemento MÁS prominente de la boca, leída
+por el QA como "rectángulo sólido". Achicada (alto 0.010→0.006) y
+recedida (z 0.137→0.129, detrás de la cara frontal de los labios en vez de
+casi al ras). Labios engrosados (radios 0.007/0.009→0.010/0.013) para que
+tengan masa propia en vez de perderse contra la línea de comisura.
+**17. Warpaint bilateral y diagonal (corrige el punto 7 original).** El
+orquestador leyó DIRECTAMENTE `fenotipo-humano-torso-v1.png` (sin
+intermediario) y confirmó que el patrón real es una "V"/"A" simétrica —
+dos franjas anchas desde ambas sienes convergiendo en diagonal hacia el
+puente de la nariz — no "2 trazos verticales de un solo lado" como había
+transcrito el QA original de la ronda del 32%. Reconstruido bilateral
+(`for fside in [-1,1]`), diagonal (`rotation.z`), y engrosado
+(0.006→0.011) para que se note a distancia media, no solo en close-up.
+**18. Brazalete verde retirado.** `_arm_stripe` (banda de pintura en el
+bíceps) no existe en ninguna lámina — verificado contra
+`fenotipo-humano-torso-v1.png`: lo que hay ahí es un BRAZAL DE CUERO
+(vestuario, ya cubierto por `character_outfit.gd`, no modelado en el
+banco desnudo), no pintura. Se quita del fenotipo humano base.
+**QA visual de esta ronda: 45% → 49%** (+4). El propio QA confirma los 3
+fixes en su alcance (bíceps limpio, warpaint bilateral con dirección
+correcta, boca ya no domina la lectura) pero señala que el techo de esta
+técnica ronda 50-55% mientras 4 bloqueadores estructurales sigan sin
+geometría nueva: **torso lee "plancha/prisma" sin anatomía a distancia
+media**, **pelo sigue como casco/domo sin mechones reales** (confirmado
+tras 2 intentos fallidos de tuning geométrico en la ronda anterior —
+necesita rediseño, no parámetros), **manos como "tablas planas"** pese a
+la separación de dedos, y **boca sin volumen real de labios** (el fix de
+esta ronda la sacó de "elemento más ruidoso" pero no logró que lea como
+labios). **Hallazgo re-señalado (no nuevo, ya conocido):** la barba sigue
+fuera del default (decisión de Boris de la Fase C) — el QA sin contexto
+la marca como ausencia mayor, recordatorio de que sigue como nota abierta
+para cuando se aborde junto con el pelo real. QA de regresión
+(`test_core`/`test_combat`/`autotest_biomech`/`autotest_slice`/
+`autotest_ui`) ALL_PASS. **No tocado a propósito:** los pecs (`pec`
+sphere, líneas ~433-438) que el QA de la ronda 42% señaló como "leen como
+ojos en el torso" — geometría con historial de debate específico
+orquestador↔QA (números ya negociados: r 0.05, escala 1.4/0.9/0.5,
+verificados contra el radio real del cilindro) — no se toca sin más
+contexto de Boris.
+
+## [2026-07-14] fix+qa | Segunda ronda: pauldron fantasma + contraste de pelo — 42% → 45%
+Boris pidió arrancar la segunda ronda de fixes tras el QA del 42%,
+empezando por los 2 más baratos.
+**14. Pauldron fantasma (RESUELTO, confirmado por el QA de esta ronda,
+ausente en los 9 renders).** Causa raíz: `_build()` en `character_rig.gd`
+agrega las venas de mana DESPUÉS del pauldron, y una de ellas ("right
+upper arm") se parentea directo a `arms[1]` — el mismo nodo del pauldron
+— así que el pauldron dejó de ser el "último hijo de arm_r". El hack por
+índice (`get_child(count-1)`) que tanto `tmp_anatomy.gd:75` como
+`_apply_build()` (línea ~1286, lógica de escalado Vanguard — **bug de
+producción real, no solo de banco de pruebas**) usaban para encontrarlo
+empezó a agarrar la vena en su lugar. Fix: pauldron ahora tiene
+`.name = "pauldron"`; ambos call sites lo buscan por `find_child()` en vez
+de por índice.
+**15. Pelo — mejora parcial, NO resuelto de raíz.** Se probaron 3
+variantes de geometría (subir protrusión/reducir sink globalmente, luego
+solo en filas traseras) — ambas reabrieron el defecto histórico "dientes
+en la silueta frontal" (blanket) o no produjeron cambio visible perceptible
+(por fila) — revertidas. Lo único que quedó: contraste tonal de mechones
+subido de 2 tonos (±10%) a 3 tonos (+28%/-18%), técnicamente perceptible
+mirando de cerca pero el QA confirma que **no resuelve el problema real**:
+la silueta general sigue leyendo "casco/gorro sólido", con un borde
+horizontal duro entre pelo y frente. **Diagnóstico para la próxima
+sesión:** el problema es de GEOMETRÍA/silueta (la concha elipsoide +
+mechones semi-hundidos no rompen el contorno general), no de tono — un
+ajuste de color no lo va a cerrar; hace falta una revisión de forma más
+profunda (quizás una sesión dedicada, posiblemente con propuesta visual
+ANTES de codear, como se hizo con pelo/Fase D en el pasado).
+**QA visual de esta ronda: 42% → 45%** (+3). Confirma que ambos fixes
+funcionan en su alcance específico pero no mueven los bloqueadores de
+fondo. **Hallazgos NUEVOS que aparecieron en este corte (no reportados
+antes):** boca como "rectángulo sólido, lee como agujero geométrico"
+(más notorio sin barba encima); **dos manchas ovaladas en el pecho que
+leen como "ojos" en el torso** (geometría de `pec`, preexistente, nunca
+señalada hasta ahora); brazalete/banda verde en el brazo que el QA no
+reconoce contra ninguna lámina (es `_arm_stripe`, ya marcado como
+"sin confirmar en la lámina" en el PRD original — candidato a quitar).
+Resto de hallazgos (nariz faceted, ojos platillo, warpaint casi invisible
+a distancia, manos aún angulosas, cuello grueso) se mantienen de la ronda
+anterior. QA de regresión (`test_core`/`test_combat`/`autotest_biomech`)
+ALL_PASS en ambos fixes.
+
+## [2026-07-14] qa | QA visual imparcial de cierre — 32% → 42% (mismo protocolo, subagente sin contexto)
+Corrido el mismo protocolo de la ronda que dio ~32%: subagente sin contexto
+de código, renders frescos (`tmp_anatomy.gd` tras los 13 puntos) contra
+`fenotipo-humano-v1.png` + `fenotipo-humano-torso-v1.png`. **Veredicto:
+42% de fidelidad global** (+10 puntos). Mejoras confirmadas por el QA:
+torso sin caja rígida (hombros/pectorales con volumen real), manos con
+dedos separados (aunque la forma final — "abanico de cartas" — no
+convence), ubicación del warpaint correcta aunque la forma no.
+**CRITICAL sin resolver / nuevo:**
+1. **Pelo sigue leyendo casco/gorro sólido** — el swap a Frontier Crop
+   (punto 2) cambió el ÍNDICE de estilo pero el QA no ve textura de
+   mechones ni volumen direccional; sigue siendo el hallazgo #1, igual
+   que en la ronda del 32%.
+2. **Objeto flotante gris/azul en el hombro derecho** — verificado por el
+   orquestador contra `anatomy_close.png`: es el pauldron, que
+   `tmp_anatomy.gd:75` intenta ocultar buscando el ÚLTIMO hijo de `arm_r`
+   (hack frágil por índice) pero no lo está logrando. **No es parte de
+   los 13 puntos de este PRD ni se tocó en esta sesión** — bug
+   preexistente, candidato a fix rápido separado.
+3. **Costuras duras en abdomen/pelvis** — el ajuste del punto 12
+   (abs_plate) no cerró la lectura de "caja" que ve el QA en esa zona.
+**HIGH nuevos/reabiertos:** boca abierta con relleno sólido (lee como
+grito, no como expresión neutra — geometría, no color; el punto 8 solo
+tocó el TONO de `mouth_seam`, no la forma del hueco entre labios); warpaint
+con forma rígida (2 barras verticales cortas) en vez de trazo diagonal
+fluido continuo hacia la mejilla; piel grisácea confirma el diagnóstico
+del punto 11 (LUT del post, no tocado sin Boris). MEDIUM: piernas/botas
+muy finas y oscuras vs. el volumen muscular de la lámina; orejas "asa
+pegada" sin pliegue interior; nariz aún facetada en perfil.
+**Pendiente: decisión de Boris** — ¿segunda ronda de fixes (empezando por
+pelo + pauldron fantasma, los 2 CRITICAL más baratos de arreglar) o
+aceptar el 42% como checkpoint y avanzar a Fase D con estas notas
+abiertas?
+
+## [2026-07-14] fix | PRD Rework Fenotipo Humano Cuerpo Completo — 13 puntos EJECUTADOS EN CÓDIGO
+Ejecución completa del plan ratificado en
+[[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]] (13 puntos, orden por
+dependencia), con QA visual (`tests/tmp_anatomy.gd`) y regresión
+(`test_core`/`autotest_biomech`/`test_combat`/`autotest_slice`/
+`autotest_ui`) ALL_PASS tras cada punto. Todo en `character_rig.gd` salvo
+donde se indica.
+1. **Venas cian:** el bloque que actualiza `accent` por tema de origin
+   corría DESPUÉS del cálculo de `vein_mat.albedo_color` — en el primer
+   `apply_phenotype()` las venas se pintaban con el cyan default
+   `#46e6ff` antes de que `accent` tomara el color del origin. Movido el
+   bloque de origin ANTES del cálculo de venas. `phenotype_data.gd`:
+   default de `arcaneMod` 0.25→0.0 (no es parte del fenotipo humano base).
+2. **Pelo:** `tmp_anatomy.gd` tenía `hair=11` (Prince Curtain, melena de
+   cintas) en vez de `10` (Frontier Crop, el propio código lo marca como
+   canon del fenotipo humano). Verificado visualmente: silueta corta real,
+   no la misma lógica de cintas en versión chica.
+3. **Torso:** trapecios eran `BoxMesh` sobre el cilindro del torso (arista
+   dura garantizada); reemplazados por esfera escalada semi-hundida, mismo
+   patrón que `pec`/`deltoid`.
+4. **Hombros:** ángulo del trapecio 0.40→0.28 rad — primer paso de bajo
+   riesgo; `SHOULDER_X` queda intacto (decisión de Boris si no basta).
+5. **Orejas:** resuelto pasivamente por el swap de pelo (punto 2) — visibles
+   en perfil sin tocar `hair_library.gd`.
+6. **Manos:** gap entre dedos (`f_off`) de ~0.38mm efectivo a ~1.4mm limpio;
+   nudillo (esfera chica semi-hundida) agregado en la base de cada dedo;
+   pulgar de caja a cápsula (ya no lee "ranura paralela").
+7. **Warpaint:** de 1 franja diagonal a 2 trazos verticales (ceja/sien
+   izquierda → pómulo), confirmado por Fable contra la lámina.
+   **Corrección sobre el propio PRD:** el punto 7 daba por "índice inválido"
+   `warpaint=6` en `tmp_anatomy.gd` (la lista `WARPAINTS` de la UI solo
+   llega a 5) y proponía fijarlo a un valor 1-5 — pero el atlas
+   (`warpaint_atlas.gd:217-231`) documenta que el patrón 6 ("Scout Marks")
+   está VACÍO A PROPÓSITO porque esa marca vive como geometría en
+   `_face_mark`. Probado con `warpaint=1`: pintó el patrón legacy "Slash
+   Crimson" ENCIMA de los 2 trazos nuevos — revertido a `6`.
+8. **Boca:** `mouth_seam` usaba `pupil_mat` (negro plano, leía "hueco");
+   nuevo `mouth_seam_mat` en tono de labio oscurecido (`#a85f47` al 55%).
+9. **Nariz:** `bot_r` 0.026→0.019 (base más angosta). **Desviación del
+   PRD:** no se tocaron `radial_segments` (4→6-8 propuesto) — con N=4 y
+   `rotation.y=0` hay una cara plana exacta al frente (el fix de "Ronda 8"
+   ya documentado en el código, que cerró 3 rondas de facetado ilegible);
+   con N par >4 ningún múltiplo de `rotation.y` deja una cara centrada en
+   +Z, así que subir segmentos reabría el problema que Ronda 8 cerró.
+10. **Cejas:** `BoxMesh` (0.048,0.011,0.010)→(0.040,0.006,0.010) — primer
+    paso de bajo riesgo; Fable ya advirtió que esto no da arco real
+    (segunda pasada = cadena de cápsulas, pendiente si Boris lo pide).
+11. **Piel:** diagnóstico con post desactivado — confirma que `skin_mat`
+    base es cálido/rosado; el LUT del post (dawn) es el responsable del
+    "gris apagado" percibido (y del entintado toon completo). Es global —
+    **no tocado** sin aprobación explícita de Boris, tal como pedía el PRD.
+12. **Abdomen:** `abs_plate.scale` x 1.1→1.25 (ancho), z 0.4→0.30
+    (protrusión) — borde más gradual contra el cilindro.
+13. **Columna (riesgo alto):** `spine.position.z += 0.01` (estático, sin
+    lerp que lo borre). **Desviación del PRD:** `upper_spine.rotation.x =
+    -0.09` NO se asignó una sola vez en `_build()` como proponía el plan —
+    se descubrió que el "follow del torácico fuera del strike" (línea
+    ~2892) hace `lerp` cada frame que no es strike hacia
+    `spine.rotation.x * 0.30`, así que una asignación directa se borra sola
+    en <150ms de idle (mismo mecanismo que "el settle satura el clamp" de
+    [[Lecciones]]). Se sumó como offset constante (`DORSAL_CURVE_X`) al
+    TARGET de ese lerp, para que la curva sobreviva al reposo real, no solo
+    al primer frame. `autotest_biomech` + `test_combat` corridos
+    ANTES y DESPUÉS del cambio, ambos ALL_PASS. **Nota abierta:** la
+    métrica "cabezas" del banco bajó 7.49→7.13 tras este cambio — el
+    cráneo inclinado infla su propio AABB (medición suelo→coronilla vía
+    bounding box, ver [[Lecciones]] sobre inflación de AABB), probablemente
+    un artefacto de medición y no una regresión anatómica real, pero sin
+    confirmar — a verificar antes del próximo VoBo.
+**Pendiente: correr un nuevo QA visual imparcial (mismo protocolo, sin
+contexto de código) contra ambas láminas para medir el % de fidelidad
+resultante, y VoBo de Boris.**
+
+## [2026-07-14] plan | PRD nuevo: rework de fenotipo humano CUERPO COMPLETO — QA imparcial detecta ~32% de fidelidad
+Boris no había ratificado la sesión anterior (cierre de Fase C cara al 75%)
+y pidió, antes de seguir, correr un QA visual imparcial (subagente Fable)
+comparando el personaje humano completo contra las láminas RAW
+(`fenotipo-humano-v1.png` + `fenotipo-humano-torso-v1.png`) — no solo cara.
+Veredicto: **~32% de fidelidad global**. El 75% que cerró la Fase C solo
+medía cara; con pelo (estilo "Prince Curtain" de 22 cintas en vez del canon
+"Frontier Crop"), torso (trapecios como cajas, costuras visibles), manos
+(dedos casi fundidos) y un bug real de venas cian (`accent`/`arcaneMod`) el
+personaje completo lee como maniquí técnico, no como el aventurero de la
+lámina. **Lección de proceso que motivó este PRD (pedido explícito de
+Boris):** el feedback de arte no se estaba traduciendo a requerimiento
+técnico preciso antes de tocar código, forzando demasiadas rondas de
+iteración. Se corrigió con 3 roles separados que se validan entre sí ANTES
+de escribir código: QA visual (Fable) → técnico (lee el código real,
+traduce a archivo/línea/valor, detecta 2 falsos positivos) → QA de nuevo
+(ratifica o corrige la traducción técnica). El plan resultante — 13 puntos
+priorizados CRITICAL→LOW con coordenadas/valores concretos y orden de
+ejecución por dependencia — queda asentado en
+[[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]]. **Código sin tocar
+todavía** — este checkpoint es solo de planeación.
+
+## [2026-07-14] fix | Mentón corregido tras quitar la barba — cierra la ventana de ajuste facial
+Con la barba fuera, un QA final enfocado solo en labios+mentón encontró un
+problema real que la barba había estado tapando: la cara frontal de
+`chin_boss` (z≈0.098) quedaba ~4.7cm detrás de la cara frontal de
+`lip_lower` (z≈0.145) — el mentón nunca competía visualmente con el labio,
+al revés de la lámina (mentón marcado, el rasgo más anguloso de la cara).
+Primer intento de fix (igualar/superar el z del labio, front≈0.148) se
+pasó de rosca — leía como mandíbula protuberante/bulldog, detectado en
+captura antes de pedir verificación. Calibrado a un punto intermedio
+(`character_rig.gd`: profundidad 0.036→0.055, posición z 0.080→0.0975,
+front≈0.125) — confirmado: mentón como masa definida y separada, sin
+sobremordida, con un pliegue mentolabial que el QA identificó como
+anatómicamente correcto (no un artefacto). Labios sin cambios (ya estaban
+resueltos). QA de regresión ALL_PASS. **Cierra la ventana de ajuste facial
+de la Fase C — listo para pasar a Fase D (orejas + pelo).** **Mapeado para
+Fase D: revisar la barba de nuevo** (Boris la sacó del default por
+"no me gusta nada" pese al 75% técnico; retomarla junto con el pelo real,
+no como tema cerrado para siempre).
+
+## [2026-07-14] fix | Barba quitada del default (veredicto directo de Boris: "no me gusta nada")
+Pese a que el [[QA Loop]] cerró la barba en un estado técnicamente sólido
+(6+ rondas: esferas dispersas → bloque sólido → conicidad real → pulido de
+contorno, confirmado por el agente de desempate como "coherente con el
+lenguaje del resto de la cara"), el director la rechazó de plano al verla
+en las capturas finales. Se prioriza el veredicto directo del director por
+encima del % de QA — el `beardDensity`/`_beard_stubble` no se borran (el
+sistema queda intacto y configurable para personalización del jugador),
+solo cambia el DEFAULT del fenotipo humano canónico: `beard` vuelve de 1
+(Stubble) a 0 (Clean) en `phenotype_data.gd`. QA de regresión completo
+ALL_PASS. El fenotipo humano canónico queda lampiño otra vez, como estaba
+antes de la Fase C paso 6.
+
+## [2026-07-14] feature | QA Loop cierra Fase C cara en 75% de fidelidad
+Boris pidió correr el [[QA Loop]] (código↔QA↔PRD) hasta ~80% de fidelidad
+o el techo real de la técnica. Progreso medido: 30-35% → 40-45% → 50-55%
+→ 53-56% → 60-63% → 62-65% (el agente QA perdió su historial de
+transcript a mitad de camino) → un agente nuevo sin contexto visual
+discrepó fuerte con lo que orquestador y Boris veían directamente en las
+capturas (dijo "sin esclerótica visible, peor rasgo de la cara" y "barba
+retrocedida a collar de cuentas") → se lanzó un TERCER agente de
+DESEMPATE que leyó el código real (no solo impresión) y falló: confirmó
+la falta de esclerótica (bug real, iris desbordaba el blanco entero) pero
+objetó la lectura de "collar" en la barba. Desde ahí, 6+ rondas más de
+desempate → 55% → 58% → 61% → 69% → **75% final**.
+
+Se resolvieron con múltiples iteraciones EN VIVO (capturar → ver el
+problema → corregir → recapturar, no solo cálculo teórico):
+- **Boca**: bloque (r1) → agujero tipo "grito" por sobre-corregir el gap Y
+  (r2) → bloque chico de nuevo (r3) → escalón real sobre las CARAS
+  FRONTALES (no los centros — con radios distintos ambas caras pueden
+  coincidir en el mismo Z pese a que los números "parecen" distintos, fue
+  la causa de 4 rondas estancadas) + tono diferenciado por labio
+  (`lip_mat` oscuro arriba / `lip_mat_lower` claro abajo) — resuelto.
+- **Barba**: reemplazo COMPLETO del vocabulario, de esferas dispersas
+  (`_beard_stubble` original de Fase C p6) a bloque sólido CONFIGURABLE
+  (`density`, fenotipo `beardDensity`). 5 iteraciones de forma: collar
+  gigante (cálculo de profundidad de jaw mal hecho) → aro (más ancho que
+  el jaw real a esa altura, la mandíbula se angosta hacia el mentón) →
+  bulto negro (esfera cae entera en la banda oscura del toon) → "ladrillo"
+  (caja única sin la conicidad del jaw) → 3 cajas escalonadas + esfera de
+  remate, midiendo el z_surface real del jaw en 3 alturas distintas.
+- **Ojos**: iris/pupila desbordaban la esclerótica entera (margen
+  NEGATIVO, no "fino" como decía el comentario de Fase C p3) — confirmado
+  contra refs. de Link/Zelda (BotW/TotK) que Boris aportó al Vault
+  (`90-Raw/research/quality-benchmarks/`). Luego Boris notó que los ojos
+  quedaban muy separados (hueco entre esquinas internas ~2.4x el ancho de
+  un ojo vs. la regla estándar ~1x) — recogidos y agrandados, ceja movida
+  junto.
+- **Pómulos/mentón**: esfera → caja achatada (mismo principio en ambos).
+- **Nariz**: causa real no era magnitud sino ORIENTACIÓN — arista al
+  frente (dos caras iguales, luz simétrica, sin contraste) → cara plana
+  al frente (una cara iluminada + sombra lateral = quiebre real), misma
+  lección que resolvió la boca.
+- **Warpaint**: color bajado 3 veces hasta un oliva apagado.
+
+**Lección nueva (candidata a [[Lecciones]]):** una esfera NUNCA da un
+plano/borde anguloso en este vocabulario de primitivas+Sobel — confirmado
+independientemente en mentón, pómulo y barba. Usar cajas para cualquier
+rasgo que la lámina muestre como plano definido.
+
+PRD actualizado y cerrado: [[PRD-Fase-C-Ajuste-Facial]]. QA de regresión
+completo ALL_PASS en cada ronda, 7.49 cabezas estable. **Pendiente: VoBo
+final de Boris sobre el 75% antes de pasar a Fase D pelo** (el techo del
+75% es atribuible a pelo/orejas placeholder, fuera de este scope).
+
+## [2026-07-14] ingest | Benchmarks visuales Link/Zelda + Sable/Hinterberg
+El director agregó 9 archivos a `90-Raw/research/quality-benchmarks/`:
+`link-01/02/03.jpg` + `zelda.jpg` (Breath of the Wild / Tears of the
+Kingdom) — propuestos como fenotipo BASE para el modelado del elfo
+(Fase C6b/C6c): a diferencia de la lámina de concept (still 2D), esto es
+un resultado YA logrado dentro de un videojuego real — ojos almendra con
+esclerótica blanca claramente visible, nariz fina, boca seria de línea
+simple. Sirvió además de evidencia directa en el desempate de la Fase C:
+confirmó que la esclerótica del ojo humano actual (Godot) tenía margen
+NEGATIVO (el iris desbordaba la esclerótica entera), comparando contra
+estas referencias. `sable-01..05.{webp,jpg}` + `dungeons-of-hinterberg-
+01..03.jpg` — capturas reales de los dos pilares del norte artístico
+([[Art Bible]] "Melancolía Gráfica"), complementan el texto con
+referencia visual directa. Indexado en `00-Index.md`.
+
+## [2026-07-14] design | QA Loop ratificado (nuevo método de trabajo)
+Boris pidió formalizar en el Vault el método que surgió durante el ajuste
+fino de la Fase C: un subagente QA imparcial (sin contexto de la sesión)
+mide fidelidad contra la lámina RAW canónica (rasgo por rasgo, % + lista
+priorizada CRITICAL/HIGH/MEDIUM/LOW), un segundo subagente PRD traduce ese
+veredicto a un documento ejecutable (mismo formato que PRD-006/007, citando
+archivos/variables reales), y el orquestador itera código→QA→PRD hasta un
+% objetivo o hasta que el QA declare el techo real de la técnica vigente.
+Documentado en `30-Loops/QA Loop.md` (contrato mínimo: Objetivo · Entrada ·
+Fases · Validación · Artefactos · Salida, mismo esqueleto que los demás
+Loops). Indexado en `00-Index.md`. Reemplaza el patrón viejo de "VoBo del
+director → ajuste a ciegas → VoBo de nuevo" cuando existe una lámina de
+referencia canónica contra la que medir.
+
+## [2026-07-14] feature | Fase C ajuste fino post-QA (mandíbula, boca, pómulos, ojos, barba, warpaint)
+Boris pidió QA imparcial (subagente sin contexto previo) comparando las
+capturas de la Fase C contra la lámina `fenotipo-humano-v1.png`. Veredicto:
+**≈30-35% de fidelidad, "totalmente alejada"** — silueta craneal demasiado
+esférica (sin quiebres), pómulos invisibles, ojos con "arrugas" no
+buscadas, boca como bloque sin lectura de labios, barba no perceptible,
+warpaint como "curita fosforescente". Objeté parcialmente (yo veía
+labios/barba en mis propias capturas) pero Boris, comparando de nuevo
+contra la lámina, le dio la razón al QA — la lámina muestra barba COMPLETA
+de mandíbula-a-mandíbula, no un mentón aislado. Se le pidió al QA pasar de
+diagnóstico a plan ejecutable (geometría concreta, no "mejorar X") y se
+ejecutó en su orden sugerido:
+1. **Silueta craneal**: masa de "ángulo goníaco" (bulto hundido por
+   overlap, altura de oreja) — introduce el quiebre vertical→horizontal
+   de la mandíbula que la esfera única de `jaw_mesh` no tenía.
+2. **Boca**: labio sup/inf casi tangentes (gap Y 0.013, misma Z) → sin
+   escalón de profundidad detectable por el Sobel. Gap Y al doble +
+   escalón Z real (sup. protruye, inf. se hunde).
+3. **Pómulos**: escala Z 0.46→0.64 (estaban tan aplastados que "no leían
+   desde ningún ángulo") + menos hundimiento.
+4. **Ojos/arrugas**: diagnóstico correcto del QA — no era piel, era el
+   Sobel apilando pómulo+ceja a ~3.4cm del ojo. Más distancia pómulo-ojo +
+   brow con menos invasión.
+5. **Barba** (prioridad explícita de Boris): de 2 esferas aisladas
+   ("perilla") a cadena de 11 masas con overlap real ~2x entre centros,
+   de patilla a patilla. 2 rondas de fix en vivo: r6d (subida — colgaba
+   sobre el cuello por falta de quiebre jaw/cuello) y r6e (más overlap —
+   leía "collar de cuentas" antes de suficiente solape). Oscurecido
+   35%→20%.
+6. **Warpaint**: proporción 4:1→10:1 + color `PAINT_COLORS[4]` desaturado
+   `#4dff9d`→`#6b7f4a` en `palette_data.gd` (array propio, no toca
+   `HAIR_COLORS`). Franja subida de nuevo en Z (pómulo más grande volvió a
+   enterrarla).
+QA: `test_core`+`autotest_biomech`+`test_combat`+`autotest_slice`+
+`autotest_ui` ALL_PASS, 7.49 cabezas estable. **Pendiente: VoBo de Boris —
+¿re-correr QA vs. lámina o cerrar Fase C y pasar a Fase D pelo?**
+
+## [2026-07-14] feature | Fase C cara COMPLETA — p4 nariz, p5 boca, p6 barba, p7 orejas, p8 warpaint (8/8)
+Sesión corrida de un tirón (director: "avancemos y al final vemos ajuste
+fino") — los 5 pasos restantes de la Fase C ejecutados y verificados en
+`character_rig.gd` / `hair_library.gd` / `phenotype_data.gd`.
+**p4 nariz cuña integrada**: el prisma de 4 caras vivía como cap plano
+flotando sobre el plano facial (sin overlap) → costura visible. Mismo
+truco de fusión que mandíbula/pómulo: raíz (puente) encogida casi a un
+punto y HUNDIDA ~1.6 cm dentro del cráneo; punta proyecta ~8-9 mm fuera.
+Se agregaron ALAS (bultos chicos semi-hundidos junto a la punta) que el
+M9-r3 pedía y nunca se construyeron.
+**p5 boca por geometría**: las 3 cajas planas (pupil_mat negro, un trazo
+sin volumen) se reemplazan por labio superior + inferior reales (`lip_mat`
+nuevo, rosa cálido, cilindros que se hunden en la mandíbula) + comisuras
+como bultos; la línea oscura queda solo de sombra interior.
+**p6 barba corta**: `HairLibrary._beard_stubble()` usaba un shell
+translúcido (pitfall ALPHA del toon `toon_opaque`, que no escribe alpha).
+r6a (revertido): una sola masa opaca grande tapaba la boca entera y leía
+como bigote-máscara. r6b (final): DOS masas chicas (bigote + mentón/
+mandíbula) con gap real donde vive la boca, oscurecidas 35% vs. el pelo.
+Default del slider `beard` sube de 0 (Clean) a 1 (Stubble) — la lámina
+pedía barba de 3 días como rasgo de identidad, el fenotipo canónico vivía
+lampiño. **Nota de ajuste fino: el mentón lee como bola marcada en
+perfil, candidato a achicar/aplanar.**
+**p7 orejas**: se agregó un lóbulo (bulto chico bajo el pabellón existente,
+mismo truco de fusión) — faltaba el quiebre lóbulo/pabellón que el resto
+de la cara ya tenía.
+**p8 warpaint 1 franja limpia**: de DOS marcas asimétricas ("Scout Marks"
+de M9-r2, frente + mejilla) a UNA franja sobre el pómulo izquierdo. **Bug
+de regresión encontrado y corregido en el mismo paso:** la franja (z=0.106
+desde M9-r2, nunca retocada) quedaba enterrada dentro de la masa `cheek`
+nueva de la Fase C p2 — invisible en render; subida a z=0.128.
+QA de los 8 pasos: `test_core` + `autotest_biomech` + `test_combat` +
+`autotest_slice` + `autotest_ui` ALL_PASS, 7.49 cabezas estable en todos.
+**Pendiente: VoBo de cara completa con Boris (ajuste fino: pómulos + barba/
+mentón) → Fase D pelo.**
+
+## [2026-07-13] feature | Fase C cara: mandíbula, pómulos y ojos (3/8 masas)
+Continuación de la sesión de tarde. **p1 mandíbula fundida** (`c12da0a`):
+esfera escalada que penetra el cráneo (overlap real, no tangente — lección
+de las uniones del cuerpo), mata el prisma de 4 caras + caja de mentón del
+r5 (los dos ofensores de costura). Recalibrado a 7.49 cabezas (colgaba a
+6.67 en el primer intento). **Veredicto del director: "me convence
+muchísimo".** **p2 pómulos altos** (`eb1ecab`): plano malar elongado
+semi-hundido en vez de esferita redonda al ras. Feedback del director:
+"los pusiste a un lado de los ojos" — diagnóstico correcto, el pómulo
+quedaba casi a la misma altura que el ojo (y=0.016 vs ojo y=0.022); fix
+(`23f03d7`) baja la base a y=-0.012 y el rango del slider nunca cruza la
+altura del ojo. Segundo veredicto: "no me terminan de convencer". Decisión
+conjunta (pregunta del director, respuesta del orquestador): NO seguir
+iterando el pómulo a ciegas contra una cara incompleta — es una masa sutil
+por diseño y compite mal con una nariz-prisma vieja y sin barba; se revisa
+en un **VoBo de cara completa después de la barba** (p6), con más contexto
+y sin costo (el pómulo es un parámetro aislado, retocable después). **p3
+ojos almendra** (`ea3f5bb`): mata el ojo-platillo del r5 — esclerótica más
+chica/aplastada, iris+pupila crecen para llenar casi todo el alto del ojo,
+la ceja crece y baja para SOLAPAR de verdad el tope del ojo (párpado real)
+→ lee entrecerrado/calmado. QA de los 3 pasos: `test_core` ALL_PASS + banco
+`tmp_anatomy.gd` sin errores en cada ronda. **Pendiente: p4 nariz cuña
+integrada → p5 boca → p6 barba corta → checkpoint VoBo cara completa → p7
+orejas → p8 warpaint.**
+
+## [2026-07-13] feature | Cintura del cuerpo desnudo cerrada + Fase C cara abierta
+Sesión de tarde. (1) **VoBo del director** al outfit frontier (r2). (2) Se
+retomó el pendiente dejado a propósito: **verificar la continuidad de cintura
+del cuerpo DESNUDO**. Delegado a subagente Sonnet; había un hueco REAL de
+15.2 cm entre `abs_plate` (mundo y=1.172) y `pelvis` (y=1.02) — se veía el
+fondo a través del torso, tapado por accidente por la faja del outfit. Fix
+(`de347d3`): malla `waist` (cilindro de piel hijo de `spine`, top_radius=0.11
+= radio base del torso, copia `torso.scale` x/z en `_apply_build` → costura
+cero en cualquier build; overlap real 5 cm en la pelvis). Banco reusable
+`tmp_waist_check.gd`. QA `test_core`+`autotest_biomech` ALL_PASS; verificado
+visualmente por el orquestador (`waist_check_*.png`, piel continua). Nota
+abierta menor (preexistente, no tocada): sliver de axila brazo-torso. (3)
+**Fase C cara ABIERTA con luz verde del director** a la propuesta por masas
+fundidas (esquema `propuesta_masas_cara_humano_faseC`, anclado a la lámina
+`fenotipo-humano-v1.png`). Diagnóstico r5-rechazado vs lámina: falta barba
+corta, ojos anti-platillo, nariz integrada, mandíbula fundida sin costuras,
+boca por geometría, warpaint de 1 franja. Orden de masas aprobado (8 pasos,
+captura por paso). Hallazgo de infra: `HairLibrary.build_beard()` existe pero
+el stubble usa overlay translúcido (pitfall toon ALPHA) → barba como masa
+opaca semi-hundida.
+
+## [2026-07-13] feature | Faja: cierra el hueco ombligo-a-cadera (feedback director)
+Boris vio en las capturas del outfit una franja de piel entre la faja y
+el pantalón. Diagnóstico medido (cotas de nodos, no a ojo): la faja de 3
+bandas quedaba en cintura alta (body 1.065-1.235) y dejaba ~4.5 cm de
+piel sobre el pantalón (pelvis tope ~1.02) — el jerkin sólido viejo lo
+tapaba. Fix (ea985f1): 5 bandas solapadas bajando hasta solapar el belt,
+radio creciente para seguir la cadera; el vuelo se acerca al faldón de
+la lámina. Gates core+slice ALL_PASS; capturas r2 en
+`test_out/rounds/outfit-frontier/`. **PENDIENTE (dejado a propósito por
+Boris): verificar la continuidad de cintura del cuerpo DESNUDO**
+(constraint sin-playera; el auditor advirtió que el jerkin tapaba un
+posible hueco de anatomía torso→pelvis) — zoom preparado, sin revisar.
+Nota abierta menor: el belt horizontal quedó parcial bajo la faja
+(subirlo si Boris quiere el cinturón sobre el fajín, como la lámina).
+
+## [2026-07-13] design | VAULT-STARTER.md — pase agnóstico (sin dominio de juego)
+El director pidió dejar el starter agnóstico a cualquier proyecto: fuera
+toda mención a Godot/videojuegos. Cambios: intro sin "videojuego"; árbol
+sin `godot/`; op-tags `feature→build` y `playtest→review`; "Feature
+Loop"→"Build Loop", "Review/Playtest Loop"→"Review Loop" (fuera
+feel/montages); "código" (como entregable) → "entregables/trabajo" en los
+principios SSoT/sincronización, Lint, gate y CLAUDE.md; bootstrap pregunta
+"dominio (software/investigación/escritura/producto/operaciones…)". Se
+conserva la terminología git (repo/branch/commit) por ser parte del
+método para cualquier dominio. Verificado: 0 menciones a juego/Godot.
+
+## [2026-07-13] design | VAULT-STARTER.md — el método exportado en un archivo único
+Encargo del director: destilar nuestro esquema de trabajo completo en un
+.md autocontenido para que cualquier persona arranque un proyecto de
+Vault adjuntándolo a su propio Claude Code. Generado en la raíz del repo
+(`VAULT-STARTER.md`) desde las fuentes raw (LLM-WIKI de Karpathy + VDD
+v1.0), el SCHEMA vigente (incluido el §7 de cierre de sesión) y los 5
+loops. Contiene: teoría (compilación vs RAG, Vault como OS/máquina de
+estados, separación de roles), estructura completa
+(Raw/Schema/Knowledge/State/Loops/Index/LOG), plantilla de página con
+ciclo de status, contratos genéricos de los 5 loops, la rutina de cierre
+de 6 pasos con la semántica de sobrescritura (Current-State = presente,
+LOG = historia, Lecciones = viva y obligatoria pre-código), tiering de
+orquestación, instrucciones de bootstrap para el agente (§9), CLAUDE.md
+sugerido (§10) y consejos de campo pagados en este proyecto (§11).
+Agnóstico de dominio; en español.
+
+## [2026-07-13] feature | Outfit configurable por piezas + cierre de sesión (checkpoint §7)
+Feedback de Boris tras ver el outfit frontier: la faja y la bandolera
+NO deben quedar hardcodeadas al personaje. Refactor (305eac1):
+`character_outfit.gd` pasa de bloque monolítico a catálogo de piezas
+(`build(rig, [ids])` + `remove_piece`/`remove_all` + `PRESETS.frontier`);
+back-compat vía alias `build_frontier`. La UI de personalización (pestaña
+OUTFIT) queda para Fase 4, la API ya la soporta. Andamiaje Beckett
+`golden_boot` versionado (c9c6f22). Gates de cierre: core+slice+combat
+ALL_PASS sobre HEAD. Working tree limpio; `Los 9 Links` (toque
+accidental CRLF de Obsidian) restaurado. **Pendientes de VoBo: torso
+desnudo + outfit. Sigue: Fase C cara → Fase D pelo (propuestas por
+masas antes de codear) → movimientos.**
+
+## [2026-07-13] feature | Rework integral Fases A→D: shaders VoBo, cuerpo a la lámina, anatomía de torso, outfit frontier (8 commits, 5 gates verdes)
+Día completo dirigido en vivo por Boris con QA imparcial Fable como
+contrapeso. (1) Dos auditorías imparciales archivadas verbatim
+(`90-Raw/reviews/QA-Auditoria-{Codigo,Output-vs-RAW}-2026-07-12.md`):
+código sólido cero critical; arte ~55% fidelidad, pipeline de render
+cerca del norte, personaje no. (2) Fase A shaders ✅ VoBo colores:
+shadow_floor por preset (muere la banda negra) + cristal peligro rojo
+unshaded (42d169e). (3) Fase B cuerpo ✅ "mucho mejor": uniones fundidas
+(c31bf81), musculatura de brazos aplastada a pedido (c2be29e, 5ac2640),
+y el fix raíz del QA dirigido al tronco superior (3550bfe +
+`QA-Auditoria-Tronco-Superior-2026-07-13.md`): el esqueleto del hombro
+llevaba un fósil de la review v0.1 (+12%) que contradecía la lámina —
+SHOULDER_X 0.262→0.21, la silueta cuello→muñeca solo desciende.
+LECCIÓN mayor: ante conflicto review↔lámina, auditar contra la lámina.
+(4) Debate formal orquestador↔QA (3 temas: jerkin/cuello/musculatura)
+→ veredictos ratificados por Boris con comparativos
+(`test_out/rounds/debate-tronco/`). (5) Anatomía de torso ✅ (e5d3e51):
+pecs elipsoides, placa abdominal sin six-pack, clavícula-cápsula,
+cuello +15%, piernas ya cumplían; rúbrica [[Benchmark-Musculatura-Torso]]
+(borrador) + lámina NB `fenotipo-humano-torso-v1.png` (autoridad #1
+SOLO superficie de torso, alcance acotado por Boris). (6) Outfit
+frontier ✅ (1794b1a): jerkin/strap/belt fuera del cuerpo base →
+`character_outfit.gd` (faja envuelta de lámina + pouches); juego
+vestido, banco desnudo. Gates completos ALL_PASS. DECISIONES de Boris:
+VoBos viejos rechazados; peinado príncipe DESECHADO (Fase D = masas de
+silueta tipo animé, propuestas antes de codear); Beckett MCP adoptado
+como loop de iteración en vivo (instalado 2118c81, protagonista del
+día). Pendiente VoBo: torso desnudo + outfit.
+
+## [2026-07-12] feature | Plan de rework EN EJECUCIÓN — Sesiones 0–2: Beckett instalado, cuelgue resuelto, peinado príncipe reconstruido (m10-r5/r6)
+Sesión de ejecución del plan "Rework gráfico Humano C6/M10 + spike
+Beckett" (Boris dio luz verde; delegación por tiering: Sonnet ejecutó
+S0 y las rondas estéticas de S2; el orquestador, diagnóstico y fixes de
+fidelidad). **S0:** TERCERA RONDA añadida a
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md` — cara sin plugin
+minable (Humanizer = blend-shapes sobre malla continua, incompatible);
+cross-check ROM contra Humanizer/VRM con huecos anotados
+(muñeca/tobillo/clavícula/dedos); orientation warping de PoseWarping
+portable a hips/spine/upper_spine → candidato C4 (tercera persona
+exclusiva, todo lo first-person descartado). **S1:** Beckett MCP 1.8.0
+instalado (`godot/addons/beckett/`, habilitado, `.mcp.json`
+gitignoreado, servidor solo-localhost verificado); **cuelgue del banco
+RESUELTO: contención confirmada** — matando Epic/EA/Steam, tmp_anatomy
+7 s / test_core 0.4 s (lección cerrada + protocolo en [[Lecciones]]).
+**S2:** el banco desbloqueado reveló el bug real del M10-r4: contrato
+de ejes contradictorio entre `_s_spine` (espina Y negativa) y `_ribbon`
+(`mbasis.y` = flow) → mechones creciendo opuestos a su flow (astas).
+Fix + lección nueva. r5 (Sonnet, 4 rondas): barrido trasero, enmarque
+lateral, +3 mechones nuca. r6 (orquestador): masa occipital + banda de
+flequillo (la concha sola era un crop; hairline frontal por fin
+visible; v1 de la banda enterrada a 0.82R — margen real aplicado).
+Capturas por ronda en `test_out/rounds/m10-r5|r6/`. QA: test_core +
+autotest_slice ALL_PASS. **VoBo del director pendiente (m10-r6)**;
+observaciones honestas anotadas en Current-State (cercanía tonal
+castaño↔piel bajo dawn y sombras gris-frío de mechones → ambas van por
+los gradientes/banding de C8 en la Sesión 4 del plan).
+
+## [2026-07-12] design | Propuesta-Recursos-de-Modelado RATIFICADA — Design Loop C8 CERRADO
+El director ratificó (mismo día, sin cambios): los 5 recursos con su
+orden (triplanar → loft/perfil → gradientes → banding MToon →
+iteración), los 3 ajustes al plan de rework C6/M10 de la sesión
+paralela, y el loft como mini-loop propio pre-C6b. Página →
+`ratificado`; C8 → 🔄 (ejecución pendiente: ajustes 1–3 dentro del plan
+de rework, sesiones 2/4/5). Quedan en §0a solo los VoBo que requieren
+ojos del director sobre material (turnaround r5 + cowl; §7 del SCHEMA).
+Cierre de sesión de la conversación de evaluación de plugins con esta
+entrada (protocolo §7).
+
+## [2026-07-12] design | Propuesta-Recursos-de-Modelado (Design Loop abierto) + reconciliación con el plan de rework paralelo
+Boris pidió al "director técnico" los recursos para modelar mejor los
+avatares → Design Loop abierto: [[Propuesta-Recursos-de-Modelado]]
+(status propuesto, C8 en Task-Board). 5 recursos: triplanar (mata los
+bugs de UV ya pagados), generador loft/perfil (generalizar
+`_ribbon`/`_s_spine` a torso/miembros — mini-loop propio pre-C6b),
+gradientes procedurales, banding tipo MToon en `toon_opaque`, e
+iteración (vista-esqueleto + Beckett, ya agendados). Anti-objetivos:
+Blender/Blockbench/artista externo/hardware. **Reconciliación entre
+sesiones vía Vault:** se leyó el transcript de la sesión paralela
+(plan "Rework gráfico Humano C6/M10 + spike Beckett", sesiones 0–5,
+solo existía en esa conversación) — plan VALIDADO en secuencia; 3
+ajustes registrados en la propuesta (Sesión 4 += gradientes+banding;
+Sesión 5 → Decal VS triplanar; Sesión 2 nota del piloto de cinta
+continua). El Vault es el punto de sincronización: la sesión paralela
+hereda esto por Current-State §0a.
+
+## [2026-07-11] lint | Benchmark de calidad godot-vrm reubicado fuera de concept/ canon
+Boris había subido 3 PNG del avatar VRM "AliciaSolid" a `90-Raw/concept/`
+con el criterio: cualquier output de mayor calidad que el nuestro es
+referencia válida para iterar, aunque la técnica no encaje con el Art
+Bible. Criterio sano, pero `concept/` es la carpeta de concept art CANON
+aprobado — mezclar ahí capturas externas contaminaría compilaciones
+futuras. Reubicadas a `90-Raw/research/quality-benchmarks/` (nueva
+carpeta, index actualizado). Análisis honesto agregado al doc de
+plugins: solo 1 de las 3 imágenes es render limpio comparable (las otras
+son UI del editor / debug de física); el personaje es asset autorado a
+mano (no algo que el plugin "genere") comparado contra nuestro procedural
+en pleno rework — no es 1:1; y el estilo (anime/VTuber) es la
+anti-referencia EXPLÍCITA del [[Art Bible]] (junto a Genshin). Se
+extrajeron 3 lecciones sí transferibles a nuestro estilo: textura
+pintada/degradada vs. color plano, curva de banding más suave
+(comparable con MToon `_ShadeShift/_ShadeToony`, ya fichado), degradado
+raíz→punta en pelo. Sin cambios de código.
+
+## [2026-07-11] ingest | godot-vrm corregido: v2.5.7 (fork AzPepoze, Godot 4 nativo)
+Tras el cierre de sesión, Boris re-bajó el zip correcto de godot-vrm
+(`godot-vrm-v2.5.7.zip` — el original era la rama godot3 obsoleta,
+descartada horas antes). Verificado: fork AzPepoze de V-Sekai, VRM
+Importer 2.5.7 + MToon Shader 3.4.0, ambos declarados "for Godot 4.x";
+`.gdshader` nativo + archivos `.uid` + `vrm_physics.gdextension`
+(`compatibility_minimum "4.3"`) — compatible con 4.6.3. GDExtension CON
+binarios Windows/Linux/**macOS** (mejora sobre el zip viejo, que no tenía
+macOS). Soporta VRM 0.x y 1.0. Veredicto actualizado en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`: MToon (12 shaders,
+shading real en `mtoon_common.gdshaderinc`) queda **minable** como
+referencia de toon shading contra `toon_opaque` — su técnica de outline
+(cull_front + casco invertido) se ignora, ya resuelta por Sobel en C6a. No
+se adopta el addon completo (seguimos sin pipeline de avatares importados).
+Sin cambios de código.
+
+## [2026-07-11] state | Cierre de sesión: SCHEMA §7 (rutina de cierre consolidada) + higiene
+Boris preguntó si la rutina de cierre estaba en el Vault: estaba REPARTIDA
+(CLAUDE.md regla 4, regla de oro, SCHEMA §6, memoria persistente de Claude —
+el paso commit/push no estaba escrito en el Vault). Consolidada como
+**SCHEMA §7 "Cierre de sesión"** (checklist de 6 pasos; pendiente VoBo).
+Higiene: op-tags de hoy corregidos a la taxonomía de §4 (research→ingest);
+`.gitignore` ahora excluye sub-vaults `.obsidian` anidados (aparecieron en
+10-Knowledge y 20-State/Decisiones — abrir subcarpetas como vault en Obsidian
+los crea; el vault root es `Aether Bound/`); descartado un cambio EOL-only de
+00-Index. Current-State: sección nueva 0a "decisiones que esperan al
+director" (VoBo r5 + cowl, spike Beckett, VoBo §7). Lección de entorno
+re-pagada en vivo: Get/Set-Content de PS 5.1 corrompió el UTF-8 del LOG
+(restaurado de git; ediciones de texto SIEMPRE con herramientas del agente).
+
+## [2026-07-11] ingest | Segunda ronda: 4 zips más + Beckett MCP (cierra la evaluación en 12 zips)
+Boris sumó humanizer, skeleleton-2d, godot-vrm, AMSG y beckett-godot-mcp.
+Veredicto integrado al mismo doc raw. Hallazgo mayor: **AMSG = referencia de
+lógica para C2/C4** (detección de mantle por 3 raycasts + shapecast portable
+a nuestra física analítica; PoseWarping = orientation/stride/slope warping y
+taxonomía de estados para el pase de poses). Humanizer NO para cuerpos (choca
+con C6) pero su tabla ROM (`physical_skeleton.gd`) y sus skeleton_config.json
+sirven de cross-check articular en C6b — responde la intención del director
+con el zip de esqueleto ("dónde van las articulaciones y sus DOF"), que
+derivó en semilla: **vista-esqueleto de debug en el banco de anatomía**
+(dibujar articulaciones + ROM que ya viven en rig_biomech.gd). El zip
+skeleleton-2d es GPLv3 (solo mirar). godot-vrm resultó ser la RAMA GODOT 3
+(inservible en 4.6.3; re-bajar master si se quiere MToon de referencia).
+Beckett MCP (Lite 1.8.0, revisado por el orquestador): servidor MCP embebido
+en el editor con observación del juego corriendo (screenshot/remote tree/
+runtime props) — propuesto spike de 1 sesión cuando el banco corra limpio;
+decisión del director. Sin cambios de código.
+
+## [2026-07-11] ingest | Evaluación de 8 plugins + Chickensoft + cabello/facial
+Boris entregó 8 zips en Downloads + 2 URLs. Inventario técnico por subagente
+Sonnet (tiering de [[Lecciones]]); análisis contra Plan/Art Bible/Lecciones
+por el orquestador. Veredicto archivado en
+`90-Raw/research/Plugin-Evaluation-2026-07-11.md`: **Dialogue Manager 3.10.1
+= único candidato de adopción completa** (entra con PRD-009, Fase 2 — cubre
+el hueco real de diálogo/escenas); HTerrain y ProtonScatter = minas de
+shaders para Fase 2/4 (low_poly faceteado, wind sway, splatmapping, perlin+
+erosión GPU, grass bend, toon water); FancyControls/FACS = patrón de tween UI
+para Fase 4 (aclarado: es UI, NO facial — el consejo externo que lo
+recomendaba para caras confabuló); MTerrain referencia menor; Beehave
+diferido post-slice; LimboAI descartado (fuente C++ sin binarios);
+GodotSteam zip vacío (repo en Codeberg); Chickensoft descartado (C#-only).
+Research cabello: no hay plugin que aplique; el ribbon del M10-r4 ES la
+técnica canónica; SpringBoneSimulator3D no aplica (requiere Skeleton3D).
+Semillas para modelado futuro: expresiones faciales por estado (Fase 3–4),
+spike nodo `Decal` para rasgos (esquiva la costura UV), reglas de textura
+facial (alpha-scissor, margen 8 mm, tinte blanco×albedo). Sin cambios de
+código; ventana C6/C4 intacta.
+
+## [2026-07-10] wip+blocked | M10-r3/r4: peinado "príncipe" (PRD ribbon) — banco colgado, cierre de sesión
+Boris pidió melena estilo Príncipe de Cuento (ref. Shrek), tono castaño
+original, "150 mechones". r3 (150 tablillas rectas al radio exterior, 2
+familias: cortina + tejas de domo) completó pero falló en revisión visual:
+orejeras tipo casco de frente + borde-repisa recto de nuca — mismo defecto que
+`frontier_crop` ya había resuelto. Boris entregó un PRD técnico completo
+("Cabello Estilizado Ondulado — Estilo Príncipe de Cuento"): construcción por
+capas de mechones-CINTA (ribbon, ancho variable raíz→punta, curva en "S",
+normal facetada por segmento — no cilindro ni tablón recto), 20–26 mechones en
+4 capas (base craneal / flequillo-coronilla 6–8 / laterales sien-oreja 8–10 /
+sueltos que rompen silueta 4–6). Este número (20–26) reemplaza el "150"
+original — Boris lo confirmó como refinamiento válido. r4 implementa el PRD:
+helpers nuevos `_ribbon`/`_s_spine` en `hair_library.gd` (cadena de cajas
+ahusadas siguiendo una curva en S) + `_hair_prince_curtain` reescrito con 22
+mechones en 4 capas. **BLOQUEADO al cierre:** `tmp_anatomy.gd` (windowed) y
+`test_core.gd` (headless) se cuelgan o quedan extremadamente lentos en 3+
+corridas limpias (proceso mata todo rastro previo confirmado, CPU real
+consumida — no deadlock clásico de GDScript). Revisión estática de
+`_ribbon`/`_s_spine` no encontró loops sin cota ni normalizaciones a NaN.
+`hair=11` no es el default (`PhenotypeData.default_phenotype()` usa `hair=0`)
+y ningún gate automatizado lo toca — CERO riesgo para test_core/
+autotest_biomech/combat/slice existentes. Sospecha sin confirmar: contención
+de recursos (Epic Games Launcher/EA Desktop/Xbox App corriendo en paralelo,
+~9 GB RAM fuera de Godot) — consistente con la fragilidad térmica ya anotada
+de la laptop RTX 2060. Código commiteado como WIP (no como ronda cerrada, no
+mostrado a Boris como terminado). Aparte: se evaluó extender la reescritura
+"ribbon" al estilo 5 (`_hair_curtain_long`, mismo defecto de tablones planos,
+actualmente sin uso en el pipeline canónico) — Boris de acuerdo en NO tocarlo
+ahora, queda anotado como deuda técnica sin urgencia.
+
+## [2026-07-10] feature | M10-r2: 31 mechones angulares (pedido del director)
+El director pidió ~25–35 mechones para acercar el pelo a la lámina. Sistema
+procedural DETERMINISTA sobre la concha: 4 filas de latitud (cresta/corona/
+parietales/nuca) × columnas, 31 mechones-cuña hundidos a media profundidad
+(el Sobel entinta sus aristas como trazos direccionales de pelo; a distancia
+se funden), tamaño en cascada frente→nuca, dos tonos alternados (base /
++10% claro = profundidad cel). Convergencia en 5 sub-rondas contra la
+silueta: filas medias solo sector trasero >104° (los laterales asomaban como
+rulos/dientes), cresta acotada a la corona, sink progresivo hacia los
+costados, mechones delgados (0.11R). El PERFIL es la vista más cercana a la
+lámina hasta ahora. Queda: 1 muesquita por sien en la silueta frontal (a
+decisión del director: matarla o dejarla como textura). QA
+biomech/combat/slice ALL_PASS. Ronda archivada en test_out/rounds/r6.
+
+## [2026-07-10] feature | M9-r6: cráneo desnudo VoBo (a) + mandíbula TRAPECIO
+El director pidió el turnaround CALVO para juzgar el cráneo desnudo — VoBo de
+la estructura ("todo bien"; banco queda sin pelo mientras se esculpe la cara).
+Tuning en vivo: la mandíbula pasa de caja a TRAPECIO (prisma de 4 caras con
+taper, ancho en la línea de orejas → estrecha al mentón; el ×0.81 en z del
+slider de jaw restaura la relación ancho/profundidad) — las facciones se
+afilan. QA biomech/combat ALL_PASS. Nota del cráneo desnudo para el backlog de
+cara: la bóveda sigue muy esférica de perfil (occipucio poco protagonista).
+
+
+## [2026-07-10] ingest+feature | Review v0.5 archivada + M9-r5: quiff redondeado, marcas restauradas, limpieza
+Quinta review (v0.5, overall 5.5 — el riesgo señalado: REGRESIONES al aplicar
+fixes) → archivada. r5 responde los 4 bloqueantes: (1) quiff sin birrete —
+masas redondeadas-angulares de esferas escaladas, curva superior ASIMÉTRICA
+más alta al frente, cero caras planas (cae también la cuña M6 y baja el
+hairline M7); (2) marcas restauradas al tamaño r3 como franjas rectas
+(frente ≈ ceja, mejilla cruzando el PÓMULO — la primera posición leía curita
+en la boca); (3) limpieza de rasgos: ojos conformados a la superficie
+(esclerótica −4 mm, más plana) y cejas pegadas (flotaban 10 mm — eso era lo
+"atravesado" visto desde atrás); (4) orejas a la vertical MEDIA del cráneo
+(leían piercing) — asoman flanqueando en la trasera ✓. PROCESO nuevo por
+exigencia del reviewer: capturas archivadas POR RONDA en
+`godot/test_out/rounds/rN/` para diff visual anti-regresiones. Turnaround
+verificado contra r4 en los 4 ángulos. QA biomech/combat/slice ALL_PASS.
+Pendiente: ratificación EXPLÍCITA del director del cowl/base-body (3ª
+documentación en PR) — con ella y el VoBo, la próxima ronda aspira a
+Approved with Minor Changes.
+
+## [2026-07-10] ingest+feature | Review v0.4 archivada + M9-r4: la nuca del jugador
+Cuarta review (v0.4, overall 6/10, 5 bloqueantes) → archivada. r4 responde:
+(1) PELO reconstruido — el hallazgo técnico de la ronda: las cajas no pueden
+abrazar una esfera (tablones r4a, occipucio enterrado r4b); la solución es una
+CONCHA elipsoide ajustada que se auto-recorta contra el cráneo (emerge ~7 mm
+en parietales/coronilla/occipucio, se hunde a la altura de orejas y nuca baja
+→ hairline que SUBE sola en las sienes, fade natural, cero borde-repisa) +
+quiff/cresta de cajas hundidas como acentos angulares. La nuca — el ángulo del
+jugador — ya lee corte corto con fade, no casco. (2) Orejas visibles en perfil
+y espalda ✓. (3) Cuello −30% (0.10, base 0.075; HEAD_Y baja con él) —
+bloqueante promovido CERRADO. (4) Cowl: documentado por 3ª vez (base-body
+modular; pendiente ratificación del director en su respuesta). (5) El plano
+flotante era la cresta/quiff de la construcción anterior — eliminado con la
+reconstrucción (quedan 2 esquinitas del quiff en la silueta superior,
+anotadas). (M6) Ambas marcas como GEOMETRÍA recta (el _slash del atlas
+escalonaba la mejilla en gusano); patrón 6 del atlas intencionalmente vacío.
+QA: biomech/combat/slice ALL_PASS. Turnaround completo regenerado.
+
+## [2026-07-10] feature | M9-r3 CERRADO: quiff, marcas bilaterales, cráneo compacto — QA verde
+Continuación tras la caída del clasificador: bench corrido y convergido en
+varias sub-rondas. (1) Quiff angular contenido (la 1ª pasada leía sombrero de
+plato; la visera frontal ocultaba la marca → levantada) sobre el casquete
+probado del library (r3b dejaba la coronilla calva en perfil). (2) Marcas
+BILATERALES en lados opuestos como el concept: mejilla izquierda por atlas +
+frente derecha por GEOMETRÍA (dos bugs de entierro cazados: anillo del bíceps
+menor que el radio efectivo escalado ×1.12 de _apply_build; placa de frente al
+ras de la elipse = astilla de 1 mm que la tinta Sobel se comía — ambos a
+Lecciones). (3) Cráneo compacto + mandíbula dominante (trapecio invertido),
+nariz-prisma de 4 lados, orejas semi-elípticas, cuello 0.13 base ancha, boca
++15%. (4) Gate biomech FLAKY arreglado de raíz: el assert adversarial re-fuerza
+la violación 6 frames (hitch de boot saturaba el settle y borraba la violación
+antes del clamp; 2/3 fallos → 4/4 verde). Turnaround de cabeza en el banco
+(frente/¾/perfil/espalda). QA: biomech ×4 + combat/slice/ui + core ALL_PASS.
+
+## [2026-07-10] ingest+feature | Review v0.3 archivada + M9-r3: quiff, trapecio invertido, marcas bilaterales
+Tercera review del director (v0.3, overall 5.5/10; cierres verificados: pelo
+castaño, ojos on-model "no tocar más", piel, prop) → archivada en
+`90-Raw/reviews/`. r3 en código: quiff ANGULAR de cajas (fuera el moño — la
+esfera superior leía top knot), cráneo compacto 0.82 x (fuera el ovoide;
+mandíbula 0.138 domina el ancho bajo = trapecio invertido), pómulos como
+quiebre (no globo lateral), marcas BILATERALES con lateralidad corregida por
+la review (frente = lado derecho x-chico; mejilla = izquierdo espejo W-1-x;
+franjas 4:1), nariz = prisma sesgado de 4 lados con arista al frente (fuera
+el bloque), orejas semi-elípticas verticales con inclinación (fuera el
+disco), cuello 0.13 con base 0.068 al trapecio, boca +15%. Vestuario:
+base-body modular DOCUMENTADO (2ª vez — la review lo da por cerrado si está
+en el PR). Banco: turnaround de cabeza (frente/¾/perfil/espalda) obligatorio
+desde ahora. Bench+QA pendientes de correr (clasificador de shell caído
+momentáneamente); se verifican antes del cierre.
+
+## [2026-07-10] ingest+feature | Review v0.2 archivada + M9-r2/M10: cabeza del concept
+Segunda review estructurada del director (Head/Bust v0.2, fidelidad 4/10) →
+archivada en `90-Raw/reviews/`. Respuesta en código: pelo nuevo `frontier_crop`
+castaño claro (fuera cuña/rizo; hack del hair_slot revertido — Dagna recupera
+sus trenzas), warpaint 6 "Scout Marks" + banda de pintura en el bíceps,
+mandíbula ancha/amable + boca con sonrisa franca + ojos entrecerrados (fuera
+caricatura) + cejas rectas, cuello 0.15 grueso (convergencia v0.1/v0.2),
+orejas a banda ceja-nariz. Hallazgos de pipeline: la cara del atlas vive en la
+costura u=0; jaw/cheeks embarraban la pintura (atlas ahora solo en cráneo);
+dump `warpaint_atlas.png` en el banco. Vestuario = base-body modular
+DOCUMENTADO (sistema signature; ropa Fase 4 por decisión previa del director).
+TODO puntual: diagonal de FRENTE oculta bajo hairline (debug UV con retícula).
+QA completo ALL_PASS.
+
+## [2026-07-10] feature | M9-r1: la cara gana personalidad (review MEDIUM 9)
+Primera ronda de M9 (manos cerradas, "listo, vamos con M9"): mandíbula marcada
++ mentón presente, nariz más fina y larga, MEJILLAS ALTAS (pómulos bajo el ojo;
+rango del slider `cheek` subido), SONRISA ligera (boca de 3 segmentos de tinta,
+comisuras arriba — el primer intento salió ceño por signo invertido), cejas
+finas café cálido (las losas negras leían enojo), iris café legible en el banco
+(el accent papel lo dejaba blanco-sobre-blanco) y **orejas por defecto** en el
+origin neutro (un humano base tiene orejas; los origins las reemplazan).
+Capturas nuevas del banco: anatomy_face.png + anatomy_face_34.png. Pendiente de
+la ronda 2 con el ojo del director: peinado real (M10), forma frontal de la
+nariz. QA biomech/combat/slice ALL_PASS.
+
+## [2026-07-10] feature | C6a-r5e: dedos 10% más delgados
+Tuning del director tras aprobar la tenar ("listo"): los cuatro dedos (no el
+pulgar) 10% más delgados en sección (0.0108×0.038) — las ranuras crecen y la
+tinta Sobel de las separaciones respira mejor. QA biomech/combat ALL_PASS.
+
+## [2026-07-10] feature | C6a-r5d: el pulgar nace de la tenar (ref. anatómica)
+El director pasó referencia anatómica (Cleveland Clinic, vista palmar): el
+pulgar nace de la eminencia tenar a media palma, no del borde inferior.
+Nacimiento 50% más adentro de la mano; conserva dirección de dedos + 30°.
+QA biomech/combat ALL_PASS.
+
+## [2026-07-10] feature | C6a-r5c: dedos +20% + pulgar alineado a 30°
+Tuning en vivo del director sobre r5b ("funciona mejor"): los cuatro dedos
++20% de largo (medio 0.076) y el pulgar deja de cruzar horizontal — apunta en
+la MISMA dirección que los dedos (cuelga) con 30° de apertura hacia el
+interior. QA biomech/combat ALL_PASS.
+
+## [2026-07-10] feature | C6a-r5b: cuatro dedos reales (la garra se tumbó)
+Segunda ronda del director sobre las manos: "hay tres masas — pulgar más dos"
+(la v1 de dos bloques leía como garra). Ahora: palma + CUATRO dedos delgados
+individuales con ranuras de 3 mm entintadas por el Sobel y largos naturales
+(medio el más largo) + pulgar. A distancia se funden en una masa. QA
+biomech/combat/slice ALL_PASS.
+
+## [2026-07-10] feature | C6a-r5: manos con dedos estilizados
+Feedback del director: las manos no tenían dedos. Solución BotW/Palia: palma +
+dos masas de dedos con ranura (el Sobel entinta la separación — de cerca se ve,
+a distancia muda) + pulgar aparte hacia el cuerpo + curl progresivo. El nodo
+`hand` sigue siendo la palma (arma/prótesis intactos). Captura nueva
+`anatomy_hands.png`. QA biomech/combat/slice ALL_PASS.
+
+## [2026-07-10] ingest+feature | Review v0.1 del director archivada + C6a-r4
+El director entregó la **Character Blockout Review v0.1** (Needs Revision,
+~60–65% fidelidad; norte: BotW/Hinterberg/Palia/Torchlight, NO anime) →
+archivada verbatim en `90-Raw/reviews/` como fuente raw y checklist de C6.
+r4 implementa CRITICAL 1–4 (silueta atlética +12% hombros, cabeza menor — el
+culpable visual era el pelo-bloque —, cuello largo, brazos con masa), HIGH 5–8
+(gemelo, manos, pies, planos de torso al ras del cel) y LOW 13–15 (A-pose,
+codo relajado, deltoide fundido). Pendientes: cara (M9, con el director),
+peinados (M10), ropa/accesorios (M11–12, diferidos). QA completo ALL_PASS.
+
+## [2026-07-10] state | Cierre de sesión — ventana C6/C4: C6a+C6c hechos
+Sesión cerrada con la ventana C6/C4 a medio camino y checkpoint completo: C6a
+(r1 proporciones 7.5 + Sobel-only, r2 volúmenes cónicos, r3 hombros caídos) y
+C6c (cabeza sin chibi) en código, QA verde (9 suites + biomech ×5), 3 commits
+pusheados en `feat/c6-anatomy-rework` (def9a27, bc22a4d, c58a784). Pendiente al
+reabrir: VoBo del director de las capturas r3 → C6b (enano/elfo + ROM + Dagna
+re-montada) → C4a/C4b → playtest de la ventana. Detalle en [[Current-State]].
+
+## [2026-07-10] feature | C6a-r3 + C6c: hombros caídos + la cabeza deja el chibi
+El director pasó la comparación lado a lado contra `fenotipo-humano-v1`. Respuesta:
+trapecios con masa (sloped shoulders, fuera la repisa), silueta más enjuta
+(SHOULDER_X/CHEST_X/Z abajo), y C6c adelantado — cráneo con forma, mandíbula
+estrecha + mentón, NARIZ (el perfil existe), ojos a escala humana, ceja baja.
+7.49 cabezas medidas (canon 7.5). Fix de gate flaky: elbow release −0.085→−0.082
+(margen 0.0003 rad → real; lección ampliada). QA completo ALL_PASS (biomech ×5).
+
+## [2026-07-10] feature | C6a-r2: volúmenes de lámina (feedback del director)
+Feedback en vivo sobre las capturas de C6a: "que los cuerpos dejen de componerse de
+puros círculos". Los volúmenes pasan a masas cónicas (`CylinderMesh` con taper):
+tronco pecho→cintura continuo con hombros cuadrados, brazos deltoide→muñeca fina,
+manos de mitón (caja), muslo→rodilla y pantorrilla→tobillo, botas con puntera,
+cuello desde el trapecio. Esferas solo en articulaciones + cráneo (C6c). Pauldron
+re-asentado. Medidas estables (7.58 cabezas); QA visual completo ALL_PASS.
+
+## [2026-07-10] feature | Ventana C6/C4 abierta — C6a: humano 7.5 cabezas bajo Sobel
+Ventana C6/C4 arrancada (branch `feat/c6-anatomy-rework`). Decisiones del director:
+pies IK diferidos; **el rework se maneja únicamente en estilo Sobel** (la regla de
+Línea del [[Art Bible]] pasa a ser LA línea del rig — sin casco invertido). C6a en
+código: shader `toon_opaque` nuevo (toon sin ALPHA — post-safe, con textura y
+emission), tabla PROPORTIONS canónica en `character_rig.gd` (7.57 cabezas medidas
+vs 6.38 del puerto anime; hombros 2.39 cabezas; deltoides sin hueco lego; cuello
+real; cabeza = pivote ×0.84), fix del fallthrough ironblooded en
+`_build_origin_features`, banco `tests/tmp_anatomy.gd` (medidas + regla de cabezas
++ capturas 3 distancias bajo el post — regla Sobel verificada en escena). QA: 9
+suites ALL_PASS (core/combat/locomotion/ads + biomech/combat/slice/ui/springboard).
+Pendiente: VoBo del director; Dagna se re-monta en C6b.
+
 ## [2026-07-09] playtest | Gate 1 APROBADO — 🏁 FASE 1 CERRADA
 Re-verificación del director tras el fix del corte del salto: **"se siente
 perfecto"**. El arco del Springboard completa limpio hasta la cornisa. Playtest Loop
@@ -1161,3 +4921,1169 @@ transparente → invisible a screen_texture); quads de post van en pase
 transparente; absf/abs en inferencias GDScript.
 **Ronda 2 abierta (gaps):** calidez+rayos del dawn · core como racimo de
 cristal · árboles nudosos sin costuras · bandas cel visibles.
+
+## [2026-07-23] design/narrative | COMPACTACIÓN + BRIEFS E3 × 4 FINALES — Speck redireccionamiento cierre
+
+**Contexto:** Sesión anterior completó E1 Warden concept (NB Pro, ratificado). 
+Esta sesión: compactación de [[Briefs de Concept Art]] + refinamiento narrativo 
+de transformación de Speck en clímax.
+
+**Refinamiento narrativo (crítico):**
+- **Cambio:** Fragmento de la Verdad activa en The First Wound → Speck reacciona 
+involuntariamente (hive mind forzado). NO es decisión de Speck; es trigger del dispositivo.
+- **PERO:** En finales donde Speck vive (F1 Guided Molt, F4 Warden's Choice), ella 
+asume su destino con **gracia divina**. No permanece víctima circunstancial. Es 
+anciana Warden aceptando su rol milenario.
+- **Implicación:** E1 → E3 (jade → rojo God-Core) es involuntario, pero Speck elige 
+su rol post-transformación. En F2/F3 (muere/encadena), esa agencia le es robada.
+
+**Briefs completados:**
+- **5a — E1 Warden (ratificado):** especificación vieja reescrita con specs finales 
+de imagen (jade pálido translúcido, orejas pétalos Opción 3, runas oro brillante, 
+patas esmeralda pálido, seams aether uniforme). Archivo: 
+`speck-estadio1-warden-crisalis-v1.png` LOCKED.
+- **5b — E2 (descartado):** Decisión de saltear E2. Zorro → E1 (descubrimiento 
+silencioso) → E3 (clímax involuntario).
+- **5c.1 — E3 Final 1 (The Guided Molt):** Criatura viva, asume rol sanadora, 
+luz cálida + propósito, gracia divina.
+- **5c.2 — E3 Final 2 (The Long Winter):** God-Core muerto/dormido, monumento 
+frío, víctima.
+- **5c.3 — E3 Final 3 (The Conqueror's Clause):** Criatura viva encadenada, 
+prisionera, trauma, víctima de tu voluntad.
+- **5c.4 — E3 Final 4 (The Warden's Choice):** God-Core vivo consciente, calcificada 
+en paz, majestuosa, libre, elegida.
+- **Forma Shapeshifteada (zorro):** Brief completado. Zorro 1.5× endémico, glitches 
+sutiles (seams teal, pata cristalina, ojos facetados, patrones geométricos), 
+imperfección legible.
+
+**Archivos actualizados:**
+- `[[Speck.md]]` — Sección "Un estadio de revelación" + "Tres capas de verdad" 
+reescritas. Narrativa transversal: transformación involuntaria → asunción de destino 
+(F1/F4) vs. agencia robada (F2/F3).
+- `[[Briefs de Concept Art.md]]` — §5 completo: E1 (locked) · E2 (descartado) · 
+E3×4 finales (briefs ratificados) · Forma zorro (brief completado).
+
+**Lecciones narrativas:**
+1. Involuntaridad + dignidad = tragedia griega. Speck no elige despertar, pero 
+elige cómo vivir después.
+2. Los 4 finales no varían solo en gameplay sino en agencia de Speck: F1/F4 la 
+dejan elegir; F2/F3 la despojans.
+3. E3 como God-Core literal (no solo criatura) añade peso ontológico a F2/F4 — 
+es transformación existencial, no visual.
+
+**Pendiente:**
+- E3 concept art generación (si Boris lo pide) — tenemos 4 briefs listos.
+- Forma zorro concept art generación (si Boris lo pide) — brief completado.
+- E3 evaluación contra specs cuando regrese art.
+
+**Checkpoint:** Barrido de [[Briefs de Concept Art]] completado. [[Speck.md]] 
+narrativamente coherente. [[Current-State.md]] y [[LOG.md]] actualizados.
+
+## [2026-07-23] production/art | FINALES + GOLDEN SCENES COMPLETADOS — sesión NB Pro cierre
+
+**Contexto:** Sesión anterior completó briefs de E3 para 4 finales + 2 keyframes adicionales. Esta sesión: generación completa en NB Pro de todos los assets.
+
+**FINALES SPECK E3 (4 concept sheets completados):**
+
+**Final 1 — The Guided Molt (criatura viva, propósito):**
+- Asset: `Speck - Awakened Warden Form The Guided Molt`
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 100%
+- Especificación: Criatura cuadrúpeda, jade rojo translúcido, orejas pétalos rojo, ojos ambar cálidos + conscientes, runas oro brillantes activas, seams aether flujo cálido rojo-ámbar, postura majestuosa serena, luz dorada-ámbar de propósito
+- Narrativa: Speck asume rol sanadora, acepta destino con gracia divina, ready to guide the Muda
+- Evaluación: Majestuosa-serena, luz cálida vs. frío de F2/F3 perfecta
+
+**Final 2 — The Long Winter (God-Core muerto, monumento):**
+- Asset: `Speck - Imprisoned Warden Form Final 2 The Long Winter` (landscape keyframe)
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 95%+
+- Especificación: Landscape The First Wound cementerio (desolado, vastedad), Speck como God-Core muerto cristalizado, monumento reconocible pero inerte, ojos congelados, runas dormidas, seams dim, luz fría gris-azul funereal, grupo humano miniatura en distancia, postura mineralized exhaustion
+- Narrativa: Speck muere/es entregada, víctima del clímax, agencia robada
+- Evaluación: Monumento frio-muerte, solemnidad, pérdida absoluta, comunicación visual sin diálogo
+
+**Final 3 — The Conqueror's Clause (criatura viva encadenada):**
+- Asset: `Speck - Imprisoned Warden Form Final 3 Traumatized` (character sheet)
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 95%+
+- Especificación: Criatura cuadrúpeda (reference F1 + cadenas), God-Core rojo con cristales CRACKED/fractured, cadenas oro-bronce pesadas + mágicas constraining limbs/torso/neck, ojos hollow ambar, runas suprimidas, seams atenuados por peso, luz fría aislante, postura submission/defeat
+- Narrativa: Speck prisionera de tu voluntad, traición, trauma, agencia robada
+- Evaluación: Prisionería visible + peso + trauma, hollow betrayal en ojos, cadenas PESAN visualmente
+
+**Final 4 — The Warden's Choice (God-Core vivo consciente):**
+- Asset: `Speck - Ancient Warden Form Final 4 Aether Renacido` (landscape keyframe)
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 100%
+- Especificación: Landscape The First Wound cementerio (dawn/aurora dorada), Speck como God-Core VIVO radiante en plataforma elevada, nombre SPECK tallado en base, ojos ambar CÁLIDOS conscientes awake, runas oro brillantes activas gloriosas, seams aether flujo cálido rojo-ámbar visible, postura quiet strength calm majestic, grupo humano pequeño abajo en veneración, luz dorada-ámbar warm purpose fulfilled, monumento AND guardian viva
+- Narrativa: Speck elige calcificarse en God-Core vivo, síntesis ganada, agencia restaurada, eternidad consciente
+- Evaluación: 100% capstone visual del juego, contrastea F2 (fría muerte) perfectamente, inner glow cálido = paz completa
+
+**GOLDEN SCENE KEYFRAMES (4 landscapes monumentales):**
+
+**Rivermeet Keyframe (capital humana):**
+- Asset: `Rivermeet keyframe`
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 95%+
+- Especificación: Ciudad fluvial golden hour (tarde/atardecer), río como protagonista (ancho, slow, glinting), terraced riverside bluffs, timber-frame architecture, cloth awnings ochre/rust, floating markets, docks, rope bridges, smoke from forges, foreground marketplace con silhouettes humanas, middle city proper ink+watercolor Sable×BotW, background bluffs silhoueta pálida aerial perspective, luz ambar bajo horizonte long warm shadows
+- Narrativa: Contraste a The Wilds (vastedad solitaria), comunidad humanidad commerce pero tone melancólico idéntico (Restless spirit)
+- Evaluación: Segundo golden scene landscape, establece coherencia visual ubicaciones, río realmente protagonista
+
+**God-Core Night Keyframe (cementerio nocturno):**
+- Asset: `God-Core Night keyframe`
+- Status: ✅ GENERADO 2026-07-23, RATIFICADO 100%
+- Especificación: Underground/highland cemetery vast, deep blue-violet starlit night (no moon), massive crystalline prismático God-Core formations justing como tombstones/sleeping giants, red crystal glowing internally DEEP SATURATED RED pulsing faintly, long geometric shadows crisp sharp (cast by red light), perspective elevada (looking DOWN at sleeping gods), foreground cores silhouetted contra own glow (backlighting perfecto), middle fade to ruby con distance, far distance absolute darkness infinito, cracked stone ground (visible catástrofe/batalla), ink grey/negro flat cel 3-4 bands, paleta greys + deep blues + RED saturado único color intenso, watercolor grain visible, Sable night palette
+- Narrativa: Cemetery of ancient gods waiting dormant, no es muerte (F2) sino vigilia dormida
+- Evaluación: Third golden scene landscape perfecto, composición elevada comunica "gaze upon sleeping gods", infinidad cósmica
+
+**Lecciones técnicas de generación:**
+1. Referencias imagen funcionan PERFECTO para mantener anatomía (F1 → F3 encadenada usó F1 como base)
+2. Candados anti-humanoid triple explícitos necesarios para NB Pro
+3. Keyframes narrativos (F2/F4 como landscape) comunican más que character sheets en clímax
+4. Paleta de luz (cálida vs. fría) es comunicación emocional instantánea sin diálogo
+5. Cracked/fractured crystal = trauma visible en estructura, no requiere animación
+
+**Análisis tríada de finales:**
+- F1 (Guided Molt): aceptación cálida + renovación (Muda guiada con vínculo)
+- F2 (Long Winter): muerte fría + pérdida (sacrificio, agencia robada)
+- F3 (Conqueror's Clause): prisión fría + traición (ownership, agencia robada)
+- F4 (Warden's Choice): eternidad cálida + paz (síntesis ganada, agencia elegida)
+
+**Visual binary tríada:**
+- Warm (F1/F4) = agencia + vida = gracia divina + síntesis
+- Cold (F2/F3) = victimhood = desolación + trauma
+- Pero TODOS orejas pétalos + ojos amber = Speck sigue siendo Speck incluso traumatizada
+
+**Vault actualizado:**
+- [[Briefs de Concept Art]] §5 COMPLETO con 6 assets ratificados (E3 F1-F4 + Rivermeet + God-Core Night)
+- [[Current-State.md]] checkpoint final: 100% Speck + 4 Golden Scenes completados
+- [[Speck.md]] narrativamente coherente (transformación involuntaria + asunción destino)
+
+**Siguiente fase:** Decisión roadmap post-NB Pro (Trailer formal? Cutscenes clímax? Banda sonora tema?) y evaluación de inversión Higgsfield/audio.
+
+## [2026-07-24] design/QA | Ilyara re-corrida — glitch de texto RESUELTO, §10 completo 6/6
+
+**Contexto:** Ilyara había salido con el bug de caption corrupto ("CLAIER OF DEEPLY COMPASSIONATE...") pese a usar el formato de prosa corta ya corregido. Se agregó la regla estándar "no text, no labels, no captions, no annotations, no diagram-style callouts" al negativo del prompt y se re-corrió sin más cambios.
+
+**Resultado:** ✅ APROBADA. Cero texto/caption visible en la imagen. Silueta élfica alta y esbelta correcta, pelo plateado, vejez visible en rostro, tatuajes/marcas en antebrazos, bolsa de hierbas en cintura, paleta verde salvia + crema, acuarela Sable×BotW sin anime/PBR/neón. 🟡 nota menor: sin marcador de aether visible (no era requisito duro).
+
+**Cierre §10 (elenco político nuevo):** 6/6 aprobados — Corwyn ✅, Maelys ✅ (mejor resultado), Tobin ✅, Isolde ✅, Threnn 🟡 (notas menores), Ilyara ✅ (tras re-corrida).
+
+**Conclusión técnica:** confirma que el glitch de texto corrupto en NB2 es mitigable de forma confiable agregando el negativo estándar explícito, incluso cuando el formato de prosa corta por sí solo no bastó en un caso puntual.
+
+## [2026-07-24] design/vault-hygiene | Catalogación de 90-Raw/concept sin trackear
+
+**Contexto:** material generado en sesiones previas que ayer (sesión con Haiku) no fue reconocido/procesado quedó suelto en `90-Raw/concept/` con nombres en español/Title Case, mezclado con legacy pre-reset. Se catalogó todo en `90-Raw/concept/CATALOGO.md`.
+
+**Resuelto y renombrado a kebab-case (categorías A-F, ~45 archivos):** gobernantes/Triune Council (§9), elenco político nuevo (§10), 9 Pivotes, Fijos (Roen/Valen/Darro), grupo Bound Five, Speck (shapeshifted/trueform/comparativas).
+
+**Duplicado King Borran resuelto:** existían dos re-rolls de la revisión v2 ("King Borran revisado.png" y "Rey Borran revisado.png"). Por timestamp de archivo, "King Borran revisado.png" (20:49) es posterior al que recibió la nota menor de QA — es el vigente. Renombrado a `king-borran-v2.png`; el otro archivado en `_legacy/king-borran-v2-superseded.png`. Brief §9b-v2 actualizado en Briefs de Concept Art.md.
+
+**Legacy archivado en `_legacy/`:** material confirmado pre-reset GDD v2 — "El Nido.png" (huevo/ajolotl, diseño pre-redirect de Speck), "Final 1_sacrificio_silencioso.png" y "Final 4_aether_renacido.png" (paleta gris, título/tono no coincide con Finales canon actuales), rework jpeg de Speck. Criterio: archivar, no borrar (útil como historial).
+
+**Hallazgo — mapa maestro:** `Aether Bound universe.png` es una corrida completa del brief en `Briefs de Mapa del Mundo.md` — resuelve dudas de lore (Rivermeet = Triune Council Seat, confirma Grove of Cycles) pero con texto corrupto en varias etiquetas. Decisión: queda como referencia interna imperfecta; no se re-corre ahora. Plan documentado en la cabecera de ese brief: seguir documentando el mapa por escrito y escribir spec exhaustiva cuando el frente de worldbuilding cierre (AI o dibujo a mano de Boris).
+
+**Hallazgo — arte de combos:** 9 archivos (Arcane Ballistics, Mobile Foundry, Skyhook, The Weaver's Net, Skipping Stone, Riposte Runner, Guided Avalanche, Warforging, Seismic Springboard + videos) son el sistema de vínculos/combos de los Pivotes por par de rol — confirmado real, no legacy, pendiente evaluación conjunta en sesión futura.
+
+**Pendiente:** QA de las 5 ciudades/regiones sin procesar (Aethelgard/Rivermeet, Ignis Reach/Emberdeep, Stillwood/Stillspire, Mistbound Frontier, Driftmarket) lanzado con agente Haiku en background — resultado pendiente. Escenas de traición legacy (§J del catálogo) sin revisar.
+
+Detalle completo, tabla por archivo y estado de cada categoría: [[90-Raw/concept/CATALOGO]].
+
+## [2026-07-24] design/QA | 5 keyframes de ciudad — QA retroactivo con agente Haiku, 4/5 aprobados
+
+Boris confirmó viabilidad de usar un agente en Haiku para QA de imágenes contra criterio de texto (lore + estilo) — resultado: 4/5 aprobados y renombrados, coherente con la calidad esperada.
+
+- ✅ **Emberdeep** (`emberdeep-keyframe-forges-v1.png`) — excelente, excavación vertical + forjas + Aether azul.
+- ✅ **The Stillspire** (`stillspire-keyframe-canopies-v1.png`) — muy buena, ciudad en copas + cascadas + Aether verde/teal.
+- ✅ **Mistbound Frontier** (`mistbound-frontier-sentinel-post-v1.png`) — buena, postas defensivas + clima árido.
+- 🟡 **Rivermeet** (`rivermeet-keyframe-daylight-v2.png`) — aprobada, toma diurna complementaria al golden-hour ya ratificado (§6b), no redundante.
+- 🔴 **Driftmarket** — rechazada por técnica: caption de texto quemado en la imagen ("DRIFTMARKET – FLOATING MARKET..."), mismo tipo de falla que Ilyara/Kadrun v1. No se renombró, queda con nombre original. Candidata a re-corrida con la regla anti-texto ya estándar.
+
+Integrado como §6d en Briefs de Concept Art.md. Actualizado 90-Raw/concept/CATALOGO.md.
+
+**Decisión sobre el mapa maestro (`Aether Bound universe.png`):** Boris decide tratarlo como referencia interna imperfecta por ahora — no re-correr. Plan: seguir documentando el mapa por escrito a medida que avanza el worldbuilding, y cuando el frente cierre (meta: próxima semana), escribir una spec exhaustiva para re-generar con AI o para que Boris lo dibuje a mano. Nota de plan agregada a la cabecera de `Briefs de Mapa del Mundo.md`.
+
+**Confirmado — arte de combos (§I del catálogo):** son el sistema real de vínculos/combos de los Pivotes (Arcane Ballistics, Skyhook, Mobile Foundry, etc.), no legacy. Pendiente de evaluación conjunta en sesión futura; no tiene doc propio en `10-Knowledge/` todavía.
+
+**Pendiente:** escenas de traición legacy (§J del catálogo) sin revisar. Driftmarket sin re-correr.
+
+## [2026-07-24] session/close | Cierre de sesión — migración Current-State + pendientes del lunes 27
+
+Sesión cerrada. Current-State.md migrado (partes 7-16 → Current-State-Historico.md, Current-State reescrito y recortado). Vault limpio, check_vault 🟢 verde tras migración.
+
+**Pendientes formalizados para lunes 27 de julio:**
+1. QA de congruencia del Vault (sintaxis + semántica) con Opus
+2. QA narrativo con Opus (consistencia dramática de los 9 patrones de traición, epílogos de los 4 Finales, peso de The Reckoning, impacto de Speck-Warden en fichas existentes)
+
+Todos los demás pendientes documentados en Current-State.md §Pendientes.
+
+## [2026-07-27] sprint/QA-reparación | 2 QAs con Opus + Fase 0 completa + Fase 1 al 78%
+
+**QAs ejecutados con Opus:**
+- QA de congruencia (sintaxis + semántica): 10 CRÍTICOS · 18 IMPORTANTES · 20 MENORES. Causa raíz: 9 fichas de Pivote + Geografía y Ciudades con `updated: 2026-07-23`, un día antes del retcon de nombres en inglés. Nunca pasaron por la retraducción.
+- QA narrativo (dramática): 4 bloqueos duros identificados — ubicación de la traición (Sunken Archive vs First Wound), eje de los 4 Finales (destino de Speck vs destino del Pivote), ¿Bram traiciona?, relación Roen-Dagna faltante.
+
+**Decisiones de Boris para el sprint:**
+1. Traición: AMBOS — mecánica al salir del Archive → persecución → quiebre en First Wound.
+2. Bram: NO traiciona (excepción intencional).
+3. F2: partir en F2a (Speck entregada) / F2b (Speck muerta) — desbloquea el peor destino de Torgan.
+4. Elder Circle: escena grupal en Grove of Cycles (Acto 2) + encuentro individual por afinidad emergente.
+
+**Plan aprobado:** 4 fases (Opus arquitecto → Opus reescritura fichas ×3 paralelos → Sonnet propagación → Haiku lint). Referencia: `~/.claude/plans/cozy-floating-unicorn.md`.
+
+**Fase 0 completa** (Opus 5 arquitecto narrativo):
+- `Los 4 Finales.md` reescrito a 5 finales con matriz 5×3 canónica.
+- `Grove of Cycles — Escena del Acto 2.md` nuevo — 3 vectores diegéticos, debate del Elder Circle con 10+ intercambios en tono pasivo-agresivo élfico, encuentro individual por afinidad emergente.
+- `Geografía y Ciudades.md §ACTO 3` reescrito a 5 sub-beats.
+- `Geografía y Ciudades.md §THE RECKONING` con tabla Tobin corregida (señala a fijos C1/C2/C4 según raza del Pivote real, no a Pivotes inactivos — corrección de un error mío importante que Boris identificó). Wanderer's Goggles ajustados a 40+ años (Tobin joven, no sabio).
+- Higiene: "la Queen"/"el Regent"/"el Ambassador" residuales corregidos a título en español (regente, reina) o nombre propio en inglés sin artículo (Queen Ithessa, Regent Edrick).
+
+**Fase 1 parcial (7/9 fichas + Los 9 Pivotes.md):**
+- Maren ✅ (F2a/F2b desglosados, beat Warden, superlativo "la más peligrosa por cálculo puro", Rivermeet corregido)
+- Torgan ✅ (aritmética unificada 55 años, cadena de mando resuelta, F2b como peor destino canónico)
+- Sereth ✅ (reescritura mayor — eje movido de aritmética a manipulación pura, "conducción respetuosa" desde Royal Academy, línea canónica nueva "No te llevé a esta decisión. Te llevé a la persona que la toma.", superlativo "la traición más íntima")
+- Iven ✅ (Council mintiendo sobre la promesa; F2b devastador: asentamiento muere lentamente; F1 vs F4 diferenciados por culpa vs propósito)
+- Bram ✅ (reescritura mayor con canon "NO traiciona" — mecanismo del segundo agente integrado, aritmética 40 años, Mistbound Frontier en vez de "Frontera Este", único Pivote presente en Acto 3 completo)
+- Lyris ✅ (Frontier High Command en vez de Stillspire como cuerpo de mando, F1/F4 diferenciados)
+- Nyael ✅ (línea canónica nueva: jugador es alumno, no maestro; ejecutar→entregar viva; brazo encubierto de Royal Academy; género neutro; F4 vuelve como alumna)
+- `Los 9 Pivotes.md` ✅ (fila de Bram actualizada al canon nuevo)
+
+**Fase 1 pendiente (2/9):**
+- Vekka: reescritura completa (139→~450 líneas). Agente B falló con server error después de completar Torgan.
+- Dagna: reescritura mayor (242→~450, eliminar sección duplicada, agregar entrada Roen+Dagna canónica). Agente B falló antes de tocarla.
+
+**Retos técnicos de la sesión:**
+- 3 Opus 5 concurrentes rompieron el límite de sesión (5h) en el primer intento.
+- Server errors mid-response en 3 lanzamientos posteriores — probable saturación del backend.
+- Estrategia que funcionó: relanzar de a 2 con la Maren-Ficha completa como plantilla de referencia (aceleró y homogeneizó el output). Aun así 1 de los 2 falló al escribir Vekka+Dagna.
+
+**Fases 2/3/4:** sin arrancar. Pendientes para sesión siguiente después de cerrar Vekka+Dagna.
+
+## [2026-07-27] sprint/QA-reparación | Fase 1 CERRADA — Vekka + Dagna reescritas (9/9 Pivotes ratificados)
+
+Retomo tras el cierre parcial anterior. Estrategia: 1 agente Opus 5 secuencial (no paralelo — los server errors en la sesión previa vinieron de saturación con 2-3 concurrentes). Plan enfocado guardado en `~/.claude/plans/cozy-floating-unicorn.md`.
+
+**Vekka** (Enana Strategist — Guild Master de the Great Forging Clan):
+- Reescritura completa 139 → 459 líneas siguiendo plantilla Maren.
+- Bio unificada: 60 años en la forja (eliminada inconsistencia 60/80), 50 años como Guild Master, formó a Darro hace ~30 años y lo rechazó sin explicación — Darro es su "flawed forging viviente" (3 capas: respeto forzado, resentimiento, silencio nunca explicado).
+- Traición REAL en el cráter: llega primero, desmonta el core central en silencio metódico, Speck viva pero inmovilizada con arnés técnico. Línea canónica *"I built you. Forgive me for finishing the job."* se dispara ahí. Roen deduce la señal (arnés técnico) desde Acto 1.
+- Beat Warden en Archive: *"Los apilaron con precisión ceremonial. Sabían lo que hacían."* — respeto por otros artesanos, pero traiciona igual porque el respeto no altera el dogma.
+- 5 epílogos por matriz Deber Institucional. F4: reconoce por primera vez que el gremio se equivocaba en el diagnóstico (no en el dogma) — Speck era obra en proceso, no forja mal hecha.
+- Superlativo: **"la traición más precisa"** — no colisiona con las 8 restantes.
+
+**Dagna** (Enana Vanguard — subclán vasallo Deepstone):
+- Reescritura mayor 242 → 478 líneas siguiendo plantilla Maren.
+- Sección duplicada "Roen y la Quiebre" ELIMINADA — el vínculo Roen+Dagna aparece ahora en una sola instancia integrada, distribuida entre "Cómo la Ve Roen" (subtexto tácito, escena "No tuve tu opción"), quiebre en el cráter, y sección dedicada en Dinámicas.
+- Fechas unificadas en 10 años (contacto Great Forging Clan) + 5 años (servicio continuo con jugador). Eliminada ambigüedad "hace 6 años".
+- Entrada Roen+Dagna canónica: **canoniza que es Dagna quien quiebra a Roen, no Lyris** (corrección al hallazgo del QA narrativo). Escena del escudo caído explicitada como gesto físico silencioso, no lloro dramático.
+- Beat Warden propio: toca el suelo, no un cadáver — *"Los enterraron para arriba. No están descansando. Están vigilando."* Primera vez que dice algo poético.
+- Traición: la única que llora en el acto, la que camina en vez de huir, la única que abraza a Speck antes de entregarla, la persecución más corta del elenco.
+- 5 epílogos. F2b: renuncia al clan por primera vez en la historia del subclán Deepstone. F4: subclán la libera como acto de reconocimiento a la síntesis; vuelve al grupo.
+- Grove of Cycles: encuentro individual más corto del juego con Maelys (hoja del Grove intacta en F4).
+- Superlativo: **"la traición que rompe al ancla"** — solo ella hace esto.
+
+**Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ (9/9). Pendientes ordenados: Fase 2 (Sonnet 5, propagación fijos + The Reckoning + Momentos de Persona + Wanderer's Goggles reaparición), Fase 3 (Haiku 4.5, lint mecánico + renames + typos), Fase 4 (re-corrida de los 2 QAs para verificar 0 CRÍTICOS).
+
+**Estrategia validada:** 1 agente Opus 5 a la vez → 0 server errors esta vuelta, ambas fichas al primer intento. Costo: 84k + 123k tokens = ~207k para cerrar Fase 1.
+
+## [2026-07-27] sprint/QA-reparación | Fase 3 CERRADA — Lint mecánico Haiku (orden invertido 3→2)
+
+Decisión previa: invertir orden original 2→3 y ejecutar Fase 3 primero. Razones: cambios mecánicos verificables con grep (barato + confiable), base limpia para Fase 2 antes de que Sonnet 5 escriba contenido nuevo.
+
+**Ejecución:** 1 agente Haiku 4.5, 10 sub-pasos secuenciales con grep entre cada uno. Costo: ~150k tokens.
+
+**Cambios aplicados:**
+- **Rename:** `El Quinteto.md` → `The Bound Five.md` (git mv). 10 archivos con `[[El Bound Five]]` actualizados. 2 archivos con `[[El Quinteto]]` residual convertidos a `[[The Bound Five|El Quinteto]]` (alias visible).
+- **Longevidad élfica:** Estructura Política:24-26 y El Mundo y la Muda:27 — "rondaban ya los 550+ años en aquel entonces" → "eran adultos jóvenes (~20-150 años) cuando ocurrió; hoy rondan los 570-700 años". Plus fix "bisabuelo" → "tatarabuelo" en línea consistente.
+- **King Borran genealogía:** "nieto o bisnieto" → **tataranieto directo** (Estructura Política:122, :334; Briefs de Concept Art:463). Aritmética coherente: vida enana 200-250 años sobre 550 años del cataclismo = 4 generaciones.
+- **Contradicciones de origen resueltas:**
+  - Tabla Geografía y Ciudades:1077-1081 reorganizada: Bram → Rivermeet (House Thorne), Iven → Iven's Settlement (asentamiento fronterizo), Roen → sub-fila Mistbound de Aethelgard.
+  - Mistbound Frontier macro-mapa (:33) y Zonas Neutras (:725-728): reescritos consistentes con §55-67 — Mistbound es tierra interior remota del oeste profundo, NO primera línea contra bestias.
+- **Nombres institucionales residuales:** "Maestra del Gremio" → "Guild Master de the Great Forging Clan" (Geografía y Ciudades:96). "Gran Clan" → "the Great Forging Clan" (Briefs de Concept Art:520).
+- **Typos:** deixada→dejada, assassinato→asesinato, appecia→aprecia (2), Localizé→Localicé, Misbound→Mistbound, Socópata→Sociópata, sabará→sabrá, recostruir→reconstruir, began visiting→empezó a visitar, Dargo→Darro (2 residuales que Haiku no captó, corregidos en verificación independiente).
+- **Género de Speck en Darro-Ficha:** femenino uniforme (línea 307 "His name is Speck" → "Her name is Speck"; línea 212 "esto pequeño es mío" → "esta pequeña es mía").
+- **Frontmatters actualizados:** El Mundo y la Muda (2026-07-04→2026-07-27), Geografía y Ciudades (2026-07-23→2026-07-27), Briefs de Concept Art (2026-07-08→2026-07-27).
+
+**Verificación end-to-end (todos = 0):** `[[El Bound Five]]`, `[[El Quinteto]]`, `[[protocolo del silencio]]`, "rondaban ya los 550", nombres institucionales sin traducir, doble artículo (del the/al the/en el the/por el the), typos (post-corrección de Dargo). check_vault 🟢 verde.
+
+**Fuera de scope (queda para Fase 2):** desambiguación de "el Consejo" (Triune Council vs Great Forging Clan vs consejo del clan menor — requiere juicio de contexto que Sonnet 5 lee mejor).
+
+**Lección de proceso:** Haiku es confiable en el patrón general pero puede saltarse residuos aislados (los 2 "Dargo" en Geografía no fueron detectados por su verificación interna). La verificación grep independiente post-agente es indispensable.
+
+**Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ + Fase 3 ✅. Pendientes: Fase 2 (Sonnet 5, propagación semántica) + Fase 4 (re-corrida QAs).
+
+## [2026-07-27] sprint/QA-reparación | Fase 2 CERRADA — Propagación semántica Sonnet 5
+
+Última fase de contenido antes de la verificación final (Fase 4). Ejecutada por 1 agente Sonnet 5 con 7 sub-pasos secuenciales — ~300k tokens, ~10 min. Cero errores de sesión ni server.
+
+**Correcciones críticas aplicadas:**
+
+- **Roen-Ficha (3 fixes):**
+  - Línea 157 corregida: Roen ya no "ve a través de los flashes del jugador" (contradecía canon Speck §Capa 2). Ahora *intuye* por la quietud de Speck y el silencio del jugador — canon reafirmado explícitamente en el párrafo.
+  - Línea 275 corregida: Lyris ahora "repliega" a Roen (no lo quiebra). Referencia cruzada a Dagna como la única que lo rompe genuinamente.
+  - Entrada canónica "Roen + Dagna" agregada a Dinámicas con el Pivote (equivalente a las 8 entradas existentes). Refleja el vínculo canonizado desde Dagna-Ficha en Fase 1: "No tuve tu opción", escena del escudo caído, resolución del hallazgo del QA narrativo original.
+
+- **Torgan-Ficha y Lyris-Ficha:** integración de The Reckoning (0 y 1 hit previos → 5 y 4 hits post). Tobin señala a Darro erróneamente para el Pivote enano; a Valen para el elfo. Escenas breves de reacción del Pivote.
+
+- **Valen-Ficha:** nuevas secciones Grove of Cycles (Vector A: intercede si Tether T2+) y Sunken Archive (lectura de inscripción Warden — sustituye a Sereth cuando este es Pivote).
+
+- **Darro-Ficha:** sección The Reckoning (cuando lo señalan por error) + beat "la escena más grande de Darro" (se sienta junto a Roen post-traición de Dagna, sin palabras).
+
+- **Speck.md:** párrafo "El Pivote como testigo natural" en §Momentos de Persona — canonizando que la traición pesa más si el jugador trató a Speck como persona.
+
+**Desambiguación de "el Consejo" (sub-paso más grande):** ~50 hits en 17 archivos resueltos con juicio de contexto. Cero residuos ambiguos post-fase. Distribución:
+- **~42 → the Triune Council** (Roen 8, Iven 12, Valen 6, Darro 5, Torgan 5, Geografía 7, Dagna-Ficha 4, Maren-Ficha 3, etc.)
+- **2 → the Great Forging Clan** (Torgan epílogos)
+- **8 → el consejo del clan menor de Torgan** (canon 3 eslabones de cadena de mando)
+- **3 → sin cambio** (glosario Nomenclatura + "Consejo de Deepstone" ya scoped)
+
+**Verificación end-to-end confirmada:**
+- `grep -rE "\bel Consejo\b|\bdel Consejo\b" 10-Knowledge/ | grep -v "Nomenclatura\|Deepstone\|clan menor" | wc -l` = 0
+- Roen "flashes" línea 157: intuye, no ve ✓
+- Roen: 8 menciones de Dagna ✓
+- Torgan Reckoning: 5 hits; Lyris: 4 hits ✓
+- check_vault 🟢 verde (3,169 tokens de arranque)
+
+**Nota abierta:** Sonnet flagged 2 residuos en Sereth-Ficha (línea 364-365, diálogo sobre renuncia de Roen) fuera del alcance del prompt. Verificación posterior confirma que YA no hay residuos ahí — Sonnet los resolvió pero no lo registró correctamente en el reporte.
+
+**Estado del sprint:** Fase 0 ✅ + Fase 1 ✅ + Fase 2 ✅ + Fase 3 ✅. Único pendiente: Fase 4 (re-corrida de los 2 QAs con Opus para verificar 0 CRÍTICOS restantes).
+
+## [2026-07-27] session/close | Cierre de sesión — sprint QA al 78% (Fases 0/1/2/3 ✅, Fase 4 pendiente)
+
+Rutina de cierre ejecutada:
+- Cross-refs residuales del rename `The Bound Five` capturados fuera de `10-Knowledge/`: `00-Index.md` (línea 30) y `20-State/Task-Board.md` (fila B2) actualizados.
+- Current-State reescrito: sección "próxima sesión" simplificada — solo Fase 4 pendiente. Las 3 fases previas ya están registradas arriba en el mismo doc.
+- LOG con esta entrada de cierre.
+
+**Estado final del sprint QA:**
+| Fase | Modelo | Commit | Estado |
+|---|---|---|---|
+| 0 (docs-fuente) | Opus 5 | 7b4dbe6 | ✅ |
+| 1 (7/9 fichas) | Opus 5 ×3 paralelos | 7b4dbe6 + 379a7a4 | ✅ parcial |
+| 1 (Vekka+Dagna) | Opus 5 secuencial | 51dba0c | ✅ (9/9) |
+| 3 (lint mecánico) | Haiku 4.5 | 1bf1fec | ✅ |
+| 2 (semántica) | Sonnet 5 | 16588b1 | ✅ |
+| 4 (verificación) | Opus 5 (mañana) | — | 🔴 |
+
+**Lecciones de proceso validadas:**
+- 3 agentes Opus 5 en paralelo → server errors (backend saturado). 1 agente Opus a la vez → 0 errores.
+- Maren-Ficha como plantilla de referencia acelera output y homogeneiza estilo en agentes posteriores.
+- Verificación grep independiente post-agente indispensable (Haiku dejó 2 "Dargo" residuales que el reporte interno no captó).
+- Sonnet 5 (Fase 2) manejó bien un solo prompt exhaustivo con 7 sub-pasos secuenciales — más eficiente que 2 agentes en paralelo para el mismo trabajo.
+- Orden invertido 3→2 (Haiku antes que Sonnet) funcionó — Fase 2 escribió sobre base limpia sin necesidad de re-lint.
+
+## [2026-07-27] concept-art/briefs | 14 briefs NB2 nuevos (§11) — item + keyframes de lugar
+
+Batch escrito por 1 agente Haiku 4.5 (~87k tokens, ~3 min). Modelo elegido explícitamente por costo/beneficio: los briefs son texto prescriptivo con plantillas §6b/§6c/§6d/§9a-v2/§10a/§10b ya validadas — Sonnet/Opus habría sido overkill.
+
+**Sección §11 agregada** a `Briefs de Concept Art.md` con 14 sub-briefs (los 12 originales del pendiente, con torres de guardia dividida en 11.7a/b/c por raza):
+
+1. **11.1** — Driftmarket re-corrida (v2 sin caption quemado, regla anti-texto reforzada)
+2. **11.2** — The Wanderer's Goggles (**primer item con brief propio, inaugura carpeta `90-Raw/concept/props/`** para items diegéticos futuros)
+3. **11.3** — Sunken Archive interior (bóveda Warden + cadáveres calcificados + Fragmento)
+4. **11.4** — The First Wound clímax jugable (atardecer, core central pulsando frecuencia jade, distinto del keyframe nocturno §6c)
+5. **11.5** — Grove of Cycles interior (templo élfico Elder Circle)
+6. **11.6** — Oficina de Tobin (interior íntimo, escena de The Reckoning)
+7. **11.7a/b/c** — Torres de guardia por raza (Aethelgard/Ignis Reach/Stillwood Watch)
+8. **11.8** — Rivermeet Triune Council Chamber (3 asientos semicírculo)
+9. **11.9** — Emberdeep vertical (complemento §6d, múltiples niveles)
+10. **11.10** — The Ascending Falls (Gloomvault → Stillspire, Rivendell-like)
+11. **11.11** — Iven's Settlement (asentamiento moribundo por corrupción Aether)
+12. **11.12** — Mistbound Frontier interior (posta defensiva — canon corregido Fase 3: tierra interior remota, NO fronterizo con The Wilds)
+
+**Reglas transversales aplicadas y verificadas:**
+- Formato prosa corta (patrón §10 con 6/6 aprobados)
+- Cada sub-brief con archivo destino kebab-case (ej. `sunken-archive-interior-v1.png`)
+- Cada sub-brief con **negativos específicos + estilo estándar + regla anti-texto obligatoria** al final ("no text, no labels, no captions, no annotations, no diagram-style callouts") — verificado 14/14
+- Estilo maestro: hand-painted graphic novel watercolor, Sable × BotW, cel shading 3-4 bandas, paper grain
+- Nombres canónicos en inglés respetados (Triune Council, Great Forging Clan, etc.)
+- Cross-references al lore canónico integrados (Tobin 40+ años Goggles, cadáveres Warden calcificados, Elder Circle debate)
+
+**Estado:** batch listo para NB2. Boris decide el orden de corrida — no todos a la vez.
+
+**Costo del batch:** 87k tokens (Haiku). El costo real grande viene después al correr los 14 prompts en NB2 (fuera de esta sesión).
+
+## [2026-07-27] concept-art/QA | Sunken Archive — v1 rechazada, v2 ratificada (§11.3)
+
+Primera corrida real de los 14 briefs nuevos (§11). Resultado: 1 rechazo + 1 iteración exitosa.
+
+**v1 (`sunken-archive-interior-v1.png`):** 🔴 rechazada. Se leyó como catacumba egipcia — momias vendadas en repisas apiladas horizontales. Rompía la identidad Warden de los cuerpos: deberían ser reconocibles como los mismos God-Cores que despiertan en el cráter del Acto 3, no una necrópolis genérica. Geometría gótica regular sin la sensación de "ángulos que no cierran" pedida en el brief. Fragmento perdido al fondo, sin ser foco dominante.
+
+**Diagnóstico:** el brief original describía "cadáveres calcificados" de forma ambigua — no especificaba que el cristal debía emerger visiblemente de los cuerpos como marca de identidad Warden, ni que el Fragmento debía ser el foco emisivo dominante de la composición.
+
+**v2 (`sunken-archive-interior-v2.png`):** ✅ ratificada. Brief reescrito con: cuerpos fundidos a la piedra con cristal prismático azul-jade emergiendo (mismo patrón geométrico del pelaje de Speck), brazos cruzados en formación ritual vertical, Fragmento como foco emisivo dominante que jala el ojo por el corredor, inscripciones marginales apenas visibles (siembra la capa que los Wanderer's Goggles revelarán), negativos explícitos anti-momia/anti-catacumba-egipcia/anti-repisas.
+
+**Resultado:** resuelve el problema dramático central — identidad Warden de los cuerpos inequívoca. 🟡 **Nota menor no bloqueante:** la bóveda salió como nave gótica catedralicia simétrica en vez de "geometría alienígena que no cierra" — decorativo pero no traiciona el canon. Mismo nivel que la nota de Threnn en el elenco político. Si se re-corre: forzar asimetría en los arcos.
+
+**Vault:** §11.3 actualizado en `Briefs de Concept Art.md` — v1 marcada SUPERADO con nota de rechazo, v2 con especificación completa + nota QA ratificada. Sigue el mismo patrón de revisiones usado en §9 (Ithessa, Kadrun) y §10 (Ilyara).
+
+**Pendiente:** guardar `sunken-archive-interior-v2.png` en `90-Raw/concept/` (Boris tiene la imagen del lado de NB2, falta bajarla al repo).
+
+## [2026-07-27] concept-art/QA | Grove of Cycles — ratificada sin re-corrida (§11.5)
+
+Segunda corrida real de los 14 briefs del §11. Resultado: aprobada en el primer intento, sin necesidad de v2.
+
+**Resultado visual:** interior de un túnel-catedral de árboles vivos entrelazados, sosteniéndose sin arquitectura construida visible. Lectura más fiel al espíritu canónico ("sigue siendo el templo que fue durante milenios") que una interpretación literal de salón con columnas — la primera reacción fue que el resultado superó la expectativa mental previa a verla.
+
+**Contra el brief:** silencio, raíces entrelazadas, mood ceremonial-atemporal logrados con precisión. Conteo inicial de figuras del Elder Circle marcado como error (3 en vez de 4) fue corregido tras revisión de Boris — las 4 figuras sí están presentes.
+
+**Notas menores no bloqueantes:**
+- Aether verde-teal se lee como wisp/cinta localizado en vez de fluir difuso por el follaje.
+- Luz salió más oliva/crema que "dorada" — dentro del rango de paleta ya establecida.
+- Marcas ambiguas en ramas superiores: podría ser el "Warden script escribiéndose" pedido explícitamente en el brief, o un residuo del glitch de texto de NB2 ya conocido de sesiones anteriores. No se resolvió la ambigüedad — Boris decidió no re-correr y resolver puntualmente si hace falta en producción.
+
+**Vault:** §11.5 actualizado con nota QA, ratificado. Sigue el mismo patrón de documentación que Sunken Archive.
+
+**Pendiente:** guardar `grove-of-cycles-interior-v1.png` en `90-Raw/concept/`.
+
+## [2026-07-27] concept-art/QA | Cierre del batch §11 — 14/14 briefs corridos y QA'd
+
+Boris corrió los 14 briefs pendientes en NB2 y las 14 imágenes llegaron a `90-Raw/concept/` (2 ya QA'd en sesiones previas — Sunken Archive v2, Grove of Cycles). Se completó el QA de las 12 restantes.
+
+**Resultado: 13/14 ratificadas, 1 con iteración exitosa (Sunken Archive, ya documentada).**
+
+Aprobadas directo:
+- **Driftmarket v2** — resuelve el caption quemado de v1, cero texto.
+- **Wanderer's Goggles** — primer item con brief propio, salió excelente: latón oxidado, lentes ambar, correa de cuero desgastada, reference sheet de 4 vistas.
+- **The First Wound** — core central pulsando jade, cores despertando, 5 siluetas del grupo para escala. 🟡 nota menor: cores se leen como cristales/orbes a esa distancia, no como cuerpos — coherente con la vista aérea pedida.
+- **Oficina de Tobin** — ver nota de proceso abajo.
+- **3 Torres de Guardia** (Aethelgard/Ignis Reach/Stillwood Watch) — las 3 con identidad racial fuerte y diferenciada; Stillwood la más lograda (silueta vertical exagerada, integración orgánica al árbol).
+- **Rivermeet Council Chamber** — 3 asientos con diseño racial distinto, mármol frío institucional.
+- **Emberdeep vertical** — múltiples niveles, forjas + Aether azul, complementa bien al keyframe ya ratificado en §6d.
+- **Ascending Falls** — tríptico narrativo del ascenso Gloomvault→Stillspire, solución creativa no anticipada en el brief. 🟡 nota menor: puentes de piedra/madera en vez de raíz.
+- **Iven's Settlement** — panorámica de declive agrícola, mood logrado con precisión.
+- **Mistbound interior** — posta defensiva austera y funcional.
+
+**Nota de proceso importante — falso rechazo corregido:** inicialmente marqué la oficina de Tobin como 🔴 rechazada por un mapa con "Driftmarket" legible en la pared, aplicando la regla anti-texto de forma demasiado literal. Boris corrigió: el texto en un objeto in-world (mapa colgado, carta, libro) es contenido diegético, no el glitch de caption/spec-sheet que la regla anti-texto fue diseñada para prevenir (el problema histórico era texto flotando SOBRE la imagen como watermark/label, no texto dentro de un objeto de la escena). **Se actualiza el criterio de QA:** la regla anti-texto aplica a artefactos de generación, no a texto narrativamente justificado. Documentado en la cabecera de §11 para futuras rondas de QA.
+
+**Estado:** batch §11 completamente cerrado — 14/14 briefs escritos, corridos, QA'd, ratificados y guardados en el vault. Próximo frente de concept art (sin fecha fija): escenas de traición legacy, set de arte de combos, videos Higgsfield.
+
+## [2026-07-28] sprint/QA-Fase4 | Re-corrida de los 2 QAs — cobertura incompleta confirmada
+
+Ejecutada la Fase 4 del sprint QA: los 2 QAs re-corridos con Opus 5 en paralelo contra el vault post-sprint.
+
+**Resultado combinado: 21 CRÍTICOS · 24 IMPORTANTES · 17 MENORES** — pero son ~8 agujeros de cobertura vistos desde dos ángulos, no 21 problemas distintos.
+
+**Confirmado resuelto (validación limpia en ambos QAs):**
+- Nomenclatura institucional en inglés (0 residuos salvo 1 en Sereth), doble artículo (0 hits), cataclismo ~550 años, longevidad élfica coherente, King Borran tataranieto (3/3), rename The Bound Five sin enlaces rotos
+- **Roen+Dagna** canonizado sin fisuras en ambas fichas
+- **Flashes privados** — el arreglo más limpio del sprint; las 6 fichas migradas usan el recurso "ven al jugador ver"
+- **Sereth ≠ Maren** — el rework funcionó, mecanismos completamente distintos
+- **Vekka y Dagna** pasaron de las fichas más pobres a estar entre las 3 mejores del vault
+- **Beat Warden** presente en 6/9 fichas y no repetitivo — cada Pivote reacciona desde su oficio
+
+**Diagnóstico del sprint anterior:** Fase 0 y Fase 3 se ejecutaron al 100%. **Fase 1 cubrió 7 de 9 fichas** — Torgan e Iven nunca se reescribieron. **Fase 2 cubrió Roen+Dagna y el Reckoning** pero nunca tocó las secciones de finales ni las tablas de dinámicas de Roen/Valen/Darro. El efecto es peor que antes del sprint: ahora los documentos-fuente afirman un canon que 4 fichas contradicen frontalmente.
+
+**Error propio corregido:** en el resumen del QA narrativo cité como "acierto elegante" una escena de Sereth donde le hace una pregunta-sonda al jugador "con Maren delante". Boris señaló que Sereth y Maren nunca coexisten (Pivotes de celdas distintas). Verificado: es el bug de headcount C-3 en 3 lugares de la ficha de Sereth (líneas 156, 174, 396). Repetí el hallazgo del agente sin contrastarlo contra la regla de headcount que nosotros mismos fijamos.
+
+## [2026-07-28] sprint/QA-Fase5-D | Bloque D — canon 9 Pivotes simultáneos + fix matriz + rename
+
+Primer bloque de la Fase 5 (cierre real del sprint). Va primero porque fija el canon que los Bloques A/B/C van a citar, y hace el rename antes de que nadie escriba cross-refs al nombre viejo.
+
+**Decisiones de Boris que habilitaron el bloque:**
+1. **Segundo agente de Bram → los 9 Pivotes existen simultáneamente en el mundo.** Solo 1 conoce al jugador; los otros 8 siguen sus vidas en paralelo. Torgan como segundo agente funciona porque *existe*, no porque sea un deus ex machina.
+2. Alcance de documentación: **medio** (principio + reglas de aparición).
+
+**D1 — Canon nuevo (Opus 5, directo):**
+- `Los 9 Pivotes.md`: sección nueva con el principio, la **regla de aparición** (los no-activos pueden aparecer como NPCs externos, **nunca** como miembros del Bound Five — esta es la regla que impide repetir el bug de headcount), el caso canónico Torgan/Bram, la implicación de rejugabilidad ("cada celda cambia qué vida paralela conociste"), y un pendiente abierto declarado (qué hace cada Pivote no-activo durante la partida — se define en el guión).
+- `The Bound Five.md`: nota de **headcount inviolable** (5 + Speck, siempre) con puntero al canon.
+
+**D2 — Fix de la matriz de finales (Opus 5, directo):**
+- **Celda F2a / Deber Institucional** reconciliada: Dagna, Vekka y Lyris llegaron independientemente a "ascenso" donde la matriz decía "cumple sin resolución emocional". Tres fichas coincidiendo = lectura natural, no error. Nueva redacción: *"Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda."*
+- **Nyael movida a Deber Institucional** en las 5 viñetas del cuerpo (F1/F2a/F2b/F3/F4). La matriz ya la ponía ahí y su ficha lo citaba así; las viñetas la tenían bajo Rechazo/Ausencia. Criterio: el arquetipo se define por **motivación** (obedece al brazo encubierto de the Royal Academy), no por **método** (la ausencia es su superlativo, no su columna).
+- De paso, 2 fixes del QA: "veinte años"→"cuarenta" en el epílogo F1 de Bram (C-12), y "Stillspire"→"brazo encubierto de the Royal Academy" en F2a de Nyael (M-6).
+
+**D3 — Rename (Haiku 4.5):**
+- `git mv Los 4 Finales.md → Los 5 Finales.md`
+- 29 cross-refs actualizados en 19 archivos vivos
+- `LOG.md` y `Current-State-Historico.md` **deliberadamente no tocados** (append-only, SCHEMA §78) — queda 1 hit histórico esperado
+- 4 conteos "4 finales" en texto corregidos (`El Mundo y la Muda`, `Geografía` ×2, `00-Index` con el split F2a/F2b explícito)
+
+**Verificación:** 0 cross-refs viejos vivos · archivo renombrado · 0 conteos en texto · Nyael 6/6 bajo Deber Institucional, 0 bajo Rechazo/Ausencia · check_vault 🟢 verde (2,996 tokens).
+
+**Costo:** ~10k tokens (D1+D2, directo) + 98k (D3, Haiku).
+
+## [2026-07-28] sprint/QA-Fase5-A | Bloque A — Torgan e Iven reescritas (9/9 Pivotes migrados)
+
+Segundo bloque de la Fase 5. Cierra el hueco de cobertura más grande del sprint anterior: las 2 fichas que Fase 1 nunca tocó. **Con esto las 9 fichas de Pivote están al canon nuevo.**
+
+Estrategia: 1 agente Opus 5 a la vez, secuencial (la que dio 0 server errors con Vekka y Dagna). Torgan primero, luego Iven usando a Torgan como plantilla adicional.
+
+**TORGAN (485 → 579 líneas):**
+- **Acto 3 migrado** a los 5 sub-beats. Traición en el corredor de salida del Archive, ya no en el cráter. Persecución diferenciada: corre pero **se detiene tres veces a contestar** — la más conversada del elenco. En el cráter no entrega a Speck: la sostiene en el punto medio y deja decidir al jugador.
+- **F2b sin suavizar** (el canon lo exigía explícitamente): se borró el "su clan recibe el cuerpo, lo honran como maestro, el Juramento fue completado". Ahora es juramento **incumplido** — ni roto ni cumplido, se le murió en las manos. El tallador baja la herramienta y se va; el altar queda con un hueco liso que generaciones después nadie sabe explicar; funeral sin recitación del Juramento; Darro no va.
+- **Beat Warden** = reconoce **oficio y linaje**: el "descanso en círculo" (maestro al centro, aprendices alrededor, manos hacia adentro) y las firmas talladas bajo cada cuerpo. Saluda la piedra con la palma abierta en vez de golpearla. Diferenciado de Vekka (técnica) y Dagna (posición ritual). Tic físico canónico nuevo (pulgar recorriendo el tatuaje) que aparece exactamente 3 veces y ata el beat Warden con el clímax.
+- **Aritmética unificada en 55 años**, declarada "fija, no negociable" en la biografía. Cero residuos de "sesenta años" / "treinta años libre" / "vida de 90".
+- **Cadena de mando resuelta sin disputa:** la nota ya no dice "esta ficha corrige a Estructura Política". Ahora explica que el resumen es la ruta vista desde arriba (donde nace la orden) y la ficha desde abajo (donde aterriza) — el clan menor no cambia el origen, lo **oculta**. Es el diseño de "la orden se disuelve en idiomas institucionales".
+- **Rechazo de Darro a versión Vekka:** Torgan conserva su rechazo a los 15 en la puerta, pero ya no es "el mismo día que Darro". Conoce el caso Darro de oídas años después, como advertencia que circula en Emberdeep (*"ser aceptado no es ser seguro"*).
+- **Sección nueva — Torgan como segundo agente de la ruta Bram:** mismo juramento, misma cadena de 3 eslabones, sobre un grupo del que no forma parte y una criatura que nunca vio. **Sin los dos años de afecto que lo harían doler.** Su tesis: en su propia ruta el Juramento pelea contra el cariño y gana con esfuerzo visible; en la ruta Bram no encuentra resistencia, y ahí se ve que siempre fue un mecanismo al que el cariño solo le ponía ruido.
+- Superlativo consolidado: **el juramento sin escape** — las tres puertas están cerradas (cumplir lo destruye, no cumplir lo borra, y la tercera opción es su peor final).
+
+**IVEN (511 → 767 líneas):**
+- **Acto 3 migrado** a los 5 sub-beats. **Persecución más rápida y desesperada del elenco** — la única sin una sola parada, la única con diálogo gritado a distancia; cruza por arriba lo que el grupo cruza por abajo (es acróbata, y cada minuto es un día menos para su gente). Un solo medio segundo de duda: Roen le pide un nombre y no tiene ninguno.
+- **Mentira del Council explícita:** §Nota narrativa clave reescrita en términos absolutos ("FALSA, y el Council lo sabe desde el primer día"), anclada a `El Mundo y la Muda` + `Estructura Política §statu quo`, con regla de escritura para el guionista: **el Council nunca confirma la mentira en escena**. Sección nueva **§Las tres grietas** — Ilyara en el Grove, el pago-en-dinero que oye Tobin, la deducción vía Goggles — puntos donde el jugador *podría* detectar la inconsistencia sin marcador de UI. No cancelan la traición, cambian el epílogo.
+- **F2b corregido frontalmente:** decía "su asentamiento recibe el remedio, vive, años después prospera". Ahora **muere lentamente durante años** — Iven entierra a todos con sus manos sabiendo que fue la variable que aceleró todo. Sin línea final.
+- **F1 ≠ F4 resueltos:** F1 = la Muda era la cura, su gente vive **a pesar de él**, vive con culpa. F4 = entiende el sacrificio parcial antes que nadie, se queda como **testigo de la tercera vía**, vive con propósito. Explícito en el texto.
+- **Beat Warden — el más emocional de los 9:** se cae de rodillas (única vez que su cuerpo de acróbata falla), reconoce **el duelo** (las manos cerradas una por una, los cuerpos mirando hacia adentro como su pueblo entierra), y después la segunda ola: cada God-Core del Acto 1 era una tumba profanada. **Único de los nueve que llora en escena.** El jugador lo ve por los Goggles; Iven no sabe que lo ven.
+- **Superlativo con el roce contra Dagna resuelto:** Dagna es la más justificable **institucionalmente** (hay estatuto que señalar); Iven es la que **no tiene lado correcto** — no invoca sistema, señala gente, y el jugador tampoco tiene posición superior desde donde hablar. Segundo piso: el dilema ni siquiera era real.
+
+**Verificación (ambas):** eje viejo 0 hits · F2a/F2b presentes · headcount corregido con cita a The Bound Five · sin "Muda Parcial" en F1 · traición al salir del Archive · cita a `[[Los 5 Finales]]`. check_vault 🟢 (3,645 tokens — creciendo, monitorear).
+
+**Costo:** 152k (Torgan) + 128k (Iven) = ~280k tokens.
+
+**Pendiente de Fase 5:** Bloque B (Roen/Valen/Darro, Sonnet 5) y Bloque C (lint final, Haiku 4.5).
+
+## [2026-07-28] vault/higiene | Migración de Current-State + Bloques B y C documentados para retomar
+
+Boris pidió dejar los Bloques B y C de la Fase 5 documentados como pendientes y cambiar de tema.
+
+**Detallado en Current-State para retomar sin contexto:** ambos bloques quedaron con líneas exactas y citas textuales de los reportes de QA — qué archivo, qué línea, qué dice hoy y qué debe decir. La próxima sesión puede arrancar sin re-derivar los hallazgos.
+
+- **Bloque B** (Sonnet 5): Roen/Valen/Darro — Bram no traiciona (3 fichas lo contradicen con cita exacta), migración al eje de 5 finales, cosmología de Valen como creencia errónea, rechazo de Darro versión Vekka, tablas de dinámicas con 6/9 entradas de raza/rol falsas, aritméticas de edad rotas en Roen y Valen.
+- **Bloque C** (Haiku 4.5): headcount >5 en Lyris (8 personas)/Sereth (7 + la cena con Maren)/Nyael, sync de `Los 9 Pivotes` (líneas canónicas viejas de Sereth y Nyael), timeline (Archive Acto 3, Grove tras 3 sub-actos), Bram 40 años, "el Consejo" residual en Sereth, orientación de Mistbound, Torgan/Dagna mal ubicados en `Geografía:96`, menores.
+
+**Higiene ejecutada:** Current-State estaba en 4,392t (+1,392 sobre techo blando). El relato completo de las fases 0-4 del sprint se migró a `Current-State-Historico.md` — ya vivía con más detalle en LOG, así que no se pierde nada. Current-State quedó en **3,322t** con estado compacto + los 2 bloques pendientes detallados (que son largos a propósito). Arranque de sesión: **3,619 tokens** 🟢.
+
+También se limpió la sección "Próxima sesión" que seguía apuntando a Fase 4 (ya ejecutada).
+
+## [2026-07-28] design/marketing | §12 — Key art + 3 mockups de UI (briefs escritos)
+
+Primer batch de material de **marca y producto**, no de mundo. 4 briefs escritos directo (Opus 5) en `Briefs de Concept Art.md §12`.
+
+**Decisiones del director:**
+- Poster: enfoque **"el grupo frente a la escala del mundo"** (descartados: Speck como centro emocional, la traición como tesis visual, Speck + God-Core)
+- Mockups: menú principal, creación de personaje, pantalla de Tether (descartado el HUD de exploración)
+
+**Regla nueva de texto para mockups de UI** (canonizada en §12): los mockups necesitan texto, lo que choca con la regla anti-texto de §10. Resolución: **el título `AETHER BOUND` va como texto real** (2 palabras, alto valor de marca, NB2 lo acierta); **todo lo demás va como placeholder visual** (barras/bloques de tinta). El mockup comunica composición, jerarquía y tono — no copy final. Se mantiene la excepción diegética de §11.6 (texto que es contenido de un objeto del mundo).
+
+**Restricción de diseño aplicada a los 3 mockups:** el vault ya tenía dos reglas de filosofía de UI que nadie había cruzado con concept art — `Art Bible` ("transición diegética, **sin UI**") y `The Bound Five` ("autónomos + un botón, **cero menús**"). Los briefs las hacen explícitas: **UI mínima, diegética y pintada** — nunca cajas de vidrio, paneles flotantes ni iconografía de MMO. Los negativos de los 3 mockups las blindan.
+
+**Briefs:**
+- **12.1 Key Art** (`marketing/key-art-poster-v1.png`, carpeta nueva) — The Bound Five de espaldas en un promontorio, First Wound como herida de luz jade en el horizonte, escala épica de silueta. Configuración canónica de referencia (arco Humano Duelist: jugador + Roen + Valen + Dagna + Darro). **Speck es la única figura que no mira al horizonte: mira al espectador.** Espacio compositivo reservado para el logo (que NO se genera aquí).
+- **12.2 Menú principal** (`ui/main-menu-mockup-v1.png`, carpeta nueva) — título en serif de tinta dibujada a mano, 5 barras de placeholder para opciones, sin cajas ni bordes: el texto flota sobre la pintura como anotación en cuaderno. Speck opcional en el borde inferior.
+- **12.3 Creación de personaje** (`ui/character-creation-mockup-v1.png`) — grilla 3×3 de la Matriz Raza × Rol con las 3 siluetas raciales en pose neutra comparable (8 / 4.5 / 7.5 cabezas), iconos de rol pintados a mano, celda seleccionada con mancha de acuarela en vez de borde. *"No debe sentirse como un configurador — debe sentirse como abrir un libro y elegir de quién va a ser esta historia."*
+- **12.4 Pantalla de Tether** (`ui/tether-screen-mockup-v1.png`) — 5 retratos en semicírculo con Speck al centro, tiers como marcas de tinta (no barras de progreso), líneas de conexión de grosor variable con **una rota a la mitad** (sugiere el Bond vacío sin explicarlo), franja inferior con 7 espacios para los Momentos de Persona. *"Una página de diario donde alguien lleva cuenta de a quién ha dejado entrar."*
+
+Listos para correr en NB2.
+
+## [2026-07-28] decision/ADR-003 | 🔴 BLOQUEO: reset de desarrollo + revisión de motor
+
+El director planteó dos movimientos: **hard/full reset de código y renders**, y **revisar la decisión de motor** (intuición de que Unity encaja mejor que Godot). Pidió opinión y registro como punto crítico bloqueante.
+
+**Creado `ADR-003 Reset de desarrollo y motor` en estado ABIERTO — BLOQUEANTE.** Supersede parcialmente a ADR-002.
+
+**Mi análisis registrado en el ADR:**
+
+- **Sobre el hard reset — de acuerdo.** El código se arquitecturó para un prototipo técnico; el proyecto hoy es un juego narrativo con 9 rutas, 5 finales y un sistema donde la intimidad ES el árbol de habilidades. **Matiz crítico: reset del código, NO del conocimiento** — `Lecciones`, `Benchmark Biomecánico`, `Art Bible`, PRDs cerrados y todo `10-Knowledge/` son el activo caro; el código es lo barato de reproducir.
+
+- **Sobre el motor — ADR-002 no está equivocado en lo que evaluó** (la golden scene probó que Godot renderiza el look, con 7-9× de margen). Pero **evaluó paisaje, no personajes animados**, y el proyecto se movió hacia donde Godot es más débil: rigging procedural (ROM por raza, foot IK tipo HZD, combos trifásicos tipo Sifu). No es casualidad que la deuda técnica abierta sea exactamente eso. Otros argumentos nuevos: consolas (Godot necesita partner externo; ADR-002 lo difirió a "producción tardía"), volumen narrativo (herramientas de branching más maduras en Unity), y el precedente directo de que **Sable se hizo en Unity**.
+
+- **Observación sobre acoplamiento de decisiones:** si el hard reset se ejecuta, el argumento "ya tenemos código en Godot" desaparece y el costo de migrar baja casi a cero. Por eso las dos decisiones se contaminan y hay que resolverlas en orden.
+
+- **El riesgo que ningún motor resuelve (lo más importante del análisis):** el alcance narrativo creció más rápido que la capacidad de producción. **9 Pivotes × 5 finales × 9 celdas es alcance de estudio mediano.** La pregunta de mayor valor no es "¿Unity o Godot?" sino **"¿cuál es el vertical slice mínimo que prueba que este juego funciona?"**
+
+**Secuencia recomendada:** definir slice → definir plataforma → definir alcance v1 → elegir motor **contra el slice** (reconstruir una escena en ambos y medir tiempo real, no specs) → resetear código. En ese orden la decisión de motor casi se toma sola, igual que ADR-002 en su momento.
+
+**Consecuencias mientras esté abierto:** ❌ no se escribe código de producción (frente C del Task-Board congelado); ✅ worldbuilding, guión, concept art, mockups de UI y diseño en papel siguen desbloqueados.
+
+Enlazado desde `Current-State` (bloque de bloqueo activo al inicio) y `00-Index`.
+
+## [2026-07-28] session/close | Poster V2 pasado al vault + 4 ediciones directas de Boris registradas
+
+**Poster V2:** Boris pasó el brief actualizado (vista panorámica desde The Monolith, sin Speck) al vault él mismo como §12.2, renumerando el resto de §12 (menú→12.3, creación→12.4, Tether→12.5). Lo enriqueció con detalle de elevación, degradado bosque→volcánico hacia el este, y proporciones explícitas de las 5 figuras del grupo (2 elfos 8 cabezas, 2 humanos 7.5, 1 enano 4.5). Sin cambios necesarios de mi parte — quedó consistente con la geografía canónica.
+
+**4 ediciones directas de Boris en Obsidian (fuera de conversación), registradas como pendientes en Current-State:**
+
+- **`Nomenclatura.md`** — Isolde Marrow ahora tatara-tataranieta del último rey (verificar consistencia genealógica); Wanderer's Goggles se vuelven accesorio no retirable tras primer uso (verificar contra Los 5 Finales §F4). Boris dejó nota explícita pidiendo revisión de control de cambios.
+- **`Speck.md`** — pelaje a rojo/naranja (con un "beige" residual, posible edición a medias), ojos facetados-naranjas + nota de que zorros normales son café-casi-negro. **Se eliminó la sección "Giro Grogu"** (memoria de especie) — sin marcar si fue intencional.
+- **`The Bound Five.md`** — pregunta de sistema: diseñar bonds propios para Roen/Darro/Valen (no solo el Pivote), con mecanismo donde los 9 bonds totales sean protagonistas parejo sin importar la celda del jugador. Toca también The Tether y Bond y el Bond Vacío.
+- **`Principios de Anatomía 3D.md`** — dump extenso de investigación de DOF biomecánico (hombro, cadera, columna 72 DOF, mano 21-24 DOF, trade-offs de rigging/IK/ragdolls) pendiente de reestructurar en la documentación técnica agnóstica.
+
+**Nota de alcance:** ninguna de las 4 ediciones fue procesada esta sesión — solo verificadas, categorizadas y registradas. Es contenido/diseño real, no housekeeping de cierre.
+
+Current-State creció a 4,007t (+1,007 sobre techo blando) por el detalle necesario para no perder las preguntas de Boris. check_vault sigue 🟢 (4,304t de arranque). Candidato a higiene en la próxima sesión si sigue creciendo.
+
+## [2026-07-28] sprint/QA-Fase5-B | Bloque B CERRADO — propagación a Roen/Valen/Darro
+
+**Bram no traiciona (propagación completa):** las 3 fichas de fijos (Roen, Valen, Darro) tenían la traición/rendición vieja de Bram en sus tablas de dinámica (`Roen:270`, `Valen:329`, `Darro:348`). Reescritas al beat del corredor del Archive: Bram rechaza la oferta del Council, no la acepta ni se rinde. Diálogo tomado del ya canonizado en `Bram-Ficha:356-388`. Aritmética corregida de "veinte años" a **cuarenta** en las 3 fichas.
+
+**Migración al eje de 5 finales:** las secciones "Arco Acto 3" de Roen/Valen/Darro usaban el bloque viejo (Final 1 Perdón/Final 2 Muerte/Final 3 Encadenamiento/Final 4 Síntesis = destino del Pivote). Reescritas contra [[Los 5 Finales]] — el eje es el destino de **Speck** (F1 Guided Molt / F2a Handed Over / F2b Fallen / F3 Conqueror's Clause / F4 Warden's Choice), el Pivote como consecuencia.
+
+**Roen:** aritmética de edad rota corregida (25+15+5 = 45, no "35-40"). Beat de traición (Archive) separado del quiebre (cráter) — antes colapsados en un solo "First Wound"; ahora dos escenas: corredor del Archive (Acto 3, donde se revela la intención del Pivote) y el cráter (donde actúa).
+
+**Valen:** aritmética de edad estandarizada a 230 años (antes alternaba 180-250/200/250/300 en distintas menciones). **Cosmología reencuadrada como creencia errónea** (decisión de Boris): la cifra "cada 300 años" que Valen cargó toda su vida es la que enseña the Academy of Sages, sin revisión desde antes del cataclismo — Valen la desmonta en el debate del Grove of Cycles, no en su infancia. El cálculo sustantivo (God-Cores = cadáveres, Speck = llave) sigue siendo correcto; el marco temporal en que creció, no.
+
+**Darro:** rechazo del gremio reescrito a **versión Vekka** (decisión de Boris) — fue su aprendiz ~30 años atrás, ella le enseñó 2 años, lo rechazó del programa formal en persona al tercer año sin explicar por qué. Verificado contra `Vekka-Ficha:46-90`, ya consistente. Añadida sección "Darro + Vekka" completa en dinámicas (antes trataba el encuentro como si fueran extraños). Género de Speck corregido a femenino en 2 menciones residuales.
+
+**Tablas de dinámicas — raza/rol falsos corregidos en las 3 fichas (Roen, Valen, Darro), 7 de 9 entradas, más de las 6 reportadas en el QA original:** Bram (Duelist→**Vanguard**), Sereth (Duelist→**Strategist**), Nyael (Humana Vanguard→**Elfa Duelist**), Lyris (Enana Duelist→**Elfa Duelist**), Maren (Elfo Duelist→**Humana Strategist**), Torgan (Elfo Strategist→**Enano Duelist**), Iven (Elfo Vanguard→**Humano Duelist**). Solo Vekka y Dagna ya estaban correctas. La causa raíz: los encabezados copiaban la "celda de jugador" del formato de ficha del Pivote en vez de su raza/rol real.
+
+**Pendiente:** re-correr los 2 QAs de Fase 4 tras cerrar Bloque C (criterio 0 CRÍTICOS) para declarar el sprint terminado. Bloque C sigue detallado en el historial de [[Current-State]] del 2026-07-28.
+
+## [2026-07-28] sprint/QA-Fase5-C | Bloque C CERRADO — lint final, Fase 5 completa
+
+**Headcount >5 corregido en 3 fichas.** Las escenas "El Primero" de Lyris, Sereth y Nyael listaban a los 8 Pivotes no-activos apareciendo junto al grupo ("Roen llega. Valen aparece. Maren aparece. Torgan aparece. Sereth aparece..."), violando el canon de Bloque D (el grupo son siempre 5: Jugador+Roen+Valen+Pivote activo+Darro). Recortadas a solo Roen/Valen/Darro. También corregidas dos referencias cruzadas indebidas dentro de la ficha de Sereth: "cena con Maren delante" → cena del grupo (sin nombrar a Maren, que no puede estar presente en la misma partida); "Darro no grita como con Maren" → sin la comparación cross-run.
+
+**`Los 9 Pivotes.md` resincronizado:** la fila de Sereth citaba la línea canónica de Maren ("Millions against one...") — reemplazada por la línea real de Sereth (*"No te llevé a esta decisión. Te llevé a la persona que la toma."*). La fila de Nyael tenía una línea vieja no ratificada — reemplazada por la línea canónica actual de su ficha (*"I set traps my teacher would have waited on..."*).
+
+**Timeline:** Sunken Archive reclasificado Acto 2→**Acto 3** en Geografía (consistente con la decisión de Boris del 2026-07-28). Grove of Cycles corregido de "dos de los tres sub-actos" a **los tres** — así cuadra el conteo de 4 God-Cores destruidos antes del Grove.
+
+**Aritmética Bram:** "20 años de mercenario" / "cortó lazos hace 20 años" en Estructura Política §239-246 → **40 años**, consistente con el resto de la ficha.
+
+**Sereth "el Consejo":** diálogo ambiguo con Roen ("Renunciaste al Consejo") reescrito a "Dejaste la Royal Academy" — Sereth es producto de la Royal Academy, no del Triune Council; la ambigüedad venía de Fase 2.
+
+**Los 5 Finales / Geografía:** "cruzar el borde es F3, retroceder es F2" → desambiguado a **F2a o F2b** según si Speck llega viva o muere en el intento.
+
+**Mistbound:** orientación unificada a **suroeste profundo** en la ficha de Bram (decía "noroeste") y en Geografía §Origen de Bram (mismo error, ambas corregidas) — consistente con las 2 menciones ya correctas en el resto de Geografía.
+
+**Geografía §Emberdeep:96:** "Torgan y Dagna pertenecen al Clan de Forja" contradecía sus fichas — corregido a "Torgan pertenece a un clan menor; Dagna al subclán vasallo Deepstone".
+
+**Menores:** "Roen ve las manos de Vekka temblar" (Roen-Ficha) contradice el canon de Vekka (su única grieta visible es cerrar los ojos un segundo, nunca temblar) — corregido. Fórmula "por primera vez en la historia registrada" aparecía idéntica 3 veces (Los 5 Finales/Dagna, Dagna-Ficha, Sereth-Ficha) — desduplicada en 2 de las 3 apariciones, conservada la de Dagna-Ficha como versión canónica.
+
+**Sprint QA de reparación — Fase 5 completa (Bloques A, B, C, D cerrados).** Pendiente: re-correr los 2 QAs de Fase 4 (criterio 0 CRÍTICOS) para declarar el sprint formalmente terminado. Nota: esta corrida se hizo con el modelo Sonnet 5 de la sesión — Boris pidió Haiku vía `/model`, pero ese comando no está disponible en este entorno no interactivo; se avisó y se continuó con el modelo activo.
+
+## [2026-07-28] sprint/QA-verificación | Re-corrida de los 2 QAs — EL SPRINT NO CIERRA (12 CRÍTICOS)
+
+Los 2 QAs re-corridos con Opus 5 en paralelo, en frío (sin decirles qué se había arreglado, para evitar sesgo de confirmación). **Criterio de cierre = 0 CRÍTICOS. Resultado: 7 críticos de congruencia + 5 de dramática.** El sprint QA de reparación **no cierra**.
+
+### Lo que sí quedó validado limpio (ambos QAs)
+
+- **Los 5 epílogos × 9 fichas:** cero residuos del esquema viejo (Perdón/Muerte/Encadenamiento/Síntesis) en todo el vault. La migración de Bloques A/B funcionó.
+- **Bram no traiciona:** consistente en las 5 menciones de su ficha, en `Los 9 Pivotes`, en `Los 5 Finales` y en Geografía. Aritmética de 40 años consistente en las 9 apariciones.
+- **Speck femenina:** cero ocurrencias de "él/lo" en todo `10-Knowledge/`.
+- **Raza/rol de los 9:** los nueve encabezados coinciden con la matriz maestra.
+- **Timeline:** Sunken Archive = Acto 3 en las 9 fichas; 4 God-Cores antes del Grove; cataclismo ~550 años consistente.
+- **Dramática:** los 9 Pivotes son genuinamente distintos — ninguno repite el beat de otro; los 3 enanos separados con precisión (elegí la cadena / nací en ella / soy la cadena). F2a vs F2b sostenido sin una sola contradicción en las 9 fichas. Torgan e Iven declarados listos para diálogo sin más trabajo.
+
+### 🔴 Errores propios introducidos o no detectados en Bloques B y C
+
+**Causa raíz de mi parte: hice correcciones a nivel de encabezado sin leer el cuerpo del texto debajo, y di archivos por cerrados tras arreglar la primera ocurrencia de un patrón sin barrer el resto del archivo.** Hallazgos que son míos, no del material previo:
+
+- `Roen:279` — **texto que yo escribí en Bloque B** decía que el Council "le ofrece a Bram la salida — rechazar el contrato, quedarse con lo que queda de su compañía". Invertido: el Council le ofrece el *trabajo*; la salida se la da Bram rechazando. Además sus dos compañías fueron disueltas, no le queda ninguna. **Corregido.**
+- `Darro:44` — **texto que yo escribí en Bloque B** presentaba el quiebre de Vekka con el Dogma como hecho biográfico previo a la campaña. Vekka nunca rompe con el Dogma en la línea base (es su identidad entera); el único quiebre ocurre en los epílogos F2b/F4. **Corregido.**
+- `Roen:267` y `Darro:358,360` — corregí los encabezados de las tablas de dinámicas a la raza/rol correcta, pero dejé el cuerpo contradiciéndolos ("Dos Vanguards" para Iven que es Duelist; "dos enanos que ven diferente" y "duele viniendo de compañero enano" para Lyris que es Elfa). **Corregidos.**
+- `Grove:15` — corregí el gate a "los tres sub-actos" en la línea 9 y dejé la línea 15 diciendo "el segundo sub-acto regional". Dos gates incompatibles a seis líneas de distancia. **Corregido.**
+- `Bram:48` — corregí "noroeste"→"suroeste profundo" en la línea 28 y dejé la 48 con el error. **Corregido.**
+- `Darro:359` — la línea de tensión con Lyris era copia literal de la entrada Valen+Lyris, y contradecía a Lyris (que no bromea). **Reescrita.**
+
+### 🔴 CRÍTICOS de congruencia pendientes
+
+- **C1 (BLOQUEANTE, requiere decisión de Boris) — el "segundo agente" de la ruta Bram tiene 3 versiones incompatibles.** `Los 9 Pivotes:32-38` y `Torgan:377` dicen que el segundo agente **es Torgan**, que toma a Speck él mismo. `Bram:257` dice que es **un mensajero enano anónimo** que le entrega orden sellada "a Torgan (o al enano fijo/Pivote más cercano si Torgan no está)" — ese paréntesis convertiría a **Darro** en ejecutor del Council. `Geografía:1025` dice que el mensajero "buscó específicamente a Torgan". Agravante: `Bram:261` describe al segundo agente como "no lo conocíamos, no le debíamos nada", que describe a un NPC anónimo, no a Torgan. **Nadie puede escribir la salida del Archive en la ruta Bram hasta que esto se decida.**
+- **C2, C3, C4, C5, C6, C7 — corregidos en esta sesión** (ver bloque de errores propios arriba, más `Geografía:1015` que ponía a Sereth como lector por defecto en las 9 partidas, y `Vekka:459` que autorizaba explícitamente dos Pivotes en el grupo).
+
+### 🔴 CRÍTICOS de dramática pendientes (los 5 son decisiones de diseño de Boris)
+
+- **D1 — Roen y Darro solo tienen arco en la ruta Dagna; en las otras 8 son cámaras de eco.** Y está canonizado explícitamente ("A Roen lo rompe Dagna, no Torgan" aparece literal en Torgan, Iven y Dagna). El escudo caído de Roen y la escena más grande de Darro viven ambas en la celda Humano Duelist. Contradice `The Bound Five:68` ("la experiencia del jugador sea la misma sin importar el personaje que escoge"). **Propuesta del QA:** darles quiebre por *arquetipo* (Aritmética / Deber / Rechazo), no por Pivote — 3 versiones del escudo caído en vez de 1, ~6 escenas nuevas que salvan 7 rutas. Presupuesto sugerido: reciclar los 54 encuentros por celda de Roen/Valen/Darro, de los que el jugador ve exactamente uno.
+- **D2 — F4 etiquetado "final verdadero" y los 9 Pivotes mejoran ahí.** Es el mejor final para todos los personajes, para el mundo, el único con consentimiento de Speck, y no cuesta nada. Los otros 4 dejan de ser alternativas morales y pasan a ser fracasos de ejecución. **Propuesta:** borrar la palabra "verdadero" del canon + darle a F4 un costo real que ningún otro final tenga (el propio Grove ya tiene el argumento: la cura cuesta civilizaciones).
+- **D3 — Speck sigue siendo MacGuffin.** No hay una sola escena escrita donde haga algo que la vuelva querible; su personalidad está en viñetas de dirección, nunca dramatizada. Los ~7 Momentos de Persona (que son el gate de F4) están sin diseñar. Borrar el "Giro Grogu" quitó la capa de interioridad. Si el jugador no la quiere, las 5 respuestas del clímax dan igual. **Propuesta:** escribir los 7 Momentos ANTES del guión de actos, no después.
+- **D4 — Dos rutas llegan al clímax sin Pivote funcional.** Bram (el segundo agente es, textual, "un traidor sin arco… función puramente mecánica" — ver C1) y Nyael (no aparece en el cráter; la ficha nunca resuelve quién lleva a Speck ahí ni cómo llega el jugador).
+- **D5 — F2b se abre por pasividad (timeout) y carga los 5 mejores epílogos del material.** El jugador lo leerá como castigo por dudar, no como tragedia — y la tragedia requiere elección. **Propuesta:** que F2b tenga una elección activa que lo produzca (ej. el jugador fuerza el forcejeo y la sobrecarga del Fragmento mata a Speck), con el timeout como ruta secundaria al mismo final.
+
+### Patrón de fondo señalado por ambos QAs
+
+**Casi todo lo grave está fuera de las fichas de Pivote y dentro de los documentos que las citan.** `Geografía y Ciudades`, `Estructura Política` y las 3 fichas de fijos quedaron en estado pre-rework mientras las 9 fichas avanzaban. 5 de los 7 críticos de congruencia y 6 de los 14 importantes son residuo de esa asimetría. **El próximo pase debe ser de propagación hacia afuera, no de más profundidad hacia adentro.**
+
+### Importantes/menores registrados (no corregidos aún)
+
+14 importantes + 11 menores del QA de congruencia, con archivo:línea y cita. Los de mayor peso: aritmética de Lyris rota en 3 cifras (170/90/45 años); esencia de Lyris contradictoria en 3 lugares ("incapaz de sentir" vs. el superlativo ratificado "siente y suprime"); Sereth muriendo de viejo a los ~205 cuando los elfos viven 650-700; Nyael con 80 vs 100 años de servicio; encabezados biográficos de Vekka y Dagna que no cuadran con sus edades; `Estructura Política` con 3 residuos pre-rework (cadena de mando de Vekka, eslabones de Dagna, "Torgan y Darro rechazados juntos"); Valen en femenino en `Vekka:401`; voseo argentino en `Lyris:82`. Del QA dramático: colisión del superlativo "la más fría" entre Lyris y Vekka; **Lyris es la ficha más débil por margen grande y necesita rework mayor**; 3 personajes mueren con la misma imagen en F2b; la traición usa el mismo blocking 9 veces.
+
+## [2026-07-28] sprint/QA-verificación | C1 CERRADO — Torgan es el segundo agente, sin mensajero anónimo
+
+**Decisión de Boris:** resolver C1, el único crítico bloqueante que impedía escribir la salida del Archive en la ruta Bram.
+
+Tres fuentes (`Los 9 Pivotes:32-38`, `Torgan-Ficha:369-381` — sección dedicada completa "Torgan como Segundo Agente de la Ruta Bram", y `Geografía:1025`) ya eran consistentes entre sí: **Torgan es el segundo agente y actúa él mismo**, activado por su propia cadena de mando (clan menor → Great Forging Clan), sin conocer al grupo ni a Speck. El outlier era `Bram-Ficha:255-261`, que inventaba un "mensajero enano de bajo perfil — NPC nuevo" entregando la orden "a Torgan (o al enano fijo/Pivote más cercano si Torgan no está)" — ese paréntesis habría convertido a **Darro** en ejecutor del Council, rompiendo headcount y canon simultáneamente.
+
+**Corregido:** `Bram-Ficha` sub-beat 4a reescrito para que Torgan aparezca directamente (sin intermediario), con referencia cruzada a su propia sección dedicada. `Geografía:1025` alineada — ya no habla de "un mensajero que buscó a Torgan" sino de Torgan mismo, activado por su cadena de mando.
+
+**Los 12 críticos del sprint quedan en: 0 de congruencia (C1-C7 todos cerrados), 5 de dramática (D1-D5, pendientes — son decisiones de diseño, no lint).** El sprint QA de reparación sigue sin poder declararse cerrado hasta resolver D1-D5, pero **ya no hay ningún bloqueante que impida empezar a escribir guión en 8 de las 9 rutas** (todas salvo Nyael, cuyo clímax sigue sin resolver — D4).
+
+## [2026-07-28] sprint/QA-verificación | D1 CERRADO — Roen, Valen y Darro con quiebre propio por arquetipo
+
+**Decisión de Boris:** Dagna sigue siendo el techo emocional de Roen (no se empareja hacia abajo); en cambio, cada fijo recibe un **pico** (su quiebre más hondo, ligado a un Pivote específico) y **dos versiones más suaves** — una por cada una de las otras 2 filas de arquetipo de [[Los 5 Finales]] (Aritmética/Manipulación: Maren, Sereth, Vekka · Deber Institucional: Torgan, Iven, Dagna, Nyael · Rechazo/Ausencia: Bram, Lyris). Así los 9 Pivotes siguen sin ser intercambiables entre sí, pero ninguna de las 9 rutas deja a los 3 fijos como pura cámara de eco.
+
+**Mapeo ejecutado:**
+
+- **Roen** — pico: **Dagna** (Deber Institucional, sin cambios, sigue siendo "la que lo rompe más hondo"). Suave-Aritmética: **Sereth** (`Roen:274`) — reescrito para registrar como quiebre real, "la que más cerca llega de romperlo" de las ocho no-Dagna. Suave-Rechazo/Ausencia: **Lyris** (`Roen:284`) — antes decía explícitamente "Roen no se quiebra aquí, se repliega"; reescrito para que sea un quiebre propio y real, más liviano que Dagna pero no un repliegue. Ajustada la entrada de Dagna (`Roen:296,304`) y el espejo en `Dagna-Ficha:387` para que digan "la que lo rompe más hondo" en vez de "la única que lo rompe" — ya no es cierto que sea la única.
+
+- **Darro** — pico: **Vekka** (Aritmética/Manipulación) — ya era la escena más suave que tiene Darro en todo el juego (el abrazo); ahora marcada explícitamente como su quiebre más hondo (`Darro:375`). Suave-Rechazo/Ausencia: **Lyris** (`Darro:360`) — ya tenía shock genuino, marcada como su versión suave. Suave-Deber Institucional: **Dagna** — **gap real encontrado en el proceso: no existía entrada "Darro + Dagna"** en la tabla de dinámicas (8 de 9 Pivotes cubiertos, faltaba ella). Agregada (`Darro:363-370`): Darro se sienta junto a Roen en el cráter sin decir nada — su propio quiebre suave es elegir el silencio de otro antes que el suyo.
+
+- **Valen** — pico nuevo: **Nyael** (`Valen:345-349`) — reescrita de una viñeta plana a el reconocimiento más hondo de su arco: Nyael observa sin intervenir, el mismo entrenamiento de la Academy of Sages que a Valen le enseñaron como virtud y que él mismo practica con Speck y con el jugador. Verla traicionar así es verse desde afuera. Suave-Aritmética: **Sereth** (`Valen:333`) — nota agregada de que es un segundo lugar, más frío que Nyael.
+
+**Nota de proceso:** el pase reveló un gap real (Darro sin entrada para Dagna) que ninguno de los 2 QAs había señalado — quedó expuesto recién al construir la matriz de picos/suaves de forma sistemática. Vale la pena tenerlo en cuenta: los gaps de "falta contenido" son más difíciles de detectar por QA que las contradicciones, porque no hay texto que contradecir.
+
+**D1 CERRADO.** Quedan D2 (F4 "final verdadero"), D3 (Momentos de Persona de Speck), D4 (clímax de la ruta Nyael) y D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D2 CERRADO — F4 pierde la etiqueta "verdadero" y gana un costo real
+
+**Problema:** `Los 5 Finales.md:83` etiquetaba F4 *"síntesis — final verdadero, ganado"*. Los 9 Pivotes mejoran ahí sin excepción, es el único con consentimiento de Speck, y no costaba nada — lo que convertía a los otros 4 finales en fracasos de ejecución en vez de alternativas morales.
+
+**Corregido:**
+- Etiqueta cambiada a *"síntesis — el único con consentimiento de Speck"* (descriptiva, no jerárquica). Mismo cambio propagado a `Bram-Ficha:332`, que citaba la etiqueta vieja.
+- **Costo agregado, consistente con canon existente:** Speck no vuelve con el grupo — la calcificación en F4 es permanente, ella se queda en el cráter para siempre. Es el único final donde el jugador rompe su propio Bond por elección, sabiendo lo que suelta. Ilyara ya había sembrado el argumento en el Grove (*"sanar el Aether cuesta algo"*) pero atado solo a F1 — F4 ahora paga el mismo principio en otra moneda: en F1 el costo es civilizaciones, en F4 es una sola vida que el jugador llegó a querer.
+- **Sabor explícito agregado:** agridulce, no triunfal — misma familia sonora del eco Bond/Link Cam que F2b, no una victoria limpia. La única diferencia entre F4 y F2b es que en F4 la pérdida tuvo consentimiento.
+
+**No se tocó la matriz 5×3 ni las 9 fichas de Pivote** — el cambio es puramente en el marco de F4 (`Los 5 Finales.md`), las reacciones de cada arquetipo en esa fila siguen siendo válidas tal como están escritas.
+
+**D2 CERRADO.** Quedan D3 (Momentos de Persona de Speck), D4 (clímax de la ruta Nyael) y D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D3 CERRADO — los 7 Momentos de Persona escritos
+
+**Problema:** `Speck.md §Momentos de Persona` era una frase-placeholder ("~7 escenas fijas... el detalle específico no se fija aquí") sin una sola escena escrita, pese a ser el gate mecánico de F4 y — según el QA narrativo — la única vía real para que Speck deje de ser MacGuffin.
+
+**Diseño aplicado:** cada Momento no es al jugador reaccionando a Speck — es **Speck actuando primero**, sin que nadie se lo pida, con una acción ambigua entre 3 lecturas (herramienta / mascota / persona). El molde es el Vector C del Grove ya existente (gira la cabeza al noreste, no se mueve 20 segundos) — el QA lo señaló como la mejor escena no reconocida como tal; ahora es oficialmente el **Momento 6**, con los otros 6 escritos alrededor del mismo molde:
+
+1. Acto 1 — se detiene antes del nido, sin que nadie le pida nada (orejas planas, se niega a avanzar).
+2. Acto 1 — en el bautizo, inclina la cabeza hacia Darro específicamente, no hacia el chiste.
+3. Acto 1→2 — tras el primer flash privado del jugador, sostiene la mirada más de lo normal y la rompe ella primero.
+4. Acto 2 — se retrae de un NPC que la toca sin permiso, gruñido deliberado, no reflejo.
+5. Acto 2 — se comporta distinto específicamente cerca del Pivote activo, antes de la traición.
+6. Acto 2 — Grove of Cycles, Vector C (ya existente, re-clasificado).
+7. Acto 3 — antes de The Reckoning, se adelanta y elige un camino por su cuenta — la única vez que dirige en vez de seguir.
+
+Cada uno documentado con las 3 lecturas posibles (herramienta/mascota/persona) para que el sistema pueda evaluar sin UI, consistente con el diseño ya fijado ("sin UI deliberadamente").
+
+**Colateral resuelto de paso:** el residual "beige" que el QA de congruencia había marcado como menor en 4 archivos (`Speck.md` ×2, `Bram-Ficha:215`, `Nyael-Ficha:221`, `Geografía:1011`) — quedó de la paleta vieja de Speck (pre-retcon a rojo/naranja). Corregido en los 5 puntos (se dejó sin tocar `Briefs de Concept Art.md`, que es fuente congelada de prompts ya corridos en NB2).
+
+**D3 CERRADO.** Quedan D4 (clímax de la ruta Nyael) y D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D4 CERRADO — la ruta Nyael tiene antagonista funcional en el cráter
+
+**Problema:** `Nyael:259-265` decía textual "Nunca hay confrontación final. Nunca hay batalla. Solo ausencia" — la ficha nunca resolvía quién lleva a Speck al cráter ni cómo el jugador llega a una decisión física ahí. Contradecía la arquitectura fija de `Los 5 Finales:9` ("el clímax físico… abre el abanico") y `Geografía:1040` ("El Pivote llega al centro con Speck").
+
+**Diseño aplicado (distinto del de Bram/C1 a propósito — Nyael no falla, tiene éxito, así que la solución no podía ser "otro Pivote actúa"):** el pulso del core central que responde a Speck **no distingue quién la carga** — cualquier intento de sacarla de The Wilds central se rompe en el mismo punto, para cualquiera. La "ruta 7" de Nyael, diseñada para una extracción limpia, se rompe ahí. Ella personalmente ya no está — su ausencia total sigue intacta, patrón preservado — pero quien el jugador encuentra en el borde es **el equipo de extracción institucional del brazo encubierto** que ella activó: operativos sin nombre, sin arco, la maquinaria funcionando sin ella. No son un segundo Pivote (eso ya se usó en Bram/C1); son antagonismo institucional puro, consistente con el propio arquetipo de Nyael.
+
+**Corregido:**
+- `Nyael-Ficha` sub-beat 5 reescrito: Speck imposible de transportar más allá del cráter, equipo de extracción como antagonista físico, Nyael nunca reaparece.
+- `Geografía:1044` — variante Nyael agregada, mismo patrón que ya tenía la variante Bram.
+- **F2a de Nyael reescrito:** antes decía que ella entregaba a Speck viva "sin complicación técnica" fuera de escena — ahora es el jugador quien, en el cráter, elige no interponerse y deja que el equipo de extracción complete la entrega. Es el único de los 9 Pivotes donde el jugador mismo cierra la traición que el Pivote empezó.
+- **F3 de Nyael reescrito:** antes la tenía "a distancia observando la decisión" en el cráter — contradecía su ausencia total recién establecida. Ahora es al equipo de extracción a quien el jugador aparta; el reporte le llega a Nyael por otra vía, sin que ella esté presente.
+
+**D4 CERRADO.** Queda solo D5 (gate de F2b).
+
+## [2026-07-28] sprint/QA-verificación | D5 CERRADO — F2b pasa de timeout a elección activa. LOS 12 CRÍTICOS EN 0.
+
+**Problema:** `Los 5 Finales:49` definía el gate de F2b como *"se abre cuando el jugador no elige a tiempo"* — un timeout. El QA narrativo señaló que un jugador lee eso como castigo por dudar, no como tragedia, y que F2b carga los 5 mejores epílogos del material (Torgan, Iven, Dagna, Vekka, Maren) detrás de la peor puerta de entrada.
+
+**Corregido:** el gate ahora es una **elección activa**: el jugador intenta arrancarle a Speck por la fuerza al Pivote (o al equipo de extracción, ruta Nyael) en vez de negociar, esperar, o retirarse — el forcejeo sobrecarga el Fragmento, que reacciona a fuerza física cerca del core, no a inacción. Congelarse demasiado tiempo puede llegar al mismo resultado por la misma vía física, pero queda como ruta secundaria, no como definición del final. Propagado a `Geografía:1042` (la mecánica del borde del cráter ahora liga F2b al forcejeo, no a "retroceder") y a las 2 fichas que describían el trigger con lenguaje pasivo residual: `Bram-Ficha` ("el Fragmento la sobrecargó antes de que nadie decidiera" → forcejeo explícito) y `Nyael-Ficha` (mismo ajuste, ligado al equipo de extracción de D4). Las otras 7 fichas ya describían solo el epílogo sin especificar el trigger, así que no necesitaron cambios.
+
+**D5 CERRADO. Los 12 críticos del sprint (7 de congruencia + 5 de dramática) quedan en 0.**
+
+## [2026-07-28] design/UI-mockups | 4 brief concepts generados + review archivado
+
+**Generación de 4 mockups de UI y key art** (2026-07-28 ~02:00-02:30):
+
+1. **`ui-character-creation-mockup-v1.png`** ✅ — Tabla Raza × Rol (9 celdas), preview de personaje. Estructura clara, navegable. **Issue menor:** barras T1/T2/T3 bloqueadas — necesita claridad de qué miden (stat? tether?). **Severidad:** MEDIUM. **Estado:** aprobado.
+
+2. **`ui-main-menu-mockup-v1.png`** 🟡 — Pantalla principal: título "AETHER BOUND" + árboles acuarela neblinosos. Atmósfera acertada pero falta elemento narrativo que lo "ancle" a Aether Bound (Speck o detalle de First Wound). **Severidad:** MEDIUM. **Estado:** aprobado con ajuste visual.
+
+3. **`ui-tether-screen-mockup-v1.png`** ✅ — Mecánica Tether: 4 personajes en vértices + Speck centro, Persona Moments en base. Excelente comunicación visual del sistema. **Verificación pendiente:** símbolos Ω/✱ en `Speck.md` §7. **Estado:** aprobado.
+
+4. **`marketing-key-art-poster-v2.png`** 🟡 → **v2 generada** — Poster épico (5 personajes, acantilado), feeling/prompt medianamente acertados pero **tone mismatch vs art bible**: parece heroic-fantasy (aventura épica) cuando el producto es cozy-fantasy (Bonds, Speck como companion). Enano muy pequeño pierde presencia. Falta Speck o elemento que lo identifique como Aether Bound vs generic fantasy. **Severidad:** CRITICAL. **Plan:** re-generar v2 con brief enfatizando cozy-fantasy + Speck visible/implied + peso visual Iron-Blooded.
+
+**Review archivado:** `90-Raw/ui/REVIEW-2026-07-28.md` (issues por severidad, % fidelidad, próximos pasos).
+
+**CATALOGO.md actualizado:** §L (UI Mockups, 3/3) + §M (Marketing, 🟡 v2 pending).
+
+**Current-State.md actualizado:** sección Concept art con nuevo status.
+
+**Próximo paso:** re-correr los 2 QAs de Fase 4 una última vez, en frío, contra el estado actual del vault — es el criterio de cierre real del sprint. Si pasan con 0 CRÍTICOS, el sprint QA de reparación queda formalmente cerrado después de 3 re-corridas (Fase 4 original, verificación C1-C7/D1-D5, esta última).
+
+## [2026-07-28] sprint/QA-verificación | Tercera re-corrida (post-ediciones-directas) — 8 CRÍTICOS nuevos, sprint sigue abierto
+
+**Contexto:** tras procesar las ediciones directas de Boris (Nomenclatura: Isolde linaje + Goggles no-retirables; Speck: Giro Grogu eliminado), se lanzaron los 2 QAs de verificación en frío con **Opus**, contra el estado actual completo del vault. Es la tercera re-corrida (Fase 4 original → C1-C7/D1-D5 → esta).
+
+**Resultado: no sale limpio. 4 CRÍTICOS de dramática (+1 MEDIUM) + 4 CRÍTICOS de congruencia (+2 MEDIUM).**
+
+### Validado limpio (re-confirmado)
+Los 3 fixes de la 2ª re-corrida siguen en pie: Speck actora en los Momentos de Persona (`Speck.md:119-128`), F2b como elección activa (`Los 5 Finales:49`, replicado en Bram:318/Nyael:291), Nyael con antagonista funcional (equipo de extracción, `Nyael:263`). También limpio: Bram no traiciona (Roen:184/279, Valen:338, Darro:355, Geografía:943/1025), Speck femenina (0 residuos), Speck como Warden anciana sin residuos de "criatura joven", los 9 Pivotes existen simultáneamente/solo 1 conoce al jugador (`Los 9 Pivotes:25-38`), Raza×Rol de los 9 correcta, Roen 45 con aritmética interna cuadrada.
+
+### CRÍTICOS de dramática
+
+1. **Darro F1 (`Darro-Ficha-Expandida-v1.md:280-282`)** — *"cuando entiende que ella eligió esto […] 'Speck eligió. Nombre honra elección.'"* Colapsa la distinción central de F4: `Los 5 Finales:83,96` titula F4 "el único con consentimiento de Speck" y remata que el consentimiento "es lo único que lo distingue de F2b". Si en F1 Speck también "eligió", F4 pierde su superlativo. Raíz en `Speck.md:70-73` ("en F1, F4 […] asume su destino con gracia divina") que agrupa ambos finales bajo la misma agencia — F1 debe ser aceptación sin ser preguntada; F4, la única vez que se le pregunta.
+
+2. **Darro F2b (`Darro-Ficha-Expandida-v1.md:298`)** — *"al menos sé que la promesa era real. Seguimos."* Viola `Los 5 Finales:55`: F2b es "tragedia pura […] ningún beat de 'aprendimos algo'". Roen y Valen respetan la regla en sus propios epílogos F2b (`Roen:234`, `Valen:284`); solo Darro la rompe.
+
+3. **Nyael F2a (`Nyael-Ficha-Expandida-v1.md:285` vs `:261`)** — `:261` establece que Speck es "imposible de transportar […] sin importar quién la cargue" (es lo que sostiene la ausencia total de Nyael). `:285` (F2a) introduce que Speck "no puede ser movida sin el consentimiento del propio jugador" — una llave que `:261` niega. Las dos reglas no pueden ser verdad a la vez; la ruta Nyael pierde F2a o pierde su mecanismo de ausencia.
+
+4. **Cita rota (`Los 5 Finales.md:49`)** — apunta a *"[[Speck]] §Capa 4 — el Fragmento reacciona a fuerza física cerca del core, no a inacción"*, pero `Speck.md` §Capa 4 (`:64-73`) no contiene esa regla (solo describe la activación del Fragmento en The First Wound). La regla que hace de F2b agencia y no timeout —el fix central de la 2ª re-corrida— se apoya en una fuente inexistente.
+
+**MEDIUM:** `Grove of Cycles — Escena del Acto 2.md:68` sigue anclando F2b a que "el jugador se congela sin decidir" — desalineado con `Los 5 Finales:49`, que degradó el congelamiento a ruta secundaria. La escena que siembra los 5 finales en Acto 2 telegrafía el gate equivocado.
+
+### CRÍTICOS de congruencia
+
+5. **Darro/Vekka aritmética (`Darro-Ficha-Expandida-v1.md:44` vs `:376`, espejado en `Vekka-Ficha-Expandida-v1.md:46,54,72,86,88`)** — `:44` sitúa el aprendizaje "a los 30" con el presente en edades 39-45 (rechazo hace ~12 años); `:376` y toda la ficha de Vekka dicen "hace ~30 años". El mismo archivo de Darro se contradice a sí mismo.
+
+6. **Longevidad de los 3 fijos (`Roen-Ficha:40,50`, `Valen-Ficha:96,106`, `Darro-Ficha:90,100`)** — las 3 fichas afirman "elfos viven 150+ años" / "enanos ~60-120 años", contra el canon de `Las Tres Razas:24-25` (elfos 650-700, enanos 200-250). Con "150+" Valen a 230 sería anciano en vez de "joven para un elfo" como dice su propia ficha. Patrón ya señalado en la 2ª re-corrida: fijos pre-rework.
+
+7. **Valen "vio cinco Mudas" (`Valen-Ficha:100`, refuerzo en `:11`)** — *"He visto tu tipo caer cinco veces en cinco Mudas."* Imposible bajo cualquier marco: ninguna Muda se ha completado en los últimos 550 años (`El Mundo y la Muda`). No es la creencia errónea de la Academy ya resuelta (esa es sobre la periodicidad) — es una experiencia personal declarada que no pudo ocurrir.
+
+8. **Isolde Marrow "tatara-tataranieta del último rey" (`Nomenclatura.md:51` vs `Estructura Política.md:154,175,190`)** — 3 choques: (a) Estructura Política dice que su sangre real es "leyenda, sin necesidad de ser verificable" — Nomenclatura la afirma como hecho; (b) 5 generaciones ≈125-150 años humanos, pero el "último rey" debería preceder 550 años de Regencias (6-8 dinastías distintas); (c) `Nomenclatura:47` sella que el título humano nunca fue "King" y no existe ningún "último rey" documentado en el vault. Ya estaba marcado como worldbuilding gap en la sesión de procesamiento de ediciones, pero el cambio quedó aplicado como canon — la contradicción está viva.
+
+**MEDIUM (Goggles):** `Geografía:1017` + 9 fichas de Pivote (Bram:213, Dagna:223, Iven:371, Lyris:254, Maren:239, Nyael:223, Sereth:226, Torgan:271) describen "el jugador se pone los Goggles" repetidamente, incluyendo un "segundo uso" explícito en el Archive — pero Nomenclatura los declara no-retirables desde el primer uso en Driftmarket. No rompe el gate de F4, pero el lenguaje narrativo en 10 archivos asume que se los quita.
+
+**MEDIUM (Valen-110-años):** `Valen-Ficha:52` — "la última Muda fue hace 110 años, no 300" sigue afirmándose como dato válido (`:217`: "el texto de sus cálculos sigue siendo correcto"), pero choca con `Geografía:748` (Muda rota hace ~550 años). Falta marcar el 110 explícitamente como parte del error de la Academy.
+
+### Diagnóstico de fondo
+
+Los críticos de esta 3ª ronda cambian de naturaleza respecto a la 2ª: ya no son huecos de cobertura (algo no escrito), son **contradicciones archivo-contra-archivo** (Darro vs Vekka, Nyael consigo misma, F2b vs su propia fuente citada) y **ediciones/fixes que no se propagaron a todas sus menciones** (longevidad de fijos, Valen-Mudas, Isolde). Varios están interconectados: fijar Isolde toca worldbuilding (construir el Último Reino); fijar longevidad/Valen-Mudas toca la timeline general de los 3 fijos; fijar Darro toca 2 fichas simultáneamente.
+
+**Decisión de Boris (2026-07-28 noche):** sesión de diseño mañana para resolver los 8 críticos + la pregunta abierta de bonds fijos en `The Bound Five.md`. Nada se toca hasta entonces. Current-State actualizado con la agenda completa.
+
+---
+
+## [2026-07-29] design/QA | Sesión de diseño — 8 críticos + 3 MEDIUM resueltos; 2 contradicciones raíz que el QA no había visto
+
+Sesión de diseño de la agenda fijada anoche. Plan de abordaje con asignación de modelos por
+sprint en `~/.claude/plans/haz-un-plan-de-dazzling-lemur.md`.
+
+### Hallazgos nuevos durante la exploración (no estaban en el reporte de la 3ª ronda)
+
+1. **`Speck.md:69-73` era la fuente real del crítico de Darro F1.** Declaraba que Speck "elige
+   con dignidad" en **F1 y F4**, contra `Los 5 Finales:83,94,96` que reserva el consentimiento
+   solo para F4. Arreglar la línea de Darro sin tocar `Speck.md` habría reintroducido el crítico
+   en la siguiente ficha que escribiera un epílogo F1.
+2. **Colisión de gates F2b/F4.** `Los 5 Finales:88` definía F4 como *"quedarse quieto en el
+   cráter en vez de decidir"* — el mismo verbo que `Grove:68` usaba para sembrar F2b. El MEDIUM
+   del Grove no era de arrastre: era una colisión de gates entre dos finales opuestos.
+3. **La cita rota era un bucle circular, no un enlace muerto.** `Los 5 Finales:49` → `Speck
+   §Capa 4` (inexistente) y `Geografía:1042` → `Los 5 Finales §F2b`. Ningún documento del vault
+   enunciaba la regla como canon primario.
+
+### Decisiones de Boris
+
+- **Agencia en F1:** manda `Los 5 Finales`. F4 es el único con consentimiento; en F1 Speck
+  **acepta sin ser preguntada**. Vocabulario fijado: el verbo de F1 es *aceptar*, el de F4 es
+  *responder*.
+- **Regla del Fragmento:** sobrecarga por **transferencia de fuerza mecánica a corta distancia
+  de un core activo**. Ni el tiempo ni la inacción la dañan. Vive en **`Speck.md` §Capa 5**, nueva
+  y declarada fuente única.
+- **Transporte de Speck (F2a vs Nyael):** *la entrega corta el pulso.* El tirón del cráter es
+  absoluto solo mientras los God-Cores pulsan; ceder a Speck corta el hive mind y recién entonces
+  es transportable. No inventa canon — `Los 5 Finales:32` ya decía que el pulso se corta en F2a;
+  ahora es la causa del transporte, no un efecto suelto. Salva el texto de `Nyael:261`.
+- **Gates:** quietud informada (termina en pregunta) = F4; forcejeo = F2b; **parálisis = F2a**,
+  porque el Pivote entrega por defecto. No decidir no es neutral: hace ganar a la institución.
+- **Isolde Marrow:** degradada a reclamo/leyenda. El "Último Reino" pasa a Pendientes como ítem
+  de worldbuilding propio, sin bloquear el cierre del sprint.
+- **Bonds de fijos:** después de cerrar el QA, no en paralelo.
+
+### Cambios aplicados
+
+**Canon nuevo (`Speck.md`):** §Capa 4 reescrita con los tres grados de agencia (le preguntan F4 /
+deciden por ella y acepta F1 / se la arrebatan F2a-F2b-F3) + regla de escritura explícita para
+epílogos. **§Capa 5 nueva** con la regla física y sus 4 derivaciones. Encabezado "Tres capas de
+verdad" → "Las capas de verdad" (tenía 4 capas desde antes; ahora 5).
+
+**`Los 5 Finales`:** cita de F2b apunta a §Capa 5 real; se eliminó la ruta secundaria por timeout
+("el forcejeo es la única vía"); F2a declarada final por defecto de la parálisis y con el
+transporte explicado por el cese del pulso; gate 3 de F4 pasa de "quedarse quieto" a "callarse
+para preguntar", con párrafo nuevo que separa la quietud de F4 de la parálisis de F2a.
+
+**`Geografía y Ciudades`:** `:1042` deja de enunciar la regla por su cuenta y cita §Capa 5 como
+fuente única; `:965` reescrito — **los Goggles no salen** (el jugador intenta quitárselos y no
+puede; línea nueva de Tobin sobre el extraño anterior); `:1017` deja de decir "segundo uso".
+
+**`Grove of Cycles:68`:** F2b resembrado como forcejeo; se declara explícitamente que congelarse
+**no** siembra F2b sino F2a.
+
+**Darro:** F1 reescrito — Darro ya no dice que Speck eligió, sino que nota que *no peleó* y que
+nadie le preguntó, él incluido. F2b: eliminado *"al menos sé que la promesa era real. Seguimos"*;
+el epílogo ahora no cierra, con nota de que ninguna versión puede dar consuelo. Aritmética
+sincronizada al canon de **~30 años**: edad ~63 (era banda 45-65 con presente en 39-45),
+"Aprendizaje Truncado" 30-33, "Salida de Emberdeep" 33→presente, y párrafo nuevo que cubre los
+25 años sin narrar entre los 38 y los 63 (y los usa para explicar por qué el rechazo no se le curó).
+
+**Nyael:285:** reescrito — el equipo se traba donde `§sub-beat 5` dice; lo que desatasca la escena
+es la entrega, no la fuerza. Ya no inventa el "consentimiento del jugador".
+
+**Valen:** *"He visto tu tipo caer cinco veces en cinco Mudas"* → autoridad archivística (*"He
+leído tu caso cinco veces, con cinco nombres distintos"*); `:11` explicita que no presenció
+ninguna Muda; el **110 años queda marcado como error de la Academy** en `:52` y `:217` (las dos
+puntas de su medición eran falsas); el anillo de `:389` se vuelve un objeto que conmemora un
+evento que nunca ocurrió — y que no se quita después del Archive.
+
+**Longevidad (6 líneas / 3 fichas):** Roen `:40,:50`, Valen `:96,:106`, Darro `:90,:100` alineadas
+a `Las Tres Razas` (elfos 650-700, enanos ~200-250), con la consecuencia de escala reescrita en
+cada caso, no solo la cifra sustituida.
+
+**`Nomenclatura:51`:** Isolde pasa de afirmación a reclamo de House Marrow, con nota de que el
+vault no ratifica ese trono y que el título humano registrado nunca fue "King".
+
+**Goggles (cubeta b — 10 líneas):** *"El jugador se pone los Goggles"* en el Sunken Archive → *"mira
+a través de"* en las 9 fichas de Pivote + Valen. Se conserva `Geografía:961` (el primer uso en la
+oficina de Tobin, que sí es un acto de ponérselos). Total de menciones auditadas: 43 en 14 archivos.
+
+**`Iven:592`:** residuo del gate viejo de F4 ("quedado quieto lo suficiente para que Speck hable
+primero") → hacerle la pregunta, con nota de que la quietud sin pregunta es F2a. **Este residuo no
+estaba en el reporte del QA** — salió del barrido post-fix.
+
+### Verificación
+
+Barrido de grep de los 8 datos corregidos: **0 residuos** (único hit es el primer uso legítimo de
+los Goggles). Verificado además que el error de F1 **no se propagó**: los 22 "Speck elige" del vault
+están todos en secciones F4, donde el verbo es correcto. `check_vault.py` 🟢 verde, arranque ~5,125t.
+
+### 3 críticos extra, encontrados en el barrido objetivo del cierre
+
+Ninguno estaba en el reporte de la 3ª ronda. Mismo patrón que el resto: una corrección previa que
+no barrió la clase completa de menciones.
+
+- **`Valen:58`** — los ancianos de Stillspire: *"The Stillspire ha sobrevivido cuatro Mudas.
+  Sobreviviremos la quinta."* **Era la fuente del "cinco Mudas" de `:100`** que se corrigió más
+  temprano en esta misma sesión. Marcada explícitamente como cosmología heredada de the Academy,
+  con el beat de que la negativa que Valen recibió a los 140 se apoyaba en un recuento inexistente.
+- **`Geografía:613`** — ermitaño élfico de Hermit's Cave: *"he visto dos mudas. Esta es la
+  tercera…"*. Imposible (ninguna Muda completada en 550 años). Reescrito: vio **dos falsas
+  alarmas** que los archivos élficos asentaron como Mudas. Queda como testigo vivo del error de
+  registro que Valen descubre en el Grove — y da razón concreta al "respeto mutuo" con Valen que
+  la ficha ya afirmaba sin fundamentar.
+- **`Torgan:11`** — "Edad aparente: 75-80 años" contra `:66`, que fija la aritmética en 75 y se
+  declara "no negociable". Alineado a 75.
+
+**Verificado además:** la aritmética de Valen cierra (hallazgos a los 140 → 40 años solo, 180 →
+God-Core hace 30 años, 200 → presente 230, coherente con el encabezado "edades 100-180"). Las 17
+citas `§Capa` del vault resuelven todas a secciones existentes con el contenido que el citante
+afirma.
+
+### 🔴 Cierre de sesión sin commit — leer antes de retomar
+
+**Nada de esta sesión quedó commiteado.** El clasificador de Opus cayó a mitad de sesión y bloqueó
+Bash, PowerShell y el Agent tool; lectura y edición siguieron operativas, así que todos los
+cambios están en disco. Dos consecuencias:
+
+1. **El Sprint 0 (baseline) nunca corrió**, así que los cambios de hoy están mezclados en el
+   working tree con los 16 archivos que ya venían modificados de la sesión del 07-28. Revisar el
+   diff antes de commitear.
+2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
+   (dramática + congruencia).
+
+### `check_canon.py` +2 clases: duplicados e índice (2026-07-29)
+
+Pregunta de Boris tras el hook de peso: *"¿algún otro script .py que sea buena
+idea implementar?"* Respuesta: sí, la clase que ya costó 4 fichas archivadas.
+
+- **`duplicados` (CRITICAL).** Detecta dos archivos de `10-Knowledge/` con el
+  mismo nombre de personaje en carpetas distintas — la heurística es pelar
+  sufijos de versión (`-v1`, `-Ficha-Expandida`) del nombre de archivo y agrupar
+  por stem normalizado. `Darro.md` y `Pivotes/Darro-Ficha-Expandida-v1.md`
+  colapsan al mismo stem `darro`, en carpetas distintas → hallazgo. Hace
+  cumplir mecánicamente la regla "una sola fuente viva por personaje" que quedó
+  escrita en `00-Index` tras archivar Dagna/Darro/Roen/Valen. **Hoy en 0**
+  (verificado con test directo del stem: la lógica sí detecta el patrón).
+- **`indice` (INFO).** Archivos de `10-Knowledge/` que ningún wikilink de
+  `00-Index.md` referencia — huérfanos o simplemente sin indexar. Primera
+  corrida encontró 2, ambos reales (verificado con grep, no falsos positivos):
+  `Benchmark-Musculatura-Torso.md` y `Grove of Cycles — Escena del Acto 2.md`.
+  Los dos ya quedaron indexados en esta sesión.
+
+**Estado:** `check_canon.py` ahora en 12 clases, 0 críticos. Actualizada la
+skill `canon-qa` con las dos clases nuevas.
+
+### 5c.1 (F1) regenerado con ancla vulpina — PASS aproximado (2026-07-29)
+
+El primer intento de regenerar la lámina de F1 (tras corregir el brief en la 5ª
+re-corrida) produjo un **ciervo con astas** — rompía la regla de que los 3 estadios
+de Speck comparten ADN de silueta con la forma zorro ([[Briefs de Concept Art]]
+§Redireccionamiento). Causa probable: *"crest branches... tendrils of light
+extending outward"* se leyó como cornamenta al no anclar la anatomía base en el
+prompt.
+
+**Fix:** prompt reescrito con `ANATOMY LOCK: FOX skeleton`, cuadrúpedo, y negativos
+duros (`NO DEER, NO STAG, NO ELK, NO CERVID, NO ANTLERS`). De paso corregida la
+frase de agencia que ya se había marcado (*"stands beside the player as equal"* era
+el verbo de F4, no de F1).
+
+**Corrección posterior (misma sesión):** al abrir los dos archivos de referencia
+con el tool de lectura, **ambos ya eran zorro/cuadrúpedo, sin astas** —
+`Final 1 The Guided Molt.png` y `speck-trueform-translucent.png` estaban bien
+desde antes. El ciervo no salió del arte ratificado: fue una regeneración nueva
+hecha desde el texto viejo del brief (sin ancla anatómica), que sí necesitaba el
+fix. **No hace falta regenerar el arte de F1** — el asset viejo sigue siendo el
+bueno. El ancla anatómica en el brief queda como seguro para futuras
+regeneraciones, no como corrección de un asset roto.
+
+**Pendiente de la línea de finales, sin tocar esta sesión:**
+- `5c.4` (F4) no tiene prompt de texto escrito — solo referencia la imagen vieja
+  pre-split de agencia. Necesita el mismo ancla vulpina + la reciprocidad de F4.
+- `5c.2` — la lámina existente (cadáver calcificado) es en rigor el brief de
+  **F2b**. El brief de **F2a** (Speck viva, cedida, sin cadáver) nunca se escribió.
+
+### 5ª re-corrida QA — 15 críticos, 13 cerrados (2026-07-29)
+
+Dos QAs Opus en frío: **6 de dramática + 9 de congruencia**, ambos con el brief de
+NO auditar lo mecánico (el linter ya está en 0).
+
+**Dos de los críticos eran fixes míos de la misma sesión, hechos en la línea y no en
+la clase.** Es literalmente el patrón que la regla 8 del CLAUDE.md existe para evitar,
+y volvió a pasar en la sesión que escribió la regla:
+- Reclutamiento de C4 en Driftmarket: corregido en **1 de 4** lugares
+  (`Geografía:704`, `:731`, `:1081`, `La Rueda:24`).
+- Rechazo de Darro: corregido en **2 de 5** (`Geografía:108`, `:683`, `:550`, y dos de
+  ellos lo hacían además público y en el lugar equivocado).
+
+#### El crítico de premisa
+
+El F1 de Iven decía que la Muda *"iba a ocurrir sola"* en dos años. Eso **revienta
+F2a**: si madura sola con Speck viva, el statu quo administrado es físicamente
+imposible y el clímax entero es un trámite. Y contenía **literal la frase que la
+prohibición 2 nombra como prohibida** — que escribí yo, en el mismo commit que escribió
+la prohibición.
+
+Reescrito: **la Muda no tiene reloj autónomo.** La crueldad de Iven no es que traicionó
+en vano, es que **traicionó contra su propio objetivo** — su gente vive porque él
+perdió. Frase disponible para el jugador: *"Tu gente vive porque perdiste."* Y lo que su
+gente se ahorró no fue gratis: es un pueblo con agua limpia en un continente sin
+comercio. Prohibición 2 ampliada a las dos cosas, con *"iba a ocurrir sola"* marcado
+como crítico de **premisa**, no de tono.
+
+#### Decisiones de Boris
+
+- **Speck durmió 550 años en crisálida.** 3 líneas outlier de `Speck.md` contra 15
+  archivos. **Su humor se refundó:** no viene de haber mirado caer la civilización (no
+  vio nada) sino de milenios de Warden previos + **el desfase del despertar** — todo lo
+  que el grupo trata como normal a ella le resulta absurdo y no puede explicar por qué.
+  La ironía es el único registro disponible para quien entiende el chiste y no puede
+  contarlo; por eso funciona en gestos y por eso los Momentos de Persona pesan. El POI
+  del avistamiento pasó a **The Guardians' Trail** (rastros de las bestias custodias).
+- **Las 4 fichas cortas archivadas** (`Dagna`, `Darro`, `Roen`, `Valen`) → `90-Raw/`.
+  Verificado antes: líneas canónicas y secciones visuales ya vivían en las expandidas.
+  Contradicciones que las condenaron: si Darro y Dagna se conocían de antes, si Darro
+  grita o **se calla** en la traición (la expandida dice que es la única vez que se
+  calla), y el gesto de Roen en el cráter (**dejar caer el escudo**, no la mano en el
+  hombro). **Regla nueva en `00-Index`: una sola fuente viva por personaje.**
+- **El Bond vacío se invierte en la celda de Bram.** Es el único Pivote que rehúsa, así
+  que nunca pierde el link y el beat obligatorio no tenía ruta. Ahora se juega al
+  revés: el jugador pica Bond esperando el vacío que el juego entero le enseñó a temer,
+  **y Bram responde** — sting completo, que no debe mezclarse con el truncado de dos
+  notas de las otras ocho celdas. Le paga su superlativo con mecánica en vez de
+  diálogo. Su costo llega igual en el cráter: rehúsa **y el Council entrega con las
+  manos de Torgan.**
+
+#### Gates, matriz y canon visual
+
+- **Gate de F1 al borde del cráter, no antes.** Como estaba, choca con la puesta en
+  escena (el agente carga a Speck hasta el centro y el jugador llega segundos después),
+  y seis fichas lo escribían bien contra el gate. Ahora con las 3 variantes por ruta:
+  Pivote / equipo de extracción (Nyael) / **Torgan como segundo agente** (Bram).
+- **F1 faltaba en la enumeración de gates de `Geografía`**, que fijaba 4 de 5. Agregada
+  la lista completa de los cinco.
+- **Vekka movida a Deber Institucional** en la fila de la matriz: su ficha, el cuerpo de
+  `Los 5 Finales` (5 líneas) y Torgan ya lo decían; la matriz era el outlier. Clase
+  barrida (`Darro:392`).
+- **Briefs §5c reescritos.** Colapsaban F1 y F4 en "aceptación con gracia divina", que
+  borra lo único que distingue F4, y decían *"finales donde vive (F1, F4)"* cuando en
+  F2a Speck **también vive**. Ahora llevan la tabla de los 3 grados de agencia. **El
+  arte generado hereda el error: el par F1/F4 hay que rehacerlo**, y `5c.2` quedó
+  escrito antes del split F2a/F2b (muestra un cadáver, que es F2b).
+- **Propagación de F4 a los fijos:** Valen decía *"The Molt completes"* donde la Muda es
+  **parcial** — en boca del confirmador de realidad; ahora nombra el precio. Darro
+  cerraba F4 **celebrando** con el sabor declarado agridulce; ahora la celebración se le
+  cae encima: el nombre fue suyo y Speck no vuelve.
+- **Residuos del modelo viejo:** `Speck.md` decía *"nueve personas del grupo"* y que
+  *"varía el C4 según quinteto"* (C4 es Darro fijo); `Darro+Iven` eran "dos Vanguards"
+  siendo los dos Duelists; dos personajes tenían la reacción *"más devastadora del
+  grupo"* en el mismo beat (Roen queda con el silencio, Valen con la más fría).
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~3,5k).
+**Pendiente:** rehacer el set de láminas de finales + 6ª re-corrida.
+
+### Los 12 epílogos F1 bajo la regla de costo (2026-07-29)
+
+Cierra el crítico C1 del QA de dramática: `Los 5 Finales:100` declaraba que F1
+"cuesta civilizaciones enteras" y los 12 epílogos mostraban las instituciones
+operando con normalidad décadas después. Con el canon de Boris (colapso
+tecnológico, no exterminio) reescritos los 12, aplicando las 3 prohibiciones.
+
+**El patrón que salió:** en casi todos, el costo civilizatorio **mejora** el beat
+en vez de recortarlo, porque le da al epílogo un antagonista de escala que antes
+no tenía.
+
+- **Iven** — su gente sobrevive porque la periferia **nunca fue
+  Aether-dependiente**: era la zona que el Council no cableó porque no valía la
+  inversión. Cruza de vuelta un país que no reconoce y llega a un asentamiento
+  que hereda el mundo por no haber tenido nada que perder. La ironía queda más
+  fuerte: traicionó por nada, y encima las instituciones que le negaron ayuda se
+  están cayendo mientras el agua le llega igual.
+- **Maren** — no puede evitar el colapso, solo volverlo sobrevivible. Raciones al
+  gramo, rutas de agua sin bombas, un invierno casa por casa. No muere nadie que
+  ella pudiera haber salvado; es un logro enorme que suena a poco, y administrar
+  esa distancia es el resto de su vida.
+- **Vekka** — bisagras, herrajes de tumba, tornillos de carreta. Y en el mundo
+  nuevo **eso es el oficio**, porque no queda forja de Aether en ninguna parte.
+  Termina siendo una de las pocas personas con oficio para el mundo que empieza y
+  lo vive como degradación, porque su dogma no tiene vocabulario para "la escala
+  cambió".
+- **Lyris** — única del elenco que ve el costo completo: sobrevuela las tres
+  capitales apagándose una por una, Stillspire con los árboles siendo por primera
+  vez en siglos lo único que brilla. El Frontier High Command se deshace solo: no
+  hace falta desertar de algo que se disolvió.
+- **Nyael** — el brazo encubierto alcanza a marcarla "no retornada" y ese es su
+  último asiento. **El expediente queda abierto para siempre porque no quedó
+  nadie para cerrarlo.** Pasó su vida siendo un renglón en un registro ajeno, y el
+  registro murió antes que ella.
+- **Bram** — en una ciudad que se cae, un cuerpo grande que sabe estar quieto vale
+  más que nunca: barcazas a pértiga, mercado nocturno todas las noches. El
+  Council manda a un hombre que **ya no es mensajero sino funcionario sin
+  institución**, con una moneda que casi no compra nada.
+- **Sereth** — no llega a renunciar a la Royal Academy: no queda Academy. Se
+  disuelve en dos años, sin voto, dejando de convocar. Para un hombre cuyo método
+  era preparar el terreno, el terreno se disolvió solo.
+- **Darro** — **beat nuevo:** se apaga la forja que lo rechazó. Treinta años
+  practicando por si algún día volvía, y le sacaron el a dónde. No se resuelve.
+- **Valen** — el que nombra el precio en voz alta, que es su función. Cierra
+  además el **M3**: su línea ya no asume un Pivote vivo (en la fila Deber
+  Institucional F1 es muerte o autoexilio, y en Torgan/Dagna es desaparición
+  total), con nota de escritura que lo prohíbe explícitamente.
+- **Roen** — no consuela, organiza. Ya vio de qué vivía el mundo cuando era
+  guardia del Council y no le sirve de nada tener razón.
+- **Torgan** / **Dagna** — nadie los borra ni los persigue: con las forjas
+  apagadas, un clan menor y un subclán vasallo tienen problemas más grandes que un
+  juramento sin cerrar. Sostuvieron una orden sesenta años y el mundo no tuvo
+  tiempo de notar que la soltaron.
+
+**Verificado:** `check_canon.py` 0 críticos; grep de las 5 formulaciones
+prohibidas sobre los 12 bloques F1 → los 2 hits son las versiones ya corregidas.
+
+### Herramienta nueva: `check_canon.py` + skill `canon-qa` (2026-07-29)
+
+**Diagnóstico que la motiva:** de los 18 críticos de la 4ª re-corrida, **10 eran
+mecánicos** — citas rotas, aritmética que no cerraba, clases de menciones
+barridas a dos tercios, reglas de fuente única re-enunciadas. Se estaba usando un
+LLM (~234k tokens, 14 min, no reproducible) para el trabajo de un linter, y encima
+el LLM olvidaba parte de la clase: la longevidad humana quedó en 2/3 y la
+aritmética de Lyris pasó **dos rondas reportada** sin cerrarse.
+
+- **`Aether Bound/scripts/check_canon.py`** — hermano de `check_vault.py` (ese
+  audita peso, este consistencia). 10 clases: wikilinks rotos, citas `§` a
+  secciones inexistentes, violaciones de fuente única, `hace N años` imposible
+  contra la edad declarada, encabezados `(edades A-B)` que no encierran sus datos,
+  longevidad contra `Las Tres Razas`, epítetos de género, reinos usados como
+  ciudades caminables, POIs con cuadrantes divergentes, y cifras en diálogo (INFO).
+  Exit 1 si hay críticos → usable como gate.
+- **Skill `canon-qa`** (`.claude/skills/canon-qa/`) — orden no negociable: linter
+  hasta 0 críticos → subagentes en frío **solo** para juicio → fixes a la fuente
+  con re-grep → checkpoint → re-corrida.
+- **[[QA de Canon Loop]]** — registro del método en el vault, como puntero a la
+  skill (no se duplica el procedimiento: dos copias de una regla es justo la clase
+  de error que el loop caza).
+- **CLAUDE.md reglas 7 y 8** — linter antes de subagentes; todo fix va a la fuente.
+
+**Primera corrida: 85 hallazgos brutos → 9 críticos reales** tras afinar cuatro
+falsos positivos del script (índice de wikilinks sin sufijos de ruta, citas
+compuestas tipo `§ACTO 3 sub-beat 5`, secciones citadas entre comillas, y
+precedencia de alias de cuadrante). Los 9 corregidos:
+
+- **3 violaciones de fuente única que ningún subagente reportó** — `Dagna:225`,
+  `Maren:241`, `Vekka:206` decían "Los Goggles son privados" sin citar
+  `Nomenclatura §the Wanderer's Goggles`
+- `The Tether` — "Gate del Final 4" era prosa inline, ahora es sección citable y
+  alineada con `Los 5 Finales §F4` (con el "vivos" divergente marcado como
+  pendiente de ratificar)
+- Citas rotas: `Geografía:752` (§SOUTH, que yo mismo rompí al regenerar los
+  cuadrantes), `Speck:192` (§Vectores diegéticos)
+- `Geografía:632` — "el último Warden caído" ambiguo con Speck viva
+- `Current-State:97` y `PRD-007:3` — género y ref a la ficha archivada
+
+**Estado: `check_canon.py` en 0 críticos / 0 MEDIUM, `check_vault.py` 🟢 (~3,4k).**
+
+### Pendiente inmediato
+
+**4ª re-corrida QA con 2 subagentes Opus en frío** — criterio real de cierre del sprint. No se
+declara cerrado sin 0 críticos.
+
+**Nota de método:** que un barrido objetivo de ~20 minutos al final de la sesión sacara 3 críticos
+nuevos indica que el cuello de botella del sprint no es el QA sino el **barrido**. A los QAs de la
+4ª hay que pedirles explícitamente que traten cada dato como una **clase de menciones** y no como
+una línea suelta.

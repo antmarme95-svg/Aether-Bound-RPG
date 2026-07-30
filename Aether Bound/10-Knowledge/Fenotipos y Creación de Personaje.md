@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "Design Loop 2026-07-04 (Sesión 1 de arte) + prototipo godot/data/phenotype_data.gd"
-updated: 2026-07-04
+updated: 2026-07-21
 ---
 
 # Fenotipos y Creación de Personaje
@@ -19,13 +19,13 @@ intocable. Los sliders comparten UI pero **cada raza re-rangea cada slider**
 
 ## Fenotipo canónico por raza
 
-| | **Elfo (Aether-Born)** | **Enano (Iron-Blooded)** | **Humano (the Restless)** |
-|---|---|---|---|
-| **Silueta** | Una línea continua: vertical, sin interrupciones | Un trapecio: más ancho que alto en lectura | La referencia atlética; se lee "neutral" contra los otros dos |
-| **Esqueleto (fijo)** | Palancas largas, hombros estrechos caídos, cuello largo, dedos largos | Palancas cortas, trapecio masivo, cuello hundido, manos enormes, centro bajo | Proporción media versátil ([[Movilidad Realista]]: el ROM de referencia) |
-| **Cabeza** | Orejas largas hacia atrás (continúan la línea), ojos grandes tilt alto, pómulos altos, mandíbula fina | Frente pesada, mandíbula ancha, nariz con historia | Máxima variación individual — la raza joven es la más diversa |
-| **Piel** | Fríos pálidos + lavanda aether-marked | Bronces cálidos + gris ceniza forge-touched | El rango humano completo (paleta más ancha); mist-mint como tono raro fronterizo |
-| **Marca cultural** | **Patrones de Aether luminosos** (el slider `arcaneMod` re-mapeado: venas de mana → grabados) | **Tatuajes de gremio + inlays de metal**; el slot facial es mayor (ver abajo) | **Warpaint/escarificación Mistbound** (fronterizos); cosmética de ciudad para el resto |
+|                      | **Elfo (Aether-Born)**                                                                                | **Enano (Iron-Blooded)**                                                      | **Humano (the Restless)**                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Silueta**          | Una línea continua: vertical, sin interrupciones                                                      | Un trapecio: más ancho que alto en lectura                                    | La referencia atlética; se lee "neutral" contra los otros dos                          |
+| **Esqueleto (fijo)** | Palancas largas, hombros estrechos caídos, cuello largo, dedos largos                                 | Palancas cortas, trapecio masivo, cuello hundido, manos enormes, centro bajo  | Proporción media versátil ([[Movilidad Realista]]: el ROM de referencia)               |
+| **Cabeza**           | Orejas largas hacia atrás (continúan la línea), ojos grandes tilt alto, pómulos altos, mandíbula fina | Frente pesada, mandíbula ancha, nariz con historia                            | Máxima variación individual — la raza joven es la más diversa                          |
+| **Piel**             | Fríos pálidos + lavanda aether-marked                                                                 | Bronces cálidos + gris ceniza forge-touched                                   | El rango humano completo (paleta más ancha); mist-mint como tono raro fronterizo       |
+| **Marca cultural**   | **Patrones de Aether luminosos** (el slider `arcaneMod` re-mapeado: venas de mana → grabados)         | **Tatuajes de gremio + inlays de metal**; el slot facial es mayor (ver abajo) | **Warpaint/escarificación Mistbound** (fronterizos); cosmética de ciudad para el resto |
 
 ## Decisiones ratificadas (2026-07-04)
 
@@ -54,9 +54,30 @@ intocable. Los sliders comparten UI pero **cada raza re-rangea cada slider**
 El motor de creación del prototipo se conserva entero: campos
 `float/pick/color` (`phenotype_data.gd`), `hair_library`, `warpaint_atlas`,
 paletas (`palette_data.gd`). Trabajo nuevo = re-rangear por raza, bibliotecas
-raciales de pelo/marcas, re-mapeo cultural de `arcaneMod`, y el paso
-Aether-Born/Iron-Blooded/Restless sobre `origins_data.gd` (que aún habla de
-"Beast-Folk" — [[Nomenclatura]], tarea C1).
+raciales de pelo/marcas, re-mapeo cultural de `arcaneMod`.
+
+**C6b piloto de proporciones (código) EN CURSO (2026-07-21):** el esqueleto
+fijo por raza ("palancas largas/cortas", hombros anchos/caídos, cuello,
+manos) se implementó como un campo `"proportions"` por origin
+(`origins_data.gd`: `limb_len`/`shoulder_x`/`neck_len`/`head_scale`/
+`hand_scale`), leído por `character_rig.gd _apply_build()` — reutiliza los
+mismos hooks de escala de peso/clase, sin geometría nueva. Medido contra
+las láminas (no a ojo): enano 4.49 cabezas (objetivo 4.5), elfo 8.17
+(objetivo 8.0). Pendiente VoBo de Boris antes de atacar geometría racial
+nueva (orejas élficas, frente/mandíbula de enano) y ROM por raza. Detalle:
+[[LOG]], [[PRD-C6b-Enano-Elfo-v1]].
+
+**Tarea C1 (código) CERRADA (2026-07-16):** `origins_data.gd` ya no describe
+al origin `"miststalker"` como raza Beast-Folk aparte — nombre/tag/lore/
+passive/heightRange reconvertidos al concepto Mistbound (subcultura humana
+fronteriza del Driftmarket), `heightRange` unificado al rango humano
+[0.9, 1.15]. `character_rig.gd` ya no genera orejas bestiales, cola ni
+mechones de pelaje falso para ese origin — usa oreja humana neutra (mismo
+tratamiento que las demás razas humanoides). El id interno `"miststalker"`
+se mantuvo (renombrarlo tocaría ~10 archivos de test que lo usan como string
+key) — ver comentario en `origins_data.gd`. Gates `test_core`,
+`autotest_combat`, `autotest_springboard`, `autotest_classes` ALL_PASS tras
+el cambio.
 
 ## Referencias visuales canónicas (`90-Raw/concept/`, 2026-07-04)
 

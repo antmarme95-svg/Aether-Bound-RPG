@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "Design Loop 2026-07-04 (pareja, ratificada); Design Loop 2026-07-05 (alcance A2b, RATIFICADO por el director)"
-updated: 2026-07-05
+updated: 2026-07-27
 ---
 
 # Slice of Bond (vertical slice)
@@ -66,15 +66,15 @@ con ella; picas Bond; nadie golpea el suelo.
   sin números). Crece por uso real del link + camp scene, fiel a la regla
   anti-grind, pero **sin tope por acto** (el slice comprime T1→T3 en una
   sesión). **Standing queda FUERA como sistema** — existe solo narrado (el
-  pregón del Consejo en el cold open).
+  pregón del Triune Council en el cold open).
 - **1 camp scene interactiva** (el ritual) — la pieza de UI de bonds mínima.
 
 ### Sistemas que NO entran
 
-[[El Quinteto]] (los otros 8 Pivotes), marcas del Strategist
+[[The Bound Five]] (los otros 8 Pivotes), marcas del Strategist
 (`MarkMultiplier` neutro), economía de Standing, momentos de Persona de
 Speck como sistema (Speck aparece scriptado en el cold open), Driftmarket,
-[[Los 4 Finales]].
+[[Los 5 Finales]].
 
 ### Duración objetivo y criterio de éxito
 
@@ -87,4 +87,4 @@ todo lo demás funcione.
 
 Desglose del alcance ratificado en PRDs de implementación (Feature Loops);
 B10 (Game Feel Bible) alimenta el feel del Springboard; guion de la camp
-scene del ritual (ver [[Dagna]]). → Task-Board.
+scene del ritual (ver [[Los 9 Links del Pivote]] §Tiers T3). → Task-Board.

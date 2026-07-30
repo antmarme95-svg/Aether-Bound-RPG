@@ -13,7 +13,7 @@ updated: 2026-07-04
   [[Acoplamientos|acoplamientos]]/recursos → fortalecer vínculos
   ([[The Tether]]) → misiones que tensan lealtad vs. valores
   ([[Estructura Dramática]]) → avanzar hacia el Fragmento.
-- Desenlaces: [[Los 4 Finales]].
+- Desenlaces: [[Los 5 Finales]].
 
 **Pendiente (❓):** progresión de personaje (skills, equipo, crafting) — sin
 definir en v2; hereda scaffolding del [[Inventario del Prototipo]].

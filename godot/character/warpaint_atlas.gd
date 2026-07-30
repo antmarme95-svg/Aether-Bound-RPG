@@ -214,5 +214,21 @@ static func _draw_pattern(img: Image, idx: int, paint: Color) -> void:
 				x = nx
 				up = !up
 
+		6:
+			# Scout Marks (concept humano canónico — reviews v0.2/v0.3):
+			# BILATERAL y ASIMÉTRICO — franja diagonal en la FRENTE (lado
+			# DERECHO del personaje) + franja diagonal en la MEJILLA (lado
+			# IZQUIERDO). Lateralidad VERIFICADA por la review v0.3: la cara
+			# vive en la costura u=0 (x=0/W) y x CHICO = lado DERECHO del
+			# personaje (su izquierda = el espejo W-1-x). Franjas ALARGADAS
+			# (~4:1), no triángulos.
+			# Scout Marks: desde M9-r4 AMBAS franjas van como GEOMETRÍA en
+			# el rig (character_rig._face_mark). Motivos: el v del atlas se
+			# comprime no-linealmente cerca de la ceja (debug de retícula
+			# M9-r3 — la franja de frente no es posicionable) y el _slash
+			# escalona la de mejilla en "gusano" (review v0.4 M6). El
+			# patrón 6 en el atlas queda intencionalmente vacío.
+			pass
+
 		_:
 			pass # index 0 = no paint

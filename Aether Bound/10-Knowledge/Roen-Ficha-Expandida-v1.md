@@ -1,0 +1,346 @@
+---
+status: draft
+source: "Sesión 2026-07-23 — Expansión narrativa"
+updated: 2026-07-27
+---
+
+# Roen — C1, El Afín (Ficha Narrativa Expandida)
+
+**Raza / Rol:** Humano (the Restless) / Vanguard  
+**Origen:** Frontera Mistbound  
+**Edad aparente:** 45 años  
+**Slot en [[The Bound Five]]:** C1 — El Afín  
+
+---
+
+## Esencia
+
+El corazón emocional del grupo. No el más inteligente ni el más fuerte — el que nadie quiere decepcionar. El grupo funciona porque él está ahí, presente, viendo. No lidera porque sea carismático; lidera porque cuando el caos llega, todos voltean a verlo y él ya decidió.
+
+**Arquetipos resonantes:** Hound (The Expanse), Boromir (LotR antes de la caída), Frank Castle versión paciente.
+
+---
+
+## Biografía Pre-Aventura
+
+### Encuentro con el Jugador — 18 Variantes por Celda
+
+Roen conoce al jugador en un **momento de fracaso cultural específico**. No siempre es "rescate" — a veces el jugador lo vio primero. La escala y naturaleza del encuentro cambia según raza, rol y género.
+
+**HUMANO** (viven ~70-90 años, timeline reciente):
+
+| Rol | ♂ Masculino | ♀ Femenino |
+|---|---|---|
+| **Duelist** | Soldado bebiendo su deshonra en taberna fronteriza. Su compañía lo dejó. Roen: *"Te vi en una cantina, tratando de beber tu fracaso. Reconocí ese sabor."* | Veterana expulsada de su orden por género, no habilidad. Roen presencia su injusticia. Roen: *"Tu orden te sacó por ser quien eres. He visto ese coraje endurecerse en odio. Vine para que no se quedara ahí."* |
+| **Vanguard** | Desertor fronterizo, culpable por abandonar puesto. Roen estaba en la frontera, lo vio huir. Roen: *"Eras guardia como mi padre. Lo dejaste. Entiendo. Vine porque alguien necesitaba decir: elegir vivir es honesto."* | Protectora que falló — perdió a quien juró defender. Roen llega después, ve muerte cargada. Roen: *"Perdiste a quien juraste proteger. No fue culpa tuya — fue el mundo. Vi ese peso. Vine a cargarlo contigo."* |
+| **Strategist** | Consejero cuyos cálculos fallaron catastróficamente. Roen en ciudad vio el derrumbe. Roen: *"Vi gente morir por tus números. El acero no perdona, pero la gente sí. Vine a mostrarte eso."* | Política/maestra rechazada por verdades que dijo. Roen vio su exilio. Roen: *"Te dieron la espalda por ser honesta. El silencio nunca te hubiera sanado. Vine porque alguien necesitaba creer en ti."* |
+
+---
+
+**ELFO** (viven 650-700 años — ver [[Las Tres Razas]]; escala antigua: los 45 años de Roen caben enteros en un tramo joven de vida élfica — el elfo lo vio crecer de principio a fin, o Roen alcanzó a presenciar uno de sus fracasos):
+
+| Rol | ♂ Masculino | ♀ Femenino |
+|---|---|---|
+| **Duelist** | Antiguo guerrero, honor quebrado por cambio de era. TE vio a ti hace 20 años joven en frontera, reconoció tu integridad (Roen tenía 25 y empezaba como guardia del Council). Roen: *"Te vi hace veinte años cuando eras joven. Ya sabías lo que significa estar plantado. Volví porque ese conocimiento no muere."* | Guerrera cuyo linaje fue borrado por política, no destreza. Roen vio tu nombre ser quitado. Roen: *"Vi lo que tu gente hizo contigo — borraron tu nombre. Ese tipo de muerte lenta la reconozco. Vine porque tu silencio parecía permanente."* |
+| **Vanguard** | Guardián fracasado, dejó morir algo sagrado. Roen presenció el sitio después. Roen: *"Fallaste en proteger. Eso te destruyó. He visto esa muerte en vida. Vine porque fallar no borra lo que intentaste."* | Protectora de lugar destruido. Roen la vio en ruinas, sabiendo su gente la culparía. Roen: *"Estabas en las ruinas. Tu pueblo iba a olvidarte. Vine porque necesitabas que alguien honrara lo que intentaste, aunque fracasara."* |
+| **Strategist** | Calculador de Mudas, sus predicciones fueron ignoradas. Roen lo encontró en estudio, cargando culpa de razón. Roen: *"Sabías. Viste venir lo que rechazaban. Ahora cargas haber tenido razón — eso es la maldición. Vine porque el conocimiento solo no salva."* | Lideresa cuyas órdenes tuvieron consecuencias imprevistas. Roen vio su arrepentimiento silencioso (los elfos no lo verbalizan). Roen: *"Los elfos no se perdonan — ni siquiera a sí mismos. Vi tu culpa válida. Vine porque el perdón a veces viene de afuera."* |
+
+---
+
+**ENANO** (viven ~200-250 años — ver [[Las Tres Razas]]; escala larga frente a la de Roen: un enano de 60 sigue siendo joven, y aun así ya vivió más que él):
+
+| Rol | ♂ Masculino | ♀ Femenino |
+|---|---|---|
+| **Duelist** | Guerrero del gremio expulsado/avergonzado. Roen lo vio quebrado en Emberdeep. Roen: *"El gremio te sacó. Eso quiebra a un enano de forma que otras razas no entienden. Vi ese quiebre. Vine porque el acero puede reformarse."* | Guerrera que lucha contra su propio gremio por legitimidad. Roen vio un duelo subestimado. Roen: *"Te vi luchar contra tu gente, no enemigos. Ganan porque el honor mira hacia adentro. Vine porque eso es injusto, y lo necesitabas escuchar."* |
+| **Vanguard** | Protector de mina/comunidad, vio corrupción desde adentro. Pidió ayuda, el gremio ignoró. Roen en Ignis Reach comprendió su dilema. Roen: *"Viste la corrupción destruir tu hogar. Pediste ayuda. El gremio no oyó. Vine porque tu lealtad merece gente que crea en ti cuando el gremio no."* | Muralla de comunidad, rechazada por no ser "suficientemente dura" (carga empatía + acero). Roen vio su fuerza ignorada. Roen: *"Las mujeres enanas cargan doble — acero y empatía. Te vi siendo juzgada por ambas. Vine porque eso requiere testigo."* |
+| **Strategist** | Ingeniero cuya obra perfecta fue saboteada o mal usada. Roen vio la destrucción. Roen: *"Construiste perfecto. Te lo quitaron. Un enano mide valor en lo que construye — eso te dejó vacío. Vine porque perfectamente hecho y robado sigue siendo maldición."* | Maestra del gremio cuya autoridad fue cuestionada cuando tomó decisión difícil. Roen vio su reversal. Roen: *"Tu gremio te obedeció hasta tu decisión más difícil. Entonces decidieron que no eras suficientemente sabia. Vine porque tu autoridad fue real."* |
+
+---
+
+**Nota:** Cada línea cabe en una **conversación de fogata** (primera noche en el grupo o poco después). El jugador la vive UNA SOLA VEZ, pero resuena porque Roen vio exactamente su fracaso cultural específico.
+
+---
+
+### Origen Mistbound (Infancia/Adolescencia)
+
+Nació en un puesto fronterizo entre The Wilds y las ciudades humanas — lugar donde la corrupción del Aether es tangible, no abstracta. Los nidos de bestias se acercaban cada generación. Su infancia fue vigilancia constante.
+
+Su padre fue guardián fronterizo. No fue héroe — fue alguien que se plantaba cada mañana sabiendo que quizá no volvería. Roen lo vio hacer eso todos los días. Cuando su padre murió en una purgación (Roen tenía 12 años), nadie lo dramaturzó: el trabajo siguió. Eso fue la lección.
+
+**Marca cultural:** Warpaint fronterizo geométrico verde — personal, no oficial. Lo lleva desde los 15 años. Nunca lo ha quitado, aunque hace 5 años que no vive en la frontera (sirvió allí como guardia del Council de los 25 a los 40 y renunció a los 40 — ver §Años de Guardia). Long-faded ahora. Es la única conexión visible a su origen.
+
+### Años de Guardia del Triune Council (15 años, edades 25-40)
+
+Se alistó en el Triune Council como guardia de élite. Fue bueno en eso — disciplinado, presente, de confianza. Ascendió lentamente porque no buscaba poder, solo hacer el trabajo bien.
+
+**Lo que vio en el Triune Council:** políticos tomando decisiones sobre vidas que nunca verían. Cálculos que sacrificaban fronteras a cambio de estabilidad urbana. El sistema funcionaba, pero pagaban los de afuera — gente como la de su infancia.
+
+Pasó 15 años siendo la espada del sistema, sabiendo que el sistema no funcionaba para todos.
+
+**Quiebre:** Hace 5 años, tras una purgación donde el Triune Council ordenó destruir un asentamiento Mistbound completo porque "albergaba corrupción", Roen vio morir a civiles. Niños. El Triune Council los llamó "sacrificio necesario".
+
+Roen fue a la reunión del Triune Council después. No gritó. Simplemente dijo: "Ya no". Dejó el escudo en la puerta. Se fue.
+
+### Después del Triune Council (5 años, presente)
+
+No tiene resentimiento activo — sabe por qué el Triune Council tomó esa decisión. Eso es lo que lo corroe. Comprende la lógica. Y la rechaza de todos modos.
+
+Ha vagabundeado desde entonces. Mercenario de bajo perfil. Trabajos donde la brújula moral es clara: proteger caravanas, limpiar nidos acotados, entrenar milicianos locales.
+
+**Conexión con el jugador:** No son amigos de infancia. Pero en algún momento, hace 1-2 años, Roen estuvo en el peor momento posible del jugador — muerte, caída, desilusión. Roen no arregló nada. Simplemente estuvo ahí. Fue presente sin ser invasivo. El jugador recordó eso. Cuando el jugador necesitó a alguien en quien confiar para este contrato del Triune Council (purgar The Wilds), buscó a Roen.
+
+Roen vino porque el jugador lo llamó. Eso es suficiente razón.
+
+---
+
+## Arco Acto 1 — Lealtad (Contrato, Encuentro, Decisión)
+
+### Escena 1: El Encuentro (Primeros 20 minutos)
+
+El jugador llega a The Wilds con un contrato: purgar nidos, apagar God-Cores, restaurar la zona. Roen está ahí ya — no como protector, sino como compañero de misión. El jugador lo contrató.
+
+**Roen en esta escena:**
+- Observador. Ve cómo el jugador maneja el terreno, la presión, el miedo.
+- Competente sin fanfarria. Hace el trabajo.
+- Hace notar cosas pequeñas: "Ese nido no huele a corrupción activa. Algo está dormido ahí."
+
+**Primer diálogo clave (opcional, puede no ser verbal):**
+Cuando el jugador mata la primera bestia y mira atrás buscando validación, Roen simplemente asiente. No celebra. Reconoce.
+
+---
+
+### Escena 2: El Nido de Speck (Crisis emocional)
+
+Llegan al nido donde está la crisálida de Speck. Las bestias guardianas están semi-corrompidas, violentas, defendiendo.
+
+**Roen aquí:**
+- Pelea. Es bueno.
+- Cuando la batalla termina y el jugador ve la crisálida, **Roen ya está mirando al jugador, no a la crisálida.**
+- El Triune Council ordenó destruir todo lo que brille con Aether. La crisálida brilla.
+- Roen no dice: "Deberías dejarla". Solo dice: "Qué haces, es tu llamado."
+
+**La decisión es del jugador.** Roen honra eso. Si el jugador destruye la crisálida, Roen lo ayuda. Si el jugador la salva, Roen la lleva.
+
+**Línea narrativa:** Sin importar la decisión, Roen nota algo: "El Triune Council no sabía que esto estaba aquí. Eso dice algo."
+
+---
+
+### Escena 3: El Primero (Encuentro con el Pivote)
+
+Mientras purifican el área, el Pivote llega — por primera vez en la historia. La razón varía (C3 está explorando, fue atraído por noticias, es un encuentro casual), pero el Pivote se une.
+
+**Roen y el Pivote (primera vez):**
+
+Roen evalúa. No con desconfianza explícita — con **observación tranquila**. Ve quién es esta persona: de dónde vino, qué trae, qué puede romper.
+
+Los primeros diálogos entre Roen y el Pivote **definen la química del grupo**. Roen no es dominante, pero su presencia establece el tono: "Aquí se honra lo que dices. Pero también se ven tus fisuras."
+
+---
+
+## Arco Acto 2 — Comunidad (La Rueda, Speck, el Bound Five se Forma)
+
+### Escena 1: La Rueda Completa (Viaje, 3-4 actos del juego)
+
+El Bound Five viaja el aro de La Rueda, tocando las tres ciudades (humana, élfica, enana) y The Wilds en el corazón.
+
+**Roen en La Rueda:**
+- En cada ciudad, Roen ve cómo su propia cultura explota The Wilds.
+- No es una revelación repentina. Es una acumulación: tanques de Aether en Aethelgard, esclavitud ecológica en Stillwood, minería en Ignis Reach.
+- Nadie le explicó esto. Él lo vio en su infancia, lo confirmó en el Triune Council, lo ve ahora confirmado en tripleta.
+
+**Dinámicas con cada Pivote durante La Rueda:**
+
+- **Con el Pivote:** En algún punto, probablemente en la mitad, Roen comparte algo honesto. No su historia completa — una grieta. El Pivote lo ve. Algunos Pivotes responden con empatía (Maren, Iven), otros con lógica fría (Sereth, Nyael), otros con deber (Torgan, Vekka). **Roen los ve responder.** Nota quién tiene límites, quién no.
+
+### Escena 2: Speck Despierta (El Vínculo Crece)
+
+Durante La Rueda, Speck comienza a revelar inteligencia. Roen es quien primero intuye el cambio — no ve los flashes del jugador (nadie los ve, son privados, [[Speck]] §Capa 2), pero lee la quietud creciente de Speck y el silencio del jugador con la precisión de quien ha protegido escondrijos toda su vida.
+
+**Su línea con Speck es diferente de la del jugador.**
+- El jugador ve al Warden y siente misterio.
+- Roen ve a alguien que necesita protección. Roen ya sabe lo que es estar solo observando un mundo roto.
+
+No verbaliza esto. Simplemente **Speck lo ve haciéndole espacio en el fuego**, sin exigir nada a cambio.
+
+### Escena 3: La Verdad Comienza a Filtrarse
+
+Hacia el final de Acto 2, el Fragmento se acerca (Sunken Archive), y Roen comienza a oír fragmentos de verdad. Valen sabe algo. El Pivote sabe algo. El mundo tiene una verdad que nadie quiso decir.
+
+**Roen aquí no demanda respuestas.** Simplemente se planta, observa, y espera. Nota que el Pivote se vuelve distante. Nota que Valen está calculando. Nota que Darro bromeando más de lo normal.
+
+**Su línea silenciosa:** *"Algo se rompe. Quién lo atrapa cuando caiga."*
+
+---
+
+## Nudo → Clímax: El Corredor del Archive y el Cráter
+
+### Escena 1: El corredor del Sunken Archive (Acto 3 — la traición se revela)
+
+En el corredor del Archive, con la lectura Warden hecha y la oferta del Triune Council sobre la mesa, la intención de cada Pivote queda expuesta — no como "giro de tuerca", sino como **conclusión de toda su lógica anterior**.
+
+- Maren hizo las cuentas. Su ciudad no sobrevive.
+- Torgan cumple su Juramento anterior.
+- Iven sacrifica a los desconocidos por los suyos.
+- Bram, en cambio, rechaza — ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §Dinámicas con Roen, Valen y Darro.
+- etc.
+
+**Roen en el corredor:** observa, no interviene. Es aquí donde entiende — antes de que nadie más lo diga en voz alta — qué va a pasar en el cráter.
+
+### Escena 2: The First Wound, en el cráter (el quiebre)
+
+El Fragmento se activa. Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado). El Pivote actúa sobre lo que ya reveló en el corredor: se lleva el Fragmento y a Speck.
+
+**Roen y el momento del quiebre:**
+
+Roen **no intenta detenerlo.** No porque sea débil, sino porque **entiende**. Ve exactamente por qué el Pivote actúa. Y honra esa comprensión incluso mientras lo rechaza.
+
+Su reacción es la más devastadora del grupo: **silencio.**
+
+Mientras el Pivote se lleva el Fragmento y Speck, Roen pone una mano en el hombro del jugador.
+
+Una mano. Sin palabras. **"Te sostengo."**
+
+---
+
+## Arco Acto 3 — Desilusión (Persecución, Decisión Final)
+
+### Persecución
+
+Roen lidera tacticamente. No es venganza — es **seguimiento**. Lograr que el Pivote explique. Que justifique. Que entienda lo que hizo.
+
+Con cada Pivote, la persecución toma sabor distinto:
+- **Maren:** negociación táctica, ella intenta razones matemáticas, Roen ve al ser humano quebrándose
+- **Torgan:** duelo físico, Roen lucha pero no para matar, busca romper el Juramento
+- **Iven:** búsqueda en territorio hostil, Roen sigue incluso cuando el camino vuelve inútil
+
+### The First Wound (Clímax emocional)
+
+El Pivote actúa finalmente (intenta destruir Speck, entregarla, lo que sea). 
+
+**La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia de esa decisión, no como elección aislada.
+
+**Roen en cada final:**
+
+#### **F1 — The Guided Molt (Speck termina la Muda sin intervención)**
+Roen es quien primero extiende la mano hacia lo que queda del grupo — no porque haya olvidado nada, sino porque **Roen conoce el peso de las decisiones imposibles.** Su línea:
+*"He estado donde estás. El arrepentimiento es el precio. Espero que valga."*
+
+**Y es el único que ya vio caer un mundo antes.** Roen renunció a la guardia del Council porque vio de cerca de qué vivía: los tanques de Aethelgard, la minería de Ignis Reach, la esclavitud ecológica de Stillwood. Cuando las luces empiezan a apagarse en las tres capitales, él no se sorprende — es lo que dijo que iba a pasar, solo que no así y no tan rápido. Su segunda línea, semanas después, cuando ya se ve la escala:
+
+*"Tenía razón sobre de qué vivíamos. No me sirve de nada tenerla. Ahora hay que enseñarle a la gente a comer sin eso, y de eso no sé nada — pero conozco a quien sí."*
+
+Es su función en el epílogo: **no consuela, organiza.** El ancla del grupo se vuelve el ancla de un barrio.
+
+#### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
+Roen es quien **mantiene la vigilia** — no sobre un cuerpo, sino sobre el silencio que deja el grupo al disolverse. No hay muerte que llorar, solo tiempo comprado a costa de Speck. Su línea, fría para lo que es él:
+*"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando compra tiempo en vez de justicia."*
+
+#### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
+Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo que queda sin hablar. Después, cuando todo se acaba, dice:
+*"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando se equivocan."*
+
+#### **F3 — The Conqueror's Clause (el jugador encadena a Speck por beneficio propio)**
+Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso — la despedida ritual descrita en [[Los 5 Finales]]. Años después, si el jugador sale del juego, encontrará una nota:
+*"I've buried people I should've protected. I'm not doing that again."*
+
+#### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
+Roen es quien **ve el futuro.** Su línea final:
+*"This is what guarding looks like. Not what you own — what you honor."*
+
+---
+
+## Línea Canónica
+
+*"I've buried people I should've protected. I'm not doing that again."*
+
+**Contexto:** Dicho a Dagna (o al Pivote en su mejor versión) antes del clímax. No es amenaza. Es promesa.
+
+---
+
+## Dinámicas con el Pivote (Por Pareja)
+
+### Roen + Maren (Humana Strategist → Ella)
+**Primera impresión:** Roen ve a alguien pragmático, gadgets en lugar de misticismo. Le gusta. Se confían tácticas.  
+**Tensión:** Cuando Maren comienza a "calcular", Roen ve el momento exacto donde la humanidad abandona la ecuación. Es incómodo.  
+**Traición:** Maren le explica su lógica. Roen comprende cada número. Y aun así la rechaza. *"Las ciudades no son números."*
+
+### Roen + Torgan (Enano Duelist → Él)
+**Primera impresión:** Roen respeta el deber. Torgan respeta la lealtad. Conectan.  
+**Tensión:** Torgan menciona su Juramento anterior. Roen pregunta (silenciosamente) si ese Juramento pesa más que este grupo.  
+**Traición:** Cuando Torgan lo honra eligiendo el Juramento, Roen asiente. *"Un hombre es su palabra. Entiendo."* No lo perdona — lo respeta.
+
+### Roen + Iven (Humano Duelist → Él)
+**Primera impresión:** Roles opuestos, misma responsabilidad — Roen es muro, Iven es velocidad. Iven es más joven, audaz donde Roen es cauteloso.  
+**Tensión:** Iven quiere salvar su asentamiento. Roen ve el precio. Intenta preparar a Iven para que ese precio no sea Speck.  
+**Traición:** Cuando Iven elige a su pueblo, Roen dice solo: *"Te entiendo. No te perdono."*
+
+### Roen + Sereth (Elfo Strategist → Él)
+**Primera impresión:** Sereth es calculador, sutil. Roen ve las capas. Desconfía un poco, pero respeta el juego.  
+**Tensión:** Sereth manipula ligeramente el grupo. Roen lo nota. Nunca lo explica — solo lo ve.  
+**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello. Es la traición más honesta. *"I see you. I still won't let you do this."* Es, de las ocho traiciones que no son la de Dagna, la que más cerca llega de romperlo — no porque Sereth calcule como el Triune Council que mató a los niños de su asentamiento, sino porque **ama** como el Triune Council nunca amó, y aun así llega al mismo lugar. Roen se queda un momento largo sin decir nada más. No es el quiebre de Dagna — es su sombra.
+
+### Roen + Bram (Humano Vanguard → Él)
+**Primera impresión:** Dos humanos de culturas distintas. Bram de guerras, Roen de fronteras. Entienden cansancio similar.  
+**Tensión:** Bram empieza a ceder bajo el peso de cuarenta años cargando la compañía de otros. Roen ve el colapso llegar. Intenta sostenerlo.  
+**El corredor del Archive:** cuando Bram rechaza la orden que el Council le pagó por ejecutar, Roen es el primero en entender, y su reacción es reconocimiento, no absolución. *"I get it. I really do."* No es despedida — Bram no se va. Es la confirmación silenciosa de que cuarenta años de cargar a otros no necesitan terminar en traición para terminar.
+
+### Roen + Lyris (Elfa Duelist → Ella)
+**Primera impresión:** Lyris es ligera, aérea. Roen es tierra. Se complementan naturalmente.  
+**Tensión:** Lyris ama con lógica fría. Cuando la verdad llega, ella no siente pánico — siente claridad. Roen ve eso y lo teme.  
+**Traición:** *"You were my stillness. Be still now."* Lyris lo dice con calma. La frialdad exacta de esa calma es lo que duele — no rabia, no urgencia, solo la certeza tranquila de alguien que ya decidió hace tiempo. Roen se queda muy quieto — no el silencio que sostiene al jugador, sino uno que no sabe qué hacer con las manos. Es su propio quiebre, en otra clave: no el peso de un puesto que sí se pudo aguantar (eso es Dagna, más abajo), sino el peso de haber confundido calma con paz. Más suave que el quiebre de Dagna, pero real — no repliegue, ruptura pequeña.
+
+### Roen + Nyael (Elfa Duelist → Ella)
+**Primera impresión:** Nyael es la sombra del grupo, precisa. Roen confía en gente precisa.  
+**Tensión:** Nyael no avisa. Roen lo siente en el silencio.  
+**Traición:** La traición de Nyael es ausencia. Una nota. Roen relee esa nota infinitas veces.
+
+### Roen + Vekka (Enana Strategist → Ella)
+**Primera impresión:** Vekka construye. Roen protege. Trabajan bien juntos.  
+**Tensión:** Vekka menciona el Dogma del Gremio. Roen pregunta si eso incluye desmontarlo a él.  
+**Traición:** Cuando Vekka lo hace, literalmente desmonta su equipo. Roen ve a Vekka cerrar los ojos un segundo — la única grieta visible que ella permite. *"I built you. Forgive me for finishing the job."* Roen lo perdona en silencio — pero se va.
+
+### Roen + Dagna (Enana Vanguard → Ella) — la que lo rompe más hondo
+
+**Primera impresión:** Roen no conoce a Dagna de antes, pero la reconoce por reputación en cuanto la ve: enana Vanguard, escolta contratada, subclán vasallo. Sabe leer un escudo pesado desde treinta pasos. Lo que ve, sin embargo, no es la reputación — es algo más íntimo. Dagna es, literalmente, la persona que hizo lo que Roen no pudo: sirvió sesenta años en un puesto que no eligió, sin abandonarlo nunca. Roen la respeta más que a nadie del grupo por eso.
+
+**El vínculo no es amistad — es reconocimiento entre dos anclas.** Nunca lo verbalizan. Se manifiesta en gestos: Roen la deja pasar primero por los pasos estrechos, Dagna acepta la deferencia sin dar las gracias porque no la necesita.
+
+**La escena del Acto 1:** en una guardia nocturna compartida, Roen pregunta, casi sin voz: *"¿Cómo aguantaste sesenta años en el mismo puesto?"* Dagna contesta: *"No tuve tu opción."* No es reproche. Es constatación. Pero Roen carga esa frase el resto del juego — reaparece cada vez que duda, en el cráter, en el final.
+
+**La traición de Dagna es la que quiebra a Roen más hondo.** Sereth y Lyris también lo rompen — de verdad, no solo lo hieren (ver sus entradas arriba) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
+
+**El gesto físico:** en el cráter, cuando Dagna ya entregó a Speck al mensajero de Deepstone, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático — es un gesto pequeño y silencioso: el brazo se afloja, el escudo se desliza, cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
+
+---
+
+## Diseño Visual Ratificado
+
+- Humano masculino, 7.5 cabezas, complexión atlética plantada (arch_xz 1.30)
+- Rostro curtido, 45 años (su edad real — no leer más joven), cicatrices pequeñas (vida de frontera, no batalla épica)
+- Líneas de expresión — ha sonreído, ha llorado, ha decidido cosas duras
+- **Warpaint fronterizo verde geométrico** en pómulo o mandíbula, long-faded (5+ años sin retoque)
+- Gear de frontera: cuero remachado, capa pesada en tonos tierra, botas de marcha
+- Arma de dos manos a la espalda (hacha de guerra o maza + escudo pequeño)
+- **Adorno personal único:** un anillo de cobre en la mano izquierda — de su padre, primer guardia
+
+---
+
+## Notas Narrativas
+
+**Roen NO es:**
+- Mentor sabio que todo lo resuelve
+- Moralizador que juzga
+- Protector que sofoca
+
+**Roen SÍ es:**
+- Presente. Siempre. Aunque sea en silencio.
+- Honesto sobre sus límites.
+- Capaz de sostener contradicciones (comprende al Pivote y lo rechaza al mismo tiempo)
+- El primero en llorar después, cuando nadie mira.
+
+**Dinámica con el Jugador:**
+No es tu consejero. Es tu compañero. Comparte la carga. Cuando el Pivote se va, Roen es quien **sostiene el peso para que el jugador respire.**
+
+Línea privada de Roen (nunca dicha aloud):  
+*"He visto la verdad del mundo. He visto gente intentar cambiarla. He visto fallar. Pero sigo viniendo. Porque alguien tiene que estar ahí cuando todo se quiebra."*
+

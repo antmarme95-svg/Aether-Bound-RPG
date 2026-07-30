@@ -11,7 +11,7 @@ updated: 2026-07-04
 God-Cores. Incidente incitante: las "bestias" del nido eran guardianas de la
 crisálida de [[Speck]]. Eliges no matar al último espécimen → prófugo.
 
-**Acto 2 — Comunidad.** Se forma [[El Quinteto]]. Viajar el aro de
+**Acto 2 — Comunidad.** Se forma [[The Bound Five]]. Viajar el aro de
 [[La Rueda]] revela que **tu propia cultura degrada el ecosistema**. Arco
 Fellowship (LotR) con fricción (Vox Machina).
 
@@ -25,11 +25,11 @@ Se lleva el Fragmento (dispositivo de acoplamiento): **orfandad mecánica** —
 pierdes tu link firma ([[Los 9 Links del Pivote]], [[Bond y el Bond Vacío]]).
 
 **Acto 3.** Perseguir/entender a C3 → los tres reinos movilizan ejércitos →
-The First Wound: clímax y [[Los 4 Finales]].
+The First Wound: clímax y [[Los 5 Finales]].
 
 ## El gancho interno
 
 Tensión permanente entre **beneficio propio** (contrato, estatus) ↔ **nuevos
 valores** (los vínculos) ↔ **desilusión** (tu sociedad no era lo que creías).
 Cada decisión mayor tensa al menos dos polos. Hecho maquinaria en
-[[The Tether]]; hecho desenlaces en [[Los 4 Finales]].
+[[The Tether]]; hecho desenlaces en [[Los 5 Finales]].

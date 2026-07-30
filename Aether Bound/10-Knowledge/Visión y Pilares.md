@@ -8,7 +8,7 @@ updated: 2026-07-04
 
 **AETHER BOUND** (ver [[Nomenclatura]]): un Action RPG de mundo de regiones
 conectadas donde **no eres el elegido** — eres un mercenario leal a tu cultura
-que, a través de un grupo disfuncional de cinco ([[El Quinteto]]) y una
+que, a través de un grupo disfuncional de cinco ([[The Bound Five]]) y una
 criatura que nadie quiere ([[Speck]]), **desaprende esa lealtad**, hasta que tu
 mano derecha te traiciona por convicción ([[Los 9 Pivotes]]).
 

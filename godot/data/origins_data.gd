@@ -22,6 +22,30 @@ const ORIGINS: Array[Dictionary] = [
 		"recruiter": {"name": "Provost Ilyra Venn", "title": "Office of Profitable Curiosity"},
 		"rival": "The Iron Tribunal of the Craters",
 		"heightRange": [0.97, 1.13],
+		# C6b (2026-07-21): esqueleto FIJO por raza ([[Fenotipos y Creación
+		# de Personaje]] — "palancas largas, hombros estrechos caídos,
+		# cuello largo"). Multiplicadores sobre el rig humano (1.0 =
+		# comportamiento humano, ver `character_rig.gd _apply_build`).
+		# Punto de partida medido contra la lámina (`fenotipo-elfo-*.png`,
+		# "8 heads tall"); afinar con el banco de anatomía antes de VoBo.
+		"proportions": {
+			# Ronda 1 (medido en banco 2026-07-21): 8.78 cabezas con
+			# 1.15/0.90 — objetivo 8.0, un poco menos extremo.
+			"limb_len": 1.08,
+			"shoulder_x": 0.82,
+			"neck_len": 1.35,
+			"head_scale": 0.94,
+			"hand_scale": 1.08,
+		},
+		# Rasgos faciales (2026-07-21, frente de geometría nueva): "mandíbula
+		# fina" (lámina) — sesgo sobre el MISMO rango del slider `jaw`, ceja
+		# fina/alta (elfo joven, no frente pesada).
+		"face": {
+			"jaw_width": 0.85,
+			"jaw_depth": 0.90,
+			"brow_scale": 0.85,
+			"brow_y": 0.003,
+		},
 		"theme": {
 			"accent": "#46e6ff",
 			"sky": "#7fd4ff",
@@ -54,6 +78,30 @@ const ORIGINS: Array[Dictionary] = [
 		"recruiter": {"name": "Forge-Sergeant Brakka Húldottir", "title": "Conscription & Quenching Division"},
 		"rival": "The Archlectors of Zephyr-Academica",
 		"heightRange": [0.92, 1.08],
+		# C6b (2026-07-21): "palancas cortas, trapecio masivo, cuello
+		# hundido, manos enormes, centro bajo" ([[Fenotipos y Creación de
+		# Personaje]]). Punto de partida medido contra la lámina
+		# (`fenotipo-enano-varon-v1.png`, "4.5 heads tall"); afinar con el
+		# banco de anatomía antes de VoBo.
+		"proportions": {
+			# Ronda 3 (medido en banco 2026-07-21): r1 5.34 cabezas (0.62/1.12),
+			# r2 4.22 cabezas (0.45/1.30) — se pasó un poco del objetivo 4.5.
+			"limb_len": 0.48,
+			"shoulder_x": 1.60,
+			"neck_len": 0.45,
+			"head_scale": 1.24,
+			"hand_scale": 1.40,
+		},
+		# Rasgos faciales (2026-07-21, frente de geometría nueva): "frente
+		# pesada, mandíbula ancha" (lámina `fenotipo-enano-varon-v1.png`) —
+		# sesgo sobre el MISMO rango del slider `jaw`, ceja gruesa y baja
+		# (frente prominente, ojos hundidos).
+		"face": {
+			"jaw_width": 1.35,
+			"jaw_depth": 1.20,
+			"brow_scale": 1.65,
+			"brow_y": -0.006,
+		},
 		"theme": {
 			"accent": "#ff9d4d",
 			"sky": "#3a2420",
@@ -67,17 +115,22 @@ const ORIGINS: Array[Dictionary] = [
 		},
 	},
 	{
+		# Human origin (the Restless). Kept id "miststalker" internally — renaming
+		# it would touch ~10 test files that key origins by string id — but the
+		# race is 100% human: this entry represents the Mistbound, the frontier
+		# Driftfolk subculture of the Restless (Aether Bound/10-Knowledge/Las Tres
+		# Razas.md, Fenotipos y Creación de Personaje.md — decisión 2026-07-04).
 		"id": "miststalker",
-		"name": "Mist-Stalkers",
-		"tag": "Beast-Folk Outlaw Rogues",
-		"lore": "Canal-running beastfolk of the fog. If you can see them, they are either being polite or you are already robbed.",
+		"name": "Mistbound",
+		"tag": "Driftmarket Frontier Outlaws",
+		"lore": "Canal-running smugglers of the fog, Driftmarket-born and beholden to no crown. If you can see them, they are either being polite or you are already robbed.",
 		"defaultName": "Ryx",
 		"passive": {
 			"id": "feralInstinct",
-			"name": "Feral Instinct",
-			"desc": "Move faster through high grass, toggle night-vision with N, and enemies notice you far later.",
+			"name": "Frontier Instinct",
+			"desc": "Move faster through high grass, toggle fog-sight with N, and enemies notice you far later.",
 			"attributeMods": {},
-			"hint": "N — NIGHT-VISION",
+			"hint": "N — FOG-SIGHT",
 		},
 		"city": {
 			"name": "The Titan's Docks",
@@ -85,7 +138,7 @@ const ORIGINS: Array[Dictionary] = [
 		},
 		"recruiter": {"name": "Quillane “Quill” Marrow", "title": "Acquisitions (Don't Ask) Desk"},
 		"rival": "The Gilded Concord of Free Captains",
-		"heightRange": [0.9, 1.1],
+		"heightRange": [0.9, 1.15],
 		"theme": {
 			"accent": "#4dff9d",
 			"sky": "#2c4a44",

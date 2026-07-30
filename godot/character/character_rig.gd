@@ -1,7 +1,63 @@
-## CharacterRig — parametric anime humanoid, direct port of CharacterRig.js.
-## All JS numeric constants are preserved exactly (positions, scales, thresholds).
-## Pivots: body > hips/spine > head > sub-meshes, arms, legs — same hierarchy.
+## CharacterRig — cuerpo humanoide paramétrico.
+## C6a (2026-07-10, rework anatómico): las proporciones ya NO son el puerto
+## del prototipo (anime ~6.4 cabezas) — siguen el canon de las láminas de
+## fenotipo (`90-Raw/concept/fenotipo-*.png`): humano ATLETA de 7.5 cabezas
+## (ver PROPORTIONS abajo). La jerarquía de pivotes es intacta (biomecánica
+## conservada: hip-first, columna lumbar+torácica, constraints de ROM).
+## Línea: el rig NO fabrica outline (decisión del director 2026-07-10) — la
+## tinta la pone el Sobel del post Melancolía (Art Bible, eje Línea); los
+## materiales son toon_opaque (pase opaco, visibles al depth del post).
+## Pivots: body > hips/spine > head > sub-meshes, arms, legs.
 class_name CharacterRig extends Node3D
+
+# ----------------------------------------------------------------
+# PROPORTIONS — canon anatómico humano (lámina fenotipo-humano-v1: atleta
+# de 7.5 cabezas). Alturas en metros a escala 1.0; el total queda ~1.92 m
+# con la coronilla y el mentón cerrando una cabeza de ~0.255 m.
+# Landmarks (mundo, de pie): coronilla 1.92 · mentón 1.67 · hombros 1.55 ·
+# codo/ombligo 1.23 · muñeca/entrepierna ~0.95 · rodilla 0.50 · suelo 0.
+# Los fenotipos enano (4.5 cabezas, trapezoide) y elfo (8, esbelto) derivan
+# de esta tabla en C6b.
+# ----------------------------------------------------------------
+# r4 = Character Blockout Review v0.1 del director (90-Raw/reviews/):
+# CRITICAL 1 silueta atlética (hombros +12%, cintura menos, pecho más),
+# CRITICAL 2 cabeza menor, CRITICAL 3 cuello largo + hombros más bajos.
+const HEAD_SCALE: float = 0.84       # cráneo del puerto ×0.84 (review: menos cabezón)
+# Fase C (Benchmark-Musculatura-Torso.md / debate orquestador↔QA
+# 2026-07-13): CUELLO +15% — la caída mentón→hombro se leía corta (la
+# barbilla casi rozaba la línea de hombros en 3/4). HEAD_Y y NECK_Y suben
+# el mismo delta que el cilindro del cuello crece (ver _build, +0.015 de
+# alto) para que la cabeza no se hunda ni se separe del cuello.
+const HEAD_Y: float = 0.520          # v0.4 H3 0.505 + 15% de cuello (Fase C)
+const NECK_Y: float = 0.3595  # v0.4 H3 0.352 + 15% de cuello (Fase C)
+const NECK_HEIGHT: float = 0.115     # alto del cilindro de cuello (ver _build) — C6b lo estira/encoge por raza
+const BROW_Y_BASE: float = 0.021     # y de la ceja en _build — C6b la baja/sube por raza (frente pesada de enano)
+# QA dirigido 2026-07-13 (hombros que no convencían al director): el
+# "+12%" de la review v0.1 CONTRADECÍA la lámina (fenotipo-humano-v1 dice
+# "narrow sloped shoulders", biacromial ~2.05 cabezas ≈ 0.52 m) y quedó
+# fosilizado — el render medía 0.67 m (+30%). Dos rondas esculpieron el
+# deltoide correcto sobre el pivote equivocado. La lámina es el canon:
+# pivote ADENTRO y ABAJO; la silueta cuello→muñeca solo DESCIENDE.
+const SHOULDER_X: float = 0.21       # media distancia entre hombros (lámina, ex-0.262)
+const SHOULDER_Y: float = 0.26       # línea de hombros (lámina: caída real, ex-0.29)
+const UPPER_SPINE_Y: float = 0.24    # bisagra torácica sobre la lumbar
+# PRD Rework Fenotipo pt.13 (2026-07-14, riesgo alto): curva dorsal estática
+# — perfil "en tabla" del QA de cuerpo completo. Subido de -0.05 (propuesta
+# técnica inicial) a -0.09 por objeción directa de Fable (imperceptible con
+# el torso construido en placas separadas). Se suma como OFFSET al target
+# del settle de `upper_spine.rotation.x` (línea ~2900, el "follow del
+# torácico fuera del strike") en vez de asignarse una sola vez en _build():
+# ese lerp corre TODO frame que no sea strike y converge hacia
+# `spine.rotation.x * 0.30` — una asignación directa en _build() se borra
+# sola en <150ms de idle (mismo mecanismo que el "settle satura el clamp"
+# de Lecciones). Sumar el offset al target la hace parte del reposo real.
+const DORSAL_CURVE_X: float = -0.09
+# V-taper del tronco (multiplicadores base sobre el build de peso/clase):
+# pecho con VOLUMEN (review CRITICAL 1) y cintura recogida marcando el
+# cambio tórax→pelvis.
+const CHEST_X: float = 1.16
+const CHEST_Z: float = 0.92
+const WAIST_XZ: float = 0.90
 
 # ---- lerp helper ----
 static func _lerp(a: float, b: float, t: float) -> float:
@@ -58,6 +114,45 @@ static func _disc_mesh(r: float, mat: Material) -> MeshInstance3D:
 	mi.material_override = mat
 	return mi
 
+# ---- ear (3-piece: pabellón + lóbulo + hélix) ----
+# Defaults = valores del humano cerrado al 74% (paso 1, nacimiento de oreja).
+func _build_ear(side: int, parent: Node3D, mat: Material, p: Dictionary) -> void:
+	var ear = _sphere_mesh(p.get("pab_r", 0.030), mat)
+	ear.scale = p.get("pab_scale", Vector3(0.58, 1.45, 0.75))
+	ear.rotation.x = p.get("rot_x", -0.15)
+	ear.rotation.z = float(side) * p.get("rot_z_mul", -0.06)
+	ear.position = Vector3(
+		side * p.get("pab_x", 0.130),
+		p.get("pab_y", 0.0),
+		p.get("pab_z", -0.024))
+	_add_outline_pass(ear, Color("#f2b186"), 0.02)
+	parent.add_child(ear)
+
+	var lobe = _sphere_mesh(p.get("lobe_r", 0.012), mat)
+	lobe.scale = p.get("lobe_scale", Vector3(0.55, 0.75, 0.55))
+	lobe.position = Vector3(
+		side * p.get("lobe_x", 0.126),
+		p.get("lobe_y", -0.042),
+		p.get("lobe_z", -0.020))
+	_add_outline_pass(lobe, Color("#f2b186"), 0.02)
+	parent.add_child(lobe)
+
+	var helix = MeshInstance3D.new()
+	var tmesh = TorusMesh.new()
+	tmesh.inner_radius = p.get("helix_inner", 0.011)
+	tmesh.outer_radius = p.get("helix_outer", 0.021)
+	helix.mesh = tmesh
+	helix.material_override = mat
+	helix.scale = p.get("helix_scale", Vector3(1.0, 1.45, 0.9))
+	helix.rotation.z = PI / 2.0
+	helix.rotation.x = p.get("rot_x", -0.15)
+	helix.position = Vector3(
+		side * p.get("helix_x", 0.140),
+		p.get("helix_y", 0.004),
+		p.get("helix_z", -0.025))
+	_add_outline_pass(helix, Color("#f2b186"), 0.02)
+	parent.add_child(helix)
+
 # ----------------------------------------------------------------
 # Scene nodes (mirrors JS property names where possible)
 # ----------------------------------------------------------------
@@ -73,8 +168,10 @@ var tail_slot: Node3D
 
 var pelvis: MeshInstance3D
 var torso: MeshInstance3D
-var jerkin: MeshInstance3D
-var strap: MeshInstance3D
+var waist: MeshInstance3D  # cintura/lumbar — cierra el hueco torso->pelvis (ver _build)
+# jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
+# debate orquestador↔QA 2026-07-13, GO del director) — el cuerpo base ya no
+# fabrica ropa fosilizada; build_frontier() la cuelga como outfit aditivo.
 var goggles: Node3D
 var skull: MeshInstance3D
 var jaw_mesh: MeshInstance3D  # renamed from "jaw" to avoid shadowing Node3D.get_name
@@ -88,6 +185,8 @@ var veins: Array = []
 
 # ---- materials (per-rig so colors are independent) ----
 var skin_mat: ShaderMaterial
+var lip_mat: ShaderMaterial
+var mouth_seam_mat: ShaderMaterial
 var head_mat: ShaderMaterial
 var hair_mat: ShaderMaterial
 var leather_mat: ShaderMaterial
@@ -103,7 +202,6 @@ var accent: Color = Color("#46e6ff")
 
 # Per-origin visual state
 var _spark_particles: GPUParticles3D = null   # ironblooded sparks node
-var _fur_slot: Node3D = null                  # miststalker fake-fur node
 var _iron_armor: Array = []                   # ironblooded armor pieces: [{node, base}]
 
 # Motion / animation state
@@ -115,6 +213,14 @@ var _motion_slide: bool = false        # true while sliding — uses a dedicated
 var _hip_crouch: float = 0.0           # smoothed 0..1 crouch amount for hip back+down offset
 var _attack_timer: float = 0.0
 var _attack_style: String = "melee"
+
+# ---- Foot IK (C4, frente 2): terreno bajo cada pie, seteado por el
+# consumidor (player_controller/escena) vía `apply_foot_ik()` cada frame.
+# NAN = sin dato de terreno todavía → esa pierna no aplica corrección
+# (gates/bancos que nunca llaman `apply_foot_ik` quedan bit-idénticos).
+var _ik_ground_h: Array = [NAN, NAN]
+var _ik_ground_n: Array = [Vector3.UP, Vector3.UP]
+var _ik_active: bool = false
 
 # ---- PRD-006 alcance 0: biomech strike + joint constraints ----
 const _Biomech = preload("res://character/rig_biomech.gd")
@@ -157,6 +263,13 @@ var _hair_key: String = ""
 var _beard_key: String = ""
 var _origin_id: String = ""
 
+# M9-r2 (review v0.2 CRITICAL 2): banda de pintura en el brazo — acompaña
+# al warpaint facial (identidad del concept: marca en el bíceps izquierdo).
+var _arm_stripe: MeshInstance3D = null
+# M9-r3: franja de FRENTE como geometría (el v del atlas se comprime no
+# lineal en esa banda — irresoluble por textura; ver warpaint_atlas §6).
+var _face_mark: MeshInstance3D = null
+
 # ---- archetype silhouette state ----
 var _archetype_class: String = ""        # "warrior" / "mage" / "thief" / ""
 var _last_p: Dictionary = {}             # last phenotype applied
@@ -184,16 +297,42 @@ var _shaman_aura: GPUParticles3D = null     # miststalker mage: green heal parti
 func _ready() -> void:
 	_init_materials()
 	_build()
-	# Apply default outline to body group (thickness 0.06, matches JS addOutline)
-	_apply_outline_to_children(self, Color("#1c1d24"), 0.02)
+	# C6: sin outline de casco invertido — la línea la pone el Sobel del post.
 
 func _init_materials() -> void:
-	skin_mat = ToonMaterials.toon_mat(Color("#f2b186"))
-	head_mat = ToonMaterials.toon_mat(Color("#ffffff"))
-	hair_mat = ToonMaterials.toon_mat(Color("#b8451f"))
-	leather_mat = ToonMaterials.toon_mat(Color("#5b4632"))
-	dark_leather_mat = ToonMaterials.toon_mat(Color("#3a2d22"))
-	metal_mat = ToonMaterials.toon_mat(Color("#6f7a88"))
+	skin_mat = ToonMaterials.toon_mat_opaque(Color("#f2b186"))
+	# FASE C paso 5: tono de labio propio (rosa cálido, más profundo que la
+	# piel) — la boca deja de ser una línea pintada y necesita distinguirse
+	# como masa de piel distinta bajo el cel-shading, no un trazo de color.
+	# AJUSTE FINO post-QA Ronda 3: 3 rondas moviendo solo posición/escala no
+	# lograron que labio sup/inf lean como DOS masas (bloque -> agujero ->
+	# bloque otra vez) — el QA sugirió variar TONO además de geometría, para
+	# que el toon shading marque la separación y no dependa solo del Sobel.
+	# R1: tono acercado a la piel (rosa-tierra desaturado) — el terracota
+	# #a85f47 leía "masa rojiza oscura/herida" (QA rostro 35% + Fase 4 del
+	# PRD v2, que pedía exactamente este cambio).
+	# Sprint B1: MÁS cerca aún de la piel (#f2b186 → #dba07c, ~10% más
+	# oscuro con sesgo rosa) — la frontera dura de MATERIAL alrededor de
+	# la cápsula era lo único que quedaba leyendo "curita" (la tinta ya no
+	# la dibuja desde la regla nueva). La lámina resuelve los labios con
+	# LÍNEA + tono sutil: la comisura oscura hace el trabajo de lectura.
+	lip_mat = ToonMaterials.toon_mat_opaque(Color("#dba07c"))
+	# PRD Rework Fenotipo pt.8: la comisura usaba pupil_mat (negro plano,
+	# leía "hueco/prótesis") — tono de labio oscurecido, coherente con el
+	# resto de la boca en vez de un agujero sin relación de color.
+	mouth_seam_mat = ToonMaterials.toon_mat_opaque(Color("#dba07c").darkened(0.58))
+	head_mat = ToonMaterials.toon_mat_opaque(Color("#ffffff"))
+	hair_mat = ToonMaterials.toon_mat_opaque(Color("#b8451f"))
+	# Full rework de pelo 2026-07-19: rim CASI apagado solo en el pelo —
+	# el rim azul-cielo (#bfe8ff, strength 0.18) baña COMPLETAS las tiras
+	# delgadas de loft (todo su perímetro está en ángulo rasante → el
+	# fresnel^3 satura) y las teñía de azul-gris; en masas grandes solo
+	# toca el borde y ahí sí funciona. Causa raíz del "tinte azulado de
+	# piezas colgantes" visto desde los conos del piloto.
+	hair_mat.set_shader_parameter("rim_strength", 0.04)
+	leather_mat = ToonMaterials.toon_mat_opaque(Color("#5b4632"))
+	dark_leather_mat = ToonMaterials.toon_mat_opaque(Color("#3a2d22"))
+	metal_mat = ToonMaterials.toon_mat_opaque(Color("#6f7a88"))
 	accent_glow_mat = ToonMaterials.glow_mat(accent, 1.2)
 	vein_mat = ToonMaterials.glow_mat(accent, 0.8)
 
@@ -221,21 +360,17 @@ func _build() -> void:
 	hips.position.y = 0.95
 	body.add_child(hips)
 
-	pelvis = _box_mesh(0.27, 0.15, 0.17, dark_leather_mat)
+	# r4 (review CRITICAL 1): pelvis un punto más ancha que la cintura — el
+	# cambio tórax→cintura→pelvis se LEE en la silueta.
+	pelvis = _box_mesh(0.27, 0.16, 0.16, dark_leather_mat)
 	pelvis.name = "pelvis"
-	pelvis.position.y = -0.02
+	pelvis.position.y = -0.01
 	hips.add_child(pelvis)
 	_add_outline_pass(pelvis, Color("#3a2d22"))
 
-	var belt = _box_mesh(0.3, 0.05, 0.2, leather_mat)
-	belt.position.y = 0.05
-	hips.add_child(belt)
-	_add_outline_pass(belt, Color("#5b4632"))
-
-	var buckle = _box_mesh(0.06, 0.04, 0.02, accent_glow_mat)
-	buckle.position = Vector3(0.05, 0.05, 0.105)
-	buckle.name = "buckle_glow"
-	hips.add_child(buckle)  # no outline on glow parts
+	# belt/buckle_glow MIGRARON a character_outfit.gd (Fase Migración de
+	# Ropa) — el cuerpo base ya no fabrica cinturón fosilizado; lo cuelga
+	# CharacterOutfit.build_frontier() como pieza aditiva del outfit.
 
 	for side in [-1, 1]:
 		var leg = Node3D.new()
@@ -243,8 +378,25 @@ func _build() -> void:
 		leg.position = Vector3(side * 0.09, 0.0, 0.0)
 		hips.add_child(leg)
 
-		var thigh = _capsule_mesh(0.067, 0.27, dark_leather_mat)
-		thigh.position.y = -0.21
+		# C6a-r2 (feedback del director: "que dejen de ser puros círculos"):
+		# la pierna es un volumen que ESTRECHA como en la lámina — muslo
+		# masivo arriba → rodilla, pantorrilla → tobillo. Cilindros cónicos,
+		# no cápsulas-globo; la rodilla es la única bola (articulación).
+		# r4 (review HIGH 5): la pierna tiene TRES volúmenes diferenciados —
+		# cuádriceps arriba, rodilla, GEMELO atrás — no un tubo continuo.
+		# FASE B (fusión de uniones, QA "maniquí articulado"): el muslo
+		# terminaba en radio 0.058 a solo 0.03 del centro de la rodilla
+		# (r0.054) — el cono era MÁS GRUESO que la esfera de articulación en
+		# ese corte transversal (0.058 > sqrt(0.054²-0.03²)=0.045), así que
+		# el muslo asomaba MÁS ANCHO que la rodilla → costura dura (valle de
+		# profundidad que el Sobel entinta). Fix: el cono termina más
+		# delgado (0.050, "ligeramente menor que la esfera") y penetra
+		# HONDO (0.02 más allá del centro de la rodilla, no tangente) —
+		# se alarga el cilindro para no mover el extremo de cadera. La
+		# rodilla crece a 0.066 ("apenas mayor que ambos conos") para
+		# envolver la transición con curvatura convexa continua.
+		var thigh = _cylinder_mesh(0.090, 0.050, 0.45, dark_leather_mat)
+		thigh.position.y = -0.245
 		leg.add_child(thigh)
 		_add_outline_pass(thigh, Color("#3a2d22"))
 
@@ -253,20 +405,71 @@ func _build() -> void:
 		knee.position.y = -0.45
 		leg.add_child(knee)
 
-		var shin = _capsule_mesh(0.055, 0.26, dark_leather_mat)
-		shin.position.y = -0.2
+		# Sprint B4: achatada lateralmente (x 0.88) — la esfera 0.066 era
+		# más ancha que ambos tubos (0.050/0.052) y leía "repisa/escalón"
+		# de frente; el bulge de rótula (y/z) se conserva y el solape hondo
+		# de FASE B en Y no se toca.
+		var knee_cap = _sphere_mesh(0.066, dark_leather_mat)
+		knee_cap.scale = Vector3(0.88, 1.0, 1.0)
+		knee_cap.position.y = 0.0
+		knee.add_child(knee_cap)
+		_add_outline_pass(knee_cap, Color("#3a2d22"))
+
+		# La espinilla también penetra 0.02 más allá del centro de la
+		# rodilla (arriba) — mismo criterio que el muslo — Y se alarga
+		# hacia ABAJO para cerrar el HUECO real con la bota (el tope de la
+		# espinilla quedaba en y=-0.39 mientras la bota empieza en
+		# y=-0.405: 1.5 cm de aire/piel visible entre caña y bota).
+		# bottom_r sube un poco (0.036→0.040) para fundir mejor con el
+		# ancho de la caña.
+		var shin = _cylinder_mesh(0.052, 0.040, 0.44, dark_leather_mat)
+		shin.position.y = -0.20
 		knee.add_child(shin)
 		_add_outline_pass(shin, Color("#3a2d22"))
 
-		var boot = _box_mesh(0.1, 0.08, 0.17, leather_mat)
-		boot.position = Vector3(0.0, -0.45, 0.03)
-		knee.add_child(boot)
+		# GEMELO: masa trasera alta de la pantorrilla (perfil de atleta)
+		# R3: +Z trasero (0.85→1.05, centro -0.028→-0.034) — el QA leyó la
+		# pantorrilla como cono recto en perfil; el bulge posterior del
+		# gemelo debe ser SILUETA (la lámina lo muestra incluso con bota).
+		# Sprint B4: más largo y un pelo más angosto (1.6→1.78 en Y) — el
+		# bulge entraba/salía abrupto en la silueta ("joroba pegada");
+		# alargarlo suaviza la entrada y salida sin perder el bulge.
+		var calf = _sphere_mesh(0.048, dark_leather_mat)
+		calf.scale = Vector3(0.72, 1.78, 1.02)
+		calf.position = Vector3(0.0, -0.10, -0.034)
+		knee.add_child(calf)
+		_add_outline_pass(calf, Color("#3a2d22"))
+
+		# TOBILLO (C4, frente 2 del orden 2026-07-20/21): 2-DOF ["Movilidad
+		# Realista": "muñeca/tobillo 2-DOF"] — antes la bota colgaba RÍGIDA
+		# del nodo `knee` (sin pivote propio), así que "pies plantados en
+		# pendiente" ([[Movilidad Realista]], IK como estándar) era
+		# imposible: no había ningún hueso que pudiera inclinar la suela.
+		# Nace en el mismo punto donde colgaba la bota (knee-local y=-0.45)
+		# — con rotation=0 el mundo queda IDÉNTICO al de antes (solo cambia
+		# la jerarquía), así que esto es neutro en reposo/gates viejos.
+		var ankle = Node3D.new()
+		ankle.name = "ankle"
+		ankle.position.y = -0.45
+		knee.add_child(ankle)
+
+		# Bota: caña + puntera (review HIGH 7: pies MAYORES — estabilidad
+		# visual, contacto con el suelo, lectura en animación)
+		var boot = _box_mesh(0.11, 0.09, 0.21, leather_mat)
+		boot.position = Vector3(0.0, 0.0, 0.03)
+		ankle.add_child(boot)
 		_add_outline_pass(boot, Color("#5b4632"))
+		var toe = _box_mesh(0.10, 0.055, 0.085, leather_mat)
+		toe.position = Vector3(0.0, -0.0175, 0.14)
+		ankle.add_child(toe)
+		_add_outline_pass(toe, Color("#5b4632"))
 
 		# Store sub-nodes in metadata (mirrors JS leg.userData)
 		leg.set_meta("knee", knee)
 		leg.set_meta("thigh", thigh)
 		leg.set_meta("shin", shin)
+		leg.set_meta("ankle", ankle)
+		leg.set_meta("calf", calf)
 		legs.append(leg)
 
 	# ---------- torso ----------
@@ -277,28 +480,313 @@ func _build() -> void:
 	spine = Node3D.new()
 	spine.name = "spine"
 	spine.position.y = 1.0
+	# PRD Rework Fenotipo pt.13: leve avance de la lumbar (perfil "en tabla"
+	# del QA) — posición pura, sin lerp que la sobrescriba (a diferencia de
+	# upper_spine.rotation.x, ver DORSAL_CURVE_X arriba).
+	spine.position.z = 0.01
 	body.add_child(spine)
 
 	upper_spine = Node3D.new()
 	upper_spine.name = "upper_spine"
-	upper_spine.position.y = 0.22
+	upper_spine.position.y = UPPER_SPINE_Y
 	spine.add_child(upper_spine)
 
-	torso = _capsule_mesh(0.16, 0.3, skin_mat)
-	torso.position.y = 0.04
+	# C6a-r2: el tronco es UN taper continuo como en la lámina — pecho ancho
+	# arriba (hombros cuadrados, no globo) que estrecha hacia la cintura; la
+	# cintura (jerkin) retoma el MISMO radio y asienta sobre la pelvis. El
+	# V-taper elíptico (CHEST_X/Z) lo aplica _apply_build sobre peso/clase.
+	# FASE 1 — investigación tras QA imparcial (2026-07-16, veredicto ~40%,
+	# CRITICAL: "bloque rectangular con bordes de tinta en la base del
+	# cuello... cuello de camisa sin soldar"). Hipótesis inicial DESCARTADA
+	# por investigación de campo (marcado de color pieza por pieza): NO es
+	# un disco expuesto por diferencia de radio torso/cuello — top_radius
+	# se probó en 0.16/0.14/0.10 sin ningún cambio visual en el defecto. La
+	# causa real es `chin_boss` (ver más abajo, cerca de la nariz) leyendo
+	# desconectado de la mandíbula en ángulo 3/4 — ya corregido ahí. Radio
+	# del torso se deja en su valor original (0.16), sin cambios.
+	torso = _cylinder_mesh(0.16, 0.11, 0.34, skin_mat)
+	torso.position.y = 0.12
 	upper_spine.add_child(torso)
 	_add_outline_pass(torso, Color("#f2b186"))
 
-	jerkin = _capsule_mesh(0.165, 0.18, leather_mat)
-	jerkin.position.y = 0.18
-	spine.add_child(jerkin)
-	_add_outline_pass(jerkin, Color("#5b4632"))
+	# Fase C (Benchmark-Musculatura-Torso.md): las cajas-peto (pec_plate/
+	# clavicle) SE ELIMINAN — leían como armadura de placas, no como
+	# músculo (QA d2 ya lo diagnosticaba). Reemplazo: PECTORALES =
+	# elipsoides SEMI-HUNDIDAS en el cilindro del torso, mismo patrón
+	# gemelo que brazos/piernas (esfera escalada + intersección real con
+	# el volumen anfitrión → el Sobel entinta la curva de intersección,
+	# no un rectángulo). Receta del debate orquestador↔QA: r 0.05, escala
+	# (1.4, 0.9, 0.5), centros x=±0.055 / y=0.21 / z=0.115. Verificado
+	# contra el radio real del cilindro en y=0.21 (interpolado top 0.16 /
+	# bot 0.11 sobre height 0.34): r_cyl≈0.148 → el borde del pec
+	# (z=0.115+0.025=0.140) queda LIGERAMENTE hundido (~0.008), no proud;
+	# el valle esternal lo dibuja la curva de intersección entre ambos
+	# elipsoides (se solapan ~3 cm en el centro — mismo mecanismo de
+	# "anillo" que el gemelo, aquí en par para el valle).
+	# PRD Geometría Nueva (2026-07-14, ratificado): la lámina de torso
+	# muestra pectorales como curvas MUY suaves, casi lineales — no bultos
+	# redondos. El QA de la ronda 42% leyó estas esferas como "dos ojos en
+	# el torso" (protrusión Z 0.5 con separación x=±0.055 = simetría +
+	# tamaño que lee como par de cuencas). Aplanadas (escala Z 0.5→0.32) y
+	# alargadas (X 1.4→1.7) para acercarse a "línea de pectoral", no
+	# "bulto".
+	# R2 ronda 4: los pecs SUBEN al frente de chest_mass (z 0.115→0.138) —
+	# quedaban 2cm DENTRO de la masa nueva de pecho y solo asomaban arcos
+	# parciales asimétricos ("semicírculos de tinta", QA 45%). Con ~3mm
+	# proud sobre chest_mass leen como la curva casi lineal de la lámina.
+	# R4: HIJOS DE `torso` (antes upper_spine) — heredan la escala x/z del
+	# build (peso/clase); con peso máximo el cilindro crecía y se tragaba
+	# las masas fijas (el "peto" renacía, verificado en rig_weight_max).
+	# Sin skew: ninguna de estas masas está rotada. Posiciones en frame
+	# torso-local (el torso vive en y=0.12 del upper_spine).
+	for pside in [-1, 1]:
+		# Sprint A6: z 0.138→0.135 — el filo superior del pec asomaba
+		# sobre chest_mass y el rim lo encendía como "streak crema" en 3/4.
+		var pec = _sphere_mesh(0.05, skin_mat)
+		pec.scale = Vector3(1.7, 0.9, 0.32)
+		pec.position = Vector3(float(pside) * 0.055, 0.09, 0.135)
+		torso.add_child(pec)
+		_add_outline_pass(pec, Color("#f2b186"))
 
-	strap = _box_mesh(0.07, 0.5, 0.02, dark_leather_mat)
-	strap.position = Vector3(0.02, 0.06, 0.155)
-	strap.rotation.z = 0.62
-	upper_spine.add_child(strap)
-	_add_outline_pass(strap, Color("#3a2d22"))
+	# CLAVÍCULA: partida en 2 segmentos (FASE 1.3, PRD-Rework-Modelado-
+	# Personajes-v2, 2026-07-16). Antes: una sola cápsula finísima recta
+	# (r 0.012) del esternón al hombro. El libro de anatomía
+	# ([[Principios de Anatomía 3D]] → "Cabeza, cuello y cara"/torso) marca
+	# la clavícula recta como el error #1 de principiante: el hueso real
+	# tiene una curva en S (convexa cerca del esternón, cóncava cerca del
+	# hombro), no una barra recta. Dos cápsulas cortas con un quiebre de Z
+	# entre ellas (medial más al frente/proa hacia el pecho, lateral más
+	# recesada hacia el hombro) sugieren la S sin necesitar una curva real
+	# — mismo espíritu que el ángulo goníaco de la mandíbula (Fase C):
+	# quiebre de radio/posición, no geometría curva compleja. Overlap real
+	# en la unión (Lección "overlap real para fundir masas").
+	# R2 (2026-07-17): las 2 cápsulas finas por lado leían "2 trazos
+	# flotantes dibujados" (QA 40%, MEDIUM) — un tubo delgado presenta
+	# pared empinada en TODO su perímetro y el Sobel lo entinta entero
+	# (Lección R1: pendiente, no protrusión). Reemplazo: UNA cresta
+	# elipsoidal semi-hundida por lado sobre la superficie del pecho —
+	# emerge en rampa, el cel-step la lee como "clavícula discreta"
+	# (exactamente lo que pide [[Benchmark-Musculatura-Torso]]) sin
+	# contorno propio. La S del hueso queda sugerida por la inclinación.
+	# R2 ronda 4: las crestas claviculares SE RETIRAN — el QA leyó "yugo/
+	# barra con píldoras apiladas"; la anotación literal de la lámina es
+	# "understated collarbones" y a esta escala del estilo la clavícula la
+	# sugieren el borde de chest_mass + la rampa del trapecio, sin pieza
+	# propia (menos es más bajo el Sobel).
+
+	# R2: PROFUNDIDAD DE PERFIL — el QA 40% (HIGH) leía el torso de lado
+	# como "tabla plana" (el cilindro con taper lineal no tiene convexidad
+	# de pecho ni curva dorsal). Dos masas GRANDES Y SUAVES (elipsoides =
+	# rampa por naturaleza, cero tinta interior — NO cajas: las cajas-peto
+	# ya fracasaron como armadura en Fase C): pecho (convexidad esternal
+	# que abarca ambos pecs) y dorsal (convexidad torácica alta). Con la
+	# cintura más angosta/plana, el perfil gana la S chest→lumbar real.
+	# Sprint A6: y 0.08→0.086 — cierra el surco supraclavicular ("divot
+	# moneda" del QA y el anillo de rim del aetherborn viven ahí).
+	var chest_mass = _sphere_mesh(0.11, skin_mat)
+	chest_mass.scale = Vector3(1.35, 0.85, 0.35)
+	chest_mass.position = Vector3(0.0, 0.086, 0.115)
+	torso.add_child(chest_mass)
+	_add_outline_pass(chest_mass, Color("#f2b186"))
+
+	var back_mass = _sphere_mesh(0.10, skin_mat)
+	back_mass.scale = Vector3(1.5, 1.3, 0.4)
+	back_mass.position = Vector3(0.0, 0.10, -0.115)
+	torso.add_child(back_mass)
+	_add_outline_pass(back_mass, Color("#f2b186"))
+
+	# ABDOMEN: SIN masa elevada — PRD Geometría Nueva (2026-07-14,
+	# ratificado por Boris). El `abs_plate` (elipsoide que sobresalía del
+	# cilindro) leyó "óvalo"/"placa geométrica"/"pieza de armadura pegada"
+	# en TRES magnitudes distintas de ajuste (0.4→0.30 de protrusión, PRD
+	# Rework Fenotipo pt.12) porque el problema nunca fue CUÁNTO sobresale
+	# — es que la lámina (`fenotipo-humano-torso-v1.png`, zoom directo) no
+	# tiene NADA que sobresalga ahí: el abdomen es prácticamente plano, y
+	# los "oblicuos" que pide la ficha técnica ("Lean obliques are
+	# suggests one or two") son literalmente 1-2 líneas de TRAZO sin
+	# volumen — el dibujo los resuelve con línea, no con forma. El abdomen
+	# vuelve a ser la superficie desnuda del cilindro del torso.
+	# NOTA (Migración de Ropa, 2026-07-13, sigue vigente): el jerkin
+	# fosilizado que tapaba esta zona MIGRÓ a `character_outfit.gd` (faja
+	# envuelta — ver `_attach_waist_wrap`); la anatomía queda desnuda aquí
+	# a propósito (banco `tmp_anatomy.gd` no llama outfit).
+
+	# CINTURA (lumbar): cierra el HUECO real entre el borde del abdomen
+	# (abs_plate, mundo y≈1.172 al fondo) y el tope de la pelvis (mundo
+	# y≈1.02) — auditoría 2026-07-13 (faja/jerkin migrado a outfit dejaba
+	# la anatomía DESNUDA con 15 cm de vacío ahí; con outfits sin playera
+	# se veía fondo a través del torso). Cilindro de piel, hijo de `spine`
+	# (frame lumbar, coincide con el mundo de `hips`/`upper_spine`).
+	# FASE 1.2 (PRD-Rework-Modelado-Personajes-v2, 2026-07-16): bloqueo de
+	# 3 masas del libro de anatomía — antes top_radius=0.11 copiaba EXACTO
+	# el radio del fondo del torso (misma línea de arriba), así que torso+
+	# cintura leían como UN cilindro cónico continuo, sin "pellizco" real
+	# (confirmado visual: perfil/3-4 no mostraban ninguna transición). Baja
+	# a 0.095 (~86% del radio del torso) — un escalón real de radio en el
+	# límite torso→cintura (ambos tangentes en el mismo Y, el cambio de
+	# radio por sí solo ya genera el reborde que el Sobel entinta, sin
+	# necesitar offset de Z — es un cilindro, no una cara plana). El factor
+	# elíptico (X/Z) se sigue copiando de `torso.scale` en _apply_build
+	# (ver ahí) para que la PROPORCIÓN del pellizco sea consistente en
+	# cualquier build/peso — lo que cambia es el radio BASE, no el
+	# mecanismo de copia. bottom_radius=0.085 sigue fundiendo con el ancho
+	# de la pelvis (half x≈0.135 en build neutro) sin sobresalir. Altura
+	# 0.22, y=0.08 (spine-local): borde superior en spine-y=0.19 (mundo
+	# 1.19, = fondo del torso) y borde inferior en spine-y=-0.03 (mundo
+	# 0.97), 5 cm HONDO dentro de la pelvis (tope en mundo 1.02) — overlap
+	# real, no tangente, mismo criterio que las uniones de pierna/brazo
+	# (evita costura por huecos de precisión flotante).
+	# R2 ronda 4: top vuelve a ~flush con el fondo del torso (0.095→0.108;
+	# el escalón de radio leía "costura de peto", QA 45% HIGH) y el
+	# PELLIZCO real se profundiza en el fondo (0.085→0.078) — la cintura
+	# como silueta continua, no como línea de tinta horizontal.
+	# Sprint A5: fondo 0.078→0.071 — la cintura frontal medía 86% del
+	# hombro; la lámina pide ~75-78% (pellizco de silueta más hondo).
+	# GRUPO C 07-19 (frente 1, orden Boris 07-20): CRITICAL "cintura sin
+	# angostamiento" — diagnóstico por color (torso/waist/pelvis aislados,
+	# brazos ocultos) confirmó que el pellizco SÍ existe en la malla pero
+	# es débil y además queda tapado por el brazo colgando (splay mínimo,
+	# "roza el torso todo el trayecto", decisión 2026-07-13 anti-gorila):
+	# el brazo pega al torso a una tasa fija mientras el torso se angosta
+	# más rápido abajo, así que el ancho combinado brazo+torso no baja.
+	# Profundiza el pellizco (0.071→0.058) para que la curva de cintura
+	# gane margen real frente al brazo, no solo frente al fondo.
+	# Ronda 2 (mismo frente, pedido de Boris "ataca el perfil también"):
+	# diagnóstico confirmó que el pellizco de PERFIL (profundidad Z) era
+	# incluso más sutil que el de frente — mismo radio de cilindro
+	# controla X y Z por igual, así que profundizar más (0.058→0.048)
+	# angosta ambas vistas a la vez (verificado que el frente no se pasa).
+	waist = _cylinder_mesh(0.108, 0.048, 0.22, skin_mat)
+	waist.position = Vector3(0.0, 0.08, 0.0)
+	spine.add_child(waist)
+	_add_outline_pass(waist, Color("#f2b186"))
+
+	# R2 ronda 4: convexidad ABDOMINAL leve (elipsoide ancha muy plana,
+	# rampa pura) — completa la S del perfil por abajo (QA 45% MEDIUM:
+	# "frente del torso plano de pecho a cadera"). Sin six-pack: es UNA
+	# superficie tensa, como pide la lámina.
+	# R4: hija de `waist` (hereda su copia del factor elíptico del torso —
+	# misma razón que chest/back/pec arriba). Frame waist-local (la waist
+	# vive en y=0.08 del spine).
+	# Sprint A2: z 0.26→0.22 — en peso máximo (hereda la escala del build
+	# vía waist) leía panza de barril; con 0.22 queda vientre lleno pero
+	# tenso.
+	var abdomen_mass = _sphere_mesh(0.07, skin_mat)
+	abdomen_mass.scale = Vector3(1.25, 1.25, 0.22)
+	abdomen_mass.position = Vector3(0.0, 0.035, 0.080)
+	waist.add_child(abdomen_mass)
+	_add_outline_pass(abdomen_mass, Color("#f2b186"))
+
+	# r3: TRAPECIOS — la línea del hombro BAJA del cuello al deltoide (lámina:
+	# sloped shoulders); mata la repisa cuadrada de la tapa del cilindro.
+	# QA 2026-07-13 (b/extra): caída 0.27→0.40 rad (~23°, la de la lámina),
+	# centro afuera para que la punta ATERRICE sobre el tope del deltoide
+	# (una sola línea cuello→brazo, sin remontar).
+	# PRD Rework Fenotipo pt.3 (2026-07-14): la CAJA sobre el cilindro del
+	# torso siempre deja arista visible (caras planas intersectando una
+	# superficie curva) — reemplazada por esfera escalada semi-hundida,
+	# mismo patrón que `pec`/`deltoid` arriba (masa de silueta, no plano).
+	# PRD Rework Fenotipo pt.4 (2026-07-14): ángulo 0.40→0.28 rad (~16°) —
+	# el QA de cuerpo completo leyó los hombros angostos; primer paso de
+	# menor riesgo antes de tocar SHOULDER_X (decisión de Boris si no basta).
+	# FASE 1.3 (PRD-Rework-Modelado-Personajes-v2, 2026-07-16): el QA de la
+	# ronda 55% seguía reportando "sin trapecio real" pese a que esta masa
+	# YA EXISTE desde 2026-07-13 — verificado en captura fresca (perfil):
+	# la escala Y=0.6 la hace demasiado CORTA/chica (radio efectivo Y=0.06)
+	# para leerse como "masa triangular base-cráneo→hombros" (libro de
+	# anatomía, [[Principios de Anatomía 3D]]) — se funde por completo con
+	# el cuello/deltoide vecinos sin dejar silueta propia. Escalada Y
+	# 0.6→1.5 (radio efectivo 0.15, cubre de verdad el tramo cuello→hombro)
+	# y X 1.6→1.4 (compensa para no invadir demasiado el cuello). Z se deja
+	# igual (0.7, "aplastada en Z" ya pedido por el libro — no es el
+	# problema). Posición Y sube 0.315→0.30 para centrar mejor el tramo
+	# ahora más alto contra la base del cuello.
+	# FASE 1.3 (cont., 2026-07-16): centro corrido 0.115→0.135 (más hacia
+	# afuera, hacia el deltoide) e Y bajado 0.30→0.285 — el propósito
+	# explícito del libro ("el deltoide emerge de abajo del trapecio,
+	# overlap real, no pegado junto a él") necesita que el trapecio se
+	# solape DIRECTO sobre el tope del deltoide (`arm`/`deltoid` más abajo,
+	# centro upper_spine-frame ≈ side*0.22, 0.24), no solo compartir
+	# vecindad — con el centro viejo (0.115) el trapecio quedaba demasiado
+	# medial (cerca del cuello) y su borde apenas tocaba el deltoide.
+	# FASE 1.3 (corrección, 2026-07-16, MISMO DÍA): Boris marcó el escalado
+	# Y=1.5 de arriba como HIPERTROFIADO — vista de espalda (turnaround)
+	# mostraba "tres cabezas" (el trapecio de cada lado leía como un bulto
+	# redondo del mismo porte que la cabeza, no una pendiente muscular).
+	# Error de proceso: se escaló para que "se viera algo" sin medir contra
+	# la lámina, violando la regla del proyecto de que la lámina manda la
+	# proporción. Se probaron 3 variantes en paralelo (A 1.2/0.85/0.6,
+	# B 1.0/0.7/0.55, C 1.5/0.55/0.6 — C, más ancha, leía tan prominente
+	# como A pese a ser más corta en Y) con captura de espalda lado a lado;
+	# Boris eligió **B** por ser la que menos lee como bulto separado. Sigue
+	# habiendo un quiebre chico en la silueta incluso en B — esperado y
+	# aceptado: el estilo tinta+Sobel del proyecto necesita algo de quiebre
+	# real para que cualquier masa se entinte (Fase 0), la lámina sola
+	# (sombreado suave) no alcanza a leerse a esta escala.
+	# R2 (2026-07-17): el trapecio-esfera (variante B) seguía ILEGIBLE
+	# (QA 40%, HIGH: "sin pendiente cuello→hombro, transición abrupta").
+	# Lección R1: la SILUETA es tinta gratis — la pendiente debe SER la
+	# silueta, no un bulto que la insinúe. Rampa de caja: su cara superior
+	# es la línea recta descendente base-del-cuello→acromion (~25°, la de
+	# la lámina "narrow sloped shoulders"); extremos enterrados en cuello/
+	# torso (adentro) y acromion/deltoide (afuera) — sin cantos expuestos.
+	# Una esfera chica atrás mantiene el relleno dorsal del trapecio.
+	for tside in [-1, 1]:
+		# R2 ronda 2: menos profundidad + volcada 0.18 rad hacia adelante —
+		# la cara frontal de la caja era un facet grande tipo "hombrera" en
+		# close-up; volcado, el tope redondea hacia el pecho y el facet
+		# muere contra chest_mass/clavícula.
+		var trap_ramp = _box_mesh(0.16, 0.045, 0.075, skin_mat)
+		trap_ramp.position = Vector3(float(tside) * 0.125, 0.293, -0.004)
+		trap_ramp.rotation.z = -float(tside) * 0.44
+		# R2 ronda 3: volcado 0.18→0.10 — a 0.18 se abrían bolsas oscuras
+		# entre cuello y hombro en la vista TRASERA (regresión detectada en
+		# banco); trap_back sube y se acerca al cuello para sellar atrás.
+		trap_ramp.rotation.x = 0.10
+		upper_spine.add_child(trap_ramp)
+		_add_outline_pass(trap_ramp, Color("#f2b186"))
+		# R2 ronda 4: más grande y pegada al cuello — sella los "huecos
+		# triangulares oscuros" de la base del cuello por atrás (QA 45%
+		# HIGH; no era malla abierta, era bolsa de sombra sin masa).
+		# Sprint A4: más ancha y afuera — solapa el tope del deltoide para
+		# fundir el escalón trap/deltoide/brazo de la vista trasera.
+		# GRUPO C 07-19 (frente 1): CRITICAL "hombro-esfera desconectado" —
+		# pese al solape ya verificado en los 3 ejes, la curva de intersección
+		# entre trap_back y el deltoide no era lo bastante profunda (lección
+		# corolario 2: dos esferas que solo se TOCAN, no INTERPENETRAN,
+		# dejan ver el horizonte propio de cada una = anillo de tinta). Más
+		# grande y más cerca del deltoide para tragar su cuadrante trasero-
+		# superior completo, no solo rozarlo.
+		var trap_back = _sphere_mesh(0.075, skin_mat)
+		trap_back.scale = Vector3(1.7, 1.05, 0.65)
+		trap_back.position = Vector3(float(tside) * 0.105, 0.29, -0.025)
+		upper_spine.add_child(trap_back)
+		_add_outline_pass(trap_back, Color("#f2b186"))
+
+	# ACROMION: FASE 1.3 — "acromion como plano (caja chica, no esfera) en
+	# el tope del hombro" ([[Principios de Anatomía 3D]]): el punto óseo
+	# donde la clavícula se articula sobre la escápula. Mismo principio ya
+	# confirmado 3 veces en Fase C (mentón/pómulo/barba): una esfera nunca
+	# da un plano/borde definido bajo el toon+Sobel de este proyecto — usar
+	# caja ([[Lecciones]]). Caja chica y chata, semi-hundida entre el borde
+	# exterior del trapecio (arriba) y el tope del deltoide (abajo),
+	# rotada con la misma caída que el trapecio para que el plano quede
+	# alineado con la línea cuello→hombro, no plano al mundo.
+	for aside in [-1, 1]:
+		var acromion = _box_mesh(0.05, 0.022, 0.05, skin_mat)
+		acromion.position = Vector3(float(aside) * 0.205, 0.275, 0.022)
+		acromion.rotation.z = -float(aside) * 0.30
+		acromion.visible = true
+		upper_spine.add_child(acromion)
+		_add_outline_pass(acromion, Color("#f2b186"))
+
+	# jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
+	# debate orquestador↔QA 2026-07-13, GO del director): el cilindro de
+	# cuero en la cintura (spine y=0.16) y la bandolera diagonal (upper_spine)
+	# ya no viven fosilizados en el cuerpo base — CharacterOutfit.
+	# build_frontier(rig) los reemplaza por la FAJA ENVUELTA + cinturón
+	# diagonal fiel a fenotipo-humano-v1.png. El torso queda desnudo aquí
+	# a propósito (banco de anatomía tests/tmp_anatomy.gd NO llama outfit).
 
 	# Pauldron is built AFTER arms loop so arm_r (arms[1], side==1) exists.
 	# It will be added to arm_r after that loop runs — placeholder here.
@@ -307,35 +795,311 @@ func _build() -> void:
 	for side in [-1, 1]:
 		var arm = Node3D.new()
 		arm.name = "arm_" + ("l" if side == -1 else "r")
-		# JS: arm.position.set(side * 0.222, 0.45, 0) — ahora relativo al
-		# torácico (0.45 − 0.22 = 0.23; posición mundial idéntica).
-		arm.position = Vector3(side * 0.222, 0.23, 0.0)
+		# Hombros del canon: en la línea 1.55 (SHOULDER_Y sobre el torácico)
+		# y abiertos a ±SHOULDER_X — el deltoide NACE del pecho, sin hueco lego.
+		arm.position = Vector3(side * SHOULDER_X, SHOULDER_Y, 0.0)
 		upper_spine.add_child(arm)
 
-		var upper = _capsule_mesh(0.054, 0.2, skin_mat)
-		upper.position.y = -0.14
+		# C6a-r2: brazo que ESTRECHA — deltoide (bola de hombro) → codo →
+		# muñeca fina → mano de MITÓN (caja, no esfera). Como la lámina.
+		# r4 (review CRITICAL 4): masa de ATLETA, no de personaje delgado —
+		# bíceps/antebrazo suben sin llegar a heroico; el deltoide crece y
+		# funde la transición hombro-brazo (LOW 15).
+		# FASE B (fusión de uniones, QA "maniquí articulado"): igual que la
+		# pierna, hombro/codo solo TOCABAN el centro de su esfera (embed=0,
+		# tangencia pura) → el Sobel entinta el anillo de tangencia. Peor
+		# aún, el antebrazo (top_r 0.054) era MÁS GRUESO que la esfera del
+		# codo (r 0.045) en su propio corte transversal — asomaba por fuera
+		# del codo. Fix uniforme: cada esfera de articulación crece "apenas
+		# mayor que ambos conos" y cada cono PENETRA 0.02 más allá del
+		# centro de su esfera (no tangente) — se alargan los cilindros para
+		# no mover el extremo libre (hombro/mano) ya aprobado.
+		# FASE B r2 (feedback director: "hombros abultados, muñecas
+		# inexistentes, músculos poco marcados"): el deltoide de r1 (r0.076,
+		# esfera pura) leía como hombrera/globo. Encoge a r0.066 y lo
+		# ACHATA con escala no-uniforme (0.95, 1.15, 0.9) — gota que
+		# ENVUELVE el hombro (más alto que ancho, más angosto que profundo)
+		# en vez de bola. Centro sube apenas (y −0.01→−0.006) y se sesga
+		# afuera+adelante (x=side*0.010, z=0.008) para leer músculo
+		# deltoides real, no repisa. Costura con "upper" INTACTA: el cono
+		# sigue tocando en y=0.01 (arm-local), que ahora queda 0.016 por
+		# encima del centro del deltoide (antes 0.02) — MÁS margen de
+		# solape que r1, no menos, porque el radio efectivo en Z/X de la
+		# elipsoide en ese corte (~0.057-0.060) sigue por encima del
+		# top_r del cono (0.056) — no hay asomo, no se reabre el anillo.
+		# QA 2026-07-13 (b/c): el tope del deltoide subía SOBRE la línea del
+		# trapecio → la silueta bajaba y REMONTABA (charretera). Estirado
+		# vertical fuera (1.15→1.0) y centro más abajo (−0.006→−0.02): el
+		# deltoide vive SIEMPRE bajo la línea descendente cuello→brazo. Con
+		# el pivote nuevo (0.21) su borde interior queda DENTRO del cilindro
+		# del pecho → solape real, muere la costura pecho-hombro.
+		# R2 (2026-07-17): recogido en Z (0.9→0.78) y sesgado adelante — de
+		# ESPALDA leía "esfera inflada/hombrera de fútbol" (QA 40%, HIGH);
+		# el deltoide posterior real es chico, la masa vive adelante-afuera.
+		# R2 ronda 4: gota real — más alto que ancho/profundo, sesgado
+		# adelante; de ATRÁS ya no debe leer esfera con contorno propio
+		# (CRITICAL del QA 45%: "hombreras de armadura").
+		# Sprint A4: tope 1.08→1.02 — no asoma sobre la línea del trapecio
+		# desde atrás (escalón).
+		var deltoid = _sphere_mesh(0.066, skin_mat)
+		deltoid.scale = Vector3(0.86, 1.02, 0.70)
+		deltoid.position = Vector3(side * 0.008, -0.025, 0.020)
+		arm.add_child(deltoid)
+		_add_outline_pass(deltoid, Color("#f2b186"))
+
+		var upper = _cylinder_mesh(0.056, 0.040, 0.35, skin_mat)
+		upper.position.y = -0.165
 		arm.add_child(upper)
 		_add_outline_pass(upper, Color("#f2b186"))
 
+		# FASE B r2: BÍCEPS (masa frontal) y TRÍCEPS (masa trasera) del
+		# brazo superior — mismo patrón que el GEMELO de la pierna (~L331):
+		# esfera escalada, semi-hundida, el escalón del cel lee el volumen.
+		# r2b (ronda visual del orquestador): la v1 desplazaba SOLO en Z →
+		# de FRENTE la silueta del brazo no cambiaba nada y el músculo no
+		# se leía (el banco captura de frente). El bulto se lee por el
+		# ensanchamiento LATERAL: componente X hacia afuera (side*) además
+		# del sesgo Z, y masas un punto más grandes.
+		# r2c: 0.014 de X seguía invisible a distancia de banco (verificado
+		# por hash de capturas — el cambio cargaba, solo era chico). El
+		# gemelo protruye ~30% de su radio; estas masas apuntan a lo mismo.
+		# r2d (feedback director: "baja el tamaño pero APLÁSTALOS, no los
+		# encojas — que mantengan su ubicación"): posiciones y largo (eje Y)
+		# INTACTOS; solo se aplastan los ejes radiales X/Z ~20-25% — el
+		# músculo sigue naciendo/muriendo donde debe, pero protruye menos.
+		var bicep = _sphere_mesh(0.046, skin_mat)
+		bicep.scale = Vector3(0.72, 1.45, 0.72)
+		bicep.position = Vector3(side * 0.020, -0.125, 0.034)   # afuera + frente
+		arm.add_child(bicep)
+		_add_outline_pass(bicep, Color("#f2b186"))
+
+		var tricep = _sphere_mesh(0.043, skin_mat)
+		tricep.scale = Vector3(0.68, 1.35, 0.72)
+		tricep.position = Vector3(side * 0.016, -0.175, -0.034)  # afuera + espalda
+		arm.add_child(tricep)
+		_add_outline_pass(tricep, Color("#f2b186"))
+
 		var elbow = Node3D.new()
 		elbow.name = "elbow"
-		elbow.position.y = -0.3
+		elbow.position.y = -0.32   # codo en la línea del ombligo (1.23)
 		arm.add_child(elbow)
 
-		var fore = _capsule_mesh(0.047, 0.18, skin_mat)
-		fore.position.y = -0.12
+		var elbow_cap = _sphere_mesh(0.058, skin_mat)
+		elbow_cap.position.y = 0.0
+		elbow.add_child(elbow_cap)
+		_add_outline_pass(elbow_cap, Color("#f2b186"))
+
+		# FASE B r2 (feedback director: "muñecas inexistentes" — el
+		# antebrazo terminaba en bot_r=0.036, casi el mismo grosor que la
+		# mano, así que no había estrechamiento visible). bot_r baja a
+		# 0.026 (rango pedido 0.024-0.028) — la muñeca vuelve a ser el
+		# punto MÁS DELGADO del brazo. top_r/height/position INTACTOS: la
+		# punta del cono (elbow-local y=-0.285) no se mueve, así que la
+		# mano tampoco pierde su solape con ella (mismo criterio de
+		# penetración que ya tenía, solo que ahora es un cono AFILADO, no
+		# grueso).
+		var fore = _cylinder_mesh(0.048, 0.026, 0.305, skin_mat)
+		fore.position.y = -0.1325
 		elbow.add_child(fore)
 		_add_outline_pass(fore, Color("#f2b186"))
 
-		var hand = _sphere_mesh(0.052, skin_mat)
-		hand.position.y = -0.26
+		# FASE B r2: masa del ANTEBRAZO (brachioradialis) — bulto superior
+		# cerca del codo que adelgaza hacia la muñeca, mismo patrón GEMELO.
+		# Semi-hundida en "fore" (cono ya con top_r=0.048 ahí cerca), sesgo
+		# frontal (+Z) que se funde con el bíceps por encima del codo.
+		# r2b: mismo fix que bíceps/tríceps — componente X hacia afuera
+		# (la masa del antebrazo/brachioradialis se lee del lado del pulgar)
+		# y un punto más grande para que el cel la agarre de frente.
+		# r2d: mismo aplastado que bíceps/tríceps (posición intacta).
+		var forearm_mass = _sphere_mesh(0.042, skin_mat)
+		forearm_mass.scale = Vector3(0.72, 1.4, 0.68)
+		forearm_mass.position = Vector3(side * 0.018, -0.075, 0.026)
+		elbow.add_child(forearm_mass)
+		_add_outline_pass(forearm_mass, Color("#f2b186"))
+
+		# FASE B r2: MUÑECA — esferita escalada que funde la punta afilada
+		# del antebrazo (r0.026) con la mano, sin mover la mano (meta de
+		# montaje de arma intacta). "Apenas mayor" que bot_r del cono,
+		# achatada (scale) para no engordar la lectura de "punto más fino".
+		# R3: encogida — su disco X-Y (5cm) era más ANCHO que la palma nueva
+		# y asomaba como burbuja en el dorso; con r 0.024 queda contenida en
+		# la silueta mano/antebrazo y sigue tapando la costura del cono. La
+		# muñeca ES el punto más delgado (feedback histórico del director).
+		var wrist_cap = _sphere_mesh(0.024, skin_mat)
+		wrist_cap.scale = Vector3(0.85, 0.75, 0.60)
+		wrist_cap.position = Vector3(0.0, -0.285, 0.0)   # punta del cono "fore"
+		elbow.add_child(wrist_cap)
+		_add_outline_pass(wrist_cap, Color("#f2b186"))
+		if OS.get_environment("DIAG_HAND") == "1":
+			var _dm := StandardMaterial3D.new()
+			_dm.albedo_color = Color(1.0, 0.0, 1.0)
+			wrist_cap.material_override = _dm
+			var _df := StandardMaterial3D.new()
+			_df.albedo_color = Color(0.0, 1.0, 1.0)
+			fore.material_override = _df
+			var _de := StandardMaterial3D.new()
+			_de.albedo_color = Color(1.0, 1.0, 0.0)
+			elbow_cap.material_override = _de
+			var _dfm := StandardMaterial3D.new()
+			_dfm.albedo_color = Color(0.0, 1.0, 0.0)
+			forearm_mass.material_override = _dfm
+
+		# r4 (review HIGH 6): mano con PRESENCIA — llega a media pierna.
+		# r5b (feedback del director: "hay tres masas — pulgar más dos"):
+		# la mano lee como MANO, no como garra — palma + CUATRO dedos
+		# individuales delgados (ranura ~3 mm entre cada uno: el Sobel
+		# entinta las separaciones en close-up y a distancia se funden en
+		# una masa) con largos naturales (medio > índice ≈ anular > meñique)
+		# + PULGAR hacia el cuerpo. La línea hace el trabajo.
+		# R3 (2026-07-17, libro de anatomía): PALMA PLANA + AHUSADA. La caja
+		# baja de cubo-mitón (prof. 0.066) a palma real (0.036) — sigue
+		# siendo el MeshInstance3D pivote de dedos/arma (meta "hand"), con
+		# ESCALA UNIFORME (los dedos hijos rotados se sesgarían bajo escala
+		# no uniforme del padre). El TAPER nudillos-anchos→muñeca-angosta lo
+		# pone un prisma hijo SIN descendientes (cilindro 4 seg, truco de la
+		# nariz), que sí puede aplastarse en Z sin sesgar a nadie.
+		var hand = _box_mesh(0.058, 0.066, 0.036, skin_mat)
+		hand.position.y = -0.30
+		hand.rotation.x = -0.12   # curl relajado de la lámina
 		elbow.add_child(hand)
 		_add_outline_pass(hand, Color("#f2b186"))
+
+		var palm_taper = _cylinder_mesh(0.027, 0.046, 0.070, skin_mat)
+		(palm_taper.mesh as CylinderMesh).radial_segments = 4
+		palm_taper.scale = Vector3(1.0, 1.0, 0.46)
+		palm_taper.rotation.y = 0.0   # cara plana al frente (lección nariz N=4)
+		# Sprint A7: -0.004→-0.006 — su cara superior rozaba la de la caja
+		# y generaba el seam highlight horizontal en la muñeca izquierda.
+		palm_taper.position = Vector3(0.0, -0.006, 0.0)
+		hand.add_child(palm_taper)
+		_add_outline_pass(palm_taper, Color("#f2b186"))
+
+		# PRD Geometría Nueva (2026-07-14, ratificado): la lámina (zoom
+		# directo, mano sobre la cadera en `fenotipo-humano-torso-v1.png`)
+		# muestra los dedos CASI JUNTOS — la separación se lee por la LÍNEA
+		# de contorno, no por un hueco físico grande — y cada dedo tiene un
+		# quiebre de ÁNGULO real en el nudillo medio, no un bulto. El PRD
+		# Rework Fenotipo pt.6 había ido en la dirección contraria (agrandar
+		# el gap + esfera-nudillo) y el QA lo siguió leyendo como "abanico
+		# de cartas"/"tablas planas". Gap recortado de vuelta (offsets más
+		# juntos) y cada dedo pasa de 1 caja recta a 2 falanges (proximal +
+		# distal) encadenadas por un Node3D con su propia rotación — mismo
+		# principio que brazo→antebrazo, a escala de dedo.
+		# R3 r3: bases más ABIERTAS (0.0175→0.0195) — de frente el índice y
+		# el meñique rompen la silueta del mitón; la convergencia (abajo)
+		# sigue juntando las PUNTAS, como una mano real (bases separadas,
+		# puntas reunidas).
+		var f_off: Array = [0.0195, 0.0065, -0.0065, -0.0195]
+		var f_len: Array = [0.067, 0.076, 0.070, 0.055]
+		# R3 (libro): (a) los 4 dedos CONVERGEN hacia el medio — "dedos
+		# rectos/paralelos = mano de plástico"; (b) curl DISTINTO por dedo
+		# (índice más recto → meñique más enroscado), la mano relajada real
+		# nunca curva parejo; (c) nudillo = cabeza del metacarpiano ASOMANDO
+		# en el dorso (protuberancia→canal→protuberancia) — con la regla de
+		# tinta nueva leen por highlight del cel, no por contorno.
+		var f_curl_root: Array = [-0.10, -0.15, -0.19, -0.26]
+		var f_curl_mid: Array = [-0.26, -0.34, -0.42, -0.52]
+		for fi in range(4):
+			var f_l: float = f_len[fi]
+			var f_x: float = -float(side) * float(f_off[fi])
+			var prox_l: float = f_l * 0.58
+			var dist_l: float = f_l * 0.42
+
+			var finger_root = Node3D.new()
+			# R3 r2: raíz en z=0 — a +0.006 la cara dorsal del dedo quedaba
+			# 6mm adelante del plano dorsal de la palma y entre las bases se
+			# veía el fondo ("dedos-tablilla", QA manos 45%).
+			finger_root.position = Vector3(f_x, -0.027, 0.0)
+			finger_root.rotation.x = float(f_curl_root[fi])
+			finger_root.rotation.z = -f_x * 3.2   # convergencia al eje medio
+			hand.add_child(finger_root)
+
+			# R3 r2: asoman de verdad por el dorso (a -0.012 quedaban DENTRO
+			# de la caja de la palma — "cero protuberancias", QA).
+			# R3 r3: hasta la SILUETA dorsal (a -0.017 eran solo highlights).
+			# r4 (cierre condicionado del QA): -0.020 generaba una ISLA de
+			# tinta aislada en el dorso izquierdo (el salto del bump contra
+			# la palma cruzaba el umbral desde el ángulo oblicuo) — punto
+			# medio -0.0185: ondulación de silueta sin isla.
+			var knuckle_bump = _sphere_mesh(0.010, skin_mat)
+			knuckle_bump.scale = Vector3(1.0, 0.85, 0.7)
+			knuckle_bump.position = Vector3(f_x, -0.028, -0.0185)
+			hand.add_child(knuckle_bump)
+			_add_outline_pass(knuckle_bump, Color("#f2b186"))
+
+			# r5e (director): dedos 10% más delgados (sección 0.0108×0.038)
+			var prox = _box_mesh(0.0108, prox_l, 0.036, skin_mat)
+			prox.position.y = -prox_l * 0.5
+			finger_root.add_child(prox)
+			_add_outline_pass(prox, Color("#f2b186"))
+
+			# nudillo medio: quiebre de ÁNGULO real (no esfera-bulto) —
+			# la falange distal cuelga más que la proximal, como pide la
+			# lámina.
+			var knuckle_joint = Node3D.new()
+			knuckle_joint.position.y = -prox_l
+			knuckle_joint.rotation.x = float(f_curl_mid[fi])
+			finger_root.add_child(knuckle_joint)
+
+			var dist = _box_mesh(0.0098, dist_l, 0.032, skin_mat)
+			dist.position.y = -dist_l * 0.5
+			knuckle_joint.add_child(dist)
+			_add_outline_pass(dist, Color("#f2b186"))
+
+		# r5d (director, ref. anatómica Cleveland Clinic): el pulgar NACE
+		# de la eminencia tenar — a media palma, cerca de la muñeca — no
+		# del borde inferior.
+		# PRD Geometría Nueva: la lámina muestra el pulgar CASI OCULTO,
+		# enroscado hacia la palma (nace bajo y se curva hacia adentro) —
+		# no un apéndice separado y visible. Nacimiento acercado al centro
+		# (x 0.038→0.030) y curl mucho más agresivo (rotation.x
+		# -0.25→-0.55) para que lea "enroscado", no "flotando".
+		# R3: base del pulgar BAJADA (-0.020→-0.030) — con la palma delgada
+		# nueva, la cápsula asomaba por el canto dorsal como burbuja junto
+		# al tenar (diagnóstico de color 2026-07-17).
+		# R3 r2 (QA manos 45%, CRITICAL): la cápsula HUNDIDA en la palma
+		# (base adentro, la tapa libre ya no flota — el Sobel entintaba su
+		# end-cap como círculo de pieza suelta) + enrosque más agresivo
+		# hacia el plano palmar (-0.55→-0.78), el pulgar NACE del tenar.
+		# R3 r3: punta presionada contra el frente de la palma (z 0.012→
+		# 0.008) — la protrusión del cap cae bajo el umbral de tinta (~2cm)
+		# y el "botón incrustado" con anillo desaparece.
+		# Sprint A7: apertura 0.44→0.40 — pega la cápsula al canto (mata
+		# los slivers naranjas de fondo iluminado entre pulgar y palma).
+		var thumb = _capsule_mesh(0.014, 0.044, skin_mat)
+		thumb.position = Vector3(-float(side) * 0.027, -0.028, 0.008)
+		thumb.rotation.z = -float(side) * 0.40
+		thumb.rotation.x = -0.78
+		hand.add_child(thumb)
+		_add_outline_pass(thumb, Color("#f2b186"))
+
+		# R3 (libro): EMINENCIA TENAR — el pad de donde nace el pulgar, la
+		# masa que hace "palma" a una palma (semi-hundida en la caja, lado
+		# palmar, junto al nacimiento del pulgar).
+		var tenar = _sphere_mesh(0.015, skin_mat)
+		tenar.scale = Vector3(1.0, 1.25, 0.50)
+		tenar.position = Vector3(-float(side) * 0.016, -0.016, 0.011)
+		hand.add_child(tenar)
+		_add_outline_pass(tenar, Color("#f2b186"))
+		if OS.get_environment("DIAG_HAND") == "1":
+			var _dt := StandardMaterial3D.new()
+			_dt.albedo_color = Color(1.0, 0.5, 0.0)
+			tenar.material_override = _dt
+			var _dp := StandardMaterial3D.new()
+			_dp.albedo_color = Color(0.5, 0.0, 1.0)
+			palm_taper.material_override = _dp
+			var _dth := StandardMaterial3D.new()
+			_dth.albedo_color = Color(1.0, 0.0, 0.0)
+			thumb.material_override = _dth
 
 		arm.set_meta("elbow", elbow)
 		arm.set_meta("upper", upper)
 		arm.set_meta("fore", fore)
 		arm.set_meta("hand", hand)
+		arm.set_meta("bicep", bicep)
+		arm.set_meta("tricep", tricep)
+		arm.set_meta("forearm_mass", forearm_mass)
+		arm.set_meta("wrist_cap", wrist_cap)
 		arm.set_meta("side", side)
 		arms.append(arm)
 
@@ -344,15 +1108,24 @@ func _build() -> void:
 	# Local position (0, 0.03, 0) = just above the arm root = top of shoulder cap.
 	var arm_r: Node3D = arms[1]
 	var pauldron = Node3D.new()
-	pauldron.position = Vector3(0.0, 0.03, 0.0)
+	# PRD Rework Fenotipo pt.14 (2026-07-14): nombrado explícito — el resto
+	# del código (línea ~1286, `_apply_build`) y `tmp_anatomy.gd` lo
+	# buscaban por "último hijo de arm_r", un hack roto desde que las venas
+	# de mana (`vein_defs`, más abajo en `_build()`) empezaron a parentear
+	# una vena directo a `arms[1]` DESPUÉS del pauldron — el "último hijo"
+	# pasó a ser la vena, no el pauldron.
+	pauldron.name = "pauldron"
+	# C6a-r2: asentado SOBRE el deltoide nuevo (r 0.062) — antes flotaba al
+	# nivel de la oreja, dimensionado para el hombro-globo del puerto.
+	pauldron.position = Vector3(0.0, 0.015, 0.0)
 	pauldron.rotation.z = -0.12
-	var plate_a = _box_mesh(0.13, 0.035, 0.14, metal_mat)
+	var plate_a = _box_mesh(0.115, 0.032, 0.125, metal_mat)
 	_add_outline_pass(plate_a, Color("#6f7a88"))
-	var plate_b = _box_mesh(0.10, 0.03, 0.11, metal_mat)
-	plate_b.position.y = 0.04
+	var plate_b = _box_mesh(0.088, 0.028, 0.098, metal_mat)
+	plate_b.position.y = 0.036
 	_add_outline_pass(plate_b, Color("#6f7a88"))
-	var stud = _box_mesh(0.035, 0.02, 0.035, accent_glow_mat)
-	stud.position.y = 0.065
+	var stud = _box_mesh(0.03, 0.018, 0.03, accent_glow_mat)
+	stud.position.y = 0.058
 	pauldron.add_child(plate_a)
 	pauldron.add_child(plate_b)
 	pauldron.add_child(stud)  # stud = glow, no outline
@@ -372,11 +1145,11 @@ func _build() -> void:
 	# seam1 = glow, no outline
 
 	var fist = _box_mesh(0.085, 0.07, 0.08, metal_mat)
-	fist.position.y = -0.26
+	fist.position.y = -0.29
 	_add_outline_pass(fist, Color("#6f7a88"))
 
 	var knuckle = _box_mesh(0.087, 0.018, 0.082, vein_mat)
-	knuckle.position.y = -0.235
+	knuckle.position.y = -0.265
 	# knuckle = glow, no outline
 
 	prosthetic.add_child(proseg)
@@ -386,74 +1159,617 @@ func _build() -> void:
 	prosthetic.visible = false
 	left_elbow.add_child(prosthetic)
 
-	# ---------- head ---------- (colgada del torácico; mundial intacto)
-	var neck = _capsule_mesh(0.05, 0.07, skin_mat)
-	neck.position.y = 0.36
+	# ---------- head ---------- (colgada del torácico)
+	# Cuello con taper — v0.1 pedía que EXISTIERA; v0.2/v0.3/v0.4 lo fueron
+	# acortando. v0.4 H3 (PROMOVIDO, 3ª ronda): −30% → 0.10 de largo, base
+	# 0.075 fundida al trapecio; la cabeza baja con él (HEAD_Y 0.505).
+	# Fase C (debate orquestador↔QA 2026-07-13): +15% de largo — 0.10→0.115
+	# (criterio: caída barbilla→hombro ~0.55 cabezas, la barbilla no roza la
+	# línea de hombros en 3/4). NECK_Y/HEAD_Y suben el mismo delta arriba.
+	var neck = _cylinder_mesh(0.050, 0.075, NECK_HEIGHT, skin_mat)
+	neck.position.y = NECK_Y
 	upper_spine.add_child(neck)
 	_add_outline_pass(neck, Color("#f2b186"))
+	upper_spine.set_meta("neck", neck)
 
 	head = Node3D.new()
 	head.name = "head"
-	head.position.y = 0.48
+	head.position.y = HEAD_Y
+	# C6a: el pivote entero de la cabeza escala ×0.84 — cráneo, cara, pelo,
+	# barba y goggles bajan JUNTOS a la cabeza de 7.5; sus layouts internos
+	# (hair_library, warpaint) no se tocan. La cara en sí es C6c.
+	head.scale = Vector3.ONE * HEAD_SCALE
 	upper_spine.add_child(head)
 
+	# C6c (comparación contra la lámina): el cráneo tiene FORMA — más angosto
+	# que alto, nuca redondeada; ya no es la pelota chibi.
+	# M9-r3 (review v0.3 HIGH 3): fuera el ovoide — cráneo compacto; el
+	# ancho lo domina la MANDÍBULA (trapecio invertido), no las mejillas.
 	skull = _sphere_mesh(0.15, head_mat)
 	skull.name = "skull"
-	skull.scale.y = 1.07
+	# R1 ronda 6: mitad INFERIOR retraída (escala Y 1.02→0.94 + centro
+	# +0.012 = coronilla intacta, fondo sube ~24mm) — el huevo del cráneo
+	# ya no domina la silueta de la cara baja; la estructura de mandíbula
+	# (cajas) pasa a dibujar el taper angular oreja→mentón que pide la
+	# lámina (QA R1-r1: "silueta frontal de huevo liso, cero quiebre").
+	skull.scale = Vector3(0.82, 0.94, 0.95)
+	skull.position.y = 0.012
 	# Godot SphereMesh: seam at -Z, so u=0.5 (face strip) faces +Z by default.
-	# No Y rotation needed — camera at +Z sees the face strip directly.
 	skull.rotation.y = 0.0
 	head.add_child(skull)
 	_add_outline_pass(skull, Color("#f2b186"))
 
-	jaw_mesh = _box_mesh(0.165, 0.075, 0.13, head_mat)
+	# M9-r2 (review v0.2 HIGH 4): mandíbula más ANCHA y cuadrada — la
+	# estructura del concept es amable y curtida, no fina y joven. El
+	# mentón se funde en la mandíbula (fuera la costura vertical dura).
+	# (jaw/cheeks en skin_mat — M9-r2b: sus UVs de caja/esfera muestrean el
+	# atlas SIN control y embarran el warpaint; la textura vive en el cráneo)
+	# r3 (review v0.3): la mandíbula DOMINA el ancho bajo. M9-r6 (director):
+	# TRAPECIO, no rectángulo — ancha en la línea de las orejas, estrechando
+	# hacia el mentón (afila las facciones). Prisma de 4 caras con taper
+	# (cilindro de 4 segmentos girado 45°, mismo truco que la nariz); la
+	# relación ancho/profundidad la pone el slider de jaw en apply_phenotype.
+	# FASE C paso 1 (luz verde del director 2026-07-13, propuesta por masas):
+	# la mandibula ya NO es un prisma de 4 caras + caja de menton apilados
+	# (esos eran los dos ofensores de costura del r5). Ahora es UNA masa
+	# redondeada (esfera escalada) que PENETRA dentro del craneo (overlap
+	# real, no tangente — misma leccion que las uniones de pierna/brazo): el
+	# borde superior queda ~2 cm DENTRO del craneo, asi el cel-step lee un
+	# craneo->mandibula continuo y el Sobel entinta solo el contorno externo,
+	# sin anillo de costura. Mas angosta que el craneo en X (mandibula fina,
+	# lamina: "fine narrow jaw continuing the line of the skull") y el borde
+	# inferior forma el menton suave (fuera la caja dura). El menton se funde
+	# aqui (ya no hay nodo `chin` aparte). skin_mat: el atlas de warpaint solo
+	# vive en el craneo (M9-r2b), la mandibula va en piel plana.
+	# R1 (reescritura por masas, 2026-07-17): la mandíbula es una ESTRUCTURA
+	# angular de cajas, no una esfera + parches. Este mesh es el CUERPO/
+	# MENTÓN central — su AABB inferior ES el mentón que mide el banco
+	# (bottom -0.1475 ≈ canon 7.5 cabezas; frente z 0.1215 ≈ el z≈0.125 de
+	# las 6 rondas de calibración frontal previas). Las 2 ramas laterales
+	# son HIJAS: heredan la escala X/Z del slider `jaw` y se separan/acercan
+	# con ella. Caja = plano/borde real bajo el toon (Lecciones: la esfera
+	# nunca dio mandíbula angular).
+	# Ronda 2: caja angostada (el frente 0.075 leía como "panel/barba
+	# recortada"), tope bajado para esconderse BAJO la cápsula de la boca,
+	# e inclinación mentolabial (rotation.x): el mentón (borde inferior)
+	# protruye al máximo y la cara superior recede — el quiebre boca→mentón
+	# sale de la geometría, no de una arista expuesta.
+	# Sprint A8 (VoBo Boris): profundidad 0.095→0.082 recortada por la
+	# ESPALDA (el centro avanza para que la cara frontal/punta del mentón
+	# no se mueva) — el tercio inferior pierde masa sin tocar el canon.
+	jaw_mesh = _box_mesh(0.055, 0.055, 0.082, skin_mat)
 	jaw_mesh.name = "jaw"
-	jaw_mesh.position = Vector3(0.0, -0.105, 0.062)
+	jaw_mesh.position = Vector3(0.0, -0.122, 0.0765)
+	jaw_mesh.rotation.x = 0.12
+
+	# Ronda 3: CUERPO mandibular — 2 facets angulados entre el mentón y las
+	# ramas (el arco facetado mentón→cuerpo→ángulo goníaco de la lámina).
+	# Se INTERPENETRAN con la caja central y las ramas: donde dos
+	# superficies se cruzan la profundidad es continua y el Sobel no dibuja
+	# costura — mata las líneas verticales que aislaban el mentón como
+	# "parche de barba" (rondas 1-2).
+	for bside in [-1, 1]:
+		# Ronda 6: yaw reducido (-0.55→-0.40) — quiebre angular más chico
+		# entre facet y mentón = menos costura entintada en cada unión.
+		# Mini-ronda VoBo 2026-07-19 (quiebres azules de Boris): yaw
+		# 0.40→0.30 (la arista del cruce facet↔caja central aún entintaba
+		# un trazo vertical junto a la comisura) y fondo alineado al ras del
+		# fondo de la caja central (-0.0275): colgaba 3.5 mm por debajo y
+		# cada desnivel es un jog en la línea de tinta de la mandíbula.
+		# Ronda 2 de la mini-ronda: z 0.002→-0.003 — con el yaw, la esquina
+		# frontal-INTERNA de la faceta quedaba ~4 mm por delante de la cara
+		# frontal de la caja central (z_local 0.0452 vs 0.041): esa arista
+		# proud entintaba el trazo vertical junto a la comisura. Retraída
+		# para que el cruce caiga SOBRE la cara central (0.0402 ≤ 0.041,
+		# profundidad continua = sin tinta).
+		var jaw_body = _box_mesh(0.050, 0.050, 0.075, skin_mat)
+		jaw_body.position = Vector3(float(bside) * 0.033, -0.0025, -0.003)
+		jaw_body.rotation.y = float(bside) * -0.30
+		jaw_mesh.add_child(jaw_body)
+		_add_outline_pass(jaw_body, Color("#f2b186"))
+
+	# Sprint B2a: CHAFLÁN del borde inferior-frontal del mentón — caja
+	# fina a 45° que parte el escalón de 90° en dos de 45° (las vistas
+	# BAJAS dejaban de leer "caja de cartón" por ese canto vivo).
+	# Mini-ronda VoBo 2026-07-19: ensanchado 0.052→0.058 — las puntas
+	# cuadradas del chaflán quedaban DENTRO del ancho de la mandíbula y
+	# sus esquinas dejaban un escalón propio en la silueta baja del mentón
+	# (jog de tinta); ahora las puntas se entierran en las facetas.
+	# Ronda 2 de la mini-ronda: centro hundido (-0.0265,0.039)→(-0.019,
+	# 0.032). Antes el centro caía casi SOBRE la arista frontal-inferior de
+	# la caja (-0.0275, 0.041): la mitad exterior del chaflán sobresalía
+	# 9.6 mm bajo el fondo y 8.6 mm frente a la cara — fabricaba sus
+	# propios labios/escalones de tinta en vez de cortar la esquina. En el
+	# centro nuevo su cara a 45° rebana la esquina con inset ~7 mm por lado
+	# y las puntas quedan enterradas en las facetas.
+	# RONDA CARA FINAL (2026-07-20, objetivo grupo C "mentón-cuboide en
+	# perfil"): geometría RATIFICADA por Boris — se toca con cuidado, sin
+	# mover el centro (mismo tangente ya calibrado), solo agrandando la
+	# sección 0.015→0.019 para que el bisel cubra más superficie y
+	# redondee la lectura del corte en perfil. Verificado en captura que
+	# la tinta ratificada no se reabre.
+	var chin_chamfer = _box_mesh(0.058, 0.019, 0.019, skin_mat)
+	chin_chamfer.position = Vector3(0.0, -0.019, 0.032)
+	chin_chamfer.rotation.x = PI / 4.0
+	jaw_mesh.add_child(chin_chamfer)
+	_add_outline_pass(chin_chamfer, Color("#f2b186"))
+
+	# Ronda cara final, parte 2 (aristas VERTICALES del mentón, decisión
+	# de Boris de seguir con cuidado): mismo patrón que `chin_chamfer`
+	# (caja rotada 45° cortando la esquina) pero en el eje Y — corta la
+	# arista frontal-lateral (entre cara frontal y cara lateral de
+	# `jaw_mesh`) que el QA marcó como "arista vertical con highlight,
+	# inequívocamente prisma". Inset simétrico al de chin_chamfer
+	# (~8.5mm en X, ~9mm en Z desde la esquina real x=±0.0275/z=0.041).
+	# Altura 0.050 (< 0.055 del bloque) para que sus tapas queden
+	# enterradas contra las ramas/gonial, sin asomar como escalón propio.
+	for cvside in [-1, 1]:
+		var chin_vchamfer = _box_mesh(0.019, 0.050, 0.019, skin_mat)
+		chin_vchamfer.position = Vector3(float(cvside) * 0.019, 0.0, 0.032)
+		chin_vchamfer.rotation.y = float(cvside) * (PI / 4.0)
+		jaw_mesh.add_child(chin_vchamfer)
+		_add_outline_pass(chin_vchamfer, Color("#f2b186"))
+
+	# Sprint B2b: GONÍACO suavizado — esfera chica en el vértice de cada
+	# rama (la lámina redondea ese ángulo con el masetero; era vértice de
+	# caja).
+	# Mini-ronda VoBo 2026-07-19: esfera agrandada (0.7/0.6/0.85 →
+	# 0.9/0.7/1.05) — en 3/4 la esquina inferior-trasera de la rama seguía
+	# asomando como vértice de caja con trazos quebrados; la esfera debe
+	# envolver ese vértice, no solo tocarlo.
+	for gside in [-1, 1]:
+		var gonial = _sphere_mesh(0.020, skin_mat)
+		gonial.scale = Vector3(0.9, 0.7, 1.05)
+		gonial.position = Vector3(float(gside) * 0.068, 0.006, -0.042)
+		jaw_mesh.add_child(gonial)
+		_add_outline_pass(gonial, Color("#f2b186"))
 	head.add_child(jaw_mesh)
 	_add_outline_pass(jaw_mesh, Color("#f2b186"))
 
+	# Ramas de la mandíbula: cajas inclinadas oreja→mentón (yaw hacia
+	# adentro + pitch hacia abajo). Su esquina inferior-trasera ES el
+	# ángulo goníaco — el quiebre óseo sale de la estructura, no de una
+	# masa suelta.
+	for jside in [-1, 1]:
+		# Ronda 6: más altas (el cráneo retraído les cede la silueta de la
+		# cara baja — deben cubrir hasta donde el cráneo nuevo termina).
+		# Ronda 8: +alto (0.085→0.095) — cierra la muesca de silueta donde
+		# el cráneo retraído se encontraba con la caja mandibular (QA R1-r2
+		# MEDIUM).
+		var ramus = _box_mesh(0.038, 0.095, 0.085, skin_mat)
+		ramus.position = Vector3(float(jside) * 0.066, 0.056, -0.026)
+		ramus.rotation.y = float(jside) * -0.42
+		ramus.rotation.x = 0.30
+		jaw_mesh.add_child(ramus)
+		_add_outline_pass(ramus, Color("#f2b186"))
+
+	# ÁNGULO GONÍACO — AJUSTE FINO post-QA (2026-07-14, veredicto del
+	# director: "totalmente alejada" de la lámina). La esfera única de
+	# `jaw_mesh` tiene curvatura uniforme en todo su perímetro -> ningún
+	# punto del contorno lee como quiebre óseo, la cara entera se ve
+	# "óvalo/blob" en vez de "por masas". Se agrega una masa chica en la
+	# zona donde la mandíbula gira de vertical (rama, junto a la oreja) a
+	# horizontal (cuerpo) — MISMO truco de overlap real (hundida en
+	# jaw_mesh, sin costura), pero rompe la curvatura continua con un
+	# segundo radio distinto, dando el ángulo que el Sobel puede entintar.
+	# (R1: el ángulo goníaco vive ahora en la esquina de las ramas de
+	# `jaw_mesh` — las 2 esferas sueltas de este bloque se retiraron.)
+
+	# MENTÓN CENTRAL — AJUSTE FINO post-QA Ronda 2 (PRD punto 8): el ángulo
+	# goníaco de arriba solo cubre la zona junto a la oreja; el mentón en
+	# sí (x=0, cerca de la punta y=-0.149 de `jaw_mesh`) seguía redondo/
+	# blando. Cerca del polo de la elipsoide la proyección Z se achica
+	# mucho (jaw solo llega a z≈0.072 ahí) — un bulto chico ahí, con más
+	# proyección Z propia, da la punta de mentón que la lámina pide, sin
+	# invadir la boca (labios en y=-0.069/-0.087, este bulto vive más abajo).
+	# AJUSTE FINO post-QA Ronda 3: la esfera (`chin_boss` v1) atenuó la
+	# redondez pero una esfera NUNCA da un borde recto — el QA señaló que
+	# la lámina tiene mentón cuadrado/definido, no una bola. Cambiado a
+	# CAJA (borde inferior recto real), mismo hundimiento por overlap.
+	# AJUSTE FINO Ronda 4: el QA notó un canto/borde flotante — protrusión
+	# ~2cm más allá de la superficie del jaw en ese punto, demasiado poco
+	# hundimiento para una caja (una caja plana sobre una superficie curva
+	# SIEMPRE deja un escalón visible donde no es tangente; necesita más
+	# overlap que una esfera para integrarse). Recesado 0.086→0.080
+	# (protrusión ahora ~1.3cm en vez de ~2cm).
+	# AJUSTE FINO Ronda 6: ensanchado (0.052→0.058) para un mentón cuadrado
+	# más definido, siguiendo la lámina.
+	# AJUSTE FINO post-QA (barba quitada, mentón por fin visible sin tapar):
+	# la cara frontal quedaba en z≈0.098 — ~4.7cm DETRÁS de la cara frontal
+	# de `lip_lower` (z≈0.145). El mentón nunca competía visualmente con el
+	# labio inferior: el punto más adelantado de esa zona era la boca, no
+	# la mandíbula, al revés de la lámina (mentón marcado, el rasgo más
+	# anguloso de la cara). Profundidad y posición subidas para que la cara
+	# frontal iguale/supere levemente al labio (z≈0.148).
+	# Primer intento (z=0.109, prof. 0.078, front≈0.148) se pasó de rosca —
+	# leía como mandíbula protuberante/bulldog, no mentón marcado. Bajado a
+	# un punto intermedio (front≈0.125, entre el 0.098 original y el 0.148
+	# exagerado).
+	# FASE 1 — investigación tras QA imparcial (2026-07-16). Investigación de
+	# campo (marcado de color por pieza, uno a la vez: torso, cuello,
+	# trapecio, clavícula, acromion, pauldron, pec, deltoide — TODOS
+	# descartados) identificó que el hallazgo CRITICAL "bloque rectangular
+	# con bordes de tinta en la base del cuello, tipo cuello de camisa sin
+	# soldar" en la vista 3/4 (`anatomy_face_34.png`) es en realidad
+	# **`chin_boss`** (el mentón) — NO una pieza de hombro/cuello. Se
+	# probaron 3 variantes de overlap contra `jaw_mesh` (profundidad
+	# 0.055→0.075, centro Z 0.0975→0.0875; alto 0.032→0.06 con centro Y
+	# -0.134→-0.120) — NINGUNA cerró la desconexión visual en 3/4.
+	# FASE 1 RONDA 4 (2026-07-17) — causa raíz real + fix. El rig NO
+	# fabrica outline por-pieza (`_add_outline_pass` es un no-op, ver
+	# header del archivo) — la tinta la pone el Sobel de profundidad del
+	# post Melancolía (`melancolia_post.gdshader`), full-screen, sensible a
+	# saltos de profundidad de pocos mm entre píxeles vecinos: cualquier
+	# hueco 3D real entre dos masas se entinta como borde propio.
+	# Diagnóstico de color (`chin_boss`=magenta, `jaw_mesh`=cian,
+	# `neck`=verde) reveló que el hueco NO estaba entre `chin_boss` y
+	# `jaw_mesh` (de frente ambas se tocan bien, por eso 6 rondas de
+	# calibración frontal nunca lo vieron) — estaba entre `chin_boss` y
+	# `neck`. `chin_boss` vive bajo `head` (que escala ×0.84 y se apoya en
+	# `upper_spine` en HEAD_Y=0.520) mientras `neck` es un cilindro fijo
+	# bajo `upper_spine` (NECK_Y=0.3595, radio 0.075→0.050) — un mentón que
+	# sobresale hacia adelante (Z) no tiene NADA que lo continúe hacia el
+	# cuello, que es un tubo liso sin ese saliente: un salto real de ~5cm
+	# en Z entre la punta del mentón y la superficie frontal del cuello,
+	# invisible en el render sin diagnóstico porque el tono de piel lo
+	# camufla, pero el Sobel de profundidad lo entinta igual. Fix de 2
+	# partes: (1) `chin_boss` se achica (0.058×0.032×0.055 → 0.045×0.014×
+	# 0.030) preservando la punta frontal ya calibrada (mismo z_max/y_min)
+	# — de mole visible pasa a filo chico, la mayoría queda embebida; (2)
+	# `chin_bridge`, una masa alargada (no una esfera chica como el primer
+	# intento) que corre desde debajo de `jaw_mesh` hasta la superficie
+	# frontal de `neck`, hundida por overlap real en ambas — funde
+	# mentón→mandíbula→cuello en una sola silueta en las 4 vistas.
+	# Confirmado con recortes ampliados (no alcanza con mirar el render
+	# completo a 1280×720 — a esa escala el hueco/step no se nota; hay que
+	# hacer zoom a la zona mentón/cuello para verlo, lección nueva).
+	# (R1: `chin_boss` y `chin_bridge` retirados — el mentón marcado es el
+	# borde inferior-frontal de la caja `jaw_mesh`, no un parche encima.)
+
+	# NARIZ — FASE C paso 4 (luz verde director): cuña INTEGRADA. Antes era
+	# un prisma de 4 caras con cap plano flotando SOBRE la piel (sin overlap)
+	# -> costura visible en la base, "pegado" al cráneo en vez de nacer de él.
+	# Mismo truco de fusión que mandíbula/pómulo: la RAÍZ (puente, arriba)
+	# se encoge casi a un punto (top_r≈0) y se HUNDE ~1.6 cm dentro del
+	# cráneo (overlap real) — sin cap visible, el cel-step lee cráneo->nariz
+	# continuo. La PUNTA (abajo) es el extremo ancho (bot_r) que sí proyecta
+	# fuera del cráneo (~8-9 mm), como pide la lámina (cuña que abre hacia
+	# la base). Arista al frente (PI/4) conserva el facetado de prisma.
+	# AJUSTE FINO post-QA (Ronda 6): "se aplana en vista frontal" — con
+	# bot_r 0.017 la cuña era angosta y su facetado apenas contrastaba de
+	# frente (la arista al frente reparte la luz simétrico entre 2 caras
+	# chicas). Base ensanchada (0.017→0.021) y protrusión subida (z 0.136→
+	# 0.139) para más volumen visible desde cámara frontal, sin perder el
+	# facetado de prisma (M9-r3) ni la raíz hundida.
+	# AJUSTE FINO Ronda 8 — PRUEBA DE DIAGNÓSTICO (misma técnica que resolvió
+	# la boca): la arista-al-frente (rotation.y=PI/4) reparte la luz
+	# simétrica entre 2 caras chicas iguales -> poco contraste frontal, sin
+	# importar cuánto se agrande la base (ya se probó en Ronda 6-7). Prueba
+	# exagerada: CARA plana al frente (rotation.y=0, no arista) — una cara
+	# put a la cámara + dos caras laterales en sombra debería dar un
+	# quiebre de tono real (puente iluminado, lados oscuros), y bot_r subido
+	# fuerte (0.021→0.030) para confirmar el umbral de visibilidad.
+	# La prueba (bot_r 0.030, cara plana) SÍ resolvió el frontal — el
+	# quiebre de tono cara-iluminada/lados-en-sombra lee mucho mejor que la
+	# arista simétrica. Calibrado hacia abajo desde el extremo de la prueba.
+	# PRD Rework Fenotipo pt.9 (2026-07-14): "prisma muy ancho/duro en
+	# frontal" — bot_r angostado 0.026→0.019. NO se tocan radial_segments
+	# (el PRD proponía 4→6-8): con N=4 y rotation.y=0 hay una CARA plana
+	# exactamente al frente (el fix de Ronda 8, documentado arriba, que
+	# resolvió 3 rondas de facetado ilegible); con N par >4 ningún múltiplo
+	# de rotation.y deja una cara centrada en +Z, así que subir segmentos
+	# reintroduce el problema que Ronda 8 cerró. Ángulo de facetas sin
+	# tocar; solo se angosta la base.
+	# Ronda 8: base 0.019→0.017 — flancos menos empinados = menos outline
+	# perimetral (el trazo lateral de nariz de la lámina sí existe; el
+	# anillo 360° no).
+	var nose = _cylinder_mesh(0.0015, 0.017, 0.070, skin_mat)
+	(nose.mesh as CylinderMesh).radial_segments = 4
+	nose.position = Vector3(0.0, -0.020, 0.139)
+	nose.rotation.x = -0.34   # raíz hundida arriba, punta proyecta frente-abajo
+	nose.rotation.y = 0.0     # cara plana al frente (fix Ronda 8, no arista)
+	head.add_child(nose)
+	_add_outline_pass(nose, Color("#f2b186"))
+
+	# R1: RAÍZ/PUENTE — caja chica en la glabela. La cuña sola "nacía en la
+	# ceja" sin quiebre (QA rostro 35%); este escalón da el puente definido
+	# que la lámina pide entre ceja y nariz.
+	var nose_root = _box_mesh(0.016, 0.020, 0.016, skin_mat)
+	nose_root.position = Vector3(0.0, 0.020, 0.138)
+	head.add_child(nose_root)
+	_add_outline_pass(nose_root, Color("#f2b186"))
+
+	# ALAS de la nariz: el M9-r3 pedía que la cuña "abriera a base/alas" y
+	# nunca se construyó — sin ellas la punta terminaba en el aire, sin
+	# conexión lateral a mejilla/mandíbula. Bulto chico semi-hundido a cada
+	# lado de la punta (overlap real con nariz Y mandíbula) que rellena esa
+	# transición — funde la base de la cuña con el plano facial.
+	for aside in [-1, 1]:
+		var ala = _sphere_mesh(0.011, skin_mat)
+		ala.scale = Vector3(0.8, 0.6, 0.6)
+		ala.position = Vector3(aside * 0.014, -0.052, 0.130)
+		head.add_child(ala)
+		_add_outline_pass(ala, Color("#f2b186"))
+
+	# BOCA — FASE C paso 5 (luz verde director): boca por GEOMETRÍA, no línea
+	# pintada. Antes eran 3 cajas planas en pupil_mat (negro) simulando un
+	# trazo de tinta sin volumen — el "cel-shading debe describir la forma
+	# correcta" (M9-r3) pedía labios reales, no un dibujo. Ahora: labio
+	# SUPERIOR + INFERIOR (masas cilíndricas en lip_mat, el inferior más
+	# grueso/carnoso — asimetría natural) que se HUNDEN en la mandíbula
+	# (overlap real, mismo truco que nariz/mandíbula/pómulo) y protruyen un
+	# poco al frente del plano facial; la línea oscura queda SOLO como la
+	# comisura interior (sombra de la boca entreabierta, ya no dibuja la
+	# boca entera) — mantiene la sonrisa franca de M9-r2 con las comisuras
+	# como bultos chicos subidos en las puntas.
+	# AJUSTE FINO post-QA: labio sup/inf estaban casi tangentes en Y (gap
+	# 0.013) y a la misma Z -> sin escalón de profundidad, el Sobel no
+	# distinguía las dos masas y el conjunto leía como un solo bloque. Ahora:
+	# gap Y casi al doble + escalón Z real (superior protruye más/bermellón,
+	# inferior se hunde) -> discontinuidad detectable = línea de comisura.
+	# AJUSTE FINO post-QA Ronda 2 (2026-07-14): el gap Y (0.066→0.090=0.024,
+	# casi el doble del valor pre-ajuste 0.013) + escalón Z (0.140/0.132)
+	# SOBRE-corrigió — el QA lo leyó como boca abierta tipo "O"/grito.
+	# AJUSTE FINO Ronda 3: gap Y recortado a 0.018 (mató el efecto "O") pero
+	# el escalón Z (0.004) quedó MAL calibrado — con radios distintos
+	# (0.007 vs 0.011) las caras FRONTALES de ambos labios terminaban
+	# exactamente al mismo Z (0.145 los dos), sin ningún escalón visible
+	# desde cámara frontal — de ahí que Ronda 4 (variar solo el TONO) no
+	# generara ningún cambio perceptible: no había geometría con la que el
+	# tono pudiera interactuar. AJUSTE FINO Ronda 5 (recomendación directa
+	# del QA — "más separación Z con hueco de sombra real" + "línea de
+	# contorno forzada, no depender del Sobel automático"): el escalón
+	# ahora se calcula sobre la cara FRONTAL de cada labio, no el centro
+	# (inferior protruye ~8mm más que superior); `mouth_seam` se hunde en
+	# ese valle real entre las dos caras Y se OSCURECE/agranda para actuar
+	# como línea de comisura forzada, visible sin depender del toon step.
+	# AJUSTE FINO Ronda 6 — PRUEBA DE DIAGNÓSTICO (recomendación directa del
+	# QA): 5 rondas corrigiendo la geometría en pasos de milímetros sin
+	# cambio perceptible → el QA sugirió un escalón EXAGERADO (3-4x) para
+	# encontrar el umbral real de visibilidad antes de seguir ajustando a
+	# ciegas. Escalón subido a ~3.6cm entre caras frontales (antes 0.8cm) —
+	# valor deliberadamente grande, a recalibrar hacia abajo si esto SÍ se
+	# lee (o a investigar la vía material/shader si ni así se nota).
+	# La prueba con escalón exagerado (3.6cm entre caras) SÍ se hizo visible
+	# en el banco (confirma: el techo era de MAGNITUD, no de técnica) — se
+	# calibra hacia abajo a ~2.6cm, todavía pronunciado pero sin leer como
+	# jeta/protuberancia en perfil.
+	# PRD Geometría Nueva (2026-07-14, ratificado, Opción A): FUSIÓN en una
+	# sola masa. Tres piezas separadas (labio sup, labio inf, comisura)
+	# pasaron por 8+ rondas de calibración (historial completo arriba) sin
+	# dejar de leer "parche"/"rectángulo sólido" — el QA de la ronda 3
+	# (45%→49%) confirmó que ni achicar/receder la comisura ni engordar los
+	# labios resolvió la lectura. Boris eligió simplificar en vez de seguir
+	# calibrando: UNA sola cápsula (no depende de que 2 caras frontales
+	# distintas coincidan en Z, la lección que costó 4 rondas) + una línea
+	# de comisura fina TALLADA sobre su superficie (no una caja aparte que
+	# compita visualmente). La asimetría "inferior más carnoso" (tradición
+	# de M9-r2 en adelante) se preserva sin una segunda masa: la comisura
+	# vive DESCENTRADA hacia arriba dentro de la cápsula, así la porción de
+	# abajo (más alta) lee más llena que la de arriba.
+	# R1: boca INTEGRADA al plano facial — cápsula más chica, hundida en el
+	# frente de `jaw_mesh`/cráneo (protrusión ≤5mm, adiós "pico de pato" en
+	# 3/4 y perfil del QA rostro 35%), subida a la posición canónica (1/3
+	# entre base de nariz y mentón).
+	# Ronda 6: cápsula APLASTADA en Z (escala 0.45) y con el frente ~2-4mm
+	# sobre el plano de la mandíbula — labios como cambio de plano casi al
+	# ras (QA R1-r1: la cápsula redonda sobresalía como pico/tapón en
+	# perfil y leía "curita" de frente; el color del material hace la
+	# lectura, no el contorno de tinta).
+	# RONDA FINAL DE CARA (2026-07-20, objetivo grupo C: boca 20% = "cápsula/
+	# píldora con una línea = bisagra/ranura mecánica"). La causa de la
+	# lectura mecánica: (a) los topes REDONDOS del capsule leían como
+	# extremos de un objeto (hotdog), y (b) la ranura corta y centrada leía
+	# como slot. Fix: capsule más ANCHO y aplanado — sus topes redondos se
+	# meten en la sombra de la comisura de las mejillas y dejan de leerse;
+	# y la comisura pasa a ser una LÍNEA DE ANCHO CASI COMPLETO con las
+	# esquinas CAYENDO (boca seria de la lámina), no un slot central.
+	# Ronda 2: la cápsula seguía leyendo "hotdog" porque protruía lo
+	# suficiente para que el Sobel entintara TODO su contorno (pared
+	# empinada = borde entintado, Lecciones). Se HUNDE casi al ras (front
+	# a z≈0.116, apenas 1mm sobre el plano) y se APLANA en Y (scale 0.70)
+	# → emerge en rampa, el Sobel ya no la recorta como pastilla y solo la
+	# COMISURA (surco real) entinta. La lectura de labio la lleva el tono
+	# del material + la comisura, no un bulto contorneado.
+	var mouth_r: float = 0.0085
+	var mouth = _capsule_mesh(mouth_r, 0.060, lip_mat)
+	mouth.rotation.z = PI / 2.0
+	mouth.scale = Vector3(1.0, 0.70, 0.34)
+	mouth.position = Vector3(0.0, -0.088, 0.1125)
+	head.add_child(mouth)
+	_add_outline_pass(mouth, Color("#f2b186"))
+
+	# COMISURA — 3 segmentos que forman una línea de boca con forma real:
+	# tramo central + dos esquinas que caen (down-turn), abarcando casi
+	# todo el ancho del labio. Descentrada +0.003 arriba (porción inferior
+	# más carnosa). El escalón frontal la mantiene como surco, no dibujo.
+	var seam_z: float = 0.1125 + mouth_r * 0.34 + 0.0006
+	# Ronda 3: esquinas ADENTRO y más cortas (x±0.020, w0.012) — antes a
+	# x±0.026/w0.018 sus puntas exteriores sobresalían del labio como
+	# muñones oscuros. Ángulo suave (0.22): down-turn de boca seria sin
+	# que la punta se salga de la cápsula.
+	var seam_defs: Array = [
+		[0.0,    -0.085,  seam_z,        0.036, 0.0],    # centro (ancho)
+		[-0.020, -0.0868, seam_z - 0.001, 0.012, 0.22],  # esquina izq cae
+		[0.020,  -0.0868, seam_z - 0.001, 0.012, -0.22], # esquina der cae
+	]
+	for sm in seam_defs:
+		var seg = _box_mesh(sm[3], 0.0028, 0.005, mouth_seam_mat)
+		seg.position = Vector3(sm[0], sm[1], sm[2])
+		seg.rotation.z = sm[4]
+		head.add_child(seg)
+	# (R1: las esferas de comisura se retiran — leían como "remaches" en
+	# los extremos de la cápsula, QA rostro 35%. La cápsula redondea sus
+	# propias puntas.)
+
+	# M9-r1: MEJILLAS ALTAS — pómulos bajo el ojo, no cachetes bajos.
+	# r3: más ADENTRO y chicos (review: no expandir más allá de la línea de
+	# mandíbula) — el pómulo es un QUIEBRE, no un globo lateral.
+	# FASE C paso 2 (luz verde director): PÓMULOS ALTOS como PLANO MALAR, no
+	# esferita redonda (la r0.023 al ras no leia nada -> cara plana del r5).
+	# Masa elongada y semi-hundida BAJO el ojo, con el eje largo DIAGONAL
+	# (outer-arriba -> inner-abajo, la eminencia malar); poco Z para leer
+	# como PLANO (no bola). Semi-hundido en el plano facial: el cel-step lee
+	# el escalon del pomulo, el Sobel entinta solo el borde. La forma
+	# (rotacion + escala no uniforme) se fija aqui; apply_phenotype modula
+	# alto/tamano alrededor de esta base sin romper el eje diagonal.
+	# Fix (feedback director 2026-07-13: "los pusiste a un lado de los ojos"):
+	# el ojo vive en y=0.022 — con el pomulo casi a esa misma altura (y~0.016)
+	# y solo un poco mas afuera en X, leia LATERAL al ojo, no bajo el ojo.
+	# Bajado a y=-0.012 (claramente por debajo) y recogido en X (0.067->0.060,
+	# mas cerca de la nariz que del borde de la mandibula) para que el plano
+	# quede BAJO el angulo externo del ojo, como pide la lamina.
+	# AJUSTE FINO post-QA Ronda 1: Z=0.46 aplastaba el pómulo tanto que no
+	# generaba discontinuidad de profundidad detectable por el Sobel ("no
+	# lee desde ningún ángulo"). Subido a 0.64 — Ronda 2 confirmó que
+	# "prácticamente no cambió nada". AJUSTE FINO Ronda 2 (PRD punto 7a):
+	# la magnitud seguía siendo insuficiente (protrusión efectiva ~2cm
+	# contra un cráneo de 15cm de radio). Radio base 0.030→0.032 y posición
+	# más adelante (0.114→0.116); el multiplicador de escala Z sube de
+	# 0.64 a 0.75 en `apply_phenotype`.
+	# AJUSTE FINO Ronda 3: Ronda 2 con radio 0.032/Z-mult 0.75 dio "mejora
+	# leve, insuficiente". El QA pidió descartar la hipótesis (a) magnitud
+	# antes de investigar (b) causa externa — se sube otro escalón: radio
+	# 0.032→0.036, posición 0.116→0.122, Z-mult 0.75→0.95 en apply_phenotype.
+	# AJUSTE FINO Ronda 4 (mismo día): 0.036/0.122/Z-mult 0.95 SÍ se hizo
+	# visible, pero se pasó de rosca — lee "cachete gordo", no plano malar
+	# alto (más radio en una ESFERA siempre lee más gordo, nunca más
+	# anguloso). AJUSTE FINO Ronda 5 (recomendación directa del QA — mismo
+	# truco que ya resolvió el mentón): CAJA achatada en vez de esfera. Una
+	# caja tiene caras PLANAS — lee como plano óseo anguloso en vez de bulto
+	# redondo, sin importar cuánto se escale.
+	# r_cheek-box-v2: 0.068 (el "diámetro" equivalente de la esfera 0.034)
+	# resultó ENORME como caja — las caras planas con arista dura leen
+	# mucho más grandes que una esfera de igual bounding box (el Sobel
+	# entinta el borde recto entero, no un highlight suave). Base bajada a
+	# ~60%.
 	cheeks = []
 	for side in [-1, 1]:
-		var cheek = _sphere_mesh(0.036, head_mat)
-		cheek.position = Vector3(side * 0.088, -0.018, 0.108)
+		var cheek = _box_mesh(0.040, 0.040, 0.040, skin_mat)
+		cheek.rotation.z = -float(side) * 0.5   # eje largo diagonal
+		# Ronda 6: la placa se ACUESTA sobre la superficie local (yaw ±35°
+		# siguiendo la normal del cráneo en ese punto) — emerge en rampa
+		# gradual en vez de presentar una pared lateral empinada que el
+		# Sobel entinta como perímetro completo ("calcomanía", QA R1-r1).
+		# Ronda 8: más acostado aún (0.61→0.70) — la cámara frontal del
+		# banco lleva 15° de key offset hacia +x, así que el pómulo -x
+		# presenta su canto más empinado a cámara y seguía entintado
+		# mientras el +x ya fundía (QA R1-r2). Aplanar más ambos baja el
+		# escalón emergente bajo el umbral de tinta desde cualquier lado.
+		cheek.rotation.y = float(side) * 0.70
+		cheek.position = Vector3(side * 0.066, -0.018, 0.107)
 		head.add_child(cheek)
 		_add_outline_pass(cheek, Color("#f2b186"))
 		cheeks.append(cheek)
 
+	# Ojos a escala HUMANA (el ojazo anime era la mitad del read chibi).
 	eyes = []
 	brows = []
 	for side in [-1, 1]:
 		var eye_group = Node3D.new()
 		eye_group.name = "eye_" + ("l" if side == -1 else "r")
-		# JS: eye.position.set(side * 0.058, 0.018, 0.136)
-		eye_group.position = Vector3(side * 0.058, 0.018, 0.136)
+		# v0.5 C3: CONFORMADO a la superficie — a 0.130 la esclerótica
+		# sobresalía del plano facial y se veía desde atrás en perfil.
+		# AJUSTE FINO post-QA (feedback directo de Boris): a x=0.052 con
+		# radio 0.015 el hueco entre esquinas internas (0.074) era ~2.4x el
+		# ancho de un ojo (0.030) — muy separados, leían como botones
+		# flotando lejos de la nariz. Regla humana estándar: el hueco entre
+		# ojos ≈ el ancho de un ojo. Recogido a x=0.036 (con el radio nuevo
+		# de 0.017 abajo, el hueco entre esquinas internas queda en ~0.038,
+		# cerca de 1 ancho de ojo).
+		# R1: ojos a la MITAD de la cara (libro: el error común es ponerlos
+		# altos — mid coronilla↔mentón ≈ y 0.002; estaban en 0.022). z sube
+		# para seguir conformados a la superficie del cráneo en la altura
+		# nueva.
+		eye_group.position = Vector3(side * 0.036, 0.008, 0.130)
+		# Ronda 8: convergencia natural ~3.5° hacia la nariz — en 3/4 el
+		# iris del ojo lejano dejaba de mirar a cámara y quedaba
+		# "arrinconado"/divergente (QA R1-r2 MEDIUM). De frente el
+		# desplazamiento del iris es <1mm, imperceptible.
+		eye_group.rotation.y = float(side) * -0.06
 
-		var white = _sphere_mesh(0.034, eye_white_mat)
-		white.scale.z = 0.55
+		# M9-r2 (review v0.2 HIGH 5): ojo más CHICO y entrecerrado — menos
+		# esclerótica visible, apertura angosta (fuera el ojo-platillo
+		# caricatura; registro grounded-fantasy).
+		# FASE C paso 3 (luz verde director): seguía leyendo "platillo" — la
+		# esclerótica (white) era GRANDE relativo al iris (r0.018 vs r0.011,
+		# el iris cubría ~60%) y la ceja no llegaba a tocarla (gap real de
+		# ~1 cm) -> ojo redondo flotando en blanco, sin párpado. Dos cambios:
+		# (a) white más CHICA y más aplastada (menos área visible total);
+		# (b) iris/pupila CRECEN para llenar casi todo el alto del ojo
+		# (margen de blanco fino arriba/abajo = almendra, no aro ancho).
+		# AJUSTE FINO post-QA Ronda 8 (desempate, confirmado por Boris contra
+		# refs. de Link/Zelda BotW/TotK): el iris (disco r0.0135, diámetro
+		# 0.027) era MÁS ALTO que la esclerótica entera (white Y-semi
+		# 0.015*0.58=0.0087, alto total 0.0174) — el iris literalmente
+		# desbordaba el blanco por todos lados, margen NEGATIVO. El
+		# comentario de p3 decía "margen de blanco fino" pero en los
+		# números reales el margen no existía. White agrandada en Y
+		# (0.58→0.85) e iris/pupila achicadas — ahora el margen es real y
+		# perceptible (~3.7mm), sin volver al ojo-platillo del r5 (el iris
+		# sigue llenando la mayoría del alto).
+		# Radio subido 0.015→0.017 (mismo ajuste de Boris de arriba): los
+		# ojos eran chicos Y separados a la vez, se veían como botones. Se
+		# agrandan un poco (manteniendo la proporción esclerótica/iris ya
+		# corregida) para que aporten estructura real a la cara, no solo un
+		# punto decorativo perdido en un óvalo grande.
+		# Sprint A8 (VoBo Boris): esclerótica achatada 0.85→0.70 — apertura
+		# angosta = párpado pesado/mirada dura del canon, no ojo redondo
+		# "cachorro".
+		var white = _sphere_mesh(0.017, eye_white_mat)
+		white.scale = Vector3(1.0, 0.70, 0.36)
 		eye_group.add_child(white)
 
-		var iris = _disc_mesh(0.0185, iris_mat)
+		var iris = _disc_mesh(0.0102, iris_mat)
 		iris.rotation.x = PI / 2.0
-		iris.position.z = 0.0195
+		iris.position.z = 0.0100
 		eye_group.add_child(iris)
 
-		var pupil = _disc_mesh(0.009, pupil_mat)
+		var pupil = _disc_mesh(0.0048, pupil_mat)
 		pupil.rotation.x = PI / 2.0
-		pupil.position.z = 0.0205
+		pupil.position.z = 0.0110
 		eye_group.add_child(pupil)
 
-		var glint = _disc_mesh(0.0045, eye_white_mat)
+		var glint = _disc_mesh(0.0022, eye_white_mat)
 		glint.rotation.x = PI / 2.0
-		glint.position = Vector3(0.006, 0.007, 0.021)
+		# R1: offset ESPEJADO por lado (hacia la nariz en ambos) — el offset
+		# fijo +x hacía que un ojo llevara el brillo hacia afuera y leyera
+		# "esclerótica despegada"/mirada desalineada (QA rostro 35%).
+		glint.position = Vector3(float(side) * -0.003, 0.003, 0.0115)
 		eye_group.add_child(glint)
 
 		eye_group.set_meta("side", side)
 		head.add_child(eye_group)
 		eyes.append(eye_group)
 
-		# JS: brow.position.set(side * 0.058, 0.07, 0.146)
-		var brow = _box_mesh(0.055, 0.012, 0.012, pupil_mat)
-		brow.position = Vector3(side * 0.058, 0.07, 0.146)
+		# Ceja BAJA y cercana al ojo (lámina: brow line marcada, no flotante).
+		# M9-r1: fina y CAFÉ CÁLIDO. M9-r2: más baja y RECTA (review v0.2:
+		# el arco alto empuja a caricatura).
+		var brow_mat := StandardMaterial3D.new()
+		brow_mat.albedo_color = Color("#3a2418")
+		brow_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		# (v0.5 C3: pegada a la superficie — a 0.140 flotaba 10 mm y se
+		# asomaba por encima del cráneo desde atrás)
+		# FASE C paso 3: PÁRPADO — la ceja crece un poco y baja para que su
+		# borde inferior SOLAPE de verdad el tope del ojo (overlap real, no
+		# tangente, misma lección que las uniones del cuerpo): tapa el borde
+		# superior de la esclerótica → lee entrecerrado/con párpado, no un
+		# óvalo blanco completo flotando bajo una ceja separada.
+		# AJUSTE FINO post-QA: el solape de párpado (bueno para matar el
+		# ojo-platillo) apilaba una segunda línea de tinta muy cerca de la
+		# del pómulo (paso de arriba) -> lectura de "arrugas". Se afina un
+		# poco (menos invasión + menos alto) sin perder el párpado real.
+		# x recogido junto con el ojo (0.052→0.036) para seguir centrada
+		# sobre el ojo movido.
+		# PRD Rework Fenotipo pt.10 (2026-07-14): primer paso de bajo riesgo
+		# (mismo mesh, solo dimensiones) — Fable señala que esto NO da arco
+		# real; si sigue leyendo recta, segunda pasada = cadena de 2-3
+		# cápsulas/esferas decrecientes (patrón `_braid`).
+		var brow = _box_mesh(0.040, 0.007, 0.010, brow_mat)
+		# R1: baja junto con el ojo (mismo gap ceja↔ojo de antes).
+		# Sprint A8: más baja aún (0.024→0.021) — tapa el tope del ojo,
+		# refuerza el párpado pesado.
+		brow.position = Vector3(side * 0.036, 0.021, 0.134)
 		head.add_child(brow)
 		brows.append(brow)
 
@@ -491,6 +1807,10 @@ func _build() -> void:
 	head.add_child(goggles)
 
 	# Hair / beard slots
+	# M10 (review v0.2): el hack de aplastar el slot se REVIERTE — cada
+	# estilo se autora a su cráneo (el flatten distorsionaba TODOS los
+	# estilos, incluidas las trenzas aprobadas de Dagna). El canon humano
+	# usa el estilo 10 "frontier crop" (corto, barrido arriba-atrás).
 	hair_slot = Node3D.new()
 	hair_slot.name = "hair_slot"
 	beard_slot = Node3D.new()
@@ -526,19 +1846,17 @@ func _build() -> void:
 		parent_node.add_child(vein)
 		veins.append(vein)
 
-# ---- helper: attach outline next_pass to a MeshInstance3D ----
-func _add_outline_pass(mi: MeshInstance3D, base_color: Color, thickness: float = 0.02) -> void:
-	if mi.material_override != null:
-		ToonMaterials.add_outline(mi.material_override, base_color, thickness)
+# ---- outline helpers: NO-OP desde C6 (2026-07-10) ----
+# La línea de tinta del rig la dibuja el Sobel del post Melancolía (Art Bible:
+# nítida cerca / grisácea media / ausente lejos). El casco invertido era el
+# look del prototipo (grosor uniforme a toda distancia = anti-referencia) y
+# además mentía sobre los volúmenes al juzgar anatomía. Los call sites se
+# conservan (documentan dónde iba la línea) pero no generan pases.
+func _add_outline_pass(_mi: MeshInstance3D, _base_color: Color, _thickness: float = 0.02) -> void:
+	pass
 
-# ---- helper: recurse node tree and add outlines ----
-func _apply_outline_to_children(node: Node, base_color: Color, thickness: float) -> void:
-	if node is MeshInstance3D:
-		var mi = node as MeshInstance3D
-		if mi.material_override != null and not (mi.material_override is StandardMaterial3D and (mi.material_override as StandardMaterial3D).emission_enabled):
-			_add_outline_pass(mi, base_color, thickness)
-	for child in node.get_children():
-		_apply_outline_to_children(child, base_color, thickness)
+func _apply_outline_to_children(_node: Node, _base_color: Color, _thickness: float) -> void:
+	pass
 
 # ================================================================
 # _apply_build — internal helper that combines phenotype weight + archetype multiplier.
@@ -559,25 +1877,90 @@ func _apply_build() -> void:
 		"thief":
 			arch_xz = 0.80  # Duelist — clearly lean/agile
 
-	torso.scale  = Vector3(_lerp(0.84, 1.34, w) * arch_xz, 1.0, _lerp(0.86, 1.26, w) * arch_xz)
-	jerkin.scale = Vector3(_lerp(0.86, 1.36, w) * arch_xz, 1.0, _lerp(0.88, 1.28, w) * arch_xz)
+	# C6a: V-taper base — el pecho es ancho/plano y la cintura recogida ANTES
+	# de aplicar peso/clase (el frijol del puerto era pecho=cintura).
+	torso.scale  = Vector3(_lerp(0.84, 1.34, w) * arch_xz * CHEST_X, 1.0, _lerp(0.86, 1.26, w) * arch_xz * CHEST_Z)
+	# jerkin.scale (WAIST_XZ) migró — ahora lo lee CharacterOutfit.
+	# build_frontier() en vivo desde torso.scale/pelvis.scale (ver ahí).
 	pelvis.scale = Vector3(_lerp(0.88, 1.25, w) * arch_xz, 1.0, 1.0)
+	# waist copia el FACTOR elíptico (x/z) de torso, no el radio base (Fase
+	# 1.2: el radio base de waist es 0.095 vs 0.11 de torso — ver comentario
+	# en _build) — así la proporción del pellizco cintura/torso se mantiene
+	# consistente en cualquier build/peso, en vez de desaparecer si cada
+	# uno escalara distinto. Y se deja en 1.0 (no respira con torso).
+	waist.scale = Vector3(torso.scale.x, 1.0, torso.scale.z)
+
+	# ---- C6b (2026-07-21, frente 3 del orden con Boris): proporciones
+	# raciales — "palancas largas/cortas" ([[Fenotipos y Creación de
+	# Personaje]]). Reutiliza los MISMOS hooks de escala que ya existen para
+	# peso/clase arriba — nada de geometría nueva para esto (orejas/marca
+	# cultural per-origin YA existían en `_build_origin_features`; lo que
+	# faltaba era esto). `proportions` vacío (humano/miststalker) = todos
+	# los multiplicadores en 1.0, CERO cambio de comportamiento (el
+	# contrato de `SHOULDER_X`/etc. del rig humano queda intacto).
+	# NOTA de corrección (medido en banco, no a ojo): escalar solo el nodo
+	# `leg`/`arm` padre en Y estira el DROP vertical pero no el alcance
+	# lateral cuando la rodilla/codo está doblado (Godot compone escala EN
+	# el frame local del padre antes de rotar — con una rotación de por
+	# medio esto genera CIZALLA, no un miembro más largo). Por eso cada
+	# segmento (mesh + el offset del joint que le sigue) se re-posiciona
+	# a mano por su PROPIO eje local, no por un scale.y del padre.
+	var prop: Dictionary = _last_origin.get("proportions", {})
+	var limb_len: float = prop.get("limb_len", 1.0)
+	var shoulder_mult: float = prop.get("shoulder_x", 1.0)
+	var neck_len: float = prop.get("neck_len", 1.0)
+	var head_mult: float = prop.get("head_scale", 1.0)
+	var hand_mult: float = prop.get("hand_scale", 1.0)
 
 	var limb_xz: float = limb * arch_xz
 	for arm in arms:
 		var upper: MeshInstance3D = arm.get_meta("upper")
 		var fore: MeshInstance3D = arm.get_meta("fore")
-		upper.scale = Vector3(limb_xz, 1.0, limb_xz)
-		fore.scale  = Vector3(limb_xz, 1.0, limb_xz)
+		var elbow: Node3D = arm.get_meta("elbow")
+		var hand: MeshInstance3D = arm.get_meta("hand")
+		var bicep: MeshInstance3D = arm.get_meta("bicep")
+		var tricep: MeshInstance3D = arm.get_meta("tricep")
+		var forearm_mass: MeshInstance3D = arm.get_meta("forearm_mass")
+		var wrist_cap: MeshInstance3D = arm.get_meta("wrist_cap")
+		upper.scale = Vector3(limb_xz, limb_len, limb_xz)
+		upper.position.y = -0.165 * limb_len
+		bicep.position.y = -0.125 * limb_len
+		tricep.position.y = -0.175 * limb_len
+		elbow.position.y = -0.32 * limb_len
+		fore.scale = Vector3(limb_xz, limb_len, limb_xz)
+		fore.position.y = -0.1325 * limb_len
+		forearm_mass.position.y = -0.075 * limb_len
+		wrist_cap.position.y = -0.285 * limb_len
+		hand.position.y = -0.30 * limb_len
+		hand.scale = Vector3.ONE * hand_mult
+		var side2: int = int(arm.get_meta("side"))
+		arm.position.x = float(side2) * SHOULDER_X * shoulder_mult
 
 	for leg in legs:
 		var thigh: MeshInstance3D = leg.get_meta("thigh")
 		var shin:  MeshInstance3D = leg.get_meta("shin")
-		thigh.scale = Vector3(limb_xz, 1.0, limb_xz)
-		shin.scale  = Vector3(limb_xz, 1.0, limb_xz)
+		var knee:  Node3D = leg.get_meta("knee")
+		var ankle: Node3D = leg.get_meta("ankle")
+		var calf:  MeshInstance3D = leg.get_meta("calf")
+		thigh.scale = Vector3(limb_xz, limb_len, limb_xz)
+		thigh.position.y = -0.245 * limb_len
+		knee.position.y = -0.45 * limb_len
+		shin.scale = Vector3(limb_xz, limb_len, limb_xz)
+		shin.position.y = -0.20 * limb_len
+		calf.position.y = -0.10 * limb_len
+		ankle.position.y = -0.45 * limb_len
+
+	var neck_node: Node3D = upper_spine.get_meta("neck")
+	if neck_node != null:
+		neck_node.scale.y = neck_len
+		head.position.y = HEAD_Y + (neck_len - 1.0) * (NECK_HEIGHT * 0.5)
+	head.scale = Vector3.ONE * HEAD_SCALE * head_mult
 
 	# Vanguard: larger pauldron to read as tank
-	var pauldron: Node3D = arms[1].get_child(arms[1].get_child_count() - 1)
+	# PRD Rework Fenotipo pt.14: lookup por NOMBRE — "último hijo" dejó de
+	# ser el pauldron desde que las venas de mana empezaron a parentear una
+	# vena a arms[1] después de construirlo (ver `_build()`).
+	var pauldron: Node3D = arms[1].find_child("pauldron", false, false)
 	if pauldron != null:
 		if _archetype_class == "warrior":
 			pauldron.scale = Vector3(1.3, 1.2, 1.3)
@@ -1133,6 +2516,21 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	var range_arr: Array = origin.get("heightRange", [0.94, 1.1])
 	scale = Vector3.ONE * _lerp(float(range_arr[0]), float(range_arr[1]), p.get("height", 0.5))
 
+	# ---- origin features (ears, tail, accent) ----
+	# NOTE: must run BEFORE the vein color calc below — vein_mat.albedo_color
+	# reads `accent`, and on the first apply_phenotype call `accent` is still
+	# the class default (#46e6ff cyan) until this block updates it per-origin.
+	var origin_id: String = origin.get("id", "")
+	if origin_id != _origin_id:
+		_origin_id = origin_id
+		var theme: Dictionary = origin.get("theme", {})
+		var accent_hex: String = theme.get("accent", "#46e6ff")
+		accent = Color(accent_hex)
+		iris_mat.albedo_color = accent
+		accent_glow_mat.albedo_color = accent * 1.2
+		accent_glow_mat.emission = accent * 1.2
+		_build_origin_features(origin)
+
 	# Arcane modification thresholds (JS: >0.06, >0.38, >0.68)
 	var mod: float = p.get("arcaneMod", 0.0)
 	for vein in veins:
@@ -1152,31 +2550,76 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	left_hand.visible = not prosthetic_on
 
 	# ---- face structure ----
-	# JS jaw.scale: lerp(0.72..1.28, 0.85..1.18, 0.8..1.22)
+	# FASE C paso 1: la mandibula es ahora la esfera fundida (base
+	# 0.78/0.84/0.94 en _build). El slider modula ANCHO y profundidad
+	# alrededor de esa base SIN tocar el largo (Y), que fija el menton al
+	# ras de la nariz. jaw bajo = mandibula fina (lamina); jaw alto = amplia.
+	# R1: `jaw_mesh` es la caja central de la mandíbula con las ramas como
+	# hijas — el slider escala ancho/profundidad de TODA la estructura
+	# (las hijas heredan), base 1.0. Y fijo: el mentón no se mueve del
+	# canon de 7.5 cabezas.
+	# C6b (2026-07-21, frente de geometría nueva): sesgo racial sobre el
+	# MISMO rango de slider — "frente pesada, mandíbula ancha" del enano y
+	# "mandíbula fina" del elfo ([[Fenotipos y Creación de Personaje]],
+	# gap ya anotado ahí: jaw/eyeTilt/eyeShape usaban un solo rango para
+	# las 3 razas). `face` vacío (humano/miststalker) = multiplicadores en
+	# 1.0/offset 0.0, CERO cambio de comportamiento.
+	var face: Dictionary = _last_origin.get("face", {})
+	var jaw_width_bias: float = face.get("jaw_width", 1.0)
+	var jaw_depth_bias: float = face.get("jaw_depth", 1.0)
 	var jaw_v: float = p.get("jaw", 0.5)
 	jaw_mesh.scale = Vector3(
-		_lerp(0.72, 1.28, jaw_v),
-		_lerp(0.85, 1.18, jaw_v),
-		_lerp(0.8, 1.22, jaw_v)
+		_lerp(0.86, 1.16, jaw_v) * jaw_width_bias,
+		1.0,
+		_lerp(0.92, 1.08, jaw_v) * jaw_depth_bias
 	)
 
-	# JS cheek.position.y = lerp(-0.045, 0.012, cheek), scale lerp(0.75..1.3)
+	# M9-r1: rango del slider subido — el pómulo ALTO es la base (review:
+	# mejillas altas); el extremo bajo ya no baja a cachete.
+	# FASE C paso 2: el pomulo es el PLANO MALAR elongado (base en _build).
+	# Escala NO uniforme: ancho X y alto Y del plano, poco Z (semi-hundido).
+	# cheek alto = base (lamina: high cheekbones); el slider sube el pomulo y
+	# lo agranda un poco, sin volverlo bola (Z se queda corto).
+	# Fix (feedback director: pomulo lateral al ojo, no bajo el ojo): rango
+	# bajado 0.004..0.028 -> -0.024..0.000 — el ojo vive en y=0.022, el tope
+	# del rango (0.0) queda 2.2 cm por debajo, nunca cruza la altura del ojo.
+	# AJUSTE FINO post-QA: el "escalón" del pómulo (Z) se subió en _build a
+	# 0.64 (antes 0.46, demasiado aplastado para leer). Acá dos fixes más:
+	# (a) rango Y bajado otros 0.008 (-0.024..0.000 -> -0.032..-0.008) — el
+	# pómulo vivía a solo ~3.4 cm del ojo (y=0.022), tan cerca que el Sobel
+	# apilaba su borde + el de la ceja como "arrugas/patas de gallo" en vez
+	# de una sola línea de párpado limpia; (b) Z de escala sube con él.
 	var cheek_v: float = p.get("cheek", 0.5)
 	for cheek in cheeks:
-		cheek.position.y = _lerp(-0.045, 0.012, cheek_v)
-		var cheek_s: float = _lerp(0.75, 1.3, cheek_v)
-		cheek.scale = Vector3(cheek_s, cheek_s, cheek_s)
+		# R1: rango bajado con el ojo (ojo ahora en y=0.008) — el pómulo
+		# vive SIEMPRE claramente bajo el ojo, sin apilar tinta con la ceja.
+		cheek.position.y = _lerp(-0.038, -0.016, cheek_v)
+		var cs: float = _lerp(0.9, 1.16, cheek_v)
+		# r_cheek-box-v2: base bajada a 0.040 (de 0.068) — multiplicadores
+		# recalibrados para la caja chica (antes tuneados para radio de
+		# esfera 0.034, quedaban gigantes sobre la base nueva).
+		# Ronda 8: menos profundidad (0.55→0.42) — escalón emergente más
+		# chico = menos tinta perimetral, el plano se lee por cel-step.
+		cheek.scale = Vector3(1.25 * cs, 0.55 * cs, 0.42 * cs)
 
 	# JS eyes: rotation.z = side * lerp(-0.32, 0.26, eyeTilt), scale.y = lerp(0.5, 1.3, eyeShape)
-	# JS brows: rotation.z = side * lerp(-0.4, 0.18, eyeTilt)
+	# M9-r2: rango de tilt de CEJA acotado (review v0.2: cejas RECTAS —
+	# el arco alto era caricatura); el ojo conserva su rango.
 	var eye_tilt: float = p.get("eyeTilt", 0.5)
 	var eye_shape: float = p.get("eyeShape", 0.5)
+	# C6b: ceja pesada del enano (frente prominente) / fina del elfo —
+	# mismo sesgo racial que la mandíbula arriba, sobre el tamaño/altura
+	# de la ceja (no toca el rango del slider eyeTilt, que sigue vivo).
+	var brow_scale_bias: float = face.get("brow_scale", 1.0)
+	var brow_y_bias: float = face.get("brow_y", 0.0)
 	for i in range(eyes.size()):
 		var eye = eyes[i]
 		var side: int = eye.get_meta("side")
 		eye.rotation.z = float(side) * _lerp(-0.32, 0.26, eye_tilt)
 		eye.scale.y = _lerp(0.5, 1.3, eye_shape)
-		brows[i].rotation.z = float(side) * _lerp(-0.4, 0.18, eye_tilt)
+		brows[i].rotation.z = float(side) * _lerp(-0.20, 0.09, eye_tilt)
+		brows[i].scale = Vector3.ONE * brow_scale_bias
+		brows[i].position.y = BROW_Y_BASE + brow_y_bias
 
 	# ---- colors ----
 	var skin_tones: Array = PaletteData.SKIN_TONES
@@ -1200,11 +2643,65 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 	if tex_key != _head_tex_key:
 		_head_tex_key = tex_key
 		var new_tex = WarpaintAtlas.build_head_texture(skin_color, warpaint_idx, paint_color)
-		head_mat = ToonMaterials.toon_mat_textured(new_tex)
+		head_mat = ToonMaterials.toon_mat_opaque_textured(new_tex)
+		# M9-r2b: SOLO el cráneo lleva el atlas (jaw/cheeks = skin plano;
+		# sus UVs de primitiva embarraban la pintura).
 		skull.material_override = head_mat
-		jaw_mesh.material_override = head_mat
-		for cheek in cheeks:
-			cheek.material_override = head_mat
+
+	# ---- marca de pintura del brazo — RETIRADA (PRD Rework Fenotipo pt.18,
+	# 2026-07-14) ----
+	# El PRD original dejaba esto como decisión abierta ("Fable no confirma
+	# que la banda de brazo exista en la lámina"). Verificado ahora contra
+	# `fenotipo-humano-torso-v1.png` directamente: no hay ninguna banda de
+	# pintura en el brazo — lo que SÍ hay ahí es un BRAZAL DE CUERO (vestuario,
+	# antebrazo, ambos lados, ya cubierto por `character_outfit.gd`), no
+	# pintura de bíceps. El QA de la ronda 42%→45% lo señaló como "objeto no
+	# reconocido contra ninguna lámina". Se quita del fenotipo humano base.
+	if _arm_stripe != null:
+		_arm_stripe.queue_free()
+		_arm_stripe = null
+
+	# ---- PRD Rework Fenotipo pt.17 (2026-07-14, ronda 3): warpaint
+	# BILATERAL Y DIAGONAL — corrige el punto 7 anterior (2 trazos
+	# verticales, un solo lado), que seguía el veredicto textual del QA
+	# imparcial original ("dos trazos verticales... ceja/sien izquierda").
+	# Verificado ahora DIRECTAMENTE contra `fenotipo-humano-torso-v1.png`
+	# (el orquestador leyó la lámina en pantalla, sin intermediario): el
+	# patrón real es una "V"/"A" SIMÉTRICA — dos franjas anchas que bajan
+	# desde ambas sienes/nacimiento del pelo y CONVERGEN en diagonal hacia
+	# el puente de la nariz, no un trazo vertical de un solo lado. El QA de
+	# la ronda 42%→45% también marcó el warpaint como "casi invisible a
+	# distancia" — franjas engrosadas (0.006→0.011) para que se noten en
+	# `anatomy_medium`/`anatomy_full_front`, no solo en close-up.
+	# PRD Warpaint Personalizable (2026-07-14): la "V" geométrica de arriba
+	# solo pertenece al estilo 6 (Scout Marks) — el atlas ya dibuja un
+	# patrón DISTINTO por cada índice 1-5 (Slash Crimson/Hexbrand/Tribal
+	# Tide/Eye of Ash/Jagged Crown, ver `warpaint_atlas.gd`). Antes esta
+	# masa se dibujaba para CUALQUIER warpaint_idx>0, así que elegir
+	# cualquier estilo 1-5 mostraba el patrón del atlas CON la "V" encima
+	# (el mismo bug que se encontró y revirtió en `tmp_anatomy.gd` — acá
+	# vivía la causa raíz real). Cada índice ahora es visualmente distinto,
+	# condición necesaria para que la elección del jugador en creación de
+	# personaje tenga sentido.
+	if _face_mark != null:
+		_face_mark.queue_free()
+		_face_mark = null
+	if warpaint_idx == 6:
+		var fm_mat := StandardMaterial3D.new()
+		fm_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		# 20% más oscuro: el unshaded puro brilla más que el mismo color
+		# blendeado en el atlas de la mejilla — así emparejan.
+		fm_mat.albedo_color = paint_color.darkened(0.18)
+		_face_mark = MeshInstance3D.new()
+		_face_mark.name = "face_paint_mark"
+		for fside in [-1, 1]:
+			var fm_stroke = _box_mesh(0.011, 0.075, 0.006, fm_mat)
+			# arriba (sien/nacimiento del pelo, afuera) → abajo (puente de
+			# la nariz, adentro): tilt en Z converge las dos franjas.
+			fm_stroke.position = Vector3(float(fside) * 0.032, 0.010, 0.132)
+			fm_stroke.rotation.z = float(fside) * 0.40
+			_face_mark.add_child(fm_stroke)
+		head.add_child(_face_mark)
 
 	# ---- hair swap ----
 	var hair_style: int = int(p.get("hair", 0))
@@ -1221,28 +2718,18 @@ func apply_phenotype(p: Dictionary, origin: Dictionary) -> void:
 
 	# ---- beard swap ----
 	var beard_style: int = int(p.get("beard", 0))
-	var beard_k = str(beard_style)
+	# CONFIGURABLE (pedido del director): densidad de la barba Stubble.
+	var beard_density: float = float(p.get("beardDensity", 0.35))
+	var beard_k = str(beard_style) + "|" + str(beard_density)
 	if beard_k != _beard_key:
 		_beard_key = beard_k
 		for child in beard_slot.get_children():
 			beard_slot.remove_child(child)
 			child.queue_free()
-		var built_b = HairLibrary.build_beard(beard_style, hair_mat)
+		var built_b = HairLibrary.build_beard(beard_style, hair_mat, beard_density)
 		if built_b != null and built_b.get_child_count() > 0:
 			_apply_outline_to_children(built_b, hair_color, 0.025)
 			beard_slot.add_child(built_b)
-
-	# ---- origin features (ears, tail, accent) ----
-	var origin_id: String = origin.get("id", "")
-	if origin_id != _origin_id:
-		_origin_id = origin_id
-		var theme: Dictionary = origin.get("theme", {})
-		var accent_hex: String = theme.get("accent", "#46e6ff")
-		accent = Color(accent_hex)
-		iris_mat.albedo_color = accent
-		accent_glow_mat.albedo_color = accent * 1.2
-		accent_glow_mat.emission = accent * 1.2
-		_build_origin_features(origin)
 
 	# ---- per-origin rim override (MUST be after warpaint rebuild so head_mat is current) ----
 	_apply_origin_rim()
@@ -1255,7 +2742,9 @@ func _apply_origin_rim() -> void:
 	var rim_col: Color
 
 	if _origin_id == "aetherborn":
-		rim_str = 0.28
+		# Sprint A1: 0.28→0.24 — a 0.28 el rim cian encendía el surco
+		# cuello↔trapecio como "anillo de collar" en ángulo rasante.
+		rim_str = 0.24
 		rim_col = accent
 	elif _origin_id == "ironblooded":
 		rim_str = 0.32
@@ -1349,11 +2838,6 @@ func _build_origin_features(origin: Dictionary) -> void:
 			n.queue_free()
 	_iron_armor.clear()
 
-	# Clean up miststalker fur (always; only re-created when miststalker)
-	if _fur_slot != null:
-		_fur_slot.queue_free()
-		_fur_slot = null
-
 	# Reset metal heat glow (cleared for all non-ironblooded origins)
 	metal_mat.set_shader_parameter("emission_color", Color(0.0, 0.0, 0.0, 1.0))
 	metal_mat.set_shader_parameter("emission_strength", 0.0)
@@ -1370,102 +2854,300 @@ func _build_origin_features(origin: Dictionary) -> void:
 	var id: String = origin.get("id", "")
 
 	if id == "aetherborn":
-		# Long pointed elven ears (ConeGeometry(0.026, 0.14, 6))
+		# C6b (2026-07-21, frente de geometría nueva): las orejas leían como
+		# un nudo horizontal apenas asomando del cráneo (verificado en banco,
+		# `ANATOMY_HAIR=0` para juzgar sin el peinado tapándolas). Primera
+		# pasada: alargada + barrido fuerte hacia atrás/arriba, medida contra
+		# la lámina de concept art (`fenotipo-elfo-lavanda-v1.png`).
+		# Ronda 2 (Boris pasó 2 referencias nuevas — Frieren + Zelda TotK,
+		# ambas en estilo más cercano al norte de siluetas limpias del
+		# proyecto): las dos apuntan la oreja hacia AFUERA con un ángulo
+		# leve hacia arriba, casi SIN rake hacia atrás — el barrido dramático
+		# de la ronda 1 (rotation.x -0.38) fue lo que la hizo leer "hacia
+		# atrás" en perfil en vez de "hacia afuera". `rotation.x` bajado a
+		# -0.08 (casi neutro) y `position.z` adelantado (-0.010→0.004, la
+		# oreja nace alineada con la sien, no detrás de ella).
+		# Ronda 3: con rotation.x≈0 la oreja queda casi PURAMENTE lateral
+		# (eje X) — la cámara de perfil mira justo por ese eje, así que se
+		# ve de canto (una astilla), no como forma. -0.15 le devuelve
+		# presencia en perfil/3-4 sin volver al barrido dramático de antes.
+		# Ronda 4 (QA imparcial vs Frieren+Zelda, ~40% fidelidad):
+		# CRITICAL — en 3/4 y perfil seguía leyendo "barrida arriba/atrás"
+		# (el clásico elfo de fantasía), no el ángulo casi-horizontal +
+		# 5-15° de las referencias. z-tilt corregido de ~63° a ~82° desde
+		# vertical (solo ~8° sobre horizontal). HIGH — punta roma: pocos
+		# radial_segments (4, patrón ya usado en la nariz) leen como filo
+		# bajo el toon en vez de un cono suave que se ve redondeado/grueso.
+		# MEDIUM — base gruesa: bottom_radius 0.024→0.019.
+		# Ronda 5 (QA re-medido tras ronda 4: 60-65%, CRITICAL/HIGH/MEDIUM
+		# de arriba RESUELTOS y verificados por píxel). Hallazgo nuevo del
+		# QA: silueta de "hoja compuesta" (Frieren/Zelda) — borde superior
+		# casi recto, inferior cóncavo, flick final más inclinado; un cono
+		# de taper lineal no puede darla.
+		# RONDAS 6-8 (2026-07-22, EXPERIMENTO CERRADO — revertido): se
+		# probó `HairLibrary._loft`/`_lock` (curva + perfil de radios, el
+		# reemplazo vigente de `_ribbon`/`_s_spine` para pelo) 3 veces con
+		# QA imparcial de por medio, y las 3 midieron PEOR que este cono
+		# (40%, 45%, 45-50% vs 60-65%). Causa según el propio QA: a esta
+		# escala/distancia de cámara, una curva delgada de perfil de radio
+		# decreciente lee como "alambre con gancho/cuerno", no como el
+		# cuerpo ancho-que-se-angosta de una oreja — el cono simple, aun
+		# siendo genérico, comunica "oreja" de forma más inequívoca que la
+		# curva compuesta en esta escala. Revertido al cono de la ronda 4
+		# (60-65%, el mejor medido). Ver [[Lecciones]] para el hallazgo
+		# completo antes de reintentar geometría curva en rasgos chicos.
+		# RONDA 9 (2026-07-22, REWORK COMPLETO — reemplaza el cono de un solo
+		# taper de las rondas 1-8): Boris rechazó el resultado de la ronda 8
+		# ("Todavía no me gustan") y escribió su propia spec anatómica contra
+		# Zelda TotK/Frieren, traducida a plan técnico por un subagente Opus
+		# dedicado (ver [[LOG]]). Decisiones de Boris: proporción 1.5-2× una
+		# oreja humana MISMO grosor (no más ancha — revierte el ensanchado de
+		# las rondas 7-8), variante **Zelda puro** (borde superior casi recto,
+		# punta muy limpia, curvatura mínima), y **composición de primitivas
+		# sólidas** en vez de reintentar el loft (ya falló 3 veces, rondas
+		# 6-8, por leer "alambre/gancho" — ver comentario arriba y
+		# [[Lecciones]]).
+		#
+		# QA imparcial ronda 9v1: ~35-40% (bajó del 60-65% del cono viejo).
+		# CRITICAL — el yaw posterior (rotation.y=0.35, ~20°) no se leía en
+		# perfil/3-4: con `rotation.z`≈82° aplicado primero (orden Euler de
+		# Godot es extrínseco Z→X→Y sobre los ejes FIJOS del padre), la
+		# mayor parte del largo del cono ya quedó proyectada sobre el eje X
+		# antes de que Y actúe — el desplazamiento en Z que produce un yaw
+		# chico resulta minúsculo en metros absolutos. Subido a 0.70 (~40°,
+		# el TECHO del rango 20-40° de Boris) para que el corrimiento hacia
+		# atrás sea medible a esta escala. HIGH — proporción "muñón"
+		# corta/gruesa, no alargada: largo subido (0.10+0.05 → 0.115+0.06,
+		# overlap 0.008) y radios adelgazados (0.024/0.014 → 0.020/0.011,
+		# tip a 0.005 sin cambio) para una silueta más esbelta, sin volver
+		# al problema de "alambre" del loft (radio mínimo pre-punta sigue
+		# ≥0.011, con volumen real). MEDIUM — el quiebre local de ~3° en la
+		# punta (`ear_tip.rotation.x=-0.05`) leía como un ESCALÓN visible en
+		# la costura, no una curva — innecesario además para la variante
+		# Zelda (borde superior YA leía "casi recto" con quiebre): bajado a
+		# ~0 (colineal con el cuerpo), el taper de radios solo (sin quiebre
+		# angular) alcanza para el efecto "ancha en la base, afina rápido
+		# cerca de la punta".
+		#
+		# 4 masas hijas de `ear_body` (evita recalcular a mano la base
+		# rotada del cono — error real de la ronda 8, el lóbulo quedó
+		# flotando invisible por usar el CENTRO del cono en vez de su base):
+		#   #1 base  — SphereMesh chico, clavado al extremo -Y (base) del cuerpo.
+		#   #2 cuerpo — CylinderMesh ancho, taper LENTO (borde ~recto, Zelda).
+		#   #3 punta  — CylinderMesh corto, taper RÁPIDO, colineal (Zelda).
+		#   #4 hélix  — TorusMesh aplastado, discreto, cerca de la base.
+		# Oreja humana del rig (línea ~3013, referencia de proporción):
+		# SphereMesh(0.030,0.060)*scale(0.40,1.28,0.75) → eje largo ≈0.077.
+		# Target Zelda ≈2× eso ≈0.15-0.17; cuerpo 0.115 + punta 0.06 (solape
+		# 0.008) ≈0.167.
 		for side in [-1, 1]:
-			var ear = MeshInstance3D.new()
-			var mesh = CylinderMesh.new()
-			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.026
-			mesh.height = 0.14
-			ear.mesh = mesh
-			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.155, 0.02, 0.0)
-			ear.rotation = Vector3(-0.25, 0.0, float(side) * -1.95)
-			_add_outline_pass(ear, Color("#f2b186"), 0.02)
-			feature_slot.add_child(ear)
+			var ear_body = MeshInstance3D.new()
+			var body_mesh = CylinderMesh.new()
+			body_mesh.top_radius = 0.011
+			body_mesh.bottom_radius = 0.020
+			body_mesh.height = 0.115
+			body_mesh.radial_segments = 6
+			ear_body.mesh = body_mesh
+			ear_body.material_override = skin_mat
+			# RONDA 10 (2026-07-22): el diagnóstico confirmó que el giro se
+			# estaba aplicando bien (misma lectura con Euler que con Basis
+			# explícito) — el problema real era otro: esta oreja quedó
+			# "casi horizontal" desde las rondas 4-5 (decisión validada en su
+			# momento contra Frieren/Zelda), pero al re-mirar esas MISMAS
+			# referencias (`zelda_ears.jpg`, `zoom_frieren_ear_left.png`) la
+			# oreja apunta claramente hacia ARRIBA (~25-35° sobre la
+			# horizontal), no casi-horizontal. Boris reabrió esa decisión.
+			#
+			# Se arma la dirección del eje DIRECTO por elevación+yaw (más
+			# claro de ajustar que encadenar 3 ángulos de Euler, que ya dio
+			# una lectura contra-intuitiva una vez): `elev` = cuánto sube
+			# sobre la horizontal (nuevo, la reapertura de hoy), `yaw_back` =
+			# barrido hacia atrás en el plano horizontal (el ajuste de la
+			# ronda 9v2/10). El eje +Y local del cilindro (extremo
+			# top_radius = la punta) se apunta directo a esta dirección vía
+			# una base ortonormal construida con producto cruz — sin pasar
+			# por ninguna convención de Euler.
+			var elev: float = deg_to_rad(28.0)
+			var yaw_back: float = deg_to_rad(20.0)
+			var tip_dir := Vector3(
+				side * cos(elev) * cos(yaw_back),
+				sin(elev),
+				-cos(elev) * sin(yaw_back)
+			).normalized()
+			var ref_axis := Vector3(0.0, 0.0, 1.0)
+			var local_x := tip_dir.cross(ref_axis).normalized()
+			var local_z := local_x.cross(tip_dir).normalized()
+			ear_body.position = Vector3(side * 0.1645, 0.040, 0.004)
+			ear_body.transform.basis = Basis(local_x, tip_dir, local_z)
+			_add_outline_pass(ear_body, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear_body)
+
+			# #1 base — hija de ear_body, en su extremo -Y local (bottom_radius,
+			# el ancho que nace del cráneo) — alineación garantizada sin trig.
+			var ear_base = MeshInstance3D.new()
+			var base_mesh = SphereMesh.new()
+			base_mesh.radius = 0.012
+			base_mesh.height = 0.024
+			ear_base.mesh = base_mesh
+			ear_base.material_override = skin_mat
+			ear_base.scale = Vector3(0.6, 0.9, 0.6)
+			ear_base.position = Vector3(0.0, -0.052, 0.0)
+			_add_outline_pass(ear_base, Color("#f2b186"), 0.02)
+			ear_body.add_child(ear_base)
+
+			# #3 punta — hija de ear_body, en su extremo +Y local (top_radius);
+			# SIN quiebre angular (colineal, Zelda: borde superior recto) —
+			# el taper de radios (0.011→0.005) ya da el afine rápido cerca
+			# de la punta sin el "escalón" que un quiebre local producía.
+			var ear_tip = MeshInstance3D.new()
+			var tip_mesh = CylinderMesh.new()
+			tip_mesh.top_radius = 0.005
+			tip_mesh.bottom_radius = 0.011
+			tip_mesh.height = 0.06
+			tip_mesh.radial_segments = 6
+			ear_tip.mesh = tip_mesh
+			ear_tip.material_override = skin_mat
+			ear_tip.position = Vector3(0.0, 0.0495, 0.0)
+			_add_outline_pass(ear_tip, Color("#f2b186"), 0.02)
+			ear_body.add_child(ear_tip)
+
+			# #4 hélix — toro aplastado DISCRETO cerca de la base, sobre el
+			# borde superior-posterior (insinúa la convexidad inicial del
+			# sable sin agregar curvatura visible — variante Zelda, no la
+			# hélix marcada de Frieren).
+			var helix = MeshInstance3D.new()
+			var helix_mesh = TorusMesh.new()
+			helix_mesh.inner_radius = 0.007
+			helix_mesh.outer_radius = 0.010
+			helix.mesh = helix_mesh
+			helix.material_override = skin_mat
+			helix.scale = Vector3(1.0, 1.2, 0.5)
+			helix.rotation.z = PI / 2.0
+			helix.position = Vector3(0.005, -0.038, 0.004)
+			_add_outline_pass(helix, Color("#f2b186"), 0.02)
+			ear_body.add_child(helix)
+
+			var ear_pab = _sphere_mesh(0.035, skin_mat)
+			ear_pab.scale = Vector3(0.50, 1.40, 0.80)
+			ear_pab.rotation.x = -0.30
+			ear_pab.rotation.z = float(side) * -0.12
+			ear_pab.position = Vector3(
+				side * 0.148,
+				0.024,
+				0.006)
+			_add_outline_pass(ear_pab, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear_pab)
 		# (vein flow animation is handled in _process when _origin_id=="aetherborn")
 
 	elif id == "miststalker":
-		# Beastfolk ears (ConeGeometry(0.045, 0.11, 5)) using hair color
+		# Mistbound — 100% human (Aether Bound/10-Knowledge/Fenotipos y Creación
+		# de Personaje.md, decisión 2026-07-04): no beast-folk geometry. Plain
+		# rounded human ears, same treatment as the other human-shaped origins.
+		#
+		# PRD-Nacimiento-de-Oreja paso 1 (2026-07-22): esta rama tenía UNA
+		# `SphereMesh` desnuda en `x=±0.150`, sin scale ni rotación — TANGENTE
+		# al cráneo, no fundida. Medido contra `HairLibrary.SKULL_SEMI` en el
+		# punto real de la oreja (no en el ecuador): penetraba 0.0026 sobre un
+		# ancho de 0.060 = **4.3%**. En el zoom leía como un círculo perfecto
+		# con tinta Sobel completa alrededor: "canica pegada", no oreja.
+		#
+		# Se adopta el patrón de 3 masas de la rama neutra de abajo (~3097),
+		# que ya pasó tres reviews (M9-r2/r3, FASE C paso 7, Sprint B3) y es
+		# la única geometría de oreja validada del proyecto: pabellón achatado
+		# en X y HUNDIDO (penetración 25%, la fusión por overlap real que pide
+		# [[Lecciones]]), lóbulo colgando que da el quiebre de silueta, y
+		# hélix semi-embebida cuyo hueco deja ver la concha.
+		#
+		# RONDA 2 (mismo día): la ronda 1 copió la rama neutra 1:1 y el QA
+		# imparcial midió 55% (objetivo 70%) — con un hallazgo que corrige la
+		# premisa del paso: **la rama neutra NO era tan buena como se asumió**.
+		# Se afinó contra la cara de M9/Fase-C, que desde entonces cambió; sus
+		# números ya no rinden sobre el cráneo actual. Los 3 defectos medidos:
+		#   CRITICAL — de FRENTE la oreja no existe: con `scale.x=0.40` el
+		#     delta de profundidad contra la mejilla no llegaba al umbral del
+		#     Sobel, así que no se entintaba NI sobresalía del contorno.
+		#     Engrosada a 0.58 y sacada a x=0.130 (protrusión +59%: 0.018 →
+		#     0.029; la penetración baja de 25% a ~17%, sigue siendo overlap
+		#     real, no tangencia).
+		#   HIGH — el lóbulo leía como "cuentita pegada" con su propio anillo
+		#     de tinta cerrado: quedaba casi TANGENTE al pabellón, no fundido.
+		#     Subido a y=-0.042 y alargado (`scale.y` 0.6→0.75) para que la
+		#     intersección sea franca (~0.009 de solape) y el Sobel no cierre
+		#     el círculo.
+		#   CRITICAL — el hélix no leía como forma sino como brillo. Medido:
+		#     el toro quedaba ENTERRADO bajo la superficie del pabellón (tubo
+		#     hasta x=0.132 contra una superficie en ~0.134) — nunca emergió,
+		#     ni en la rama neutra. Engrosado (`outer` 0.017→0.021) y sacado a
+		#     x=0.140 para que el borde exterior asome en rampa de verdad.
+		# El conjunto sube ~0.006 en Y: el QA lo midió colgando hasta la altura
+		# de la boca, y la lámina lo termina en la base de la nariz.
+		#
+		# RONDA 3 (mismo día): ronda 2 midió 69% — a UN punto del objetivo, con
+		# un solo bloqueante identificado. Dos cambios, ambos del QA:
+		#   HIGH — el arco antero-superior seguía SIN entintar (de las 11 a las
+		#     7 del reloj en perfil): ahí la normal del pabellón quedaba casi
+		#     paralela a la de la mejilla y el Sobel por profundidad no
+		#     disparaba. `position.z` -0.034 → -0.030 le da ángulo al borde
+		#     anterior contra el plano de la mejilla. Se eligió esto antes que
+		#     inclinar más el pabellón (`rotation.x`) porque no mueve la altura,
+		#     que la ronda 2 dejó ya correcta (ceja → base de nariz, verificado
+		#     contra la lámina en lateral puro).
+		#   MEDIUM — oreja subdimensionada ~25-30% contra la lámina: `scale.y`
+		#     1.28 → 1.45. El centro sube en la misma medida en que la masa
+		#     crece hacia abajo (y -0.004 → 0.000), así que la oreja se alarga
+		#     hacia ARRIBA y la punta del lóbulo NO se despega de la base de la
+		#     nariz — que es la trampa que el QA marcó al pedir el cambio.
+		# Lóbulo y hélix acompañan el corrimiento en Z para no quedar atrás.
+		#
+		# RONDA 4 (mismo día): la ronda 3 cruzó el objetivo (71%) pero dejó dos
+		# cosas medidas y abiertas, ambas baratas de cerrar:
+		#   HIGH — el arco antero-superior SIGUE sin entintar: la dirección del
+		#     fix era la correcta, la magnitud no. 0.004 sobre un radio de 0.030
+		#     es ~13% de corrimiento; el QA pidió 0.008-0.010 para que ese arco
+		#     gane ángulo real contra el plano de la mejilla. `position.z` va a
+		#     -0.024 (0.010 total desde el -0.034 de la ronda 2).
+		#     OJO CON EL SIGNO: el QA escribió "-0.030 → -0.038", pero eso mueve
+		#     la oreja hacia ATRÁS, o sea al revés de lo que él mismo venía
+		#     pidiendo ("empujar hacia adelante en Z"). Se aplicó la DIRECCIÓN
+		#     pedida, no el número escrito. Aun así queda 0.024 por detrás del
+		#     centro del cráneo, lejos del "piercing en la mejilla" que la
+		#     review M9-r2 arregló retrasando esta pieza — ese es el límite por
+		#     el otro lado y no se cruza.
+		#   REGRESIÓN — al alargar el pabellón en la ronda 3 sin escalar el
+		#     hélix, el anillo quedó chico dentro de una masa 13% mayor y la
+		#     estructura interna BAJÓ (62→58): el tercio inferior quedó como
+		#     carne lisa. `helix.scale.y` 1.3 → 1.45, el mismo factor que se le
+		#     dio al pabellón.
+		# Lo que NO se toca y queda documentado como techo de la técnica: la
+		# CONCHA (el hueco interno). Tres primitivas convexas ADITIVAS pueden
+		# dar un reborde — lo probó el fix del hélix — pero no una concavidad.
+		# Eso es cambio de enfoque (primitiva embebida más oscura, vertex-color
+		# o malla propia), no otra vuelta de parámetros.
 		for side in [-1, 1]:
-			var ear = MeshInstance3D.new()
-			var mesh = CylinderMesh.new()
-			mesh.top_radius = 0.001
-			mesh.bottom_radius = 0.045
-			mesh.height = 0.11
-			ear.mesh = mesh
-			ear.material_override = hair_mat
-			ear.position = Vector3(side * 0.082, 0.15, 0.0)
-			ear.rotation.z = float(side) * -0.35
-			_add_outline_pass(ear, Color("#b8451f"), 0.02)
-			feature_slot.add_child(ear)
+			_build_ear(side, feature_slot, skin_mat, {})
 
-		# Tail: 6 sphere segments tapering from hips
-		var tail = Node3D.new()
-		var r: float = 0.035
-		for i in range(6):
-			var seg = MeshInstance3D.new()
-			var smesh = SphereMesh.new()
-			smesh.radius = r
-			smesh.height = r * 2.0
-			seg.mesh = smesh
-			seg.material_override = hair_mat
-			seg.position = Vector3(0.0, -0.05 - float(i) * 0.012, -0.12 - float(i) * 0.07)
-			_add_outline_pass(seg, Color("#b8451f"), 0.02)
-			tail.add_child(seg)
-			r *= 0.92
-		tail_slot.add_child(tail)
-
-		# ---- Miststalker fake-fur tufts ----
-		# A few flat alpha-card-like quads (thin boxes) on shoulders and torso to
-		# read as a pelt silhouette. Green-tinted, slightly semi-transparent.
-		# Parented to spine so they follow the torso.
-		_fur_slot = Node3D.new()
-		_fur_slot.name = "fur_slot"
-		spine.add_child(_fur_slot)
-
-		var fur_color: Color = Color(0.18, 0.38, 0.12, 0.72)  # mossy green, partly transparent
-		var fur_mat := StandardMaterial3D.new()
-		fur_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		fur_mat.albedo_color = fur_color
-		fur_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		fur_mat.cull_mode = BaseMaterial3D.CULL_DISABLED  # visible from both sides
-
-		# Left shoulder tuft
-		var tuft_l := _box_mesh(0.08, 0.14, 0.03, fur_mat)
-		tuft_l.position = Vector3(-0.22, 0.44, 0.0)
-		tuft_l.rotation.z = 0.3
-		_fur_slot.add_child(tuft_l)
-
-		# Right shoulder tuft (smaller — pauldron is on this side)
-		var tuft_r := _box_mesh(0.06, 0.10, 0.03, fur_mat)
-		tuft_r.position = Vector3(0.22, 0.44, 0.0)
-		tuft_r.rotation.z = -0.3
-		_fur_slot.add_child(tuft_r)
-
-		# Chest center tuft
-		var tuft_c := _box_mesh(0.07, 0.16, 0.03, fur_mat)
-		tuft_c.position = Vector3(0.0, 0.30, 0.15)
-		_fur_slot.add_child(tuft_c)
-
-		# Forearm left tuft
-		var tuft_fa := _box_mesh(0.06, 0.11, 0.025, fur_mat)
-		tuft_fa.position = Vector3(-0.22, 0.18, 0.0)
-		tuft_fa.rotation.z = 0.15
-		_fur_slot.add_child(tuft_fa)
-
-	else:
+	elif id == "ironblooded":
 		# ---- Ironblooded: compact round ears + heat glow + sparks ----
+		# (C6a: rama EXPLÍCITA — antes era el else, y cualquier origin
+		# desconocido caía aquí con armadura de forja incluida. Un origin
+		# fuera del canon ahora deja el cuerpo neutral CON OREJAS, abajo.)
 		for side in [-1, 1]:
-			var ear = MeshInstance3D.new()
-			var smesh = SphereMesh.new()
-			smesh.radius = 0.032
-			smesh.height = 0.064
-			ear.mesh = smesh
-			ear.material_override = skin_mat
-			ear.position = Vector3(side * 0.148, 0.0, 0.0)
-			_add_outline_pass(ear, Color("#f2b186"), 0.02)
-			feature_slot.add_child(ear)
+			_build_ear(side, feature_slot, skin_mat, {
+				"pab_r": 0.032,
+				"pab_scale": Vector3(0.72, 0.95, 0.85),
+				"pab_x": 0.130,
+				"pab_z": -0.024,
+				"rot_z_mul": -0.15,
+				"lobe_r": 0.016,
+				"lobe_scale": Vector3(0.65, 0.65, 0.65),
+				"lobe_x": 0.126,
+				"lobe_y": -0.034,
+				"lobe_z": -0.020,
+				"helix_outer": 0.026,
+				"helix_scale": Vector3(1.0, 1.00, 0.9),
+				"helix_x": 0.140,
+				"helix_z": -0.025,
+			})
 
 		# Warm body tint: leather clothing reads rust/amber so the ironblooded silhouette
 		# reads warm at distance (not just via the low-contrast rim).
@@ -1540,6 +3222,57 @@ func _build_origin_features(origin: Dictionary) -> void:
 		# Place near the right shoulder (arm_r is arms[1])
 		_spark_particles.position = Vector3(0.0, 0.06, 0.0)
 		arms[1].add_child(_spark_particles)
+
+	else:
+		# ---- Origin neutro/desconocido (M9-r1): un humano base TIENE
+		# orejas — redondas simples; los origins las REEMPLAZAN arriba.
+		# M9-r2/r3 (reviews M7/M6): banda ceja-nariz, SEMI-ELÍPTICA de eje
+		# vertical con leve inclinación hacia atrás — la review v0.3 tumbó
+		# el disco frontal ("audífonos/botones").
+		for side in [-1, 1]:
+			var ear = MeshInstance3D.new()
+			var smesh = SphereMesh.new()
+			smesh.radius = 0.030
+			smesh.height = 0.060
+			ear.mesh = smesh
+			ear.material_override = skin_mat
+			# v0.5 H4: RETRASADA a la vertical media del cráneo (adelantada
+			# leía piercing en la mejilla); asoma flanqueando en la trasera.
+			ear.position = Vector3(side * 0.124, -0.010, -0.034)
+			ear.scale = Vector3(0.40, 1.28, 0.75)   # semi-elipse vertical
+			ear.rotation.x = -0.15                  # leve inclinación atrás
+			ear.rotation.z = float(side) * -0.06
+			_add_outline_pass(ear, Color("#f2b186"), 0.02)
+			feature_slot.add_child(ear)
+
+			# FASE C paso 7: LÓBULO — la masa única leía como botón plano sin
+			# forma (una sola bola). Bulto chico colgando bajo el pabellón
+			# (mismo truco de fusión: overlap real con el ear de arriba), da
+			# el quiebre lóbulo/pabellón que el resto de la cara ya tiene
+			# (mandíbula/pómulo/nariz) — silueta de oreja real en perfil.
+			var lobe = _sphere_mesh(0.012, skin_mat)
+			lobe.scale = Vector3(0.55, 0.6, 0.55)
+			lobe.position = Vector3(side * 0.120, -0.050, -0.030)
+			_add_outline_pass(lobe, Color("#f2b186"), 0.02)
+			feature_slot.add_child(lobe)
+
+			# Sprint B3: HÉLIX — toro aplastado semi-hundido en el pabellón
+			# (anillo en el plano YZ, hueco hacia ±X): el borde exterior
+			# emerge en rampa (sin tinta propia bajo la regla nueva) y el
+			# hueco deja ver la elipse de abajo como concha — la oreja de
+			# perfil deja de ser un óvalo-decal plano.
+			var helix = MeshInstance3D.new()
+			var tmesh = TorusMesh.new()
+			tmesh.inner_radius = 0.011
+			tmesh.outer_radius = 0.017
+			helix.mesh = tmesh
+			helix.material_override = skin_mat
+			helix.scale = Vector3(1.0, 1.3, 0.9)
+			helix.rotation.z = PI / 2.0
+			helix.rotation.x = -0.15
+			helix.position = Vector3(side * 0.127, -0.006, -0.035)
+			_add_outline_pass(helix, Color("#f2b186"), 0.02)
+			feature_slot.add_child(helix)
 
 # ================================================================
 # Motion API — mirrors JS setMotion / playAttack / update
@@ -1625,6 +3358,46 @@ var _parry_dur: float = 0.30
 func play_parry(dur: float = 0.30) -> void:
 	_parry_dur = maxf(dur, 0.12)
 	_parry_t = _parry_dur
+
+## apply_foot_ik — C4 frente 2 (2026-07-21): "pies plantados en pendiente"
+## ([[Movilidad Realista]]). El CONSUMIDOR (player_controller u otra escena)
+## mide el terreno bajo cada pie con su propio `get_height()` (contrato ya
+## existente, agnóstico de escena) y pasa altura+normal aquí cada frame; el
+## rig no sabe nada de escenas/terreno (mismo principio que `set_motion` —
+## el rig solo POSA, quien mueve el cuerpo decide contra qué). Sin llamar a
+## esto nunca (bancos/escenas planas), el rig queda bit-idéntico a antes de
+## C4 — cero riesgo de regresión donde no se usa.
+func apply_foot_ik(l_height: float, r_height: float, l_normal: Vector3 = Vector3.UP, r_normal: Vector3 = Vector3.UP) -> void:
+	_ik_ground_h = [l_height, r_height]
+	_ik_ground_n = [l_normal, r_normal]
+	_ik_active = true
+
+## Capa correctiva de IK: corre DESPUÉS de que el gait/strike/crouch ya
+## escribió leg.rotation.x de este frame (se preserva el swing autorado) y
+## ANTES del clamp de ROM (la red de seguridad de siempre). Dobla la
+## rodilla lo justo para que el tobillo alcance la altura de terreno medida
+## y nivela el tobillo contra la normal de pendiente — nunca toca la cadera.
+func _apply_foot_ik_pose(delta: float) -> void:
+	var t: float = minf(1.0, delta * 10.0)
+	# C6b: el largo de pierna cambia por raza (enano/elfo) — el segmento
+	# real que la IK debe resolver es LEG_SEGMENT_LEN * limb_len, no la
+	# constante humana fija (ver `_apply_build`, mismo multiplicador).
+	var limb_len: float = _last_origin.get("proportions", {}).get("limb_len", 1.0)
+	var seg_len: float = _Biomech.LEG_SEGMENT_LEN * limb_len
+	for i in range(legs.size()):
+		var target_h: float = _ik_ground_h[i]
+		if is_nan(target_h):
+			continue
+		var leg: Node3D = legs[i]
+		var knee: Node3D = leg.get_meta("knee")
+		var ankle: Node3D = leg.get_meta("ankle")
+		var knee_delta: float = _Biomech.solve_knee_for_height(
+				leg.rotation.x, leg.global_position.y, target_h, seg_len)
+		var target_knee: float = clampf(knee_delta, 0.0, 2.4)
+		knee.rotation.x = lerpf(knee.rotation.x, target_knee, t)
+		var lvl: Vector2 = _Biomech.solve_ankle_level(knee.global_transform.basis, _ik_ground_n[i])
+		ankle.rotation.x = lerpf(ankle.rotation.x, lvl.x, t)
+		ankle.rotation.z = lerpf(ankle.rotation.z, lvl.y, t)
 
 ## Constraint report accessors (QA: autotest_biomech asserts on these).
 func constraint_report() -> Dictionary:
@@ -1721,7 +3494,12 @@ func _process(delta: float) -> void:
 		if _pose_clock < POSE_STEP:
 			# Held frame: the pose doesn't move, but the anatomical safety
 			# net still runs — external writes to bones get clamped anyway.
+			# Foot IK también: es necesidad física (no clipping en terreno
+			# irregular), no ritmo de pose — corre cada frame real, como los
+			# relojes de gameplay de arriba, no escalonado en 2s.
 			_apply_body_hold()
+			if _ik_active:
+				_apply_foot_ik_pose(delta)
 			_apply_joint_constraints()
 			return
 		delta = _pose_clock   # the pose integrates the full held interval
@@ -1767,7 +3545,9 @@ func _process(delta: float) -> void:
 	# Pump amplitude scales with speed.  Elbow flexes on the FORWARD swing of its arm.
 	# arms[0] swings forward when sin_ph < 0 (contralateral to leg0).
 	# arms[1] swings forward when sin_ph > 0.
-	var elbow_base: float   = 0.30
+	# r4 (review LOW 14): codo en reposo un poco más doblado — postura
+	# relajada del concept, no maniquí vertical.
+	var elbow_base: float   = 0.34
 	var elbow_pump: float   = lerp(0.15, 0.55, spd_clamped) * spd_clamped
 	var e0_flex: float = elbow_base + max(0.0, -sin(_phase + 0.1)) * elbow_pump
 	var e1_flex: float = elbow_base + max(0.0,  sin(_phase + 0.1)) * elbow_pump
@@ -1820,9 +3600,13 @@ func _process(delta: float) -> void:
 			arms[0].rotation.x = lerp(arms[0].rotation.x, 0.0, min(1.0, delta * 8.0))
 			arms[1].rotation.x = lerp(arms[1].rotation.x, 0.0, min(1.0, delta * 8.0))
 
-		# Slight outward splay so arms don't clip torso
-		arms[0].rotation.z = 0.1
-		arms[1].rotation.z = -0.1
+		# r4 (review LOW 13): A-pose suave — brazos despegados del cuerpo.
+		# QA 2026-07-13 (d1): con el pivote de hombro de vuelta a la lámina
+		# (0.262→0.21) el splay 0.15 dejaba luz de axila corriendo por todo
+		# el flanco (lectura gorila). La lámina: el brazo interior ROZA el
+		# torso todo el trayecto — splay mínimo, cuelgue casi vertical.
+		arms[0].rotation.z = 0.07
+		arms[1].rotation.z = -0.07
 
 		var e0: Node3D = arms[0].get_meta("elbow")
 		var e1: Node3D = arms[1].get_meta("elbow")
@@ -1938,11 +3722,13 @@ func _process(delta: float) -> void:
 		var chest_rot: float = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["chest"],    -0.75, 0.60)
 		var arm_x: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -1.90, 0.70)
 		var arm_z: float     = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["shoulder"], -0.85, -0.10)
-		# Elbow release -0.085 (no -0.10): la bisagra está pegada a su límite
+		# Elbow release -0.082 (no -0.10): la bisagra está pegada a su límite
 		# de extensión (+0.03) y el follow-through oscila ~35% del release al
-		# otro lado — con -0.085 el vaivén pico (+0.0295) queda DENTRO del ROM
-		# (la pose autorada nunca depende del clamp; autotest_biomech lo exige).
-		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.085)
+		# otro lado. Con -0.085 el pico rozaba +0.0297 (margen 0.0003 rad =
+		# flake por alineado de frames en autotest_biomech, visto 2026-07-10);
+		# con -0.082 el pico (+0.0287) queda DENTRO con margen real. La pose
+		# autorada nunca depende del clamp; autotest_biomech lo exige.
+		var elbow_x: float   = _Biomech.segment_offset(sk, _Biomech.CHAIN_LAG["elbow"],    -1.45, -0.082)
 
 		hips.rotation.y  = hip_rot
 		spine.rotation.y = spine_rot * 0.45
@@ -2083,8 +3869,14 @@ func _process(delta: float) -> void:
 	if _strike_t <= 0.0 and upper_spine != null:
 		upper_spine.rotation.y = lerpf(upper_spine.rotation.y,
 				spine.rotation.y * 0.38, minf(1.0, delta * 7.0))
+		# DORSAL_CURVE_X (PRD Rework Fenotipo pt.13): offset sumado al target,
+		# no asignado una vez — así sobrevive al settle de idle.
 		upper_spine.rotation.x = lerpf(upper_spine.rotation.x,
-				spine.rotation.x * 0.30, minf(1.0, delta * 7.0))
+				spine.rotation.x * 0.30 + DORSAL_CURVE_X, minf(1.0, delta * 7.0))
+
+	# ── C4 frente 2: foot IK corre DESPUÉS del gait/pose, ANTES del clamp ──
+	if _ik_active:
+		_apply_foot_ik_pose(delta)
 
 	# ── PRD-006: joint constraints — ALWAYS the last pose pass ──
 	# "Nada rota donde un cuerpo no rota" (Movilidad Realista §4.3): every
@@ -2113,3 +3905,5 @@ func _apply_joint_constraints() -> void:
 				_constraint_report)
 		_Biomech.clamp_node(leg.get_meta("knee"), "knee",
 				"knee_" + ("l" if side_l else "r"), _constraint_report)
+		_Biomech.clamp_node(leg.get_meta("ankle"), "ankle",
+				"ankle_" + ("l" if side_l else "r"), _constraint_report)

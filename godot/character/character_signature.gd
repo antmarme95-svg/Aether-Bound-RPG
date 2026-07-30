@@ -60,25 +60,27 @@ static func _wedge(mat: Material, w: float, h: float, d: float,
 	mi.rotation = rot
 	return mi
 
-static func _outline(rig, mi: MeshInstance3D, base_color: Color) -> void:
-	if mi.material_override != null:
-		ToonMaterials.add_outline(mi.material_override, base_color, 0.02)
+static func _outline(_rig, _mi: MeshInstance3D, _base_color: Color) -> void:
+	# C6 (2026-07-10): sin casco invertido — la tinta la pone el Sobel del
+	# post (igual que el rig base). Call sites conservados como documentación.
+	pass
 
 # ---- materiales compartidos de la pasada (uno por attach) ----
+# C6: variante OPACA (post-safe) — mismas razones que _init_materials del rig.
 
 static func _steel() -> ShaderMaterial:
-	return ToonMaterials.toon_mat(Color("#8f96a2"))
+	return ToonMaterials.toon_mat_opaque(Color("#8f96a2"))
 
 static func _bright_steel() -> ShaderMaterial:
 	# Acero claro con rescoldo de forja: garantiza que la cuña se LEA
 	# a distancia de cámara (ficha de Dagna: quedó tímida en la lámina).
-	var m := ToonMaterials.toon_mat(Color("#d4d8e0"))
+	var m := ToonMaterials.toon_mat_opaque(Color("#d4d8e0"))
 	m.set_shader_parameter("emission_color", Color(1.0, 0.55, 0.18, 1.0))
 	m.set_shader_parameter("emission_strength", 0.85)
 	return m
 
 static func _wood() -> ShaderMaterial:
-	return ToonMaterials.toon_mat(Color("#6b4a2e"))
+	return ToonMaterials.toon_mat_opaque(Color("#6b4a2e"))
 
 static func _ink() -> StandardMaterial3D:
 	# Tinta de gremio: terracota oscura plana (unshaded, como venas/ojos).

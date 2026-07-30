@@ -32,7 +32,12 @@ const PAINT_COLORS: Array[Color] = [
 	Color("#ff4d5e"), # blood signal red
 	Color("#ffc94d"), # contract gold
 	Color("#b14df0"), # mana violet
-	Color("#4dff9d"), # wyld green
+	# AJUSTE FINO post-QA Ronda 1: #4dff9d (mint saturado, "curita
+	# fosforescente") → #6b7f4a. Ronda 2: "sigue saturado" → #5a6b42.
+	# Ronda 6: QA aún lo ve "algo más saturado que la lámina" — bajado un
+	# escalón más hacia un oliva apagado/mate. Arrays separados: NO afecta
+	# HAIR_COLORS ni otros usos de "wyld green".
+	Color("#4f5c3a"), # wyld green (warpaint, desaturado más aún)
 	Color("#f5f1e6"), # bone white
 ]
 
