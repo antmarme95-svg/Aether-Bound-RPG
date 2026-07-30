@@ -278,6 +278,8 @@ Ver [[Los 5 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con To
 
 Nyael escribe una **segunda nota, más corta**, y desaparece antes de que amanezca en el cráter. La primera nota (la del corredor) explicó la captura; la segunda no explica nada — es un renglón: *"You chose well. I will not come back to say it in person."*
 
+**Ella misma ya no está presente para neutralizar (§sub-beat 5) — quien completaría la entrega es el equipo de extracción** que puso en marcha antes de irse. El jugador lo alcanza en el borde y lo detiene ahí, antes de que el pulso se corte y puedan moverla ([[Speck]] §Capa 5). Es el gate de F1 en esta ruta: el equipo neutralizado, no Nyael — ella ya resolvió su parte del tablero antes de que el jugador llegara.
+
 **Epílogo:** desaparece del mapa institucional, y el mapa institucional desaparece detrás de ella. El brazo encubierto de the Royal Academy alcanza a marcarla como **"no retornada"** — y ese es el último asiento que hace ese brazo en su historia: con el Aether apagado, la Academy se disuelve y su sección encubierta se apaga sin liquidar nada. **El expediente de Nyael queda abierto para siempre**, no por diligencia sino porque no quedó nadie para cerrarlo. No envían reemplazo; no había reemplazo, ella era el único activo con ese perfil, y para cuando eso importaba ya no había nadie a quien le importara.
 
 Es el destino exacto que ella habría elegido y por la razón contraria: Nyael pasó su vida siendo un renglón en un registro ajeno, y el registro murió antes que ella. Años después, el jugador ocasionalmente encuentra en su habitación una nota que no recuerda haber recibido — una línea, gris, dejada mientras dormía. Nunca la ve entregar; nunca la ve. La presencia es la ausencia repetida.

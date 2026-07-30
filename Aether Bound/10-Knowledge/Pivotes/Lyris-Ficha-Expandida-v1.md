@@ -315,7 +315,9 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
+El jugador la alcanza en el borde, donde sostiene a Speck esperando una orden que nunca llega (§sub-beat 5). No forcejea: sostiene la mirada un segundo, y **baja el vuelo por su cuenta** — deja a Speck en tierra sin que nadie se lo arranque. Es lo más parecido a un dato que Lyris puede procesar en el momento: nadie le va a dar la orden, y una variable sin orden no es su problema. Cede antes de que se lo pidan.
+
+Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
 **Y desde ahí arriba es la única del elenco que ve el costo completo.** Lyris sobrevuela las tres capitales en las semanas siguientes y las ve **apagarse una por una** — Emberdeep sin el resplandor de las forjas, Rivermeet a oscuras salvo por fuego real, The Stillspire con las luces de Aether muertas y los árboles, por primera vez en siglos, siendo lo único que brilla. Nadie más en el mundo tiene ese punto de vista. Nadie más entiende la escala de lo que se dejó pasar en el cráter. Ella no lo cuenta a nadie.
 
@@ -325,7 +327,7 @@ Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de 
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Lyris cumple. Traiciona, huye por aire, entrega a Speck en el punto acordado. No hay furia, no hay explicación, no hay confrontación.
+Lyris cumple. Traiciona, huye por aire con Speck hasta el cráter — no puede entregarla en ningún otro punto: mientras el pulso siga activo, nadie puede moverla lejos del centro ([[Speck]] §Capa 5). Ahí cede a Speck al mensajero de Frontier High Command sin forcejeo. El cese del pulso es lo que la suelta. No hay furia, no hay explicación, no hay confrontación.
 
 **Se aparta con calma que hiere.** Después de entregar, asciende y no vuelve. El jugador la ve una vez más semanas después, en distancia — patrullando otra ruta al norte de Stillwood, cumpliendo un contrato distinto de Frontier High Command. No baja. No hace señal. Lyris no rompió con el jugador con palabras; simplemente cambió de patrón, y en su gramática esa es la ruptura más completa posible.
 
@@ -339,7 +341,7 @@ Frontier High Command marca su expediente como "no retornada"; envían nueva ras
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Lyris **no aparece en el epílogo.** Se va antes del cráter — literalmente asciende y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida.
+Lyris **no aparece en el epílogo.** Está en el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: suelta a Speck sin forcejeo y asciende, y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
 
 Años después, si el jugador convertido en tirano intenta rastrearla, no la encuentra — Lyris es rastreadora, sabe cómo no ser rastreada. Su ausencia es más completa que la de cualquier otro compañero que huyó de F3: nunca deja huella. Es como si Lyris nunca hubiera bajado del cielo, retroactivamente.
 

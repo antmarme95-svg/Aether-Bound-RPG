@@ -32,7 +32,7 @@ Molde de referencia para los 8 restantes. Escala por tier de [[The Tether]]:
 
 **Objeto firma y regla T3:** la **Primera Cuña** — la cuña de hierro de su juramento, que todo guardián clava donde monta su guardia definitiva. En la traición la clava en la roca del nido. Si llegaste a T3, junto a la cuña deja **su martillo**: eligió la ley, pero te heredó la puerta (regla T3 de [[The Tether]] — la traición con bond alto deja algo atrás).
 
-**Regla post-traición:** [[Speck]] (estadio 3) puentea una versión
+**Regla post-traición:** [[Speck]] en su forma God-Core (E3 — no hay "estadios" de crecimiento, es desvelamiento, ver [[Speck]]) puentea una versión
 *degradada* del link — funciona distinto, se siente distinto, nunca es igual
 de bueno. Agridulce por diseño. El momento diseñado del reencuentro con el
 link perdido: [[Bond y el Bond Vacío]].

@@ -17,7 +17,7 @@ updated: 2026-07-28
 
 **La promesa que Iven cree es falsa. No ambigua, no exagerada, no bien intencionada y mal ejecutada: FALSA, y el Council lo sabe desde el primer día.**
 
-El Triune Council le prometió a Iven que sacrificar a Speck produciría un remedio capaz de purificar la zona de su asentamiento. Ese remedio **no puede existir**. Canon ratificado en [[El Mundo y la Muda]]: lo que sana el Aether no es la muerte de la Warden — es su **maduración**. Matar a Speck no produce cura alguna; **perpetúa la corrupción indefinidamente**. La promesa hecha a Iven es físicamente imposible en las reglas del mundo.
+El Triune Council le prometió a Iven que sacrificar a Speck produciría un remedio capaz de purificar la zona de su asentamiento. Ese remedio **no puede existir**. Canon ([[El Mundo y la Muda]] / [[Los 5 Finales]] §F1): lo que sana el Aether no es la muerte de la Warden — es que ella **complete la Muda, viva, en el cráter, sin que nadie se lo impida.** Matar a Speck no produce cura alguna; **perpetúa la corrupción indefinidamente**. La promesa hecha a Iven es físicamente imposible en las reglas del mundo — y la persecución en la que él mismo participa es, literalmente, lo único capaz de impedir la cura que le prometieron.
 
 **Por qué el Council miente:** ver [[Estructura Política]] §"Por qué el Council prefiere el statu quo". El Council no gestiona una crisis temporal — gestiona su razón de existir. Si la Muda se completa, el Council se vuelve obsoleto. Lo que necesita no es una cura: necesita a Speck **fuera de circulación** y la corrupción **estable**. Y para eso necesita un ejecutor con motivo propio, que no haga preguntas y que no pueda ser comprado por el otro lado. Un hombre desesperado con doscientas personas muriéndose atrás es la herramienta perfecta: **su motivación se sostiene sola durante meses sin necesidad de supervisión.**
 
@@ -573,7 +573,7 @@ El asentamiento no colapsa ese año. Ni el siguiente. La corrupción sigue su cu
 
 Entierra a todos. **Con sus manos, como siempre.** Cava para la mujer que lo crió cuando murió Sael. Cava para los niños que entrenó como defensores. Cava para el hombre que le tejió la cuerda de la muñeca. Les cierra las manos una por una y los pone mirando hacia el asentamiento, hacia un asentamiento que cada año tiene menos gente adentro para hacerles guardia.
 
-**Y sabe, todo el tiempo, que él fue la variable que aceleró esto.** Speck estaba viva y en camino a madurar. Iven la sacó del grupo, la corrió por The Scar of Breaking, la llevó al cráter, y ahí se murió. **La única cura real del mundo murió cargada en sus brazos, por sus piernas, a su velocidad.**
+**Y sabe, todo el tiempo, que él fue la variable que cerró esa puerta.** Speck estaba viva, y el cráter era el único lugar donde algo podía cambiar de verdad para su gente. Iven la sacó del grupo, la corrió por The Scar of Breaking, la llevó ahí — y en el forcejeo, ahí se murió, antes de que nadie llegara a decidir nada. **La única vía real de curar el mundo murió cargada en sus brazos, por sus piernas, a su velocidad.**
 
 Nadie del asentamiento se lo echa en cara nunca — no saben. Lo quieren hasta el final. Lo llaman cuando hay que cavar. **Es la crueldad completa del final: muere querido por la gente a la que mató.**
 

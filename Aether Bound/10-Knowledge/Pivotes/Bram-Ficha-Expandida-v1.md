@@ -297,7 +297,7 @@ Ver [[Los 5 Finales]] — Bram ocupa la fila "Rechazo / Ausencia". Cada final es
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Bram vive. La Muda cierra sobre sí misma. Los God-Cores dejan de responder. El paisaje del cráter cambia de raíz.
+Bram vive. **Bram no ejecuta — Torgan como segundo agente es quien carga a Speck hacia el cráter, y es a él a quien el jugador alcanza y detiene** antes de que complete la entrega ([[Los 5 Finales]] §F1). La Muda cierra sobre sí misma. Los God-Cores dejan de responder. El paisaje del cráter cambia de raíz.
 
 **Epílogo:** Bram termina el juego en paz por primera vez en cuarenta años, **en el peor momento posible para estar en paz.** Regresa a Rivermeet — no al ala de House Thorne, no al ala del Council, a un barrio bajo cerca del río — y encuentra una ciudad en caída libre: talleres cerrados, bombas muertas, gente durmiendo en la calle por primera vez en generaciones.
 

@@ -16,32 +16,31 @@ updated: 2026-07-29
 
 **✅ 3ª re-corrida cerrada.** Canon fijado (detalle en [[LOG]]): agencia de Speck en 3 grados (`Speck.md §Capa 4`); regla del Fragmento fuente única (`Speck.md §Capa 5` — esperar no mata, ceder no mata, **arrebatar sí**); transporte corta el pulso; gates (pregunta=F4, forcejeo=F2b, **parálisis=F2a**); Isolde=reclamo de House Marrow; longevidad alineada; Goggles no retirables; Mudas ninguna completada en 550 años (error heredado marcado, no borrado).
 
-**✅ 4ª re-corrida cerrada (18→17).** Commits `7550a7d`, `ad3bde7`. Canon fijado (detalle en [[LOG]]): costo de F1 = colapso tecnológico NO exterminio (`Los 5 Finales §El costo de F1`, F1 no es mejor que F4); gate de F4 = 2 condiciones (fuera Goggles/flashes); matriz de roles fija eliminada; `Geografía` = fuente primaria de ubicaciones; Goggles fuente única en `Nomenclatura`. **Los 12 epílogos F1 reescritos** bajo la regla de costo — mejoró el beat en casi todos (Vekka, Lyris, Nyael, Darro).
+**✅ 4ª re-corrida cerrada (18→17).** Canon fijado (detalle en [[LOG]]): costo de F1 = colapso tecnológico NO exterminio (F1 no es mejor que F4); gate de F4 = 2 condiciones; matriz de roles fija eliminada; `Geografía` = fuente primaria de ubicaciones; Goggles fuente única en `Nomenclatura`. **12 epílogos F1 reescritos** bajo la regla de costo.
 
-## 5ª RE-CORRIDA QA — CORRIDA (2026-07-29). 15 críticos, 13 cerrados
+**✅ 5ª re-corrida cerrada (15→13).** Canon fijado (detalle en [[LOG]]): Speck durmió 550 años en crisálida (su humor se refundó desde el desfase del despertar, no de haber mirado caer la civilización); 4 fichas cortas archivadas (`Dagna/Darro/Roen/Valen.md` → `90-Raw/`, regla nueva: una sola fuente viva por personaje); Bond vacío invertido en la celda de Bram; premisa de que la Muda no tiene reloj autónomo; gate de F1 al borde del cráter; Vekka → Deber Institucional. **Los 5 finales visuales completos** (`5c.1-5c.4a/b`, ratificados por Boris) — nota abierta no bloqueante: orejas de zorro simple en vez de pétalos.
 
-6 de dramática + 9 de congruencia. Commits `c92b7fe` y siguientes. Detalle en [[LOG]].
+## 6ª RE-CORRIDA QA — CORRIDA (2026-07-30). 9 críticos, 8 cerrados
 
-**Dos de los críticos eran fixes míos hechos en la línea y no en la clase** (reclutamiento de C4: 1 de 4 lugares; rechazo de Darro: 2 de 5). Es el patrón que la regla 8 del CLAUDE.md existe para evitar, y volvió a pasar dentro de la misma sesión que lo documentó.
+6 de dramática + 3 de congruencia. Detalle completo en [[LOG]].
 
-### Decisiones de canon de Boris en esta ronda
+**Un patrón nuevo:** los 3 críticos de congruencia estaban en material *viejo que nadie había vuelto a mirar* (`Geografía §Beats Narrativos por Acto`, escrito antes de que las 9 fichas fijaran que el Pivote se une en el Acto 1) — no en la propagación de esta sesión, que salió limpia. El gate de F1 que escribí la ronda pasada también se contradecía a sí mismo en la misma frase ("detenido en el borde" + "carga hasta el centro").
 
-- **Speck durmió 550 años en crisálida** — NO estuvo despierta disfrazada de zorro. Era la versión mayoritaria (15 archivos) contra 3 líneas outlier de `Speck.md`. **Su humor se refundó:** no viene de haber mirado caer la civilización (no vio nada), viene de milenios de Warden previos + **el desfase del despertar** — todo lo que el grupo trata como normal a ella le resulta literalmente absurdo, y no puede explicar por qué. La ironía es el único registro disponible para alguien que entiende el chiste y no puede contarlo. El POI del avistamiento pasó a ser **The Guardians' Trail**: rastros de las bestias que la custodiaron.
-- **Las 4 fichas cortas archivadas** (`Dagna.md`, `Darro.md`, `Roen.md`, `Valen.md`) → `90-Raw/`. Verificado antes: las líneas canónicas y las secciones visuales ya vivían en las expandidas. **Regla nueva: una sola fuente viva por personaje**, anotada en `00-Index`.
-- **El Bond vacío se invierte en la celda de Bram** — el único Pivote que rehúsa nunca pierde el link, así que el beat obligatorio se juega al revés: el jugador pica Bond esperando el vacío que el juego entero le enseñó a temer, **y Bram responde.** Le paga su superlativo con mecánica, no con diálogo. Su costo llega igual en el cráter: rehúsa y el Council entrega con las manos de Torgan.
-- **Premisa corregida:** la Muda **no tiene reloj autónomo**. El F1 de Iven decía que "iba a ocurrir sola" en 2 años, lo que hacía físicamente imposible el statu quo de F2a y volvía el clímax un trámite. La prohibición 2 ahora cubre las dos cosas: ni *gratis* ni *iba a ocurrir sola*.
-- **Gate de F1 al borde del cráter, no antes** — choca con la puesta en escena si es antes (el agente carga a Speck hasta el centro). Con las 3 variantes por ruta: Pivote / equipo de extracción (Nyael) / Torgan segundo agente (Bram).
-- **Vekka es Deber Institucional**, no Aritmética (su ficha y el cuerpo de `Los 5 Finales` ya lo decían; la fila de la matriz era el outlier).
+**Cerrados:** gate de F1 reescrito sin contradicción (el punto exacto queda abstracto por diseño, cada ficha lo interpreta); Lyris F1/F3 alineadas a su propio sub-beat 5; Nyael y Bram F1 ahora mencionan a su agente sustituto (equipo de extracción / Torgan); premisa "sin reloj autónomo" bajada a la fuente real (`El Mundo y la Muda.md`, no solo a `Los 5 Finales`); ítem huérfano de `Bond y el Bond Vacío` reubicado; **Bound Five formado en Acto 1** propagado a `Geografía` y `Estructura Dramática` (decían Acto 2, las 11 fichas ya decían Acto 1); topología "rueda, no malla" reforzada (Geografía tenía 4 líneas describiendo conexión directa reino-reino); Momento de Persona 7 corregido a Acto 2; matriz de "3 cadenas de poder" con las 2 excepciones (Lyris, Bram); mecanismo de activación de Torgan alineado; gate de F4 con el calificador de Momentos disponibles; "sabor de traición por raza" corregido a "por arquetipo"; referencia rota de `5c.2b` y `CATALOGO.md` desactualizado.
 
-### ✅ Los 5 finales visuales completos (2026-07-30)
+### 🔴 Pendiente — decisión de Boris
 
-`5c.1` (F1, arte viejo ya correcto) / `5c.2a` (F2a, brief nuevo — sola, contención clínica, paleta fría) / `5c.2b` (F2b, ex-"Final 2") / `5c.3` (F3) / `5c.4` (F4, brief rehecho — sin pedestal, mirada recíproca al jugador, sin halo triunfal). Los tres briefs nuevos (`5c.2a`, `5c.4`, y el ancla vulpina de `5c.1`) generados y **ratificados por Boris**. Detalle y prompts completos en [[LOG]].
+**C4 — Iven rompe la fila "Deber Institucional" de la matriz en 2 de sus 5 celdas.** En F1 sobrevive querido en su asentamiento (la fila exige "muere o se autoexilia"); en F2a es "tolerado, no querido" sin ascenso (la fila exige "asciende sin celebración"). Su propia ficha ya se declara *"Deber Institucional en su variante envenenada"* — **¿la excepción es intencional** (Iven es el único cuya institución le mintió, y por eso su fila no puede leerse igual) **o hay que reescribir sus epílogos F1/F2a para que calcen**? No lo decidí por él; es un llamado de diseño, no un fix mecánico.
 
-**Nota abierta, no bloqueante (aplica a las 5 láminas):** las orejas quedaron con forma de zorro simple en vez de la forma de pétalos establecida en canon — anotado en `Briefs de Concept Art §Base visual común a todos los finales`. Refinamiento futuro si hay margen.
+### Pendientes menores, sin bloquear el cierre
+- `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond invertido (solo vive en `Bond y el Bond Vacío.md`).
+- 3 epílogos F4 (Maren, Iven, Bram) cierran en alza sin friccionar con "agridulce, no triunfal"; Roen F4 sin la pasada de tono que sí recibieron Valen/Darro.
+- `.claude/worktrees/quirky-wiles-afa8a0/` — worktree real de git (rama `claude/strange-galileo-243fc7`, 62MB) con vault viejo adentro. No la toqué; revisar si hace falta.
 
 ### 🔜 Pendiente para cerrar el sprint
 
-1. **6ª re-corrida QA.** Criterio: 0 críticos.
+1. **Decisión de Boris sobre C4/Iven** (arriba).
+2. **7ª re-corrida QA.** Criterio: 0 críticos.
 
 ### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 

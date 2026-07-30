@@ -15,7 +15,7 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
 **Gate:** dos condiciones, en este orden.
-1. **Quien iba a completar la entrega quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo.** El momento es **el borde del cráter, no antes**: el canon de puesta en escena es que el Pivote (o, en las rutas donde él ya no está, el ejecutor que dejó activado) **carga a Speck hasta el centro** y el jugador llega segundos después ([[Geografía y Ciudades]] §ACTO 3 sub-beat 5). No hay versión de F1 en la que Speck llegue al cráter sola. Es indispensable porque mientras ese agente pueda actuar, la inacción del jugador resuelve a **F2a**: la entrega se completa por defecto.
+1. **Quien iba a completar la entrega quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo — antes de que la entrega se consume.** El agente (el Pivote, o su sustituto) llega cargando a Speck hacia el centro del cráter; el jugador lo alcanza **en algún punto de ese tramo** — borde, centro, o entremedio, según lo que cada ficha necesite narrar. [[Geografía y Ciudades]] §ACTO 3, sub-beat 5, deja el punto exacto deliberadamente abstracto (*"cada ficha de Pivote escribirá su variación"*); lo único fijo es que **no hay versión de F1 en la que Speck llegue al cráter sola**, y que mientras ese agente pueda completar la entrega, la inacción del jugador resuelve a **F2a**: la entrega se completa por defecto.
 2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
 
 **Por ruta, quién es "quien iba a completar la entrega":**
@@ -115,7 +115,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 ### F4 — The Warden's Choice *(síntesis — el único con consentimiento de Speck)*
 
 **Gate compuesto — 2 condiciones, ambas discriminantes:**
-1. Mayoría "persona" en los Momentos de Persona de Speck.
+1. Mayoría "persona" en los Momentos de Persona **disponibles en esa partida** (no sobre un total fijo de 7 — el Momento 6 depende del Vector C del Grove).
 2. ≥2 compañeros en Tether T2+ ([[The Tether]]).
 
 Coincide con [[The Tether]] §Gate del Final 4 — **son la misma regla y no debe divergir.**

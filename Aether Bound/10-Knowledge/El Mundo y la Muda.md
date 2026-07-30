@@ -41,19 +41,25 @@ masacrados a mitad de **la Muda del Mundo** (the World-Molt): el gran reset
 del Aether que quedó inconcluso. La corrupción actual ES la Muda a medias.
 Cada core que el jugador destruyó en el Acto 1 era un cuerpo.
 
-**El dilema:** si Speck madura, terminará la Muda — sanaría el ecosistema y
-podría borrar la civilización actual. Esa lectura divide al grupo y detona la
-traición ([[Los 9 Pivotes]], [[Estructura Dramática]]). Los 5 desenlaces
-posibles: [[Los 5 Finales]].
+**El dilema:** si Speck termina la Muda, sanaría el ecosistema y podría borrar
+la civilización actual. **No hay reloj de maduración autónomo** ([[Los 5
+Finales]] §F1 — fuente única de esta regla): la Muda se completa únicamente si
+Speck llega al cráter y nadie interviene. "Madurar" no es un proceso que ocurra
+solo con el tiempo — es lo que pasa cuando el jugador decide no detenerla. Esa
+lectura divide al grupo y detona la traición ([[Los 9 Pivotes]], [[Estructura
+Dramática]]). Los 5 desenlaces posibles: [[Los 5 Finales]].
 
 **Por qué las 9 traiciones no son coincidencia:** el Triune Council nació
 gestionando esta misma corrupción — su poder depende de que la crisis siga
 administrada, no resuelta ([[Estructura Política]] §"Por qué el Council
-prefiere el statu quo"). Las órdenes hacia los 9 Pivotes vienen de 3 cadenas
-de poder distintas (Great Forging Clan, Royal Academy, Trade Consortium)
-que convergen todas en el mismo Council — una sola estrategia
-disuelta en 3 idiomas institucionales, ejecutada por 9 personas que nunca se
-enteran de que son parte del mismo plan.
+prefiere el statu quo"). **Casi todas** las órdenes hacia los 9 Pivotes vienen
+de las 3 cadenas de poder institucionales (Great Forging Clan, Royal Academy,
+Trade Consortium) que convergen en el mismo Council — una sola estrategia
+disuelta en 3 idiomas institucionales. Dos excepciones, por diseño: Lyris
+responde a Frontier High Command, un cuarto track fuera de las tres
+academias ([[Estructura Política]] — *"Fuera de ambas Academias"*); Bram tiene
+**contrato directo con el Triune Council**, sin intermediario. Las 9 personas
+ejecutan, casi ninguna sabe que es parte del mismo plan.
 
 **Estética:** aetherpunk medieval — magia cruda (Aether) como combustible
 tecnológico en naturaleza exuberante. Dirección visual: [[Art Bible]].

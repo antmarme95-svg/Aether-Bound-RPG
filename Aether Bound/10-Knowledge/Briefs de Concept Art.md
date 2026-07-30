@@ -331,7 +331,7 @@ captions, no photorealism.
 
 #### **5c.2b — Final 2b: The Long Winter, Fallen — E3 como God-Core Muerto, Monumento Frío ✅**
 
-**Archivo:** `Speck - Imprisoned Warden Form Final 3` (GENERADO 2026-07-23, imagen pasada)
+**Archivo:** `Final 2 The Long Winter.png` (GENERADO 2026-07-23, imagen pasada — el nombre de archivo interno era `Speck - Imprisoned Warden Form Final 3`, corregido acá al nombre real en disco)
 
 **Evaluación:** ✅ 95%+ PASS — Landscape keyframe The First Wound cementerio (desolado, monumento muerto, luz fría gris-azul, Speck reconocible pero cristalizada, ojos congelados, runas dormidas, seams atenuados). Composición épica: Speck miniaturizada por vastedad, humano pequeño en distancia mirando. Paleta desaturada excepto rojo muted. Atmósfera: solemnidad, pérdida absoluta, funeral. **Capstone visual de desolación.**
 

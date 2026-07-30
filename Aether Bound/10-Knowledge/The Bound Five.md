@@ -56,14 +56,18 @@ Cinco personas + Speck, siempre. Ver [[Los 9 Pivotes]] §Canon.
 
 **Constantes del Pivote:** (1) nunca de tu raza, rol co-dependiente del tuyo;
 (2) te enseña la virtud que tu cultura no tiene y su traición usa esa virtud
-en tu contra; (3) el sabor de la traición lo dicta su raza — Humano =
-pragmatismo · Enano = deber · Elfo = lógica fría.
+en tu contra; (3) el sabor de la traición lo dicta su **arquetipo**, no su
+raza — Aritmética/Manipulación, Deber Institucional, o Rechazo/Ausencia (ver
+matriz ratificada en [[Los 5 Finales]] §matriz — 3 de las 9 razas rompen
+cualquier regla fija por raza: Iven y Bram, humanos, están en Deber
+Institucional y Rechazo/Ausencia respectivamente; Nyael, elfa, está en Deber
+Institucional).
 
 Control en juego: [[Bond y el Bond Vacío]] (autónomos + un botón, cero menús).
 Vínculos y progresión de intimidad: [[The Tether]].
 
 **Pendiente (❓):** tablas de C1/C2/C4 por celda de jugador + sus links (y los
-links directos de Speck estadio 2). → Task-Board.
+links directos de Speck en su fase de desvelamiento previa a E3). → Task-Board.
 
 
 **Preguntas/Dudas Toño a Claude:** 

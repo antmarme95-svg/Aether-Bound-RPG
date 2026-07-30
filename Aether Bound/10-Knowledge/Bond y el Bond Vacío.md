@@ -29,6 +29,10 @@ responde nadie.**
    gimotea. La cámara vuelve al hombro sin corte.
 4. **Regla de dirección:** el dramatismo sale de **reusar el lenguaje de la
    celebración sobre la ausencia** — cuanto más idéntico, más duele.
+5. **Eco final:** cuando Speck puentea el link degradado, la Link Cam regresa
+   encuadrándola *imitando la postura* del Pivote. El sting suena en otra
+   tonalidad. Aplica a las 8 celdas con traición — **no a la celda de Bram**,
+   ver excepción abajo.
 
 ## La excepción de Bram — el Bond que SÍ responde
 
@@ -58,10 +62,8 @@ un hueco: es la única celda donde el beat se juega invertido.**
 
 **Nota de diseño:** el sting completo de este beat **no debe mezclarse** con el sting
 truncado de dos notas de las otras ocho celdas. Si el jugador rejuega y los confunde,
-la inversión no lee.
-5. **Eco final:** cuando Speck puentea el link degradado, la Link Cam regresa
-   encuadrándola *imitando la postura* del Pivote. El sting suena en otra
-   tonalidad.
+la inversión no lee. **Y en esta celda no hay Eco final** (arriba, ítem 5): no hay
+link degradado que Speck pueda puentear, porque Bram nunca lo perdió.
 
 El sting de dos notas es el leitmotiv del juego entero; cada final cierra con
 su propio eco de este lenguaje ([[Los 5 Finales]]). El cordón trenzado del

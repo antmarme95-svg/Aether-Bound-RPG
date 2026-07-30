@@ -310,7 +310,7 @@ Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final 
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
+El jugador alcanza a Dagna cargando a Speck y la detiene antes de que llegue al mensajero de Deepstone que espera en el cráter. Dagna no forcejea — sostiene el escudo en alto un segundo, mide la situación con la misma calma con la que sostuvo cinco años de escolta, y baja el arma. Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
 
 **Epílogo:** Dagna **deserta.** Es la distinción que importa: no renuncia — renunciar es un acto formal que exige presentarse ante el consejo y decirlo, y para eso haría falta un informe que ella no puede escribir. Deja el escudo pesado en el altar del subclán, no avisa a nadie, y sale de Emberdeep a pie. En los papeles sigue siendo Deepstone. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
 

@@ -301,7 +301,9 @@ distintas pero conectadas al mismo cuerpo:**
 
 - Torgan/Vekka/Dagna → Great Forging Clan → King Borran → **Ambassador Kadrun**
 - Sereth/Nyael → Royal Academy → Queen Ithessa → **Ambassador Cyrion**
-- Maren → Trade Consortium → **Triune Council directamente**
+- Maren/Bram → Trade Consortium/**contrato directo** → **Triune Council directamente**
+- Iven → mentira específica del Council (sin cadena institucional intermedia — ver su ficha)
+- Lyris → **Frontier High Command**, un cuarto track fuera de las tres academias, que igual reporta arriba al Council
 
 No es que 9 personas decidieron traicionar por separado — es que **una sola
 institución supra-racial coordina la misma estrategia a través de 3 cadenas

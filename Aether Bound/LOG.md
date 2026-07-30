@@ -5849,6 +5849,121 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### 6ª re-corrida QA — 9 críticos, 8 cerrados (2026-07-30)
+
+Dos QAs Opus en frío: **6 de dramática + 3 de congruencia.**
+
+**Patrón nuevo esta ronda:** los 3 críticos de congruencia estaban en material
+*viejo que nadie había vuelto a mirar* — `Geografía y Ciudades §Beats
+Narrativos por Acto` — no en la propagación de la 5ª ronda, que el QA
+confirmó limpia. Y uno de los críticos de dramática era mío, de la ronda
+pasada: el gate de F1 que escribí se contradecía en la misma frase
+("detenido en el borde del cráter" + "carga a Speck hasta el centro" — un
+agente no puede estar en las dos partes a la vez).
+
+#### Dramática (6 críticos)
+
+- **C1 — gate de F1 autocontradictorio.** Reescrito: el punto exacto de
+  intercepción queda **abstracto por diseño** (borde, centro, o entremedio),
+  citando la abstracción que `Geografía §ACTO 3 sub-beat 5` ya declaraba
+  explícita ("cada ficha de Pivote escribirá su variación"). Ya no fuerza una
+  geometría única que las 9 fichas no podían cumplir a la vez.
+- **C2 — Lyris F1/F3 contradecían su propio sub-beat 5.** Su F1 saltaba
+  directo a "se queda quieta en su cielo" sin el paso de ser neutralizada
+  mientras sostenía a Speck; agregado el beat de que cede sin forcejeo antes
+  de retirarse. Su F3 decía "se va antes del cráter" cuando su staging la
+  tiene ahí sosteniendo a Speck — corregido a que suelta y asciende
+  **específicamente cuando ve al jugador cruzar hacia el core**, mismo
+  patrón de salvaguarda que ya tenía Bram.
+- **C3 — Nyael y Bram: los dos casos para los que se reescribió el gate no
+  lo mencionaban.** Ninguna de las dos fichas nombraba a su agente sustituto
+  (equipo de extracción / Torgan) en su propio epílogo F1. Agregado a las dos.
+- **C4 — Iven rompe la fila Deber Institucional en F1 y F2a.** **Sin
+  resolver — decisión de Boris registrada en Current-State.** Su ficha ya se
+  declara "variante envenenada"; falta decidir si eso justifica la excepción
+  o si hay que reescribir los epílogos para calzar con la fila.
+- **C5 — "sin reloj autónomo" nunca bajó a la fuente.** `El Mundo y la
+  Muda.md:44` (el documento raíz) seguía diciendo "si Speck madura, terminará
+  la Muda" sin condición de cráter. Reescrito ahí, y barrida la clase
+  completa: `Iven:20` (la promesa del Council como "físicamente imposible"),
+  `Iven:576` (F2b, tenía literal "estaba en camino a madurar" — contradecía a
+  `Iven:522`, arreglado la ronda pasada, 54 líneas antes en el mismo
+  archivo), `Valen:70` y `Valen:219` (presentado como lectura confirmada del
+  Archive, no como creencia de personaje).
+- **C6 — ítem huérfano en `Bond y el Bond Vacío.md`.** El "5. Eco final" de
+  la lista original (ítems 1-4) quedó pegado dentro de la sección de la
+  excepción de Bram al insertarse esa sección — y ahí contradice, porque en
+  la celda de Bram no hay link degradado que Speck pueda puentear. Reubicado
+  a su lista original, con nota explícita de que no aplica a Bram.
+
+#### Congruencia (3 críticos — todos en `Geografía §Beats Narrativos`)
+
+- **C1 — Cuándo se forma The Bound Five: Acto 1 vs Acto 2.** Las 9 fichas de
+  Pivote + los 3 fijos + `Speck.md` sitúan al grupo completo desde el Acto 1.
+  `Geografía` (bloque de sub-actos 2A/2B/2C) y `Estructura Dramática:14`
+  seguían con "Encuentro con Maren/Torgan/Dagna/Lyris/Sereth" en Acto 2 —
+  residuo de antes de que las fichas fijaran el canon. Corregido: los 3
+  sub-actos ahora dicen "el Pivote [raza] ya está en el grupo desde el Acto
+  1 — territorio natal, no encuentro", con la lista correcta de qué Pivote es
+  de qué raza (enanos: Torgan/Dagna/Vekka; elfos: Sereth/Lyris/Nyael;
+  humanos: Maren/Iven/Bram — verificado contra `Los 9 Pivotes.md`, cometí y
+  corregí un error de raza propio en el camino). También corregido
+  `Estructura Dramática.md:14` y el residuo "Segunda traición visible" (no
+  hay segunda traición, era la misma corrupción del asentamiento de Iven ya
+  etiquetada dos veces).
+- **C2 — topología "rueda, no malla" contradicha en 4 lugares.** La regla que
+  fijé esta sesión (*"los tres reinos no se conectan entre sí
+  directamente"*) chocaba con texto viejo de `Geografía §Reinos`: Cinder
+  Ascent y Gloomvault descritos como accesos directos reino-a-reino en vez de
+  radios hacia The Wilds. Corregidas las 4 menciones (Cinder Ascent Base como
+  puesto de Aethelgard, accesos de Aethelgard e Ignis Reach).
+- **C3 — Momento de Persona 7 fechado en el Acto equivocado.** `Speck.md:215`
+  decía "Acto 3 — antes de The Reckoning", pero The Reckoning es de **Acto
+  2** en 4 fuentes (`Grove of Cycles`, `Geografía`, ficha de Bram). Un beat no
+  puede ser "Acto 3" y "antes de un evento de Acto 2" a la vez. Corregido ahí
+  y en `Geografía:894` y `La Rueda:32` (que agrupaba los 7 Momentos en Acto 2
+  sin reconocer que los 2 primeros son de Acto 1).
+
+#### MEDIUM cerrados (5 de los reportados)
+
+- Gate de F4 sin el calificador "Momentos disponibles en esa partida" en
+  `Los 5 Finales:118` — las 2 fuentes que lo declaran obligatorio
+  (`The Tether`, `Grove of Cycles`) ya lo tenían.
+- Mecanismo de activación de Torgan: `Geografía:1038` negaba el mensajero y
+  ponía la cadena en el Great Forging Clan; 3 fuentes (ficha de Torgan, ficha
+  de Bram, `Los 9 Pivotes`) dicen mensajero + clan menor. Alineado.
+- "3 cadenas de poder, 9 personas" como regla absoluta — Lyris (Frontier High
+  Command, un cuarto track) y Bram (contrato directo, sin cadena) la rompían.
+  Suavizado a "casi todas" en `El Mundo y la Muda` y completada la lista de
+  `Estructura Política:298-304` a las 9.
+- "El sabor de la traición lo dicta la raza" (`The Bound Five:59`)
+  contradecía la matriz ratificada en 3 de 9 (Iven y Bram humanos no son
+  pragmatismo; Nyael elfa no es lógica fría). Corregido a "por arquetipo".
+- `5c.2b` apuntaba a un archivo que no existe en disco
+  (`Speck - Imprisoned Warden Form Final 3`) — el asset real es
+  `Final 2 The Long Winter.png`. Corregido, y actualizado `CATALOGO.md`, que
+  seguía hablando de "4 finales" cuando son 5.
+
+Más 3 MEDIUM de barrido rápido: residuo del modelo de "estadios" de
+crecimiento (abolido en `Speck.md`) en `Los 9 Links del Pivote` y
+`The Bound Five`; violación de la regla de Goggles en `Geografía:1030`
+("que Valen no puede traducir sin los lentes" es un contrafáctico inválido —
+Valen nunca accede a esa capa, punto); Lyris F2a entregaba a Speck "en el
+punto acordado" fuera del cráter, imposible por la regla física de
+`Speck.md §Capa 5`; Dagna F1 elidía el beat de neutralización.
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~3,4k).
+**No cerrado — falta la decisión de Boris sobre C4/Iven, y después la 7ª
+re-corrida.**
+
+**Pendiente sin tocar, de menor prioridad:** `Los 9 Links del Pivote`/ficha
+de Bram no anotan la excepción del Bond invertido; 3 epílogos F4 (Maren,
+Iven, Bram) cierran en alza sin la fricción de "agridulce, no triunfal";
+Roen F4 sin la pasada de tono de Valen/Darro. Y una nota lateral: existe un
+worktree de git real en `.claude/worktrees/quirky-wiles-afa8a0/` (rama
+`claude/strange-galileo-243fc7`, 62MB) con una copia vieja del vault — no se
+tocó, revisar si hace falta.
+
 ### Los 5 finales visuales completos + hook de check_vault.py (2026-07-30)
 
 **F1 (5c.1) — falsa alarma resuelta.** Boris mostró una imagen de un ciervo con

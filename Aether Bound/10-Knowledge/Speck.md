@@ -212,7 +212,7 @@ sub-gate, así que en la mayoría de las partidas son 6
 
 6. **Acto 2 — Grove of Cycles, Vector C** (ya escrito, ver [[Grove of Cycles — Escena del Acto 2]] §Por qué el grupo llega ahí). Gira la cabeza al noreste y no la mueve por 20 segundos completos, sin que nada en el entorno lo justifique. Es el Momento más puro del set — el molde del que salieron los otros seis.
 
-7. **Acto 3 — antes de The Reckoning, la única vez que ella dirige.** Frente a dos caminos hacia The Driftmarket, Speck se adelanta y toma uno por su cuenta — la primera vez en todo el juego que camina *delante* del grupo en vez de seguirlo, y elige. No es el camino más corto ni el más seguro. Herramienta: el grupo la sigue porque "conoce el terreno mejor". Mascota: alguien la carga de vuelta a la ruta "correcta". Persona: el grupo toma su camino sin necesidad de una razón — confía en que ella decidió por algo, aunque no puedan preguntarle qué.
+7. **Acto 2 — final del acto, antes de The Reckoning, la única vez que ella dirige.** Frente a dos caminos hacia The Driftmarket, Speck se adelanta y toma uno por su cuenta — la primera vez en todo el juego que camina *delante* del grupo en vez de seguirlo, y elige. No es el camino más corto ni el más seguro. Herramienta: el grupo la sigue porque "conoce el terreno mejor". Mascota: alguien la carga de vuelta a la ruta "correcta". Persona: el grupo toma su camino sin necesidad de una razón — confía en que ella decidió por algo, aunque no puedan preguntarle qué.
 
 **El Pivote como testigo natural:** de las cinco personas del grupo (jugador + Roen + Valen + Pivote activo + Darro — headcount inviolable, [[The Bound Five]]), el
 Pivote activo es quien más tiempo pasa observando cómo el jugador trata a
