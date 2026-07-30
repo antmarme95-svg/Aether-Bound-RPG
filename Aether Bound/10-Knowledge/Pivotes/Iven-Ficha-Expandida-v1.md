@@ -517,7 +517,13 @@ Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epíl
 
 Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
 
-**Y ahí está la crueldad exacta de este final: la Muda era la cura, y para su gente era gratis.** El asentamiento de Iven nunca fue Aether-dependiente — era la periferia que el Council no cableó porque no valía la inversión. No tenían nada que se pudiera apagar. Si Iven se hubiera quedado sentado dos años esperando, **su gente habría vivido igual, y mejor.** Traicionó a las cinco personas que lo querían para conseguir un resultado que iba a ocurrir solo.
+**Y ahí está la crueldad exacta de este final: la Muda era la cura, e Iven casi la mata.**
+
+La Muda **no iba a ocurrir sola.** No hay reloj autónomo: Speck tenía que llegar al cráter y que nadie interviniera, y las dos cosas dependieron de decisiones ajenas a Iven — de hecho, de las decisiones **contrarias** a las suyas. Él pasó el Acto 3 tratando de impedir exactamente lo que sanó a su gente. Estuvo a un forcejeo de conseguirlo.
+
+Eso es peor que traicionar en vano: **traicionó *contra* su propio objetivo.** El agua de sus pozos se limpió porque el jugador lo detuvo, no a pesar de eso. Y si el jugador quiere ser cruel, tiene la frase disponible y verdadera: *"Tu gente vive porque perdiste."*
+
+**Lo que su gente sí se ahorró, y no fue gratis.** El asentamiento nunca fue Aether-dependiente — era la periferia que el Council no cableó porque no valía la inversión, así que no tenía nada que se pudiera apagar. Se salva del apagón, no del mundo que deja el apagón: no entran herramientas nuevas, no hay quien funda metal, no llega sal, no pasa un sanador. **Es un pueblo con agua limpia en un continente sin comercio**, y va a criar dos generaciones aprendiendo a hacer a mano lo que antes compraba. Sobreviven mejor que casi nadie, y "mejor que casi nadie" en esta década no significa bien.
 
 **Epílogo:** Iven sobrevive (si cayó en el cráter, cayó ahí y no hay más). Vuelve al asentamiento a pie, tardando el doble de lo necesario. Cruza de vuelta un país que no reconoce: caravanas detenidas sin combustible, una fundición apagada con la gente todavía sentada enfrente, funcionarios del Council discutiendo a gritos qué son ahora. Nadie lo detiene. Nadie tiene tiempo de detener a nadie.
 

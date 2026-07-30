@@ -236,7 +236,7 @@ El Fragmento se activa. Speck reacciona. La verdad completa sale.
 
 Valen **ya sabía.** No la traición específica, pero **la estructura de ella.** Notó cuando el Pivote comenzó a hacer cálculos paralelos hace semanas.
 
-Su reacción es la más devastadora del grupo: **dos palabras, sin emoción.**
+Su reacción es la más **fría** del grupo — la más devastadora es el silencio de Roen ([[Roen-Ficha-Expandida-v1]]); la de Valen es la más difícil de responder: **dos palabras, sin emoción.**
 
 *"I know."*
 
@@ -303,7 +303,13 @@ Valen se va. Pero no con drama. Con nota escrita, sin firmar — su trabajo term
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
 Valen es quien **confirma la nueva estructura**.
 
-*"The Molt completes. The pattern breaks. I no longer have registros for this future. That is both terrifying and... novel."*
+*"The Molt stops halfway — and it stops **because she said so.** The pattern breaks. I no longer have records for this future. That is both terrifying and… novel."*
+
+Pausa. Y después, porque es el confirmador de realidad y le toca:
+
+*"You should know what you traded. The world gets a slow cure and time to learn. You get to remember that you asked her, and that she answered. She does not get to come back. Do not let anyone tell you those cancel out."*
+
+**Nota de escritura:** en F4 la Muda es **parcial** ([[Los 5 Finales]] §F4) — *"The Molt completes"* es la descripción de **F1** y no puede aparecer acá, y menos en boca del personaje cuya función es confirmar la realidad.
 
 Su línea final:
 *"For the first time in 230 years, I cannot calculate what comes next. That is the price of change. I'm not sure if I'm grateful."*

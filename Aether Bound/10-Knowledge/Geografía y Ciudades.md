@@ -105,7 +105,7 @@ updated: 2026-07-27
 
 - **Ember Workshops** (dispersos por cavernas)
   - Talleres de forja secundarios
-  - Donde aprendices como Darro fueron rechazados
+  - Talleres de aprendices en general. **El rechazo de Darro NO ocurrió acá:** fue en el taller de Vekka, cara a cara, hace ~30 años (§Emberdeep — Darro's Shame). No fue público ni quedó registrado en ningún muro
   - Donde Vekka forjó equipo del jugador (posiblemente viajando)
 
 **Geografía Física:**
@@ -547,7 +547,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Dinámicas:
   - Vekka: siente culpa profunda
   - Vekka: "les hice armas. No pude salvarlos con las armas"
-  - Darro: reconoce esta forja (estudia con Vekka aquí)
+  - Darro: reconoce la **mano** de Vekka en el trabajo, no el lugar — su tutela con ella fue en Emberdeep, no acá. Reconocer su técnica en una forja perdida de The Wilds es peor que reconocer el sitio: la sigue leyendo después de treinta años
 
 #### **Dagna's Clan Stone** (East-Central, in The Wilds)
 - Monolito de piedra enana con símbolos de clan (real clan stone, not in cave)
@@ -680,7 +680,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   de la montaña
 - Guarnición: fija, la misma familia/clan por generaciones
 - Dinámicas: Torgan/Vekka/Dagna reconocen el puesto (posible pariente
-  destacado ahí); Darro tiene historia incómoda (aquí lo vieron rechazado)
+  destacado ahí); Darro tiene historia incómoda — **no porque lo hayan rechazado acá** (fue en Emberdeep, en privado), sino porque este puesto es el punto de paso obligado hacia Ignis Reach y él pasó veinticinco años evitando aceptar trabajos ahí
 
 #### **Stillwood Watch** (North — junto a The Ascending Falls, entrada desde Gloomvault)
 - Arquitectura élfica: no es "torre" en el sentido humano/enano — es una
@@ -701,7 +701,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - **Función:** Mercado negro, terreno franco entre reinos
 - **Habitantes:** Nómadas, comerciantes, "Mistbound" (grupo cultural divergente)
 - **Mecánica:** Standing vs Bond tensión (mercado no respeta Triune Council)
-- **Reclutamiento:** C4 es reclutado aquí (se une al grupo)
+- **NO hay reclutamiento acá.** Darro (C4) ya está en el grupo desde el primer campamento del Acto 1 — fue el primero en tocar la crisálida y quien nombró a Speck. El Driftmarket es de Acto 2/The Reckoning, muy posterior
 - **Arquitectura:** Plataformas flotantes, velas de tela, mercado caótico
 - **Política:** Neutral pero compleja (deuda, favores, crédito mercante)
 
@@ -728,8 +728,10 @@ porque puede, no porque calcula.
 **Línea canónica:** *"I don't care who you were before you got here. I
 care what you do while you're standing on my docks."*
 
-**Conexión con Darro:** posiblemente vouches por él desde antes — explica
-por qué el Driftmarket es donde C4 se recluta con naturalidad.
+**Conexión con Darro:** posiblemente vouches por él desde antes — Darro ya
+lleva un acto entero en el grupo cuando llegan acá, así que el gesto no es
+reclutamiento sino **reconocimiento**: alguien de este mercado lo conoce y lo
+respalda, y el grupo lo ve.
 
 ### MISTBOUND FRONTIER (Región Humana Interior — Oeste Profundo)
 - **Ubicación:** Tierra interior remota de Aethelgard, más allá de Rivermeet (sur-oeste profundo), lejos del río
@@ -1039,7 +1041,7 @@ El corazón del Acto 3. El Pivote (o el segundo agente, en ruta Bram) huye por T
 
 Las pistas dramáticas que emergen aquí:
 - **Aliados momentáneos**: dependiendo de decisiones del Acto 2, pueden aparecer figuras que ayudan a interceptar — un contingente pequeño de Aethelgard Watch si Roen mantuvo su Bond con el puesto, un centinela de Stillwood Watch si Valen intercedió, un mercenario suelto de la vieja compañía de Bram. Nunca resuelven el clímax; solo mueven el tablero medio metro.
-- **Decisiones del jugador sobre el Pivote antes del cráter**: dos o tres puntos donde el jugador puede elegir entre alcanzar y neutralizar al Pivote en la persecución (final más rápido, más cruel) o dejar que llegue al cráter para hablar (final más largo, más doloroso, único que permite F4). Estas decisiones no se anuncian con UI — se juegan con el botón de Bond (rehusarlo es una decisión).
+- **Decisiones del jugador sobre el Pivote antes del cráter**: dos o tres puntos donde el jugador puede elegir entre cerrarle el paso al Pivote y detenerlo **en el borde del cráter** (la ruta que abre F1: más corta, elegíaca, con luto — **no cruel**) o dejarlo llegar hasta Speck y hablar (más larga, más dolorosa, única que permite F4). **En ninguna de las dos Speck llega al cráter sola:** el agente de la entrega la carga hasta el centro en todos los casos. Estas decisiones no se anuncian con UI — se juegan con el botón de Bond (rehusarlo es una decisión).
 - **Los Bonds acumulados se prueban aquí**: los 2-3 fijos restantes reaccionan a la persecución según su Tether. Roen carga peso emocional que no descarga; Valen ofrece lectura filosófica que suena a evasión; Darro insiste en bromas que fallan y luego pide perdón. Si el Bond con alguno cayó en el Acto 2, ese fijo pierde una línea completa aquí — su silencio es la penalidad.
 
 El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometría del suelo se rompe, y en el horizonte empieza a verse el cráter latir. El grupo llega al borde de The First Wound cuando el sol se pone.
@@ -1048,7 +1050,9 @@ El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometrí
 
 Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
 
-Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el Pivote entrega por defecto —, y **preguntarle a Speck qué quiere** es F4. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta.
+Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el Pivote entrega por defecto —, **preguntarle a Speck qué quiere** es F4, y **neutralizar al Pivote en el borde y después no intervenir con Speck es F1**. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta. Y la diferencia entre F2a y F1 tampoco es la quietud: es si queda alguien capaz de completar la entrega.
+
+**Los cinco gates del cráter, completos** (ninguno puede faltar de esta lista): cruzar = F3 · forcejear = F2b · retroceder o congelarse = F2a · preguntar = F4 · **neutralizar al agente de la entrega y no intervenir = F1**. En la ruta Nyael ese agente es el equipo de extracción que ella dejó activado, y en la ruta Bram es Torgan como segundo agente — **F1 exige detener a ése**, no a un Pivote que ya no está en escena ([[Los 5 Finales]] §F1).
 
 Los detalles del acto final quedan abstractos aquí — cada final los interpreta distinto y cada ficha de Pivote escribirá su variación. Lo que este documento fija: **el cráter es el escenario único de la decisión**, no hay clímax repartido en dos locaciones, y ningún Pivote decide por el jugador. El Pivote llegó cargando a Speck; el jugador decide qué pasa después.
 
@@ -1078,7 +1082,7 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 ### Strategic Positioning
 - **The Wilds es el núcleo:** acceso a todo desde cualquier reino
-- **The Driftmarket es el hub:** mercado, descanso, reclutamiento
+- **The Driftmarket es el hub:** mercado, descanso, información (**no reclutamiento** — el grupo ya está completo desde Acto 1)
 - **Mistbound Frontier es la "salida del mapa":** donde Standing se pierde completamente
 
 ---

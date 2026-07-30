@@ -140,7 +140,7 @@ speck with opinions."*
 Darro reconoce que Speck razona — que tiene intenciones, que entiende.
 **Pero es solo... un zorro extraño.** Darro hace la observación burlona (conexión
 de humor enano con humor pragmático de Speck). Un solo nombre canónico, **nueve
-escenas de bautizo distintas** (varía el C4 según quinteto). En el endgame el
+escenas de bautizo distintas** — **lo que varía NO es quién bautiza:** C4 es Darro fijo en las 9 celdas ([[The Bound Five]]). Varía el **Pivote presente** y por tanto quién reacciona y cómo. En el endgame el
 Triune Council la llama "the Warden"; el grupo insiste en "Speck" — **el nombre es el
 vínculo.**
 
@@ -193,7 +193,7 @@ sub-gate, así que en la mayoría de las partidas son 6
 
 7. **Acto 3 — antes de The Reckoning, la única vez que ella dirige.** Frente a dos caminos hacia The Driftmarket, Speck se adelanta y toma uno por su cuenta — la primera vez en todo el juego que camina *delante* del grupo en vez de seguirlo, y elige. No es el camino más corto ni el más seguro. Herramienta: el grupo la sigue porque "conoce el terreno mejor". Mascota: alguien la carga de vuelta a la ruta "correcta". Persona: el grupo toma su camino sin necesidad de una razón — confía en que ella decidió por algo, aunque no puedan preguntarle qué.
 
-**El Pivote como testigo natural:** de las nueve personas del grupo, el
+**El Pivote como testigo natural:** de las cinco personas del grupo (jugador + Roen + Valen + Pivote activo + Darro — headcount inviolable, [[The Bound Five]]), el
 Pivote activo es quien más tiempo pasa observando cómo el jugador trata a
 Speck — no por diseño narrativo forzado, sino porque el Pivote es, en casi
 toda ruta, quien camina más cerca del jugador durante los Momentos de

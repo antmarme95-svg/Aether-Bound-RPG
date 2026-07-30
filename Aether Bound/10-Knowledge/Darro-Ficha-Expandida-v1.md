@@ -317,13 +317,19 @@ Darro se va. Es lo más devastador posible viniendo de él. No grita — simplem
 Años después, nota que Darro nunca volvió.
 
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
-Darro es quien **celebra de verdad.**
+Darro es quien **celebra primero** — y el único del elenco al que la celebración se le cae encima a mitad de camino.
 
 *"SPECK VIVE. SPECK ELIGE. NOMBRE SIGUE SIENDO PROMESA."*
 
-Es su única alegría genuina en cualquier final.
+Es su alegría más genuina en cualquier final, y **dura poco.** Porque después el grupo se da la vuelta para irse y Speck no viene. Darro se queda mirando el cráter con la boca todavía a medio gesto, y hace la pregunta que nadie quiere contestar:
 
-Años después, Darro es el que cuenta historias de "el día que nombramos a Speck" — es la historia que repite cada vez que alguien le pregunta.
+*"¿Y ahora la dejamos acá."* No es pregunta. *"Le pusimos nombre para que fuera de alguien. Y la dejamos acá."*
+
+**El costo de F4 le pega a él más que a nadie**, porque el nombre fue suyo: fue el primero en tocar la crisálida y el que la bautizó ([[Los 5 Finales]] §F4 — la calcificación es permanente; nadie vuelve por ella). Que Speck haya elegido no le devuelve a Speck. Es exactamente lo agridulce que el final promete: **preguntarle fue lo correcto, y la respuesta se la lleva.**
+
+Años después, Darro es el que cuenta historias de "el día que nombramos a Speck" — es la historia que repite cada vez que alguien le pregunta. La cuenta bien, la cuenta con gracia, y **nunca cuenta el final.** Cuando alguien pregunta qué pasó con ella, Darro cambia de tema con un chiste, y quien lo conoce sabe que ese chiste es una puerta cerrada.
+
+**Nota de escritura:** el beat de celebración va **antes** del de pérdida, nunca al revés, y el epílogo no puede cerrar en la alegría. `Los 5 Finales` §F4 declara el sabor **agridulce, no triunfal**; Darro es el termómetro emocional del grupo, así que si él cierra celebrando, el jugador lee F4 como final feliz.
 
 ---
 
@@ -350,7 +356,7 @@ No es argumento. Es **declaración de promesa.**
 **Traición:** Cuando Torgan actúa, Darro acepta: *"Un hombre es su palabra. Honro eso. También te lucho por ello."*
 
 ### Darro + Iven (Humano Duelist → Él)
-**Primera impresión:** Dos Vanguards, energía similar. Darro lo ve como hermano de rol diferente.  
+**Primera impresión:** **dos Duelists** — mismo rol, energías opuestas. Darro es velocidad con chiste, Iven es velocidad con deber. Darro lo ve como hermano del **mismo** oficio y le desconfía justo por eso: sabe lo que un Duelist es capaz de hacer cuando cree que no tiene opción.  
 **Tensión:** Iven menciona su asentamiento. Darro: *"Amor a casa es hermoso. También es jaula."* Pregunta si Iven puede elegir.  
 **Traición:** Cuando Iven elige a su pueblo, Darro: *"Te entiendo. No te disculpes por amar. Solo... Speck también merecía amor."*
 
@@ -389,7 +395,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Traición:** cuando Vekka desmonta el equipo del jugador por última vez, Darro reconoce el gesto en su propio cuerpo — es el mismo con que lo desmontó a él, treinta años atrás. Darro es quien siempre grita; en este momento se queda mudo, la única vez en la campaña. Después, si el jugador lo acompaña, Darro dice una sola cosa: *"Ahora sé por qué me despidió. Es porque sabía que iba a doler menos rápido que si me quedaba."* No es toda la verdad, pero es lo único que puede sostener sin romperse.
 
-**Este es el quiebre más hondo de Darro en todo el elenco de arquetipo Aritmética/Manipulación** — Maren y Sereth pueden dolerle (ver abajo), pero solo Vekka fue, literalmente, la persona que lo desmontó primero. Es la única traición donde Darro no tiene chiste ni siquiera de reserva.
+**Este es el quiebre más hondo de Darro en todo el elenco** — Maren y Sereth pueden dolerle desde la Aritmética, y Torgan desde el deber compartido (ver abajo), pero solo Vekka fue, literalmente, la persona que lo desmontó primero. Es la única traición donde Darro no tiene chiste ni siquiera de reserva.
 
 ---
 

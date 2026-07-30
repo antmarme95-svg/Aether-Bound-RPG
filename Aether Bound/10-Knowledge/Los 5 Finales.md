@@ -15,10 +15,15 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
 **Gate:** dos condiciones, en este orden.
-1. **El Pivote quedó neutralizado antes del cráter** — alcanzado en la persecución y detenido. Es indispensable: mientras el Pivote pueda actuar, la inacción del jugador resuelve a F2a, porque el Pivote completa la entrega ([[Geografía y Ciudades]] §ACTO 3 sub-beat 5).
-2. **El jugador no interviene en el cráter.** No cruza hacia el core, no forcejea, no pregunta. Se queda fuera y deja que la Muda termine.
+1. **Quien iba a completar la entrega quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo.** El momento es **el borde del cráter, no antes**: el canon de puesta en escena es que el Pivote (o, en las rutas donde él ya no está, el ejecutor que dejó activado) **carga a Speck hasta el centro** y el jugador llega segundos después ([[Geografía y Ciudades]] §ACTO 3 sub-beat 5). No hay versión de F1 en la que Speck llegue al cráter sola. Es indispensable porque mientras ese agente pueda actuar, la inacción del jugador resuelve a **F2a**: la entrega se completa por defecto.
+2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
 
-No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar al Pivote primero: es lo que convierte la quietud en una decisión en vez de un descuido.
+**Por ruta, quién es "quien iba a completar la entrega":**
+- **7 rutas:** el Pivote mismo, detenido en el borde.
+- **Ruta Nyael:** el **equipo de extracción** que ella activó antes de retirarse. F1 exige detenerlo a él — si el jugador se aparta, el equipo completa la entrega y es F2a.
+- **Ruta Bram:** **Torgan como segundo agente**, que es el ejecutor real cuando Bram rehúsa.
+
+No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero a ese agente: es lo que convierte la quietud en una decisión en vez de un descuido.
 
 **F1 no usa el verbo de F4.** No hay rama de "hablar con Speck primero": preguntarle qué quiere es F4 y solo F4 ([[Speck]] §Capa 4 — el verbo de F1 es *aceptar*, el de F4 es *responder*). El jugador de F1 decide por Speck; que ella lo asuma con gracia no lo convierte en consentimiento.
 
@@ -36,7 +41,9 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 **Regla de escritura para los epílogos F1 — las tres prohibiciones:**
 1. **Ninguna institución Aether-dependiente puede aparecer operando con normalidad.** Nada de Councils despachando mensajeros de rutina, Academies tramitando renuncias, gremios llevando registros. Pueden aparecer como cascarones, en disolución, o discutiendo qué son ahora.
-2. **Nadie puede concluir que la Muda salió gratis.** La línea de `Iven` — *"su gente habría vivido igual"* — es exactamente lo prohibido: la gente vive, el mundo que conocían no.
+2. **Nadie puede concluir que la Muda salió gratis** ni que **iba a ocurrir sola.** Las dos son prohibiciones distintas y las dos importan:
+   - *Gratis* está prohibido porque la gente vive y el mundo que conocían no. Ni siquiera las comunidades que se salvan del apagón se salvan de lo que el apagón deja: sin comercio, sin herramientas nuevas, sin oficios que ya nadie ejerce.
+   - *"Iba a ocurrir sola"* está prohibido porque **rompe los otros cuatro finales.** La Muda se completa únicamente si Speck llega al cráter y nadie interviene; no hay reloj de maduración autónomo. Si lo hubiera, F2a — donde Speck queda **viva** en custodia — no podría terminar en statu quo administrado, y el clímax entero sería un trámite. Toda formulación del tipo *"si nadie hubiera hecho nada, pasaba igual"* es un crítico de premisa, no de tono.
 3. **El Aether sana de golpe, y eso es parte del costo.** No hay transición administrada. La diferencia con F4 es precisamente esa: allá el Aether sana lento y las civilizaciones tienen tiempo de adaptarse; acá se les cae encima en una generación.
 
 **Por eso F1 no es estrictamente mejor que F4.** F1 sana el mundo y funde la civilización; F4 sana el mundo más despacio, la civilización se adapta, y el precio es Speck. Son costos incomparables, no una escala.
@@ -140,7 +147,7 @@ Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un Go
 
 Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, pero no puede contradecirla.
 
-| Final | Aritmética / Manipulación (Maren, Sereth, Vekka) | Deber Institucional (Torgan, Iven, Dagna, Nyael) | Rechazo / Ausencia (Bram, Lyris) |
+| Final | Aritmética / Manipulación (Maren, Sereth) | Deber Institucional (Torgan, Iven, Dagna, Nyael, **Vekka**) | Rechazo / Ausencia (Bram, Lyris) |
 |---|---|---|---|
 | **F1 Guided Molt** | Sobrevive quebrado, no pide perdón | Muere o se autoexilia — juramento reventado sin cierre | Bram en paz por primera vez; Lyris se queda quieta en su cielo |
 | **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda | Bram no aplica; Lyris se aparta del grupo con calma que hiere |

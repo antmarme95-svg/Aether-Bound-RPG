@@ -115,7 +115,7 @@ idéntica geometría). La revelación de [[El Mundo y la Muda]] cosida en arte.
 Los 3 estadios comparten ADN de silueta, ojos facetados tipo gema, y runas.
 
 **Forma shapeshifteada (E1→E2 coexisten):** Zorro endémico de The Wilds,
-1.5× tamaño normal, pelaje beige/gris con patrones geométricos sutiles (runas
+1.5× tamaño normal, pelaje **rojo/naranja** (visual-locked en [[Speck]] — el valor beige/gris es de una versión anterior y genera el asset equivocado) con patrones geométricos sutiles (runas
 Warden interpretadas como "coloración rara"). Seams teal presentes. Pata
 delantera izquierda con cristal visible (glitch del shapeshifting). Ojos
 facetados. Comportamiento demasiado inteligente.
@@ -175,10 +175,32 @@ activa, Speck reacciona involuntariamente). No hay E2 intermediario.
 **Especificación:** Clímax en The First Wound. Fragmento activa → Speck reacciona 
 involuntariamente (hive mind forzado). Jade pálido se revela como rojo God-Core.
 
-**Narrativa transversal:** La transformación es involuntaria. PERO en finales donde 
-vive (F1, F4), Speck asume su destino con gracia divina — no permanece como víctima 
-circunstancial. Es anciana Warden aceptando su rol milenario. En F2/F3 (muerte/cadenas), 
-esa agencia le es robada.
+**Narrativa transversal — los 3 grados de agencia, y hay que poder VERLOS.** La
+transformación es involuntaria en todos los casos ([[Speck]] §Capa 4). Lo que cambia
+por final es **cuánta agencia tiene Speck sobre lo que viene**, y son tres grados
+distintos, no dos. Fuente: [[Speck]] §Capa 4.
+
+| Grado | Finales | Verbo | Qué debe leerse en la imagen |
+|---|---|---|---|
+| **Le preguntan** | **F4** | *responder* | Es la única donde Speck **contesta**. Mirada hacia el jugador, no hacia el core. Reciprocidad. Es lo único que distingue F4 |
+| **Deciden por ella y acepta** | **F1** | *aceptar* | Dignidad frente a una decisión **ajena**. NO reciprocidad, NO igualdad — nadie le preguntó. Se sostiene sola |
+| **Se la arrebatan** | **F2a, F2b, F3** | — | Agencia robada. En F2a **vive** (cedida y catalogada), en F2b muere, en F3 encadenada |
+
+> ⚠️ **Dos errores que este brief tenía y que el arte generado hereda:**
+> 1. **Colapsaba F1 y F4** en un solo bucket de "aceptación con gracia divina". Está
+>    prohibido: *"El verbo de F1 es aceptar; el de F4 es responder. Colapsarlos borra lo
+>    único que distingue a F4"* ([[Speck]] §Capa 4). **F1 y F4 no pueden verse igual** —
+>    si el jugador no distingue las dos láminas, "costos incomparables" no existe para él.
+> 2. Decía *"finales donde vive (F1, F4)"*. **Falso: en F2a Speck también vive**, cedida
+>    viva al Council. Vivir no es el eje; la agencia sí.
+>
+> **Consecuencia de producción:** los briefs §5c.1 (F1) y §5c.4 (F4) fueron generados bajo
+> la lectura colapsada — F1 pedía *"beside the player as equal"* y *"no passivity"*, que es
+> agencia, y su mood (renewal, warmth) es indistinguible del de F4. **Ese par de láminas
+> hay que rehacerlo**, no reetiquetarlo. Y §5c.2 quedó escrito antes del split F2a/F2b:
+> muestra un cadáver calcificado en el cráter, que es **F2b**, no F2a — F2a no tiene
+> cuerpo y Speck no se queda ahí. El archivo además está nombrado "Final 3" y catalogado
+> como Final 2. Hay que rehacer el set de finales completo contra esta tabla.
 
 **Base visual común a todos los finales:**
 Cristales rojos saturados (misma geometría que God-Cores del mundo). Seams aether 

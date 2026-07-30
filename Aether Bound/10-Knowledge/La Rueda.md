@@ -21,7 +21,7 @@ metroidvania-lite por [[Acoplamientos|links]], no por llaves.
 | **River Road** (arteria) | El Aethelgard navegable | Co-op: puentes del Tank / plataformas del Strategist; el río castiga separarse |
 | **Cinder Ascent** (arteria) | Paso de montaña empinado | Co-op: anclaje en pendientes |
 | **Gloomvault** (arteria) | Bosque profundo, visibilidad nula | Co-op: el Strategist lleva la luz — el peor lugar para perderlo |
-| **The Driftmarket** | Ciudad flotante neutral, mercado negro (reusa "Nómadas de la Niebla" → Mistbound) | Terreno franco; recluta de C4; Standing vs Bond de frente |
+| **The Driftmarket** | Ciudad flotante neutral, mercado negro (reusa "Nómadas de la Niebla" → Mistbound) | Terreno franco; Standing vs Bond de frente (**no** se recluta a C4 acá: Darro entra en Acto 1) |
 | **The Sunken Archive** | Bóveda de la civilización de los dioses | Dungeon del Fragmento; la traición ocurre al salir |
 | **The First Wound** | Cementerio de God-Cores ([[El Mundo y la Muda]]) | Zona final: clímax + [[Los 5 Finales]] |
 

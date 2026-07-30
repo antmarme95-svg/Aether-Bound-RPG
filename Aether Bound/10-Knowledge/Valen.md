@@ -18,8 +18,11 @@ que el resto del grupo nunca termina de sintonizar, y está bien con eso.
 
 ## Historia
 
-Estudioso de los ciclos de la Muda. Los elfos llevan milenios observando
-las Mudas y conservan registros que ninguna otra raza ha mantenido.
+Estudioso de los ciclos de la Muda. Los elfos **creen** llevar milenios
+observando Mudas y conservan los registros más antiguos que existen — pero
+**ese archivo está mal**, y descubrirlo es el arco de Valen: ninguna Muda se ha
+completado en 550 años, y las "Mudas" que the Academy of Sages asentó fueron
+falsas alarmas. Ver [[Valen-Ficha-Expandida-v1]], que es la ficha viva.
 Valen sabe más de lo que dice — no por reserva estratégica, sino porque
 la mayoría de lo que sabe asustaría a los demás antes de serles útil.
 
@@ -41,7 +44,7 @@ Valen lo vio venir. No la traición específica — sí la estructura de ella.
 Reconoció el peso que Dagna cargaba semanas antes. No dijo nada porque
 no era su decisión interferir.
 
-Cuando sucede, su reacción es la más devastadora del grupo:
+Cuando sucede, su reacción es la más fría del grupo:
 *"I know."* Dos palabras. Sin rabia.
 
 ## Línea canónica
