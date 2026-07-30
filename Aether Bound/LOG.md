@@ -5849,6 +5849,35 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### 5c.1 (F1) regenerado con ancla vulpina — PASS aproximado (2026-07-29)
+
+El primer intento de regenerar la lámina de F1 (tras corregir el brief en la 5ª
+re-corrida) produjo un **ciervo con astas** — rompía la regla de que los 3 estadios
+de Speck comparten ADN de silueta con la forma zorro ([[Briefs de Concept Art]]
+§Redireccionamiento). Causa probable: *"crest branches... tendrils of light
+extending outward"* se leyó como cornamenta al no anclar la anatomía base en el
+prompt.
+
+**Fix:** prompt reescrito con `ANATOMY LOCK: FOX skeleton`, cuadrúpedo, y negativos
+duros (`NO DEER, NO STAG, NO ELK, NO CERVID, NO ANTLERS`). De paso corregida la
+frase de agencia que ya se había marcado (*"stands beside the player as equal"* era
+el verbo de F4, no de F1).
+
+**Corrección posterior (misma sesión):** al abrir los dos archivos de referencia
+con el tool de lectura, **ambos ya eran zorro/cuadrúpedo, sin astas** —
+`Final 1 The Guided Molt.png` y `speck-trueform-translucent.png` estaban bien
+desde antes. El ciervo no salió del arte ratificado: fue una regeneración nueva
+hecha desde el texto viejo del brief (sin ancla anatómica), que sí necesitaba el
+fix. **No hace falta regenerar el arte de F1** — el asset viejo sigue siendo el
+bueno. El ancla anatómica en el brief queda como seguro para futuras
+regeneraciones, no como corrección de un asset roto.
+
+**Pendiente de la línea de finales, sin tocar esta sesión:**
+- `5c.4` (F4) no tiene prompt de texto escrito — solo referencia la imagen vieja
+  pre-split de agencia. Necesita el mismo ancla vulpina + la reciprocidad de F4.
+- `5c.2` — la lámina existente (cadáver calcificado) es en rigor el brief de
+  **F2b**. El brief de **F2a** (Speck viva, cedida, sin cadáver) nunca se escribió.
+
 ### 5ª re-corrida QA — 15 críticos, 13 cerrados (2026-07-29)
 
 Dos QAs Opus en frío: **6 de dramática + 9 de congruencia**, ambos con el brief de

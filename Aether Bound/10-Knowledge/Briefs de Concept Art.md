@@ -213,28 +213,52 @@ sin defensa.
 
 #### **5c.1 — Final 1: The Guided Molt — E3 Viva, Aceptación y Propósito**
 
+> ⚠️ **Re-hecho 2026-07-29.** La versión anterior generó un **ciervo con astas** —
+> rompió la regla de que los 3 estadios comparten ADN de silueta con la forma zorro
+> ([[Briefs de Concept Art]] §Redireccionamiento — *"Los 3 estadios comparten ADN de
+> silueta, ojos facetados tipo gema, y runas"*). La causa probable: *"crest branches...
+> tendrils of light extending outward"* se leyó como cornamenta al no anclar la
+> anatomía base. El prompt de abajo fija **vulpino, cuadrúpedo, sin cornamenta**
+> explícitamente, y corrige además el problema de agencia (ver tabla arriba: F1 es
+> *aceptar*, no *reciprocidad* — "stands beside the player as equal" era el error).
+>
+> **✅ Regenerado 2026-07-29 con el ancla vulpina — PASS aproximado.** Boris confirmó
+> resultado zorro/cuadrúpedo, sin astas, comparado contra `speck-trueform-translucent.png`
+> y el viejo `Final 1 The Guided Molt.png`. El ancla anatómica funcionó. **Falta VoBo
+> formal y archivo final ratificado** — queda pendiente para la próxima sesión.
+
 ```
 Creature concept sheet, front view and side view, of "Speck" at the end of Final 1, 
 The Guided Molt: the moment where involuntary transformation becomes accepted purpose. 
-She stands as a living Warden creature in her true red God-Core form — jade pálido 
-revealed as vivid translucent red crystalline body. She radiates warm light: deep 
-saturated red crystals gleam along spine, crest, flanks and legs with the exact geometry 
-of the God-Core formations, alive with energy. Aether seams glow in warm ámbar and teal, 
-flowing like living blood through the lattice. Petal-like ears are translucent red, 
-elegant, catching light like stained glass. Eyes remain dark amber, faceted, now warm 
-with acceptance and ancient purpose — not happiness, but grave dignity. The golden runes 
-blaze across her body, active and glorious, god-script awakened. Posture is calm, steady, 
-serene and purposeful — she has accepted her ancient role. She stands beside the player 
-as equal, ready to guide the Muda. The light around her is warm amber and soft red, 
-healing light, not danger. She reads as: *"I am old. I remember. I will tend what I must."* 
-Small vignette: her crest branches glow, tendrils of light extending outward as if 
-mending something broken in the world. Mood: luminous, purposeful, majestic, grave 
-compassion — the healer-guardian accepting her ancient duty. Atmosphere: renewal, 
-warmth, ancient power channeled for good, grace divina. Art style: hand-painted graphic 
-novel watercolor, ligne claire, flat cel shading 3–4 bands, saturated red and warm 
-amber dominant, low saturation elsewhere, visible paper grain. Blend of Sable × Breath 
-of the Wild with luminosity. Negative: no darkness, no victim expression, no passivity, 
-no cold light, no photorealism, no neon glow beyond natural aether brilliance.
+ANATOMY LOCK: she is built on a FOX skeleton — vulpine skull and muzzle, quadruped 
+fox-proportioned body, four fox legs and paws, a fox tail — the SAME silhouette DNA 
+as her E1 crystalline form and her shapeshifted fox disguise, just fully revealed and 
+larger in scale. She is NOT a deer, NOT a stag, NOT a cervid — she has no antlers and 
+no branching crown structure of any kind. She stands as a living Warden creature in 
+her true red God-Core form — jade pálido revealed as vivid translucent red crystalline 
+body over vulpine anatomy. Deep saturated red crystals gleam along the fox-shaped spine, 
+flanks and legs with the exact geometry of the God-Core formations, alive with energy. 
+Aether seams glow in warm ámbar and teal, flowing like living blood through the lattice. 
+Ears are fox-shaped but translucent red and petal-thin, elegant, catching light like 
+stained glass — vulpine ear shape, not floral, not antler-like. Eyes remain dark amber, 
+faceted, now warm with acceptance and ancient purpose — not happiness, but grave dignity, 
+looking forward into the middle distance, NOT at the player — no reciprocity, no 
+dialogue, nobody asked her anything, she is enacting a decision made for her. The golden 
+runes blaze across her body, active and glorious, god-script awakened. Posture is calm, 
+steady, solitary — she stands alone, apart from the group, accepting her role on her 
+own, not beside anyone as an equal. The light around her is warm amber and soft red, 
+healing light, not danger. She reads as: *"Nobody asked. I choose to carry it anyway."* 
+Small vignette: warm light radiates outward from her crystalline spine and flanks — no 
+antler-like or branch-like light structures — as if mending something broken in the 
+world. Mood: luminous, purposeful, solemn dignity, quiet acceptance of a decision that 
+was not hers to make — grave, not triumphant. Atmosphere: renewal, warmth, ancient power 
+channeled for good. Art style: hand-painted graphic novel watercolor, ligne claire, flat 
+cel shading 3–4 bands, saturated red and warm amber dominant, low saturation elsewhere, 
+visible paper grain. Blend of Sable × Breath of the Wild with luminosity. Negative: NO 
+DEER, NO STAG, NO ELK, NO CERVID, NO ANTLERS, no branching crown or horn structures, no 
+equal-footing pose beside a human figure, no eye contact with viewer/player, no 
+darkness, no victim expression, no passivity, no cold light, no photorealism, no text, 
+no captions, no neon glow beyond natural aether brilliance.
 ```
 
 #### **5c.2 — Final 2: The Long Winter — E3 como God-Core Muerto, Monumento Frío ✅**

@@ -14,14 +14,7 @@ updated: 2026-07-29
 
 **Sprint QA de reparación — Fases 0-5 cerradas + 3 re-corridas procesadas.** Relato completo de las fases 0-4 en [[Current-State-Historico]]; detalle operativo de cada bloque y de las 3 re-corridas en [[LOG]].
 
-**✅ 3ª re-corrida cerrada.** Canon fijado (detalle en [[LOG]]):
-
-- **Agencia de Speck en 3 grados** (`Speck.md §Capa 4`): F4 = le preguntan (*responder*); F1 = deciden por ella y acepta (*aceptar*); F2a/F2b/F3 = se la arrebatan. Ninguna ficha puede hacer que Speck "elija" en F1.
-- **Regla del Fragmento — `Speck.md §Capa 5`, fuente única.** Esperar no la mata, cederla no la mata, **arrebatarla sí**. Nadie más la enuncia.
-- **Transporte:** la entrega corta el pulso, y el cese del pulso la suelta del centro. Por eso F2a puede transportarla.
-- **Gates:** pregunta = F4; forcejeo = F2b; **parálisis = F2a**. No decidir hace ganar a la institución.
-- **Isolde Marrow** = reclamo de House Marrow. **Longevidad** alineada a [[Las Tres Razas]]. **Goggles no retirables** propagado.
-- **Mudas:** ninguna se completó en 550 años; las 3 afirmaciones contrarias quedaron **marcadas como error heredado de the Academy**, no borradas (`Valen:58`, `Valen:52`, `Geografía:613`).
+**✅ 3ª re-corrida cerrada.** Canon fijado (detalle en [[LOG]]): agencia de Speck en 3 grados (`Speck.md §Capa 4`); regla del Fragmento fuente única (`Speck.md §Capa 5` — esperar no mata, ceder no mata, **arrebatar sí**); transporte corta el pulso; gates (pregunta=F4, forcejeo=F2b, **parálisis=F2a**); Isolde=reclamo de House Marrow; longevidad alineada; Goggles no retirables; Mudas ninguna completada en 550 años (error heredado marcado, no borrado).
 
 ## 4ª RE-CORRIDA QA — CORRIDA (2026-07-29). 18 críticos, 17 cerrados
 
@@ -54,8 +47,10 @@ Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruenc
 
 ### 🔜 Pendiente para cerrar el sprint
 
-1. **Rehacer el par de láminas F1/F4** y el set de finales. Los briefs `§5c` colapsaban F1 y F4 en "aceptación con gracia divina" — borra lo único que distingue F4 — y `5c.2` quedó escrito antes del split F2a/F2b (muestra un cadáver, que es F2b). El brief ya está corregido con la tabla de los 3 grados de agencia; **el arte generado hereda el error**.
-2. **6ª re-corrida QA.** Criterio: 0 críticos.
+1. **5c.1 (F1) — el arte existente YA está bien; no hace falta regenerarlo.** Verificado: `Final 1 The Guided Molt.png` y `speck-trueform-translucent.png` ya son zorro/cuadrúpedo, sin astas. El ciervo que motivó la alarma salió de una regeneración nueva desde el TEXTO viejo del brief (sin ancla anatómica), no del arte ratificado. Fix real: el brief §5c.1 quedó con ancla vulpina explícita (por si se regenera a futuro) + corregida la frase de agencia ("beside the player as equal" era F4). **No usar el ciervo como referencia de nada; el asset viejo sigue siendo el bueno.**
+2. **5c.4 (F4) — sin prompt de texto todavía.** Solo referencia la imagen vieja aprobada (pre-split de agencia). Si se regenera, necesita el mismo ancla vulpina que 5c.1 más la reciprocidad de F4 (Speck mirando y respondiendo al jugador).
+3. **5c.2 — falta escribir el brief de F2a desde cero.** La lámina existente (cadáver calcificado) es en rigor el brief de **F2b**; F2a (Speck viva, cedida al Council, sin cadáver) nunca se escribió.
+4. **6ª re-corrida QA.** Criterio: 0 críticos.
 
 ### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 
@@ -118,6 +113,9 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 ---
 
 ## Pendientes
+
+### 🔍 Optimización de tokens pendiente de evaluar
+`Current-State.md` se pasa del techo blando (3,000t) casi cada sesión y hay que comprimirlo a mano al cierre — el chequeo con `check_vault.py` es reactivo, no preventivo. Evaluar automatizar el corte (mover a [[LOG]] apenas una sección deja de ser inmediata, no cuando ya sobró).
 
 ### 🗓 Inmediato
 - **5ª re-corrida QA** (ver arriba) — único criterio de cierre del sprint.
