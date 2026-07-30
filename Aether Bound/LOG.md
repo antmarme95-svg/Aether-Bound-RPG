@@ -5849,6 +5849,63 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### Los 12 epílogos F1 bajo la regla de costo (2026-07-29)
+
+Cierra el crítico C1 del QA de dramática: `Los 5 Finales:100` declaraba que F1
+"cuesta civilizaciones enteras" y los 12 epílogos mostraban las instituciones
+operando con normalidad décadas después. Con el canon de Boris (colapso
+tecnológico, no exterminio) reescritos los 12, aplicando las 3 prohibiciones.
+
+**El patrón que salió:** en casi todos, el costo civilizatorio **mejora** el beat
+en vez de recortarlo, porque le da al epílogo un antagonista de escala que antes
+no tenía.
+
+- **Iven** — su gente sobrevive porque la periferia **nunca fue
+  Aether-dependiente**: era la zona que el Council no cableó porque no valía la
+  inversión. Cruza de vuelta un país que no reconoce y llega a un asentamiento
+  que hereda el mundo por no haber tenido nada que perder. La ironía queda más
+  fuerte: traicionó por nada, y encima las instituciones que le negaron ayuda se
+  están cayendo mientras el agua le llega igual.
+- **Maren** — no puede evitar el colapso, solo volverlo sobrevivible. Raciones al
+  gramo, rutas de agua sin bombas, un invierno casa por casa. No muere nadie que
+  ella pudiera haber salvado; es un logro enorme que suena a poco, y administrar
+  esa distancia es el resto de su vida.
+- **Vekka** — bisagras, herrajes de tumba, tornillos de carreta. Y en el mundo
+  nuevo **eso es el oficio**, porque no queda forja de Aether en ninguna parte.
+  Termina siendo una de las pocas personas con oficio para el mundo que empieza y
+  lo vive como degradación, porque su dogma no tiene vocabulario para "la escala
+  cambió".
+- **Lyris** — única del elenco que ve el costo completo: sobrevuela las tres
+  capitales apagándose una por una, Stillspire con los árboles siendo por primera
+  vez en siglos lo único que brilla. El Frontier High Command se deshace solo: no
+  hace falta desertar de algo que se disolvió.
+- **Nyael** — el brazo encubierto alcanza a marcarla "no retornada" y ese es su
+  último asiento. **El expediente queda abierto para siempre porque no quedó
+  nadie para cerrarlo.** Pasó su vida siendo un renglón en un registro ajeno, y el
+  registro murió antes que ella.
+- **Bram** — en una ciudad que se cae, un cuerpo grande que sabe estar quieto vale
+  más que nunca: barcazas a pértiga, mercado nocturno todas las noches. El
+  Council manda a un hombre que **ya no es mensajero sino funcionario sin
+  institución**, con una moneda que casi no compra nada.
+- **Sereth** — no llega a renunciar a la Royal Academy: no queda Academy. Se
+  disuelve en dos años, sin voto, dejando de convocar. Para un hombre cuyo método
+  era preparar el terreno, el terreno se disolvió solo.
+- **Darro** — **beat nuevo:** se apaga la forja que lo rechazó. Treinta años
+  practicando por si algún día volvía, y le sacaron el a dónde. No se resuelve.
+- **Valen** — el que nombra el precio en voz alta, que es su función. Cierra
+  además el **M3**: su línea ya no asume un Pivote vivo (en la fila Deber
+  Institucional F1 es muerte o autoexilio, y en Torgan/Dagna es desaparición
+  total), con nota de escritura que lo prohíbe explícitamente.
+- **Roen** — no consuela, organiza. Ya vio de qué vivía el mundo cuando era
+  guardia del Council y no le sirve de nada tener razón.
+- **Torgan** / **Dagna** — nadie los borra ni los persigue: con las forjas
+  apagadas, un clan menor y un subclán vasallo tienen problemas más grandes que un
+  juramento sin cerrar. Sostuvieron una orden sesenta años y el mundo no tuvo
+  tiempo de notar que la soltaron.
+
+**Verificado:** `check_canon.py` 0 críticos; grep de las 5 formulaciones
+prohibidas sobre los 12 bloques F1 → los 2 hits son las versiones ya corregidas.
+
 ### Herramienta nueva: `check_canon.py` + skill `canon-qa` (2026-07-29)
 
 **Diagnóstico que la motiva:** de los 18 críticos de la 4ª re-corrida, **10 eran

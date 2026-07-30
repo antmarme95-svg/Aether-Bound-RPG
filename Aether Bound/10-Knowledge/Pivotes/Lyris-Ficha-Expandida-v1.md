@@ -317,7 +317,11 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
-**Epílogo:** cuando finalmente se retira, no regresa a Stillspire ni a los Sky Watchtowers. Cambia territorio: se instala en una franja aérea sobre Mistbound Frontier — lejos de la cadena de Frontier High Command, lejos de todo. Ocasionalmente el jugador la ve como un punto contra el cielo, sin bajar. Nunca vuelve a hablar. Sigue viva, sigue volando, sigue sola. El patrón cambió; ella no.
+**Y desde ahí arriba es la única del elenco que ve el costo completo.** Lyris sobrevuela las tres capitales en las semanas siguientes y las ve **apagarse una por una** — Emberdeep sin el resplandor de las forjas, Rivermeet a oscuras salvo por fuego real, The Stillspire con las luces de Aether muertas y los árboles, por primera vez en siglos, siendo lo único que brilla. Nadie más en el mundo tiene ese punto de vista. Nadie más entiende la escala de lo que se dejó pasar en el cráter. Ella no lo cuenta a nadie.
+
+**Epílogo:** cuando finalmente se retira, no regresa a Stillspire ni a los Sky Watchtowers — el Frontier High Command se deshace solo en menos de un año, sin Aether con que sostener una cadena de mando repartida en torres. No hace falta desertar de algo que se disolvió. Se instala en una franja aérea sobre Mistbound Frontier, lejos de todo. Ocasionalmente el jugador la ve como un punto contra el cielo, sin bajar. Nunca vuelve a hablar. Sigue viva, sigue volando, sigue sola.
+
+**El patrón cambió; ella no.** Y por primera vez el mundo entero se parece a ella: todos abajo aprendiendo a vivir sin nada que los sostenga más que sí mismos. Lyris lleva noventa años practicando eso. Es la única ventaja que tuvo en su vida y no le sirve de consuelo.
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 

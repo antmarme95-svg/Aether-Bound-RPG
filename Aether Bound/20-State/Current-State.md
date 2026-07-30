@@ -14,17 +14,17 @@ updated: 2026-07-29
 
 **Sprint QA de reparación — Fases 0-5 cerradas + 3 re-corridas procesadas.** Relato completo de las fases 0-4 en [[Current-State-Historico]]; detalle operativo de cada bloque y de las 3 re-corridas en [[LOG]].
 
-**✅ Sesión de diseño 2026-07-29 — los 8 críticos + 3 MEDIUM de la 3ª re-corrida están resueltos.** Detalle completo (decisiones + cambios archivo por archivo) en la entrada del 2026-07-29 de [[LOG]]. Resumen de lo que quedó fijado como canon:
+**✅ 3ª re-corrida cerrada (8 críticos + 3 MEDIUM).** Detalle en [[LOG]]. Canon que quedó fijado:
 
-- **Agencia de Speck en 3 grados.** F4 = le preguntan (*responder*); F1 = deciden por ella y acepta (*aceptar*); F2a/F2b/F3 = se la arrebatan. El verbo importa: ninguna ficha puede hacer que Speck "elija" en F1. Fuente: `Speck.md §Capa 4`.
-- **Regla del Fragmento — `Speck.md §Capa 5`, nueva y fuente única.** Sobrecarga por transferencia de fuerza mecánica cerca de un core activo. Esperar no la mata, cederla no la mata, arrebatarla sí. Ningún otro archivo puede enunciar la regla por su cuenta; todos citan ahí.
-- **Transporte de Speck:** la entrega corta el pulso, y el cese del pulso es lo que la suelta del centro. Por eso F2a puede transportarla y `Nyael:261` sigue siendo verdad.
-- **Gates desambiguados:** quietud que termina en pregunta = F4; forcejeo = F2b; **parálisis = F2a** (el Pivote entrega por defecto). No decidir hace ganar a la institución.
-- **Isolde Marrow** degradada a reclamo de House Marrow. El "Último Reino" pasó a Pendientes como ítem de worldbuilding, ya no es una contradicción viva.
-- **Longevidad de los 3 fijos** alineada a [[Las Tres Razas]]; **Darro a ~63 años** (sincronizado al canon de "hace ~30 años" que ya estaba en 6 lugares); **Valen no presenció ninguna Muda** y el "110 años" quedó marcado como error de la Academy.
-- **Goggles no retirables** propagado: las 9 fichas + Valen dejaron de decir "se pone los Goggles" en el Archive. Se conserva el primer uso en la oficina de Tobin, donde ahora **no salen** al intentar quitárselos.
+- **Agencia de Speck en 3 grados** (`Speck.md §Capa 4`): F4 = le preguntan (*responder*); F1 = deciden por ella y acepta (*aceptar*); F2a/F2b/F3 = se la arrebatan. Ninguna ficha puede hacer que Speck "elija" en F1.
+- **Regla del Fragmento — `Speck.md §Capa 5`, fuente única.** Sobrecarga por transferencia de fuerza mecánica cerca de un core activo: esperar no la mata, cederla no la mata, **arrebatarla sí**. Nadie más la enuncia; todos citan ahí.
+- **Transporte:** la entrega corta el pulso, y el cese del pulso es lo que la suelta del centro. Por eso F2a puede transportarla.
+- **Gates:** quietud que termina en pregunta = F4; forcejeo = F2b; **parálisis = F2a** (el Pivote entrega por defecto). No decidir hace ganar a la institución.
+- **Isolde Marrow** degradada a reclamo de House Marrow (el "Último Reino" pasó a Pendientes).
+- **Longevidad** alineada a [[Las Tres Razas]]; **Darro ~63**; **Valen no presenció ninguna Muda**.
+- **Goggles no retirables** propagado a las 9 fichas + Valen.
 
-**Cronología de las Mudas — verificada limpia.** Ninguna Muda se ha completado en 550 años. Las tres afirmaciones que decían lo contrario quedaron marcadas como **error heredado de the Academy**, no borradas: `Valen:58` (los ancianos y sus "cuatro Mudas" — era la fuente del "cinco Mudas"), `Valen:52` (el "110 años") y `Geografía:613` (el ermitaño, que ahora vio dos **falsas alarmas** y por eso es testigo del error de registro). Aritmética de Valen verificada: 140 → 180 → 200 → presente 230.
+**Cronología de las Mudas — limpia.** Ninguna se completó en 550 años; las 3 afirmaciones contrarias quedaron **marcadas como error heredado de the Academy**, no borradas: `Valen:58` (los ancianos y sus "cuatro Mudas", fuente del "cinco Mudas"), `Valen:52` (el "110 años") y `Geografía:613` (el ermitaño, hoy testigo del error de registro). Aritmética de Valen: 140 → 180 → 200 → 230.
 
 ## 4ª RE-CORRIDA QA — CORRIDA (2026-07-29). 18 críticos, 17 cerrados
 
@@ -40,13 +40,15 @@ Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruenc
 - **`Geografía y Ciudades` = fuente primaria única de ubicaciones.** Los cuadrantes de `Briefs de Mapa` son **derivados**, no se editan a mano.
 - **Fuente única nueva: `Nomenclatura §the Wanderer's Goggles`** — no retirables + estrictamente privados + **no son gate**.
 
+### ✅ Los 12 epílogos F1 reescritos bajo la regla de costo (2026-07-29)
+
+Los 9 Pivotes + los 3 fijos. Cierra el crítico C1 del QA de dramática. **El costo civilizatorio mejoró el beat en casi todos** — le dio al epílogo un antagonista de escala que antes no tenía. Detalle personaje por personaje en la entrada del 2026-07-29 de [[LOG]].
+
+Muestras del patrón: Vekka termina haciendo bisagras y herrajes, que en el mundo nuevo **son el oficio** porque no queda forja de Aether — y lo vive como degradación. Lyris es la única que ve el costo completo, sobrevolando las tres capitales apagándose una por una. Nyael queda "no retornada" para siempre porque el registro murió antes que ella. A Darro se le apaga **la forja que lo rechazó**, y le sacaron el a dónde volver. Valen es el que nombra el precio en voz alta, con el **M3 cerrado**: su línea ya no asume un Pivote vivo (en 4 de 9 rutas F1 muere o desaparece).
+
 ### 🔜 Único pendiente para cerrar el sprint
 
-**11 epílogos F1 restantes** bajo la nueva regla de costo (hecho: Iven, el peor caso — su gente sobrevive porque la periferia nunca fue Aether-dependiente, mientras cae el centro que la ignoraba). Faltan: Maren, Torgan, Sereth, Bram, Lyris, Nyael, Vekka, Dagna, Roen, Valen, Darro.
-
-Las tres prohibiciones a aplicar en cada uno: ninguna institución Aether-dependiente operando con normalidad; nadie concluye que la Muda salió gratis; el Aether sana **de golpe** y eso es parte del costo.
-
-**Después de eso: 5ª re-corrida QA.** El criterio de cierre sigue siendo 0 críticos, y las 4 rondas anteriores dicen que va a haber una 5ª.
+**5ª re-corrida QA.** Criterio de cierre: 0 críticos. Arranca con `check_canon.py` (hoy en 0) y sigue con los 2 subagentes en frío — ver skill `canon-qa`.
 
 ### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 
@@ -117,7 +119,7 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 ## Pendientes
 
 ### 🗓 Inmediato
-- **4ª re-corrida QA** (ver arriba) — único criterio de cierre del sprint.
+- **5ª re-corrida QA** (ver arriba) — único criterio de cierre del sprint.
 - **Pregunta de bonds de fijos** de `The Bound Five.md` — arranca al cerrar el QA.
 
 ### Worldbuilding — abierto

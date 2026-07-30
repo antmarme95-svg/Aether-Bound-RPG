@@ -283,6 +283,14 @@ Pero después, cuando ve lo que Speck se vuelve — cuando ve que ella no se res
 
 *"Ella no peleó. ¿Viste? No peleó."* Pausa. *"Nadie le preguntó nada. Yo tampoco. Le puse nombre y no le pregunté nada."*
 
+**Y hay una segunda cosa que a Darro le pasa en F1 y que él no sabe cómo nombrar.** Cuando las forjas de Emberdeep se apagan, se apaga también **la forja que lo rechazó** — el taller de Vekka, el programa formal, el sistema entero que le dijo a los treinta y tres años que no servía. Treinta años de humor pulido para no tener que explicarse, y el tribunal desaparece antes de que él consiguiera nunca demostrarle nada.
+
+No es alivio. Es peor: **le sacaron la posibilidad de volver a intentarlo.** Darro lo dice una sola vez, en un campamento, con la voz que usa cuando no está haciendo un chiste:
+
+*"Hermano, ¿sabes qué es lo más idiota? Que una parte de mí seguía practicando. Por si algún día volvía."* Se ríe, mal. *"Ya no hay a dónde volver. Y resulta que eso duele más que el no."*
+
+**Nota de escritura:** este beat va *después* del de Speck, nunca antes. El duelo por Speck es el principal; esto es la esquirla que aparece semanas más tarde, cuando el ruido baja. Y no se resuelve — Darro no encuentra una lectura que lo consuele, porque no la hay.
+
 #### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
 Darro es quien **no puede perdonar la entrega, aunque la entienda.**
 

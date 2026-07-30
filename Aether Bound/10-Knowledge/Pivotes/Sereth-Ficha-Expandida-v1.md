@@ -305,7 +305,11 @@ Sereth sobrevive quebrado. Está en el borde del cráter cuando Speck se convier
 
 No es que se equivocó calculando. **Su método asumía que el terreno bien preparado siempre produce el resultado buscado.** El terreno estaba perfectamente preparado. El resultado no.
 
-**Epílogo:** Sereth vuelve a The Stillspire y **no se disculpa**. Su arquetipo no lo permite — la disculpa sería otra siembra. Renuncia a la Royal Academy sin ceremonia. Se dedica, en silencio, a **escribir un tratado privado** sobre los límites de la lectura larga — específicamente, sobre cómo una persona bien preparada puede aún así elegir contra el sembrador. El tratado queda inédito. No busca al jugador. Nunca vuelve a ver a Speck completada — sabe que no le corresponde estar cerca.
+**Epílogo:** Sereth vuelve a The Stillspire y **no se disculpa**. Su arquetipo no lo permite — la disculpa sería otra siembra.
+
+**No llega a renunciar a la Royal Academy: no queda Academy de la cual renunciar.** Con el Aether apagado, la institución que existía para estudiarlo y administrarlo se disuelve en dos años — sin escándalo, sin voto, simplemente dejando de convocar. Sereth se encuentra sin cargo del que dimitir, y eso lo humilla más que una expulsión: para un hombre cuyo método era preparar el terreno, el terreno se disolvió solo.
+
+Se dedica, en silencio, a **escribir un tratado privado** sobre los límites de la lectura larga — específicamente, sobre cómo una persona bien preparada puede aún así elegir contra el sembrador. El tratado queda inédito. No busca al jugador. Nunca vuelve a ver a Speck completada — sabe que no le corresponde estar cerca.
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council en el cráter)
 

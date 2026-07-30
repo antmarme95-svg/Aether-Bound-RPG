@@ -392,7 +392,7 @@ Speck alcanza forma Warden completa y el jugador la deja terminar. La orden frac
 
 **Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja las dos hachas en el borde del cráter, sin ceremonia, y camina hacia las montañas.
 
-**No vuelve.** Ningún enano lo ve otra vez con certeza. El clan menor no borra su nombre del registro — simplemente deja de anotarlo, y con los años la diferencia deja de notarse.
+**No vuelve.** Ningún enano lo ve otra vez con certeza. El clan menor no borra su nombre del registro — deja de anotarlo, y no por tacto: **con las forjas apagadas y el Aether ido, un clan menor de Ignis Reach tiene problemas más grandes que un juramento sin cerrar.** Torgan pasó cincuenta y cinco años sosteniendo lo más preciado que tenía, y el mundo lo dejó de registrar porque estaba ocupado sobreviviendo. Con los años la diferencia deja de notarse.
 
 Si el jugador lo busca, no lo encuentra. El único rastro es un tallado en una pared de roca alta, a días de cualquier camino: la marca de su clan, hecha a mano, mal hecha, con un cincel que no era de forja. Es lo más parecido a un altar que Torgan se va a permitir construirse.
 

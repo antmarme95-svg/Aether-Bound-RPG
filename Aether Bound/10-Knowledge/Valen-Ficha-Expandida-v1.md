@@ -267,11 +267,17 @@ El Pivote actúa finalmente.
 **Valen en cada final:**
 
 #### **F1 — The Guided Molt (Speck termina la Muda sin intervención)**
-Valen es quien **verifica las consecuencias**.
+Valen es quien **verifica las consecuencias** — y en F1 eso significa ser el que nombra el precio en voz alta, porque nadie más del grupo puede sostener la escala sin quebrarse.
 
-*"Your mercy has logic. The Pivot carries guilt — that will drive certain choices for decades. You've not forgiven without cost."*
+*"The Aether heals. Say that part first, and mean it. Now the rest: every forge, every pump, every airship, every thing this world learned to do in five hundred years ran on the corruption you just cured. That ends inside a generation."*
 
-No es validador como Roen. Es **confirmador de realidad.**
+Pausa. Sin cambiar el tono.
+
+*"People live. Their world does not. Both of those are true, and you will spend your life meeting people who only believe one."*
+
+**No es validador como Roen. Es confirmador de realidad** — y es el único personaje del elenco cuya voz aguanta decir las dos mitades sin elegir una.
+
+**Nota de escritura (obligatoria):** esta línea **no puede asumir que el Pivote sobrevive.** En la fila "Deber Institucional" F1 es muerte o autoexilio ([[Los 5 Finales]] §matriz), y en Torgan y Dagna el epílogo F1 es desaparición total. Toda formulación del tipo *"el Pivote carga la culpa durante décadas"* es inválida en casi la mitad de las rutas. Si hace falta una variante que hable del Pivote, va condicionada a su celda, no en la línea base.
 
 #### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
 Valen es quien **computa el precio del tiempo comprado**.

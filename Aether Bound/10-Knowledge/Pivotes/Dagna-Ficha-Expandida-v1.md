@@ -314,7 +314,9 @@ Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no 
 
 **Epílogo:** Dagna **deserta.** Es la distinción que importa: no renuncia — renunciar es un acto formal que exige presentarse ante el consejo y decirlo, y para eso haría falta un informe que ella no puede escribir. Deja el escudo pesado en el altar del subclán, no avisa a nadie, y sale de Emberdeep a pie. En los papeles sigue siendo Deepstone. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
 
-Años después, un mensajero cuenta haber visto a una enana canosa con marcas de Deepstone borradas del cinturón, sirviendo como escolta silenciosa de una caravana en el norte lejano. No sonríe. No habla. No es nombre reconocido. Puede ser ella o puede no serlo. Deepstone no reclama el rumor.
+**Y nadie va a buscarla.** No por respeto: con las forjas apagadas y el Aether ido, un subclán vasallo de Ignis Reach no tiene gente que gastar persiguiendo a una vanguard que se fue sola. La deserción que en cualquier otro año habría sido un escándalo pasa desapercibida en el peor invierno de la historia enana. Dagna sostuvo una orden durante sesenta años y el mundo no tuvo tiempo de notar que la soltó.
+
+Años después, un mensajero cuenta haber visto a una enana canosa con marcas de Deepstone borradas del cinturón, sirviendo como escolta silenciosa de una caravana en el norte lejano — de las que ahora se mueven a pie y con bestias, porque no hay otra forma de mover nada. No sonríe. No habla. No es nombre reconocido. Puede ser ella o puede no serlo. Deepstone no reclama el rumor.
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 

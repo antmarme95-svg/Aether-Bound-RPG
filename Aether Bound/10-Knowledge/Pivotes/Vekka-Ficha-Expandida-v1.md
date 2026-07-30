@@ -313,9 +313,11 @@ Ver [[Los 5 Finales]] — Vekka ocupa la fila "Deber Institucional". Cada final 
 
 Vekka es detenida en el cráter — no muerta, contenida. Speck completa la Muda con Vekka atada al borde, viendo. La operación de desmontaje quedó a medio hacer, con el core central parcialmente expuesto — Vekka lo ve durante horas.
 
-**Epílogo:** Vekka **no puede volver al gremio.** Su forja definitoria — el unmaking encargado directamente por el círculo interno — falló. En la lógica del Great Forging Clan, un Guild Master que no ejecuta una orden directa es un Guild Master que ya no existe. No hay ceremonia de despido. Simplemente su marca — el semicírculo cortado por línea vertical — deja de aparecer en registros nuevos.
+**Epílogo:** Vekka **no puede volver al gremio, y para cuando llega ya casi no hay gremio al que volver.** Su forja definitoria — el unmaking encargado por el círculo interno — falló, y en la lógica del Great Forging Clan un Guild Master que no ejecuta una orden directa es un Guild Master que ya no existe. Pero el Aether se apagó de golpe y con él **las forjas industriales de Emberdeep, que eran el clan.** No hay ceremonia de despido porque no hay quién la celebre; su marca — el semicírculo cortado por línea vertical — deja de aparecer en registros nuevos porque **no se abren registros nuevos.**
 
-Vekka se retira a las montañas altas. Hace trabajo pequeño para nadie: bisagras para puertas de granjas, herrajes para tumbas anónimas, tornillos para carretas de leñadores. Sesenta años de oficio reducidos a lo más humilde. No se queja. No pide perdón. En su cuaderno anota: *"Sigo forjando. Es lo único que sé."*
+Vekka se retira a las montañas altas y hace trabajo pequeño: bisagras para puertas de granjas, herrajes para tumbas anónimas, tornillos para carretas de leñadores. Sesenta años de oficio reducidos a lo más humilde.
+
+**Y ahí está la ironía que la ficha no le deja ver del todo:** en el mundo nuevo, eso *es* el oficio. Ya no hay forja de Aether en ninguna parte; lo único que se puede forjar es exactamente lo que ella forja. Vekka termina siendo, sin saberlo, una de las pocas personas vivas con oficio para el mundo que empieza — y lo vive como una degradación, porque su dogma nunca tuvo vocabulario para "la escala cambió". No se queja. No pide perdón. En su cuaderno anota: *"Sigo forjando. Es lo único que sé."*
 
 Nunca vuelve a ver al jugador. Nunca vuelve a ver a Darro.
 

@@ -278,7 +278,9 @@ Ver [[Los 5 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con To
 
 Nyael escribe una **segunda nota, más corta**, y desaparece antes de que amanezca en el cráter. La primera nota (la del corredor) explicó la captura; la segunda no explica nada — es un renglón: *"You chose well. I will not come back to say it in person."*
 
-**Epílogo:** desaparece del mapa institucional. El brazo encubierto de the Royal Academy la marca como "no retornada"; no envían reemplazo — no había reemplazo, Nyael era el único activo con ese perfil. Años después, el jugador ocasionalmente encuentra en su habitación una nota que no recuerda haber recibido — una línea, gris, dejada mientras dormía. Nunca la ve entregar; nunca la ve. La presencia es la ausencia repetida.
+**Epílogo:** desaparece del mapa institucional, y el mapa institucional desaparece detrás de ella. El brazo encubierto de the Royal Academy alcanza a marcarla como **"no retornada"** — y ese es el último asiento que hace ese brazo en su historia: con el Aether apagado, la Academy se disuelve y su sección encubierta se apaga sin liquidar nada. **El expediente de Nyael queda abierto para siempre**, no por diligencia sino porque no quedó nadie para cerrarlo. No envían reemplazo; no había reemplazo, ella era el único activo con ese perfil, y para cuando eso importaba ya no había nadie a quien le importara.
+
+Es el destino exacto que ella habría elegido y por la razón contraria: Nyael pasó su vida siendo un renglón en un registro ajeno, y el registro murió antes que ella. Años después, el jugador ocasionalmente encuentra en su habitación una nota que no recuerda haber recibido — una línea, gris, dejada mientras dormía. Nunca la ve entregar; nunca la ve. La presencia es la ausencia repetida.
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 

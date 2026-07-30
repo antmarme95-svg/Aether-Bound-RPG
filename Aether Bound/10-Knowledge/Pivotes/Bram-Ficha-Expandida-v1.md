@@ -299,7 +299,11 @@ Ver [[Los 5 Finales]] — Bram ocupa la fila "Rechazo / Ausencia". Cada final es
 
 Bram vive. La Muda cierra sobre sí misma. Los God-Cores dejan de responder. El paisaje del cráter cambia de raíz.
 
-**Epílogo:** Bram termina el juego en paz por primera vez en cuarenta años. Regresa a Rivermeet — no al ala de House Thorne, no al ala del Council, a un barrio bajo cerca del río. Consigue trabajo pequeño (descarga de barcazas, seguridad de mercado nocturno — algo que un veterano de sesenta y pico puede hacer sin quebrarse). No lleva mazo. La pulsera de cuerda con los nombres tallados sigue en la muñeca, pero ya no la toca cada noche. Le llega, semanas después, un mensajero del Council con una moneda cara y una advertencia — Bram devuelve la moneda y no responde. No pasa nada más. El Council ya perdió; su venganza sería redundante.
+**Epílogo:** Bram termina el juego en paz por primera vez en cuarenta años, **en el peor momento posible para estar en paz.** Regresa a Rivermeet — no al ala de House Thorne, no al ala del Council, a un barrio bajo cerca del río — y encuentra una ciudad en caída libre: talleres cerrados, bombas muertas, gente durmiendo en la calle por primera vez en generaciones.
+
+Y es la única cosa que le sale bien. **En una ciudad que se cae, un cuerpo grande que sabe estar quieto vale más que nunca.** Descarga barcazas que ahora se mueven a pértiga porque no hay otra forma de moverlas. Hace seguridad de mercado nocturno, que de golpe hace falta todas las noches. No lleva mazo. Trabaja de sol a sol y duerme entero — un hombre que pasó cuarenta años siendo el muro de otros, finalmente siendo el muro de un barrio que se lo pidió en vez de comprárselo. La pulsera de cuerda con los nombres tallados sigue en la muñeca, pero ya no la toca cada noche.
+
+Semanas después aparece un hombre del Council. **No es un mensajero: es un funcionario sin institución**, viniendo él mismo porque ya no queda nadie a quien mandar, con una moneda cara que ya casi no compra nada y una advertencia que no puede respaldar. Bram devuelve la moneda y no responde. No pasa nada más — no por clemencia, sino porque el Council perdió el recurso, el mandato y la capacidad de cobrar deudas viejas. Su venganza sería redundante.
 
 Muere de viejo, unos años después. Su compañía original (los que quedan) manda a un enviado al funeral. El jugador manda a otro. Ninguno de los dos se cruza con Roen ahí, pero los tres saben.
 

@@ -225,6 +225,12 @@ El Pivote actúa finalmente (intenta destruir Speck, entregarla, lo que sea).
 Roen es quien primero extiende la mano hacia lo que queda del grupo — no porque haya olvidado nada, sino porque **Roen conoce el peso de las decisiones imposibles.** Su línea:
 *"He estado donde estás. El arrepentimiento es el precio. Espero que valga."*
 
+**Y es el único que ya vio caer un mundo antes.** Roen renunció a la guardia del Council porque vio de cerca de qué vivía: los tanques de Aethelgard, la minería de Ignis Reach, la esclavitud ecológica de Stillwood. Cuando las luces empiezan a apagarse en las tres capitales, él no se sorprende — es lo que dijo que iba a pasar, solo que no así y no tan rápido. Su segunda línea, semanas después, cuando ya se ve la escala:
+
+*"Tenía razón sobre de qué vivíamos. No me sirve de nada tenerla. Ahora hay que enseñarle a la gente a comer sin eso, y de eso no sé nada — pero conozco a quien sí."*
+
+Es su función en el epílogo: **no consuela, organiza.** El ancla del grupo se vuelve el ancla de un barrio.
+
 #### **F2a — The Long Winter: Handed Over (Speck entregada viva al Council)**
 Roen es quien **mantiene la vigilia** — no sobre un cuerpo, sino sobre el silencio que deja el grupo al disolverse. No hay muerte que llorar, solo tiempo comprado a costa de Speck. Su línea, fría para lo que es él:
 *"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando compra tiempo en vez de justicia."*

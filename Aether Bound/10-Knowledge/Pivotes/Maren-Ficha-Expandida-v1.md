@@ -308,9 +308,11 @@ Ver [[Los 5 Finales]] — Maren ocupa la fila "Aritmética/Manipulación". Cada 
 
 Maren sobrevive quebrada. Está en el borde del cráter cuando Speck se convierte en Warden completa. Ve la Muda cerrar sobre sí misma. Su cálculo fue correcto E insuficiente al mismo tiempo — es la conclusión más devastadora para alguien que se define por precisión.
 
-**Epílogo:** Maren regresa a Rivermeet. No pide perdón — no puede; el arquetipo lo prohíbe. Implementa nuevos sistemas: energía diversificada, redes de contingencia, planificación de post-Aether. La ciudad **no colapsa** porque ella la reorganiza sin depender del Aether corrupto que ya no existe.
+**Epílogo:** Maren regresa a Rivermeet y llega a tiempo para verla caer. El Aether se apagó de golpe y con él la mitad de la ciudad: los talleres, las bombas del río, la logística que ella misma había optimizado durante veinte años. **No puede evitar el colapso — nadie podía.** Lo que hace es la única cosa que su precisión todavía sirve para hacer: **volverlo sobrevivible.** Raciones calculadas al gramo, rutas de agua sin bombas, censos de quién puede trabajar y quién no, un invierno planificado casa por casa.
 
-Nunca vuelve a ver al jugador. Le llega un mensaje años después, corto: *"La ecuación resultó. No de la forma que calculé. Pero resultó."* No firma. No hace falta.
+Rivermeet pasa la peor década de su historia y **no se muere nadie que ella pudiera haber salvado.** Es un logro enorme y suena a poco, y esa distancia entre las dos cosas es exactamente su epílogo. No pide perdón — no puede; el arquetipo lo prohíbe.
+
+Nunca vuelve a ver al jugador. Le llega un mensaje años después, corto: *"La ecuación resultó. No de la forma que calculé. Pero resultó."* No firma. No hace falta. Y el jugador, si lleva la cuenta, sabe lo que Maren no escribe: que su cálculo fue **correcto e insuficiente** desde el principio, y que ella se pasó el resto de su vida administrando la diferencia.
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council en el cráter)
 
