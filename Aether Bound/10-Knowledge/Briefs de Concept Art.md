@@ -194,13 +194,14 @@ distintos, no dos. Fuente: [[Speck]] §Capa 4.
 > 2. Decía *"finales donde vive (F1, F4)"*. **Falso: en F2a Speck también vive**, cedida
 >    viva al Council. Vivir no es el eje; la agencia sí.
 >
-> **Consecuencia de producción:** los briefs §5c.1 (F1) y §5c.4 (F4) fueron generados bajo
-> la lectura colapsada — F1 pedía *"beside the player as equal"* y *"no passivity"*, que es
-> agencia, y su mood (renewal, warmth) es indistinguible del de F4. **Ese par de láminas
-> hay que rehacerlo**, no reetiquetarlo. Y §5c.2 quedó escrito antes del split F2a/F2b:
-> muestra un cadáver calcificado en el cráter, que es **F2b**, no F2a — F2a no tiene
-> cuerpo y Speck no se queda ahí. El archivo además está nombrado "Final 3" y catalogado
-> como Final 2. Hay que rehacer el set de finales completo contra esta tabla.
+> **Consecuencia de producción (histórico — resuelto 2026-07-29/30):** los briefs
+> §5c.1 (F1) y §5c.4 (F4) habían sido generados bajo la lectura colapsada — F1 pedía
+> *"beside the player as equal"* y *"no passivity"*, que es agencia, y su mood
+> (renewal, warmth) era indistinguible del de F4. Los dos quedaron corregidos y
+> ratificados. Y §5c.2 estaba escrito antes del split F2a/F2b: mostraba un cadáver
+> calcificado en el cráter, que es **F2b**, no F2a. Reorganizado: **§5c.2a** es el
+> brief nuevo de F2a (Speck viva, administrada, sola); **§5c.2b** es la lámina vieja,
+> re-etiquetada correctamente como lo que siempre fue — el brief de F2b.
 
 **Base visual común a todos los finales:**
 Cristales rojos saturados (misma geometría que God-Cores del mundo). Seams aether 
@@ -208,6 +209,16 @@ rojo-ámbar brillantes. Ojos amber facetados con peso/consciencia antigua. Patas
 rojo-esmeralda. Runas oro activas. Orejas pétalos rojo translúcido. **Lo crítico:** 
 retiene humanidad en los ojos/postura. Sigue siendo Speck — pero ahora sin velo, 
 sin defensa.
+
+> ⚠️ **Nota de generación (2026-07-30), aplica a los 5 briefs:** E3 es
+> **desvelamiento, no crecimiento** ([[Speck]] §la forma no crece — "cuando lo ves
+> sin velo, ves quién siempre fue"). El cuerpo debe leerse reconociblemente
+> **zorro** — no un esqueleto/robot genérico de cristal — y las orejas deben
+> mantener la forma de **pétalos** establecida (no orejas de zorro simples). La
+> primera pasada de `5c.4` cumplió las 3 correcciones narrativas (sin pedestal,
+> mirada recíproca al jugador, sin halo triunfal) pero derivó a un costillar
+> expuesto y orejas simplificadas — anotado, sin bloquear, pendiente de una
+> pasada de refinamiento visual si hay margen.
 
 **Briefs específicos por final a continuación.**
 
@@ -261,7 +272,64 @@ darkness, no victim expression, no passivity, no cold light, no photorealism, no
 no captions, no neon glow beyond natural aether brilliance.
 ```
 
-#### **5c.2 — Final 2: The Long Winter — E3 como God-Core Muerto, Monumento Frío ✅**
+#### **5c.2a — Final 2a: The Long Winter, Handed Over — E3 Viva, Administrada ✅**
+
+**Archivo:** `Final 2a The Long Winter Handed Over.png` (GENERADO 2026-07-30, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Los 3 ejes que distinguen F2a se cumplen — sola en cuadro (sin grupo ni jugador), contención clínica con vendaje/collar en vez de cadenas oscuras, paleta fría administrativa con su cuerpo como única nota cálida. Cuerpo de placas de cristal sólidas (mejor que la deriva a esqueleto expuesto de 5c.4). **Misma nota abierta que 5c.4, no bloqueante:** orejas de zorro simples en vez de la forma de pétalos establecida — ver ⚠️ en §Base visual común.
+
+> Brief nuevo (2026-07-30). Nunca se había escrito: la lámina que existía para
+> "Final 2" era, en rigor, el brief de F2b (ver 5c.2b abajo). F2a es distinto en
+> los tres ejes que importan — **vive** (no muere como F2b), **está sola** (no
+> hay grupo como en F4, y el Bond Echo canónico es *"responde débilmente, desde
+> muy lejos... como quien está siendo consultada contra su voluntad"*), y el
+> sabor es **decepción fría, no tragedia ni imprisonment dramático** — es un
+> recurso administrado, no una prisionera de un villano (eso es F3). Sin
+> cadenas oscuras (vocabulario ya usado en F3); en su lugar, contención clínica.
+
+```
+Interior keyframe of Speck's fate at the conclusion of Final 2a, The Long Winter: 
+Handed Over — she lives, but she has become an administered resource. ANATOMY LOCK: 
+she is built on a FOX skeleton — vulpine skull and muzzle, quadruped fox-proportioned 
+body, four fox legs and paws, a fox tail, the SAME silhouette DNA as her E1 
+crystalline form and her shapeshifted fox disguise — she must read clearly and 
+immediately as fox-derived, NOT a generic crystal skeleton or robot. She is NOT a 
+deer, NOT a stag, NOT a cervid — no antlers, no branching crown structure. Her body 
+is deep saturated red translucent crystal with the exact geometry of the God-Core 
+formations, gold runes still faintly active across her flanks, aether seams glowing 
+low and steady in warm ámbar and teal — dimmed, not extinguished. Her ears keep 
+their established petal-like shape: thin, translucent, faceted like quartz petals, 
+NOT simple pointed fox ears. Her eyes are dark amber, faceted — not hollow or broken 
+like a prisoner's, not warm and reciprocal like an answered question — subdued, 
+distant, quietly resigned, the look of someone being consulted against her will. 
+She is alone in frame — no Bound Five, no player character, no companions: this is 
+the loneliness of the ending, two years later. She is contained, not chained — no 
+heavy dark chains like a conqueror's prisoner. Instead: a soft woven lattice of 
+pale aether-dampening crystal forms a collar and cuffs around her neck and forelegs, 
+clinical rather than punitive, with a small stylized band on one foreleg — a 
+diegetic institutional marker, not legible text. She rests in a sparse, cold 
+institutional chamber — worked stone and dark metal, Triune Council or Great 
+Forging Clan architecture, clean and administrative rather than dungeon-like. Cold 
+pale blue-white aether lamps light the room evenly, no warm sunlight. A single 
+narrow window or opening in the background shows a sliver of the outside world, 
+distant and out of reach, going on without her. Her posture: lying or sitting 
+quietly, contained but not brutalized, patient in a way that reads as resignation 
+rather than peace. Mood: quiet disappointment, not tragedy — cold, administrative, 
+a resource being managed, not a monster being punished. Atmosphere: sterile, still, 
+muted, faintly sad. Art style: hand-painted graphic novel watercolor, ligne claire, 
+flat cel shading 3–4 bands, desaturated cool palette (pale blues, greys, worked 
+stone) with her red crystal body as the only warm color note in the frame, muted 
+rather than saturated. Visible paper grain. Blend of Sable × Breath of the Wild, 
+colder and quieter than the other finals. Negative: NO DEER, NO STAG, NO ELK, NO 
+CERVID, NO ANTLERS, no branching crown or horn structures, no skeletal exposed- 
+ribcage look, no simple pointed ears — ears must be petal-shaped and translucent, 
+no heavy dark punitive chains, no torture or brutality, no visible player character 
+or companions, no crater or wild outdoor landscape, no warm golden light, no 
+triumphant or majestic framing, no hollow broken prisoner-eyes, no readable text or 
+captions, no photorealism.
+```
+
+#### **5c.2b — Final 2b: The Long Winter, Fallen — E3 como God-Core Muerto, Monumento Frío ✅**
 
 **Archivo:** `Speck - Imprisoned Warden Form Final 3` (GENERADO 2026-07-23, imagen pasada)
 
@@ -293,11 +361,72 @@ no freedom, no gentle posture, no active runes, no flowing seams, no hope — mu
 as defeat and ownership, not majesty.
 ```
 
-#### **5c.4 — Final 4: The Warden's Choice — E3 como God-Core Vivo, Elegida y Majestuosa ✅**
+#### **5c.4 — Final 4: The Warden's Choice — E3 Viva, Respondiendo ✅**
 
-**Archivo:** `Speck - Ancient Warden Form Final 4 Aether Renacido` (GENERADO 2026-07-23, imagen pasada)
+**Archivo:** `Final 4 The Warden's Choice v2.png` (GENERADO 2026-07-30, RATIFICADO por Boris — reemplaza al v1 pre-canon de 2026-07-23, que queda en `90-Raw/concept/` como referencia histórica del problema corregido).
 
-**Evaluación:** ✅ 100% PASS — Capstone visual absoluto. Landscape keyframe The First Wound cementerio (dawn light dorado-ámbar CÁLIDO, Speck radiante en plataforma elevada, God-Cores rojos alrededor pero ella destaca VIVA, nombre SPECK tallado en base, grupo humano pequeño abajo en veneración). Ojos amber CÁLIDOS y conscientes (opuesto a F2 congelados). Runas oro BRILLANTES activas. Seams aether flujo cálido rojo-ámbar. Postura: quiet strength, calm, majestic. Luz dorada = purpose fulfilled, renewal, peace absoluta. Contrasta perfectamente F2 (fría muerte) vs. F4 (cálida eternidad). **ESTE ES EL FINAL VISUAL DEL JUEGO.**
+**Evaluación:** ✅ Las 3 correcciones narrativas se cumplen — sin pedestal/monumento, mirada recíproca directa al jugador (el único beat que distingue F4), sin halo ni composición triunfal. **Nota abierta, no bloqueante:** el cuerpo derivó a costillar expuesto tipo esqueleto y las orejas perdieron la forma de pétalos — ver ⚠️ en §Base visual común. Aceptado tal cual; refinamiento visual queda para una pasada futura si hay margen.
+
+> ⚠️ **Re-hecho 2026-07-30.** El archivo viejo (`Final 4 The Warden's Choice.png`,
+> GENERADO 2026-07-23, evaluado "100% PASS" en su momento) es **pre-canon**: se
+> aprobó antes del split de 5 finales, antes de la tabla de 3 grados de agencia, y
+> antes de que `Los 5 Finales §F4` fijara *"agridulce, no triunfal"* como sabor
+> obligatorio. Comparado contra el canon actual, tiene 3 problemas:
+> 1. **Composición de monumento** — pedestal, nombre grabado en runas, grupo
+>    mirando hacia arriba a distancia reverente. Es apoteosis/deificación, no una
+>    despedida. Ella *"se queda en el cráter para siempre"* tal cual quedó, no
+>    como estatua erigida después.
+> 2. **Sin reciprocidad.** Lo único que distingue F4 es que ella **responde** —
+>    mirada hacia el jugador, no al horizonte ni al sol. El viejo la muestra
+>    mirando de frente en pose de ídolo, sin ningún personaje específico como
+>    destinatario de esa mirada.
+> 3. **Triunfal en vez de agridulce** — halo dorado detrás de la cabeza, luz de
+>    amanecer como gloria. El sabor declarado prohíbe exactamente esto.
+>
+> El brief de abajo mantiene el formato de landscape keyframe (coherente con
+> `5c.2b`) y la luz cálida de amanecer (contraste correcto con el frío de F2b),
+> pero reconstruye la escena como un momento **íntimo y recíproco**, no público.
+
+```
+Landscape keyframe of The First Wound at the conclusion of Final 4, The Warden's 
+Choice — the one ending where the player asked and Speck answered. ANATOMY LOCK: 
+she is built on a FOX skeleton — vulpine skull and muzzle, quadruped fox-proportioned 
+body, four fox legs and paws, a fox tail — the SAME silhouette DNA as her E1 
+crystalline form and her shapeshifted fox disguise. She is NOT a deer, NOT a stag, 
+NOT a cervid — no antlers, no branching crown structure of any kind. She stands as 
+a living Warden creature in her true red God-Core form, deep saturated red 
+translucent crystal with the exact geometry of the God-Core formations around her, 
+aether seams glowing warm ámbar and teal, golden runes active across her body. She 
+has calcified in place at the edge of the central core — this is where she will 
+stand forever, permanent, rooted directly into the crater floor. NO PEDESTAL, NO 
+PLINTH, NO CARVED INSCRIPTION, NO STATUE BASE of any kind — she stands on bare 
+crater ground among the God-Core formations, not elevated, not enshrined. Dawn 
+light, warm gold-amber, soft — the intended contrast is with Final 2's cold 
+blue-grey, not with grandeur. THE CENTRAL BEAT, the only thing that must read 
+clearly: she is looking down and directly AT THE PLAYER CHARACTER, who stands close 
+to her at an intimate, human distance — not at the horizon, not at the sky, not out 
+at the viewer generically. Her eyes are dark amber, faceted, warm — and for the 
+first and only time across all five endings there is reciprocity in that gaze: she 
+was asked a question, and this is her answering it. The player character stands 
+near enough to almost touch her, head tilted up, in a quiet private exchange — not 
+a public unveiling. The rest of the Bound Five (Roen, Valen, Darro, the active 
+Pivote) stand a short distance back, small in frame, each visibly processing their 
+own private grief in their own posture — NOT posed as reverent worshippers looking 
+up in awe, NOT arranged symmetrically below her like an audience at a monument. No 
+golden halo or sunburst directly behind her head. Mood: bittersweet, not triumphant 
+— quiet acceptance, warmth undercut by the knowledge that this is a goodbye. The 
+world got its slow cure; a friend was lost anyway, only this time with her consent. 
+Atmosphere: intimate, solemn, tender, grave — a farewell, not a coronation. Art 
+style: hand-painted graphic novel watercolor, ligne claire, flat cel shading 3–4 
+bands, warm gold-amber and saturated red dominant, visible paper grain. Blend of 
+Sable × Breath of the Wild with luminosity. Negative: NO DEER, NO STAG, NO ELK, NO 
+CERVID, NO ANTLERS, no branching crown or horn structures, no pedestal, no plinth, 
+no carved name or runic inscription base, no statue-like presentation, no halo or 
+sunburst directly behind her head, no group posed as worshippers looking up from a 
+reverent distance, no looking at the horizon or sky, no looking at the viewer 
+generically — she must be looking at the player character specifically, no 
+triumphant or glorious framing, no photorealism, no text, no captions.
+```
 
 ### Forma Shapeshifteada — Zorro (E1→E2, coexiste con Estadios Warden) — BRIEF RATIFICADO 2026-07-23
 

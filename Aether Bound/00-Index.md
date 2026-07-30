@@ -14,6 +14,9 @@
   fusionado con `project-context` (auditoría de tokens, niveles
   equipo/privado, puentes) el 2026-07-20.
 - `scripts/check_vault.py` — auditoría de **peso** de arranque del Vault
+- `scripts/hook_current_state.sh` + `.claude/settings.json` (raíz del repo) —
+  hook `PostToolUse` que corre `check_vault.py` automáticamente al editar
+  `Current-State.md` y devuelve el semáforo al mismo turno
 - `scripts/check_canon.py` — auditoría de **consistencia** del canon (citas,
   aritmética, fuente única, clases incompletas). Correr ANTES de gastar
   subagentes de QA; exit 1 si hay críticos
@@ -51,7 +54,7 @@
 - [[Benchmark-Musculatura-Torso]] — rúbrica de aceptación para músculo esculpido en el rig procedural (torso sin playera + piernas). Canon visual: [[Art Bible]] + lámina fenotipo-humano-v1. `status: borrador`.
 - [[Principios de Anatomía 3D]] — minado de "Anatomy for 3D Artists" (157 páginas, 5 subagentes, 2026-07-16): torso en 3 masas (caja torácica 2/3 + cintura + pelvis 1/3), cintura escapular como bloque separado, sistema de mitades sucesivas para nudillos, pelo = masa completa primero + variación anti-paralelismo entre mechones. Insumo directo para `SHOULDER_X`/manos/pelo, nada aplicado aún en código.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres.
-- [[Briefs de Concept Art]] — prompts Nano Banana 2 (fenotipos/keyframes/Speck/foliage/Dagna) + notas de pipeline; ratificada 2026-07-08 (sus outputs ya son canon). Página viva: se añaden los 8 pivotes restantes.
+- [[Briefs de Concept Art]] — prompts Nano Banana 2 (fenotipos/keyframes/Speck/foliage/Dagna) + notas de pipeline; ratificada 2026-07-08 (sus outputs ya son canon). Página viva: se añaden los 8 pivotes restantes. **§5c — los 5 finales visuales de Speck completos (2026-07-30):** F1/F2a/F2b/F3/F4, todos ratificados y consistentes con `Los 5 Finales` actual.
 - [[Briefs de Mapa del Mundo]] — brief profesional para generar mapa Tolkien × Sable × BotW (45+ POI mapeados, fidedigno para RAW + concept). Estilo línea clara, desaturación cálida, isométrico.
 - [[Slice of Bond]] — vertical slice ratificado: Humano Duelist × Dagna; 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), 45–60 min.
 - [[Game Feel Bible]] — §6.3 ratificada: hit-stop por masa, shake modelo trauma, cámara libre + soft-assist, feel del Springboard.

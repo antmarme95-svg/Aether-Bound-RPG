@@ -33,12 +33,15 @@ updated: 2026-07-29
 - **Gate de F1 al borde del cráter, no antes** — choca con la puesta en escena si es antes (el agente carga a Speck hasta el centro). Con las 3 variantes por ruta: Pivote / equipo de extracción (Nyael) / Torgan segundo agente (Bram).
 - **Vekka es Deber Institucional**, no Aritmética (su ficha y el cuerpo de `Los 5 Finales` ya lo decían; la fila de la matriz era el outlier).
 
+### ✅ Los 5 finales visuales completos (2026-07-30)
+
+`5c.1` (F1, arte viejo ya correcto) / `5c.2a` (F2a, brief nuevo — sola, contención clínica, paleta fría) / `5c.2b` (F2b, ex-"Final 2") / `5c.3` (F3) / `5c.4` (F4, brief rehecho — sin pedestal, mirada recíproca al jugador, sin halo triunfal). Los tres briefs nuevos (`5c.2a`, `5c.4`, y el ancla vulpina de `5c.1`) generados y **ratificados por Boris**. Detalle y prompts completos en [[LOG]].
+
+**Nota abierta, no bloqueante (aplica a las 5 láminas):** las orejas quedaron con forma de zorro simple en vez de la forma de pétalos establecida en canon — anotado en `Briefs de Concept Art §Base visual común a todos los finales`. Refinamiento futuro si hay margen.
+
 ### 🔜 Pendiente para cerrar el sprint
 
-1. **5c.1 (F1) — el arte existente YA está bien; no hace falta regenerarlo.** Verificado: `Final 1 The Guided Molt.png` y `speck-trueform-translucent.png` ya son zorro/cuadrúpedo, sin astas. El ciervo que motivó la alarma salió de una regeneración nueva desde el TEXTO viejo del brief (sin ancla anatómica), no del arte ratificado. Fix real: el brief §5c.1 quedó con ancla vulpina explícita (por si se regenera a futuro) + corregida la frase de agencia ("beside the player as equal" era F4). **No usar el ciervo como referencia de nada; el asset viejo sigue siendo el bueno.**
-2. **5c.4 (F4) — sin prompt de texto todavía.** Solo referencia la imagen vieja aprobada (pre-split de agencia). Si se regenera, necesita el mismo ancla vulpina que 5c.1 más la reciprocidad de F4 (Speck mirando y respondiendo al jugador).
-3. **5c.2 — falta escribir el brief de F2a desde cero.** La lámina existente (cadáver calcificado) es en rigor el brief de **F2b**; F2a (Speck viva, cedida al Council, sin cadáver) nunca se escribió.
-4. **6ª re-corrida QA.** Criterio: 0 críticos.
+1. **6ª re-corrida QA.** Criterio: 0 críticos.
 
 ### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 
@@ -108,7 +111,7 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 - **Pregunta de bonds de fijos** de `The Bound Five.md` — arranca al cerrar el QA.
 
 ### Herramientas — estado
-🔴 **Hook de `check_vault.py` al editar `Current-State.md` — NO CONSTRUIDO.** Se acordó, se registró como ✅ resuelto por error (nunca se creó el archivo de hook), y Boris lo detectó. Pendiente real.
+✅ **Hook de `check_vault.py` al editar `Current-State.md` — CONSTRUIDO Y PROBADO (2026-07-30).** `.claude/settings.json` (proyecto, versionado) + `Aether Bound/scripts/hook_current_state.sh`. `PostToolUse` en `Edit|Write`; si el archivo tocado es `Current-State.md`, corre `check_vault.py` y devuelve el semáforo como contexto del mismo turno. Probado en vivo con una edición real (funcionó, incluido el fix de encoding UTF-8 del hook mismo).
 ✅ `check_canon.py` +2 clases (2026-07-29): `duplicados` (CRITICAL, hoy en 0) y `indice` (INFO, cerró 2 huérfanos).
 
 ### Worldbuilding — abierto

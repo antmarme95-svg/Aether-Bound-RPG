@@ -5849,6 +5849,69 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### Los 5 finales visuales completos + hook de check_vault.py (2026-07-30)
+
+**F1 (5c.1) — falsa alarma resuelta.** Boris mostró una imagen de un ciervo con
+astas alegando ser el resultado de F1. Verificado abriendo `Final 1 The Guided
+Molt.png` y `speck-trueform-translucent.png` con el tool de lectura: los dos
+YA eran zorro/cuadrúpedo, sin astas — el arte ratificado estaba bien. El ciervo
+salió de una regeneración nueva desde el texto viejo del brief (sin ancla
+anatómica), no del asset. Corregido el registro (había quedado mal anotado
+como "regenerado, falta VoBo" en la sesión anterior).
+
+**F4 (5c.4) — problema real, resuelto.** El asset viejo (`Final 4 The Warden's
+Choice.png`, aprobado 23/07, pre-split de 5 finales) sí violaba el canon
+actual: pedestal con nombre grabado, halo dorado, grupo en actitud de
+veneración — apoteosis, no *"agridulce, no triunfal"* (`Los 5 Finales §F4`). Sin
+reciprocidad (el único beat que distingue F4: ella responde, mirada al
+jugador). Prompt nuevo con ancla vulpina + composición íntima (ella mirando
+directo al jugador, sin pedestal, sin halo, el resto del grupo atrás
+procesando su propio duelo). Generado y **ratificado por Boris**. Guardado
+como `Final 4 The Warden's Choice v2.png`.
+
+**F2a (5c.2a) — nunca existía, brief escrito de cero.** La lámina de "Final 2"
+que existía era, en rigor, el brief de F2b (cadáver calcificado); F2a (Speck
+viva, cedida al Council, sin cuerpo) no tenía brief propio. Reorganizada la
+sección: `5c.2a` = brief nuevo de F2a, `5c.2b` = la lámina vieja re-etiquetada
+correctamente. El prompt de F2a se distingue de los otros 4 en los tres ejes
+que importan: **vive** (a diferencia de F2b), **está sola** — sin grupo ni
+jugador, a diferencia de F4 — y el tono es **frío/administrativo**, no trágico
+(F2b) ni de encadenamiento de villano (F3): contención clínica (vendaje/collar,
+no cadenas oscuras), cámara institucional, paleta fría con su cuerpo como
+única nota cálida. Generado y ratificado. Guardado como `Final 2a The Long
+Winter Handed Over.png`.
+
+**Nota de canon reforzada en el proceso:** E3 es *"desvelamiento, no
+crecimiento"* ([[Speck]]) — el cuerpo debe leerse reconociblemente zorro, no
+esqueleto/robot genérico, y las orejas deben mantener la forma de pétalos
+establecida. Las dos primeras generaciones (F4 y F2a) derivaron a costillar
+expuesto/orejas simples pese al ancla vulpina — anotado como nota abierta no
+bloqueante en `Briefs de Concept Art §Base visual común a todos los finales`,
+para refinamiento futuro si hay margen.
+
+**Con esto, los 5 finales visuales (F1/F2a/F2b/F3/F4) quedan completos y
+consistentes con el canon actual.**
+
+#### Hook de `check_vault.py` — construido y probado (corrige el registro falso de la sesión anterior)
+
+La sesión anterior había registrado "✅ Resuelto" sin haber creado el archivo
+de hook — Boris lo detectó preguntando directamente "¿el hook lo armaste?".
+Esta vez se construyó de verdad, vía la skill `update-config`:
+
+- **`.claude/settings.json`** (nuevo, proyecto — versionado, no local): hook
+  `PostToolUse` con matcher `Edit|Write`.
+- **`Aether Bound/scripts/hook_current_state.sh`** (nuevo): si el archivo
+  tocado es `Current-State.md`, corre `check_vault.py` y devuelve el semáforo
+  de arranque como `additionalContext` — inyectado de vuelta al modelo en el
+  mismo turno, no como texto de terminal que se pierde.
+- **`jq` no está instalado en este Git Bash** — el hook usa Python puro para
+  parsear el JSON de stdin y construir la respuesta. Encontrado y corregido
+  un bug de encoding en el primer intento (acentos llegaban como mojibake
+  `Ã©`/`Ã±`) forzando `PYTHONIOENCODING=utf-8` en el subproceso.
+- **Probado en vivo**, no solo con pipe-test sintético: una edición real a
+  `Current-State.md` disparó el hook y el contexto adicional llegó limpio
+  (*"última fecha 2026-07-29"* sin corrupción de encoding).
+
 ### `check_canon.py` +2 clases: duplicados e índice (2026-07-29)
 
 Pregunta de Boris tras el hook de peso: *"¿algún otro script .py que sea buena
