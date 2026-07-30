@@ -11,8 +11,10 @@ dioses para cuidar el Aether (sabor Horizon Zero Dawn — arqueología viviente)
 El secreto que reescribe el lore: [[El Mundo y la Muda]].
 
 **Esencia:** Superviviente de una era perdida. No es "criatura" — es **tecnología
-biológica antigua que fue diseñada, no evolucionada**. Lleva 550+ años sola,
-shapeshifteada como zorro endémico de The Wilds como método de auto-protección. Tiene el sentido del humor
+biológica antigua que fue diseñada, no evolucionada**. Lleva **550+ años dormida
+en crisálida** — no despierta y disfrazada: el shapeshifting de zorro exige plena
+consciencia, y hasta que la corrupción la despierta no puede sostenerlo (ver
+§Capa 1). Tiene el sentido del humor
 pragmático de un enano (seco, oscuro, sabio tras siglos) — es el último testigo
 del universo quebrantarse.
 
@@ -114,7 +116,7 @@ cualquier criatura de su tamaño. La regla es de **proximidad al pulso**, no de 
 
 ## Un estadio de revelación — La verdad es una
 
-**Speck no crece. No hay infancia, adolescencia, o madurez.** El viaje es **descubrimiento del JUGADOR**, no transformación de Speck. Ella es Warden anciana desde el primer encuentro — 550+ años despierta bajo disfraz de zorro, no una criatura juvenil aprendiendo el mundo.
+**Speck no crece. No hay infancia, adolescencia, o madurez.** El viaje es **descubrimiento del JUGADOR**, no transformación de Speck. Ella es Warden anciana desde el primer encuentro — **milenaria y recién despertada de 550 años de crisálida**, no una criatura juvenil aprendiendo el mundo. Lo que descubre no es cómo funciona el mundo: es **cuánto se perdió mientras dormía.**
 
 La forma Warden real existe desde el inicio, shapeshifteada como zorro. El "estadio" 
 es la **progresión de cómo el jugador la ve**, no cómo ella cambia:
@@ -146,9 +148,28 @@ vínculo.**
 
 ## Personalidad & Humor
 
-**Sentido del humor:** Pragmático-oscuro, como enano. Tras 550+ años sola
-observando la civilización caer, tiene wit seco y comprensión de lo absurdo.
-No busca risa — observa y comunica mediante ironía. Ejemplos:
+**Sentido del humor:** Pragmático-oscuro, como enano. Wit seco y comprensión de
+lo absurdo. No busca risa — observa y comunica mediante ironía.
+
+**De dónde sale, ahora que sabemos que durmió 550 años.** No de haber mirado
+caer la civilización: **no vio nada.** Sale de dos cosas distintas y mejores:
+
+1. **Milenios de Warden antes del cataclismo.** Speck ya era anciana cuando la
+   pusieron en crisálida. Su humor es viejo de origen — es el de alguien que
+   vio funcionar un mundo entero y sabe que las cosas grandes también se
+   terminan. No es cinismo aprendido: es perspectiva de escala.
+2. **El desfase del despertar, que es la parte divertida y la parte triste.**
+   Se durmió en una civilización Warden y despertó en un mundo que corre con
+   los cadáveres de sus pares como combustible, sin saberlo. **Todo lo que el
+   grupo trata como normal, a ella le resulta literalmente absurdo** — y no
+   puede explicar por qué. La ironía de Speck no es comentario: es **el único
+   registro disponible** para alguien que entiende el chiste y no tiene forma
+   de contarlo.
+
+Por eso su humor funciona en gestos y no en palabras, y por eso los Momentos de
+Persona pesan: son las únicas veces en que alguien **capta** el chiste.
+
+Ejemplos:
 - Inclina la cabeza cuando algo es particularmente ridículo ("¿en serio?")
 - Mira al jugador como si dijera "¿viste eso?" ante errores obvios
 - Se comporta *intencionalmente* menos "zorro" delante de Darro (camina raro,

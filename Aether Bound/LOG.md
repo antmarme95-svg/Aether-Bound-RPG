@@ -5849,6 +5849,85 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### 5ª re-corrida QA — 15 críticos, 13 cerrados (2026-07-29)
+
+Dos QAs Opus en frío: **6 de dramática + 9 de congruencia**, ambos con el brief de
+NO auditar lo mecánico (el linter ya está en 0).
+
+**Dos de los críticos eran fixes míos de la misma sesión, hechos en la línea y no en
+la clase.** Es literalmente el patrón que la regla 8 del CLAUDE.md existe para evitar,
+y volvió a pasar en la sesión que escribió la regla:
+- Reclutamiento de C4 en Driftmarket: corregido en **1 de 4** lugares
+  (`Geografía:704`, `:731`, `:1081`, `La Rueda:24`).
+- Rechazo de Darro: corregido en **2 de 5** (`Geografía:108`, `:683`, `:550`, y dos de
+  ellos lo hacían además público y en el lugar equivocado).
+
+#### El crítico de premisa
+
+El F1 de Iven decía que la Muda *"iba a ocurrir sola"* en dos años. Eso **revienta
+F2a**: si madura sola con Speck viva, el statu quo administrado es físicamente
+imposible y el clímax entero es un trámite. Y contenía **literal la frase que la
+prohibición 2 nombra como prohibida** — que escribí yo, en el mismo commit que escribió
+la prohibición.
+
+Reescrito: **la Muda no tiene reloj autónomo.** La crueldad de Iven no es que traicionó
+en vano, es que **traicionó contra su propio objetivo** — su gente vive porque él
+perdió. Frase disponible para el jugador: *"Tu gente vive porque perdiste."* Y lo que su
+gente se ahorró no fue gratis: es un pueblo con agua limpia en un continente sin
+comercio. Prohibición 2 ampliada a las dos cosas, con *"iba a ocurrir sola"* marcado
+como crítico de **premisa**, no de tono.
+
+#### Decisiones de Boris
+
+- **Speck durmió 550 años en crisálida.** 3 líneas outlier de `Speck.md` contra 15
+  archivos. **Su humor se refundó:** no viene de haber mirado caer la civilización (no
+  vio nada) sino de milenios de Warden previos + **el desfase del despertar** — todo lo
+  que el grupo trata como normal a ella le resulta absurdo y no puede explicar por qué.
+  La ironía es el único registro disponible para quien entiende el chiste y no puede
+  contarlo; por eso funciona en gestos y por eso los Momentos de Persona pesan. El POI
+  del avistamiento pasó a **The Guardians' Trail** (rastros de las bestias custodias).
+- **Las 4 fichas cortas archivadas** (`Dagna`, `Darro`, `Roen`, `Valen`) → `90-Raw/`.
+  Verificado antes: líneas canónicas y secciones visuales ya vivían en las expandidas.
+  Contradicciones que las condenaron: si Darro y Dagna se conocían de antes, si Darro
+  grita o **se calla** en la traición (la expandida dice que es la única vez que se
+  calla), y el gesto de Roen en el cráter (**dejar caer el escudo**, no la mano en el
+  hombro). **Regla nueva en `00-Index`: una sola fuente viva por personaje.**
+- **El Bond vacío se invierte en la celda de Bram.** Es el único Pivote que rehúsa, así
+  que nunca pierde el link y el beat obligatorio no tenía ruta. Ahora se juega al
+  revés: el jugador pica Bond esperando el vacío que el juego entero le enseñó a temer,
+  **y Bram responde** — sting completo, que no debe mezclarse con el truncado de dos
+  notas de las otras ocho celdas. Le paga su superlativo con mecánica en vez de
+  diálogo. Su costo llega igual en el cráter: rehúsa **y el Council entrega con las
+  manos de Torgan.**
+
+#### Gates, matriz y canon visual
+
+- **Gate de F1 al borde del cráter, no antes.** Como estaba, choca con la puesta en
+  escena (el agente carga a Speck hasta el centro y el jugador llega segundos después),
+  y seis fichas lo escribían bien contra el gate. Ahora con las 3 variantes por ruta:
+  Pivote / equipo de extracción (Nyael) / **Torgan como segundo agente** (Bram).
+- **F1 faltaba en la enumeración de gates de `Geografía`**, que fijaba 4 de 5. Agregada
+  la lista completa de los cinco.
+- **Vekka movida a Deber Institucional** en la fila de la matriz: su ficha, el cuerpo de
+  `Los 5 Finales` (5 líneas) y Torgan ya lo decían; la matriz era el outlier. Clase
+  barrida (`Darro:392`).
+- **Briefs §5c reescritos.** Colapsaban F1 y F4 en "aceptación con gracia divina", que
+  borra lo único que distingue F4, y decían *"finales donde vive (F1, F4)"* cuando en
+  F2a Speck **también vive**. Ahora llevan la tabla de los 3 grados de agencia. **El
+  arte generado hereda el error: el par F1/F4 hay que rehacerlo**, y `5c.2` quedó
+  escrito antes del split F2a/F2b (muestra un cadáver, que es F2b).
+- **Propagación de F4 a los fijos:** Valen decía *"The Molt completes"* donde la Muda es
+  **parcial** — en boca del confirmador de realidad; ahora nombra el precio. Darro
+  cerraba F4 **celebrando** con el sabor declarado agridulce; ahora la celebración se le
+  cae encima: el nombre fue suyo y Speck no vuelve.
+- **Residuos del modelo viejo:** `Speck.md` decía *"nueve personas del grupo"* y que
+  *"varía el C4 según quinteto"* (C4 es Darro fijo); `Darro+Iven` eran "dos Vanguards"
+  siendo los dos Duelists; dos personajes tenían la reacción *"más devastadora del
+  grupo"* en el mismo beat (Roen queda con el silencio, Valen con la más fría).
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~3,5k).
+**Pendiente:** rehacer el set de láminas de finales + 6ª re-corrida.
+
 ### Los 12 epílogos F1 bajo la regla de costo (2026-07-29)
 
 Cierra el crítico C1 del QA de dramática: `Los 5 Finales:100` declaraba que F1

@@ -42,7 +42,7 @@ Concept art de los tres pendiente (NB Pro, prompts generados 2026-07-22 en sesi�
 Diseño visual: distinguir Valen de Sereth (pelo oscuro, ropa de viajero) y Darro de Torgan (más ligero, expresión abierta).
 
 **C1, C2 y C4 son personajes FIJOS** (decisión de diseño 2026-07-23):
-[[Roen]], [[Valen]] y [[Darro]] tienen identidad, historia y arco propios —
+[[Roen-Ficha-Expandida-v1|Roen]], [[Valen-Ficha-Expandida-v1|Valen]] y [[Darro-Ficha-Expandida-v1|Darro]] tienen identidad, historia y arco propios —
 independientes de la celda del jugador. Esto permite desarrollarles
 personalidad profunda y arcos narrativos específicos.
 El Pivote (C3) sigue siendo la única variable — asignado por celda

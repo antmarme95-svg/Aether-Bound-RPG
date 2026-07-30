@@ -385,12 +385,14 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   - Si llevas a Sereth, debate sobre cálculos
   - Si llevas a Lyris, ella ve "drones" de Aether moviéndose (invisible a otros)
 
-#### **Speck's First Glimpse Site** (East, random spawn)
-- Ubicación donde alguien vio a Speck hace meses (¿Lyris? ¿Roen?)
-- Conexión narrativa: Pista sobre movimientos previos de Speck
-- Mecanismo: Encuentro aleatorio con NPC o bestia que "confirma" avistamiento
+#### **The Guardians' Trail** (East, random spawn)
+- **No es un avistamiento de Speck.** Speck estuvo **dormida en crisálida los 550 años** ([[Speck]] §Capa 1) — nadie la vio nunca antes del Acto 1, y este POI no puede insinuar lo contrario
+- Lo que hay son **rastros de las bestias guardianas** que la colocaron y la custodiaron: huellas demasiado grandes, marcas de garra en piedra a altura equivocada, un cerco de árboles crecidos en círculo que nadie plantó
+- Conexión narrativa: pista de que **algo la estuvo protegiendo con intención** durante siglos — siembra la pregunta de quién y por qué, que el Sunken Archive paga
+- Mecanismo: encuentro aleatorio con NPC o bestia que reacciona al rastro (miedo heredado, no memoria propia)
 - Dinámicas:
-  - Alguien describe a "criatura pequeña pero rara"
+  - Alguien describe "algo grande que pasaba cada tantos años y nunca bajaba al pueblo"
+  - **Valen:** reconoce el patrón del cerco como arquitectura ritual, no natural
   - Speck reacciona con reconocimiento (flash visual)
   - Jugador intuye que Speck no es animal normal
 

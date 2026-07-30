@@ -14,41 +14,48 @@ updated: 2026-07-29
 
 **Sprint QA de reparación — Fases 0-5 cerradas + 3 re-corridas procesadas.** Relato completo de las fases 0-4 en [[Current-State-Historico]]; detalle operativo de cada bloque y de las 3 re-corridas en [[LOG]].
 
-**✅ 3ª re-corrida cerrada (8 críticos + 3 MEDIUM).** Detalle en [[LOG]]. Canon que quedó fijado:
+**✅ 3ª re-corrida cerrada.** Canon fijado (detalle en [[LOG]]):
 
 - **Agencia de Speck en 3 grados** (`Speck.md §Capa 4`): F4 = le preguntan (*responder*); F1 = deciden por ella y acepta (*aceptar*); F2a/F2b/F3 = se la arrebatan. Ninguna ficha puede hacer que Speck "elija" en F1.
-- **Regla del Fragmento — `Speck.md §Capa 5`, fuente única.** Sobrecarga por transferencia de fuerza mecánica cerca de un core activo: esperar no la mata, cederla no la mata, **arrebatarla sí**. Nadie más la enuncia; todos citan ahí.
-- **Transporte:** la entrega corta el pulso, y el cese del pulso es lo que la suelta del centro. Por eso F2a puede transportarla.
-- **Gates:** quietud que termina en pregunta = F4; forcejeo = F2b; **parálisis = F2a** (el Pivote entrega por defecto). No decidir hace ganar a la institución.
-- **Isolde Marrow** degradada a reclamo de House Marrow (el "Último Reino" pasó a Pendientes).
-- **Longevidad** alineada a [[Las Tres Razas]]; **Darro ~63**; **Valen no presenció ninguna Muda**.
-- **Goggles no retirables** propagado a las 9 fichas + Valen.
-
-**Cronología de las Mudas — limpia.** Ninguna se completó en 550 años; las 3 afirmaciones contrarias quedaron **marcadas como error heredado de the Academy**, no borradas: `Valen:58` (los ancianos y sus "cuatro Mudas", fuente del "cinco Mudas"), `Valen:52` (el "110 años") y `Geografía:613` (el ermitaño, hoy testigo del error de registro). Aritmética de Valen: 140 → 180 → 200 → 230.
+- **Regla del Fragmento — `Speck.md §Capa 5`, fuente única.** Esperar no la mata, cederla no la mata, **arrebatarla sí**. Nadie más la enuncia.
+- **Transporte:** la entrega corta el pulso, y el cese del pulso la suelta del centro. Por eso F2a puede transportarla.
+- **Gates:** pregunta = F4; forcejeo = F2b; **parálisis = F2a**. No decidir hace ganar a la institución.
+- **Isolde Marrow** = reclamo de House Marrow. **Longevidad** alineada a [[Las Tres Razas]]. **Goggles no retirables** propagado.
+- **Mudas:** ninguna se completó en 550 años; las 3 afirmaciones contrarias quedaron **marcadas como error heredado de the Academy**, no borradas (`Valen:58`, `Valen:52`, `Geografía:613`).
 
 ## 4ª RE-CORRIDA QA — CORRIDA (2026-07-29). 18 críticos, 17 cerrados
 
 Dos QAs Opus en frío, en paralelo: **9 críticos de dramática + 9 de congruencia.** Commits `7550a7d`, `ad3bde7`.
 
+### Canon fijado en la 4ª ronda
+
+- **Costo de F1 = colapso tecnológico, NO exterminio** (`Los 5 Finales §El costo de F1`, con 3 prohibiciones obligatorias para los 12 epílogos). Muere la tecnología Aether y la legitimidad de toda institución que vivía del recurso; sobrevive la gente, empobrecida. **F1 no es mejor que F4:** funde la civilización de golpe; F4 la deja adaptarse y cobra a Speck.
+- **Gate de F4 = 2 condiciones** (mayoría "persona" + ≥2 compañeros T2+). Fuera Goggles/flashes: el 100% de las partidas los cumplía.
+- **Matriz de roles fija eliminada** de `The Bound Five`; el balance se verifica **por celda**.
+- **`Geografía y Ciudades` = fuente primaria única de ubicaciones**; los cuadrantes de `Briefs de Mapa` son derivados y no se editan a mano.
+- **Fuente única nueva: `Nomenclatura §the Wanderer's Goggles`** — no retirables + privados + **no son gate**.
+
+**Los 12 epílogos F1 reescritos** bajo la regla de costo, y el costo mejoró el beat en casi todos (detalle en [[LOG]]): Vekka hace bisagras que en el mundo nuevo **son el oficio** y lo vive como degradación; Lyris es la única que ve el apagón completo desde el aire; Nyael queda "no retornada" para siempre porque el registro murió antes que ella; a Darro se le apaga **la forja que lo rechazó**.
+
+## 5ª RE-CORRIDA QA — CORRIDA (2026-07-29). 15 críticos, 13 cerrados
+
+6 de dramática + 9 de congruencia. Commits `c92b7fe` y siguientes. Detalle en [[LOG]].
+
+**Dos de los críticos eran fixes míos hechos en la línea y no en la clase** (reclutamiento de C4: 1 de 4 lugares; rechazo de Darro: 2 de 5). Es el patrón que la regla 8 del CLAUDE.md existe para evitar, y volvió a pasar dentro de la misma sesión que lo documentó.
+
 ### Decisiones de canon de Boris en esta ronda
 
-- **Costo de F1 = colapso tecnológico, NO exterminio.** Nueva sección `Los 5 Finales §El costo de F1`, con 3 prohibiciones obligatorias para los 12 epílogos F1. Muere la tecnología Aether y la legitimidad de toda institución que vivía del recurso; sobrevive la gente, empobrecida. **F1 no es mejor que F4:** F1 funde la civilización de golpe, F4 la deja adaptarse y cobra a Speck.
-- **Gate de F1 = Pivote neutralizado antes del cráter + no intervenir.** Eliminada la rama "hablar con Speck", que era el verbo de F4. F1 es el único final cuya acción de cráter es la ausencia de acción **con nadie más capaz de actuar** — de ahí el requisito del Pivote.
-- **Gate de F4 = 2 condiciones** (mayoría "persona" en Momentos + ≥2 compañeros T2+). Eliminada la condición de Goggles/flashes: por no retirables y estar en rieles, el 100% de las partidas la cumplía. Alineado con `The Tether §Gate del Final 4`.
-- **`Dagna.md` archivada** a `90-Raw/`. Contradecía a la expandida en origen, apellido y reclutamiento; los tiers del Springboard se migraron antes a [[Los 9 Links del Pivote]].
-- **Matriz de roles fija eliminada** de `The Bound Five` (1V/2D/2S cerraba en 4 de 9 celdas). El balance se verifica **por celda**.
-- **`Geografía y Ciudades` = fuente primaria única de ubicaciones.** Los cuadrantes de `Briefs de Mapa` son **derivados**, no se editan a mano.
-- **Fuente única nueva: `Nomenclatura §the Wanderer's Goggles`** — no retirables + estrictamente privados + **no son gate**.
+- **Speck durmió 550 años en crisálida** — NO estuvo despierta disfrazada de zorro. Era la versión mayoritaria (15 archivos) contra 3 líneas outlier de `Speck.md`. **Su humor se refundó:** no viene de haber mirado caer la civilización (no vio nada), viene de milenios de Warden previos + **el desfase del despertar** — todo lo que el grupo trata como normal a ella le resulta literalmente absurdo, y no puede explicar por qué. La ironía es el único registro disponible para alguien que entiende el chiste y no puede contarlo. El POI del avistamiento pasó a ser **The Guardians' Trail**: rastros de las bestias que la custodiaron.
+- **Las 4 fichas cortas archivadas** (`Dagna.md`, `Darro.md`, `Roen.md`, `Valen.md`) → `90-Raw/`. Verificado antes: las líneas canónicas y las secciones visuales ya vivían en las expandidas. **Regla nueva: una sola fuente viva por personaje**, anotada en `00-Index`.
+- **El Bond vacío se invierte en la celda de Bram** — el único Pivote que rehúsa nunca pierde el link, así que el beat obligatorio se juega al revés: el jugador pica Bond esperando el vacío que el juego entero le enseñó a temer, **y Bram responde.** Le paga su superlativo con mecánica, no con diálogo. Su costo llega igual en el cráter: rehúsa y el Council entrega con las manos de Torgan.
+- **Premisa corregida:** la Muda **no tiene reloj autónomo**. El F1 de Iven decía que "iba a ocurrir sola" en 2 años, lo que hacía físicamente imposible el statu quo de F2a y volvía el clímax un trámite. La prohibición 2 ahora cubre las dos cosas: ni *gratis* ni *iba a ocurrir sola*.
+- **Gate de F1 al borde del cráter, no antes** — choca con la puesta en escena si es antes (el agente carga a Speck hasta el centro). Con las 3 variantes por ruta: Pivote / equipo de extracción (Nyael) / Torgan segundo agente (Bram).
+- **Vekka es Deber Institucional**, no Aritmética (su ficha y el cuerpo de `Los 5 Finales` ya lo decían; la fila de la matriz era el outlier).
 
-### ✅ Los 12 epílogos F1 reescritos bajo la regla de costo (2026-07-29)
+### 🔜 Pendiente para cerrar el sprint
 
-Los 9 Pivotes + los 3 fijos. Cierra el crítico C1 del QA de dramática. **El costo civilizatorio mejoró el beat en casi todos** — le dio al epílogo un antagonista de escala que antes no tenía. Detalle personaje por personaje en la entrada del 2026-07-29 de [[LOG]].
-
-Muestras del patrón: Vekka termina haciendo bisagras y herrajes, que en el mundo nuevo **son el oficio** porque no queda forja de Aether — y lo vive como degradación. Lyris es la única que ve el costo completo, sobrevolando las tres capitales apagándose una por una. Nyael queda "no retornada" para siempre porque el registro murió antes que ella. A Darro se le apaga **la forja que lo rechazó**, y le sacaron el a dónde volver. Valen es el que nombra el precio en voz alta, con el **M3 cerrado**: su línea ya no asume un Pivote vivo (en 4 de 9 rutas F1 muere o desaparece).
-
-### 🔜 Único pendiente para cerrar el sprint
-
-**5ª re-corrida QA.** Criterio de cierre: 0 críticos. Arranca con `check_canon.py` (hoy en 0) y sigue con los 2 subagentes en frío — ver skill `canon-qa`.
+1. **Rehacer el par de láminas F1/F4** y el set de finales. Los briefs `§5c` colapsaban F1 y F4 en "aceptación con gracia divina" — borra lo único que distingue F4 — y `5c.2` quedó escrito antes del split F2a/F2b (muestra un cadáver, que es F2b). El brief ya está corregido con la tabla de los 3 grados de agencia; **el arte generado hereda el error**.
+2. **6ª re-corrida QA.** Criterio: 0 críticos.
 
 ### 🛠️ Herramienta nueva — correr ANTES de gastar subagentes
 
@@ -71,8 +78,6 @@ El cuello de botella no es el QA, es el **barrido**: la longevidad humana quedó
 
 Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, y se abre la pregunta de bonds de fijos (abajo).
 
-**Verificado en esta sesión:** grep de los 8 datos corregidos → 0 residuos; los 22 "Speck elige" del vault están todos en secciones F4 (el error de F1 no se propagó); `check_vault.py` 🟢 verde, arranque ~5,125 tokens.
-
 **Plan de abordaje con asignación de modelos por sprint:** `~/.claude/plans/haz-un-plan-de-dazzling-lemur.md`.
 
 ---
@@ -84,11 +89,7 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 🟡 **`The Bound Five.md`** — **pregunta de diseño abierta:** mecanismo de bonds/links propios para Roen, Darro y Valen a partir de raza/rol, de forma que los 9 bonds sean protagonistas por igual. Toca [[The Tether]] y [[Bond y el Bond Vacío]]. Arranca al cerrar el QA.
 📋 **`Principios de Anatomía 3D.md`** — referencia compilada (DOF por región). Pendiente reestructurar en tablas agnósticas de motor.
 
-**Concept art:** catalogado y trackeado en `90-Raw/concept/CATALOGO.md`.
-- §9 gobernantes: 5/6 ✅, King Borran 🟡 provisional · §10 elenco político: 6/6 ✅
-- §6d keyframes ciudades: Emberdeep/Stillspire/Mistbound ✅, Rivermeet daylight 🟡, Driftmarket 🔴
-- §L UI Mockups: 3/3 ✅ (main-menu 🟡 ajuste menor) · §M Marketing: key-art-poster 🟡 v2 por tone mismatch
-- §11: **14/14 briefs corridos y con QA ✅ cerrado** (2026-07-27)
+**Concept art:** estado por sección en `90-Raw/concept/CATALOGO.md` (fuente). Pendientes vivos: King Borran 🟡, Rivermeet daylight 🟡, Driftmarket 🔴, key-art-poster 🟡. **Y el set de finales §5c hay que rehacerlo** (ver arriba).
 
 ---
 
@@ -132,22 +133,16 @@ Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**, 
 
 ### Narrativa / guión (próximo frente real)
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
-- Voz narrativa definida (¿narrador? ¿silent protagonist? ¿qué tan verbose?)
-- Momentos de Persona de Speck (~7 escenas sin UI)
-- Diálogos del Bautizo de Speck (Darro la nombra)
-- Los 5 Finales — scripting de diálogos/cinemática; estado post-final jugable
-- Variantes C3 vivo/muerto en Finales 2-3
+- Voz narrativa (¿narrador? ¿silent protagonist? ¿qué tan verbose?)
+- Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
+- Los 5 Finales — scripting de diálogos/cinemática; estado post-final jugable; variantes C3 vivo/muerto
 
 ### Fichas de personaje pendientes
 - **Old Tobin Hale — ficha expandida.** Solo aparece en `Geografía y Ciudades §The Driftmarket` y `Briefs de Concept Art §10b`. The Reckoning le dio peso dramático mayor (custodio inconsciente de los Goggles hace 40+ años) y ahora también una línea propia sobre el extraño anterior (`Geografía:965`, nueva 07-29). Estimado: ficha corta ~200-300 líneas, sin arco de traición.
 
 ### Concept art pendiente
-- Revisar las **4 escenas de traición** (`Traición_Dagna`, `La traición ejecutada`, `El primer viso de la muda`, `El Último Vínculo`) — ¿legacy o canon?
-- Evaluar el **set de arte de combos** como conjunto — no tiene doc en `10-Knowledge/` todavía
-- QA de las **4 variantes de The Wilds** sin procesar (`Arterias`, `Interior`, `Noche con Muda`, `Ruinas`)
-- Evaluar **videos Higgsfield** (bloqueo técnico ffmpeg activo)
-- **King Borran** 🟡 — si se retoma: prompt en prosa corta (formato que resolvió Kadrun v2)
-- **POIs de The Wilds sueltos** — van cuando aparezcan en el guión
+- **Rehacer el set de finales §5c** (F1/F4 se ven igual; 5c.2 es pre-split) — ver arriba
+- Revisar las 4 escenas de traición (¿legacy o canon?); set de combos sin doc; QA de las 4 variantes de The Wilds; videos Higgsfield (bloqueo ffmpeg); King Borran 🟡 con prompt en prosa corta; POIs sueltos cuando aparezcan en el guión
 
 ### Mapa del mundo
 `Aether Bound universe.png` = referencia interna imperfecta (texto corrupto en etiquetas). Plan: documentar por escrito a medida que avanza el worldbuilding → al cerrar el frente, escribir spec exhaustiva. Ver cabecera de [[Briefs de Mapa del Mundo]].
