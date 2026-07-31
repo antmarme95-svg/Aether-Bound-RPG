@@ -25,3 +25,12 @@
 8. **Todo fix de canon va a la FUENTE del dato, no a la línea reportada.**
    Grep de la clase completa de menciones en todo el vault antes de cerrarlo.
    Cuatro rondas de QA fallaron por corregir líneas sueltas.
+9. **Idioma (decisión de Boris, 2026-07-30): el guión y todo el contenido de
+   front-end (diálogos, líneas canónicas, UI, textos in-game) se escribe en
+   **inglés** de acá en adelante.** El vault (prosa de diseño, análisis,
+   nombres de sección) sigue en español — es donde Boris y el asistente
+   conversan, no lo que ve el jugador. Las conversaciones de trabajo pueden
+   seguir en español o inglés, indistinto. Nota: varios beats de diálogo ya
+   escritos (ej. las líneas del Reckoning en `Geografía y Ciudades.md`) están
+   en español, de antes de esta decisión — pendiente de pasada de traducción
+   cuando se aborde el guión en serio; no bloquea nada mientras tanto.

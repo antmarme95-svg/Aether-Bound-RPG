@@ -5849,6 +5849,44 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### Ficha de Old Tobin Hale + regla de idioma para el guión (2026-07-30)
+
+**Old Tobin Hale, escrita.** `10-Knowledge/Old-Tobin-Hale-Ficha-Expandida-v1.md`
+— personaje de apoyo, sin arco de traición ni epílogo en los 5 finales.
+Consolida canon ya disperso en `Geografía y Ciudades §The Driftmarket / §THE
+RECKONING` (los dos beats fijos: la advertencia con falso positivo sobre uno
+de los 3 fijos, y la entrega de the Wanderer's Goggles) y en `Briefs de
+Concept Art §10b/§11.6` (visual, ya ratificado). No duplica el guión existente
+— lo resume desde el punto de vista de Tobin y agrega 3 líneas de voz nuevas.
+
+**El extraño que le dejó los Goggles hace 40+ años queda deliberadamente sin
+resolver.** El vault no tiene canon sobre su identidad y la ficha dice
+explícitamente que no hay que inventar uno sin que Boris lo pida — es una
+siembra a propósito, mismo patrón que The Monolith (aporta peso sin
+resolverse). Se dejaron las tres lecturas abiertas por si se retoma: otro
+portador del poder innato, un Warden distinto, o sin relación con Speck.
+
+**Regla de idioma (decisión de Boris):** el guión y todo el contenido de
+front-end (diálogos, líneas canónicas, UI, textos in-game) se escribe en
+**inglés** de acá en adelante. El vault sigue en español — es donde Boris y
+el asistente conversan, no lo que ve el jugador. Registrado en `CLAUDE.md`
+regla 9 y en `Nomenclatura.md` (extensión de la regla de nombres propios en
+inglés ya vigente desde 2026-07-24). Las 3 líneas de voz nuevas de Tobin ya
+se escribieron en inglés siguiendo la regla; el diálogo viejo del Reckoning
+(en español, de antes de esta decisión) queda anotado como pendiente de
+traducción para cuando se aborde el guión completo — no bloquea nada.
+
+**Limpieza de `Current-State.md`:** la sección `## Pendientes` había quedado
+desactualizada desde antes de la 5ª ronda (seguía listando "6ª re-corrida"
+como pendiente, "5c.4/5c.2 sin escribir" cuando ya estaban cerrados, y la
+ficha de Tobin como pendiente cuando ya se escribió). Reescrita completa,
+comprimidas las 3ª-5ª rondas a resumen de una línea cada una (detalle
+completo sigue en este LOG), y agregada la regla de idioma como pendiente
+transversal del frente de guión.
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~2,9k, bajó
+respecto a la sesión anterior por la limpieza). **Pendiente: 7ª re-corrida QA.**
+
 ### 6ª re-corrida QA — 9 críticos, 8 cerrados (2026-07-30)
 
 Dos QAs Opus en frío: **6 de dramática + 3 de congruencia.**

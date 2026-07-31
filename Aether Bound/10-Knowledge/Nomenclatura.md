@@ -35,6 +35,11 @@ crea o retraduce en inglés** — el vault sigue en español, pero los nombres
 propios siguen la regla ya vigente (the Aether-Born, the Triune Council):
 más globales, más estándar, idioma primario del juego.
 
+**Extensión (decisión de Boris, 2026-07-30):** la regla se generaliza a **todo
+el guión y front-end** — diálogos, líneas canónicas, UI, textos in-game se
+escriben en inglés de acá en adelante (ver `CLAUDE.md` regla 9). El vault
+sigue siendo español para la prosa de diseño.
+
 | Cosa                                             | Nombre canónico                           | Nota                                                                                                                                                                                                                   |
 | ------------------------------------------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Autoridad moral élfica (testigos del cataclismo) | **The Elder Circle**                      | Originalmente 5, hoy 4 (uno murió hace 10 años); sin asiento formal — [[Estructura Política]]                                                                                                                          |
