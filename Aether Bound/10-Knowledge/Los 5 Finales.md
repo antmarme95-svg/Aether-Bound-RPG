@@ -15,13 +15,16 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
 **Gate:** dos condiciones, en este orden.
-1. **El mensajero quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo — antes de completar la entrega.** El Pivote (o quien la esté cargando) llega al cráter con Speck y **se detiene** en algún punto del tramo hacia el core — borde, centro, o entremedio, según lo que cada ficha necesite narrar — sosteniéndola mientras espera al **mensajero del Council** que viene a recibirla. El Pivote no completa la entrega por su cuenta: la cede o la retiene según lo que haga el jugador. [[Geografía y Ciudades]] §ACTO 3, sub-beat 5, deja el punto exacto deliberadamente abstracto (*"cada ficha de Pivote escribirá su variación"*); lo único fijo es que **no hay versión de F1 en la que Speck llegue al cráter sola**, y que mientras el mensajero pueda completar la entrega, la inacción del jugador resuelve a **F2a**: el mensajero llega y la entrega se consuma por defecto.
+1. **El mensajero quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo — antes de completar la entrega.** El Pivote (o quien la esté cargando) llega al **borde** del cráter con Speck y **se detiene ahí, siempre en el borde** — nunca en el centro, para que cruzarlo hacia el core siga siendo la línea exclusiva de F3 ([[Geografía y Ciudades]] §ACTO 3, sub-beat 5) — sosteniéndola mientras espera al mensajero que viene a recibirla. El Pivote no completa la entrega por su cuenta: la cede o la retiene según lo que haga el jugador. **No hay versión de F1 en la que Speck llegue al cráter sola**, y mientras el mensajero pueda completar la entrega, la inacción del jugador resuelve a **F2a**: el mensajero llega y la entrega se consuma por defecto.
 2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
 
-**Por ruta, quién es el mensajero que hay que neutralizar:**
-- **7 rutas:** un mensajero del Council que se acerca al Pivote, detenido en el borde con Speck en brazos.
+**Por ruta, quién es el mensajero que hay que neutralizar** — no siempre es el Council: cada Pivote responde a **su propia cadena institucional**, y el mensajero es de esa cadena.
+- **Council directo:** Maren, Sereth (negociaron con el Council o su brazo visible).
+- **Cadena propia:** Dagna → mensajero de Deepstone. Torgan → mensajero de su clan menor. Vekka → mensajero del Great Forging Clan. Lyris → mensajero de Frontier High Command. Iven → contacto del Consortium que lo reclutó con mentiras.
 - **Ruta Nyael:** el **equipo de extracción** que ella activó antes de retirarse. F1 exige detenerlo a él — si el jugador se aparta, el equipo completa la entrega y es F2a.
 - **Ruta Bram:** **Torgan como segundo agente**, que es el ejecutor real cuando Bram rehúsa.
+
+**Ninguna ruta puede ceder viva a Speck sin que el jugador detenga al mensajero primero** — si una ficha no tiene mensajero explícito, o el jugador "detiene" al Pivote en vez de al mensajero, esa ficha no cumple el gate: cae en F2a por defecto, no en F1.
 
 No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero al mensajero: es lo que convierte la quietud del Pivote en una decisión del jugador en vez de un descuido.
 
@@ -157,7 +160,7 @@ Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, p
 
 **Regla para las 9 fichas:** cada epílogo debe expandir su celda de la matriz sin contradecir ninguna otra celda de su fila. Cada Pivote tiene 5 epílogos, uno por final.
 
-**Excepción declarada e intencional — Iven, fila Deber Institucional.** Es el único de los 4 (junto a Torgan, Dagna, Nyael) cuya institución le mintió activamente para reclutarlo (*"Deber Institucional en su variante envenenada"*, [[Pivotes/Iven-Ficha-Expandida-v1]]). Por eso su F1 no es "muere o se autoexilia" (sobrevive, querido, en su asentamiento) y su F2a no es "asciende sin celebración" (queda tolerado, no querido, sin institución que lo ascienda — su lealtad nunca fue a un clan o academia, sino a un pueblo). **Decisión de Boris (2026-07-30): la excepción se queda así, no se reescribe para calzar con la fila.** Ningún QA futuro debe reportarla como crítico.
+**Excepción declarada e intencional — Iven, fila Deber Institucional.** La fila tiene 5 miembros (Torgan, Dagna, Nyael, Vekka, Iven). Iven es el único de los 5 cuya institución le mintió activamente para reclutarlo (*"Deber Institucional en su variante envenenada"*, [[Pivotes/Iven-Ficha-Expandida-v1]]). Por eso su F1 no es "muere o se autoexilia" (sobrevive, querido, en su asentamiento) y su F2a no es "asciende sin celebración" (queda tolerado, no querido, sin institución que lo ascienda — su lealtad nunca fue a un clan o academia, sino a un pueblo). **Decisión de Boris (2026-07-30): la excepción se queda así, no se reescribe para calzar con la fila.** Ningún QA futuro debe reportarla como crítico.
 
 Rejugabilidad: el género emocional del clímax varía por Pivote ([[Los 9 Pivotes]]); los finales, por filosofía.
 

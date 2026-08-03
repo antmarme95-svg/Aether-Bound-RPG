@@ -208,7 +208,7 @@ Si Speck vive, Rivermeet muere y con ella Aethelgard. No es abstracto — es sus
 
 **Maren no lo dice.** Simplemente nota: *"Bonita criatura. Lástima que exista."* (Bromista, pero con verdad debajo.)
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket; Maren entra con inventario mental listo, esperando aburrirse. No se aburre.
 
@@ -306,7 +306,7 @@ Ver [[Los 5 Finales]] — Maren ocupa la fila "Aritmética/Manipulación". Cada 
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
-Maren sobrevive quebrada. Está en el borde del cráter cuando Speck se convierte en Warden completa. Ve la Muda cerrar sobre sí misma. Su cálculo fue correcto E insuficiente al mismo tiempo — es la conclusión más devastadora para alguien que se define por precisión.
+El jugador alcanza al mensajero del Council antes de que llegue hasta Maren y lo detiene ahí ([[Los 5 Finales]] §F1). Maren no forcejea ni interviene — se queda sosteniendo a Speck, y sobrevive quebrada. Está en el borde del cráter cuando Speck se convierte en Warden completa. Ve la Muda cerrar sobre sí misma. Su cálculo fue correcto E insuficiente al mismo tiempo — es la conclusión más devastadora para alguien que se define por precisión.
 
 **Epílogo:** Maren regresa a Rivermeet y llega a tiempo para verla caer. El Aether se apagó de golpe y con él la mitad de la ciudad: los talleres, las bombas del río, la logística que ella misma había optimizado durante veinte años. **No puede evitar el colapso — nadie podía.** Lo que hace es la única cosa que su precisión todavía sirve para hacer: **volverlo sobrevivible.** Raciones calculadas al gramo, rutas de agua sin bombas, censos de quién puede trabajar y quién no, un invierno planificado casa por casa.
 

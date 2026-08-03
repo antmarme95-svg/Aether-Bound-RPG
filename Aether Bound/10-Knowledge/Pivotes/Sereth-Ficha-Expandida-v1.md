@@ -181,7 +181,7 @@ El Bound Five viaja. Sereth observa. Y siembra.
 
 Sereth no se endurece. Sigue siendo cálido. Sigue riendo de bromas de Darro. Sigue teniendo conversaciones profundas con el jugador — algunas por siembra, algunas simplemente porque lo quiere. **Esa mezcla es exactamente lo que hace su método imposible de detectar en tiempo real.**
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. Para Sereth, el Grove es un encuentro con **su propio ecosistema institucional al descubierto**.
 
@@ -301,7 +301,7 @@ Ver [[Los 5 Finales]] — Sereth ocupa la fila "Aritmética/Manipulación". Cada
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
-Sereth sobrevive quebrado. Está en el borde del cráter cuando Speck se convierte en Warden completa y la Muda cierra sobre sí misma. Ve, con lucidez académica, que **su método era el problema — no las cuentas.** La aritmética de "millones sobre uno" era de otra escuela (la de Maren). La suya era "conducir a la persona correcta a decidir por sí misma". Y la persona correcta, decidiendo por sí misma con toda la información, decidió lo contrario de lo que la Corona le encargó preparar.
+El jugador alcanza al mensajero del Council antes de que llegue hasta Sereth y lo detiene ahí ([[Los 5 Finales]] §F1). Sereth no forcejea — se queda quieto con Speck, y sobrevive quebrado. Está en el borde del cráter cuando Speck se convierte en Warden completa y la Muda cierra sobre sí misma. Ve, con lucidez académica, que **su método era el problema — no las cuentas.** La aritmética de "millones sobre uno" era de otra escuela (la de Maren). La suya era "conducir a la persona correcta a decidir por sí misma". Y la persona correcta, decidiendo por sí misma con toda la información, decidió lo contrario de lo que la Corona le encargó preparar.
 
 No es que se equivocó calculando. **Su método asumía que el terreno bien preparado siempre produce el resultado buscado.** El terreno estaba perfectamente preparado. El resultado no.
 

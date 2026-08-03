@@ -215,7 +215,7 @@ Con cada Pivote, la persecución toma sabor distinto:
 
 ### The First Wound (Clímax emocional)
 
-El Pivote actúa finalmente (intenta destruir Speck, entregarla, lo que sea). 
+El Pivote llega al cráter cargando a Speck, dispuesto a entregarla viva a su institución.
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia de esa decisión, no como elección aislada.
 

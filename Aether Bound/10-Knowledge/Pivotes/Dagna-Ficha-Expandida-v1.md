@@ -180,7 +180,7 @@ Vuelve **más callada.** Esto es medible — Darro lo comenta al día siguiente:
 
 **Desde este momento, Dagna sabe lo que va a hacer.** No le queda ninguna revelación por delante. Va a esperar al Archive, va a confirmar en la ejecución, y va a tomar a Speck al salir. Todo está decidido. Los meses que quedan son los meses de despedirse sin decir adiós.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket.
 
@@ -306,11 +306,11 @@ El jugador lo nota. Darro lo nota. Nadie más — Dagna sigue con los ojos en el
 
 ## Finales — 5 Variantes según Matriz Deber Institucional
 
-Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Dagna, sin contradecir ninguna otra celda de su fila (Torgan, Iven, Nyael).
+Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Dagna, sin contradecir ninguna otra celda de su fila (Torgan, Iven, Nyael, Vekka).
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-El jugador alcanza a Dagna cargando a Speck y la detiene antes de que llegue al mensajero de Deepstone que espera en el cráter. Dagna no forcejea — sostiene el escudo en alto un segundo, mide la situación con la misma calma con la que sostuvo cinco años de escolta, y baja el arma. Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
+El jugador alcanza y detiene **al mensajero de Deepstone** antes de que llegue hasta Dagna ([[Los 5 Finales]] §F1) — Dagna, que ya estaba quieta esperándolo, no necesita que la detengan a ella. Sostiene el escudo en alto un segundo, mide la situación con la misma calma con la que sostuvo cinco años de escolta, y baja el arma sin forcejear. Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
 
 **Epílogo:** Dagna **deserta.** Es la distinción que importa: no renuncia — renunciar es un acto formal que exige presentarse ante el consejo y decirlo, y para eso haría falta un informe que ella no puede escribir. Deja el escudo pesado en el altar del subclán, no avisa a nadie, y sale de Emberdeep a pie. En los papeles sigue siendo Deepstone. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
 

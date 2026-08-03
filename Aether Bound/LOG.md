@@ -6361,3 +6361,57 @@ símbolo tallado de Darro que nunca aparece en su F3.
 verdad y no reabrieron nada antes de declarar el sprint cerrado. Las 2 decisiones de diseño
 pendientes (Elder Circle, conteo de flashes) quedan para resolver con Boris antes o durante
 esa corrida.
+
+## [2026-08-02] sprint/QA-verificación | 8ª re-corrida — ~9 CRITICAL + 16 MEDIUM, los fixes no habían bajado a los epílogos
+
+**Diagnóstico:** los 6 fixes de la 7ª ronda quedaron bien en las fuentes (`Los 5 Finales`,
+`Geografía y Ciudades`, `Speck.md §Capa 4/5`), pero el barrido no llegó a los **45 epílogos**
+donde vive la ejecución real de los gates. Mismo patrón de siempre: fix a la línea reportada,
+no a la clase completa.
+
+**1 decisión nueva de Boris:** en las rutas Torgan, Iven y Vekka el Pivote llegaba al
+**centro** del cráter con Speck (no al borde como las otras 6 rutas), lo que obligaba al
+jugador a cruzar el borde para alcanzarlo — disparando F3 por defecto e imposibilitando
+F1/F2b/F4 en esas 3 rutas. Se resolvió moviendo a los 3 Pivotes al borde, igual que las
+otras 6 — cambio de staging, no de gate.
+
+**Fixes aplicados:**
+- **Gate F1 reescrito en 7 epílogos** con el mensajero correcto de cada cadena institucional
+  (el enunciado "7 rutas: mensajero del Council" en `Los 5 Finales` era falso — 4 de esas 7
+  usan su propio mensajero): Maren y Sereth (Council directo), Dagna→Deepstone, Torgan→su
+  clan menor, Vekka→Great Forging Clan, Lyris→Frontier High Command, Iven→contacto del
+  Consortium. Dagna y Vekka tenían el gate invertido (el jugador detenía al Pivote, no al
+  mensajero); Lyris cedía sola, sin acción del jugador.
+- **Sub-beat 5 de Vekka reescrito por completo** — seguía siendo la versión vieja: desmontaba
+  el core central sola, con Speck atada a un yunque, sin ningún mecanismo de espera/mensajero.
+  Ahora se detiene en el borde con su propio yunque portátil, y el mensajero del Great Forging
+  Clan sube desde el cráter a buscarla — se preserva toda la caracterización de oficio/ritual.
+- **Bautizo de Speck** — `Speck.md` (la fuente declarada de los Momentos de Persona) seguía
+  rotulando el Momento 2 como Acto 1; se movió a Acto 2 y se reordenaron los Momentos 2/3 en
+  consecuencia. Residuo en `Geografía:808` también corregido.
+- **`Estructura Dramática:29`** ya no dice que el Pivote traidor concluye "esto debe morir" —
+  contradecía todo el canon (matar a Speck no cura nada). Ahora dice que busca entregarla viva
+  a su institución. Eco corregido en `Roen-Ficha:218`.
+- **Agencia de Speck**: `Briefs de Concept Art` todavía decía "3 grados" en dos encabezados
+  pese a que la tabla ya tenía los 4 correctos desde la 7ª ronda — corregido.
+- **Topología**: `Briefs de Mapa del Mundo` repetía el error de Cinder Ascent que ya se había
+  cerrado en `Geografía` — el barrido de la 7ª ronda no había salido de ese archivo.
+- **Flashes**: `Grove of Cycles:27` llamaba "Flash privado" al evento del Vector C, que en
+  realidad es el Momento de Persona 6 — desambiguado. Encabezado "Grove of Cycles (a mitad del
+  Acto 2)" corregido a "cierre del Acto 2" en las 10 fichas que lo replican (la fuente ya se
+  contradecía a sí misma sobre cuándo ocurre).
+- Menores: Vekka agregada a la fila "Deber Institucional" en 3 fichas donde faltaba, wikilink
+  roto de "protocolo del silencio" por salto de línea en `Speck.md` corregido, cita rota de
+  los Goggles en `Geografía:1140` (apuntaba a §ACTO 2 Interludios, es §THE RECKONING).
+
+**Quedan MEDIUM sin tocar** (no bloquean): línea de Tobin sin traducción fiel, aritmética de
+Torgan, hueco de 5 años en cronología de Dagna, duplicación de Old Tobin en `Geografía`,
+símbolo tallado de Darro ausente en su F3, sujeto de la cesión sin resolver en el F1 de Nyael.
+
+**Estado: `check_canon.py` en 0 críticos, `check_vault.py` 🟢.**
+
+### Pendiente inmediato
+
+**9ª re-corrida QA con 2 subagentes Opus en frío** — criterio de cierre: 0 críticos de ambos.
+Si el patrón se repite (fix en la fuente, no propagado a fichas), buscar dónde más puede estar
+pasando esto antes de declarar cerrado cualquier futuro sprint.

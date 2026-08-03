@@ -174,7 +174,7 @@ En privado, alrededor del fuego, después de dos meses de camino, Bram empieza a
 
 En Rivermeet, Bram **evita activamente** el ala de la ciudad donde vive House Thorne. Cambia rutas, propone rodeos, sugiere cantinas más lejanas. El jugador lo nota. Bram no explica. Cuando el jugador insiste — *"¿Hay algo aquí que no quieres cruzar?"* — Bram responde: *"Vieja historia. No es de esta aventura."* Cierra la puerta con la misma cortesía con que House Thorne le enseñó a cerrar puertas hace cuarenta años.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket.
 

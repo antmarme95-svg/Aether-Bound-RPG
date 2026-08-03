@@ -200,7 +200,7 @@ Elige esperar. Porque Nyael **ama la precisión del momento exacto.** Y el momen
 
 Nyael no es cruel. Es **perfeccionista.**
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Nyael entra sin hacer ruido — el Grove es de los pocos lugares donde su silencio no se distingue del silencio del sitio. Se sienta contra una raíz, medio metro detrás del grupo, mazo de dagas guardado. Los cuatro elfos no la miran directo. Threnn la nota — tarda un segundo más de lo debido en el saludo. Corwyn sonríe con la boca cerrada hacia ella una vez, en el silencio que sigue al primer intercambio con Ilyara. Reconocimiento profesional: Corwyn sabe para quién trabaja Nyael sin que nadie se lo haya dicho.
 
@@ -272,7 +272,7 @@ Nyael **no aparece en el borde del cráter con el jugador.** Ella personalmente 
 
 ## Finales — 5 Variantes según Matriz Deber Institucional
 
-Ver [[Los 5 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con Torgan, Iven y Dagna, con lectura propia (ausencia como método). Cada final es la traducción de su celda a voz Nyael, sin contradecir ninguna otra celda de su fila.
+Ver [[Los 5 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con Torgan, Iven, Dagna y Vekka, con lectura propia (ausencia como método). Cada final es la traducción de su celda a voz Nyael, sin contradecir ninguna otra celda de su fila.
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 

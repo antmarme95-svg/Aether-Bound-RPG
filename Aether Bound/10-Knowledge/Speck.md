@@ -60,8 +60,8 @@ Estos flashes no son "revelación", son **destellos de tu poder anti-ilusión**.
 
 **Capa 3 — Lo que descubre el Bound Five (por convivencia):**
 La inteligencia se hace innegable. La calma es antinatural. La mirada te
-*conoce* — ya no es animal, es ser. Nadie lo dice en voz alta ([[protocolo del
-silencio]]).
+*conoce* — ya no es animal, es ser. Nadie lo dice en voz alta (protocolo del
+silencio).
 
 **Capa 4 — Lo que revela el Fragmento (clímax — la verdad impuesta):**
 El Fragmento activa en The First Wound. Speck reacciona involuntariamente: hive 
@@ -208,9 +208,9 @@ sub-gate, así que en la mayoría de las partidas son 6
 
 1. **Acto 1 — El nido, antes de que nadie le pida nada.** Segundos antes de que el grupo doble una esquina hacia una bestia semi-corrompida, Speck se detiene sola, orejas planas, y no avanza — no ladra, no huye, simplemente se niega a seguir caminando. Herramienta: el jugador la lee como sensor de Aether y avanza igual, confiando en el dato. Mascota: alguien la carga para "protegerla" del peligro que ella misma señaló. Persona: el grupo cambia de ruta porque ella dijo que no. Las tres lecturas son razonables — solo una la trata como alguien con criterio, no como instrumento o cría asustada.
 
-2. **Acto 1 — El bautizo, el instante después del nombre.** Cuando Darro dice *"It's nothing but a speck with opinions"*, hay medio segundo de silencio antes de que el grupo ría. En ese medio segundo, Speck inclina la cabeza — su gesto de ironía, ya establecido (§Personalidad & Humor) — directo a Darro, no al vacío. Herramienta: nadie lo nota, la escena sigue. Mascota: alguien dice "aww" y la acaricia por el gesto "gracioso". Persona: el jugador es quien nota que le respondió a Darro específicamente, no al chiste en general — que entendió quién lo dijo.
+2. **Acto 1→2 — Después del primer flash privado del jugador.** La primera vez que el jugador la ve sin el velo (seams aether, no pelaje), Speck nota que la están mirando distinto — un instante donde ella devuelve la mirada más tiempo del que un zorro sostendría contacto visual, y después rompe el contacto primero. Herramienta: el jugador sigue caminando, fue "un momento raro". Mascota: el jugador la abraza, asumiendo que necesita consuelo. Persona: el jugador no hace nada — la deja romper el contacto a su propio ritmo, sin invadir el momento que claramente es de ella.
 
-3. **Acto 1→2 — Después del primer flash privado del jugador.** La primera vez que el jugador la ve sin el velo (seams aether, no pelaje), Speck nota que la están mirando distinto — un instante donde ella devuelve la mirada más tiempo del que un zorro sostendría contacto visual, y después rompe el contacto primero. Herramienta: el jugador sigue caminando, fue "un momento raro". Mascota: el jugador la abraza, asumiendo que necesita consuelo. Persona: el jugador no hace nada — la deja romper el contacto a su propio ritmo, sin invadir el momento que claramente es de ella.
+3. **Acto 2 — El bautizo, el instante después del nombre.** Darro se une al grupo al final del Acto 1 y pasa un tramo de La Rueda observándola antes de nombrarla ([[Darro-Ficha-Expandida-v1]] §Acto 2, Escena 2). Cuando dice *"It's nothing but a speck with opinions"*, hay medio segundo de silencio antes de que el grupo ría. En ese medio segundo, Speck inclina la cabeza — su gesto de ironía, ya establecido (§Personalidad & Humor) — directo a Darro, no al vacío. Herramienta: nadie lo nota, la escena sigue. Mascota: alguien dice "aww" y la acaricia por el gesto "gracioso". Persona: el jugador es quien nota que le respondió a Darro específicamente, no al chiste en general — que entendió quién lo dijo.
 
 4. **Acto 2 — La Rueda, una ciudad cualquiera.** Un NPC (comerciante, curioso, funcionario menor) intenta tocarla o examinarla de cerca sin permiso — la clase de gesto que cualquiera haría con un zorro raro. Speck se retrae con un gruñido bajo, deliberado, sostenido — no el reflejo instantáneo de un animal asustado, sino algo más parecido a un límite. Herramienta: el jugador la calma para que el NPC pueda terminar de examinarla (hay valor narrativo/comercial en dejarlo). Mascota: el jugador la aparta y la consuela como a una cría asustada. Persona: el jugador se para entre ella y el NPC sin tocarla a ella tampoco — lee el gruñido como un "no" y lo respeta sin gestionarlo.
 

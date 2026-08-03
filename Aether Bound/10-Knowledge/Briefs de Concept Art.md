@@ -175,7 +175,7 @@ activa, Speck reacciona involuntariamente). No hay E2 intermediario.
 **Especificación:** Clímax en The First Wound. Fragmento activa → Speck reacciona 
 involuntariamente (hive mind forzado). Jade pálido se revela como rojo God-Core.
 
-**Narrativa transversal — los 3 grados de agencia, y hay que poder VERLOS.** La
+**Narrativa transversal — los 4 grados de agencia, y hay que poder VERLOS.** La
 transformación es involuntaria en todos los casos ([[Speck]] §Capa 4). Lo que cambia
 por final es **cuánta agencia tiene Speck sobre lo que viene**, y son cuatro grados
 distintos, no dos. Fuente: [[Speck]] §Capa 4.
@@ -370,8 +370,8 @@ as defeat and ownership, not majesty.
 
 > ⚠️ **Re-hecho 2026-07-30.** El archivo viejo (`Final 4 The Warden's Choice.png`,
 > GENERADO 2026-07-23, evaluado "100% PASS" en su momento) es **pre-canon**: se
-> aprobó antes del split de 5 finales, antes de la tabla de 3 grados de agencia, y
-> antes de que `Los 5 Finales §F4` fijara *"agridulce, no triunfal"* como sabor
+> aprobó antes del split de 5 finales, antes de la tabla de grados de agencia (hoy
+> 4, ver arriba), y antes de que `Los 5 Finales §F4` fijara *"agridulce, no triunfal"* como sabor
 > obligatorio. Comparado contra el canon actual, tiene 3 problemas:
 > 1. **Composición de monumento** — pedestal, nombre grabado en runas, grupo
 >    mirando hacia arriba a distancia reverente. Es apoteosis/deificación, no una

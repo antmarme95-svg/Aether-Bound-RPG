@@ -805,8 +805,9 @@ respalda, y el grupo lo ve.
    - Primer God-Core destruido
 
 4. **Después del Nido**
-   - **Darro (C4) se une, último** — bautiza a Speck si sobrevive
-     ([[The Bound Five]])
+   - **Darro (C4) se une, último** — el bautizo ocurre recién en **Acto 2**,
+     después de que el grupo entero la ve comportarse de forma inteligente
+     ([[The Bound Five]], [[Darro-Ficha-Expandida-v1]] §Acto 2 Escena 2)
 
 **Beats:**
 - Razón para salir (Triune Council ordena purga / standing decae)
@@ -897,8 +898,8 @@ respalda, y el grupo lo ve.
 **Entre reinos:**
 - Descanso en **The Driftmarket**
 - Mecánica de Standing vs Bond
-- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, **final del Acto 2**, justo antes de The Reckoning). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido en Acto 1; el bautizo, el primer flash, La Rueda, el Pivote, el Grove y el camino a Driftmarket en Acto 2. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
-- **Darro no se recluta aquí.** Ya está en el grupo desde el primer campamento del Acto 1 (§ACTO 1 — Primer campamento); fue el primero en tocar la crisálida y quien nombró a Speck
+- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, **final del Acto 2**, justo antes de The Reckoning). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido en Acto 1; el primer flash, el bautizo, La Rueda, el Pivote, el Grove y el camino a Driftmarket en Acto 2, en ese orden. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
+- **Darro no se recluta aquí.** Ya está en el grupo desde el Acto 1, unido el último de los cuatro después del nido (§ACTO 1 — 4. Después del Nido); fue quien la nombró en Acto 2, no el primero en tocar la crisálida — eso ocurrió antes de que él se uniera
 
 **Cada reino ofrece vista del pecado del vecino:**
 - Desde Rivermeet: ves corrupción en Ignis Reach
@@ -1056,9 +1057,9 @@ El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometrí
 
 #### 5. Quiebre final en The First Wound (cráter, God-Core cemetery)
 
-Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
+Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. **El Pivote se detiene siempre en el borde con Speck** — nunca en el centro, en ninguna de las 9 rutas — para que cruzar hacia el core central siga siendo la línea exclusiva de F3. El jugador y los fijos llegan segundos después.
 
-Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central sin esperar a que Speck sea entregada es F3 (el Pivote la suelta recién cuando ve al jugador cruzar, [[Los 5 Finales]] §F3), **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el mensajero del Council entrega por defecto —, **preguntarle a Speck qué quiere** es F4, y **neutralizar al mensajero en el borde y después no intervenir con Speck es F1**. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta. Y la diferencia entre F2a y F1 tampoco es la quietud: es si queda alguien capaz de completar la entrega.
+Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central sin esperar a que Speck sea entregada es F3 (el Pivote la suelta recién cuando ve al jugador cruzar, [[Los 5 Finales]] §F3), **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el mensajero de la cadena del Pivote activo entrega por defecto —, **preguntarle a Speck qué quiere** es F4, y **neutralizar al mensajero en el borde y después no intervenir con Speck es F1**. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta. Y la diferencia entre F2a y F1 tampoco es la quietud: es si queda alguien capaz de completar la entrega.
 
 **Los cinco gates del cráter, completos** (ninguno puede faltar de esta lista): cruzar = F3 · forcejear = F2b · retroceder o congelarse = F2a · preguntar = F4 · **neutralizar al agente de la entrega y no intervenir = F1**. En la ruta Nyael ese agente es el equipo de extracción que ella dejó activado, y en la ruta Bram es Torgan como segundo agente — **F1 exige detener a ése**, no a un Pivote que ya no está en escena ([[Los 5 Finales]] §F1).
 
@@ -1136,7 +1137,7 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 ### The Driftmarket
 - **Neutral Ground:** Donde Standing no aplica igual
-- **Tobin's Office:** donde entrega the Wanderer's Goggles (§ACTO 2 Interludios)
+- **Tobin's Office:** donde entrega the Wanderer's Goggles (§THE RECKONING)
 - **Un** Momento de Persona en el camino hacia acá — los demás están repartidos por todo el juego ([[Speck]] §Momentos de Persona)
 - **Old Tobin:** único personaje de poder sin agenda oculta — controla el
   comercio por reputación, no corrupción

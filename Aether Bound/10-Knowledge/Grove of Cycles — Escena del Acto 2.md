@@ -6,7 +6,7 @@ updated: 2026-07-27
 
 # Grove of Cycles — Escena del Acto 2
 
-> La única escena del juego donde The Elder Circle entra al arco jugable. Ocurre a mitad del Acto 2, después de completar los tres sub-actos regionales, antes de The Reckoning. Es la última puerta abierta antes de que la traición se vuelva inevitable.
+> La única escena del juego donde The Elder Circle entra al arco jugable. Ocurre al **cierre** del Acto 2, después de completar los tres sub-actos regionales, antes de The Reckoning. Es la última puerta abierta antes de que la traición se vuelva inevitable.
 
 ---
 
@@ -24,7 +24,7 @@ Tres vectores posibles, dependiendo de decisiones previas:
 
 **Vector B — Convocatoria formal.** Si el Standing élfico está alto (o si el Pivote activo es élfico y Ambassador Cyrion ya movió pieza), llega un mensajero de Stillspire con una convocatoria en pergamino: The Elder Circle quiere ver al Bound Five. La convocatoria es cortesía absoluta y presión total — la marca élfica.
 
-**Vector C — Speck.** Si el jugador ha tratado a Speck **como persona en al menos 3 Momentos de Persona**, entonces en el descanso previo a bajar a Driftmarket, Speck hace algo que solo el jugador ve: gira la cabeza hacia el noreste — hacia Grove of Cycles — y no la mueve por 20 segundos completos. **Flash privado**, invisible al grupo. El jugador puede seguir la dirección o no; si la sigue y guía al grupo hacia allá, los otros no preguntan por qué. Este vector desbloquea una línea extra de Maelys en el debate.
+**Vector C — Speck.** Si el jugador ha tratado a Speck **como persona en al menos 3 Momentos de Persona**, entonces en el descanso previo a bajar a Driftmarket, Speck hace algo que solo el jugador ve: gira la cabeza hacia el noreste — hacia Grove of Cycles — y no la mueve por 20 segundos completos. Es el **Momento de Persona 6**, privado, invisible al grupo — no uno de los tres flashes ([[Speck]] §Capa 2, §Momentos de Persona). El jugador puede seguir la dirección o no; si la sigue y guía al grupo hacia allá, los otros no preguntan por qué. Este vector desbloquea una línea extra de Maelys en el debate.
 
 **Por qué el gate de Vector C no cuenta flashes.** Los flashes son **exactamente tres** y están en la ruta principal ([[Speck]] §Capa 2 — tabla de fases): pedir ≥4 lo volvía inalcanzable, y pedir ≥3 lo volvería automático. Lo único que discrimina de verdad es cómo el jugador trató a Speck, así que el gate corre solo sobre los Momentos de Persona. Es la misma corrección que se aplicó al gate de F4 ([[Los 5 Finales]] §F4).
 

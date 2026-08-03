@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "GDD §1.2, §1.3"
-updated: 2026-07-04
+updated: 2026-08-02
 ---
 
 # Estructura Dramática
@@ -26,9 +26,11 @@ que Speck es la llave de [[El Mundo y la Muda|la Muda]] — con una verdad
 parcial diseñada para dividir al grupo.
 
 **Clímax — La Traición por Convicción.** El Compañero 3 ([[Los 9 Pivotes]])
-concluye *"para que millones vivan, esto debe morir"* y actúa. No es malvado.
-Se lleva el Fragmento (dispositivo de acoplamiento): **orfandad mecánica** —
-pierdes tu link firma ([[Los 9 Links del Pivote]], [[Bond y el Bond Vacío]]).
+concluye que Speck tiene que ser entregada a su institución — viva, no muerta:
+matarla no sana nada y perpetúa la corrupción ([[Speck]] §Capa 5) — y actúa.
+No es malvado. Se lleva el Fragmento (dispositivo de acoplamiento): **orfandad
+mecánica** — pierdes tu link firma ([[Los 9 Links del Pivote]], [[Bond y el
+Bond Vacío]]).
 
 **Acto 3.** Perseguir/entender a C3 → los tres reinos movilizan ejércitos →
 The First Wound: clímax y [[Los 5 Finales]].

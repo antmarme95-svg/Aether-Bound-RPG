@@ -61,24 +61,36 @@ No bloquea nada mientras tanto.
 
 ### 🔜 Pendiente para cerrar el sprint
 
-**7ª re-corrida QA — corrida y procesada (2026-08-02), no cierra todavía.** Encontró
-**13 CRITICAL + 18 MEDIUM** (volumen más alto desde la 1ª ronda: el QA entró por
-primera vez a las 12 fichas de personaje, no solo a `Geografía`/`Estructura
-Dramática`). Detalle completo de las 6 decisiones de diseño de Boris y los fixes
-aplicados en [[LOG]] (entrada 2026-08-02). Resumen: gate F1/F2a rehecho (mensajero
-del Council completa la entrega, no el Pivote), orden fijo de "El Primero" (Roen →
-Valen → Pivote → Darro), bautizo de Speck movido a Acto 2, gate F3 sin Speck en
-mano al cruzar, agencia de Speck a 4 grados, mapeo Elder Circle→Final fijado por
-`Grove of Cycles`, "tres flashes" confirmado y desambiguado de la lectura de Tether.
+**7ª re-corrida (2026-08-02):** 13 CRITICAL + 18 MEDIUM, corregidos con 6
+decisiones de Boris (gate F1/F2a con mensajero, orden "El Primero" Roen→Valen→
+Pivote→Darro, bautizo a Acto 2, gate F3 sin Speck en mano, agencia a 4 grados,
+mapeo Elder Circle). Detalle en [[LOG]].
 
-**Quedan MEDIUM sin tocar** (no bloquean, para la 8ª): línea de Tobin sin traducir,
-aritmética de Torgan (20-72→20-75), hueco de 5 años en cronología de Dagna,
-duplicación de Old Tobin en `Geografía`, repeticiones de imagen entre epílogos,
-símbolo tallado de Darro ausente en su F3.
+**8ª re-corrida (2026-08-02) — corrida y procesada, no cierra todavía.** Encontró
+**~9 CRITICAL + 16 MEDIUM**: los fixes de la fuente (`Los 5 Finales`, `Geografía`)
+habían cerrado bien, pero no habían bajado a los **45 epílogos**. Una decisión
+nueva de Boris: en las rutas Torgan/Iven/Vekka el Pivote se detiene siempre en el
+**borde** del cráter (nunca en el centro), para que F1/F2b/F4 sigan siendo
+alcanzables sin disparar F3 por defecto. Fixes aplicados: gate F1 reescrito en 7
+epílogos con el mensajero correcto de cada cadena institucional (no siempre el
+Council — Dagna→Deepstone, Torgan→su clan, Vekka→Great Forging Clan, Lyris→
+Frontier High Command); sub-beat 5 de Vekka reescrito por completo (seguía
+desmontando el core sola, sin mensajero); `Speck.md` corregido a bautizo Acto 2
+(era la fuente que faltaba); `Estructura Dramática` corregida (ya no dice que el
+Pivote quiere matar a Speck); grados de agencia corregidos en `Briefs de Concept
+Art`; residuo de Cinder Ascent purgado de `Briefs de Mapa del Mundo`; ambigüedad
+de flashes resuelta en `Grove of Cycles` (el evento del Vector C es el Momento de
+Persona 6, no un flash). Detalle completo en [[LOG]] (entrada 2026-08-02, 8ª
+ronda).
 
-**Siguiente paso:** correr una **8ª re-corrida** (2 subagentes Opus en frío) para
-validar que los 13 CRITICAL cerraron de verdad y no reabrieron nada — recién ahí
-se declara el sprint cerrado. Linter en 0 críticos después de esta ronda de fixes.
+**Quedan MEDIUM sin tocar** (no bloquean): línea de Tobin sin traducir, aritmética
+de Torgan, hueco de 5 años en cronología de Dagna, duplicación de Old Tobin en
+`Geografía`, símbolo tallado de Darro ausente en su F3, sujeto de la cesión sin
+resolver en el F1 de Nyael.
+
+**Siguiente paso:** correr una **9ª re-corrida** (2 subagentes Opus en frío) para
+validar que estos fixes cerraron de verdad — recién ahí se declara el sprint
+cerrado. Linter en 0 críticos después de esta ronda.
 
 ### 🛠️ Herramientas del vault
 

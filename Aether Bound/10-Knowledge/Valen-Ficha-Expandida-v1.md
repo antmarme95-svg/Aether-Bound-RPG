@@ -210,7 +210,7 @@ El jugador: "¿Entonces debemos destruirla?"
 
 Valen: *"No. Quiero decir: debes elegir entre lo que amas y lo que es correcto. Eso es lo que significa ser consciente. Eso es el precio del conocimiento."*
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. Si el Tether del jugador con Valen está en T2+, es **Valen quien pide al grupo desviarse a Grove of Cycles** antes de bajar a The Driftmarket — Vector A canónico. No explica del todo por qué: *"Hay gente que necesita ver algo, aunque no sepan que lo están viendo."* Es la única vez en el juego donde Valen inicia una desviación de ruta sin que se la pidan — coherente con su formación en la Academy of Sages, la misma de la que salen los 4 miembros de The Elder Circle que van a encontrar ahí.
 
@@ -388,7 +388,7 @@ Valen: *"Because in 230 years of patterns, I've seen endings. You have not. That
 
 Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de verdad. Verdad sin escape es prisión.
 
-**Momento clave:** Cuando Darro llora por Dagna después del clímax, Valen está ahí (silenciosamente). Simplemente presente. Raro para Valen.
+**Momento clave:** Cuando Darro se queda sin palabras por Dagna después del clímax — el único momento de la campaña donde el que siempre tiene frase no tiene ninguna ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5) — Valen está ahí (silenciosamente). Simplemente presente. Raro para Valen.
 
 ---
 

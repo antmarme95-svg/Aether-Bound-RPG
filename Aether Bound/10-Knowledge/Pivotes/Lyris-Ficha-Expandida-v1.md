@@ -228,7 +228,7 @@ Speck revela inteligencia.
 
 Lyris casi—casi—se permite fascinar. Pero se detiene a sí misma. No puede permitir fascinación.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Lyris **incómoda en interior** — noventa años sin techo sobre la cabeza pasan factura. Se queda cerca de la salida sur, contra un árbol, con la vista alta hacia el follaje. Rastrea el techo de hojas por costumbre, buscando una salida de emergencia aérea que en el Grove no existe.
 
@@ -303,7 +303,7 @@ Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. La aritmética que Lyris trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
 
-**No cruza al core central** — no es F3, no toma poder para sí. Sostiene a Speck y espera la orden siguiente que Frontier High Command no manda porque el Council mismo perdió el hilo del plan al llegar a este punto.
+**No cruza al core central** — no es F3, no toma poder para sí. Se queda suspendida en el borde, sosteniendo a Speck, mientras un mensajero de Frontier High Command sube desde dentro del cráter a recibirla. Lyris no le sale al encuentro — la orden es que el mensajero complete la entrega, no ella.
 
 **La decisión es del jugador.**
 
@@ -315,7 +315,7 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-El jugador la alcanza en el borde, donde sostiene a Speck esperando una orden que nunca llega (§sub-beat 5). No forcejea: sostiene la mirada un segundo, y **baja el vuelo por su cuenta** — deja a Speck en tierra sin que nadie se lo arranque. Es lo más parecido a un dato que Lyris puede procesar en el momento: nadie le va a dar la orden, y una variable sin orden no es su problema. Cede antes de que se lo pidan.
+El jugador alcanza y detiene **al mensajero de Frontier High Command** antes de que llegue hasta ella (§sub-beat 5, [[Los 5 Finales]] §F1). Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, sosteniendo a Speck, y sostiene la mirada del jugador un segundo antes de **bajar el vuelo por su cuenta** — deja a Speck en tierra sin que nadie se la arranque. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y una variable sin cadena no es su problema.
 
 Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 

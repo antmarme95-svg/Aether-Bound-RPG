@@ -202,7 +202,7 @@ Durante el Acto 2, Speck revela inteligencia. **Torgan la ve completa.** No como
 Jugador: *"Te confío a Speck. Mientras esté contigo, sé que está segura."*
 Torgan: *"Siempre."* (Mentira. Verdad. Ambas a la vez.)
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Torgan entra, se queda de pie contra la pared del fondo, brazos cruzados sobre el tatuaje, y **no dice una palabra en todo el debate.**
 
@@ -330,11 +330,11 @@ En el último tramo, cuando ya se ve el cráter latir en el horizonte, Torgan **
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-Torgan llega al centro del cráter con Speck. El core central ya está pulsando en frecuencia jade. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor espera en el borde opuesto — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería.
+Torgan llega al **borde** del cráter con Speck — no cruza hacia el core central, que ya está pulsando en frecuencia jade. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter hacia el borde — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería.
 
 El jugador y los fijos llegan segundos después.
 
-Torgan **no huye hacia el mensajero.** Se detiene en el centro, con Speck todavía en brazos, y **espera al jugador.** Es lo último que le puede dar: que la entrega ocurra frente a él y no a sus espaldas.
+Torgan **no le sale al encuentro al mensajero.** Se detiene ahí mismo, con Speck todavía en brazos, y **espera al jugador.** Es lo último que le puede dar: que la entrega ocurra frente a él y no a sus espaldas.
 
 **Diálogo del quiebre:**
 
@@ -358,9 +358,9 @@ Aquí — y solo aquí — Torgan **se pasa el pulgar por el tatuaje por tercera
 
 ***"An oath doesn't care how I feel about you."***
 
-Y baja los brazos, ofreciendo a Speck hacia el jugador y hacia el mensajero al mismo tiempo, sin elegir dirección.
+Y baja los brazos, sosteniendo a Speck entre él y el mensajero que se acerca, sin dar un paso hacia ninguno de los dos.
 
-**Ese es el diseño del clímax de Torgan:** no la arrebata, no la esconde, no la lleva al mensajero. La **sostiene en el punto medio y deja que el jugador decida.** Torgan cumplió su parte — llegó, la trajo, la puso donde el Juramento pedía que estuviera. Lo que pase en los siguientes diez segundos ya no le corresponde a él, y eso es lo único parecido a un alivio que Torgan siente en toda la campaña.
+**Ese es el diseño del clímax de Torgan:** no la arrebata, no la esconde, no le sale al encuentro al mensajero. La **sostiene quieto en el borde y deja que el jugador decida.** Torgan cumplió su parte — llegó, la trajo, la puso donde el Juramento pedía que estuviera. Lo que pase en los siguientes diez segundos ya no le corresponde a él, y eso es lo único parecido a un alivio que Torgan siente en toda la campaña.
 
 **El Fragmento se activa.** Speck E1 → E3. La decisión del jugador abre uno de los 5 finales.
 
@@ -388,7 +388,7 @@ Ver [[Los 5 Finales]] — Torgan ocupa la fila **Deber Institucional**. Cada ep�
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
+El jugador alcanza al mensajero del clan menor antes de que llegue hasta Torgan y lo detiene ahí ([[Los 5 Finales]] §F1). Torgan no interviene — se queda quieto, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
 
 **Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja las dos hachas en el borde del cráter, sin ceremonia, y camina hacia las montañas.
 
@@ -438,7 +438,7 @@ Darro no va. No puede.
 
 **Torgan muere confrontándote en el cráter.** No se une. No negocia. No informa a su clan.
 
-Cuando el jugador cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck. Deja que caiga hacia donde caiga. Y va contra el jugador con las dos hachas.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a Torgan y cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck al verlo cruzar. Deja que caiga hacia donde caiga. Y va contra el jugador con las dos hachas.
 
 **Línea antes de caer:** *"Esto no. Yo juré entregarla, no venderla."*
 

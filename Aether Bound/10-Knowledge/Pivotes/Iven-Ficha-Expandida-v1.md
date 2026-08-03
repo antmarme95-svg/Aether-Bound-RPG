@@ -274,7 +274,7 @@ Iven: *"Siempre. Pero también estoy aquí. Las dos cosas son verdad."*
 
 (Es el dilema de Iven entero, en una frase, dicho sin darse cuenta.)
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. Iven es **el más silencioso durante el debate del Elder Circle.** No habla. No participa. Escucha a Threnn, Ilyara, Corwyn y Maelys discutir con la cortesía absoluta que caracteriza a los elfos, y en su cabeza cada argumento se traduce a nombres específicos de su asentamiento: gente que va a morir mientras cuatro elfos, en un bosque que no está corrupto, debaten teorías con siglos de sobra.
 
@@ -459,13 +459,13 @@ No es negación de la información. Es un hombre pidiéndole a alguien que no le
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-Iven llega al centro del cráter con Speck. El core central pulsa en frecuencia jade. Los God-Cores despiertan uno a uno alrededor.
+Iven llega al **borde** del cráter con Speck — no cruza hacia el core central, que ya pulsa en frecuencia jade. Los God-Cores despiertan uno a uno alrededor.
 
-El contacto del Consortium espera en el borde opuesto: un hombre común, ropa buena, sin sello ni insignia, **con un maletín**. No trae equipo médico. No trae convoy. No trae nada que se parezca a un remedio.
+El contacto del Consortium viene subiendo desde dentro del cráter hacia el borde: un hombre común, ropa buena, sin sello ni insignia, **con un maletín**. No trae equipo médico. No trae convoy. No trae nada que se parezca a un remedio.
 
 El jugador y los fijos llegan segundos después.
 
-Iven está de rodillas en el centro, sin aire, todavía con Speck en brazos. **Ha corrido más rápido que nadie y llegó al lugar donde no hay nada.**
+Iven está de rodillas en el borde, sin aire, todavía con Speck en brazos. **Ha corrido más rápido que nadie y llegó al lugar donde no hay nada.**
 
 **Diálogo del quiebre:**
 
@@ -501,7 +501,7 @@ Y después, dos segundos más tarde, en voz mucho más baja — la frase que nad
 
 *"Dime que hay otra forma. Dímela y la hago."*
 
-**Ese es el diseño del clímax de Iven:** no la ofrece, no la esconde, no corre hacia el contacto. **Se queda de rodillas en el centro con Speck en brazos y le pide al jugador una salida que el jugador no tiene.** Iven es el único Pivote que, en el último segundo, **pide ayuda**.
+**Ese es el diseño del clímax de Iven:** no la ofrece, no la esconde, no le sale al encuentro al contacto. **Se queda de rodillas en el borde con Speck en brazos y le pide al jugador una salida que el jugador no tiene.** Iven es el único Pivote que, en el último segundo, **pide ayuda**.
 
 **El Fragmento se activa.** Speck E1 → E3. La decisión del jugador abre uno de los 5 finales.
 
@@ -509,13 +509,13 @@ Y después, dos segundos más tarde, en voz mucho más baja — la frase que nad
 
 ## Finales — 5 variantes según matriz Deber Institucional
 
-Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epílogo expande su celda sin contradecir las de Torgan, Dagna ni Nyael.
+Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epílogo expande su celda sin contradecir las de Torgan, Dagna, Nyael ni Vekka.
 
 **Constante transversal de los cinco:** el Council **jamás confirma la mentira.** No hay escena donde un funcionario admita nada. La verdad, cuando llega, llega por deducción, por ausencia, o por Roen — nunca por confesión. Iven no obtiene ni siquiera la dignidad de que alguien le diga a la cara lo que le hicieron.
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
+El jugador alcanza al contacto del Consortium antes de que llegue hasta Iven y lo detiene ahí ([[Los 5 Finales]] §F1). Iven no se mueve — sigue de rodillas, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
 
 **Y ahí está la crueldad exacta de este final: la Muda era la cura, e Iven casi la mata.**
 
@@ -589,7 +589,7 @@ Y en su caso es más simple todavía: si el jugador encadena a Speck bajo sus pr
 
 **Iven muere confrontándote en el cráter, o se va y no vuelve.**
 
-Si confronta: no lo hace con discurso. Suelta a Speck, la deja donde caiga, y va contra el jugador con las dos dagas y sin ningún plan — es la única pelea de su vida donde el acróbata **no esquiva**. Cae rápido.
+Si confronta: cuando el jugador pasa de largo junto a él y cruza el borde hacia el core central en vez de negociar o esperar, Iven suelta a Speck al verlo cruzar, la deja donde caiga, y va contra el jugador con las dos dagas y sin ningún plan — es la única pelea de su vida donde el acróbata **no esquiva**. Cae rápido.
 
 **Línea antes de caer:** *"Yo la vendí por doscientas personas. Tú la estás vendiendo por ti."*
 

@@ -155,7 +155,7 @@ En Ignis Reach, Vekka desaparece dos días. Vuelve con la mandíbula tensa. No d
 
 En Driftmarket, Vekka observa a Speck durmiendo y anota tres páginas seguidas en el cuaderno. Roen la ve anotar. No pregunta. Archiva.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Vekka entra en silencio, cruza los brazos, se queda de pie contra un pilar durante toda la escena.
 
@@ -255,13 +255,11 @@ Guarda el cincel. Sigue caminando.
 
 ### Sub-beat 5: Quiebre en First Wound
 
-Cuando el jugador y los sobrevivientes llegan al borde del cráter, **Vekka ya está adentro trabajando.**
-
-Está sobre el core central. Speck está sobre el yunque improvisado — una plancha de piedra plana en el centro del cráter, alineada con los ejes cardinales exactos que Vekka ajustó a ojo. Speck está **inmovilizada con el arnés técnico**, el mismo arnés con que Vekka sujeta forjas en reparación. No es atadura hostil — es fijación de artesano. Vekka la trata como trataría cualquier pieza sobre el yunque: con cuidado, con precisión, sin apuro.
+Vekka llega al **borde** del cráter con Speck — no cruza hacia el core central, que ya pulsa en frecuencia jade por su cuenta, sin que nadie tenga que tocarlo. Se detiene ahí y arma, en el suelo, su propio yunque portátil: una plancha de piedra plana, alineada a ojo con los ejes cardinales. Fija a Speck al yunque con el **arnés técnico** — el mismo con que sujeta forjas en reparación. No es atadura hostil — es fijación de artesano. La trata como trataría cualquier pieza: con cuidado, con precisión, sin apuro.
 
 Speck está viva. No puede moverse. Sus ojos siguen a Vekka.
 
-Vekka está **desmontando el core central pieza por pieza.** Trabaja en silencio metódico. Cada tornillo que suelta lo pone en el suelo alineado con los otros, en la misma posición relativa que tenía en el ensamblaje — protocolo de rearmado inverso, aunque Vekka sabe que no habrá rearmado. Es tic profesional.
+El **mensajero del Great Forging Clan** viene subiendo desde dentro del cráter hacia el borde, a recibir la pieza terminada. Vekka no le sale al encuentro — se queda junto al yunque, ajustando el arnés, y espera. Mientras tanto se entretiene con un tic profesional que no cambia nada del resultado: revisa los tornillos del arnés uno por uno, en el mismo orden en que los ajustó.
 
 El jugador entra al cráter corriendo. Se detiene a diez pasos.
 
@@ -269,7 +267,7 @@ El jugador entra al cráter corriendo. Se detiene a diez pasos.
 
 Jugador: *"VEKKA."*
 
-Vekka (sin levantar la vista, ajustando un tornillo): *"Llegaste. Bien. Puedes verlo terminar."*
+Vekka (sin levantar la vista, ajustando un tornillo del arnés): *"Llegaste. Bien. Puedes verlo terminar."*
 
 Jugador: *"Suéltala."*
 
@@ -277,19 +275,19 @@ Vekka: *"No."*
 
 Jugador: *"Es una NIÑA."*
 
-Vekka (sigue trabajando): *"Es una forja incompleta. Nombre distinto, misma operación. El gremio decretó. Yo ejecuto."*
+Vekka (sigue ajustando): *"Es una forja incompleta. Nombre distinto, misma operación. El gremio decretó. Yo ejecuto."*
 
 Jugador: *"¡El gremio ni siquiera sabe qué es!"*
 
 Vekka: *"Yo sí. Ahora sí. Vi lo que viste. No cambia nada."*
 
-Roen entra al cráter. Valen entra. Darro entra último y se detiene en el borde. Vekka levanta la vista una sola vez — mira a Darro. Darro le devuelve la mirada. No dicen nada. Los treinta años que no se hablaron caben en esa mirada. Vekka baja la vista. Sigue trabajando.
+Roen entra al cráter. Valen entra. Darro entra último y se detiene junto a los demás en el borde. Vekka levanta la vista una sola vez — mira a Darro. Darro le devuelve la mirada. No dicen nada. Los treinta años que no se hablaron caben en esa mirada. Vekka baja la vista. Sigue con el arnés.
 
 Roen: *"Vekka. Suéltala. Podemos hablarlo."*
 
 Vekka: *"Ya lo hablé. Con el yunque. Cuando salí de Ignis Reach."*
 
-El jugador da un paso. Vekka levanta el martillo pesado — no como amenaza al jugador, sino como martillo en posición sobre la pieza. La siguiente acción es continuar desmontando.
+El jugador da un paso hacia el mensajero. Vekka levanta el martillo pesado — no como amenaza al jugador, sino como martillo en posición sobre la pieza, lista para intervenir si alguien intenta arrancarla del arnés en vez de esperar al mensajero.
 
 Vekka dice, sin subir la voz, la línea canónica de la ficha:
 
@@ -301,7 +299,7 @@ Después dice, más bajo, casi para sí:
 
 *"Termina de gritar. Después te ayudo a decidir qué haces con lo que queda."*
 
-Es la traición más fría del elenco. No aritmética como Maren, no manipulación como Sereth, no dogma emocional como Torgan, sino **oficio aplicado a un cuerpo vivo.** La decisión del jugador se toma aquí. Detenerla, matarla, dejarla terminar, unirse — todos son movimientos posibles. Vekka no va a negociar. Vekka va a seguir hasta que la detengan o hasta que termine.
+Es la traición más fría del elenco. No aritmética como Maren, no manipulación como Sereth, no dogma emocional como Torgan, sino **oficio aplicado a un cuerpo vivo.** La decisión del jugador se toma aquí. Detener al mensajero, arrancarla del arnés, dejar que la entrega se complete, cruzar el borde por su cuenta, o preguntar — todos son movimientos posibles. Vekka no va a negociar, pero tampoco va a completar la entrega ella misma: eso le corresponde al mensajero, y ella se limita a esperar con el martillo listo.
 
 ---
 
@@ -311,7 +309,7 @@ Ver [[Los 5 Finales]] — Vekka ocupa la fila "Deber Institucional". Cada final 
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
-Vekka es detenida en el cráter — no muerta, contenida. Speck completa la Muda con Vekka atada al borde, viendo. La operación de desmontaje quedó a medio hacer, con el core central parcialmente expuesto — Vekka lo ve durante horas.
+El jugador alcanza y detiene **al mensajero del Great Forging Clan** antes de que llegue hasta el yunque ([[Los 5 Finales]] §F1) — Vekka no forcejea por eso: sin mensajero, no hay a quién entregarle la pieza, y se queda quieta junto al arnés, viendo. Speck completa la Muda ahí mismo, en el borde. La operación quedó a medio cerrar — Vekka la ve durante horas sin poder anotarla como terminada.
 
 **Epílogo:** Vekka **no puede volver al gremio, y para cuando llega ya casi no hay gremio al que volver.** Su forja definitoria — el unmaking encargado por el círculo interno — falló, y en la lógica del Great Forging Clan un Guild Master que no ejecuta una orden directa es un Guild Master que ya no existe. Pero el Aether se apagó de golpe y con él **las forjas industriales de Emberdeep, que eran el clan.** No hay ceremonia de despido porque no hay quién la celebre; su marca — el semicírculo cortado por línea vertical — deja de aparecer en registros nuevos porque **no se abren registros nuevos.**
 
