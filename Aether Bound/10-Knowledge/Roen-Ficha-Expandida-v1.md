@@ -215,7 +215,7 @@ Con cada Pivote, la persecución toma sabor distinto:
 
 ### The First Wound (Clímax emocional)
 
-El Pivote llega al cráter cargando a Speck, dispuesto a entregarla viva a su institución.
+El agente de la entrega llega al borde del cráter con Speck, dispuesto a cederla viva a su institución — es el Pivote en siete rutas, el equipo de extracción en la de Nyael, y Torgan en la de Bram ([[El Cráter — Matriz de Rutas]] §2).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia de esa decisión, no como elección aislada.
 
@@ -296,7 +296,7 @@ Roen es quien **ve el futuro.** Su línea final:
 ### Roen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Vekka construye. Roen protege. Trabajan bien juntos.  
 **Tensión:** Vekka menciona el Dogma del Gremio. Roen pregunta si eso incluye desmontarlo a él.  
-**Traición:** Cuando Vekka lo hace, literalmente desmonta su equipo. Roen ve a Vekka cerrar los ojos un segundo — la única grieta visible que ella permite. *"I built you. Forgive me for finishing the job."* Roen lo perdona en silencio — pero se va.
+**Traición:** Vekka se lleva a Speck y la trabaja como a una pieza — con cuidado, sin apuro, sin explicarse (escena en [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5). **Lo que le toca a Roen es reconocer el método antes que el crimen:** ha visto a artesanos tratar así el metal toda su vida, y le lleva un segundo entender que esta vez la pieza respira. Lo perdona en silencio — pero se va.
 
 ### Roen + Dagna (Enana Vanguard → Ella) — la que lo rompe más hondo
 
@@ -308,7 +308,7 @@ Roen es quien **ve el futuro.** Su línea final:
 
 **La traición de Dagna es la que quiebra a Roen más hondo.** Sereth y Lyris también lo rompen — de verdad, no solo lo hieren (ver sus entradas arriba) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
 
-**El gesto físico:** en el cráter, cuando Dagna ya entregó a Speck al mensajero de Deepstone, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático — es un gesto pequeño y silencioso: el brazo se afloja, el escudo se desliza, cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
+**El gesto físico:** en el cráter, **antes de que el jugador decida nada** — con Dagna quieta en el borde, Speck todavía en sus brazos y el mensajero de Deepstone acercándose — Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático: es un gesto pequeño y silencioso, el brazo que se afloja, el escudo que se desliza y cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. **Ocurre en las cinco rutas de esta celda, porque no es reacción a un final — es reacción a verla ahí parada.** Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
 
 ---
 

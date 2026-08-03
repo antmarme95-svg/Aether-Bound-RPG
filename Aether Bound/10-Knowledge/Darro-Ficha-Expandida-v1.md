@@ -327,7 +327,7 @@ Años después, Darro es el que cuenta historias de "el día que nombramos a Spe
 
 *"Her name is Speck. I don't care what you think of the name. Her name is Speck."*
 
-**Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Triune Council, el Pivote, incluso el jugador si lo considera sacrificar.
+**Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Triune Council, el Pivote, incluso el jugador si lo considera entregar.
 
 No es argumento. Es **declaración de promesa.**
 
@@ -337,7 +337,7 @@ No es argumento. Es **declaración de promesa.**
 
 ### Darro + Maren (Humana Strategist → Ella)
 **Primera impresión:** Maren es táctica, tiene gadgets. Darro la bromea. Ella responde con humor seco. Conexión.  
-**Tensión:** Cuando Maren empieza a "calcular" qué sacrificar (incluyendo Speck), Darro pregunta: "¿Dónde estoy yo en tu ecuación?" No es amenaza — es pregunta honesta.  
+**Tensión:** Cuando Maren empieza a "calcular" qué se entrega y qué se conserva (incluyendo a Speck), Darro pregunta: "¿Dónde estoy yo en tu ecuación?" No es amenaza — es pregunta honesta.  
 **Traición:** Cuando Maren actúa, Darro: *"Las personas calculadas, cuando deciden — deciden completo. Eso da miedo."* Pero después: *"Prometiste algo. Speck era eso. Rompiste tu palabra. Eso se honra con justicia, no perdón."*
 
 ### Darro + Torgan (Enano Duelist → Él)
@@ -383,7 +383,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Tensión:** treinta años de silencio no resuelto. Ninguno lo nombra directamente frente al grupo. Vekka nunca le corrige la técnica — sería reabrir el taller. Darro nunca le pide consejo — sería aceptar que sigue siendo su maestra.
 
-**Traición:** cuando Vekka desmonta el equipo del jugador por última vez, Darro reconoce el gesto en su propio cuerpo — es el mismo con que lo desmontó a él, treinta años atrás. Darro es quien siempre grita; en este momento se queda mudo, la única vez en la campaña. Después, si el jugador lo acompaña, Darro dice una sola cosa: *"Ahora sé por qué me despidió. Es porque sabía que iba a doler menos rápido que si me quedaba."* No es toda la verdad, pero es lo único que puede sostener sin romperse.
+**Traición:** en el cráter, cuando Vekka fija a Speck al yunque y se pone a revisar los tornillos con la misma calma de taller ([[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5), Darro reconoce el gesto en su propio cuerpo — es el mismo con que lo deshizo a él, treinta años atrás. Darro es quien siempre grita; en este momento se queda mudo, la única vez en la campaña. Después, si el jugador lo acompaña, Darro dice una sola cosa: *"Ahora sé por qué me despidió. Es porque sabía que iba a doler menos rápido que si me quedaba."* No es toda la verdad, pero es lo único que puede sostener sin romperse.
 
 **Este es el quiebre más hondo de Darro en todo el elenco** — Maren y Sereth pueden dolerle desde la Aritmética, y Torgan desde el deber compartido (ver abajo), pero solo Vekka fue, literalmente, la persona que lo desmontó primero. Es la única traición donde Darro no tiene chiste ni siquiera de reserva.
 

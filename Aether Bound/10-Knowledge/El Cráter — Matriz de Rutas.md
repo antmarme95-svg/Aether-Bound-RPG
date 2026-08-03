@@ -176,9 +176,16 @@ Re-enunciarlas es la causa mecánica de la mitad de los críticos del sprint.
 narrar **solo lo dramático**. En los 5 epílogos, citar el gate en vez de describirlo.
 
 **3 fijos (Roen, Valen, Darro).** Narran **su reacción** al quiebre, nunca el quiebre en sí.
-Ninguna ficha de fijo describe la traición de un Pivote con detalle propio: cita la ficha del
-Pivote. Es la clase de error que dejó a cuatro archivos describiendo el quiebre de Vekka como
-su epílogo de F2b.
+Ninguna ficha de fijo describe la traición de un Pivote con detalle propio: **una frase de
+contexto y un puntero a la ficha del Pivote**, y después toda la tinta en lo que le pasa al
+fijo. Es la clase de error que dejó a cuatro archivos describiendo el quiebre de Vekka como
+su epílogo de F2b, y que además reventó dos beats de "única vez en la campaña" al ubicarlos
+en la escena equivocada.
+
+**Corolario — los superlativos de los fijos son frágiles.** Cuando una ficha dice "la única
+vez que Darro se queda mudo" o "la única grieta visible que Vekka permite", ese momento tiene
+que estar **en un solo lugar del vault**. Antes de escribir un superlativo de reacción,
+grep de la frase: si ya existe apuntando a otra escena, una de las dos está mal.
 
 **[[Los 9 Pivotes]].** Tabla de índice. Su columna *Quiebre* debe coincidir con el sub-beat 5
 de cada ficha, en una frase, sin agregar mecánica.

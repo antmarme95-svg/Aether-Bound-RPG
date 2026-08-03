@@ -236,7 +236,7 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove ante
 
 ### The Reckoning en The Driftmarket
 
-Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, el grupo pasa por The Driftmarket y Harbormaster Tobin Hale aparta al jugador solo. Con Lyris como Pivote activo, Tobin oye una nota de Frontier High Command con instrucciones de ruta hacia el Archive — fragmento del idioma militar de frontera. La única elfa del grupo que Tobin ubica hablando esa burocracia es **Valen**, el único elfo fijo; Tobin no distingue Academy of Sages de Frontier High Command — para él son "asuntos de elfos con papeles". Señala a Valen por error.
+Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, el grupo pasa por The Driftmarket y Harbormaster Tobin Hale aparta al jugador solo. Con Lyris como Pivote activo, Tobin oye una nota de Frontier High Command con instrucciones de ruta hacia el Archive — fragmento del idioma militar de frontera. La única persona del grupo que Tobin ubica hablando esa burocracia es **Valen**, el único elfo fijo; Tobin no distingue Academy of Sages de Frontier High Command — para él son "asuntos de elfos con papeles". Señala a Valen por error.
 
 **Reacción de Lyris:** indiferencia visible. No defiende a Valen con vehemencia ni lo acusa con interés — se limita a observar la escena desde una distancia calculada, como observa todo. Si el jugador confronta a Valen, Lyris no interviene; si el jugador decide no confrontar, tampoco comenta. Por fuera, es la misma ausencia de reacción que ofrece a cualquier evento que no altere su patrón.
 

@@ -200,15 +200,15 @@ No de golpe. Lentamente. En conversaciones privadas, fragmento por fragmento.
 
 *"Los God-Cores no son dioses. Son Wardens. Cadáveres. Fueron asesinados a mitad de una Muda."*
 
-*"Speck es la última. Si madura, la Muda se completa. El Aether sana."*
+*"Speck es la última. Si llega a The First Wound y nadie se lo impide, la Muda se completa. El Aether sana."*
 
 *"La civilización que construimos depende de Aether corrupto. Nosotros — todas nuestras ciudades, magia, tecnología — depender de un error que no ha sanado."*
 
-*"Si Speck vive, todo esto muere. Las ciudades, los reinos, nosotros."*
+*"Si la Muda se completa, todo esto muere. Las ciudades, los reinos, nosotros."*
 
-El jugador: "¿Entonces debemos destruirla?"
+El jugador: *"¿Entonces hay que matarla?"*
 
-Valen: *"No. Quiero decir: debes elegir entre lo que amas y lo que es correcto. Eso es lo que significa ser consciente. Eso es el precio del conocimiento."*
+Valen: *"Matarla no apaga nada — el Aether seguiría corrupto y nosotros seguiríamos aquí, igual de condenados y con una muerte encima. Eso ni siquiera es una opción, es un error de cálculo."* Pausa. *"Lo que hay que elegir es entre lo que amas y lo que es correcto. Eso es lo que significa ser consciente. Ese es el precio del conocimiento."*
 
 ### Grove of Cycles (cierre del Acto 2)
 
@@ -364,7 +364,7 @@ Su línea final:
 ### Valen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Otra Strategist. Vekka construye, Valen calcula. Dinámicas de respeto mutuo raro.  
 **Tensión:** Vekka pregunta a Valen si sus cálculos incluyen el costo para ella. Valen: *"Always."* (Es verdad, y es aterrador).  
-**Traición:** Cuando Vekka desmonta el equipo del jugador, Valen: *"The Forging Dogma demands you finish what you started. I understand. I will not forgive."*
+**Traición:** cuando Vekka fija a Speck al yunque en el borde del cráter ([[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5), Valen: *"The Forging Dogma demands you finish what you started. I understand. I will not forgive."* Es el único del grupo que **nombra el dogma correctamente mientras ocurre** — y eso es peor que gritar, porque le concede la coherencia.
 
 ---
 
