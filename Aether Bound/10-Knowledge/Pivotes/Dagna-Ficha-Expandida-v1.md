@@ -266,7 +266,7 @@ No hay diálogo en la persecución. Roen y Dagna se miran una vez a media distan
 
 El jugador llega al borde del cráter. Se detiene a cinco pasos. Roen se detiene detrás, un poco a un lado. Valen queda más atrás. Darro queda el último, escudo bajo.
 
-Dagna hace algo que nadie del elenco hace: **abraza a Speck antes de entregarla.** Se agacha, sostiene a Speck con las dos manos contra el pecho durante unos segundos, con la cara enterrada un momento en el pelaje. Nadie ve la cara de Dagna en ese instante — el escudo la tapa por el ángulo. Cuando se endereza, Speck sigue en sus brazos, pero ya está separada del pecho, ofrecida hacia el jugador y hacia el mensajero de Deepstone que espera al fondo del cráter.
+Dagna hace algo que nadie del elenco hace: **abraza a Speck antes de entregarla.** Se agacha, sostiene a Speck con las dos manos contra el pecho durante unos segundos, con la cara enterrada un momento en el pelaje. Nadie ve la cara de Dagna en ese instante — el escudo la tapa por el ángulo. Cuando se endereza, Speck sigue en sus brazos, pero ya está separada del pecho, ofrecida hacia el jugador y hacia el mensajero de Deepstone que viene subiendo desde dentro del cráter hacia el borde.
 
 **Diálogo del quiebre:**
 
@@ -292,7 +292,7 @@ Roen no contesta. Dagna vuelve al jugador. Dice, sin subir la voz, la línea can
 
 ***"The mountain doesn't forgive. And I am the mountain's."***
 
-Se detiene ahí mismo, con Speck en brazos, y espera. Un mensajero de Deepstone viene bajando hacia el centro del cráter — Dagna no camina a su encuentro: sostiene el escudo en alto, calculando, y deja que sea el mensajero quien cierre la distancia. Lo que pase en los siguientes segundos ya no depende solo de ella.
+Se detiene ahí mismo, con Speck en brazos, y espera. El mensajero de Deepstone sigue subiendo desde dentro del cráter hacia el borde — Dagna no camina a su encuentro: sostiene el escudo en alto, calculando, y deja que sea el mensajero quien cierre la distancia. Lo que pase en los siguientes segundos ya no depende solo de ella.
 
 **El quiebre físico de Roen:**
 
@@ -348,7 +348,7 @@ Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas — puede
 
 **Imposible para Dagna.** El arquetipo del deber institucional no puede convivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la orden — la deja incumplida indefinidamente, y sostenida por la persona a la que Dagna sirvió cinco años. No hay salida.
 
-**Dagna muere confrontándote en el cráter.** No se une. No negocia. No informa a Deepstone. Levanta el escudo por última vez, se planta entre el jugador y el mensajero del subclán, y pelea hasta caer.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cruza el borde hacia el core central, Dagna suelta a Speck al verlo cruzar — no forcejea, eso mataría al Fragmento. **Dagna muere confrontándote en el cráter.** No se une. No negocia. No informa a Deepstone. Levanta el escudo por última vez, se planta entre el jugador y el mensajero del subclán, y pelea hasta caer.
 
 **Línea antes de caer:** *"No fue esto lo que juré."*
 

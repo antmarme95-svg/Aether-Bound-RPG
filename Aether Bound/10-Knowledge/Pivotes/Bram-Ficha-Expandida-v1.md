@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Humano (the Restless) / Vanguard
 **Origen:** House Thorne, Rivermeet (huyó a los 15 a Mistbound Frontier)
-**Edad aparente:** 55-65 años (gastado por cuarenta años de servicio ajeno)
+**Edad aparente:** 55 años (gastado por cuarenta años de servicio ajeno)
 **Arquetipo de Traición:** Rechazo activo — **el único Pivote que rehúsa**. Superlativo: **el único rechazo activo** del elenco (ver [[Los 5 Finales]] — fila Rechazo/Ausencia).
 
 ---
@@ -283,7 +283,7 @@ Conversaciones en la persecución:
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-Torgan, como segundo agente, es quien llegó cargando a Speck y se detuvo en el borde del cráter a esperar al mensajero ([[Los 5 Finales]] §F1) — Bram rechazó ese rol en el corredor y no la carga. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
+Torgan, como segundo agente, es quien llegó cargando a Speck y se detuvo en el borde del cráter — él mismo es el agente que el jugador tiene que alcanzar y detener, no hay un tercero de por medio ([[Los 5 Finales]] §F1) — Bram rechazó ese rol en el corredor y no la carga. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
 
 **Rol de Bram en el cráter:** cuando cualquier amenaza física se acerca a Speck en brazos de Torgan — una bestia despierta, un desprendimiento de terreno — Bram se pone entre Speck y la amenaza. Reflejo de cuarenta años. No es decisión heroica: es el cuerpo antes de la mente. En un momento específico, Bram se lleva un golpe que iba para Speck. No cae. Se sostiene con el mazo apoyado en el suelo. Roen lo mira y no dice nada.
 
@@ -319,7 +319,7 @@ Es peor que F1 porque F1 le dio paz. F2a le dio una duda que no cierra. Bram, ac
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-Bram vive. Speck no llegó viva al final — el jugador intentó arrancarla por la fuerza del segundo agente (o del punto de entrega, si ya había sido tomada) en vez de esperar o negociar, y el forcejeo sobrecargó el Fragmento. Nadie gana.
+Bram vive. Speck no llegó viva al final — el jugador intentó arrancarla por la fuerza del segundo agente en vez de esperar o negociar, y el forcejeo sobrecargó el Fragmento ([[Speck]] §Capa 5). Nadie gana.
 
 **Epílogo:** Bram vive con la **misma culpa duplicada** de F2a. *"Si yo hubiera cumplido, quizás Speck hubiera llegado viva a algún lugar. Quizás mi ejecución habría sido menos violenta que la del segundo agente. Quizás."* Falso, otra vez — la Fragmento no se controla, la persecución no es rescatable por delicadeza — pero Bram no puede saberlo.
 

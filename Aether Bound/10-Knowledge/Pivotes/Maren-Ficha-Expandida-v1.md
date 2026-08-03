@@ -34,7 +34,7 @@ tipo de poder humano: **ganado, no heredado ni ausente.** Hija de un
 ingeniero de acueductos y una negociadora de rutas — gente común, no
 nobleza — escaló hasta autoridad real por pura competencia.
 
-Cuando el Triune Council necesita **ejecutar** el plan de sacrificio (no
+Cuando el Triune Council necesita **ejecutar** el plan de captura (no
 solo decretarlo), pasa por ella — el regente puede ordenar, pero solo el
 Consortium puede movilizar los recursos y la logística para que realmente
 ocurra. Su autoridad es práctica, no política. Pero en el sistema roto de
@@ -83,7 +83,7 @@ Hace 6 meses, Maren confirmó su predicción: **la Muda aceleró.** El Aether co
 
 Cálculo nuevo: Rivermeet tiene 3-5 años antes de no poder sostener población. Sin intervención externa, la ciudad muere y con ella el reino de Aethelgard.
 
-**Única solución conocida (clasificada):** the Triune Council ofrece plan — sacrificar variable crítica para salvar la ciudad. Se lo traen a ella directamente, no al regente — saben que sin el Consortium, el plan es solo papel. Maren vio el plan. Supo exactamente qué variable era.
+**Única solución conocida (clasificada):** the Triune Council ofrece plan — capturar y entregar viva a una variable crítica para salvar la ciudad ([[Speck]] §Capa 5 — matarla no sana nada). Se lo traen a ella directamente, no al regente — saben que sin el Consortium, el plan es solo papel. Maren vio el plan. Supo exactamente qué variable era.
 
 Fue cuando decidió: *"Voy a amar todo lo que pueda. Y luego voy a hacer matemática."*
 
@@ -320,7 +320,7 @@ Maren cumple. Entrega a Speck viva al mensajero del Council. Los God-Cores dejan
 
 **Epílogo:** Maren **asciende con reconocimiento formal del Council.** Recibe un asiento consultivo permanente en el Triune Council — no como embajadora, como Directora de Contingencia Comercial, cargo creado para ella. Es el primer humano sin apellido de House en tener silla en la mesa del Council.
 
-Se aparta del jugador **con cortesía.** No lo evita, pero no lo busca. En Rivermeet, si se cruzan, saluda con la boca sonriendo y los ojos midiendo. Su tesis se cumplió: millones viven porque una murió. La ecuación cerró. El precio fue el jugador — y ese precio ya estaba en la fórmula desde el primer día.
+Se aparta del jugador **con cortesía.** No lo evita, pero no lo busca. En Rivermeet, si se cruzan, saluda con la boca sonriendo y los ojos midiendo. Su tesis se cumplió: millones viven, administrados, mientras una queda catalogada y viva en algún archivo del Council. La ecuación cerró sin necesitar una muerte. El precio fue el jugador — y ese precio ya estaba en la fórmula desde el primer día.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento, sin llegar a ser entregada)
 
@@ -334,7 +334,7 @@ La diferencia con F2a es total: allá cumplió y ganó, aquí cumplió y perdió
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Maren **se te une, en teoría.** Es la única del grupo que no se va — todos los demás abandonan, ella se queda. Sus habilidades son demasiado útiles como para desperdiciarlas por sentimentalismo. El jugador tiene ejército sofisticado, red de suministro impecable, contingencias en cada frente. Maren opera todo.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cruza el borde hacia el core central, Maren no forcejea — suelta a Speck al verlo cruzar, calculando en el acto que retenerla no cambia el resultado. Maren **se te une, en teoría.** Es la única del grupo que no se va — todos los demás abandonan, ella se queda. Sus habilidades son demasiado útiles como para desperdiciarlas por sentimentalismo. El jugador tiene ejército sofisticado, red de suministro impecable, contingencias en cada frente. Maren opera todo.
 
 **En la práctica, calcula tu caída desde el primer mes.** No como venganza — como diagnóstico. Un tirano con Speck encadenada no es un sistema estable, y Maren solo sabe trabajar con sistemas estables. Modela tu régimen y ve, con precisión, cuándo colapsará y cómo. Anota fechas.
 

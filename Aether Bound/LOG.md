@@ -6461,3 +6461,66 @@ prioridad propia).
 
 **9ª re-corrida QA con 2 subagentes Opus en frío** — sigue siendo el criterio real de cierre
 del sprint.
+
+## [2026-08-02] sprint/QA-verificación | 9ª re-corrida — 7 CRITICAL únicos + varios MEDIUM, mismo patrón otra vez
+
+**QA-Dramática: 7 CRITICAL + 9 MEDIUM. QA-Congruencia: 5 CRITICAL + 13 MEDIUM** (con
+superposición entre ambos). Confirmado lo bueno primero: el staging borde/centro y la
+identidad del mensajero por ruta habían cerrado bien en 7 de las 9 fichas, igual que el
+bautizo en Acto 2, el tono de F2b, y los 4 grados de agencia. El patrón que se repite ronda
+tras ronda es el mismo: **la fuente se corrige, la propagación hacia atrás (sub-beats
+anteriores en la misma fuente) o hacia las fichas que no estaban en la lista de esa ronda
+queda sin barrer.**
+
+**7 críticos únicos, todos de propagación — ninguno pidió decisión de diseño nueva:**
+
+1. **`Geografía y Ciudades.md` se contradecía a sí misma.** El sub-beat 4 (persecución)
+   todavía decía "dejarlo llegar hasta el centro con Speck" y "la carga hacia el centro en
+   todos los casos" — 7 líneas antes de que el sub-beat 5 dijera "siempre en el borde, nunca
+   en el centro". El sub-beat 5 se corrigió en la 8ª ronda; el 4, nunca.
+2. **La orden institucional de Vekka seguía siendo "destruir", no "entregar viva".** Se
+   reescribió su escena de cráter en la 8ª ronda, pero la premisa que la origina ("a flawed
+   forging must be unmade by its maker", "Termínala. Unmake it.") seguía sonando a muerte,
+   contradiciendo `Estructura Dramática:29` (entregar viva). **Resuelto con el precedente que
+   la propia ficha ya tenía:** Vekka "deshizo" a Darro hace 30 años sin matarlo — lo expulsó
+   del programa. "Unmake" nunca significó matar; significa terminar el proceso. Se reescribió
+   la Esencia de la ficha para dejar esto explícito, y se ajustó la orden citada.
+3. **Vekka se contradecía sobre si toma a Speck en el corredor.** Un sub-beat decía que no
+   ("Vekka no toma a Speck en el corredor... espera que Speck le sea llevada"), la escena del
+   cráter la tenía llegando con Speck en brazos. Reescrito el sub-beat 3 para que la tome en
+   el corredor como las otras 8 rutas — "no hay versión en la que Speck llegue al cráter
+   sola" es regla sin excepciones.
+4. **F3 de Vekka era físicamente imposible.** El arnés que la fija al yunque no tenía ningún
+   mecanismo de liberación que no contara como forcejeo. Agregado el beat "suelta el arnés al
+   verlo cruzar", igual que las otras 8 rutas.
+5. **Maren F2a trataba a Speck como muerta** ("millones viven porque una murió"), en el único
+   final donde queda viva. Reescrito. De paso, purgado un residuo de la premisa vieja
+   ("sacrificar variable crítica") en la motivación del Council hacia Maren.
+6. **Bram tenía un mensajero fantasma.** Su sub-beat 5 decía que Torgan "se detuvo... a
+   esperar al mensajero" — inventando un tercero que el propio gate de F1 no contempla:
+   Torgan **es** el agente a neutralizar, no alguien que espera a otro. También se cerró una
+   vía de muerte imposible en su F2b ("del punto de entrega, si ya había sido tomada" — si ya
+   fue entregada, el pulso se cortó y no puede morir ahí, per `Speck.md §Capa 5`).
+7. **Sereth usaba "mensajero del Council"** en 3 lugares de su ficha y en la clasificación de
+   `Los 5 Finales:22`, pero su cadena real es la Royal Academy vía Queen Ithessa — nunca
+   negoció con el Council directamente. Corregido en ambos archivos.
+
+Más un fix estructural: **Dagna tenía el vector de aproximación del mensajero invertido**
+("espera al fondo del cráter" / "viene bajando hacia el centro" — el patrón correcto en las
+otras 4 rutas con mensajero físico es "sube desde dentro hacia el borde"). Y **faltaba el
+beat "el Pivote suelta a Speck al ver cruzar al jugador"** en el F3 de Maren, Sereth y Dagna
+(Vekka se resolvió con el fix #4 de arriba).
+
+**Estado: `check_canon.py` en 0 críticos, `check_vault.py` 🟢.**
+
+### Nota de método — el costo por ronda no está bajando
+
+Cuatro rondas seguidas (6ª→9ª) encontraron críticos del mismo mecanismo: un fix en la fuente
+no se re-grepea hacia atrás (otros sub-beats de la misma fuente) ni hacia los lados (fichas
+que no estaban en el radar de esa ronda). Si la 10ª repite el patrón, vale la pena parar de
+parchar línea por línea y hacer una pasada de reescritura completa de las 9 escenas de
+cráter como una sola unidad coherente, en vez de seguir corrigiendo por ronda.
+
+### Pendiente inmediato
+
+**10ª re-corrida QA con 2 subagentes Opus en frío** — criterio de cierre: 0 críticos de ambos.

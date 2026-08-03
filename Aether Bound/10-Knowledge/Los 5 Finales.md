@@ -19,8 +19,8 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
 
 **Por ruta, quién es el mensajero que hay que neutralizar** — no siempre es el Council: cada Pivote responde a **su propia cadena institucional**, y el mensajero es de esa cadena.
-- **Council directo:** Maren, Sereth (negociaron con el Council o su brazo visible).
-- **Cadena propia:** Dagna → mensajero de Deepstone. Torgan → mensajero de su clan menor. Vekka → mensajero del Great Forging Clan. Lyris → mensajero de Frontier High Command. Iven → contacto del Consortium que lo reclutó con mentiras.
+- **Council directo:** Maren (Trade Consortium).
+- **Cadena propia:** Dagna → mensajero de Deepstone. Torgan → mensajero de su clan menor. Vekka → mensajero del Great Forging Clan. Lyris → mensajero de Frontier High Command. Iven → contacto del Consortium que lo reclutó con mentiras. Sereth → mensajero de la Royal Academy (nunca negoció con el Council directamente — fue prestado por Queen Ithessa).
 - **Ruta Nyael:** el **equipo de extracción** que ella activó antes de retirarse. F1 exige detenerlo a él — si el jugador se aparta, el equipo completa la entrega y es F2a.
 - **Ruta Bram:** **Torgan como segundo agente**, que es el ejecutor real cuando Bram rehúsa.
 

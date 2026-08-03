@@ -17,7 +17,7 @@ updated: 2026-07-27
 
 Ingeniera de gremio, maestra del oficio. Vekka no ama ni odia: **mide, ajusta, cierra la pieza.** Su vida entera ha sido el mismo gesto repetido durante seis décadas — poner un objeto sobre el yunque y decidir si sirve o si debe deshacerse.
 
-La traición de Vekka no viene del corazón ni del cálculo. Viene del **dogma del gremio interiorizado hasta ser reflejo**: *"a flawed forging must be unmade by its maker."* Cuando el gremio le entrega una orden que encaja con ese dogma, Vekka no delibera. Ejecuta. La ejecución es su forma de rezar.
+La traición de Vekka no viene del corazón ni del cálculo. Viene del **dogma del gremio interiorizado hasta ser reflejo**: *"a flawed forging must be unmade by its maker."* **"Unmake" no es matar** — es deshacer el proceso, devolver la pieza a un estado controlado en vez de dejarla terminar sola. Es exactamente lo que le hizo a Darro: no lo mató, **terminó su camino** (lo expulsó del programa). Con Speck el gesto es el mismo a escala mayor: contenerla, fijarla, entregarla a la institución para que decida — nunca destruirla, porque una forja destruida no es una forja corregida, es una pérdida, y el dogma no tiene espacio para pérdidas. Cuando el gremio le entrega una orden que encaja con ese dogma, Vekka no delibera. Ejecuta. La ejecución es su forma de rezar.
 
 **Arquetipos resonantes:** Jaime después de la redención (honor por encima de todo), un maestro artesano japonés que rompe su propia pieza defectuosa sin ceremonia, la cirujana que amputa a un ser querido porque nadie más puede.
 
@@ -59,7 +59,7 @@ Darro es, en el vocabulario privado que Vekka nunca comparte con nadie, **su pri
 
 Hace pocos meses, el círculo interno del Great Forging Clan la contactó con un mensaje corto:
 
-*"Ha aparecido lo que temíamos. Una forja incompleta que camina con la variable. Ve. Termínala. Unmake it."*
+*"Ha aparecido lo que temíamos. Una forja incompleta que camina con la variable. Ve. Contenla. Termina el proceso. Unmake it."*
 
 El mensaje no dice "Speck". Nunca dice nombres. El gremio decreta principios; el ejecutor identifica el objeto. Vekka salió de Ignis Reach con el equipo completo: martillo pesado, cinceles calibrados, tornillos de fijación, arnés técnico de sujeción — el mismo arnés con que se inmoviliza una forja en reparación.
 
@@ -215,21 +215,17 @@ Lo que pasó por su cabeza en ese instante, si lo tradujera a palabras (no lo tr
 
 ### Sub-beat 3: Separación al salir del Archive
 
-Vekka no toma a Speck en el corredor de ascenso. Ella es **distinta a Maren, distinta a Torgan, distinta a los demás Pivotes**: ya sabe adónde va y qué necesita hacer allí. Speck es una forja que requiere yunque, y el yunque está en el cráter. Llevarse a Speck del corredor sería trabajo apresurado, y Vekka **no hace trabajo apresurado.**
-
-En un descanso del ascenso, Vekka se aparta del grupo con un pretexto técnico:
+En el último corredor del ascenso, Vekka se separa igual que cualquier otro Pivote — no hay versión de esta escena en la que Speck llegue al cráter sola ([[Geografía y Ciudades]] §ACTO 3 sub-beat 3). Con un pretexto técnico:
 
 *"Voy a verificar la estructura de un pilar marginal. La disposición del corredor sur no me cuadra. Sigan. Los alcanzo arriba."*
 
-Nadie desconfía. Vekka ha hecho paradas técnicas en todo el viaje. Es su forma.
+Nadie desconfía. Vekka ha hecho paradas técnicas en todo el viaje. Es su forma. Cuando el grupo voltea, ya tiene a Speck — sin forcejeo, sin drama, con la misma eficiencia con la que hace todo. Sale por una ruta lateral que ya identificó en el descenso, rumbo al cráter de First Wound. Camina, no corre — Vekka no corre nunca. Va con propósito.
 
-Sale por su cuenta. Toma una ruta lateral que ya identificó en el descenso. Va rumbo al cráter de First Wound. Camina, no corre — Vekka no corre nunca. Va con propósito.
-
-Cuando el grupo llega arriba, Vekka no está. Roen lo entiende primero. Dice, con la calma más seca posible:
+Cuando el grupo se da cuenta, Vekka ya no está. Roen lo entiende primero. Dice, con la calma más seca posible:
 
 *"Cargó el arnés técnico desde Ignis Reach. Ese arnés no es de camino. Es de taller. Va a inmovilizar algo del tamaño de un cuerpo."*
 
-El grupo entiende. Speck está con ellos, viva, aún — pero Vekka no viene por Speck en ese momento. **Vekka va al yunque.** Y espera que Speck le sea llevada.
+Y ahora, además, se llevó a Speck. **Vekka va al cráter a terminar el trabajo** — con la pieza ya en sus manos, no esperando que se la traigan.
 
 ---
 
@@ -347,7 +343,7 @@ La diferencia con F2a es total: allá cumplió y ascendió, aquí ejecutó y per
 
 **Imposible para Vekka.** El arquetipo del dogma no puede vivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la operación — la deja abierta indefinidamente. Y una forja incompleta que camina con un tirano es peor que una forja incompleta que camina sola.
 
-Vekka **no se une** al régimen del jugador. No se ofrece a operar. En el cráter, cuando ve que el jugador intenta tomar el poder para sí, **abandona el arnés y va contra él con el martillo pesado.** Muere confrontándolo, o el jugador la deja irse — no importa. Si se va, camina hacia Emberdeep a informar al gremio que la operación no se completó y que la variable está en manos hostiles. Muere en el camino, o llega y es despedida sin ceremonia, o simplemente desaparece del registro.
+Vekka **no se une** al régimen del jugador. No se ofrece a operar. Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cruza el borde hacia el core central, Vekka **suelta el arnés al verlo cruzar** — no forcejea por retenerla, eso mataría al Fragmento — y va contra él con el martillo pesado. Muere confrontándolo, o el jugador la deja irse — no importa. Si se va, camina hacia Emberdeep a informar al gremio que la operación no se completó y que la variable está en manos hostiles. Muere en el camino, o llega y es despedida sin ceremonia, o simplemente desaparece del registro.
 
 No hay epílogo compartido. Vekka no puede estar en un mundo donde la variable no se cerró. Se saca del cuadro.
 

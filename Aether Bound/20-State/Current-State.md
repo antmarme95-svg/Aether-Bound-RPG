@@ -61,45 +61,32 @@ No bloquea nada mientras tanto.
 
 ### 🔜 Pendiente para cerrar el sprint
 
-**7ª re-corrida (2026-08-02):** 13 CRITICAL + 18 MEDIUM, corregidos con 6
-decisiones de Boris (gate F1/F2a con mensajero, orden "El Primero" Roen→Valen→
-Pivote→Darro, bautizo a Acto 2, gate F3 sin Speck en mano, agencia a 4 grados,
-mapeo Elder Circle). Detalle en [[LOG]].
+**Rondas 7ª-9ª procesadas (2026-08-02), sprint no cierra todavía.** Detalle
+completo de cada una en [[LOG]] (entradas 2026-08-02). Resumen:
 
-**8ª re-corrida (2026-08-02) — corrida y procesada, no cierra todavía.** Encontró
-**~9 CRITICAL + 16 MEDIUM**: los fixes de la fuente (`Los 5 Finales`, `Geografía`)
-habían cerrado bien, pero no habían bajado a los **45 epílogos**. Una decisión
-nueva de Boris: en las rutas Torgan/Iven/Vekka el Pivote se detiene siempre en el
-**borde** del cráter (nunca en el centro), para que F1/F2b/F4 sigan siendo
-alcanzables sin disparar F3 por defecto. Fixes aplicados: gate F1 reescrito en 7
-epílogos con el mensajero correcto de cada cadena institucional (no siempre el
-Council — Dagna→Deepstone, Torgan→su clan, Vekka→Great Forging Clan, Lyris→
-Frontier High Command); sub-beat 5 de Vekka reescrito por completo (seguía
-desmontando el core sola, sin mensajero); `Speck.md` corregido a bautizo Acto 2
-(era la fuente que faltaba); `Estructura Dramática` corregida (ya no dice que el
-Pivote quiere matar a Speck); grados de agencia corregidos en `Briefs de Concept
-Art`; residuo de Cinder Ascent purgado de `Briefs de Mapa del Mundo`; ambigüedad
-de flashes resuelta en `Grove of Cycles` (el evento del Vector C es el Momento de
-Persona 6, no un flash). Detalle completo en [[LOG]] (entrada 2026-08-02, 8ª
-ronda).
+- **7ª:** 13 CRITICAL + 18 MEDIUM. 6 decisiones de Boris: gate F1/F2a con
+  mensajero (no el Pivote), orden "El Primero" Roen→Valen→Pivote→Darro,
+  bautizo a Acto 2, gate F3 sin Speck en mano, agencia a 4 grados, mapeo Elder
+  Circle.
+- **8ª:** ~9 CRITICAL + 16 MEDIUM. Los fixes de fuente no habían bajado a los
+  45 epílogos. Decisión nueva: Torgan/Iven/Vekka se detienen siempre en el
+  **borde** del cráter, nunca en el centro.
+- **9ª:** 7 CRITICAL + varios MEDIUM. Mismo patrón otra vez — la fuente
+  (`Geografía` sub-beat 4) todavía contradecía al sub-beat 5; el orden
+  institucional de Vekka seguía diciendo "destruir" en vez de "entregar viva"
+  (resuelto con el precedente de Darro: "unmake" = terminar el proceso, no
+  matar); Vekka reescrita de punta a punta (corredor + cráter + F3); Maren F2a
+  trataba a Speck como muerta; Bram tenía un mensajero fantasma que rompía su
+  propio gate; Sereth usaba "mensajero del Council" cuando su cadena real es
+  la Royal Academy; Dagna tenía el vector de aproximación del mensajero
+  invertido; faltaba el beat "el Pivote suelta a Speck al ver cruzar" en 3
+  fichas de F3.
 
-**MEDIUM de la 8ª ronda, cerrados:** error de raza de Tobin (`Old-Tobin-Hale`
-alineado con la tabla fuente de `Geografía`: es "misma raza", no "raza
-equivocada"); hueco de 5 años en cronología de Dagna cerrado (encargo y llegada
-al puesto coinciden, el contrato vence justo en el clímax), edad fijada en 100;
-duplicación de Old Tobin en `Geografía` colapsada a puntero; símbolo tallado de
-Darro agregado a su F3; sujeto de la cesión resuelto en F1/F2a de Nyael.
-**Aritmética de Torgan (20-72) verificada como correcta** — cubre el servicio
-previo a la Misión Clasificada, no era un error.
-
-**Quedan, no bloqueantes:** traducción de la línea de Tobin al inglés (pendiente
-de la pasada de guión completo), cuadrante de entrada de Stillwood con doble
-asignación en `Briefs de Mapa del Mundo` (categoría ya documentada de ~16 POIs
-con este problema).
-
-**Siguiente paso:** correr una **9ª re-corrida** (2 subagentes Opus en frío) para
-validar que estos fixes cerraron de verdad — recién ahí se declara el sprint
-cerrado. Linter en 0 críticos después de esta ronda.
+**Siguiente paso:** correr una **10ª re-corrida** (2 subagentes Opus en frío).
+Si vuelve a encontrar críticos del mismo patrón (fix en la fuente sin bajar a
+las fichas), considerar una pasada de reescritura completa de las 9 fichas de
+cráter en vez de más rondas de parches puntuales — el costo por ronda no está
+bajando. Linter en 0 críticos después de esta ronda.
 
 ### 🛠️ Herramientas del vault
 

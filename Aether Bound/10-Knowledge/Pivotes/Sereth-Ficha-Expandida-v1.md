@@ -275,7 +275,7 @@ Los otros fijos reaccionan según Tether:
 
 ### Sub-beat 5: Quiebre en First Wound
 
-Sereth espera en el **borde** del cráter — no en el core central. **Esto lo diferencia de F3 explícitamente:** Sereth no toma el poder para sí, no cruza el borde, no activa nada por su cuenta. Se queda en el margen con Speck acurrucada contra el pecho, esperando al mensajero del Council que ya está en camino desde arriba.
+Sereth espera en el **borde** del cráter — no en el core central. **Esto lo diferencia de F3 explícitamente:** Sereth no toma el poder para sí, no cruza el borde, no activa nada por su cuenta. Se queda en el margen con Speck acurrucada contra el pecho, esperando al mensajero de la Royal Academy que ya está subiendo desde dentro del cráter.
 
 Y aquí — y **solo aquí, única escena de Acto 3 donde Sereth explica su método** — habla.
 
@@ -301,7 +301,7 @@ Ver [[Los 5 Finales]] — Sereth ocupa la fila "Aritmética/Manipulación". Cada
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
-El jugador alcanza al mensajero del Council antes de que llegue hasta Sereth y lo detiene ahí ([[Los 5 Finales]] §F1). Sereth no forcejea — se queda quieto con Speck, y sobrevive quebrado. Está en el borde del cráter cuando Speck se convierte en Warden completa y la Muda cierra sobre sí misma. Ve, con lucidez académica, que **su método era el problema — no las cuentas.** La aritmética de "millones sobre uno" era de otra escuela (la de Maren). La suya era "conducir a la persona correcta a decidir por sí misma". Y la persona correcta, decidiendo por sí misma con toda la información, decidió lo contrario de lo que la Corona le encargó preparar.
+El jugador alcanza al mensajero de la Royal Academy antes de que llegue hasta Sereth y lo detiene ahí ([[Los 5 Finales]] §F1). Sereth no forcejea — se queda quieto con Speck, y sobrevive quebrado. Está en el borde del cráter cuando Speck se convierte en Warden completa y la Muda cierra sobre sí misma. Ve, con lucidez académica, que **su método era el problema — no las cuentas.** La aritmética de "millones sobre uno" era de otra escuela (la de Maren). La suya era "conducir a la persona correcta a decidir por sí misma". Y la persona correcta, decidiendo por sí misma con toda la información, decidió lo contrario de lo que la Corona le encargó preparar.
 
 No es que se equivocó calculando. **Su método asumía que el terreno bien preparado siempre produce el resultado buscado.** El terreno estaba perfectamente preparado. El resultado no.
 
@@ -313,7 +313,7 @@ Se dedica, en silencio, a **escribir un tratado privado** sobre los límites de 
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council en el cráter)
 
-Sereth cumple. Entrega a Speck viva al mensajero del Council que sube desde arriba. Los God-Cores dejan de pulsar. El Aether se estanca en un statu quo administrado.
+Sereth cumple. Entrega a Speck viva al mensajero de la Royal Academy que sube desde dentro del cráter. Los God-Cores dejan de pulsar. El Aether se estanca en un statu quo administrado.
 
 **Epílogo:** **the Royal Academy lo condecora** — no públicamente (el encargo era clasificado) sino en el círculo interno. Recibe un asiento consultivo permanente al servicio directo de Queen Ithessa. Es el ascenso que su carrera prometía desde los 100 años.
 
@@ -331,7 +331,7 @@ En dos años pide baja de la Academy. En cinco años deja de escribir. Muere de 
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Sereth **se te une**, en teoría. Es de los pocos del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cruza el borde hacia el core central, Sereth no forcejea — suelta a Speck al verlo cruzar, leyendo la situación con la misma frialdad académica de siempre. Sereth **se te une**, en teoría. Es de los pocos del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
 
 **En la práctica, calcula tu caída desde el primer mes.** Y — variante especialmente peligrosa — **te ayuda a caer bien.** Un tirano que colapsa mal arrastra a todos los que quedaron con él. Sereth diseña las condiciones para que, cuando caigas, caigas de una forma que le permita a él sobrevivir intacto. Te sirve con lealtad aparente durante años. Cada consejo que te da tiene dos capas: la superficial (te ayuda a gobernar) y la profunda (te empuja imperceptiblemente hacia decisiones que erosionan tu régimen).
 
