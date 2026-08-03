@@ -6524,3 +6524,70 @@ cráter como una sola unidad coherente, en vez de seguir corrigiendo por ronda.
 ### Pendiente inmediato
 
 **10ª re-corrida QA con 2 subagentes Opus en frío** — criterio de cierre: 0 críticos de ambos.
+
+## [2026-08-03] design/arquitectura | Sesión de diseño — se corta el ciclo de re-corridas con un fix estructural
+
+**Contexto:** 10 re-corridas de QA, cinco de ellas (6ª-10ª) con el mismo mecanismo de falla y
+sin bajar el volumen de críticos (13 → ~9 → 7 → ~10). Boris planteó que repetir el método
+esperando otro resultado no iba a funcionar, y pidió una sesión de diseño con entregable de
+plan en vez de otra ronda de parches. Tenía razón.
+
+**Diagnóstico:** la escena del cráter mezcla dos capas en un mismo texto — una **mecánica**
+(idéntica en las 9 rutas salvo parámetros) y una **dramática** (única por Pivote). La capa
+mecánica estaba copiada a mano en **13 archivos**: 9 fichas de Pivote + Roen + Valen + Darro +
+`Los 9 Pivotes`. Cada corrección de regla exigía 13 transcripciones con redacción propia. No
+era un problema de disciplina en el barrido: era un método que garantizaba divergencia y que
+además no dejaba nada verificable por el linter.
+
+**Las 4 clases de error, con evidencia de 4 rondas:** (A) parámetro divergente — mensajero del
+Council vs cadena propia, vector de aproximación, borde vs centro; (B) regla global
+re-enunciada con variación — gate de F4 con condición inventada, "unmake"=matar, reloj de
+maduración; (C) beat obligatorio faltante — soltar a Speck en F3, el mensajero apartándose en
+F4; (D) cita cruzada podrida — cuatro archivos describiendo el quiebre de Vekka como su
+epílogo F2b.
+
+**Decisiones de Boris:** (1) el gate de F4 son 2 condiciones globales y **ninguna depende del
+Pivote** — en consecuencia cada epílogo F4 se escribe en dos variantes, Pivote vivo y Pivote
+muerto; (2) fuente única en ficha nueva dedicada; (3) reescritura quirúrgica, preservando toda
+la prosa dramática ya ratificada.
+
+**Fases 1-5 ejecutadas en la misma sesión** (plan completo en
+`~/.claude/plans/plan-craterculata-fix-arquitectura-crater.md`):
+
+- **F1 —** `10-Knowledge/El Cráter — Matriz de Rutas.md`: secuencia fija de 7 pasos, tabla de
+  parámetros por ruta (cadena institucional, mensajero, quién sostiene a Speck, excepciones),
+  los 5 gates enunciados una sola vez, beats obligatorios por final, y las 7 reglas globales
+  que las fichas citan y nunca reformulan.
+- **F2 —** `Los 5 Finales` y `Geografía §ACTO 3` podados. El primero se queda con filosofía,
+  sabor, líneas canónicas y ecos Bond; el segundo, con el lugar. Los dos archivos que se
+  autocontradijeron entre secciones vecinas en las rondas 9ª y 10ª ya no enuncian mecánica.
+- **F3 —** las 9 fichas heredan (verificado: 9/9 citan la matriz, 0 residuos del gate de F4
+  inventado). Se cerraron de paso todos los críticos de la 10ª y se escribieron las 7
+  variantes de epílogo F4 "Pivote muerto".
+- **F4 —** los 3 fijos y `Los 9 Pivotes`, barridos **por primera vez en todo el sprint**. De
+  ahí había salido la clase D entera.
+- **F5 —** 6 chequeos nuevos en `check_canon.py` (18 clases en total): `crater-mensajero`,
+  `crater-borde`, `gate-f4`, `premisas`, `crater-beats`, `quiebre-fijos`. Verificados contra
+  un fixture con los errores reales de la 10ª: los cazan todos, y dan 0 falsos positivos sobre
+  el vault corregido.
+
+**Reglas de canon nuevas que salieron del trabajo:**
+- **En F4, Speck cruza el borde sola.** Nadie la carga al core central — eso la devolvería a
+  la categoría de objeto que ese final existe para negar. Es el reverso exacto de F3.
+- **Nyael y Bram no tienen variante de epílogo "Pivote muerto"**, y es intencional: al jugador
+  nunca se le presenta la oportunidad de matarlos.
+- **Los superlativos de reacción de los fijos** ("la única vez que Darro se queda mudo") tienen
+  que existir en un solo lugar del vault. Dos fichas habían reclamado el mismo para escenas
+  distintas.
+- **La variante muerta no agrega tragedia genérica** — cobra algo específico que solo ese
+  personaje podía dar. Si se resume como "y además murió", está mal escrita.
+
+**Regla de método nueva:** si un QA encuentra un crítico de una clase que el linter ya cubre,
+**el bug es del linter** — se agrega el chequeo, no se parcha la línea.
+
+**Estado: `check_canon.py` en 0 críticos (18 clases), `check_vault.py` 🟢.**
+
+### Pendiente inmediato
+
+**11ª re-corrida (Fase 6)** — con las 4 clases mecánicas cubiertas por el linter, esta ronda
+debería medir dramaturgia real por primera vez en el sprint.

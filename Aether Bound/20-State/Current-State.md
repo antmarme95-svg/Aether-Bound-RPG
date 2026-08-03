@@ -61,46 +61,66 @@ No bloquea nada mientras tanto.
 
 ### 🔜 Pendiente para cerrar el sprint
 
-**Rondas 7ª-9ª procesadas (2026-08-02), sprint no cierra todavía.** Detalle
-completo de cada una en [[LOG]] (entradas 2026-08-02). Resumen:
+**Rondas 7ª-10ª procesadas (2026-08-02/03).** Detalle completo en [[LOG]].
+13 → ~9 → 7 → ~10 críticos: **el volumen no bajó en cinco rondas**, siempre por
+el mismo mecanismo (un fix entra en la fuente y no baja a las fichas). Las
+decisiones de canon que salieron de esas rondas — gate F1/F2a con mensajero,
+orden "El Primero", bautizo a Acto 2, agencia a 4 grados, el Pivote siempre en
+el borde — están todas aplicadas. En la 10ª **se cortó el ciclo de parches y se
+hizo una sesión de diseño.**
 
-- **7ª:** 13 CRITICAL + 18 MEDIUM. 6 decisiones de Boris: gate F1/F2a con
-  mensajero (no el Pivote), orden "El Primero" Roen→Valen→Pivote→Darro,
-  bautizo a Acto 2, gate F3 sin Speck en mano, agencia a 4 grados, mapeo Elder
-  Circle.
-- **8ª:** ~9 CRITICAL + 16 MEDIUM. Los fixes de fuente no habían bajado a los
-  45 epílogos. Decisión nueva: Torgan/Iven/Vekka se detienen siempre en el
-  **borde** del cráter, nunca en el centro.
-- **9ª:** 7 CRITICAL + varios MEDIUM. Mismo patrón otra vez — la fuente
-  (`Geografía` sub-beat 4) todavía contradecía al sub-beat 5; el orden
-  institucional de Vekka seguía diciendo "destruir" en vez de "entregar viva"
-  (resuelto con el precedente de Darro: "unmake" = terminar el proceso, no
-  matar); Vekka reescrita de punta a punta (corredor + cráter + F3); Maren F2a
-  trataba a Speck como muerta; Bram tenía un mensajero fantasma que rompía su
-  propio gate; Sereth usaba "mensajero del Council" cuando su cadena real es
-  la Royal Academy; Dagna tenía el vector de aproximación del mensajero
-  invertido; faltaba el beat "el Pivote suelta a Speck al ver cruzar" en 3
-  fichas de F3.
+### 🏗️ Fix de arquitectura (sesión de diseño 2026-08-03)
 
-**Siguiente paso:** correr una **10ª re-corrida** (2 subagentes Opus en frío).
-Si vuelve a encontrar críticos del mismo patrón (fix en la fuente sin bajar a
-las fichas), considerar una pasada de reescritura completa de las 9 fichas de
-cráter en vez de más rondas de parches puntuales — el costo por ronda no está
-bajando. Linter en 0 críticos después de esta ronda.
+**Diagnóstico:** la mecánica del cráter estaba copiada a mano en **13 archivos**
+(9 Pivotes + 3 fijos + `Los 9 Pivotes`), así que cada cambio de regla exigía 13
+transcripciones con redacción propia. No era indisciplina — era un método que
+garantizaba divergencia, y por eso 5 rondas de parches no bajaron el volumen.
+
+**Fases 1-5 completadas** (plan en `~/.claude/plans/plan-craterculata-fix-arquitectura-crater.md`):
+
+1. **[[El Cráter — Matriz de Rutas]]** — fuente única nueva: secuencia fija de
+   7 pasos, tabla de parámetros por ruta, los 5 gates, beats obligatorios,
+   reglas globales que se citan y nunca se re-enuncian.
+2. `Los 5 Finales` y `Geografía §ACTO 3` **podados** de la mecánica duplicada —
+   se quedan con filosofía y lugar respectivamente.
+3. **Las 9 fichas heredan**: citan la matriz en vez de re-narrarla. Se cerraron
+   de paso todos los críticos de la 10ª.
+4. **Los 3 fijos + `Los 9 Pivotes`** barridos por primera vez en todo el sprint.
+5. **6 chequeos nuevos en el linter** (ver abajo).
+
+**Decisiones de Boris en esa sesión:** el gate de F4 no depende del Pivote (y
+por eso cada epílogo F4 tiene dos variantes, vivo/muerto); en F4 Speck **cruza
+el borde sola**; Nyael y Bram no tienen variante muerta y es intencional.
+
+**Siguiente paso:** **11ª re-corrida** (Fase 6). Ahora mide dramaturgia real —
+las 4 clases de error mecánico que dominaron las rondas 6ª-10ª las caza el
+linter.
 
 ### 🛠️ Herramientas del vault
 
 ```
 python "Aether Bound/scripts/check_vault.py"    # peso de arranque
-python "Aether Bound/scripts/check_canon.py"    # consistencia (12 clases)
+python "Aether Bound/scripts/check_canon.py"    # consistencia (18 clases)
 ```
 
-`check_canon.py`: citas `§`, wikilinks, fuente única, aritmética de edades,
-longevidad, género, reinos, cuadrantes, diálogo, **fichas duplicadas**,
-**huérfanos de índice**. Exit 1 si hay críticos. Método: skill `canon-qa` /
-[[QA de Canon Loop]]. **Orden no negociable:** linter en 0 → subagentes en
-frío solo para juicio → fixes **a la fuente** con re-grep → checkpoint →
-re-corrida.
+`check_canon.py` — **18 clases**. Las 12 originales: citas `§`, wikilinks,
+fuente única, aritmética de edades, longevidad, género, reinos, cuadrantes,
+diálogo, fichas duplicadas, huérfanos de índice. Las **6 nuevas (2026-08-03)**
+cubren la escena del cráter, que causó críticos en 4 rondas seguidas:
+`crater-mensajero` (cada Pivote responde a su cadena, no al Council por
+defecto), `crater-borde` (el Pivote nunca en el centro), `gate-f4` (prohibido
+agregar condición de ruta), `premisas` (matar a Speck no sana nada; no hay
+reloj autónomo), `crater-beats` (F3 exige soltar, F4 exige que el mensajero se
+aparte), `quiebre-fijos` (los fijos narran su reacción, no el evento).
+Verificados contra los errores reales de la 10ª ronda: los cazan todos.
+
+Exit 1 si hay críticos. Método: skill `canon-qa` / [[QA de Canon Loop]].
+**Orden no negociable:** linter en 0 → subagentes en frío solo para juicio →
+fixes **a la fuente** con re-grep → checkpoint → re-corrida.
+
+**Regla nueva (2026-08-03):** si un QA encuentra un crítico de una clase que el
+linter ya cubre, **el bug es del linter** — se agrega el chequeo, no se parcha
+la línea.
 
 Hook `.claude/settings.json` + `Aether Bound/scripts/hook_current_state.sh`:
 corre `check_vault.py` automáticamente al editar este archivo — construido y
