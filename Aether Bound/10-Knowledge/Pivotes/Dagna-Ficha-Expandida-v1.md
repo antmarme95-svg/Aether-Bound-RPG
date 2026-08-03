@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Vanguard
 **Origen:** Subclán vasallo **Deepstone**, vasallo del Great Forging Clan (Ignis Reach)
-**Edad aparente:** 90-100 años (veterana, ~60 años en el rol de muralla)
+**Edad aparente:** 100 años (veterana, ~60 años en el rol de muralla)
 **Arquetipo de Traición:** Deber Institucional — cadena de vasallaje interiorizada como piedra. Superlativo: **la traición que rompe al ancla** (ver [[Los 5 Finales]]).
 
 ---
@@ -52,19 +52,19 @@ Dagna no eligió el rol. Nadie en Deepstone elige rol. La palabra "vocación" no
 
 **Personalidad:** callada por defecto. Reserva profunda. Ríe muy poco, y cuando ríe lo hace en silencio — el pecho se mueve, la cara casi no. Los suyos la respetan; los extraños la subestiman por lo poco que habla.
 
-### Sesenta años de muralla (edades 40-90)
+### Sesenta años de muralla (edades 40-100)
 
 Sesenta años cumpliendo el rol. Bestias, hambrunas, escaramuzas fronterizas, un colapso de galería en las minas profundas de Deepstone que dejó a diecisiete enanos vivos porque Dagna sostuvo un travesaño con el hombro durante cuarenta minutos. **Nadie del subclán recuerda un día en que Dagna no estuviera en su puesto.**
 
 Es lo que la distingue en la memoria de Deepstone: **no lo abandonó nunca.** Ni por enfermedad, ni por duelo (murieron sus padres y siguió), ni por opción propia (nunca hubo opción propia). El puesto y ella fueron la misma cosa durante seis décadas.
 
-### El encargo especial (hace 10 años)
+### El encargo especial (hace 5 años)
 
-Hace 10 años, el Great Forging Clan contactó formalmente al consejo de Deepstone: *"Necesitamos protectora para un contratista humano. Cinco años de servicio. Si sirve bien, Deepstone recibe recursos, oro, posición ante nosotros."*
+Hace 5 años, el Great Forging Clan contactó formalmente al consejo de Deepstone: *"Necesitamos protectora para un contratista humano. Cinco años de servicio. Si sirve bien, Deepstone recibe recursos, oro, posición ante nosotros."*
 
 El consejo de Deepstone decidió sin consultarla: **envía a Dagna.** No porque fuera la mejor — era la mejor — sino porque enviar a la mejor mejoraba la posición del subclán ante el Great Forging Clan. La decisión fue política, no personal. Dagna no cuestionó. Es enana. Deepstone ordena, Dagna obedece.
 
-Cinco años después (hace 5 años), llegó al puesto de escolta del jugador (Humano Duelist).
+Llegó al puesto de escolta del jugador (Humano Duelist) casi de inmediato — el contrato de cinco años arrancó ahí, y hoy, en el presente de la historia, está por cumplirse. Nadie lo menciona en voz alta, pero el vencimiento cae casi exactamente sobre el clímax.
 
 ### Cinco años con el jugador (hace 5 años a hoy)
 

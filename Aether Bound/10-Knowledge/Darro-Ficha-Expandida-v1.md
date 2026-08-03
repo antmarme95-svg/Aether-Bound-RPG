@@ -302,9 +302,9 @@ Darro es quien **rechaza tu justicia.**
 
 *"Speck no es trofeo. Prisión no es victoria. Esto es... hermano, esto es peor que perderla. La tienes y está muerta por ello."*
 
-Darro se va. Es lo más devastador posible viniendo de él. No grita — simplemente no está.
+Darro se va. Es lo más devastador posible viniendo de él. No grita — simplemente no está. No dice adiós: antes de irse, talla en silencio su símbolo en la mesa del último campamento — el mismo gesto de honra que usó para nombrar a Speck, esta vez de despedida ([[Los 5 Finales]] §F3).
 
-Años después, nota que Darro nunca volvió.
+Años después, el jugador nota que Darro nunca volvió. La mesa, si todavía existe, sigue teniendo el símbolo tallado.
 
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
 Darro es quien **celebra primero** — y el único del elenco al que la celebración se le cae encima a mitad de camino.

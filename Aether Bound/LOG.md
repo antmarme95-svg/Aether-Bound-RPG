@@ -6415,3 +6415,49 @@ símbolo tallado de Darro ausente en su F3, sujeto de la cesión sin resolver en
 **9ª re-corrida QA con 2 subagentes Opus en frío** — criterio de cierre: 0 críticos de ambos.
 Si el patrón se repite (fix en la fuente, no propagado a fichas), buscar dónde más puede estar
 pasando esto antes de declarar cerrado cualquier futuro sprint.
+
+## [2026-08-02] sprint/QA-verificación | Barrido de MEDIUM de la 8ª ronda — 6 cerrados, 1 verificado como no-error
+
+Boris pidió cerrar los MEDIUM que quedaron abiertos de la 8ª re-corrida antes de lanzar la 9ª.
+
+- **Error de raza de Tobin.** `Old-Tobin-Hale-Ficha-Expandida-v1.md:94` decía que el error de
+  Tobin siempre apunta al fijo de la **raza equivocada**; la tabla fuente en
+  `Geografía y Ciudades.md:923-939` (mucho más detallada, con los 9 casos por Pivote) dice que
+  apunta al fijo de la **misma raza** que el Pivote real. Corregido para citar la tabla como
+  fuente.
+- **Hueco de 5 años en la cronología de Dagna.** El encargo del Great Forging Clan (hace 10
+  años) y su llegada al puesto de escolta (hace 5 años) dejaban 5 años sin explicar en el
+  medio. Se fusionaron los dos eventos: el encargo pasó a "hace 5 años" y ella llegó casi de
+  inmediato — el contrato de 5 años vence justo en el presente de la historia, lo cual además
+  suma tensión al clímax en vez de ser un hueco.
+- **Edad de Dagna sin cerrar.** `Dagna:11` daba un rango "90-100 años" que no cerraba con la
+  aritmética del resto de la ficha. Fijada en **100 años** (encabezado "edades 40-90" corregido
+  a "40-100" para que las cuentas cierren con "sesenta años de muralla").
+- **Duplicación de Old Tobin.** `Geografía y Ciudades.md:709-735` reproducía en prosa la bio,
+  el contraste con el elenco político y la línea canónica que ya vive en
+  `Old-Tobin-Hale-Ficha-Expandida-v1.md` — el mismo patrón que obligó a archivar 4 fichas
+  cortas en la 5ª ronda. Colapsado a un puntero de 3 líneas; la ficha expandida queda como
+  fuente única.
+- **Símbolo tallado de Darro ausente en su F3.** `Los 5 Finales.md:106` lo fija como su
+  despedida ritual (deja su símbolo tallado en la mesa del último campamento); su propia ficha
+  no lo mencionaba. Agregado.
+- **Sujeto de la cesión sin resolver en Nyael.** En su ruta, el equipo de extracción intentaba
+  "completar la entrega" sin quedar claro que la tenían en brazos — la física de
+  `Speck.md §Capa 5` exige que alguien la sostenga y la ceda para que el pulso se corte.
+  Reescrito para que el equipo la sostenga explícitamente desde el sub-beat 5.
+- **Aritmética de Torgan (20-72) — verificada, no era un error.** El encabezado cubre su
+  servicio *previo* a la Misión Clasificada que arrancó "hace 3 años" sobre una edad actual de
+  75 (72 + 3 = 75). Ya lo había señalado la 8ª ronda; se confirma y se saca de la lista de
+  pendientes.
+
+**Quedan, no bloqueantes:** traducción al inglés de la línea de Tobin (parte de la pasada de
+guión completo pendiente), doble asignación de cuadrante en el POI de entrada de Stillwood en
+`Briefs de Mapa del Mundo` (categoría ya documentada de ~16 POIs con este problema, sin
+prioridad propia).
+
+**Estado: `check_canon.py` en 0 críticos, `check_vault.py` 🟢.**
+
+### Pendiente inmediato
+
+**9ª re-corrida QA con 2 subagentes Opus en frío** — sigue siendo el criterio real de cierre
+del sprint.

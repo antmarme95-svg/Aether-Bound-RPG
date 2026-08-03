@@ -708,31 +708,12 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 
 #### Harbormaster Tobin Hale — "Old Tobin"
 
-**El único personaje de poder sin agenda oculta en todo el juego.** Sin
-título nobiliario, sin sangre de House — pero controla derechos de
-atraque, rutas comerciales, y prácticamente el flujo económico completo
-del Driftmarket. No por corrupción: por reputación. Empezó como
-contrabandista/refugiado él mismo, décadas atrás, y construyó su fortuna
-con honestidad radical.
-
-**Por qué es querido:** nunca engaña. Da crédito a quien lo necesita.
-Protege refugiados y desertores sin preguntar de qué huyen — el
-Driftmarket es refugio en parte *por él*. Encarna "Bond sobre Standing":
-no le importa el rango oficial de nadie, solo si es decente con la gente
-— coherente con la tensión que ya define al Driftmarket.
-
-**Contraste con el resto del elenco político:** el Council tiene interés
-institucional oculto, Isolde Marrow calcula su ascenso, hasta Maren tiene
-que jugar política pese a querer evitarlo. Tobin es la excepción — ayuda
-porque puede, no porque calcula.
-
-**Línea canónica:** *"I don't care who you were before you got here. I
-care what you do while you're standing on my docks."*
-
-**Conexión con Darro:** posiblemente vouches por él desde antes — Darro ya
-lleva un acto entero en el grupo cuando llegan acá, así que el gesto no es
-reclutamiento sino **reconocimiento**: alguien de este mercado lo conoce y lo
-respalda, y el grupo lo ve.
+Harbormaster del Driftmarket, controla su flujo económico por reputación,
+no por título. Ficha completa (bio, esencia, contraste con el elenco
+político, línea canónica, el extraño de hace 40+ años) en
+[[Old-Tobin-Hale-Ficha-Expandida-v1]] — **fuente única del personaje**, no
+duplicar acá. Aparece en §THE RECKONING (Beat 1: el falso positivo; Beat
+2: entrega de los Wanderer's Goggles).
 
 ### MISTBOUND FRONTIER (Región Humana Interior — Oeste Profundo)
 - **Ubicación:** Tierra interior remota de Aethelgard, más allá de Rivermeet (sur-oeste profundo), lejos del río

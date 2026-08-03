@@ -83,10 +83,19 @@ de flashes resuelta en `Grove of Cycles` (el evento del Vector C es el Momento d
 Persona 6, no un flash). Detalle completo en [[LOG]] (entrada 2026-08-02, 8ª
 ronda).
 
-**Quedan MEDIUM sin tocar** (no bloquean): línea de Tobin sin traducir, aritmética
-de Torgan, hueco de 5 años en cronología de Dagna, duplicación de Old Tobin en
-`Geografía`, símbolo tallado de Darro ausente en su F3, sujeto de la cesión sin
-resolver en el F1 de Nyael.
+**MEDIUM de la 8ª ronda, cerrados:** error de raza de Tobin (`Old-Tobin-Hale`
+alineado con la tabla fuente de `Geografía`: es "misma raza", no "raza
+equivocada"); hueco de 5 años en cronología de Dagna cerrado (encargo y llegada
+al puesto coinciden, el contrato vence justo en el clímax), edad fijada en 100;
+duplicación de Old Tobin en `Geografía` colapsada a puntero; símbolo tallado de
+Darro agregado a su F3; sujeto de la cesión resuelto en F1/F2a de Nyael.
+**Aritmética de Torgan (20-72) verificada como correcta** — cubre el servicio
+previo a la Misión Clasificada, no era un error.
+
+**Quedan, no bloqueantes:** traducción de la línea de Tobin al inglés (pendiente
+de la pasada de guión completo), cuadrante de entrada de Stillwood con doble
+asignación en `Briefs de Mapa del Mundo` (categoría ya documentada de ~16 POIs
+con este problema).
 
 **Siguiente paso:** correr una **9ª re-corrida** (2 subagentes Opus en frío) para
 validar que estos fixes cerraron de verdad — recién ahí se declara el sprint

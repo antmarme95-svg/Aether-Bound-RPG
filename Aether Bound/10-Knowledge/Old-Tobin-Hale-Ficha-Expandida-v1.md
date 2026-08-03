@@ -91,8 +91,10 @@ décadas de oído entrenado en los muelles, distinguiendo cargamentos y
 acentos institucionales. Ese oído es real y es exactamente lo que lo
 traiciona: cuando escucha un fragmento de jerga élfica, enana o de
 Consortium, confía en que solo quien la habla naturalmente puede estar
-detrás — y en el grupo, eso siempre apunta al fijo de la raza equivocada.
-No miente, no exagera, no especula más allá de lo que sabe. Su honestidad
+detrás — y en el grupo, eso siempre apunta al fijo **de la misma raza** que
+el Pivote real, nunca al Pivote mismo ([[Geografía y Ciudades]] §THE
+RECKONING, Beat 1 — tabla completa por Pivote activo). No miente, no
+exagera, no especula más allá de lo que sabe. Su honestidad
 es lo que vuelve el error creíble, y el error es lo que le da al jugador
 agencia real: puede confrontar al fijo equivocado, quedarse con la duda, o
 consultarlo con Speck.
