@@ -44,7 +44,8 @@
 - [[Combate]] — 4 componentes + HitPayload; marcas como datos; parry racial; verbos 3×3.
 - [[Movilidad Realista]] — mandato §4.3: constraints + IK + ROM por raza; el esqueleto manda.
 - [[Progresión y Contrato]] — el Contrato que te persigue; loop principal.
-- [[Los 5 Finales]] — Guided Molt / Long Winter (Handed Over · Fallen) / Conqueror's Clause / Warden's Choice + ecos Bond.
+- [[Los 5 Finales]] — Guided Molt / Long Winter (Handed Over · Fallen) / Conqueror's Clause / Warden's Choice + ecos Bond. **Filosofía y sabor** de cada final; la mecánica de la escena vive en la Matriz de Rutas.
+- [[El Cráter — Matriz de Rutas]] — **fuente única de la mecánica del clímax** (2026-08-03): secuencia fija de 7 pasos, tabla de parámetros por ruta (mensajero y cadena institucional de cada Pivote), los 5 gates, beats obligatorios por final, y las reglas globales que las fichas citan en vez de re-enunciar. Las 9 fichas de Pivote + 3 fijos + [[Los 9 Pivotes]] **heredan de acá**.
 - [[The Tether]] — Contract Standing vs. Bond por compañero (T1–T3) + Momentos de Persona.
 - [[Grove of Cycles — Escena del Acto 2]] — el debate del Elder Circle (Threnn/Ilyara/Corwyn/Maelys) que siembra los finales; fuente primaria de por qué el grupo llega ahí y del Vector C (gate: mayoría "persona" en los Momentos de Persona, sin conteo de flashes).
 - [[Art Bible]] — "Melancolía Gráfica": Sable×BotW×Hinterberg, regla espacial, pipeline 4 capas.
