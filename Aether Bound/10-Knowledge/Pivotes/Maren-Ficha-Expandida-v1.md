@@ -190,7 +190,7 @@ Con el jugador: **profesional en público.** Compañeros de grupo. Privadamente,
 
 Maren viaja el aro de La Rueda. En cada ciudad **recibe información.**
 
-- **Rivermeet:** the Triune Council la actualiza en secreto (vía mensaje cifrado). Confirma: si Speck madura, la Muda se completa. El Aether sana. Aethelgard entero pierde su único combustible.
+- **Rivermeet:** the Triune Council la actualiza en secreto (vía mensaje cifrado). Confirma lo que el Council teme: **si Speck llega al cráter y nadie interviene**, la Muda se completa, el Aether sana, y Aethelgard entero pierde su único combustible. No hay reloj que corra solo ([[El Mundo y la Muda]]) — hay una llave caminando hacia una cerradura, y el Council quiere la llave antes de que llegue.
 - **Stillspire:** Ve los registros élficos (acceso de Valen). Confirma timescale — 3 años, no 5.
 - **Ignis Reach:** Habla con negociadores enanos. Confirma: todos los reinos dependen de Aether corrupto.
 
@@ -204,7 +204,7 @@ Durante Acto 2, Speck revela inteligencia.
 
 **Maren ve a Speck y comprende:** No es mascota. No es arma. Es **llave.**
 
-Si Speck vive, Rivermeet muere y con ella Aethelgard. No es abstracto — es sus padres, sus colegas, los niños en el mercado.
+Si Speck llega al cráter, Rivermeet muere y con ella Aethelgard. No es abstracto — es sus padres, sus colegas, los niños en el mercado. **La solución no es matarla** (eso no sana ni apaga nada, [[Speck]] §Capa 5): es entregarla antes de que llegue, viva, y que el Council la administre.
 
 **Maren no lo dice.** Simplemente nota: *"Bonita criatura. Lástima que exista."* (Bromista, pero con verdad debajo.)
 
@@ -263,7 +263,7 @@ Maren mira al jugador. Dice, sin subir la voz:
 **Se lleva a Speck.** No corre — camina rápido. La escena "por qué traiciona" ocurre AQUÍ, no en First Wound. First Wound es solo el cierre físico.
 
 **Línea de traición:**
-*"I can love her and still do the math. The math says millions live if she dies. Even after what the Goggles showed you. Especially after."*
+*"I can love her and still do the math. The math says millions live if she's handed over. Even after what the Goggles showed you. Especially after."*
 
 No es malvada. Es **exactamente lo que dijo que era: alguien que piensa en sistemas.** Y los sistemas no se disuelven porque una civilización antigua tuviera nombre.
 
@@ -294,7 +294,9 @@ Conversaciones clave:
 
 ### Sub-beat 5: Quiebre en First Wound
 
-Se alcanza a Maren en el borde del cráter. Fragmento está activado. Speck está transformándose. Maren no cruza al core central — no es F3, no toma el poder para sí. Simplemente sostiene a Speck y espera al mensajero del Council.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Maren**. Secuencia: §1, pasos 1-7, sin excepciones. El mensajero del Council sube desde dentro del cráter hacia el borde.
+
+Lo que distingue a Maren es que **no hay escena.** Los otros ocho Pivotes tienen un quiebre — un discurso, un forcejeo, una grieta visible. Maren simplemente sostiene a Speck y espera, con la misma cara con la que espera un envío atrasado en el muelle de Rivermeet. Ya tuvo su escena en el corredor del Archive; esto es la parte administrativa. Si el jugador viene buscando una confrontación, no la va a encontrar: encuentra a una mujer haciendo tiempo hasta que llegue quien tiene que llegar.
 
 **La decisión es del jugador.**
 
@@ -306,7 +308,9 @@ Ver [[Los 5 Finales]] — Maren ocupa la fila "Aritmética/Manipulación". Cada 
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
-El jugador alcanza al mensajero del Council antes de que llegue hasta Maren y lo detiene ahí ([[Los 5 Finales]] §F1). Maren no forcejea ni interviene — se queda sosteniendo a Speck, y sobrevive quebrada. Está en el borde del cráter cuando Speck se convierte en Warden completa. Ve la Muda cerrar sobre sí misma. Su cálculo fue correcto E insuficiente al mismo tiempo — es la conclusión más devastadora para alguien que se define por precisión.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero del Council queda neutralizado antes de llegar hasta ella.
+
+Maren no forcejea ni interviene — se queda sosteniendo a Speck, y sobrevive quebrada. Está en el borde del cráter cuando Speck se convierte en Warden completa. Ve la Muda cerrar sobre sí misma. Su cálculo fue correcto E insuficiente al mismo tiempo — es la conclusión más devastadora para alguien que se define por precisión.
 
 **Epílogo:** Maren regresa a Rivermeet y llega a tiempo para verla caer. El Aether se apagó de golpe y con él la mitad de la ciudad: los talleres, las bombas del río, la logística que ella misma había optimizado durante veinte años. **No puede evitar el colapso — nadie podía.** Lo que hace es la única cosa que su precisión todavía sirve para hacer: **volverlo sobrevivible.** Raciones calculadas al gramo, rutas de agua sin bombas, censos de quién puede trabajar y quién no, un invierno planificado casa por casa.
 
@@ -316,7 +320,9 @@ Nunca vuelve a ver al jugador. Le llega un mensaje años después, corto: *"La e
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council en el cráter)
 
-Maren cumple. Entrega a Speck viva al mensajero del Council. Los God-Cores dejan de pulsar. El Aether se estanca en un statu quo administrado.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Maren cumple. Speck sale del cráter **viva**, en custodia del Council. Los God-Cores dejan de pulsar. El Aether se estanca en un statu quo administrado.
 
 **Epílogo:** Maren **asciende con reconocimiento formal del Council.** Recibe un asiento consultivo permanente en el Triune Council — no como embajadora, como Directora de Contingencia Comercial, cargo creado para ella. Es el primer humano sin apellido de House en tener silla en la mesa del Council.
 
@@ -326,6 +332,8 @@ Se aparta del jugador **con cortesía.** No lo evita, pero no lo busca. En River
 
 Este es el final donde Maren **colapsa internamente.**
 
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador.
+
 Su cálculo original incluía "Speck viva" como variable requerida — sin ella, el Council no obtiene el recurso, Rivermeet no obtiene los subsidios prometidos, la aritmética no cuadra. El precio se pagó, no se compró nada.
 
 **Epílogo:** Maren regresa a Rivermeet, pero ya no calcula. Se sienta en su oficina del Consortium con papeles frente a ella y no anota nada. Ha visto muchas cosas romperse en su vida; nunca había visto romperse una ecuación. Los subordinados dejan de preguntarle. En seis meses, deja el cargo sin ceremonia. En dos años, la ciudad empieza a colapsar como estaba predicho, y Maren lo ve desde una ventana en las afueras — sin ábaco, sin cifras, con las manos vacías. Muere de vieja, sola, en un cuarto de renta.
@@ -334,7 +342,9 @@ La diferencia con F2a es total: allá cumplió y ganó, aquí cumplió y perdió
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cruza el borde hacia el core central, Maren no forcejea — suelta a Speck al verlo cruzar, calculando en el acto que retenerla no cambia el resultado. Maren **se te une, en teoría.** Es la única del grupo que no se va — todos los demás abandonan, ella se queda. Sus habilidades son demasiado útiles como para desperdiciarlas por sentimentalismo. El jugador tiene ejército sofisticado, red de suministro impecable, contingencias en cada frente. Maren opera todo.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Maren suelta.
+
+No forcejea: suelta a Speck al verlo cruzar, calculando en el acto que retenerla no cambia el resultado. Maren **se te une, en teoría.** Es la única del grupo que no se va — todos los demás abandonan, ella se queda. Sus habilidades son demasiado útiles como para desperdiciarlas por sentimentalismo. El jugador tiene ejército sofisticado, red de suministro impecable, contingencias en cada frente. Maren opera todo.
 
 **En la práctica, calcula tu caída desde el primer mes.** No como venganza — como diagnóstico. Un tirano con Speck encadenada no es un sistema estable, y Maren solo sabe trabajar con sistemas estables. Modela tu régimen y ve, con precisión, cuándo colapsará y cómo. Anota fechas.
 
@@ -342,15 +352,21 @@ Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cr
 
 ### F4 — The Warden's Choice (Speck elige Muda parcial, síntesis)
 
-Este final requiere que el jugador haya **perdonado** a Maren en la persecución — que la alcanzó y la dejó ir en vez de neutralizarla. Sin perdón, Maren no está en F4; muere en el borde del cráter tratando de terminar el trabajo.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Maren**. El mensajero del Council se aparta; no tiene instrucción para una variable a la que se le consulta.
 
-Con perdón: Speck elige. El Aether comienza a sanar. **Las ecuaciones de Maren se rompen porque el futuro es impredecible.** Por primera vez en su vida, no puede calcular.
+Speck responde y **cruza el borde sola**. Maren abre las manos y la deja ir — el gesto le sale sin pensarlo, y esa es la parte que después no puede explicarse. **Las ecuaciones de Maren se rompen porque el futuro se vuelve impredecible.** Por primera vez en su vida, no puede calcular.
 
-**Epílogo:** Maren regresa a Rivermeet y ayuda a reconstruir bajo el nuevo paradigma. Sin Aether corrupto, la ciudad debe innovar de verdad — no diversificar, sino crear. Es el proyecto que Maren siempre quiso sin saber que lo quería: **crear sin dependencias.**
+**Epílogo — Maren viva.** Regresa a Rivermeet y ayuda a reconstruir bajo el nuevo paradigma. Sin Aether corrupto, la ciudad debe innovar de verdad — no diversificar, sino crear. Es el proyecto que Maren siempre quiso sin saber que lo quería: **crear sin dependencias.**
 
 Cambia sus cuentas — es literal, no metáfora. En su cuaderno personal, las variables ya no son "vidas × probabilidad × utilidad". Son otras cosas. No sabe nombrarlas todavía.
 
-Años después, Rivermeet es modelo de sostenibilidad. Maren no se lo apunta como logro. Deja un mensaje al jugador, sin firma: *"La ecuación se completó diferente. Resultó mejor que cualquier variable que haya calculado. Gracias por no dejarme quedarme con mis números."*
+Años después, Rivermeet funciona sin Aether, y funciona porque ella pasó una década resolviendo cómo. Maren no se lo apunta como logro; se lo apunta como deuda. Deja un mensaje al jugador, sin firma: *"La ecuación se completó diferente. No mejor — diferente, y con una variable que yo había puesto en la columna equivocada. Sigo sin saber dónde va."* No hay agradecimiento en la nota, y tampoco hay paz: Maren pasa el resto de su vida reconstruyendo una ciudad con el método que le falló, porque es el único que tiene.
+
+**Epílogo — Maren muerta** (cayó en la persecución o en el cráter). Sus cálculos sobreviven a Maren. En su oficina del Consortium queda el modelo completo — proyecciones a diez años, rutas de contingencia, censos de quién puede trabajar y quién no — hecho para un mundo con Aether que ya no existe.
+
+Rivermeet lo usa igual. Es el único plan que alguien se molestó en escribir, y la ciudad lo va corrigiendo sobre la marcha, tachando supuestos año tras año hasta que del documento original no queda casi nada. Nadie recuerda de quién era la letra.
+
+**La reconstrucción funciona.** Ese es el filo: Maren consiguió exactamente lo que quería — Rivermeet sobrevive, la gente vive — y lo consiguió por el camino que ella había descartado por imposible, sin estar ahí para verlo, con el nombre borrado del método que lo hizo posible. El jugador es el único que sabe que ese plan tuvo autora, y no tiene a quién decírselo.
 
 ---
 

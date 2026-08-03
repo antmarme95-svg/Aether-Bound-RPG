@@ -102,7 +102,21 @@ correspondiente. Un epílogo al que le falte su beat no ejecuta el gate que dice
 | **F2a** | El mensajero completa la entrega. **Speck queda viva** — ningún texto de este final puede tratarla como muerta, ni celebrar una muerte que no ocurrió. |
 | **F2b** | La mano que la arranca es **la del jugador**, con el core activo. **No existe ninguna otra vía de muerte** en el cráter. |
 | **F3** | El holder **suelta a Speck al ver que el jugador cruza** — no forcejea por retenerla, eso la mataría. El jugador la recoge del otro lado del borde. |
-| **F4** | El mensajero **se aparta** al ver que Speck responde: no tiene protocolo para una pregunta. + **Dos variantes de epílogo** (ver abajo). |
+| **F4** | El mensajero **se aparta** al ver que Speck responde: no tiene protocolo para una pregunta. **Speck cruza el borde por su cuenta** (ver abajo). + **Dos variantes de epílogo**. |
+
+### F4 — quién cruza el borde
+
+Speck se calcifica **en el core central**, y el Pivote se detuvo en el borde. Quien cubre esa
+distancia es **ella**: nadie la carga, nadie la arrastra.
+
+**F4 es el único final donde Speck cruza el borde, y lo cruza sola.** El jugador preguntó, ella
+respondió, y la respuesta es caminar. Quien la sostenía **abre las manos** — en la ruta Vekka,
+eso significa soltar el arnés del yunque con sus propias manos, que es el gesto más contrario
+a su dogma que ejecuta en toda la campaña. Es el reverso exacto de F3, donde el que cruza el
+borde es el jugador y Speck es recogida del otro lado.
+
+Ninguna ficha puede tener a Speck **transportada** al centro en F4: la cargaría alguien, y eso
+la devuelve a la categoría de objeto que este final existe para negar.
 
 ### Las dos variantes de F4 — decisión de Boris (2026-08-03)
 
