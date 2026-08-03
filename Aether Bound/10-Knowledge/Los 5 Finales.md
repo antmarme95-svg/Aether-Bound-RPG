@@ -1,10 +1,16 @@
 ---
 status: ratificado
-source: "GDD §5.1 (v2 — 2026-07-27 partido F2)"
-updated: 2026-07-27
+source: "GDD §5.1 (v2 — 2026-07-27 partido F2). Mecánica de escena extraída a El Cráter — Matriz de Rutas el 2026-08-03."
+updated: 2026-08-03
 ---
 
 # Los 5 Finales — "¿Qué haces con Speck?"
+
+> **Qué vive acá:** la **filosofía** de cada final — qué significa, qué cuesta, a qué sabe,
+> su línea canónica, su eco Bond, y qué le pasa a cada arquetipo de Pivote.
+> **Qué NO vive acá:** la mecánica de la escena del cráter — staging, mensajero por ruta,
+> beats obligatorios. Eso es [[El Cráter — Matriz de Rutas]], y esta página la cita.
+> El gate de F4 es la excepción: se enuncia acá porque es fuente compartida con [[The Tether]].
 
 El eje canónico no es el destino del Pivote — es el destino de **Speck**. El clímax físico (llegar al cráter con Speck cargada por el Pivote) abre el abanico; qué eliges hacer con ella en The First Wound cierra el final. El Pivote sobrevive o cae como consecuencia, no como decisión aislada. Regla transversal mantenida de v1: cada final cierra con su eco del lenguaje Bond/Link Cam ([[Bond y el Bond Vacío]]).
 
@@ -14,17 +20,8 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
-**Gate:** dos condiciones, en este orden.
-1. **El mensajero quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo — antes de completar la entrega.** El Pivote (o quien la esté cargando) llega al **borde** del cráter con Speck y **se detiene ahí, siempre en el borde** — nunca en el centro, para que cruzarlo hacia el core siga siendo la línea exclusiva de F3 ([[Geografía y Ciudades]] §ACTO 3, sub-beat 5) — sosteniéndola mientras espera al mensajero que viene a recibirla. El Pivote no completa la entrega por su cuenta: la cede o la retiene según lo que haga el jugador. **No hay versión de F1 en la que Speck llegue al cráter sola**, y mientras el mensajero pueda completar la entrega, la inacción del jugador resuelve a **F2a**: el mensajero llega y la entrega se consuma por defecto.
-2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
-
-**Por ruta, quién es el mensajero que hay que neutralizar** — no siempre es el Council: cada Pivote responde a **su propia cadena institucional**, y el mensajero es de esa cadena.
-- **Council directo:** Maren (Trade Consortium).
-- **Cadena propia:** Dagna → mensajero de Deepstone. Torgan → mensajero de su clan menor. Vekka → mensajero del Great Forging Clan. Lyris → mensajero de Frontier High Command. Iven → contacto del Consortium que lo reclutó con mentiras. Sereth → mensajero de la Royal Academy (nunca negoció con el Council directamente — fue prestado por Queen Ithessa).
-- **Ruta Nyael:** el **equipo de extracción** que ella activó antes de retirarse. F1 exige detenerlo a él — si el jugador se aparta, el equipo completa la entrega y es F2a.
-- **Ruta Bram:** **Torgan como segundo agente**, que es el ejecutor real cuando Bram rehúsa.
-
-**Ninguna ruta puede ceder viva a Speck sin que el jugador detenga al mensajero primero** — si una ficha no tiene mensajero explícito, o el jugador "detiene" al Pivote en vez de al mensajero, esa ficha no cumple el gate: cae en F2a por defecto, no en F1.
+**Gate:** neutralizar al mensajero y después no intervenir con Speck.
+Mecánica completa y mensajero por ruta: [[El Cráter — Matriz de Rutas]] §3 y §2.
 
 No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero al mensajero: es lo que convierte la quietud del Pivote en una decisión del jugador en vez de un descuido.
 
@@ -60,9 +57,11 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F2a — The Long Winter: Handed Over *(Speck entregada viva al Council)*
 
-**Gate:** el mensajero del Council llega hasta el Pivote (que se detuvo sosteniendo a Speck, ver §F1) y completa la entrega — por acción del jugador que renuncia a intervenir, o simplemente porque nadie lo detiene. Speck no muere — es cedida, y por eso puede ser transportada: la entrega corta el hive mind y los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
+**Gate:** el mensajero completa la entrega, sea porque el jugador renuncia a intervenir o simplemente porque nadie lo detiene. Mecánica y mensajero por ruta: [[El Cráter — Matriz de Rutas]] §3 y §2.
 
-**Es también el final por defecto de la parálisis.** Si el jugador no decide nada en el cráter, el mensajero llega y completa la entrega. No hacer nada no es neutral: hace ganar a la institución.
+**Speck no muere — es cedida, y por eso puede ser transportada:** la entrega corta el hive mind, los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
+
+**Es también el final por defecto de la parálisis.** No hacer nada no es neutral: hace ganar a la institución.
 
 **Línea canónica:** *"Un recurso administrado no es un futuro. Pero mañana amanece."*
 
@@ -79,7 +78,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F2b — The Long Winter: Fallen *(Speck muere en el intento)*
 
-**Gate:** el jugador **intenta arrancarle a Speck por la fuerza** al Pivote (o al equipo de extracción, en la ruta Nyael) en vez de negociar la entrega, esperar, o retirarse — el forcejeo sobrecarga el Fragmento y la mata en el intento. Es una elección activa con consecuencia trágica, no un timeout: el jugador *hizo algo*, y lo que hizo fue precisamente lo que no debía hacerse en presencia del Fragmento ([[Speck]] §Capa 5 — la sobrecarga es por transferencia de fuerza mecánica cerca de un core activo; ni el tiempo ni la inacción la dañan).
+**Gate:** el jugador **intenta arrancarle a Speck por la fuerza** a quien la sostenga ([[El Cráter — Matriz de Rutas]] §2) en vez de negociar la entrega, esperar, o retirarse — el forcejeo sobrecarga el Fragmento y la mata en el intento. Es una elección activa con consecuencia trágica, no un timeout: el jugador *hizo algo*, y lo que hizo fue precisamente lo que no debía hacerse en presencia del Fragmento ([[Speck]] §Capa 5 — la sobrecarga es por transferencia de fuerza mecánica cerca de un core activo; ni el tiempo ni la inacción la dañan).
 
 **El forcejeo es la única vía.** Esperar no mata a Speck, y congelarse tampoco: si el jugador no actúa, el mensajero completa la entrega y el final es **F2a**, no este. F2b requiere que la mano que la arranca sea la del jugador.
 
@@ -100,7 +99,9 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F3 — The Conqueror's Clause *(beneficio propio — villano)*
 
-**Gate:** el jugador cruza el borde del cráter hacia el core central **antes** de que el mensajero llegue o de que el Pivote la suelte — igual que en F1, interrumpe el proceso, pero en vez de detenerse ahí sigue de largo. El Pivote, ya superado, suelta a Speck al ver que el jugador cruza: no forcejea por retenerla (eso mataría al Fragmento, [[Speck]] §Capa 5), y el jugador la recoge del otro lado del borde. Una vez con ella dentro del core, activa el vínculo por su cuenta y la encadena o entrega bajo sus propios términos, no los del Council. El Contrato cumplido hasta su última letra — pero renegociado a su favor.
+**Gate:** el jugador cruza el borde del cráter hacia el core central sin esperar la entrega. Mecánica del cruce y de la cesión: [[El Cráter — Matriz de Rutas]] §3 y §4.
+
+Una vez con Speck dentro del core, activa el vínculo por su cuenta y la encadena o entrega bajo sus propios términos, no los del Council. El Contrato cumplido hasta su última letra — pero renegociado a su favor.
 
 **Línea canónica:** *"El Council me pidió que la entregara. Nunca dijeron a quién."*
 
@@ -122,6 +123,8 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 2. ≥2 compañeros en Tether T2+ ([[The Tether]]).
 
 Coincide con [[The Tether]] §Gate del Final 4 — **son la misma regla y no debe divergir.**
+
+**Son dos condiciones y nada más. Ninguna ficha puede agregar una tercera** (decisión de Boris, 2026-08-03). En particular, **el gate no depende del Pivote**: que el jugador lo haya perdonado, alcanzado, o matado en la persecución no abre ni cierra F4. Formulaciones del tipo *"este final requiere que el jugador haya perdonado a X"* o *"sin perdón, X no está en F4"* están **prohibidas** — inventan un gate que no existe. Lo que sí varía es el **estado del Pivote**, y por eso cada epílogo F4 se escribe en dos variantes (vivo / muerto): ver [[El Cráter — Matriz de Rutas]] §4.
 
 **Por qué el gate no incluye los Goggles ni los flashes.** Ambas cosas le pasan a todo jugador: los Goggles **no son retirables** desde The Reckoning ([[Nomenclatura]] — objeto no retirable) y los tres flashes están en la ruta principal ([[Speck]] §Capa 2). Una condición que el 100% de las partidas cumple no gatea nada. Los Goggles y los flashes son **contexto emocional**, no requisito: explican por qué el jugador *podría* preguntar. Lo que decide si pregunta son los dos sistemas que él sí maneja — cómo trató a Speck y cuánto se acercó a su gente.
 

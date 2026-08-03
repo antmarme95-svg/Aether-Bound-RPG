@@ -25,9 +25,14 @@ son la misma con distinto ocupante de un rol.
 
 1. **El Pivote toma a Speck** en el último corredor del ascenso del Sunken Archive. Sin
    forcejeo largo, sin discurso — el grupo queda desalojado, no golpeado.
+   *Excepción — ruta Bram:* Bram **rehúsa** en el corredor y devuelve a Speck al jugador; el
+   grupo sale intacto y es **Torgan**, esperando afuera del Archive, quien la toma.
 2. **Persecución** por The Wilds hacia The First Wound
    ([[Geografía y Ciudades]] §ACTO 3, sub-beat 4). Cada ruta tiene su sabor; ninguna cambia
    el destino.
+   *Excepción — ruta Nyael:* Nyael toma a Speck en el corredor (paso 1), la pasa al **equipo
+   de extracción** que activó, y **se retira antes de la persecución**. No llega al cráter.
+   El equipo cubre los pasos 3-7 en su lugar.
 3. **El Pivote se detiene en el borde del cráter**, con Speck en brazos.
    **Nunca en el centro, en ninguna ruta** — cruzar el borde es la línea exclusiva de F3, y
    si el Pivote lo cruzara, F1/F2b/F4 quedarían geométricamente inalcanzables en esa ruta.
@@ -54,7 +59,7 @@ son la misma con distinto ocupante de un rol.
 | **Dagna** | Kadrun → Great Forging Clan → subclán **Deepstone** → Dagna | Mensajero de Deepstone | Dagna | — |
 | **Vekka** | Círculo interno del **Great Forging Clan** → Vekka (sin intermediario) | Mensajero del Great Forging Clan | Vekka, con Speck **fijada al yunque portátil con el arnés técnico** | **Única ruta con Speck inmovilizada a un objeto.** Ver §4, nota de liberación |
 | **Lyris** | Triune Council → **Frontier High Command** → Lyris | Mensajero de Frontier High Command | Lyris | — |
-| **Nyael** | Brazo encubierto de la **Royal Academy** → Nyael | **El equipo de extracción** (2-3 operativos) | **El equipo de extracción** | **Holder = agente a neutralizar.** Nyael no está presente en el cráter — se retiró antes |
+| **Nyael** | Brazo encubierto de la **Royal Academy** → Nyael | **El equipo de extracción** (2-3 operativos) | **El equipo de extracción** | **Holder = agente a neutralizar.** Nyael toma a Speck en el corredor, la pasa al equipo y se retira: no está en el cráter (§1, paso 2) |
 | **Bram** | Contrato directo del Triune Council → Bram **(rechaza)** → **Torgan** como segundo agente | **Torgan** | **Torgan** | **Holder = agente a neutralizar. No hay un tercero.** Bram está presente pero no carga a Speck |
 
 **La excepción de holder = agente (Nyael y Bram) es intencional y no se reporta como
