@@ -459,13 +459,15 @@ No es negación de la información. Es un hombre pidiéndole a alguien que no le
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-Iven llega al **borde** del cráter con Speck — no cruza hacia el core central, que ya pulsa en frecuencia jade. Los God-Cores despiertan uno a uno alrededor.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Iven**. Secuencia: §1, pasos 1-7, sin excepciones. Su "mensajero" es el **contacto del Consortium** — y la promesa que lo trajo hasta acá es falsa (§2, columna de excepción).
+
+Iven llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor.
 
 El contacto del Consortium viene subiendo desde dentro del cráter hacia el borde: un hombre común, ropa buena, sin sello ni insignia, **con un maletín**. No trae equipo médico. No trae convoy. No trae nada que se parezca a un remedio.
 
 El jugador y los fijos llegan segundos después.
 
-Iven está de rodillas en el borde, sin aire, todavía con Speck en brazos. **Ha corrido más rápido que nadie y llegó al lugar donde no hay nada.**
+Iven está de rodillas en el borde, sin aire, todavía con Speck en brazos. **Ha corrido más rápido que nadie y llegó al lugar donde no hay nada.** Es la única ruta donde el Pivote llega al cráter y **el mensajero es la peor noticia de la escena** — en las otras ocho, el mensajero solo confirma lo que el Pivote ya decidió.
 
 **Diálogo del quiebre:**
 
@@ -515,7 +517,9 @@ Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epíl
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-El jugador alcanza al contacto del Consortium antes de que llegue hasta Iven y lo detiene ahí ([[Los 5 Finales]] §F1). Iven no se mueve — sigue de rodillas, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el contacto del Consortium queda neutralizado antes de llegar hasta él.
+
+Iven no se mueve — sigue de rodillas, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
 
 **Y ahí está la crueldad exacta de este final: la Muda era la cura, e Iven casi la mata.**
 
@@ -597,7 +601,9 @@ Si se va: camina fuera del cráter sin mirar atrás, y no llega al asentamiento.
 
 ### F4 — The Warden's Choice (Speck elige la Muda parcial — síntesis)
 
-Requiere que el jugador haya **alcanzado a Iven y no lo haya matado**, y que en el cráter le haya **hecho la pregunta a Speck** en vez de decidir por ella ([[Los 5 Finales]] §F4 — no basta con no moverse: la quietud sin pregunta es F2a). Speck responde, y lo que responde es la Muda parcial: se calcifica voluntariamente en el core central. El Aether sana **lentamente**, no de golpe. Las civilizaciones no colapsan; se adaptan.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Iven**. No basta con no moverse: la quietud sin pregunta es F2a. El contacto del Consortium se aparta — cierra el maletín y se va sin decir nada, porque no le pagaron por presenciar esto.
+
+Speck responde, y lo que responde es la Muda parcial. **Cruza el borde sola** — Iven abre los brazos desde las rodillas — y se calcifica voluntariamente en el core central. El Aether sana **lentamente**, no de golpe. Las civilizaciones no colapsan; se adaptan.
 
 **Iven es, de los nueve, quien mejor entiende lo que acaba de pasar — y lo entiende antes que nadie en el cráter, incluido el jugador.**
 
@@ -605,7 +611,7 @@ Porque lo que Speck hizo es exactamente lo que Iven lleva haciendo desde los nue
 
 Se queda de rodillas y dice, sin dirigirse a nadie: *"Ella eligió cuánto."*
 
-**Epílogo — y esto no es F1, es su opuesto exacto: en F1 vive con culpa; en F4 vive con propósito.**
+**Epílogo — Iven vivo. Esto no es F1, es su opuesto exacto: en F1 vive con culpa; en F4 vive con propósito.**
 
 Iven vuelve al asentamiento. La zona no se limpia de golpe: **mejora año por año**, un pozo esta primavera, dos el otro invierno, el pasto volviendo desde el borde hacia adentro. **Prospera lentamente**, y esa lentitud es precisamente lo que Iven puede explicarle a su gente, porque es la única forma de curación que él ha visto funcionar alguna vez.
 
@@ -616,6 +622,14 @@ A los defensores jóvenes que entrena les enseña combate por la mañana y otra 
 Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y una vez al año baja al cráter transformado, solo, y apoya la palma sobre la base del core central un rato largo — el mismo gesto con el que en su pueblo se le cierra las manos a un muerto, hecho sobre algo que no está muerto.
 
 No pide perdón en F4 tampoco. **Pero acepta que lo perdonen**, que en Iven es la distancia entera entre sobrevivir y vivir.
+
+**Epílogo — Iven muerto** (cayó en la persecución o en el cráter). **El asentamiento mejora igual.** El Aether sana lento, el pasto vuelve desde el borde hacia adentro, los pozos se recuperan uno por primavera. Doscientas personas viven porque Speck eligió — que es, exactamente, lo que Iven quería comprar.
+
+Y **nunca saben que él tuvo algo que ver.** Los enviados de Rivermeet llegan a explicar que la recuperación es mérito de la gestión del Council, y no hay nadie que los contradiga: el único testigo de primera mano de que existía una tercera vía se quedó en el cráter. La contra-narrativa muere sin haberse dicho una sola vez.
+
+En el asentamiento, Iven queda en la memoria como **el guardián que se fue con el grupo de forasteros y no volvió.** Ni héroe ni traidor: ausente. Los defensores jóvenes que él entrenaba siguen entrenando sin la lección de la tarde, y aprenden — como aprendió su pueblo durante generaciones — que cuando te dicen que solo hay dos opciones horribles, hay que elegir la menos mala.
+
+**Ese es el costo específico:** Iven pagó el precio más alto del elenco por una cura que no existía, la consiguió igual por un camino que no era el suyo, y el pueblo que salvó nunca va a saber su nombre en esa historia. El jugador es el único que puede ir a contárselo. Que lo haga o no queda fuera de la ficha.
 
 Ver [[Los 5 Finales]].
 

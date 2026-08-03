@@ -258,6 +258,8 @@ Las notas ya no llaman "maestro" al jugador — reconocen aprendizaje entre pare
 
 ### Sub-beat 5: Ausencia en The First Wound — y quién sí está
 
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Nyael** — **excepción declarada: holder = agente.** Quien sostiene a Speck en el borde es el equipo de extracción, y es también el agente que hay que neutralizar; no hay un mensajero aparte. Secuencia: §1, con la excepción del paso 2 — Nyael toma a Speck en el corredor, la pasa al equipo, y se retira antes de la persecución.
+
 Nyael **no aparece en el borde del cráter con el jugador.** Ella personalmente ya no está en la persecución — cumplió, entregó, se retiró. Pero Speck sí llega al cráter, y esto no es elección de nadie: en cuanto el grupo se acerca al sur de The Wilds, el core que responde a ella empieza a pulsar (canon en [[Geografía y Ciudades]] §Acto 3 sub-beat 5), y Speck se vuelve, literalmente, imposible de transportar en línea recta — tira hacia el centro con una fuerza que ninguna técnica de contención está diseñada para vencer. La ruta 7 de Nyael, diseñada meses antes para una extracción tranquila, se rompe exactamente en el mismo punto donde se rompería para cualquiera: el cráter reclama a Speck sin importar quién la cargue.
 
 **Quien el grupo encuentra en el borde no es Nyael — es el equipo de extracción del brazo encubierto**, dos o tres operativos institucionales, entrenados por la misma escuela de Nyael pero sin su historia, sin su nombre, sin línea de traición que decir. No son villanos con arco: son la maquinaria que Nyael puso en marcha, funcionando sin ella. **Sostienen a Speck entre ellos**, intentando cargarla más allá del borde, y fallan por la misma razón que Nyael habría fallado — mientras el pulso siga activo, nadie puede moverla, y son ellos quienes la tienen en brazos cuando eso se resuelve.
@@ -278,7 +280,7 @@ Ver [[Los 5 Finales]] — Nyael ocupa la fila "Deber Institucional" junto con To
 
 Nyael escribe una **segunda nota, más corta**, y desaparece antes de que amanezca en el cráter. La primera nota (la del corredor) explicó la captura; la segunda no explica nada — es un renglón: *"You chose well. I will not come back to say it in person."*
 
-**Ella misma ya no está presente para neutralizar (§sub-beat 5) — quien completaría la entrega es el equipo de extracción** que puso en marcha antes de irse. El jugador lo alcanza en el borde y lo detiene ahí, antes de que el pulso se corte y puedan moverla ([[Speck]] §Capa 5). Es el gate de F1 en esta ruta: el equipo neutralizado, no Nyael — ella ya resolvió su parte del tablero antes de que el jugador llegara.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1, con la excepción **holder = agente** de su fila en §2 — acá neutralizar a quien sostiene a Speck **sí** cumple el gate, porque el equipo de extracción es las dos cosas. Nyael ya resolvió su parte del tablero antes de que el jugador llegara.
 
 **Epílogo:** desaparece del mapa institucional, y el mapa institucional desaparece detrás de ella. El brazo encubierto de the Royal Academy alcanza a marcarla como **"no retornada"** — y ese es el último asiento que hace ese brazo en su historia: con el Aether apagado, la Academy se disuelve y su sección encubierta se apaga sin liquidar nada. **El expediente de Nyael queda abierto para siempre**, no por diligencia sino porque no quedó nadie para cerrarlo. No envían reemplazo; no había reemplazo, ella era el único activo con ese perfil, y para cuando eso importaba ya no había nadie a quien le importara.
 
@@ -300,13 +302,17 @@ Nyael desaparece del mapa. Nadie sabe si vive. Es exactamente el tipo de silenci
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Nyael **desaparece antes de que amanezca — nunca vuelve, ni siquiera al borde del cráter** (ver §sub-beat 5). No confronta — su patrón no permite confrontación. Cuando el jugador cruza el borde hacia el core central y toma el poder para sí, es al equipo de extracción a quien aparta o somete, no a ella. En algún punto de la cadena institucional, el reporte de lo ocurrido le llega a Nyael de todos modos — y esta vez no deja nota. El silencio es el silencio total: ni rastros, ni pistas, ni notas encontradas semanas después.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y el equipo suelta.
+
+Nyael **desaparece antes de que amanezca — nunca vuelve, ni siquiera al borde del cráter** (ver §sub-beat 5). No confronta — su patrón no permite confrontación. Cuando el jugador pasa de largo y cruza el borde hacia el core central, **el equipo de extracción baja a Speck y la suelta al verlo cruzar**: no forcejean por retenerla — su instrucción es entregar una variable intacta, y una variable rota no sirve. Se retiran sin pelear. El jugador la recoge del otro lado del borde. En algún punto de la cadena institucional, el reporte de lo ocurrido le llega a Nyael de todos modos — y esta vez no deja nota. El silencio es el silencio total: ni rastros, ni pistas, ni notas encontradas semanas después.
 
 Es la única vez que Nyael **no escribe.** Escribir sería reconocer que la decisión del jugador merece explicación; el silencio total es su forma más precisa de decir *"esto no lo comento."* Años después, si el jugador tirano la busca, no la encuentra. Nyael sabe cómo no ser encontrada mejor que nadie que la busque.
 
 ### F4 — The Warden's Choice (síntesis)
 
-En el borde, frente al mismo equipo de extracción que aparece en los otros cuatro finales (ver §sub-beat 5), el jugador no forcejea ni espera: pregunta. El equipo no tiene protocolo para eso — no es una variable que su entrenamiento contemplara — y se aparta cuando ve que Speck responde. Speck elige. El Aether comienza a sanar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales. **Nyael no tiene variante "muerta"**: el jugador nunca la alcanza, porque se retiró antes de la persecución (matriz §4, nota de excepción). Su arquetipo es la ausencia; también acá.
+
+En el borde, frente al mismo equipo de extracción que aparece en los otros cuatro finales (ver §sub-beat 5), el jugador no forcejea ni espera: pregunta. El equipo no tiene protocolo para eso — no es una variable que su entrenamiento contemplara — y bajan a Speck cuando ven que responde. **Speck cruza el borde sola.** Elige. El Aether comienza a sanar.
 
 **Nyael reaparece** — no como Pivote, no como enemiga, no como asesina redimida. **Como alumna que vuelve al jugador (ahora reconocido como quien le enseñó algo que su maestra original no supo enseñarle) para preguntar qué aprendió.** Esta es la reinversión del arco: durante toda la aventura Nyael proyectó al jugador como par; en F4, con el nuevo paradigma del mundo, Nyael reconoce que el jugador le enseñó algo específico — cuándo **no** actuar — que su maestra centenaria del brazo encubierto nunca supo enseñar porque su maestra vivía en un régimen que solo enseñaba cuándo actuar.
 

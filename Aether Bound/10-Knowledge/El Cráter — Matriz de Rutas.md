@@ -138,6 +138,18 @@ Lo que sí varía es **el estado del Pivote**, y por eso cada epílogo F4 se esc
   sobre el mismo final agridulce. **Que el Pivote haya muerto no vuelve triunfal a F4 ni lo
   convierte en tragedia** — es la misma pérdida con un nombre más.
 
+**Regla de escritura para la variante muerta:** la muerte del Pivote no agrega tragedia
+genérica — **cobra algo específico que solo ese personaje podía dar.** En Vekka es el
+conocimiento que su cuaderno contenía y nadie más sabe leer; en Maren, la autoría de una
+reconstrucción que igual funciona sin ella; en Sereth, la única refutación que su escuela
+habría aceptado. Si la variante muerta se puede resumir como "y además murió", está mal
+escrita.
+
+**Dos rutas no tienen variante muerta, y es intencional:** en **Nyael** el jugador nunca
+la alcanza (se retira antes de la persecución — su arquetipo *es* la ausencia), y en
+**Bram** no hay persecución porque Bram no traiciona. En esas dos, el Pivote llega vivo a
+F4 siempre. No es un epílogo faltante.
+
 ---
 
 ## §5. Reglas globales — se citan, nunca se re-enuncian

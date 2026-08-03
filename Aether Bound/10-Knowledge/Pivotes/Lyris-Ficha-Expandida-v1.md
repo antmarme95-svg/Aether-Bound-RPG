@@ -301,7 +301,9 @@ Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. La aritmética que Lyris trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Lyris**. Secuencia: §1, pasos 1-7, sin excepciones. Su mensajero es de **Frontier High Command**, subiendo desde dentro del cráter hacia el borde.
+
+Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. **Es la única del elenco que espera sin tocar el suelo**, y eso la vuelve la más fácil de alcanzar y la más imposible de detener: nadie sabe si va a bajar o irse. La aritmética que trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
 
 **No cruza al core central** — no es F3, no toma poder para sí. Se queda suspendida en el borde, sosteniendo a Speck, mientras un mensajero de Frontier High Command sube desde dentro del cráter a recibirla. Lyris no le sale al encuentro — la orden es que el mensajero complete la entrega, no ella.
 
@@ -315,7 +317,9 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-El jugador alcanza y detiene **al mensajero de Frontier High Command** antes de que llegue hasta ella (§sub-beat 5, [[Los 5 Finales]] §F1). Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, sosteniendo a Speck, y sostiene la mirada del jugador un segundo antes de **bajar el vuelo por su cuenta** — deja a Speck en tierra sin que nadie se la arranque. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y una variable sin cadena no es su problema.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Frontier High Command queda neutralizado antes de llegar hasta ella.
+
+Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, sosteniendo a Speck, y sostiene la mirada del jugador un segundo antes de **bajar el vuelo por su cuenta** — deja a Speck en tierra sin que nadie se la arranque. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y una variable sin cadena no es su problema.
 
 Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
@@ -327,7 +331,9 @@ Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuel
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Lyris cumple. Traiciona, huye por aire con Speck hasta el cráter — no puede entregarla en ningún otro punto: mientras el pulso siga activo, nadie puede moverla lejos del centro ([[Speck]] §Capa 5). Ahí cede a Speck al mensajero de Frontier High Command sin forcejeo. El cese del pulso es lo que la suelta. No hay furia, no hay explicación, no hay confrontación.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Lyris cumple. Traiciona, huye por aire con Speck hasta el cráter — no puede entregarla en ningún otro punto: mientras el pulso siga activo, nadie puede moverla lejos del centro ([[Speck]] §Capa 5). Ahí cede a Speck **viva** al mensajero de Frontier High Command, sin forcejeo. El cese del pulso es lo que la suelta. No hay furia, no hay explicación, no hay confrontación.
 
 **Se aparta con calma que hiere.** Después de entregar, asciende y no vuelve. El jugador la ve una vez más semanas después, en distancia — patrullando otra ruta al norte de Stillwood, cumpliendo un contrato distinto de Frontier High Command. No baja. No hace señal. Lyris no rompió con el jugador con palabras; simplemente cambió de patrón, y en su gramática esa es la ruptura más completa posible.
 
@@ -341,17 +347,27 @@ Frontier High Command marca su expediente como "no retornada"; envían nueva ras
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Lyris **no aparece en el epílogo.** Está en el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: suelta a Speck sin forcejeo y asciende, y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Lyris suelta.
+
+Lyris **no aparece en el epílogo.** Está en el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: baja a Speck sin forcejeo y asciende, y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
 
 Años después, si el jugador convertido en tirano intenta rastrearla, no la encuentra — Lyris es rastreadora, sabe cómo no ser rastreada. Su ausencia es más completa que la de cualquier otro compañero que huyó de F3: nunca deja huella. Es como si Lyris nunca hubiera bajado del cielo, retroactivamente.
 
 ### F4 — The Warden's Choice (síntesis)
 
-Speck elige. El Aether comienza a sanar. El cielo mismo cambia — corrientes nuevas, presiones que Lyris nunca había leído, el patrón atmosférico se reescribe.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Lyris**. El mensajero de Frontier High Command se aparta: su cadena transmite órdenes de ruta, no de conversación.
 
-**Lyris regresa con el grupo — el patrón ahora la incluye.** Cambio mínimo pero real: vuela más bajo, aterriza más seguido, pasa noches enteras en el campamento en vez de en los riscos. No se vuelve cálida — sigue siendo silenciosa, sigue calculando patrones antes de hablar — pero está **dentro del círculo** del grupo por primera vez. Cambio de patrón, no de personalidad.
+Speck responde y **cruza el borde sola**. Lyris baja el vuelo y abre las manos. El Aether comienza a sanar. El cielo mismo cambia — corrientes nuevas, presiones que Lyris nunca había leído, el patrón atmosférico se reescribe.
+
+**Epílogo — Lyris viva. Regresa con el grupo: el patrón ahora la incluye.** Cambio mínimo pero real: vuela más bajo, aterriza más seguido, pasa noches enteras en el campamento en vez de en los riscos. No se vuelve cálida — sigue siendo silenciosa, sigue calculando patrones antes de hablar — pero está **dentro del círculo** del grupo por primera vez. Cambio de patrón, no de personalidad.
 
 Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de campamento, se sienta al lado del jugador sin motivo aparente. Se queda hasta el amanecer. No hablan. Al amanecer despega. Vuelve la noche siguiente. Ese es su epílogo: presencia repetida donde antes había ausencia.
+
+**Epílogo — Lyris muerta** (cayó en la persecución o en el cráter). El cielo se reescribe y **ella es la única persona viva que habría sabido leerlo.** Noventa años de vuelo de frontera, corrientes memorizadas una por una, y el mundo cambia todas las corrientes el mismo día en que ella deja de estar.
+
+Frontier High Command envía rastreadoras nuevas a mapear las presiones nuevas. Tardan una generación en reconstruir lo que Lyris sabía de memoria del mundo viejo, y el mapa que arman no le sirve a nadie: describe un cielo que ya no existe. **Nadie sabe que la persona que podía haberlo hecho en un año está enterrada al borde de un cráter.**
+
+El grupo la entierra en altura — el risco más alto que encuentran, porque nadie soporta la idea de dejarla bajo tierra. Es el único funeral del elenco donde **no se dice una palabra**: Roen lo intenta y no le sale, y después nadie más lo intenta, y en el silencio todos entienden que así estaría bien para ella. **La ausencia que Lyris practicó toda su vida se le concede por fin, y ya no la puede disfrutar.**
 
 ---
 

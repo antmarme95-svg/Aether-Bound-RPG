@@ -330,7 +330,9 @@ En el último tramo, cuando ya se ve el cráter latir en el horizonte, Torgan **
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-Torgan llega al **borde** del cráter con Speck — no cruza hacia el core central, que ya está pulsando en frecuencia jade. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter hacia el borde — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Torgan**. Secuencia: §1, pasos 1-7, sin excepciones. Su mensajero es del **clan menor** — no del Great Forging Clan, que es el que lo rechazó.
+
+Torgan llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Lo que distingue a esta ruta es que **Torgan es el único que espera de frente**: no le da la espalda al jugador ni al mensajero, y esa postura es deliberada.
 
 El jugador y los fijos llegan segundos después.
 
@@ -388,7 +390,9 @@ Ver [[Los 5 Finales]] — Torgan ocupa la fila **Deber Institucional**. Cada ep�
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-El jugador alcanza al mensajero del clan menor antes de que llegue hasta Torgan y lo detiene ahí ([[Los 5 Finales]] §F1). Torgan no interviene — se queda quieto, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero del clan menor queda neutralizado antes de llegar hasta él.
+
+Torgan no interviene — se queda quieto, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
 
 **Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja las dos hachas en el borde del cráter, sin ceremonia, y camina hacia las montañas.
 
@@ -398,7 +402,9 @@ Si el jugador lo busca, no lo encuentra. El único rastro es un tallado en una p
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Torgan **cumple.** El mensajero del clan menor se lleva a Speck viva. Los God-Cores dejan de pulsar. El hive mind se corta. La cadena de tres eslabones entrega hacia arriba y nadie en el camino pregunta qué era la variable.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Torgan **cumple.** El mensajero del clan menor se lleva a Speck **viva**. Los God-Cores dejan de pulsar. El hive mind se corta. La cadena de tres eslabones entrega hacia arriba y nadie en el camino pregunta qué era la variable.
 
 **Epílogo:** Torgan regresa a Emberdeep con su clan menor. **Asciende por mecánica institucional** — pasa a maestro de armas del clan, el rango más alto que un guerrero sin sangre de forja puede alcanzar ahí. El ascenso es automático: el registro se actualiza, el consejo asiente una vez, y sigue.
 
@@ -409,6 +415,8 @@ Entrena reclutas durante años. Es bueno. Es exigente. Y hay una cosa nueva en c
 Si el jugador viaja a Emberdeep años después, Torgan lo recibe. No evita el contacto — evitar sería negar el Juramento, y el Juramento fue cumplido. Se saludan por el nombre. **Ninguno de los dos menciona el cráter.** Torgan le sirve de beber y le pregunta por el camino. Es la conversación más educada y más muerta del epílogo entero.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento) — **su peor destino canónico**
+
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador.
 
 Speck muere en el cráter. No fue entregada, no fue liberada, no completó nada. Nadie ganó.
 
@@ -446,7 +454,11 @@ No hay epílogo. Torgan no existe en un mundo donde el Juramento sirvió para es
 
 ### F4 — The Warden's Choice (Speck elige la Muda parcial — síntesis)
 
-Requiere que el jugador haya **alcanzado a Torgan y no lo haya matado** — contenido en la persecución o detenido en el cráter. Speck elige. Se calcifica voluntariamente en el core central. El Aether empieza a sanar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Torgan**. El mensajero del clan menor se aparta: un juramento de forja no contempla que alguien le pregunte algo a la pieza.
+
+Speck responde y **cruza el borde sola**. Torgan abre los brazos. Se calcifica voluntariamente en el core central. El Aether empieza a sanar.
+
+**Epílogo — Torgan vivo.**
 
 **Epílogo:** Torgan **renegocia su Juramento con su clan menor.** Es la única lectura ritual que lo permite, y existe por una razón técnica: un clan menor tiene la facultad de reinterpretar los juramentos que administra cuando se demuestra que **el objeto original de la promesa era algo que la promesa no cubría.** No es perdón ni indulto — es corrección de alcance. Los clanes menores existen precisamente para tener esa flexibilidad que el clan real no puede permitirse.
 
@@ -459,6 +471,14 @@ Torgan pasa el resto de su vida siendo el único enano de Emberdeep con un juram
 Si el jugador lo visita, Torgan lo recibe distinto que en F2a: **le enseña la línea nueva.** Es la única vez en toda la campaña que Torgan muestra el brazo por voluntad propia.
 
 Y una vez al año, solo, baja al cráter transformado y apoya la palma abierta sobre la base del core central. El mismo gesto que le hizo a la piedra del Archive. Nunca se lo cuenta a nadie.
+
+**Epílogo — Torgan muerto** (cayó en la persecución o en el cráter). El Juramento queda **sin la reinterpretación que lo habría salvado.** Es la diferencia exacta con la variante viva: la corrección de alcance existe, el clan menor tiene la facultad de firmarla — pero la facultad se ejerce sobre un juramento vivo, y el de Torgan murió con él.
+
+El consejo del clan menor delibera igual, cuatro días igual, y llega a la misma conclusión: la promesa no cubría lo que resultó ser la variable. Después descubren que **no hay procedimiento para enmendar el juramento de un muerto.** El registro queda con la deliberación anotada y sin acto que la ejecute.
+
+Lo entierran con el tatuaje incompleto. Nadie del clan lo llama deshonor — es peor: **lo llaman "caso sin resolver"**, y así queda en el archivo, entre trámites, durante generaciones. Torgan pasó cincuenta y cinco años sosteniendo una promesa para que alguien la cerrara, y la única vez que su clan estuvo dispuesto a cerrarla, llegó tarde.
+
+**Darro es quien baja al cráter una vez al año**, en su lugar, y apoya la palma sobre la base del core central. No sabe que está repitiendo el gesto de Torgan — nunca se lo vio hacer. Lo hace porque le parece lo correcto, y esa coincidencia es lo único parecido a una enmienda que el Juramento consigue.
 
 Ver [[Los 5 Finales]].
 

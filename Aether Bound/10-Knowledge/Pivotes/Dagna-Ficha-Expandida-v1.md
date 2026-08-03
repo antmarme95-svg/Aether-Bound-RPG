@@ -264,6 +264,10 @@ No hay diálogo en la persecución. Roen y Dagna se miran una vez a media distan
 
 ### Sub-beat 5: quiebre en First Wound — la escena canónica de Roen quebrado
 
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Dagna**. Secuencia: §1, pasos 1-7, sin excepciones. Su mensajero es del subclán **Deepstone**, subiendo desde dentro del cráter hacia el borde.
+
+Lo que distingue a esta ruta no es lo que hace Dagna — es **lo que le hace a Roen**. Es la única escena de cráter donde el quiebre emocional le pasa a un fijo y no al Pivote.
+
 El jugador llega al borde del cráter. Se detiene a cinco pasos. Roen se detiene detrás, un poco a un lado. Valen queda más atrás. Darro queda el último, escudo bajo.
 
 Dagna hace algo que nadie del elenco hace: **abraza a Speck antes de entregarla.** Se agacha, sostiene a Speck con las dos manos contra el pecho durante unos segundos, con la cara enterrada un momento en el pelaje. Nadie ve la cara de Dagna en ese instante — el escudo la tapa por el ángulo. Cuando se endereza, Speck sigue en sus brazos, pero ya está separada del pecho, ofrecida hacia el jugador y hacia el mensajero de Deepstone que viene subiendo desde dentro del cráter hacia el borde.
@@ -310,7 +314,9 @@ Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final 
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-El jugador alcanza y detiene **al mensajero de Deepstone** antes de que llegue hasta Dagna ([[Los 5 Finales]] §F1) — Dagna, que ya estaba quieta esperándolo, no necesita que la detengan a ella. Sostiene el escudo en alto un segundo, mide la situación con la misma calma con la que sostuvo cinco años de escolta, y baja el arma sin forcejear. Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Deepstone queda neutralizado antes de llegar hasta ella.
+
+Dagna, que ya estaba quieta esperándolo, no necesita que la detengan a ella. Sostiene el escudo en alto un segundo, mide la situación con la misma calma con la que sostuvo cinco años de escolta, y baja el arma sin forcejear. Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
 
 **Epílogo:** Dagna **deserta.** Es la distinción que importa: no renuncia — renunciar es un acto formal que exige presentarse ante el consejo y decirlo, y para eso haría falta un informe que ella no puede escribir. Deja el escudo pesado en el altar del subclán, no avisa a nadie, y sale de Emberdeep a pie. En los papeles sigue siendo Deepstone. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
 
@@ -320,7 +326,9 @@ Años después, un mensajero cuenta haber visto a una enana canosa con marcas de
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Dagna cumple. Entrega a Speck viva al mensajero de Deepstone en el cráter. Los God-Cores dejan de pulsar. El Aether se estanca en statu quo administrado. El Great Forging Clan recibe la variable a través de Deepstone. La operación cerró.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Dagna cumple. Speck sale del cráter **viva**, en custodia de Deepstone. Los God-Cores dejan de pulsar. El Aether se estanca en statu quo administrado. El Great Forging Clan recibe la variable a través de Deepstone. La operación cerró.
 
 **Epílogo:** Dagna regresa al subclán Deepstone. **La ascienden de rango** — pasa a mando de una guarnición interna del subclán, no más trabajo de escolta externa. Es reconocimiento formal por servicio prolongado y ejecución impecable.
 
@@ -329,6 +337,8 @@ Dagna cumple. Entrega a Speck viva al mensajero de Deepstone en el cráter. Los 
 **El jugador no la busca.** Ni ella lo busca a él. Si el jugador viaja a Ignis Reach años después, puede verla en la muralla del subclán, escudo listo, silueta al atardecer. No se le acerca — no habría qué decir. Cinco años del oficio caben en un asentimiento a distancia. Ninguno de los dos lo ofrece.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
+
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador.
 
 Este es el final donde Dagna **rompe con Deepstone.**
 
@@ -346,6 +356,8 @@ Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas — puede
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Dagna suelta.
+
 **Imposible para Dagna.** El arquetipo del deber institucional no puede convivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la orden — la deja incumplida indefinidamente, y sostenida por la persona a la que Dagna sirvió cinco años. No hay salida.
 
 Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cruza el borde hacia el core central, Dagna suelta a Speck al verlo cruzar — no forcejea, eso mataría al Fragmento. **Dagna muere confrontándote en el cráter.** No se une. No negocia. No informa a Deepstone. Levanta el escudo por última vez, se planta entre el jugador y el mensajero del subclán, y pelea hasta caer.
@@ -356,9 +368,11 @@ No hay epílogo compartido. Dagna no puede vivir en un mundo donde la orden se c
 
 ### F4 — The Warden's Choice (Speck elige Muda parcial, síntesis)
 
-Este final requiere que el jugador haya **alcanzado a Dagna y la haya dejado ir** en la persecución — o que la haya alcanzado en el cráter y contenido sin matar. Con esas condiciones, Speck elige. Se calcifica voluntariamente en el core central. El Aether comienza a sanar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Dagna**. El mensajero de Deepstone se aparta: la orden que le transmitieron no contempla que alguien le hable a la variable.
 
-**Epílogo:** ocurre algo sin precedente en Deepstone. **El subclán libera a Dagna como acto de reconocimiento a la síntesis.** El consejo de Deepstone, tras deliberar con el Great Forging Clan, emite una reinterpretación ritual de la asignación original: **si Speck eligió por su cuenta, la orden pierde validez retroactivamente.** No era la variable que había que tomar; era la que había que dejar elegir. El consejo firma la liberación. Es la primera liberación ritual registrada en Deepstone.
+Speck responde y **cruza el borde sola**. Dagna abre los brazos — el mismo gesto con el que la abrazó antes de ofrecerla, en el orden inverso. Se calcifica voluntariamente en el core central. El Aether comienza a sanar.
+
+**Epílogo — Dagna viva.** Ocurre algo sin precedente en Deepstone. **El subclán la libera como acto de reconocimiento a la síntesis.** El consejo de Deepstone, tras deliberar con el Great Forging Clan, emite una reinterpretación ritual de la asignación original: **si Speck eligió por su cuenta, la orden pierde validez retroactivamente.** No era la variable que había que tomar; era la que había que dejar elegir. El consejo firma la liberación. Es la primera liberación ritual registrada en Deepstone.
 
 Dagna vuelve al grupo. Cuando llega al campamento del jugador, no anuncia. Aparece en el círculo del fuego, se sienta, deja el escudo al lado. No es efusiva — sigue callada. Pero se queda.
 
@@ -367,6 +381,14 @@ Dagna vuelve al grupo. Cuando llega al campamento del jugador, no anuncia. Apare
 **La hoja de Maelys** sigue intacta en el compartimento interior del cinturón. Dagna la ha llevado durante todo el Acto 3, y en F4 sigue verde plata cuando abre el compartimento en un momento sin público — hoja de un solo bosque, en el bolsillo de la única enana que se dejó mirar. Maelys sabía. Dagna nunca comenta.
 
 Años después, si el jugador viaja a Deepstone, encuentra que el subclán ha cambiado protocolos internos — la palabra "asignación" empieza a compartir espacio con "elección" en los registros nuevos. Nadie atribuye el cambio a Dagna. Deepstone no atribuye nada a nadie. Pero el cambio está ahí.
+
+**Epílogo — Dagna muerta** (cayó en la persecución o en el cráter). El consejo de Deepstone emite la reinterpretación ritual **igual** — la orden pierde validez retroactivamente, la liberación se firma — y llega tarde por semanas. **Dagna es liberada muerta**, en un pergamino que nadie le puede leer.
+
+El subclán no tiene procedimiento para eso. Un enano liberado vuelve a su gente; una enana liberada póstumamente no vuelve a ninguna parte, y el registro queda con la firma puesta y el renglón de recepción en blanco. **Es exactamente el final que su vida entera predijo:** sesenta años en un puesto que nunca eligió, y la única vez que Deepstone le concede elegir, ya no hay nadie a quien concederle nada.
+
+Quien carga eso es **Roen**. Él dejó su puesto y sobrevivió; ella no lo dejó nunca y no sobrevivió, y el mundo terminó dándole la razón a él por accidente. No lo dice en voz alta. Vuelve a levantar el escudo — el mismo que dejó caer en el cráter — y no lo suelta otra vez en lo que le queda de vida.
+
+La hoja de Maelys se encuentra en el compartimento interior del cinturón, todavía verde plata. Nadie del grupo entiende qué hace ahí. **Maelys sí**, y cuando se entera, es la única vez que un miembro del Elder Circle baja de Stillwood a un funeral enano.
 
 ---
 
