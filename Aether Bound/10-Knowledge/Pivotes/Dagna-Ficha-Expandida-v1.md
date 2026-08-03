@@ -149,7 +149,7 @@ Cuando el jugador decide salvar o destruir la crisálida, Dagna asiente. No opin
 
 ### Escena: el primero (aceptación del grupo)
 
-Roen ya está. Valen aparece. Darro se une. El Bound Five se forma con Dagna adentro desde el principio.
+Roen ya está. Valen aparece. Dagna se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 - **Con Roen:** deferencia mutua tácita. La primera guardia nocturna compartida ocurre en el sub-acto 1B, y ahí sucede la escena canónica: Roen pregunta *"¿Cómo aguantaste sesenta años en el mismo puesto?"*, Dagna contesta *"No tuve tu opción."* Roen no vuelve a preguntar. La frase se queda entre los dos.
 - **Con Valen:** silencio respetuoso.
@@ -292,15 +292,15 @@ Roen no contesta. Dagna vuelve al jugador. Dice, sin subir la voz, la línea can
 
 ***"The mountain doesn't forgive. And I am the mountain's."***
 
-Camina hacia el mensajero de Deepstone al fondo del cráter. Le entrega a Speck. El mensajero asiente una vez y se retira por el lado opuesto, subiendo el borde. Dagna se queda de pie en el centro del cráter, mirando al jugador, escudo todavía colgado del hombro.
+Se detiene ahí mismo, con Speck en brazos, y espera. Un mensajero de Deepstone viene bajando hacia el centro del cráter — Dagna no camina a su encuentro: sostiene el escudo en alto, calculando, y deja que sea el mensajero quien cierre la distancia. Lo que pase en los siguientes segundos ya no depende solo de ella.
 
 **El quiebre físico de Roen:**
 
-En ese momento — cuando Dagna ya entregó a Speck y todavía no se ha ido — **Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego.** No es lloro dramático. No es grito. Es un gesto físico, pequeño, silencioso: el brazo se afloja, el escudo se desliza, cae al suelo con un ruido seco. Roen no lo levanta.
+En ese momento — con Dagna quieta, Speck todavía en sus brazos, el mensajero acercándose — **Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego.** No es lloro dramático. No es grito. Es un gesto físico, pequeño, silencioso: el brazo se afloja, el escudo se desliza, cae al suelo con un ruido seco. Roen no lo levanta.
 
-El jugador lo nota. Darro lo nota. Nadie más. Dagna no ve el escudo caer — ya se está girando para irse.
+El jugador lo nota. Darro lo nota. Nadie más — Dagna sigue con los ojos en el mensajero que se acerca, no en Roen.
 
-**Darro se acerca a Roen** después de que Dagna sale del cráter. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado. Es la escena más grande de Darro en todo el juego — un gesto sin palabras, dirigido a un compañero al que respeta, dejando pasar al enano que traicionó porque entiende sin decir por qué. Dura hasta que el jugador decide moverse.
+**Darro se acerca a Roen** mientras el jugador decide qué hacer. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado. Es la escena más grande de Darro en todo el juego — un gesto sin palabras, dirigido a un compañero al que respeta, sin juzgar todavía a la enana que puede o no traicionar. Dura hasta que el jugador decide moverse.
 
 ---
 
@@ -326,7 +326,7 @@ Dagna cumple. Entrega a Speck viva al mensajero de Deepstone en el cráter. Los 
 
 **Nadie brinda.** Los enanos del subclán no brindan por órdenes cumplidas; asienten una vez y siguen. Dagna acepta el ascenso con el mismo asentimiento. No es efusiva. Nunca lo fue.
 
-**Roen no la busca.** Ni ella lo busca a él. Si el jugador viaja a Ignis Reach años después, puede verla en la muralla del subclán, escudo listo, silueta al atardecer. No se le acerca — no habría qué decir. Cinco años del oficio caben en un asentimiento a distancia. Ninguno de los dos lo ofrece.
+**El jugador no la busca.** Ni ella lo busca a él. Si el jugador viaja a Ignis Reach años después, puede verla en la muralla del subclán, escudo listo, silueta al atardecer. No se le acerca — no habría qué decir. Cinco años del oficio caben en un asentimiento a distancia. Ninguno de los dos lo ofrece.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
@@ -334,7 +334,7 @@ Este es el final donde Dagna **rompe con Deepstone.**
 
 Speck muere en el cráter antes de ser entregada, por la única vía por la que puede morir ahí: **el jugador se la arranca por la fuerza** a Dagna o al mensajero, y el Fragmento se sobrecarga (regla física en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia). El mensajero de Deepstone llega y encuentra un cadáver.
 
-Lo que quiebra a Dagna no es la muerte: es que **la mano fue la del jugador.** Cinco años de oficio con Roen, y el cierre de todo es una vanguard viendo cómo la persona a la que escoltó rompe lo que ella tenía orden de proteger. No lo dice. No hace falta. La orden se ejecutó sin resultado. La variable no está viva, no está entregada, no cumple lo que el Great Forging Clan pidió a través del subclán.
+Lo que quiebra a Dagna no es la muerte: es que **la mano fue la del jugador.** Cinco años de oficio con el jugador, y el cierre de todo es una vanguard viendo cómo la persona a la que escoltó rompe lo que ella tenía orden de proteger. No lo dice. No hace falta. La orden se ejecutó sin resultado. La variable no está viva, no está entregada, no cumple lo que el Great Forging Clan pidió a través del subclán.
 
 **Epílogo:** Dagna **renuncia al subclán Deepstone por primera vez en la historia registrada del subclán.** Es un evento histórico en la política enana. Los archivos internos de Deepstone no tienen precedente de una vanguard vasalla renunciando; la palabra formal para el acto no existe, y el consejo tiene que inventarla.
 
@@ -342,7 +342,7 @@ Antes de renunciar, Dagna se queda **en el cráter, cuidando el cuerpo muerto de
 
 Cuando el equipo del Council llega, Dagna se pone de pie, deja el escudo en el suelo al lado del cuerpo, y camina hacia Emberdeep a pie. Entrega la renuncia al consejo de Deepstone en persona, sin más palabras que *"No sigo aquí."* Sale del edificio del subclán y desaparece.
 
-Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas. Puede haber muerto de vieja en un cuarto de renta como Vekka en su propio F2b, o puede haber muerto en la primera nevada del año. Deepstone no busca cuerpo.
+Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas — puede haber muerto en la primera nevada del año, o puede seguir caminando todavía. Deepstone no busca cuerpo.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 

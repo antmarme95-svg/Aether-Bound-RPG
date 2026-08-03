@@ -172,7 +172,7 @@ Cuando el jugador decide salvar o destruir, Maren simplemente asiente. *"Tuya es
 
 ### Escena: El Primero (Aceptación del Grupo)
 
-Roen llega. Darro llega. Valen aparece. El Bound Five se forma.
+Roen ya está con el jugador. Valen aparece. Maren se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 **Maren con el grupo:**
 - Toma inventario mental de quién es quién

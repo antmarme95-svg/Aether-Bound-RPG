@@ -145,7 +145,7 @@ Cuando el jugador finalmente decide, Bram dice: *"Sea lo que sea, cubro tu espal
 
 ### Escena: El Primero (Aceptación del Grupo)
 
-Roen ya está en el grupo. Valen aparece. Darro se integra en Driftmarket. Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[The Bound Five|El Quinteto]]).
+Roen ya está en el grupo. Valen aparece. Bram se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro, en Acto 1 — **no** en el Driftmarket, que es de Acto 2 y no tiene reclutamiento ([[Geografía y Ciudades]] §The Driftmarket). Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[The Bound Five]]).
 
 **Bram aquí asume rol de protector del grupo:**
 - Se posiciona estratégicamente en campamento (siempre vigilante)
@@ -283,11 +283,11 @@ Conversaciones en la persecución:
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-Se alcanza al segundo agente en el borde del cráter. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
+Torgan, como segundo agente, es quien llegó cargando a Speck y se detuvo en el borde del cráter a esperar al mensajero ([[Los 5 Finales]] §F1) — Bram rechazó ese rol en el corredor y no la carga. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
 
-**Rol de Bram en el cráter:** cuando cualquier amenaza física se acerca a Speck — una bestia despierta, el segundo agente en su último movimiento, un desprendimiento de terreno — Bram se pone entre Speck y la amenaza. Reflejo de cuarenta años. No es decisión heroica: es el cuerpo antes de la mente. En un momento específico, Bram se lleva un golpe que iba para Speck. No cae. Se sostiene con el mazo apoyado en el suelo. Roen lo mira y no dice nada.
+**Rol de Bram en el cráter:** cuando cualquier amenaza física se acerca a Speck en brazos de Torgan — una bestia despierta, un desprendimiento de terreno — Bram se pone entre Speck y la amenaza. Reflejo de cuarenta años. No es decisión heroica: es el cuerpo antes de la mente. En un momento específico, Bram se lleva un golpe que iba para Speck. No cae. Se sostiene con el mazo apoyado en el suelo. Roen lo mira y no dice nada.
 
-**Bram no toma la decisión del final** — la toma el jugador. Lo que Bram hace es mantener a Speck físicamente protegida hasta que el jugador elija. Después, se retira dos pasos y espera.
+**Bram no toma la decisión del final** — la toma el jugador. Lo que Bram hace es cubrir a Speck de amenazas externas mientras Torgan la sostiene, hasta que el jugador elija. Después, se retira dos pasos y espera.
 
 ---
 
@@ -327,7 +327,7 @@ Se retira a un pueblo pequeño de Mistbound Frontier, no a Rivermeet. Ahí, en e
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Bram **nunca te siguió tan lejos.** Se va antes del cráter — específicamente, en el momento en que el jugador decide cruzar el borde hacia el core central. No hay ceremonia, no hay discurso, no hay confrontación. Bram deja el equipo que el jugador le dio (armadura menor, mazo secundario, ración de campamento) en el suelo, apilado con orden militar, y camina en dirección opuesta.
+Bram **nunca te siguió tan lejos.** Se va antes del cráter — específicamente, en el momento en que el jugador, en vez de detener a Torgan (el segundo agente, ver §sub-beat 5) o esperar, cruza el borde de largo para tomar a Speck por su cuenta. No hay ceremonia, no hay discurso, no hay confrontación. Bram deja el equipo que el jugador le dio (armadura menor, mazo secundario, ración de campamento) en el suelo, apilado con orden militar, y camina en dirección opuesta.
 
 No es traición ni deserción — es rechazo, que es lo único que Bram sabe hacer desde el corredor. Rechazó al Council y rechaza al jugador con el mismo mecanismo.
 
@@ -335,7 +335,7 @@ No es traición ni deserción — es rechazo, que es lo único que Bram sabe hac
 
 ### F4 — The Warden's Choice (síntesis — el único con consentimiento de Speck)
 
-Speck elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
+En el borde, frente a Torgan como segundo agente (ver §sub-beat 5), el jugador no forcejea ni espera: pregunta. Torgan no tiene orden para eso y se aparta cuando ve que Speck responde. Speck elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
 
 **Epílogo:** Bram **se queda por elección propia — único final donde lo hace.** Es el mejor destino posible para Bram y es canon exclusivo de F4 ([[Los 5 Finales]] §matriz — celda Rechazo/Ausencia × F4). No se queda como empleado, no como escolta, no como contratado por nadie. Se queda porque quiere.
 

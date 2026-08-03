@@ -167,7 +167,7 @@ Promesa silenciosa.
 
 ### Escena: El Primero (Aceptación del Grupo — Sombra Integrada)
 
-El Bound Five se forma.
+Roen y Valen ya están con el jugador cuando Nyael se une — son testigos del encuentro, no su causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 **Nyael aquí es presencia silenciosa:**
 - Nunca habla excepto si es necesario
@@ -306,7 +306,7 @@ Es la única vez que Nyael **no escribe.** Escribir sería reconocer que la deci
 
 ### F4 — The Warden's Choice (síntesis)
 
-Speck elige. El Aether comienza a sanar.
+En el borde, frente al mismo equipo de extracción que aparece en los otros cuatro finales (ver §sub-beat 5), el jugador no forcejea ni espera: pregunta. El equipo no tiene protocolo para eso — no es una variable que su entrenamiento contemplara — y se aparta cuando ve que Speck responde. Speck elige. El Aether comienza a sanar.
 
 **Nyael reaparece** — no como Pivote, no como enemiga, no como asesina redimida. **Como alumna que vuelve al jugador (ahora reconocido como quien le enseñó algo que su maestra original no supo enseñarle) para preguntar qué aprendió.** Esta es la reinversión del arco: durante toda la aventura Nyael proyectó al jugador como par; en F4, con el nuevo paradigma del mundo, Nyael reconoce que el jugador le enseñó algo específico — cuándo **no** actuar — que su maestra centenaria del brazo encubierto nunca supo enseñar porque su maestra vivía en un régimen que solo enseñaba cuándo actuar.
 

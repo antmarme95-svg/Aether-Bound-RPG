@@ -153,7 +153,7 @@ Cuando el jugador decide salvar o destruir, Sereth dice: *"Cualquiera sea tu ele
 
 ### Escena: El Primero (Aceptación del Grupo — Investigación Activa)
 
-Roen llega. Valen aparece. Darro aparece. El Bound Five se forma.
+Roen ya está con el jugador. Valen aparece. Sereth se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 Sereth aquí está en rol de observador cortés: estudia a cada miembro, mapea sus disparadores, empieza a modelar cómo cada uno pesará en el jugador durante los próximos meses. Su prioridad no es el grupo — es la **relación del jugador con cada miembro del grupo.** Necesita saber qué voz el jugador escucha con más facilidad y cuál con más desconfianza. En el cráter, cada una de esas voces contará.
 

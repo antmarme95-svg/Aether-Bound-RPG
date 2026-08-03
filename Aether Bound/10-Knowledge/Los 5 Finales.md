@@ -15,15 +15,15 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
 **Gate:** dos condiciones, en este orden.
-1. **Quien iba a completar la entrega quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo — antes de que la entrega se consume.** El agente (el Pivote, o su sustituto) llega cargando a Speck hacia el centro del cráter; el jugador lo alcanza **en algún punto de ese tramo** — borde, centro, o entremedio, según lo que cada ficha necesite narrar. [[Geografía y Ciudades]] §ACTO 3, sub-beat 5, deja el punto exacto deliberadamente abstracto (*"cada ficha de Pivote escribirá su variación"*); lo único fijo es que **no hay versión de F1 en la que Speck llegue al cráter sola**, y que mientras ese agente pueda completar la entrega, la inacción del jugador resuelve a **F2a**: la entrega se completa por defecto.
+1. **El mensajero quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo — antes de completar la entrega.** El Pivote (o quien la esté cargando) llega al cráter con Speck y **se detiene** en algún punto del tramo hacia el core — borde, centro, o entremedio, según lo que cada ficha necesite narrar — sosteniéndola mientras espera al **mensajero del Council** que viene a recibirla. El Pivote no completa la entrega por su cuenta: la cede o la retiene según lo que haga el jugador. [[Geografía y Ciudades]] §ACTO 3, sub-beat 5, deja el punto exacto deliberadamente abstracto (*"cada ficha de Pivote escribirá su variación"*); lo único fijo es que **no hay versión de F1 en la que Speck llegue al cráter sola**, y que mientras el mensajero pueda completar la entrega, la inacción del jugador resuelve a **F2a**: el mensajero llega y la entrega se consuma por defecto.
 2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
 
-**Por ruta, quién es "quien iba a completar la entrega":**
-- **7 rutas:** el Pivote mismo, detenido en el borde.
+**Por ruta, quién es el mensajero que hay que neutralizar:**
+- **7 rutas:** un mensajero del Council que se acerca al Pivote, detenido en el borde con Speck en brazos.
 - **Ruta Nyael:** el **equipo de extracción** que ella activó antes de retirarse. F1 exige detenerlo a él — si el jugador se aparta, el equipo completa la entrega y es F2a.
 - **Ruta Bram:** **Torgan como segundo agente**, que es el ejecutor real cuando Bram rehúsa.
 
-No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero a ese agente: es lo que convierte la quietud en una decisión en vez de un descuido.
+No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero al mensajero: es lo que convierte la quietud del Pivote en una decisión del jugador en vez de un descuido.
 
 **F1 no usa el verbo de F4.** No hay rama de "hablar con Speck primero": preguntarle qué quiere es F4 y solo F4 ([[Speck]] §Capa 4 — el verbo de F1 es *aceptar*, el de F4 es *responder*). El jugador de F1 decide por Speck; que ella lo asuma con gracia no lo convierte en consentimiento.
 
@@ -57,9 +57,9 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F2a — The Long Winter: Handed Over *(Speck entregada viva al Council)*
 
-**Gate:** jugador entrega a Speck viva al Pivote o al mensajero del Council en el cráter. Speck no muere — es cedida, y por eso puede ser transportada: la entrega corta el hive mind y los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
+**Gate:** el mensajero del Council llega hasta el Pivote (que se detuvo sosteniendo a Speck, ver §F1) y completa la entrega — por acción del jugador que renuncia a intervenir, o simplemente porque nadie lo detiene. Speck no muere — es cedida, y por eso puede ser transportada: la entrega corta el hive mind y los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
 
-**Es también el final por defecto de la parálisis.** Si el jugador no decide nada en el cráter, el Pivote completa la entrega por él. No hacer nada no es neutral: hace ganar a la institución.
+**Es también el final por defecto de la parálisis.** Si el jugador no decide nada en el cráter, el mensajero llega y completa la entrega. No hacer nada no es neutral: hace ganar a la institución.
 
 **Línea canónica:** *"Un recurso administrado no es un futuro. Pero mañana amanece."*
 
@@ -78,7 +78,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 **Gate:** el jugador **intenta arrancarle a Speck por la fuerza** al Pivote (o al equipo de extracción, en la ruta Nyael) en vez de negociar la entrega, esperar, o retirarse — el forcejeo sobrecarga el Fragmento y la mata en el intento. Es una elección activa con consecuencia trágica, no un timeout: el jugador *hizo algo*, y lo que hizo fue precisamente lo que no debía hacerse en presencia del Fragmento ([[Speck]] §Capa 5 — la sobrecarga es por transferencia de fuerza mecánica cerca de un core activo; ni el tiempo ni la inacción la dañan).
 
-**El forcejeo es la única vía.** Esperar no mata a Speck, y congelarse tampoco: si el jugador no actúa, el Pivote completa la entrega y el final es **F2a**, no este. F2b requiere que la mano que la arranca sea la del jugador.
+**El forcejeo es la única vía.** Esperar no mata a Speck, y congelarse tampoco: si el jugador no actúa, el mensajero completa la entrega y el final es **F2a**, no este. F2b requiere que la mano que la arranca sea la del jugador.
 
 **Línea canónica:** *"Nadie ganó. Nadie ganaba nunca."*
 
@@ -97,11 +97,11 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F3 — The Conqueror's Clause *(beneficio propio — villano)*
 
-**Gate:** jugador cruza el borde del cráter hacia el core central con Speck en la mano y activa el vínculo por su cuenta. Encadena o entrega a Speck bajo sus propios términos, no los del Council. El Contrato cumplido hasta su última letra — pero renegociado a su favor.
+**Gate:** el jugador cruza el borde del cráter hacia el core central **antes** de que el mensajero llegue o de que el Pivote la suelte — igual que en F1, interrumpe el proceso, pero en vez de detenerse ahí sigue de largo. El Pivote, ya superado, suelta a Speck al ver que el jugador cruza: no forcejea por retenerla (eso mataría al Fragmento, [[Speck]] §Capa 5), y el jugador la recoge del otro lado del borde. Una vez con ella dentro del core, activa el vínculo por su cuenta y la encadena o entrega bajo sus propios términos, no los del Council. El Contrato cumplido hasta su última letra — pero renegociado a su favor.
 
 **Línea canónica:** *"El Council me pidió que la entregara. Nunca dijeron a quién."*
 
-**Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada. Ningún compañero. El multi-link es un solo-link.
+**Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada, trasladada desde el cráter una vez que el vínculo quedó bajo control del jugador, no del Council. Ningún compañero. El multi-link es un solo-link.
 
 **Sabor:** villanía funcional. Los compañeros te abandonan uno por uno, cada uno con la despedida ritual de su cultura. Roen se va sin discurso. Valen escribe una carta y no la firma. Darro no dice adiós — solo deja su símbolo tallado en la mesa del último campamento.
 

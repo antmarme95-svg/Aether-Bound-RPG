@@ -72,7 +72,7 @@ updated: 2026-07-27
   - 5-10 años más aguanta si no ocurre la Muda
   - Arquitectura: granja, casas simples, pastoral
 
-- **Cinder Ascent Base** — puesto militar de Aethelgard en el paso de montaña, mirando hacia **The Wilds** (no hacia Ignis Reach — §Topología: es una rueda, no una malla; los dos reinos no se conectan entre sí de forma directa)
+- **Aethelgard Watch** — puesto militar de Aethelgard en el paso de montaña, mirando hacia **The Wilds** (no hacia Ignis Reach — §Topología: es una rueda, no una malla; los dos reinos no se conectan entre sí de forma directa). Ver perfil completo en §Los Cuatro Puestos de Vigilancia — es el mismo puesto, no uno adicional. **Cinder Ascent es el radio de Ignis Reach, del lado opuesto de la rueda — no confundir los dos nombres.**
   - Soldados humanos patrullan
   - Vigilancia del radio de Aethelgard hacia The Wilds, no tránsito a Ignis Reach
   - Control de tráfico comercial hacia The Wilds
@@ -702,7 +702,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - **Función:** Mercado negro, terreno franco entre reinos
 - **Habitantes:** Nómadas, comerciantes, "Mistbound" (grupo cultural divergente)
 - **Mecánica:** Standing vs Bond tensión (mercado no respeta Triune Council)
-- **NO hay reclutamiento acá.** Darro (C4) ya está en el grupo desde el primer campamento del Acto 1 — fue el primero en tocar la crisálida y quien nombró a Speck. El Driftmarket es de Acto 2/The Reckoning, muy posterior
+- **NO hay reclutamiento acá.** Darro (C4) se unió al grupo en el Acto 1, después del nido (último de los 4, orden: Roen → Valen → Pivote → Darro) — fue quien la nombró en Acto 2, cuando el grupo entero vio su comportamiento inteligente. El Driftmarket es de Acto 2/The Reckoning, muy posterior
 - **Arquitectura:** Plataformas flotantes, velas de tela, mercado caótico
 - **Política:** Neutral pero compleja (deuda, favores, crédito mercante)
 
@@ -792,20 +792,28 @@ respalda, y el grupo lo ve.
 1. **Desfiladeros de Zephyr** (tutorial)
    - Tu ciudad natal (Rivermeet / Emberdeep / Stillspire)
    - Tutorial de locomoción y combate básico
+   - **Roen (C1) se une** — introducción a UI de bonds
 
 2. **Frontera inmediata de tu reino**
-   - Primer campamento con C4 (Darro)
-   - Introducción a UI de bonds
+   - **Valen (C2) se une**
 
-3. **El Nido (primer acto)**
+3. **El Nido — Escena 3, "El Primero"**
    - Encuentro con Speck (crisálida)
+   - **El Pivote (C3) se une** — Roen y Valen son testigos del encuentro, no
+     sus causantes ([[Estructura Dramática]])
    - Decisión: ¿salvar o destruir?
    - Primer God-Core destruido
 
+4. **Después del Nido**
+   - **Darro (C4) se une, último** — bautiza a Speck si sobrevive
+     ([[The Bound Five]])
+
 **Beats:**
 - Razón para salir (Triune Council ordena purga / standing decae)
-- Encuentro con Speck
-- Primer aliado (C1 o C2, depende de raza)
+- Roen se une, luego Valen
+- Encuentro con Speck y el Pivote en el nido
+- Darro se une, cierra el grupo — orden fijo: Roen → Valen → Pivote → Darro
+  (decisión de Boris, 2026-08-02)
 - Primer jefe: bestia corrupta guardiana
 
 ---
@@ -819,7 +827,7 @@ respalda, y el grupo lo ve.
 **Locaciones:**
 1. **Entrada a Rivermeet**
    - River Road (co-op Tank/Strategist)
-   - Cinder Ascent Base (checkpoint)
+   - Aethelgard Watch (checkpoint) — no Cinder Ascent, que es el radio de Ignis Reach
 
 2. **Rivermeet interior**
    - Mercado central
@@ -889,7 +897,7 @@ respalda, y el grupo lo ve.
 **Entre reinos:**
 - Descanso en **The Driftmarket**
 - Mecánica de Standing vs Bond
-- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, **final del Acto 2**, justo antes de The Reckoning). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido y el bautizo en Acto 1, el primer flash, La Rueda, el Pivote, el Grove y el camino a Driftmarket en Acto 2. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
+- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, **final del Acto 2**, justo antes de The Reckoning). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido en Acto 1; el bautizo, el primer flash, La Rueda, el Pivote, el Grove y el camino a Driftmarket en Acto 2. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
 - **Darro no se recluta aquí.** Ya está en el grupo desde el primer campamento del Acto 1 (§ACTO 1 — Primer campamento); fue el primero en tocar la crisálida y quien nombró a Speck
 
 **Cada reino ofrece vista del pecado del vecino:**
@@ -949,7 +957,7 @@ Los otros 8 Pivotes no existen en la partida actual (una celda = un Pivote). El 
 >
 > **Tobin:** *"No. Estoy seguro de que alguien va a hacer algo. No estoy seguro de quién. Pero prefiero equivocarme diciéndote a acertar callándome."*
 
-Tobin no miente ni exagera — es la lectura honesta de un hombre sin acceso al Council. Su honestidad es lo que hace posible el error. Y el error es lo que le da al jugador agencia real: puede confrontar, guardar silencio, o consultar con Speck (flash privado — el jugador puede leer una reacción de Speck si el Tether con ella es alto, pero Speck no sabe más que él).
+Tobin no miente ni exagera — es la lectura honesta de un hombre sin acceso al Council. Su honestidad es lo que hace posible el error. Y el error es lo que le da al jugador agencia real: puede confrontar, guardar silencio, o consultar con Speck (**lectura privada de Tether** — el jugador puede leer una reacción de Speck si el Tether con ella es alto, pero Speck no sabe más que él; no es uno de los tres flashes de [[Speck]] §Capa 2, es otro sistema).
 
 **Variante Bram:** en la ruta Bram, Tobin no oye una orden a ejecutarse — oye que el Council busca *"un segundo"*. Es decir, alguien más está siendo activado en la sombra porque Bram ya rechazó. Tobin no sabe quién es el segundo, y no sabe que Bram rechazó — solo sabe que hay actividad duplicada donde debería haber una sola pieza. El jugador entra al Archive con la incertidumbre de que su Pivote asignado (Bram) puede *no* ser el traidor real, sin saber quién es el segundo. Este beat prepara la variante del Sunken Archive: Bram rechaza en el corredor y afuera espera el segundo agente.
 
@@ -999,7 +1007,7 @@ Lo que la escena realmente es: **cinco personas sonriendo, dos de las cuales ya 
 >
 > **Darro:** *(rompiendo el silencio)* *"Bien, bien. Menos poesía, más cerveza. Speck, ¿tú brindas?"*
 >
-> *(Speck no se mueve. Los mira uno por uno, se detiene en el Pivote real un segundo más que en los otros, y baja la cabeza. Solo el jugador lo nota — flash privado si Tether con Speck es alto.)*
+> *(Speck no se mueve. Los mira uno por uno, se detiene en el Pivote real un segundo más que en los otros, y baja la cabeza. Solo el jugador lo nota — lectura privada de Tether, no uno de los tres flashes de [[Speck]] §Capa 2.)*
 
 La escena cierra sin resolver. Nadie confiesa. Nadie confronta. Se acuestan temprano — al amanecer bajan al Archive.
 
@@ -1019,7 +1027,7 @@ Los siguientes 3-5 beats de la ruta Bram están marcados por esta incertidumbre:
 
 #### 1. Approach al Sunken Archive
 
-El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. Los flashes del jugador se han vuelto más frecuentes en los últimos beats — cristal debajo del pelaje, facetas donde deberían haber ojos — pero siguen siendo privados (canon en [[Speck]] §Capa 2), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
+El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. El último de los tres flashes del jugador — cristal debajo del pelaje, facetas donde deberían haber ojos — ya pasó y sigue siendo privado (canon en [[Speck]] §Capa 2, tres flashes fijos, ni uno más), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
 
 #### 2. Interior del Archive
 
@@ -1050,7 +1058,7 @@ El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometrí
 
 Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
 
-Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el Pivote entrega por defecto —, **preguntarle a Speck qué quiere** es F4, y **neutralizar al Pivote en el borde y después no intervenir con Speck es F1**. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta. Y la diferencia entre F2a y F1 tampoco es la quietud: es si queda alguien capaz de completar la entrega.
+Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central sin esperar a que Speck sea entregada es F3 (el Pivote la suelta recién cuando ve al jugador cruzar, [[Los 5 Finales]] §F3), **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el mensajero del Council entrega por defecto —, **preguntarle a Speck qué quiere** es F4, y **neutralizar al mensajero en el borde y después no intervenir con Speck es F1**. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta. Y la diferencia entre F2a y F1 tampoco es la quietud: es si queda alguien capaz de completar la entrega.
 
 **Los cinco gates del cráter, completos** (ninguno puede faltar de esta lista): cruzar = F3 · forcejear = F2b · retroceder o congelarse = F2a · preguntar = F4 · **neutralizar al agente de la entrega y no intervenir = F1**. En la ruta Nyael ese agente es el equipo de extracción que ella dejó activado, y en la ruta Bram es Torgan como segundo agente — **F1 exige detener a ése**, no a un Pivote que ya no está en escena ([[Los 5 Finales]] §F1).
 
@@ -1060,7 +1068,7 @@ Los detalles del acto final quedan abstractos aquí — cada final los interpret
 
 #### 6. Nota transversal — Grove of Cycles florece aquí
 
-Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycles — Escena del Acto 2]]) tienen razón parcial en este cráter, y ninguno tiene toda la razón. Threnn tuvo razón en que dejar la Muda completarse cuesta civilizaciones (F1 lo confirma, con belleza y con luto). Ilyara tuvo razón en que no sanar es su propia forma de violencia (F2b lo confirma, con tragedia sin retorno). Corwyn tuvo razón en que negociar administradamente compra tiempo (F2a lo confirma, con sabor a decepción). Maelys — la que casi no habló — tuvo razón en que ninguna preferencia importa hasta que Speck elige (F4 lo confirma, y es el único final que la cita literalmente). El jugador nunca les debe una respuesta; el juego se las da en el cráter.
+Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycles — Escena del Acto 2]] §Siembras por Final — fuente única de este mapeo) tienen razón parcial en este cráter, y ninguno tiene toda la razón. Ilyara tuvo razón en que sanar aunque cueste civilizaciones era la única salida honesta (F1 lo confirma, con belleza y con luto). Threnn tuvo razón en que un statu quo administrado, aunque frío, compra tiempo (F2a lo confirma, con sabor a decepción). Corwyn tuvo razón en que la crisis es un recurso administrable — para uno mismo, en su lectura más cínica (F3 lo confirma). Maelys — la que casi no habló — tuvo razón en que ninguna preferencia importa hasta que Speck elige (F4 lo confirma, y es el único final que la cita literalmente). El jugador nunca les debe una respuesta; el juego se las da en el cráter.
 
 ---
 

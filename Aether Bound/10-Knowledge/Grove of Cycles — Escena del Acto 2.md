@@ -69,7 +69,7 @@ Cada uno siembra una semilla que apunta a uno de los 5 finales. El debate no men
 - **Ilyara → F1 Guided Molt** (sanar aunque cueste civilizaciones).
 - **Corwyn → F2a también, con lectura política** (gestión, no solución) — pero también inicia la lectura que hace posible **F3** (la crisis como recurso administrable *para uno mismo*).
 - **Maelys → F4 Warden's Choice** (única voz que apunta a preguntarle a Speck en vez de decidir por ella).
-- **La discusión completa como fracaso conjunto → F2b Fallen** (si en el cráter el jugador termina arrancándole a Speck de las manos al Pivote, esta escena queda como el diagnóstico de por qué: cuatro élderes que sabían más que nadie tampoco encontraron una salida negociada, y el jugador hereda esa desesperación). **Congelarse no siembra F2b** — la parálisis en el cráter desemboca en F2a, porque el Pivote entrega por defecto (ver [[Los 5 Finales]] §F2a).
+- **La discusión completa como fracaso conjunto → F2b Fallen** (si en el cráter el jugador termina arrancándole a Speck de las manos al Pivote, esta escena queda como el diagnóstico de por qué: cuatro élderes que sabían más que nadie tampoco encontraron una salida negociada, y el jugador hereda esa desesperación). **Congelarse no siembra F2b** — la parálisis en el cráter desemboca en F2a, porque el mensajero completa la entrega por defecto si nadie interviene (ver [[Los 5 Finales]] §F2a).
 
 **Vector C bonus:** si el jugador llegó por Vector C (Speck lo trajo), Maelys tiene una línea adicional al final del debate: *"Ya lo hicieron antes. Escogieron por ella. Miren cómo terminó."* Los otros tres se callan. Ninguno la contradice.
 
@@ -96,7 +96,7 @@ Al terminar el debate, tres de los cuatro se retiran a distintos rincones del Gr
 
 El grupo sale distinto de como entró — pero no unificado, no fragmentado. **Tenso, con un secreto compartido que nadie nombra.** Cada uno interpretó el debate a su manera. Valen guarda silencio prolongado. Darro intenta hacer un chiste sobre "elfos discutiendo con hojas" y no le sale. Roen carga a Speck sin pedir permiso — la lleva en brazos hasta el borde del Grove, y solo la baja cuando la vegetación se vuelve normal otra vez.
 
-Speck se comporta distinta durante los siguientes 1-2 beats. Es sutil — Darro la mira dos veces sin motivo aparente, Valen le ofrece agua sin decirle nada. No comentan. Speck no come esa noche. En el próximo campamento, el jugador tiene un flash privado especialmente largo ([[Speck]] §Capa 2): las runas geométricas del pelaje se ven activas por primera vez, pulsando débilmente. **Nadie más ve nada.**
+Speck se comporta distinta durante los siguientes 1-2 beats. Es sutil — Darro la mira dos veces sin motivo aparente, Valen le ofrece agua sin decirle nada. No comentan. Speck no come esa noche. En el próximo campamento, el jugador ve algo que no es uno de los tres flashes (esos son fijos y ya fueron o serán, ver [[Speck]] §Capa 2): las runas geométricas del pelaje, ya vistas en el shapeshifting imperfecto, pulsan visiblemente por primera vez mientras duerme. No revela nada nuevo de la verdad de Speck — solo confirma que algo en ella responde al Grove. **Nadie más lo ve.**
 
 Este beat es la última puerta abierta antes de The Reckoning. Todo lo que se sembró en el Grove puede aún redirigirse; después de The Reckoning ya no.
 

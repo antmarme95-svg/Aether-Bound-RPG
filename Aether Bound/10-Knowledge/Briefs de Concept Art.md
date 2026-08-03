@@ -177,14 +177,15 @@ involuntariamente (hive mind forzado). Jade pálido se revela como rojo God-Core
 
 **Narrativa transversal — los 3 grados de agencia, y hay que poder VERLOS.** La
 transformación es involuntaria en todos los casos ([[Speck]] §Capa 4). Lo que cambia
-por final es **cuánta agencia tiene Speck sobre lo que viene**, y son tres grados
+por final es **cuánta agencia tiene Speck sobre lo que viene**, y son cuatro grados
 distintos, no dos. Fuente: [[Speck]] §Capa 4.
 
 | Grado | Finales | Verbo | Qué debe leerse en la imagen |
 |---|---|---|---|
 | **Le preguntan** | **F4** | *responder* | Es la única donde Speck **contesta**. Mirada hacia el jugador, no hacia el core. Reciprocidad. Es lo único que distingue F4 |
 | **Deciden por ella y acepta** | **F1** | *aceptar* | Dignidad frente a una decisión **ajena**. NO reciprocidad, NO igualdad — nadie le preguntó. Se sostiene sola |
-| **Se la arrebatan** | **F2a, F2b, F3** | — | Agencia robada. En F2a **vive** (cedida y catalogada), en F2b muere, en F3 encadenada |
+| **Es cedida, no arrebatada** | **F2a, F3** | — | Agencia ausente, pero **vive** — cedida y catalogada en F2a, encadenada bajo el jugador en F3. La fuerza nunca entra en su cuerpo |
+| **Es arrebatada** | **F2b** | — | La única donde "arrebatada" es literal: el forcejeo la mata |
 
 > ⚠️ **Dos errores que este brief tenía y que el arte generado hereda:**
 > 1. **Colapsaba F1 y F4** en un solo bucket de "aceptación con gracia divina". Está

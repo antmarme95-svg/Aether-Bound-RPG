@@ -227,9 +227,9 @@ Los dos caminos pierden algo. Iven elige el que le da más tiempo, que es lo que
 
 ### Escena: el primero (formación del grupo)
 
-Roen llega y lo reconoce. Valen aparece. Darro se suma.
+Roen ya está con el jugador y lo reconoce. Valen aparece. Iven se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro.
 
-**El Bound Five se forma: Jugador + Roen + Valen + Iven + Darro.** Nunca más de cinco ([[The Bound Five]]).
+**El Bound Five queda formado recién con Darro: Jugador + Roen + Valen + Iven + Darro.** Nunca más de cinco ([[The Bound Five]]).
 
 **Iven está en un rol imposible:**
 - Es compañero genuino (lo es, sin reserva).

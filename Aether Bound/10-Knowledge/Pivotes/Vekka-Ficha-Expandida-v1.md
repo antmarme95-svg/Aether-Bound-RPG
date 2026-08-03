@@ -93,15 +93,15 @@ Darro no grita. Darro se queda mudo. Es la única vez en la campaña que Darro s
 
 ## Encuentro con Jugador (Humano Vanguard) — Contexto Específico
 
-**Cuándo:** Sub-Acto 2B, en Emberdeep, cuando el equipo del jugador se rompe. No una pieza, todo — el conjunto entero se desalinea por fatiga tras las minas profundas, y ningún herrero local puede repararlo sin desmontarlo primero para leer la geometría original.
+**Cuándo:** Acto 1, en el nido — Escena 3, "El Primero" ([[Estructura Dramática]]; orden fijo Roen → Valen → Pivote → Darro). El equipo del jugador llega roto de la frontera: no una pieza, todo — el conjunto entero se desalinea por fatiga, y ningún herrero de paso puede repararlo sin desmontarlo primero para leer la geometría original.
 
-**Por qué Vekka:** ella pasa por Emberdeep camino a algún encargo del gremio. Escucha del problema. Se ofrece a mirarlo — no por amistad, ni por el jugador, sino porque Vekka **no tolera trabajo incompleto en su radio de visión.** Si ve una pieza rota que puede repararse, la repara. Es un tic profesional que no distingue si el dueño le cae bien.
+**Por qué Vekka:** anda por la zona camino a algún encargo del gremio, cerca del nido. Escucha del problema. Se ofrece a mirarlo — no por amistad, ni por el jugador, sino porque Vekka **no tolera trabajo incompleto en su radio de visión.** Si ve una pieza rota que puede repararse, la repara. Es un tic profesional que no distingue si el dueño le cae bien.
 
 Pasa tres días desmontando y rearmando el equipo del jugador. Cada pieza va al yunque, cada pieza vuelve mejor. No cobra — pero **deja al jugador en deuda profesional con ella.** Es explícita al respecto:
 
 *"No me debes dinero. Me debes acabar lo que estás haciendo. No hay trabajo incompleto en mi radio. Tu Warden — o lo que sea — es tu pieza incompleta. Terminarla es tu obligación conmigo."*
 
-El jugador la invita al viaje. Vekka acepta porque, en su lógica, ya está adentro del asunto — reparó el equipo, la deuda es real, no puede dejar la pieza a la mitad. Se queda.
+El jugador la invita al viaje. Vekka acepta porque, en su lógica, ya está adentro del asunto — reparó el equipo, la deuda es real, no puede dejar la pieza a la mitad. Se queda. Roen y Valen, que ya viajaban con el jugador, son testigos del encuentro.
 
 **Nadie del grupo lo sabe todavía**, pero Vekka ya está en dos ecuaciones al mismo tiempo: la deuda con el jugador y la orden pendiente del Great Forging Clan sobre "una forja incompleta que camina con la variable". Cuando esas dos ecuaciones colisionen, el dogma va a ganar. Siempre.
 
@@ -133,7 +133,7 @@ El jugador, en Acto 1, no lo sabe. Ve a Vekka mirar a Speck a veces, mucho tiemp
 
 ### Escena: El primero (aceptación del grupo)
 
-Roen ya está. Valen aparece. Darro se une. El Bound Five se forma.
+Roen ya está. Valen aparece. Vekka se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 **Vekka con el grupo:**
 - **Con Roen:** respeto mutuo instantáneo. Ambos veteranos, ambos gente de oficio. Se hablan poco pero cuando se hablan es preciso.

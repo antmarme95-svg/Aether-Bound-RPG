@@ -127,7 +127,7 @@ Llegan al nido donde está la crisálida de Speck. Las bestias guardianas están
 
 ### Escena 3: El Primero (Encuentro con el Pivote)
 
-Mientras purifican el área, el Pivote llega — por primera vez en la historia. La razón varía (C3 está explorando, fue atraído por noticias, es un encuentro casual), pero el Pivote se une.
+Mientras purifican el área, el Pivote llega — no es un encuentro casual. Cada Pivote tiene su propio Conocimiento Previo del jugador (ver su ficha: la relación viene de antes, con una razón concreta para aparecer justo acá), y ese vínculo previo es lo que trae a esta escena, no la casualidad.
 
 **Roen y el Pivote (primera vez):**
 
@@ -137,7 +137,7 @@ Los primeros diálogos entre Roen y el Pivote **definen la química del grupo**.
 
 ---
 
-## Arco Acto 2 — Comunidad (La Rueda, Speck, el Bound Five se Forma)
+## Arco Acto 2 — Comunidad (La Rueda, Speck)
 
 ### Escena 1: La Rueda Completa (Viaje, 3-4 actos del juego)
 
@@ -236,12 +236,11 @@ Roen es quien **mantiene la vigilia** — no sobre un cuerpo, sino sobre el sile
 *"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando compra tiempo en vez de justicia."*
 
 #### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
-Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo que queda sin hablar. Después, cuando todo se acaba, dice:
-*"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando se equivocan."*
+Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo que queda sin hablar. No hay línea de cierre que ofrecer — lo intenta una vez, se detiene a mitad de frase, y no vuelve a intentarlo. Lo único que dice, mucho después, sin mirar a nadie:
+*"No hay una forma de decir esto bien. Dejé de buscarla."*
 
 #### **F3 — The Conqueror's Clause (el jugador encadena a Speck por beneficio propio)**
-Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso — la despedida ritual descrita en [[Los 5 Finales]]. Años después, si el jugador sale del juego, encontrará una nota:
-*"I've buried people I should've protected. I'm not doing that again."*
+Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso, sin nota — la despedida ritual descrita en [[Los 5 Finales]]. La única línea que queda de él es la que dice antes de irse, no después: *"I've buried people I should've protected. I'm not doing that again."*
 
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
 Roen es quien **ve el futuro.** Su línea final:

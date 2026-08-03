@@ -172,7 +172,7 @@ Cuando el jugador decide salvar o destruir, Torgan dice: *"Tuya es la decisión.
 
 ### Escena: el primero (aceptación del grupo — doble agente)
 
-Roen llega. Darro lo reconoce. Valen aparece. **El Bound Five se forma: Jugador + Roen + Valen + Torgan + Darro.** Nunca más de cinco ([[The Bound Five]]).
+Roen ya está con el jugador. Valen aparece. Torgan se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro, y lo reconoce apenas llega. **El Bound Five queda formado recién con él: Jugador + Roen + Valen + Torgan + Darro.** Nunca más de cinco ([[The Bound Five]]).
 
 **Torgan está en rol imposible:**
 - Debe ser compañero genuino (lo es).

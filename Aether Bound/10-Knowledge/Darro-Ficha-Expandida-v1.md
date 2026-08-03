@@ -115,15 +115,15 @@ A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón)
 
 ## Arco Acto 1 — Lealtad (Accidental, Bromista, Honesto)
 
-### Escena 1: El Encuentro (Primeros 20 minutos)
+### Escena 1: El Encuentro (Darro se une, último)
 
-El jugador está en The Wilds con contrato del Triune Council. Darro está aquí porque... bueno, la versión cambia. Mercenario pasando. Huyendo de algo. Buscando dinero. La historia es diferente cada vez y siempre divertida.
+Darro es el cuarto y último en unirse — el jugador, Roen, Valen y el Pivote ya vienen viajando juntos desde el nido cuando lo cruzan ([[Estructura Dramática]], orden fijo: Roen → Valen → Pivote → Darro). Darro está en el camino porque... bueno, la versión cambia. Mercenario pasando. Huyendo de algo. Buscando dinero. La historia es diferente cada vez y siempre divertida.
 
 **Darro en esta escena:**
 - Energía. Mucho movimiento. Sonrisa constante.
-- Bromea sobre ABSOLUTAMENTE TODO — el nido, el peligro, el Triune Council.
-- Es bueno peleando. Mejor que esperarías para alguien tan burlón.
-- Cuando el jugador mata la primera bestia, Darro aplaude: "¡Excelente! Eso fue casi competencia de gremio."
+- Bromea sobre ABSOLUTAMENTE TODO — el grupo recién formado, el peligro, el Triune Council.
+- Es bueno peleando. Mejor que esperarías para alguien tan burlón — el grupo lo comprueba en la primera escaramuza junto a él.
+- Cuando termina la pelea, Darro aplaude: "¡Excelente! Eso fue casi competencia de gremio."
 
 **Primer diálogo clave:**
 Jugador espera que Darro sea serio alguna vez. Darro: "¿Serio? Hermano, la seriedad mató a mi padre. Voy a mantenerme feliz, gracias."
@@ -132,32 +132,9 @@ Jugador espera que Darro sea serio alguna vez. Darro: "¿Serio? Hermano, la seri
 
 ---
 
-### Escena 2: El Nido de Speck (Primer Toque, Primer Nombre)
+### Escena 2: El Primero (Encuentro con el Pivote, ya en el grupo)
 
-Llegan al nido. Bestias guardianas. La crisálida.
-
-**Darro aquí:**
-- Es el PRIMERO en tocar la crisálida — sin permiso, sin consideración, con curiosidad de niño.
-- Ella no reacciona (está dormida).
-- Darro: "Mira, es una piedra brillante. Bonita. Rara."
-
-El jugador debe decidir: destruir o salvar.
-
-**Darro interviene:** "¿Destruir eso? Hermano, apenas hace algo. Si vas a destruir algo tan pequeño, dame primero un nombre. Las cosas destruidas merecen nombre."
-
-No es argumento serio. Es **broma que contiene seriedad.**
-
-**Cualquiera que sea tu decisión, Darro la honra sin drama:**
-- Si destruyes: "Está bien. Se llamaba Speck. Adiós, Speck."
-- Si lo salvas: "Excelente. Speck viene con nosotros. Hablé."
-
-**Es decidido.** Punto final. Darro no argumenta — simplemente **nombraba como acto de honra.**
-
----
-
-### Escena 3: El Primero (Encuentro con Pivote)
-
-El Pivote llega.
+El Pivote ya viaja con Roen y Valen desde el nido cuando Darro se suma — acá el que llega nuevo es Darro, no el Pivote.
 
 **Darro y el Pivote (primera vez):**
 
@@ -166,6 +143,19 @@ Darro hace broma sobre ellos: "¿De dónde vienes?" "¿Cuál es tu historia?" Pe
 Algunos Pivotes responden con humor (Maren, Iven). Otros responden en serio (Torgan, Vekka). Darro nota la diferencia y **se adapta.**
 
 Con Pivotes fríos, Darro reduce bromas pero **mantiene energía**. Con Pivotes cálidos, Darro aumenta. Es **calibración social**, no frivolidad.
+
+---
+
+### Escena 3: Primer contacto con Speck (todavía sin nombre)
+
+Speck ya viaja con el grupo desde el nido — sobrevivió a la decisión del jugador y del Pivote, en la que Darro no estuvo presente. Para Darro, en esta primera escena, es solo un zorro raro que el grupo carga con demasiado cuidado.
+
+**Darro aquí:**
+- Es el PRIMERO en meterse con ella sin permiso, con curiosidad de niño.
+- Ella lo evade o lo ignora — todavía no hay señal de que entienda nada.
+- Darro: "Es un zorro raro. Bonito. Nervioso. ¿Por qué todos lo tratan como si fuera a explotar?"
+
+**Todavía no tiene nombre.** Eso llega después, cuando el grupo entero vea lo que Darro todavía no vio.
 
 ---
 
@@ -187,21 +177,21 @@ El Bound Five viaja La Rueda — lugares pesados, verdades pesadas.
 
 Darro habla a Speck como si Speck entendiese: "¿Escuchas estos elfos pomposos? Adorable. Recuérdame enseñarte a burlarte de ellos."
 
-### Escena 2: Speck Despierta, Darro Siente Responsabilidad
+### Escena 2: El Bautizo — Speck Despierta, Darro le da Nombre
 
-Durante Acto 2, Speck claramente **no es animal normal.**
-
-Darro lo ve. Darro reconoce: **esto no es mascota. Es alguien.**
+Durante Acto 2, el Bound Five entero ha visto comportamientos antinatural-inteligentes: Speck razona, tiene intenciones, entiende. Darro reconoce: **esto no es mascota. Es alguien.**
 
 **Primera vez que Darro es serio** (de verdad, no broma):
 
 Cuando Speck lo mira directamente — cuando Speck lo VE — Darro calla. Está ahí sentado. Mirando a Speck. Sin sonrisa.
 
-Después dice: "Okay. Esto cambió algo."
+Después dice, con su ironía marca registrada: *"It's nothing but a speck with opinions."* No es argumento serio — es broma que contiene seriedad, y en el momento en que la dice se vuelve nombre.
 
 El jugador: "¿Qué cambió?"
 
 Darro: "Yo. Eres responsable de esto ahora. No es mascota. Es nombre. Nombre es promesa."
+
+**Es decidido.** Punto final. Darro no argumenta — simplemente **nombró como acto de honra.** En el endgame the Triune Council la llama "the Warden"; el grupo insiste en "Speck" ([[Speck]] §El bautizo).
 
 ### Escena 3: La Verdad Filtra, Darro Ve el Peso Llegar
 
@@ -325,7 +315,7 @@ Es su alegría más genuina en cualquier final, y **dura poco.** Porque después
 
 *"¿Y ahora la dejamos acá."* No es pregunta. *"Le pusimos nombre para que fuera de alguien. Y la dejamos acá."*
 
-**El costo de F4 le pega a él más que a nadie**, porque el nombre fue suyo: fue el primero en tocar la crisálida y el que la bautizó ([[Los 5 Finales]] §F4 — la calcificación es permanente; nadie vuelve por ella). Que Speck haya elegido no le devuelve a Speck. Es exactamente lo agridulce que el final promete: **preguntarle fue lo correcto, y la respuesta se la lleva.**
+**El costo de F4 le pega a él más que a nadie**, porque el nombre fue suyo: fue el primero en meterse con ella sin permiso y el que la bautizó ([[Los 5 Finales]] §F4 — la calcificación es permanente; nadie vuelve por ella). Que Speck haya elegido no le devuelve a Speck. Es exactamente lo agridulce que el final promete: **preguntarle fue lo correcto, y la respuesta se la lleva.**
 
 Años después, Darro es el que cuenta historias de "el día que nombramos a Speck" — es la historia que repite cada vez que alguien le pregunta. La cuenta bien, la cuenta con gracia, y **nunca cuenta el final.** Cuando alguien pregunta qué pasó con ella, Darro cambia de tema con un chiste, y quien lo conoce sabe que ese chiste es una puerta cerrada.
 

@@ -11,8 +11,13 @@ updated: 2026-07-04
 God-Cores. Incidente incitante: las "bestias" del nido eran guardianas de la
 crisálida de [[Speck]]. Eliges no matar al último espécimen → prófugo.
 
-**Acto 2 — Comunidad.** [[The Bound Five]] ya está formado desde el Acto 1 (el
-Pivote se une en la Escena 3 del nido); acá se profundiza. Viajar el aro de
+**Acto 2 — Comunidad.** [[The Bound Five]] ya está formado desde el Acto 1.
+Orden de incorporación al grupo, fijo para las 12 fichas (decisión de Boris,
+2026-08-02): **Roen primero, Valen segundo, el Pivote tercero (Escena 3, el
+nido — "El Primero"), Darro último.** El encuentro del jugador con el Pivote
+en la Escena 3 **no es casual**: cada Pivote llega con su Conocimiento Previo
+ya establecido (ver ficha de cada uno) — Roen y Valen son testigos del
+encuentro, no sus causantes. Acá se profundiza. Viajar el aro de
 [[La Rueda]] revela que **tu propia cultura degrada el ecosistema**. Arco
 Fellowship (LotR) con fricción (Vox Machina).
 

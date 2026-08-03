@@ -289,7 +289,7 @@ Frío. Honesto. Sin malicia.
 #### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
 Valen es quien **computa el precio final**.
 
-*"One variable removed. The system shifts. This was inevitable after the Fragment was taken. You didn't choose this — you chose seconds before this."*
+*"One variable removed. The system shifts. This wasn't inevitable — the Fragment doesn't kill on its own. Your hand did that, seconds ago. Own the seconds."*
 
 Frío. Honesto. Sin malicia.
 

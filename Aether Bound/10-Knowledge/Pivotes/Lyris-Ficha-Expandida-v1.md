@@ -195,9 +195,9 @@ No es promesa emocional. Es oferta funcional.
 
 ### Escena: El Primero (Aceptación del Grupo — Asimetría)
 
-Roen llega. Valen aparece. Darro aparece.
+Roen ya está con el jugador. Valen aparece. Lyris se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro.
 
-El Bound Five se forma.
+El Bound Five queda formado recién con él.
 
 **Lyris aquí está en rol de observadora:**
 - Vuela arriba, siempre viendo

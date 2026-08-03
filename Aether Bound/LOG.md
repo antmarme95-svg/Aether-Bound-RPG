@@ -6308,3 +6308,56 @@ declara cerrado sin 0 críticos.
 nuevos indica que el cuello de botella del sprint no es el QA sino el **barrido**. A los QAs de la
 4ª hay que pedirles explícitamente que traten cada dato como una **clase de menciones** y no como
 una línea suelta.
+
+## [2026-08-02] sprint/QA-verificación | 7ª re-corrida — 13 CRITICAL + 18 MEDIUM, el volumen más alto desde la 1ª ronda
+
+**Motivo del salto:** las rondas 2ª-6ª habían quedado auditando `Geografía y Ciudades` y
+`Estructura Dramática` — ya corregidos — pero nunca bajaron con el mismo detalle a las 12
+fichas de personaje (9 Pivotes + Roen/Valen/Darro), que son las que narran las escenas en
+disputa. La 7ª corrida (2 subagentes Opus en frío, QA-Dramática + QA-Congruencia) entró ahí
+por primera vez.
+
+**4 decisiones de diseño, resueltas por Boris:**
+1. **Gate F1/F2a** (`Los 5 Finales.md`): el portador se detiene y cede la decisión al
+   jugador — un **mensajero del Council** completa la entrega si nadie interviene. Ya no
+   es "el Pivote completa la entrega por defecto".
+2. **Orden de "El Primero"** (formación del grupo, Acto 1): **Roen → Valen → Pivote →
+   Darro**, fijo para las 12 fichas (antes había dos versiones incompatibles: fijos-ya-están
+   vs Pivote-ya-está).
+3. **Bautizo de Speck**: manda `Speck.md` — ocurre en Acto 2, cuando el grupo entero ve su
+   comportamiento inteligente. Se movió de Acto 1 (dormida en la crisálida) en la ficha de
+   Darro, que además ahora se une último al grupo, no desde el inicio.
+4. **Gate F3**: el jugador cruza el borde **sin** Speck en la mano; el portador la suelta
+   después de que cruza.
+
+**13 CRITICAL resueltos** — las 4 decisiones arriba, propagadas a `Los 5 Finales`,
+`Estructura Dramática`, `Geografía y Ciudades`, y las 12 fichas; más 9 fixes de propagación
+mecánica: `Speck.md §Capa 4` pasó de 3 a **4 grados de agencia** (cedida ≠ arrebatada — F2a/F3
+no matan a Speck, solo F2b) y se propagó a `Briefs de Concept Art:187`; agente sustituto
+(Torgan/equipo de extracción) completado en F3/F4 de Bram y Nyael; Vekka corregida a Acto 1
+en dos lugares distintos de su propia ficha (se auto-contradecía); "Darro reclutado en el
+Driftmarket" purgado de la ficha de Bram (ya estaba resuelto en 6 archivos, solo faltaba
+propagarlo); los 5 años de servicio de Dagna, mal atribuidos a Roen en 2 líneas, corregidos
+a "el jugador"; topología de Cinder Ascent realineada a Ignis Reach en 3 lugares de
+`Geografía y Ciudades` (tenía 2 líneas asignándola a Aethelgard); Valen F2b y Roen F2b
+reescritos — el primero afirmaba que la muerte de Speck "era inevitable" (contradice la regla
+física de `Speck §Capa 5`), el segundo violaba la prohibición de tono de F2b ("ningún beat de
+aprendimos algo") con una línea casi idéntica a su propio F2a.
+
+**Quedan MEDIUM sin tocar para la 8ª** (no bloquean): mapeo Elder Circle→Final con dos
+versiones sin fuente declarada, si "exactamente tres flashes" sigue siendo regla (hay 4
+menciones de flashes extra en el texto), línea de Tobin sin traducción fiel del guión,
+aritmética de Torgan (20-72 → debería ser 20-75), hueco de 5 años en la cronología de Dagna,
+duplicación parcial del bloque de Old Tobin en `Geografía`, repeticiones de imagen entre
+epílogos (muerte de Maren/Vekka/Dagna, gesto de Torgan/Iven, tratado fantasma de Sereth),
+símbolo tallado de Darro que nunca aparece en su F3.
+
+**Estado: `check_canon.py` en 0 críticos / 0 MEDIUM tras los fixes, `check_vault.py` 🟢
+(~3,6k).**
+
+### Pendiente inmediato
+
+**8ª re-corrida QA con 2 subagentes Opus en frío** — validar que los 13 CRITICAL cerraron de
+verdad y no reabrieron nada antes de declarar el sprint cerrado. Las 2 decisiones de diseño
+pendientes (Elder Circle, conteo de flashes) quedan para resolver con Boris antes o durante
+esa corrida.

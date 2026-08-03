@@ -70,7 +70,7 @@ no elección.
 
 **Lo que viene después no es igual en todos los finales.** Speck no recupera la
 iniciativa por el solo hecho de sobrevivir: recupera exactamente la parte que el jugador
-le devuelve. Son tres grados distintos, y confundirlos es el error más fácil de cometer
+le devuelve. Son cuatro grados distintos, y confundirlos es el error más fácil de cometer
 al escribir epílogos.
 
 - **Le preguntan (F4):** el único final donde alguien le dirige la pregunta. Speck
@@ -82,8 +82,14 @@ al escribir epílogos.
   milenario. Eso es **aceptación**, no elección — dignidad frente a una decisión ajena.
   Desde afuera se parece al consentimiento, y ahí está la trampa del final: F1 se siente
   generoso porque Speck no protesta.
-- **Se la arrebatan (F2a, F2b, F3):** muere, es transportada o es encadenada. Ni pregunta
-  ni aceptación — ahí SÍ es pura víctima.
+- **Es cedida, no arrebatada (F2a, F3):** vive, y por eso puede ser transportada o
+  encadenada — la fuerza nunca entra en su cuerpo (§Capa 5). No hay pregunta ni
+  aceptación de su parte: es un objeto de la negociación de otros, pero un objeto
+  vivo, tratado con el cuidado mínimo que la mantiene intacta.
+- **Es arrebatada (F2b, y solo F2b):** el forcejeo transfiere fuerza mecánica y la mata.
+  Es la única de las cuatro donde "se la arrebatan" es literal, y la única vía por la
+  que Speck muere en el cráter (§Capa 5). Ni pregunta ni aceptación — ahí SÍ es pura
+  víctima.
 
 **Regla de escritura:** ninguna ficha puede hacer que Speck "elija" en F1. El verbo de F1
 es *aceptar*; el de F4 es *responder*. Colapsarlos borra lo único que distingue a F4

@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-30
+updated: 2026-08-02
 ---
 
 # Current State
@@ -61,7 +61,24 @@ No bloquea nada mientras tanto.
 
 ### 🔜 Pendiente para cerrar el sprint
 
-**7ª re-corrida QA.** Criterio: 0 críticos.
+**7ª re-corrida QA — corrida y procesada (2026-08-02), no cierra todavía.** Encontró
+**13 CRITICAL + 18 MEDIUM** (volumen más alto desde la 1ª ronda: el QA entró por
+primera vez a las 12 fichas de personaje, no solo a `Geografía`/`Estructura
+Dramática`). Detalle completo de las 6 decisiones de diseño de Boris y los fixes
+aplicados en [[LOG]] (entrada 2026-08-02). Resumen: gate F1/F2a rehecho (mensajero
+del Council completa la entrega, no el Pivote), orden fijo de "El Primero" (Roen →
+Valen → Pivote → Darro), bautizo de Speck movido a Acto 2, gate F3 sin Speck en
+mano al cruzar, agencia de Speck a 4 grados, mapeo Elder Circle→Final fijado por
+`Grove of Cycles`, "tres flashes" confirmado y desambiguado de la lectura de Tether.
+
+**Quedan MEDIUM sin tocar** (no bloquean, para la 8ª): línea de Tobin sin traducir,
+aritmética de Torgan (20-72→20-75), hueco de 5 años en cronología de Dagna,
+duplicación de Old Tobin en `Geografía`, repeticiones de imagen entre epílogos,
+símbolo tallado de Darro ausente en su F3.
+
+**Siguiente paso:** correr una **8ª re-corrida** (2 subagentes Opus en frío) para
+validar que los 13 CRITICAL cerraron de verdad y no reabrieron nada — recién ahí
+se declara el sprint cerrado. Linter en 0 críticos después de esta ronda de fixes.
 
 ### 🛠️ Herramientas del vault
 
