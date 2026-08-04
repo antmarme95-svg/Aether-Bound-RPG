@@ -170,6 +170,10 @@ Internamente, Bram sigue conectado al Council por señal cifrada que llega en fo
 
 En privado, alrededor del fuego, después de dos meses de camino, Bram empieza a contar cosas que no había contado en cuarenta años. Cortas. Historias de escolta. Nombres de compañeros muertos. Un chiste viejo de fuerte. El jugador las escucha sin forzar. Bram nunca contó estas cosas ni a los hombres que las vivieron con él — es raro que salgan ahora, con un grupo que no conoce el mapa mental de lo que describe. Lo raro es exactamente el punto: por primera vez en cuarenta años, hay alguien que escucha sin necesitarlo profesionalmente.
 
+### Encuentro de mundo abierto: las Compañías Impagas
+
+Si el grupo se cruza con una de **las Compañías Impagas** ([[Villanos Menores]] §Capa 1) en River Road, Bram se queda callado más tiempo del normal — más que con cualquier otra amenaza del mapa. No pelea distinto, no explica por qué. Es la puerta que él sí cruzó a tiempo.
+
 ### Sub-Acto 2A: Rivermeet (evita a House Thorne)
 
 En Rivermeet, Bram **evita activamente** el ala de la ciudad donde vive House Thorne. Cambia rutas, propone rodeos, sugiere cantinas más lejanas. El jugador lo nota. Bram no explica. Cuando el jugador insiste — *"¿Hay algo aquí que no quieres cruzar?"* — Bram responde: *"Vieja historia. No es de esta aventura."* Cierra la puerta con la misma cortesía con que House Thorne le enseñó a cerrar puertas hace cuarenta años.

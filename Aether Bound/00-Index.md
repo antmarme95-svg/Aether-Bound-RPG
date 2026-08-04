@@ -28,6 +28,9 @@
 - [[Visión y Pilares]] — la frase de visión y los 4 filtros de toda decisión.
 - [[El Mundo y la Muda]] — lore público vs. la revelación: God-Cores = cadáveres de Wardens; la Muda inconclusa.
 - [[Geografía y Ciudades]] — mapeo completo: 3 reinos + ciudades secundarias + zonas neutras + beats por acto + viajes.
+- [[Bestiario]] — eje de salud del Aether (Sano/Ambiental/Corrupto/Aberración), los 4 bosses ya nombrados + 3 nuevos que completan los 5 dungeons formales.
+- [[Flora y Ecosistemas]] — mismo eje aplicado a vegetación; el Jacarandá de Rivermeet, la Hoja de Maelys (referencia cruzada a Dagna).
+- [[Villanos Menores]] — amenazas de mundo abierto: 3 facciones de las razas existentes (Compañías Impagas, Sin Nombre, No Licenciados) + 2 razas nuevas no sapientes nacidas de la corrupción (Vaciados, Motas). Sin jefe final — decisión deliberada.
 - [[Estructura Dramática]] — 3 actos + nudo del Fragmento + traición por convicción + gancho de 3 polos.
 - [[Las Tres Razas]] — Elfos/Enanos/Humanos: temperamento, hábitat, por qué nadie quiere a Speck. Incluye tabla de longevidad (elfos 650-700 / enanos ~200-250 / humanos ~70-90).
 - [[Estructura Política]] — cómo se gobierna cada reino: Queen Ithessa + The Elder Circle + 2 Academias (elfos); King Borran + Great Forging Clan (enanos); Regent Edrick Ashcombe + Triune Council (humanos, sin dinastía estable). Nombres propios en inglés — ver [[Nomenclatura]].

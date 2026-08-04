@@ -200,6 +200,10 @@ Durante el Acto 2, Speck revela inteligencia. **Torgan la ve completa.** No como
 Jugador: *"Te confío a Speck. Mientras esté contigo, sé que está segura."*
 Torgan: *"Siempre."* (Mentira. Verdad. Ambas a la vez.)
 
+### Encuentro de mundo abierto: los Sin Nombre
+
+Si el grupo se cruza con una banda de **los Sin Nombre** ([[Villanos Menores]] §Capa 1) cerca de Cinder Ascent o Ironforge Outpost, Torgan pelea igual que siempre, pero lo dice después, sin que se lo pregunten: *"Pude haber sido yo. Casi lo fui, dos veces."* No explica cuáles. No hace falta.
+
 ### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Torgan entra, se queda de pie contra la pared del fondo, brazos cruzados sobre el tatuaje, y **no dice una palabra en todo el debate.**

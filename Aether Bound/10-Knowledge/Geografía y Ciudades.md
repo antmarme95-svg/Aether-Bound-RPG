@@ -236,7 +236,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Conexión narrativa: Donde se guardaban registros de La Muda
 - Mecanismo: Dungeon corto, acústica extraña (reverb infinito)
 - Loot: Mapa antiguo (muestra posición de otros God-Cores)
-- Enemigos: Guardianes automáticos dormidos (activables)
+- Enemigos: Guardianes automáticos dormidos (activables); boss: **The Mirror Stalker** ([[Bestiario]] §Los 4 bosses ya nombrados)
 - Momento de Speck: Speck reconoce símbolos, reacciona con miedo
 
 #### **The God's Throne** (Center, near El Nido)
@@ -315,7 +315,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Conexión narrativa: Río que alimenta Rivermeet nace aquí
 - Mecanismo: Co-op puzzle (cruzar cascada, plataformas mojadas resbaladizas)
 - Loot: Recursos de agua, minerales raros
-- Enemigos: Bestias de agua (teleportean por espuma)
+- Enemigos: **The Cascade Warden**, ave-bestia alfa territorial ([[Bestiario]] §Los 3 bosses nuevos)
 - Dinámicas: Si Roen/Maren juntos, comentan sobre origen del río de Rivermeet
 
 #### **The Ossuary Grove** (South, before First Wound)
@@ -331,9 +331,9 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 #### **The Hollow Deep** (East — Cueva conectada a Cinder Ascent)
 - Caverna extensa con múltiples niveles
 - Conexión narrativa: Túnel alternativo a Ignis Reach (avoid Cinder Ascent)
-- Mecanismo: Mini-dungeon corto (15-20 min), sin jefe final
+- Mecanismo: Mini-dungeon corto (15-20 min)
 - Loot: Recursos enanos, forja portátil (crafting point)
-- Enemigos: Bestias de cueva (ojos luminosos, evasivas en oscuridad)
+- Enemigos: **The Hollow Warden**, boss de cueva ([[Bestiario]] §Los 3 bosses nuevos)
 - Dinámicas: Si llevas Strategist puede "mapear" (reduce desorientación)
 
 #### **The Rift** (Center-East — Grieta del Aether)
@@ -349,7 +349,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Conexión narrativa: Antiguos pasillos de Warden (acceso alternativo a Sunken Archive?)
 - Mecanismo: Medio-acuático (movimiento restringido, oxígeno limitado)
 - Loot: Artefactos de Warden (equipo mágico avanzado)
-- Enemigos: Bestias acuáticas inteligentes (coordinadas, tácticas)
+- Enemigos: **The Drowned Choir**, boss coordinado de 3-5 unidades ([[Bestiario]] §Los 3 bosses nuevos)
 - Dinámicas: Roen puede "leer" escrituras de seguridad (es guardia)
 
 ### E) PUNTOS NARRATIVOS

@@ -45,22 +45,13 @@ hizo una sesión de diseño.**
 
 ### 🏗️ Fix de arquitectura — cerrado, 0 decisiones de diseño abiertas
 
-La mecánica del cráter, copiada a mano en 13 archivos, se centralizó en
-[[El Cráter — Matriz de Rutas]] (fuente única); `Los 5 Finales` y `Geografía
-§ACTO 3` podados; 8 chequeos nuevos en el linter. Detalle completo, incluidas
-las 4 decisiones de diseño ya resueltas (gate F4, homogeneización de los 7
-ejes F4-muerta, sabor de F4 con el beat de duelo en las 9 rutas, y agencia
-de Speck con el beat mínimo de "cedida" en `Speck.md §Capa 4`): [[LOG]].
-
-**Rondas 12ª-14ª (2026-08-04): 6 + 4 + 10 críticos, todos cerrados en la
-fuente.** 1 fue decisión de diseño real consultada a Boris (quién llora).
-El resto: beats obligatorios faltantes, superlativos colisionando entre
-archivos, y — patrón nuevo identificado en la 14ª — **datos triplicados
-sin fuente única** (el bloque "Superlativo Consolidado" vivía copiado en
-3 fichas de Pivote; ahora vive una vez en `Los 9 Pivotes §Superlativo
-Consolidado` y se cita). Detalle completo de las 3 rondas en [[LOG]].
-Quedan menores sin cerrar (no bloquean) y 1 hueco de canon genuino sin
-resolver (quién mueve el dinero de Iven, cruza con el rol de Maren).
+Cráter centralizado en [[El Cráter — Matriz de Rutas]] (fuente única).
+Rondas 11ª-14ª (2026-08-03/04): 4 decisiones de diseño resueltas + 20
+críticos de propagación/superlativo, todos cerrados en la fuente —
+detalle completo en [[LOG]]. Patrón recurrente y ya corregido: datos
+triplicados sin fuente única (ver "Superlativo Consolidado" ahora en
+`Los 9 Pivotes`). Quedan menores sin cerrar (no bloquean) y 1 hueco de
+canon genuino (quién mueve el dinero de Iven, cruza con Maren).
 
 **Falta lanzar la 15ª re-corrida** para confirmar cierre.
 
@@ -174,6 +165,38 @@ motor resuelve eso.
 - `.claude/worktrees/quirky-wiles-afa8a0/` — worktree real de git (rama
   `claude/strange-galileo-243fc7`, 62MB) con vault viejo adentro. No se tocó;
   revisar si hace falta.
+
+### ✅ Bestiario/Flora/Villanos menores — cerrado (2026-08-04)
+
+Hueco identificado por Boris: el vault no tenía criaturas, flora,
+ecosistemas ni villanos de mundo abierto con nombre propio (los 4 bosses
+que ya existían en Geografía nunca tuvieron ficha). Sesión de diseño
+completa — 3 archivos nuevos:
+
+- [[Bestiario]] — eje de salud del Aether (Sano/Ambiental/Corrupto/
+  Aberración) aplicado a toda la fauna dispersa; ficha para los 4 bosses
+  ya nombrados + 3 nuevos que completan los 5 dungeons formales (Hollow
+  Warden, Drowned Choir, Cascade Warden). God's Throne queda sin boss
+  nombrado a propósito — no compite con el peso de The First Wound.
+- [[Flora y Ecosistemas]] — mismo eje aplicado a plantas; incluye el
+  **Jacaranda de Rivermeet** (pedido de Boris) y sistematiza la Hoja de
+  Maelys ya existente en la ficha de Dagna.
+- [[Villanos Menores]] — decisión de Boris: **sin jefe final** de mundo
+  abierto (no hace falta, el antagonismo real es institucional/personal).
+  2 capas: facciones de las 3 razas ya establecidas (Compañías Impagas
+  humanas, Sin Nombre enanos, No Licenciados élficos — cada una anclada a
+  canon político ya escrito) + 2 razas nuevas **no sapientes** nacidas de
+  la corrupción del Aether (Vaciados = ex-personas mutadas, espejo oscuro
+  de Speck; Motas = enjambre menor, alivio cómico). Ninguna es 4ª
+  civilización — no contradice [[Las Tres Razas]].
+
+Se agregaron 2 líneas de reacción de mundo abierto (Bram y Torgan, ver
+sus fichas) y se asignaron los 3 bosses nuevos a sus dungeons en
+`Geografía y Ciudades`. `check_canon.py` 0 críticos tras el barrido.
+
+**Pendiente de esta sesión:** Mistbound Frontier sigue sin flora/fauna
+propia (anotado en [[Flora y Ecosistemas]], no bloquea). Falta meter esta
+pasada al loop de QA — mañana.
 
 ### Worldbuilding — abierto
 - **El Último Reino humano pre-Regencias:** construir backwards qué fue,

@@ -6988,3 +6988,63 @@ dinero de la promesa falsa es el Trade Consortium — que Maren dirige como Jefa
 archivo aborda ni excluye esa intersección bajo el canon de "los 9 existen simultáneamente".
 No bloquea el cierre. Quedan menores de rondas anteriores + nuevos de esta sin cerrar.
 **15ª re-corrida** pendiente de lanzar.
+
+## [2026-08-04] design/worldbuilding | Bestiario, Flora, Villanos Menores — hueco de mundo abierto cerrado
+
+**Diagnóstico de Boris:** el vault tenía worldbuilding narrativo completo (9 Pivotes, fijos,
+Speck, geografía, política) pero **cero** contenido de mundo abierto: sin bestiario, sin flora
+sistemática, sin ecosistemas por región, sin villanos menores, y los 5 dungeons ya bocetados en
+`Geografía y Ciudades` no tenían bosses propios. Auditoría confirmó: 4 bosses ya nombrados sin
+ficha (Crowned Leviathan, Burning Shepherd, Mirror Stalker, Aether Wyrm — cada uno con una sola
+línea), fauna genérica dispersa sin sistematizar, flora solo ambiental ("musgo", "enredaderas"),
+y 0 facciones antagonistas de mundo abierto.
+
+**Decisiones de Boris antes de escribir:**
+1. **Sin jefe final de mundo abierto** — el antagonismo real es institucional y personal (los
+   Pivotes), no un villano de mapa. No se fuerza uno.
+2. **Villanos menores: ambas capas** — facciones de las 3 razas existentes + 2-3 razas
+   fantásticas nuevas, máximo.
+3. **Jacarandá** (árbol favorito de Boris) plantado en Rivermeet, avenidas/plazas de la capital
+   humana.
+4. **Dungeons: solo formalizar los 5 ya bocetados** (Echoing Archive, Hollow Deep, Submerged
+   Halls, Shattered Cascade, God's Throne), sin agregar dungeons nuevos — evita inflar más el
+   alcance ya señalado como riesgo mayor del proyecto.
+
+**3 archivos nuevos:**
+
+- **[[Bestiario]]** — eje de salud del Aether (Sano → Ambiental → Corrupto → Aberración)
+  aplicado a toda la fauna. Los 4 bosses ya nombrados reciben ficha completa (viven en landmarks,
+  grado Aberración). 3 bosses nuevos completan los dungeons formales: **The Hollow Warden**
+  (Hollow Deep, caza por eco), **The Drowned Choir** (Submerged Halls, 3-5 unidades coordinadas),
+  **The Cascade Warden** (Shattered Cascade, alfa territorial no corrupto — la excepción). God's
+  Throne queda deliberadamente sin boss nombrado: no debe competir con el peso de The First
+  Wound, mismo principio de fuente única que protege los superlativos de personaje.
+- **[[Flora y Ecosistemas]]** — mismo eje aplicado a plantas. **El Jacarandá de Rivermeet**:
+  crece en la avenida principal, florece en púrpura una vez al año, plantado por alguien que
+  nadie recuerda en una ciudad que no tiene tiempo para jardines — contraste deliberado con el
+  pragmatismo de Rivermeet. Explícitamente **sin** grado de corrupción: no todo tiene que
+  significar algo sobre Speck. Sistematiza también la Hoja de Maelys ya existente (ficha de
+  Dagna, fuente única, no reescrita) y agrega 2 especies menores (Sauce de Vidrio, Musgo de Eco).
+- **[[Villanos Menores]]** — Capa 1 (facciones de las 3 razas, ancladas a política ya escrita):
+  **Compañías Impagas** (mercenarios humanos sin contrato — el destino que Bram esquivó),
+  **Los Sin Nombre** (enanos expulsados de clan — la sombra de Torgan/Dagna), **Los No
+  Licenciados** (elfos rechazados por ambas Academias, contrabando de Aether — eco distorsionado
+  de Sereth). Capa 2 (2 razas nuevas, **no sapientes**, nacidas de la corrupción — no rompen
+  [[Las Tres Razas]]): **Los Vaciados** (ex-personas mutadas por exposición a Aether corrupto,
+  espejo oscuro de Speck — ella reacciona distinto frente a uno, sin diálogo que lo explique) y
+  **Las Motas** (enjambre pequeño nacido de Aether cristalizado, alivio cómico, roban objetos
+  brillantes).
+
+**Propagación:** 2 líneas de reacción agregadas a fichas existentes (Bram ante las Compañías
+Impagas, Torgan ante los Sin Nombre — *"Pude haber sido yo. Casi lo fui, dos veces."*); los 3
+bosses nuevos asignados en `Geografía y Ciudades` (Hollow Deep, Submerged Halls, Shattered
+Cascade); Mirror Stalker referenciado en Echoing Archive. `00-Index.md` actualizado con los 3
+archivos nuevos.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Mistbound Frontier sigue sin flora/fauna propia (anotado en `Flora y Ecosistemas`, no bloquea).
+**Esta pasada entra al loop de QA mañana** (decisión de Boris) — no se lanzó ronda de re-corrida
+hoy para este contenido nuevo.
