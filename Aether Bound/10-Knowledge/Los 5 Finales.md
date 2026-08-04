@@ -65,7 +65,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 **Línea canónica:** *"Un recurso administrado no es un futuro. Pero mañana amanece."*
 
-**Eco Bond/Link Cam:** epílogo en Rivermeet, dos años después. El jugador pica Bond por costumbre. Speck responde débilmente, desde muy lejos — está viva, catalogada, y el Council la usa. La respuesta llega en la misma frecuencia jade, pero apagada, sin la calidez de antes (el único beat de interioridad que le corresponde a este grado está en [[Speck]] §Capa 4). Créditos con esa nota sostenida.
+**Eco Bond/Link Cam:** epílogo en Rivermeet, dos años después. El jugador pica Bond por costumbre. El eco vuelve débil y distante — está viva, catalogada, y el Council la usa — en la misma frecuencia jade de siempre, pero apagada. Es una señal, no una respuesta: el único beat de interioridad que le corresponde a este grado está en [[Speck]] §Capa 4, y no es este. Créditos con esa nota sostenida.
 
 **Sabor:** decepción, no tragedia. Compraste tiempo. El grupo se disuelve, y la disolución es fría — nadie odia al jugador, nadie lo perdona.
 
@@ -113,7 +113,7 @@ Una vez con Speck dentro del core, activa el vínculo por su cuenta y la encaden
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* se te une, en teoría. En la práctica, calcula tu caída desde el primer mes.
-- *Deber Institucional:* imposible — el arquetipo no puede convivir con esta ruta. Se va o muere confrontándote en el cráter mismo. Nyael desaparece antes de que amanezca, sin nota: es la única vez que no deja una.
+- *Deber Institucional:* imposible — el arquetipo no puede convivir con esta ruta. Se va o muere confrontándote en el cráter mismo. Nyael desaparece antes de que amanezca sin nota: es la única vez que no escribe.
 - *Rechazo/Ausencia:* Bram nunca te siguió tan lejos. Lyris no aparece en el epílogo.
 
 ---

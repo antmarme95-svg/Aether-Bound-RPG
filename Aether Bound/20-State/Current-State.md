@@ -12,7 +12,7 @@ updated: 2026-08-04
 
 **Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck +
 Old Tobin Hale + toda la estructura política y geográfica están escritos. El
-vault soporta escribir guión en cuanto cierre el sprint QA (14ª re-corrida,
+vault soporta escribir guión en cuanto cierre el sprint QA (15ª re-corrida,
 único pendiente — ver "Inmediato" abajo).
 
 **Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
@@ -52,30 +52,26 @@ las 4 decisiones de diseño ya resueltas (gate F4, homogeneización de los 7
 ejes F4-muerta, sabor de F4 con el beat de duelo en las 9 rutas, y agencia
 de Speck con el beat mínimo de "cedida" en `Speck.md §Capa 4`): [[LOG]].
 
-**12ª re-corrida (2026-08-04): 6 críticos, cerrados en la fuente.** 1 fue
-decisión de diseño real consultada a Boris (quién llora: Iven conserva la
-exclusividad, Dagna pasa a "se le quiebra la voz"); el resto, beats
-obligatorios faltantes y superlativos colisionando.
+**Rondas 12ª-14ª (2026-08-04): 6 + 4 + 10 críticos, todos cerrados en la
+fuente.** 1 fue decisión de diseño real consultada a Boris (quién llora).
+El resto: beats obligatorios faltantes, superlativos colisionando entre
+archivos, y — patrón nuevo identificado en la 14ª — **datos triplicados
+sin fuente única** (el bloque "Superlativo Consolidado" vivía copiado en
+3 fichas de Pivote; ahora vive una vez en `Los 9 Pivotes §Superlativo
+Consolidado` y se cita). Detalle completo de las 3 rondas en [[LOG]].
+Quedan menores sin cerrar (no bloquean) y 1 hueco de canon genuino sin
+resolver (quién mueve el dinero de Iven, cruza con el rol de Maren).
 
-**13ª re-corrida (2026-08-04): 4 críticos, los 4 residuo — no decisión
-nueva.** La 12ª había arreglado la línea reportada sin barrer la clase
-completa en 3 casos (colisión de "Darro se queda mudo" seguía en 3
-menciones no tocadas) y un fix de la 12ª introdujo un bug nuevo sin
-querer (Lyris F1 ejecutaba mecánica de F2b). El cuarto era cadena
-institucional de Iven desalineada en `Estructura Política.md`. Los 4
-cerrados + una porción grande de medios. Detalle completo de ambas rondas
-en [[LOG]]. Quedan menores sin cerrar (no bloquean).
-
-**Falta lanzar la 14ª re-corrida** para confirmar cierre.
+**Falta lanzar la 15ª re-corrida** para confirmar cierre.
 
 ### 🛠️ Herramientas del vault
 
 ```
 python "Aether Bound/scripts/check_vault.py"    # peso de arranque
-python "Aether Bound/scripts/check_canon.py"    # consistencia (20 clases)
+python "Aether Bound/scripts/check_canon.py"    # consistencia (21 clases)
 ```
 
-`check_canon.py` — **20 clases**. Las 12 originales: citas `§`, wikilinks,
+`check_canon.py` — **21 clases**. Las 12 originales: citas `§`, wikilinks,
 fuente única, aritmética de edades, longevidad, género, reinos, cuadrantes,
 diálogo, fichas duplicadas, huérfanos de índice. Las **6 nuevas (2026-08-03)**
 cubren la escena del cráter, que causó críticos en 4 rondas seguidas:
@@ -159,11 +155,10 @@ motor resuelve eso.
 
 ### 🗓 Inmediato — arrancar acá mañana
 
-1. **14ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
-   subagentes Opus en frío. La 12ª y 13ª (2026-08-04) encontraron 6 y 4
-   críticos respectivamente, todos cerrados en la fuente (detalle en
-   [[LOG]]); esta ronda debería confirmar el cierre o encontrar lo que
-   quedó.
+1. **15ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
+   subagentes Opus en frío. Las rondas 12ª-14ª (2026-08-04) encontraron
+   6+4+10 críticos, todos cerrados en la fuente (detalle en [[LOG]]);
+   esta ronda debería confirmar el cierre o encontrar lo que quedó.
 2. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
    bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
    los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el

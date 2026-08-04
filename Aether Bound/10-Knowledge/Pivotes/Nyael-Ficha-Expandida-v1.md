@@ -15,9 +15,9 @@ updated: 2026-07-27
 
 ## Esencia
 
-Duelist hoja silenciosa — existe principalmente para no existir. Maestra de invisibilidad, precisión, y **final definitivo.** Nyael es la más peligrosa porque no actúa con drama — actúa con eficiencia tan perfecta que solo después comprendes que fue atacada.
+Duelist hoja silenciosa — existe principalmente para no existir. Maestra de invisibilidad, precisión, y **final definitivo.** Actúa con eficiencia tan perfecta que solo después comprendes que fue atacada.
 
-La traición de Nyael es la más devastadora porque **no hay confrontación.** Solo ausencia. Solo nota.
+La traición de Nyael es *la traición como ausencia* — superlativo completo en [[Los 9 Pivotes]] §Superlativo Consolidado. **No hay confrontación.** Solo ausencia. Solo nota.
 
 **Arquetipos resonantes:** Jaqen H'ghar (A Song of Ice and Fire), el asesino que respeta al objetivo demasiado para confrontación dramática, el sacrificio hecho sin avisar.
 
@@ -101,7 +101,7 @@ Valen: *"¿Qué haces aquí?"*
 
 Nyael: *"Lo que hago en todos lados. Observar. Calcular. Esperar."*
 
-**Primera impresión:** Valen ve a alguien tan silencioso que es casi transparente. Hay respeto. También hay **advertencia de que es más peligrosa que cualquier otro en el grupo.**
+**Primera impresión:** Valen ve a alguien tan silencioso que es casi transparente. Hay respeto. También hay **advertencia de que, cuando actúe, no habrá forma de verla venir.**
 
 **Cuando traiciona:** Valen no está sorprendido. Simplemente dice: *"Dejaste nota."* Como observación, no pregunta.
 

@@ -45,7 +45,7 @@ La traición de Iven no es cálculo ni deber. Es **elección imposible entre dos
 
 Iven no tiene clan, gremio ni academia. **No tiene institución propia** — y eso lo distingue de los otros tres del arquetipo.
 
-Su cadena es la más corta y la más sucia del elenco:
+Su cadena es la más sucia del elenco — no la más corta (Maren, Vekka y Bram tratan directo, sin intermediarios; la de Iven tiene tres eslabones, empatada con la de Torgan), pero sí la que menos rastro institucional deja:
 
 **Triune Council → Trade Consortium → un agente sin nombre → Iven.**
 
@@ -621,7 +621,7 @@ A los defensores jóvenes que entrena les enseña combate por la mañana y otra 
 
 **Cuenta la historia entera, menos una parte.** Habla del maletín, del contacto, de la mentira, de la tercera vía que sí existió — se la sabe de memoria, la cuenta con detalle de testigo. Lo único que nunca cuenta es que fue **él** quien cargó a Speck hasta el borde, quien la sostuvo mientras el jugador decidía, quien la vio elegir. En su propia historia, Iven aparece como testigo, no como parte. No es modestia — es lo único que todavía le cuesta decir en voz alta: que quiso venderla, y que la persona a la que quiso vender terminó salvando a su gente de todos modos.
 
-Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y una vez al año hace el viaje al cráter transformado llevando **un cántaro de agua del pozo del asentamiento** — el pozo que volvió, el que estuvo seco veinte años — y la vuelca en la tierra al borde del core. No reza, no habla, no se queda. Es un gesto de agricultor: se le devuelve agua a lo que dio de comer.
+Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto.
 
 No pide perdón en F4 tampoco. **Pero acepta que lo perdonen**, que en Iven es la distancia entera entre sobrevivir y vivir.
 
@@ -707,21 +707,9 @@ Y eso es lo que rompe a Darro: **que Iven tiene razón, y la razón no lo absuel
 
 ---
 
-## Superlativo Consolidado
+## Superlativo
 
-**Iven es *la única traición sin respuesta correcta.***
-
-Coexiste sin colisión con el resto del elenco:
-- **Torgan** — el juramento sin escape.
-- **Vekka** — la traición más precisa.
-- **Dagna** — la traición que rompe al ancla.
-- **Bram** — el único rechazo activo.
-- **Maren** — la más peligrosa por cálculo puro.
-- **Sereth** — la más íntima.
-- **Nyael** — la traición como ausencia.
-- **Lyris** — la más fría.
-
-**Resolución del roce con Dagna.** [[Estructura Política]] y la ficha de Dagna la describen como la traición **más justificable institucionalmente**: hay una ley, la ley es legítima, la cadena es antigua y a Dagna se le quiebra la voz cumpliéndola. Es justificable **hacia afuera** — cualquiera puede señalar el estatuto que la obliga.
+Iven es *la única traición sin respuesta correcta* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado, incluida la resolución del roce con Dagna.
 
 Iven es otra cosa. **No tiene lado correcto que señalar.** Su traición no es defendible por una institución (no tiene ninguna), ni por un juramento (no juró nada), ni por un cálculo (nunca hizo cuentas frías). Es defendible únicamente por el hecho bruto de que **doscientas personas se están muriendo y él es lo único que tienen.** Y la posición contraria — que Speck no se toca — es igual de defendible por el hecho igual de bruto de que Speck es un ser vivo que confía en él.
 

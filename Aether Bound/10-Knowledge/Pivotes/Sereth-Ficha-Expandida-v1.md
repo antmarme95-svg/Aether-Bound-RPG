@@ -339,7 +339,7 @@ En dos años pide baja de la Academy. En cinco años deja de escribir. Muere de 
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Sereth suelta. Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cruza el borde hacia el core central, Sereth no forcejea — suelta a Speck al verlo cruzar, leyendo la situación con la misma frialdad académica de siempre. Sereth **se te une**, en teoría. Es de los pocos del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Sereth suelta. Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cruza el borde hacia el core central, Sereth no forcejea — suelta a Speck al verlo cruzar, leyendo la situación con la misma frialdad académica de siempre. Sereth **se te une**, en teoría. Es el único del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
 
 **En la práctica, calcula tu caída desde el primer mes.** Y — variante especialmente peligrosa — **te ayuda a caer bien.** Un tirano que colapsa mal arrastra a todos los que quedaron con él. Sereth diseña las condiciones para que, cuando caigas, caigas de una forma que le permita a él sobrevivir intacto. Te sirve con lealtad aparente durante años. Cada consejo que te da tiene dos capas: la superficial (te ayuda a gobernar) y la profunda (te empuja imperceptiblemente hacia decisiones que erosionan tu régimen).
 
@@ -384,6 +384,8 @@ El jugador es el único que carga la corrección, y no tiene dónde presentarla.
 ### Sereth + Roen (Conductor vs. Conciencia Institucional)
 
 **Primera impresión:** Roen ve a alguien que trabaja en instituciones desde adentro. Sereth ve a alguien que renunció a instituciones por conciencia.
+
+**Este intercambio ocurre años después, en el epílogo de F1** (ver §F1 — Sereth "pide baja de la Academy" en dos años), no durante la campaña: mientras dura la aventura, Sereth sigue activo, prestado por Queen Ithessa, y su mensajero en el cráter es de la Royal Academy.
 
 *"Dejaste la Royal Academy."*  
 *"La Academy no deja ir a nadie. Yo simplemente elegí no volver a presentarme."*  

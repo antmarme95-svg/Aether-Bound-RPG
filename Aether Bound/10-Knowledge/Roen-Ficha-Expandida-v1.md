@@ -196,7 +196,7 @@ Roen **no intenta detenerlo.** No porque sea débil, sino porque **entiende**. V
 
 Su reacción es la más devastadora del grupo: **silencio.**
 
-Mientras el Pivote se lleva el Fragmento y Speck, Roen pone una mano en el hombro del jugador.
+Mientras Speck reacciona en brazos del Pivote, Roen pone una mano en el hombro del jugador.
 
 Una mano. Sin palabras. **"Te sostengo."**
 
@@ -279,7 +279,7 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 ### Roen + Sereth (Elfo Strategist → Él)
 **Primera impresión:** Sereth es calculador, sutil. Roen ve las capas. Desconfía un poco, pero respeta el juego.  
 **Tensión:** Sereth manipula ligeramente el grupo. Roen lo nota. Nunca lo explica — solo lo ve.  
-**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello. Es la traición más honesta. *"I see you. I still won't let you do this."* Es, de las ocho traiciones que no son la de Dagna, la que más cerca llega de romperlo — no porque Sereth calcule como el Triune Council que mató a los niños de su asentamiento, sino porque **ama** como el Triune Council nunca amó, y aun así llega al mismo lugar. Roen se queda un momento largo sin decir nada más. No es el quiebre de Dagna — es su sombra.
+**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello — la traición más íntima del elenco, vista desde adentro ([[Los 9 Pivotes]] §Superlativo Consolidado). *"I see you. I still won't let you do this."* Es, de las ocho traiciones que no son la de Dagna, la que más cerca llega de romperlo — no porque Sereth calcule como el Triune Council que mató a los niños de su asentamiento, sino porque **ama** como el Triune Council nunca amó, y aun así llega al mismo lugar. Roen se queda un momento largo sin decir nada más. No es el quiebre de Dagna — es su sombra.
 
 ### Roen + Bram (Humano Vanguard → Él)
 **Primera impresión:** Dos humanos de culturas distintas. Bram de guerras, Roen de fronteras. Entienden cansancio similar.  

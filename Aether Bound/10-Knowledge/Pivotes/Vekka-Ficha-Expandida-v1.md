@@ -297,7 +297,7 @@ Después dice, más bajo, casi para sí:
 
 *"Termina de gritar. Después te ayudo a decidir qué haces con lo que queda."*
 
-Es la traición más fría del elenco. No aritmética como Maren, no manipulación como Sereth, no dogma emocional como Torgan, sino **oficio aplicado a un cuerpo vivo.** La decisión del jugador se toma aquí. Detener al mensajero, arrancarla del arnés, dejar que la entrega se complete, cruzar el borde por su cuenta, o preguntar — todos son movimientos posibles. Vekka no va a negociar, pero tampoco va a completar la entrega ella misma: eso le corresponde al mensajero, y ella se limita a esperar con el martillo listo.
+Es la traición más precisa del elenco. No aritmética como Maren, no manipulación como Sereth, no dogma emocional como Torgan, sino **oficio aplicado a un cuerpo vivo.** La decisión del jugador se toma aquí. Detener al mensajero, arrancarla del arnés, dejar que la entrega se complete, cruzar el borde por su cuenta, o preguntar — todos son movimientos posibles. Vekka no va a negociar, pero tampoco va a completar la entrega ella misma: eso le corresponde al mensajero, y ella se limita a esperar con el martillo listo.
 
 ---
 

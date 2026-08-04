@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Vanguard
 **Origen:** Subclán vasallo **Deepstone**, vasallo del Great Forging Clan (Ignis Reach)
-**Edad aparente:** 100 años (veterana, ~60 años en el rol de muralla)
+**Edad aparente:** 105 años (veterana, **aritmética fija:** 60 años de muralla en Deepstone desde los 40, más 5 años con el jugador — 40+60+5=105; toda cifra que diga "100" es residuo y está corregida acá)
 **Arquetipo de Traición:** Deber Institucional — cadena de vasallaje interiorizada como piedra. Superlativo: **la traición que rompe al ancla** (ver [[Los 5 Finales]]).
 
 ---
@@ -19,7 +19,7 @@ Vanguard muralla. Cuerpo como fortaleza. Sesenta años de estar entre la amenaza
 
 La traición de Dagna no viene del cálculo (Maren), ni del oficio (Vekka), ni del juramento personal (Torgan). Viene de **una cadena de vasallaje que la reclama desde antes de que ella naciera**, y que reclama a través de una gente — el subclán **Deepstone** — con la que Dagna sí tiene lazo genuino. Cuando el Great Forging Clan pide a través de Deepstone, Dagna no obedece al Great Forging Clan. Obedece a los suyos.
 
-Es la única Pivote del elenco a la que **se le quiebra la voz en el acto de traicionar** — una lágrima suelta, sin más. Y también la única que **camina** en lugar de huir después — porque quiere que el jugador la alcance.
+Es la única Pivote del elenco a la que **se le quiebra la voz en el acto de traicionar** — una lágrima suelta, sin más. Y también la única que camina despacio **para que la alcancen**, no por eficiencia como Vekka — porque quiere que el jugador la alcance.
 
 **Arquetipos resonantes:** Catelyn Stark (clan sobre grupo), el soldado que regresa a su tribu, la Vanguard del cuento que muere en el mismo puesto donde la asignaron.
 
@@ -234,13 +234,13 @@ En el corredor de ascenso, mientras el grupo se reagrupa después del tramo cola
 
 Dagna no dice palabra al tomarla. No se disculpa. **No huye rápido — camina.** Da la vuelta y empieza a subir el corredor con paso firme y ancho, sin ocultarse, dejando pasos claros en la ceniza del suelo.
 
-**Quiere que el jugador la alcance.** Es la única Pivote que camina en lugar de correr. Sabe que no puede irse sin que él la mire de frente. Es su forma de honrar cinco años sin haber dicho nunca la palabra: **darse tiempo para que él llegue.**
+**Quiere que el jugador la alcance.** Es la única Pivote que camina despacio *a propósito de que la alcancen* — Vekka también camina en su persecución, pero por eficiencia, no para ser encontrada. Dagna sabe que no puede irse sin que él la mire de frente. Es su forma de honrar cinco años sin haber dicho nunca la palabra: **darse tiempo para que él llegue.**
 
 El jugador dice, primero: *"Dagna."*
 
 Dagna no se detiene. Contesta sin girar la cara: *"Sube. Voy a esperarte arriba."*
 
-Nada más. Sube el corredor. Speck en brazos. Lágrimas silenciosas. Escudo golpeando la cadera con cada paso.
+Nada más. Sube el corredor. Speck en brazos. La lágrima ya seca. Escudo golpeando la cadera con cada paso.
 
 **Reacción del grupo:**
 
@@ -258,7 +258,7 @@ Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interi
 
 Dagna deja **pasos anchos, sin ocultarse.** No pone trampas (Maren). No toma ruta técnica (Vekka). No huye por atajos (Torgan). Camina rápido, en línea, hacia el cráter, dejando huella clara.
 
-El jugador, Roen, Valen y Darro la alcanzan **antes de que llegue al centro del cráter.** Dagna se detiene en el borde de First Wound, se gira, y espera. Speck en brazos, escudo colgado del hombro izquierdo, cara mojada seca al aire.
+El jugador, Roen, Valen y Darro la alcanzan **antes de que llegue al centro del cráter.** Dagna se detiene en el borde de First Wound, se gira, y espera. Speck en brazos, escudo colgado del hombro izquierdo, la cara otra vez quieta.
 
 No hay diálogo en la persecución. Roen y Dagna se miran una vez a media distancia. Roen frena el paso. Los demás lo pasan de largo. Dagna sigue esperando en el borde.
 
@@ -266,7 +266,7 @@ No hay diálogo en la persecución. Roen y Dagna se miran una vez a media distan
 
 **Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Dagna**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es del subclán **Deepstone**, subiendo desde dentro del cráter hacia el borde.
 
-Lo que distingue a esta ruta no es lo que hace Dagna — es **lo que le hace a Roen**. Es la única escena de cráter donde el quiebre emocional le pasa a un fijo y no al Pivote.
+Lo que distingue a esta ruta no es solo lo que hace Dagna — es también **lo que le hace a Roen**: es la única ruta donde el quiebre de un fijo (Roen — ver [[Los 9 Pivotes]] §Superlativo Consolidado, "la traición que rompe al ancla") pesa tanto como el de la propia Pivote.
 
 El jugador llega al borde del cráter. Se detiene a cinco pasos. Roen se detiene detrás, un poco a un lado. Valen queda más atrás. Darro queda el último, escudo bajo.
 
@@ -444,21 +444,9 @@ Valen lee a Dagna desde el primer día. Sabe que carga carta. Sabe que carga sil
 
 ---
 
-## Superlativo Consolidado
+## Superlativo
 
-**Dagna es *la traición que rompe al ancla.***
-
-Coexiste sin colisión con los superlativos del resto del elenco:
-- **Bram** — el único rechazo activo (no ejecuta).
-- **Torgan** — el juramento sin escape (deber personal, no institucional).
-- **Vekka** — la traición más precisa (oficio aplicado a un cuerpo vivo).
-- **Nyael** — la traición como ausencia (no aparece en el cráter).
-- **Sereth** — la más íntima.
-- **Maren** — la más peligrosa por cálculo puro.
-- **Iven** — la única sin respuesta correcta.
-- **Lyris** — la más fría.
-
-Cada Pivote tiene un centro emocional distinto. **Solo Dagna rompe a Roen.** Ese es su centro.
+Dagna es *la traición que rompe al ancla* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado. **Solo Dagna rompe a Roen.** Ese es su centro.
 
 ---
 

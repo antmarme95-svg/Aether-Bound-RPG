@@ -14,6 +14,30 @@ provisionales hasta el pase de naming. Sus links firma: [[Los 9 Links del Pivote
 
 ---
 
+## Superlativo Consolidado — fuente única
+
+**Cada Pivote tiene un eje de traición que no compite con el de otro.** Esta
+tabla es la única fuente: las 9 fichas la citan en vez de reenunciarla, y la
+sección "Esencia" de cada ficha no puede reclamar un superlativo que la tabla
+asigna a otro Pivote.
+
+| Pivote | Superlativo |
+|---|---|
+| **Vekka** | la traición más precisa (oficio aplicado a un cuerpo vivo) |
+| **Torgan** | el juramento sin escape (deber personal, no institucional) |
+| **Dagna** | la traición que rompe al ancla (la única que quiebra a Roen) |
+| **Bram** | el único rechazo activo (no ejecuta) |
+| **Maren** | la más peligrosa por cálculo puro |
+| **Sereth** | la más íntima |
+| **Nyael** | la traición como ausencia (no aparece en el cráter) |
+| **Lyris** | la más fría |
+| **Iven** | la única sin respuesta correcta |
+
+**Resolución del roce Dagna/Iven:** ambos tocan "institucionalmente
+justificable" — Dagna porque hay ley y cadena antigua, Iven porque no la hay y
+por eso su traición no tiene respuesta correcta. No colisionan: uno es tener
+la excusa perfecta, el otro es no tener ninguna.
+
 ## Canon: los 9 existen simultáneamente (decisión 2026-07-28)
 
 **Los 9 Pivotes no son variantes alternativas del mismo slot — son nueve personas

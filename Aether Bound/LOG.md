@@ -6928,3 +6928,63 @@ Menores sin cerrar de rondas anteriores más los nuevos de esta (aritmética de 
 años, "estuvo a un forcejeo de conseguirlo" en Iven, longevidad de los tres muertos que se
 leen como continuidad inmediata, frase rota en Vekka:326). No bloquean. **14ª re-corrida**
 pendiente de lanzar para confirmar el cierre.
+
+## [2026-08-04] sprint/QA | 14ª re-corrida — 10 críticos únicos, patrón nuevo identificado
+
+**2 subagentes Opus en frío.** Resultado combinado: **QA-Dramática 6 críticos**, **QA-Congruencia
+4 críticos** (sin solapamiento esta vez — son clases distintas), más ~12 medios entre ambos.
+**Diagnóstico de patrón, explícito en el propio reporte de QA-Dramática:** de los 6 críticos
+dramáticos, 4 eran el mismo bug estructural — **superlativos de exclusividad copiados en 3
+archivos distintos** (bloques "Superlativo Consolidado" idénticos en `Dagna-Ficha`, `Iven-Ficha`
+y `Torgan-Ficha`), que las secciones "Esencia" de **Vekka** y **Nyael** podían contradecir sin
+que ningún archivo lo notara — porque ninguno de los dos citaba la tabla, cada uno tenía su
+propia frase.
+
+**Fix estructural (no solo de línea):** se creó **`Los 9 Pivotes.md` §Superlativo Consolidado**
+como fuente única de los 9 ejes de traición. Las 3 copias en Dagna/Iven/Torgan se reemplazaron
+por una cita de una línea. Vekka ("la más fría" → "la más precisa") y Nyael ("la más peligrosa"
+→ sin reclamo, cede a Maren) se alinearon con la tabla ya establecida en vez de competir con
+ella. Mismo patrón que resolvió la Matriz del cráter en la 11ª ronda, aplicado ahora a un
+segundo tipo de dato triplicado.
+
+**Los otros críticos de QA-Dramática:** colisión residual "quién llora" (Dagna:243/261 seguían
+narrando llanto sostenido pese al desempate de la 12ª — corregido a coherente con "una
+lágrima"); "quién camina en vez de correr" (Dagna vs Vekka, diferenciado por motivo: Dagna para
+ser alcanzada, Vekka por eficiencia); "único quiebre de fijo en el cráter" (Dagna:269 vs la
+escena de Vekka/Darro, reformulado sin exclusividad); "cadena más corta" de Iven (factualmente
+falsa contra `Matriz §2` — Maren/Vekka/Bram son más cortas; corregido a "la que menos rastro
+deja").
+
+**Los 4 críticos de QA-Congruencia — todos residuo del propio fix de cadenas institucionales de
+la 13ª ronda:** al reescribir `Estructura Política.md` se insertó **King Borran** en las
+cadenas de Vekka, Torgan y Dagna de forma pareja, cuando el canon real no es uniforme (Vekka no
+pasa por Kadrun ni Borran; Torgan y Dagna sí pasan por Kadrun pero nunca por Borran). Reescritas
+las 3 líneas contra `Matriz §2` exacta. `Torgan-Ficha:38` tenía además una "nota de cadena" que
+citaba **verbatim** la versión vieja de `Estructura Política` para reconciliar una contradicción
+que ya no existía — eliminada. Y `Roen-Ficha:199` / `Darro-Ficha:220` describían al Pivote
+"llevándose el Fragmento" en el cráter — beat pre-Matriz (de cuando la traición ocurría ahí) que
+sobrevivió en los dos fijos con prohibición de narrar mecánica; corregido a que Speck simplemente
+reacciona, sin narrar qué pasa con el Fragmento.
+
+**Medios cerrados:** tabla de duelo F4-vivo de la Matriz ajustada para Darro (colapsa en público,
+no "a solas" — la ficha manda) y Roen (acotado a "él mismo lo distingue", no "el único que se lo
+dice al jugador"); doble beat de duelo de Iven en F4-vivo (se quitó el peregrinaje repetido,
+dejando solo la exclusión narrativa); Sereth F3 "de los pocos que se queda" → "el único"; segundo
+beat de interioridad de "cedida" en el eco Bond de F2a (Los 5 Finales:68) reformulado a señal
+mecánica, no respuesta con voluntad; superlativo de "traición más honesta" (Roen:282, de Sereth)
+realineado a "la más íntima"; "tercer/cuarto track" de Frontier High Command unificado a tercero,
+consistente con "las dos Academias"; rango "pasos 3-6" del equipo de extracción de Nyael
+corregido a "3-5" (el paso 6 es del jugador); "única vez que no deja nota" de Nyael en Los 5
+Finales alineado a "no escribe"; edad de Dagna corregida de 100 a 105 (la aritmética de la propia
+ficha suma 40+60+5); diálogo Sereth/Roen sobre dejar la Royal Academy re-anclado como epílogo de
+F1, no como algo que ya pasó durante la campaña activa.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Queda sin resolver un hueco de canon genuino (no un dato roto): en la ruta Iven, quien mueve el
+dinero de la promesa falsa es el Trade Consortium — que Maren dirige como Jefa de Ops — y ningún
+archivo aborda ni excluye esa intersección bajo el canon de "los 9 existen simultáneamente".
+No bloquea el cierre. Quedan menores de rondas anteriores + nuevos de esta sin cerrar.
+**15ª re-corrida** pendiente de lanzar.

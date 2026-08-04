@@ -35,8 +35,6 @@ Ambassador Kadrun → the Great Forging Clan → **el consejo del clan menor de 
 
 Torgan responde solo al último eslabón. Su consejo no puede negar una orden que ya bajó por la cadena, porque la existencia misma del clan menor depende de estar en buenos términos con el Great Forging Clan. Por eso Torgan puede cumplir "el Juramento" sin sentir que sirve a Kadrun: **el Juramento es a su clan menor, y su clan menor le pide obedecer.** La cadena entera lo blinda de tener que mirar a la fuente a la cara.
 
-**Nota de cadena (lectura conjunta con [[Estructura Política]]):** el resumen de Estructura Política registra la ruta institucional en taquigrafía (*"Torgan/Vekka/Dagna → Great Forging Clan → King Borran → Ambassador Kadrun"*). No hay contradicción: esa es la ruta vista desde arriba, donde la orden nace. Esta ficha describe la misma ruta vista desde abajo, donde la orden aterriza. El eslabón del clan menor no altera el origen — lo **oculta**, que es exactamente el diseño que Estructura Política describe cuando dice que la orden se disuelve en idiomas institucionales al bajar. El ejecutor final obedece por juramento sin conocer la fuente. Torgan es el caso de manual.
-
 **Diferencia con las otras dos enanas:**
 - **Vekka** — Guild Master del clan real, autoridad de Estado, cero eslabones intermedios.
 - **Dagna** — subclán vasallo hereditario, tres eslabones, nació dentro de la cadena.
@@ -540,19 +538,9 @@ Valen pregunta si el Juramento es variable mutable. Torgan: *"No. Es piedra."* V
 
 ---
 
-## Superlativo Consolidado
+## Superlativo
 
-**Torgan es *el juramento sin escape.***
-
-Coexiste sin colisión con el resto del elenco:
-- **Vekka** — la traición más precisa (oficio aplicado a un cuerpo vivo).
-- **Dagna** — la traición que rompe al ancla (la única que quiebra a Roen).
-- **Bram** — el único rechazo activo (no ejecuta).
-- **Maren** — la más peligrosa por cálculo puro.
-- **Sereth** — la más íntima.
-- **Nyael** — la traición como ausencia.
-- **Lyris** — la más fría.
-- **Iven** — la única sin respuesta correcta.
+Torgan es *el juramento sin escape* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado.
 
 El centro de Torgan es que **no hay puerta.** Vekka podría dejar la pieza sin desmontar y seguir siendo maestra. Dagna podría renunciar (y en F2b lo hace). Bram rechaza. Torgan es el único cuyo arquetipo **no admite salida en ninguna dirección**: cumplir lo destruye, no cumplir lo borra, y la tercera opción — que el objeto de la promesa desaparezca — es su peor final canónico. Las tres puertas están cerradas desde que tenía veinte años.
 

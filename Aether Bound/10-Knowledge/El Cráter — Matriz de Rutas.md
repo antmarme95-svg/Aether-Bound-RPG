@@ -38,7 +38,7 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
    el destino, porque el destino no lo elige el Pivote (paso 0).
    *Excepción — ruta Nyael:* Nyael toma a Speck en el corredor (paso 1), la pasa al **equipo
    de extracción** que activó, y **se retira antes de la persecución**. No llega al cráter.
-   El equipo cubre los pasos 3-6 en su lugar.
+   El equipo cubre los pasos 3-5 en su lugar; el paso 6 sigue siendo del jugador.
 3. **El Pivote se detiene en el borde del cráter**, con Speck en brazos, y **el Fragmento
    termina de activarse**: hive mind involuntario, Speck E1 → E3, los God-Cores despiertan uno
    a uno alrededor. Ocurre **al llegar**, no después — el pulso venía desde el Archive y acá
@@ -225,7 +225,7 @@ antes de escribir**, para no homogeneizar.
 
 | Personaje | Qué reconoce el duelo |
 |---|---|
-| **Roen** (fijo) | lo dice en voz alta al jugador — es el único que distingue actuar bien de salir ileso |
+| **Roen** (fijo) | lo dice en voz alta al jugador — es la única vez que **él mismo** distingue actuar bien de salir ileso (no la única vez que alguien se lo dice al jugador; Valen tiene su propia versión, ver fila abajo) |
 | **Torgan** | el cuerpo recuerda cargarla; el hábito no se rompe con el tiempo |
 | **Iven** | se excluye a sí mismo de la historia que cuenta, como testigo y no como parte |
 | **Dagna** | no puede volver al cráter transformado, ni una vez |
@@ -235,7 +235,7 @@ antes de escribir**, para no homogeneizar.
 | **Bram** | casi talla un nombre en la pulsera y no lo hace — no tiene categoría para esto |
 | **Maren** | deja de usar una variable de su modelo sin decírselo a nadie |
 | **Sereth** | intenta escribir la pregunta que le falta y tacha la mitad |
-| **Darro** (fijo) | celebra en el momento y colapsa después, a solas — ver su ficha, nota de escritura |
+| **Darro** (fijo) | celebra primero, colapsa delante del grupo en el mismo beat — y en privado, años después, es el único que nunca cuenta el final de la historia que sí cuenta — ver su ficha, nota de escritura |
 | **Valen** (fijo) | nombra el costo directamente al jugador: *"those cancel out"* que no cancelan nada |
 
 Esta tabla se escribe **antes** de tocar una sola ficha en la próxima ronda que la necesite

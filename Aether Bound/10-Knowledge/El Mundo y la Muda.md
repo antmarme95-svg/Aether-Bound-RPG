@@ -56,7 +56,7 @@ prefiere el statu quo"). **Casi todas** las órdenes hacia los 9 Pivotes vienen
 de las 3 cadenas de poder institucionales (Great Forging Clan, Royal Academy,
 Trade Consortium) que convergen en el mismo Council — una sola estrategia
 disuelta en 3 idiomas institucionales. Dos excepciones, por diseño: Lyris
-responde a Frontier High Command, un cuarto track fuera de las tres
+responde a Frontier High Command, un tercer track fuera de las dos
 academias ([[Estructura Política]] — *"Fuera de ambas Academias"*); Bram tiene
 **contrato directo con el Triune Council**, sin intermediario. Las 9 personas
 ejecutan, casi ninguna sabe que es parte del mismo plan.

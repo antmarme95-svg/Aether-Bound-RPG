@@ -217,7 +217,7 @@ Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive,
 
 ### Escena: The First Wound (Clímax Emocional — Darro Explota)
 
-El Pivote se llevó a Speck en el **corredor** del Archive — con el Fragmento — y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse y Speck reacciona.
+El Pivote se llevó a Speck en el **corredor** del Archive y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse y Speck reacciona.
 
 **Para Darro, la pérdida ya ocurrió río arriba. Esto es verla confirmarse.**
 
