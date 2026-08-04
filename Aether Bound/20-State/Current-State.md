@@ -12,8 +12,8 @@ updated: 2026-08-03
 
 **Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck +
 Old Tobin Hale + toda la estructura política y geográfica están escritos. El
-vault soporta escribir guión en cuanto cierre el sprint QA (7ª re-corrida,
-único pendiente).
+vault soporta escribir guión en cuanto cierre el sprint QA (12ª re-corrida,
+único pendiente — ver "Inmediato" abajo).
 
 **Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
 [[LOG]] y [[Current-State-Historico]]. Canon que quedó fijado ahí y sigue
@@ -170,12 +170,19 @@ motor resuelve eso.
 
 ## Pendientes
 
-### 🗓 Inmediato
-- **7ª re-corrida QA** (ver arriba) — único criterio de cierre del sprint.
-- **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
-  bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
-  los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el
-  Bond Vacío`. Arranca al cerrar el QA.
+### 🗓 Inmediato — arrancar acá mañana
+
+1. **Decisión de Boris: grados de agencia de Speck.** De los 4 grados
+   declarados en `Speck.md §Capa 4`, *cedida* (F2a/F3) no tiene interioridad
+   en ninguna parte del vault — en los 12 epílogos F3, Speck es un objeto sin
+   punto de vista. Es la única decisión de diseño que queda abierta de la
+   11ª ronda; sabor de F4 ya se cerró (ver arriba). No delegable sin él.
+2. **12ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
+   subagentes Opus en frío. Correr después de resolver (1).
+3. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
+   bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
+   los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el
+   Bond Vacío`. Arranca al cerrar el sprint.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond

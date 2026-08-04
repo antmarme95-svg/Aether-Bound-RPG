@@ -6766,3 +6766,14 @@ advertencia de método que la tabla de F4-muerta.
 **1 decisión de diseño para Boris**: los grados de agencia de Speck (*cedida* no tiene
 interioridad en ninguna parte del vault). Después de eso, **12ª re-corrida** (criterio de
 cierre del sprint: 0 críticos de 2 subagentes Opus en frío).
+
+## [2026-08-03] checkpoint | Cierre de sesión
+
+`Current-State.md` reordenado: la decisión de agencia de Speck queda como primer ítem de
+"Inmediato" para arrancar la próxima sesión directo ahí, seguida de la 12ª re-corrida y recién
+después la pregunta de bonds de fijos. Se corrigió además una referencia stale a "7ª
+re-corrida" en `## Estado general` que había quedado de antes del fix de arquitectura —
+apunta ahora a la 12ª.
+
+**Estado al cierre:** `check_canon.py` 0 críticos / 0 medium (20 clases). `check_vault.py`
+🟢, arranque de sesión ~3,670 tokens. Working tree limpio tras commit + push.
