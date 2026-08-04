@@ -65,7 +65,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 **Línea canónica:** *"Un recurso administrado no es un futuro. Pero mañana amanece."*
 
-**Eco Bond/Link Cam:** epílogo en Rivermeet, dos años después. El jugador picas Bond por costumbre. Speck responde débilmente, desde muy lejos — está viva, catalogada, y el Council la usa. La respuesta llega en la misma frecuencia jade, pero apagada, como quien está siendo consultada contra su voluntad. Créditos con esa nota sostenida.
+**Eco Bond/Link Cam:** epílogo en Rivermeet, dos años después. El jugador pica Bond por costumbre. Speck responde débilmente, desde muy lejos — está viva, catalogada, y el Council la usa. La respuesta llega en la misma frecuencia jade, pero apagada, sin la calidez de antes (el único beat de interioridad que le corresponde a este grado está en [[Speck]] §Capa 4). Créditos con esa nota sostenida.
 
 **Sabor:** decepción, no tragedia. Compraste tiempo. El grupo se disuelve, y la disolución es fría — nadie odia al jugador, nadie lo perdona.
 
@@ -105,7 +105,7 @@ Una vez con Speck dentro del core, activa el vínculo por su cuenta y la encaden
 
 **Línea canónica:** *"El Council me pidió que la entregara. Nunca dijeron a quién."*
 
-**Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada, trasladada desde el cráter una vez que el vínculo quedó bajo control del jugador, no del Council. Ningún compañero. El multi-link es un solo-link.
+**Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada, trasladada desde el cráter una vez que el vínculo quedó bajo control del jugador, no del Council. **Ningún compañero, ni siquiera el que se queda a operar contigo** (Maren, Sereth en sus rutas): la traición corta el Bond aunque la persona siga presente — servir a un tirano no es lo mismo que estar vinculado a él. El multi-link es un solo-link.
 
 **El único beat de interioridad permitido en "cedida"** está en [[Speck]] §Capa 4 (fuente única — no se reescribe acá). Las dos fichas que la tienen cerca durante años bajo el régimen (Maren, Sereth — las únicas que se quedan) lo citan en vez de dejarla completamente ausente de su propio cautiverio.
 

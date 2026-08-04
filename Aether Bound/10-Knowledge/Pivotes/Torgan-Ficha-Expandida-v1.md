@@ -330,7 +330,7 @@ En el último tramo, cuando ya se ve el cráter latir en el horizonte, Torgan **
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Torgan**. Secuencia: §1, pasos 1-7, sin excepciones. Su mensajero es del **clan menor** — no del Great Forging Clan, que es el que lo rechazó.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Torgan**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es del **clan menor** — no del Great Forging Clan, que es el que lo rechazó.
 
 Torgan llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Lo que distingue a esta ruta es que **Torgan es el único que espera de frente**: no le da la espalda al jugador ni al mensajero, y esa postura es deliberada.
 
@@ -442,7 +442,7 @@ Darro no va. No puede.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-**Imposible para Torgan.** El arquetipo no puede convivir con esta ruta. Que Speck sea encadenada bajo los términos del jugador no cumple el Juramento — lo deja abierto y además lo pone en manos de la persona a la que Torgan quiso. Es la peor combinación disponible: obligación incumplida más afecto convertido en enemigo.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Torgan suelta. **Imposible para Torgan.** El arquetipo no puede convivir con esta ruta. Que Speck sea encadenada bajo los términos del jugador no cumple el Juramento — lo deja abierto y además lo pone en manos de la persona a la que Torgan quiso. Es la peor combinación disponible: obligación incumplida más afecto convertido en enemigo.
 
 **Torgan muere confrontándote en el cráter.** No se une. No negocia. No informa a su clan.
 
@@ -471,8 +471,6 @@ Torgan pasa el resto de su vida siendo el único enano de Emberdeep con un juram
 **Y hay algo que la reinterpretación no arregla.** Torgan cargó a Speck en brazos desde el corredor del Archive hasta el borde del cráter — cincuenta y cinco años de Juramento resumidos en ese tramo. El cuerpo no lo olvida tan rápido como el consejo. Meses después, todavía hay noches en que se despierta con los brazos en la posición exacta en que la sostuvo, buscando un peso que ya no está. No se lo dice a nadie. No hay ritual enano para eso — el duelo del gremio es por juramentos, no por brazos que aprendieron una forma y no la quieren olvidar.
 
 Si el jugador lo visita, Torgan lo recibe distinto que en F2a: **le enseña la línea nueva.** Es la única vez en toda la campaña que Torgan muestra el brazo por voluntad propia.
-
-Y una vez al año, solo, baja al cráter transformado y apoya la palma abierta sobre la base del core central. El mismo gesto que le hizo a la piedra del Archive. Nunca se lo cuenta a nadie.
 
 **Epílogo — Torgan muerto** (cayó en la persecución o en el cráter). El Juramento queda **sin la reinterpretación que lo habría salvado.** Es la diferencia exacta con la variante viva: la corrección de alcance existe, el clan menor tiene la facultad de firmarla — pero la facultad se ejerce sobre un juramento vivo, y el de Torgan murió con él.
 

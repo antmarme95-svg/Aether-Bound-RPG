@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-03
+updated: 2026-08-04
 ---
 
 # Current State
@@ -12,7 +12,7 @@ updated: 2026-08-03
 
 **Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck +
 Old Tobin Hale + toda la estructura política y geográfica están escritos. El
-vault soporta escribir guión en cuanto cierre el sprint QA (12ª re-corrida,
+vault soporta escribir guión en cuanto cierre el sprint QA (13ª re-corrida,
 único pendiente — ver "Inmediato" abajo).
 
 **Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
@@ -52,7 +52,16 @@ las 4 decisiones de diseño ya resueltas (gate F4, homogeneización de los 7
 ejes F4-muerta, sabor de F4 con el beat de duelo en las 9 rutas, y agencia
 de Speck con el beat mínimo de "cedida" en `Speck.md §Capa 4`): [[LOG]].
 
-**Queda solo la 12ª re-corrida** para cerrar el sprint (ver "Inmediato" abajo).
+**12ª re-corrida corrida (2026-08-04): 6 críticos, todos cerrados en la fuente.**
+Detalle en [[LOG]]. Ninguno era propagación repetida — 5 eran superlativos de
+exclusividad colisionando entre archivos y beats obligatorios faltantes
+(Lyris F1/F2b, Iven F2b, Nyael F2a), 1 fue una decisión de diseño real
+consultada a Boris (quién llora: Iven conserva la exclusividad, Dagna pasa
+a "se le quiebra la voz"). También se cerró una porción grande de medios
+(rango de pasos de la Matriz, puntero circular Speck/Los 5 Finales, eco
+Bond de F3, línea canónica de Sereth, edad de Bram, geografía de Bram,
+gates faltantes, doble grieta de Vekka). Quedan menores sin cerrar (no
+bloquean). **Falta lanzar la 13ª re-corrida** para confirmar cierre.
 
 ### 🛠️ Herramientas del vault
 
@@ -145,9 +154,10 @@ motor resuelve eso.
 
 ### 🗓 Inmediato — arrancar acá mañana
 
-1. **12ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
-   subagentes Opus en frío. Las 4 decisiones de diseño de la 11ª ronda ya
-   están todas cerradas (ver arriba); no queda nada pendiente para correrla.
+1. **13ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
+   subagentes Opus en frío. La 12ª (2026-08-04) encontró 6 críticos, todos
+   cerrados en la fuente (detalle en [[LOG]]); esta ronda debería confirmar
+   el cierre o encontrar lo que quedó.
 2. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
    bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
    los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el

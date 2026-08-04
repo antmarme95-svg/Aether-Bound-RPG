@@ -247,7 +247,7 @@ Roen es quien **ve el futuro** — y quien dice en voz alta lo que los demás de
 
 Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que estén solos, esa misma noche, y dice lo que sí es cierto: *"This is what guarding looks like. Not what you own — what you honor."* Pausa. Y después, más bajo, la parte que no iba a decir: *"You did it right. That doesn't mean you get to keep her."*
 
-**Es la única vez en el juego donde Roen distingue entre haber actuado bien y haber salido ileso.** Los enterró a todos los que no protegió; a Speck la protegió, y la perdió igual. Esa distinción es nueva para él, y se la entrega al jugador porque sabe que nadie más se la va a decir.
+**Es la única vez en el juego donde Roen mismo distingue entre haber actuado bien y haber salido ileso** — no es la única vez que alguien se lo dice al jugador (Valen hace su propia versión, desde el costo y no desde el mérito), pero es la única vez que **a Roen** le toca decirlo, y lo dice como quien nombra algo que lleva enterrando desde Mistbound. Los enterró a todos los que no protegió; a Speck la protegió, y la perdió igual. Esa distinción es nueva para él.
 
 ---
 
@@ -309,7 +309,7 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 
 **La escena del Acto 1:** en una guardia nocturna compartida, Roen pregunta, casi sin voz: *"¿Cómo aguantaste sesenta años en el mismo puesto?"* Dagna contesta: *"No tuve tu opción."* No es reproche. Es constatación. Pero Roen carga esa frase el resto del juego — reaparece cada vez que duda, en el cráter, en el final.
 
-**La traición de Dagna es la que quiebra a Roen más hondo.** Sereth y Lyris también lo rompen — de verdad, no solo lo hieren (ver sus entradas arriba) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
+**La traición de Dagna es la única que rompe a Roen.** Sereth y Lyris lo doblan (ver sus entradas arriba) — Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz — pero doblarse es recuperable, y de las dos se recupera. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
 
 **El gesto físico:** en el cráter, **antes de que el jugador decida nada** — con Dagna quieta en el borde, Speck todavía en sus brazos y el mensajero de Deepstone acercándose — Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático: es un gesto pequeño y silencioso, el brazo que se afloja, el escudo que se desliza y cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. **Ocurre en las cinco rutas de esta celda, porque no es reacción a un final — es reacción a verla ahí parada.** Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
 

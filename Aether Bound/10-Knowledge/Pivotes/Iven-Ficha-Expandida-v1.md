@@ -459,7 +459,7 @@ No es negación de la información. Es un hombre pidiéndole a alguien que no le
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Iven**. Secuencia: §1, pasos 1-7, sin excepciones. Su "mensajero" es el **contacto del Consortium** — y la promesa que lo trajo hasta acá es falsa (§2, columna de excepción).
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Iven**. Secuencia: §1, pasos 1-6, sin excepciones. Su "mensajero" es el **contacto del Consortium** — y la promesa que lo trajo hasta acá es falsa (§2, columna de excepción).
 
 Iven llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor.
 
@@ -543,7 +543,7 @@ Si el jugador lo busca años después, Iven lo recibe, le da de comer, y **no me
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Iven **cumple.** Speck es entregada viva. El contacto se la lleva. Los God-Cores dejan de pulsar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega. Iven **cumple.** Speck es entregada viva. El contacto se la lleva. Los God-Cores dejan de pulsar.
 
 **Epílogo:** Iven vuelve al asentamiento a esperar el remedio.
 
@@ -565,7 +565,7 @@ Muere viejo, en un asentamiento vivo, financiado por un pago que compró con una
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento) — **su peor destino canónico**
 
-Speck muere en el cráter. No fue entregada, no fue liberada, no completó nada. Nadie ganó ([[Los 5 Finales]] F2b).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador. No existe otra vía de muerte. Speck muere en el cráter. No fue entregada, no fue liberada, no completó nada. Nadie ganó ([[Los 5 Finales]] F2b).
 
 **Sin Speck viva no queda absolutamente nada.** No hay remedio falso — el Council no paga por un cadáver, y el trato de Iven se disuelve sin que nadie se lo comunique. Y no hay maduración — el único mecanismo que de verdad podía sanar la zona murió en el fondo del cráter. **Las dos vías, la real y la inventada, se cierran en el mismo instante.**
 
@@ -577,7 +577,7 @@ El asentamiento no colapsa ese año. Ni el siguiente. La corrupción sigue su cu
 
 Entierra a todos. **Con sus manos, como siempre.** Cava para la mujer que lo crió cuando murió Sael. Cava para los niños que entrenó como defensores. Cava para el hombre que le tejió la cuerda de la muñeca. Les cierra las manos una por una y los pone mirando hacia el asentamiento, hacia un asentamiento que cada año tiene menos gente adentro para hacerles guardia.
 
-**Y sabe, todo el tiempo, que él fue la variable que cerró esa puerta.** Speck estaba viva, y el cráter era el único lugar donde algo podía cambiar de verdad para su gente. Iven la sacó del grupo, la corrió por The Scar of Breaking, la llevó ahí — y en el forcejeo, ahí se murió, antes de que nadie llegara a decidir nada. **La única vía real de curar el mundo murió cargada en sus brazos, por sus piernas, a su velocidad.**
+**Y sabe, todo el tiempo, que él fue la variable que abrió esa puerta.** Speck estaba viva, y el cráter era el único lugar donde algo podía cambiar de verdad para su gente. Iven la sacó del grupo, la corrió por The Scar of Breaking, la llevó ahí en sus propios brazos — y fue el jugador quien decidió arrancársela de ahí, en el borde, para impedir la entrega. Iven lo ve pasar de cerca: no es un accidente ni un forcejeo que se les fue de las manos a los dos. Es una decisión, tomada por otra persona, sobre algo que él cargó hasta ese punto exacto. **La única vía real de curar el mundo llegó cargada en sus brazos, por sus piernas, a su velocidad — y se cerró en una mano que no era la suya.**
 
 Nadie del asentamiento se lo echa en cara nunca — no saben. Lo quieren hasta el final. Lo llaman cuando hay que cavar. **Es la crueldad completa del final: muere querido por la gente a la que mató.**
 
@@ -587,7 +587,7 @@ Los últimos años queda casi solo. Se sienta a mirar el camino por donde llegar
 
 ### F3 — The Conqueror's Clause (el jugador toma el poder para sí)
 
-**Imposible para Iven.** El arquetipo del deber no puede convivir con esta ruta ([[Los 5 Finales]] F3).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Iven suelta. **Imposible para Iven.** El arquetipo del deber no puede convivir con esta ruta ([[Los 5 Finales]] F3).
 
 Y en su caso es más simple todavía: si el jugador encadena a Speck bajo sus propios términos, **el asentamiento no recibe nada de nadie.** Ni el remedio inventado, ni la maduración, ni el dinero. Iven cruzó la línea entera, quemó todo lo que tenía, y el resultado es que la criatura cambió de dueño.
 
@@ -721,7 +721,7 @@ Coexiste sin colisión con el resto del elenco:
 - **Nyael** — la traición como ausencia.
 - **Lyris** — la más fría.
 
-**Resolución del roce con Dagna.** [[Estructura Política]] y la ficha de Dagna la describen como la traición **más justificable institucionalmente**: hay una ley, la ley es legítima, la cadena es antigua y Dagna la cumple llorando. Es justificable **hacia afuera** — cualquiera puede señalar el estatuto que la obliga.
+**Resolución del roce con Dagna.** [[Estructura Política]] y la ficha de Dagna la describen como la traición **más justificable institucionalmente**: hay una ley, la ley es legítima, la cadena es antigua y a Dagna se le quiebra la voz cumpliéndola. Es justificable **hacia afuera** — cualquiera puede señalar el estatuto que la obliga.
 
 Iven es otra cosa. **No tiene lado correcto que señalar.** Su traición no es defendible por una institución (no tiene ninguna), ni por un juramento (no juró nada), ni por un cálculo (nunca hizo cuentas frías). Es defendible únicamente por el hecho bruto de que **doscientas personas se están muriendo y él es lo único que tienen.** Y la posición contraria — que Speck no se toca — es igual de defendible por el hecho igual de bruto de que Speck es un ser vivo que confía en él.
 

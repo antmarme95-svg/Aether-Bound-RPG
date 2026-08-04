@@ -183,7 +183,7 @@ Es la primera vez que el grupo entiende que **para Vekka los Warden no son mitol
 
 ## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición al Salir
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Vekka**. Secuencia: §1, pasos 1-7, sin excepciones — toma a Speck en el corredor, la carga hasta el **borde** del cráter, y espera ahí al mensajero del Great Forging Clan.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Vekka**. Secuencia: §1, pasos 1-6, sin excepciones — toma a Speck en el corredor, la carga hasta el **borde** del cráter, y espera ahí al mensajero del Great Forging Clan.
 
 Lo que distingue a Vekka no es *dónde* se detiene sino **cómo espera**: es la única que convierte la espera en trabajo. Monta el yunque, fija la pieza, revisa los tornillos. Para el grupo que la persigue, eso se lee como una ejecución en curso — y esa lectura errónea es exactamente el efecto que Vekka produce sin proponérselo.
 
@@ -247,7 +247,7 @@ Vekka contesta, sin girarse:
 
 Guarda el cincel. Sigue caminando.
 
-**Con Darro:** Darro grita algo desde lejos. No es una palabra articulada. Vekka lo escucha. Se detiene un segundo. Cierra los ojos. Sigue. Es la única grieta visible de la ficha, y es breve.
+**Con Darro:** Darro grita algo desde lejos. No es una palabra articulada. Vekka lo escucha. Se detiene un segundo. Cierra los ojos. Sigue. Es la única grieta de la persecución — breve, y menor comparada con lo que pasa en el cráter (ver §sub-beat 5).
 
 **Con Valen:** Valen le pregunta a distancia: *"¿Incluiste lo que vio el jugador en el Archive en tu diagnóstico?"* Vekka contesta: *"Sí. No cambia la operación. Cambia el respeto."*
 

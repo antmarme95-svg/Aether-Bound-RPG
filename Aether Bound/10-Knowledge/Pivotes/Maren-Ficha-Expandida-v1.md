@@ -294,7 +294,7 @@ Conversaciones clave:
 
 ### Sub-beat 5: Quiebre en First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Maren**. Secuencia: §1, pasos 1-7, sin excepciones. El mensajero del Council sube desde dentro del cráter hacia el borde.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Maren**. Secuencia: §1, pasos 1-6, sin excepciones. El mensajero del Council sube desde dentro del cráter hacia el borde.
 
 Lo que distingue a Maren es que **no hay escena.** Los otros ocho Pivotes tienen un quiebre — un discurso, un forcejeo, una grieta visible. Maren simplemente sostiene a Speck y espera, con la misma cara con la que espera un envío atrasado en el muelle de Rivermeet. Ya tuvo su escena en el corredor del Archive; esto es la parte administrativa. Si el jugador viene buscando una confrontación, no la va a encontrar: encuentra a una mujer haciendo tiempo hasta que llegue quien tiene que llegar.
 
@@ -362,7 +362,7 @@ Speck responde y **cruza el borde sola**. Maren abre las manos y la deja ir — 
 
 Cambia sus cuentas — es literal, no metáfora. En su cuaderno personal, las variables ya no son "vidas × probabilidad × utilidad". Son otras cosas. No sabe nombrarlas todavía.
 
-**Una variable, sin embargo, no la vuelve a usar.** Nunca más pone a nadie en una columna de utilidad marginal sin preguntarse antes si esa persona es Speck — es decir, si es alguien a quien el modelo describiría mal por definición. No lo dice en voz alta, no lo enseña, no lo escribe en ningún tratado. Es una revisión que corre en silencio antes de cada cálculo, y que ninguna cifra en el cuaderno registra jamás.
+**Una variable, sin embargo, no la vuelve a usar.** Nunca más pone a nadie en una columna de utilidad marginal sin preguntarse antes si esa persona es Speck — es decir, si es alguien a quien el modelo describiría mal por definición. No lo enseña, no lo escribe en ningún tratado. Pero un aprendiz de Ops, con los años, empieza a notar la pausa: Maren se detiene medio segundo antes de cerrar cualquier cálculo sobre una persona, como si revisara algo contra una lista que nadie más puede ver. Le pregunta una vez. Maren contesta: *"Costumbre vieja."* No es mentira. Tampoco es toda la verdad.
 
 Años después, Rivermeet funciona sin Aether, y funciona porque ella pasó una década resolviendo cómo. Maren no se lo apunta como logro; se lo apunta como deuda. Deja un mensaje al jugador, sin firma: *"La ecuación se completó diferente. No mejor — diferente, y con una variable que yo había puesto en la columna equivocada. Sigo sin saber dónde va."* No hay agradecimiento en la nota, y tampoco hay paz: Maren pasa el resto de su vida reconstruyendo una ciudad con el método que le falló, porque es el único que tiene.
 

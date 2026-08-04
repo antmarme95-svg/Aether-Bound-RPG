@@ -86,11 +86,11 @@ al escribir epílogos.
   encadenada — la fuerza nunca entra en su cuerpo (§Capa 5). No hay pregunta ni
   aceptación de su parte: es un objeto de la negociación de otros, pero un objeto
   vivo, tratado con el cuidado mínimo que la mantiene intacta. **Único beat de
-  interioridad permitido en este grado** (decisión de Boris, 2026-08-04; texto
-  completo y uso en [[Los 5 Finales]] §F3): sostiene la mirada de quien la
-  retiene sin apartarla — ni desafío ni súplica, la misma atención inmóvil de un
-  animal no domesticado ante lo que no controla. Confirma que hay alguien
-  adentro sin cruzar a voluntad ni consentimiento.
+  interioridad permitido en este grado, fuente única** (decisión de Boris,
+  2026-08-04; uso citado desde [[Los 5 Finales]] §F3): sostiene la mirada de
+  quien la retiene sin apartarla — ni desafío ni súplica, la misma atención
+  inmóvil de un animal no domesticado ante lo que no controla. Confirma que
+  hay alguien adentro sin cruzar a voluntad ni consentimiento.
 - **Es arrebatada (F2b, y solo F2b):** el forcejeo transfiere fuerza mecánica y la mata.
   Es la única de las cuatro donde "se la arrebatan" es literal, y la única vía por la
   que Speck muere en el cráter (§Capa 5). Ni pregunta ni aceptación — ahí SÍ es pura

@@ -219,7 +219,8 @@ RE_TOMA_A_SPECK = re.compile(
 # Un superlativo de reacción vale en UN solo lugar del vault (Matriz §Corolario).
 RE_SUPERLATIVO = re.compile(
     r"(?:la\s+[uú]nica\s+vez|el\s+[uú]nico\s+momento|la\s+escena\s+m[aá]s\s+grande|"
-    r"lo\s+m[aá]s\s+raro\s+posible)\b[^.\n]{0,80}", re.IGNORECASE)
+    r"lo\s+m[aá]s\s+raro\s+posible|la\s+[uú]nica\s+traici[oó]n|el\s+[uú]nico\s+de\s+los\s+nueve|"
+    r"la\s+[uú]nica\s+que\b)\b[^.\n]{0,80}", re.IGNORECASE)
 NOMBRES_FIJOS = ("darro", "roen", "valen")
 # Solo verbos de ESCENA (los que reconstruyen el quiebre paso a paso). Mencionar
 # el evento en subordinada para hablar de la reacción propia es correcto y es lo

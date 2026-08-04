@@ -301,7 +301,7 @@ Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Lyris**. Secuencia: §1, pasos 1-7, sin excepciones. Su mensajero es de **Frontier High Command**, subiendo desde dentro del cráter hacia el borde.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Lyris**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es de **Frontier High Command**, subiendo desde dentro del cráter hacia el borde.
 
 Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. **Es la única del elenco que espera sin tocar el suelo**, y eso la vuelve la más fácil de alcanzar y la más imposible de detener: nadie sabe si va a bajar o irse. La aritmética que trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
 
@@ -319,7 +319,7 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Frontier High Command queda neutralizado antes de llegar hasta ella.
 
-Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, sosteniendo a Speck, y sostiene la mirada del jugador un segundo antes de **bajar el vuelo por su cuenta** — deja a Speck en tierra sin que nadie se la arranque. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y una variable sin cadena no es su problema.
+Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, **sosteniendo a Speck sin bajarla** — no la suelta, no la entrega, no la lleva a ningún lado. Sostiene la mirada del jugador hasta que él la alcanza y se la quita de los brazos. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y sin cadena no hay instrucción para lo que sigue.
 
 Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
@@ -341,7 +341,9 @@ Ella asciende dentro de la cadena militar — Frontier High Command reconoce su 
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-**Lyris desaparece.** No hay cuerpo, no hay nota, no hay comunicación a Frontier High Command reportando el resultado. Podría haber caído en la persecución, podría haber renunciado, podría haber elegido no volver. El vacío es el epílogo.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador, en el aire, en el borde. No existe otra vía de muerte. Lyris no forcejea por retenerla: forcejear a esa altura las tira a las dos, y de cualquier modo el Fragmento ya hizo su trabajo antes de que el cuerpo de Speck llegue al suelo.
+
+**Lyris desaparece después.** No hay cuerpo propio, no hay nota, no hay comunicación a Frontier High Command reportando el resultado. Podría haber caído en la persecución, podría haber renunciado, podría haber elegido no volver. El vacío es el epílogo.
 
 Frontier High Command marca su expediente como "no retornada"; envían nueva rastreadora. El ciclo continúa. El Council, más arriba, tacha una línea de un registro que nadie verá. Nadie del Bound Five sabe si Lyris está viva. Nunca lo sabrán.
 
@@ -365,7 +367,7 @@ Speck responde y **cruza el borde sola**. Lyris baja el vuelo y abre las manos. 
 
 Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de campamento, se sienta al lado del jugador sin motivo aparente. Se queda hasta el amanecer. No hablan. Al amanecer despega. Vuelve la noche siguiente. Ese es su epílogo: presencia repetida donde antes había ausencia.
 
-**Hay un vuelo que nunca comparte.** De vez en cuando, sola, sube más alto de lo necesario y traza un círculo lento sobre el cráter — la única vista aérea que existe del core central, la única persona con ángulo para verlo completo. Nunca aterriza ahí. Nunca se lo cuenta a nadie, ni siquiera al jugador. Es el único hábito de su vida anterior que conserva intacto: mirar desde arriba lo que no puede tocar.
+**Hay un vuelo que no explica.** De vez en cuando, sola, sube más alto de lo necesario y traza un círculo lento sobre el cráter — la única vista aérea que existe del core central, la única persona con ángulo para verlo completo. Nunca aterriza ahí. Cualquiera que mire el cielo esos días la ve — no se esconde, no podría aunque quisiera — pero nadie sabe qué significa el círculo, y ella no se lo explica a quien pregunta. El jugador la ve hacerlo dos o tres veces a lo largo de los años y deja de preguntar después de la primera respuesta: *"Miro."*
 
 **Epílogo — Lyris muerta** (cayó en la persecución o en el cráter). Lo específico de su muerte no es lo que se pierde con ella. Es **cuándo ocurre.**
 

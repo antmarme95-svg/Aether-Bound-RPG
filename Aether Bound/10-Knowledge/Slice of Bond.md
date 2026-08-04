@@ -17,8 +17,8 @@ Razones: (1) el momentum chaining / supersalto del prototipo (PRD-005,
 aceptado en playtest) **ya es la base técnica del link** — media mecánica
 está construida; (2) orfandad mecánica máximamente legible: perderla = perder
 la verticalidad, peleas a ras de suelo ([[Los 9 Links del Pivote]]); (3) el
-quiebre de Dagna (la ley del clan pesa más que el nido; llora mientras lo
-hace) es de los beats más fuertes de [[Los 9 Pivotes]]; (4) Humano = ROM de
+quiebre de Dagna (la ley del clan pesa más que el nido; se le quiebra la voz
+mientras lo hace) es de los beats más fuertes de [[Los 9 Pivotes]]; (4) Humano = ROM de
 referencia del rig ([[Movilidad Realista]]) — el esqueleto más barato de
 hacer bien primero.
 

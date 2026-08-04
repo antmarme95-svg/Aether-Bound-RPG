@@ -6810,3 +6810,74 @@ decide no leerla porque hacerlo sería tratarla como un dato más.
 **Cierra la última de las 4 decisiones de diseño abiertas de la 11ª ronda** (gate F4,
 homogeneización F4-muerta, sabor de F4, agencia de Speck — las 4 resueltas). Solo queda la
 **12ª re-corrida** para cerrar formalmente el sprint.
+
+## [2026-08-04] sprint/QA | 12ª re-corrida — 6 críticos encontrados y cerrados
+
+**2 subagentes Opus en frío** (QA-Dramática, QA-Congruencia), sin contexto de los fixes
+previos, sobre el vault completo. Resultado combinado: **6 críticos únicos** (con
+solapamiento entre los dos reportes), ~15 medios, ~13 menores. El sprint no cerró en esta
+pasada — se resolvieron los 6 críticos y una porción sustancial de los medios en la misma
+sesión.
+
+**Los 6 críticos y su fix:**
+
+1. **"Darro se queda mudo" reclamado por 4 escenas** (cráter de Vekka, traición de Dagna,
+   Darro+Roen sentados, The Reckoning) — el corolario de superlativos de `Matriz:249` estaba
+   escrito pero el chequeo del linter no cubría las variantes de frase ("única traición",
+   "no tiene broma lista"). **Fix de contenido:** Vekka conserva el "se queda mudo" literal
+   (el más cargado, ligado a su propio pasado); Dagna pasa a "no le sale ningún chiste"
+   (pierde el registro, no la voz); The Reckoning pasa a "titubea un segundo". **Fix de
+   linter:** `RE_SUPERLATIVO` extendido con "la única traición", "el único de los nueve",
+   "la única que" — 21 clases en total.
+2. **Lyris sin beat obligatorio en F1 y F2b** — única de los 45 epílogos así. F1: ahora se
+   queda sosteniendo a Speck (no la suelta sola). F2b: gate agregado, el jugador se la
+   arranca en el aire.
+3. **Los 10 epílogos F4-vivo homogeneizados en FORMA** (9/10 "secreto que no comparte con
+   nadie", 3 con "peregrinaje anual al cráter" literal) — pese a que el contenido de cada
+   eje ya era distinto. **Segunda lección de método registrada en `Matriz §4`:** contenido
+   distinto con forma idéntica sigue siendo homogeneización. Fix: eliminado el peregrinaje
+   duplicado de Torgan (quedó solo en Iven); Lyris y Maren pasan a visibilidad parcial (el
+   jugador/un tercero nota algo sin que se explique) en vez de secreto total.
+4. **Iven F2b le sacaba la agencia al jugador** ("se murió antes de que nadie decidiera
+   nada") — reescrito: el jugador se la arranca activamente, Iven lo ve de cerca.
+5. **Ruta Nyael reinventaba la física del Fragmento** (el equipo forcejea junto al core y
+   Speck sobrevive, con un "se corta el hive mind al dejar de forcejear" inexistente en
+   ninguna otra parte). **Fix en la fuente:** nota de excepción nueva en `Matriz §2`
+   explicando cómo se satisface el beat de F2a cuando holder = agente (el equipo simplemente
+   espera, como cualquier mensajero retenido — no forcejea, no hay mecánica nueva). La ficha
+   de Nyael se reescribió para citarla.
+6. **"Solo Dagna rompe a Roen" contradicho dentro del mismo archivo que lo canoniza** —
+   residuo de propagación, no decisión nueva: `Dagna-Ficha` corrige explícitamente el
+   hallazgo ("es Dagna, no Lyris") y 300 líneas después lo reintroduce. Restaurado en las 3
+   menciones (`Dagna-Ficha`, `Roen-Ficha` ×2) a "Sereth y Lyris doblan, Dagna rompe".
+
+**Una decisión de diseño real, no residuo, consultada a Boris vía AskUserQuestion:** Iven
+declara "soy el único de los 9 Pivotes que llora en escena", pero Dagna tenía un sub-beat
+titulado "la única que llora" con múltiples menciones, y Geografía le daba a Bram una línea
+de "llora aquí, única vez". **Decisión de Boris:** Iven conserva la exclusividad; Dagna pasa
+a "se le quiebra la voz, una lágrima suelta" (no llanto); Bram pierde el "única vez". Barrido
+completo de la clase en `Dagna-Ficha` (×4), `Los 9 Pivotes`, `Slice of Bond`, `Geografía`,
+residuo cruzado en `Iven-Ficha:724`.
+
+**Medios cerrados en la misma pasada (no exhaustivo, ver commit):** rango "§1, pasos 1-7"
+corregido a "1-6" en 7 fichas + la plantilla de la Matriz (el rango real es paso 0 + pasos
+1-6); puntero circular entre `Speck.md` y `Los 5 Finales.md` sobre el beat de "cedida"
+resuelto (fuente única real: `Speck.md`); eco Bond de F3 aclarado (la traición corta el Bond
+aunque la persona se quede sirviendo); línea canónica de Sereth restaurada a inglés (única de
+las 9 que estaba en español, con nota de traducción pendiente para la escena completa); edad
+de Bram en línea privada corregida (60→55); Geografía de "Bram's Last Stand" reescrita
+(desgaste administrativo, no masacre puntual — contradecía la biografía de la ficha); Dagna
+F2b/F3 con lenguaje mecánico corregido (mensajero no puede ser holder; "eso la mataría", no
+"eso mataría al Fragmento"); 8 epílogos sin cita de gate ahora la tienen (Iven F2a/F3, Sereth
+F3, Torgan F3, Nyael F2a/F2b); Vekka's doble "única grieta" escalado (persecución = menor,
+cráter = la grande); M3 Roen/Valen (ambos "explicaban lo mismo" en F4) resuelto acotando la
+exclusividad de Roen a "él mismo lo distingue", no "es el único que se lo dicen al jugador".
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Quedan menores sin cerrar (ubicación de la negociación de Maren en Geografía vs su ficha,
+Sereth "calculista" vs su propio contraste declarado, cruce de fechas Maren×Roen contra la
+cadencia de Regents, aritmética interna de Nyael, fuerza mecánica de Nyael sobre Speck en el
+corredor) — no bloquean el cierre del sprint. **13ª re-corrida** pendiente de lanzar.

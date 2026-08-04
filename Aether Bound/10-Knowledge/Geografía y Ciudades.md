@@ -514,12 +514,12 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   - Valen: "sé de este lugar. Respeto tu privacidad"
 
 #### **Bram's Last Stand** (Center, scorched earth)
-- Llanura quemada con cruces improvisadas y armaduras oxidadas
-- Conexión narrativa: Donde su compañía mercenaria fue masacrada
-- Mecanismo: Tumbas de soldados (nombre de Bram's fallen junto)
+- Llanura con cruces improvisadas y armaduras oxidadas, acumuladas a lo largo de años, no de una sola batalla
+- Conexión narrativa: donde se disolvió una de sus dos compañías, cuando el contrato terminó y nadie lo renovó — desgaste administrativo, no masacre puntual ([[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §Biografía)
+- Mecanismo: Tumbas de soldados caídos en distintos contratos a lo largo de los años (nombre de Bram's fallen junto)
 - Loot: Mercenary insignia (equipment token)
 - Dinámicas:
-  - Bram: llora aquí (única vez vulnerabilidad directa)
+  - Bram: se detiene más de lo normal, sin explicarlo
   - Bram: "no debería volver"
   - Roen: reconoce a algunos soldados caídos
 

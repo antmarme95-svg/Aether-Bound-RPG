@@ -192,7 +192,7 @@ Brazo encubierto: *"Confirma cuando sea tiempo de capturar. Recordatorio: viva e
 
 Speck revela inteligencia.
 
-Nyael lo ve. Nyael siente — por primera vez en vida, Nyael siente algo hacia objetivo. **Compasión.** O al menos, reconocimiento de que Speck es consciente de la muerte que viene.
+Nyael lo ve. Nyael siente — por primera vez en vida, Nyael siente algo hacia objetivo. **Compasión.** O al menos, reconocimiento de que Speck es consciente de la captura que viene.
 
 Nyael considera: ¿capturar ahora, mientras es inocente? ¿O esperar al punto de máxima cohesión del grupo, para que la ausencia sea la evidencia?
 
@@ -228,7 +228,7 @@ En el corredor de ascenso, Nyael se retrasa medio paso — no cinco, medio. La v
 
 El mensaje del brazo encubierto llegó horas antes por señal muerta que solo Nyael sabe leer: *"Ahora. Captura viva. Extracción por ruta 7."*
 
-Nyael toma a Speck con eficiencia quirúrgica — inconsciente por técnica de presión, no herida, no drogada; viva y transportable, como la orden pide. Sale del Archive por rutas que ella misma diseñó meses antes en reconocimiento previo. No hay confrontación, no hay palabras, no hay línea de traición gritada. Solo hueco donde había dos figuras.
+Nyael se mueve con eficiencia quirúrgica — sin forcejeo, sin herirla, sin tocar el Fragmento: la guía, no la arrastra, y Speck la sigue porque la conoce y no la lee como amenaza. Viva y transportable, como la orden pide. Sale del Archive por rutas que ella misma diseñó meses antes en reconocimiento previo. No hay confrontación, no hay palabras, no hay línea de traición gritada. Solo hueco donde había dos figuras.
 
 **El jugador nunca la ve actuar.** Solo ve que Speck se va. Solo después, en un nicho de la pared del corredor, descubre la nota — pluma corta, tinta gris:
 
@@ -250,7 +250,7 @@ Conversación nunca es directa. Solo notas encontradas a lo largo de la persecuc
 
 > *"You are slow. Could have taken her three times without you noticing. Did not, because you were still learning to look."*
 >
-> *"Your pattern shows growth. Am pleased. This makes the necessary ending harder."*
+> *"Your pattern shows growth. Am pleased. This makes the necessary capture harder."*
 >
 > *"Know that I do not honor the order that gave me this task. I honor that you and I once shared quiet. Best companion, worst outcome."*
 
@@ -262,7 +262,7 @@ Las notas ya no llaman "maestro" al jugador — reconocen aprendizaje entre pare
 
 Nyael **no aparece en el borde del cráter con el jugador.** Ella personalmente ya no está en la persecución — cumplió, entregó, se retiró. Pero Speck sí llega al cráter, y esto no es elección de nadie: es el tirón del cráter ([[El Cráter — Matriz de Rutas]] §1 paso 0, regla en [[Speck]] §Capa 5). **La ruta 7 de Nyael, diseñada meses antes para una extracción tranquila, se rompe exactamente en el mismo punto donde se rompería para cualquiera** — y esa es la ironía específica de esta ruta: la operativa más meticulosa del elenco planificó contra una física que no conocía.
 
-**Quien el grupo encuentra en el borde no es Nyael — es el equipo de extracción del brazo encubierto**, dos o tres operativos institucionales, entrenados por la misma escuela de Nyael pero sin su historia, sin su nombre, sin línea de traición que decir. No son villanos con arco: son la maquinaria que Nyael puso en marcha, funcionando sin ella. **Sostienen a Speck entre ellos**, intentando cargarla más allá del borde, y fallan por la misma razón que Nyael habría fallado — mientras el pulso siga activo, nadie puede moverla, y son ellos quienes la tienen en brazos cuando eso se resuelve.
+**Quien el grupo encuentra en el borde no es Nyael — es el equipo de extracción del brazo encubierto**, dos o tres operativos institucionales, entrenados por la misma escuela de Nyael pero sin su historia, sin su nombre, sin línea de traición que decir. No son villanos con arco: son la maquinaria que Nyael puso en marcha, funcionando sin ella. **Sostienen a Speck, quietos, esperando** — no forcejean, no hay razón dramática para que lo hagan: son operativos entrenados, no un Pivote en crisis. Simplemente no pueden completar la entrega todavía ([[El Cráter — Matriz de Rutas]] §2, nota de excepción holder = agente): el tirón del cráter los retiene igual que retendría a cualquier mensajero, y son ellos quienes la tienen en brazos cuando eso se resuelve.
 
 *"Was time to leave. To stay would be dishonor to the quiet we shared. Go. Live. Do not follow. I will not be findable."* — la última nota de Nyael, encontrada por el jugador antes de llegar al borde, ya anticipa esto: ella sabía que no necesitaba estar ahí para que el mecanismo terminara de girar.
 
@@ -288,15 +288,15 @@ Es el destino exacto que ella habría elegido y por la razón contraria: Nyael p
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-**El equipo de extracción cumple la orden que Nyael puso en marcha** (ver §sub-beat 5 — ella misma ya no está presente). El jugador llega al borde y ve al equipo trabado exactamente donde `§sub-beat 5` dijo que se trabarían: con el pulso activo, Speck no se deja mover por más que la sostengan, y ninguna técnica de contención lo resuelve. Lo que desatasca la escena no es fuerza — es la entrega. El jugador elige no interponerse, el equipo deja de forcejear y simplemente la sostiene quieta — cede en vez de arrebatar — y el hive mind se corta; recién entonces pueden llevársela ([[Speck]] §Capa 5). Speck llega en custodia, en el estado exacto que el brazo encubierto pidió. Ejecución perfecta según los parámetros institucionales — pero completada por el jugador, no arrebatada por Nyael. Es el único de los 9 Pivotes donde el jugador mismo cierra la traición que el Pivote empezó.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a, con la excepción holder = agente de §2 — el equipo completa la entrega. **El equipo de extracción cumple la orden que Nyael puso en marcha** (ver §sub-beat 5 — ella misma ya no está presente). El jugador llega al borde y ve al equipo esperando exactamente donde `§sub-beat 5` dijo que esperarían: el tirón del cráter los retiene, igual que retendría a un mensajero en cualquier otra ruta ([[El Cráter — Matriz de Rutas]] §2, nota de excepción). El jugador elige no interponerse — eso completa la entrega, y recién entonces el hive mind se corta y pueden llevársela ([[Speck]] §Capa 5). Speck llega en custodia, en el estado exacto que el brazo encubierto pidió. Ejecución perfecta según los parámetros institucionales — pero completada por el jugador, no arrebatada por Nyael. Es el único de los 9 Pivotes donde el jugador mismo cierra la traición que el Pivote empezó.
 
 **Pero Nyael sabe que el Council mintió** sobre "custodia digna" — es mentira administrativa. En el Reckoning, oyó lo suficiente en las señales muertas para intuir que la palabra "custodia" cubría cosas que ninguna instrucción operativa dice en voz alta. Vive **en el limbo entre haber cumplido y haber sido usada.** El brazo encubierto la felicita, le asigna nueva ruta, la orden siguiente. Nyael la acepta y no la ejecuta — la deja pasar. No renuncia; simplemente deja de responder a las señales. Al año, el brazo encubierto la marca como "en estado de reasignación indefinida". Al segundo año, la marcan como "no retornada". Al tercero, alguien encuentra una daga suya clavada en la puerta de la oficina de la maestra que la entrenó — sin nota. La maestra, que sigue viva, entiende.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-Si el jugador, al llegar al borde y encontrar al equipo de extracción (ver §sub-beat 5), intenta arrancarle a Speck por la fuerza en vez de esperar o negociar, el forcejeo sobrecarga el Fragmento y la mata — la misma mecánica que en cualquier otra ruta ([[Los 5 Finales]] §F2b). **Nyael no vuelve.** No al grupo, no al brazo encubierto, no a Stillspire, no a ningún registro.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b, con la excepción holder = agente de §2 — la mano que la arranca es la del jugador. Si el jugador, al llegar al borde y encontrar al equipo de extracción (ver §sub-beat 5), intenta arrancarle a Speck por la fuerza en vez de esperar o negociar, el forcejeo sobrecarga el Fragmento y la mata — la misma mecánica que en cualquier otra ruta ([[Los 5 Finales]] §F2b). **Nyael no vuelve.** No al grupo, no al brazo encubierto, no a Stillspire, no a ningún registro.
 
-**Nota post-mortem** llega semanas después al último campamento del jugador — corta, sin explicación, solo un plano detallado de la ruta 7 que iba a usar para entregarla viva, con anotaciones técnicas sobre por qué esa ruta era la más segura para transportar sin lastimar. El jugador entiende, al recibirla, que **la muerte no era el plan** — nunca fue el plan. Nyael no adjunta disculpa. La ruta es la disculpa.
+**Nota post-mortem** llega semanas después al último campamento del jugador — una línea, sin explicación, sin plano, sin anotación técnica: *"Miscalculated the variable that mattered most."* No es disculpa, no es consuelo, no es una lectura que el jugador pueda cargar como si significara algo. Es un dato mal cerrado, y Nyael no le da forma de nada más.
 
 Nyael desaparece del mapa. Nadie sabe si vive. Es exactamente el tipo de silencio que Nyael diseñaría si diseñara un final propio — y por eso es su peor final: incluso el desaparecer se vuelve indistinguible de la ejecución que su tradición espera de ella.
 

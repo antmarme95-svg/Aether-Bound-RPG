@@ -75,6 +75,19 @@ crítico.** En las otras 7 rutas, "detener al Pivote" **no** cumple el gate de F
 detener al mensajero. En estas dos, el que sostiene a Speck **es** el agente de la entrega,
 así que detenerlo sí lo cumple.
 
+**Cómo se satisface el beat de F2a cuando holder = agente (solo ruta Nyael — Bram no llega
+a F2a, no traiciona).** El equipo de extracción no puede completar la entrega mientras el
+pulso siga activo — **el tirón del cráter aplica exactamente igual que en las otras 8
+rutas** ([[Speck]] §Capa 5): nadie mueve a Speck lejos del centro hasta que el hive mind se
+corte, y eso solo pasa con la entrega, nunca con forcejeo. El equipo **no forcejea** — no
+hay ninguna razón dramática para que lo haga, son operativos entrenados, no un Pivote en
+crisis emocional. Simplemente esperan con Speck sostenida, igual que esperaría un mensajero
+retenido en cualquier otra ruta, hasta que el jugador decide no interponerse. Ahí se
+completa la entrega y el pulso se corta. **No hay mecánica nueva que inventar:** es la
+misma regla de siempre, aplicada a un holder que no tiene un mensajero aparte a quien
+entregarle la pieza — se la entrega directamente al vacío que deja el jugador al no
+intervenir.
+
 ---
 
 ## §3. Los cinco gates
@@ -193,6 +206,20 @@ solo como recalibración profesional o institucional. El mismo método que corri
 variantes muertas aplica acá: **una sola pasada comparativa, un eje por personaje, asignado
 antes de escribir**, para no homogeneizar.
 
+> ⚠️ **Segunda lección de método (2026-08-04): homogeneizar la FORMA, no solo el
+> contenido.** La primera tanda de estos 9 beats asignó un contenido distinto a cada uno
+> (correcto), pero 9 de 9 convergieron en la misma **forma**: "secreto privado que el
+> personaje no comparte con nadie", y tres de ellos repitieron literalmente "peregrinaje
+> anual al cráter transformado". Contenido distinto con forma idéntica **sigue siendo
+> homogeneización** — el lector nota el molde antes que el detalle.
+>
+> La forma también se asigna antes de escribir, variando al menos: **quién lo sabe**
+> (nadie / el jugador lo nota sin preguntar / un tercero periférico lo nota / se muestra
+> abiertamente sin explicar el significado), y **si es un objeto, un hábito, una omisión
+> narrativa, o una palabra dicha en voz alta.** De los 9 Pivotes, ninguno lo dice en voz
+> alta — esa forma queda reservada a los fijos (Roen y Valen, cada uno desde su propio
+> ángulo: Roen distingue actuar bien de salir ileso, Valen nombra el costo directamente).
+
 **Los 9 ejes, uno por ruta — no se repiten:**
 
 | Personaje | Qué reconoce el duelo |
@@ -235,7 +262,7 @@ Re-enunciarlas es la causa mecánica de la mitad de los críticos del sprint.
 ## Regla de uso para las 13 fichas
 
 **9 Pivotes.** En el sub-beat 5, abrir con una línea de herencia — *"Parámetros de esta ruta:
-[[El Cráter — Matriz de Rutas]] §2, fila [Pivote]. Secuencia: §1, pasos 3-7."* — y después
+[[El Cráter — Matriz de Rutas]] §2, fila [Pivote]. Secuencia: §1, pasos 1-6."* — y después
 narrar **solo lo dramático**. En los 5 epílogos, citar el gate en vez de describirlo.
 
 **3 fijos (Roen, Valen, Darro).** Narran **su reacción** al quiebre, nunca el quiebre en sí.

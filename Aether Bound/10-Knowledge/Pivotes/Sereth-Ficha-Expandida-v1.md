@@ -275,7 +275,7 @@ Los otros fijos reaccionan según Tether:
 
 ### Sub-beat 5: Quiebre en First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Sereth**. Secuencia: §1, pasos 1-7, sin excepciones. Su mensajero es de la **Royal Academy** — Sereth nunca trató con el Council directamente; lo prestó Queen Ithessa.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Sereth**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es de la **Royal Academy** — Sereth nunca trató con el Council directamente; lo prestó Queen Ithessa.
 
 Se queda en el margen con Speck acurrucada contra el pecho. Lo que distingue a esta ruta es que **es la única donde el Pivote usa la espera para explicarse**: los otros ocho callan, forcejean o ejecutan. Sereth da una clase.
 
@@ -339,7 +339,7 @@ En dos años pide baja de la Academy. En cinco años deja de escribir. Muere de 
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cruza el borde hacia el core central, Sereth no forcejea — suelta a Speck al verlo cruzar, leyendo la situación con la misma frialdad académica de siempre. Sereth **se te une**, en teoría. Es de los pocos del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Sereth suelta. Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cruza el borde hacia el core central, Sereth no forcejea — suelta a Speck al verlo cruzar, leyendo la situación con la misma frialdad académica de siempre. Sereth **se te une**, en teoría. Es de los pocos del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
 
 **En la práctica, calcula tu caída desde el primer mes.** Y — variante especialmente peligrosa — **te ayuda a caer bien.** Un tirano que colapsa mal arrastra a todos los que quedaron con él. Sereth diseña las condiciones para que, cuando caigas, caigas de una forma que le permita a él sobrevivir intacto. Te sirve con lealtad aparente durante años. Cada consejo que te da tiene dos capas: la superficial (te ayuda a gobernar) y la profunda (te empuja imperceptiblemente hacia decisiones que erosionan tu régimen).
 
@@ -371,7 +371,9 @@ El jugador es el único que carga la corrección, y no tiene dónde presentarla.
 
 ## Línea Canónica
 
-*"No te llevé a esta decisión. Te llevé a la persona que la toma."*
+*"I didn't lead you to this decision. I led you to the person who makes it."*
+
+(Ver escena completa, todavía en español — pendiente de la pasada de traducción general, regla 9 del repo — en §Traición: *"No te llevé a esta decisión. Te llevé a la persona que la toma."*)
 
 **Contexto:** el borde del cráter, mirando al jugador. No es defensa — es diagnóstico técnico. Sereth explica su método en una sola frase: nunca se manipula un evento, se manipula la disposición mental de quien va a llegar al evento. El jugador oye la frase y **se reconoce a sí mismo** en ella — reconoce que sí, que la persona que toma la decisión final es él, y que esa persona fue esculpida durante un año. Y aun así tiene que decidir. Ese es el punto exacto del arquetipo.
 
