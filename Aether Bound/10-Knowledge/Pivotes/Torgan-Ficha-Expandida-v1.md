@@ -478,7 +478,9 @@ El consejo del clan menor delibera igual, cuatro días igual, y llega a la misma
 
 Lo entierran con el tatuaje incompleto. Nadie del clan lo llama deshonor — es peor: **lo llaman "caso sin resolver"**, y así queda en el archivo, entre trámites, durante generaciones. Torgan pasó cincuenta y cinco años sosteniendo una promesa para que alguien la cerrara, y la única vez que su clan estuvo dispuesto a cerrarla, llegó tarde.
 
-**Darro es quien baja al cráter una vez al año**, en su lugar, y apoya la palma sobre la base del core central. No sabe que está repitiendo el gesto de Torgan — nunca se lo vio hacer. Lo hace porque le parece lo correcto, y esa coincidencia es lo único parecido a una enmienda que el Juramento consigue.
+Quien hace algo al respecto es **Darro**, y lo hace desde el único lugar donde tiene autoridad: **el tatuaje.** Los dos lo tenían incompleto — el de aprendiz que Vekka nunca dejó terminar, el de juramento que el clan nunca pudo enmendar. Darro se hace agregar, en el suyo, una línea corta de color distinto: la que le habrían puesto a Torgan si hubiera llegado vivo al consejo.
+
+No pide permiso a nadie. No tiene derecho a hacerlo — no es su clan, no es su juramento, y ningún tatuador enano debería habérselo grabado. **Encuentra uno que sí.** Cuando le preguntan qué significa esa línea, Darro contesta que es de un amigo, y no dice más. Es la única vez en la campaña que Darro completa algo.
 
 Ver [[Los 5 Finales]].
 

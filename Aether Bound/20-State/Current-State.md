@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-02
+updated: 2026-08-03
 ---
 
 # Current State
@@ -62,13 +62,17 @@ Validó `Matriz §2`/`§4` contra las 9 fichas, la aritmética del elenco y las 
 nunca tocadas (`The Tether`, `Bond y el Bond Vacío`, `La Rueda`, `Nomenclatura`,
 `Old-Tobin-Hale`) — sin contradicciones. Lo mecánico que encontró ya está cerrado.
 
-**Pendiente — 3 críticos de homogeneización**, todos de la tanda de epílogos F4
-de esta sesión: Torgan/Dagna F4-muerto idénticos; Torgan/Iven F4-vivo con el
-mismo gesto final; **5 de 7 variantes F4-muerta con el mismo molde**. Requieren
-**una pasada comparativa** sobre las 6 fichas — de a una vuelven a converger.
+**Homogeneización — cerrada** (2026-08-03, pasada comparativa). Los 7 epílogos
+F4-muerta tienen ahora **un eje de pérdida distinto cada uno**, tabulados en
+`Matriz §4`: Vekka (el saber que no se transmite), Sereth (la refutación),
+Torgan (el juramento sin enmendar), Maren (la redundancia), Iven (muere
+creyendo que falló), Lyris (el timing), Dagna (Roen). El gesto de la palma
+sobre el core quedó en un solo personaje.
 
-**Lección:** escribir N variantes en secuencia contra la misma regla las
-homogeneiza, aunque cada una cumpla la regla por separado.
+**Lección registrada en `Matriz §4`:** escribir N variantes en secuencia contra
+la misma regla **las homogeneiza**, aunque cada una la cumpla por separado. La
+corrección se hace comparándolas entre sí, asignando los ejes *antes* de
+escribir — de a una vuelven a converger.
 
 **2 decisiones abiertas para Boris:** (1) sabor de F4 — hoy se lee como final
 feliz, solo Darro paga el agridulce declarado; (2) grados de agencia de Speck —

@@ -147,11 +147,33 @@ Lo que sí varía es **el estado del Pivote**, y por eso cada epílogo F4 se esc
   convierte en tragedia** — es la misma pérdida con un nombre más.
 
 **Regla de escritura para la variante muerta:** la muerte del Pivote no agrega tragedia
-genérica — **cobra algo específico que solo ese personaje podía dar.** En Vekka es el
-conocimiento que su cuaderno contenía y nadie más sabe leer; en Maren, la autoría de una
-reconstrucción que igual funciona sin ella; en Sereth, la única refutación que su escuela
-habría aceptado. Si la variante muerta se puede resumir como "y además murió", está mal
-escrita.
+genérica — **cobra algo específico que solo ese personaje podía dar.** Si la variante muerta
+se puede resumir como "y además murió", está mal escrita.
+
+**Los 7 ejes, uno por ruta — no se repiten:**
+
+| Pivote | Qué cobra su muerte |
+|---|---|
+| **Vekka** | el saber que muere sin transmitirse (el cuaderno que nadie sabe leer) |
+| **Sereth** | la única refutación que su escuela habría aceptado, porque tenía que venir de adentro |
+| **Torgan** | el juramento que queda sin enmendar: la facultad existe, se ejerce sobre vivos |
+| **Maren** | **la redundancia** — la ciudad se reconstruye sin ella, y nunca recibe esa corrección |
+| **Iven** | **muere creyendo que falló** — el único con un resultado medible, y no llega a verlo |
+| **Lyris** | **el timing** — muere el día antes de que el patrón la incluyera por primera vez |
+| **Dagna** | **Roen** — no es institucional: el mundo le da la razón a él por accidente, y él la carga |
+
+> ⚠️ **Lección de método (2026-08-03), obligatoria antes de escribir variantes en tanda.**
+> Estas 7 se escribieron en secuencia contra la regla de arriba, y **5 de las 7 salieron con
+> el mismo molde** (*saber único que se pierde + institución que archiva la versión
+> equivocada + jugador como custodio impotente*), con cuatro cerrando en la misma frase
+> estructural. Cada una cumplía la regla por separado; **lo específico terminó siendo
+> idéntico.**
+>
+> Escribir N variantes en secuencia contra un mismo criterio **las homogeneiza**. La
+> corrección no se hace de a una — de a una vuelven a converger. Se hace **comparándolas
+> entre sí en una sola pasada**, asignando el eje de cada una *antes* de escribir. La tabla
+> de arriba es el resultado de esa pasada, y existe para que la próxima tanda arranque con
+> los ejes ya repartidos.
 
 **Dos rutas no tienen variante muerta, y es intencional:** en **Nyael** el jugador nunca
 la alcanza (se retira antes de la persecución — su arquetipo *es* la ausencia), y en

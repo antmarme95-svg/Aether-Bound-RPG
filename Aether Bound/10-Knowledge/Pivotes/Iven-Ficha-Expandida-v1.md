@@ -619,17 +619,19 @@ Y se convierte en **testigo de que existía una tercera vía.** No como penitenc
 
 A los defensores jóvenes que entrena les enseña combate por la mañana y otra cosa por la tarde. La otra cosa es siempre la misma lección, con distintas palabras: *"Cuando te digan que solo hay dos opciones y las dos son horribles, alguien está ganando dinero con eso. Búsquenle la tercera. A veces no está. Pero yo vi una."*
 
-Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y una vez al año baja al cráter transformado, solo, y apoya la palma sobre la base del core central un rato largo — el mismo gesto con el que en su pueblo se le cierra las manos a un muerto, hecho sobre algo que no está muerto.
+Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y una vez al año hace el viaje al cráter transformado llevando **un cántaro de agua del pozo del asentamiento** — el pozo que volvió, el que estuvo seco veinte años — y la vuelca en la tierra al borde del core. No reza, no habla, no se queda. Es un gesto de agricultor: se le devuelve agua a lo que dio de comer.
 
 No pide perdón en F4 tampoco. **Pero acepta que lo perdonen**, que en Iven es la distancia entera entre sobrevivir y vivir.
 
-**Epílogo — Iven muerto** (cayó en la persecución o en el cráter). **El asentamiento mejora igual.** El Aether sana lento, el pasto vuelve desde el borde hacia adentro, los pozos se recuperan uno por primavera. Doscientas personas viven porque Speck eligió — que es, exactamente, lo que Iven quería comprar.
+**Epílogo — Iven muerto** (cayó en la persecución o en el cráter). **Iven es el único de los nueve que traicionó por un resultado medible** — no por un juramento, no por una tesis, no por un dogma: por doscientas personas y unos pozos que o se recuperan o no. Todos los demás pueden morir sin saber si tenían razón. Él no: lo suyo se podía verificar.
 
-Y **nunca saben que él tuvo algo que ver.** Los enviados de Rivermeet llegan a explicar que la recuperación es mérito de la gestión del Council, y no hay nadie que los contradiga: el único testigo de primera mano de que existía una tercera vía se quedó en el cráter. La contra-narrativa muere sin haberse dicho una sola vez.
+**Y se muere sin verificarlo.**
 
-En el asentamiento, Iven queda en la memoria como **el guardián que se fue con el grupo de forasteros y no volvió.** Ni héroe ni traidor: ausente. Los defensores jóvenes que él entrenaba siguen entrenando sin la lección de la tarde, y aprenden — como aprendió su pueblo durante generaciones — que cuando te dicen que solo hay dos opciones horribles, hay que elegir la menos mala.
+Su última certeza, la que se lleva, es que vendió a Speck a cambio de nada. Vio el maletín. Escuchó al contacto no contestar la pregunta. Entendió — o quedó a un milímetro de entender — que la cura no existía, y sobre esa comprensión, sin nada que la corrija, se le acaba el tiempo. Muere en el peor momento posible de su propio arco: después de saber que lo estafaron y antes de saber que el asentamiento se salva igual.
 
-**Ese es el costo específico:** Iven pagó el precio más alto del elenco por una cura que no existía, la consiguió igual por un camino que no era el suyo, y el pueblo que salvó nunca va a saber su nombre en esa historia. El jugador es el único que puede ir a contárselo. Que lo haga o no queda fuera de la ficha.
+Porque se salva. El Aether sana lento, el pasto vuelve desde el borde hacia adentro, los pozos se recuperan uno por primavera. **Doscientas personas viven, que es exactamente lo que Iven quería comprar** — y lo consiguió, y nunca lo supo.
+
+En el asentamiento queda como **el guardián que se fue con unos forasteros y no volvió.** Ni héroe ni traidor: ausente. Los defensores jóvenes que entrenaba siguen entrenando sin la lección de la tarde. El jugador es el único que carga las dos mitades de esa historia — lo que Iven pagó y lo que Iven compró — y no hay forma de juntarlas para él.
 
 Ver [[Los 5 Finales]].
 

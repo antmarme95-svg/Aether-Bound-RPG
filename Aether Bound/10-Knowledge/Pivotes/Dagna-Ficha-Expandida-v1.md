@@ -382,13 +382,13 @@ Dagna vuelve al grupo. Cuando llega al campamento del jugador, no anuncia. Apare
 
 Años después, si el jugador viaja a Deepstone, encuentra que el subclán ha cambiado protocolos internos — la palabra "asignación" empieza a compartir espacio con "elección" en los registros nuevos. Nadie atribuye el cambio a Dagna. Deepstone no atribuye nada a nadie. Pero el cambio está ahí.
 
-**Epílogo — Dagna muerta** (cayó en la persecución o en el cráter). El consejo de Deepstone emite la reinterpretación ritual **igual** — la orden pierde validez retroactivamente, la liberación se firma — y llega tarde por semanas. **Dagna es liberada muerta**, en un pergamino que nadie le puede leer.
+**Epílogo — Dagna muerta** (cayó en la persecución o en el cráter). Este epílogo **no es sobre Deepstone.** Lo que el subclán haga o deje de hacer con su registro es papeleo, y a Dagna nunca le importó el papeleo: le importaba el puesto. Este epílogo es sobre **Roen**, porque su muerte se cobra en él.
 
-El subclán no tiene procedimiento para eso. Un enano liberado vuelve a su gente; una enana liberada póstumamente no vuelve a ninguna parte, y el registro queda con la firma puesta y el renglón de recepción en blanco. **Es exactamente el final que su vida entera predijo:** sesenta años en un puesto que nunca eligió, y la única vez que Deepstone le concede elegir, ya no hay nadie a quien concederle nada.
+Los dos hicieron la misma pregunta con la vida. Roen dejó su puesto y sobrevivió. Dagna no lo dejó nunca y no sobrevivió. **El mundo le dio la razón a Roen por accidente**, sin argumento, sin justicia y sin que él la quisiera — y esa es la respuesta que va a tener que cargar, porque es la única que va a recibir.
 
-Quien carga eso es **Roen**. Él dejó su puesto y sobrevivió; ella no lo dejó nunca y no sobrevivió, y el mundo terminó dándole la razón a él por accidente. No lo dice en voz alta. Vuelve a levantar el escudo — el mismo que dejó caer en el cráter — y no lo suelta otra vez en lo que le queda de vida.
+No lo dice en voz alta. Vuelve a levantar el escudo — el mismo que dejó caer en el cráter viéndola a ella — y **no lo suelta otra vez en lo que le queda de vida.** Nadie del grupo entiende por qué Roen se volvió tan rígido después del cráter. El jugador sí.
 
-La hoja de Maelys se encuentra en el compartimento interior del cinturón, todavía verde plata. Nadie del grupo entiende qué hace ahí. **Maelys sí**, y cuando se entera, es la única vez que un miembro del Elder Circle baja de Stillwood a un funeral enano.
+La hoja de Maelys aparece en el compartimento interior del cinturón, todavía verde plata. Nadie entiende qué hace ahí. **Maelys sí**, y cuando se entera, baja de Stillwood a un funeral enano — la única vez que un miembro del Elder Circle lo hace. No explica nada. Se para al fondo, mira el escudo que Roen no suelta, y se va antes de que termine.
 
 ---
 

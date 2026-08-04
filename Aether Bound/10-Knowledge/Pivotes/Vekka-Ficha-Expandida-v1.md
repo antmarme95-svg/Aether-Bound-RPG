@@ -343,7 +343,7 @@ Este es el final donde Vekka **rompe con el oficio.** El Fragmento se sobrecarga
 
 Después de eso, **nunca vuelve a levantar una herramienta.** Cuelga el martillo pesado en la pared del taller donde entrenó a Darro hace treinta años. Cierra el taller. Se muda al cuarto trasero de una posada en las afueras de Emberdeep. Muere de vieja, sola, sin haber tocado metal en años. En el cuaderno pequeño no anota nada nuevo — las últimas páginas quedan vacías.
 
-La diferencia con F2a es total: allá cumplió y ascendió, aquí ejecutó y perdió el oficio. Su arquetipo no sobrevive a una operación mal cerrada — no porque tenga conciencia moral, sino porque **el gremio interiorizado le retira el permiso de seguir siendo maestra.**
+No es culpa lo que la detiene: es que **el gremio que lleva adentro le retira el permiso de seguir siendo maestra**, y ese gremio no acepta apelaciones porque no tiene a nadie a quien apelar. Vekka acata su propia sentencia con la misma obediencia con que acató todo lo demás.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 

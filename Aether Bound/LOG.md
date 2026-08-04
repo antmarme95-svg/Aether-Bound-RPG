@@ -6661,3 +6661,60 @@ a converger.
    *arrebatada* (F2b) están dramatizados. *Acepta* (F1) se paga en un solo lugar del vault
    (Darro F1) y *cedida* (F2a/F3) no tiene interioridad en ninguna parte: en los 12 epílogos
    F3, Speck es un objeto sin punto de vista.
+
+## [2026-08-03] design/narrativa | Pasada de des-homogeneización — los 3 críticos de prosa de la 11ª
+
+**Hecha en una sola pasada comparativa, no de a una ficha.** Ese fue el punto: los 3 críticos
+venían de haber escrito 7 variantes de epílogo F4 en secuencia contra la misma regla, y
+corregirlas por separado las habría vuelto a hacer converger.
+
+**Método:** primero se asignó **un eje de pérdida distinto a cada una de las 7**, con la tabla
+completa a la vista; recién después se reescribió. Tres se conservaron por orgánicas (Vekka —
+el cuaderno; Sereth — la refutación; Torgan — el juramento sin enmendar) y cuatro cambiaron
+de eje:
+
+- **Maren → la redundancia.** Antes: "sus cálculos sobreviven y nadie recuerda de quién era la
+  letra". Ahora: Rivermeet se reconstruye **sin ella y sin su modelo**, mal y lento, y funciona
+  igual. Maren construyó su ética entera sobre *si yo no calculo, la gente muere* — y era lo
+  que le permitía entregar a Speck sin romperse. La corrección de su tesis existe y **ella
+  nunca la recibe**.
+- **Iven → muere creyendo que falló.** Es el único de los nueve que traicionó por un resultado
+  **medible** (doscientas personas, unos pozos). Todos los demás pueden morir sin saber si
+  tenían razón; lo suyo se podía verificar. Y se muere entre saber que lo estafaron y saber
+  que el asentamiento se salva igual. Consiguió exactamente lo que quería comprar y nunca lo
+  supo.
+- **Lyris → el timing.** No es lo que se pierde con ella, es **cuándo**. Noventa años en el
+  margen, y el mundo nuevo de F4 es el primero que tiene lugar para alguien que lee corrientes
+  y no pertenece a ningún reino. Muere el día anterior a eso.
+- **Dagna → Roen.** Se sacó el pergamino póstumo entero (colisionaba con Torgan). Su epílogo
+  ahora es relacional: los dos hicieron la misma pregunta con la vida, **el mundo le dio la
+  razón a Roen por accidente**, y él carga esa respuesta levantando otra vez el escudo que
+  dejó caer en el cráter y no soltándolo nunca más.
+
+**El gesto de la palma sobre el core** estaba en tres lugares (Torgan F4-vivo, Iven F4-vivo,
+Darro en Torgan F4-muerto). Queda solo en **Torgan**, que tiene la raíz establecida — el mismo
+gesto que le hizo a la piedra del Archive. Iven recibe uno propio y agrícola: lleva **un
+cántaro de agua del pozo que volvió** y la vuelca al borde del core. Darro, en la variante
+muerta de Torgan, hace algo que solo él puede hacer: **se agrega al propio tatuaje incompleto
+la línea que le habrían puesto a Torgan** si hubiera llegado vivo al consejo. Ningún tatuador
+enano debería habérselo grabado; encuentra uno que sí.
+
+**MEDIUM de prosa compartida, también cerrados:** Maren y Sereth ya no comparten la frase de
+F2a ("los ojos midiendo") ni el remate de F3 — ahora se diferencian por lo que hacen con la
+caída del tirano (Maren anota el reloj y no lo toca; Sereth interviene). Maren y Vekka ya no
+comparten el párrafo molde de F2b. Lyris y Nyael ya no comparten "el silencio que habría
+diseñado": ahora la ficha de Lyris **usa el contraste explícitamente** — Nyael desaparece
+porque la ausencia es su método, Lyris porque nunca aprendió a estar presente.
+
+**Registrado en la Matriz §4:** la tabla de los 7 ejes (para que la próxima tanda arranque con
+los ejes repartidos) y la lección de método como advertencia obligatoria antes de escribir
+variantes en tanda.
+
+**Estado: `check_canon.py` en 0 críticos (20 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+**2 decisiones de diseño para Boris**, ambas de la 11ª y ninguna resoluble sin él: el sabor de
+F4 (hoy se lee como final feliz — solo Darro paga el agridulce declarado) y los grados de
+agencia de Speck (*cedida* no tiene interioridad en ninguna parte del vault). Después de eso,
+**12ª re-corrida**.

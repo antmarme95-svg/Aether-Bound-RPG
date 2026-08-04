@@ -343,7 +343,9 @@ Ella asciende dentro de la cadena militar — Frontier High Command reconoce su 
 
 **Lyris desaparece.** No hay cuerpo, no hay nota, no hay comunicación a Frontier High Command reportando el resultado. Podría haber caído en la persecución, podría haber renunciado, podría haber elegido no volver. El vacío es el epílogo.
 
-Frontier High Command marca su expediente como "no retornada"; envían nueva rastreadora. El ciclo continúa. El Council, más arriba, tacha una línea de un registro que nadie verá. Nadie del Bound Five sabe si Lyris está viva. Nunca lo sabrán. Es exactamente el tipo de silencio que Lyris habría diseñado si hubiera diseñado un final propio.
+Frontier High Command marca su expediente como "no retornada"; envían nueva rastreadora. El ciclo continúa. El Council, más arriba, tacha una línea de un registro que nadie verá. Nadie del Bound Five sabe si Lyris está viva. Nunca lo sabrán.
+
+**Y a diferencia de Nyael, esto no es un final que Lyris hubiera elegido.** Nyael desaparece porque la ausencia es su método; Lyris desaparece porque nunca aprendió a estar presente, que no es lo mismo. Una se va. La otra simplemente no supo cómo quedarse.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
@@ -363,11 +365,15 @@ Speck responde y **cruza el borde sola**. Lyris baja el vuelo y abre las manos. 
 
 Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de campamento, se sienta al lado del jugador sin motivo aparente. Se queda hasta el amanecer. No hablan. Al amanecer despega. Vuelve la noche siguiente. Ese es su epílogo: presencia repetida donde antes había ausencia.
 
-**Epílogo — Lyris muerta** (cayó en la persecución o en el cráter). El cielo se reescribe y **ella es la única persona viva que habría sabido leerlo.** Noventa años de vuelo de frontera, corrientes memorizadas una por una, y el mundo cambia todas las corrientes el mismo día en que ella deja de estar.
+**Epílogo — Lyris muerta** (cayó en la persecución o en el cráter). Lo específico de su muerte no es lo que se pierde con ella. Es **cuándo ocurre.**
 
-Frontier High Command envía rastreadoras nuevas a mapear las presiones nuevas. Tardan una generación en reconstruir lo que Lyris sabía de memoria del mundo viejo, y el mapa que arman no le sirve a nadie: describe un cielo que ya no existe. **Nadie sabe que la persona que podía haberlo hecho en un año está enterrada al borde de un cráter.**
+Noventa años afuera. Un patrón que nunca la incluyó — ni la Academia, ni la ciudad, ni el grupo del todo. Lyris construyó una vida entera sobre la premisa de que el mundo estaba organizado y ella quedaba en el margen, y se le volvió cómodo: por eso vuela, por eso mira desde arriba, por eso su traición es fría. El margen era su lugar.
 
-El grupo la entierra en altura — el risco más alto que encuentran, porque nadie soporta la idea de dejarla bajo tierra. Es el único funeral del elenco donde **no se dice una palabra**: Roen lo intenta y no le sale, y después nadie más lo intenta, y en el silencio todos entienden que así estaría bien para ella. **La ausencia que Lyris practicó toda su vida se le concede por fin, y ya no la puede disfrutar.**
+**Y en F4 el patrón cambia.** El Aether sana, el cielo se reescribe, las tres capitales aprenden a vivir de otra cosa — y el mundo nuevo, el que empieza el día que Speck elige, es un mundo donde alguien que sabe leer corrientes y no pertenece a ningún reino **hace falta**. Por primera vez en noventa años, el patrón tenía un lugar para ella.
+
+Lyris muere el día anterior a eso. No un año antes ni una década antes: **el día anterior**, en el borde del cráter, mirando hacia arriba como siempre.
+
+El grupo la entierra en altura — el risco más alto que encuentran, porque a nadie le entra en la cabeza dejarla bajo tierra. Es el único funeral del elenco donde **no se dice una palabra**: Roen lo intenta y no le sale, y después nadie más lo intenta. En el silencio todos entienden que así habría estado bien para ella, y ninguno se anima a decir en voz alta lo otro — que esta vez, por fin, no habría hecho falta.
 
 ---
 
