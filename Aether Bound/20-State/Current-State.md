@@ -194,6 +194,11 @@ Se agregaron 2 líneas de reacción de mundo abierto (Bram y Torgan, ver
 sus fichas) y se asignaron los 3 bosses nuevos a sus dungeons en
 `Geografía y Ciudades`. `check_canon.py` 0 críticos tras el barrido.
 
+**Briefs de concept art agregados (2026-08-04):** [[Briefs de Concept Art]]
+§13 — 9 prompts NB2 listos para correr (los 7 bosses del Bestiario + Los
+Vaciados y Las Motas de Villanos Menores). Pendientes de generar/ratificar
+en `90-Raw/concept/`.
+
 **Pendiente de esta sesión:** Mistbound Frontier sigue sin flora/fauna
 propia (anotado en [[Flora y Ecosistemas]], no bloquea). Falta meter esta
 pasada al loop de QA — mañana.

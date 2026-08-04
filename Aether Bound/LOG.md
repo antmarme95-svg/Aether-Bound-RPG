@@ -7048,3 +7048,32 @@ archivos nuevos.
 Mistbound Frontier sigue sin flora/fauna propia (anotado en `Flora y Ecosistemas`, no bloquea).
 **Esta pasada entra al loop de QA mañana** (decisión de Boris) — no se lanzó ronda de re-corrida
 hoy para este contenido nuevo.
+
+## [2026-08-04] concept-art | Briefs de Bestiario para NB2 (9 prompts)
+
+Boris pidió briefs de concept art sobre el bestiario recién diseñado, para correr en NB2 durante
+la tarde. Agregada `Briefs de Concept Art.md` §13, siguiendo el formato ya establecido del
+documento (bloque de estilo compartido, negativos estándar, nota de eje de corrupción por
+criatura).
+
+**9 prompts:**
+- **Los 4 bosses ya nombrados** (nunca habían tenido brief, solo una línea en Geografía): Crowned
+  Leviathan (superviviente sana, no mutada), Burning Shepherd (guardián corrupto de fuego/sombra),
+  Mirror Stalker (aberración pura que imita movimiento), Aether Wyrm (aberración semi-corpórea,
+  la más pura de las 4).
+- **Los 3 bosses nuevos de dungeon**: Hollow Warden (cueva, caza por eco, brillo jade mineral —
+  aclarado en el brief que no tiene relación real con el Bond), Drowned Choir (unidad coordinada
+  de 3-5, brief describe una sola unidad para repetir en implementación), Cascade Warden (la
+  excepción no corrompida del batch — vieja y territorial, no mutada).
+- **Los Vaciados y Las Motas** (Villanos Menores §Capa 2): nota narrativa explícita en el brief
+  de los Vaciados para que el artista no los diseñe como monstruo de fantasía genérico —
+  cicatrices de una anatomía que fue persona, no colmillos/cuernos inventados. Las Motas con tono
+  deliberadamente liviano (alivio cómico, no horror).
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Los 9 briefs están listos para correr en NB2 pero **no generados todavía** — ninguno tiene
+archivo en `90-Raw/concept/` ni ratificación de Boris. Sigue pendiente meter la pasada completa
+de bestiario/flora/villanos/briefs al loop de QA (mañana).
