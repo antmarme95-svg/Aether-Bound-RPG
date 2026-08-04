@@ -74,9 +74,12 @@ la misma regla **las homogeneiza**, aunque cada una la cumpla por separado. La
 corrección se hace comparándolas entre sí, asignando los ejes *antes* de
 escribir — de a una vuelven a converger.
 
-**2 decisiones abiertas para Boris:** (1) sabor de F4 — hoy se lee como final
-feliz, solo Darro paga el agridulce declarado; (2) grados de agencia de Speck —
-de los 4 de `§Capa 4`, *cedida* no tiene interioridad en ninguna parte.
+**Sabor de F4 — cerrado (2026-08-03).** Boris eligió "beat de duelo obligatorio
+en las 9 (+Roen)": pasada comparativa con un eje distinto por personaje,
+registrada en `Matriz §4`. Detalle en [[LOG]].
+
+**1 decisión abierta para Boris:** grados de agencia de Speck — de los 4 de
+`§Capa 4`, *cedida* no tiene interioridad en ninguna parte.
 
 ### 🛠️ Herramientas del vault
 
@@ -177,9 +180,6 @@ motor resuelve eso.
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond
   invertido (solo vive en `Bond y el Bond Vacío.md`).
-- 3 epílogos F4 (Maren, Iven, Bram) cierran en alza sin friccionar con
-  "agridulce, no triunfal"; Roen F4 sin la pasada de tono que sí recibieron
-  Valen/Darro.
 - Orejas de Speck en las 5 láminas de finales: forma de zorro simple, no la
   forma de pétalos establecida en canon. Refinamiento visual futuro.
 - Traducción pendiente de los beats de diálogo ya escritos en español (ver

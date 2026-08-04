@@ -380,6 +380,8 @@ Dagna vuelve al grupo. Cuando llega al campamento del jugador, no anuncia. Apare
 
 **La hoja de Maelys** sigue intacta en el compartimento interior del cinturón. Dagna la ha llevado durante todo el Acto 3, y en F4 sigue verde plata cuando abre el compartimento en un momento sin público — hoja de un solo bosque, en el bolsillo de la única enana que se dejó mirar. Maelys sabía. Dagna nunca comenta.
 
+**Una cosa no se le cura.** Dagna no vuelve al cráter transformado. Nunca. El grupo pasa cerca alguna vez, en algún viaje, y ella encuentra excusa de guardia, de ruta, de lo que sea — cualquier cosa antes que acercarse. La sostuvo, la ofreció, la vio elegir; eso ya lo hizo una vez y no le queda otra versión de sí misma para hacerlo de nuevo. El jugador lo nota después de la tercera vez. No se lo pregunta. Algunas cosas Dagna las carga como carga un escudo: sin gesto, sin queja, sin acercarse.
+
 Años después, si el jugador viaja a Deepstone, encuentra que el subclán ha cambiado protocolos internos — la palabra "asignación" empieza a compartir espacio con "elección" en los registros nuevos. Nadie atribuye el cambio a Dagna. Deepstone no atribuye nada a nadie. Pero el cambio está ahí.
 
 **Epílogo — Dagna muerta** (cayó en la persecución o en el cráter). Este epílogo **no es sobre Deepstone.** Lo que el subclán haga o deje de hacer con su registro es papeleo, y a Dagna nunca le importó el papeleo: le importaba el puesto. Este epílogo es sobre **Roen**, porque su muerte se cobra en él.

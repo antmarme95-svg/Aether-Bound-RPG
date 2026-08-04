@@ -468,6 +468,8 @@ El consejo delibera cuatro días. **Firma la reinterpretación.** El Juramento n
 
 Torgan pasa el resto de su vida siendo el único enano de Emberdeep con un juramento que fue enmendado en vida y no rompido. Los jóvenes del clan menor le preguntan cómo se hace. Él contesta siempre lo mismo: *"No se hace. Se paga primero, y a veces después te lo devuelven."*
 
+**Y hay algo que la reinterpretación no arregla.** Torgan cargó a Speck en brazos desde el corredor del Archive hasta el borde del cráter — cincuenta y cinco años de Juramento resumidos en ese tramo. El cuerpo no lo olvida tan rápido como el consejo. Meses después, todavía hay noches en que se despierta con los brazos en la posición exacta en que la sostuvo, buscando un peso que ya no está. No se lo dice a nadie. No hay ritual enano para eso — el duelo del gremio es por juramentos, no por brazos que aprendieron una forma y no la quieren olvidar.
+
 Si el jugador lo visita, Torgan lo recibe distinto que en F2a: **le enseña la línea nueva.** Es la única vez en toda la campaña que Torgan muestra el brazo por voluntad propia.
 
 Y una vez al año, solo, baja al cráter transformado y apoya la palma abierta sobre la base del core central. El mismo gesto que le hizo a la piedra del Archive. Nunca se lo cuenta a nadie.

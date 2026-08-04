@@ -360,6 +360,8 @@ Speck responde y **cruza el borde sola**. Maren abre las manos y la deja ir — 
 
 Cambia sus cuentas — es literal, no metáfora. En su cuaderno personal, las variables ya no son "vidas × probabilidad × utilidad". Son otras cosas. No sabe nombrarlas todavía.
 
+**Una variable, sin embargo, no la vuelve a usar.** Nunca más pone a nadie en una columna de utilidad marginal sin preguntarse antes si esa persona es Speck — es decir, si es alguien a quien el modelo describiría mal por definición. No lo dice en voz alta, no lo enseña, no lo escribe en ningún tratado. Es una revisión que corre en silencio antes de cada cálculo, y que ninguna cifra en el cuaderno registra jamás.
+
 Años después, Rivermeet funciona sin Aether, y funciona porque ella pasó una década resolviendo cómo. Maren no se lo apunta como logro; se lo apunta como deuda. Deja un mensaje al jugador, sin firma: *"La ecuación se completó diferente. No mejor — diferente, y con una variable que yo había puesto en la columna equivocada. Sigo sin saber dónde va."* No hay agradecimiento en la nota, y tampoco hay paz: Maren pasa el resto de su vida reconstruyendo una ciudad con el método que le falló, porque es el único que tiene.
 
 **Epílogo — Maren muerta** (cayó en la persecución o en el cráter). Rivermeet se reconstruye. Sin ella, sin su modelo, sin nadie que sepa hacer lo que ella hacía — **y funciona.**

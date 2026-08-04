@@ -371,6 +371,8 @@ Se queda en el cráter días. Estudia el God-Core vivo. Toma notas. Toca la calc
 
 Vive los últimos años enseñando a aprendices jóvenes del clan **una regla nueva**, que ella nunca formaliza pero que los aprendices repiten después: *"Antes de desmontar, mira si la pieza todavía está creciendo."* No dice de dónde le vino la regla. Los aprendices no preguntan.
 
+**Guarda un tornillo del arnés.** Uno solo, el último que desatornilló, el que soltó justo antes de que Speck cruzara. No lo devuelve al set, no lo etiqueta, no lo registra en el cuaderno. Es la única pieza incompleta que Vekka deja así a propósito en sesenta años de oficio — un arnés al que le falta exactamente un tornillo, guardado aparte, sin cerrar. Rompe su propia regla una vez, y la rompe por ella.
+
 **Epílogo — Vekka muerta** (cayó en la persecución o en el cráter). El arnés lo abre el jugador, con las manos equivocadas y en el orden equivocado, y tarda el triple. Speck espera a que termine. Cruza igual.
 
 El cuaderno pequeño queda entre las cosas de Vekka, y **Darro es quien lo abre** — treinta años esperando una explicación de esa mujer, y lo que encuentra son sesenta páginas de mediciones de Speck sin una sola línea de opinión. Se lo lleva. No lo comenta con nadie.

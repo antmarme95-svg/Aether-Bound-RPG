@@ -6718,3 +6718,51 @@ variantes en tanda.
 F4 (hoy se lee como final feliz — solo Darro paga el agridulce declarado) y los grados de
 agencia de Speck (*cedida* no tiene interioridad en ninguna parte del vault). Después de eso,
 **12ª re-corrida**.
+
+## [2026-08-03] design/narrativa | Sabor de F4 — beat de duelo obligatorio en las 9 rutas + fijos
+
+**Decisión de Boris:** "Beat de duelo obligatorio en las 9 (Recomendado)" — de las 3 opciones
+planteadas (solo los 3 fijos cargan el peso / excluir a Bram / obligatorio en las 9), se eligió
+que **todo epílogo F4-vivo** lleve un beat de duelo específico, no genérico, escrito **en una
+sola pasada comparativa** para no repetir el error de homogeneización de la ronda anterior.
+
+**Diagnóstico:** de 9 rutas + Roen (fijo), solo Darro y Valen tenían el costo agridulce
+declarado en [[Los 5 Finales]] §F4 realmente dramatizado. Los otros 8 cerraban en triunfo puro
+— Speck cruza, el mundo sana, nadie paga nada personal.
+
+**Método:** mismo que los 7 ejes de F4-muerta — tabla de ejes asignada *antes* de escribir,
+para que cada uno sea mecánicamente distinto de los demás. Los 9 (+Roen):
+
+| Personaje | Eje |
+|---|---|
+| Roen | lo dice en voz alta — distingue actuar bien de salir ileso |
+| Torgan | el cuerpo recuerda cargarla; el hábito no se rompe |
+| Iven | se excluye a sí mismo de la historia que cuenta |
+| Dagna | no puede volver al cráter transformado |
+| Vekka | deja una pieza sin cerrar — rompe su propia regla |
+| Lyris | vuela sola sobre el cráter, no lo cuenta |
+| Nyael | escribe una nota que no tiene a quién entregar |
+| Bram | casi talla un nombre en la pulsera y no lo hace |
+| Maren | deja de usar una variable sin decírselo a nadie |
+| Sereth | intenta escribir la pregunta que le falta y tacha la mitad |
+
+**Roen** recibe además una reescritura completa de su sección F4 (antes era una sola línea de
+"ve el futuro"): ahora es quien, esa misma noche y a solas con el jugador, dice la parte que
+no iba a decir — *"You did it right. That doesn't mean you get to keep her."* Es la única vez
+en el juego donde distingue haber actuado bien de haber salido ileso.
+
+**Maren y Sereth** ya tenían cobertura parcial de una ronda anterior (recalibración
+profesional); se reforzó con el eje específico de arriba para que el duelo sea por la persona,
+no solo por el método.
+
+**Registrado en la Matriz** (`El Cráter — Matriz de Rutas.md` §4, nueva sub-sección "La
+variante viva — beat de duelo obligatorio") como regla + tabla de los 9 ejes, con la misma
+advertencia de método que la tabla de F4-muerta.
+
+**Estado: `check_canon.py` en 0 críticos / 0 medium (20 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+**1 decisión de diseño para Boris**: los grados de agencia de Speck (*cedida* no tiene
+interioridad en ninguna parte del vault). Después de eso, **12ª re-corrida** (criterio de
+cierre del sprint: 0 críticos de 2 subagentes Opus en frío).

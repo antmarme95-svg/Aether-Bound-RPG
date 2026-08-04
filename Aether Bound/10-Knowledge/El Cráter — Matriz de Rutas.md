@@ -180,6 +180,38 @@ la alcanza (se retira antes de la persecución — su arquetipo *es* la ausencia
 **Bram** no hay persecución porque Bram no traiciona. En esas dos, el Pivote llega vivo a
 F4 siempre. No es un epílogo faltante.
 
+### La variante viva — beat de duelo obligatorio (decisión de Boris, 2026-08-03)
+
+F4 está declarado **agridulce, no triunfal** ([[Los 5 Finales]] §F4). Sin embargo, con la
+variante muerta ya resuelta arriba, quedó expuesto que **la variante viva no pagaba ningún
+precio**: de 9 rutas, solo Darro y Valen (fijos) cargaban el costo declarado; el resto leía
+como final feliz sin matiz.
+
+**Regla:** todo epílogo F4-vivo debe incluir un **beat de duelo específico y no genérico**
+— un momento, gesto o hábito que reconozca la ausencia de Speck como pérdida personal, no
+solo como recalibración profesional o institucional. El mismo método que corrigió las 7
+variantes muertas aplica acá: **una sola pasada comparativa, un eje por personaje, asignado
+antes de escribir**, para no homogeneizar.
+
+**Los 9 ejes, uno por ruta — no se repiten:**
+
+| Personaje | Qué reconoce el duelo |
+|---|---|
+| **Roen** (fijo) | lo dice en voz alta al jugador — es el único que distingue actuar bien de salir ileso |
+| **Torgan** | el cuerpo recuerda cargarla; el hábito no se rompe con el tiempo |
+| **Iven** | se excluye a sí mismo de la historia que cuenta, como testigo y no como parte |
+| **Dagna** | no puede volver al cráter transformado, ni una vez |
+| **Vekka** | deja una pieza sin cerrar — rompe su propia regla de oficio |
+| **Lyris** | vuela sola sobre el cráter y no se lo cuenta a nadie |
+| **Nyael** | escribe una nota de cierre que por primera vez no tiene a quién entregar |
+| **Bram** | casi talla un nombre en la pulsera y no lo hace — no tiene categoría para esto |
+| **Maren** | deja de usar una variable de su modelo sin decírselo a nadie |
+| **Sereth** | intenta escribir la pregunta que le falta y tacha la mitad |
+
+Esta tabla se escribe **antes** de tocar una sola ficha en la próxima ronda que la necesite
+(p. ej. si se agrega un décimo Pivote o se reabre alguno de estos epílogos), siguiendo la
+misma lección de método que la tabla de §4 arriba.
+
 ---
 
 ## §5. Reglas globales — se citan, nunca se re-enuncian

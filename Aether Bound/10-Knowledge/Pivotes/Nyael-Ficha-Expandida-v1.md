@@ -328,6 +328,8 @@ Meses después del cráter, en un campamento tranquilo cualquiera. El jugador es
 
 Se retira. Regresa meses después, misma escena, otra pregunta. Es su forma de estudiar: intervalos largos, preguntas cortas, respuestas que digiere en silencio. Nunca se une al grupo. Nunca se queda a dormir. Es alumna sin aula.
 
+**Escribe una nota que nunca entrega.** Su costumbre de toda la vida — una línea después de cada trabajo cerrado — no encuentra destinatario esta vez: Speck no lee notas, nunca pudo, y de todos modos ya no está para recibir nada. Nyael la escribe igual, la dobla igual, y en vez de dejarla donde alguien la encuentre, se la queda. Es la primera nota de su vida que no cumple su función. No la tira.
+
 El jugador la ve, con el tiempo, dejar de necesitar la maestra centenaria del brazo encubierto — no por rebeldía, por reemplazo natural. Es el epílogo más blando que Nyael puede tener sin dejar de ser Nyael.
 
 ---

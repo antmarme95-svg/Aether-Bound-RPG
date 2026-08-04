@@ -365,6 +365,8 @@ Speck responde y **cruza el borde sola**. Lyris baja el vuelo y abre las manos. 
 
 Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de campamento, se sienta al lado del jugador sin motivo aparente. Se queda hasta el amanecer. No hablan. Al amanecer despega. Vuelve la noche siguiente. Ese es su epílogo: presencia repetida donde antes había ausencia.
 
+**Hay un vuelo que nunca comparte.** De vez en cuando, sola, sube más alto de lo necesario y traza un círculo lento sobre el cráter — la única vista aérea que existe del core central, la única persona con ángulo para verlo completo. Nunca aterriza ahí. Nunca se lo cuenta a nadie, ni siquiera al jugador. Es el único hábito de su vida anterior que conserva intacto: mirar desde arriba lo que no puede tocar.
+
 **Epílogo — Lyris muerta** (cayó en la persecución o en el cráter). Lo específico de su muerte no es lo que se pierde con ella. Es **cuándo ocurre.**
 
 Noventa años afuera. Un patrón que nunca la incluyó — ni la Academia, ni la ciudad, ni el grupo del todo. Lyris construyó una vida entera sobre la premisa de que el mundo estaba organizado y ella quedaba en el margen, y se le volvió cómodo: por eso vuela, por eso mira desde arriba, por eso su traición es fría. El margen era su lugar.

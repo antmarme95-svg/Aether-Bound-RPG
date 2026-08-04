@@ -619,6 +619,8 @@ Y se convierte en **testigo de que existía una tercera vía.** No como penitenc
 
 A los defensores jóvenes que entrena les enseña combate por la mañana y otra cosa por la tarde. La otra cosa es siempre la misma lección, con distintas palabras: *"Cuando te digan que solo hay dos opciones y las dos son horribles, alguien está ganando dinero con eso. Búsquenle la tercera. A veces no está. Pero yo vi una."*
 
+**Cuenta la historia entera, menos una parte.** Habla del maletín, del contacto, de la mentira, de la tercera vía que sí existió — se la sabe de memoria, la cuenta con detalle de testigo. Lo único que nunca cuenta es que fue **él** quien cargó a Speck hasta el borde, quien la sostuvo mientras el jugador decidía, quien la vio elegir. En su propia historia, Iven aparece como testigo, no como parte. No es modestia — es lo único que todavía le cuesta decir en voz alta: que quiso venderla, y que la persona a la que quiso vender terminó salvando a su gente de todos modos.
+
 Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y una vez al año hace el viaje al cráter transformado llevando **un cántaro de agua del pozo del asentamiento** — el pozo que volvió, el que estuvo seco veinte años — y la vuelca en la tierra al borde del core. No reza, no habla, no se queda. Es un gesto de agricultor: se le devuelve agua a lo que dio de comer.
 
 No pide perdón en F4 tampoco. **Pero acepta que lo perdonen**, que en Iven es la distancia entera entre sobrevivir y vivir.

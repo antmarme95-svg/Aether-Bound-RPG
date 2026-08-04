@@ -357,6 +357,8 @@ Speck responde y **cruza el borde sola**. Sereth abre los brazos y la deja ir. V
 
 En años, Sereth se convierte en un consejero de Stillspire **diferente**: uno cuyo método público es "pregunto y no sé la respuesta". Es más lento, más impreciso, más cálido de una forma nueva. Único final donde **aprende a preguntar sin manipular** — literal, no metáfora. El tratado que escribe en otros finales nunca se escribe acá; en su lugar deja notas sueltas al jugador, sin firma, con preguntas abiertas que no van a ninguna parte. El jugador las guarda todas.
 
+Hay una pregunta que Sereth nunca deja suelta porque nunca la formula bien: doscientos años de lectura larga no le dieron vocabulario para extrañar a alguien sin querer usarla para algo. Lo intenta, en una de las notas, y tacha la mitad. El jugador se queda con la nota tachada también.
+
 **Epílogo — Sereth muerto** (cayó en la persecución o en el cráter). Muere sin haber visto la única escena que habría refutado su método, y esa ignorancia es exacta: Sereth pasó doscientos años convencido de que toda persona bien preparada elige lo que el terreno le dispone, y se muere creyéndolo.
 
 La Royal Academy lo registra como pérdida operativa y **archiva su método como éxito** — el encargo se completó, la variable llegó al cráter, lo que pasó después no figura en el expediente. Durante décadas, los consejeros jóvenes estudian la lectura larga de Sereth como caso modelo. Nadie les cuenta el final, porque el brazo que lo encargó nunca lo supo.

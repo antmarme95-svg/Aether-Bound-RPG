@@ -243,8 +243,11 @@ Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo
 Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso, sin nota — la despedida ritual descrita en [[Los 5 Finales]]. La única línea que queda de él es la que dice antes de irse, no después: *"I've buried people I should've protected. I'm not doing that again."*
 
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
-Roen es quien **ve el futuro.** Su línea final:
-*"This is what guarding looks like. Not what you own — what you honor."*
+Roen es quien **ve el futuro** — y quien dice en voz alta lo que los demás dejan sin decir, porque esa es su función desde el Acto 1: nombrar el peso que el grupo carga.
+
+Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que estén solos, esa misma noche, y dice lo que sí es cierto: *"This is what guarding looks like. Not what you own — what you honor."* Pausa. Y después, más bajo, la parte que no iba a decir: *"You did it right. That doesn't mean you get to keep her."*
+
+**Es la única vez en el juego donde Roen distingue entre haber actuado bien y haber salido ileso.** Los enterró a todos los que no protegió; a Speck la protegió, y la perdió igual. Esa distinción es nueva para él, y se la entrega al jugador porque sabe que nadie más se la va a decir.
 
 ---
 
