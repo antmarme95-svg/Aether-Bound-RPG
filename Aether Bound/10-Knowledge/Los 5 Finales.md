@@ -71,7 +71,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* asciende. Recibe reconocimiento formal del Council. Se aparta del jugador con cortesía.
-- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: entregó a Speck viva al brazo encubierto de the Royal Academy, cumpliendo la orden real que recibió — pero sabe que el Council mintió sobre "custodia digna".
+- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: el equipo de extracción que ella activó completó la entrega en su lugar (es el único de los 9 donde el jugador mismo cierra la traición que el Pivote empezó — ver su ficha), cumpliendo la orden real que ella puso en marcha — pero sabe que el Council mintió sobre "custodia digna".
 - *Rechazo/Ausencia:* no aplica a Bram — nunca ejecutó. Lyris se aparta del grupo con calma que hiere.
 
 ---

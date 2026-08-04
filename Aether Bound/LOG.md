@@ -6881,3 +6881,50 @@ Quedan menores sin cerrar (ubicación de la negociación de Maren en Geografía 
 Sereth "calculista" vs su propio contraste declarado, cruce de fechas Maren×Roen contra la
 cadencia de Regents, aritmética interna de Nyael, fuerza mecánica de Nyael sobre Speck en el
 corredor) — no bloquean el cierre del sprint. **13ª re-corrida** pendiente de lanzar.
+
+## [2026-08-04] sprint/QA | 13ª re-corrida — 4 críticos únicos, todos de residuo
+
+**2 subagentes Opus en frío**, sin contexto de los fixes de la 12ª. Resultado combinado
+(con solapamiento): **4 críticos únicos**, ~10 medios, ~11 menores. Ninguno fue una decisión
+de canon nueva — los 4 eran **residuo**: la 12ª ronda arregló la línea reportada y no barrió
+la clase completa, o un fix de la 12ª introdujo un bug nuevo sin querer.
+
+**Los 4 críticos y su fix:**
+
+1. **"Darro se queda mudo" seguía colisionando** — la 12ª ronda arbitró el desempate en
+   `Dagna:439` (Vekka conserva el literal, Dagna pasa a "no le sale ningún chiste") pero no
+   tocó las 3 menciones que seguían reclamando el superlativo para la escena de Dagna+Roen:
+   `Darro-Ficha:402`, `Valen-Ficha:391`, `Dagna-Ficha:441`. Las tres reescritas a "elige el
+   silencio pudiendo hablar" — ya no compiten por la mudez, que queda solo en Vekka.
+2. **Bug nuevo introducido en el fix de Lyris F1 (12ª ronda):** al escribir "se queda
+   sosteniendo a Speck" se agregó sin querer "y él se la quita de los brazos" — es
+   literalmente el gate de F2b (arrancarla cerca de un core activo) escrito dentro de F1.
+   Corregido: la Muda se completa en sus brazos, nadie se la quita.
+3. **Cadena institucional de Iven contradicha en `Estructura Política.md:305`** ("sin cadena
+   intermedia") contra la fuente única de `Matriz §2` (Triune Council → Trade Consortium →
+   agente sin nombre → Iven). Reescrita la tabla completa de cadenas enanas y de Iven en
+   `Estructura Política` para coincidir con la Matriz, incluyendo los subclanes de Torgan y
+   Dagna que también faltaban ahí.
+4. *(Ya cerrado por un fix hecho al inicio de esta misma sesión, antes de que terminaran los
+   subagentes — QA-Congruencia lo confirmó de forma independiente sin saberlo.)*
+
+**Medios cerrados en la misma pasada:** tabla de duelo F4-vivo de la Matriz corregida para
+incluir a Darro y Valen (antes solo tenía a Roen entre los fijos, con conteos "9" y "10"
+inconsistentes); `00-Index.md` seguía diciendo "7 pasos" después de que la 12ª normalizara a
+1-6; `Los 5 Finales §F2a` describía a Nyael "entregando" a Speck cuando su ficha dice
+explícitamente que es el equipo, no ella; `Slice of Bond` tenía a Dagna llevándose "el
+Fragmento" en vez de a Speck; contradicción interna en el epílogo F4 de Bram (la pulsera "es
+para los que perdió" invalidaba el propio beat de agregar el nombre del jugador, que no está
+perdido); superlativo de Darro ("única vez que completa algo") alojado en la ficha de Torgan
+sin contraparte en la ficha de Darro; residuo de staging en `Darro-Ficha:228` ("no puede
+perseguir porque Speck ya se fue" cuando la Matriz dice que llega al borde en brazos del
+Pivote, no ausente).
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Menores sin cerrar de rondas anteriores más los nuevos de esta (aritmética de Vekka 50 vs 60
+años, "estuvo a un forcejeo de conseguirlo" en Iven, longevidad de los tres muertos que se
+leen como continuidad inmediata, frase rota en Vekka:326). No bloquean. **14ª re-corrida**
+pendiente de lanzar para confirmar el cierre.

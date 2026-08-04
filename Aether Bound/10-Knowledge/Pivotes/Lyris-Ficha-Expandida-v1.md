@@ -319,7 +319,7 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Frontier High Command queda neutralizado antes de llegar hasta ella.
 
-Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, **sosteniendo a Speck sin bajarla** — no la suelta, no la entrega, no la lleva a ningún lado. Sostiene la mirada del jugador hasta que él la alcanza y se la quita de los brazos. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y sin cadena no hay instrucción para lo que sigue.
+Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, **sosteniendo a Speck sin bajarla** — no la suelta, no la entrega, no la lleva a ningún lado, y nadie se la quita. Sostiene la mirada del jugador mientras la Muda se completa ahí mismo, en sus brazos. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y sin cadena no hay instrucción para lo que sigue — así que se queda quieta hasta que deja de haber nada que sostener.
 
 Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 

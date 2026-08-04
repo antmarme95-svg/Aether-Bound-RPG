@@ -438,7 +438,7 @@ Valen lee a Dagna desde el primer día. Sabe que carga carta. Sabe que carga sil
 
 **Cuando traiciona:** Darro grita una vez (*"¡DAGNA!"*) y después no le sale ningún chiste — sigue hablando, a media frase, nada con forma de broma. Es distinto de lo que le pasa con Vekka (ahí sí se queda mudo del todo): con Dagna el problema no es la voz, es el registro — nunca supo qué era esa relación, y la incertidumbre no se resuelve gritando su nombre.
 
-**La escena de Darro sentándose junto a Roen en el cráter** es el momento más grande de Darro en todo el juego. No dice nada. Solo se sienta al lado. Escudo bajado. Es reconocimiento entre compañeros de que uno se acaba de romper y el otro sabe que no hay palabras que sirvan. Que sea Darro — el que siempre tiene frase, el que hace las bromas — es lo que le da peso. Cuando Darro se queda sin frase, sabemos que la escena es real.
+**La escena de Darro sentándose junto a Roen en el cráter** es el momento más grande de Darro en todo el juego. No dice nada. Solo se sienta al lado. Escudo bajado. **No es que no le salgan las palabras** — es que elige no usarlas, pudiendo. Es reconocimiento entre compañeros de que uno se acaba de romper y el otro sabe que no hay palabras que sirvan. Que sea Darro — el que siempre tiene frase, el que hace las bromas — quien elige el silencio es lo que le da peso a la escena.
 
 **En F4:** si Dagna vuelve, Darro es el primero en probar broma nueva. Es torpe, no funciona del todo. Dagna se ríe silenciosamente una vez. Darro sale de la escena diciendo *"Creo que le caí bien"* con la misma cero confianza de siempre. La incertidumbre sobrevive a todo, incluso a la síntesis.
 

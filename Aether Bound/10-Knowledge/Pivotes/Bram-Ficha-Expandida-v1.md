@@ -355,7 +355,7 @@ Elige asentarse cerca del cráter transformado — no dentro, no en Rivermeet, e
 
 El jugador lo visita ocasionalmente. Bram sonríe — cosa rara. La pulsera con los nombres talladados sigue en la muñeca, pero ahora la lleva más suelta. Le agrega, una noche, un nombre más en el nudo interior — no se lo dice a nadie, y el nombre no es el de un caído. Es el nombre del jugador.
 
-**Casi le agrega otro.** Sostiene el hilo un rato largo pensando en el nombre de Speck, y no lo talla — la pulsera es para los que perdió, y Speck no está perdida, está en un cráter a la vista de todos, viva de una forma que Bram no tiene palabra para nombrar. No tallarla no es olvido. Es que su sistema entero — cuarenta años clasificando a quién le debe algo y a quién no — nunca tuvo categoría para esto, y por primera vez Bram deja un hilo sin usar en vez de forzar la cuenta.
+**Casi le agrega otro.** Sostiene el hilo un rato largo pensando en el nombre de Speck, y no lo talla — no porque no le deba algo, sino porque no sabe clasificar lo que le debe. Al jugador le debe compañía, y eso entra en cuarenta años de práctica de saldar cuentas. A Speck le debe algo que no tiene nombre en su sistema: ella está en un cráter a la vista de todos, viva de una forma que Bram no sabe nombrar, ni deuda ni pérdida. No tallarla no es olvido. Es que su sistema entero — cuarenta años clasificando a quién le debe algo y a quién no — nunca tuvo categoría para esto, y por primera vez Bram deja un hilo sin usar en vez de forzar la cuenta.
 
 Último pensamiento (no dicho, no narrado, sembrado): *"Cuarenta años siendo el muro. El resto de la vida siendo la puerta. Balance."*
 

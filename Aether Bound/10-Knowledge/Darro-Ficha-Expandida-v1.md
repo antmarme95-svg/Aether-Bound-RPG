@@ -225,7 +225,7 @@ El Pivote se llevó a Speck en el **corredor** del Archive — con el Fragmento 
 
 Es **el que más explota emocionalmente en el momento.**
 
-- Grita. Ataques erráticos. Quiere perseguir pero no puede porque Speck ya se fue.
+- Grita. Ataques erráticos. Quiere cargar contra el Pivote ahí mismo, y no puede — forcejear cerca del core mataría a Speck, y hasta furioso Darro lo sabe.
 - Por primera vez en la campaña, **Darro está furioso y serio.**
 
 *"¿QUÉ HICISTE? ¡SPECK NO ES TUYO PARA TOMAR!"*
@@ -399,7 +399,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Momento clave:** Cuando Darro llora por Speck/Pivote, Roen lo deja llorar. No intenta arreglarlo. Simplemente está. Darro después dice: *"Gracias por no hacer broma de mi llanto."* Roen: *"El llanto es honesto. Tú eres honesto. Sigue siendo Darro."*
 
-**La escena más grande de Darro en todo el juego (ruta Dagna):** cuando Dagna es el Pivote y entrega a Speck en el cráter, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. Es, de todo el elenco, el único momento donde Darro — el que siempre tiene frase — se queda sin ninguna. Que sea justo él quien elige el silencio es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
+**La escena más grande de Darro en todo el juego (ruta Dagna):** cuando Dagna es el Pivote y entrega a Speck en el cráter, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. **No es que se quede mudo** — eso solo le pasa una vez, con Vekka (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]]) — es que elige el silencio pudiendo hablar. Esa elección es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
 
 ### Darro + Valen
 **Energía:** Valen es información pesada. Darro es humor ligero. Parecen opuestos.

@@ -46,7 +46,7 @@ con ella; picas Bond; nadie golpea el suelo.
 3. **Dungeon — eco del Sunken Archive (~15 min).** Mini-bóveda al final del
    Ascent que guarda el Fragmento. Antes de entrar, escena firma → **T3 The
    Mountain's Answer**. Al salir, **la traición**: clava la Primera Cuña,
-   deja el martillo (regla T3 de [[The Tether]]), se lleva el Fragmento.
+   deja el martillo (regla T3 de [[The Tether]]), se lleva a Speck.
 4. **Coda — Bond vacío (~10 min).** Desandar un tramo del Ascent sin
    verticalidad: peleas a ras de suelo, rutas que ya no existen. La cornisa
    que *sabes* que alcanzabas con ella; picas Bond; nadie golpea el suelo.

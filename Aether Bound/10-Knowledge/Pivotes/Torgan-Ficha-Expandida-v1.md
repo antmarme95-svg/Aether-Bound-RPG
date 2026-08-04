@@ -480,7 +480,7 @@ Lo entierran con el tatuaje incompleto. Nadie del clan lo llama deshonor — es 
 
 Quien hace algo al respecto es **Darro**, y lo hace desde el único lugar donde tiene autoridad: **el tatuaje.** Los dos lo tenían incompleto — el de aprendiz que Vekka nunca dejó terminar, el de juramento que el clan nunca pudo enmendar. Darro se hace agregar, en el suyo, una línea corta de color distinto: la que le habrían puesto a Torgan si hubiera llegado vivo al consejo.
 
-No pide permiso a nadie. No tiene derecho a hacerlo — no es su clan, no es su juramento, y ningún tatuador enano debería habérselo grabado. **Encuentra uno que sí.** Cuando le preguntan qué significa esa línea, Darro contesta que es de un amigo, y no dice más. Es la única vez en la campaña que Darro completa algo.
+No pide permiso a nadie. No tiene derecho a hacerlo — no es su clan, no es su juramento, y ningún tatuador enano debería habérselo grabado. **Encuentra uno que sí.** Cuando le preguntan qué significa esa línea, Darro contesta que es de un amigo, y no dice más. Es lo único que puede hacer por Torgan, y lo hace de todos modos.
 
 Ver [[Los 5 Finales]].
 

@@ -197,8 +197,8 @@ F4 siempre. No es un epílogo faltante.
 
 F4 está declarado **agridulce, no triunfal** ([[Los 5 Finales]] §F4). Sin embargo, con la
 variante muerta ya resuelta arriba, quedó expuesto que **la variante viva no pagaba ningún
-precio**: de 9 rutas, solo Darro y Valen (fijos) cargaban el costo declarado; el resto leía
-como final feliz sin matiz.
+precio**: de 9 rutas + 3 fijos, solo Darro y Valen cargaban el costo declarado; el resto
+(incluido Roen) leía como final feliz sin matiz.
 
 **Regla:** todo epílogo F4-vivo debe incluir un **beat de duelo específico y no genérico**
 — un momento, gesto o hábito que reconozca la ausencia de Speck como pérdida personal, no
@@ -217,10 +217,11 @@ antes de escribir**, para no homogeneizar.
 > (nadie / el jugador lo nota sin preguntar / un tercero periférico lo nota / se muestra
 > abiertamente sin explicar el significado), y **si es un objeto, un hábito, una omisión
 > narrativa, o una palabra dicha en voz alta.** De los 9 Pivotes, ninguno lo dice en voz
-> alta — esa forma queda reservada a los fijos (Roen y Valen, cada uno desde su propio
-> ángulo: Roen distingue actuar bien de salir ileso, Valen nombra el costo directamente).
+> alta — esa forma queda reservada a los 3 fijos, cada uno desde su propio ángulo: Darro lo
+> celebra y colapsa después (ver su ficha, nota de escritura), Valen nombra el costo
+> directamente, Roen distingue actuar bien de salir ileso.
 
-**Los 9 ejes, uno por ruta — no se repiten:**
+**Los 9 ejes de los Pivotes, más los 3 fijos — no se repiten:**
 
 | Personaje | Qué reconoce el duelo |
 |---|---|
@@ -234,6 +235,8 @@ antes de escribir**, para no homogeneizar.
 | **Bram** | casi talla un nombre en la pulsera y no lo hace — no tiene categoría para esto |
 | **Maren** | deja de usar una variable de su modelo sin decírselo a nadie |
 | **Sereth** | intenta escribir la pregunta que le falta y tacha la mitad |
+| **Darro** (fijo) | celebra en el momento y colapsa después, a solas — ver su ficha, nota de escritura |
+| **Valen** (fijo) | nombra el costo directamente al jugador: *"those cancel out"* que no cancelan nada |
 
 Esta tabla se escribe **antes** de tocar una sola ficha en la próxima ronda que la necesite
 (p. ej. si se agrega un décimo Pivote o se reabre alguno de estos epílogos), siguiendo la

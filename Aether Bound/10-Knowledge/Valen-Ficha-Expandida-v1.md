@@ -388,7 +388,7 @@ Valen: *"Because in 230 years of patterns, I've seen endings. You have not. That
 
 Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de verdad. Verdad sin escape es prisión.
 
-**Momento clave:** Cuando Darro se queda sin palabras por Dagna después del clímax — el único momento de la campaña donde el que siempre tiene frase no tiene ninguna ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5) — Valen está ahí (silenciosamente). Simplemente presente. Raro para Valen.
+**Momento clave:** Cuando Darro elige el silencio por Dagna después del clímax — no porque se le corten las palabras, sino porque decide no usarlas ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5) — Valen está ahí (silenciosamente). Simplemente presente. Raro para Valen.
 
 ---
 
