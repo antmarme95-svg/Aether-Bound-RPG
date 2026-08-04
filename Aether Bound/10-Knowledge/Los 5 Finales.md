@@ -107,6 +107,8 @@ Una vez con Speck dentro del core, activa el vínculo por su cuenta y la encaden
 
 **Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada, trasladada desde el cráter una vez que el vínculo quedó bajo control del jugador, no del Council. Ningún compañero. El multi-link es un solo-link.
 
+**El único beat de interioridad permitido en "cedida"** está en [[Speck]] §Capa 4 (fuente única — no se reescribe acá). Las dos fichas que la tienen cerca durante años bajo el régimen (Maren, Sereth — las únicas que se quedan) lo citan en vez de dejarla completamente ausente de su propio cautiverio.
+
 **Sabor:** villanía funcional. Los compañeros te abandonan uno por uno, cada uno con la despedida ritual de su cultura. Roen se va sin discurso. Valen escribe una carta y no la firma. Darro no dice adiós — solo deja su símbolo tallado en la mesa del último campamento.
 
 **Pivote — por arquetipo:**

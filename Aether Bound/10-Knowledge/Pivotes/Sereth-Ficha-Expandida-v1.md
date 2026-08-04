@@ -343,6 +343,8 @@ Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cru
 
 **En la práctica, calcula tu caída desde el primer mes.** Y — variante especialmente peligrosa — **te ayuda a caer bien.** Un tirano que colapsa mal arrastra a todos los que quedaron con él. Sereth diseña las condiciones para que, cuando caigas, caigas de una forma que le permita a él sobrevivir intacto. Te sirve con lealtad aparente durante años. Cada consejo que te da tiene dos capas: la superficial (te ayuda a gobernar) y la profunda (te empuja imperceptiblemente hacia decisiones que erosionan tu régimen).
 
+Speck sostiene su mirada cada vez que Sereth pasa por el trono ([[Speck]] §Capa 4) — es la única lectura que Sereth nunca intenta hacer. Doscientos años leyendo intenciones, y a ella decide no leerla, porque hacerlo sería tratar la mirada como un dato más para usar.
+
 **Epílogo:** cuando finalmente caes (siempre caes), Sereth ya negoció con la sucesión. Reaparece en la Corte de quien te reemplace, sin manchas, y con un tratado en el bolsillo — el que empezó en F1 pero nunca terminó — que ahora sí termina, porque tiene el caso de estudio completo. Un manipulador ayudando a un tirano es, para su escuela, el trabajo más difícil documentado, y él lo ejecutó. Sereth muere respetado por la próxima generación de consejeros. El jugador, si sigue vivo bajo cualquier condición, nunca sabrá que la caída fue diseñada.
 
 Esta es la variante Sereth que ninguna otra fila de la matriz puede reproducir: **manipulador ayudando a un tirano hasta hacerlo caer sin manchas.**

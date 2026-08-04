@@ -6777,3 +6777,36 @@ apunta ahora a la 12ª.
 
 **Estado al cierre:** `check_canon.py` 0 críticos / 0 medium (20 clases). `check_vault.py`
 🟢, arranque de sesión ~3,670 tokens. Working tree limpio tras commit + push.
+
+## [2026-08-04] design/narrativa | Agencia de Speck — "cedida" recibe un beat mínimo
+
+**Decisión de Boris:** "beat mínimo de conciencia sin agencia (Recomendado)" — de las 3
+opciones planteadas (dejarlo intencionalmente vacío / interioridad solo en el epílogo / un
+beat mínimo escrito una vez y citado), se eligió la última.
+
+**Diagnóstico:** `Speck.md §Capa 4` declara 4 grados de agencia (F4 consentimiento, F1
+aceptación, F2a/F3 cedida, F2b arrebatada), pero de los 7 epílogos F3 que la tienen en escena
+bajo el régimen del tirano (Maren, Sereth, Torgan, Dagna, Iven, Nyael, Lyris), ninguno le da
+una sola línea de punto de vista. Revisión más fina: solo **Maren y Sereth** conviven con ella
+durante años (son las únicas dos que se quedan sirviendo al tirano); Torgan/Dagna/Iven/Vekka
+mueren confrontando al jugador en el mismo instante del cruce, Nyael/Lyris se retiran antes de
+que empiece el régimen, y Bram nunca llega a verla encadenada. El vacío de interioridad
+afectaba en la práctica solo a las dos fichas que realmente la tienen presente en el tiempo.
+
+**El beat:** Speck sostiene la mirada de quien la retiene, sin apartarla — ni desafío ni
+súplica, la misma atención inmóvil de un animal no domesticado ante lo que no controla.
+Confirma que hay alguien adentro sin cruzar a voluntad ni consentimiento: no es una pregunta
+que ella responde (exclusivo de F4) ni una resistencia que ella opone (eso la mataría, `Speck
+§Capa 5`).
+
+**Fuente única:** `Speck.md §Capa 4`, en la bala de "cedida". `Los 5 Finales §F3` cita el beat
+sin reescribirlo (regla de fuente única). Maren y Sereth reciben una línea cada una,
+diferenciada por cómo cada quien *no* la lee: Maren, que fuerza todo a una variable, es la
+única cosa de su modelo que nunca logra leer; Sereth, que lee intenciones hace 200 años,
+decide no leerla porque hacerlo sería tratarla como un dato más.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (20 clases), `check_vault.py` 🟢.**
+
+**Cierra la última de las 4 decisiones de diseño abiertas de la 11ª ronda** (gate F4,
+homogeneización F4-muerta, sabor de F4, agencia de Speck — las 4 resueltas). Solo queda la
+**12ª re-corrida** para cerrar formalmente el sprint.

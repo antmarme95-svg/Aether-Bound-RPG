@@ -43,43 +43,16 @@ orden "El Primero", bautizo a Acto 2, agencia a 4 grados, el Pivote siempre en
 el borde — están todas aplicadas. En la 10ª **se cortó el ciclo de parches y se
 hizo una sesión de diseño.**
 
-### 🏗️ Fix de arquitectura + 11ª re-corrida (2026-08-03)
+### 🏗️ Fix de arquitectura — cerrado, 0 decisiones de diseño abiertas
 
-**Diagnóstico:** la mecánica del cráter estaba copiada a mano en **13 archivos**,
-así que cada cambio de regla exigía 13 transcripciones. Era un método que
-garantizaba divergencia. Detalle y plan: [[LOG]] + `~/.claude/plans/plan-craterculata-fix-arquitectura-crater.md`.
+La mecánica del cráter, copiada a mano en 13 archivos, se centralizó en
+[[El Cráter — Matriz de Rutas]] (fuente única); `Los 5 Finales` y `Geografía
+§ACTO 3` podados; 8 chequeos nuevos en el linter. Detalle completo, incluidas
+las 4 decisiones de diseño ya resueltas (gate F4, homogeneización de los 7
+ejes F4-muerta, sabor de F4 con el beat de duelo en las 9 rutas, y agencia
+de Speck con el beat mínimo de "cedida" en `Speck.md §Capa 4`): [[LOG]].
 
-**Hecho:** [[El Cráter — Matriz de Rutas]] como fuente única; `Los 5 Finales` y
-`Geografía §ACTO 3` podados; las 9 fichas heredan; los 3 fijos y `Los 9 Pivotes`
-barridos por primera vez; 8 chequeos nuevos en el linter.
-
-**Decisiones de Boris:** el gate de F4 no depende del Pivote (cada epílogo F4
-tiene dos variantes, vivo/muerto); en F4 Speck **cruza el borde sola**; Nyael y
-Bram no tienen variante muerta, intencional.
-
-**La 11ª cambió de naturaleza: ya no reporta propagación, reporta dramaturgia.**
-Validó `Matriz §2`/`§4` contra las 9 fichas, la aritmética del elenco y las zonas
-nunca tocadas (`The Tether`, `Bond y el Bond Vacío`, `La Rueda`, `Nomenclatura`,
-`Old-Tobin-Hale`) — sin contradicciones. Lo mecánico que encontró ya está cerrado.
-
-**Homogeneización — cerrada** (2026-08-03, pasada comparativa). Los 7 epílogos
-F4-muerta tienen ahora **un eje de pérdida distinto cada uno**, tabulados en
-`Matriz §4`: Vekka (el saber que no se transmite), Sereth (la refutación),
-Torgan (el juramento sin enmendar), Maren (la redundancia), Iven (muere
-creyendo que falló), Lyris (el timing), Dagna (Roen). El gesto de la palma
-sobre el core quedó en un solo personaje.
-
-**Lección registrada en `Matriz §4`:** escribir N variantes en secuencia contra
-la misma regla **las homogeneiza**, aunque cada una la cumpla por separado. La
-corrección se hace comparándolas entre sí, asignando los ejes *antes* de
-escribir — de a una vuelven a converger.
-
-**Sabor de F4 — cerrado (2026-08-03).** Boris eligió "beat de duelo obligatorio
-en las 9 (+Roen)": pasada comparativa con un eje distinto por personaje,
-registrada en `Matriz §4`. Detalle en [[LOG]].
-
-**1 decisión abierta para Boris:** grados de agencia de Speck — de los 4 de
-`§Capa 4`, *cedida* no tiene interioridad en ninguna parte.
+**Queda solo la 12ª re-corrida** para cerrar el sprint (ver "Inmediato" abajo).
 
 ### 🛠️ Herramientas del vault
 
@@ -172,14 +145,10 @@ motor resuelve eso.
 
 ### 🗓 Inmediato — arrancar acá mañana
 
-1. **Decisión de Boris: grados de agencia de Speck.** De los 4 grados
-   declarados en `Speck.md §Capa 4`, *cedida* (F2a/F3) no tiene interioridad
-   en ninguna parte del vault — en los 12 epílogos F3, Speck es un objeto sin
-   punto de vista. Es la única decisión de diseño que queda abierta de la
-   11ª ronda; sabor de F4 ya se cerró (ver arriba). No delegable sin él.
-2. **12ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
-   subagentes Opus en frío. Correr después de resolver (1).
-3. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
+1. **12ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
+   subagentes Opus en frío. Las 4 decisiones de diseño de la 11ª ronda ya
+   están todas cerradas (ver arriba); no queda nada pendiente para correrla.
+2. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
    bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
    los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el
    Bond Vacío`. Arranca al cerrar el sprint.

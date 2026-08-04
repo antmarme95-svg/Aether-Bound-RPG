@@ -348,6 +348,8 @@ No forcejea: suelta a Speck al verlo cruzar, calculando en el acto que retenerla
 
 **En la práctica, te da fecha de vencimiento el primer mes.** No como venganza — como diagnóstico. Un tirano con Speck encadenada no es un sistema estable, y Maren solo sabe trabajar con sistemas estables. Modela tu régimen, ve con precisión cuándo colapsará, **y no hace nada para acelerarlo ni para impedirlo.** Se limita a anotar la fecha y a operar bien hasta que llegue. Es la diferencia con Sereth, que en su ruta sí interviene: Maren observa el reloj, no lo toca.
 
+Speck sostiene la mirada de Maren cada vez que pasa cerca del trono ([[Speck]] §Capa 4) — es la única variable de todo el modelo que Maren nunca logra leer, y la única que no intenta forzar en una columna.
+
 **Epílogo:** el régimen cae en el trimestre que ella había anotado. Maren no celebra el acierto ni lo menciona: para entonces ya hace años que dejó de anotar cosas. Sigue en Rivermeet, administrando lo que queda, con la competencia intacta y el motivo apagado — **acertó todos los cálculos de su vida y ninguno le sirvió para lo único que quería conservar.** El jugador la ve un día en la calle. No hay reproche. Tampoco hay nada más.
 
 ### F4 — The Warden's Choice (Speck elige Muda parcial, síntesis)
