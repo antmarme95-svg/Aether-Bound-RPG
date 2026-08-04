@@ -15,39 +15,13 @@ Old Tobin Hale + toda la estructura política y geográfica están escritos. El
 vault soporta escribir guión en cuanto cierre el sprint QA (7ª re-corrida,
 único pendiente).
 
-**Sprint QA de reparación — 6 re-corridas procesadas.** Historial completo en
-[[LOG]] y [[Current-State-Historico]]. Resumen de lo fijado por ronda:
-
-- **3ª:** agencia de Speck en 3 grados; regla del Fragmento fuente única;
-  gates de los 5 finales desambiguados; Isolde = reclamo de House Marrow;
-  longevidad alineada; Goggles no retirables; Mudas ninguna completada en
-  550 años.
-- **4ª (18→17):** costo de F1 = colapso tecnológico, NO exterminio (F1 no es
-  mejor que F4); gate de F4 = 2 condiciones; matriz de roles fija eliminada;
-  `Geografía` = fuente primaria de ubicaciones. **12 epílogos F1 reescritos.**
-- **5ª (15→13):** Speck durmió 550 años en crisálida (nunca estuvo despierta
-  disfrazada); 4 fichas cortas archivadas (`Dagna/Darro/Roen/Valen.md` →
-  `90-Raw/`, regla: una sola fuente viva por personaje); Bond vacío invertido
-  en la celda de Bram; Vekka → Deber Institucional. **Los 5 finales visuales
-  completos**, ratificados por Boris (nota abierta no bloqueante: orejas de
-  zorro simple en vez de pétalos).
-- **6ª (9→9, todos cerrados):** gate de F1 reescrito sin autocontradicción;
-  Lyris F1/F3 alineadas a su sub-beat 5; Nyael/Bram F1 mencionan a su agente
-  sustituto; premisa "sin reloj autónomo" bajada a la fuente real; Bound Five
-  formado en Acto 1 (no Acto 2) propagado a `Geografía`/`Estructura
-  Dramática`; topología "rueda, no malla" reforzada; Momento de Persona 7
-  corregido a Acto 2. **Iven queda como excepción intencional** a la fila
-  "Deber Institucional" (decisión de Boris, 2026-07-30) — es el único de los
-  4 cuya institución le mintió activamente; registrado en `Los 5 Finales
-  §matriz` para que ningún QA futuro lo reporte como crítico.
-
-### ✅ Old Tobin Hale — ficha escrita (2026-07-30)
-
-[[Old-Tobin-Hale-Ficha-Expandida-v1]]. Personaje de apoyo, sin arco de
-traición: dispara el falso positivo del Reckoning y entrega the Wanderer's
-Goggles. El extraño que le dejó los Goggles hace 40+ años queda
-**deliberadamente sin resolver** (siembra a propósito, mismo patrón que The
-Monolith). Indexado en `00-Index`.
+**Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
+[[LOG]] y [[Current-State-Historico]]. Canon que quedó fijado ahí y sigue
+vigente: costo de F1 = colapso tecnológico (no exterminio); una sola fuente
+viva por personaje; Speck durmió 550 años en crisálida; Bound Five formado en
+Acto 1; topología "rueda, no malla"; **Iven es excepción intencional** de la
+fila Deber Institucional (registrada en `Los 5 Finales §matriz` — ningún QA
+debe reportarla). Los 5 finales visuales están completos y ratificados.
 
 ### ✅ Regla de idioma establecida (decisión de Boris, 2026-07-30)
 
@@ -69,41 +43,45 @@ orden "El Primero", bautizo a Acto 2, agencia a 4 grados, el Pivote siempre en
 el borde — están todas aplicadas. En la 10ª **se cortó el ciclo de parches y se
 hizo una sesión de diseño.**
 
-### 🏗️ Fix de arquitectura (sesión de diseño 2026-08-03)
+### 🏗️ Fix de arquitectura + 11ª re-corrida (2026-08-03)
 
-**Diagnóstico:** la mecánica del cráter estaba copiada a mano en **13 archivos**
-(9 Pivotes + 3 fijos + `Los 9 Pivotes`), así que cada cambio de regla exigía 13
-transcripciones con redacción propia. No era indisciplina — era un método que
-garantizaba divergencia, y por eso 5 rondas de parches no bajaron el volumen.
+**Diagnóstico:** la mecánica del cráter estaba copiada a mano en **13 archivos**,
+así que cada cambio de regla exigía 13 transcripciones. Era un método que
+garantizaba divergencia. Detalle y plan: [[LOG]] + `~/.claude/plans/plan-craterculata-fix-arquitectura-crater.md`.
 
-**Fases 1-5 completadas** (plan en `~/.claude/plans/plan-craterculata-fix-arquitectura-crater.md`):
+**Hecho:** [[El Cráter — Matriz de Rutas]] como fuente única; `Los 5 Finales` y
+`Geografía §ACTO 3` podados; las 9 fichas heredan; los 3 fijos y `Los 9 Pivotes`
+barridos por primera vez; 8 chequeos nuevos en el linter.
 
-1. **[[El Cráter — Matriz de Rutas]]** — fuente única nueva: secuencia fija de
-   7 pasos, tabla de parámetros por ruta, los 5 gates, beats obligatorios,
-   reglas globales que se citan y nunca se re-enuncian.
-2. `Los 5 Finales` y `Geografía §ACTO 3` **podados** de la mecánica duplicada —
-   se quedan con filosofía y lugar respectivamente.
-3. **Las 9 fichas heredan**: citan la matriz en vez de re-narrarla. Se cerraron
-   de paso todos los críticos de la 10ª.
-4. **Los 3 fijos + `Los 9 Pivotes`** barridos por primera vez en todo el sprint.
-5. **6 chequeos nuevos en el linter** (ver abajo).
+**Decisiones de Boris:** el gate de F4 no depende del Pivote (cada epílogo F4
+tiene dos variantes, vivo/muerto); en F4 Speck **cruza el borde sola**; Nyael y
+Bram no tienen variante muerta, intencional.
 
-**Decisiones de Boris en esa sesión:** el gate de F4 no depende del Pivote (y
-por eso cada epílogo F4 tiene dos variantes, vivo/muerto); en F4 Speck **cruza
-el borde sola**; Nyael y Bram no tienen variante muerta y es intencional.
+**La 11ª cambió de naturaleza: ya no reporta propagación, reporta dramaturgia.**
+Validó `Matriz §2`/`§4` contra las 9 fichas, la aritmética del elenco y las zonas
+nunca tocadas (`The Tether`, `Bond y el Bond Vacío`, `La Rueda`, `Nomenclatura`,
+`Old-Tobin-Hale`) — sin contradicciones. Lo mecánico que encontró ya está cerrado.
 
-**Siguiente paso:** **11ª re-corrida** (Fase 6). Ahora mide dramaturgia real —
-las 4 clases de error mecánico que dominaron las rondas 6ª-10ª las caza el
-linter.
+**Pendiente — 3 críticos de homogeneización**, todos de la tanda de epílogos F4
+de esta sesión: Torgan/Dagna F4-muerto idénticos; Torgan/Iven F4-vivo con el
+mismo gesto final; **5 de 7 variantes F4-muerta con el mismo molde**. Requieren
+**una pasada comparativa** sobre las 6 fichas — de a una vuelven a converger.
+
+**Lección:** escribir N variantes en secuencia contra la misma regla las
+homogeneiza, aunque cada una cumpla la regla por separado.
+
+**2 decisiones abiertas para Boris:** (1) sabor de F4 — hoy se lee como final
+feliz, solo Darro paga el agridulce declarado; (2) grados de agencia de Speck —
+de los 4 de `§Capa 4`, *cedida* no tiene interioridad en ninguna parte.
 
 ### 🛠️ Herramientas del vault
 
 ```
 python "Aether Bound/scripts/check_vault.py"    # peso de arranque
-python "Aether Bound/scripts/check_canon.py"    # consistencia (18 clases)
+python "Aether Bound/scripts/check_canon.py"    # consistencia (20 clases)
 ```
 
-`check_canon.py` — **18 clases**. Las 12 originales: citas `§`, wikilinks,
+`check_canon.py` — **20 clases**. Las 12 originales: citas `§`, wikilinks,
 fuente única, aritmética de edades, longevidad, género, reinos, cuadrantes,
 diálogo, fichas duplicadas, huérfanos de índice. Las **6 nuevas (2026-08-03)**
 cubren la escena del cráter, que causó críticos en 4 rondas seguidas:
@@ -112,7 +90,10 @@ defecto), `crater-borde` (el Pivote nunca en el centro), `gate-f4` (prohibido
 agregar condición de ruta), `premisas` (matar a Speck no sana nada; no hay
 reloj autónomo), `crater-beats` (F3 exige soltar, F4 exige que el mensajero se
 aparte), `quiebre-fijos` (los fijos narran su reacción, no el evento).
-Verificados contra los errores reales de la 10ª ronda: los cazan todos.
+**+2 de la 11ª:** `quiebre-lugar` (la traición ocurre en el corredor, no en el
+cráter — el chequeo anterior veía el QUÉ y no el DÓNDE) y `superlativos`
+(un «única vez» de un fijo vale en un solo lugar del vault).
+Verificados contra los errores reales de las rondas 10ª y 11ª: los cazan todos.
 
 Exit 1 si hay críticos. Método: skill `canon-qa` / [[QA de Canon Loop]].
 **Orden no negociable:** linter en 0 → subagentes en frío solo para juicio →

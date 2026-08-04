@@ -304,7 +304,7 @@ En ese momento — con Dagna quieta, Speck todavía en sus brazos, el mensajero 
 
 El jugador lo nota. Darro lo nota. Nadie más — Dagna sigue con los ojos en el mensajero que se acerca, no en Roen.
 
-**Darro se acerca a Roen** mientras el jugador decide qué hacer. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado. Es la escena más grande de Darro en todo el juego — un gesto sin palabras, dirigido a un compañero al que respeta, sin juzgar todavía a la enana que puede o no traicionar. Dura hasta que el jugador decide moverse.
+**Darro se acerca a Roen** mientras el jugador decide qué hacer. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado — un gesto sin palabras, dirigido a un compañero al que respeta, sin juzgar todavía a la enana que puede o no traicionar. Dura hasta que el jugador decide moverse. El peso que tiene esto desde el lado de Darro está en [[Darro-Ficha-Expandida-v1|Darro]] §Dinámicas con Roen y Valen (El Triángulo del Grupo).
 
 ---
 

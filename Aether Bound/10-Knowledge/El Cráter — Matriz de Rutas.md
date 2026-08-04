@@ -23,26 +23,34 @@ Si un dato de acá cambia, cambia **una vez**.
 **Idéntica en las 9 rutas.** Las excepciones declaradas están en §2 y no son otra secuencia:
 son la misma con distinto ocupante de un rol.
 
+**Paso 0 — el pulso ya está corriendo.** El core central **empieza a pulsar desde el descenso
+al Archive** ([[Geografía y Ciudades]] §ACTO 3), antes de que nadie traicione a nadie. Eso no
+es ambientación: mientras los God-Cores pulsan, **Speck no puede ser transportada lejos del
+centro** ([[Speck]] §Capa 5). Es lo que hace que las 9 rutas terminen en el cráter y no en
+otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja llevar.
+
 1. **El Pivote toma a Speck** en el último corredor del ascenso del Sunken Archive. Sin
    forcejeo largo, sin discurso — el grupo queda desalojado, no golpeado.
    *Excepción — ruta Bram:* Bram **rehúsa** en el corredor y devuelve a Speck al jugador; el
    grupo sale intacto y es **Torgan**, esperando afuera del Archive, quien la toma.
 2. **Persecución** por The Wilds hacia The First Wound
    ([[Geografía y Ciudades]] §ACTO 3, sub-beat 4). Cada ruta tiene su sabor; ninguna cambia
-   el destino.
+   el destino, porque el destino no lo elige el Pivote (paso 0).
    *Excepción — ruta Nyael:* Nyael toma a Speck en el corredor (paso 1), la pasa al **equipo
    de extracción** que activó, y **se retira antes de la persecución**. No llega al cráter.
-   El equipo cubre los pasos 3-7 en su lugar.
-3. **El Pivote se detiene en el borde del cráter**, con Speck en brazos.
-   **Nunca en el centro, en ninguna ruta** — cruzar el borde es la línea exclusiva de F3, y
-   si el Pivote lo cruzara, F1/F2b/F4 quedarían geométricamente inalcanzables en esa ruta.
+   El equipo cubre los pasos 3-6 en su lugar.
+3. **El Pivote se detiene en el borde del cráter**, con Speck en brazos, y **el Fragmento
+   termina de activarse**: hive mind involuntario, Speck E1 → E3, los God-Cores despiertan uno
+   a uno alrededor. Ocurre **al llegar**, no después — el pulso venía desde el Archive y acá
+   se cierra.
+   **El Pivote nunca cruza al centro, en ninguna ruta** — cruzar el borde es la línea
+   exclusiva de F3, y si el Pivote lo cruzara, F1/F2b/F4 quedarían geométricamente
+   inalcanzables en esa ruta.
 4. **El mensajero de la cadena del Pivote sube desde dentro del cráter hacia el borde**,
    a recibir a Speck. Es él quien cierra la distancia, no el Pivote.
 5. **El Pivote no le sale al encuentro y no completa la entrega por su cuenta.** Sostiene y
    espera. Lo que pase después no depende de él.
-6. **El Fragmento se activa.** Hive mind involuntario, Speck E1 → E3, los God-Cores despiertan
-   uno a uno alrededor del cráter.
-7. **El jugador decide.** Los cinco gates de §3.
+6. **El jugador decide.** Los cinco gates de §3.
 
 **No hay versión de ninguna ruta en la que Speck llegue al cráter sola.**
 
@@ -160,6 +168,7 @@ Re-enunciarlas es la causa mecánica de la mitad de los críticos del sprint.
 | Regla | Fuente única |
 |---|---|
 | Qué sobrecarga el Fragmento (fuerza mecánica cerca de un core activo) | [[Speck]] §Capa 5 |
+| **El tirón del cráter** — mientras los God-Cores pulsan, Speck no se deja transportar lejos del centro; la entrega corta el hive mind y recién entonces se la puede mover | [[Speck]] §Capa 5 |
 | Los 4 grados de agencia de Speck por final | [[Speck]] §Capa 4 |
 | El gate de F4 (2 condiciones, sin condición de ruta) | [[Los 5 Finales]] §F4 = [[The Tether]] §Gate |
 | **No hay reloj de maduración autónomo** — la Muda no ocurre sola con el tiempo | [[El Mundo y la Muda]] |

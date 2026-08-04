@@ -188,7 +188,7 @@ En el corredor del Archive, con la lectura Warden hecha y la oferta del Triune C
 
 ### Escena 2: The First Wound, en el cráter (el quiebre)
 
-El Fragmento se activa. Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado). El Pivote actúa sobre lo que ya reveló en el corredor: se lleva el Fragmento y a Speck.
+La traición ya ocurrió: fue en el **corredor** del Archive, donde el Pivote se llevó a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). Roen pasó toda la persecución sabiéndolo. Acá, en el borde del cráter, el Fragmento termina de activarse y Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado).
 
 **Roen y el momento del quiebre:**
 

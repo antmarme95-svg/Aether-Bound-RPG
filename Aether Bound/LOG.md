@@ -6591,3 +6591,73 @@ la prosa dramática ya ratificada.
 
 **11ª re-corrida (Fase 6)** — con las 4 clases mecánicas cubiertas por el linter, esta ronda
 debería medir dramaturgia real por primera vez en el sprint.
+
+## [2026-08-03] sprint/QA-verificación | 11ª re-corrida — el reporte cambia de naturaleza
+
+**Primera ronda del sprint donde el QA no reporta errores de propagación.** El encargo a los
+subagentes fue distinto: se les dijo explícitamente que **no re-verificaran lo mecánico** (el
+linter ya lo cubre) y que si encontraban algo de esas clases lo marcaran como **bug del
+linter**, no como hallazgo de ficha.
+
+**Lo que validaron (y no existía antes):** `Matriz §2` y `§4` coinciden celda por celda con
+las 9 fichas — las 9 cadenas, los 9 mensajeros, las 3 excepciones, las 7 variantes de F4. La
+aritmética completa del elenco cierra (Torgan 75, Vekka 80, Darro 63, Bram 55, Dagna 100,
+Lyris 180, Roen 45). Y las zonas que el sprint **nunca había tocado** — `The Tether`, `Bond y
+el Bond Vacío`, `La Rueda`, `Nomenclatura`, `Progresión y Contrato`, `Old-Tobin-Hale` — están
+sin contradicciones. Cita textual del reporte sobre la propagación del escudo de Roen en tres
+archivos: *"cero divergencia — es el modelo de cómo debería verse el resto"*.
+
+**Lo mecánico que quedaba, cerrado en esta pasada.** Los cinco eran defectos introducidos en
+esta misma sesión:
+
+- **`Matriz §1` tenía el orden mal.** La activación del Fragmento estaba en el paso 6 (después
+  del mensajero) cuando ocurre al llegar al borde. No era cosmético: `Speck §Capa 5` dice que
+  mientras los cores pulsan Speck no se deja transportar — que es *lo que sostiene la ruta de
+  Nyael*. Con el orden mal, **F2a de Nyael era mecánicamente imposible**. Se agregó un **paso 0**
+  explícito (el pulso viene desde el descenso al Archive) que además explica por qué las 9
+  rutas terminan en el cráter y no en otro lado.
+- **`Matriz §5` omitía la regla del tirón del cráter** — justamente la que seguía transcrita a
+  mano en tres archivos. Agregada; Nyael ahora la cita en vez de re-narrarla.
+- **La fila Vekka de `Los 9 Pivotes`** agregaba mecánica, violando la nota escrita tres líneas
+  arriba en el mismo archivo.
+- **Dos huecos del linter:** `quiebre-fijos` detectaba que un fijo *describiera* el quiebre
+  pero no que lo *ubicara* mal — los 3 fijos lo tenían escenificado en el cráter cuando ocurre
+  en el corredor. Y el corolario de superlativos estaba escrito en la Matriz y nunca
+  implementado: "Darro se queda mudo, la única vez en la campaña" estaba reclamado por cuatro
+  escenas.
+
+**Dos chequeos nuevos (20 clases en total):** `quiebre-lugar` (agrupa por sección y acepta la
+sección si declara dónde ocurrió la toma) y `superlativos` (un «única vez» de un fijo vale en
+un solo lugar; acepta los que tienen eje declarado, tipo "el único **donde** X elige Y").
+Verificados: cazan los hallazgos de la 11ª y dan 0 falsos positivos sobre el vault corregido.
+
+### Pendiente — 3 críticos de homogeneización de prosa
+
+Todos de la tanda de epílogos F4 escrita en esta misma sesión, y todos de la misma causa:
+
+- **Torgan y Dagna F4-muerto son el mismo epílogo** con distintos sustantivos (papeleo ritual
+  póstumo, consejo que delibera, registro que queda sin cerrar).
+- **Torgan e Iven F4-vivo cierran con el mismo gesto** (bajar al cráter una vez al año, apoyar
+  la palma sobre el core) — y la variante muerta de Torgan se lo dio también a Darro, así que
+  el beat está triplicado. Es un buen beat; es **uno solo**.
+- **5 de las 7 variantes F4-muerta usan el mismo molde:** *saber único que se pierde +
+  institución que archiva la versión equivocada + jugador como custodio impotente*. Cuatro
+  cierran con la misma frase estructural.
+
+**Lección de método, para el vault:** escribir N variantes en secuencia contra la misma regla
+**las homogeneiza**, aunque cada una cumpla la regla por separado. La regla de la Matriz ("la
+muerte cobra algo específico que solo ese personaje podía dar") se cumplió una por una y el
+conjunto igual falló, porque *lo específico terminó siendo idéntico*. La des-homogeneización
+tiene que hacerse **comparando las variantes entre sí**, en una sola pasada — de a una vuelven
+a converger.
+
+### Pendiente — 2 decisiones de diseño para Boris
+
+1. **El sabor de F4.** `Los 5 Finales` lo declara *agridulce, no triunfal*, pero hoy nueve
+   personajes alcanzan su mejor versión y **solo Darro paga el agridulce** (con una nota de
+   escritura que se lo ordena). Roen tiene una línea sin duelo. Es un problema de escala, no
+   de tres fichas.
+2. **Los grados de agencia de Speck.** De los 4 de `§Capa 4`, solo *responde* (F4) y
+   *arrebatada* (F2b) están dramatizados. *Acepta* (F1) se paga en un solo lugar del vault
+   (Darro F1) y *cedida* (F2a/F3) no tiene interioridad en ninguna parte: en los 12 epílogos
+   F3, Speck es un objeto sin punto de vista.

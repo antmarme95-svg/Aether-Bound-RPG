@@ -228,9 +228,9 @@ Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La le
 
 ### Escena: The First Wound (Clímax Emocional)
 
-El Fragmento se activa. Speck reacciona. La verdad completa sale.
+El Pivote se llevó a Speck en el **corredor** del Archive y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse, Speck reacciona, y la verdad completa sale.
 
-**El Pivote decide.**
+**Lo que se decide acá no lo decide el Pivote — lo decide el jugador.**
 
 **Valen aquí:**
 
@@ -260,7 +260,7 @@ Proporciona datos: dónde fue el Pivote, qué recursos necesitará, qué ruta el
 
 ### The First Wound (Clímax Emocional)
 
-El Pivote actúa finalmente.
+El Pivote ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 

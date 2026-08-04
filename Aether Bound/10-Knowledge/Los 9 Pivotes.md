@@ -60,7 +60,7 @@ cuando aparezca en el guión, no antes.
 | Enano Vanguard | **Lyris** — Elfa Duelist (trazadora aérea) | Ligereza — el muro mira el cielo | Lógica fría con calma que hiere más que un grito | *"You were my stillness. Be still now."* |
 | Humano Duelist | **Dagna** — Enana Vanguard (muralla) | Constancia, lealtad, raíces | La ley del clan pesa más que el nido que juró proteger; llora mientras lo hace | *"The mountain doesn't forgive. And I am the mountain's."* |
 | Humano Strategist | **Nyael** — Elfa Duelist (hoja silenciosa) | Paciencia, precisión | Ejecuta la conclusión antes de discutirla: su traición es una **ausencia** (nota encontrada) | *"I set traps my teacher would have waited on. She's older than you'll ever be. She was also wrong."* |
-| Humano Vanguard | **Vekka** — Enana Strategist (ingeniera de gremio) | El oficio, la dignidad del detalle | Dogma del gremio: *"a flawed forging must be unmade by its maker"* — se lleva a Speck y la fija a un yunque en el borde del cráter, con el cuidado de una artesana | *"I built you. Forgive me for finishing the job."* |
+| Humano Vanguard | **Vekka** — Enana Strategist (ingeniera de gremio) | El oficio, la dignidad del detalle | Dogma del gremio: *"a flawed forging must be unmade by its maker"* — trata a Speck como una pieza sin terminar, con el cuidado de una artesana | *"I built you. Forgive me for finishing the job."* |
 
 La orfandad mecánica específica de cada pérdida está en
 [[Los 9 Links del Pivote]]; el beat diseñado del duelo, en

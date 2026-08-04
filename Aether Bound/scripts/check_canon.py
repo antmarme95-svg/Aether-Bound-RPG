@@ -206,6 +206,21 @@ RE_HEAD_FINAL = re.compile(r"^#{2,4}\s*\**\s*(F1|F2a|F2b|F3|F4)\b", re.IGNORECAS
 
 # Los fijos narran su reacción, nunca el quiebre en sí (Matriz §Regla de uso).
 FIJOS = ("Roen-Ficha", "Valen-Ficha", "Darro-Ficha")
+
+# La traición ocurre en el CORREDOR del Archive (Matriz §1, paso 1), no en el
+# cráter. Los 3 fijos la tenían escenificada en el lugar equivocado y el chequeo
+# de descripción no lo veía: detectaba el QUÉ, no el DÓNDE.
+RE_ENCABEZADO_CRATER = re.compile(
+    r"^#{2,5}.*(?:First\s+Wound|cr[aá]ter)", re.IGNORECASE)
+RE_TOMA_A_SPECK = re.compile(
+    r"se\s+lleva\s+a\s+speck|el\s+pivote\s+act[uú]a|toma\s+a\s+speck|"
+    r"se\s+lleva\s+el\s+fragmento", re.IGNORECASE)
+
+# Un superlativo de reacción vale en UN solo lugar del vault (Matriz §Corolario).
+RE_SUPERLATIVO = re.compile(
+    r"(?:la\s+[uú]nica\s+vez|el\s+[uú]nico\s+momento|la\s+escena\s+m[aá]s\s+grande|"
+    r"lo\s+m[aá]s\s+raro\s+posible)\b[^.\n]{0,80}", re.IGNORECASE)
+NOMBRES_FIJOS = ("darro", "roen", "valen")
 # Solo verbos de ESCENA (los que reconstruyen el quiebre paso a paso). Mencionar
 # el evento en subordinada para hablar de la reacción propia es correcto y es lo
 # que los fijos deben hacer: "cuando ella se lleva a Speck, Roen pierde…".
@@ -216,7 +231,7 @@ RE_QUIEBRE_VERBO = re.compile(
 CLASES = ["links", "citas", "fuente-unica", "edades", "rangos", "longevidad",
           "genero", "reinos", "cuadrantes", "dialogo", "duplicados", "indice",
           "crater-mensajero", "crater-borde", "gate-f4", "premisas",
-          "crater-beats", "quiebre-fijos"]
+          "crater-beats", "quiebre-fijos", "quiebre-lugar", "superlativos"]
 
 
 def _pivote_de(rel):
@@ -760,6 +775,70 @@ def check_quiebre_fijos(docs, f):
                 "(El Cráter — Matriz de Rutas §Regla de uso)")
 
 
+def check_quiebre_lugar(docs, f):
+    """La traición ocurre en el CORREDOR del Archive, no en el cráter. Los 3
+    fijos la tenían bajo un encabezado de First Wound — el chequeo anterior
+    veía el QUÉ y no el DÓNDE, y por eso la 11ª ronda lo encontró igual."""
+    for rel, doc in docs.items():
+        if not any(nombre in rel for nombre in FIJOS):
+            continue
+        # Agrupar por sección: una sección que declara dónde ocurrió la toma
+        # (menciona el corredor o cita la Matriz) está bien ubicada aunque
+        # después mencione el evento varias veces.
+        secciones, actual = [], None
+        for i, ln in enumerate(doc["lines"], 1):
+            if RE_HEADING.match(ln):
+                actual = {"linea": i, "crater": bool(RE_ENCABEZADO_CRATER.match(ln)),
+                          "cuerpo": [], "primera": None}
+                secciones.append(actual)
+                continue
+            if actual is None:
+                continue
+            actual["cuerpo"].append(ln)
+            if actual["primera"] is None and RE_TOMA_A_SPECK.search(ln):
+                actual["primera"] = i
+        for s in secciones:
+            if not s["crater"] or s["primera"] is None:
+                continue
+            cuerpo = "\n".join(s["cuerpo"])
+            if re.search(r"corredor|Matriz\s+de\s+Rutas|ya\s+lleg[oó]", cuerpo, re.IGNORECASE):
+                continue
+            add(f, "CRITICAL", "quiebre-lugar", rel, s["primera"],
+                f"la traición está escenificada bajo un encabezado de cráter "
+                f"(línea {s['linea']}) sin aclarar que la toma ocurrió en el "
+                f"CORREDOR del Sunken Archive (El Cráter — Matriz de Rutas §1, "
+                f"paso 1). En el cráter el Pivote ya llegó con Speck")
+
+
+def check_superlativos(docs, f):
+    """Un superlativo de reacción de un fijo ('la única vez que Darro se queda
+    mudo') vale en UN solo lugar del vault. La 11ª encontró cuatro escenas
+    reclamando el mismo — el corolario estaba escrito y no implementado."""
+    vistos = {}
+    for rel, doc in docs.items():
+        if doc["append_only"] or not rel.startswith("10-Knowledge/"):
+            continue
+        for i, ln in enumerate(doc["lines"], 1):
+            for frase in RE_SUPERLATIVO.findall(ln):
+                fn = norm(frase)
+                quien = next((n for n in NOMBRES_FIJOS if n in norm(ln)), None)
+                if not quien:
+                    continue
+                # Un superlativo con eje declarado ("el único donde X elige Y")
+                # es legítimo: acota en vez de reclamar exclusividad global.
+                if re.search(r"\bdonde\b|\bpor\b|no\s+es\s+su", fn):
+                    continue
+                clave = (quien, re.sub(r"\d+", "", fn)[:45])
+                if clave in vistos and vistos[clave][0] != rel:
+                    prev_rel, prev_i = vistos[clave]
+                    add(f, "MEDIUM", "superlativos", rel, i,
+                        f"superlativo de {quien.capitalize()} ya reclamado en "
+                        f"{prev_rel}:{prev_i} — un «única vez» vale en un solo lugar "
+                        f"del vault (Matriz §Corolario). Re-escopar uno de los dos")
+                else:
+                    vistos.setdefault(clave, (rel, i))
+
+
 CHEQUEOS = {
     "links": lambda d, i, f: check_links(d, i, f),
     "crater-mensajero": lambda d, i, f: check_crater_mensajero(d, f),
@@ -768,6 +847,8 @@ CHEQUEOS = {
     "premisas": lambda d, i, f: check_premisas(d, f),
     "crater-beats": lambda d, i, f: check_crater_beats(d, f),
     "quiebre-fijos": lambda d, i, f: check_quiebre_fijos(d, f),
+    "quiebre-lugar": lambda d, i, f: check_quiebre_lugar(d, f),
+    "superlativos": lambda d, i, f: check_superlativos(d, f),
     "citas": lambda d, i, f: check_citas(d, i, f),
     "fuente-unica": lambda d, i, f: check_fuente_unica(d, f),
     "edades": lambda d, i, f: check_edades(d, f),
