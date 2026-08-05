@@ -7112,3 +7112,85 @@ Evaluaciones completas anotadas en `Briefs de Concept Art.md` §13.1-13.9 (forma
 `Bestiario.md` y `Villanos Menores.md` en la entrada de cada criatura.
 
 **Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+## [2026-08-04] sprint/QA | 15ª re-corrida — 10 críticos únicos, mejora estructural al linter
+
+**2 subagentes Opus en frío.** QA-Dramática: 4 críticos, 8 medios, 9 menores. QA-Congruencia:
+6 críticos, 9 medios, 8 menores. Con solapamiento (Sereth F1/F2b lo reportaron los dos), **10
+críticos únicos**. Todos cerrados en la fuente esta sesión.
+
+**Críticos, todos residuo de fixes previos a medias o del contenido nuevo del 04:**
+
+1. **Sereth F1 vs §Dinámicas** — el diálogo Roen+Sereth sobre "dejar la Royal Academy" citaba
+   una frase que en realidad vive en §F2b (`:338`), y §F1 declara explícitamente que no hay
+   Academy de la que renunciar. Referencia corregida a F2b, donde la institución sí sigue
+   existiendo.
+2. **Funeral mudo Lyris/Torgan** — Lyris reclamaba "el único funeral del elenco donde no se
+   dice una palabra", colisionando con el funeral silencioso de Torgan (ámbito distinto: clan
+   menor, no elenco). Quitada la exclusividad de elenco de Lyris.
+3. **Lyris "incapaz de sentir"** — el header y las Notas Narrativas ya decían "capaz de sentir,
+   convencida de que sentir es debilidad"; el cuerpo de §Esencia seguía diciendo "incapaz de
+   sentir" sin matiz, como causa de la traición. Reescrito para coincidir.
+4. **"Torgan el único que espera de frente"** — colisionaba con Dagna e Iven, que también
+   esperan de frente en su propia ruta. Quitada la exclusividad, queda la postura sin reclamo.
+5. **Cadenas élficas invertidas en `Estructura Política`** — Sereth y Nyael se habían escrito
+   con la jerarquía al revés (terminando en un asiento del Council en vez del Pivote) en la
+   reescritura de la 13ª ronda, que corrigió el tramo enano y no el élfico. Reescritas contra
+   `Matriz §2` exacta.
+6. **"Se lleva el Fragmento" sobreviviente en `Estructura Dramática.md`** — última mención viva
+   del beat pre-Matriz (lo que se lleva el Pivote es a Speck, no un dispositivo), y agravado
+   por ser la fuente declarada de la regla de orfandad mecánica. Corregido.
+7. **Escena del escudo caído, dos tiempos incompatibles** — Darro (×2 menciones) la ataba a
+   "cuando Dagna entrega a Speck" (F2a consumado); Roen la canoniza como "antes de que el
+   jugador decida nada", ocurre en las 5 rutas de la celda. Las 2 menciones de Darro corregidas
+   para coincidir con Roen.
+8. **Bestiario: superlativo de Speck contradicho por su propia fuente citada** — decía que el
+   Burning Shepherd era "la única de las 4" con reconocimiento de Speck, pero la fuente que el
+   propio archivo cita (Geografía §I) le da ese beat a 3 de las 4. Reformulado sin exclusividad.
+9. **Ruta Lyris: mecánica aérea no declarada** — su ficha decía "sin excepciones" y a la vez la
+   narraba suspendida en el aire en vez de parada en el borde (contra `Matriz §1 paso 3`), lo
+   que además rompía el beat obligatorio de F3 (Speck no se puede recoger "del otro lado del
+   borde" si cae desde altura). **Fix estructural, no de línea:** se declaró la excepción
+   "holder aérea" en `Matriz §2` — mismo patrón que las excepciones de Nyael/Bram — explicando
+   cómo se satisface cada gate sin que Lyris deje de ser la única duelist con vuelo del elenco.
+10. **(dedup)** — mismo hallazgo que #1, reportado independientemente por los dos subagentes.
+
+**Medios cerrados en la misma pasada:** contradicción real de regla en `Los 5 Finales` (F4
+tenía una condición de "si lo perdonaste" que el propio documento prohíbe — quitada); Vekka
+con una copia completa de la tabla de superlativos en vez de una cita (alineada al patrón que
+ya seguían Dagna/Torgan/Iven/Nyael); header residual "Rechazo" en la ficha de Lyris (el canon
+vigente dice que nunca la rechazaron); beat de F3 de Torgan incompleto ("deja que caiga hacia
+donde caiga" en vez de que el jugador la recoja); colisión de nomenclatura "Warden" entre los
+bosses nuevos y la especie de Speck (nota de desambiguación agregada); Villanos Menores:
+Roen citado como canon de una cultura mercenaria que no es la suya, superlativo de Bram
+endurecido respecto a su propia ficha, los Vaciados descritos como "raza nueva" cuando son
+personas transformadas (no nacen), cita a una sección de Estructura Política que no sostiene
+lo que se le atribuía; una línea inventada sobre Torgan ("casi expulsado dos veces") que no
+tiene base en su biografía, reemplazada por una reflexión real sobre la fragilidad de su clan
+menor; **regla 9 del repo aplicada retroactivamente**: los 5 nombres de facciones/criaturas
+nuevas de Villanos Menores pasan a inglés como canon primario (The Unpaid Companies, The
+Nameless, The Unlicensed, The Hollowed, The Chaff) — coincide además con los nombres de archivo
+que ya usaba el concept art (`the-hollowed-v1.png`, `the-chaff-v1.png`), que habían quedado
+desalineados del texto en español.
+
+**Mejora estructural al linter, sugerida por el propio QA-Dramática:** `check_superlativos`
+solo vigilaba a los 3 fijos y solo detectaba colisiones del mismo personaje repitiendo su
+propio superlativo en dos archivos. 3 de los 4 críticos de QA-Dramática eran la misma clase
+aplicada a Pivotes, o colisiones **entre dos personajes distintos** reclamando la misma
+exclusividad de elenco (el caso Lyris/Torgan). Extendido: `NOMBRES_ELENCO` ahora cubre a los 9
+Pivotes además de los 3 fijos; `RE_SUPERLATIVO` gana los patrones "el único que", "del elenco",
+"único funeral", "primera vez en (la/toda la) campaña" y los superlativos de grado ("más
+fría/precisa/corta/íntima/peligrosa/honesta"); y se agregó un segundo diccionario
+(`vistos_elenco`) que detecta colisiones cross-personaje cuando el reclamo es explícitamente
+"de elenco" — antes esa clase de bug era estructuralmente invisible al chequeo, sin importar
+cuántas rondas de subagentes se gastaran en encontrarla. 22 clases en total.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (22 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Quedan algunos menores sin cerrar de ambos reportes (aritmética de Nyael y Darro con huecos de
+2-años y de tramos que no cierran del todo; algunas referencias § que apuntan a secciones con
+nombre distinto al real; un residuo en un worktree de git viejo que no se tocó). No bloquean.
+**16ª re-corrida** pendiente de lanzar para confirmar si la mejora del linter bajó el volumen
+de críticos de juicio narrativo, que es la hipótesis a probar.

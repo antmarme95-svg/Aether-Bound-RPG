@@ -25,15 +25,16 @@ Cada una tiene una razón institucional para existir, anclada a canon ya
 escrito. Ninguna es malvada por diseño de raza — son personas que la
 estructura política ya establecida dejó afuera.
 
-### Humanos — Las Compañías Impagas
+### Humanos — The Unpaid Companies (las Compañías Impagas)
 
 Restless que sirvieron en compañías mercenarias de **Mistbound Frontier**
-([[Roen-Ficha-Expandida-v1|Roen]], [[Pivotes/Bram-Ficha-Expandida-v1|Bram]]
-son el canon de esa cultura) cuyo contrato terminó y nadie lo renovó — el
-mismo mecanismo de desgaste administrativo que casi se traga a Bram. La
-diferencia es la que Bram no cruzó: cuando no hay contrato, no hay paga, y
-no hay adónde volver, algunas compañías enteras se vuelven la amenaza que
-antes cobraban por detener.
+([[Pivotes/Bram-Ficha-Expandida-v1|Bram]] es el canon de esa cultura —
+Roen sirvió en la misma región pero como guardia del Council, no como
+mercenario) cuyo contrato terminó y nadie lo renovó — el mismo mecanismo
+de desgaste administrativo que casi se traga a Bram. La diferencia es la
+que Bram no cruzó: cuando no hay contrato, no hay paga, y no hay adónde
+volver, algunas compañías enteras se vuelven la amenaza que antes
+cobraban por detener.
 
 - **Estructura:** bandas de 6-15, mandos de la vieja jerarquía de compañía
   intactos (un capitán, dos tenientes). Disciplinados, no caóticos —
@@ -43,10 +44,12 @@ antes cobraban por detener.
   una ética de guerra que no incluye civiles, el último resto de disciplina
   que les queda.
 - **Por qué importa:** es el destino que Bram esquivó por poco. Si el
-  jugador tiene a Bram en el grupo, encontrar una de estas compañías es
-  la única vez que Bram se queda callado más de lo normal.
+  jugador tiene a Bram en el grupo, encontrar una de estas compañías lo
+  deja callado más tiempo del normal — más que con cualquier otra
+  amenaza del mapa ([[Pivotes/Bram-Ficha-Expandida-v1|Bram]], cita
+  textual).
 
-### Enanos — Los Sin Nombre
+### Enanos — The Nameless (los Sin Nombre)
 
 Enanos expulsados de su clan o subclán — la sanción más grave del sistema
 de vasallaje ya establecido ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]],
@@ -66,12 +69,14 @@ Otros forman bandas.
   enano si su ruta terminara distinto. Torgan lo dice explícito si el
   jugador se cruza con ellos: *"Pude haber sido yo. Casi lo fui, dos veces."*
 
-### Elfos — Los No Licenciados
+### Elfos — The Unlicensed (los No Licenciados)
 
 Elfos rechazados por **ambas** Academias (Royal Academy y Academy of
-Sages — [[Estructura Política]] §"Fuera de ambas Academias") o expulsados
-de una sin ser aceptados por la otra. Sin academia, un elfo no tiene
-canal legítimo para practicar lectura de ciclos ni conducción — así que lo
+Sages) o expulsados de una sin ser aceptados por la otra — canon nuevo,
+no confundir con Lyris ([[Estructura Política]] §"Fuera de ambas
+Academias" es explícito en que a ella nunca la rechazaron; es un tercer
+track legítimo, no una expulsión). Sin academia, un elfo no tiene canal
+legítimo para practicar lectura de ciclos ni conducción — así que lo
 hacen igual, ilegalmente, y lo venden.
 
 - **Estructura:** redes pequeñas, no bandas armadas — el peligro es
@@ -87,16 +92,18 @@ hacen igual, ilegalmente, y lo venden.
 
 ---
 
-## Capa 2 — Razas nuevas, no sapientes, nacidas de la corrupción
+## Capa 2 — Dos tipos nuevos, no sapientes, nacidos de la corrupción
 
-**Regla dura:** ninguna de las dos es una civilización. No tienen ciudades,
-no tienen política, no tienen lenguaje en el sentido que las 3 razas lo
-tienen. Son fauna — la corrupción del Aether producida por los God-Cores
-tomando forma agresiva, coherente con lo que [[El Mundo y la Muda]] ya
-establece (*"la fauna, ya agresiva por hambre, se volvió letal"*). Esto
-las mantiene fuera de [[Las Tres Razas]] sin contradecirla.
+**Regla dura:** ninguno de los dos es una civilización ni una raza en el
+sentido de [[Las Tres Razas]] — ni siquiera The Hollowed, que **no nace**:
+son personas de las 3 razas existentes, transformadas. Ninguno tiene
+ciudades, política, ni lenguaje real. Son fauna — la corrupción del
+Aether producida por los God-Cores tomando forma agresiva, coherente con
+lo que [[El Mundo y la Muda]] ya establece (*"la fauna, ya agresiva por
+hambre, se volvió letal"*). Esto los mantiene fuera de [[Las Tres Razas]]
+sin contradecirla.
 
-### Los Vaciados (equivalente funcional a "orco")
+### The Hollowed (los Vaciados) — equivalente funcional a "orco"
 
 **Lo que eran:** gente de cualquiera de las 3 razas que pasó demasiado
 tiempo demasiado cerca de un God-Core activo o de una filtración de Aether
@@ -114,9 +121,9 @@ vida hecha de la corrupción no tolera lo opuesto).
 
 **Por qué esto no es solo un monstruo genérico:** es el **espejo oscuro de
 Speck.** Ella es lo que el Aether puede hacer sostenido con cuidado (una
-Warden, una forma de vida). Un Vaciado es lo que el Aether hace sin
+Warden, una forma de vida). Un Hollowed es lo que el Aether hace sin
 cuidado, sobre alguien que no estaba hecho para sostenerlo. Ningún Pivote
-lo dice en voz alta, pero **Speck reacciona distinto** frente a un Vaciado
+lo dice en voz alta, pero **Speck reacciona distinto** frente a un Hollowed
 que frente a cualquier otra bestia — se queda quieta más tiempo del normal,
 como reconociendo algo. Ningún diálogo lo explica. Es un beat visual, no
 narrado.
@@ -128,7 +135,7 @@ Aether sano (Grove of Cycles los mataría con solo estar ahí).
 **Concept art:** `the-hollowed-v1.png` — RATIFICADO, el mejor resultado
 del batch de bestiario ([[Briefs de Concept Art]] §13.8).
 
-### Las Motas (equivalente funcional a "goblin")
+### The Chaff (las Motas) — equivalente funcional a "goblin"
 
 **Lo que son:** no fueron nada antes — nacen directamente de Aether
 corrupto que se cristaliza en proto-vida, del mismo modo que un God-Core

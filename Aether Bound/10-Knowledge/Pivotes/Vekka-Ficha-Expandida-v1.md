@@ -459,7 +459,7 @@ Ver `90-Raw/concept/vekka-v1.png`.
 - Capaz de respetar profundamente a los Warden y seguir fijando a la última al yunque.
 - La traición más precisa del elenco — no la más cruel, no la más dolorosa, la más precisa. Cada gesto es intencional. Cada tornillo va en su lugar.
 
-**Superlativo consolidado:** *la traición más precisa* — coexiste con Bram (*el único rechazo activo*), Torgan (*juramento sin escape*), Dagna (*la traición que rompe al ancla*), Maren (*la más peligrosa por cálculo puro*). Cada Pivote tiene un centro distinto; Vekka es la del oficio.
+**Superlativo:** Vekka es *la traición más precisa* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado.
 
 **Línea privada de Vekka (nunca dicha aloud):**
 *"Construí durante sesenta años. Cada pieza que hice fue una promesa: durar. Cuando el gremio me pide terminar el proceso de una forja mal hecha, me pide cumplir la misma promesa desde el otro lado — no dejar a medio hacer lo que no puede quedarse así. No es contradicción. Es la misma disciplina. He devuelto piezas propias al yunque antes. Esta también es mía, en cierto modo. La sostuve de la única forma que sé — con las manos, con el yunque, con respeto. Que Darro me haya visto hacerlo no cambia el trabajo. Que lo haya visto dos veces en la vida quizás sí — pero eso es problema del silencio, no del oficio."*

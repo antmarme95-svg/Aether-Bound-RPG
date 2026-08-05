@@ -302,8 +302,8 @@ distintas pero conectadas al mismo cuerpo:**
 - Vekka → **círculo interno del Great Forging Clan** → Vekka, **sin intermediario** — no pasa por Kadrun
 - Torgan → Ambassador Kadrun → Great Forging Clan → **su clan menor** → Torgan (el Juramento es al clan menor, no al Great Forging Clan que lo rechazó — [[El Cráter — Matriz de Rutas]] §2)
 - Dagna → Ambassador Kadrun → Great Forging Clan → **consejo del subclán vasallo Deepstone** → Dagna
-- Sereth → Royal Academy → Queen Ithessa → **Ambassador Cyrion** (prestado por la Corona, nunca trató con el Council directamente)
-- Nyael → brazo encubierto de la Royal Academy → Queen Ithessa → Ambassador Cyrion
+- Sereth → Triune Council → Queen Ithessa → **Royal Academy** → Sereth (prestado por la Corona, nunca trató con el Council directamente)
+- Nyael → **brazo encubierto de la Royal Academy** → Nyael (sin Ithessa ni Cyrion — es una operación encubierta, no un préstamo formal)
 - Maren → Triune Council directamente
 - Bram → **contrato directo** con el Triune Council — puro mercenariado, sin institución intermedia
 - Iven → Triune Council → **Trade Consortium** → agente sin nombre (contacto con maletín) → Iven

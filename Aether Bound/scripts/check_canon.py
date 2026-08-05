@@ -220,8 +220,18 @@ RE_TOMA_A_SPECK = re.compile(
 RE_SUPERLATIVO = re.compile(
     r"(?:la\s+[uú]nica\s+vez|el\s+[uú]nico\s+momento|la\s+escena\s+m[aá]s\s+grande|"
     r"lo\s+m[aá]s\s+raro\s+posible|la\s+[uú]nica\s+traici[oó]n|el\s+[uú]nico\s+de\s+los\s+nueve|"
-    r"la\s+[uú]nica\s+que\b)\b[^.\n]{0,80}", re.IGNORECASE)
+    r"la\s+[uú]nica\s+que\b|el\s+[uú]nico\s+que\b|la\s+[uú]nica\s+del\s+elenco|"
+    r"el\s+[uú]nico\s+del\s+elenco|el\s+[uú]nico\s+funeral|primera\s+vez\s+en\s+(?:la|toda\s+la)\s+campaña|"
+    r"m[aá]s\s+(?:fr[ií]a|precisa|corta|[ií]ntima|peligrosa|honesta)\b)[^.\n]{0,80}",
+    re.IGNORECASE)
 NOMBRES_FIJOS = ("darro", "roen", "valen")
+# 15ª ronda: el check de superlativos solo miraba a los 3 fijos. 3 de 4
+# críticos de esa ronda eran el mismo patrón aplicado a Pivotes (Torgan
+# "único que espera de frente", Lyris/Torgan funeral mudo). Se amplía el
+# universo de nombres vigilados a todo el elenco.
+NOMBRES_ELENCO = NOMBRES_FIJOS + (
+    "maren", "sereth", "torgan", "iven", "dagna", "vekka", "lyris",
+    "nyael", "bram")
 # Solo verbos de ESCENA (los que reconstruyen el quiebre paso a paso). Mencionar
 # el evento en subordinada para hablar de la reacción propia es correcto y es lo
 # que los fijos deben hacer: "cuando ella se lleva a Speck, Roen pierde…".
@@ -812,23 +822,42 @@ def check_quiebre_lugar(docs, f):
 
 
 def check_superlativos(docs, f):
-    """Un superlativo de reacción de un fijo ('la única vez que Darro se queda
-    mudo') vale en UN solo lugar del vault. La 11ª encontró cuatro escenas
-    reclamando el mismo — el corolario estaba escrito y no implementado."""
+    """Un superlativo de reacción de un personaje ('la única vez que Darro se
+    queda mudo') vale en UN solo lugar del vault. La 11ª encontró cuatro
+    escenas reclamando el mismo — el corolario estaba escrito y no
+    implementado. La 15ª encontró la misma clase aplicada a Pivotes, no solo
+    a fijos, y colisiones ENTRE dos personajes distintos reclamando la misma
+    exclusividad "de elenco" (ver vistos_elenco abajo)."""
     vistos = {}
+    vistos_elenco = {}
     for rel, doc in docs.items():
         if doc["append_only"] or not rel.startswith("10-Knowledge/"):
             continue
         for i, ln in enumerate(doc["lines"], 1):
             for frase in RE_SUPERLATIVO.findall(ln):
                 fn = norm(frase)
-                quien = next((n for n in NOMBRES_FIJOS if n in norm(ln)), None)
+                quien = next((n for n in NOMBRES_ELENCO if n in norm(ln)), None)
                 if not quien:
                     continue
                 # Un superlativo con eje declarado ("el único donde X elige Y")
                 # es legítimo: acota en vez de reclamar exclusividad global.
                 if re.search(r"\bdonde\b|\bpor\b|no\s+es\s+su", fn):
                     continue
+                # Reclamos explícitamente "de elenco/campaña" colisionan entre
+                # SÍ mismos aunque el sujeto sea otro personaje — dos Pivotes
+                # pueden reclamar cada uno "el único funeral silencioso" sin
+                # que compartan nombre, y siguen colisionando entre sí.
+                if re.search(r"elenco|campaña|funeral", fn):
+                    fn_e = re.sub(r"\d+", "", fn)[:45]
+                    if fn_e in vistos_elenco and vistos_elenco[fn_e][0] != rel:
+                        prev_rel, prev_i = vistos_elenco[fn_e]
+                        add(f, "MEDIUM", "superlativos", rel, i,
+                            f"superlativo de exclusividad de elenco ya reclamado "
+                            f"(por otro personaje) en {prev_rel}:{prev_i} — "
+                            f"«{frase.strip()[:60]}» vale en un solo lugar del "
+                            f"vault aunque el sujeto sea distinto")
+                    else:
+                        vistos_elenco.setdefault(fn_e, (rel, i))
                 clave = (quien, re.sub(r"\d+", "", fn)[:45])
                 if clave in vistos and vistos[clave][0] != rel:
                     prev_rel, prev_i = vistos[clave]

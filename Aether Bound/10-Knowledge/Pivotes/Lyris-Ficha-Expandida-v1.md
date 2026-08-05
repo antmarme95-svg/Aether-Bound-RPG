@@ -18,9 +18,9 @@ updated: 2026-07-27
 
 ## Esencia
 
-Duelist trazadora aérea — vive en movimiento, en el cielo, nunca en tierra. Velocidad y gracia combinadas con **distancia emocional radical.** Lyris es incapaz de mentir pero también es incapaz de sentir. O al menos, eso es lo que cree.
+Duelist trazadora aérea — vive en movimiento, en el cielo, nunca en tierra. Velocidad y gracia combinadas con **distancia emocional radical.** Lyris es incapaz de mentir, y capaz de sentir — pero convencida de que sentir es debilidad, así que suprime en vez de no sentir.
 
-La traición de Lyris es la más fría porque no viene de frialdad calculada como Maren ni manipulación como Sereth. Viene de **ausencia de capacidad para sentir lo que otros sienten.**
+La traición de Lyris es la más fría porque no viene de frialdad calculada como Maren ni manipulación como Sereth. Viene de **sentir y suprimirlo sistemáticamente**, hasta que la supresión se vuelve indistinguible de la ausencia — para ella y para todos los demás.
 
 **Arquetipos resonantes:** Cassandra (sabes pero no importa), asesina profesional que sigue órdenes, el guerrero que ve la guerra como juego de posiciones.
 
@@ -59,7 +59,7 @@ práctica sirve al Council.
 
 ## Biografía Pre-Aventura
 
-### The Frontier High Command: Rechazo (edades 0-80)
+### The Frontier High Command: Nunca Invitada (edades 0-80)
 
 Nacida cerca de The Stillspire pero **fuera de círculos políticos y
 académicos por completo.** Familia fue cazadores de frontera aérea — no
@@ -301,7 +301,7 @@ Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Lyris**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es de **Frontier High Command**, subiendo desde dentro del cráter hacia el borde.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Lyris** — **excepción declarada: holder aérea**, ver nota en la Matriz. Secuencia: §1, pasos 1-6. Su mensajero es de **Frontier High Command**, subiendo desde dentro del cráter hacia el borde.
 
 Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. **Es la única del elenco que espera sin tocar el suelo**, y eso la vuelve la más fácil de alcanzar y la más imposible de detener: nadie sabe si va a bajar o irse. La aritmética que trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
 
@@ -353,7 +353,7 @@ Frontier High Command marca su expediente como "no retornada"; envían nueva ras
 
 Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Lyris suelta.
 
-Lyris **no aparece en el epílogo.** Está en el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: baja a Speck sin forcejeo y asciende, y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
+Lyris **no aparece en el epílogo.** Está sobre el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: desciende lo justo para dejar a Speck de pie del lado seguro del borde, sin forcejeo, y asciende de nuevo sin volver a bajar. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
 
 Años después, si el jugador convertido en tirano intenta rastrearla, no la encuentra — Lyris es rastreadora, sabe cómo no ser rastreada. Su ausencia es más completa que la de cualquier otro compañero que huyó de F3: nunca deja huella. Es como si Lyris nunca hubiera bajado del cielo, retroactivamente.
 
@@ -377,7 +377,7 @@ Noventa años afuera. Un patrón que nunca la incluyó — ni la Academia, ni la
 
 Lyris muere el día anterior a eso. No un año antes ni una década antes: **el día anterior**, en el borde del cráter, mirando hacia arriba como siempre.
 
-El grupo la entierra en altura — el risco más alto que encuentran, porque a nadie le entra en la cabeza dejarla bajo tierra. Es el único funeral del elenco donde **no se dice una palabra**: Roen lo intenta y no le sale, y después nadie más lo intenta. En el silencio todos entienden que así habría estado bien para ella, y ninguno se anima a decir en voz alta lo otro — que esta vez, por fin, no habría hecho falta.
+El grupo la entierra en altura — el risco más alto que encuentran, porque a nadie le entra en la cabeza dejarla bajo tierra. Roen intenta decir algo y no le sale; después nadie más lo intenta, y el silencio se queda así. En el silencio todos entienden que así habría estado bien para ella, y ninguno se anima a decir en voz alta lo otro — que esta vez, por fin, no habría hecho falta.
 
 ---
 

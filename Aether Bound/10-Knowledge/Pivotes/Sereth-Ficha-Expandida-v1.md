@@ -249,7 +249,7 @@ Se va con Speck. Camina rápido. No corre.
 
 **Valen:** *"Three months ago your questions to him changed shape. Same content, different angles — long-read consolidation. I calculated this then. I hoped I was wrong."*
 
-**Darro:** *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* El único que grita. Darro entiende engaño como ausencia de amor, no como amor con función. No puede procesar la coexistencia.
+**Darro:** *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* Darro entiende engaño como ausencia de amor, no como amor con función. No puede procesar la coexistencia.
 
 **El jugador:** parálisis breve. Sereth, el que ha sido su interlocutor filosófico durante un año entero, acaba de irse con Speck sin discutir. Todavía no entiende el patrón. Va a entenderlo durante la persecución.
 
@@ -385,7 +385,7 @@ El jugador es el único que carga la corrección, y no tiene dónde presentarla.
 
 **Primera impresión:** Roen ve a alguien que trabaja en instituciones desde adentro. Sereth ve a alguien que renunció a instituciones por conciencia.
 
-**Este intercambio ocurre años después, en el epílogo de F1** (ver §F1 — Sereth "pide baja de la Academy" en dos años), no durante la campaña: mientras dura la aventura, Sereth sigue activo, prestado por Queen Ithessa, y su mensajero en el cráter es de la Royal Academy.
+**Este intercambio ocurre años después, en el epílogo de F2b** (ver §F2b — Sereth "pide baja de la Academy" en dos años), no durante la campaña: mientras dura la aventura, Sereth sigue activo, prestado por Queen Ithessa, y su mensajero en el cráter es de la Royal Academy.
 
 *"Dejaste la Royal Academy."*  
 *"La Academy no deja ir a nadie. Yo simplemente elegí no volver a presentarme."*  

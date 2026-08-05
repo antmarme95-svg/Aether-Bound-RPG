@@ -28,9 +28,9 @@ parcial diseñada para dividir al grupo.
 **Clímax — La Traición por Convicción.** El Compañero 3 ([[Los 9 Pivotes]])
 concluye que Speck tiene que ser entregada a su institución — viva, no muerta:
 matarla no sana nada y perpetúa la corrupción ([[Speck]] §Capa 5) — y actúa.
-No es malvado. Se lleva el Fragmento (dispositivo de acoplamiento): **orfandad
-mecánica** — pierdes tu link firma ([[Los 9 Links del Pivote]], [[Bond y el
-Bond Vacío]]).
+No es malvado. Se lleva a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1):
+**orfandad mecánica** — pierdes tu link firma, porque perdiste al compañero,
+no un dispositivo ([[Los 9 Links del Pivote]], [[Bond y el Bond Vacío]]).
 
 **Acto 3.** Perseguir/entender a C3 → los tres reinos movilizan ejércitos →
 The First Wound: clímax y [[Los 5 Finales]].

@@ -12,7 +12,7 @@ updated: 2026-08-04
 
 **Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck +
 Old Tobin Hale + toda la estructura política y geográfica están escritos. El
-vault soporta escribir guión en cuanto cierre el sprint QA (15ª re-corrida,
+vault soporta escribir guión en cuanto cierre el sprint QA (16ª re-corrida,
 único pendiente — ver "Inmediato" abajo).
 
 **Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
@@ -46,23 +46,32 @@ hizo una sesión de diseño.**
 ### 🏗️ Fix de arquitectura — cerrado, 0 decisiones de diseño abiertas
 
 Cráter centralizado en [[El Cráter — Matriz de Rutas]] (fuente única).
-Rondas 11ª-14ª (2026-08-03/04): 4 decisiones de diseño resueltas + 20
+Rondas 11ª-15ª (2026-08-03/04): 4 decisiones de diseño resueltas + 30
 críticos de propagación/superlativo, todos cerrados en la fuente —
-detalle completo en [[LOG]]. Patrón recurrente y ya corregido: datos
-triplicados sin fuente única (ver "Superlativo Consolidado" ahora en
-`Los 9 Pivotes`). Quedan menores sin cerrar (no bloquean) y 1 hueco de
-canon genuino (quién mueve el dinero de Iven, cruza con Maren).
+detalle completo en [[LOG]]. Patrón recurrente: datos triplicados sin
+fuente única (resuelto, "Superlativo Consolidado" en `Los 9 Pivotes`) y
+superlativos de exclusividad colisionando entre Pivotes, no solo fijos.
 
-**Falta lanzar la 15ª re-corrida** para confirmar cierre.
+**Mejora estructural al linter (15ª, sugerida por el propio QA):**
+`check_superlativos` solo vigilaba a los 3 fijos y solo detectaba un
+personaje repitiéndose a sí mismo. Ahora cubre los 9 Pivotes + detecta
+colisiones **entre dos personajes distintos** reclamando la misma
+exclusividad "de elenco" (el bug estructural detrás de 3 de los últimos
+4 críticos). 22 clases en total.
+
+Queda 1 hueco de canon genuino (quién mueve el dinero de Iven, cruza con
+Maren) y menores sin cerrar (no bloquean).
+
+**Falta lanzar la 16ª re-corrida** — a ver si el linter bajó el volumen.
 
 ### 🛠️ Herramientas del vault
 
 ```
 python "Aether Bound/scripts/check_vault.py"    # peso de arranque
-python "Aether Bound/scripts/check_canon.py"    # consistencia (21 clases)
+python "Aether Bound/scripts/check_canon.py"    # consistencia (22 clases)
 ```
 
-`check_canon.py` — **21 clases** (12 base + 6 de la escena del cráter +
+`check_canon.py` — **22 clases** (12 base + 6 de la escena del cráter +
 2 de la 11ª: `quiebre-lugar`, `superlativos`). Detalle de cada clase y su
 origen: [[LOG]].
 
@@ -136,10 +145,10 @@ motor resuelve eso.
 
 ### 🗓 Inmediato — arrancar acá mañana
 
-1. **15ª re-corrida QA** — criterio de cierre del sprint: 0 críticos de 2
-   subagentes Opus en frío. Las rondas 12ª-14ª (2026-08-04) encontraron
-   6+4+10 críticos, todos cerrados en la fuente (detalle en [[LOG]]);
-   esta ronda debería confirmar el cierre o encontrar lo que quedó.
+1. **16ª re-corrida QA** — criterio de cierre: 0 críticos de 2 subagentes
+   Opus en frío. Rondas 12ª-15ª (2026-08-04): 6+4+10+10 críticos, todos
+   cerrados en la fuente ([[LOG]]); la 15ª además amplió
+   `check_superlativos` — esta ronda muestra si bajó el volumen.
 2. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
    bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
    los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el
@@ -186,7 +195,7 @@ sus fichas) y se asignaron los 3 bosses nuevos a sus dungeons en
 
 **Concept art del Bestiario — 7/9 ratificados (2026-08-04):** los 9 briefs
 de [[Briefs de Concept Art]] (sección "13 — Bestiario") se corrieron en NB2. **Burning Shepherd,
-Hollow Warden, Drowned Choir, Cascade Warden, Los Vaciados, Las Motas**
+Hollow Warden, Drowned Choir, Cascade Warden, The Hollowed, The Chaff**
 ratificados y en `90-Raw/concept/`. **Crowned Leviathan** y **Aether
 Wyrm** archivados pero pendientes de re-roll (traen texto/etiquetas
 incrustadas, violan la regla estándar §10). **Mirror Stalker rechazado**

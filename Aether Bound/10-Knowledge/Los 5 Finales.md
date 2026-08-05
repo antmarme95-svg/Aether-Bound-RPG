@@ -145,7 +145,7 @@ Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un Go
 **Eco Bond/Link Cam:** años después, Bond responde un sting débil de dos notas — la melodía del Bond vacío, completada en otra tonalidad, la misma familia sonora que F2b, no una victoria limpia. El Council la bautiza oficialmente "the Warden"; The Bound Five talla **SPECK** en la base del core, porque el nombre es lo único que se llevan de vuelta.
 
 **Pivote — por arquetipo:**
-- *Aritmética/Manipulación:* se reintegra si el jugador lo perdonó en la persecución. No pide perdón en voz alta — cambia sus cuentas.
+- *Aritmética/Manipulación:* se reintegra sin condición de ruta (el gate de F4 no depende del Pivote — ver [[El Cráter — Matriz de Rutas]] §4). No pide perdón en voz alta — cambia sus cuentas.
 - *Deber Institucional:* Torgan renegocia su Juramento con su clan menor (única lectura ritual que lo permite). Dagna es liberada por su subclán como acto de reconocimiento a la síntesis. Nyael reaparece — no como Pivote, sino como alumna que vuelve al jugador (su par, no su maestro) para preguntar qué aprendió.
 - *Rechazo/Ausencia:* Bram se queda. Es el único final donde Bram se queda por elección propia y no por deber. Lyris regresa con el grupo — el patrón ahora la incluye.
 
@@ -161,7 +161,7 @@ Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, p
 | **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda | Bram no aplica; Lyris se aparta del grupo con calma que hiere |
 | **F2b Fallen** | Colapso interno — sus cuentas ya no cuadran | **Torgan: peor final canónico** (juramento incumplido, no roto); Dagna renuncia al clan; Nyael escribe la última nota | Bram vive con culpa por no haber traicionado antes; Lyris desaparece |
 | **F3 Conqueror** | Se te une, calcula tu caída | Imposible — muere confrontándote o se va sin volver | Bram nunca te siguió tan lejos; Lyris no aparece en el epílogo |
-| **F4 Warden's Choice** | Se reintegra si lo perdonaste; cambia sus cuentas | Torgan renegocia juramento; Dagna es liberada por su subclán; **Nyael vuelve como alumna** | **Bram se queda por elección propia — único final donde lo hace** |
+| **F4 Warden's Choice** | Se reintegra sin condición de ruta; cambia sus cuentas | Torgan renegocia juramento; Dagna es liberada por su subclán; **Nyael vuelve como alumna** | **Bram se queda por elección propia — único final donde lo hace** |
 
 **Regla para las 9 fichas:** cada epílogo debe expandir su celda de la matriz sin contradecir ninguna otra celda de su fila. Cada Pivote tiene 5 epílogos, uno por final.
 

@@ -66,7 +66,7 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
 | **Iven** | Triune Council → Trade Consortium → agente sin nombre → Iven | Contacto del Consortium, **con maletín** | Iven | La promesa que lo movió es **falsa**; el contacto nunca la confirma ([[Pivotes/Iven-Ficha-Expandida-v1]] §regla de escritura) |
 | **Dagna** | Kadrun → Great Forging Clan → subclán **Deepstone** → Dagna | Mensajero de Deepstone | Dagna | — |
 | **Vekka** | Círculo interno del **Great Forging Clan** → Vekka (sin intermediario) | Mensajero del Great Forging Clan | Vekka, con Speck **fijada al yunque portátil con el arnés técnico** | **Única ruta con Speck inmovilizada a un objeto.** Ver §4, nota de liberación |
-| **Lyris** | Triune Council → **Frontier High Command** → Lyris | Mensajero de Frontier High Command | Lyris | — |
+| **Lyris** | Triune Council → **Frontier High Command** → Lyris | Mensajero de Frontier High Command | Lyris | **Holder aérea** — se detiene sobre el borde, no parada en él. Ver nota abajo |
 | **Nyael** | Brazo encubierto de la **Royal Academy** → Nyael | **El equipo de extracción** (2-3 operativos) | **El equipo de extracción** | **Holder = agente a neutralizar.** Nyael toma a Speck en el corredor, la pasa al equipo y se retira: no está en el cráter (§1, paso 2) |
 | **Bram** | Contrato directo del Triune Council → Bram **(rechaza)** → **Torgan** como segundo agente | **Torgan** | **Torgan** | **Holder = agente a neutralizar. No hay un tercero.** Bram está presente pero no carga a Speck |
 
@@ -74,6 +74,16 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
 crítico.** En las otras 7 rutas, "detener al Pivote" **no** cumple el gate de F1 — hay que
 detener al mensajero. En estas dos, el que sostiene a Speck **es** el agente de la entrega,
 así que detenerlo sí lo cumple.
+
+**La excepción de holder aérea (Lyris) es intencional.** El paso 3 de §1 dice que el
+Pivote "se detiene en el borde"; Lyris se detiene **sobre** el borde, suspendida, sin
+tocar tierra — es la única duelist con vuelo del elenco y la ficha lo declara rasgo
+central desde el sub-beat 5. No cambia ningún gate: en F1 se queda sosteniendo a Speck
+en el aire hasta que la Muda se completa; en F2b el forcejeo cerca del core la mata
+igual que a cualquiera, la altura no protege a Speck del Fragmento; en F3, cuando el
+jugador cruza, Lyris desciende lo justo para dejar a Speck de pie del otro lado del
+borde antes de volver a ascender — el beat ("el jugador la recoge del otro lado del
+borde") se cumple igual, solo que el último tramo lo hace ella en vez de dejarla caer.
 
 **Cómo se satisface el beat de F2a cuando holder = agente (solo ruta Nyael — Bram no llega
 a F2a, no traiciona).** El equipo de extracción no puede completar la entrega mientras el

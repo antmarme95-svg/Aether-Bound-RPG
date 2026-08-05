@@ -273,7 +273,7 @@ No es malvada. Es **exactamente lo que dijo que era: alguien que piensa en siste
 
 **Valen:** *"Three weeks ago you adjusted your gear distribution. Weight changed, spine straighter — preparation for bearing extra load. I calculated this trajectory then. I hoped I was wrong."*
 
-**Darro:** *"¿¡MAREN!? ¡¿QUÉ HACES?!"* El único que grita. Darro ve a persona que amaba, ahora viendo traición pura. Para él es incomprensible.
+**Darro:** *"¿¡MAREN!? ¡¿QUÉ HACES?!"* Darro ve a persona que amaba, ahora viendo traición pura. Para él es incomprensible.
 
 **Maren se va calmadamente.** No corre. No hay drama. Solo: *"Voy a hacer lo que debo."*
 

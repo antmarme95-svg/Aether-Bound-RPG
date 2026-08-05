@@ -21,7 +21,7 @@ God-Cores, no de una maldición genérica).
 
 | Grado | Qué le pasa a la fauna | Dónde |
 |---|---|---|
-| **Sano** | Comportamiento normal, evita al jugador salvo que se sienta acorralada | Grove of Cycles (el único punto sin corrupción), interior de las 3 capitales |
+| **Sano** | Comportamiento normal, evita al jugador salvo que se sienta acorralada | Grove of Cycles, interior de las 3 capitales |
 | **Ambiental** | Más agresiva de lo esperable, territorial, pero reconocible como su especie base | La mayoría de The Wilds — bosques, ríos, cuevas sin exposición directa a un God-Core |
 | **Corrupto** | Mutada — vetas de Aether visibles, comportamiento errático, ataca sin provocación | Zonas cercanas a filtraciones (The Rift, Stillwood Sanctuary, Riverstone Settlement) |
 | **Aberración** | Ya no es un animal — es Aether puro que tomó una forma que imita vida | The First Wound, The Rift en profundidad, los 4 bosses "puros" de abajo |
@@ -35,8 +35,11 @@ sí tienen nombre, ficha, y un lugar fijo.
 
 ## Los 4 bosses ya nombrados (fuente: [[Geografía y Ciudades]] §I)
 
-Viven en landmarks, no en los 5 dungeons formales — son encuentros de
-mundo abierto de grado Aberración, el tope del espectro.
+Viven en landmarks de mundo abierto — 3 de grado Aberración (Burning
+Shepherd, Mirror Stalker, Aether Wyrm) y 1 excepción sana (Crowned
+Leviathan, ver abajo). El Mirror Stalker es la única excepción de
+ubicación: además de aparecer en su landmark, está asignado como boss de
+The Echoing Archive (ver §Los 3 bosses nuevos).
 
 ### The Crowned Leviathan
 **Dónde:** Lake of Mirrors, bajo el agua. **Qué es:** híbrido
@@ -50,10 +53,11 @@ incrustado ([[Briefs de Concept Art]] §13.1).
 
 ### The Burning Shepherd
 **Dónde:** Ossuary Grove. **Qué es:** híbrido fuego+sombra que custodia
-los restos óseos del cementerio de Wardens menores que da nombre al lugar
-— comportamiento de guardián, no de depredador. Es la única de las 4 que
-Speck reconoce activamente como *"lo que ella misma haría"* (protege a los
-muertos como los protegería un Warden). Fase dual (fuego/sombra). Loot:
+los restos óseos dispersos que dan nombre al lugar — comportamiento de
+guardián, no de depredador. Es una de las 4 con las que Speck tiene un
+momento de reconocimiento propio (protege a los muertos como los
+protegería un Warden — ver también Mirror Stalker y Aether Wyrm, cada
+uno con su propio eco distinto). Fase dual (fuego/sombra). Loot:
 cuerno (instrumento, reacciona con Speck). **Concept art:**
 `burning-shepherd-v1.png` — RATIFICADO ([[Briefs de Concept Art]] §13.2).
 
@@ -77,6 +81,12 @@ texto incrustado y mandíbula visible que el brief prohibía —
 [[Briefs de Concept Art]] §13.4).
 
 ---
+
+**Nota de nomenclatura:** "Warden" en los nombres de abajo (Hollow Warden,
+Cascade Warden) es la palabra genérica en inglés para "guardián" — no
+hace referencia a la especie de Speck (*"la Última Warden"*, [[Speck]]).
+Ninguno de los dos tiene relación real con ella; el Hollow Warden aclara
+esto explícitamente en su propia entrada.
 
 ## Los 3 bosses nuevos — completan los 5 dungeons formales
 

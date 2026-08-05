@@ -202,7 +202,7 @@ Torgan: *"Siempre."* (Mentira. Verdad. Ambas a la vez.)
 
 ### Encuentro de mundo abierto: los Sin Nombre
 
-Si el grupo se cruza con una banda de **los Sin Nombre** ([[Villanos Menores]] §Capa 1) cerca de Cinder Ascent o Ironforge Outpost, Torgan pelea igual que siempre, pero lo dice después, sin que se lo pregunten: *"Pude haber sido yo. Casi lo fui, dos veces."* No explica cuáles. No hace falta.
+Si el grupo se cruza con una banda de **los Sin Nombre** ([[Villanos Menores]] §Capa 1) cerca de Cinder Ascent o Ironforge Outpost, Torgan pelea igual que siempre, pero lo dice después, sin que se lo pregunten: *"Mi clan menor existe porque el Great Forging Clan todavía nos quiere cerca. El día que deje de querernos, somos esto."* No es lástima. Es aritmética que conoce de memoria.
 
 ### Grove of Cycles (cierre del Acto 2)
 
@@ -334,7 +334,7 @@ En el último tramo, cuando ya se ve el cráter latir en el horizonte, Torgan **
 
 **Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Torgan**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es del **clan menor** — no del Great Forging Clan, que es el que lo rechazó.
 
-Torgan llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Lo que distingue a esta ruta es que **Torgan es el único que espera de frente**: no le da la espalda al jugador ni al mensajero, y esa postura es deliberada.
+Torgan llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Torgan espera de frente, sin darle la espalda al jugador ni al mensajero — postura deliberada, la misma con la que ha cargado contratos toda su vida: lo que se hace, se hace mirando a la cara.
 
 El jugador y los fijos llegan segundos después.
 
@@ -448,7 +448,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el bo
 
 **Torgan muere confrontándote en el cráter.** No se une. No negocia. No informa a su clan.
 
-Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a Torgan y cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck al verlo cruzar. Deja que caiga hacia donde caiga. Y va contra el jugador con las dos hachas.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a Torgan y cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck al verlo cruzar — el jugador la recoge del otro lado del borde. Y va contra el jugador con las dos hachas.
 
 **Línea antes de caer:** *"Esto no. Yo juré entregarla, no venderla."*
 
