@@ -125,6 +125,9 @@ narrado.
 Riverstone Settlement, los bordes de The Ossuary Grove. Nunca en zonas de
 Aether sano (Grove of Cycles los mataría con solo estar ahí).
 
+**Concept art:** `the-hollowed-v1.png` — RATIFICADO, el mejor resultado
+del batch de bestiario ([[Briefs de Concept Art]] §13.8).
+
 ### Las Motas (equivalente funcional a "goblin")
 
 **Lo que son:** no fueron nada antes — nacen directamente de Aether
@@ -148,6 +151,8 @@ primeras horas y para zonas de tránsito.
 las más numerosas y las más repartidas por el mapa de las dos razas nuevas.
 Anidan en ruinas menores, nunca en dungeons formales (ver
 [[Bestiario]] §Dungeons).
+
+**Concept art:** `the-chaff-v1.png` — RATIFICADO ([[Briefs de Concept Art]] §13.9).
 
 ---
 

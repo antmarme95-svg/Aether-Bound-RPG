@@ -44,7 +44,9 @@ serpiente/ballena, uno de los últimos especímenes de una fauna que existía
 antes de la corrupción — no es una mutación, es una superviviente. Por
 eso Lyris la reconoce como *"raro ver aquí"* y no como amenaza corrupta:
 es fauna sana de una escala que ya no debería existir. Combate restringido
-por el agua. Loot: escamas (armadura tier 2).
+por el agua. Loot: escamas (armadura tier 2). **Concept art:**
+`crowned-leviathan-v1.png` — diseño ✅, pendiente re-roll sin texto
+incrustado ([[Briefs de Concept Art]] §13.1).
 
 ### The Burning Shepherd
 **Dónde:** Ossuary Grove. **Qué es:** híbrido fuego+sombra que custodia
@@ -52,21 +54,27 @@ los restos óseos del cementerio de Wardens menores que da nombre al lugar
 — comportamiento de guardián, no de depredador. Es la única de las 4 que
 Speck reconoce activamente como *"lo que ella misma haría"* (protege a los
 muertos como los protegería un Warden). Fase dual (fuego/sombra). Loot:
-cuerno (instrumento, reacciona con Speck).
+cuerno (instrumento, reacciona con Speck). **Concept art:**
+`burning-shepherd-v1.png` — RATIFICADO ([[Briefs de Concept Art]] §13.2).
 
 ### The Mirror Stalker
 **Dónde:** The Echoing Archive — **asignado como boss de ese dungeon**
 (ver §Dungeons abajo). Copia los movimientos del jugador; Valen advierte
 que *"aprende, no solo imita"* — es Aether puro reaccionando a estímulo,
 no una bestia con instinto propio. Loot: fragmento espejo (revela caminos
-ocultos).
+ocultos). **Concept art:** primera corrida rechazada — se leyó como gólem
+de piedra, sin sensación de espejo/vidrio; pendiente re-roll real
+([[Briefs de Concept Art]] §13.3).
 
 ### The Aether Wyrm
 **Dónde:** The Rift, semi-corpóreo. **Qué es:** serpiente de Aether puro,
 vuela, se vuelve invisible, cambia de fase — la Aberración más pura de las
 4, sin ningún resto reconocible de fauna original. Sereth: *"No debería
 existir. Pero existe."* Speck siente parentesco (mismo Aether). Loot:
-escama de Aether (material más raro del crafting).
+escama de Aether (material más raro del crafting). **Concept art:**
+`aether-wyrm-v1.png` — diseño ✅ atmosférico, pendiente re-roll (trae
+texto incrustado y mandíbula visible que el brief prohibía —
+[[Briefs de Concept Art]] §13.4).
 
 ---
 
@@ -86,7 +94,8 @@ color jade cuando detecta movimiento — la misma frecuencia jade del Bond,
 pura coincidencia mineral, no relación real con Speck (aclarar en
 implementación para que ningún jugador lea significado donde no lo hay).
 **Mecánica:** caza por eco — quedarse quieto la pierde, moverse la atrae.
-**Loot:** núcleo auditivo (crafting, mejora detección).
+**Loot:** núcleo auditivo (crafting, mejora detección). **Concept art:**
+`hollow-warden-v1.png` — RATIFICADO ([[Briefs de Concept Art]] §13.5).
 
 ### The Drowned Choir (The Submerged Halls)
 **Grado:** Corrupto, coordinado. No es un individuo — son 3-5 bestias
@@ -95,7 +104,9 @@ especie que ya cazaba en grupo antes de la corrupción y que el Aether
 sincronizó todavía más. Cantan bajo el agua en un patrón audible desde la
 superficie — de ahí el nombre. **Mecánica:** derrotar a una desincroniza
 a las demás por unos segundos (ventana de daño). **Loot:** perla de coro
-(componente de equipo acuático).
+(componente de equipo acuático). **Concept art:** `drowned-choir-v1.png`
+— RATIFICADO, más feroz de lo pedido pero funcional
+([[Briefs de Concept Art]] §13.6).
 
 ### The Cascade Warden (The Shattered Cascade)
 **Grado:** Ambiental, alfa territorial — no corrupto, la excepción de los
@@ -103,7 +114,8 @@ tres. Ave-bestia de las corrientes de la cascada, grande pero no mutada:
 simplemente muy vieja y muy territorial, defendiendo el nido en la parte
 alta del salto. **Mecánica:** combate vertical, usa el viento y el agua
 del salto para empujar al jugador de las plataformas. **Loot:** pluma de
-corriente (mejora movilidad/planeo).
+corriente (mejora movilidad/planeo). **Concept art:**
+`cascade-warden-v1.png` — RATIFICADO ([[Briefs de Concept Art]] §13.7).
 
 **God's Throne no recibe boss nuevo — decisión de diseño:** sus
 "bestias élite (God-touched)" quedan como encuentro múltiple sin boss

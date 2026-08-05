@@ -62,19 +62,9 @@ python "Aether Bound/scripts/check_vault.py"    # peso de arranque
 python "Aether Bound/scripts/check_canon.py"    # consistencia (21 clases)
 ```
 
-`check_canon.py` — **21 clases**. Las 12 originales: citas `§`, wikilinks,
-fuente única, aritmética de edades, longevidad, género, reinos, cuadrantes,
-diálogo, fichas duplicadas, huérfanos de índice. Las **6 nuevas (2026-08-03)**
-cubren la escena del cráter, que causó críticos en 4 rondas seguidas:
-`crater-mensajero` (cada Pivote responde a su cadena, no al Council por
-defecto), `crater-borde` (el Pivote nunca en el centro), `gate-f4` (prohibido
-agregar condición de ruta), `premisas` (matar a Speck no sana nada; no hay
-reloj autónomo), `crater-beats` (F3 exige soltar, F4 exige que el mensajero se
-aparte), `quiebre-fijos` (los fijos narran su reacción, no el evento).
-**+2 de la 11ª:** `quiebre-lugar` (la traición ocurre en el corredor, no en el
-cráter — el chequeo anterior veía el QUÉ y no el DÓNDE) y `superlativos`
-(un «única vez» de un fijo vale en un solo lugar del vault).
-Verificados contra los errores reales de las rondas 10ª y 11ª: los cazan todos.
+`check_canon.py` — **21 clases** (12 base + 6 de la escena del cráter +
+2 de la 11ª: `quiebre-lugar`, `superlativos`). Detalle de cada clase y su
+origen: [[LOG]].
 
 Exit 1 si hay críticos. Método: skill `canon-qa` / [[QA de Canon Loop]].
 **Orden no negociable:** linter en 0 → subagentes en frío solo para juicio →
@@ -194,10 +184,14 @@ Se agregaron 2 líneas de reacción de mundo abierto (Bram y Torgan, ver
 sus fichas) y se asignaron los 3 bosses nuevos a sus dungeons en
 `Geografía y Ciudades`. `check_canon.py` 0 críticos tras el barrido.
 
-**Briefs de concept art agregados (2026-08-04):** [[Briefs de Concept Art]]
-§13 — 9 prompts NB2 listos para correr (los 7 bosses del Bestiario + Los
-Vaciados y Las Motas de Villanos Menores). Pendientes de generar/ratificar
-en `90-Raw/concept/`.
+**Concept art del Bestiario — 7/9 ratificados (2026-08-04):** los 9 briefs
+de [[Briefs de Concept Art]] (sección "13 — Bestiario") se corrieron en NB2. **Burning Shepherd,
+Hollow Warden, Drowned Choir, Cascade Warden, Los Vaciados, Las Motas**
+ratificados y en `90-Raw/concept/`. **Crowned Leviathan** y **Aether
+Wyrm** archivados pero pendientes de re-roll (traen texto/etiquetas
+incrustadas, violan la regla estándar §10). **Mirror Stalker rechazado**
+— se leyó como gólem de piedra, no vendió el concepto de reflejo/vidrio;
+no está en el vault, pendiente de re-roll real en la próxima corrida.
 
 **Pendiente de esta sesión:** Mistbound Frontier sigue sin flora/fauna
 propia (anotado en [[Flora y Ecosistemas]], no bloquea). Falta meter esta

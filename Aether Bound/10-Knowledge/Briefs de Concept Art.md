@@ -1128,11 +1128,26 @@ nombre propio (es la mayoría silenciosa de mundo abierto, sin ficha).
 
 ### 13.1 — The Crowned Leviathan (Lake of Mirrors, grado Ambiental — superviviente, no mutada)
 
+**Archivo:** `crowned-leviathan-v1.png` (GENERADO 2026-08-04).
+
+**Evaluación:** ⚠️ El diseño cumple el brief (corona de espinas óseas,
+vetas bioluminiscentes teal, calma antigua) pero la lámina trae texto y
+etiquetas incrustadas ("FRONT VIEW", título, párrafo descriptivo) —
+rompe la regla estándar del documento (§10: *"no text, no labels, no
+captions"*). Se archiva como referencia de diseño; **pendiente re-roll
+sin texto** para uso de producción.
+
 ```
 Creature concept sheet, front view and side view, of "The Crowned Leviathan" — a massive aquatic beast, hybrid of serpent and whale, one of the last surviving specimens of a species that predates the Aether corruption entirely. NOT a mutation — an ancient, unmutated survivor, ancient and dignified rather than monstrous. Long serpentine body with a whale-like head and baleen-adjacent jaw structure, powerful finned flippers, a crown-like ridge of bone spines running from the skull down the back of the neck (the source of its name). Skin in deep blue-grey with faint bioluminescent teal patterning along the flanks, natural and organic, no crystalline growths, no visible corruption. Eyes large, dark, ancient and calm rather than aggressive. Scale texture rendered as overlapping plates, weathered by age. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation blue-grey palette with teal bioluminescent accents, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of ancient dignity rather than menace. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond soft teal bioluminescence, no crystalline growths or Aether corruption marks, no text, no labels, no captions, no diagram-style callouts.
 ```
 
 ### 13.2 — The Burning Shepherd (Ossuary Grove, grado Corrupto — guardián de los muertos)
+
+**Archivo:** `burning-shepherd-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Fuego contenido en el frente, sombra disolviéndose sin
+borde claro en el tren trasero, vetas rojas agrietadas en el flanco,
+ojos ámbar vigilantes. Cumple los tres ejes del brief. PASS sin reservas.
 
 ```
 Creature concept sheet, front view and side view, of "The Burning Shepherd" — a hybrid beast of fire and shadow that guards a grove of skeletal Warden remains, behaving like a protector rather than a predator. Quadruped, wolf-like build but larger and heavier, front half wreathed in low flickering flame (dull orange-red, not bright — restrained, smoldering rather than blazing), back half dissolving into soft trailing shadow with no clear edge, as if half of it isn't fully physical. Bone-like ridges along the spine echo the skeletal remains it guards. Eyes glow a steady amber, watchful and almost sorrowful rather than hostile. Aether corruption visible as thin cracked veins of dull red light across the flame-side flank. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation palette dominated by muted ember-orange and charcoal-grey shadow, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of mournful guardianship rather than aggression. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no bright blazing fire, no neon glow beyond dim ember light, no text, no labels, no captions, no diagram-style callouts.
@@ -1140,17 +1155,42 @@ Creature concept sheet, front view and side view, of "The Burning Shepherd" — 
 
 ### 13.3 — The Mirror Stalker (The Echoing Archive, boss del dungeon, grado Aberración)
 
+**Evaluación (2026-08-04):** ❌ **No pasa.** El resultado se lee como un
+gólem de piedra genérico — tiene rostro tallado y textura mineral en vez
+de superficie de espejo/vidrio reflectante. El concepto central del boss
+(*"copia tus movimientos", "reflective energy"*) no se transmite
+visualmente: no hay sensación de reflejo, distorsión ni vidrio. **No se
+archiva en `90-Raw/concept/`** — pendiente de un re-roll real, no solo de
+texto, en la próxima corrida de NB2. Reforzar en el prompt: superficie de
+vidrio/espejo explícita, ausencia total de rasgos faciales tallados.
+
 ```
 Creature concept sheet, front view and side view, of "The Mirror Stalker" — an Aether aberration with no true animal ancestry, a being of pure reflective energy that mimics the movements of whoever approaches it. Humanoid-adjacent but deliberately ambiguous silhouette, roughly person-sized, surface entirely made of smooth dark glass-like facets that reflect a distorted, slightly-delayed copy of anything nearby rather than a normal reflection. No visible face — where a face would be, only a fractured mirror-surface that occasionally suggests a half-formed expression before smoothing back to blankness. Thin cracks of pale teal aether light run between the facets like mortar between broken glass. Posture is still and watchful, unnervingly patient. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation grey-blue palette with pale teal light in the seams, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of uncanny stillness. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no clear humanoid face, no neon glow beyond pale teal seam light, no text, no labels, no captions, no diagram-style callouts.
 ```
 
 ### 13.4 — The Aether Wyrm (The Rift, grado Aberración — la más pura de las 4)
 
+**Archivo:** `aether-wyrm-v1.png` (GENERADO 2026-08-04).
+
+**Evaluación:** ⚠️ Buen resultado atmosférico (ojos ámbar, cuerpo teal,
+estelas de humo), pero dos desvíos del brief: (1) trae etiquetas "FRONT
+VIEW"/"SIDE VIEW" incrustadas — mismo problema de §10 que el Leviathan;
+(2) tiene hocico/mandíbula de dragón visible, cuando el brief pedía
+explícitamente *"no true head shape... no visible mouth"*. Se archiva
+como referencia; **pendiente re-roll** (sin texto, sin mandíbula
+reconocible) antes de darlo por final.
+
 ```
 Creature concept sheet, front view and side view, of "The Aether Wyrm" — a serpent made entirely of raw Aether, with no animal tissue at all, semi-corporeal and capable of phasing partially out of visibility. Long sinuous serpentine body with no legs, its form only partially solid — sections of the body fade into translucent, barely-visible mist-like Aether while other sections remain a solid deep-teal crystalline surface, as if it is constantly flickering between existing and not existing. No true head shape, just a tapering, elongated skull-like formation with faint glowing amber eye-points and no visible mouth. Faint wisps of raw Aether trail behind it like smoke. Art style: hand-painted graphic novel watercolor, crisp black ink linework only where the body is solid (fading to loose unfinished linework where it phases out), flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation palette with deep teal and pale amber as the only saturated notes, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of something that should not exist. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no solid fully-opaque body, no neon glow beyond teal/amber Aether light, no text, no labels, no captions, no diagram-style callouts.
 ```
 
 ### 13.5 — The Hollow Warden (The Hollow Deep, boss del dungeon, grado Corrupto)
+
+**Archivo:** `hollow-warden-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Sin ojos (cuencas atrofiadas lisas), bigotes
+sensoriales, cuerpo bajo y pesado de cueva, vetas jade tenues bajo la
+piel. Match casi exacto del brief. PASS sin reservas.
 
 ```
 Creature concept sheet, front view and side view, of "The Hollow Warden" — a blind cave-dwelling beast that hunts by echo and vibration, mutated by a minor Aether leak deep underground without becoming a full aberration. Quadruped, low and heavy-bodied, built for crawling through tight tunnels rather than running — thick stubby limbs, no visible eyes (only smooth atrophied sockets where eyes would be), a wide flat head built almost entirely of sensory whiskers and vibration-sensing ridges. Skin is pale cave-grey, hairless, with a network of faint jade-glowing veins beneath the surface that pulse when it senses motion — the glow is a mineral coincidence, not a magical signal, so it should read as bioluminescent rather than rune-like. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation pale-grey palette with dim jade-green pulsing veins, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of blind subterranean menace. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no visible eyes, no neon glow beyond dim jade veins, no text, no labels, no captions, no diagram-style callouts.
@@ -1162,11 +1202,25 @@ Creature concept sheet, front view and side view, of "The Hollow Warden" — a b
 como una sola unidad sincronizada. El brief describe **una** unidad del
 grupo; en implementación se repite el mismo diseño 3-5 veces.
 
+**Archivo:** `drowned-choir-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Cámara resonante visible en el lomo, aletas violeta
+translúcidas, cuerpo de anguila con extremidades palmeadas. Ojos más
+grandes y agresivos que "milky y pequeños" del brief — se lee más feroz
+de lo pedido, pero funciona igual de bien para un boss de dungeon. PASS
+con nota menor, no bloqueante.
+
 ```
 Creature concept sheet, front view and side view, of a single unit of "The Drowned Choir" — a coordinated pack of aquatic beasts that move and attack in perfect synchrony, corrupted descendants of a species that already hunted in groups before the Aether touched them. Eel-like elongated body with four webbed limbs, built for fast coordinated swimming, translucent fins edged in a sickly pale violet. A ribbed, resonating chamber along the throat and spine — visibly open slits, like gill-adjacent structures repurposed for sound — is the source of the low choral hum the pack produces underwater. Skin is a deep drowned blue-grey with faint corrupted violet mottling, no crystalline growths, the corruption reads as sickness rather than mineral mutation. Eyes are small, milky, adapted to murky water. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation deep-blue palette with pale violet corruption mottling, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of eerie coordinated hunger. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no crystalline growths, no neon glow, no text, no labels, no captions, no diagram-style callouts.
 ```
 
 ### 13.7 — The Cascade Warden (The Shattered Cascade, boss del dungeon, grado Ambiental — la excepción sin corromper)
+
+**Archivo:** `cascade-warden-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Rapaz territorial, cresta que se eriza, ojos ámbar,
+plumaje slate-grey/blanco, sin marca de corrupción — exactamente la
+excepción sin corromper que pedía el brief. PASS sin reservas.
 
 ```
 Creature concept sheet, front view and side view, of "The Cascade Warden" — a large territorial bird-beast alpha that nests at the top of a massive waterfall, NOT corrupted by the Aether, simply very old and fiercely territorial. Large raptor-like build with powerful wings adapted for riding waterfall updrafts, thick waterproof plumage in slate-grey and white, a crest of longer feathers along the skull that flares when threatened. Talons oversized and weathered from decades of gripping wet rock. No Aether corruption markings anywhere — this is natural wildlife, aged and dominant rather than mutated. Eyes sharp amber, alert and territorial. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation slate-grey and white palette with natural amber eye accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of ancient territorial dominance. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no crystalline growths or Aether corruption markings of any kind, no neon glow, no text, no labels, no captions, no diagram-style callouts.
@@ -1181,11 +1235,27 @@ física**, no como monstruo de fantasía estándar: cicatrices de una
 anatomía que alguna vez fue humana/élfica/enana, no colmillos ni cuernos
 inventados.
 
+**Archivo:** `the-hollowed-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ El mejor resultado del batch. Piel agrietada tipo
+arcilla, vetas rojo-violeta exactas en las articulaciones, cara en blanco
+sin rasgos individuales, ropa reducida a jirones — tragedia física
+lograda sin caer en cliché de orco (sin colmillos, sin piel verde). PASS
+sin reservas.
+
 ```
 Creature concept sheet, front view and side view, of "The Hollowed" (Los Vaciados) — a large humanoid figure, once a person of one of three fantasy races, slowly rewritten by prolonged exposure to corrupted Aether until no personality or memory remains. The design must read as tragic transformation, not generic fantasy monster — no invented tusks, horns or bestial features. Body reads as an enlarged, muscular humanoid silhouette with skin cracked like dry clay, deep violet-red Aether veins visible glowing faintly beneath the cracks especially at the joints, where the corruption clearly entered the body first. Face still loosely humanoid but blank — no distinct individual features remain, eyes are solid dull amber with no visible pupil, expression permanently slack. Sparse, tattered remnants of what were once ordinary traveler's or worker's clothes still cling to the body, torn and stained, the only trace of who this used to be. Posture hunched, feral, pack-hunting stance rather than upright civilization. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation grey-brown palette with dull violet-red veined glow, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of tragic corrupted humanity, not monstrous glee. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no tusks, no horns, no bestial animal features, no orc-cliché green skin, no neon glow beyond dim violet-red veins, no text, no labels, no captions, no diagram-style callouts.
 ```
 
 ### 13.9 — Las Motas ([[Villanos Menores]] §Capa 2, grado Corrupto — proto-vida, tono liviano)
+
+```
+**Archivo:** `the-chaff-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Tono liviano logrado — ojos ámbar puntuales, sonrisa,
+postura juguetona sobre un objeto robado. Grupo de 3 + individuo grande
+para mostrar detalle y comportamiento de enjambre a la vez. Sin deriva a
+mascota Genshin. PASS.
 
 ```
 Creature concept sheet, front view view and multiple small figures in a cluster, of "The Chaff" (Las Motas) — tiny scavenging creatures that are not mutated animals but proto-life, born when corrupted Aether crystallizes into the simplest possible living form. About half a meter tall, roughly humanoid-adjacent but simplified and asymmetrical, like a rough sketch of a person made of stone-grey clay with small jagged crystal shards embedded across the body catching dull violet light. No true face, just two small glowing amber pinprick eyes and a wide chattering slit of a mouth. Long grasping fingers built for snatching small shiny objects. Posture playful and skittering rather than menacing — the tone here is mischievous nuisance, not horror. Show 3 in a small cluster to convey swarm behavior. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation stone-grey palette with small dull-violet crystal accents, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of mischievous low-stakes nuisance rather than dread. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no cute Genshin-style mascot design, no neon glow beyond small dull violet crystal accents, no text, no labels, no captions, no diagram-style callouts.

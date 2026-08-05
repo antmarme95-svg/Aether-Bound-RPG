@@ -7077,3 +7077,38 @@ criatura).
 Los 9 briefs están listos para correr en NB2 pero **no generados todavía** — ninguno tiene
 archivo en `90-Raw/concept/` ni ratificación de Boris. Sigue pendiente meter la pasada completa
 de bestiario/flora/villanos/briefs al loop de QA (mañana).
+
+## [2026-08-04] concept-art | Evaluación de los 9 renders — 7/9 ratificados
+
+Boris corrió los 9 briefs de §13 en NB2 durante la tarde. Evaluación contra cada brief + la
+regla estándar de "no text/labels/captions" (§10 de `Briefs de Concept Art.md`):
+
+**RATIFICADOS y copiados a `90-Raw/concept/`:**
+- `burning-shepherd-v1.png` — fuego contenido/sombra sin borde/vetas rojas, PASS sin reservas.
+- `hollow-warden-v1.png` — sin ojos, bigotes, vetas jade, match casi exacto.
+- `drowned-choir-v1.png` — cámara resonante y aletas violeta correctas; ojos más agresivos de
+  lo pedido ("milky, small") pero funcional para un boss de dungeon.
+- `cascade-warden-v1.png` — rapaz vieja sin corrupción, exactamente la excepción del batch.
+- `the-hollowed-v1.png` — el mejor resultado de los 9: tragedia física exacta, sin cliché de
+  orco (sin colmillos, sin piel verde).
+- `the-chaff-v1.png` — tono liviano logrado, sin deriva a mascota.
+
+**ARCHIVADOS pero pendientes de re-roll (el diseño sirve, la lámina no):**
+- `crowned-leviathan-v1.png` — corona de espinas y vetas teal correctas, pero trae texto y
+  etiquetas incrustadas ("FRONT VIEW", título, párrafo) — rompe la regla estándar §10.
+- `aether-wyrm-v1.png` — atmósfera correcta, pero (1) etiquetas "FRONT VIEW"/"SIDE VIEW"
+  incrustadas y (2) mandíbula de dragón visible, cuando el brief pedía explícitamente
+  *"no true head shape... no visible mouth"*.
+
+**RECHAZADO, no entra al vault:**
+- **Mirror Stalker** — se leyó como gólem de piedra genérico, con rostro tallado y textura
+  mineral en vez de superficie de espejo/vidrio reflectante. El concepto central del boss
+  ("copia tus movimientos") no se transmite visualmente. Pendiente de re-roll real (no solo de
+  texto) en la próxima corrida — reforzar en el prompt la superficie de vidrio explícita y la
+  ausencia total de rasgos faciales tallados.
+
+Evaluaciones completas anotadas en `Briefs de Concept Art.md` §13.1-13.9 (formato
+`**Archivo:**`/`**Evaluación:**` ya establecido en el documento) y cross-referenciadas en
+`Bestiario.md` y `Villanos Menores.md` en la entrada de cada criatura.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
