@@ -49,7 +49,7 @@ solo con el tiempo — es lo que pasa cuando el jugador decide no detenerla. Esa
 lectura divide al grupo y detona la traición ([[Los 9 Pivotes]], [[Estructura
 Dramática]]). Los 5 desenlaces posibles: [[Los 5 Finales]].
 
-**Por qué las 9 traiciones no son coincidencia:** el Triune Council nació
+**Por qué las traiciones no son coincidencia:** el Triune Council nació
 gestionando esta misma corrupción — su poder depende de que la crisis siga
 administrada, no resuelta ([[Estructura Política]] §"Por qué el Council
 prefiere el statu quo"). **Casi todas** las órdenes hacia los 9 Pivotes vienen

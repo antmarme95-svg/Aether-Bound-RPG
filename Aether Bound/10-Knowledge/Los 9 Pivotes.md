@@ -76,7 +76,7 @@ cuando aparezca en el guión, no antes.
 
 | Jugador | Pivote | Te enseña | Quiebre | Línea |
 |---|---|---|---|---|
-| Elfo Duelist | **Maren** — Humana Strategist (gadgeteer fluvial) | Calidez, improvisación | Descifra el Fragmento y hace las cuentas: su ciudad no sobrevive una Muda salvaje; vende el plan al Triune Council | *"I can love her and still do the math."* |
+| Elfo Duelist | **Maren** — Humana Strategist (gadgeteer fluvial) | Calidez, improvisación | Años de modelos del Consortium le dicen que su ciudad no sobrevive una Muda salvaje; el Triune Council le trae el plan directamente a ella, no al revés | *"I can love her and still do the math."* |
 | Elfo Strategist | **Torgan** — Enano Duelist (misil humano) | La palabra empeñada | Un Juramento de Forja anterior al grupo lo obliga; no discute, cumple | *"An oath doesn't care how I feel about you."* |
 | Elfo Vanguard | **Iven** — Humano Duelist (acróbata) | Espontaneidad, apetito de vivir | Su asentamiento muere de corrupción; el Triune Council **le promete una cura que no existe** a cambio de Speck, y él la cree. Traiciona por los suyos | *"You'd trade her for strangers? I'm trading her for everyone I've ever known."* |
 | Enano Duelist | **Sereth** — Elfo Strategist (manipulador) | Perspectiva, soltar la terquedad | Afecto sincero usado como instrumento de conducción | *"I didn't lead you to this decision. I led you to the person who makes it."* |

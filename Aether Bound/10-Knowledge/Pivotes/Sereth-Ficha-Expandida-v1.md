@@ -353,7 +353,7 @@ Esta es la variante Sereth que ninguna otra fila de la matriz puede reproducir: 
 
 Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Sereth**. El mensajero de la Royal Academy se aparta: la Corona no lo mandó a discutir con la variable.
 
-Speck responde y **cruza el borde sola**. Sereth abre los brazos y la deja ir. Ve, en tiempo real, algo que su escuela no cataloga — **una persona que no fue conducida, decidiendo con autoridad propia.** Es el único final donde Sereth aprende algo. No es que su método haya sido incorrecto en abstracto; es que **existe una categoría de persona a la que la lectura larga no se puede aplicar sin destruirla como categoría.** Speck es esa persona.
+Speck responde y **cruza el borde sola**. Sereth abre los brazos y la deja ir. Ve, en tiempo real, algo que su escuela no cataloga — **una persona que no fue conducida, decidiendo con autoridad propia.** En F1 y F2b, Sereth diagnostica que su método falló; acá es distinto — es el único final donde el aprendizaje **le cambia el método** en vez de archivarlo. No es que su método haya sido incorrecto en abstracto; es que **existe una categoría de persona a la que la lectura larga no se puede aplicar sin destruirla como categoría.** Speck es esa persona.
 
 **Epílogo — Sereth vivo.** Se reintegra al grupo — no al Council, no a la Royal Academy. Renuncia a su escuela, algo que ningún consejero de su linaje familiar había hecho antes. Aprende, lentamente y con torpeza (para un consejero de 200 años, es humillante), a **preguntar sin sembrar.** Sus primeras preguntas al jugador después del cráter suenan mal — se nota que aún no le sale. El jugador las recibe con paciencia, porque también le duele oírlas mal.
 

@@ -224,7 +224,7 @@ Frontier High Command: *"Continúa rastreando. Acción vendrá."*
 
 Speck revela inteligencia.
 
-**Lyris no siente nada.** Pero Lyris **reconoce patrón.** Speck es destello en el caos, punto de orden en desorden.
+**Lyris no lo deja mostrarse.** Pero Lyris **reconoce patrón.** Speck es destello en el caos, punto de orden en desorden.
 
 Lyris casi—casi—se permite fascinar. Pero se detiene a sí misma. No puede permitir fascinación.
 

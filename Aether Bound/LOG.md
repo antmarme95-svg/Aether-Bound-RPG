@@ -7194,3 +7194,56 @@ Quedan algunos menores sin cerrar de ambos reportes (aritmética de Nyael y Darr
 nombre distinto al real; un residuo en un worktree de git viejo que no se tocó). No bloquean.
 **16ª re-corrida** pendiente de lanzar para confirmar si la mejora del linter bajó el volumen
 de críticos de juicio narrativo, que es la hipótesis a probar.
+
+## [2026-08-05] canon-qa | 16ª re-corrida — 9 críticos reportados, 7 falsos positivos, 2 reales cerrados
+
+**Linter primero:** `check_canon.py` 0 críticos / 0 medium antes de spawnear (22 clases). Se
+lanzaron los 2 subagentes Opus en frío de rigor (dramaturgia + congruencia semántica), sin
+contexto de rondas previas.
+
+**Resultado combinado: 9 CRITICAL, 14 MEDIUM, 9 INFO.** Verificación manual línea por línea
+contra el archivo real (no contra la cita del subagente) mostró que **7 de los 9 críticos eran
+falsos positivos** — ambos subagentes citaron contenido que ya no existe en el vault. La causa:
+`El Cráter — Matriz de Rutas.md`, creada el 2026-08-03 como fuente única de la mecánica del
+clímax (geometría borde/centro, excepción Nyael, quién se lleva el Fragmento, gate F4), no fue
+descubierta por ninguno de los dos subagentes — auditaron una versión mental del canon anterior
+a esa sesión de diseño, no el archivo real. Los 5 críticos correspondientes (geometría del
+cráter en 8 fichas, gate de la ruta Nyael, línea "inevitable" de Valen en F2b, línea duplicada
+de Roen en F2b, Fragmento llevado por el Pivote en 3 fichas de fijos) estaban **ya bien** al
+leer el archivo directamente.
+
+**2 críticos reales, corregidos en la fuente:**
+- `Valen-Ficha-Expandida-v1.md:223` — tenía invertido quién lee la inscripción Warden del
+  Sunken Archive: decía que correspondía normalmente a Sereth y que Valen la reemplazaba cuando
+  Sereth era el Pivote activo. Es al revés y además lógicamente imposible (Sereth es 1 de 9
+  rutas — si fuera el default, 8 de 9 partidas no tendrían lector). Corregido contra
+  `Geografía y Ciudades.md:1016` y `Sereth-Ficha:216`, ambas ya correctas: Valen lee por
+  defecto, Sereth solo en su propia ruta.
+- `Valen-Ficha` — la Escena 3 del Acto 2 hacía que Valen revelara "los God-Cores son Wardens"
+  como hecho confirmado, contradiciendo `El Mundo y la Muda.md:31-36` (la palabra "Warden" no
+  existe en el conocimiento público de ninguna raza; el Sunken Archive del Acto 3 es "la primera
+  fuente que confirma, sin ambigüedad, lo que hasta entonces era mito"). Reescrita la escena y
+  el bloque de backstory de hace 30 años para que sea teoría/hipótesis sin fuente de Valen, con
+  la confirmación real ocurriendo recién en el Archive — incluyendo el beat de la cifra errónea,
+  que ya vivía correctamente ahí.
+
+**+ 3 residuos MEDIUM reales, corregidos en la fuente:** "9 traiciones" → reformulado (Bram no
+traiciona, son 8) en `El Mundo y la Muda.md` y `Bond y el Bond Vacío.md`; superlativo de Sereth
+en F4 ("único final donde aprende algo") suavizado a "único final donde el aprendizaje le
+cambia el método" para no contradecir el aprendizaje que también tiene en F1/F2b; línea
+residual de Lyris ("Lyris no siente nada") en `Lyris-Ficha:227`, que no se había actualizado
+cuando el header del arquetipo se corrigió a "siente y suprime, no ausencia de sentimiento".
+
+**Otros MEDIUM/INFO del reporte quedaron sin verificar/cerrar** (beats de duelo por final,
+Goggles/Tobin sin eco en los 60 epílogos, sección de Reckoning faltante en Nyael, aritmética
+menor) — no bloquean el criterio de cierre (0 críticos) y quedan para la 17ª si Boris quiere
+tratarlos.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
+
+**Nota de método para la 17ª:** el prompt de los subagentes de QA debe apuntar explícitamente a
+`[[El Cráter — Matriz de Rutas]]` como fuente única de la mecánica del clímax — es reciente
+(2026-08-03) y ninguno de los dos subagentes de esta ronda la encontró por su cuenta, lo que
+produjo la mayoría del ruido de esta corrida. Es la primera ronda con **más falsos positivos que
+críticos reales**: vale la pena verificar cada hallazgo contra el archivo real antes de tocar
+nada, no asumir que la cita del subagente refleja el estado actual del vault.

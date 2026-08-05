@@ -51,7 +51,8 @@ un hueco: es la única celda donde el beat se juega invertido.**
 3. **Regla de dirección invertida:** el peso no sale de la ausencia sino de **la
    expectativa de ausencia que no se cumple.** El jugador aprieta el botón preparado
    para que le duela. La emoción es el desahogo — un beat que ninguna otra celda
-   ofrece, y que en un juego de nueve traiciones vale precisamente porque es único.
+   ofrece, y que en un juego de ocho traiciones (Bram es el único que no traiciona)
+   vale precisamente porque es único.
 4. **Lo que esto le paga a Bram.** Su superlativo es *"el único que rehúsa"*
    ([[Los 9 Pivotes]]), y hasta ahora eso vivía solo en diálogo. Acá se vuelve
    **mecánica**: la única celda donde el gesto de la pérdida devuelve presencia.

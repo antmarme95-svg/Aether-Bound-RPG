@@ -33,36 +33,28 @@ español. Registrado en `CLAUDE.md` regla 9 y en `Nomenclatura.md`.
 decisión — necesitan pasada de traducción cuando se aborde el guión completo.
 No bloquea nada mientras tanto.
 
-### 🔜 Pendiente para cerrar el sprint
+### ✅ Sprint QA — cerrado (16ª re-corrida, 2026-08-05)
 
-**Rondas 7ª-10ª procesadas (2026-08-02/03).** Detalle completo en [[LOG]].
-13 → ~9 → 7 → ~10 críticos: **el volumen no bajó en cinco rondas**, siempre por
-el mismo mecanismo (un fix entra en la fuente y no baja a las fichas). Las
-decisiones de canon que salieron de esas rondas — gate F1/F2a con mensajero,
-orden "El Primero", bautizo a Acto 2, agencia a 4 grados, el Pivote siempre en
-el borde — están todas aplicadas. En la 10ª **se cortó el ciclo de parches y se
-hizo una sesión de diseño.**
+Rondas 7ª-15ª (2026-08-02/04): decisiones de canon y arquitectura resueltas
+(gate F1/F2a con mensajero, cráter centralizado en [[El Cráter — Matriz de
+Rutas]], 4 grados de agencia, linter ampliado a 22 clases). Detalle completo
+en [[LOG]].
 
-### 🏗️ Fix de arquitectura — cerrado, 0 decisiones de diseño abiertas
-
-Cráter centralizado en [[El Cráter — Matriz de Rutas]] (fuente única).
-Rondas 11ª-15ª (2026-08-03/04): 4 decisiones de diseño resueltas + 30
-críticos de propagación/superlativo, todos cerrados en la fuente —
-detalle completo en [[LOG]]. Patrón recurrente: datos triplicados sin
-fuente única (resuelto, "Superlativo Consolidado" en `Los 9 Pivotes`) y
-superlativos de exclusividad colisionando entre Pivotes, no solo fijos.
-
-**Mejora estructural al linter (15ª, sugerida por el propio QA):**
-`check_superlativos` solo vigilaba a los 3 fijos y solo detectaba un
-personaje repitiéndose a sí mismo. Ahora cubre los 9 Pivotes + detecta
-colisiones **entre dos personajes distintos** reclamando la misma
-exclusividad "de elenco" (el bug estructural detrás de 3 de los últimos
-4 críticos). 22 clases en total.
+**16ª (2026-08-05):** linter 0 críticos → 2 subagentes en frío → **9
+críticos reportados, 7 falsos positivos** (citaban mecánica del cráter que
+`El Cráter — Matriz de Rutas` ya centralizó el 08-03 y que las fichas ya
+citan bien — los subagentes no la encontraron). 2 críticos reales
+corregidos en la fuente: `Valen-Ficha` tenía invertido quién lee la
+inscripción Warden (es Valen por defecto, Sereth solo en su ruta) y
+revelaba "God-Cores = Wardens" como hecho confirmado en Acto 2 en vez de
+teoría sin probar hasta el Sunken Archive (Acto 3). + 3 residuos MEDIUM
+("9 traiciones"→8, superlativo de Sereth en F4, línea vieja de Lyris).
+**Nota de método para la 17ª:** los prompts de QA deben apuntar
+explícitamente a `[[El Cráter — Matriz de Rutas]]` como fuente única —
+evita el ruido que dominó esta ronda. Detalle en [[LOG]].
 
 Queda 1 hueco de canon genuino (quién mueve el dinero de Iven, cruza con
 Maren) y menores sin cerrar (no bloquean).
-
-**Falta lanzar la 16ª re-corrida** — a ver si el linter bajó el volumen.
 
 ### 🛠️ Herramientas del vault
 
@@ -145,14 +137,12 @@ motor resuelve eso.
 
 ### 🗓 Inmediato — arrancar acá mañana
 
-1. **16ª re-corrida QA** — criterio de cierre: 0 críticos de 2 subagentes
-   Opus en frío. Rondas 12ª-15ª (2026-08-04): 6+4+10+10 críticos, todos
-   cerrados en la fuente ([[LOG]]); la 15ª además amplió
-   `check_superlativos` — esta ronda muestra si bajó el volumen.
+1. **Sprint QA cerrado (16ª, 2026-08-05)** — linter 0 críticos, 2 reales de
+   los subagentes ya corregidos en la fuente. Detalle arriba y en [[LOG]].
 2. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
    bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
    los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el
-   Bond Vacío`. Arranca al cerrar el sprint.
+   Bond Vacío`. Arranca ahora que el sprint QA cerró.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond
