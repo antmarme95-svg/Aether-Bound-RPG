@@ -154,6 +154,10 @@ motor resuelve eso.
    feedback post-hoc. Descartada la "competencia de compañeros por el
    link" (rompe el silencio de la traición). No auditable sin vertical
    slice — detrás de ADR-003.
+4. **Concept art de los 3 links de fijos — 3/3 ratificados (2026-08-05).**
+   [[Briefs de Concept Art]] §14 — primer concept art de los 3 fijos en
+   acción. Valen salió como ficha frente/dorso en vez de pose con ambos
+   orbes a la vez; ratificado igual, funciona para el propósito.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond
@@ -168,43 +172,12 @@ motor resuelve eso.
 
 ### ✅ Bestiario/Flora/Villanos menores — cerrado (2026-08-04)
 
-Hueco identificado por Boris: el vault no tenía criaturas, flora,
-ecosistemas ni villanos de mundo abierto con nombre propio (los 4 bosses
-que ya existían en Geografía nunca tuvieron ficha). Sesión de diseño
-completa — 3 archivos nuevos:
-
-- [[Bestiario]] — eje de salud del Aether (Sano/Ambiental/Corrupto/
-  Aberración) aplicado a toda la fauna dispersa; ficha para los 4 bosses
-  ya nombrados + 3 nuevos que completan los 5 dungeons formales (Hollow
-  Warden, Drowned Choir, Cascade Warden). God's Throne queda sin boss
-  nombrado a propósito — no compite con el peso de The First Wound.
-- [[Flora y Ecosistemas]] — mismo eje aplicado a plantas; incluye el
-  **Jacaranda de Rivermeet** (pedido de Boris) y sistematiza la Hoja de
-  Maelys ya existente en la ficha de Dagna.
-- [[Villanos Menores]] — decisión de Boris: **sin jefe final** de mundo
-  abierto (no hace falta, el antagonismo real es institucional/personal).
-  2 capas: facciones de las 3 razas ya establecidas (Compañías Impagas
-  humanas, Sin Nombre enanos, No Licenciados élficos — cada una anclada a
-  canon político ya escrito) + 2 razas nuevas **no sapientes** nacidas de
-  la corrupción del Aether (Vaciados = ex-personas mutadas, espejo oscuro
-  de Speck; Motas = enjambre menor, alivio cómico). Ninguna es 4ª
-  civilización — no contradice [[Las Tres Razas]].
-
-Se agregaron 2 líneas de reacción de mundo abierto (Bram y Torgan, ver
-sus fichas) y se asignaron los 3 bosses nuevos a sus dungeons en
-`Geografía y Ciudades`. `check_canon.py` 0 críticos tras el barrido.
-
-**Concept art del Bestiario — 7/9 ratificados (2026-08-04):** los 9 briefs
-de [[Briefs de Concept Art]] (sección "13 — Bestiario") se corrieron en NB2. **Burning Shepherd,
-Hollow Warden, Drowned Choir, Cascade Warden, The Hollowed, The Chaff**
-ratificados y en `90-Raw/concept/`. **Crowned Leviathan** y **Aether
-Wyrm** archivados pero pendientes de re-roll (traen texto/etiquetas
-incrustadas, violan la regla estándar §10). **Mirror Stalker rechazado**
-— se leyó como gólem de piedra, no vendió el concepto de reflejo/vidrio;
-no está en el vault, pendiente de re-roll real en la próxima corrida.
-
-Mistbound Frontier sigue sin flora/fauna propia (anotado en
-[[Flora y Ecosistemas]], no bloquea).
+3 archivos nuevos ([[Bestiario]], [[Flora y Ecosistemas]],
+[[Villanos Menores]]) llenando el hueco de mundo abierto — detalle
+completo en [[LOG]]. Concept art: 7/9 ratificados ([[Briefs de Concept
+Art]] §13); pendiente re-roll de Crowned Leviathan, Aether Wyrm (texto
+incrustado) y Mirror Stalker (rechazado). Mistbound Frontier sigue sin
+flora/fauna propia (no bloquea).
 
 ### Worldbuilding — abierto
 - **El Último Reino humano pre-Regencias:** construir backwards qué fue,

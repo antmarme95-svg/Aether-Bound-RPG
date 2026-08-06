@@ -7334,3 +7334,25 @@ problema de input.
 posible — reemplaza el pendiente (❓) anterior.
 
 **Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
+
+## [2026-08-05] concept-art | Links de los 3 fijos -- 3/3 ratificados
+
+Primer concept art de Roen, Valen y Darro en accion (antes solo tenian el fenotipo generico
+de su raza). 3 briefs nuevos en `Briefs de Concept Art.md` SS14, escritos y corregidos de
+formato para igualar el patron de brief pre-generacion ya establecido (SS7 Dagna, SS9
+Queen Ithessa/King Borran): parrafo de referencia en prosa plana, sin etiquetas en negrita,
+terminado en "Destino:", seguido del bloque de codigo con el prompt completo.
+
+**Resultado:**
+- `roen-second-catch-v1.png` -- RATIFICADO. Cumple el brief; nota menor no bloqueante:
+  expresion lee a esfuerzo en vez de instinto calmado.
+- `valen-long-calculus-v1.png` -- RATIFICADO. Broke el brief literal (pedia los dos orbes
+  activos a la vez en una sola pose de accion; salio como ficha frente/dorso, cada vista
+  con un solo orbe). Boris ratifica igual: funciona para el proposito del concept art,
+  diferencia con claridad Discord (rojo filoso) de Harmony (dorado fluido). Si hace falta
+  la pose de accion con ambos orbes simultaneos, es un brief nuevo, no un re-roll de este.
+- `darro-open-seam-v1.png` -- RATIFICADO. Cumple el brief; nota menor no bloqueante:
+  deriva de proporcion (menos trapezoide/4.5-cabezas que el fenotipo enano), mismo patron
+  ya visto con King Borran (SS9b-v2).
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.

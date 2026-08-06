@@ -1261,6 +1261,97 @@ mascota Genshin. PASS.
 Creature concept sheet, front view view and multiple small figures in a cluster, of "The Chaff" (Las Motas) — tiny scavenging creatures that are not mutated animals but proto-life, born when corrupted Aether crystallizes into the simplest possible living form. About half a meter tall, roughly humanoid-adjacent but simplified and asymmetrical, like a rough sketch of a person made of stone-grey clay with small jagged crystal shards embedded across the body catching dull violet light. No true face, just two small glowing amber pinprick eyes and a wide chattering slit of a mouth. Long grasping fingers built for snatching small shiny objects. Posture playful and skittering rather than menacing — the tone here is mischievous nuisance, not horror. Show 3 in a small cluster to convey swarm behavior. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation stone-grey palette with small dull-violet crystal accents, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of mischievous low-stakes nuisance rather than dread. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no cute Genshin-style mascot design, no neon glow beyond small dull violet crystal accents, no text, no labels, no captions, no diagram-style callouts.
 ```
 
+## 14 — Links de los 3 fijos (Sesión de diseño 2026-08-05)
+
+Fuente: [[Los 3 Links de los Fijos]] (provisional, pendiente de QA). Primer
+batch de concept art para Roen, Valen y Darro en acción — no existía
+ninguno hasta ahora (§3 los dejaba "pendiente"). Cada brief muestra el T1
+del link en el instante de ejecución, ancla de anatomía en el fenotipo ya
+ratificado de cada raza, y el "Diseño Visual Ratificado" de la ficha
+respectiva como referencia de vestuario/rasgos.
+
+**Bloque de estilo compartido (igual que el resto del documento):**
+hand-painted graphic novel watercolor · crisp black ink linework · flat
+cel 3–4 bandas con bordes dry-brush · paleta lavada de baja saturación ·
+grano de papel · Sable ligne claire × BotW impresionista. **Negativos
+estándar en todos:** no Genshin candy saturation, no photorealism/PBR, no
+generic anime cel, no neon glow salvo el VFX propio de cada link, no
+text/labels/captions/annotations/diagram-style callouts, no UI icon
+framing (esto es ilustración de escena, no ícono — la iconografía de UI
+queda para una pasada aparte).
+
+### 14.1 — Roen (Second Catch, T1)
+
+**Archivo:** `roen-second-catch-v1.png` (GENERADO 2026-08-05, RATIFICADO
+por Boris).
+
+**Evaluación:** ✅ Cape en tonos tierra, warpaint verde desvanecido en el
+pómulo, cuero remachado, agarra a un aliado a media caída, único VFX
+ámbar de movimiento. Nota menor no bloqueante: la expresión lee más a
+esfuerzo/tensión que al "instinto calmado" del brief; el anillo de cobre
+no se ve (mano ocupada agarrando).
+
+Referencia adjunta: `fenotipo-humano-v1.png` (ancla de anatomía/proporción).
+Plants visuales: el copo de cobre heredado de su padre en la mano
+izquierda ([[Roen-Ficha-Expandida-v1]] §Diseño Visual Ratificado), el
+warpaint fronterizo verde ya desvanecido, cape pesada en tonos tierra.
+Único VFX del link: un solo trazo ámbar de movimiento redirigido, nada
+más brilla en la imagen. Destino: `roen-second-catch-v1.png`.
+
+```
+Use the attached human male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Roen", a 45-year-old human Vanguard, 7.5 heads tall, weathered athletic build. Face: sun-worn face with small scars from a life on the frontier (not epic battle), faded green geometric warpaint on cheekbone or jaw, 5+ years old and unretouched. Gear: riveted leather, heavy earth-tone cape, marching boots, a copper ring on his left hand. Action pose, mid-combat: Roen has just caught a falling ally by the forearm mid-air, his own body braced low and turned sideways to absorb the momentum, both boots planted hard into the ground, cape whipping from the sudden stop. His free hand is extended forward, having redirected the ally's fall into a controlled swing. A faint warm amber motion-arc trail follows the caught arm, showing the redirected trajectory — the only VFX in the image, no other glow. Expression: focused, calm, entirely unsurprised — this is instinct, not effort. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation earth-tone palette with a single warm amber motion-arc accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of quiet, practiced reliability. Negative: no tall or slender body, no youthful smooth face, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the single amber motion-arc, no text, no labels, no captions, no UI icon framing.
+```
+
+### 14.2 — Valen (The Long Calculus, T1, doble orbe)
+
+**Archivo:** `valen-long-calculus-v1.png` (GENERADO 2026-08-05,
+RATIFICADO por Boris).
+
+**Evaluación:** ⚠️→✅ El brief pedía los dos orbes activos a la vez en
+una sola pose de acción; lo generado salió como ficha frente/dorso, cada
+vista con un solo orbe (Discord al frente, Harmony atrás) — no cumple
+literalmente el punto central del brief. Boris ratifica igual: **funciona
+para el propósito del concept art** (diferencia con claridad los dos
+colores/texturas — rojo filoso vs. dorado fluido — y da anatomía
+frente/dorso utilizable). Queda anotado que una pose de acción con ambos
+orbes simultáneos, si hace falta, es un brief aparte, no un re-roll de
+este.
+
+Referencia adjunta: `fenotipo-elfo-V2.png` (ancla de anatomía/proporción).
+Plants visuales: el anillo de plata grabado con la fecha falsa
+([[Valen-Ficha-Expandida-v1]] §Diseño Visual Ratificado), grabados teal
+contenidos en cuello y esternón, abrigo slate-grey de viajero. Único VFX
+del link: los dos orbes activos a la vez, uno filoso ámbar-rojo (Discord)
+y uno cálido dorado (Harmony), sin otro brillo en la imagen. Destino:
+`valen-long-calculus-v1.png`.
+
+```
+Use the attached elf male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Valen", a 230-year-old elf Strategist, 8 heads tall, pure continuous vertical silhouette. Face: near-achromatic porcelain skin, cold white with no lavender undertone, jet-black straight hair loose to the shoulder, teal geometric markings at neck and sternum (contained, academic rather than warrior-style), a silver ring engraved with a date worn on his right hand. Clothing: long structured slate-grey traveler's coat, never ceremonial robes. Action pose: Valen stands with perfect calm posture, both hands raised, palms open in opposite directions. From his right hand extends a small orb of deep amber-red light drifting toward an unseen target — sharp, crackling, marking energy (Discord). From his left hand extends a small orb of soft warm gold light drifting the opposite direction — slow, steady, glowing warmly (Harmony). The two orbs and their trailing light-threads are the only VFX in the image, clearly different in color and texture from each other. His expression is unreadable, calculating, entirely still except for his eyes tracking both orbs at once. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation slate-grey palette with the two contrasting orb accents (amber-red and warm gold), visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of cold precision holding two opposite forces at once. Negative: no short or stocky body, no warm skin tone, no lavender undertone, no ceremonial robes, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the two named orbs, no text, no labels, no captions, no UI icon framing.
+```
+
+### 14.3 — Darro (Open Seam, T1)
+
+**Archivo:** `darro-open-seam-v1.png` (GENERADO 2026-08-05, RATIFICADO
+por Boris).
+
+**Evaluación:** ✅ Sin barba, trenza pelirroja, hachas en el cinturón,
+fisura blanco-dorada en la mano, expresión seria sin sonrisa. Nota menor
+no bloqueante: la proporción no lee tan trapezoide/4.5-cabezas como el
+fenotipo enano establecido (deriva de proporción ya vista antes con King
+Borran, §9b-v2) — no bloquea la ratificación.
+
+Referencia adjunta: `fenotipo-enano-varon-v1.png` (ancla de
+anatomía/proporción). Plants visuales: el tatuaje ámbar incompleto en el
+antebrazo ([[Darro-Ficha-Expandida-v1]] §Diseño Visual Ratificado), sin
+barba, build más liviano que Dagna o Torgan, hachas cortas en el
+cinturón. Único VFX del link: una sola fisura blanco-dorada partiendo el
+aire donde conectó el golpe, nada más brilla en la imagen. Destino:
+`darro-open-seam-v1.png`.
+
+```
+Use the attached dwarf male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Darro", a ~63-year-old dwarf Duelist, 4.5 heads tall, rigid trapezoid build, lighter build than a heavily-armored dwarf — leather instead of plate, short axes at his belt. Face: reddish-brown hair in a short topknot or warrior braid, no beard, an unfinished amber guild tattoo (a single symbol, not the full mastery pattern) on one forearm, open loose-limbed expression, eyes that glint with constant motion. Action pose, full follow-through of a heavy overhead strike just landed: Darro's weapon has just struck an unseen surface directly in front of him, his whole body low and torqued from the swing, one arm still extended past the point of impact. Where the blow landed, a jagged crack of bright white-gold light splits open across the empty air like a fracture line in glass — sharp, sudden, the only VFX in the image. His expression, unusually for him, is completely serious — no smirk, no joke, focused entirely on the impact. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation leather-brown palette with a single sharp white-gold fracture-light accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of sudden, uncharacteristic gravity. Negative: no tall or slender body, no full beard, no heavy plate armor, no playful or smirking expression, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the single fracture-light accent, no text, no labels, no captions, no UI icon framing.
+```
+
 ## Notas de uso
 
 - Pedir siempre "concept sheet, front view and side view" — la silueta debe
