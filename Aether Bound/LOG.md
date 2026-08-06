@@ -7356,3 +7356,38 @@ terminado en "Destino:", seguido del bloque de codigo con el prompt completo.
   ya visto con King Borran (SS9b-v2).
 
 **Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+## [2026-08-05] concept-art | Re-rolls del Bestiario escritos + limpieza de flags viejos
+
+Continuacion del pase de concept art (lista de "Concept art pendiente" en Current-State).
+Antes de escribir nada nuevo se audito el estado real contra los flags que traia la lista,
+y aparecieron dos falsos pendientes:
+
+- **Driftmarket ya estaba resuelto desde el 2026-07-27** (SS11.1, `driftmarket-keyframe-v2.png`,
+  RATIFICADO) -- el 6D nunca actualizo su propio flag 🔴 despues de esa re-corrida, y
+  Current-State lo seguia arrastrando como pendiente. Limpiado en ambos lugares.
+- **Rivermeet daylight ya estaba 🟡 aprobado** (SS6d) sin ningun problema real -- tambien
+  arrastrado sin necesidad en la lista de pendientes.
+
+**Trabajo real, 4 briefs re-escritos:**
+- **SS13.1-v2 Crowned Leviathan** -- mismo diseno (ya aprobado en contenido), reescrito en
+  prosa corta estilo Kadrun (SS9e-v2) para sacar el texto/etiquetas "FRONT VIEW" quemadas
+  en la v1.
+- **SS13.4-v2 Aether Wyrm** -- mismo tratamiento de texto, mas refuerzo explicito y repetido
+  contra la mandibula de dragon que aparecio pese a que el brief v1 ya la prohibia una vez.
+- **SS13.3-v2 Mirror Stalker** -- rediseno real, no solo limpieza de texto: la v1 leyo como
+  golem de piedra porque "glass-like facets" es vocabulario ambiguo (tambien describe roca).
+  Fix: vocabulario inequivoco de vidrio -- especificamente el **respaldo plateado de un
+  espejo real**, visible en las grietas entre fragmentos, un detalle que ninguna roca tiene
+  y que un modelo de imagen no puede confundir. Negativos nuevos contra piedra/golem/tallado
+  que la v1 no tenia.
+- **SS9b-v3 King Borran** -- el propio doc ya marcaba que si se retomaba habia que aplicar el
+  formato de prosa corta que salvo a Kadrun; reescrito con el mismo tratamiento.
+
+Los 4 estan escritos y listos para correr en NB2 -- no se ejecutaron esta sesion (Boris corre
+NB2 externamente). Quedan sin tocar los items de la lista que no son briefs de imagen: revisar
+4 escenas de traicion (legacy o canon), set de combos sin doc, QA de 4 variantes de The Wilds,
+videos Higgsfield (bloqueo ffmpeg), POIs sueltos. key-art-poster (SS12.1/12.2) ya estaba
+completo y listo para correr, sin cambios.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.

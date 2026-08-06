@@ -175,9 +175,12 @@ motor resuelve eso.
 3 archivos nuevos ([[Bestiario]], [[Flora y Ecosistemas]],
 [[Villanos Menores]]) llenando el hueco de mundo abierto — detalle
 completo en [[LOG]]. Concept art: 7/9 ratificados ([[Briefs de Concept
-Art]] §13); pendiente re-roll de Crowned Leviathan, Aether Wyrm (texto
-incrustado) y Mirror Stalker (rechazado). Mistbound Frontier sigue sin
-flora/fauna propia (no bloquea).
+Art]] §13). **Re-rolls escritos (2026-08-05), listos para correr en
+NB2:** §13.1-v2 Crowned Leviathan, §13.4-v2 Aether Wyrm (ambos por texto
+incrustado), §13.3-v2 Mirror Stalker (rediseño real — vocabulario de
+vidrio con respaldo plateado en vez de "facets" ambiguo, que leyó como
+gólem de piedra). Mistbound Frontier sigue sin flora/fauna propia (no
+bloquea).
 
 ### Worldbuilding — abierto
 - **El Último Reino humano pre-Regencias:** construir backwards qué fue,
@@ -199,10 +202,17 @@ flora/fauna propia (no bloquea).
 - Traducción de los beats de diálogo existentes en español (Reckoning, etc.)
 
 ### Concept art pendiente
-- Revisar las 4 escenas de traición (¿legacy o canon?); set de combos sin
-  doc; QA de las 4 variantes de The Wilds; videos Higgsfield (bloqueo
-  ffmpeg); King Borran 🟡; Rivermeet daylight 🟡; Driftmarket 🔴; key-art-poster
-  🟡; POIs sueltos cuando aparezcan en el guión
+- **King Borran → §9b-v3 escrito (2026-08-05)**, prosa corta estilo
+  Kadrun, listo para correr — reemplaza el intento de re-roll anterior.
+- **Driftmarket y Rivermeet daylight: ya resueltos**, flags viejos
+  limpiados de esta lista (Driftmarket ratificado desde 2026-07-27 en
+  §11.1; Rivermeet daylight ya estaba 🟡 aprobado, no bloqueaba nada).
+- key-art-poster 🟡 — los 2 briefs (§12.1/12.2) están completos, listos
+  para correr en NB2, nunca se ejecutaron todavía.
+- Sin tocar esta sesión: revisar las 4 escenas de traición (¿legacy o
+  canon?); set de combos sin doc; QA de las 4 variantes de The Wilds;
+  videos Higgsfield (bloqueo ffmpeg); POIs sueltos cuando aparezcan en
+  el guión.
 
 ### Mapa del mundo
 `Aether Bound universe.png` = referencia interna imperfecta (texto corrupto

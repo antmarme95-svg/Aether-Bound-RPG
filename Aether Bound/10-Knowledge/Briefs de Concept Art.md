@@ -525,11 +525,11 @@ cubierta.
 (no ciudad), postas defensivas simples, clima árido, cultura mercenaria
 pragmática.
 
-**`Driftmarket (mercado flotante).png`** — 🔴 sin renombrar, lore/estilo
-correctos PERO tiene un caption de texto quemado en la imagen
-("DRIFTMARKET – FLOATING MARKET..."), incumple la regla estándar
-anti-texto (ver §10). Candidata a re-corrida con esa regla aplicada; no se
-re-corrió todavía.
+**`Driftmarket (mercado flotante).png`** — ✅ **RESUELTO (2026-07-27).**
+Tenía un caption de texto quemado, incumplía la regla anti-texto (§10).
+Re-corrida en §11.1 → `driftmarket-keyframe-v2.png`, RATIFICADO, cero
+texto en la imagen. Este archivo v1 queda solo como referencia histórica
+del problema.
 
 ## 7 — Dagna (Pivote del slice, B1)
 
@@ -666,6 +666,20 @@ negativos de estilo agresivos.
 
 ```
 Full-body character concept sheet, front view and side view, of "King Borran", ruler of a dwarven mountain kingdom, on a plain warm paper background. The proportions are the single most important rule: he is exactly 4.5 heads tall, a trapezoid silhouette nearly as wide as he is tall, with a massive trapezius and shoulders so wide they swallow the neck entirely, a wide barrel torso, enormous hands, very short thick arms and legs, and a low planted center of gravity — immovable, built like a load-bearing wall, NOT a tall human viking build. He is NOT tall, NOT athletic, NOT broad-in-a-human-way — every limb is short and thick, the total height barely clears a human's waist. Face: heavy brow, broad jaw, a thick braided grey beard woven with small forge-iron rings and rune-stamped clasps — the beard itself reads as a chronicle of his lineage. Hair: dark iron-grey, pulled back beneath a crown that is clearly forged metal, not gemmed — a heavy band of dark iron with raised gold inlay in a repeating overlapping hammer-strike chevron pattern, visibly fused in style with forge-craft rather than looking like a jeweled royal ornament. Skin: warm bronze tones with soot shading. Amber geometric guild-and-crown tattoos on both forearms. Clothing: ceremonial forge-plate over practical smith-king garb sized to his short thick frame — dark iron pauldrons chased with gold sitting on his massive shoulders, a heavy fur-lined mantle in deep ember red and black, medieval aetherpunk with faint warm ember accents glowing at the seams. Holds a ceremonial war-hammer/scepter hybrid at rest, head resting on the ground, in a relaxed formal stance rather than a battle-ready one. Art style: this must look like a traditional hand-painted watercolor illustration on textured paper — visible rough watercolor paper grain across the entire image, crisp black ink linework with slightly uneven hand-drawn line weight, flat cel shading in only 3-4 distinct light bands with soft dry-brush jittered edges between them, NOT a smooth gradient. Washed, low-saturation, slightly muted watercolor palette. Style blend of the game Sable's ligne claire flat graphic shapes and Breath of the Wild's soft impressionist color. Negative: no tall body, no human proportions, no viking-human build, no long or average-length arms and legs, no slender build, no comedic caricature dwarf, no gemstone-heavy crown, no plain unadorned crown, no battle-ready aggressive stance, no smooth airbrushed digital gradient shading, no clean vector-style linework, no glossy modern video-game splash art finish, no anime illustration style, no Genshin Impact candy saturation, no photorealism or PBR rendering, no neon glow.
+```
+
+### 9b-v3 — King Borran (REESCRITO en prosa corta estilo Kadrun, 2026-08-05)
+
+Referencia adjunta: `king-borran-v2.png` (vigente hoy, sin QA formal —
+ver nota 🟡 arriba). Aplica el mismo tratamiento que resolvió Kadrun en
+§9e-v2: la v2 de Borran sigue siendo una oración densa larga, el mismo
+patrón que causó los glitches de texto en Ithessa v1 y Kadrun v1. Esta
+versión reformula el mismo contenido (proporción 4.5 cabezas como regla
+más importante, corona forjada sin gemas, motivo de martillo) en
+oraciones cortas independientes. Destino: `king-borran-v3.png`.
+
+```
+Full-body character concept sheet, front view and side view, of a dwarf king named Borran, on a plain warm paper background. His proportions are the most important rule: he is exactly four and a half heads tall, a wide trapezoid body nearly as wide as it is tall. His shoulders are massive and swallow his neck entirely. His torso is a wide barrel shape, his hands are enormous, and his arms and legs are very short and thick — low to the ground, immovable, nothing like a tall human build. His face has a heavy brow and broad jaw, framed by a thick braided grey beard woven with small forge-iron rings and rune-stamped clasps. His iron-grey hair is pulled back under a crown. The crown is forged dark iron with raised gold inlay in a hammer-strike pattern — no gemstones, it looks like smith-work, not jewelry. His skin is warm bronze with soot shading. Amber geometric tattoos mark both forearms. He wears ceremonial forge-plate armor sized to his short wide frame, dark iron pauldrons chased with gold, and a heavy fur-lined mantle in deep ember red and black, with warm ember accents glowing faintly at the seams. He holds a ceremonial war-hammer at rest, its head resting on the ground, in a calm formal stance rather than a battle-ready one. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No tall body. No human proportions. No viking build. No long arms or legs. No slender build. No comedic caricature. No gemstone crown. No battle-ready aggressive stance. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow.
 ```
 
 ### 9c — Regent Edrick Ashcombe (Aethelgard)
@@ -1138,7 +1152,22 @@ captions"*). Se archiva como referencia de diseño; **pendiente re-roll
 sin texto** para uso de producción.
 
 ```
-Creature concept sheet, front view and side view, of "The Crowned Leviathan" — a massive aquatic beast, hybrid of serpent and whale, one of the last surviving specimens of a species that predates the Aether corruption entirely. NOT a mutation — an ancient, unmutated survivor, ancient and dignified rather than monstrous. Long serpentine body with a whale-like head and baleen-adjacent jaw structure, powerful finned flippers, a crown-like ridge of bone spines running from the skull down the back of the neck (the source of its name). Skin in deep blue-grey with faint bioluminescent teal patterning along the flanks, natural and organic, no crystalline growths, no visible corruption. Eyes large, dark, ancient and calm rather than aggressive. Scale texture rendered as overlapping plates, weathered by age. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation blue-grey palette with teal bioluminescent accents, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of ancient dignity rather than menace. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond soft teal bioluminescence, no crystalline growths or Aether corruption marks, no text, no labels, no captions, no diagram-style callouts.
+Creature concept sheet, front view and side view, of "The Crowned Leviathan" — a massive aquatic beast, hybrid of serpent and whale, ancient and dignified rather than monstrous. Not a mutation — an unmutated survivor from before the Aether corruption. Long serpentine body, a whale-like head with a baleen-adjacent jaw, powerful finned flippers, and a crown-like ridge of bone spines running from the skull down the back of the neck. Skin deep blue-grey with faint bioluminescent teal patterning along the flanks, natural and organic, no crystalline growths. Eyes large, dark, calm rather than aggressive. Scale texture rendered as overlapping plates, weathered by age. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation blue-grey palette with teal bioluminescent accents, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of ancient dignity. No crystalline growths. No Aether corruption marks. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond soft teal bioluminescence. No text anywhere in the image. No "front view" or "side view" labels. No title text. No captions. No diagram callouts.
+```
+
+### 13.1-v2 — The Crowned Leviathan (REVISADO — sin texto/etiquetas incrustadas, 2026-08-05)
+
+Referencia adjunta: `crowned-leviathan-v1.png` (v1, archivada como
+referencia de diseño — el diseño en sí ya estaba bien, solo trae texto
+quemado). Reescrito en prosa corta y natural (mismo formato que resolvió
+Kadrun en §9e-v2), negativos como oraciones simples en vez de una lista
+larga, con una prohibición explícita y literal de las etiquetas "front
+view"/"side view" que aparecieron quemadas en la v1 — hipótesis: prompts
+largos y densos en una sola oración elevan el riesgo de que NB2 renderice
+esas palabras como texto real. Destino: `crowned-leviathan-v2.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of a massive aquatic beast called the Crowned Leviathan, on a plain warm paper background. It is a hybrid of serpent and whale, ancient and dignified rather than monstrous — an unmutated survivor from long before the Aether corruption, not a mutation. Its body is long and serpentine, with a whale-like head and a baleen-adjacent jaw. It has powerful finned flippers and a crown-like ridge of bone spines running from the skull down the back of its neck. Its skin is deep blue-grey with faint bioluminescent teal patterning along the flanks — natural and organic, no crystalline growths anywhere. Its eyes are large, dark, and calm rather than aggressive. Its scale texture reads as overlapping plates, weathered by age. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation blue-grey palette with teal bioluminescent accents, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No crystalline growths. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the teal bioluminescence. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
 ```
 
 ### 13.2 — The Burning Shepherd (Ossuary Grove, grado Corrupto — guardián de los muertos)
@@ -1168,6 +1197,22 @@ vidrio/espejo explícita, ausencia total de rasgos faciales tallados.
 Creature concept sheet, front view and side view, of "The Mirror Stalker" — an Aether aberration with no true animal ancestry, a being of pure reflective energy that mimics the movements of whoever approaches it. Humanoid-adjacent but deliberately ambiguous silhouette, roughly person-sized, surface entirely made of smooth dark glass-like facets that reflect a distorted, slightly-delayed copy of anything nearby rather than a normal reflection. No visible face — where a face would be, only a fractured mirror-surface that occasionally suggests a half-formed expression before smoothing back to blankness. Thin cracks of pale teal aether light run between the facets like mortar between broken glass. Posture is still and watchful, unnervingly patient. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation grey-blue palette with pale teal light in the seams, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of uncanny stillness. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no clear humanoid face, no neon glow beyond pale teal seam light, no text, no labels, no captions, no diagram-style callouts.
 ```
 
+### 13.3-v2 — The Mirror Stalker (REDISEÑO — vocabulario de vidrio, no de piedra, 2026-08-05)
+
+**Diagnóstico de la v1:** "glass-like facets" y "surface" son palabras
+que también describen roca — sin un ancla léxica inconfundible, NB2
+completó con la lectura por defecto (gólem de piedra tallado). Fix: usar
+vocabulario que **solo** puede leerse como espejo — específicamente el
+**respaldo plateado de un espejo real**, visible en las grietas, es un
+detalle que ninguna roca tiene y que un modelo de imagen no puede
+confundir. También se cambia "facets" por "shards of mirror glass" en
+todo el prompt, y se agregan negativos explícitos contra piedra/gólem
+que la v1 no tenía. Destino: `mirror-stalker-v2.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of "The Mirror Stalker", on a plain warm paper background. It is an Aether aberration made of broken mirror glass fused into a crude, unstable humanoid shape — not a golem, not made of stone or rock in any way. Its entire body is built from jagged shards of real mirror glass, each shard reflecting a slightly warped and delayed copy of whatever stands nearby. Where the shards meet, thin cracks reveal the silvered backing of the mirror glass showing through underneath — a distinctly metallic-silver seam between panes, the clearest proof this is glass and not stone. It has no carved face and no sculpted features of any kind — where a face would be, there is only a cracked mirror surface, occasionally suggesting the ghost of an expression before smoothing back into blank reflection. Faint pale teal Aether light glows faintly in the deepest cracks between shards. Its posture is still, watchful, and unnervingly patient. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation grey-blue palette with pale teal light in the cracks and cool silver-white glass highlights, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of uncanny stillness. No stone. No rock texture. No carved stone golem. No sculpted or chiseled surface. No mineral texture of any kind. No carved facial features. No clear humanoid face. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the pale teal crack-light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
+```
+
 ### 13.4 — The Aether Wyrm (The Rift, grado Aberración — la más pura de las 4)
 
 **Archivo:** `aether-wyrm-v1.png` (GENERADO 2026-08-04).
@@ -1182,6 +1227,20 @@ reconocible) antes de darlo por final.
 
 ```
 Creature concept sheet, front view and side view, of "The Aether Wyrm" — a serpent made entirely of raw Aether, with no animal tissue at all, semi-corporeal and capable of phasing partially out of visibility. Long sinuous serpentine body with no legs, its form only partially solid — sections of the body fade into translucent, barely-visible mist-like Aether while other sections remain a solid deep-teal crystalline surface, as if it is constantly flickering between existing and not existing. No true head shape, just a tapering, elongated skull-like formation with faint glowing amber eye-points and no visible mouth. Faint wisps of raw Aether trail behind it like smoke. Art style: hand-painted graphic novel watercolor, crisp black ink linework only where the body is solid (fading to loose unfinished linework where it phases out), flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation palette with deep teal and pale amber as the only saturated notes, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of something that should not exist. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no solid fully-opaque body, no neon glow beyond teal/amber Aether light, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.4-v2 — The Aether Wyrm (REVISADO — sin texto/etiquetas ni mandíbula de dragón, 2026-08-05)
+
+Referencia adjunta: `aether-wyrm-v1.png` (v1, archivada — ambiente y
+color correctos, pero trajo etiquetas "FRONT VIEW"/"SIDE VIEW" quemadas
+y una mandíbula reconocible de dragón que el brief prohibía). Misma
+receta que resolvió Kadrun (§9e-v2): prosa corta, negativos como
+oraciones simples, y acá además un refuerzo explícito y repetido de "no
+jaw, no mouth, no teeth, no dragon head" porque una sola mención no
+alcanzó la vez anterior. Destino: `aether-wyrm-v2.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of a serpent-like being called the Aether Wyrm, on a plain warm paper background. It is made entirely of raw Aether, with no animal tissue at all — semi-corporeal, and partly phasing out of visibility. Its body is long, sinuous, and legless. Some sections of its body are solid, a deep-teal crystalline surface; other sections fade into translucent, barely-visible mist, as if it keeps flickering between existing and not existing. It has no true head shape at all — where a head would be, there is only a tapering, elongated formation with two faint glowing amber points of light for eyes. It has no jaw, no mouth, no teeth, and does not read as a dragon head in any way. Faint wisps of raw Aether trail behind it like smoke. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines where the body is solid, fading to loose unfinished linework where it phases out, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette with deep teal and pale amber as the only saturated colors, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of something that should not exist. No jaw. No mouth. No teeth. No dragon head or dragon snout. No fully solid opaque body. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the teal and amber Aether light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
 ```
 
 ### 13.5 — The Hollow Warden (The Hollow Deep, boss del dungeon, grado Corrupto)
