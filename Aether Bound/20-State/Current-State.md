@@ -136,28 +136,29 @@ motor resuelve eso.
 
 ### 🗓 Inmediato — arrancar acá mañana
 
-1. **Sprint QA cerrado (16ª, 2026-08-05)** — linter 0 críticos, 2 reales de
-   los subagentes ya corregidos en la fuente. Detalle arriba y en [[LOG]].
-2. **Links de los 3 fijos — diseñados, provisional (2026-08-05).**
-   [[Los 3 Links de los Fijos]]: Second Catch (Roen), The Long Calculus
-   (Valen, doble orbe Discord/Harmony), Open Seam (Darro). Mismo sistema
-   T1→T3 que el Pivote, sin tope de sistema — la ventaja del Pivote sale
-   del pacing de contenido (su arco sigue sumando en Acto 3, el de los
-   fijos no), no de una regla visible que delate quién traiciona. Mismo
-   presupuesto de poder; el Pivote cambia el verbo de juego, los fijos son
-   fuertes y constantes sin alterar la build. **Pendiente:** ronda de QA
-   antes de `status: ratificado`; iconografía UI de los 6 estados nuevos.
-3. **Resolución de Bond con 4 links — cerrada vía council (2026-08-05).**
-   Ver [[Bond y el Bond Vacío]] §Resolución de Bond con más de un link
-   posible. Regla primaria es de encounter design (no telegraphs
-   simultáneos ambiguos), no de input; respaldo es proximidad + urgencia +
-   feedback post-hoc. Descartada la "competencia de compañeros por el
-   link" (rompe el silencio de la traición). No auditable sin vertical
-   slice — detrás de ADR-003.
-4. **Concept art de los 3 links de fijos — 3/3 ratificados (2026-08-05).**
-   [[Briefs de Concept Art]] §14 — primer concept art de los 3 fijos en
-   acción. Valen salió como ficha frente/dorso en vez de pose con ambos
-   orbes a la vez; ratificado igual, funciona para el propósito.
+**Arranca el guión.** Diálogos/screenplay empiezan mañana (2026-08-07),
+**sin ronda nueva de subagentes de QA** — decisión de Boris (2026-08-06)
+para conservar presupuesto semanal hasta el domingo.
+
+**Reglas de tráfico mientras tanto (obligatorias, no opcionales):**
+1. El linter (`check_canon.py`, gratis) sigue corriendo antes de cada
+   checkpoint como siempre — eso no se salta nunca.
+2. Diálogo sobre terreno ya auditado en la 16ª (arcos, encuentros,
+   traiciones, los 60 epílogos) se escribe con confianza, sin reserva.
+3. Cualquier línea de guión que toque [[Los 3 Links de los Fijos]]
+   (Second Catch, The Long Calculus, Open Seam) se trata como
+   **provisional** — está bien escribirla, pero no se da por definitiva
+   hasta el QA del domingo.
+4. **Domingo:** una sola ronda de subagentes audita todo lo acumulado —
+   el guión nuevo de la semana + los links de fijos que siguen en
+   `status: provisional` — en vez de gastar dos corridas separadas.
+
+**Resumen de lo cerrado el 2026-08-05/06** (detalle completo en [[LOG]]):
+Sprint QA 16ª cerrado · [[Los 3 Links de los Fijos]] diseñados
+(provisional, pendiente QA domingo) · resolución del botón Bond con 4
+links vía council ([[Bond y el Bond Vacío]] §Resolución) · concept art
+de los 3 links de fijos y del batch completo del Bestiario (9/9,
+incluido el pivote de Mirror Stalker) ratificados.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond

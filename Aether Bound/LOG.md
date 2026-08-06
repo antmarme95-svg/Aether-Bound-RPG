@@ -7448,3 +7448,26 @@ superficie.
 **Estado: batch de concept art del Bestiario cerrado, 9/9** (los 4 re-rolls de esta sesion
 mas los 5 que ya habian pasado directo el 2026-08-04). `check_canon.py` 0 criticos / 0
 medium, `check_vault.py` verde.
+
+## [2026-08-06] decision | Regla de trafico para arrancar guion sin QA hasta el domingo
+
+Boris quiere empezar dialogos/screenplay manana (2026-08-07) pero conservar el presupuesto
+semanal de subagentes de QA hasta el domingo. Se evaluo si hacia falta una ronda de QA
+antes de arrancar: el linter mecanico sigue en 0 criticos (gratis, no consume presupuesto),
+y todo lo agregado desde la 16a re-corrida (links de los 3 fijos, resolucion del boton Bond,
+concept art) es mecanica/sistemas/visual -- no toca arcos, finales ni epilogos, que es lo
+que audita el QA de dramaturgia. El terreno narrativo ya paso limpio por la 16a.
+
+**Reglas de trafico establecidas para la semana, escritas en `Current-State.md`:**
+1. El linter sigue corriendo antes de cada checkpoint, sin excepcion.
+2. Dialogo sobre terreno ya auditado (arcos, encuentros, traiciones, los 60 epilogos) se
+   escribe con confianza.
+3. Cualquier linea de guion que toque los links de los 3 fijos se trata como provisional
+   hasta que pasen QA.
+4. El domingo, una sola ronda de subagentes audita todo lo acumulado de la semana (guion
+   nuevo + links de fijos) en vez de dos corridas separadas.
+
+**Estado de cierre de sesion:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py`
+verde. Sprint QA (16a) cerrado, links de los 3 fijos diseñados (provisional), boton Bond
+resuelto via council, concept art del Bestiario y de los links de fijos cerrado 9/9 + 3/3.
+Proximo frente: guion y dialogos por actos, en ingles, arrancando manana.
