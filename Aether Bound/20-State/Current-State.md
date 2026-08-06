@@ -8,12 +8,11 @@ updated: 2026-08-04
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
 > funciona el juego (eso vive en `10-Knowledge/`).
 
-## Estado general (2026-07-30)
+## Estado general (2026-08-05)
 
 **Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck +
-Old Tobin Hale + toda la estructura política y geográfica están escritos. El
-vault soporta escribir guión en cuanto cierre el sprint QA (16ª re-corrida,
-único pendiente — ver "Inmediato" abajo).
+Old Tobin Hale + toda la estructura política y geográfica están escritos.
+Sprint QA cerrado (16ª). El vault ya soporta escribir guión.
 
 **Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
 [[LOG]] y [[Current-State-Historico]]. Canon que quedó fijado ahí y sigue
@@ -86,8 +85,8 @@ reportada y no en la clase completa causaron que críticos ya "cerrados"
 reaparecieran en la ronda siguiente (pasó en la 4ª→5ª y otra vez en la
 5ª→6ª). Ver [[Lecciones]] y [[QA de Canon Loop]].
 
-Con el sprint cerrado, el frente siguiente es **guión y diálogos por actos**
-(ahora en inglés), y se abre la pregunta de bonds de fijos (abajo).
+Con el sprint y los links de fijos cerrados, el frente siguiente es
+**guión y diálogos por actos** (ahora en inglés).
 
 **Plan de abordaje con asignación de modelos por sprint:** `~/.claude/plans/haz-un-plan-de-dazzling-lemur.md`.
 
@@ -148,6 +147,13 @@ motor resuelve eso.
    presupuesto de poder; el Pivote cambia el verbo de juego, los fijos son
    fuertes y constantes sin alterar la build. **Pendiente:** ronda de QA
    antes de `status: ratificado`; iconografía UI de los 6 estados nuevos.
+3. **Resolución de Bond con 4 links — cerrada vía council (2026-08-05).**
+   Ver [[Bond y el Bond Vacío]] §Resolución de Bond con más de un link
+   posible. Regla primaria es de encounter design (no telegraphs
+   simultáneos ambiguos), no de input; respaldo es proximidad + urgencia +
+   feedback post-hoc. Descartada la "competencia de compañeros por el
+   link" (rompe el silencio de la traición). No auditable sin vertical
+   slice — detrás de ADR-003.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond
@@ -197,9 +203,8 @@ incrustadas, violan la regla estándar §10). **Mirror Stalker rechazado**
 — se leyó como gólem de piedra, no vendió el concepto de reflejo/vidrio;
 no está en el vault, pendiente de re-roll real en la próxima corrida.
 
-**Pendiente de esta sesión:** Mistbound Frontier sigue sin flora/fauna
-propia (anotado en [[Flora y Ecosistemas]], no bloquea). Falta meter esta
-pasada al loop de QA — mañana.
+Mistbound Frontier sigue sin flora/fauna propia (anotado en
+[[Flora y Ecosistemas]], no bloquea).
 
 ### Worldbuilding — abierto
 - **El Último Reino humano pre-Regencias:** construir backwards qué fue,

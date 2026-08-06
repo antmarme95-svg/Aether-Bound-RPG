@@ -70,5 +70,47 @@ El sting de dos notas es el leitmotiv del juego entero; cada final cierra con
 su propio eco de este lenguaje ([[Los 5 Finales]]). El cordón trenzado del
 botón es la UI de [[The Tether]].
 
-**Pendiente (❓):** ¿ping/marca manual opcional? ¿A quién mapea Bond con dos
-links posibles? → Task-Board.
+## Resolución de Bond con más de un link posible (council 2026-08-05)
+
+Con los 4 compañeros (3 fijos + Pivote, [[Los 3 Links de los Fijos]]) activos
+en pantalla a la vez, el botón único necesita una regla para cuando hay más
+de una oportunidad de link telegrafiada al mismo tiempo. Se corrió un council
+de 5 perspectivas antes de decidir — la pregunta original ("¿qué opción de
+las 3 elegimos?") resultó ser la pregunta equivocada.
+
+**Regla de diseño primaria — va a la fuente, no al síntoma.** Un encuentro
+**no debe** generar dos telegraphs de link igualmente válidos y simultáneos,
+salvo que sea un dilema narrativo intencional (una escena que explícitamente
+quiere que el jugador sienta "no puedo con los dos"). Esto es una restricción
+de **encounter/level design** — spacing, timing, composición visual del
+telegraph — no un problema que se resuelve en el input. Aplica a quien diseñe
+encuentros cuando ADR-003 se destrabe y exista contenido jugable; hoy es
+regla escrita, no auditable todavía (no hay vertical slice).
+
+**Sistema de respaldo — solo para el residuo de casos, nunca el sistema
+central:**
+1. **Proximidad/contexto** dispara el link — el mundo desambigua, no el
+   jugador ni una tabla memorizable.
+2. **Desempate por urgencia real**, no por rol: si dos oportunidades
+   compiten, gana la que tiene la ventana de telegrafía más corta.
+3. **Feedback visual post-hoc** cuando el sistema resuelve a favor de uno:
+   el jugador tiene que poder ver, después del gesto, que la otra
+   oportunidad también estaba ahí — sin esto, cualquier regla se siente
+   arbitraria la primera vez que "falla".
+
+**Descartado — no implementar:**
+- **Prioridad fija por rol:** memorizable ("el Vanguard siempre gana"), y
+  rompe con cada compañero nuevo que se agregue.
+- **Ping/marca manual:** un segundo input, aunque sea liviano, convierte el
+  gesto en secuencia — viola que Bond sea UN botón y agrega titubeo en el
+  instante donde el peso emocional depende de que apretar sea instantáneo.
+- **"Caracterización emergente" (compañeros compitiendo por el link vía IA):**
+  la idea más atractiva que salió del council y también la más peligrosa —
+  si un compañero "se adelanta" o "le roba" el link a otro, el jugador deja
+  de poder atribuir el resultado a su propia lectura del campo, y eso
+  contamina exactamente el silencio que hace funcionar el beat de traición
+  ("aprietas Bond y no responde nadie"). Prohibido para esta mecánica.
+
+**Pendiente (❓):** auditar la frecuencia real de telegraphs simultáneos
+ambiguos una vez exista contenido jugable — no ejecutable hoy, sin vertical
+slice. → Task-Board.

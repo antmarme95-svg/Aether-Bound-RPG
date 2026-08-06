@@ -7300,3 +7300,37 @@ fichas de fijos (Roen, Valen, Darro), sin re-enunciarse en ninguna.
 **Pendiente:** ronda de QA de dramaturgia + balance antes de pasar a `status: ratificado`;
 nombres de iconografía UI para los 6 estados T2/T3 nuevos; links directos de Speck en su fase
 de desvelamiento previa a E3 (pregunta que ya estaba abierta en `The Bound Five`).
+
+## [2026-08-05] design | Council: resolución del botón Bond con 4 links activos
+
+**Contexto:** con los links de los 3 fijos recién diseñados ([[Los 3 Links de los Fijos]]),
+la pregunta pendiente de `Bond y el Bond Vacío` ("¿a quién mapea Bond con dos links posibles?")
+dejó de ser teórica — el botón único ahora tiene 4 candidatos posibles en pantalla a la vez,
+no 1. Se corrió un council de 5 perspectivas (Contrarian, First Principles, Expansionist,
+Outsider, Executor) con ronda de revisión cruzada anonimizada antes de decidir.
+
+**Veredicto:** la pregunta original ("¿cuál de las 3 opciones — proximidad, prioridad por rol,
+ping manual — elegimos?") estaba mal planteada. Consenso 5/5 en la revisión cruzada: la
+respuesta más fuerte fue la que rechazó el marco de arbitraje y señaló que el conflicto es
+síntoma de **encounter/level design** (dos telegraphs simultáneos igual de válidos), no un
+problema de input.
+
+**Decisiones:**
+- **Regla primaria (fuente del problema):** un encuentro no debe generar dos telegraphs de
+  link igualmente válidos y simultáneos, salvo que sea un dilema narrativo intencional.
+  Aplica a diseño de encuentros cuando exista contenido jugable — no auditable hoy, sin
+  vertical slice, detrás de ADR-003.
+- **Sistema de respaldo, solo para el residuo:** proximidad/contexto dispara el link +
+  desempate por urgencia real (ventana de telegrafía más corta, no rol memorizable) +
+  feedback visual post-hoc de la oportunidad no elegida.
+- **Descartado:** prioridad fija por rol (memorizable, frágil ante nuevos compañeros); ping/
+  marca manual (viola "un solo botón" y agrega titubeo); **"caracterización emergente"**
+  (compañeros compitiendo por el link vía IA) — la idea más atractiva del council y también
+  la más peligrosa: rompe la atribución del jugador sobre el resultado, contaminando
+  exactamente el silencio que hace funcionar el beat de traición ("aprietas Bond y no
+  responde nadie"). Blind spot identificado por 5/5 revisores independientes.
+
+**Archivo actualizado:** [[Bond y el Bond Vacío]] §Resolución de Bond con más de un link
+posible — reemplaza el pendiente (❓) anterior.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
