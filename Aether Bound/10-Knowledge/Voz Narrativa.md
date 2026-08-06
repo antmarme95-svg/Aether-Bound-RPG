@@ -110,5 +110,16 @@ sugerencias, son la condición bajo la cual el bookend se aprobó:
   ritmo extendido a ~1:30 por cierre (el tiempo extra sale del Barkeep
   insistiendo, no de que Roen se explique de más — su economía se
   mantiene como rasgo de personaje).
-- **Bookend completo: apertura + 5 cierres, cerrado.** Próximo frente
-  narrativo: guión de actos (Acto 1, Encuentro).
+- **✅ Puente narrado al Acto 1 — escrito y ratificado (2026-08-07).**
+  La apertura ya no corta a negro tras "I'm going to tell you what
+  happened on mine": Roen sigue hablando ~30-45s en términos universales
+  (por qué la gente firma el Contrato de Conquistador, nunca específico
+  de raza/rol) mientras la cámara pasa a una viñeta silenciosa del
+  jugador (match cut de luz: fogata/forja/amanecer según raza). El
+  handoff pasa a ser auditivo — la voz de Roen se apaga bajo el ambiente
+  de The Wilds, no hay corte a negro intermedio. Incluye una línea que
+  alude al poder anti-ilusión del jugador **sin nombrarlo** (verificado
+  contra [[Speck]]: el poder es privado, Roen nunca lo supo en la
+  ficción — la línea es observación externa sin explicación).
+- **Bookend completo: apertura (con puente) + 5 cierres, cerrado.**
+  Próximo frente narrativo: guión de actos (Acto 1, Encuentro).

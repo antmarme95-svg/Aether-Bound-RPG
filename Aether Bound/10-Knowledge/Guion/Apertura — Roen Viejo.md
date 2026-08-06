@@ -1,6 +1,6 @@
 ---
 status: ratificado
-source: "[[Voz Narrativa]] — regla 4, primer paso obligatorio antes de escribir los 5 cierres. Ratificado por Boris 2026-08-07 tras 2 rondas de revisión (línea de los 9 Pivotes, worldbuilding humano)."
+source: "[[Voz Narrativa]] — regla 4, primer paso obligatorio antes de escribir los 5 cierres. Ratificado por Boris 2026-08-07 tras 3 rondas de revisión (línea de los 9 Pivotes, worldbuilding humano, puente narrado al Acto 1)."
 updated: 2026-08-07
 ---
 
@@ -110,21 +110,97 @@ I'm going to tell you what happened on mine.
 He looks up — not at the room, at nothing in particular. The fire
 catches in his eyes for a second, then fades.
 
-CUT TO BLACK.
+MATCH CUT — the tavern fire dissolves into another light source in the
+player's own opening vignette (campfire embers / forge light / first
+dawn light — whichever fits the player's race, see "Nota sobre el
+puente al Acto 1" abajo). Roen's voice carries over, unbroken.
 
-[HANDOFF — hard cut, no crossfade, no lingering audio bleed from the
-tavern. Silence for one full beat before the first playable scene opens.
-See "Nota de handoff" abajo.]
+ROEN (V.O.)
+Everybody signs that contract for their own reasons. Some for
+the coin. Some because a debt came due. Some just needed
+somewhere to put themselves that wasn't here.
+
+(beat)
+
+Nobody signs it because they read the fine print.
+
+(beat)
+
+Some walked in green and came out seeing things the rest of
+us never learned to see. Still don't know what that was.
+Wasn't my business to ask.
+
+SILENT VIGNETTE — the player character, no dialogue yet. Lacing boots.
+Checking a weapon. Something from home left behind on a table. The
+Conqueror's Contract, unsigned, then signed. Content varies by race and
+role — see production note below — but the shape stays constant: someone
+getting ready to leave, and someone deciding not to look back.
+
+ROEN (V.O.)
+Don't remember what I told myself, walking out. Probably
+something about how it wouldn't take long.
+
+(beat)
+
+It took the rest of my life.
+
+Roen's voice fades under the ambient sound of The Wilds — wind, distant
+birds, footsteps. By the time the camera settles fully into the player's
+point of view, he's gone. No sting, no music cue marking the exit — the
+silence itself is the handoff.
+
+[HANDOFF — full player control begins here. See "Nota de handoff"
+abajo.]
 ```
+
+## Nota sobre el puente al Acto 1 (agregado 2026-08-07, pedido de Boris)
+
+**Por qué puente y no corte duro.** La versión anterior cortaba a negro
+después de "I'm going to tell you what happened on mine" y arrancaba el
+juego en silencio total. Boris pidió en su lugar un **puente narrado**:
+Roen no desaparece de un corte, su voz se desvanece *sobre* la primera
+escena del jugador — más caro emocionalmente que un corte seco, más
+barato de producir que 18 aperturas jugables completamente separadas
+(una sola pista de audio de Roen, reusada en las 18).
+
+**Por qué las líneas nuevas siguen sin nombrar raza/rol.** "Everybody
+signs that contract for their own reasons" y el resto del bloque hablan
+en términos universales — por qué la gente en general firma el
+Contrato de Conquistador ([[Progresión y Contrato]]), no por qué firmó
+*este* jugador en particular. La viñeta visual es la que carga la
+variación por celda; el audio de Roen no cambia nunca.
+
+**La línea sobre el poder del jugador — verificada contra canon antes de
+escribirla.** El poder anti-ilusión del jugador es explícitamente
+**privado** — "el Bound Five no ve lo que ves" ([[Speck]] §Capa 2,
+tabla). Roen nunca lo supo en la ficción. Por eso "some walked in green
+and came out seeing things the rest of us never learned to see" está
+escrita como **observación externa sin explicación** — Roen nota que
+algo era distinto, no sabe qué, y "wasn't my business to ask" cierra la
+puerta sin nombrar el poder. No es Roen revelando la mecánica; es Roen
+confirmando, treinta años después, que nunca entendió del todo lo que
+vio.
+
+**Nota de producción — matriz 3×3, no 18 viñetas.** La viñeta silenciosa
+no necesita metraje único por combinación. Una matriz de raza (bosque /
+forja / río, ambientación) × rol (Duelist = chequeo de arma o
+movimiento; Vanguard = armadura o escudo; Strategist = mapa o
+dispositivo) da 9 combinaciones de base; el género es swap de asset
+sobre esas 9, no contenido nuevo. Mismo criterio que ya se usó para el
+match cut de la luz (fogata / forja / amanecer).
 
 ## Nota de handoff
 
 `Voz Narrativa.md` §Pendiente pide que la transición apertura → personaje
 jugable sea un **corte limpio y deliberado**, no un fundido ambiguo — si
 se siente ambiguo, cuela la sensación de narrador recurrente aunque no lo
-sea. Por eso el corte a negro es duro, con un beat de silencio completo
-antes de que arranque la primera escena jugable. Nada de la taberna
-(sonido, música, voz de Roen) debe sangrar hacia la escena siguiente.
+sea. Con el puente narrado, el corte limpio no es visual (ya no hay un
+`CUT TO BLACK` entre Roen y el jugador) sino **auditivo**: la voz de
+Roen se apaga bajo el ambiente de The Wilds y no vuelve — el silencio
+que sigue es la señal de que el jugador tiene control total, sin
+necesidad de una pantalla negra intermedia. Nada de la taberna (sonido,
+música, voz de Roen) debe sangrar más allá del punto donde su voz se
+apaga.
 
 ## Test de la regla 1 (apertura sin dirección tonal)
 
@@ -158,6 +234,12 @@ cómo termina?"*:
   El council ya lo marcó como residual y aceptado: es la premisa mínima
   necesaria para que el dispositivo exista, no una fuga de trama sobre
   los Pivotes ni sobre el resultado del final.
+- **¿La línea sobre "seeing things the rest of us never learned to see"
+  revela el poder anti-ilusión del jugador?** No lo nombra ni lo explica
+  — es observación externa de alguien que nunca supo qué era (verificado
+  contra [[Speck]]: el poder es privado, invisible al Bound Five). No
+  dice cuándo empezó a notarlo, no dice qué vio, no lo ata a Speck ni a
+  ningún Pivote.
 
 **Resultado: pasa el test.** Único dato que se filtra es que Roen
 sobrevive — inherente al dispositivo, ya aceptado por el consejo. No hay
@@ -165,10 +247,14 @@ fuga de tono ni de identidad del Pivote.
 
 ## Pendiente
 
+- **✅ Los 5 cierres — escritos y ratificados** en
+  [[Guion/Cierres — Roen Viejo]]. Bookend completo.
+- **✅ Puente narrado al Acto 1 — escrito y ratificado (2026-08-07).**
+  Reemplaza el corte duro a negro; handoff ahora es auditivo (la voz de
+  Roen se apaga, no vuelve).
 - Confirmar taberna específica (o dejarla sin nombrar/genérica — a
   decidir cuando se aborde el guión de Rivermeet).
-- Con la apertura aprobada, siguiente paso: escribir los 5 cierres,
-  auditando cada uno contra la regla 2 de [[Voz Narrativa]] (fuga de
-  info sobre los otros 8 Pivotes).
+- Producir las 9 combinaciones de la viñeta silenciosa (matriz raza×rol)
+  cuando se aborde el guión visual del Acto 1, Encuentro.
 - Voz actoral / dirección de tono de grabación: fuera de scope de este
   borrador, nota para producción.

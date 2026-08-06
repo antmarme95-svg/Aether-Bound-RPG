@@ -7588,3 +7588,39 @@ de punta a punta.
 **Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
 
 **Proximo frente:** guion de actos, arrancando por el Encuentro del Acto 1.
+
+## [2026-08-07] guion | Puente narrado al Acto 1 -- apertura del bookend extendida, ratificada
+
+Boris pidio resolver el corte entre la apertura de Roen y la primera escena jugable: en
+vez de CUT TO BLACK duro, propuso que Roen siga hablando ~30-60 segundos mientras la
+camara ya muestra al jugador en su propia escena de origen -- valido para las 9 celdas
+(18 con genero) porque el audio de Roen nunca es especifico de raza/rol, solo la viñeta
+visual lo es.
+
+**Estructura acordada (propuesta como guionista senior, ratificada sin cambios de
+estructura):** match cut del fuego de la taberna a otra fuente de luz en la escena del
+jugador (fogata/forja/amanecer segun raza) -> Roen sigue narrando en terminos
+universales (por que la gente firma el Contrato de Conquistador, [[Progresión y
+Contrato]]) sobre una viñeta silenciosa del jugador sin dialogo propio todavia -> la voz
+de Roen se apaga bajo el ambiente de The Wilds -> handoff real es auditivo, no visual (ya
+no hay corte a negro intermedio).
+
+**Linea sobre el poder del jugador, pedido explicito de Boris:** una alusion al poder
+anti-ilusion sin nombrarlo. Verificado contra canon antes de escribir: el poder es
+explicitamente privado ([[Speck]] §Capa 2, "el Bound Five no ve lo que ves") -- Roen
+nunca lo supo en la ficcion. Se dieron 3 propuestas, todas como observacion externa sin
+explicacion; Boris eligio la mas seca: "Some walked in green and came out seeing things
+the rest of us never learned to see. Still don't know what that was. Wasn't my business
+to ask."
+
+**Nota de produccion:** la viñeta silenciosa no necesita 18 tomas distintas -- matriz 3x3
+de raza x rol (bosque/forja/rio cruzado con chequeo de arma/armadura/mapa segun Duelist/
+Vanguard/Strategist), genero como swap de asset sobre esas 9, no contenido nuevo.
+
+**Archivo:** [[Guion/Apertura — Roen Viejo]] actualizado, sigue `status: ratificado`
+(3a ronda de revision: linea de los 9 Pivotes, worldbuilding humano, puente al Acto 1).
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo frente:** guion de actos, Acto 1 - Encuentro (primera escena jugable completa,
+donde arranca la viñeta que el puente deja sembrada).

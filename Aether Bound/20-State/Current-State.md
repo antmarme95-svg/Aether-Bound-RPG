@@ -198,10 +198,12 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
 - **✅ Bookend de Roen viejo — cerrado (2026-08-07).** [[Voz Narrativa]] +
   [[Guion/Apertura — Roen Viejo]] + [[Guion/Cierres — Roen Viejo]], los 3
   `ratificado`. Sin narrador durante el juego; único bookend — apertura
-  neutra en taberna + 5 cierres variables por final (F1/F2a/F2b/F3/F4),
-  formato conversación con un Barkeep fijo. Primer guión real del juego,
-  escrito de punta a punta.
-- **🗓 Próximo paso:** guión de actos (Acto 1, Encuentro).
+  neutra en taberna con puente narrado al Acto 1 (Roen se apaga sobre
+  una viñeta silenciosa del jugador, sin corte a negro) + 5 cierres
+  variables por final (F1/F2a/F2b/F3/F4), formato conversación con un
+  Barkeep fijo. Primer guión real del juego, escrito de punta a punta.
+- **🗓 Próximo paso:** guión de actos (Acto 1, Encuentro) — producir las
+  9 combinaciones raza×rol de la viñeta silenciosa del puente.
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
 - Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
 - Los 5 Finales — scripting de diálogos/cinemática; estado post-final
