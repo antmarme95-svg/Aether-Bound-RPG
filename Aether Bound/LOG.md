@@ -7471,3 +7471,48 @@ que audita el QA de dramaturgia. El terreno narrativo ya paso limpio por la 16a.
 verde. Sprint QA (16a) cerrado, links de los 3 fijos diseñados (provisional), boton Bond
 resuelto via council, concept art del Bestiario y de los links de fijos cerrado 9/9 + 3/3.
 Proximo frente: guion y dialogos por actos, en ingles, arrancando manana.
+
+## [2026-08-07] design | Voz Narrativa -- ratificada via 2 rondas de council
+
+Pregunta abierta desde hace semanas ("Voz narrativa" en Current-State, sin nada escrito en
+el vault) bloqueaba el arranque real del guion. Se resolvio con 2 rondas de council (5
+asesores + revision cruzada anonimizada cada una) antes de escribir una sola linea de
+dialogo.
+
+**Ronda 1 -- pregunta general (¿narrador si o no, y de que tipo?):** consenso fuerte hacia
+sin narrador. El pilar "el silencio es el beat mas fuerte del juego" (Bond y el Bond
+Vacio) fue el argumento decisivo -- cualquier narrador, externo tipo "Book" (It Takes Two)
+o diegetico recurrente tipo Gimli (Return to Moria), esta presente durante el cuerpo del
+juego aunque hable poco, y su silencio en el climax se vuelve una eleccion notable de la
+voz en vez de un vacio puro -- contamina exactamente el beat que se queria proteger.
+
+**Ronda 2 -- propuesta refinada de Boris:** no un narrador recurrente, sino un bookend
+estricto -- Roen viejo (60-70 anos, 20-30 anos despues) narra la apertura literal del
+juego (pantalla negra, antes de que exista nada que espoilear) y un cierre variable segun
+el final (5 versiones). Verificado contra el canon: Roen sobrevive los 5 finales sin
+excepcion. El council encontro que el bookend resuelve la mayoria de las objeciones de la
+ronda 1 (no compite con el silencio del climax porque vive fuera del tiempo de juego), pero
+el Contrarian (ganador 3/5 en la revision cruzada) señalo con precision que el riesgo de
+spoiler se **reubica, no se cierra**: la sola apertura ya confirma que hay una historia que
+merece contarse 30 anos despues, y cualquier tono que le den (eleccion, quien falta en la
+mesa) es informacion. La propuesta de Expansionist de vender "los 5 finales de Roen" como
+gancho de marketing/replay fue marcada como punto ciego por los 5 revisores independientes
+-- optimiza retencion antes de resolver si el objeto central es sano para el pilar, y abre
+una fuga de spoiler extra-diegetica (comunidad filtrando el final de un jugador que todavia
+no termino el suyo).
+
+**Decision final de Boris: adelante con el bookend**, con las 4 condiciones que salieron de
+la critica de la ronda 2 (ver [[Voz Narrativa]] para el detalle completo): apertura sin
+direccion tonal, auditar cada cierre contra fuga de info de los otros 8 Pivotes, no
+fabricar el gancho de marketing pre-lanzamiento, y un test de aprobacion (escribir la
+apertura sola, aplicarle la pregunta de spoiler) antes de tocar los 5 cierres. Taberna gano
+4/5 sobre fogata/feria como puesta en escena -- coherente con que Roen "nunca busca al
+jugador, no se explica de mas".
+
+**Archivo nuevo:** [[Voz Narrativa]] -- fuente unica, `status: ratificado`. Actualiza el
+pendiente de "voz narrativa" en Current-State y el indice.
+
+**Proximo paso inmediato:** escribir la apertura, sola, y correrla contra el test de la
+regla 4 antes de escribir ningun cierre.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.

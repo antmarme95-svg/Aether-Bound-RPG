@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-06
+updated: 2026-08-07
 ---
 
 # Current State
@@ -195,8 +195,12 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
 - Cabeza de the Academy of Sages (baja prioridad)
 
 ### Narrativa / guión (próximo frente real — en inglés)
+- **✅ Voz narrativa — ratificada (2026-08-07).** [[Voz Narrativa]]: sin
+  narrador durante el juego; único bookend, Roen viejo en taberna
+  (apertura neutra + 5 cierres variables por final), vía 2 rondas de
+  council. **Próximo paso inmediato:** escribir la apertura sola y
+  correrla contra el test de la regla 4 antes de tocar los 5 cierres.
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
-- Voz narrativa (¿narrador? ¿silent protagonist? ¿qué tan verbose?)
 - Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
 - Los 5 Finales — scripting de diálogos/cinemática; estado post-final
   jugable; variantes C3 vivo/muerto
