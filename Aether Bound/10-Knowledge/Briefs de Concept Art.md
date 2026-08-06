@@ -670,6 +670,16 @@ Full-body character concept sheet, front view and side view, of "King Borran", r
 
 ### 9b-v3 — King Borran (REESCRITO en prosa corta estilo Kadrun, 2026-08-05)
 
+**Archivo:** `king-borran-v3.png` (GENERADO 2026-08-06, RATIFICADO por
+Boris).
+
+**Evaluación:** ✅ Sin texto ni glitches. Corona forjada de metal oscuro
+sin gemas, martillo ceremonial en reposo, barba trenzada con anillos de
+forja, capa con acentos ember. Nota menor no bloqueante: la proporción
+mejoró pero sigue sin ser tan extrema como el trapezoide de 4.5 cabezas
+del canon (Dagna/Vekka) — mismo margen que ya se toleró en King Borran
+v2 y en otras fichas enanas.
+
 Referencia adjunta: `king-borran-v2.png` (vigente hoy, sin QA formal —
 ver nota 🟡 arriba). Aplica el mismo tratamiento que resolvió Kadrun en
 §9e-v2: la v2 de Borran sigue siendo una oración densa larga, el mismo
@@ -1157,6 +1167,14 @@ Creature concept sheet, front view and side view, of "The Crowned Leviathan" —
 
 ### 13.1-v2 — The Crowned Leviathan (REVISADO — sin texto/etiquetas incrustadas, 2026-08-05)
 
+**Archivo:** `crowned-leviathan-v2.png` (GENERADO 2026-08-06, RATIFICADO
+por Boris).
+
+**Evaluación:** ✅ Cero texto en la imagen — la prosa corta resolvió el
+glitch de la v1. Corona de espinas óseas, vetas bioluminiscentes teal,
+sin cristales de corrupción, calma antigua en la mirada. Coincide con el
+brief punto por punto.
+
 Referencia adjunta: `crowned-leviathan-v1.png` (v1, archivada como
 referencia de diseño — el diseño en sí ya estaba bien, solo trae texto
 quemado). Reescrito en prosa corta y natural (mismo formato que resolvió
@@ -1199,6 +1217,20 @@ Creature concept sheet, front view and side view, of "The Mirror Stalker" — an
 
 ### 13.3-v2 — The Mirror Stalker (REDISEÑO — vocabulario de vidrio, no de piedra, 2026-08-05)
 
+**Archivo:** `mirror-stalker-v2.png` (GENERADO 2026-08-06). **❌ No pasa,
+sin archivar en producción.**
+
+**Evaluación:** el vocabulario de vidrio no alcanzó — el resultado lee
+como una armadura de placas cristalinas/metálicas, más caballero que
+espejo. Ningún panel muestra reflejo real, no hay el respaldo plateado
+pedido, no hay traslucidez. **Diagnóstico nuevo:** el problema no era
+solo la palabra "facets" — es la **estructura** de la descripción.
+"Shards fused into a humanoid shape covering the body" se lee como
+armadura sin importar qué material se nombre encima. Hace falta cambiar
+la estructura, no solo el vocabulario: describirlo primero como **panel
+de vidrio roto**, humanoide solo en el contorno general, no como cuerpo
+cubierto de placas. Ver §13.3-v3 abajo.
+
 **Diagnóstico de la v1:** "glass-like facets" y "surface" son palabras
 que también describen roca — sin un ancla léxica inconfundible, NB2
 completó con la lectura por defecto (gólem de piedra tallado). Fix: usar
@@ -1211,6 +1243,22 @@ que la v1 no tenía. Destino: `mirror-stalker-v2.png`.
 
 ```
 Full-body creature concept sheet, front view and side view, of "The Mirror Stalker", on a plain warm paper background. It is an Aether aberration made of broken mirror glass fused into a crude, unstable humanoid shape — not a golem, not made of stone or rock in any way. Its entire body is built from jagged shards of real mirror glass, each shard reflecting a slightly warped and delayed copy of whatever stands nearby. Where the shards meet, thin cracks reveal the silvered backing of the mirror glass showing through underneath — a distinctly metallic-silver seam between panes, the clearest proof this is glass and not stone. It has no carved face and no sculpted features of any kind — where a face would be, there is only a cracked mirror surface, occasionally suggesting the ghost of an expression before smoothing back into blank reflection. Faint pale teal Aether light glows faintly in the deepest cracks between shards. Its posture is still, watchful, and unnervingly patient. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation grey-blue palette with pale teal light in the cracks and cool silver-white glass highlights, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of uncanny stillness. No stone. No rock texture. No carved stone golem. No sculpted or chiseled surface. No mineral texture of any kind. No carved facial features. No clear humanoid face. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the pale teal crack-light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
+```
+
+### 13.3-v3 — The Mirror Stalker (REDISEÑO ESTRUCTURAL — panel de vidrio, no armadura, 2026-08-06)
+
+Cambia la estructura de la descripción, no solo el vocabulario: en vez de
+"cuerpo humanoide cubierto de placas de vidrio" (que lee como armadura
+sin importar el material), se describe primero como **un panel de espejo
+roto** que adoptó apenas un contorno humanoide — plano antes que
+volumétrico, translúcido antes que sólido. Se agrega un reflejo real y
+distorsionado del entorno visible dentro del vidrio (lo único que un
+modelo de imagen no puede confundir con metal u opaco), y negativos
+directos contra armadura/caballero/robot que la v2 no tenía. Destino:
+`mirror-stalker-v3.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of "The Mirror Stalker", on a plain warm paper background. Think of it first as a shattered full-length mirror that has been bent and cracked into a rough, unstable humanoid outline — not as a person wearing anything. It reads as flat broken glass first, a figure only second: thin, angular, with visible gaps between the largest glass fragments where you can see straight through to the paper behind it. Within the glass, a dim, warped, slightly delayed reflection of whatever stands in front of it is visible — a ghostly double, not a clear mirror image. Where the glass fragments meet, a thin metallic-silver seam shows through the cracks, the silvered backing of real mirror glass. There is no face, no helmet, no carved or sculpted feature anywhere — only more cracked reflective glass where a face would be. Faint pale teal Aether light glows in the deepest cracks. It stands still, watchful, unnervingly patient. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines only where the glass edges are, flat shading in a few soft bands with dry-brush edges, a muted low-saturation grey-blue palette with pale teal crack-light and cool silver-white glass highlights, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of uncanny stillness. No armor. No plate armor. No knight. No robot or mech suit. No metal suit. No solid opaque body. No stone. No rock texture. No carved stone golem. No sculpted or chiseled surface. No carved facial features. No helmet or visor shape. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the pale teal crack-light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
 ```
 
 ### 13.4 — The Aether Wyrm (The Rift, grado Aberración — la más pura de las 4)
@@ -1230,6 +1278,15 @@ Creature concept sheet, front view and side view, of "The Aether Wyrm" — a ser
 ```
 
 ### 13.4-v2 — The Aether Wyrm (REVISADO — sin texto/etiquetas ni mandíbula de dragón, 2026-08-05)
+
+**Archivo:** `aether-wyrm-v2.png` (GENERADO 2026-08-06, RATIFICADO por
+Boris).
+
+**Evaluación:** ✅ Resuelve los dos problemas de la v1: cero texto en la
+imagen, y sin mandíbula/hocico de dragón — la cabeza es una formación
+cristalina puntiaguda sin boca, solo dos puntos ámbar de ojos. Cuerpo
+alternando entre sólido teal cristalino y niebla translúcida, coherente
+con "constantemente parpadeando entre existir y no existir".
 
 Referencia adjunta: `aether-wyrm-v1.png` (v1, archivada — ambiente y
 color correctos, pero trajo etiquetas "FRONT VIEW"/"SIDE VIEW" quemadas

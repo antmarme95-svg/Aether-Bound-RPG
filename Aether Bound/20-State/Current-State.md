@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-04
+updated: 2026-08-06
 ---
 
 # Current State
@@ -174,12 +174,13 @@ motor resuelve eso.
 
 3 archivos nuevos ([[Bestiario]], [[Flora y Ecosistemas]],
 [[Villanos Menores]]) llenando el hueco de mundo abierto — detalle
-completo en [[LOG]]. Concept art: 7/9 ratificados ([[Briefs de Concept
-Art]] §13). **Re-rolls escritos (2026-08-05), listos para correr en
-NB2:** §13.1-v2 Crowned Leviathan, §13.4-v2 Aether Wyrm (ambos por texto
-incrustado), §13.3-v2 Mirror Stalker (rediseño real — vocabulario de
-vidrio con respaldo plateado en vez de "facets" ambiguo, que leyó como
-gólem de piedra). Mistbound Frontier sigue sin flora/fauna propia (no
+completo en [[LOG]]. Concept art: **9/9 ratificados (2026-08-06)** salvo
+Mirror Stalker, que sigue sin pasar. Crowned Leviathan v2, Aether Wyrm
+v2 y King Borran v3 (§9) resolvieron el texto incrustado y están en
+`90-Raw/concept/`. Mirror Stalker v2 falló de nuevo — leyó como armadura
+de placas, no espejo; §13.3-v3 en [[Briefs de Concept Art]] cambia la
+estructura de la descripción (panel de vidrio roto, no cuerpo cubierto
+de placas), pendiente de correr. Mistbound Frontier sigue sin flora/fauna propia (no
 bloquea).
 
 ### Worldbuilding — abierto

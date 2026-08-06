@@ -7391,3 +7391,34 @@ videos Higgsfield (bloqueo ffmpeg), POIs sueltos. key-art-poster (SS12.1/12.2) y
 completo y listo para correr, sin cambios.
 
 **Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+## [2026-08-06] concept-art | Evaluacion de los 4 re-rolls -- 3/4 ratificados, Mirror Stalker v3 escrito
+
+Boris genero los 4 briefs escritos la sesion anterior y los dejo en Descargas. Evaluacion
+contra brief:
+
+- **Crowned Leviathan v2** -- RATIFICADO. Cero texto, corona de espinas, vetas
+  bioluminiscentes, sin cristales de corrupcion. La prosa corta resolvio el glitch de la v1.
+- **Aether Wyrm v2** -- RATIFICADO. Cero texto, sin mandibula de dragon (cabeza cristalina
+  puntiaguda, sin boca), cuerpo alternando solido/traslucido.
+- **King Borran v3** -- RATIFICADO. Sin texto ni glitches, corona forjada sin gemas,
+  martillo en reposo. Nota menor no bloqueante: proporcion mejorada pero sigue sin ser tan
+  extrema como el trapezoide de 4.5 cabezas del canon.
+- **Mirror Stalker v2** -- FALLA DE NUEVO, no archivado en produccion. El vocabulario de
+  vidrio (SS13.3-v2, respaldo plateado) no alcanzo: el resultado leyo como armadura de
+  placas cristalinas/metalicas, mas caballero que espejo. Ningun panel mostro reflejo real.
+
+**Diagnostico del fallo repetido de Mirror Stalker:** el problema no era el vocabulario de
+material -- es la **estructura** de la descripcion. "Shards fused into a humanoid shape
+covering the body" lee como armadura sin importar que material se nombre. Escrito SS13.3-v3:
+cambia la estructura completa, describiendolo primero como un **panel de espejo roto** que
+apenas adopto contorno humanoide (plano antes que volumetrico, traslucido antes que solido),
+con un reflejo distorsionado real del entorno visible dentro del vidrio, y negativos directos
+contra armadura/caballero/robot que las dos versiones anteriores no tenian. Pendiente de
+correr en NB2.
+
+**Archivos movidos a `90-Raw/concept/`:** `crowned-leviathan-v2.png`, `aether-wyrm-v2.png`,
+`king-borran-v3.png`.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde. Concept art del
+Bestiario: 9/9 salvo Mirror Stalker, que va por su tercer intento.
