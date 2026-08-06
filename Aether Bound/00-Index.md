@@ -34,6 +34,7 @@
 - [[Estructura Dramática]] — 3 actos + nudo del Fragmento + traición por convicción + gancho de 3 polos.
 - [[Voz Narrativa]] — sin narrador durante el juego; único bookend: Roen viejo en taberna, apertura neutra + 5 cierres variables por final. Ratificado 2026-08-07.
 - [[Guion/Apertura — Roen Viejo]] — primera escena literal del juego, guión en inglés, `status: ratificado`.
+- [[Guion/Cierres — Roen Viejo]] — 5 cierres variables por final (F1/F2a/F2b/F3/F4), formato conversación con un Barkeep fijo, `status: ratificado`. Bookend completo.
 - [[Las Tres Razas]] — Elfos/Enanos/Humanos: temperamento, hábitat, por qué nadie quiere a Speck. Incluye tabla de longevidad (elfos 650-700 / enanos ~200-250 / humanos ~70-90).
 - [[Estructura Política]] — cómo se gobierna cada reino: Queen Ithessa + The Elder Circle + 2 Academias (elfos); King Borran + Great Forging Clan (enanos); Regent Edrick Ashcombe + Triune Council (humanos, sin dinastía estable). Nombres propios en inglés — ver [[Nomenclatura]].
 - [[La Rueda]] — mapa macro: cubo (Wilds), aro (3 reinos), 3 arterias co-op, Driftmarket, Sunken Archive, First Wound.

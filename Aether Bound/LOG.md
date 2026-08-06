@@ -7551,3 +7551,40 @@ nueva carpeta `10-Knowledge/Guion/`.
 
 **Proximo paso:** escribir los 5 cierres (F1, F2a, F2b, F3, F4), auditando cada uno contra
 la regla 2 de [[Voz Narrativa]] (fuga de informacion sobre los otros 8 Pivotes).
+
+## [2026-08-07] guion | Los 5 cierres del bookend (Roen viejo) -- escritos y ratificados, bookend completo cerrado
+
+Continuacion de la apertura ([[Guion/Apertura — Roen Viejo]]). Escritos los 5 cierres
+variables por final (F1, F2a, F2b, F3, F4), cada uno anclado en la linea canonica que
+Roen ya tenia en su propia ficha para ese final -- no se invento contenido nuevo, se
+extendio el que ya existia.
+
+**Primer borrador:** monologo V.O. puro, igual que la apertura. Auditado contra la regla 2
+de [[Voz Narrativa]] (fuga de info sobre los otros 8 Pivotes) -- ninguno de los 5 nombra
+al Pivote ni menciona detalle institucional exclusivo de una ruta (Juramento de Forja,
+pagos del Council, Royal Academy), siguiendo el mismo patron que ya usaba la propia ficha
+de Roen.
+
+**2 rondas de ajuste de Boris:**
+- **Formato:** de monologo a conversacion -- se agrego un BARKEEP fijo (mismo personaje en
+  las 5 variantes, no uno nuevo por final) que le pregunta a Roen y saca sus lineas en vez
+  de que las narre corridas. Nunca pregunta por nombres, solo por hechos.
+- **Ritmo:** la primera version en conversacion quedo en ~45 segundos; Boris pidio
+  estirarla a ~1:30. El tiempo extra sale de que el Barkeep habla e insiste mas, no de que
+  Roen se explique de mas -- su economia de personaje ("no se explica de mas") se mantuvo
+  intacta a proposito, incluso en la version larga.
+
+**Nota de craft, F2b:** unico cierre donde estirar la duracion sin romper la prohibicion
+de moraleja ("aprendimos algo", regla ya establecida para F2b en QA anteriores) significo
+alargar el silencio, no el contenido -- el Barkeep insiste y es rechazado, Roen no dice
+mas de lo que ya tenia que decir.
+
+**Archivo:** [[Guion/Cierres — Roen Viejo]] -- `status: ratificado`.
+
+**Bookend completo, cerrado:** [[Voz Narrativa]] + [[Guion/Apertura — Roen Viejo]] +
+[[Guion/Cierres — Roen Viejo]], los 3 `ratificado`. Primer tramo de guion real del juego,
+de punta a punta.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo frente:** guion de actos, arrancando por el Encuentro del Acto 1.

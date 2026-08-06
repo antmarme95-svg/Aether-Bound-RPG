@@ -195,14 +195,13 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
 - Cabeza de the Academy of Sages (baja prioridad)
 
 ### Narrativa / guión (próximo frente real — en inglés)
-- **✅ Voz narrativa — ratificada (2026-08-07).** [[Voz Narrativa]]: sin
-  narrador durante el juego; único bookend, Roen viejo en taberna.
-- **✅ Apertura del bookend — escrita y ratificada (2026-08-07).**
-  [[Guion/Apertura — Roen Viejo]] — primer guión real del juego. Pasó el
-  test de spoiler; agrega contexto de worldbuilding público (cataclismo,
-  Aether como combustible) sin tocar el secreto del Acto 3. **Próximo
-  paso:** los 5 cierres (F1/F2a/F2b/F3/F4), auditando cada uno contra
-  fuga de info sobre los otros 8 Pivotes.
+- **✅ Bookend de Roen viejo — cerrado (2026-08-07).** [[Voz Narrativa]] +
+  [[Guion/Apertura — Roen Viejo]] + [[Guion/Cierres — Roen Viejo]], los 3
+  `ratificado`. Sin narrador durante el juego; único bookend — apertura
+  neutra en taberna + 5 cierres variables por final (F1/F2a/F2b/F3/F4),
+  formato conversación con un Barkeep fijo. Primer guión real del juego,
+  escrito de punta a punta.
+- **🗓 Próximo paso:** guión de actos (Acto 1, Encuentro).
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
 - Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
 - Los 5 Finales — scripting de diálogos/cinemática; estado post-final

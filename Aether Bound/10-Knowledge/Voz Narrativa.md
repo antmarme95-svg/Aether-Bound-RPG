@@ -103,6 +103,12 @@ sugerencias, son la condición bajo la cual el bookend se aprobó:
   de un humano (canon: memoria humana es la más degradada de las 3
   razas). Handoff especificado como corte duro con un beat de silencio,
   sin sangrado de audio.
-- **🗓 Siguiente paso:** escribir los 5 cierres (F1, F2a, F2b, F3, F4),
-  auditando cada uno contra la regla 2 (fuga de info sobre los otros 8
-  Pivotes).
+- **✅ Los 5 cierres escritos y ratificados por Boris (2026-08-07)** —
+  [[Guion/Cierres — Roen Viejo]], `status: ratificado`. Pasaron el test
+  de la regla 2. Boris pidió 2 ajustes de forma sobre el primer borrador:
+  formato conversación con un BARKEEP fijo en vez de monólogo puro, y
+  ritmo extendido a ~1:30 por cierre (el tiempo extra sale del Barkeep
+  insistiendo, no de que Roen se explique de más — su economía se
+  mantiene como rasgo de personaje).
+- **Bookend completo: apertura + 5 cierres, cerrado.** Próximo frente
+  narrativo: guión de actos (Acto 1, Encuentro).
