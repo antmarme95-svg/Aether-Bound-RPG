@@ -196,10 +196,13 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
 
 ### Narrativa / guión (próximo frente real — en inglés)
 - **✅ Voz narrativa — ratificada (2026-08-07).** [[Voz Narrativa]]: sin
-  narrador durante el juego; único bookend, Roen viejo en taberna
-  (apertura neutra + 5 cierres variables por final), vía 2 rondas de
-  council. **Próximo paso inmediato:** escribir la apertura sola y
-  correrla contra el test de la regla 4 antes de tocar los 5 cierres.
+  narrador durante el juego; único bookend, Roen viejo en taberna.
+- **✅ Apertura del bookend — escrita y ratificada (2026-08-07).**
+  [[Guion/Apertura — Roen Viejo]] — primer guión real del juego. Pasó el
+  test de spoiler; agrega contexto de worldbuilding público (cataclismo,
+  Aether como combustible) sin tocar el secreto del Acto 3. **Próximo
+  paso:** los 5 cierres (F1/F2a/F2b/F3/F4), auditando cada uno contra
+  fuga de info sobre los otros 8 Pivotes.
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
 - Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
 - Los 5 Finales — scripting de diálogos/cinemática; estado post-final

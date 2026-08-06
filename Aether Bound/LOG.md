@@ -7516,3 +7516,38 @@ pendiente de "voz narrativa" en Current-State y el indice.
 regla 4 antes de escribir ningun cierre.
 
 **Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+## [2026-08-07] guion | Apertura del bookend (Roen viejo) -- escrita y ratificada
+
+Primer guion real del juego, siguiendo la regla 4 de [[Voz Narrativa]]: escribir la
+apertura sola, testearla contra fuga de spoiler, antes de tocar ninguno de los 5 cierres.
+
+**Primer borrador y auto-test:** paso el test de la regla 1 (unico dato que se filtra es
+que Roen sobrevive, aceptado como residual del dispositivo). Presentado a Boris para
+lectura.
+
+**Revision de Boris, 2 cambios reales:**
+- La linea "Nine of us took that same job, near enough" le metia a Roen conocimiento de
+  la estructura de diseño (los 9 Pivotes) que no tendria manera de tener en la ficcion --
+  el vivio solo su propia version. Corregida a "Wasn't just me who got that job offer. I
+  know that much." -- insinua que hubo otros sin numero ni certeza.
+- Se saco tambien "Same girl" de la version anterior (no hacia falta confirmar genero del
+  "package" tan temprano).
+- **Agregado un bloque de worldbuilding publico** (pedido explicito de Boris, dado que la
+  escena transcurre en una taberna humana): el cataclismo, el Aether corrupto usado desde
+  entonces como combustible/tecnologia/comercio/poder -- sin tocar el secreto del Acto 3
+  (God-Cores = Wardens muertos, que sigue reservado para el Sunken Archive). La cifra
+  "almost six hundred years" es intencional, no error: el canon fija el cataclismo en 550
+  años, pero Roen es humano, y los humanos son la raza con memoria institucional mas
+  degradada (El Mundo y la Muda, tabla de memoria por raza). Que el mismo protagonista
+  redondee mal la cifra es la dramatizacion directa de esa regla de canon -- anotado en el
+  archivo para que una futura QA no lo "corrija" a 550 pensando que es un descuido, mismo
+  patron que las "cuatro Mudas" de Valen.
+
+**Archivo:** [[Guion/Apertura — Roen Viejo]] -- `status: ratificado`. Primera pagina de la
+nueva carpeta `10-Knowledge/Guion/`.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo paso:** escribir los 5 cierres (F1, F2a, F2b, F3, F4), auditando cada uno contra
+la regla 2 de [[Voz Narrativa]] (fuga de informacion sobre los otros 8 Pivotes).

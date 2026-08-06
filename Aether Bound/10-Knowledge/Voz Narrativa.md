@@ -92,8 +92,17 @@ sugerencias, son la condición bajo la cual el bookend se aprobó:
 
 ## Pendiente
 
-- Escribir la apertura (primer borrador) y correrla contra el test de la
-  regla 4 antes de tocar los 5 cierres.
-- Especificar el "handoff" (transición apertura → personaje jugable) como
-  un corte limpio y deliberado — si se siente ambiguo, cuela la sensación
-  de narrador recurrente aunque no lo sea.
+- **✅ Apertura escrita y ratificada por Boris (2026-08-07)** —
+  [[Guion/Apertura — Roen Viejo]], `status: ratificado`. Pasó el test de
+  la regla 1. Dos ajustes tras lectura de Boris: la línea "nine of us"
+  se cortó (le metía a Roen conocimiento de la estructura de diseño que
+  no tendría manera de tener en la ficción — quedó "wasn't just me who
+  got that job offer"), y se agregó un bloque de worldbuilding público
+  (cataclismo, Aether como combustible) sin tocar el secreto del Acto 3,
+  con la cifra "almost six hundred years" como imprecisión intencional
+  de un humano (canon: memoria humana es la más degradada de las 3
+  razas). Handoff especificado como corte duro con un beat de silencio,
+  sin sangrado de audio.
+- **🗓 Siguiente paso:** escribir los 5 cierres (F1, F2a, F2b, F3, F4),
+  auditando cada uno contra la regla 2 (fuga de info sobre los otros 8
+  Pivotes).
