@@ -202,8 +202,13 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
   una viñeta silenciosa del jugador, sin corte a negro) + 5 cierres
   variables por final (F1/F2a/F2b/F3/F4), formato conversación con un
   Barkeep fijo. Primer guión real del juego, escrito de punta a punta.
-- **🗓 Próximo paso:** guión de actos (Acto 1, Encuentro) — producir las
-  9 combinaciones raza×rol de la viñeta silenciosa del puente.
+- **✅ Estructura del Encuentro con Roen — confirmada (2026-08-07).**
+  [[Geografía y Ciudades]]: title card "AETHER BOUND" a mitad del tramo
+  solo (no al final) → emboscada de 3 Hollowed, imposible en solitario
+  → Roen interviene en el punto ya acordado (contratación ya es hecho
+  previo) → tutorial de *Second Catch* variable por **rol**, no raza.
+- **🗓 Próximo paso:** guión real de la escena (diálogo, 3 variantes de
+  rol) — hoy es solo estructura.
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
 - Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
 - Los 5 Finales — scripting de diálogos/cinemática; estado post-final

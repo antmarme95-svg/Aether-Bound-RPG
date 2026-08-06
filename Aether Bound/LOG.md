@@ -7624,3 +7624,46 @@ Vanguard/Strategist), genero como swap de asset sobre esas 9, no contenido nuevo
 
 **Proximo frente:** guion de actos, Acto 1 - Encuentro (primera escena jugable completa,
 donde arranca la viñeta que el puente deja sembrada).
+
+## [2026-08-07] design | Estructura del Encuentro con Roen -- confirmada, Acto 1 empieza a cristalizar
+
+Boris pidio un desglose en bullets de todo lo que pasa en Acto 1 antes de empezar a
+comentar cada uno. Se reunio lo que ya estaba disperso en el vault (arco de 3 escenas en
+la ficha de Roen/Valen/Darro, secuencia macro de Estructura Dramatica, zona de tutorial
+de Geografia y Ciudades, los 2 primeros Momentos de Persona de Speck que La Rueda ya
+marcaba como parte del Acto 1) y se armo la cronologia real (las fichas narran "Escena
+1/2/3" relativas a cuando CADA personaje aparece, no un orden universal -- hubo que
+reconstruir la secuencia verdadera cruzando las 3 fichas).
+
+**Decision de Boris sobre estructura macro:** el prologo es el bookend completo de Roen
+(apertura + puente + handoff auditivo) MAS la zona tutorial en solitario (Los
+Desfiladeros de Zephyr, sin companeros). El title card "AETHER BOUND" corta **a mitad**
+de ese tramo solo -- no al final -- dejando un pedazo de caminata despues del logo antes
+de llegar al punto de encuentro con Roen.
+
+**Decision sobre el Encuentro con Roen, estructura completa:**
+1. Tramo solo (tutorial de movimiento) -> TITLE CARD a mitad de camino.
+2. Resto del tramo solo, acercandose al punto de encuentro ya acordado con Roen (la
+   contratacion ya es un hecho previo -- Roen-Ficha:101 ya dice "el jugador lo contrato"
+   -- esta escena es el primer encuentro FISICO en pantalla, no la contratacion en si;
+   resuelto asi para no pisar el dato ya escrito).
+3. Emboscada de 3 Hollowed (Villanos Menores, sin restriccion de ubicacion en canon) --
+   imposible en solitario, calza con la Zona B de Acoplamientos ("obstaculo imposible sin
+   tu primer companero").
+4. Roen interviene, llega justo cuando los Hollowed ya encontraron al jugador. Ahi se
+   enseña su link (Second Catch) -- **el camino de tutorial varia por ROL del jugador, no
+   por raza**, porque el link no cambia con la raza: Duelist/Strategist reciben el modo
+   estandar (Roen atrapa/lanza), Vanguard (rol duplicado) recibe el modo "doble ancla" ya
+   diseñado en Los 3 Links de los Fijos.
+5. Primera linea de Roen post-combate, coherente con su propia ficha (competente sin
+   fanfarria, asiente, no aplaude).
+6. Roen + jugador siguen a la ciudad natal, donde los alcanza Valen -- ya fijado en
+   Geografia y Ciudades.
+
+**Archivo actualizado:** [[Geografía y Ciudades]] §El Encuentro con Roen, dentro de §Los
+Desfiladeros de Zephyr.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo paso:** escribir el guion real de la escena del Encuentro (dialogo, 3 variantes
+de rol) -- lo de hoy es estructura, todavia no hay texto escrito.

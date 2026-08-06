@@ -762,6 +762,44 @@ duplicar acá. Aparece en §THE RECKONING (Beat 1: el falso positivo; Beat
 - Encuentro con enredaderas/naturaleza hostil
 - Introducción a mecanismo de locomoción
 
+### El Encuentro con Roen — estructura confirmada (decisión de Boris, 2026-08-07)
+
+Sigue al prólogo ([[Voz Narrativa]], [[Guion/Apertura — Roen Viejo]]) y su
+puente narrado al Acto 1.
+
+1. **Tramo solo** — tutorial de movimiento/combate básico, sin
+   compañeros, mismo template de las 3 versiones raciales de arriba.
+2. **A mitad del tramo, TITLE CARD "AETHER BOUND".** Corta a mitad del
+   camino en solitario, no al final — queda un pedazo de caminata más
+   después del logo, no una transición directa al punto de encuentro.
+3. **Después del logo:** último tramo de caminata solo, acercándose al
+   punto de encuentro acordado con Roen. **El jugador ya lo contrató**
+   antes de esta escena (dato ya fijado en
+   [[Roen-Ficha-Expandida-v1]]:101, "el jugador lo contrató") — esta
+   escena es el primer encuentro físico en pantalla, no la contratación
+   en sí.
+4. **Emboscada — 3 Hollowed** ([[Villanos Menores]] §The Hollowed). Solo,
+   es una pelea que el jugador no gana — la Zona B de
+   [[Acoplamientos]]: "obstáculo imposible sin tu primer compañero".
+5. **Roen interviene.** No es coincidencia pura: llega al punto de
+   encuentro justo cuando los Hollowed ya encontraron al jugador. Es acá
+   donde se enseña su link, *Second Catch*
+   ([[Los 3 Links de los Fijos]] §Roen) — **el camino de tutorial varía
+   por rol del jugador, no por raza**, porque el link no cambia con la
+   raza:
+   - **Duelist o Strategist:** modo estándar del link — Roen atrapa al
+     jugador a media caída, o agarra a un Hollowed y se lo lanza para
+     que lo remate.
+   - **Vanguard (rol duplicado):** modo "doble ancla" — los dos
+     sostienen terreno juntos, ya diseñado como caso de rol duplicado en
+     [[Los 3 Links de los Fijos]] §Roen.
+6. **Pelea resuelta.** Primera línea de Roen tras el combate — coherente
+   con [[Roen-Ficha-Expandida-v1]] (Escena 1, "El Encuentro"): competente
+   sin fanfarria, asiente, no aplaude.
+7. Roen y el jugador siguen juntos hacia la ciudad natal
+   (Rivermeet/Emberdeep/Stillspire), donde los alcanza Valen — ya fijado
+   más abajo en este archivo (§Beats Narrativos por Acto).
+
 ---
 
 ## Beats Narrativos por Acto
