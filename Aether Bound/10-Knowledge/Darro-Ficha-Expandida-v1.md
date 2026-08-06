@@ -10,6 +10,7 @@ updated: 2026-07-27
 **Origen:** Emberdeep, Ignis Reach  
 **Edad:** ~63 años (joven para enano bajo el canon de ~200-250 de [[Las Tres Razas]] — adulto completo, sin cicatrices de edad). La cifra no es libre: se deriva de haber sido aprendiz de Vekka a los 30 y de que ese rechazo fue **hace ~30 años** (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §Darro).  
 **Slot en [[The Bound Five]]:** C4 — La Chispa  
+**Link:** *Open Seam* — [[Los 3 Links de los Fijos]] §Darro (provisional)
 
 ---
 

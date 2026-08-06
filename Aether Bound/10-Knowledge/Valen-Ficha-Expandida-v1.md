@@ -10,6 +10,7 @@ updated: 2026-07-27
 **Origen:** The Stillspire  
 **Edad aparente:** 230 años (joven para un elfo — ninguna Muda se ha completado en 550 años, así que no presenció ninguna; todo lo que sabe de ellas lo sabe leído)  
 **Slot en [[The Bound Five]]:** C2 — El Opuesto  
+**Link:** *The Long Calculus* — [[Los 3 Links de los Fijos]] §Valen (provisional)
 
 ---
 

@@ -10,6 +10,7 @@ updated: 2026-07-27
 **Origen:** Frontera Mistbound  
 **Edad aparente:** 45 años  
 **Slot en [[The Bound Five]]:** C1 — El Afín  
+**Link:** *Second Catch* — [[Los 3 Links de los Fijos]] §Roen (provisional)
 
 ---
 

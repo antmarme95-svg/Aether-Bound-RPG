@@ -41,6 +41,7 @@
 - **`10-Knowledge/Pivotes/` — 9 fichas narrativas expandidas COMPLETAS (2026-07-23):** [[Pivotes/Maren-Ficha-Expandida-v1|Maren]] / [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] / [[Pivotes/Iven-Ficha-Expandida-v1|Iven]] / [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] / [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] / [[Pivotes/Lyris-Ficha-Expandida-v1|Lyris]] / [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] / [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] / [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]]. Incluye: bio pre-aventura, Conocimiento Previo (fijo ve Pivote), encuentro player-único, arco 3-actos, traición, **5 epílogos** (F1/F2a/F2b/F3/F4), línea canónica/privada, dinámicas, diseño visual.
 - [[Acoplamientos]] — roles de co-dependencia sin ultimates; parejas fundadoras; tutorial geográfico.
 - [[Los 9 Links del Pivote]] — Skipping Stone…Warforging: qué hace cada uno y qué duele al perderlo.
+- [[Los 3 Links de los Fijos]] — Second Catch (Roen) / The Long Calculus (Valen) / Open Seam (Darro), provisional 2026-08-05, pendiente de QA.
 - [[Bond y el Bond Vacío]] — el único botón de vínculo; el beat del miembro fantasma; la Link Cam.
 - [[Matriz Raza x Rol]] — las 9 celdas de arquetipo mecánico.
 - [[Locomoción]] — FSM conservada + mantling + escalada zonificada + conservación de impulso.

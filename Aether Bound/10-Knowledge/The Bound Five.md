@@ -66,11 +66,15 @@ Institucional).
 Control en juego: [[Bond y el Bond Vacío]] (autónomos + un botón, cero menús).
 Vínculos y progresión de intimidad: [[The Tether]].
 
-**Pendiente (❓):** tablas de C1/C2/C4 por celda de jugador + sus links (y los
-links directos de Speck en su fase de desvelamiento previa a E3). → Task-Board.
+**Resuelto (2026-08-05, provisional):** Roen, Valen y Darro tienen ahora
+sus propios links nombrados — ver [[Los 3 Links de los Fijos]]. Ya no son
+solo función genérica de rol; cada uno tiene T1→T3, objeto firma en T3,
+y una resolución específica para cuando el rol del jugador coincide con
+el suyo. El "bond más útil es el del Pivote conforme avanzan los actos"
+que pedía Boris se resuelve por **pacing de contenido**, no por un tope
+de sistema visible — ver la página para el detalle completo.
 
-
-**Preguntas/Dudas Toño a Claude:** 
-
-*Links/Bonds:* Los bonds no deben suceder únicamente entre jugador y pivote, debemos desarrollar los bonds/links fijos de Roen, Darro y Valen. Siempre a partir de su raza y rol. Todos los links son útiles pero conforme van avanzando los actos, el bond más útil es el del pivote, esto construye dramatismo silencioso. Debemos idear un mecanismo narrativo y de worldbuilding donde los 9 bonds son protagonistas y la experiencia del jugador sea la misma sin importar el personaje (raza/rol) que escoge.
+**Pendiente (❓):** links directos de Speck en su fase de desvelamiento
+previa a E3; nombres de UI/iconografía de los 6 estados T2/T3 nuevos;
+ronda de QA antes de ratificar [[Los 3 Links de los Fijos]]. → Task-Board.
 

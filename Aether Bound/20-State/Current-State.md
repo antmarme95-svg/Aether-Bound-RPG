@@ -139,10 +139,15 @@ motor resuelve eso.
 
 1. **Sprint QA cerrado (16ª, 2026-08-05)** — linter 0 críticos, 2 reales de
    los subagentes ya corregidos en la fuente. Detalle arriba y en [[LOG]].
-2. **Pregunta de bonds de fijos** de `The Bound Five.md` — mecanismo de
-   bonds/links propios para Roen, Darro y Valen a partir de raza/rol, para que
-   los 9 vínculos sean protagonistas por igual. Toca `The Tether` y `Bond y el
-   Bond Vacío`. Arranca ahora que el sprint QA cerró.
+2. **Links de los 3 fijos — diseñados, provisional (2026-08-05).**
+   [[Los 3 Links de los Fijos]]: Second Catch (Roen), The Long Calculus
+   (Valen, doble orbe Discord/Harmony), Open Seam (Darro). Mismo sistema
+   T1→T3 que el Pivote, sin tope de sistema — la ventaja del Pivote sale
+   del pacing de contenido (su arco sigue sumando en Acto 3, el de los
+   fijos no), no de una regla visible que delate quién traiciona. Mismo
+   presupuesto de poder; el Pivote cambia el verbo de juego, los fijos son
+   fuertes y constantes sin alterar la build. **Pendiente:** ronda de QA
+   antes de `status: ratificado`; iconografía UI de los 6 estados nuevos.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond

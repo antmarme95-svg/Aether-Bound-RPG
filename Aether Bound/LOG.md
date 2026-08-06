@@ -7247,3 +7247,56 @@ tratarlos.
 produjo la mayoría del ruido de esta corrida. Es la primera ronda con **más falsos positivos que
 críticos reales**: vale la pena verificar cada hallazgo contra el archivo real antes de tocar
 nada, no asumir que la cita del subagente refleja el estado actual del vault.
+
+## [2026-08-05] design | Links de los 3 fijos — Second Catch, The Long Calculus, Open Seam (provisional)
+
+**Origen:** pregunta abierta de Boris en `The Bound Five.md` — los bonds no debían suceder
+solo entre jugador y Pivote; faltaba desarrollar los links propios de Roen, Darro y Valen a
+partir de su raza y rol, de forma que la profundidad de vínculo se sintiera pareja sin importar
+la celda del jugador.
+
+**Diagnóstico de partida:** Roen, Valen y Darro son fijos (misma raza y rol en las 9 celdas) y
+**ya forman su propia tríada de acoplamiento** entre ellos (Vanguard + Strategist + Duelist) —
+a diferencia del Pivote, diseñado a propósito para nunca duplicar el rol del jugador. Consecuencia
+no documentada hasta ahora: el rol del jugador **siempre** coincide con el de uno de los tres
+fijos, en las 9 celdas.
+
+**Decisiones de la sesión:**
+- **3 links, no 9.** Ir a 3 fijos × 3 roles de jugador sumaría 9 links más a los 9 del Pivote
+  (18 en total) sin necesidad — de los 3 roles posibles, 2 son variantes de la misma
+  complementariedad y solo 1 (rol duplicado) es genuinamente distinto.
+- **Sin tope de tier visible.** Se descartó un primer diseño que capaba a los fijos en T2 para
+  simular "el bond del Pivote se vuelve el más útil con los actos": un tope de sistema detectable
+  es exactamente el tipo de pista que delata quién va a traicionar antes de que la historia lo
+  diga. Reemplazado por **pacing de contenido**: el arco de cada fijo (Encuentro, Nido de Speck,
+  El Primero / La Rueda, Speck Despierta, La Verdad) ya está concentrado en Actos 1-2: en Acto 3
+  su contenido es reactivo. El Pivote, en cambio, ya sigue sumando contenido propio hasta el
+  final (The Reckoning en Acto 2, corredor y cráter en Acto 3) — la asimetría que pedía Boris
+  ya estaba en la estructura existente, no hizo falta inventar una regla nueva.
+- **Mismo presupuesto de poder, distinto tipo de poder.** Los 3 links quedan en el mismo tier
+  numérico que un link de Pivote equivalente. La diferencia no es cuánto pegan: el Pivote
+  reconfigura el verbo de combate del jugador ("su partida rompe tu forma de jugar", ya canon en
+  `The Bound Five`); los fijos son fuertes y constantes sin alterar la identidad de combate. Así
+  el balance queda parejo sin abrir una segunda pista mecánica.
+- **3 tiers con objeto/beat firma en T3**, igual que Seismic Springboard (Dagna): cada T3 ata a
+  un beat de personaje ya existente en la ficha del fijo, no es solo un power-up — Roen usa por
+  primera vez el escudo real que dejó atrás (sus 15 años de guardia del Council), Valen aprende
+  a confiar en el dato de ahora en vez del cálculo heredado (eco directo del beat de la cifra
+  errónea), Darro pega en serio por primera vez sin chiste después.
+- **Roen — dos pitches, Boris eligió el segundo.** *Borrowed Ground* (relación con el mundo:
+  agarra objetos del entorno) vs *Second Catch* (relación con personas: agarra y reposiciona
+  aliados/enemigos, más cerca de "el corazón del grupo" de su Esencia). Queda **Second Catch**.
+- **Valen — pedido específico de Boris:** un link de dos botones estilo Zenyatta (Overwatch) —
+  Discord (marca de vulnerabilidad) + Harmony (regeneración sostenida), ambos justificados como
+  cálculo, no magia. Encaja con su arquetipo ya escrito en `Matriz Raza x Rol` (Elfo Strategist =
+  "manipulador psíquico: recoloca aliados/enemigos").
+
+**Archivo nuevo:** [[Los 3 Links de los Fijos]] — fuente única, `status: provisional`. Citado
+desde `Acoplamientos.md`, `The Bound Five.md` (resuelve la pregunta abierta de Boris) y las 3
+fichas de fijos (Roen, Valen, Darro), sin re-enunciarse en ninguna.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
+
+**Pendiente:** ronda de QA de dramaturgia + balance antes de pasar a `status: ratificado`;
+nombres de iconografía UI para los 6 estados T2/T3 nuevos; links directos de Speck en su fase
+de desvelamiento previa a E3 (pregunta que ya estaba abierta en `The Bound Five`).

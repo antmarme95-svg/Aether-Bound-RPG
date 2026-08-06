@@ -36,3 +36,9 @@ Zona B (obstáculo imposible sin tu primer compañero).
 [[Speck]] estadio 2 es fuente de acoplamientos nuevos; el input único en
 juego es [[Bond y el Bond Vacío|Bond]]; la intimidad los profundiza
 ([[The Tether]]: T1→T3 = variantes del link).
+
+## Los 3 fijos también tienen link propio
+
+Roen, Valen y Darro no son solo función de rol genérica: cada uno tiene
+un link nombrado, con el mismo sistema T1→T3 que el Pivote y sin tope de
+sistema — ver [[Los 3 Links de los Fijos]] (provisional, 2026-08-05).
