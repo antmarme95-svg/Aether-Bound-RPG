@@ -1247,6 +1247,19 @@ Full-body creature concept sheet, front view and side view, of "The Mirror Stalk
 
 ### 13.3-v3 — The Mirror Stalker (REDISEÑO ESTRUCTURAL — panel de vidrio, no armadura, 2026-08-06)
 
+**Archivo:** `mirror-stalker-v3.png` (GENERADO 2026-08-06, RATIFICADO
+por Boris — **con pivote de concepto**, ver abajo).
+
+**Evaluación:** ⚠️→✅ Mejoró parcialmente sobre la v2 — huecos reales
+entre paneles (torso, cadera) donde se ve el papel de fondo, luz teal en
+las grietas — pero sigue sin mostrar reflejo literal ni respaldo
+plateado; el resultado lee como autómata de cristal/vidrio articulado,
+no como espejo roto en sentido estricto. **Boris acepta el pivote**: en
+vez de forzar un cuarto intento, el canon de The Mirror Stalker se
+ajusta para describir esto — ver [[Bestiario]] §The Mirror Stalker,
+actualizado. El nombre se mantiene por la habilidad de imitación
+("copia tus movimientos"), no por la superficie literal.
+
 Cambia la estructura de la descripción, no solo el vocabulario: en vez de
 "cuerpo humanoide cubierto de placas de vidrio" (que lee como armadura
 sin importar el material), se describe primero como **un panel de espejo

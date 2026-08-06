@@ -7422,3 +7422,29 @@ correr en NB2.
 
 **Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde. Concept art del
 Bestiario: 9/9 salvo Mirror Stalker, que va por su tercer intento.
+
+## [2026-08-06] concept-art | Mirror Stalker v3 -- pivote de canon aceptado, batch del Bestiario cerrado 9/9
+
+Tercer intento de Mirror Stalker (SS13.3-v3, estructura de "panel de espejo roto" en vez de
+"cuerpo cubierto de placas"). Resultado: mejora parcial -- huecos reales entre paneles con
+el fondo visible, luz teal en las grietas -- pero sigue sin mostrar reflejo literal ni
+respaldo plateado de espejo; lee como automata de cristal/vidrio articulado, no como espejo
+roto en sentido estricto.
+
+**Decision de Boris: aceptar el pivote en vez de un cuarto intento.** Tres corridas
+convergieron en la misma familia de resultado (cristal/vidrio articulado, no reflejo
+literal) pese a cambiar vocabulario y estructura -- señal de que es el limite razonable de
+la tecnica para este concepto exacto, no un prompt mal escrito.
+
+**Canon actualizado en `Bestiario.md` SSThe Mirror Stalker:** se mantiene la habilidad
+("copia tus movimientos", "aprende, no solo imita" -- cita de Valen intacta) pero la
+descripcion visual pasa de "superficie de espejo con reflejo literal" a "automata de
+cristal/vidrio fracturado, cuerpo articulado de facetas traslucidas con vetas de luz teal
+en las grietas". El nombre "Mirror Stalker" queda igual -- describe la habilidad, no la
+superficie.
+
+**Archivo:** `mirror-stalker-v3.png`, RATIFICADO, movido a `90-Raw/concept/`.
+
+**Estado: batch de concept art del Bestiario cerrado, 9/9** (los 4 re-rolls de esta sesion
+mas los 5 que ya habian pasado directo el 2026-08-04). `check_canon.py` 0 criticos / 0
+medium, `check_vault.py` verde.

@@ -65,10 +65,15 @@ cuerno (instrumento, reacciona con Speck). **Concept art:**
 **Dónde:** The Echoing Archive — **asignado como boss de ese dungeon**
 (ver §Dungeons abajo). Copia los movimientos del jugador; Valen advierte
 que *"aprende, no solo imita"* — es Aether puro reaccionando a estímulo,
-no una bestia con instinto propio. Loot: fragmento espejo (revela caminos
-ocultos). **Concept art:** primera corrida rechazada — se leyó como gólem
-de piedra, sin sensación de espejo/vidrio; pendiente re-roll real
-([[Briefs de Concept Art]] §13.3).
+no una bestia con instinto propio. **Visual (pivote ratificado por
+Boris, 2026-08-06):** el concepto original pedía una superficie de
+espejo con reflejo literal; tres corridas de NB2 convergieron en su
+lugar en un autómata de cristal/vidrio fracturado — cuerpo articulado de
+facetas traslúcidas con vetas de luz teal en las grietas. El nombre
+sigue siendo "Mirror Stalker" por la habilidad de imitación, no por la
+superficie. Loot: fragmento espejo (revela caminos ocultos). **Concept
+art:** `mirror-stalker-v3.png` — RATIFICADO ([[Briefs de Concept Art]]
+§13.3-v3).
 
 ### The Aether Wyrm
 **Dónde:** The Rift, semi-corpóreo. **Qué es:** serpiente de Aether puro,

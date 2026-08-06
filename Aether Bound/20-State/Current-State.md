@@ -174,14 +174,13 @@ motor resuelve eso.
 
 3 archivos nuevos ([[Bestiario]], [[Flora y Ecosistemas]],
 [[Villanos Menores]]) llenando el hueco de mundo abierto — detalle
-completo en [[LOG]]. Concept art: **9/9 ratificados (2026-08-06)** salvo
-Mirror Stalker, que sigue sin pasar. Crowned Leviathan v2, Aether Wyrm
-v2 y King Borran v3 (§9) resolvieron el texto incrustado y están en
-`90-Raw/concept/`. Mirror Stalker v2 falló de nuevo — leyó como armadura
-de placas, no espejo; §13.3-v3 en [[Briefs de Concept Art]] cambia la
-estructura de la descripción (panel de vidrio roto, no cuerpo cubierto
-de placas), pendiente de correr. Mistbound Frontier sigue sin flora/fauna propia (no
-bloquea).
+completo en [[LOG]]. **Concept art del batch: 9/9 cerrado (2026-08-06).**
+Los 3 re-rolls de texto (Leviathan v2, Wyrm v2, Borran v3) ratificados
+sin cambios de canon. Mirror Stalker cerró distinto: tras 3 intentos sin
+lograr la superficie de espejo literal, Boris aceptó la v3 (autómata de
+cristal/vidrio) como pivote de diseño — [[Bestiario]] §The Mirror
+Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
+(no bloquea).
 
 ### Worldbuilding — abierto
 - **El Último Reino humano pre-Regencias:** construir backwards qué fue,
