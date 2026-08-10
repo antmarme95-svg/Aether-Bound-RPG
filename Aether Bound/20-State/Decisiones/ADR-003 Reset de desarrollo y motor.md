@@ -300,17 +300,66 @@ Log de horas por escena y por sistema, desde la primera línea. No es
 métrica de productividad — es **el insumo del criterio 5**: el costo real
 de un Pivote completo, que multiplicado por 9 dice si ese juego existe.
 
-### C. Los 3 playtesters — con nombre y fecha
+### C. Los 3 playtesters ✅ (definidos por Boris, 2026-08-10)
 
-⚠️ **PENDIENTE — Boris los tiene definidos, falta registrarlos acá.**
-Necesario por cada uno: quién es, qué tan ajeno es al proyecto (¿sabe
-algo del lore? ¿ha visto concept art?), y fecha tentativa de
-disponibilidad.
+| # | Nombre | Exposición previa al proyecto | Disponibilidad |
+|---|---|---|---|
+| 1 | **Diego** | Ninguna significativa — no conoce el lore ni el proyecto | Confirmada |
+| 2 | **Santiago** | Ninguna significativa — íd. | Confirmada |
+| 3 | **Delmer** | Ninguna significativa — íd. | Confirmada |
 
-**Requisito de diseño del test:** tienen que ser ajenos de verdad. Quien
-ya conoce a Dagna por las conversaciones del vault no puede medir si la
-escena construye el vínculo desde cero — ese es exactamente el sesgo que
-el criterio busca esquivar.
+Los tres son **jugadores experimentados** ("gamers natos"). Fecha exacta
+a fijar cuando el slice tenga fecha de entrega; la disponibilidad ya está
+confirmada por Boris.
+
+#### 🔴 Regla de oro: NO ponerlos al corriente
+
+**Su ignorancia del proyecto es el instrumento, no un obstáculo a
+resolver.** El impulso natural es explicarles quién es Dagna y de qué va
+el mundo antes de que jueguen. Hacerlo **destruye la medición**: el slice
+existe para probar si la escena construye el vínculo *por sí sola*, en
+~35 minutos, sin ayuda externa. Un jugador que llega sabiendo que Dagna
+importa va a sentir que importa, y eso no prueba nada sobre el juego.
+
+**Se les puede decir:**
+- Los controles (moverse, usar el link) — eso es tutorial, no lore.
+- Que es un prototipo temprano sin arte: cubos grises, sin texturas.
+  Evita que reporten "se ve feo" como si fuera un hallazgo.
+- Encuadre mínimo de género: *"es un RPG de acción; vas a subir una
+  montaña con una compañera."* Nada más.
+
+**No se les puede decir, bajo ninguna circunstancia:**
+- Quién es Dagna más allá de lo que la escena muestre.
+- **Que va a traicionarte.** Mata el experimento completo.
+- Que el objetivo del test es medir si duele. Si saben que se espera
+  tristeza, la actúan.
+- Nada del mundo más amplio: los 9 Pivotes, los 5 finales, las razas, la
+  política de los 3 reinos, que el Bond es el árbol de habilidades.
+
+#### Orden de las preguntas post-sesión (no negociable)
+
+El árbol de fallas §A **solo funciona si la comprensión se mide antes que
+la emoción.** Al revés, la pregunta emocional contamina el recuerdo y ya
+no se puede distinguir "no entendió" de "entendió y no le importó".
+
+1. **Abiertas primero.** *"Contame qué pasó."* / *"¿Cómo estuvo?"* Sin
+   dirigir. Se anota lo que mencionan **espontáneamente** — si la pérdida
+   aparece sola acá, es la señal más fuerte que el test puede dar.
+2. **Comprensión después.** *"¿Qué podías hacer en la primera subida que
+   no pudiste en la segunda?"* / *"¿Por qué cambió?"* Esto mide si el
+   canal funcionó, y es lo que separa la rama EJECUCIÓN de la rama
+   DISEÑO.
+3. **Emocional al final, y nunca dirigida.** *"¿Cómo te sentiste en el
+   último tramo?"* — **no** *"¿te dio tristeza que se fuera?"*.
+
+**Ventaja y riesgo de que sean jugadores experimentados:** a favor,
+articulan bien "el movimiento se siente raro" vs. "no me importó el
+personaje", que es justo lo que el árbol necesita para discriminar. En
+contra, tienden a **rellenar huecos con convención de género** — pueden
+dar por sentado que la compañera traiciona porque así funcionan estos
+juegos, y reportar comprensión que la escena no construyó. Contramedida:
+en el paso 2, preguntar *cómo lo supieron* — si la respuesta es "porque
+siempre pasa", eso no cuenta como que la escena lo comunicó.
 
 **Plan B si se caen:** autograbación de sesión + revisión diferida a las
 2 semanas, más una pasada previa de agente imparcial **como filtro, no
