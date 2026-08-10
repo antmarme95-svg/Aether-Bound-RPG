@@ -773,12 +773,12 @@ puente narrado al Acto 1.
    camino en solitario, no al final — queda un pedazo de caminata más
    después del logo, no una transición directa al punto de encuentro.
 3. **Después del logo:** último tramo de caminata solo, acercándose al
-   punto de encuentro acordado con Roen. **El jugador ya lo contrató**
-   antes de esta escena (dato ya fijado en
-   [[Roen-Ficha-Expandida-v1]] §Escena 1, "el jugador ya contrató a
-   Roen") — esta
-   escena es el primer encuentro físico en pantalla, no la contratación
-   en sí.
+   punto de encuentro acordado con Roen para este trabajo — un arreglo
+   personal, no el Contrato de Conquistador del Triune Council que el
+   jugador firma por su cuenta ([[Roen-Ficha-Expandida-v1]] §Escena 1).
+   Ya se conocían de antes (1-2 años, ver §Conexión con el jugador de esa
+   ficha) — esta escena es el primer encuentro físico **de este trabajo**
+   en pantalla, no la primera vez que se ven.
 4. **Emboscada — 3 Hollowed** ([[Villanos Menores]] §The Hollowed). Solo,
    es una pelea que el jugador no gana — la Zona B de
    [[Acoplamientos]]: "obstáculo imposible sin tu primer compañero".
@@ -788,9 +788,12 @@ puente narrado al Acto 1.
    ([[Los 3 Links de los Fijos]] §Roen) — **el camino de tutorial varía
    por rol del jugador, no por raza**, porque el link no cambia con la
    raza:
-   - **Duelist o Strategist:** modo estándar del link — Roen atrapa al
-     jugador a media caída, o agarra a un Hollowed y se lo lanza para
-     que lo remate.
+   - **Duelist o Strategist:** modo estándar del link — Roen agarra a un
+     Hollowed y se lo lanza al jugador para que lo remate (sabor único
+     de esta escena, decisión de Boris 2026-08-07 2ª pasada — el sabor
+     "atrapa al jugador a media caída" sigue vigente como flavor
+     general de T1 en [[Los 3 Links de los Fijos]], pero no es el que
+     usa esta escena puntual).
    - **Vanguard (rol duplicado):** modo "doble ancla" — los dos
      sostienen terreno juntos, ya diseñado como caso de rol duplicado en
      [[Los 3 Links de los Fijos]] §Roen.

@@ -93,19 +93,33 @@ link** (el daño/impacto extra que el remate otorga). Whiff = perdés el
 premio del link, no perdés el combate. Aplica en general al T1, no solo
 a la escena de [[Guion/Encuentro con Roen]].
 
-**T1, variante "doble ancla" (rol duplicado — jugador también Vanguard).**
-No es un agarre: los dos se plantan espalda con espalda, cada uno
-cubriendo el arco del otro, sosteniendo el mismo terreno sin retroceder.
-Es **T1, no T2** — a diferencia del resto de T2 en este documento (que
-se gana con bond acumulado, [[The Tether]] §B), el rol duplicado
-queda fijado en la creación de personaje: si el jugador es Vanguard,
-esta es la única forma que el link puede tomar desde el primer
+**T1, variante "doble ancla" (rol duplicado — jugador también Vanguard,
+solo en momentos de combate compartido).** No es un agarre: los dos se
+plantan espalda con espalda, cada uno cubriendo el arco del otro,
+sosteniendo el mismo terreno sin retroceder. Es **T1, no T2** — a
+diferencia del resto de T2 en este documento (que se gana con bond
+acumulado, [[The Tether]] §B), el rol duplicado queda fijado en la
+creación de personaje: si el jugador es Vanguard, esta es la forma que
+el link toma en un encuentro de combate compartido, desde el primer
 encuentro, con bond cero ([[Guion/Encuentro con Roen]], variante B —
-decisión de Boris, 2026-08-10). **Corrección de canon (2026-08-10):**
-esta sección decía antes "cadena de rescate" (agarre en relevo);
-[[Geografía y Ciudades]] había escrito "doble ancla" atribuyéndolo (mal)
-a esta página. Esta es ahora la fuente correcta — "doble ancla" es
-canon, "cadena de rescate" se descarta.
+decisión de Boris, 2026-08-10). **No reemplaza el traversal del T1
+base** (atraparte a media caída, lanzarte a una cornisa) — eso no es un
+caso de "rol duplicado", es el uso normal del link fuera de combate, y
+sigue disponible para cualquier rol, Vanguard incluido (aclarado
+2026-08-10, 2ª pasada — la redacción anterior era ambigua sobre esto).
+**Corrección de canon (2026-08-10):** esta sección decía antes "cadena
+de rescate" (agarre en relevo); [[Geografía y Ciudades]] había escrito
+"doble ancla" atribuyéndolo (mal) a esta página. Esta es ahora la fuente
+correcta para el caso de rol duplicado — "doble ancla" es canon,
+"cadena de rescate" se reasigna abajo, a T2.
+
+**T2 — "Cadena."** Ganado con bond ([[The Tether]] §B), disponible para
+los 3 roles del jugador (no exclusivo de rol duplicado). Roen encadena
+dos acciones del link en el mismo respiro: agarra al jugador y en el
+mismo movimiento lanza a un segundo enemigo, o lanza a dos enemigos en
+secuencia sin perder ritmo — una cadena de rescate que ninguno de los
+dos arma solo a T1. La ventana de remate (arriba) aplica a cada blanco
+lanzado por separado.
 
 **T3 — "Nothing Borrowed."** Roen deja el agarre a mano limpia: absorbe
 un golpe letal dirigido al jugador con el cuerpo entero (una vez por
@@ -176,8 +190,8 @@ serio, sin chiste después.
 
 ---
 
-**Pendiente (❓):** nombres de UI/iconografía para los 6 estados nuevos
-(ahora 2 T2 + 1 T1-variante + 3 T3); si "Marked Variable"/"Steady
+**Pendiente (❓):** nombres de UI/iconografía para los 7 estados nuevos
+(3 T2 + 1 T1-variante + 3 T3); si "Marked Variable"/"Steady
 Variable" necesitan cooldown propio o comparten uno; ronda de QA de
 dramaturgia y de balance antes de pasar a `status: ratificado`. → Task-Board.
 **Pendiente (❓, 2026-08-10):** el rol duplicado de Roen bajó de T2 a T1

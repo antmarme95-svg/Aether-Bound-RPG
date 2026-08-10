@@ -11,11 +11,13 @@ updated: 2026-08-07
 > hacia él ([[Los 3 Links de los Fijos]] §Roen, sabor "lanza a un
 > enemigo"; primer uso en pantalla: [[Guion/Encuentro con Roen]]).
 > **Ese remate está escrito a nivel de rol, no de celda:** Duelist
-> conecta con su arma base (melee); Strategist no tiene remate melee —
-> usa su propia acción a distancia/control (Elfo: Tether Arcano;
-> Enano: hand cannon; Humano: hanger/trampa) sobre el Hollowed lanzado
-> (decisión de Boris, 2026-08-07, [[LOG]]:7876-7881; coherente con
-> [[Acoplamientos]], Strategist no inflige daño directo) — más el
+> conecta con su arma base (melee, daño directo); Strategist no tiene
+> remate melee ni de daño — usa su propia acción de control (Elfo:
+> Tether Arcano; Enano: ronda de marcaje del hand cannon; Humano:
+> trampa/Signal Horn) para neutralizar al Hollowed lanzado sin matarlo
+> con la mano (decisión de Boris, 2026-08-07, [[LOG]]:7876-7881;
+> coherente con [[Acoplamientos]], Strategist no inflige daño directo) —
+> más el
 > equipamiento de los 3 fijos
 > (Roen, Darro, Valen), cerrado en la misma sesión para completar el
 > ejercicio a 12 celdas. Es el punto de partida de la matriz de verbos
@@ -64,10 +66,10 @@ en [[Los 3 Links de los Fijos]] §Roen.
 | **Elfo Strategist** | Manipulación a distancia | *Elven bow* | **Corriente Psíquica (Tether Arcano).** Las flechas marcan, no curan. Un enemigo marcado queda atado telekinéticamente — el jugador puede **tirar** de él (lo arrastra hacia sí o hacia un aliado, rompe formación) o **empujarlo** (lo desplaza, útil para sacarlo de una cornisa o separarlo de la manada). Sobre un aliado, la misma marca reposiciona sin daño de caída. "Manipulador psíquico: recoloca aliados/enemigos" ([[Matriz Raza x Rol]]) literal — no colisiona con Valen (fijo, mismo arquetipo pero equipamiento propio, ver abajo). |
 | **Enano Duelist** | Absorción-negada | *Dwarven war pick & hammer* | **Impacto de Ruptura (Torniquete y Placa).** Alterna martillo (romo) y pico (penetrante). El martillo aplica "Guardia Rota" (reduce armadura); el pico que sigue ignora la resistencia restante e inflige sangrado masivo. Silueta distinta a las hachas cortas de Darro (fijo) — resuelve la colisión que detectó el consejo. |
 | **Enano Vanguard** | Absorción-negada (máxima) | *Dwarven great warhammer* + brazaletes reforzados | **Postura de Ancla (Guardia de Placa).** Cruzar los brazaletes entra en postura inamovible: **absorbe** una gran cantidad de daño frontal y anula empujones — coincide exacto con el parry racial del Enano (*absorbe-planta*, [[Combate]] §B4). Todo el daño absorbido fortalece el siguiente "Golpe de Sismo" (más área, más aturdimiento). |
-| **Enano Strategist** | Absorción-negada vía herramienta | *Dwarven hand cannon* + kit ingeniero | **Torreta de Forja (Ancla de Sustento).** El kit despliega una torreta compacta que dispara en área de forma automática mientras está en pie (control de zona, no soporte pasivo); los aliados junto a ella reciben un buff de armadura ("placa reforzada de campo"). El hand cannon queda para el remate y municiones especiales (cegadora/incendiaria). "Ingeniero: torretas, drones, buffs de armadura" ([[Matriz Raza x Rol]]) literal. |
+| **Enano Strategist** | Absorción-negada vía herramienta | *Dwarven hand cannon* + kit ingeniero | **Torreta de Forja (Ancla de Sustento).** El kit despliega una torreta compacta que dispara en área de forma automática mientras está en pie (control de zona, no soporte pasivo); los aliados junto a ella reciben un buff de armadura ("placa reforzada de campo"). El hand cannon dispara una ronda de marcaje/aturdidor para el remate del link (no bala letal — tambalea y marca al Hollowed lanzado por Roen para que el resto del grupo lo termine, coherente con [[Acoplamientos]]: el Strategist no inflige daño directo), más munición especial normal (cegadora/incendiaria) fuera de ese contexto. "Ingeniero: torretas, drones, buffs de armadura" ([[Matriz Raza x Rol]]) literal. |
 | **Humano Duelist** | Robo-desarme | *Scimitar + parrying dagger* | **Desvío y Oportunismo (Riposte).** Ventana de bloqueo de precisión con la daga. Si bloquea justo antes del impacto, **le arrebata el control del golpe usando el propio impulso del rival** (no "desvía" — coincide con el parry racial humano, *roba-desarma, usa el VectorFuerza del rival*, [[Combate]] §B4), abriendo un punto ciego para un tajo de cimitarra 100% crítico que aplica debuff de reducción de daño al rival. |
 | **Humano Vanguard** | Absorción-negada (impacto) | *War flail* + kite shield | **Inercia de Rompeformaciones.** El mayal ignora el % de bloqueo de escudos enemigos (físicos o de energía). Al avanzar cubierto tras el kite shield acumula Momentum; el golpe de mayal al final del avance rompe defensas en línea y provoca Taunt. Arma física deliberada — distingue al jugador del agarre a mano limpia de Roen (fijo), resuelve la colisión que detectó el consejo. |
-| **Humano Strategist** | Control de terreno | *Hunting hanger* + *signal horn* | **Trampero de Caza.** Despliega trampas de red/cepo en el terreno — un enemigo que las pisa queda inmovilizado/enredado. El Signal Horn hace sonar la trampa para atraer enemigos hacia ella, o la detona a distancia si ya está activada. La hanger queda para remate y repliegue rápido (disengage). "Gadgeteer: hooks, redes, trampas" ([[Matriz Raza x Rol]]) literal. |
+| **Humano Strategist** | Control de terreno | *Hunting hanger* + *signal horn* | **Trampero de Caza.** Despliega trampas de red/cepo en el terreno — un enemigo que las pisa queda inmovilizado/enredado. El Signal Horn hace sonar la trampa para atraer enemigos hacia ella, o la detona a distancia si ya está activada. El remate del link no es la hanger — es el Signal Horn detonando la trampa/red a distancia sobre el Hollowed lanzado, inmovilizándolo sin dañarlo directamente (coherente con [[Acoplamientos]]: el Strategist no inflige daño directo). La hanger queda para repliegue rápido (disengage) y defensa personal, no para el remate. "Gadgeteer: hooks, redes, trampas" ([[Matriz Raza x Rol]]) literal. |
 
 **Nota sobre el giro de los Strategist (2026-08-07):** la primera pasada
 convergía los 3 en "sanador de área" (marca curativa / vapor curativo /

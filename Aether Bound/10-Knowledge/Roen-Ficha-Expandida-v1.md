@@ -115,20 +115,29 @@ Roen vino porque el jugador lo llamó. Eso es suficiente razón.
 ([[Geografía y Ciudades]] §El Encuentro con Roen, [[Estructura
 Dramática]]) y el guión ya escrito ([[Guion/Encuentro con Roen]]) — esta
 sección estaba en `draft` desde 2026-07-27 y describía una versión
-anterior (The Wilds, Roen ya presente como compañero).
+anterior (The Wilds, Roen ya presente como compañero). **Corrección
+2026-08-10 (2ª pasada):** el primer intento de este fix decía que el
+jugador "todavía no lo conoce en persona" — falso, contradice
+§Conexión con el jugador y las 18 Variantes de Encuentro más abajo en
+esta misma ficha (se conocen desde hace 1-2 años). Zephyr no es su
+primer encuentro; es la primera vez que **trabajan juntos** en esta
+misión puntual.
 
-El jugador ya contrató a Roen para el trabajo que se viene (purgar
-nidos, apagar God-Cores — el contrato del Triune Council), pero todavía
-no lo conoce en persona. Cruza solo Los Desfiladeros de Zephyr, el
-tutorial de su reino natal, hacia el punto de encuentro acordado. Antes
-de llegar, **3 Hollowed lo emboscan** — una pelea pensada para no
-ganarse en solitario. Roen **llega corriendo, ya en movimiento**, y lo
-saca del apriete: no está ahí de antemano, es un rescate. Guión completo
-en [[Guion/Encuentro con Roen]].
+El jugador contrató a Roen para el trabajo que se viene (purgar nidos,
+apagar God-Cores) — un arreglo personal, de mercenario, no el Contrato
+de Conquistador del Triune Council que el jugador firma por su cuenta
+([[Guion/Apertura — Roen Viejo]], [[Estructura Dramática]] §2). Cruza
+solo Los Desfiladeros de Zephyr, el tutorial de su reino natal, hacia el
+punto de encuentro acordado con Roen. Antes de llegar, **3 Hollowed lo
+emboscan** — una pelea pensada para no ganarse en solitario. Roen
+**llega corriendo, ya en movimiento**, y lo saca del apriete: no está
+ahí de antemano, es un rescate — pero no es un rescate entre
+desconocidos, es la primera vez que ese vínculo previo se pone a prueba
+en el terreno. Guión completo en [[Guion/Encuentro con Roen]].
 
 **Roen en esta escena:**
-- Entra resolviendo, no presentándose — el nombre y la charla vienen
-  después.
+- Entra resolviendo, no saludando — ya se conocen, no hace falta
+  presentación ni charla.
 - Competente sin fanfarria. Hace el trabajo.
 - Tras la pelea: observador. Mira cómo el jugador se sostuvo, no busca
   heridas.

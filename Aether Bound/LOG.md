@@ -8222,3 +8222,55 @@ linea reportada. Re-grep + linter en 0 criticos / 0 medium tras los fixes
 [[Los 3 Links de los Fijos]] y [[Guion/Encuentro con Roen]] a `ratificado`
 (criterio de cierre del sprint: 0 criticos en ambos). Queda tambien la
 pregunta abierta sobre tier de Valen/Darro (punto 2 arriba).
+
+## [2026-08-10, 2a pasada] canon-qa | re-corrida -- 3 nuevos criticos por subagente (uno mio), corregidos
+
+Re-corri los 2 subagentes (mismo alcance, en frio otra vez) para verificar los
+fixes de la entrada anterior. **No cerro.** 6 criticos entre ambos (fuerte
+solapamiento -- 2 eran el mismo hallazgo desde los dos angulos).
+
+**Bug propio detectado:** el fix de la ronda anterior (bajar el rol duplicado
+de Roen de T2 a T1) dejo a Roen sin ningun T2 -- unico de los 3 fijos sin tier
+medio, contradiciendo [[The Tether]] §B ("T1->T2->T3", sin excepcion) y el
+gate del Final 4 (>=2 companieros en T2+). Peor: mi propio texto agregado a
+[[Roen-Ficha-Expandida-v1]] ("todavia no lo conoce en persona") contradecia
+una seccion YA EXISTENTE de esa misma ficha (18 variantes de encuentro, se
+conocen hace 1-2 anios) que no habia leido con cuidado antes de escribir.
+
+**Fixes de esta pasada:**
+1. **T2 de Roen restaurado:** el contenido original "cadena de rescate" (que
+   la pasada anterior habia reasignado a la variante T1 "doble ancla") se
+   reasigna de nuevo, esta vez como **T2 generico** para los 3 roles, earned
+   por bond -- no exclusivo de rol duplicado. [[Los 3 Links de los Fijos]]
+   ahora: T1 base + T1-variante (doble ancla, solo combate compartido
+   Vanguard) + T2 (cadena) + T3 (Nothing Borrowed). Aclarado tambien que
+   "doble ancla" NO reemplaza el traversal base del link fuera de combate
+   compartido -- ambiguedad que el subagente de dramaturgia marco como
+   critico (perdida de la unica herramienta de traversal del jugador Vanguard
+   en Acto 1).
+2. **Corregido mi error:** Roen y el jugador YA se conocian (1-2 anios,
+   [[Roen-Ficha-Expandida-v1]] §Conexion con el jugador). Zephyr es la
+   primera vez que trabajan juntos en este contrato, no la primera vez que se
+   ven. Ajustado tambien el guion (la linea "not the kind you give a
+   stranger" ya era compatible, no necesito tocarla).
+3. **Linea "Contract said you could handle yourself" reescrita** a "Told
+   myself you could handle yourself before I took this job. Wasn't wrong." --
+   la version anterior confundia 3 lecturas de "contrato" (el Contrato de
+   Conquistador del Triune Council que firma el jugador vs. la contratacion
+   personal de Roen, mercenario). [[Geografía y Ciudades]] tambien ajustada
+   para distinguir ambos.
+4. **Remate Strategist: de "no melee" a "no dano directo" de verdad.** El fix
+   anterior solo saco el boton de melee pero el hand cannon (Enano) y la
+   hanger (Humano) seguian siendo golpes de muerte en la prosa -- violaba
+   [[Acoplamientos]] ("Strategist no dana") pese a citarlo. Reescrito en
+   [[Armamento Base — Matriz Raza x Rol]] y el guion: las 3 celdas
+   Strategist ahora neutralizan/marcan (Elfo: Tether Arcano: Enano: ronda de
+   marcaje del hand cannon, no bala letal; Humano: Signal Horn detona la
+   trampa, no la hanger) -- el Hollowed cae igual, pero no por el golpe del
+   Strategist.
+5. **[[Geografía y Ciudades]] ya no ofrece el sabor "atrapa a media caida"**
+   para esta escena puntual (seguia listado como opcion viva pese a que el
+   guion ya lo habia descartado explicitamente).
+
+**Metodo:** de nuevo, todos los fixes a la fuente. Linter en 0 criticos / 0
+medium tras esta pasada. Lanzando 3a re-corrida de los 2 subagentes.

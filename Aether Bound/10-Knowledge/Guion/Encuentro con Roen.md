@@ -65,18 +65,24 @@ Yours.
 [GAMEPLAY: a short input window opens. **Duelist:** the player presses
 the melee button to land the finisher with the race's base weapon
 ([[Armamento Base — Matriz Raza x Rol]]: double-bladed sword for Elfo,
-war pick & hammer for Enano, scimitar + parrying dagger for Humano).
-**Strategist:** the finisher is not melee — it's each celda's own
-ranged/control action landed on the thrown Hollowed instead (Elfo:
-Tether Arcano mark-and-pull; Enano: hand cannon shot; Humano: hanger
-throw/trap trigger — same table). Remate a nivel de rol, no una sola
-coreografía para las 6 celdas Duelist+Strategist (decisión de Boris,
-2026-08-07, ver [[LOG]]:7876-7881). Second Catch T1, thrown-enemy
-flavor. If the window is missed, this is NOT a fail state — the
-Hollowed falls back into the normal fight, the player just doesn't get
-the link's bonus impact ([[Los 3 Links de los Fijos]] §Roen, "Ventana de
-remate"). Roen turns to the other two Hollowed without waiting to see
-the finish land — he already knows it will.]
+war pick & hammer for Enano, scimitar + parrying dagger for Humano) —
+this one deals the killing blow, bonus damage/impact from the link.
+**Strategist:** no killing blow — the celda's control action lands on
+the thrown Hollowed instead and neutralizes it (Elfo: Tether Arcano
+marks it, yanked off-balance and out of the fight; Enano: hand cannon's
+marking round staggers and tags it for the rest of the group to finish;
+Humano: signal horn detonates the trap underfoot, net pins it down).
+The Hollowed still goes down
+in the same beat, just not from the Strategist's own hit — coherente
+con [[Acoplamientos]] (ratificado): el Strategist no inflige daño
+directo, controla. Remate a nivel de rol, no una sola coreografía para
+las 6 celdas Duelist+Strategist (decisión de Boris, 2026-08-07, ver
+[[LOG]]:7876-7881). Second Catch T1, thrown-enemy flavor. If the window
+is missed, this is NOT a fail state — the Hollowed falls back into the
+normal fight, the player just doesn't get the link's bonus effect
+([[Los 3 Links de los Fijos]] §Roen, "Ventana de remate"). Roen turns to
+the other two Hollowed without waiting to see the finish land — he
+already knows it will.]
 
 --- ROLE VARIANT B: VANGUARD (rol duplicado) ---
 
@@ -107,7 +113,8 @@ nod — the kind you give someone who did the job, not the kind you give
 a stranger.
 
 ROEN
-Contract said you could handle yourself. Contract wasn't wrong.
+Told myself you could handle yourself before I took this job. Wasn't
+wrong.
 
 (beat)
 
@@ -163,12 +170,16 @@ recurso. Este guión sigue ese patrón por consistencia — **asunción de
 diseño, no regla escrita, a confirmar con Boris antes de generalizarla
 al resto del guión de actos.**
 
-**"Contract wasn't wrong" — verificado contra canon.** Es la primera
-confirmación hablada en pantalla de que el jugador ya contrató a Roen
-antes de esta escena ([[Roen-Ficha-Expandida-v1]] §Escena 1) — no revela nada
-nuevo, solo lo hace diegético por primera vez, sin re-narrar la
-contratación en sí (que sigue sin mostrarse, tal como decidió
-[[Geografía y Ciudades]]).
+**"Told myself... wasn't wrong" — corregido 2026-08-10 (2ª pasada).**
+La versión anterior ("Contract said you could handle yourself") usaba
+"Contract" de forma ambigua con el Contrato de Conquistador del Triune
+Council (que firma el jugador, [[Guion/Apertura — Roen Viejo]]) — tres
+lecturas distintas convivían en el vault (ver [[LOG]]). Reescrita para
+que sea inequívocamente el juicio personal de Roen, no una cita de
+documento: confirma en pantalla que ya se conocían y que Roen aceptó el
+trabajo confiando en eso ([[Roen-Ficha-Expandida-v1]] §Escena 1,
+§Conexión con el jugador) — no la contratación en sí, que sigue sin
+mostrarse.
 
 **Tono de la primera línea de Roen — verificado.** "Competente sin
 fanfarria, asiente, no aplaude" ([[Roen-Ficha-Expandida-v1]] §Escena 1,

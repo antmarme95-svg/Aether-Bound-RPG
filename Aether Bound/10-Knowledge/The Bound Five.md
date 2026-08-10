@@ -75,6 +75,7 @@ que pedía Boris se resuelve por **pacing de contenido**, no por un tope
 de sistema visible — ver la página para el detalle completo.
 
 **Pendiente (❓):** links directos de Speck en su fase de desvelamiento
-previa a E3; nombres de UI/iconografía de los 6 estados T2/T3 nuevos;
-ronda de QA antes de ratificar [[Los 3 Links de los Fijos]]. → Task-Board.
+previa a E3; nombres de UI/iconografía de los 7 estados T1-variante/T2/T3
+nuevos (ver [[Los 3 Links de los Fijos]] §Pendiente); ronda de QA antes
+de ratificar [[Los 3 Links de los Fijos]]. → Task-Board.
 
