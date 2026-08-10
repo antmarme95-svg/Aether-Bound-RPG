@@ -367,10 +367,13 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
   de sus 15 años de guardia (recuperado como regalo anónimo, ver arriba
   la escena del Quiebre) — **carga las tres piezas visibles todo el
   juego, pero no las usa**, pelea a mano limpia (agarres, [[Los 3 Links
-  de los Fijos]] §Roen) hasta T3 ("Nothing Borrowed"), donde recién se
-  permite tocarlas. Sin conflicto con "dejó el escudo en la puerta" — es
-  el mismo escudo físico, vuelto a sus manos sin que él lo pidiera;
-  mandoble y espada nunca fueron del Triune Council, son gear posterior
+  de los Fijos]] §Roen). **Solo el escudo se desbloquea en T3** ("Nothing
+  Borrowed") — mandoble y espada siguen dormidos el juego entero, con o
+  sin T3 (aclarado 2026-08-10): son gear posterior a su Quiebre, sin el
+  peso simbólico del Council que sí carga el escudo. Sin conflicto con
+  "dejó el escudo en la puerta" — es el mismo escudo físico, vuelto a
+  sus manos sin que él lo pidiera; mandoble y espada nunca fueron del
+  Triune Council, son gear posterior
   sin ese peso.
 - **Adorno personal único:** un anillo de cobre en la mano izquierda — de su padre, primer guardia
 

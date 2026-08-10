@@ -144,8 +144,11 @@ something about how it wouldn't take long.
 
 It took the rest of my life.
 
-Roen's voice fades under the ambient sound of The Wilds — wind, distant
-birds, footsteps. By the time the camera settles fully into the player's
+Roen's voice fades under the ambient sound of Los Desfiladeros de
+Zephyr — wind, loose rock, footsteps on the trail (corrected 2026-08-10,
+3rd pass: was "The Wilds," which doesn't match where the tutorial
+actually opens — [[Geografía y Ciudades]] §El Encuentro con Roen). By
+the time the camera settles fully into the player's
 point of view, he's gone. No sting, no music cue marking the exit — the
 silence itself is the handoff.
 
@@ -196,7 +199,7 @@ jugable sea un **corte limpio y deliberado**, no un fundido ambiguo — si
 se siente ambiguo, cuela la sensación de narrador recurrente aunque no lo
 sea. Con el puente narrado, el corte limpio no es visual (ya no hay un
 `CUT TO BLACK` entre Roen y el jugador) sino **auditivo**: la voz de
-Roen se apaga bajo el ambiente de The Wilds y no vuelve — el silencio
+Roen se apaga bajo el ambiente de Los Desfiladeros de Zephyr y no vuelve — el silencio
 que sigue es la señal de que el jugador tiene control total, sin
 necesidad de una pantalla negra intermedia. Nada de la taberna (sonido,
 música, voz de Roen) debe sangrar más allá del punto donde su voz se

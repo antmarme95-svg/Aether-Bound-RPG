@@ -68,9 +68,14 @@ Vínculos y progresión de intimidad: [[The Tether]].
 
 **Resuelto (2026-08-05, provisional):** Roen, Valen y Darro tienen ahora
 sus propios links nombrados — ver [[Los 3 Links de los Fijos]]. Ya no son
-solo función genérica de rol; cada uno tiene T1→T3, objeto firma en T3,
-y una resolución específica para cuando el rol del jugador coincide con
-el suyo. El "bond más útil es el del Pivote conforme avanzan los actos"
+solo función genérica de rol; cada uno tiene T1→T3 y una resolución
+específica para cuando el rol del jugador coincide con el suyo.
+**Corregido 2026-08-10 (3ª pasada):** esta línea prometía "objeto firma
+en T3" para los 3 — falso, solo Roen tiene uno (el escudo); Valen y
+Darro no. Si Valen/Darro necesitan objeto o escena firma propia queda
+como pendiente de diseño en [[Los 3 Links de los Fijos]] §Pendiente, no
+como hecho ya resuelto. El "bond más útil es el del Pivote conforme
+avanzan los actos"
 que pedía Boris se resuelve por **pacing de contenido**, no por un tope
 de sistema visible — ver la página para el detalle completo.
 

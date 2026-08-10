@@ -146,19 +146,20 @@ motor resuelve eso.
    ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
    2026-08-10, ver [[LOG]]). Sigue directo de
    [[Guion/Encuentro con Roen]].
-2. **Re-corrida de QA pendiente (2ª vez).** La 17ª ronda (2026-08-10)
-   encontró 13 críticos, corregidos → la re-corrida encontró 6 más
-   (uno de ellos, un hueco de T2 que mi propio fix había dejado en
-   Second Catch de Roen) → corregidos también. Falta lanzar una
-   **3ª re-corrida** para confirmar cierre real (criterio: 0 críticos
-   en ambos subagentes) antes de pasar [[Los 3 Links de los Fijos]] y
-   [[Guion/Encuentro con Roen]] a `ratificado`. Detalle completo en
-   [[LOG]].
-3. **Pregunta abierta de la 17ª ronda:** Valen y Darro tienen el mismo
-   patrón estructural que tenía el rol duplicado de Roen (T2 marcado
-   como "earned" pero en realidad fijado en character creation) — Roen
-   ya se corrigió (ahora T1-variante + T2 genérico separado); revisar
-   si Valen/Darro necesitan el mismo tratamiento antes de ratificar.
+2. **Re-corrida de QA pendiente (3ª vez).** La 17ª ronda (2026-08-10)
+   encontró 13 críticos → re-corrida: 6 más (uno propio) → re-corrida:
+   4 más, esta vez sistémicos (T1 de los 3 links asumía "golpe del
+   jugador", rompía para Strategist; Darro sin T2 general; "objeto
+   firma en T3" falso para Valen/Darro; el bookend ratificado seguía
+   diciendo "The Wilds"). Todos corregidos a la fuente. Falta lanzar
+   una **4ª re-corrida** para confirmar cierre real (criterio: 0
+   críticos en ambos subagentes) antes de pasar [[Los 3 Links de los
+   Fijos]] y [[Guion/Encuentro con Roen]] a `ratificado`. Detalle
+   completo en [[LOG]].
+3. **Pregunta abierta:** ninguno de los 3 T3 de los fijos tiene "escena
+   firma" propia (solo Roen tiene objeto firma, el escudo) —
+   [[The Tether]] promete ambos para todo T3. Es decisión de diseño, no
+   de QA — revisar antes de ratificar [[Los 3 Links de los Fijos]].
 4. **Reglas de tráfico mientras tanto:** linter (`check_canon.py`) antes
    de cada checkpoint, siempre.
 5. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr — es

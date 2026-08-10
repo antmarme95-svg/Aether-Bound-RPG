@@ -80,18 +80,35 @@ sobre objetos, este es sobre **personas** — coherente con su Esencia
 
 **T1.** Roen agarra al jugador y lo saca de un apriete — un agarre
 enemigo, una caída, un área a punto de explotar — o agarra a un enemigo
-y lo lanza directo a donde el jugador pueda rematarlo. **Traversal:** te
+y lo deja expuesto para que el jugador lo remate. **Traversal:** te
 atrapa a media caída (red de seguridad) o te lanza a una cornisa que no
 alcanzás solo — es él sosteniéndote, no una plataforma improvisada.
 
-**Ventana de remate (decisión de Boris, 2026-08-07).** En el sabor
-"lanza a un enemigo", hay una ventana de input acotada para apretar el
-ataque/melee y conectar el remate. **Si el jugador falla la ventana, no
-es un fail state** — el combate sigue, el enemigo lanzado cae y se
-reincorpora a la pelea normal — pero **se anula el efecto de bonus del
-link** (el daño/impacto extra que el remate otorga). Whiff = perdés el
-premio del link, no perdés el combate. Aplica en general al T1, no solo
-a la escena de [[Guion/Encuentro con Roen]].
+**Ventana de remate — split por rol (decisión de Boris, 2026-08-07;
+corregido a la fuente 2026-08-10, 3ª pasada).** En el sabor "lanza a un
+enemigo", hay una ventana de input acotada. **Duelist/Vanguard:**
+conectan un golpe directo — daño/impacto extra si aciertan la ventana.
+**Strategist:** no golpea — su ventana se resuelve con su propia acción
+de control (ver [[Armamento Base — Matriz Raza x Rol]]: Tether Arcano/
+marca del hand cannon/trampa del Signal Horn), coherente con
+[[Acoplamientos]] ("Strategist no inflige daño directo"). **Si el
+jugador falla la ventana (cualquier rol), no es un fail state** — el
+combate sigue, el enemigo cae y se reincorpora a la pelea normal — pero
+**se anula el efecto de bonus del link**. Whiff = perdés el premio del
+link, no perdés el combate. Aplica en general al T1, no solo a la
+escena de [[Guion/Encuentro con Roen]].
+
+**Nota de co-dependencia (2026-08-10, 3ª pasada):** [[Acoplamientos]]
+(ratificado) hace que el Duelist necesite la marca de un Strategist
+para el daño **pleno** — no solo el remate del link, la regla base del
+juego. Cuando Roen deja a un enemigo "expuesto" para el remate, ese
+estado funciona como el equivalente de una marca de Strategist **para
+esta interacción puntual** (Roen genera la apertura que normalmente
+generaría un Strategist). Fuera de esta ventana de remate, la regla de
+`Acoplamientos` sigue vigente sin excepción — un Duelist sin ningún
+Strategist en el grupo (como en [[Guion/Encuentro con Roen]], donde
+Valen todavía no se sumó) no tiene daño pleno en el resto del combate,
+solo en el golpe de remate que Roen habilita.
 
 **T1, variante "doble ancla" (rol duplicado — jugador también Vanguard,
 solo en momentos de combate compartido).** No es un agarre: los dos se
@@ -113,22 +130,34 @@ de rescate" (agarre en relevo); [[Geografía y Ciudades]] había escrito
 correcta para el caso de rol duplicado — "doble ancla" es canon,
 "cadena de rescate" se reasigna abajo, a T2.
 
-**T2 — "Cadena."** Ganado con bond ([[The Tether]] §B), disponible para
-los 3 roles del jugador (no exclusivo de rol duplicado). Roen encadena
-dos acciones del link en el mismo respiro: agarra al jugador y en el
-mismo movimiento lanza a un segundo enemigo, o lanza a dos enemigos en
-secuencia sin perder ritmo — una cadena de rescate que ninguno de los
-dos arma solo a T1. La ventana de remate (arriba) aplica a cada blanco
-lanzado por separado.
+**T2 — "Cadena."** Ganado con bond ([[The Tether]] §B). **Duelist/
+Strategist:** Roen encadena dos acciones del link en el mismo respiro —
+agarra al jugador y en el mismo movimiento lanza a un segundo enemigo, o
+lanza a dos enemigos en secuencia sin perder ritmo — una cadena de
+rescate que ninguno de los dos arma solo a T1. La ventana de remate
+(arriba) aplica a cada blanco lanzado por separado. **Vanguard
+(aclarado 2026-08-10, 3ª pasada):** su T1 en combate compartido es
+"doble ancla" (sin agarres), así que su T2 encadena eso, no un agarre —
+**"Ancla Móvil":** el dúo mantiene la postura espalda-con-espalda pero
+avanza sincronizado, arrastrando el frente de batalla, y puede
+"soltarse" un instante para que Roen ejecute un solo lanzamiento de
+emergencia (el único punto donde el Vanguard sí ve el agarre/lanzamiento
+del T1 base) antes de volver a anclar.
 
 **T3 — "Nothing Borrowed."** Roen deja el agarre a mano limpia: absorbe
 un golpe letal dirigido al jugador con el cuerpo entero (una vez por
 encuentro), usando por primera vez su escudo real de los 15 años de
 guardia del Triune Council ([[Roen-Ficha-Expandida-v1]] §Años de
-Guardia) como placaje, no como herramienta encontrada. Hasta T3 confía
-solo en sus manos; en T3 vuelve a confiar en lo que dejó atrás cuando se
-fue. Beat de personaje, no solo power-up. **Reconciliado (2026-08-07):**
-el escudo vuelve a sus manos como regalo anónimo semanas después de
+Guardia) como placaje, no como herramienta encontrada. **Solo el
+escudo** — el mandoble y la espada siguen dormidos incluso en T3;
+"Nothing Borrowed" es específicamente sobre el objeto que el Council le
+devolvió, no sobre el arsenal completo (aclarado 2026-08-10, 3ª pasada
+— [[Roen-Ficha-Expandida-v1]] y [[Armamento Base — Matriz Raza x Rol]]
+mencionaban "las tres piezas" de forma ambigua; se mantienen cargadas y
+sin usar el juego entero, con o sin T3). Hasta T3 confía solo en sus
+manos; en T3 vuelve a confiar en lo que dejó atrás cuando se fue. Beat
+de personaje, no solo power-up. **Reconciliado (2026-08-07):** el
+escudo vuelve a sus manos como regalo anónimo semanas después de
 dejarlo en la puerta del Council — nunca sabe quién se lo devolvió,
 deliberadamente sin resolver (mismo recurso que los Wanderer's Goggles
 de Old Tobin Hale). Lo carga sin usar hasta este momento — detalle
@@ -144,7 +173,11 @@ Zenyatta (Overwatch), pero justificado por cálculo, no por magia.
 **T1 — dos botones, un orbe activo a la vez:**
 - **"Marked Variable" (Discord).** Valen calcula el punto débil
   estructural de un enemigo y lo marca: mientras dure, ese enemigo
-  recibe daño extra de cualquier golpe del jugador.
+  recibe daño extra del próximo golpe que reciba — del jugador o de un
+  aliado (generalizado 2026-08-10, 3ª pasada: para el jugador
+  Strategist, que no golpea directo, la marca sigue siendo útil porque
+  bonifica los golpes de Roen/Darro/Pivote presentes; no depende de que
+  el jugador mismo conecte un ataque).
 - **"Steady Variable" (Harmony).** Valen proyecta sobre un aliado la
   trayectoria de daño que calculó que va a recibir y lo compensa por
   adelantado: regeneración lenta y sostenida mientras dure la marca.
@@ -174,14 +207,24 @@ Arquetipo base: *Tanque ofensivo* (~Punisher) — pesado, contundente
 ([[Matriz Raza x Rol]], fila Enano/Duelist).
 
 **T1.** Golpe pesado que no busca marca, busca **quiebre**: abre una
-fisura en armadura, escudo o muro que el jugador explota de inmediato
-con su propio golpe. **Traversal:** la misma fisura abre rutas selladas
-— escombros, puertas trabadas, muros débiles.
+fisura en armadura, escudo o muro. **Duelist/Vanguard:** la explotan de
+inmediato con su propio golpe. **Strategist (generalizado 2026-08-10,
+3ª pasada):** no golpea la fisura — la usa como blanco para su propia
+acción de control (Elfo: tira/empuja al enemigo fisurado, que cae
+desestabilizado; Enano: la torreta prioriza el objetivo fisurado; Humano:
+la trampa lo inmoviliza ahí mismo), sin necesitar un golpe directo,
+coherente con [[Acoplamientos]]. **Traversal:** la misma fisura abre
+rutas selladas — escombros, puertas trabadas, muros débiles.
 
-**T2 — rol duplicado (jugador también Duelist).** En vez de pelear por
-el turno de golpear, sincronizan un golpe doble que abre fisuras que
-ninguno de los dos solo podría — muros y escudos que un Duelist solo no
-rompe.
+**T2 — "Doble Quiebre."** Ganado con bond ([[The Tether]] §B),
+disponible para los 3 roles (2026-08-10, 3ª pasada — antes solo existía
+como caso de rol duplicado). Darro golpea dos veces en rápida sucesión:
+el primero abre la fisura, el segundo la ensancha antes de que se
+cierre, dejando una ventana más larga para explotarla y afectando a un
+segundo enemigo cercano si está en rango. *Rol duplicado (jugador
+también Duelist):* variante synced — en vez de pelear por el turno de
+golpear, sincronizan un golpe doble que abre fisuras que ninguno de los
+dos solo podría — muros y escudos que un Duelist solo no rompe.
 
 **T3 — "Wide Open."** La fisura que abre ya no cierra en ese enemigo por
 el resto del encuentro, y se contagia a quien golpee cerca con el mismo
@@ -194,9 +237,15 @@ serio, sin chiste después.
 (3 T2 + 1 T1-variante + 3 T3); si "Marked Variable"/"Steady
 Variable" necesitan cooldown propio o comparten uno; ronda de QA de
 dramaturgia y de balance antes de pasar a `status: ratificado`. → Task-Board.
-**Pendiente (❓, 2026-08-10):** el rol duplicado de Roen bajó de T2 a T1
-por ser estructural (fijado en character creation, no earned). Valen
-(T2, línea "rol duplicado") y Darro (T2, línea "rol duplicado") tienen
-la misma estructura — mismo argumento podría aplicar. No se tocaron acá
-porque ninguna escena escrita los dramatiza todavía a bond cero; revisar
-antes de ratificar este documento.
+**Resuelto (2026-08-10, 3ª pasada):** los 3 fijos ahora tienen T2
+genérico (disponible para los 3 roles) además de su sub-caso de rol
+duplicado — Roen ("Cadena"), Valen (ambos orbes), Darro ("Doble
+Quiebre"). Cierra el hueco que dejaba a Darro sin T2 fuera de rol
+duplicado.
+**Pendiente (❓, 2026-08-10, 3ª pasada):** ninguno de los 3 T3 tiene
+"escena firma" propia (solo Roen tiene objeto firma, el escudo). Según
+[[The Tether]] §B, T3 debería ser "link perfeccionado + escena firma"
+para todo compañero. [[The Bound Five]] se corrigió para no prometer
+objeto firma universal (ver esa página), pero la pregunta de si Valen y
+Darro necesitan una escena firma propia queda abierta — es decisión de
+diseño, no de QA.

@@ -8274,3 +8274,47 @@ conocen hace 1-2 anios) que no habia leido con cuidado antes de escribir.
 
 **Metodo:** de nuevo, todos los fixes a la fuente. Linter en 0 criticos / 0
 medium tras esta pasada. Lanzando 3a re-corrida de los 2 subagentes.
+
+## [2026-08-10, 3a pasada] canon-qa | 3a re-corrida -- 4 criticos mas, mas profundos, corregidos
+
+3a re-corrida (2 subagentes, mismo alcance, en frio). **Buena noticia:** los 3
+temas que la 2a pasada habia arreglado (contrato personal vs. Contrato de
+Conquistador, "ya se conocian", cantidad/habitat de Hollowed) salieron
+**verificados limpios** en los 2 reportes -- primera vez que un barrido
+sobrevive intacto a una re-corrida completa en esta ronda.
+
+**4 criticos nuevos, mas sistemicos que los anteriores:**
+1. **T1 de los 3 links asumia "golpe del jugador"** en la fuente unica
+   ([[Los 3 Links de los Fijos]]) -- rompia para las 3 celdas Strategist
+   (violaba [[Acoplamientos]], "Strategist no dana") pese a que el guion y
+   Armamento Base ya tenian el split de rol correcto. Era literalmente el
+   fallo de la regla 8: se habia arreglado la linea reportada (el guion) dos
+   veces sin tocar la fuente que originaba el problema. Corregido en la
+   fuente para Roen (ventana de remate), Valen (Marked Variable ya no exige
+   "golpe" del jugador) y Darro (T1 con rama de control para Strategist).
+   Agregada tambien una nota de co-dependencia: el "expuesto" que genera
+   Roen al lanzar un enemigo funciona como equivalente de marca de
+   Strategist para el Duelist, solo en esa ventana puntual -- fuera de ella,
+   sin Strategist en el grupo, el Duelist no tiene dano pleno.
+2. **Darro sin T2 general** (solo tenia el caso de rol duplicado, a
+   diferencia de Roen y Valen). Agregado "Doble Quiebre", T2 generico
+   disponible para los 3 roles.
+3. **"Objeto firma en T3" (afirmado en [[The Bound Five]], ratificado) era
+   falso para Valen y Darro** -- solo Roen tiene uno (el escudo). Corregido
+   en la fuente que originaba la promesa; queda como pendiente de diseño
+   abierto en [[Los 3 Links de los Fijos]], no como hecho ya resuelto.
+4. **El bookend ratificado ([[Guion/Apertura — Roen Viejo]] y [[Voz
+   Narrativa]]) seguia diciendo "The Wilds"** como ambiente del handoff de
+   control, pese a que la estructura ratificada (2026-08-07) arranca en Los
+   Desfiladeros de Zephyr. El barrido de esta clase (rondas 1a y 2a) nunca
+   habia llegado a estos 2 archivos ratificados -- se corrigieron ahi.
+
+**Fixes menores en la misma pasada:** T2 "Cadena" de Roen no tenia sentido
+para el jugador Vanguard (T1 no incluye agarres para ese rol) -- agregada
+variante "Ancla Movil"; T3 de Roen aclarado a "solo el escudo" (mandoble y
+espada siguen dormidos con o sin T3), propagado a Roen-Ficha y Armamento
+Base, que tenian redaccion ambigua sobre "las tres piezas".
+
+**Metodo:** linter en 0 criticos tras esta pasada (un critical propio de
+cita rota en el primer intento, corregido de inmediato). Lanzando 4a
+re-corrida.

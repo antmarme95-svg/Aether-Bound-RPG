@@ -117,7 +117,9 @@ sugerencias, son la condición bajo la cual el bookend se aprobó:
   de raza/rol) mientras la cámara pasa a una viñeta silenciosa del
   jugador (match cut de luz: fogata/forja/amanecer según raza). El
   handoff pasa a ser auditivo — la voz de Roen se apaga bajo el ambiente
-  de The Wilds, no hay corte a negro intermedio. Incluye una línea que
+  de Los Desfiladeros de Zephyr (corregido 2026-08-10, 3ª pasada — era
+  "The Wilds", no coincide con dónde arranca el tutorial), no hay corte
+  a negro intermedio. Incluye una línea que
   alude al poder anti-ilusión del jugador **sin nombrarlo** (verificado
   contra [[Speck]]: el poder es privado, Roen nunca lo supo en la
   ficción — la línea es observación externa sin explicación).
