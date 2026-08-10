@@ -8324,3 +8324,38 @@ alcance) antes de cualquier otra cosa -- criterio de cierre sigue siendo
 0 criticos en ambos. Tres rondas seguidas encontraron problemas reales
 (nunca ruido, siempre solapamiento fuerte entre los 2 subagentes), asi
 que no asumir que esta vez cierra limpio solo porque van 3 pasadas.
+
+## [2026-08-10] research | gauntlet-loop investigado + brief para el consejo
+
+Boris pidio empezar a preparar el terreno para los 2 pendientes grandes
+ingestados fuera de sesion: (1) revisar gauntlet-loop como tercer metodo de
+desarrollo, (2) llevar al consejo la decision de motor/fases con su premisa
+de vertical slice.
+
+**Gauntlet-loop, How I Prompt Fable, y Workbench fetcheados y leidos.**
+Conclusion: gauntlet-loop **no es una tercera via de motor** -- es un metodo
+de produccion (constructor + critico independiente, loop sin limite de
+rondas contra un estandar de calidad medible), ortogonal a Godot/Unity, no
+un reemplazo. Ya disponible parcialmente en esta sesion via skill `/loop`;
+lo que falta es disciplina de prompt, no tooling nuevo. Candidato natural de
+"estandar medible" para Aether Bound: [[Benchmark Biomecánico]] (ya mide
+frame a frame contra Sable/Sifu/HZD). Workbench (coordinacion multi-agente
+via markdown compartido) no tiene caso de uso claro mientras el equipo sea
+Boris + 1 agente. Todo el analisis completo agregado a [[ADR-003 Reset de
+desarrollo y motor]] §Tercera via.
+
+**Brief para el consejo escrito:** [[Brief para el Consejo — Motor y Fases
+de Desarrollo]] compila la premisa de fases que Boris escribio (vertical
+slice = creacion de personaje x18 + prologo + tutorial + titulo + Encuentro
+con Roen, sin limite de tiempo para el desarrollo completo) + los insumos ya
+resueltos (Godot vs Unity de ADR-002/003, gauntlet-loop de arriba).
+**Tension detectada:** el candidato de slice de ADR-003 ([[Slice of Bond]],
+4 escenas narrativas, Humano Duelist x Dagna) no es el mismo alcance que
+pide la premisa de Boris (slice de onboarding/produccion, no de profundidad
+narrativa) -- marcado explicitamente en el brief para que el consejo no lo
+pise por error.
+
+**Estado:** ambos pendientes tienen el terreno preparado. Falta que Boris
+confirme si corre `/llm-council` con el brief ahora o prefiere ajustar la
+premisa primero -- la sesion de decision de ADR-003 sigue siendo no
+delegable, este brief la hace mas eficiente, no la reemplaza.

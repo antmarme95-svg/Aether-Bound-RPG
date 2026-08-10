@@ -108,6 +108,75 @@ En ese orden, la decisión de motor casi se toma sola y con evidencia, igual que
 - `ADR-002` queda **parcialmente superado**: su evidencia de rendering sigue siendo válida; su conclusión ("Godot es el motor") queda en revisión.
 - El [[Task-Board]] frente C (técnico) queda congelado hasta el cierre.
 
+## Tercera vía: Gauntlet Loop (agentes autónomos) — investigación 2026-08-10
+
+Boris pidió evaluar la metodología [gauntlet-loop](https://somethingbig.ai/gauntlet-loop)
+como alternativa a "Godot & Unity + Blender", con dos artículos de apoyo:
+[How I Prompt Fable](https://shumer.dev/how-i-prompt-fable) (Matt Shumer) y
+[Workbench](https://workbench.md/).
+
+### Qué es, en una línea
+
+Una técnica de **prompting/orquestación**, no un motor: un agente líder
+descompone un objetivo ambicioso en piezas, y cada pieza tiene un
+constructor (genera) y un crítico independiente (compara contra una
+referencia de calidad concreta — ej. screenshots de Call of Duty) en
+loop sin límite de rondas hasta satisfacer el estándar. El proyecto de
+referencia (`Claude-of-Duty`, Matt Shumer) generó ~55.000 líneas de
+código, texturas, meshes, animaciones y sonido desde un único prompt,
+corriendo sobre Claude Code/Codex.
+
+### Por qué NO es una tercera vía comparable a Godot/Unity
+
+**Es ortogonal al motor, no un reemplazo.** Gauntlet Loop es un método de
+*producción* (cómo se genera y verifica el trabajo), no un *runtime* de
+juego. El proyecto de referencia corre sobre stack web (no Godot, no
+Unity) — no hay evidencia de que la técnica esté probada contra un motor
+con requisitos como los nuestros: rigging humanoide por raza, ROM,
+combos tipo Sifu, cámara libre, gates de autotest. Comparar "Gauntlet
+Loop vs. Godot vs. Unity" mezcla dos ejes distintos: **motor** (dónde
+corre el juego) y **método de producción** (cómo se genera el
+contenido/código dentro de ese motor). El método podría aplicarse
+*sobre* cualquiera de los dos motores ya evaluados, no en su lugar.
+
+### Lo que sí es directamente aplicable, ya, sin decisión de motor
+
+Esta sesión de Claude Code **ya tiene una implementación parcial del
+patrón** vía la skill `/loop` (self-pacing) — construir, autoevaluar,
+iterar. Lo que falta para aplicar el patrón completo de Gauntlet Loop no
+es tooling nuevo, es **disciplina de prompt**, según "How I Prompt
+Fable": (1) objetivo grande y sub-especificado en vez de pasos
+prescriptos, (2) "house rules" inmutables en el prompt de sistema en vez
+de permisos caso por caso, (3) un estándar de calidad **medible**, no un
+adjetivo — para nosotros, candidatos ya existen: el [[Benchmark
+Biomecánico]] (mediciones frame a frame contra Sable/Sifu/HZD) es
+exactamente el tipo de "barra real" que la técnica pide, y ya lo
+tenemos, (4) verificación por un crítico independiente que **nunca**
+puede ser el mismo agente que construyó.
+
+**Workbench** resuelve coordinación multi-agente vía un doc markdown
+compartido con permisos granulares — útil si en algún momento se corren
+varios agentes en paralelo sobre distintas piezas del vertical slice
+(ej. un agente en assets, otro en combate, otro en UI), pero no
+resuelve nada que el vault + `Task-Board` no estén ya resolviendo a
+menor escala para un director trabajando con un solo agente a la vez.
+No hay caso de uso claro para adoptarlo mientras el equipo sea
+Boris + 1 agente.
+
+### Recomendación para la sesión de decisión
+
+No tratar Gauntlet Loop como punto 4 del ADR (motor). Tratarlo como
+**método de producción a aplicar dentro de la decisión de motor que se
+tome** — la pregunta correcta no es "¿Godot, Unity o Gauntlet Loop?"
+sino "una vez que el vertical slice y el motor estén definidos, ¿lo
+construimos con este patrón de constructor/crítico contra el Benchmark
+Biomecánico como estándar medible, en vez de a mano?". Es compatible con
+cualquiera de los dos motores evaluados.
+
 ## Pendiente
 
 Agendar la sesión de decisión. Requiere al director; no es delegable a un agente.
+Insumo listo para esa sesión: [[Brief para el Consejo — Motor y Fases de
+Desarrollo]] (2026-08-10) — compila esta investigación, la premisa de fases
+de Boris, y marca una tensión de alcance a resolver antes de correr el
+consejo.

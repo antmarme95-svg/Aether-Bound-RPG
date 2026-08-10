@@ -166,11 +166,23 @@ motor resuelve eso.
    de cada checkpoint, siempre.
 5. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr — es
    el único brief pendiente de la sección 12.
-6. **Pendiente ingestado por Boris:** Revisar a fondo la metodología propuesta en https://somethingbig.ai/gauntlet-loop como tercer método de desarrollo (vs Godot & Unity + Blender) incluyendo los hipervínculos dentro del artículo como https://somethingbig.ai/gauntlet-loop, [How I Prompt Fable — matt shumer](https://shumer.dev/how-i-prompt-fable), [Workbench — Turn your agents into a team](https://workbench.md/). Generar skills, loops o scripts según sea pertinente en caso de que vayamos por esta tercer vía.
-7. **Pendiente ingestado por Boris:** Llevar ante el consejo esta decisión de motor y desarrollo con la siguiente premisa de fases de desarrollo del juego:
-	1. Vertical slice de Aether Bound con creación de personaje (9 posibilidades * 2 (inclusión de género)) incluyendo selección de marcas/tatuajes/warpaint, selección de estilo de cabello y color (más vello facial si aplica), prólogo + tutorial + game title sequence + encuentro con Roen y rescate. Todo debe ser con el game feel correcto pero puede ser low poly, con biomecánica y fluidez correctas.
-		1. Este alcance de vertical slide, desde mi perspectiva incluye mecánicas de juego básicas, características de personajes, sistema de combate y habilidades (bond con Roen)
-	2. Desarrollo completo del juego después de completar guión y demás temas asociados o similares al GDD pendientes. No tengo un límite de tiempo (ej. "en un mes quiero publicar en steam"). Me he encariñado bastante con el lore y worldbuilding que estamos construyendo, entonces antes que como un negocio (si sale bien desde el punto de vista de ingresos netos, evidentemente se agradece), es un hobby y una pasión por los videojuegos y por homenajear al mundo de los videojuegos y las alegrías que me ha dado.
+6. **✅ Investigación de gauntlet-loop — hecha (2026-08-10).** No es una
+   tercera vía de motor: es un método de producción (constructor +
+   crítico en loop contra un estándar medible) ortogonal a Godot/Unity,
+   aplicable sobre cualquiera de los dos. Ya disponible parcialmente vía
+   skill `/loop`; candidato de estándar medible: [[Benchmark
+   Biomecánico]]. Detalle completo en [[ADR-003 Reset de desarrollo y
+   motor]] §Tercera vía.
+7. **Brief para el consejo — listo (2026-08-10).** [[Brief para el
+   Consejo — Motor y Fases de Desarrollo]] compila la premisa de fases
+   que escribió Boris + los insumos ya resueltos (Godot vs Unity,
+   gauntlet-loop) + una tensión de alcance sin resolver: el candidato de
+   slice de `ADR-003` ([[Slice of Bond]], 4 escenas narrativas) no es el
+   mismo alcance que pide la premisa de Boris (creación de personaje ×18
+   + prólogo + tutorial + título + Encuentro con Roen — un slice de
+   onboarding/producción, no de profundidad narrativa). **Falta:**
+   confirmar con Boris si corre `/llm-council` con este brief o si
+   quiere ajustar la premisa primero.
 
 **Resumen de la 17ª ronda de QA (2026-08-10)** (detalle completo en
 [[LOG]]): 13 críticos entre 2 subagentes en frío sobre todo el
