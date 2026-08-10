@@ -173,16 +173,23 @@ motor resuelve eso.
    skill `/loop`; candidato de estándar medible: [[Benchmark
    Biomecánico]]. Detalle completo en [[ADR-003 Reset de desarrollo y
    motor]] §Tercera vía.
-7. **Brief para el consejo — listo (2026-08-10).** [[Brief para el
-   Consejo — Motor y Fases de Desarrollo]] compila la premisa de fases
-   que escribió Boris + los insumos ya resueltos (Godot vs Unity,
-   gauntlet-loop) + una tensión de alcance sin resolver: el candidato de
-   slice de `ADR-003` ([[Slice of Bond]], 4 escenas narrativas) no es el
-   mismo alcance que pide la premisa de Boris (creación de personaje ×18
-   + prólogo + tutorial + título + Encuentro con Roen — un slice de
-   onboarding/producción, no de profundidad narrativa). **Falta:**
-   confirmar con Boris si corre `/llm-council` con este brief o si
-   quiere ajustar la premisa primero.
+7. **✅ Consejo corrido (2026-08-10) → [[ADR-003 Reset de desarrollo y
+   motor]] tiene BORRADOR DE CIERRE, pendiente de tu firma.** Salió:
+   hard reset SÍ · **Godot** (no se reabre hasta que el slice dé
+   veredicto) · slice = [[Slice of Bond]] recortado a **3 escenas** con
+   Dagna, greybox de entorno pero **no de cuerpo** (la biomecánica es el
+   canal por el que viaja la pérdida — es el punto de tu premisa que el
+   consejo casi tira junto con los tatuajes) · PC únicamente · alcance
+   de v1 diferido hasta medir el costo real en horas de un Pivote.
+   Transcript en `90-Raw/council-2026-08-10-motor-y-fases.md`.
+   **Corrección al consejo:** propuso "Dagna o Roen" para el slice —
+   malformado, **Roen es fijo y no traiciona**, no puede sostener la
+   coda del Bond vacío. Dagna gana por defecto.
+   **Falta para firmar:** (a) los 3 playtesters con nombre y fecha
+   (Boris los tiene definidos, hay que registrarlos en §C del cierre);
+   (b) 30 min de lectura para confirmar que Dagna sigue siendo el mejor
+   de los **9 Pivotes** post-rework; (c) tu VoBo al recorte de 3
+   escenas.
 
 **Resumen de la 17ª ronda de QA (2026-08-10)** (detalle completo en
 [[LOG]]): 13 críticos entre 2 subagentes en frío sobre todo el

@@ -209,7 +209,7 @@
 - [[Propuesta-Recursos-de-Modelado]] — **RATIFICADA 2026-07-12**: 5 recursos para subir el techo del pipeline procedural de personajes (triplanar, loft/perfil, gradientes, banding MToon, iteración) + 3 ajustes al plan de rework C6/M10 de la sesión paralela; loft = mini-loop pre-C6b.
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
 - [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene. ⚠️ Parcialmente superada por ADR-003.
-- [[ADR-003 Reset de desarrollo y motor]] — 🔴 **ABIERTA Y BLOQUEANTE** (2026-07-28): hard reset de código + revisión Godot→Unity. **No se toca código hasta cerrarla.** 5 criterios en orden: slice → plataforma → alcance v1 → motor → inventario. **§Tercera vía (2026-08-10):** gauntlet-loop investigado — es método de producción, no motor, ortogonal a Godot/Unity. Insumo para la sesión de decisión: [[Brief para el Consejo — Motor y Fases de Desarrollo]].
+- [[ADR-003 Reset de desarrollo y motor]] — 🟡 **BORRADOR DE CIERRE, pendiente de firma del director** (2026-08-10). Tras el consejo: hard reset SÍ · **motor GODOT** (ADR-002 vuelve a plena vigencia) · slice = [[Slice of Bond]] recortado a 3 escenas con Dagna, greybox de entorno pero **no** de cuerpo · PC únicamente · alcance de v1 diferido hasta tener el costo real en horas. Más las 3 piezas pre-código: árbol de "¿y si no duele?", contador de horas, y 3 playtesters con nombre y fecha. **§Tercera vía:** gauntlet-loop es método de producción, no motor. Insumos: [[Brief para el Consejo — Motor y Fases de Desarrollo]] · transcript del consejo en `90-Raw/council-2026-08-10-motor-y-fases.md`.
 
 ## 30-Loops (cómo trabajar)
 
