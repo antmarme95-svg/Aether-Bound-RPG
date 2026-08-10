@@ -15,7 +15,7 @@ updated: 2026-07-28
 
 ## Esencia
 
-Duelist de impacto cinético — misil humano, cuerpo como arma concentrada, dos hachas cortas y ninguna floritura. Pero **detrás del músculo hay acero más profundo**: Torgan vive por juramentos. Un Juramento de Forja anterior al grupo lo obliga en dirección opuesta a su corazón.
+Duelist de impacto cinético — misil humano, cuerpo como arma concentrada, warhammer a una mano y ninguna floritura. Pero **detrás del músculo hay acero más profundo**: Torgan vive por juramentos. Un Juramento de Forja anterior al grupo lo obliga en dirección opuesta a su corazón.
 
 La traición no es decisión — es **cumplimiento de promesa anterior.**
 
@@ -396,7 +396,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero del clan 
 
 Torgan no interviene — se queda quieto, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
 
-**Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja las dos hachas en el borde del cráter, sin ceremonia, y camina hacia las montañas.
+**Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja el warhammer en el borde del cráter, sin ceremonia, y camina hacia las montañas.
 
 **No vuelve.** Ningún enano lo ve otra vez con certeza. El clan menor no borra su nombre del registro — deja de anotarlo, y no por tacto: **con las forjas apagadas y el Aether ido, un clan menor de Ignis Reach tiene problemas más grandes que un juramento sin cerrar.** Torgan pasó cincuenta y cinco años sosteniendo lo más preciado que tenía, y el mundo lo dejó de registrar porque estaba ocupado sobreviviendo. Con los años la diferencia deja de notarse.
 
@@ -448,7 +448,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el bo
 
 **Torgan muere confrontándote en el cráter.** No se une. No negocia. No informa a su clan.
 
-Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a Torgan y cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck al verlo cruzar — el jugador la recoge del otro lado del borde. Y va contra el jugador con las dos hachas.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a Torgan y cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck al verlo cruzar — el jugador la recoge del otro lado del borde. Y va contra el jugador con el warhammer.
 
 **Línea antes de caer:** *"Esto no. Yo juré entregarla, no venderla."*
 
@@ -559,7 +559,7 @@ El centro de Torgan es que **no hay puerta.** Vekka podría dejar la pieza sin d
 - **Piel:** bronceada de forja, cicatrices profesionales de combate y de trabajo.
 - **Ojos:** grises, expresión seria que rara vez se quiebra.
 - **Postura:** erguida, peso plantado, listo para el impacto en cualquier momento.
-- **Arma:** dos hachas cortas de duelist, para combate cinético de impacto.
+- **Arma:** warhammer de guerra a una mano, cabeza compacta, para combate cinético de impacto. (Cambiado 2026-08-07 desde "dos hachas cortas" — colisionaba literal con [[Darro-Ficha-Expandida-v1|Darro]], mismo Enano Duelist.)
 - **Adorno único:** ninguno. El tatuaje es su identidad entera.
 - **Tic físico canónico:** el pulgar recorriendo la línea del tatuaje en el antebrazo izquierdo, de la muñeca al codo. **Aparece exactamente tres veces en toda la campaña:** en el Archive tras ver la cara del jugador con los Goggles, en el último tramo de la persecución, y en el cráter antes de la línea canónica. Nunca más. Es su único tell.
 - **Expresión facial:** severa por defecto. No es atenta como Vekka. No es quieta como Dagna. Torgan es **tenso** — la cara de alguien que sostiene algo pesado desde hace décadas y ya no recuerda cómo se ve el descanso.

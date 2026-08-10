@@ -1031,7 +1031,7 @@ Mood: melancolía gráfica, umbral, cinco personas antes de la decisión que las
 
 ---
 
-### 12.2 — Poster / Key Art (V2)
+### 12.2 — Poster / Key Art (V2) — RATIFICADO ✅
 
 **Archivo destino:** `marketing_key-art-poster-v2.png`
 
@@ -1057,6 +1057,8 @@ Cielo amplio ocupando más de la mitad del encuadre — gradiente de teal en lo 
 Mood: cinco personas en el techo del mundo, viendo todo lo que está en juego a la vez — y todavía sin saber hacia dónde va a terminar la historia.
 
 **Negativos:** No Speck, no fox silhouette. No text, no title, no logo, no labels, no captions. No visible crater or jade light on the horizon (no First Wound). No readable city detail — silhouettes only. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No heroic action poses. No characters facing the camera. No weapons drawn. No dramatic lens flare. No modern movie-poster collage layout.
+
+**QA (evaluado retroactivamente — generado 2026-07-28, evaluado 2026-08-07):** ✅ **Ratificada.** Las 3 franjas de horizonte correctas (río/Rivermeet izquierda, Stillspire sobre el dosel de Gloomvault al centro, terreno volcánico con resplandor de Ignis Reach a la derecha), sur ausente sin indicios de First Wound, hueco de composición donde estaba Speck, cielo con el gradiente exacto y espacio limpio para el logo, perspectiva aérea correcta, sin armas desenvainadas ni poses heroicas. 🟡 Nota menor no bloqueante: mismo ícono de destello/diamante blanco en la esquina que ya se viene marcando desde el batch de Zephyr (§15.4) — contaminación repetida de NB2, no exclusiva de esta lámina.
 
 ---
 
@@ -1480,6 +1482,232 @@ aire donde conectó el golpe, nada más brilla en la imagen. Destino:
 ```
 Use the attached dwarf male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Darro", a ~63-year-old dwarf Duelist, 4.5 heads tall, rigid trapezoid build, lighter build than a heavily-armored dwarf — leather instead of plate, short axes at his belt. Face: reddish-brown hair in a short topknot or warrior braid, no beard, an unfinished amber guild tattoo (a single symbol, not the full mastery pattern) on one forearm, open loose-limbed expression, eyes that glint with constant motion. Action pose, full follow-through of a heavy overhead strike just landed: Darro's weapon has just struck an unseen surface directly in front of him, his whole body low and torqued from the swing, one arm still extended past the point of impact. Where the blow landed, a jagged crack of bright white-gold light splits open across the empty air like a fracture line in glass — sharp, sudden, the only VFX in the image. His expression, unusually for him, is completely serious — no smirk, no joke, focused entirely on the impact. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation leather-brown palette with a single sharp white-gold fracture-light accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of sudden, uncharacteristic gravity. Negative: no tall or slender body, no full beard, no heavy plate armor, no playful or smirking expression, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the single fracture-light accent, no text, no labels, no captions, no UI icon framing.
 ```
+
+## 15 — Los Desfiladeros de Zephyr (tutorial, Acto 1, 3 skins raciales)
+
+**Contexto:** primer tramo jugable del juego, template compartido con 3 skins
+por raza de origen ([[Geografía y Ciudades]] §Los Desfiladeros de Zephyr).
+Tramo solo (sin compañeros) que corta a mitad de camino con el title card
+"AETHER BOUND" y termina en la emboscada de 3 Hollowed donde Roen interviene
+([[Geografía y Ciudades]] §El Encuentro con Roen). Los 3 briefs abajo son el
+entorno del tramo — no la escena de la emboscada, que es un beat de guión
+aparte, pendiente de brief propio cuando se aborde esa escena.
+
+### 15.1 — Zephyr Canyons, variante humana (Mistbound Frontier / Aethelgard) — RATIFICADO ✅
+
+**Archivo destino:** `zephyr-canyons-human-v1.png`
+
+**Especificación:** Wide cinematic landscape keyframe, 16:9, of a narrow arid
+canyon pass at the edge of the Mistbound Frontier — the human origin's
+opening tutorial stretch. Composition rules: empty space is the protagonist —
+a single tiny traveler figure walks alone along a dusty trail cut into the
+canyon floor, seen from far away, small against the scale of the rock walls.
+Foreground: pale sun-bleached sandstone walls rising on both sides, crisp
+black ink linework on the rock strata, sparse dry scrub clinging to ledges.
+Middle ground: the trail bends between boulders and a half-collapsed wooden
+watch-post marker (a single weathered signpost, no legible text), hinting at
+a military Standing outpost further ahead; faint tracks of a minor beast
+crossing the path. Far distance: the canyon opens toward a hazy horizon of
+low frontier hills, dissolving into flat pale ochre silhouettes, aerial
+perspective. Light: harsh midday sun, hard-edged shadows pooling at the base
+of the walls, warm dusty haze in the air, wind-blown grit implied along the
+ridgelines. Overall palette: washed ochres, sand, rust, low saturation.
+Art style: hand-painted graphic novel watercolor — crisp black ink linework,
+flat cel shading in 3–4 fixed light bands with dry-brush jittered edges,
+washed low-saturation watercolor palette, visible paper grain, style blend of
+Sable's ligne claire and Breath of the Wild's soft impressionist color, mood
+of solitary vigilance, first steps of a long road.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow. No lush vegetation. No
+characters in close-up. No text, no labels, no captions, no annotations, no
+diagram-style callouts.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor.** Cañón amplio con
+figura diminuta en el sendero (silueta correcta), cartel de madera sin
+texto, paleta ochre/arena lavada, línea negra nítida en primer plano,
+montañas disolviéndose en la lejanía (perspectiva aérea correcta). 🟡 Notas
+no bloqueantes: la luz lee difusa/pareja en vez de la luz dura de mediodía
+con sombras marcadas que pedía el brief; los arbustos leen algo más verdes
+que "sparse dry scrub" árido.
+
+### 15.2 — Zephyr Canyons, variante enana (Ignis Reach) — RATIFICADO ✅
+
+**Archivo destino:** `zephyr-canyons-dwarf-v1.png`
+
+**Especificación:** Wide cinematic keyframe, 16:9, of a descending volcanic
+cavern pass — the dwarf origin's opening tutorial stretch. Composition
+rules: empty space is the protagonist — a single tiny traveler figure climbs
+down a narrow carved stone stairway, seen from far above, dwarfed by the
+scale of the cavern. Foreground: dark angular volcanic rock walls, crisp
+black ink linework on jagged basalt edges, a thin vein of glowing orange
+magma tracing down one wall like a seam. Middle ground: the stairway
+switches back past a geothermal vent hissing faint steam, small pools of
+low-glow lava far below, chunks of raw ore embedded visibly in the rock —
+first hint of the underground-resources mechanic. Far distance: the cavern
+drops into a hazy orange-black abyss, heat-shimmer dissolving detail,
+aerial perspective in reverse (looking down instead of out). Light: warm
+ember-orange glow from below mixing with cold blue ambient light filtering
+from a distant opening above, dramatic contrast, floating embers drifting
+upward. Overall palette: charcoal black, deep rust-orange, low saturation
+elsewhere. Art style: hand-painted graphic novel watercolor — crisp black
+ink linework, flat cel shading in 3–4 fixed light bands with dry-brush
+jittered edges, washed low-saturation watercolor palette, visible paper
+grain, style blend of Sable's ligne claire and Breath of the Wild's soft
+impressionist color, mood of descent into the unknown, controlled danger.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow beyond the magma/ember accents.
+No open-sky daylight. No characters in close-up. No text, no labels, no
+captions, no annotations, no diagram-style callouts.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor.** Contraste
+cálido/frío logrado con precisión (magma naranja abajo vs. apertura
+azul-fría arriba, exactamente lo que pedía el brief), vapor del
+respiradero geotérmico, embers flotando, charcos de lava brillando abajo,
+escala vertiginosa. 🟡 Nota no bloqueante: la escalera es de tablones de
+madera, el brief pedía "narrow carved stone stairway" — desviación de
+material, no de composición.
+
+### 15.3 — Zephyr Canyons, variante élfica (Stillwood) — RATIFICADO ✅
+
+**Archivo destino:** `zephyr-canyons-elf-v1.png`
+
+**Especificación:** Wide cinematic keyframe, 16:9, of a dense ascending
+forest ravine — the elf origin's opening tutorial stretch. Composition
+rules: empty space is the protagonist — a single tiny traveler figure climbs
+upward along a root-choked slope, seen from far below, small against the
+scale of the colossal trees. Foreground: thick tangled roots and hanging
+vines crisp in black ink linework, a few vines coiled aggressively across
+the trail — hostile nature the player must push through, first hint of the
+locomotion mechanism being taught here (climbing/vaulting handholds visible
+in the roots and rock). Middle ground: shafts of green-gold light cutting
+through a dense canopy, moss-covered boulders, a narrow game-trail switching
+upward between ancient trunks. Far distance: the canopy thickens into a hazy
+green blur far overhead, aerial perspective, no sky visible yet — the
+ascent isn't finished. Light: dappled forest light, soft and filtered,
+long vertical light shafts, cool green-teal ambient shadow. Overall palette:
+deep forest green, moss, faint Aether-teal undertone, low saturation.
+Art style: hand-painted graphic novel watercolor — crisp black ink linework,
+flat cel shading in 3–4 fixed light bands with dry-brush jittered edges,
+washed low-saturation watercolor palette, visible paper grain, style blend
+of Sable's ligne claire and Breath of the Wild's soft impressionist color,
+mood of quiet effort, nature testing the traveler.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow. No open canyon/desert
+elements. No characters in close-up. No text, no labels, no captions, no
+annotations, no diagram-style callouts.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor — la más lograda de
+las 3.** Vides enredadas de forma agresiva cruzando el paso, musgo, rayos
+de luz verde-dorada atravesando el dosel, ningún cielo visible (el ascenso
+no termina, como pedía el brief). 🟡 Nota no bloqueante: la composición lee
+más como "parado entre raíces" que como una pendiente en ascenso — el
+brief pedía que el mecanismo de locomoción (handholds en raíces/roca)
+fuera visible, y no es evidente que haya desnivel.
+
+### 15.4 — Hallazgo transversal (las 3 láminas)
+
+El mismo ícono de destello/diamante blanco aparece idéntico en la esquina
+inferior derecha de las 3 imágenes — probablemente un elemento de UI de
+NB2 filtrándose (mismo tipo de contaminación que la regla anti-texto de
+§0, aunque no es texto). No bloqueó la ratificación de ninguna de las 3.
+**Nota para futuros briefs de este batch:** si se re-corre alguna,
+agregar al negativo *"no watermark, no sparkle icon, no UI overlay
+elements"*.
+
+## 16 — La Emboscada de los 3 Hollowed — Roen interviene (cierre del tutorial, Acto 1) — RATIFICADO ✅
+
+**Contexto:** el beat que resuelve Los Desfiladeros de Zephyr
+([[Geografía y Ciudades]] §El Encuentro con Roen, pasos 4-5): el jugador,
+solo, es acorralado por 3 Hollowed ([[Villanos Menores]] §The Hollowed) —
+una pelea que no se puede ganar en solitario, la Zona B de
+[[Acoplamientos]] ("obstáculo imposible sin tu primer compañero"). Roen
+entra en cuadro en el instante justo. **Este brief captura el instante de
+tensión máxima — los Hollowed ya cerraron el círculo, Roen recién entra
+en cuadro** — no el momento del rescate en sí (ese ya existe, ratificado,
+en [[Briefs de Concept Art]] §14.1, `roen-second-catch-v1.png`: el
+mecanismo del link *Second Catch* aislado sobre fondo neutro). Los dos
+briefs son complementarios, no redundantes: éste es el establishing shot
+narrativo con entorno; §14.1 es el close-up del link en acción.
+
+**Variante de entorno:** ambientado en la skin humana de Los Desfiladeros
+de Zephyr (§15.1, Mistbound Frontier/Aethelgard) — es la variante por
+default del elenco fijo (Roen es humano, su ficha y su brief de link ya
+usan ese registro). Si hace falta una versión ambientada en la skin
+enana o élfica más adelante, es la misma composición con el fondo de
+§15.2/§15.3 — no bloquea nada mientras tanto.
+
+**Archivo destino:** `zephyr-ambush-roen-arrival-v1.png`
+
+**Referencias a adjuntar (las 3, ya ratificadas — ancla de diseño):**
+`roen-second-catch-v1.png` (Roen: cara, cuero remachado, capa, anillo de
+cobre), `the-hollowed-v1.png` (los 3 Hollowed: piel agrietada, vetas
+violeta-rojas, cara en blanco), `zephyr-canyons-human-v1.png` (entorno:
+cañón árido, paleta ochre, luz de mediodía). Sin las 3 adjuntas, NB2
+tiende a re-derivar diseño propio en vez de mantener consistencia con lo
+ya aprobado.
+
+**Especificación:**
+
+```
+Wide cinematic scene keyframe, 16:9, of an ambush at its peak tension, set in the same narrow arid canyon pass as the Zephyr Canyons human-origin tutorial (pale sun-bleached sandstone walls, washed ochre palette, harsh midday light). Composition: a small lone traveler figure stands cornered against a canyon wall at the center of the frame, three "Hollowed" creatures closing in from three different angles — large hunched humanoid figures with clay-cracked skin and faint dull violet-red Aether veins glowing at the joints, blank slack faces, tattered traveler's clothes, feral pack-hunting posture, the same design as the ratified Hollowed reference. The violet-red glow of their veins is the only saturated color near the traveler — danger read as pure color per the project's visual language. Entering the frame from the trail behind, at speed: "Roen", a weathered 45-year-old human Vanguard in riveted leather and a heavy earth-tone cape whipping from sudden motion, cape and posture caught mid-stride as he closes the distance, not yet in contact with any Hollowed — his hand is reaching but the catch hasn't happened yet, no VFX glow on him yet, this is the half-second before the rescue, not the rescue itself. Camera reads as a wide establishing shot from slightly above and behind the traveler, canyon walls framing the action, dust kicked up from the Hollowed's approach, hard-edged midday shadows. Overall palette: washed ochres and sand, broken only by the dull violet-red veins on the three Hollowed — the single alarming color in the frame. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of a trap closing, help arriving just in time but not yet arrived.
+```
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow beyond the dull violet-red
+Hollowed veins. No tusks, no horns, no bestial animal features on the
+Hollowed, no orc-cliché green skin. No contact/impact VFX on Roen yet —
+the catch hasn't happened. No close-up faces — this is a wide scene shot,
+not a character portrait. No text, no labels, no captions, no
+annotations, no diagram-style callouts, no watermark, no sparkle icon, no
+UI overlay elements.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor.** Los 3 Hollowed
+correctos (piel agrietada, vetas violeta-rojas en las articulaciones,
+postura de manada agachada, ropa hecha jirones), Roen sin VFX de
+contacto todavía — mano extendida, el rescate aún no pasó, exactamente
+el instante que pedía el brief. Capa tierra ondeando, cuero remachado,
+entorno de cañón árido consistente con §15.1. El peligro (vetas violeta)
+es el único color saturado del cuadro. 🟡 Notas no bloqueantes: el pelo de
+Roen sale gris/blanco acá, en `roen-second-catch-v1.png` (§14.1, ya
+ratificada) es castaño oscuro — inconsistencia de continuidad entre las
+dos láminas del mismo personaje, anotar si se re-corre algo de Roen a
+futuro. El jugador queda en medio del sendero, no literalmente
+"acorralado contra la pared" como pedía el brief — no afecta la lectura
+general.
+
+## 17 — Lyris re-roll: bumeranes élficos + limpieza de texto (edición sobre imagen) — RATIFICADO ✅
+
+**Contexto:** `lyris-v1.png` es una lámina previa a la regla anti-texto
+(§0) y a esta sesión de armamento — muestra dos dagas curvas cortas en
+las caderas, arma vieja descartada por colisión con Nyael (mismo Elfa
+Duelist, [[Armamento Base — Matriz Raza x Rol]] §Colisiones con los
+Pivotes, 2026-08-07: Lyris pasa a par de bumeranes élficos de doble
+filo). La lámina nunca tuvo brief formal ratificado en esta página.
+
+**Archivo destino:** `lyris-v2.png`
+
+**Referencia a adjuntar:** `lyris-v1.png` (ancla de pose, anatomía,
+traje, arnés de cuerdas de traversal aéreo — todo eso se conserva).
+
+```
+Keep this exact character sheet — same pose, front and side views, same anatomy, same harness/armor, same long tethered cords at the wrists for aerial traversal, same hair and face — but make two changes only. First, replace the two curved short daggers holstered at her hips with a pair of elven war-boomerangs: curved double-edged blades, each about forearm-length, worn crossed on a strap across her lower back instead of at the hips — they read as throwing weapons that arc and return, not stabbing daggers. Second, remove all overlaid text, titles, and labels from the image entirely — no "Lyris", no "Aerial Duelist", no "Front View" / "Side View" captions, clean concept sheet with no typography anywhere.
+```
+
+**Negativos:** No text, no labels, no captions, no titles, no diagram
+callouts. No changing pose, face, hair, harness, or the aerial tether
+cords. No curved daggers remaining anywhere on the body. No photorealism
+or PBR rendering, no anime cel shading, no Genshin Impact candy
+saturation, no neon glow.
+
+**QA (2026-08-07):** ✅ **Ratificada.** Pose, anatomía, arnés y cuerdas de
+traversal aéreo intactos; texto superpuesto eliminado por completo. En
+la vista lateral se ven con claridad los dos bumeranes curvos cruzados
+en la espalda baja, reemplazando las dagas. 🟡 Nota menor no bloqueante:
+en la vista frontal el arma queda tapada por el arnés/capa — la lateral
+resuelve la lectura sin ambigüedad.
 
 ## Notas de uso
 

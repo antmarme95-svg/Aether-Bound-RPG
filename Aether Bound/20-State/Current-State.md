@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-07
+updated: 2026-08-10
 ---
 
 # Current State
@@ -134,31 +134,47 @@ motor resuelve eso.
 
 ## Pendientes
 
-### 🗓 Inmediato — arrancar acá mañana
+> Boris también escribe acá directo (fuera de sesión con el asistente) —
+> cualquier ítem nuevo bajo "Inmediato" o dentro de las listas de abajo
+> se revisa juntos al arrancar la próxima sesión, se lea o no la marca
+> de quién lo escribió.
 
-**Arranca el guión.** Diálogos/screenplay empiezan mañana (2026-08-07),
-**sin ronda nueva de subagentes de QA** — decisión de Boris (2026-08-06)
-para conservar presupuesto semanal hasta el domingo.
+### 🗓 Inmediato — próxima sesión
 
-**Reglas de tráfico mientras tanto (obligatorias, no opcionales):**
-1. El linter (`check_canon.py`, gratis) sigue corriendo antes de cada
-   checkpoint como siempre — eso no se salta nunca.
-2. Diálogo sobre terreno ya auditado en la 16ª (arcos, encuentros,
-   traiciones, los 60 epílogos) se escribe con confianza, sin reserva.
-3. Cualquier línea de guión que toque [[Los 3 Links de los Fijos]]
-   (Second Catch, The Long Calculus, Open Seam) se trata como
-   **provisional** — está bien escribirla, pero no se da por definitiva
-   hasta el QA del domingo.
-4. **Domingo:** una sola ronda de subagentes audita todo lo acumulado —
-   el guión nuevo de la semana + los links de fijos que siguen en
-   `status: provisional` — en vez de gastar dos corridas separadas.
+1. **Guión: siguiente escena.** El tramo de caminata silenciosa hacia la
+   ciudad natal, y la escena en la taberna donde se suma Valen
+   ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
+   2026-08-10, ver [[LOG]]). Sigue directo de
+   [[Guion/Encuentro con Roen]].
+2. **Re-corrida de QA pendiente:** la 17ª ronda (2026-08-10) encontró 13
+   críticos entre 2 subagentes en [[Los 3 Links de los Fijos]] +
+   [[Guion/Encuentro con Roen]], todos corregidos a la fuente. Falta
+   re-correr los 2 subagentes (criterio de cierre: 0 críticos en ambos)
+   antes de pasar esos 2 archivos a `ratificado`. Detalle completo en
+   [[LOG]].
+3. **Pregunta abierta de la 17ª ronda:** el rol duplicado de Roen bajó
+   de T2 a T1 en [[Los 3 Links de los Fijos]] (es estructural, no
+   earned). Valen y Darro tienen el mismo patrón en sus propios casos de
+   rol duplicado — revisar si aplica el mismo ajuste antes de ratificar.
+4. **Reglas de tráfico mientras tanto:** linter (`check_canon.py`) antes
+   de cada checkpoint, siempre.
+5. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr — es
+   el único brief pendiente de la sección 12.
+6. **Pendiente ingestado por Boris:** Revisar a fondo la metodología propuesta en https://somethingbig.ai/gauntlet-loop como tercer método de desarrollo (vs Godot & Unity + Blender) incluyendo los hipervínculos dentro del artículo como https://somethingbig.ai/gauntlet-loop, [How I Prompt Fable — matt shumer](https://shumer.dev/how-i-prompt-fable), [Workbench — Turn your agents into a team](https://workbench.md/). Generar skills, loops o scripts según sea pertinente en caso de que vayamos por esta tercer vía.
+7. **Pendiente ingestado por Boris:** Llevar ante el consejo esta decisión de motor y desarrollo con la siguiente premisa de fases de desarrollo del juego:
+	1. Vertical slice de Aether Bound con creación de personaje (9 posibilidades * 2 (inclusión de género)) incluyendo selección de marcas/tatuajes/warpaint, selección de estilo de cabello y color (más vello facial si aplica), prólogo + tutorial + game title sequence + encuentro con Roen y rescate. Todo debe ser con el game feel correcto pero puede ser low poly, con biomecánica y fluidez correctas.
+		1. Este alcance de vertical slide, desde mi perspectiva incluye mecánicas de juego básicas, características de personajes, sistema de combate y habilidades (bond con Roen)
+	2. Desarrollo completo del juego después de completar guión y demás temas asociados o similares al GDD pendientes. No tengo un límite de tiempo (ej. "en un mes quiero publicar en steam"). Me he encariñado bastante con el lore y worldbuilding que estamos construyendo, entonces antes que como un negocio (si sale bien desde el punto de vista de ingresos netos, evidentemente se agradece), es un hobby y una pasión por los videojuegos y por homenajear al mundo de los videojuegos y las alegrías que me ha dado.
 
-**Resumen de lo cerrado el 2026-08-05/06** (detalle completo en [[LOG]]):
-Sprint QA 16ª cerrado · [[Los 3 Links de los Fijos]] diseñados
-(provisional, pendiente QA domingo) · resolución del botón Bond con 4
-links vía council ([[Bond y el Bond Vacío]] §Resolución) · concept art
-de los 3 links de fijos y del batch completo del Bestiario (9/9,
-incluido el pivote de Mirror Stalker) ratificados.
+**Resumen de la 17ª ronda de QA (2026-08-10)** (detalle completo en
+[[LOG]]): 13 críticos entre 2 subagentes en frío sobre todo el
+`provisional` acumulado — corregidos a la fuente: dónde/cuándo se suma
+Valen (taberna, ciudad natal), rol duplicado de Roen ("doble ancla" +
+bajado a T1), excepción de manada de los 3 Hollowed, reubicación de
+"El Encuentro" en las fichas draft de Roen/Valen (Zephyr, no The
+Wilds), remate Strategist restaurado a distancia, escudo de Roen
+quitado de la escena del tutorial, y 3 fixes menores de residuos.
+Pendiente re-corrida antes de ratificar (ver punto 2 arriba).
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond
@@ -195,20 +211,21 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
 - Cabeza de the Academy of Sages (baja prioridad)
 
 ### Narrativa / guión (próximo frente real — en inglés)
-- **✅ Bookend de Roen viejo — cerrado (2026-08-07).** [[Voz Narrativa]] +
+- **✅ Bookend de Roen viejo — cerrado.** [[Voz Narrativa]] +
   [[Guion/Apertura — Roen Viejo]] + [[Guion/Cierres — Roen Viejo]], los 3
-  `ratificado`. Sin narrador durante el juego; único bookend — apertura
-  neutra en taberna con puente narrado al Acto 1 (Roen se apaga sobre
-  una viñeta silenciosa del jugador, sin corte a negro) + 5 cierres
-  variables por final (F1/F2a/F2b/F3/F4), formato conversación con un
-  Barkeep fijo. Primer guión real del juego, escrito de punta a punta.
-- **✅ Estructura del Encuentro con Roen — confirmada (2026-08-07).**
-  [[Geografía y Ciudades]]: title card "AETHER BOUND" a mitad del tramo
-  solo (no al final) → emboscada de 3 Hollowed, imposible en solitario
-  → Roen interviene en el punto ya acordado (contratación ya es hecho
-  previo) → tutorial de *Second Catch* variable por **rol**, no raza.
-- **🗓 Próximo paso:** guión real de la escena (diálogo, 3 variantes de
-  rol) — hoy es solo estructura.
+  `ratificado`. Sin narrador durante el juego; único bookend.
+- **✅ Encuentro con Roen — estructura + guión escritos.**
+  [[Geografía y Ciudades]] fija la secuencia (title card a mitad del
+  tramo solo → emboscada de 3 Hollowed → Roen interviene → *Second
+  Catch* variable por rol, no raza). [[Guion/Encuentro con Roen]] la
+  escribe, `status: provisional` (toca *Second Catch*, pendiente QA del
+  domingo).
+- **✅ Armamento Base ratificado — 12 celdas + 9 Pivotes sin
+  colisiones.** [[Armamento Base — Matriz Raza x Rol]]: arma/verbo/
+  mecánica por celda, ventana de input del remate, equipamiento de
+  Roen/Darro/Valen, escudo de Roen reconciliado. Barrido contra los
+  Pivotes cerró 2 colisiones (Torgan, Lyris). Implementación
+  (hitbox/timing/peso) sin verificar todavía — no bloquea.
 - Guión completo por actos (GDD §1.2 tiene estructura, no hay diálogos)
 - Momentos de Persona de Speck; diálogos del Bautizo (Darro la nombra)
 - Los 5 Finales — scripting de diálogos/cinemática; estado post-final
@@ -216,13 +233,21 @@ Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
 - Traducción de los beats de diálogo existentes en español (Reckoning, etc.)
 
 ### Concept art pendiente
-- **King Borran → §9b-v3 escrito (2026-08-05)**, prosa corta estilo
-  Kadrun, listo para correr — reemplaza el intento de re-roll anterior.
+- **✅ Tutorial de Zephyr completo — 5/5 ratificadas.** [[Briefs de
+  Concept Art]] §15 (entorno ×3 skins) + §16 (emboscada/Roen) + §17
+  (re-roll de Lyris, bumeranes). Todas copiadas a `90-Raw/concept/`.
+  Notas menores no bloqueantes anotadas en el brief de cada una (§15-17).
+- **✅ King Borran — ya cerrado (§9b-v3, ratificado 2026-08-06).**
+  `king-borran-v3.png` en `90-Raw/concept/`. Flag viejo limpiado de esta
+  lista — estaba mal listado como pendiente.
 - **Driftmarket y Rivermeet daylight: ya resueltos**, flags viejos
   limpiados de esta lista (Driftmarket ratificado desde 2026-07-27 en
   §11.1; Rivermeet daylight ya estaba 🟡 aprobado, no bloqueaba nada).
-- key-art-poster 🟡 — los 2 briefs (§12.1/12.2) están completos, listos
-  para correr en NB2, nunca se ejecutaron todavía.
+- **✅ key-art-poster V2 — ratificado retroactivamente (2026-08-07).**
+  [[Briefs de Concept Art]] §12.2, `marketing_key-art-poster-v2.png`
+  (generado 2026-07-28, hallado sin evaluar), copiado a
+  `90-Raw/concept/`. Nota menor no bloqueante: mismo ícono de destello
+  de NB2 ya trackeado desde §15.4. §12.1 (V1) sigue sin correr.
 - Sin tocar esta sesión: revisar las 4 escenas de traición (¿legacy o
   canon?); set de combos sin doc; QA de las 4 variantes de The Wilds;
   videos Higgsfield (bloqueo ffmpeg); POIs sueltos cuando aparezcan en

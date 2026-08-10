@@ -119,6 +119,16 @@ gruñidos de coordinación básica. Cazan en manadas de 4-8. Rehúyen el
 Aether sano (les quema, literalmente — es la ironía de lo que son: una
 vida hecha de la corrupción no tolera lo opuesto).
 
+**Excepción — emboscada de los Desfiladeros de Zephyr (decisión de
+Boris, 2026-08-10):** ahí son solo **3**, no manada completa — grupo
+desviado, no representativo de cómo cazan normalmente. En cualquier otra
+aparición, la manada es de 4-8. Su presencia en Zephyr (borde de una
+región por lo demás sana) es una **filtración aislada** — un bolsillo
+de corrupción localizado en el tramo final del desfiladero, no una
+excepción a "nunca en zonas de Aether sano": el grupo entero es la
+prueba física de que ese bolsillo existe, y por eso son solo 3 y no una
+manada asentada — no podrían sostenerse ahí mucho tiempo ni en número.
+
 **Por qué esto no es solo un monstruo genérico:** es el **espejo oscuro de
 Speck.** Ella es lo que el Aether puede hacer sostenido con cuidado (una
 Warden, una forma de vida). Un Hollowed es lo que el Aether hace sin

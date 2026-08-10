@@ -82,6 +82,19 @@ Pasó 15 años siendo la espada del sistema, sabiendo que el sistema no funciona
 
 Roen fue a la reunión del Triune Council después. No gritó. Simplemente dijo: "Ya no". Dejó el escudo en la puerta. Se fue.
 
+**El regalo anónimo (reconciliación 2026-08-07):** semanas después, en algún
+campamento del camino, el escudo aparece — dejado junto al fuego, o en la
+puerta de una posada, sin nota ni testigo. Roen nunca sabe quién se lo
+devolvió. Pudo ser un guardia que todavía lo respeta, pudo ser alguien
+del propio Council con la conciencia incómoda. **Queda deliberadamente
+sin resolver** — mismo recurso narrativo que los Wanderer's Goggles de
+Old Tobin Hale ([[Old-Tobin-Hale-Ficha-Expandida-v1]]). Roen no lo usa:
+lo carga, a la espalda, sin tocarlo, los 5 años siguientes — hasta T3
+("Nothing Borrowed", [[Los 3 Links de los Fijos]] §Roen), donde recién
+se permite aceptar el gesto y usarlo. Es el mismo escudo físico de sus
+15 años de guardia — nunca dejó de serlo, por eso T3 lo describe como
+"su escudo real... no una herramienta encontrada".
+
 ### Después del Triune Council (5 años, presente)
 
 No tiene resentimiento activo — sabe por qué el Triune Council tomó esa decisión. Eso es lo que lo corroe. Comprende la lógica. Y la rechaza de todos modos.
@@ -98,15 +111,31 @@ Roen vino porque el jugador lo llamó. Eso es suficiente razón.
 
 ### Escena 1: El Encuentro (Primeros 20 minutos)
 
-El jugador llega a The Wilds con un contrato: purgar nidos, apagar God-Cores, restaurar la zona. Roen está ahí ya — no como protector, sino como compañero de misión. El jugador lo contrató.
+**Actualizado 2026-08-10** para alinear con la estructura ratificada
+([[Geografía y Ciudades]] §El Encuentro con Roen, [[Estructura
+Dramática]]) y el guión ya escrito ([[Guion/Encuentro con Roen]]) — esta
+sección estaba en `draft` desde 2026-07-27 y describía una versión
+anterior (The Wilds, Roen ya presente como compañero).
+
+El jugador ya contrató a Roen para el trabajo que se viene (purgar
+nidos, apagar God-Cores — el contrato del Triune Council), pero todavía
+no lo conoce en persona. Cruza solo Los Desfiladeros de Zephyr, el
+tutorial de su reino natal, hacia el punto de encuentro acordado. Antes
+de llegar, **3 Hollowed lo emboscan** — una pelea pensada para no
+ganarse en solitario. Roen **llega corriendo, ya en movimiento**, y lo
+saca del apriete: no está ahí de antemano, es un rescate. Guión completo
+en [[Guion/Encuentro con Roen]].
 
 **Roen en esta escena:**
-- Observador. Ve cómo el jugador maneja el terreno, la presión, el miedo.
+- Entra resolviendo, no presentándose — el nombre y la charla vienen
+  después.
 - Competente sin fanfarria. Hace el trabajo.
-- Hace notar cosas pequeñas: "Ese nido no huele a corrupción activa. Algo está dormido ahí."
+- Tras la pelea: observador. Mira cómo el jugador se sostuvo, no busca
+  heridas.
 
 **Primer diálogo clave (opcional, puede no ser verbal):**
-Cuando el jugador mata la primera bestia y mira atrás buscando validación, Roen simplemente asiente. No celebra. Reconoce.
+Cuando cae el último Hollowed y el jugador sigue de pie por sus propios
+medios, Roen simplemente asiente. No celebra. Reconoce.
 
 ---
 
@@ -312,7 +341,7 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 
 **La traición de Dagna es la única que rompe a Roen.** Sereth y Lyris lo doblan (ver sus entradas arriba) — Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz — pero doblarse es recuperable, y de las dos se recupera. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
 
-**El gesto físico:** en el cráter, **antes de que el jugador decida nada** — con Dagna quieta en el borde, Speck todavía en sus brazos y el mensajero de Deepstone acercándose — Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático: es un gesto pequeño y silencioso, el brazo que se afloja, el escudo que se desliza y cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. **Ocurre en las cinco rutas de esta celda, porque no es reacción a un final — es reacción a verla ahí parada.** Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
+**El gesto físico:** en el cráter, **antes de que el jugador decida nada** — con Dagna quieta en el borde, Speck todavía en sus brazos y el mensajero de Deepstone acercándose — Roen deja caer el escudo por primera vez desde que volvió a sus manos, años antes del juego (regalo anónimo semanas después de dejar el Triune Council — ver [[Armamento Base — Matriz Raza x Rol]]). No es lloro dramático: es un gesto pequeño y silencioso, el brazo que se afloja, el escudo que se desliza y cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. **Ocurre en las cinco rutas de esta celda, porque no es reacción a un final — es reacción a verla ahí parada.** Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
 
 ---
 
@@ -323,7 +352,17 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 - Líneas de expresión — ha sonreído, ha llorado, ha decidido cosas duras
 - **Warpaint fronterizo verde geométrico** en pómulo o mandíbula, long-faded (5+ años sin retoque)
 - Gear de frontera: cuero remachado, capa pesada en tonos tierra, botas de marcha
-- Arma de dos manos a la espalda (hacha de guerra o maza + escudo pequeño)
+- **Equipamiento completo (reconciliado 2026-08-07, arma fijada mismo
+  día):** mandoble (greatsword) a la espalda + espada como sidearm (gear
+  de frontera recogido en sus 5 años vagabundeando) + el escudo pequeño
+  de sus 15 años de guardia (recuperado como regalo anónimo, ver arriba
+  la escena del Quiebre) — **carga las tres piezas visibles todo el
+  juego, pero no las usa**, pelea a mano limpia (agarres, [[Los 3 Links
+  de los Fijos]] §Roen) hasta T3 ("Nothing Borrowed"), donde recién se
+  permite tocarlas. Sin conflicto con "dejó el escudo en la puerta" — es
+  el mismo escudo físico, vuelto a sus manos sin que él lo pidiera;
+  mandoble y espada nunca fueron del Triune Council, son gear posterior
+  sin ese peso.
 - **Adorno personal único:** un anillo de cobre en la mano izquierda — de su padre, primer guardia
 
 ---

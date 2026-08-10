@@ -400,7 +400,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Momento clave:** Cuando Darro llora por Speck/Pivote, Roen lo deja llorar. No intenta arreglarlo. Simplemente está. Darro después dice: *"Gracias por no hacer broma de mi llanto."* Roen: *"El llanto es honesto. Tú eres honesto. Sigue siendo Darro."*
 
-**La escena más grande de Darro en todo el juego (ruta Dagna):** en el cráter, antes de que el jugador decida nada, al ver a Dagna quieta en el borde con Speck en brazos, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. **No es que se quede mudo** — eso solo le pasa una vez, con Vekka (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]]) — es que elige el silencio pudiendo hablar. Esa elección es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
+**La escena más grande de Darro en todo el juego (ruta Dagna):** en el cráter, antes de que el jugador decida nada, al ver a Dagna quieta en el borde con Speck en brazos, Roen deja caer el escudo por primera vez desde que volvió a sus manos, años antes del juego (regalo anónimo) — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. **No es que se quede mudo** — eso solo le pasa una vez, con Vekka (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]]) — es que elige el silencio pudiendo hablar. Esa elección es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
 
 ### Darro + Valen
 **Energía:** Valen es información pesada. Darro es humor ligero. Parecen opuestos.
@@ -422,7 +422,7 @@ Después: Darro bromea sobre predicciones de Valen fallando. Valen permite la br
 - Cabello rojizo/castaño en topknot corto o trenza de guerrero — siempre en movimiento
 - Sin barba (decisión estilística diferente de otros enanos)
 - Tatuaje ámbar **incompleto** en un antebrazo — un símbolo, no el patrón completo de maestría
-- **Build más ligero que Dagna o Torgan** — cuero en lugar de plata, sin armadura pesada, hachas cortas en cinturón
+- **Build más ligero que Dagna o Torgan** — cuero en lugar de plata, sin armadura pesada, hachas cortas en cinturón + un par de cuchillas lanzables en bandolera cruzada al pecho (equipamiento agregado 2026-08-07, sin conflicto con lo ya ratificado — extiende el kit, no lo reemplaza)
 - Expresión **abierta, gesto suelto, en movimiento constante**
 - Ojos que brillan constantemente (humor o maquinación — a veces indistinguible)
 - **Adorno personal único:** nada oficial. Pero a veces lleva pequeño trozo de metal en bolsillo — de su última obra en Emberdeep antes de irse.

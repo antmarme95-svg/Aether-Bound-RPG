@@ -300,7 +300,7 @@ Se detiene ahí mismo, con Speck en brazos, y espera. El mensajero de Deepstone 
 
 **El quiebre físico de Roen:**
 
-En ese momento — con Dagna quieta, Speck todavía en sus brazos, el mensajero acercándose — **Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego.** No es lloro dramático. No es grito. Es un gesto físico, pequeño, silencioso: el brazo se afloja, el escudo se desliza, cae al suelo con un ruido seco. Roen no lo levanta.
+En ese momento — con Dagna quieta, Speck todavía en sus brazos, el mensajero acercándose — **Roen deja caer el escudo por primera vez desde que volvió a sus manos, años antes del juego (regalo anónimo semanas después de dejar el Triune Council — ver [[Armamento Base — Matriz Raza x Rol]]).** No es lloro dramático. No es grito. Es un gesto físico, pequeño, silencioso: el brazo se afloja, el escudo se desliza, cae al suelo con un ruido seco. Roen no lo levanta.
 
 El jugador lo nota. Darro lo nota. Nadie más — Dagna sigue con los ojos en el mensajero que se acerca, no en Roen.
 
@@ -414,7 +414,7 @@ Este es el corazón dramático de toda la ficha, ya desplegado arriba en "Cómo 
 
 **Por qué es la única que lo rompe:** Sereth y Lyris lo doblan — Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz (ver [[Roen-Ficha-Expandida-v1|Roen]] §Dinámicas con el Pivote) — pero doblarse es recuperable, y de hecho Roen se recupera de las dos. **Dagna lo rompe** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
 
-**La escena del escudo caído** es la manifestación física de ese quiebre. No es el escudo del combate — es el escudo del puesto, el peso que Roen recogió para probarse que todavía servía como muralla. Cuando Dagna se va con Speck y con la prueba, Roen no tiene más razón para cargarlo.
+**La escena del escudo caído** es la manifestación física de ese quiebre. No es el escudo del combate — es el escudo del puesto, el peso que Roen volvió a cargar (regalo anónimo, años antes del juego) para probarse que todavía servía como muralla. Cuando Dagna se va con Speck y con la prueba, Roen no tiene más razón para cargarlo.
 
 Roen no recupera el escudo hasta el final del juego. En F2a lo sigue teniendo caído en el cuarto del cuartel. En F4, Dagna lo recoge sin comentario y se lo devuelve una noche de guardia. Nunca se hablan de eso.
 

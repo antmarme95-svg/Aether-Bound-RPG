@@ -407,7 +407,7 @@ El grupo la entierra en altura — el risco más alto que encuentran, porque a n
 - Ropa diseñada para movimiento aéreo: telas fluidas, sin peso, en grises y blancos
 - Ojos color ámbar brillante, siempre mirando arriba
 - **Postura:** incluso de pie en tierra, se ve como si estuviera punto de despegar
-- **Arma:** cuchillos dobles, cortos, para combate aéreo
+- **Arma:** par de bumeranes élficos de doble filo — vuelan en arco y vuelven a la mano, literal "trazadora aérea". (Cambiado 2026-08-07 desde "cuchillos dobles cortos" — colisionaba con [[Nyael-Ficha-Expandida-v1|Nyael]], mismo Elfa Duelist. Distinto también de los lanzadores de disco wrist-mounted de [[Maren-Ficha-Expandida-v1|Maren]] — los de Lyris son hoja élfica arrojada a mano, no gadget mecánico.)
 
 ---
 

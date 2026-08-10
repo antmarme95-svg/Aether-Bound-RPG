@@ -56,10 +56,18 @@ Pivote equivalente — ningún fijo debe sentirse "peor" de usar. La
 diferencia no es cuánto pegan: es que **el Pivote te cambia el verbo**
 (reconfigura cómo herís, te movés o resolvís encuentros — "el mejor
 acoplamiento contigo, su partida rompe tu forma de jugar",
-[[The Bound Five]]), mientras los 3 fijos son fuertes y confiables sin
-alterar tu identidad de combate. Por eso duele perder al Pivote — no es
-una caída de daño, es perder una forma entera de jugar que ya
-internalizaste.
+[[The Bound Five]]), mientras los 3 fijos amplifican tu identidad de
+combate existente sin reemplazarla — no te dan un verbo nuevo, hacen
+más fuerte el que ya tenés. **Matiz para el jugador Duelist
+(2026-08-10):** esto no es absoluto — [[Acoplamientos]] (ratificado)
+hace que el Duelist dependa de las marcas de un Strategist para el daño
+pleno, y Valen es ese Strategist cuando no hay Pivote Strategist en el
+grupo. Para esa celda, Valen no es "un extra confiable": es parte de tu
+identidad de daño. Por eso duele perder al Pivote — no es solo una
+caída de daño, es perder una forma entera de jugar que ya
+internalizaste; perder a un fijo duele distinto (menos, salvo la
+excepción de Valen arriba), no porque no importe, sino porque no te
+cambia el verbo.
 
 ---
 
@@ -76,10 +84,28 @@ y lo lanza directo a donde el jugador pueda rematarlo. **Traversal:** te
 atrapa a media caída (red de seguridad) o te lanza a una cornisa que no
 alcanzás solo — es él sosteniéndote, no una plataforma improvisada.
 
-**T2 — rol duplicado (jugador también Vanguard).** Dos Vanguards se
-agarran entre sí en relevo: uno lanza al otro, que a su vez agarra y
-reposiciona a un tercero (enemigo o aliado) — una cadena de rescate que
-ninguno arma solo.
+**Ventana de remate (decisión de Boris, 2026-08-07).** En el sabor
+"lanza a un enemigo", hay una ventana de input acotada para apretar el
+ataque/melee y conectar el remate. **Si el jugador falla la ventana, no
+es un fail state** — el combate sigue, el enemigo lanzado cae y se
+reincorpora a la pelea normal — pero **se anula el efecto de bonus del
+link** (el daño/impacto extra que el remate otorga). Whiff = perdés el
+premio del link, no perdés el combate. Aplica en general al T1, no solo
+a la escena de [[Guion/Encuentro con Roen]].
+
+**T1, variante "doble ancla" (rol duplicado — jugador también Vanguard).**
+No es un agarre: los dos se plantan espalda con espalda, cada uno
+cubriendo el arco del otro, sosteniendo el mismo terreno sin retroceder.
+Es **T1, no T2** — a diferencia del resto de T2 en este documento (que
+se gana con bond acumulado, [[The Tether]] §B), el rol duplicado
+queda fijado en la creación de personaje: si el jugador es Vanguard,
+esta es la única forma que el link puede tomar desde el primer
+encuentro, con bond cero ([[Guion/Encuentro con Roen]], variante B —
+decisión de Boris, 2026-08-10). **Corrección de canon (2026-08-10):**
+esta sección decía antes "cadena de rescate" (agarre en relevo);
+[[Geografía y Ciudades]] había escrito "doble ancla" atribuyéndolo (mal)
+a esta página. Esta es ahora la fuente correcta — "doble ancla" es
+canon, "cadena de rescate" se descarta.
 
 **T3 — "Nothing Borrowed."** Roen deja el agarre a mano limpia: absorbe
 un golpe letal dirigido al jugador con el cuerpo entero (una vez por
@@ -87,7 +113,13 @@ encuentro), usando por primera vez su escudo real de los 15 años de
 guardia del Triune Council ([[Roen-Ficha-Expandida-v1]] §Años de
 Guardia) como placaje, no como herramienta encontrada. Hasta T3 confía
 solo en sus manos; en T3 vuelve a confiar en lo que dejó atrás cuando se
-fue. Beat de personaje, no solo power-up.
+fue. Beat de personaje, no solo power-up. **Reconciliado (2026-08-07):**
+el escudo vuelve a sus manos como regalo anónimo semanas después de
+dejarlo en la puerta del Council — nunca sabe quién se lo devolvió,
+deliberadamente sin resolver (mismo recurso que los Wanderer's Goggles
+de Old Tobin Hale). Lo carga sin usar hasta este momento — detalle
+completo en [[Roen-Ficha-Expandida-v1]], sección de Diseño Visual
+Ratificado.
 
 ## Valen — Elfo Strategist → *The Long Calculus*
 
@@ -145,6 +177,12 @@ serio, sin chiste después.
 ---
 
 **Pendiente (❓):** nombres de UI/iconografía para los 6 estados nuevos
-(3 T2 + 3 T3); si "Marked Variable"/"Steady Variable" necesitan cooldown
-propio o comparten uno; ronda de QA de dramaturgia y de balance antes de
-pasar a `status: ratificado`. → Task-Board.
+(ahora 2 T2 + 1 T1-variante + 3 T3); si "Marked Variable"/"Steady
+Variable" necesitan cooldown propio o comparten uno; ronda de QA de
+dramaturgia y de balance antes de pasar a `status: ratificado`. → Task-Board.
+**Pendiente (❓, 2026-08-10):** el rol duplicado de Roen bajó de T2 a T1
+por ser estructural (fijado en character creation, no earned). Valen
+(T2, línea "rol duplicado") y Darro (T2, línea "rol duplicado") tienen
+la misma estructura — mismo argumento podría aplicar. No se tocaron acá
+porque ninguna escena escrita los dramatiza todavía a bond cero; revisar
+antes de ratificar este documento.

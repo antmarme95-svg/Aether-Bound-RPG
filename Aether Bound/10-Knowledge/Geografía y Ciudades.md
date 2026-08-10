@@ -775,7 +775,8 @@ puente narrado al Acto 1.
 3. **Después del logo:** último tramo de caminata solo, acercándose al
    punto de encuentro acordado con Roen. **El jugador ya lo contrató**
    antes de esta escena (dato ya fijado en
-   [[Roen-Ficha-Expandida-v1]]:101, "el jugador lo contrató") — esta
+   [[Roen-Ficha-Expandida-v1]] §Escena 1, "el jugador ya contrató a
+   Roen") — esta
    escena es el primer encuentro físico en pantalla, no la contratación
    en sí.
 4. **Emboscada — 3 Hollowed** ([[Villanos Menores]] §The Hollowed). Solo,
@@ -797,8 +798,10 @@ puente narrado al Acto 1.
    con [[Roen-Ficha-Expandida-v1]] (Escena 1, "El Encuentro"): competente
    sin fanfarria, asiente, no aplaude.
 7. Roen y el jugador siguen juntos hacia la ciudad natal
-   (Rivermeet/Emberdeep/Stillspire), donde los alcanza Valen — ya fijado
-   más abajo en este archivo (§Beats Narrativos por Acto).
+   (Rivermeet/Emberdeep/Stillspire). **En una taberna dentro de la
+   ciudad, tras la caminata, se suma Valen** (decisión de Boris,
+   2026-08-10) — ya fijado más abajo en este archivo (§Beats Narrativos
+   por Acto, locación 1).
 
 ---
 
@@ -808,13 +811,16 @@ puente narrado al Acto 1.
 **Duración:** ~20-30 min
 
 **Locaciones:**
-1. **Desfiladeros de Zephyr** (tutorial)
+1. **Desfiladeros de Zephyr** (tutorial) → **ciudad natal**
    - Tu ciudad natal (Rivermeet / Emberdeep / Stillspire)
    - Tutorial de locomoción y combate básico
    - **Roen (C1) se une** — introducción a UI de bonds
+   - **Valen (C2) se une**, en una taberna dentro de la ciudad natal, tras
+     la caminata a solas Roen+jugador (decisión de Boris, 2026-08-10)
 
 2. **Frontera inmediata de tu reino**
-   - **Valen (C2) se une**
+   - Tramo de viaje hacia El Nido, ya con Roen y Valen en el grupo — sin
+     nuevo compañero (Valen ya se sumó en la ciudad natal, locación 1)
 
 3. **El Nido — Escena 3, "El Primero"**
    - Encuentro con Speck (crisálida)
@@ -830,7 +836,7 @@ puente narrado al Acto 1.
 
 **Beats:**
 - Razón para salir (Triune Council ordena purga / standing decae)
-- Roen se une, luego Valen
+- Roen se une, luego Valen (taberna, ciudad natal)
 - Encuentro con Speck y el Pivote en el nido
 - Darro se une, cierra el grupo — orden fijo: Roen → Valen → Pivote → Darro
   (decisión de Boris, 2026-08-02)

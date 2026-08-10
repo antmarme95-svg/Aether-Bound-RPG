@@ -124,16 +124,32 @@ Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una var
 
 ### Escena 1: El Encuentro (Primeros 20 minutos)
 
-El jugador está haciendo el contrato del Triune Council, purgar The Wilds. Valen está ahí — no por el mismo motivo que Roen (Roen vino porque lo llamaste). Valen vino **porque calculó que serías variable importante**.
+**Actualizado 2026-08-10** para alinear con la estructura ratificada
+([[Geografía y Ciudades]] §Beats Narrativos, locación 1) y el guión ya
+escrito ([[Guion/Encuentro con Roen]]) — esta sección estaba en `draft`
+desde 2026-07-27 y ubicaba a Valen presente desde el inicio en The
+Wilds, junto a Roen. Valen **no** está en la emboscada de los 3
+Hollowed; se suma después, ya en la ciudad natal.
+
+El jugador y Roen llegan a la ciudad natal tras el tramo de Los
+Desfiladeros de Zephyr (incluida la emboscada de los 3 Hollowed, ya
+resuelta). En una taberna, Valen los está esperando — no por el mismo
+motivo que Roen (Roen vino porque lo llamaste). Valen vino **porque
+calculó que serías variable importante**, y ya sabe del encuentro con
+los Hollowed antes de que se lo cuenten.
 
 **Valen en esta escena:**
 - Frío. Eficiente. No sociable.
 - Observa más que actúa.
-- Cuando el jugador mata la primera bestia, Valen nota: "Ese movimiento sugiere entrenamiento de [raza]. Patrón esperado."
-- No está siendo insultante. Simplemente **categorizando.**
+- Ya sabe de la emboscada — Standing, rumor de taberna, o cálculo
+  propio, sin que nadie se lo diga — y lo nota de pasada: "Tres
+  Vaciados, tan cerca del reino. Eso no es ruido, es dato."
+- No está siendo insultante con el jugador. Simplemente **categorizando.**
 
 **Primer diálogo clave (potencialmente incómodo):**
-El jugador espera reconocimiento. Valen ofrece análisis: "Destreza consistente con tu rol. Nada inesperado aún."
+El jugador espera reconocimiento por la pelea que Valen ni vio. Valen
+ofrece análisis, no felicitación: "Sobreviviste a tres. Destreza
+consistente con tu rol. Nada inesperado — todavía."
 
 ---
 
@@ -401,6 +417,13 @@ Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de ve
 - Grabados teal en cuello y esternón — más contenidos que fenotipo base (él es académico, no guerrero)
 - Abrigo largo de viajero en slate-grey estructurado — nunca robes ceremoniales
 - Postura: erguida, manos a menudo guardadas o en gesto de reflexión
+- **Equipamiento (agregado 2026-08-07, cierra el hueco frente a Roen y
+  Darro):** una hoja corta ceremonial tipo estilete/plumín ("calculation
+  blade"), guardada en la manga o el cinturón — nunca la blande como
+  arma de combate, la usa para trazar/anclar físicamente sus marcas
+  (Discord/Harmony) sobre una superficie o un objetivo a corta distancia.
+  Herramienta de precisión, no arma — coherente con "académico, no
+  guerrero"
 - **Adorno personal único:** anillo de plata élfico grabado con fecha — el aniversario de la "última Muda" según los registros de la Academy, 110 años atrás. **La fecha es falsa** (§Grove of Cycles / §Sunken Archive): Valen lleva doscientos años usando un anillo que conmemora un evento que nunca ocurrió, y no lo sabe hasta el Acto 3. Después del Archive, no se lo quita.
 
 ---

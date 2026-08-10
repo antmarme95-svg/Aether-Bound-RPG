@@ -7667,3 +7667,558 @@ Desfiladeros de Zephyr.
 
 **Proximo paso:** escribir el guion real de la escena del Encuentro (dialogo, 3 variantes
 de rol) -- lo de hoy es estructura, todavia no hay texto escrito.
+
+## [2026-08-07] design | Briefs de concept art de Los Desfiladeros de Zephyr
+
+Boris pidio arrancar el concept art del tutorial de Acto 1 -- vital porque es el primer
+entorno jugable del juego (el tramo solo antes del title card y de la emboscada de
+Roen, ya estructurado en Geografia y Ciudades §El Encuentro con Roen). El vault no tenia
+ninguna pieza de esa zona todavia (confirmado por barrido de 90-Raw/concept/ y grep de
+"zephyr"/"canyon"/"desfiladero" -- cero archivos).
+
+**3 briefs nuevos en [[Briefs de Concept Art]] §15**, uno por skin racial ya fijada en
+Geografia y Ciudades §Los Desfiladeros de Zephyr:
+- §15.1 skin humana (Mistbound Frontier / Aethelgard) -- canon arido, paso de guardia
+  militar, introduce Standing.
+- §15.2 skin enana (Ignis Reach) -- descenso volcanico, geotermia/lava, introduce
+  recursos subterraneos.
+- §15.3 skin elfica (Stillwood) -- ascenso boscoso, enredaderas hostiles, introduce el
+  mecanismo de locomocion.
+
+Mismo bloque de estilo compartido (hand-painted graphic novel watercolor, Sable x BotW)
+que el resto de la pagina; formato calcado de los keyframes de lugar ya ratificados
+(§11.7a-c, torres de guardia). Ninguno de los 3 se corrio todavia en NB2 -- quedan
+listos para generar. Fuera de alcance: la escena de la emboscada de los 3 Hollowed (beat
+de guion, no de entorno) queda con brief propio pendiente.
+
+**Archivos actualizados:** [[Briefs de Concept Art]] §15 (nuevo) · [[Current-State]]
+§Concept art pendiente · [[00-Index]].
+
+**Estado:** `check_vault.py` verde tras el edit de Current-State (~3,857 tokens de
+arranque). `check_canon.py` no corrido -- el brief nuevo no toca canon narrativo, solo
+cita a Geografia y Ciudades ya ratificado.
+
+**Proximo paso:** correr los 3 briefs en NB2 y traer las 3 laminas para QA visual.
+
+## [2026-08-07] QA | Los Desfiladeros de Zephyr — 3/3 ratificadas
+
+Boris trajo las 3 laminas generadas de los briefs de §15 (Briefs de Concept Art) --
+zephyr-canyons-human-v1.png / -dwarf-v1.png / -elf-v1.png, corridas en NB2. Evaluacion
+contra brief + los 5 ejes de la Art Bible, sin subagente (juicio directo sobre imagen).
+
+**15.1 humana (Mistbound Frontier) -- Ratificada, nota menor.** Canon amplio, figura
+diminuta en el sendero, cartel de madera sin texto, paleta ochre lavada, perspectiva
+aerea correcta en la lejania. Nota no bloqueante: luz difusa en vez de la luz dura de
+mediodia del brief; arbustos algo mas verdes que "arido".
+
+**15.2 enana (Ignis Reach) -- Ratificada, nota menor.** Contraste calido/frio logrado
+con precision (magma abajo vs apertura azul-fria arriba, tal como pedia el brief),
+vapor, embers flotando, charcos de lava, escala vertiginosa. Nota no bloqueante:
+escalera de tablones de madera en vez de "narrow carved stone stairway".
+
+**15.3 elfica (Stillwood) -- Ratificada, nota menor -- la mas lograda de las 3.** Vides
+enredadas agresivamente, musgo, rayos de luz verde-dorada, sin cielo visible (ascenso
+sin terminar). Nota no bloqueante: composicion lee mas "parado entre raices" que
+pendiente en ascenso -- el mecanismo de locomocion (handholds) no es evidente.
+
+**Hallazgo transversal:** mismo icono de destello/diamante blanco repetido identico en
+esquina inferior derecha de las 3 -- probable filtracion de UI de NB2, no bloqueante.
+Nota agregada a §15.4 del brief para negativos de futuros re-rolls del batch.
+
+**Archivos:** las 3 laminas copiadas de Downloads a `90-Raw/concept/` (ahora canon
+inmutable). [[Briefs de Concept Art]] §15.1-15.4 actualizado con QA + RATIFICADO en
+cada header. [[Current-State]] §Concept art pendiente movido a cerrado. [[00-Index]]
+actualizado.
+
+**Estado:** `check_canon.py` pendiente de re-correr como cierre del checkpoint.
+
+## [2026-08-07] design | Brief de la Emboscada de los 3 Hollowed + llegada de Roen
+
+Boris pidio el brief pendiente de la escena que cierra el tutorial de Los Desfiladeros
+de Zephyr -- la emboscada ya estructurada en Geografia y Ciudades §El Encuentro con
+Roen (pasos 4-5): 3 Hollowed cierran el circulo sobre el jugador solo, Roen entra en
+cuadro justo a tiempo.
+
+**Nuevo brief en [[Briefs de Concept Art]] §16.** Decision de encuadre: el brief
+captura el INSTANTE ANTES del rescate (Hollowed ya cerraron el circulo, Roen recien
+entra en cuadro, sin contacto todavia) -- no el rescate en si, que ya existe ratificado
+en §14.1 (roen-second-catch-v1.png, el mecanismo del link Second Catch aislado sobre
+fondo neutro). Los dos son complementarios: §16 es el establishing shot narrativo con
+entorno, §14.1 es el close-up del link en accion.
+
+Ambientado en la skin humana de Zephyr Canyons (§15.1, ya ratificada) por ser el
+registro default del elenco fijo -- Roen y su brief de link ya usan esa referencia.
+Reusa el diseño ya ratificado de los Hollowed (§13.8: piel agrietada, vetas
+violeta-rojas, cara en blanco) y de Roen (§14.1: cuero remachado, capa tierra, sin
+VFX de contacto todavia). Regla de la Art Bible aplicada: peligro = rojo saturado,
+unico color intenso del frame son las vetas de los Hollowed.
+
+**Archivos actualizados:** [[Briefs de Concept Art]] §16 (nuevo) · [[Current-State]]
+§Concept art pendiente · [[00-Index]].
+
+**Estado:** brief escrito, sin correr en NB2 todavia.
+
+**Proximo paso:** correr §16 en NB2 y traer la lamina para QA.
+
+## [2026-08-07] QA | Emboscada de los 3 Hollowed + llegada de Roen — ratificada
+
+Boris trajo zephyr-ambush-roen-arrival-v1.png (brief §16), corrida en NB2 con las 3
+referencias adjuntas segun instruccion del brief (roen-second-catch-v1.png,
+the-hollowed-v1.png, zephyr-canyons-human-v1.png).
+
+**Ratificada, con nota menor.** Los 3 Hollowed correctos (piel agrietada, vetas
+violeta-rojas en las articulaciones, postura de manada agachada, ropa hecha jirones),
+Roen sin VFX de contacto todavia -- mano extendida, el rescate aun no paso, exactamente
+el instante que pedia el brief. Capa tierra ondeando, cuero remachado, entorno de
+cañon arido consistente con §15.1. El peligro (vetas violeta) es el unico color
+saturado del cuadro.
+
+**Nota no bloqueante:** el pelo de Roen sale gris/blanco aca, en la lamina ya
+ratificada del link (§14.1, roen-second-catch-v1.png) es castaño oscuro --
+inconsistencia de continuidad entre 2 laminas del mismo personaje. No se corrige ahora
+(no bloquea), queda anotada para si se re-corre algo de Roen a futuro. Nota menor
+adicional: el jugador queda en medio del sendero, no literalmente "acorralado contra
+la pared" como pedia el brief -- no afecta la lectura general.
+
+**Archivos:** lamina copiada de Downloads a `90-Raw/concept/`. [[Briefs de Concept
+Art]] §16 actualizado con QA + RATIFICADO en el header. [[Current-State]] §Concept art
+pendiente cerrado. [[00-Index]] actualizado.
+
+**Cierre de sesion:** con esto, el tutorial completo de Los Desfiladeros de Zephyr
+(3 skins raciales del entorno + la escena de la emboscada que lo cierra) tiene su
+concept art completo y ratificado. Proximo frente: guion real de la escena del
+Encuentro con Roen (dialogo, 3 variantes de rol) -- sigue siendo estructura sin texto
+todavia, como quedo anotado el 2026-08-07 anterior.
+
+## [2026-08-07] guion | Escena del Encuentro con Roen — primer guion jugado del juego
+
+Boris pidio escribir el guion real de la escena que ya tenia estructura confirmada
+(Geografia y Ciudades §El Encuentro con Roen, cerrado antes en la sesion): la emboscada
+de los 3 Hollowed que resuelve el tutorial de Los Desfiladeros de Zephyr, con Roen
+interviniendo justo a tiempo. Es el primer guion JUGADO del juego (distinto del
+bookend de Roen viejo, que es pre/post-partida).
+
+**Nuevo archivo: [[Guion/Encuentro con Roen]], `status: provisional`.** Retoma el
+tramo solo justo despues del title card, calca el staging de la lamina ya ratificada
+(zephyr-ambush-roen-arrival-v1.png, §16) y escribe las 3 variantes por rol:
+- Duelist: Roen agarra un Hollowed y lo lanza para que el jugador lo remate.
+- Strategist: Roen atrapa al jugador a media caida y lo repone en terreno firme.
+- Vanguard (rol duplicado): modo "doble ancla", ya fijado en Geografia y Ciudades,
+  no es decision nueva de hoy.
+
+**Decision nueva de esta sesion, sin fuente previa:** el split Duelist/Strategist
+dentro del "modo estandar" de Second Catch (Los 3 Links de los Fijos solo describia
+2 sabores de T1 sin asignarlos a un rol especifico). Queda marcado explicitamente en
+el archivo como pendiente de confirmacion/veto de Boris.
+
+**Asuncion de diseño sin regla escrita:** el jugador no tiene linea hablada en esta
+escena -- ninguna fuente fija "protagonista silencioso" de forma explicita, pero seguir
+el mismo patron de la viñeta muda de Guion/Apertura -- Roen Viejo se uso por
+consistencia. Anotado como asuncion a confirmar antes de generalizarla al resto del
+guion de actos.
+
+Verificado contra canon antes de escribir: la linea "Contract wasn't wrong" es la
+primera confirmacion hablada en pantalla de que el jugador ya contrato a Roen
+(Roen-Ficha:101), sin re-narrar la contratacion en si. El tono de la primera linea
+post-combate ("competente sin fanfarria, asiente, no aplaude") cita directo
+Roen-Ficha §Escena 1 y el paso 6 de Geografia y Ciudades.
+
+**`status: provisional`** -- toca Second Catch, que sigue provisional en Los 3 Links
+de los Fijos, pendiente de la ronda de QA del domingo (regla de trafico ya fijada en
+Current-State).
+
+**Archivos actualizados:** [[Guion/Encuentro con Roen]] (nuevo) · [[Current-State]]
+§Narrativa/guion · [[00-Index]].
+
+**Cierre de sesion (pedido de Boris):** con esto para hoy. Resumen de lo cerrado:
+concept art completo de Los Desfiladeros de Zephyr (3 skins + emboscada, todo
+ratificado) + primer guion jugado del juego escrito (provisional, pendiente 2 puntos
+de confirmacion: split de rol + asuncion de jugador silencioso). Proximo frente
+cuando retomen: caminata silenciosa hacia la ciudad natal donde los alcanza Valen, o
+la ronda de QA del domingo sobre todo lo provisional de la semana.
+
+## [2026-08-07] fix | Correccion: el link de Roen no cambia por rol (Duelist=Strategist)
+
+Boris corrigio el guion recien escrito de la Emboscada/Encuentro con Roen: el primer
+borrador de [[Guion/Encuentro con Roen]] inventaba un split Duelist/Strategist dentro
+del "modo estandar" del link (remate de enemigo lanzado para Duelist, atrapada a media
+caida para Strategist) -- **no tenia base en canon.** Los 3 Links de los Fijos §Roen
+describe 2 sabores del T1 de Second Catch, pero contextuales (segun la situacion de
+combate), no atados a rol. Geografia y Ciudades §El Encuentro con Roen ya decia esto
+con precision desde que se cerro la estructura: "Duelist o Strategist: modo estandar
+del link... Vanguard (rol duplicado): modo doble ancla" -- solo Vanguard difiere.
+
+**Fix a la fuente** (regla 8 del repo -- fix va a la fuente, no a la linea reportada):
+[[Guion/Encuentro con Roen]] fusiono las 2 variantes en una sola ("Variant A:
+Duelist/Strategist, modo estandar"), usando el sabor de "atrapa a media caida" por
+match directo con la lamina ya ratificada (roen-second-catch-v1.png, §14.1). El sabor
+de "lanza a un enemigo" del sistema no se descarta en general -- solo no es el que se
+uso en ESTE guion especifico, por consistencia visual con lo ya aprobado. Se elimino
+la nota de "pendiente de confirmacion de Boris" del split, porque ya no existe split
+que confirmar.
+
+**Archivos actualizados:** [[Guion/Encuentro con Roen]] · [[Current-State]] ·
+[[00-Index]].
+
+## [2026-08-07] fix | 2a correccion: modo estandar pasa a "lanza y remata", nuevo frente de verbos por celda
+
+Boris pidio simplificar aun mas: en vez de "atrapa a media caida" para el modo
+estandar (Duelist/Strategist), usar el otro sabor ya descripto en Los 3 Links de los
+Fijos -- Roen lanza un Hollowed, el jugador remata. Lo unico que varia es la animacion
+del remate, y eso deberia pensarse a nivel de la habilidad inicial/melee de cada
+raza x rol, no como coreografia completa de rescate por celda.
+
+**Pregunta de fork resuelta con Boris antes de tocar la fuente:** ¿Vanguard tambien se
+unifica a "lanza y remata", o mantiene el modo "doble ancla"? Boris eligio mantener
+doble ancla -- tiene razon narrativa propia (mismo arquetipo que Roen) que las otras 8
+celdas no comparten, y Geografia y Ciudades ya lo fijaba asi.
+
+**Fix aplicado en [[Guion/Encuentro con Roen]]:** el modo estandar (Duelist/Strategist)
+ahora usa "Roen lanza un Hollowed para que el jugador remate", con el remate escrito a
+NIVEL DE ROL (Duelist = melee, Strategist = ejecucion a distancia) -- no a nivel de las
+6 celdas raza x rol completas, porque esos verbos no estan compilados en el vault
+todavia (Combate.md §C y Matriz Raza x Rol citan al GDD §4.2C congelado sin
+reproducirlo). Vanguard sin cambios (doble ancla).
+
+**Frente nuevo detectado, sin ejecutar:** verbos/armas de ataque base por las 9 celdas
+raza x rol. Boris pidio llevarlo al consejo (skill llm-council) para que propongan
+base attacks coherentes con el lore, con ejemplos de referencia (mandoble, espada
+doble, dagas, arco+daga, espada, magia ignea, etc.) -- se corre a continuacion.
+
+**Archivos actualizados:** [[Guion/Encuentro con Roen]] · [[Current-State]] ·
+[[00-Index]].
+
+## [2026-08-07] design | Consejo de armamento base + tabla final de las 9 celdas raza x rol
+
+Boris pidio llevar al consejo (skill llm-council) el diseño del ataque base/remate de
+las 9 celdas de la Matriz Raza x Rol -- el hueco que quedo abierto al escribir
+Guion/Encuentro con Roen (el remate solo estaba resuelto a nivel de ROL, no de celda).
+
+**Ronda de consejo (5 asesores + peer review + chairman):** convergencia fuerte en
+tratar el remate como problema BIOMECANICO (Roen fija trayectoria/timing, el rig de
+cada raza define como intercepta) en vez de "que arma le queda linda a cada raza" --
+reduce las 9 celdas a 3 verbos por raza (Elfo=intercepcion, Enano=absorcion-negada,
+Humano=variable por rol) con el rol como inflexion. El consejo detecto 2 colisiones de
+identidad sin resolver (Enano Duelist vs. hachas de Darro, Humano Vanguard vs. agarre
+de Roen) y una pregunta abierta: que pasa si el jugador falla el remate (whiff).
+
+**Boris resolvio las 3 cosas en la misma sesion:**
+1. Whiff: hay ventana de input para apretar ataque/melee -- si falla, NO es fail state,
+   el combate sigue pero se anula el bonus de daño del link. Agregado a la fuente en
+   [[Los 3 Links de los Fijos]] §Roen (T1).
+2. Equipamiento final de las 9 celdas, con nombres concretos que resuelven las 2
+   colisiones detectadas (Enano Duelist = war pick & hammer, no hachas; Humano Vanguard
+   = war flail + kite shield, no agarre a mano limpia):
+   - Elfo Duelist: elven double-bladed sword
+   - Elfo Vanguard: elven glaive + escudo arcano
+   - Elfo Strategist: elven bow (debuffs+daño ligero) + magia de marcado tipo Valen
+   - Enano Duelist: dwarven war pick & hammer
+   - Enano Vanguard: dwarven great warhammer + brazaletes reforzados (escudo)
+   - Enano Strategist: dwarven hand cannon + kit ingeniero de curas (estilo Rocket
+     Raccoon, Marvel Rivals)
+   - Humano Duelist: scimitar + parrying dagger
+   - Humano Vanguard: war flail + kite shield
+   - Humano Strategist: Hunting Hanger + Signal Horn + granadas de cura
+
+**Archivo nuevo: [[Armamento Base — Matriz Raza x Rol]], `status: borrador`.** Tabla
+completa (verbo/ejecucion/arma/nota) + la regla de la ventana de remate. Arranca a
+compilar la seccion C de [[Combate]], enlazada desde ahi. [[Guion/Encuentro con Roen]]
+actualizado para citar el arma especifica en vez de la descripcion generica por rol, y
+para incluir la mecanica de ventana de input en el beat del remate.
+
+**Archivos actualizados:** [[Los 3 Links de los Fijos]] · [[Armamento Base — Matriz
+Raza x Rol]] (nuevo) · [[Combate]] · [[Guion/Encuentro con Roen]] · [[Current-State]] ·
+[[00-Index]].
+
+**Estado:** `status: borrador`, sin pasar por QA de canon todavia -- decisiones de
+Boris de esta sesion, no verificadas contra Movilidad Realista/Game Feel Bible
+(peso, timing de hit-stop por celda).
+
+## [2026-08-07] fix + design | Cierre de las 12 celdas: fix de canon del parry + giro de Strategist + equipamiento de los 3 fijos
+
+Boris trajo su propia propuesta de mecanicas clave para las 9 celdas y goteo hacia
+un problema real: yo habia introducido un error de canon en la ronda de consejo
+anterior, diciendo "parry redirige, no absorbe" como regla transversal del juego.
+Combate.md §B4 (ratificado) dice lo contrario -- el parry es de SABOR RACIAL: Elfo
+redirige, Enano absorbe-planta (roba Equilibrio), Humano roba-desarma (usa el
+VectorFuerza del rival). El error se habia filtrado a Armamento Base — Matriz Raza x
+Rol.md, donde el mecanismo del Enano Vanguard estaba mal etiquetado como
+"redireccion" en vez de "absorcion". Corregido a la fuente.
+
+**Revision celda por celda de la propuesta de Boris contra el canon real:**
+- 7 de 9 sin conflicto.
+- Enano Vanguard: la propuesta de Boris ("absorbe daño frontal") es la que estaba
+  BIEN -- coincide exacto con el canon. El error era mio (mi doc decia
+  "redireccion").
+- Elfo Vanguard: fix de framing, no de mecanica -- la carga del escudo sale de
+  "canalizar el impulso de cada redireccion exitosa", no de "absorber el golpe",
+  para no romper "no absorbe, redirige" (Matriz Raza x Rol + Combate §B4).
+- Humano Duelist: fix de lenguaje -- "le arrebata el control del golpe usando el
+  impulso del rival" en vez de "desvia", para coincidir con el sabor humano
+  (roba-desarma, no redirige).
+
+**Giro de los 3 Strategist (pedido explicito de Boris):** la primera pasada
+convergia los 3 en "sanador de area" (marca curativa / vapor curativo / granadas de
+cura), alejandose de los arquetipos originales de la Matriz. Vuelta al sabor
+original:
+- Elfo Strategist: Corriente Psiquica (Tether Arcano) -- marca que tira/empuja
+  enemigos y aliados, "manipulador psiquico: recoloca" literal.
+- Enano Strategist: Torreta de Forja -- torreta de area + buff de armadura,
+  "ingeniero: torretas/drones/buffs de armadura" literal.
+- Humano Strategist: Trampero de Caza -- trampas de red/cepo + Signal Horn como
+  detonador/señuelo, "gadgeteer: hooks/redes/trampas" literal.
+
+**Equipamiento de los 3 fijos (cierra las 12 celdas):**
+- Roen: mandoble + espada, cargados todo el juego pero SIN USAR -- pelea a mano
+  limpia hasta T3 ("Nothing Borrowed"). Reconcilia la contradiccion real que
+  aparecio al hacer el ejercicio: Roen-Ficha §Diseño Visual Ratificado ya decia que
+  carga un arma de dos manos + escudo, pero Los 3 Links de los Fijos y el concept
+  art ratificado (§14.1) lo muestran peleando sin arma. Reconciliado: carga el
+  mandoble/espada visibles pero no los usa hasta T3 -- no contradice "confia solo
+  en sus manos". **Cabo suelto sin resolver:** el escudo especifico de T3 se
+  describe como "su escudo real... no como herramienta encontrada", pero la ficha
+  tambien dice que lo dejo en la puerta del Council al irse -- falta el beat de
+  como volvio a sus manos. Anotado en ambos archivos, pendiente de Boris.
+- Darro: hachas cortas (ya ratificado) + cuchillas lanzables (agregado, sin
+  conflicto).
+- Valen: hueco real confirmado -- su Diseño Visual no tenia ningun objeto. Cierra
+  con una "calculation blade" (hoja corta ceremonial, herramienta de precision
+  para anclar sus marcas, nunca arma de combate) -- coherente con "academico, no
+  guerrero".
+
+**Archivos actualizados:** [[Armamento Base — Matriz Raza x Rol]] (reescrito
+completo, `status: ratificado`) · [[Roen-Ficha-Expandida-v1]] · [[Darro-Ficha-Expandida-v1]]
+· [[Valen-Ficha-Expandida-v1]] · [[Los 3 Links de los Fijos]] · [[Guion/Encuentro con
+Roen]] · [[Current-State]] · [[00-Index]].
+
+**Estado:** decisiones de diseño (arma/mecanica/verbo) RATIFICADAS por Boris.
+Implementacion (hitbox/timing/peso contra Movilidad Realista/Game Feel Bible) sigue
+sin verificar -- no bloquea. El cabo suelto del escudo de Roen tampoco bloquea nada.
+
+## [2026-08-07] guion | Reconciliacion del escudo de Roen -- regalo anonimo
+
+Boris eligio la opcion del regalo anonimo para cerrar el cabo suelto del escudo de
+Roen (dejado en la puerta del Triune Council al renunciar, pero descripto en T3 como
+"su escudo real... no una herramienta encontrada" -- contradiccion real detectada al
+hacer el ejercicio de equipamiento de los fijos).
+
+**Beat agregado a la fuente:** semanas despues de renunciar, el escudo aparece --
+dejado junto al fuego o en la puerta de una posada, sin nota ni testigo. Roen nunca
+sabe quien se lo devolvio. Reutiliza a proposito el mismo recurso narrativo de los
+Wanderer's Goggles de Old Tobin Hale (regalo/objeto que llega sin explicacion,
+deliberadamente sin resolver) -- consistencia de tono, cero maquinaria nueva. Roen
+carga el escudo (+ mandoble + espada) visible todo el juego pero no lo usa hasta T3,
+donde recien se permite aceptar el gesto.
+
+**Archivos actualizados:** [[Roen-Ficha-Expandida-v1]] (beat en la seccion de origen
++ Diseño Visual Ratificado) · [[Los 3 Links de los Fijos]] §Roen · [[Armamento Base
+— Matriz Raza x Rol]] (tabla de fijos) · [[Current-State]].
+
+**Estado:** cabo suelto CERRADO. Las 12 celdas de equipamiento (9 raza x rol + 3
+fijos) quedan sin pendientes de canon abiertos.
+
+## [2026-08-07] fix | Barrido de armamento contra los 9 Pivotes -- 2 colisiones cerradas
+
+Boris pregunto si los 9 Pivotes ya tenian equipamiento como los fijos y las 9
+opciones del jugador. Verificacion: 8 de 9 SI tenian arma ratificada (Sereth es la
+unica excepcion, consistente con Valen -- mismo Elfo Strategist sin arma, patron
+"academico, no guerrero" a proposito). El hallazgo real no fue un hueco general,
+fueron 2 colisiones literales entre Pivotes que nadie habia cruzado hasta ahora:
+
+- **Torgan vs. Darro** (ambos Enano Duelist): los dos con "dos hachas cortas",
+  identico. Ademas distinto del Enano Duelist del jugador (war pick & hammer, ya
+  elegido para no chocar con Darro -- pero nunca se cruzo contra Torgan).
+- **Lyris vs. Nyael** (ambas Elfa Duelist): los dos con dagas/cuchillos dobles
+  cortos, mismo tipo de arma.
+
+**Decisiones de Boris:**
+- Torgan -> warhammer de guerra a una mano (4 menciones corregidas en su ficha:
+  Esencia, epilogo x2, Diseño Visual Ratificado -- barrido completo, rule 8).
+- Lyris -> propuesta mia, confirmada por Boris: par de bumeranes elficos de doble
+  filo (vuelan en arco y vuelven a la mano) -- literal su epiteto "trazadora
+  aerea", distinto tambien de los lanzadores de disco mecanicos de Maren (gadget
+  tech, no hoja elfica arrojada a mano).
+- Nyael y Bram: confirmados sin cambios (dagas delgadas / mazo de dos manos).
+- Roen: arma fijada explicitamente como mandoble (greatsword), reemplaza la
+  ambiguedad "mandoble/maza" de la reconciliacion anterior.
+
+**Archivos actualizados:** [[Pivotes/Torgan-Ficha-Expandida-v1]] (4 menciones) ·
+[[Pivotes/Lyris-Ficha-Expandida-v1]] · [[Roen-Ficha-Expandida-v1]] · [[Armamento
+Base — Matriz Raza x Rol]] (nueva seccion §Colisiones con los Pivotes) ·
+[[Current-State]] · [[00-Index]].
+
+**Estado:** las 2 colisiones detectadas quedan cerradas. Bram/Roen (misma familia
+de maza, Humano Vanguard x2) queda anotado como cercania menor, no colision --
+el arma de Roen no se usa en pantalla hasta T3.
+
+## [2026-08-07] design | Brief de re-roll de Lyris (bumeranes + limpieza de texto)
+
+Tras cambiar el arma de Lyris (bumeranes elficos, cierre de la colision con Nyael),
+Boris pregunto si hacia falta re-roll de su lamina. Verificacion: lyris-v1.png
+muestra dos dagas curvas cortas claramente visibles en las caderas (arma vieja) +
+texto superpuesto (titulo, "Front View"/"Side View") -- lamina previa a la regla
+anti-texto de §0 y sin brief formal ratificado en Briefs de Concept Art.
+
+**Nuevo brief §17, edicion sobre la imagen existente (no regeneracion completa):**
+adjuntar lyris-v1.png, mantener pose/anatomia/arnes de cuerdas de traversal aereo
+intactos, reemplazar las dagas por un par de bumeranes elficos cruzados a la
+espalda baja, y sacar todo el texto superpuesto. Archivo destino: lyris-v2.png.
+
+**Archivos actualizados:** [[Briefs de Concept Art]] §17 (nuevo) · [[Current-State]]
+§Concept art pendiente · [[00-Index]].
+
+**Estado:** brief escrito, sin correr en NB2 todavia.
+
+## [2026-08-07] QA | Lyris v2 ratificada -- bumeranes elficos
+
+Boris trajo lyris-v2.png (brief §17), corrida en NB2 con lyris-v1.png adjunta como
+referencia. Evaluacion directa (sin subagente).
+
+**Ratificada.** Pose, anatomia, arnes y cuerdas de traversal aereo intactos; texto
+superpuesto eliminado por completo. Vista lateral muestra con claridad los dos
+bumeranes curvos cruzados en la espalda baja, reemplazando las dagas viejas. Nota
+menor no bloqueante: en la vista frontal el arma queda tapada por el arnes/capa --
+la lateral resuelve la lectura sin ambiguedad.
+
+**Archivos:** lamina copiada de Downloads a `90-Raw/concept/`. [[Briefs de Concept
+Art]] §17 actualizado con QA + RATIFICADO en el header. [[Current-State]] y
+[[00-Index]] actualizados.
+
+**Estado:** con esto, las 2 colisiones de armamento detectadas contra los Pivotes
+(Torgan/Darro, Lyris/Nyael) quedan cerradas tanto en canon de texto como en concept
+art -- Torgan no tenia lamina propia que corregir.
+
+## [2026-08-07] cierre de sesión | Compactación de Current-State + To Do de la próxima sesión
+
+Sesión larga (2026-08-07): tutorial de Zephyr completo en concept art (3 skins +
+emboscada + re-roll de Lyris, §15-17 de Briefs de Concept Art, 5/5 ratificadas) +
+primer guion jugado del juego escrito (Guion/Encuentro con Roen, provisional) +
+Armamento Base de las 12 celdas + barrido contra los 9 Pivotes (2 colisiones
+cerradas: Torgan, Lyris) + fix de canon del parry + reconciliacion del escudo de
+Roen. Detalle completo de cada paso en las entradas de arriba, todas fechadas
+2026-08-07.
+
+**Cierre:** Current-State.md compactado (estaba +823t sobre el techo tras la
+sesion larga, bajo a +88t) -- el detalle ya vive completo en este LOG, Current-State
+solo guarda resumen + pendientes. Bloque "Inmediato" reescrito con el To Do real de
+la proxima sesion (reemplaza el bloque stale del 08-06).
+
+**To Do de la proxima sesion:**
+1. Guion: la caminata silenciosa hacia la ciudad natal donde alcanza Valen
+   (Geografia y Ciudades §Beats Narrativos por Acto, punto 2) -- sigue directo de
+   Guion/Encuentro con Roen.
+2. Domingo pendiente: una sola ronda de subagentes de QA audita todo lo
+   provisional acumulado (Los 3 Links de los Fijos + Guion/Encuentro con Roen).
+   No antes de esa fecha.
+3. Concept art listo para correr sin ejecutar (no bloquea): King Borran §9b-v3,
+   key-art-poster §12.1/12.2.
+4. Reglas de trafico sin cambios: linter antes de cada checkpoint, cualquier
+   guion nuevo que toque un Link de los Fijos queda provisional hasta el domingo.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium. `check_vault.py` verde
+(~3,850 tokens de arranque). Sesion cerrada.
+
+## [post-cierre] fix | King Borran ya estaba cerrado + hallazgo de key-art-poster-v2 sin evaluar
+
+Boris senalo que King Borran v3 ya estaba hecho -- error mio: lo deje en el To Do
+de cierre sin cruzarlo contra Briefs de Concept Art (que ya tenia "Evaluacion: ✅
+GENERADO 2026-08-06, RATIFICADO por Boris" registrado) ni contra 90-Raw/concept
+(donde king-borran-v3.png ya estaba copiado). Corregido en Current-State.
+
+**Hallazgo adicional al verificar:** `marketing_key-art-poster-v2.png` (brief
+§12.2) tambien existe -- sentado en Downloads desde 2026-07-28, coincide exacto
+con el nombre de archivo destino del brief, pero nunca se evaluo ni se copio al
+vault. Pendiente de QA la proxima vez que se retome concept art.
+
+**Archivos actualizados:** [[Current-State]] (bloque Inmediato + Concept art
+pendiente).
+
+**Leccion de metodo:** antes de escribir un To Do de cierre con items de concept
+art, cruzar contra `Briefs de Concept Art` (¿tiene Evaluacion ya?) y contra
+`90-Raw/concept/` (¿el archivo ya existe?) -- no confiar en el estado previo de
+Current-State sin verificar.
+
+## [post-cierre 2] QA | key-art-poster V2 ratificado retroactivamente
+
+Boris pidio evaluar marketing_key-art-poster-v2.png (brief §12.2), encontrado sin
+evaluar en Downloads desde 2026-07-28. Evaluacion directa contra el brief completo.
+
+**Ratificado.** Las 3 franjas de horizonte correctas (rio/Rivermeet izquierda,
+Stillspire sobre el dosel de Gloomvault al centro, terreno volcanico con
+resplandor de Ignis Reach a la derecha), sur ausente sin indicios de First Wound,
+hueco de composicion donde estaba Speck, cielo con el gradiente exacto y espacio
+limpio para el logo, perspectiva aerea correcta, sin armas desenvainadas ni poses
+heroicas. Nota menor no bloqueante: mismo icono de destello de NB2 ya trackeado
+desde el batch de Zephyr (§15.4).
+
+**Archivos:** lamina copiada de Downloads a `90-Raw/concept/`. [[Briefs de Concept
+Art]] §12.2 actualizado con QA + RATIFICADO en el header (insertado via awk por un
+problema de encoding NBSP en la linea de negativos original -- Edit normal fallaba
+por mismatch de espacios no-rompibles ocultos en el texto). [[Current-State]] y
+[[00-Index]] actualizados.
+
+**Estado:** con esto, los 2 hallazgos de concept art "generado pero olvidado sin
+evaluar" (King Borran ya estaba cerrado, key-art-poster V2 recien se cerro) quedan
+resueltos. §12.1 (V1) sigue siendo el unico brief de esta seccion sin correr.
+
+## [2026-08-10] canon-qa | 17a ronda -- 13 criticos entre 2 subagentes, corregidos a la fuente
+
+Ronda de QA sobre todo el canon `provisional` acumulado: [[Los 3 Links de los
+Fijos]] + [[Guion/Encuentro con Roen]]. Linter primero (0 criticos, 28 INFO
+preexistentes) -> 2 subagentes en frio (Opus, dramaturgia + congruencia
+semantica), sin contexto entre si. Resultado: **13 criticos unicos** (fuerte
+solapamiento entre ambos reportes, senal de que no era ruido).
+
+**4 decisiones de diseno resueltas por Boris (AskUserQuestion):**
+1. **Donde se suma Valen:** en una taberna dentro de la ciudad natal, tras la
+   caminata a solas Roen+jugador (no en la "Frontera inmediata" que decia
+   §Beats Narrativos -- [[Geografía y Ciudades]] se contradecia a si misma,
+   punto 7 vs §Beats). Corregidos ambos + propagado a
+   [[Guion/Encuentro con Roen]].
+2. **Rol duplicado de Roen:** "doble ancla" (lo ya escrito en el guion) es
+   canon, no "cadena de rescate" (lo que decia la fuente unica). Ademas
+   bajado de T2 a T1 en [[Los 3 Links de los Fijos]] -- es estructural
+   (character creation), no earned via bond, y se dispara en el primer
+   encuentro a bond cero. Queda pendiente (❓) revisar si Valen/Darro tienen
+   el mismo problema en sus propios casos de rol duplicado.
+3. **Los 3 Hollowed de la emboscada:** excepcion de manada (solo 3, no la
+   manada normal de 4-8) registrada en [[Villanos Menores]] §The Hollowed,
+   con justificacion de habitat (filtracion aislada, no una manada asentada
+   en zona sana).
+4. **Ubicacion de "El Encuentro":** [[Roen-Ficha-Expandida-v1]] y
+   [[Valen-Ficha-Expandida-v1]] (draft desde 2026-07-27) describian la
+   escena en The Wilds, con ambos ya presentes -- desactualizado contra
+   [[Geografía y Ciudades]]/[[Estructura Dramática]] (ratificadas) y el
+   guion ya escrito. Reescritas ambas §Escena 1 a Zephyr: Roen rescata (no
+   "ya presente"), Valen ausente (se suma despues, en la taberna). Resuelve
+   tambien el beat duplicado de "primera bestia" (Valen ya no lo tiene --
+   no estaba ahi).
+
+**5 fixes directos** (sin decision nueva -- restauraban decisiones ya
+tomadas o corregian texto obsoleto):
+- Escudo/"shield arm" de Roen en el guion quemaba T3 "Nothing Borrowed" --
+  reescrito a mano limpia.
+- Remate de las 3 celdas Strategist restaurado a "accion a distancia", no
+  melee -- la distincion por rol (Duelist=melee, Strategist=distancia) que
+  Boris ya habia aprobado el 2026-08-07 (ver entrada de esa fecha) se habia
+  perdido en un borrador intermedio de [[Armamento Base — Matriz Raza x
+  Rol]]. Corregido ahi y en el guion.
+- "Los fijos no alteran tu identidad de combate" ([[Los 3 Links de los
+  Fijos]]) contradecia [[Acoplamientos]] (ratificado) para el jugador
+  Duelist -- matizado.
+- 4 menciones de "Roen recogio el escudo al inicio del juego" (residuo
+  previo a la reconciliacion del 2026-08-07) corregidas a la version
+  vigente (regalo anonimo, anios antes del juego).
+- La lamina §16 (`zephyr-ambush-roen-arrival-v1.png`, ratificada) prometia
+  un rescate que el guion no entrega en la Variante A -- aclarado en el
+  guion que §16 es el instante de la llegada de Roen, no el catch en si
+  (eso es §14.1).
+
+**Metodo:** todos los fixes fueron a la fuente (regla 8 del repo), no a la
+linea reportada. Re-grep + linter en 0 criticos / 0 medium tras los fixes
+(28 INFO preexistentes sin cambios).
+
+**Pendiente:** re-corrida de los 2 subagentes antes de pasar
+[[Los 3 Links de los Fijos]] y [[Guion/Encuentro con Roen]] a `ratificado`
+(criterio de cierre del sprint: 0 criticos en ambos). Queda tambien la
+pregunta abierta sobre tier de Valen/Darro (punto 2 arriba).
