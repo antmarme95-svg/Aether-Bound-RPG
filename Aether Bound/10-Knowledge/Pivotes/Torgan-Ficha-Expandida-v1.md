@@ -15,7 +15,7 @@ updated: 2026-07-28
 
 ## Esencia
 
-Duelist de impacto cinético — misil humano, cuerpo como arma concentrada, dos hachas cortas y ninguna floritura. Pero **detrás del músculo hay acero más profundo**: Torgan vive por juramentos. Un Juramento de Forja anterior al grupo lo obliga en dirección opuesta a su corazón.
+Duelist de impacto cinético — misil humano, cuerpo como arma concentrada, warhammer a una mano y ninguna floritura. Pero **detrás del músculo hay acero más profundo**: Torgan vive por juramentos. Un Juramento de Forja anterior al grupo lo obliga en dirección opuesta a su corazón.
 
 La traición no es decisión — es **cumplimiento de promesa anterior.**
 
@@ -34,8 +34,6 @@ Es la diferencia exacta con las otras dos enanas del arquetipo: Vekka ejecuta un
 Ambassador Kadrun → the Great Forging Clan → **el consejo del clan menor de Torgan** → Torgan.
 
 Torgan responde solo al último eslabón. Su consejo no puede negar una orden que ya bajó por la cadena, porque la existencia misma del clan menor depende de estar en buenos términos con el Great Forging Clan. Por eso Torgan puede cumplir "el Juramento" sin sentir que sirve a Kadrun: **el Juramento es a su clan menor, y su clan menor le pide obedecer.** La cadena entera lo blinda de tener que mirar a la fuente a la cara.
-
-**Nota de cadena (lectura conjunta con [[Estructura Política]]):** el resumen de Estructura Política registra la ruta institucional en taquigrafía (*"Torgan/Vekka/Dagna → Great Forging Clan → King Borran → Ambassador Kadrun"*). No hay contradicción: esa es la ruta vista desde arriba, donde la orden nace. Esta ficha describe la misma ruta vista desde abajo, donde la orden aterriza. El eslabón del clan menor no altera el origen — lo **oculta**, que es exactamente el diseño que Estructura Política describe cuando dice que la orden se disuelve en idiomas institucionales al bajar. El ejecutor final obedece por juramento sin conocer la fuente. Torgan es el caso de manual.
 
 **Diferencia con las otras dos enanas:**
 - **Vekka** — Guild Master del clan real, autoridad de Estado, cero eslabones intermedios.
@@ -172,7 +170,7 @@ Cuando el jugador decide salvar o destruir, Torgan dice: *"Tuya es la decisión.
 
 ### Escena: el primero (aceptación del grupo — doble agente)
 
-Roen llega. Darro lo reconoce. Valen aparece. **El Bound Five se forma: Jugador + Roen + Valen + Torgan + Darro.** Nunca más de cinco ([[The Bound Five]]).
+Roen ya está con el jugador. Valen aparece. Torgan se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro, y lo reconoce apenas llega. **El Bound Five queda formado recién con él: Jugador + Roen + Valen + Torgan + Darro.** Nunca más de cinco ([[The Bound Five]]).
 
 **Torgan está en rol imposible:**
 - Debe ser compañero genuino (lo es).
@@ -202,7 +200,11 @@ Durante el Acto 2, Speck revela inteligencia. **Torgan la ve completa.** No como
 Jugador: *"Te confío a Speck. Mientras esté contigo, sé que está segura."*
 Torgan: *"Siempre."* (Mentira. Verdad. Ambas a la vez.)
 
-### Grove of Cycles (a mitad del Acto 2)
+### Encuentro de mundo abierto: los Sin Nombre
+
+Si el grupo se cruza con una banda de **los Sin Nombre** ([[Villanos Menores]] §Capa 1) cerca de Cinder Ascent o Ironforge Outpost, Torgan pelea igual que siempre, pero lo dice después, sin que se lo pregunten: *"Mi clan menor existe porque el Great Forging Clan todavía nos quiere cerca. El día que deje de querernos, somos esto."* No es lástima. Es aritmética que conoce de memoria.
+
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Torgan entra, se queda de pie contra la pared del fondo, brazos cruzados sobre el tatuaje, y **no dice una palabra en todo el debate.**
 
@@ -330,11 +332,13 @@ En el último tramo, cuando ya se ve el cráter latir en el horizonte, Torgan **
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-Torgan llega al centro del cráter con Speck. El core central ya está pulsando en frecuencia jade. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor espera en el borde opuesto — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Torgan**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es del **clan menor** — no del Great Forging Clan, que es el que lo rechazó.
+
+Torgan llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Torgan espera de frente, sin darle la espalda al jugador ni al mensajero — postura deliberada, la misma con la que ha cargado contratos toda su vida: lo que se hace, se hace mirando a la cara.
 
 El jugador y los fijos llegan segundos después.
 
-Torgan **no huye hacia el mensajero.** Se detiene en el centro, con Speck todavía en brazos, y **espera al jugador.** Es lo último que le puede dar: que la entrega ocurra frente a él y no a sus espaldas.
+Torgan **no le sale al encuentro al mensajero.** Se detiene ahí mismo, con Speck todavía en brazos, y **espera al jugador.** Es lo último que le puede dar: que la entrega ocurra frente a él y no a sus espaldas.
 
 **Diálogo del quiebre:**
 
@@ -358,9 +362,9 @@ Aquí — y solo aquí — Torgan **se pasa el pulgar por el tatuaje por tercera
 
 ***"An oath doesn't care how I feel about you."***
 
-Y baja los brazos, ofreciendo a Speck hacia el jugador y hacia el mensajero al mismo tiempo, sin elegir dirección.
+Y baja los brazos, sosteniendo a Speck entre él y el mensajero que se acerca, sin dar un paso hacia ninguno de los dos.
 
-**Ese es el diseño del clímax de Torgan:** no la arrebata, no la esconde, no la lleva al mensajero. La **sostiene en el punto medio y deja que el jugador decida.** Torgan cumplió su parte — llegó, la trajo, la puso donde el Juramento pedía que estuviera. Lo que pase en los siguientes diez segundos ya no le corresponde a él, y eso es lo único parecido a un alivio que Torgan siente en toda la campaña.
+**Ese es el diseño del clímax de Torgan:** no la arrebata, no la esconde, no le sale al encuentro al mensajero. La **sostiene quieto en el borde y deja que el jugador decida.** Torgan cumplió su parte — llegó, la trajo, la puso donde el Juramento pedía que estuviera. Lo que pase en los siguientes diez segundos ya no le corresponde a él, y eso es lo único parecido a un alivio que Torgan siente en toda la campaña.
 
 **El Fragmento se activa.** Speck E1 → E3. La decisión del jugador abre uno de los 5 finales.
 
@@ -388,9 +392,11 @@ Ver [[Los 5 Finales]] — Torgan ocupa la fila **Deber Institucional**. Cada ep�
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero del clan menor queda neutralizado antes de llegar hasta él.
 
-**Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja las dos hachas en el borde del cráter, sin ceremonia, y camina hacia las montañas.
+Torgan no interviene — se queda quieto, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. La orden fracasó. El Juramento **reventó sin cierre ritual**: no fue roto por Torgan ni cumplido por Torgan — fue anulado por un mundo que cambió de forma mientras él lo sostenía.
+
+**Epílogo:** si Torgan cae en el cráter, cae ahí y no hay más. Si sobrevive, **se autoexilia.** No vuelve al clan menor a informar: informar sería pedirle a otros que decidan qué queda de él, y eso es cobardía. Deja el warhammer en el borde del cráter, sin ceremonia, y camina hacia las montañas.
 
 **No vuelve.** Ningún enano lo ve otra vez con certeza. El clan menor no borra su nombre del registro — deja de anotarlo, y no por tacto: **con las forjas apagadas y el Aether ido, un clan menor de Ignis Reach tiene problemas más grandes que un juramento sin cerrar.** Torgan pasó cincuenta y cinco años sosteniendo lo más preciado que tenía, y el mundo lo dejó de registrar porque estaba ocupado sobreviviendo. Con los años la diferencia deja de notarse.
 
@@ -398,7 +404,9 @@ Si el jugador lo busca, no lo encuentra. El único rastro es un tallado en una p
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Torgan **cumple.** El mensajero del clan menor se lleva a Speck viva. Los God-Cores dejan de pulsar. El hive mind se corta. La cadena de tres eslabones entrega hacia arriba y nadie en el camino pregunta qué era la variable.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Torgan **cumple.** El mensajero del clan menor se lleva a Speck **viva**. Los God-Cores dejan de pulsar. El hive mind se corta. La cadena de tres eslabones entrega hacia arriba y nadie en el camino pregunta qué era la variable.
 
 **Epílogo:** Torgan regresa a Emberdeep con su clan menor. **Asciende por mecánica institucional** — pasa a maestro de armas del clan, el rango más alto que un guerrero sin sangre de forja puede alcanzar ahí. El ascenso es automático: el registro se actualiza, el consejo asiente una vez, y sigue.
 
@@ -409,6 +417,8 @@ Entrena reclutas durante años. Es bueno. Es exigente. Y hay una cosa nueva en c
 Si el jugador viaja a Emberdeep años después, Torgan lo recibe. No evita el contacto — evitar sería negar el Juramento, y el Juramento fue cumplido. Se saludan por el nombre. **Ninguno de los dos menciona el cráter.** Torgan le sirve de beber y le pregunta por el camino. Es la conversación más educada y más muerta del epílogo entero.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento) — **su peor destino canónico**
+
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador.
 
 Speck muere en el cráter. No fue entregada, no fue liberada, no completó nada. Nadie ganó.
 
@@ -434,11 +444,11 @@ Darro no va. No puede.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-**Imposible para Torgan.** El arquetipo no puede convivir con esta ruta. Que Speck sea encadenada bajo los términos del jugador no cumple el Juramento — lo deja abierto y además lo pone en manos de la persona a la que Torgan quiso. Es la peor combinación disponible: obligación incumplida más afecto convertido en enemigo.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Torgan suelta. **Imposible para Torgan.** El arquetipo no puede convivir con esta ruta. Que Speck sea encadenada bajo los términos del jugador no cumple el Juramento — lo deja abierto y además lo pone en manos de la persona a la que Torgan quiso. Es la peor combinación disponible: obligación incumplida más afecto convertido en enemigo.
 
 **Torgan muere confrontándote en el cráter.** No se une. No negocia. No informa a su clan.
 
-Cuando el jugador cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck. Deja que caiga hacia donde caiga. Y va contra el jugador con las dos hachas.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a Torgan y cruza el borde hacia el core central, Torgan lo entiende antes que nadie — reconoce el gesto de alguien que está renegociando un contrato a su favor, porque lleva 55 años cerca de contratos. Suelta a Speck al verlo cruzar — el jugador la recoge del otro lado del borde. Y va contra el jugador con el warhammer.
 
 **Línea antes de caer:** *"Esto no. Yo juré entregarla, no venderla."*
 
@@ -446,7 +456,11 @@ No hay epílogo. Torgan no existe en un mundo donde el Juramento sirvió para es
 
 ### F4 — The Warden's Choice (Speck elige la Muda parcial — síntesis)
 
-Requiere que el jugador haya **alcanzado a Torgan y no lo haya matado** — contenido en la persecución o detenido en el cráter. Speck elige. Se calcifica voluntariamente en el core central. El Aether empieza a sanar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Torgan**. El mensajero del clan menor se aparta: un juramento de forja no contempla que alguien le pregunte algo a la pieza.
+
+Speck responde y **cruza el borde sola**. Torgan abre los brazos. Se calcifica voluntariamente en el core central. El Aether empieza a sanar.
+
+**Epílogo — Torgan vivo.**
 
 **Epílogo:** Torgan **renegocia su Juramento con su clan menor.** Es la única lectura ritual que lo permite, y existe por una razón técnica: un clan menor tiene la facultad de reinterpretar los juramentos que administra cuando se demuestra que **el objeto original de la promesa era algo que la promesa no cubría.** No es perdón ni indulto — es corrección de alcance. Los clanes menores existen precisamente para tener esa flexibilidad que el clan real no puede permitirse.
 
@@ -456,9 +470,19 @@ El consejo delibera cuatro días. **Firma la reinterpretación.** El Juramento n
 
 Torgan pasa el resto de su vida siendo el único enano de Emberdeep con un juramento que fue enmendado en vida y no rompido. Los jóvenes del clan menor le preguntan cómo se hace. Él contesta siempre lo mismo: *"No se hace. Se paga primero, y a veces después te lo devuelven."*
 
+**Y hay algo que la reinterpretación no arregla.** Torgan cargó a Speck en brazos desde el corredor del Archive hasta el borde del cráter — cincuenta y cinco años de Juramento resumidos en ese tramo. El cuerpo no lo olvida tan rápido como el consejo. Meses después, todavía hay noches en que se despierta con los brazos en la posición exacta en que la sostuvo, buscando un peso que ya no está. No se lo dice a nadie. No hay ritual enano para eso — el duelo del gremio es por juramentos, no por brazos que aprendieron una forma y no la quieren olvidar.
+
 Si el jugador lo visita, Torgan lo recibe distinto que en F2a: **le enseña la línea nueva.** Es la única vez en toda la campaña que Torgan muestra el brazo por voluntad propia.
 
-Y una vez al año, solo, baja al cráter transformado y apoya la palma abierta sobre la base del core central. El mismo gesto que le hizo a la piedra del Archive. Nunca se lo cuenta a nadie.
+**Epílogo — Torgan muerto** (cayó en la persecución o en el cráter). El Juramento queda **sin la reinterpretación que lo habría salvado.** Es la diferencia exacta con la variante viva: la corrección de alcance existe, el clan menor tiene la facultad de firmarla — pero la facultad se ejerce sobre un juramento vivo, y el de Torgan murió con él.
+
+El consejo del clan menor delibera igual, cuatro días igual, y llega a la misma conclusión: la promesa no cubría lo que resultó ser la variable. Después descubren que **no hay procedimiento para enmendar el juramento de un muerto.** El registro queda con la deliberación anotada y sin acto que la ejecute.
+
+Lo entierran con el tatuaje incompleto. Nadie del clan lo llama deshonor — es peor: **lo llaman "caso sin resolver"**, y así queda en el archivo, entre trámites, durante generaciones. Torgan pasó cincuenta y cinco años sosteniendo una promesa para que alguien la cerrara, y la única vez que su clan estuvo dispuesto a cerrarla, llegó tarde.
+
+Quien hace algo al respecto es **Darro**, y lo hace desde el único lugar donde tiene autoridad: **el tatuaje.** Los dos lo tenían incompleto — el de aprendiz que Vekka nunca dejó terminar, el de juramento que el clan nunca pudo enmendar. Darro se hace agregar, en el suyo, una línea corta de color distinto: la que le habrían puesto a Torgan si hubiera llegado vivo al consejo.
+
+No pide permiso a nadie. No tiene derecho a hacerlo — no es su clan, no es su juramento, y ningún tatuador enano debería habérselo grabado. **Encuentra uno que sí.** Cuando le preguntan qué significa esa línea, Darro contesta que es de un amigo, y no dice más. Es lo único que puede hacer por Torgan, y lo hace de todos modos.
 
 Ver [[Los 5 Finales]].
 
@@ -518,19 +542,9 @@ Valen pregunta si el Juramento es variable mutable. Torgan: *"No. Es piedra."* V
 
 ---
 
-## Superlativo Consolidado
+## Superlativo
 
-**Torgan es *el juramento sin escape.***
-
-Coexiste sin colisión con el resto del elenco:
-- **Vekka** — la traición más precisa (oficio aplicado a un cuerpo vivo).
-- **Dagna** — la traición que rompe al ancla (la única que quiebra a Roen).
-- **Bram** — el único rechazo activo (no ejecuta).
-- **Maren** — la más peligrosa por cálculo puro.
-- **Sereth** — la más íntima.
-- **Nyael** — la traición como ausencia.
-- **Lyris** — la más fría.
-- **Iven** — la única sin respuesta correcta.
+Torgan es *el juramento sin escape* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado.
 
 El centro de Torgan es que **no hay puerta.** Vekka podría dejar la pieza sin desmontar y seguir siendo maestra. Dagna podría renunciar (y en F2b lo hace). Bram rechaza. Torgan es el único cuyo arquetipo **no admite salida en ninguna dirección**: cumplir lo destruye, no cumplir lo borra, y la tercera opción — que el objeto de la promesa desaparezca — es su peor final canónico. Las tres puertas están cerradas desde que tenía veinte años.
 
@@ -545,7 +559,7 @@ El centro de Torgan es que **no hay puerta.** Vekka podría dejar la pieza sin d
 - **Piel:** bronceada de forja, cicatrices profesionales de combate y de trabajo.
 - **Ojos:** grises, expresión seria que rara vez se quiebra.
 - **Postura:** erguida, peso plantado, listo para el impacto en cualquier momento.
-- **Arma:** dos hachas cortas de duelist, para combate cinético de impacto.
+- **Arma:** warhammer de guerra a una mano, cabeza compacta, para combate cinético de impacto. (Cambiado 2026-08-07 desde "dos hachas cortas" — colisionaba literal con [[Darro-Ficha-Expandida-v1|Darro]], mismo Enano Duelist.)
 - **Adorno único:** ninguno. El tatuaje es su identidad entera.
 - **Tic físico canónico:** el pulgar recorriendo la línea del tatuaje en el antebrazo izquierdo, de la muñeca al codo. **Aparece exactamente tres veces en toda la campaña:** en el Archive tras ver la cara del jugador con los Goggles, en el último tramo de la persecución, y en el cráter antes de la línea canónica. Nunca más. Es su único tell.
 - **Expresión facial:** severa por defecto. No es atenta como Vekka. No es quieta como Dagna. Torgan es **tenso** — la cara de alguien que sostiene algo pesado desde hace décadas y ya no recuerda cómo se ve el descanso.

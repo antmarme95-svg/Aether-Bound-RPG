@@ -28,9 +28,10 @@ metroidvania-lite por [[Acoplamientos|links]], no por llaves.
 **Los Desfiladeros de Zephyr** (tutorial) = primer tramo de *tu* arteria de
 origen: un template, tres skins culturales.
 
-**Beats por acto:** ver [[Estructura Dramática]]. Acto 1 = tu gajo; Acto 2 =
-la rueda completa (quests personales, ~7 momentos de [[Speck]], el pecado de
-cada reino visible desde el vecino); Acto 3 = el centro del centro.
+**Beats por acto:** ver [[Estructura Dramática]]. Acto 1 = tu gajo (incluye los
+2 primeros Momentos de Persona de [[Speck]]); Acto 2 = la rueda completa
+(quests personales, la mayoría de los Momentos restantes, el pecado de cada
+reino visible desde el vecino); Acto 3 = el centro del centro.
 
 La dirección de arte cambia de registro por región ([[Art Bible]]: Sable×BotW
 en cubo/arterias, Hinterberg en ciudades).

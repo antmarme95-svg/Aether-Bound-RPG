@@ -10,6 +10,7 @@ updated: 2026-07-27
 **Origen:** Frontera Mistbound  
 **Edad aparente:** 45 años  
 **Slot en [[The Bound Five]]:** C1 — El Afín  
+**Link:** *Second Catch* — [[Los 3 Links de los Fijos]] §Roen (provisional)
 
 ---
 
@@ -81,6 +82,19 @@ Pasó 15 años siendo la espada del sistema, sabiendo que el sistema no funciona
 
 Roen fue a la reunión del Triune Council después. No gritó. Simplemente dijo: "Ya no". Dejó el escudo en la puerta. Se fue.
 
+**El regalo anónimo (reconciliación 2026-08-07):** semanas después, en algún
+campamento del camino, el escudo aparece — dejado junto al fuego, o en la
+puerta de una posada, sin nota ni testigo. Roen nunca sabe quién se lo
+devolvió. Pudo ser un guardia que todavía lo respeta, pudo ser alguien
+del propio Council con la conciencia incómoda. **Queda deliberadamente
+sin resolver** — mismo recurso narrativo que los Wanderer's Goggles de
+Old Tobin Hale ([[Old-Tobin-Hale-Ficha-Expandida-v1]]). Roen no lo usa:
+lo carga, a la espalda, sin tocarlo, los 5 años siguientes — hasta T3
+("Nothing Borrowed", [[Los 3 Links de los Fijos]] §Roen), donde recién
+se permite aceptar el gesto y usarlo. Es el mismo escudo físico de sus
+15 años de guardia — nunca dejó de serlo, por eso T3 lo describe como
+"su escudo real... no una herramienta encontrada".
+
 ### Después del Triune Council (5 años, presente)
 
 No tiene resentimiento activo — sabe por qué el Triune Council tomó esa decisión. Eso es lo que lo corroe. Comprende la lógica. Y la rechaza de todos modos.
@@ -97,15 +111,40 @@ Roen vino porque el jugador lo llamó. Eso es suficiente razón.
 
 ### Escena 1: El Encuentro (Primeros 20 minutos)
 
-El jugador llega a The Wilds con un contrato: purgar nidos, apagar God-Cores, restaurar la zona. Roen está ahí ya — no como protector, sino como compañero de misión. El jugador lo contrató.
+**Actualizado 2026-08-10** para alinear con la estructura ratificada
+([[Geografía y Ciudades]] §El Encuentro con Roen, [[Estructura
+Dramática]]) y el guión ya escrito ([[Guion/Encuentro con Roen]]) — esta
+sección estaba en `draft` desde 2026-07-27 y describía una versión
+anterior (The Wilds, Roen ya presente como compañero). **Corrección
+2026-08-10 (2ª pasada):** el primer intento de este fix decía que el
+jugador "todavía no lo conoce en persona" — falso, contradice
+§Conexión con el jugador y las 18 Variantes de Encuentro más abajo en
+esta misma ficha (se conocen desde hace 1-2 años). Zephyr no es su
+primer encuentro; es la primera vez que **trabajan juntos** en esta
+misión puntual.
+
+El jugador contrató a Roen para el trabajo que se viene (purgar nidos,
+apagar God-Cores) — un arreglo personal, de mercenario, no el Contrato
+de Conquistador del Triune Council que el jugador firma por su cuenta
+([[Guion/Apertura — Roen Viejo]], [[Estructura Dramática]] §2). Cruza
+solo Los Desfiladeros de Zephyr, el tutorial de su reino natal, hacia el
+punto de encuentro acordado con Roen. Antes de llegar, **3 Hollowed lo
+emboscan** — una pelea pensada para no ganarse en solitario. Roen
+**llega corriendo, ya en movimiento**, y lo saca del apriete: no está
+ahí de antemano, es un rescate — pero no es un rescate entre
+desconocidos, es la primera vez que ese vínculo previo se pone a prueba
+en el terreno. Guión completo en [[Guion/Encuentro con Roen]].
 
 **Roen en esta escena:**
-- Observador. Ve cómo el jugador maneja el terreno, la presión, el miedo.
+- Entra resolviendo, no saludando — ya se conocen, no hace falta
+  presentación ni charla.
 - Competente sin fanfarria. Hace el trabajo.
-- Hace notar cosas pequeñas: "Ese nido no huele a corrupción activa. Algo está dormido ahí."
+- Tras la pelea: observador. Mira cómo el jugador se sostuvo, no busca
+  heridas.
 
 **Primer diálogo clave (opcional, puede no ser verbal):**
-Cuando el jugador mata la primera bestia y mira atrás buscando validación, Roen simplemente asiente. No celebra. Reconoce.
+Cuando cae el último Hollowed y el jugador sigue de pie por sus propios
+medios, Roen simplemente asiente. No celebra. Reconoce.
 
 ---
 
@@ -127,7 +166,7 @@ Llegan al nido donde está la crisálida de Speck. Las bestias guardianas están
 
 ### Escena 3: El Primero (Encuentro con el Pivote)
 
-Mientras purifican el área, el Pivote llega — por primera vez en la historia. La razón varía (C3 está explorando, fue atraído por noticias, es un encuentro casual), pero el Pivote se une.
+Mientras purifican el área, el Pivote llega — no es un encuentro casual. Cada Pivote tiene su propio Conocimiento Previo del jugador (ver su ficha: la relación viene de antes, con una razón concreta para aparecer justo acá), y ese vínculo previo es lo que trae a esta escena, no la casualidad.
 
 **Roen y el Pivote (primera vez):**
 
@@ -137,7 +176,7 @@ Los primeros diálogos entre Roen y el Pivote **definen la química del grupo**.
 
 ---
 
-## Arco Acto 2 — Comunidad (La Rueda, Speck, el Bound Five se Forma)
+## Arco Acto 2 — Comunidad (La Rueda, Speck)
 
 ### Escena 1: La Rueda Completa (Viaje, 3-4 actos del juego)
 
@@ -188,7 +227,7 @@ En el corredor del Archive, con la lectura Warden hecha y la oferta del Triune C
 
 ### Escena 2: The First Wound, en el cráter (el quiebre)
 
-El Fragmento se activa. Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado). El Pivote actúa sobre lo que ya reveló en el corredor: se lleva el Fragmento y a Speck.
+La traición ya ocurrió: fue en el **corredor** del Archive, donde el Pivote se llevó a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). Roen pasó toda la persecución sabiéndolo. Acá, en el borde del cráter, el Fragmento termina de activarse y Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado).
 
 **Roen y el momento del quiebre:**
 
@@ -196,7 +235,7 @@ Roen **no intenta detenerlo.** No porque sea débil, sino porque **entiende**. V
 
 Su reacción es la más devastadora del grupo: **silencio.**
 
-Mientras el Pivote se lleva el Fragmento y Speck, Roen pone una mano en el hombro del jugador.
+Mientras Speck reacciona en brazos del Pivote, Roen pone una mano en el hombro del jugador.
 
 Una mano. Sin palabras. **"Te sostengo."**
 
@@ -215,7 +254,7 @@ Con cada Pivote, la persecución toma sabor distinto:
 
 ### The First Wound (Clímax emocional)
 
-El Pivote actúa finalmente (intenta destruir Speck, entregarla, lo que sea). 
+El agente de la entrega llega al borde del cráter con Speck, dispuesto a cederla viva a su institución — es el Pivote en siete rutas, el equipo de extracción en la de Nyael, y Torgan en la de Bram ([[El Cráter — Matriz de Rutas]] §2).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia de esa decisión, no como elección aislada.
 
@@ -236,16 +275,18 @@ Roen es quien **mantiene la vigilia** — no sobre un cuerpo, sino sobre el sile
 *"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando compra tiempo en vez de justicia."*
 
 #### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
-Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo que queda sin hablar. Después, cuando todo se acaba, dice:
-*"La gente que arriesga todo para defender lo que ama... merece ser recordada. Incluso cuando se equivocan."*
+Si Speck muere, Roen es quien **mantiene la vigilia real.** Se sienta junto a lo que queda sin hablar. No hay línea de cierre que ofrecer — lo intenta una vez, se detiene a mitad de frase, y no vuelve a intentarlo. Lo único que dice, mucho después, sin mirar a nadie:
+*"No hay una forma de decir esto bien. Dejé de buscarla."*
 
 #### **F3 — The Conqueror's Clause (el jugador encadena a Speck por beneficio propio)**
-Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso — la despedida ritual descrita en [[Los 5 Finales]]. Años después, si el jugador sale del juego, encontrará una nota:
-*"I've buried people I should've protected. I'm not doing that again."*
+Roen es quien **se va.** No grita. Simplemente toma su gear y se marcha, sin discurso, sin nota — la despedida ritual descrita en [[Los 5 Finales]]. La única línea que queda de él es la que dice antes de irse, no después: *"I've buried people I should've protected. I'm not doing that again."*
 
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
-Roen es quien **ve el futuro.** Su línea final:
-*"This is what guarding looks like. Not what you own — what you honor."*
+Roen es quien **ve el futuro** — y quien dice en voz alta lo que los demás dejan sin decir, porque esa es su función desde el Acto 1: nombrar el peso que el grupo carga.
+
+Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que estén solos, esa misma noche, y dice lo que sí es cierto: *"This is what guarding looks like. Not what you own — what you honor."* Pausa. Y después, más bajo, la parte que no iba a decir: *"You did it right. That doesn't mean you get to keep her."*
+
+**Es la única vez en el juego donde Roen mismo distingue entre haber actuado bien y haber salido ileso** — no es la única vez que alguien se lo dice al jugador (Valen hace su propia versión, desde el costo y no desde el mérito), pero es la única vez que **a Roen** le toca decirlo, y lo dice como quien nombra algo que lleva enterrando desde Mistbound. Los enterró a todos los que no protegió; a Speck la protegió, y la perdió igual. Esa distinción es nueva para él.
 
 ---
 
@@ -277,7 +318,7 @@ Roen es quien **ve el futuro.** Su línea final:
 ### Roen + Sereth (Elfo Strategist → Él)
 **Primera impresión:** Sereth es calculador, sutil. Roen ve las capas. Desconfía un poco, pero respeta el juego.  
 **Tensión:** Sereth manipula ligeramente el grupo. Roen lo nota. Nunca lo explica — solo lo ve.  
-**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello. Es la traición más honesta. *"I see you. I still won't let you do this."* Es, de las ocho traiciones que no son la de Dagna, la que más cerca llega de romperlo — no porque Sereth calcule como el Triune Council que mató a los niños de su asentamiento, sino porque **ama** como el Triune Council nunca amó, y aun así llega al mismo lugar. Roen se queda un momento largo sin decir nada más. No es el quiebre de Dagna — es su sombra.
+**Traición:** Sereth expresa su decisión con afecto sorprendente. Roen reconoce que Sereth ama profundamente mientras actúa contra ello — la traición más íntima del elenco, vista desde adentro ([[Los 9 Pivotes]] §Superlativo Consolidado). *"I see you. I still won't let you do this."* Es, de las ocho traiciones que no son la de Dagna, la que más cerca llega de romperlo — no porque Sereth calcule como el Triune Council que mató a los niños de su asentamiento, sino porque **ama** como el Triune Council nunca amó, y aun así llega al mismo lugar. Roen se queda un momento largo sin decir nada más. No es el quiebre de Dagna — es su sombra.
 
 ### Roen + Bram (Humano Vanguard → Él)
 **Primera impresión:** Dos humanos de culturas distintas. Bram de guerras, Roen de fronteras. Entienden cansancio similar.  
@@ -297,7 +338,7 @@ Roen es quien **ve el futuro.** Su línea final:
 ### Roen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Vekka construye. Roen protege. Trabajan bien juntos.  
 **Tensión:** Vekka menciona el Dogma del Gremio. Roen pregunta si eso incluye desmontarlo a él.  
-**Traición:** Cuando Vekka lo hace, literalmente desmonta su equipo. Roen ve a Vekka cerrar los ojos un segundo — la única grieta visible que ella permite. *"I built you. Forgive me for finishing the job."* Roen lo perdona en silencio — pero se va.
+**Traición:** Vekka se lleva a Speck y la trabaja como a una pieza — con cuidado, sin apuro, sin explicarse (escena en [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5). **Lo que le toca a Roen es reconocer el método antes que el crimen:** ha visto a artesanos tratar así el metal toda su vida, y le lleva un segundo entender que esta vez la pieza respira. Lo perdona en silencio — pero se va.
 
 ### Roen + Dagna (Enana Vanguard → Ella) — la que lo rompe más hondo
 
@@ -307,9 +348,9 @@ Roen es quien **ve el futuro.** Su línea final:
 
 **La escena del Acto 1:** en una guardia nocturna compartida, Roen pregunta, casi sin voz: *"¿Cómo aguantaste sesenta años en el mismo puesto?"* Dagna contesta: *"No tuve tu opción."* No es reproche. Es constatación. Pero Roen carga esa frase el resto del juego — reaparece cada vez que duda, en el cráter, en el final.
 
-**La traición de Dagna es la que quiebra a Roen más hondo.** Sereth y Lyris también lo rompen — de verdad, no solo lo hieren (ver sus entradas arriba) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
+**La traición de Dagna es la única que rompe a Roen.** Sereth y Lyris lo doblan (ver sus entradas arriba) — Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz — pero doblarse es recuperable, y de las dos se recupera. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
 
-**El gesto físico:** en el cráter, cuando Dagna ya entregó a Speck al mensajero de Deepstone, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego. No es lloro dramático — es un gesto pequeño y silencioso: el brazo se afloja, el escudo se desliza, cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
+**El gesto físico:** en el cráter, **antes de que el jugador decida nada** — con Dagna quieta en el borde, Speck todavía en sus brazos y el mensajero de Deepstone acercándose — Roen deja caer el escudo por primera vez desde que volvió a sus manos, años antes del juego (regalo anónimo semanas después de dejar el Triune Council — ver [[Armamento Base — Matriz Raza x Rol]]). No es lloro dramático: es un gesto pequeño y silencioso, el brazo que se afloja, el escudo que se desliza y cae con un ruido seco. Roen no lo levanta. Solo el jugador (y Darro) lo nota. **Ocurre en las cinco rutas de esta celda, porque no es reacción a un final — es reacción a verla ahí parada.** Ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa desde su lado, incluida la respuesta de Dagna: *"Roen. Dejaste tu puesto. Yo no dejé el mío. Ninguno de los dos ganó."*
 
 ---
 
@@ -320,7 +361,20 @@ Roen es quien **ve el futuro.** Su línea final:
 - Líneas de expresión — ha sonreído, ha llorado, ha decidido cosas duras
 - **Warpaint fronterizo verde geométrico** en pómulo o mandíbula, long-faded (5+ años sin retoque)
 - Gear de frontera: cuero remachado, capa pesada en tonos tierra, botas de marcha
-- Arma de dos manos a la espalda (hacha de guerra o maza + escudo pequeño)
+- **Equipamiento completo (reconciliado 2026-08-07, arma fijada mismo
+  día):** mandoble (greatsword) a la espalda + espada como sidearm (gear
+  de frontera recogido en sus 5 años vagabundeando) + el escudo pequeño
+  de sus 15 años de guardia (recuperado como regalo anónimo, ver arriba
+  la escena del Quiebre) — **carga las tres piezas visibles todo el
+  juego, pero no las usa**, pelea a mano limpia (agarres, [[Los 3 Links
+  de los Fijos]] §Roen). **Solo el escudo se desbloquea en T3** ("Nothing
+  Borrowed") — mandoble y espada siguen dormidos el juego entero, con o
+  sin T3 (aclarado 2026-08-10): son gear posterior a su Quiebre, sin el
+  peso simbólico del Council que sí carga el escudo. Sin conflicto con
+  "dejó el escudo en la puerta" — es el mismo escudo físico, vuelto a
+  sus manos sin que él lo pidiera; mandoble y espada nunca fueron del
+  Triune Council, son gear posterior
+  sin ese peso.
 - **Adorno personal único:** un anillo de cobre en la mano izquierda — de su padre, primer guardia
 
 ---

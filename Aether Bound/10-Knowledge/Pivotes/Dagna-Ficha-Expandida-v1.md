@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Enana (the Iron-Blooded) / Vanguard
 **Origen:** Subclán vasallo **Deepstone**, vasallo del Great Forging Clan (Ignis Reach)
-**Edad aparente:** 90-100 años (veterana, ~60 años en el rol de muralla)
+**Edad aparente:** 105 años (veterana, **aritmética fija:** 60 años de muralla en Deepstone desde los 40, más 5 años con el jugador — 40+60+5=105; toda cifra que diga "100" es residuo y está corregida acá)
 **Arquetipo de Traición:** Deber Institucional — cadena de vasallaje interiorizada como piedra. Superlativo: **la traición que rompe al ancla** (ver [[Los 5 Finales]]).
 
 ---
@@ -19,7 +19,7 @@ Vanguard muralla. Cuerpo como fortaleza. Sesenta años de estar entre la amenaza
 
 La traición de Dagna no viene del cálculo (Maren), ni del oficio (Vekka), ni del juramento personal (Torgan). Viene de **una cadena de vasallaje que la reclama desde antes de que ella naciera**, y que reclama a través de una gente — el subclán **Deepstone** — con la que Dagna sí tiene lazo genuino. Cuando el Great Forging Clan pide a través de Deepstone, Dagna no obedece al Great Forging Clan. Obedece a los suyos.
 
-Es la única Pivote del elenco que **llora en el acto de traicionar.** Y también la única que **camina** en lugar de huir después — porque quiere que el jugador la alcance.
+Es la única Pivote del elenco a la que **se le quiebra la voz en el acto de traicionar** — una lágrima suelta, sin más. Y también la única que camina despacio **para que la alcancen**, no por eficiencia como Vekka — porque quiere que el jugador la alcance.
 
 **Arquetipos resonantes:** Catelyn Stark (clan sobre grupo), el soldado que regresa a su tribu, la Vanguard del cuento que muere en el mismo puesto donde la asignaron.
 
@@ -52,19 +52,19 @@ Dagna no eligió el rol. Nadie en Deepstone elige rol. La palabra "vocación" no
 
 **Personalidad:** callada por defecto. Reserva profunda. Ríe muy poco, y cuando ríe lo hace en silencio — el pecho se mueve, la cara casi no. Los suyos la respetan; los extraños la subestiman por lo poco que habla.
 
-### Sesenta años de muralla (edades 40-90)
+### Sesenta años de muralla (edades 40-100)
 
 Sesenta años cumpliendo el rol. Bestias, hambrunas, escaramuzas fronterizas, un colapso de galería en las minas profundas de Deepstone que dejó a diecisiete enanos vivos porque Dagna sostuvo un travesaño con el hombro durante cuarenta minutos. **Nadie del subclán recuerda un día en que Dagna no estuviera en su puesto.**
 
 Es lo que la distingue en la memoria de Deepstone: **no lo abandonó nunca.** Ni por enfermedad, ni por duelo (murieron sus padres y siguió), ni por opción propia (nunca hubo opción propia). El puesto y ella fueron la misma cosa durante seis décadas.
 
-### El encargo especial (hace 10 años)
+### El encargo especial (hace 5 años)
 
-Hace 10 años, el Great Forging Clan contactó formalmente al consejo de Deepstone: *"Necesitamos protectora para un contratista humano. Cinco años de servicio. Si sirve bien, Deepstone recibe recursos, oro, posición ante nosotros."*
+Hace 5 años, el Great Forging Clan contactó formalmente al consejo de Deepstone: *"Necesitamos protectora para un contratista humano. Cinco años de servicio. Si sirve bien, Deepstone recibe recursos, oro, posición ante nosotros."*
 
 El consejo de Deepstone decidió sin consultarla: **envía a Dagna.** No porque fuera la mejor — era la mejor — sino porque enviar a la mejor mejoraba la posición del subclán ante el Great Forging Clan. La decisión fue política, no personal. Dagna no cuestionó. Es enana. Deepstone ordena, Dagna obedece.
 
-Cinco años después (hace 5 años), llegó al puesto de escolta del jugador (Humano Duelist).
+Llegó al puesto de escolta del jugador (Humano Duelist) casi de inmediato — el contrato de cinco años arrancó ahí, y hoy, en el presente de la historia, está por cumplirse. Nadie lo menciona en voz alta, pero el vencimiento cae casi exactamente sobre el clímax.
 
 ### Cinco años con el jugador (hace 5 años a hoy)
 
@@ -149,7 +149,7 @@ Cuando el jugador decide salvar o destruir la crisálida, Dagna asiente. No opin
 
 ### Escena: el primero (aceptación del grupo)
 
-Roen ya está. Valen aparece. Darro se une. El Bound Five se forma con Dagna adentro desde el principio.
+Roen ya está. Valen aparece. Dagna se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 - **Con Roen:** deferencia mutua tácita. La primera guardia nocturna compartida ocurre en el sub-acto 1B, y ahí sucede la escena canónica: Roen pregunta *"¿Cómo aguantaste sesenta años en el mismo puesto?"*, Dagna contesta *"No tuve tu opción."* Roen no vuelve a preguntar. La frase se queda entre los dos.
 - **Con Valen:** silencio respetuoso.
@@ -180,7 +180,7 @@ Vuelve **más callada.** Esto es medible — Darro lo comenta al día siguiente:
 
 **Desde este momento, Dagna sabe lo que va a hacer.** No le queda ninguna revelación por delante. Va a esperar al Archive, va a confirmar en la ejecución, y va a tomar a Speck al salir. Todo está decidido. Los meses que quedan son los meses de despedirse sin decir adiós.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket.
 
@@ -226,21 +226,21 @@ El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] 
 
 Lo único que Dagna hace en ese momento es ajustar el escudo. Ni siquiera mira al jugador. **Ese desapego es el rasgo del arquetipo aplicado a su forma más pura:** el deber institucional no negocia con revelaciones.
 
-### Sub-beat 3: Traición al salir del Archive — la única que llora
+### Sub-beat 3: Traición al salir del Archive
 
 En el corredor de ascenso, mientras el grupo se reagrupa después del tramo colapsado, Dagna se retrasa dos pasos. Cuando el grupo voltea, tiene a Speck en los brazos.
 
-**Y está llorando.** Silenciosamente, como se ríe — pecho moviéndose, cara casi quieta, dos líneas de agua. Sostiene a Speck con las dos manos, contra el pecho, con la misma firmeza con que sostiene el escudo. No hay violencia. Speck no forcejea — la conoce, la olió durante meses posicionándose entre ella y el ruido, no la lee como amenaza.
+**Le tiembla la voz.** No llora — se le suelta una sola lágrima, la nota justo cuando ya rodó, y no se la limpia porque hacerlo sería reconocerla. Sostiene a Speck con las dos manos, contra el pecho, con la misma firmeza con que sostiene el escudo. No hay violencia. Speck no forcejea — la conoce, la olió durante meses posicionándose entre ella y el ruido, no la lee como amenaza.
 
 Dagna no dice palabra al tomarla. No se disculpa. **No huye rápido — camina.** Da la vuelta y empieza a subir el corredor con paso firme y ancho, sin ocultarse, dejando pasos claros en la ceniza del suelo.
 
-**Quiere que el jugador la alcance.** Es la única Pivote que camina en lugar de correr. Sabe que no puede irse sin que él la mire de frente. Es su forma de honrar cinco años sin haber dicho nunca la palabra: **darse tiempo para que él llegue.**
+**Quiere que el jugador la alcance.** Es la única Pivote que camina despacio *a propósito de que la alcancen* — Vekka también camina en su persecución, pero por eficiencia, no para ser encontrada. Dagna sabe que no puede irse sin que él la mire de frente. Es su forma de honrar cinco años sin haber dicho nunca la palabra: **darse tiempo para que él llegue.**
 
 El jugador dice, primero: *"Dagna."*
 
 Dagna no se detiene. Contesta sin girar la cara: *"Sube. Voy a esperarte arriba."*
 
-Nada más. Sube el corredor. Speck en brazos. Lágrimas silenciosas. Escudo golpeando la cadera con cada paso.
+Nada más. Sube el corredor. Speck en brazos. La lágrima ya seca. Escudo golpeando la cadera con cada paso.
 
 **Reacción del grupo:**
 
@@ -258,15 +258,19 @@ Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interi
 
 Dagna deja **pasos anchos, sin ocultarse.** No pone trampas (Maren). No toma ruta técnica (Vekka). No huye por atajos (Torgan). Camina rápido, en línea, hacia el cráter, dejando huella clara.
 
-El jugador, Roen, Valen y Darro la alcanzan **antes de que llegue al centro del cráter.** Dagna se detiene en el borde de First Wound, se gira, y espera. Speck en brazos, escudo colgado del hombro izquierdo, cara mojada seca al aire.
+El jugador, Roen, Valen y Darro la alcanzan **antes de que llegue al centro del cráter.** Dagna se detiene en el borde de First Wound, se gira, y espera. Speck en brazos, escudo colgado del hombro izquierdo, la cara otra vez quieta.
 
 No hay diálogo en la persecución. Roen y Dagna se miran una vez a media distancia. Roen frena el paso. Los demás lo pasan de largo. Dagna sigue esperando en el borde.
 
 ### Sub-beat 5: quiebre en First Wound — la escena canónica de Roen quebrado
 
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Dagna**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es del subclán **Deepstone**, subiendo desde dentro del cráter hacia el borde.
+
+Lo que distingue a esta ruta no es solo lo que hace Dagna — es también **lo que le hace a Roen**: es la única ruta donde el quiebre de un fijo (Roen — ver [[Los 9 Pivotes]] §Superlativo Consolidado, "la traición que rompe al ancla") pesa tanto como el de la propia Pivote.
+
 El jugador llega al borde del cráter. Se detiene a cinco pasos. Roen se detiene detrás, un poco a un lado. Valen queda más atrás. Darro queda el último, escudo bajo.
 
-Dagna hace algo que nadie del elenco hace: **abraza a Speck antes de entregarla.** Se agacha, sostiene a Speck con las dos manos contra el pecho durante unos segundos, con la cara enterrada un momento en el pelaje. Nadie ve la cara de Dagna en ese instante — el escudo la tapa por el ángulo. Cuando se endereza, Speck sigue en sus brazos, pero ya está separada del pecho, ofrecida hacia el jugador y hacia el mensajero de Deepstone que espera al fondo del cráter.
+Dagna hace algo que nadie del elenco hace: **abraza a Speck antes de entregarla.** Se agacha, sostiene a Speck con las dos manos contra el pecho durante unos segundos, con la cara enterrada un momento en el pelaje. Nadie ve la cara de Dagna en ese instante — el escudo la tapa por el ángulo. Cuando se endereza, Speck sigue en sus brazos, pero ya está separada del pecho, ofrecida hacia el jugador y hacia el mensajero de Deepstone que viene subiendo desde dentro del cráter hacia el borde.
 
 **Diálogo del quiebre:**
 
@@ -292,25 +296,27 @@ Roen no contesta. Dagna vuelve al jugador. Dice, sin subir la voz, la línea can
 
 ***"The mountain doesn't forgive. And I am the mountain's."***
 
-Camina hacia el mensajero de Deepstone al fondo del cráter. Le entrega a Speck. El mensajero asiente una vez y se retira por el lado opuesto, subiendo el borde. Dagna se queda de pie en el centro del cráter, mirando al jugador, escudo todavía colgado del hombro.
+Se detiene ahí mismo, con Speck en brazos, y espera. El mensajero de Deepstone sigue subiendo desde dentro del cráter hacia el borde — Dagna no camina a su encuentro: sostiene el escudo en alto, calculando, y deja que sea el mensajero quien cierre la distancia. Lo que pase en los siguientes segundos ya no depende solo de ella.
 
 **El quiebre físico de Roen:**
 
-En ese momento — cuando Dagna ya entregó a Speck y todavía no se ha ido — **Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego.** No es lloro dramático. No es grito. Es un gesto físico, pequeño, silencioso: el brazo se afloja, el escudo se desliza, cae al suelo con un ruido seco. Roen no lo levanta.
+En ese momento — con Dagna quieta, Speck todavía en sus brazos, el mensajero acercándose — **Roen deja caer el escudo por primera vez desde que volvió a sus manos, años antes del juego (regalo anónimo semanas después de dejar el Triune Council — ver [[Armamento Base — Matriz Raza x Rol]]).** No es lloro dramático. No es grito. Es un gesto físico, pequeño, silencioso: el brazo se afloja, el escudo se desliza, cae al suelo con un ruido seco. Roen no lo levanta.
 
-El jugador lo nota. Darro lo nota. Nadie más. Dagna no ve el escudo caer — ya se está girando para irse.
+El jugador lo nota. Darro lo nota. Nadie más — Dagna sigue con los ojos en el mensajero que se acerca, no en Roen.
 
-**Darro se acerca a Roen** después de que Dagna sale del cráter. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado. Es la escena más grande de Darro en todo el juego — un gesto sin palabras, dirigido a un compañero al que respeta, dejando pasar al enano que traicionó porque entiende sin decir por qué. Dura hasta que el jugador decide moverse.
+**Darro se acerca a Roen** mientras el jugador decide qué hacer. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado — un gesto sin palabras, dirigido a un compañero al que respeta, sin juzgar todavía a la enana que puede o no traicionar. Dura hasta que el jugador decide moverse. El peso que tiene esto desde el lado de Darro está en [[Darro-Ficha-Expandida-v1|Darro]] §Dinámicas con Roen y Valen (El Triángulo del Grupo).
 
 ---
 
 ## Finales — 5 Variantes según Matriz Deber Institucional
 
-Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Dagna, sin contradecir ninguna otra celda de su fila (Torgan, Iven, Nyael).
+Ver [[Los 5 Finales]] — Dagna ocupa la fila "Deber Institucional". Cada final es la traducción de su celda a voz Dagna, sin contradecir ninguna otra celda de su fila (Torgan, Iven, Nyael, Vekka).
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Deepstone queda neutralizado antes de llegar hasta ella.
+
+Dagna, que ya estaba quieta esperándolo, no necesita que la detengan a ella. Sostiene el escudo en alto un segundo, mide la situación con la misma calma con la que sostuvo cinco años de escolta, y baja el arma sin forcejear. Speck alcanza forma Warden completa. **La variable nunca fue entregada** — no hubo entrega que hacer: Speck terminó la Muda y dejó de ser algo que se pueda poner en manos de nadie. La orden de Deepstone no quedó incumplida ni cumplida: quedó **sin objeto.** En la lógica del deber institucional eso es peor que fallar, porque no hay nada que reportar y por tanto nada que cerrar ritualmente.
 
 **Epílogo:** Dagna **deserta.** Es la distinción que importa: no renuncia — renunciar es un acto formal que exige presentarse ante el consejo y decirlo, y para eso haría falta un informe que ella no puede escribir. Deja el escudo pesado en el altar del subclán, no avisa a nadie, y sale de Emberdeep a pie. En los papeles sigue siendo Deepstone. Nadie sabe dónde va. Nadie del grupo vuelve a verla.
 
@@ -320,21 +326,25 @@ Años después, un mensajero cuenta haber visto a una enana canosa con marcas de
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Dagna cumple. Entrega a Speck viva al mensajero de Deepstone en el cráter. Los God-Cores dejan de pulsar. El Aether se estanca en statu quo administrado. El Great Forging Clan recibe la variable a través de Deepstone. La operación cerró.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Dagna cumple. Speck sale del cráter **viva**, en custodia de Deepstone. Los God-Cores dejan de pulsar. El Aether se estanca en statu quo administrado. El Great Forging Clan recibe la variable a través de Deepstone. La operación cerró.
 
 **Epílogo:** Dagna regresa al subclán Deepstone. **La ascienden de rango** — pasa a mando de una guarnición interna del subclán, no más trabajo de escolta externa. Es reconocimiento formal por servicio prolongado y ejecución impecable.
 
 **Nadie brinda.** Los enanos del subclán no brindan por órdenes cumplidas; asienten una vez y siguen. Dagna acepta el ascenso con el mismo asentimiento. No es efusiva. Nunca lo fue.
 
-**Roen no la busca.** Ni ella lo busca a él. Si el jugador viaja a Ignis Reach años después, puede verla en la muralla del subclán, escudo listo, silueta al atardecer. No se le acerca — no habría qué decir. Cinco años del oficio caben en un asentimiento a distancia. Ninguno de los dos lo ofrece.
+**El jugador no la busca.** Ni ella lo busca a él. Si el jugador viaja a Ignis Reach años después, puede verla en la muralla del subclán, escudo listo, silueta al atardecer. No se le acerca — no habría qué decir. Cinco años del oficio caben en un asentimiento a distancia. Ninguno de los dos lo ofrece.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador.
+
 Este es el final donde Dagna **rompe con Deepstone.**
 
-Speck muere en el cráter antes de ser entregada, por la única vía por la que puede morir ahí: **el jugador se la arranca por la fuerza** a Dagna o al mensajero, y el Fragmento se sobrecarga (regla física en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia). El mensajero de Deepstone llega y encuentra un cadáver.
+Speck muere en el cráter antes de ser entregada, por la única vía por la que puede morir ahí: **el jugador se la arranca a Dagna por la fuerza**, y el Fragmento se sobrecarga (regla física en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia). El mensajero de Deepstone llega y encuentra un cadáver.
 
-Lo que quiebra a Dagna no es la muerte: es que **la mano fue la del jugador.** Cinco años de oficio con Roen, y el cierre de todo es una vanguard viendo cómo la persona a la que escoltó rompe lo que ella tenía orden de proteger. No lo dice. No hace falta. La orden se ejecutó sin resultado. La variable no está viva, no está entregada, no cumple lo que el Great Forging Clan pidió a través del subclán.
+Lo que quiebra a Dagna no es la muerte: es que **la mano fue la del jugador.** Cinco años de oficio con el jugador, y el cierre de todo es una vanguard viendo cómo la persona a la que escoltó rompe lo que ella tenía orden de proteger. No lo dice. No hace falta. La orden se ejecutó sin resultado. La variable no está viva, no está entregada, no cumple lo que el Great Forging Clan pidió a través del subclán.
 
 **Epílogo:** Dagna **renuncia al subclán Deepstone por primera vez en la historia registrada del subclán.** Es un evento histórico en la política enana. Los archivos internos de Deepstone no tienen precedente de una vanguard vasalla renunciando; la palabra formal para el acto no existe, y el consejo tiene que inventarla.
 
@@ -342,13 +352,15 @@ Antes de renunciar, Dagna se queda **en el cráter, cuidando el cuerpo muerto de
 
 Cuando el equipo del Council llega, Dagna se pone de pie, deja el escudo en el suelo al lado del cuerpo, y camina hacia Emberdeep a pie. Entrega la renuncia al consejo de Deepstone en persona, sin más palabras que *"No sigo aquí."* Sale del edificio del subclán y desaparece.
 
-Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas. Puede haber muerto de vieja en un cuarto de renta como Vekka en su propio F2b, o puede haber muerto en la primera nevada del año. Deepstone no busca cuerpo.
+Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas — puede haber muerto en la primera nevada del año, o puede seguir caminando todavía. Deepstone no busca cuerpo.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Dagna suelta.
+
 **Imposible para Dagna.** El arquetipo del deber institucional no puede convivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la orden — la deja incumplida indefinidamente, y sostenida por la persona a la que Dagna sirvió cinco años. No hay salida.
 
-**Dagna muere confrontándote en el cráter.** No se une. No negocia. No informa a Deepstone. Levanta el escudo por última vez, se planta entre el jugador y el mensajero del subclán, y pelea hasta caer.
+Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a ella y cruza el borde hacia el core central, Dagna suelta a Speck al verlo cruzar — no forcejea, eso la mataría. **Dagna muere confrontándote en el cráter.** No se une. No negocia. No informa a Deepstone. Levanta el escudo por última vez, se planta entre el jugador y el mensajero del subclán, y pelea hasta caer.
 
 **Línea antes de caer:** *"No fue esto lo que juré."*
 
@@ -356,9 +368,11 @@ No hay epílogo compartido. Dagna no puede vivir en un mundo donde la orden se c
 
 ### F4 — The Warden's Choice (Speck elige Muda parcial, síntesis)
 
-Este final requiere que el jugador haya **alcanzado a Dagna y la haya dejado ir** en la persecución — o que la haya alcanzado en el cráter y contenido sin matar. Con esas condiciones, Speck elige. Se calcifica voluntariamente en el core central. El Aether comienza a sanar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Dagna**. El mensajero de Deepstone se aparta: la orden que le transmitieron no contempla que alguien le hable a la variable.
 
-**Epílogo:** ocurre algo sin precedente en Deepstone. **El subclán libera a Dagna como acto de reconocimiento a la síntesis.** El consejo de Deepstone, tras deliberar con el Great Forging Clan, emite una reinterpretación ritual de la asignación original: **si Speck eligió por su cuenta, la orden pierde validez retroactivamente.** No era la variable que había que tomar; era la que había que dejar elegir. El consejo firma la liberación. Es la primera liberación ritual registrada en Deepstone.
+Speck responde y **cruza el borde sola**. Dagna abre los brazos — el mismo gesto con el que la abrazó antes de ofrecerla, en el orden inverso. Se calcifica voluntariamente en el core central. El Aether comienza a sanar.
+
+**Epílogo — Dagna viva.** Ocurre algo sin precedente en Deepstone. **El subclán la libera como acto de reconocimiento a la síntesis.** El consejo de Deepstone, tras deliberar con el Great Forging Clan, emite una reinterpretación ritual de la asignación original: **si Speck eligió por su cuenta, la orden pierde validez retroactivamente.** No era la variable que había que tomar; era la que había que dejar elegir. El consejo firma la liberación. Es la primera liberación ritual registrada en Deepstone.
 
 Dagna vuelve al grupo. Cuando llega al campamento del jugador, no anuncia. Aparece en el círculo del fuego, se sienta, deja el escudo al lado. No es efusiva — sigue callada. Pero se queda.
 
@@ -366,7 +380,17 @@ Dagna vuelve al grupo. Cuando llega al campamento del jugador, no anuncia. Apare
 
 **La hoja de Maelys** sigue intacta en el compartimento interior del cinturón. Dagna la ha llevado durante todo el Acto 3, y en F4 sigue verde plata cuando abre el compartimento en un momento sin público — hoja de un solo bosque, en el bolsillo de la única enana que se dejó mirar. Maelys sabía. Dagna nunca comenta.
 
+**Una cosa no se le cura.** Dagna no vuelve al cráter transformado. Nunca. El grupo pasa cerca alguna vez, en algún viaje, y ella encuentra excusa de guardia, de ruta, de lo que sea — cualquier cosa antes que acercarse. La sostuvo, la ofreció, la vio elegir; eso ya lo hizo una vez y no le queda otra versión de sí misma para hacerlo de nuevo. El jugador lo nota después de la tercera vez. No se lo pregunta. Algunas cosas Dagna las carga como carga un escudo: sin gesto, sin queja, sin acercarse.
+
 Años después, si el jugador viaja a Deepstone, encuentra que el subclán ha cambiado protocolos internos — la palabra "asignación" empieza a compartir espacio con "elección" en los registros nuevos. Nadie atribuye el cambio a Dagna. Deepstone no atribuye nada a nadie. Pero el cambio está ahí.
+
+**Epílogo — Dagna muerta** (cayó en la persecución o en el cráter). Este epílogo **no es sobre Deepstone.** Lo que el subclán haga o deje de hacer con su registro es papeleo, y a Dagna nunca le importó el papeleo: le importaba el puesto. Este epílogo es sobre **Roen**, porque su muerte se cobra en él.
+
+Los dos hicieron la misma pregunta con la vida. Roen dejó su puesto y sobrevivió. Dagna no lo dejó nunca y no sobrevivió. **El mundo le dio la razón a Roen por accidente**, sin argumento, sin justicia y sin que él la quisiera — y esa es la respuesta que va a tener que cargar, porque es la única que va a recibir.
+
+No lo dice en voz alta. Vuelve a levantar el escudo — el mismo que dejó caer en el cráter viéndola a ella — y **no lo suelta otra vez en lo que le queda de vida.** Nadie del grupo entiende por qué Roen se volvió tan rígido después del cráter. El jugador sí.
+
+La hoja de Maelys aparece en el compartimento interior del cinturón, todavía verde plata. Nadie entiende qué hace ahí. **Maelys sí**, y cuando se entera, baja de Stillwood a un funeral enano — la única vez que un miembro del Elder Circle lo hace. No explica nada. Se para al fondo, mira el escudo que Roen no suelta, y se va antes de que termine.
 
 ---
 
@@ -388,9 +412,9 @@ Este es el corazón dramático de toda la ficha, ya desplegado arriba en "Cómo 
 
 **Lo que Dagna sabe sin verbalizar:** que Roen la respeta más que a cualquiera del grupo porque ella hizo lo que él no pudo. Que ese respeto es real y le pesa. Que cuando ella lo traicione, la traición va a romperlo — no por la traición, sino porque la traición viene de la persona que Roen usa internamente como prueba de que el puesto se podía aguantar. Cuando Dagna se lo lleva, Roen pierde la prueba.
 
-**Por qué es la que lo quiebra más hondo:** Sereth y Lyris también lo rompen — de verdad, no solo lo doblan (ver [[Roen-Ficha-Expandida-v1|Roen]] §Dinámicas con el Pivote) — pero son quiebres de otra escala: Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz. **Dagna lo rompe más hondo que cualquiera de las dos,** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
+**Por qué es la única que lo rompe:** Sereth y Lyris lo doblan — Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz (ver [[Roen-Ficha-Expandida-v1|Roen]] §Dinámicas con el Pivote) — pero doblarse es recuperable, y de hecho Roen se recupera de las dos. **Dagna lo rompe** porque Dagna es el argumento interno que Roen usa para sostenerse desde que se fue de Mistbound. Sin ese argumento, Roen se queda sin piso.
 
-**La escena del escudo caído** es la manifestación física de ese quiebre. No es el escudo del combate — es el escudo del puesto, el peso que Roen recogió para probarse que todavía servía como muralla. Cuando Dagna se va con Speck y con la prueba, Roen no tiene más razón para cargarlo.
+**La escena del escudo caído** es la manifestación física de ese quiebre. No es el escudo del combate — es el escudo del puesto, el peso que Roen volvió a cargar (regalo anónimo, años antes del juego) para probarse que todavía servía como muralla. Cuando Dagna se va con Speck y con la prueba, Roen no tiene más razón para cargarlo.
 
 Roen no recupera el escudo hasta el final del juego. En F2a lo sigue teniendo caído en el cuarto del cuartel. En F4, Dagna lo recoge sin comentario y se lo devuelve una noche de guardia. Nunca se hablan de eso.
 
@@ -412,29 +436,17 @@ Valen lee a Dagna desde el primer día. Sabe que carga carta. Sabe que carga sil
 
 **Diferencia con las otras dos enanas:** con Vekka, Darro carga treinta años de silencio pesado y respeto forzado. Con Torgan, Darro carga el rechazo compartido del Great Forging Clan y la fraternidad de dos escupidos por el mismo sistema. Con Dagna, Darro carga **una amistad que no está seguro de tener.** Es la relación más ligera y la más incierta de las tres. Y por eso, cuando Dagna traiciona, es la que Darro no puede procesar de la misma manera — no hay historial que lo prepare.
 
-**Cuando traiciona:** Darro grita una vez (*"¡DAGNA!"*) y luego se queda mudo. Es la única traición donde Darro no encuentra la frase corta para procesar. Con Vekka se queda mudo por el peso; con Dagna se queda mudo por la incertidumbre — nunca supo qué era esa relación, y ahora tampoco sabrá.
+**Cuando traiciona:** Darro grita una vez (*"¡DAGNA!"*) y después no le sale ningún chiste — sigue hablando, a media frase, nada con forma de broma. Es distinto de lo que le pasa con Vekka (ahí sí se queda mudo del todo): con Dagna el problema no es la voz, es el registro — nunca supo qué era esa relación, y la incertidumbre no se resuelve gritando su nombre.
 
-**La escena de Darro sentándose junto a Roen en el cráter** es el momento más grande de Darro en todo el juego. No dice nada. Solo se sienta al lado. Escudo bajado. Es reconocimiento entre compañeros de que uno se acaba de romper y el otro sabe que no hay palabras que sirvan. Que sea Darro — el que siempre tiene frase, el que hace las bromas — es lo que le da peso. Cuando Darro se queda sin frase, sabemos que la escena es real.
+**La escena de Darro sentándose junto a Roen en el cráter** es el momento más grande de Darro en todo el juego. No dice nada. Solo se sienta al lado. Escudo bajado. **No es que no le salgan las palabras** — es que elige no usarlas, pudiendo. Es reconocimiento entre compañeros de que uno se acaba de romper y el otro sabe que no hay palabras que sirvan. Que sea Darro — el que siempre tiene frase, el que hace las bromas — quien elige el silencio es lo que le da peso a la escena.
 
 **En F4:** si Dagna vuelve, Darro es el primero en probar broma nueva. Es torpe, no funciona del todo. Dagna se ríe silenciosamente una vez. Darro sale de la escena diciendo *"Creo que le caí bien"* con la misma cero confianza de siempre. La incertidumbre sobrevive a todo, incluso a la síntesis.
 
 ---
 
-## Superlativo Consolidado
+## Superlativo
 
-**Dagna es *la traición que rompe al ancla.***
-
-Coexiste sin colisión con los superlativos del resto del elenco:
-- **Bram** — el único rechazo activo (no ejecuta).
-- **Torgan** — el juramento sin escape (deber personal, no institucional).
-- **Vekka** — la traición más precisa (oficio aplicado a un cuerpo vivo).
-- **Nyael** — la traición como ausencia (no aparece en el cráter).
-- **Sereth** — la más íntima.
-- **Maren** — la más peligrosa por cálculo puro.
-- **Iven** — la única sin respuesta correcta.
-- **Lyris** — la más fría.
-
-Cada Pivote tiene un centro emocional distinto. **Solo Dagna rompe a Roen.** Ese es su centro.
+Dagna es *la traición que rompe al ancla* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado. **Solo Dagna rompe a Roen.** Ese es su centro.
 
 ---
 
@@ -451,7 +463,7 @@ Ver `90-Raw/concept/dagna-v2.png`.
 - **Escudo pesado:** carga principal. Grande, redondo, borde tachonado. Marca de Deepstone grabada en el centro. El escudo es la pieza más antigua de su equipo — sesenta años en el brazo izquierdo, con abolladuras que Dagna nunca repara porque cada abolladura es un recuerdo del puesto sostenido.
 - **Martillo de guerra corto:** arma secundaria, colgada del cinturón derecho. Cabeza cuadrada, mango corto, funcional. Se usa poco — Dagna es escudo antes que hacha.
 - **Cinturón:** compartimento interior donde guarda las cartas de Deepstone y, desde el Grove of Cycles, **la hoja verde plata de Maelys** (que nunca se marchita).
-- **Expresión facial:** neutra por defecto, con un fondo de reserva. No es severa como Torgan. No es atenta como Vekka. Dagna es **quieta.** La cara se le mueve muy poco. Cuando se ríe, se ríe con el pecho. Cuando llora — que ocurre exactamente una vez en el juego, en la traición — llora con dos líneas silenciosas.
+- **Expresión facial:** neutra por defecto, con un fondo de reserva. No es severa como Torgan. No es atenta como Vekka. Dagna es **quieta.** La cara se le mueve muy poco. Cuando se ríe, se ríe con el pecho. La única vez que se le quiebra algo es en la traición — una lágrima, y nada más.
 
 ---
 
@@ -465,7 +477,7 @@ Ver `90-Raw/concept/dagna-v2.png`.
 
 **Dagna SÍ es:**
 - La única Pivote que llega al Archive sin descubrir nada nuevo — solo a confirmar.
-- La única que llora en el acto de traicionar.
+- La única a la que se le quiebra la voz (una lágrima, nada más) en el acto de traicionar.
 - La única que camina en lugar de huir, porque quiere que el jugador la alcance.
 - La única traición que **rompe** a Roen, no que lo dobla.
 - La única enana del elenco cuya cadena de mando es vasallaje hereditario sin escapatoria política.
@@ -477,6 +489,6 @@ Ver `90-Raw/concept/dagna-v2.png`.
 
 ## Preguntas Abiertas (para futuras iteraciones)
 
-1. **¿Cómo reacciona el consejo de Deepstone en F1 cuando Dagna renuncia y desaparece?** Es su primera vanguard perdida por autoexilio. ¿Se registra el evento? ¿Se borra su nombre? ¿Se guarda el escudo? Deepstone no tiene precedente para procesar esto y la ficha no lo cierra.
+1. **¿Cómo reacciona el consejo de Deepstone en F1 cuando Dagna deserta y desaparece?** Es su primera vanguard perdida por autoexilio. ¿Se registra el evento? ¿Se borra su nombre? ¿Se guarda el escudo? Deepstone no tiene precedente para procesar esto y la ficha no lo cierra.
 2. **¿La hoja de Maelys es item coleccionable en F4?** Puede aparecer en el compartimento del cinturón como lore item legible, o solo se referencia narrativamente. Si es coleccionable, ¿desbloquea algún diálogo posterior con Maelys?
 3. **¿La escena de Darro sentándose junto a Roen en el cráter es scripted o emergente?** El peso del gesto pide scripted, pero la naturalidad del vínculo Darro-Roen pediría dejarlo emergente según el estado de sus Tethers. Decisión abierta para Fase 3 (implementación).

@@ -1,7 +1,7 @@
 ---
 status: ratificado
 source: "[[Fenotipos y Creación de Personaje]] + [[Art Bible]] (destilados a prompt); RATIFICADO por el director 2026-07-08 (sus outputs — fenotipos/keyframes/Speck/foliage/Dagna — ya son canon en 90-Raw/concept/). Página viva: los briefs de los 8 pivotes restantes se AÑADEN sin desratificar lo probado."
-updated: 2026-07-27
+updated: 2026-08-04
 ---
 
 # Briefs de Concept Art — Fenotipos
@@ -175,16 +175,17 @@ activa, Speck reacciona involuntariamente). No hay E2 intermediario.
 **Especificación:** Clímax en The First Wound. Fragmento activa → Speck reacciona 
 involuntariamente (hive mind forzado). Jade pálido se revela como rojo God-Core.
 
-**Narrativa transversal — los 3 grados de agencia, y hay que poder VERLOS.** La
+**Narrativa transversal — los 4 grados de agencia, y hay que poder VERLOS.** La
 transformación es involuntaria en todos los casos ([[Speck]] §Capa 4). Lo que cambia
-por final es **cuánta agencia tiene Speck sobre lo que viene**, y son tres grados
+por final es **cuánta agencia tiene Speck sobre lo que viene**, y son cuatro grados
 distintos, no dos. Fuente: [[Speck]] §Capa 4.
 
 | Grado | Finales | Verbo | Qué debe leerse en la imagen |
 |---|---|---|---|
 | **Le preguntan** | **F4** | *responder* | Es la única donde Speck **contesta**. Mirada hacia el jugador, no hacia el core. Reciprocidad. Es lo único que distingue F4 |
 | **Deciden por ella y acepta** | **F1** | *aceptar* | Dignidad frente a una decisión **ajena**. NO reciprocidad, NO igualdad — nadie le preguntó. Se sostiene sola |
-| **Se la arrebatan** | **F2a, F2b, F3** | — | Agencia robada. En F2a **vive** (cedida y catalogada), en F2b muere, en F3 encadenada |
+| **Es cedida, no arrebatada** | **F2a, F3** | — | Agencia ausente, pero **vive** — cedida y catalogada en F2a, encadenada bajo el jugador en F3. La fuerza nunca entra en su cuerpo |
+| **Es arrebatada** | **F2b** | — | La única donde "arrebatada" es literal: el forcejeo la mata |
 
 > ⚠️ **Dos errores que este brief tenía y que el arte generado hereda:**
 > 1. **Colapsaba F1 y F4** en un solo bucket de "aceptación con gracia divina". Está
@@ -194,13 +195,14 @@ distintos, no dos. Fuente: [[Speck]] §Capa 4.
 > 2. Decía *"finales donde vive (F1, F4)"*. **Falso: en F2a Speck también vive**, cedida
 >    viva al Council. Vivir no es el eje; la agencia sí.
 >
-> **Consecuencia de producción:** los briefs §5c.1 (F1) y §5c.4 (F4) fueron generados bajo
-> la lectura colapsada — F1 pedía *"beside the player as equal"* y *"no passivity"*, que es
-> agencia, y su mood (renewal, warmth) es indistinguible del de F4. **Ese par de láminas
-> hay que rehacerlo**, no reetiquetarlo. Y §5c.2 quedó escrito antes del split F2a/F2b:
-> muestra un cadáver calcificado en el cráter, que es **F2b**, no F2a — F2a no tiene
-> cuerpo y Speck no se queda ahí. El archivo además está nombrado "Final 3" y catalogado
-> como Final 2. Hay que rehacer el set de finales completo contra esta tabla.
+> **Consecuencia de producción (histórico — resuelto 2026-07-29/30):** los briefs
+> §5c.1 (F1) y §5c.4 (F4) habían sido generados bajo la lectura colapsada — F1 pedía
+> *"beside the player as equal"* y *"no passivity"*, que es agencia, y su mood
+> (renewal, warmth) era indistinguible del de F4. Los dos quedaron corregidos y
+> ratificados. Y §5c.2 estaba escrito antes del split F2a/F2b: mostraba un cadáver
+> calcificado en el cráter, que es **F2b**, no F2a. Reorganizado: **§5c.2a** es el
+> brief nuevo de F2a (Speck viva, administrada, sola); **§5c.2b** es la lámina vieja,
+> re-etiquetada correctamente como lo que siempre fue — el brief de F2b.
 
 **Base visual común a todos los finales:**
 Cristales rojos saturados (misma geometría que God-Cores del mundo). Seams aether 
@@ -208,6 +210,16 @@ rojo-ámbar brillantes. Ojos amber facetados con peso/consciencia antigua. Patas
 rojo-esmeralda. Runas oro activas. Orejas pétalos rojo translúcido. **Lo crítico:** 
 retiene humanidad en los ojos/postura. Sigue siendo Speck — pero ahora sin velo, 
 sin defensa.
+
+> ⚠️ **Nota de generación (2026-07-30), aplica a los 5 briefs:** E3 es
+> **desvelamiento, no crecimiento** ([[Speck]] §la forma no crece — "cuando lo ves
+> sin velo, ves quién siempre fue"). El cuerpo debe leerse reconociblemente
+> **zorro** — no un esqueleto/robot genérico de cristal — y las orejas deben
+> mantener la forma de **pétalos** establecida (no orejas de zorro simples). La
+> primera pasada de `5c.4` cumplió las 3 correcciones narrativas (sin pedestal,
+> mirada recíproca al jugador, sin halo triunfal) pero derivó a un costillar
+> expuesto y orejas simplificadas — anotado, sin bloquear, pendiente de una
+> pasada de refinamiento visual si hay margen.
 
 **Briefs específicos por final a continuación.**
 
@@ -261,9 +273,66 @@ darkness, no victim expression, no passivity, no cold light, no photorealism, no
 no captions, no neon glow beyond natural aether brilliance.
 ```
 
-#### **5c.2 — Final 2: The Long Winter — E3 como God-Core Muerto, Monumento Frío ✅**
+#### **5c.2a — Final 2a: The Long Winter, Handed Over — E3 Viva, Administrada ✅**
 
-**Archivo:** `Speck - Imprisoned Warden Form Final 3` (GENERADO 2026-07-23, imagen pasada)
+**Archivo:** `Final 2a The Long Winter Handed Over.png` (GENERADO 2026-07-30, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Los 3 ejes que distinguen F2a se cumplen — sola en cuadro (sin grupo ni jugador), contención clínica con vendaje/collar en vez de cadenas oscuras, paleta fría administrativa con su cuerpo como única nota cálida. Cuerpo de placas de cristal sólidas (mejor que la deriva a esqueleto expuesto de 5c.4). **Misma nota abierta que 5c.4, no bloqueante:** orejas de zorro simples en vez de la forma de pétalos establecida — ver ⚠️ en §Base visual común.
+
+> Brief nuevo (2026-07-30). Nunca se había escrito: la lámina que existía para
+> "Final 2" era, en rigor, el brief de F2b (ver 5c.2b abajo). F2a es distinto en
+> los tres ejes que importan — **vive** (no muere como F2b), **está sola** (no
+> hay grupo como en F4, y el Bond Echo canónico es *"responde débilmente, desde
+> muy lejos... como quien está siendo consultada contra su voluntad"*), y el
+> sabor es **decepción fría, no tragedia ni imprisonment dramático** — es un
+> recurso administrado, no una prisionera de un villano (eso es F3). Sin
+> cadenas oscuras (vocabulario ya usado en F3); en su lugar, contención clínica.
+
+```
+Interior keyframe of Speck's fate at the conclusion of Final 2a, The Long Winter: 
+Handed Over — she lives, but she has become an administered resource. ANATOMY LOCK: 
+she is built on a FOX skeleton — vulpine skull and muzzle, quadruped fox-proportioned 
+body, four fox legs and paws, a fox tail, the SAME silhouette DNA as her E1 
+crystalline form and her shapeshifted fox disguise — she must read clearly and 
+immediately as fox-derived, NOT a generic crystal skeleton or robot. She is NOT a 
+deer, NOT a stag, NOT a cervid — no antlers, no branching crown structure. Her body 
+is deep saturated red translucent crystal with the exact geometry of the God-Core 
+formations, gold runes still faintly active across her flanks, aether seams glowing 
+low and steady in warm ámbar and teal — dimmed, not extinguished. Her ears keep 
+their established petal-like shape: thin, translucent, faceted like quartz petals, 
+NOT simple pointed fox ears. Her eyes are dark amber, faceted — not hollow or broken 
+like a prisoner's, not warm and reciprocal like an answered question — subdued, 
+distant, quietly resigned, the look of someone being consulted against her will. 
+She is alone in frame — no Bound Five, no player character, no companions: this is 
+the loneliness of the ending, two years later. She is contained, not chained — no 
+heavy dark chains like a conqueror's prisoner. Instead: a soft woven lattice of 
+pale aether-dampening crystal forms a collar and cuffs around her neck and forelegs, 
+clinical rather than punitive, with a small stylized band on one foreleg — a 
+diegetic institutional marker, not legible text. She rests in a sparse, cold 
+institutional chamber — worked stone and dark metal, Triune Council or Great 
+Forging Clan architecture, clean and administrative rather than dungeon-like. Cold 
+pale blue-white aether lamps light the room evenly, no warm sunlight. A single 
+narrow window or opening in the background shows a sliver of the outside world, 
+distant and out of reach, going on without her. Her posture: lying or sitting 
+quietly, contained but not brutalized, patient in a way that reads as resignation 
+rather than peace. Mood: quiet disappointment, not tragedy — cold, administrative, 
+a resource being managed, not a monster being punished. Atmosphere: sterile, still, 
+muted, faintly sad. Art style: hand-painted graphic novel watercolor, ligne claire, 
+flat cel shading 3–4 bands, desaturated cool palette (pale blues, greys, worked 
+stone) with her red crystal body as the only warm color note in the frame, muted 
+rather than saturated. Visible paper grain. Blend of Sable × Breath of the Wild, 
+colder and quieter than the other finals. Negative: NO DEER, NO STAG, NO ELK, NO 
+CERVID, NO ANTLERS, no branching crown or horn structures, no skeletal exposed- 
+ribcage look, no simple pointed ears — ears must be petal-shaped and translucent, 
+no heavy dark punitive chains, no torture or brutality, no visible player character 
+or companions, no crater or wild outdoor landscape, no warm golden light, no 
+triumphant or majestic framing, no hollow broken prisoner-eyes, no readable text or 
+captions, no photorealism.
+```
+
+#### **5c.2b — Final 2b: The Long Winter, Fallen — E3 como God-Core Muerto, Monumento Frío ✅**
+
+**Archivo:** `Final 2 The Long Winter.png` (GENERADO 2026-07-23, imagen pasada — el nombre de archivo interno era `Speck - Imprisoned Warden Form Final 3`, corregido acá al nombre real en disco)
 
 **Evaluación:** ✅ 95%+ PASS — Landscape keyframe The First Wound cementerio (desolado, monumento muerto, luz fría gris-azul, Speck reconocible pero cristalizada, ojos congelados, runas dormidas, seams atenuados). Composición épica: Speck miniaturizada por vastedad, humano pequeño en distancia mirando. Paleta desaturada excepto rojo muted. Atmósfera: solemnidad, pérdida absoluta, funeral. **Capstone visual de desolación.**
 
@@ -293,11 +362,72 @@ no freedom, no gentle posture, no active runes, no flowing seams, no hope — mu
 as defeat and ownership, not majesty.
 ```
 
-#### **5c.4 — Final 4: The Warden's Choice — E3 como God-Core Vivo, Elegida y Majestuosa ✅**
+#### **5c.4 — Final 4: The Warden's Choice — E3 Viva, Respondiendo ✅**
 
-**Archivo:** `Speck - Ancient Warden Form Final 4 Aether Renacido` (GENERADO 2026-07-23, imagen pasada)
+**Archivo:** `Final 4 The Warden's Choice v2.png` (GENERADO 2026-07-30, RATIFICADO por Boris — reemplaza al v1 pre-canon de 2026-07-23, que queda en `90-Raw/concept/` como referencia histórica del problema corregido).
 
-**Evaluación:** ✅ 100% PASS — Capstone visual absoluto. Landscape keyframe The First Wound cementerio (dawn light dorado-ámbar CÁLIDO, Speck radiante en plataforma elevada, God-Cores rojos alrededor pero ella destaca VIVA, nombre SPECK tallado en base, grupo humano pequeño abajo en veneración). Ojos amber CÁLIDOS y conscientes (opuesto a F2 congelados). Runas oro BRILLANTES activas. Seams aether flujo cálido rojo-ámbar. Postura: quiet strength, calm, majestic. Luz dorada = purpose fulfilled, renewal, peace absoluta. Contrasta perfectamente F2 (fría muerte) vs. F4 (cálida eternidad). **ESTE ES EL FINAL VISUAL DEL JUEGO.**
+**Evaluación:** ✅ Las 3 correcciones narrativas se cumplen — sin pedestal/monumento, mirada recíproca directa al jugador (el único beat que distingue F4), sin halo ni composición triunfal. **Nota abierta, no bloqueante:** el cuerpo derivó a costillar expuesto tipo esqueleto y las orejas perdieron la forma de pétalos — ver ⚠️ en §Base visual común. Aceptado tal cual; refinamiento visual queda para una pasada futura si hay margen.
+
+> ⚠️ **Re-hecho 2026-07-30.** El archivo viejo (`Final 4 The Warden's Choice.png`,
+> GENERADO 2026-07-23, evaluado "100% PASS" en su momento) es **pre-canon**: se
+> aprobó antes del split de 5 finales, antes de la tabla de grados de agencia (hoy
+> 4, ver arriba), y antes de que `Los 5 Finales §F4` fijara *"agridulce, no triunfal"* como sabor
+> obligatorio. Comparado contra el canon actual, tiene 3 problemas:
+> 1. **Composición de monumento** — pedestal, nombre grabado en runas, grupo
+>    mirando hacia arriba a distancia reverente. Es apoteosis/deificación, no una
+>    despedida. Ella *"se queda en el cráter para siempre"* tal cual quedó, no
+>    como estatua erigida después.
+> 2. **Sin reciprocidad.** Lo único que distingue F4 es que ella **responde** —
+>    mirada hacia el jugador, no al horizonte ni al sol. El viejo la muestra
+>    mirando de frente en pose de ídolo, sin ningún personaje específico como
+>    destinatario de esa mirada.
+> 3. **Triunfal en vez de agridulce** — halo dorado detrás de la cabeza, luz de
+>    amanecer como gloria. El sabor declarado prohíbe exactamente esto.
+>
+> El brief de abajo mantiene el formato de landscape keyframe (coherente con
+> `5c.2b`) y la luz cálida de amanecer (contraste correcto con el frío de F2b),
+> pero reconstruye la escena como un momento **íntimo y recíproco**, no público.
+
+```
+Landscape keyframe of The First Wound at the conclusion of Final 4, The Warden's 
+Choice — the one ending where the player asked and Speck answered. ANATOMY LOCK: 
+she is built on a FOX skeleton — vulpine skull and muzzle, quadruped fox-proportioned 
+body, four fox legs and paws, a fox tail — the SAME silhouette DNA as her E1 
+crystalline form and her shapeshifted fox disguise. She is NOT a deer, NOT a stag, 
+NOT a cervid — no antlers, no branching crown structure of any kind. She stands as 
+a living Warden creature in her true red God-Core form, deep saturated red 
+translucent crystal with the exact geometry of the God-Core formations around her, 
+aether seams glowing warm ámbar and teal, golden runes active across her body. She 
+has calcified in place at the edge of the central core — this is where she will 
+stand forever, permanent, rooted directly into the crater floor. NO PEDESTAL, NO 
+PLINTH, NO CARVED INSCRIPTION, NO STATUE BASE of any kind — she stands on bare 
+crater ground among the God-Core formations, not elevated, not enshrined. Dawn 
+light, warm gold-amber, soft — the intended contrast is with Final 2's cold 
+blue-grey, not with grandeur. THE CENTRAL BEAT, the only thing that must read 
+clearly: she is looking down and directly AT THE PLAYER CHARACTER, who stands close 
+to her at an intimate, human distance — not at the horizon, not at the sky, not out 
+at the viewer generically. Her eyes are dark amber, faceted, warm — and for the 
+first and only time across all five endings there is reciprocity in that gaze: she 
+was asked a question, and this is her answering it. The player character stands 
+near enough to almost touch her, head tilted up, in a quiet private exchange — not 
+a public unveiling. The rest of the Bound Five (Roen, Valen, Darro, the active 
+Pivote) stand a short distance back, small in frame, each visibly processing their 
+own private grief in their own posture — NOT posed as reverent worshippers looking 
+up in awe, NOT arranged symmetrically below her like an audience at a monument. No 
+golden halo or sunburst directly behind her head. Mood: bittersweet, not triumphant 
+— quiet acceptance, warmth undercut by the knowledge that this is a goodbye. The 
+world got its slow cure; a friend was lost anyway, only this time with her consent. 
+Atmosphere: intimate, solemn, tender, grave — a farewell, not a coronation. Art 
+style: hand-painted graphic novel watercolor, ligne claire, flat cel shading 3–4 
+bands, warm gold-amber and saturated red dominant, visible paper grain. Blend of 
+Sable × Breath of the Wild with luminosity. Negative: NO DEER, NO STAG, NO ELK, NO 
+CERVID, NO ANTLERS, no branching crown or horn structures, no pedestal, no plinth, 
+no carved name or runic inscription base, no statue-like presentation, no halo or 
+sunburst directly behind her head, no group posed as worshippers looking up from a 
+reverent distance, no looking at the horizon or sky, no looking at the viewer 
+generically — she must be looking at the player character specifically, no 
+triumphant or glorious framing, no photorealism, no text, no captions.
+```
 
 ### Forma Shapeshifteada — Zorro (E1→E2, coexiste con Estadios Warden) — BRIEF RATIFICADO 2026-07-23
 
@@ -395,11 +525,11 @@ cubierta.
 (no ciudad), postas defensivas simples, clima árido, cultura mercenaria
 pragmática.
 
-**`Driftmarket (mercado flotante).png`** — 🔴 sin renombrar, lore/estilo
-correctos PERO tiene un caption de texto quemado en la imagen
-("DRIFTMARKET – FLOATING MARKET..."), incumple la regla estándar
-anti-texto (ver §10). Candidata a re-corrida con esa regla aplicada; no se
-re-corrió todavía.
+**`Driftmarket (mercado flotante).png`** — ✅ **RESUELTO (2026-07-27).**
+Tenía un caption de texto quemado, incumplía la regla anti-texto (§10).
+Re-corrida en §11.1 → `driftmarket-keyframe-v2.png`, RATIFICADO, cero
+texto en la imagen. Este archivo v1 queda solo como referencia histórica
+del problema.
 
 ## 7 — Dagna (Pivote del slice, B1)
 
@@ -536,6 +666,30 @@ negativos de estilo agresivos.
 
 ```
 Full-body character concept sheet, front view and side view, of "King Borran", ruler of a dwarven mountain kingdom, on a plain warm paper background. The proportions are the single most important rule: he is exactly 4.5 heads tall, a trapezoid silhouette nearly as wide as he is tall, with a massive trapezius and shoulders so wide they swallow the neck entirely, a wide barrel torso, enormous hands, very short thick arms and legs, and a low planted center of gravity — immovable, built like a load-bearing wall, NOT a tall human viking build. He is NOT tall, NOT athletic, NOT broad-in-a-human-way — every limb is short and thick, the total height barely clears a human's waist. Face: heavy brow, broad jaw, a thick braided grey beard woven with small forge-iron rings and rune-stamped clasps — the beard itself reads as a chronicle of his lineage. Hair: dark iron-grey, pulled back beneath a crown that is clearly forged metal, not gemmed — a heavy band of dark iron with raised gold inlay in a repeating overlapping hammer-strike chevron pattern, visibly fused in style with forge-craft rather than looking like a jeweled royal ornament. Skin: warm bronze tones with soot shading. Amber geometric guild-and-crown tattoos on both forearms. Clothing: ceremonial forge-plate over practical smith-king garb sized to his short thick frame — dark iron pauldrons chased with gold sitting on his massive shoulders, a heavy fur-lined mantle in deep ember red and black, medieval aetherpunk with faint warm ember accents glowing at the seams. Holds a ceremonial war-hammer/scepter hybrid at rest, head resting on the ground, in a relaxed formal stance rather than a battle-ready one. Art style: this must look like a traditional hand-painted watercolor illustration on textured paper — visible rough watercolor paper grain across the entire image, crisp black ink linework with slightly uneven hand-drawn line weight, flat cel shading in only 3-4 distinct light bands with soft dry-brush jittered edges between them, NOT a smooth gradient. Washed, low-saturation, slightly muted watercolor palette. Style blend of the game Sable's ligne claire flat graphic shapes and Breath of the Wild's soft impressionist color. Negative: no tall body, no human proportions, no viking-human build, no long or average-length arms and legs, no slender build, no comedic caricature dwarf, no gemstone-heavy crown, no plain unadorned crown, no battle-ready aggressive stance, no smooth airbrushed digital gradient shading, no clean vector-style linework, no glossy modern video-game splash art finish, no anime illustration style, no Genshin Impact candy saturation, no photorealism or PBR rendering, no neon glow.
+```
+
+### 9b-v3 — King Borran (REESCRITO en prosa corta estilo Kadrun, 2026-08-05)
+
+**Archivo:** `king-borran-v3.png` (GENERADO 2026-08-06, RATIFICADO por
+Boris).
+
+**Evaluación:** ✅ Sin texto ni glitches. Corona forjada de metal oscuro
+sin gemas, martillo ceremonial en reposo, barba trenzada con anillos de
+forja, capa con acentos ember. Nota menor no bloqueante: la proporción
+mejoró pero sigue sin ser tan extrema como el trapezoide de 4.5 cabezas
+del canon (Dagna/Vekka) — mismo margen que ya se toleró en King Borran
+v2 y en otras fichas enanas.
+
+Referencia adjunta: `king-borran-v2.png` (vigente hoy, sin QA formal —
+ver nota 🟡 arriba). Aplica el mismo tratamiento que resolvió Kadrun en
+§9e-v2: la v2 de Borran sigue siendo una oración densa larga, el mismo
+patrón que causó los glitches de texto en Ithessa v1 y Kadrun v1. Esta
+versión reformula el mismo contenido (proporción 4.5 cabezas como regla
+más importante, corona forjada sin gemas, motivo de martillo) en
+oraciones cortas independientes. Destino: `king-borran-v3.png`.
+
+```
+Full-body character concept sheet, front view and side view, of a dwarf king named Borran, on a plain warm paper background. His proportions are the most important rule: he is exactly four and a half heads tall, a wide trapezoid body nearly as wide as it is tall. His shoulders are massive and swallow his neck entirely. His torso is a wide barrel shape, his hands are enormous, and his arms and legs are very short and thick — low to the ground, immovable, nothing like a tall human build. His face has a heavy brow and broad jaw, framed by a thick braided grey beard woven with small forge-iron rings and rune-stamped clasps. His iron-grey hair is pulled back under a crown. The crown is forged dark iron with raised gold inlay in a hammer-strike pattern — no gemstones, it looks like smith-work, not jewelry. His skin is warm bronze with soot shading. Amber geometric tattoos mark both forearms. He wears ceremonial forge-plate armor sized to his short wide frame, dark iron pauldrons chased with gold, and a heavy fur-lined mantle in deep ember red and black, with warm ember accents glowing faintly at the seams. He holds a ceremonial war-hammer at rest, its head resting on the ground, in a calm formal stance rather than a battle-ready one. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No tall body. No human proportions. No viking build. No long arms or legs. No slender build. No comedic caricature. No gemstone crown. No battle-ready aggressive stance. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow.
 ```
 
 ### 9c — Regent Edrick Ashcombe (Aethelgard)
@@ -877,7 +1031,7 @@ Mood: melancolía gráfica, umbral, cinco personas antes de la decisión que las
 
 ---
 
-### 12.2 — Poster / Key Art (V2)
+### 12.2 — Poster / Key Art (V2) — RATIFICADO ✅
 
 **Archivo destino:** `marketing_key-art-poster-v2.png`
 
@@ -903,6 +1057,8 @@ Cielo amplio ocupando más de la mitad del encuadre — gradiente de teal en lo 
 Mood: cinco personas en el techo del mundo, viendo todo lo que está en juego a la vez — y todavía sin saber hacia dónde va a terminar la historia.
 
 **Negativos:** No Speck, no fox silhouette. No text, no title, no logo, no labels, no captions. No visible crater or jade light on the horizon (no First Wound). No readable city detail — silhouettes only. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow. No heroic action poses. No characters facing the camera. No weapons drawn. No dramatic lens flare. No modern movie-poster collage layout.
+
+**QA (evaluado retroactivamente — generado 2026-07-28, evaluado 2026-08-07):** ✅ **Ratificada.** Las 3 franjas de horizonte correctas (río/Rivermeet izquierda, Stillspire sobre el dosel de Gloomvault al centro, terreno volcánico con resplandor de Ignis Reach a la derecha), sur ausente sin indicios de First Wound, hueco de composición donde estaba Speck, cielo con el gradiente exacto y espacio limpio para el logo, perspectiva aérea correcta, sin armas desenvainadas ni poses heroicas. 🟡 Nota menor no bloqueante: mismo ícono de destello/diamante blanco en la esquina que ya se viene marcando desde el batch de Zephyr (§15.4) — contaminación repetida de NB2, no exclusiva de esta lámina.
 
 ---
 
@@ -971,6 +1127,587 @@ Mood: íntimo, como una página de diario donde alguien lleva cuenta de a quién
 **Negativos:** No text names — placeholder bars only. No rectangular progress bars. No percentage or numeric displays. No UI panels, cards or glass boxes. No skill-tree node graphics. No RPG stat sheet layout. No photorealism or PBR rendering. No anime cel shading. No Genshin Impact candy saturation. No neon glow.
 
 ---
+
+## 13 — Bestiario (Sesión de diseño 2026-08-04)
+
+Primer batch de fauna con nombre propio, fuente: [[Bestiario]]. Los 4
+primeros ya existían como una línea suelta en [[Geografía y Ciudades]] §I
+y nunca tuvieron brief; los 3 siguientes son los bosses nuevos que
+completan los 5 dungeons formales. Cierra con los 2 monstruos de
+[[Villanos Menores]] §Capa 2 — no sapientes, nacidos de la corrupción.
+
+**Bloque de estilo compartido (igual que el resto del documento):**
+hand-painted graphic novel watercolor · crisp black ink linework · flat
+cel 3–4 bandas con bordes dry-brush · paleta lavada de baja saturación ·
+grano de papel · Sable ligne claire × BotW impresionista. **Negativos
+estándar en todos:** no Genshin candy saturation, no photorealism/PBR, no
+generic anime cel, no neon glow salvo el propio Aether de la criatura, no
+text/labels/captions/annotations/diagram-style callouts.
+
+**Nota de eje (ver [[Bestiario]] §El eje que organiza todo):** la paleta y
+el nivel de mutación de cada criatura están fijados por su grado —
+Ambiental = fauna reconocible con más agresividad; Corrupto = vetas de
+Aether visibles sobre anatomía todavía reconocible; Aberración = ya no
+hay anatomía original que respetar, es Aether puro con forma. Ningún
+brief de este batch es grado Sano — el Bestiario no lista fauna sana con
+nombre propio (es la mayoría silenciosa de mundo abierto, sin ficha).
+
+### 13.1 — The Crowned Leviathan (Lake of Mirrors, grado Ambiental — superviviente, no mutada)
+
+**Archivo:** `crowned-leviathan-v1.png` (GENERADO 2026-08-04).
+
+**Evaluación:** ⚠️ El diseño cumple el brief (corona de espinas óseas,
+vetas bioluminiscentes teal, calma antigua) pero la lámina trae texto y
+etiquetas incrustadas ("FRONT VIEW", título, párrafo descriptivo) —
+rompe la regla estándar del documento (§10: *"no text, no labels, no
+captions"*). Se archiva como referencia de diseño; **pendiente re-roll
+sin texto** para uso de producción.
+
+```
+Creature concept sheet, front view and side view, of "The Crowned Leviathan" — a massive aquatic beast, hybrid of serpent and whale, ancient and dignified rather than monstrous. Not a mutation — an unmutated survivor from before the Aether corruption. Long serpentine body, a whale-like head with a baleen-adjacent jaw, powerful finned flippers, and a crown-like ridge of bone spines running from the skull down the back of the neck. Skin deep blue-grey with faint bioluminescent teal patterning along the flanks, natural and organic, no crystalline growths. Eyes large, dark, calm rather than aggressive. Scale texture rendered as overlapping plates, weathered by age. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation blue-grey palette with teal bioluminescent accents, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of ancient dignity. No crystalline growths. No Aether corruption marks. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond soft teal bioluminescence. No text anywhere in the image. No "front view" or "side view" labels. No title text. No captions. No diagram callouts.
+```
+
+### 13.1-v2 — The Crowned Leviathan (REVISADO — sin texto/etiquetas incrustadas, 2026-08-05)
+
+**Archivo:** `crowned-leviathan-v2.png` (GENERADO 2026-08-06, RATIFICADO
+por Boris).
+
+**Evaluación:** ✅ Cero texto en la imagen — la prosa corta resolvió el
+glitch de la v1. Corona de espinas óseas, vetas bioluminiscentes teal,
+sin cristales de corrupción, calma antigua en la mirada. Coincide con el
+brief punto por punto.
+
+Referencia adjunta: `crowned-leviathan-v1.png` (v1, archivada como
+referencia de diseño — el diseño en sí ya estaba bien, solo trae texto
+quemado). Reescrito en prosa corta y natural (mismo formato que resolvió
+Kadrun en §9e-v2), negativos como oraciones simples en vez de una lista
+larga, con una prohibición explícita y literal de las etiquetas "front
+view"/"side view" que aparecieron quemadas en la v1 — hipótesis: prompts
+largos y densos en una sola oración elevan el riesgo de que NB2 renderice
+esas palabras como texto real. Destino: `crowned-leviathan-v2.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of a massive aquatic beast called the Crowned Leviathan, on a plain warm paper background. It is a hybrid of serpent and whale, ancient and dignified rather than monstrous — an unmutated survivor from long before the Aether corruption, not a mutation. Its body is long and serpentine, with a whale-like head and a baleen-adjacent jaw. It has powerful finned flippers and a crown-like ridge of bone spines running from the skull down the back of its neck. Its skin is deep blue-grey with faint bioluminescent teal patterning along the flanks — natural and organic, no crystalline growths anywhere. Its eyes are large, dark, and calm rather than aggressive. Its scale texture reads as overlapping plates, weathered by age. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation blue-grey palette with teal bioluminescent accents, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild. No crystalline growths. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the teal bioluminescence. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
+```
+
+### 13.2 — The Burning Shepherd (Ossuary Grove, grado Corrupto — guardián de los muertos)
+
+**Archivo:** `burning-shepherd-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Fuego contenido en el frente, sombra disolviéndose sin
+borde claro en el tren trasero, vetas rojas agrietadas en el flanco,
+ojos ámbar vigilantes. Cumple los tres ejes del brief. PASS sin reservas.
+
+```
+Creature concept sheet, front view and side view, of "The Burning Shepherd" — a hybrid beast of fire and shadow that guards a grove of skeletal Warden remains, behaving like a protector rather than a predator. Quadruped, wolf-like build but larger and heavier, front half wreathed in low flickering flame (dull orange-red, not bright — restrained, smoldering rather than blazing), back half dissolving into soft trailing shadow with no clear edge, as if half of it isn't fully physical. Bone-like ridges along the spine echo the skeletal remains it guards. Eyes glow a steady amber, watchful and almost sorrowful rather than hostile. Aether corruption visible as thin cracked veins of dull red light across the flame-side flank. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation palette dominated by muted ember-orange and charcoal-grey shadow, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of mournful guardianship rather than aggression. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no bright blazing fire, no neon glow beyond dim ember light, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.3 — The Mirror Stalker (The Echoing Archive, boss del dungeon, grado Aberración)
+
+**Evaluación (2026-08-04):** ❌ **No pasa.** El resultado se lee como un
+gólem de piedra genérico — tiene rostro tallado y textura mineral en vez
+de superficie de espejo/vidrio reflectante. El concepto central del boss
+(*"copia tus movimientos", "reflective energy"*) no se transmite
+visualmente: no hay sensación de reflejo, distorsión ni vidrio. **No se
+archiva en `90-Raw/concept/`** — pendiente de un re-roll real, no solo de
+texto, en la próxima corrida de NB2. Reforzar en el prompt: superficie de
+vidrio/espejo explícita, ausencia total de rasgos faciales tallados.
+
+```
+Creature concept sheet, front view and side view, of "The Mirror Stalker" — an Aether aberration with no true animal ancestry, a being of pure reflective energy that mimics the movements of whoever approaches it. Humanoid-adjacent but deliberately ambiguous silhouette, roughly person-sized, surface entirely made of smooth dark glass-like facets that reflect a distorted, slightly-delayed copy of anything nearby rather than a normal reflection. No visible face — where a face would be, only a fractured mirror-surface that occasionally suggests a half-formed expression before smoothing back to blankness. Thin cracks of pale teal aether light run between the facets like mortar between broken glass. Posture is still and watchful, unnervingly patient. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation grey-blue palette with pale teal light in the seams, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of uncanny stillness. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no clear humanoid face, no neon glow beyond pale teal seam light, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.3-v2 — The Mirror Stalker (REDISEÑO — vocabulario de vidrio, no de piedra, 2026-08-05)
+
+**Archivo:** `mirror-stalker-v2.png` (GENERADO 2026-08-06). **❌ No pasa,
+sin archivar en producción.**
+
+**Evaluación:** el vocabulario de vidrio no alcanzó — el resultado lee
+como una armadura de placas cristalinas/metálicas, más caballero que
+espejo. Ningún panel muestra reflejo real, no hay el respaldo plateado
+pedido, no hay traslucidez. **Diagnóstico nuevo:** el problema no era
+solo la palabra "facets" — es la **estructura** de la descripción.
+"Shards fused into a humanoid shape covering the body" se lee como
+armadura sin importar qué material se nombre encima. Hace falta cambiar
+la estructura, no solo el vocabulario: describirlo primero como **panel
+de vidrio roto**, humanoide solo en el contorno general, no como cuerpo
+cubierto de placas. Ver §13.3-v3 abajo.
+
+**Diagnóstico de la v1:** "glass-like facets" y "surface" son palabras
+que también describen roca — sin un ancla léxica inconfundible, NB2
+completó con la lectura por defecto (gólem de piedra tallado). Fix: usar
+vocabulario que **solo** puede leerse como espejo — específicamente el
+**respaldo plateado de un espejo real**, visible en las grietas, es un
+detalle que ninguna roca tiene y que un modelo de imagen no puede
+confundir. También se cambia "facets" por "shards of mirror glass" en
+todo el prompt, y se agregan negativos explícitos contra piedra/gólem
+que la v1 no tenía. Destino: `mirror-stalker-v2.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of "The Mirror Stalker", on a plain warm paper background. It is an Aether aberration made of broken mirror glass fused into a crude, unstable humanoid shape — not a golem, not made of stone or rock in any way. Its entire body is built from jagged shards of real mirror glass, each shard reflecting a slightly warped and delayed copy of whatever stands nearby. Where the shards meet, thin cracks reveal the silvered backing of the mirror glass showing through underneath — a distinctly metallic-silver seam between panes, the clearest proof this is glass and not stone. It has no carved face and no sculpted features of any kind — where a face would be, there is only a cracked mirror surface, occasionally suggesting the ghost of an expression before smoothing back into blank reflection. Faint pale teal Aether light glows faintly in the deepest cracks between shards. Its posture is still, watchful, and unnervingly patient. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines, flat shading in a few soft bands with dry-brush edges, a muted low-saturation grey-blue palette with pale teal light in the cracks and cool silver-white glass highlights, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of uncanny stillness. No stone. No rock texture. No carved stone golem. No sculpted or chiseled surface. No mineral texture of any kind. No carved facial features. No clear humanoid face. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the pale teal crack-light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
+```
+
+### 13.3-v3 — The Mirror Stalker (REDISEÑO ESTRUCTURAL — panel de vidrio, no armadura, 2026-08-06)
+
+**Archivo:** `mirror-stalker-v3.png` (GENERADO 2026-08-06, RATIFICADO
+por Boris — **con pivote de concepto**, ver abajo).
+
+**Evaluación:** ⚠️→✅ Mejoró parcialmente sobre la v2 — huecos reales
+entre paneles (torso, cadera) donde se ve el papel de fondo, luz teal en
+las grietas — pero sigue sin mostrar reflejo literal ni respaldo
+plateado; el resultado lee como autómata de cristal/vidrio articulado,
+no como espejo roto en sentido estricto. **Boris acepta el pivote**: en
+vez de forzar un cuarto intento, el canon de The Mirror Stalker se
+ajusta para describir esto — ver [[Bestiario]] §The Mirror Stalker,
+actualizado. El nombre se mantiene por la habilidad de imitación
+("copia tus movimientos"), no por la superficie literal.
+
+Cambia la estructura de la descripción, no solo el vocabulario: en vez de
+"cuerpo humanoide cubierto de placas de vidrio" (que lee como armadura
+sin importar el material), se describe primero como **un panel de espejo
+roto** que adoptó apenas un contorno humanoide — plano antes que
+volumétrico, translúcido antes que sólido. Se agrega un reflejo real y
+distorsionado del entorno visible dentro del vidrio (lo único que un
+modelo de imagen no puede confundir con metal u opaco), y negativos
+directos contra armadura/caballero/robot que la v2 no tenía. Destino:
+`mirror-stalker-v3.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of "The Mirror Stalker", on a plain warm paper background. Think of it first as a shattered full-length mirror that has been bent and cracked into a rough, unstable humanoid outline — not as a person wearing anything. It reads as flat broken glass first, a figure only second: thin, angular, with visible gaps between the largest glass fragments where you can see straight through to the paper behind it. Within the glass, a dim, warped, slightly delayed reflection of whatever stands in front of it is visible — a ghostly double, not a clear mirror image. Where the glass fragments meet, a thin metallic-silver seam shows through the cracks, the silvered backing of real mirror glass. There is no face, no helmet, no carved or sculpted feature anywhere — only more cracked reflective glass where a face would be. Faint pale teal Aether light glows in the deepest cracks. It stands still, watchful, unnervingly patient. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines only where the glass edges are, flat shading in a few soft bands with dry-brush edges, a muted low-saturation grey-blue palette with pale teal crack-light and cool silver-white glass highlights, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of uncanny stillness. No armor. No plate armor. No knight. No robot or mech suit. No metal suit. No solid opaque body. No stone. No rock texture. No carved stone golem. No sculpted or chiseled surface. No carved facial features. No helmet or visor shape. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the pale teal crack-light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
+```
+
+### 13.4 — The Aether Wyrm (The Rift, grado Aberración — la más pura de las 4)
+
+**Archivo:** `aether-wyrm-v1.png` (GENERADO 2026-08-04).
+
+**Evaluación:** ⚠️ Buen resultado atmosférico (ojos ámbar, cuerpo teal,
+estelas de humo), pero dos desvíos del brief: (1) trae etiquetas "FRONT
+VIEW"/"SIDE VIEW" incrustadas — mismo problema de §10 que el Leviathan;
+(2) tiene hocico/mandíbula de dragón visible, cuando el brief pedía
+explícitamente *"no true head shape... no visible mouth"*. Se archiva
+como referencia; **pendiente re-roll** (sin texto, sin mandíbula
+reconocible) antes de darlo por final.
+
+```
+Creature concept sheet, front view and side view, of "The Aether Wyrm" — a serpent made entirely of raw Aether, with no animal tissue at all, semi-corporeal and capable of phasing partially out of visibility. Long sinuous serpentine body with no legs, its form only partially solid — sections of the body fade into translucent, barely-visible mist-like Aether while other sections remain a solid deep-teal crystalline surface, as if it is constantly flickering between existing and not existing. No true head shape, just a tapering, elongated skull-like formation with faint glowing amber eye-points and no visible mouth. Faint wisps of raw Aether trail behind it like smoke. Art style: hand-painted graphic novel watercolor, crisp black ink linework only where the body is solid (fading to loose unfinished linework where it phases out), flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation palette with deep teal and pale amber as the only saturated notes, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of something that should not exist. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no solid fully-opaque body, no neon glow beyond teal/amber Aether light, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.4-v2 — The Aether Wyrm (REVISADO — sin texto/etiquetas ni mandíbula de dragón, 2026-08-05)
+
+**Archivo:** `aether-wyrm-v2.png` (GENERADO 2026-08-06, RATIFICADO por
+Boris).
+
+**Evaluación:** ✅ Resuelve los dos problemas de la v1: cero texto en la
+imagen, y sin mandíbula/hocico de dragón — la cabeza es una formación
+cristalina puntiaguda sin boca, solo dos puntos ámbar de ojos. Cuerpo
+alternando entre sólido teal cristalino y niebla translúcida, coherente
+con "constantemente parpadeando entre existir y no existir".
+
+Referencia adjunta: `aether-wyrm-v1.png` (v1, archivada — ambiente y
+color correctos, pero trajo etiquetas "FRONT VIEW"/"SIDE VIEW" quemadas
+y una mandíbula reconocible de dragón que el brief prohibía). Misma
+receta que resolvió Kadrun (§9e-v2): prosa corta, negativos como
+oraciones simples, y acá además un refuerzo explícito y repetido de "no
+jaw, no mouth, no teeth, no dragon head" porque una sola mención no
+alcanzó la vez anterior. Destino: `aether-wyrm-v2.png`.
+
+```
+Full-body creature concept sheet, front view and side view, of a serpent-like being called the Aether Wyrm, on a plain warm paper background. It is made entirely of raw Aether, with no animal tissue at all — semi-corporeal, and partly phasing out of visibility. Its body is long, sinuous, and legless. Some sections of its body are solid, a deep-teal crystalline surface; other sections fade into translucent, barely-visible mist, as if it keeps flickering between existing and not existing. It has no true head shape at all — where a head would be, there is only a tapering, elongated formation with two faint glowing amber points of light for eyes. It has no jaw, no mouth, no teeth, and does not read as a dragon head in any way. Faint wisps of raw Aether trail behind it like smoke. Painted in a hand-painted watercolor graphic-novel style: crisp black ink outlines where the body is solid, fading to loose unfinished linework where it phases out, flat shading in a few soft bands with dry-brush edges, a muted low-saturation palette with deep teal and pale amber as the only saturated colors, visible watercolor paper grain — style blend of the games Sable and Breath of the Wild, mood of something that should not exist. No jaw. No mouth. No teeth. No dragon head or dragon snout. No fully solid opaque body. No candy-bright saturation. No photorealism or PBR rendering. No anime cel shading. No neon glow beyond the teal and amber Aether light. No text of any kind anywhere in the image. No written labels. No words reading "front view" or "side view". No title. No captions. No diagram callouts.
+```
+
+### 13.5 — The Hollow Warden (The Hollow Deep, boss del dungeon, grado Corrupto)
+
+**Archivo:** `hollow-warden-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Sin ojos (cuencas atrofiadas lisas), bigotes
+sensoriales, cuerpo bajo y pesado de cueva, vetas jade tenues bajo la
+piel. Match casi exacto del brief. PASS sin reservas.
+
+```
+Creature concept sheet, front view and side view, of "The Hollow Warden" — a blind cave-dwelling beast that hunts by echo and vibration, mutated by a minor Aether leak deep underground without becoming a full aberration. Quadruped, low and heavy-bodied, built for crawling through tight tunnels rather than running — thick stubby limbs, no visible eyes (only smooth atrophied sockets where eyes would be), a wide flat head built almost entirely of sensory whiskers and vibration-sensing ridges. Skin is pale cave-grey, hairless, with a network of faint jade-glowing veins beneath the surface that pulse when it senses motion — the glow is a mineral coincidence, not a magical signal, so it should read as bioluminescent rather than rune-like. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation pale-grey palette with dim jade-green pulsing veins, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of blind subterranean menace. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no visible eyes, no neon glow beyond dim jade veins, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.6 — The Drowned Choir (The Submerged Halls, boss del dungeon, grado Corrupto — unidad coordinada)
+
+**Nota de encuentro:** no es un individuo — son 3-5 bestias que atacan
+como una sola unidad sincronizada. El brief describe **una** unidad del
+grupo; en implementación se repite el mismo diseño 3-5 veces.
+
+**Archivo:** `drowned-choir-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Cámara resonante visible en el lomo, aletas violeta
+translúcidas, cuerpo de anguila con extremidades palmeadas. Ojos más
+grandes y agresivos que "milky y pequeños" del brief — se lee más feroz
+de lo pedido, pero funciona igual de bien para un boss de dungeon. PASS
+con nota menor, no bloqueante.
+
+```
+Creature concept sheet, front view and side view, of a single unit of "The Drowned Choir" — a coordinated pack of aquatic beasts that move and attack in perfect synchrony, corrupted descendants of a species that already hunted in groups before the Aether touched them. Eel-like elongated body with four webbed limbs, built for fast coordinated swimming, translucent fins edged in a sickly pale violet. A ribbed, resonating chamber along the throat and spine — visibly open slits, like gill-adjacent structures repurposed for sound — is the source of the low choral hum the pack produces underwater. Skin is a deep drowned blue-grey with faint corrupted violet mottling, no crystalline growths, the corruption reads as sickness rather than mineral mutation. Eyes are small, milky, adapted to murky water. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation deep-blue palette with pale violet corruption mottling, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of eerie coordinated hunger. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no crystalline growths, no neon glow, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.7 — The Cascade Warden (The Shattered Cascade, boss del dungeon, grado Ambiental — la excepción sin corromper)
+
+**Archivo:** `cascade-warden-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Rapaz territorial, cresta que se eriza, ojos ámbar,
+plumaje slate-grey/blanco, sin marca de corrupción — exactamente la
+excepción sin corromper que pedía el brief. PASS sin reservas.
+
+```
+Creature concept sheet, front view and side view, of "The Cascade Warden" — a large territorial bird-beast alpha that nests at the top of a massive waterfall, NOT corrupted by the Aether, simply very old and fiercely territorial. Large raptor-like build with powerful wings adapted for riding waterfall updrafts, thick waterproof plumage in slate-grey and white, a crest of longer feathers along the skull that flares when threatened. Talons oversized and weathered from decades of gripping wet rock. No Aether corruption markings anywhere — this is natural wildlife, aged and dominant rather than mutated. Eyes sharp amber, alert and territorial. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation slate-grey and white palette with natural amber eye accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of ancient territorial dominance. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no crystalline growths or Aether corruption markings of any kind, no neon glow, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.8 — The Hollowed (los Vaciados) ([[Villanos Menores]] §Capa 2, grado Corrupto — ex-personas)
+
+**Nota narrativa para el artista:** no son una raza fantástica genérica —
+son gente de cualquiera de las 3 razas que la corrupción del Aether
+reescribió hasta borrar la persona. El diseño debe leerse como **tragedia
+física**, no como monstruo de fantasía estándar: cicatrices de una
+anatomía que alguna vez fue humana/élfica/enana, no colmillos ni cuernos
+inventados.
+
+**Archivo:** `the-hollowed-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ El mejor resultado del batch. Piel agrietada tipo
+arcilla, vetas rojo-violeta exactas en las articulaciones, cara en blanco
+sin rasgos individuales, ropa reducida a jirones — tragedia física
+lograda sin caer en cliché de orco (sin colmillos, sin piel verde). PASS
+sin reservas.
+
+```
+Creature concept sheet, front view and side view, of "The Hollowed" (Los Vaciados) — a large humanoid figure, once a person of one of three fantasy races, slowly rewritten by prolonged exposure to corrupted Aether until no personality or memory remains. The design must read as tragic transformation, not generic fantasy monster — no invented tusks, horns or bestial features. Body reads as an enlarged, muscular humanoid silhouette with skin cracked like dry clay, deep violet-red Aether veins visible glowing faintly beneath the cracks especially at the joints, where the corruption clearly entered the body first. Face still loosely humanoid but blank — no distinct individual features remain, eyes are solid dull amber with no visible pupil, expression permanently slack. Sparse, tattered remnants of what were once ordinary traveler's or worker's clothes still cling to the body, torn and stained, the only trace of who this used to be. Posture hunched, feral, pack-hunting stance rather than upright civilization. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation grey-brown palette with dull violet-red veined glow, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of tragic corrupted humanity, not monstrous glee. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no tusks, no horns, no bestial animal features, no orc-cliché green skin, no neon glow beyond dim violet-red veins, no text, no labels, no captions, no diagram-style callouts.
+```
+
+### 13.9 — The Chaff (las Motas) ([[Villanos Menores]] §Capa 2, grado Corrupto — proto-vida, tono liviano)
+
+```
+**Archivo:** `the-chaff-v1.png` (GENERADO 2026-08-04, RATIFICADO por Boris).
+
+**Evaluación:** ✅ Tono liviano logrado — ojos ámbar puntuales, sonrisa,
+postura juguetona sobre un objeto robado. Grupo de 3 + individuo grande
+para mostrar detalle y comportamiento de enjambre a la vez. Sin deriva a
+mascota Genshin. PASS.
+
+```
+Creature concept sheet, front view view and multiple small figures in a cluster, of "The Chaff" (Las Motas) — tiny scavenging creatures that are not mutated animals but proto-life, born when corrupted Aether crystallizes into the simplest possible living form. About half a meter tall, roughly humanoid-adjacent but simplified and asymmetrical, like a rough sketch of a person made of stone-grey clay with small jagged crystal shards embedded across the body catching dull violet light. No true face, just two small glowing amber pinprick eyes and a wide chattering slit of a mouth. Long grasping fingers built for snatching small shiny objects. Posture playful and skittering rather than menacing — the tone here is mischievous nuisance, not horror. Show 3 in a small cluster to convey swarm behavior. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation stone-grey palette with small dull-violet crystal accents, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of mischievous low-stakes nuisance rather than dread. Negative: no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no cute Genshin-style mascot design, no neon glow beyond small dull violet crystal accents, no text, no labels, no captions, no diagram-style callouts.
+```
+
+## 14 — Links de los 3 fijos (Sesión de diseño 2026-08-05)
+
+Fuente: [[Los 3 Links de los Fijos]] (provisional, pendiente de QA). Primer
+batch de concept art para Roen, Valen y Darro en acción — no existía
+ninguno hasta ahora (§3 los dejaba "pendiente"). Cada brief muestra el T1
+del link en el instante de ejecución, ancla de anatomía en el fenotipo ya
+ratificado de cada raza, y el "Diseño Visual Ratificado" de la ficha
+respectiva como referencia de vestuario/rasgos.
+
+**Bloque de estilo compartido (igual que el resto del documento):**
+hand-painted graphic novel watercolor · crisp black ink linework · flat
+cel 3–4 bandas con bordes dry-brush · paleta lavada de baja saturación ·
+grano de papel · Sable ligne claire × BotW impresionista. **Negativos
+estándar en todos:** no Genshin candy saturation, no photorealism/PBR, no
+generic anime cel, no neon glow salvo el VFX propio de cada link, no
+text/labels/captions/annotations/diagram-style callouts, no UI icon
+framing (esto es ilustración de escena, no ícono — la iconografía de UI
+queda para una pasada aparte).
+
+### 14.1 — Roen (Second Catch, T1)
+
+**Archivo:** `roen-second-catch-v1.png` (GENERADO 2026-08-05, RATIFICADO
+por Boris).
+
+**Evaluación:** ✅ Cape en tonos tierra, warpaint verde desvanecido en el
+pómulo, cuero remachado, agarra a un aliado a media caída, único VFX
+ámbar de movimiento. Nota menor no bloqueante: la expresión lee más a
+esfuerzo/tensión que al "instinto calmado" del brief; el anillo de cobre
+no se ve (mano ocupada agarrando).
+
+Referencia adjunta: `fenotipo-humano-v1.png` (ancla de anatomía/proporción).
+Plants visuales: el copo de cobre heredado de su padre en la mano
+izquierda ([[Roen-Ficha-Expandida-v1]] §Diseño Visual Ratificado), el
+warpaint fronterizo verde ya desvanecido, cape pesada en tonos tierra.
+Único VFX del link: un solo trazo ámbar de movimiento redirigido, nada
+más brilla en la imagen. Destino: `roen-second-catch-v1.png`.
+
+```
+Use the attached human male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Roen", a 45-year-old human Vanguard, 7.5 heads tall, weathered athletic build. Face: sun-worn face with small scars from a life on the frontier (not epic battle), faded green geometric warpaint on cheekbone or jaw, 5+ years old and unretouched. Gear: riveted leather, heavy earth-tone cape, marching boots, a copper ring on his left hand. Action pose, mid-combat: Roen has just caught a falling ally by the forearm mid-air, his own body braced low and turned sideways to absorb the momentum, both boots planted hard into the ground, cape whipping from the sudden stop. His free hand is extended forward, having redirected the ally's fall into a controlled swing. A faint warm amber motion-arc trail follows the caught arm, showing the redirected trajectory — the only VFX in the image, no other glow. Expression: focused, calm, entirely unsurprised — this is instinct, not effort. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation earth-tone palette with a single warm amber motion-arc accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of quiet, practiced reliability. Negative: no tall or slender body, no youthful smooth face, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the single amber motion-arc, no text, no labels, no captions, no UI icon framing.
+```
+
+### 14.2 — Valen (The Long Calculus, T1, doble orbe)
+
+**Archivo:** `valen-long-calculus-v1.png` (GENERADO 2026-08-05,
+RATIFICADO por Boris).
+
+**Evaluación:** ⚠️→✅ El brief pedía los dos orbes activos a la vez en
+una sola pose de acción; lo generado salió como ficha frente/dorso, cada
+vista con un solo orbe (Discord al frente, Harmony atrás) — no cumple
+literalmente el punto central del brief. Boris ratifica igual: **funciona
+para el propósito del concept art** (diferencia con claridad los dos
+colores/texturas — rojo filoso vs. dorado fluido — y da anatomía
+frente/dorso utilizable). Queda anotado que una pose de acción con ambos
+orbes simultáneos, si hace falta, es un brief aparte, no un re-roll de
+este.
+
+Referencia adjunta: `fenotipo-elfo-V2.png` (ancla de anatomía/proporción).
+Plants visuales: el anillo de plata grabado con la fecha falsa
+([[Valen-Ficha-Expandida-v1]] §Diseño Visual Ratificado), grabados teal
+contenidos en cuello y esternón, abrigo slate-grey de viajero. Único VFX
+del link: los dos orbes activos a la vez, uno filoso ámbar-rojo (Discord)
+y uno cálido dorado (Harmony), sin otro brillo en la imagen. Destino:
+`valen-long-calculus-v1.png`.
+
+```
+Use the attached elf male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Valen", a 230-year-old elf Strategist, 8 heads tall, pure continuous vertical silhouette. Face: near-achromatic porcelain skin, cold white with no lavender undertone, jet-black straight hair loose to the shoulder, teal geometric markings at neck and sternum (contained, academic rather than warrior-style), a silver ring engraved with a date worn on his right hand. Clothing: long structured slate-grey traveler's coat, never ceremonial robes. Action pose: Valen stands with perfect calm posture, both hands raised, palms open in opposite directions. From his right hand extends a small orb of deep amber-red light drifting toward an unseen target — sharp, crackling, marking energy (Discord). From his left hand extends a small orb of soft warm gold light drifting the opposite direction — slow, steady, glowing warmly (Harmony). The two orbs and their trailing light-threads are the only VFX in the image, clearly different in color and texture from each other. His expression is unreadable, calculating, entirely still except for his eyes tracking both orbs at once. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation slate-grey palette with the two contrasting orb accents (amber-red and warm gold), visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of cold precision holding two opposite forces at once. Negative: no short or stocky body, no warm skin tone, no lavender undertone, no ceremonial robes, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the two named orbs, no text, no labels, no captions, no UI icon framing.
+```
+
+### 14.3 — Darro (Open Seam, T1)
+
+**Archivo:** `darro-open-seam-v1.png` (GENERADO 2026-08-05, RATIFICADO
+por Boris).
+
+**Evaluación:** ✅ Sin barba, trenza pelirroja, hachas en el cinturón,
+fisura blanco-dorada en la mano, expresión seria sin sonrisa. Nota menor
+no bloqueante: la proporción no lee tan trapezoide/4.5-cabezas como el
+fenotipo enano establecido (deriva de proporción ya vista antes con King
+Borran, §9b-v2) — no bloquea la ratificación.
+
+Referencia adjunta: `fenotipo-enano-varon-v1.png` (ancla de
+anatomía/proporción). Plants visuales: el tatuaje ámbar incompleto en el
+antebrazo ([[Darro-Ficha-Expandida-v1]] §Diseño Visual Ratificado), sin
+barba, build más liviano que Dagna o Torgan, hachas cortas en el
+cinturón. Único VFX del link: una sola fisura blanco-dorada partiendo el
+aire donde conectó el golpe, nada más brilla en la imagen. Destino:
+`darro-open-seam-v1.png`.
+
+```
+Use the attached dwarf male character sheet as the exact anatomy, proportion and art style reference, but design a specific named character: "Darro", a ~63-year-old dwarf Duelist, 4.5 heads tall, rigid trapezoid build, lighter build than a heavily-armored dwarf — leather instead of plate, short axes at his belt. Face: reddish-brown hair in a short topknot or warrior braid, no beard, an unfinished amber guild tattoo (a single symbol, not the full mastery pattern) on one forearm, open loose-limbed expression, eyes that glint with constant motion. Action pose, full follow-through of a heavy overhead strike just landed: Darro's weapon has just struck an unseen surface directly in front of him, his whole body low and torqued from the swing, one arm still extended past the point of impact. Where the blow landed, a jagged crack of bright white-gold light splits open across the empty air like a fracture line in glass — sharp, sudden, the only VFX in the image. His expression, unusually for him, is completely serious — no smirk, no joke, focused entirely on the impact. Art style: hand-painted graphic novel watercolor, crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation leather-brown palette with a single sharp white-gold fracture-light accent, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of sudden, uncharacteristic gravity. Negative: no tall or slender body, no full beard, no heavy plate armor, no playful or smirking expression, no Genshin Impact candy saturation, no photorealism or PBR rendering, no generic anime cel shading, no neon glow beyond the single fracture-light accent, no text, no labels, no captions, no UI icon framing.
+```
+
+## 15 — Los Desfiladeros de Zephyr (tutorial, Acto 1, 3 skins raciales)
+
+**Contexto:** primer tramo jugable del juego, template compartido con 3 skins
+por raza de origen ([[Geografía y Ciudades]] §Los Desfiladeros de Zephyr).
+Tramo solo (sin compañeros) que corta a mitad de camino con el title card
+"AETHER BOUND" y termina en la emboscada de 3 Hollowed donde Roen interviene
+([[Geografía y Ciudades]] §El Encuentro con Roen). Los 3 briefs abajo son el
+entorno del tramo — no la escena de la emboscada, que es un beat de guión
+aparte, pendiente de brief propio cuando se aborde esa escena.
+
+### 15.1 — Zephyr Canyons, variante humana (Mistbound Frontier / Aethelgard) — RATIFICADO ✅
+
+**Archivo destino:** `zephyr-canyons-human-v1.png`
+
+**Especificación:** Wide cinematic landscape keyframe, 16:9, of a narrow arid
+canyon pass at the edge of the Mistbound Frontier — the human origin's
+opening tutorial stretch. Composition rules: empty space is the protagonist —
+a single tiny traveler figure walks alone along a dusty trail cut into the
+canyon floor, seen from far away, small against the scale of the rock walls.
+Foreground: pale sun-bleached sandstone walls rising on both sides, crisp
+black ink linework on the rock strata, sparse dry scrub clinging to ledges.
+Middle ground: the trail bends between boulders and a half-collapsed wooden
+watch-post marker (a single weathered signpost, no legible text), hinting at
+a military Standing outpost further ahead; faint tracks of a minor beast
+crossing the path. Far distance: the canyon opens toward a hazy horizon of
+low frontier hills, dissolving into flat pale ochre silhouettes, aerial
+perspective. Light: harsh midday sun, hard-edged shadows pooling at the base
+of the walls, warm dusty haze in the air, wind-blown grit implied along the
+ridgelines. Overall palette: washed ochres, sand, rust, low saturation.
+Art style: hand-painted graphic novel watercolor — crisp black ink linework,
+flat cel shading in 3–4 fixed light bands with dry-brush jittered edges,
+washed low-saturation watercolor palette, visible paper grain, style blend of
+Sable's ligne claire and Breath of the Wild's soft impressionist color, mood
+of solitary vigilance, first steps of a long road.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow. No lush vegetation. No
+characters in close-up. No text, no labels, no captions, no annotations, no
+diagram-style callouts.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor.** Cañón amplio con
+figura diminuta en el sendero (silueta correcta), cartel de madera sin
+texto, paleta ochre/arena lavada, línea negra nítida en primer plano,
+montañas disolviéndose en la lejanía (perspectiva aérea correcta). 🟡 Notas
+no bloqueantes: la luz lee difusa/pareja en vez de la luz dura de mediodía
+con sombras marcadas que pedía el brief; los arbustos leen algo más verdes
+que "sparse dry scrub" árido.
+
+### 15.2 — Zephyr Canyons, variante enana (Ignis Reach) — RATIFICADO ✅
+
+**Archivo destino:** `zephyr-canyons-dwarf-v1.png`
+
+**Especificación:** Wide cinematic keyframe, 16:9, of a descending volcanic
+cavern pass — the dwarf origin's opening tutorial stretch. Composition
+rules: empty space is the protagonist — a single tiny traveler figure climbs
+down a narrow carved stone stairway, seen from far above, dwarfed by the
+scale of the cavern. Foreground: dark angular volcanic rock walls, crisp
+black ink linework on jagged basalt edges, a thin vein of glowing orange
+magma tracing down one wall like a seam. Middle ground: the stairway
+switches back past a geothermal vent hissing faint steam, small pools of
+low-glow lava far below, chunks of raw ore embedded visibly in the rock —
+first hint of the underground-resources mechanic. Far distance: the cavern
+drops into a hazy orange-black abyss, heat-shimmer dissolving detail,
+aerial perspective in reverse (looking down instead of out). Light: warm
+ember-orange glow from below mixing with cold blue ambient light filtering
+from a distant opening above, dramatic contrast, floating embers drifting
+upward. Overall palette: charcoal black, deep rust-orange, low saturation
+elsewhere. Art style: hand-painted graphic novel watercolor — crisp black
+ink linework, flat cel shading in 3–4 fixed light bands with dry-brush
+jittered edges, washed low-saturation watercolor palette, visible paper
+grain, style blend of Sable's ligne claire and Breath of the Wild's soft
+impressionist color, mood of descent into the unknown, controlled danger.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow beyond the magma/ember accents.
+No open-sky daylight. No characters in close-up. No text, no labels, no
+captions, no annotations, no diagram-style callouts.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor.** Contraste
+cálido/frío logrado con precisión (magma naranja abajo vs. apertura
+azul-fría arriba, exactamente lo que pedía el brief), vapor del
+respiradero geotérmico, embers flotando, charcos de lava brillando abajo,
+escala vertiginosa. 🟡 Nota no bloqueante: la escalera es de tablones de
+madera, el brief pedía "narrow carved stone stairway" — desviación de
+material, no de composición.
+
+### 15.3 — Zephyr Canyons, variante élfica (Stillwood) — RATIFICADO ✅
+
+**Archivo destino:** `zephyr-canyons-elf-v1.png`
+
+**Especificación:** Wide cinematic keyframe, 16:9, of a dense ascending
+forest ravine — the elf origin's opening tutorial stretch. Composition
+rules: empty space is the protagonist — a single tiny traveler figure climbs
+upward along a root-choked slope, seen from far below, small against the
+scale of the colossal trees. Foreground: thick tangled roots and hanging
+vines crisp in black ink linework, a few vines coiled aggressively across
+the trail — hostile nature the player must push through, first hint of the
+locomotion mechanism being taught here (climbing/vaulting handholds visible
+in the roots and rock). Middle ground: shafts of green-gold light cutting
+through a dense canopy, moss-covered boulders, a narrow game-trail switching
+upward between ancient trunks. Far distance: the canopy thickens into a hazy
+green blur far overhead, aerial perspective, no sky visible yet — the
+ascent isn't finished. Light: dappled forest light, soft and filtered,
+long vertical light shafts, cool green-teal ambient shadow. Overall palette:
+deep forest green, moss, faint Aether-teal undertone, low saturation.
+Art style: hand-painted graphic novel watercolor — crisp black ink linework,
+flat cel shading in 3–4 fixed light bands with dry-brush jittered edges,
+washed low-saturation watercolor palette, visible paper grain, style blend
+of Sable's ligne claire and Breath of the Wild's soft impressionist color,
+mood of quiet effort, nature testing the traveler.
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow. No open canyon/desert
+elements. No characters in close-up. No text, no labels, no captions, no
+annotations, no diagram-style callouts.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor — la más lograda de
+las 3.** Vides enredadas de forma agresiva cruzando el paso, musgo, rayos
+de luz verde-dorada atravesando el dosel, ningún cielo visible (el ascenso
+no termina, como pedía el brief). 🟡 Nota no bloqueante: la composición lee
+más como "parado entre raíces" que como una pendiente en ascenso — el
+brief pedía que el mecanismo de locomoción (handholds en raíces/roca)
+fuera visible, y no es evidente que haya desnivel.
+
+### 15.4 — Hallazgo transversal (las 3 láminas)
+
+El mismo ícono de destello/diamante blanco aparece idéntico en la esquina
+inferior derecha de las 3 imágenes — probablemente un elemento de UI de
+NB2 filtrándose (mismo tipo de contaminación que la regla anti-texto de
+§0, aunque no es texto). No bloqueó la ratificación de ninguna de las 3.
+**Nota para futuros briefs de este batch:** si se re-corre alguna,
+agregar al negativo *"no watermark, no sparkle icon, no UI overlay
+elements"*.
+
+## 16 — La Emboscada de los 3 Hollowed — Roen interviene (cierre del tutorial, Acto 1) — RATIFICADO ✅
+
+**Contexto:** el beat que resuelve Los Desfiladeros de Zephyr
+([[Geografía y Ciudades]] §El Encuentro con Roen, pasos 4-5): el jugador,
+solo, es acorralado por 3 Hollowed ([[Villanos Menores]] §The Hollowed) —
+una pelea que no se puede ganar en solitario, la Zona B de
+[[Acoplamientos]] ("obstáculo imposible sin tu primer compañero"). Roen
+entra en cuadro en el instante justo. **Este brief captura el instante de
+tensión máxima — los Hollowed ya cerraron el círculo, Roen recién entra
+en cuadro** — no el momento del rescate en sí (ese ya existe, ratificado,
+en [[Briefs de Concept Art]] §14.1, `roen-second-catch-v1.png`: el
+mecanismo del link *Second Catch* aislado sobre fondo neutro). Los dos
+briefs son complementarios, no redundantes: éste es el establishing shot
+narrativo con entorno; §14.1 es el close-up del link en acción.
+
+**Variante de entorno:** ambientado en la skin humana de Los Desfiladeros
+de Zephyr (§15.1, Mistbound Frontier/Aethelgard) — es la variante por
+default del elenco fijo (Roen es humano, su ficha y su brief de link ya
+usan ese registro). Si hace falta una versión ambientada en la skin
+enana o élfica más adelante, es la misma composición con el fondo de
+§15.2/§15.3 — no bloquea nada mientras tanto.
+
+**Archivo destino:** `zephyr-ambush-roen-arrival-v1.png`
+
+**Referencias a adjuntar (las 3, ya ratificadas — ancla de diseño):**
+`roen-second-catch-v1.png` (Roen: cara, cuero remachado, capa, anillo de
+cobre), `the-hollowed-v1.png` (los 3 Hollowed: piel agrietada, vetas
+violeta-rojas, cara en blanco), `zephyr-canyons-human-v1.png` (entorno:
+cañón árido, paleta ochre, luz de mediodía). Sin las 3 adjuntas, NB2
+tiende a re-derivar diseño propio en vez de mantener consistencia con lo
+ya aprobado.
+
+**Especificación:**
+
+```
+Wide cinematic scene keyframe, 16:9, of an ambush at its peak tension, set in the same narrow arid canyon pass as the Zephyr Canyons human-origin tutorial (pale sun-bleached sandstone walls, washed ochre palette, harsh midday light). Composition: a small lone traveler figure stands cornered against a canyon wall at the center of the frame, three "Hollowed" creatures closing in from three different angles — large hunched humanoid figures with clay-cracked skin and faint dull violet-red Aether veins glowing at the joints, blank slack faces, tattered traveler's clothes, feral pack-hunting posture, the same design as the ratified Hollowed reference. The violet-red glow of their veins is the only saturated color near the traveler — danger read as pure color per the project's visual language. Entering the frame from the trail behind, at speed: "Roen", a weathered 45-year-old human Vanguard in riveted leather and a heavy earth-tone cape whipping from sudden motion, cape and posture caught mid-stride as he closes the distance, not yet in contact with any Hollowed — his hand is reaching but the catch hasn't happened yet, no VFX glow on him yet, this is the half-second before the rescue, not the rescue itself. Camera reads as a wide establishing shot from slightly above and behind the traveler, canyon walls framing the action, dust kicked up from the Hollowed's approach, hard-edged midday shadows. Overall palette: washed ochres and sand, broken only by the dull violet-red veins on the three Hollowed — the single alarming color in the frame. Art style: hand-painted graphic novel watercolor — crisp black ink linework, flat cel shading in 3–4 fixed light bands with dry-brush jittered edges, washed low-saturation watercolor palette, visible paper grain, style blend of Sable's ligne claire and Breath of the Wild's soft impressionist color, mood of a trap closing, help arriving just in time but not yet arrived.
+```
+
+**Negativos:** No photorealism or PBR rendering. No anime cel shading. No
+Genshin Impact candy saturation. No neon glow beyond the dull violet-red
+Hollowed veins. No tusks, no horns, no bestial animal features on the
+Hollowed, no orc-cliché green skin. No contact/impact VFX on Roen yet —
+the catch hasn't happened. No close-up faces — this is a wide scene shot,
+not a character portrait. No text, no labels, no captions, no
+annotations, no diagram-style callouts, no watermark, no sparkle icon, no
+UI overlay elements.
+
+**QA (2026-08-07):** ✅ **Ratificada, con nota menor.** Los 3 Hollowed
+correctos (piel agrietada, vetas violeta-rojas en las articulaciones,
+postura de manada agachada, ropa hecha jirones), Roen sin VFX de
+contacto todavía — mano extendida, el rescate aún no pasó, exactamente
+el instante que pedía el brief. Capa tierra ondeando, cuero remachado,
+entorno de cañón árido consistente con §15.1. El peligro (vetas violeta)
+es el único color saturado del cuadro. 🟡 Notas no bloqueantes: el pelo de
+Roen sale gris/blanco acá, en `roen-second-catch-v1.png` (§14.1, ya
+ratificada) es castaño oscuro — inconsistencia de continuidad entre las
+dos láminas del mismo personaje, anotar si se re-corre algo de Roen a
+futuro. El jugador queda en medio del sendero, no literalmente
+"acorralado contra la pared" como pedía el brief — no afecta la lectura
+general.
+
+## 17 — Lyris re-roll: bumeranes élficos + limpieza de texto (edición sobre imagen) — RATIFICADO ✅
+
+**Contexto:** `lyris-v1.png` es una lámina previa a la regla anti-texto
+(§0) y a esta sesión de armamento — muestra dos dagas curvas cortas en
+las caderas, arma vieja descartada por colisión con Nyael (mismo Elfa
+Duelist, [[Armamento Base — Matriz Raza x Rol]] §Colisiones con los
+Pivotes, 2026-08-07: Lyris pasa a par de bumeranes élficos de doble
+filo). La lámina nunca tuvo brief formal ratificado en esta página.
+
+**Archivo destino:** `lyris-v2.png`
+
+**Referencia a adjuntar:** `lyris-v1.png` (ancla de pose, anatomía,
+traje, arnés de cuerdas de traversal aéreo — todo eso se conserva).
+
+```
+Keep this exact character sheet — same pose, front and side views, same anatomy, same harness/armor, same long tethered cords at the wrists for aerial traversal, same hair and face — but make two changes only. First, replace the two curved short daggers holstered at her hips with a pair of elven war-boomerangs: curved double-edged blades, each about forearm-length, worn crossed on a strap across her lower back instead of at the hips — they read as throwing weapons that arc and return, not stabbing daggers. Second, remove all overlaid text, titles, and labels from the image entirely — no "Lyris", no "Aerial Duelist", no "Front View" / "Side View" captions, clean concept sheet with no typography anywhere.
+```
+
+**Negativos:** No text, no labels, no captions, no titles, no diagram
+callouts. No changing pose, face, hair, harness, or the aerial tether
+cords. No curved daggers remaining anywhere on the body. No photorealism
+or PBR rendering, no anime cel shading, no Genshin Impact candy
+saturation, no neon glow.
+
+**QA (2026-08-07):** ✅ **Ratificada.** Pose, anatomía, arnés y cuerdas de
+traversal aéreo intactos; texto superpuesto eliminado por completo. En
+la vista lateral se ven con claridad los dos bumeranes curvos cruzados
+en la espalda baja, reemplazando las dagas. 🟡 Nota menor no bloqueante:
+en la vista frontal el arma queda tapada por el arnés/capa — la lateral
+resuelve la lectura sin ambigüedad.
 
 ## Notas de uso
 

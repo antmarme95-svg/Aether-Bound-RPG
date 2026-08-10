@@ -153,7 +153,7 @@ Cuando el jugador decide salvar o destruir, Sereth dice: *"Cualquiera sea tu ele
 
 ### Escena: El Primero (Aceptación del Grupo — Investigación Activa)
 
-Roen llega. Valen aparece. Darro aparece. El Bound Five se forma.
+Roen ya está con el jugador. Valen aparece. Sereth se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
 Sereth aquí está en rol de observador cortés: estudia a cada miembro, mapea sus disparadores, empieza a modelar cómo cada uno pesará en el jugador durante los próximos meses. Su prioridad no es el grupo — es la **relación del jugador con cada miembro del grupo.** Necesita saber qué voz el jugador escucha con más facilidad y cuál con más desconfianza. En el cráter, cada una de esas voces contará.
 
@@ -181,7 +181,7 @@ El Bound Five viaja. Sereth observa. Y siembra.
 
 Sereth no se endurece. Sigue siendo cálido. Sigue riendo de bromas de Darro. Sigue teniendo conversaciones profundas con el jugador — algunas por siembra, algunas simplemente porque lo quiere. **Esa mezcla es exactamente lo que hace su método imposible de detectar en tiempo real.**
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. Para Sereth, el Grove es un encuentro con **su propio ecosistema institucional al descubierto**.
 
@@ -249,7 +249,7 @@ Se va con Speck. Camina rápido. No corre.
 
 **Valen:** *"Three months ago your questions to him changed shape. Same content, different angles — long-read consolidation. I calculated this then. I hoped I was wrong."*
 
-**Darro:** *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* El único que grita. Darro entiende engaño como ausencia de amor, no como amor con función. No puede procesar la coexistencia.
+**Darro:** *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* Darro entiende engaño como ausencia de amor, no como amor con función. No puede procesar la coexistencia.
 
 **El jugador:** parálisis breve. Sereth, el que ha sido su interlocutor filosófico durante un año entero, acaba de irse con Speck sin discutir. Todavía no entiende el patrón. Va a entenderlo durante la persecución.
 
@@ -275,7 +275,9 @@ Los otros fijos reaccionan según Tether:
 
 ### Sub-beat 5: Quiebre en First Wound
 
-Sereth espera en el **borde** del cráter — no en el core central. **Esto lo diferencia de F3 explícitamente:** Sereth no toma el poder para sí, no cruza el borde, no activa nada por su cuenta. Se queda en el margen con Speck acurrucada contra el pecho, esperando al mensajero del Council que ya está en camino desde arriba.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Sereth**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es de la **Royal Academy** — Sereth nunca trató con el Council directamente; lo prestó Queen Ithessa.
+
+Se queda en el margen con Speck acurrucada contra el pecho. Lo que distingue a esta ruta es que **es la única donde el Pivote usa la espera para explicarse**: los otros ocho callan, forcejean o ejecutan. Sereth da una clase.
 
 Y aquí — y **solo aquí, única escena de Acto 3 donde Sereth explica su método** — habla.
 
@@ -301,7 +303,9 @@ Ver [[Los 5 Finales]] — Sereth ocupa la fila "Aritmética/Manipulación". Cada
 
 ### F1 — The Guided Molt (Speck completa la Muda, jugador la deja terminar)
 
-Sereth sobrevive quebrado. Está en el borde del cráter cuando Speck se convierte en Warden completa y la Muda cierra sobre sí misma. Ve, con lucidez académica, que **su método era el problema — no las cuentas.** La aritmética de "millones sobre uno" era de otra escuela (la de Maren). La suya era "conducir a la persona correcta a decidir por sí misma". Y la persona correcta, decidiendo por sí misma con toda la información, decidió lo contrario de lo que la Corona le encargó preparar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de la Royal Academy queda neutralizado antes de llegar hasta él.
+
+Sereth no forcejea — se queda quieto con Speck, y sobrevive quebrado. Está en el borde del cráter cuando Speck se convierte en Warden completa y la Muda cierra sobre sí misma. Ve, con lucidez académica, que **su método era el problema — no las cuentas.** La aritmética de "millones sobre uno" era de otra escuela (la de Maren). La suya era "conducir a la persona correcta a decidir por sí misma". Y la persona correcta, decidiendo por sí misma con toda la información, decidió lo contrario de lo que la Corona le encargó preparar.
 
 No es que se equivocó calculando. **Su método asumía que el terreno bien preparado siempre produce el resultado buscado.** El terreno estaba perfectamente preparado. El resultado no.
 
@@ -313,7 +317,9 @@ Se dedica, en silencio, a **escribir un tratado privado** sobre los límites de 
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council en el cráter)
 
-Sereth cumple. Entrega a Speck viva al mensajero del Council que sube desde arriba. Los God-Cores dejan de pulsar. El Aether se estanca en un statu quo administrado.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Sereth cumple. Speck sale del cráter **viva**, en custodia de la Royal Academy. Los God-Cores dejan de pulsar. El Aether se estanca en un statu quo administrado.
 
 **Epílogo:** **the Royal Academy lo condecora** — no públicamente (el encargo era clasificado) sino en el círculo interno. Recibe un asiento consultivo permanente al servicio directo de Queen Ithessa. Es el ascenso que su carrera prometía desde los 100 años.
 
@@ -323,7 +329,9 @@ Se aparta del jugador **con cortesía**. No lo evita, pero no lo busca. Si se cr
 
 **Colapso interno.**
 
-El método de Sereth requería que Speck llegara al Council viva — el resultado del encargo era su recurso, no su cadáver. Si Speck muere en el cráter, el mecanismo entero **funcionó y no produjo nada.** La conducción fue perfecta, la lectura larga cerró, el jugador llegó al momento decisivo con toda la información. Y el resultado fue el que ningún cálculo incluía: cero.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador.
+
+El método de Sereth requería que Speck llegara **a la Royal Academy** viva — el resultado del encargo era su recurso, no su cadáver. Si Speck muere en el cráter, el mecanismo entero **funcionó y no produjo nada.** La conducción fue perfecta, la lectura larga cerró, el jugador llegó al momento decisivo con toda la información. Y el resultado fue el que ningún cálculo incluía: cero.
 
 **Epílogo:** Sereth vuelve a Stillspire y su arquetipo se le apaga desde adentro. No es culpa moral — es **desorientación técnica**. Su escuela no tiene lectura para "el método funcionó y el resultado fue nulo". Se sienta en su alcoba de la Royal Academy y no vuelve a plantar preguntas. Sigue amando al jugador, en abstracto, pero ya no sabe qué hacer con ese amor porque su forma de amar era la conducción, y la conducción se agotó sola.
 
@@ -331,9 +339,11 @@ En dos años pide baja de la Academy. En cinco años deja de escribir. Muere de 
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Sereth **se te une**, en teoría. Es de los pocos del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Sereth suelta. Cuando el jugador, en vez de negociar o esperar, pasa de largo junto a él y cruza el borde hacia el core central, Sereth no forcejea — suelta a Speck al verlo cruzar, leyendo la situación con la misma frialdad académica de siempre. Sereth **se te une**, en teoría. Es el único del grupo que se queda — su escuela le permite adaptarse a un tirano tan fácilmente como se adaptaba a una Corona hereditaria. La lectura larga no tiene ideología; tiene técnica.
 
 **En la práctica, calcula tu caída desde el primer mes.** Y — variante especialmente peligrosa — **te ayuda a caer bien.** Un tirano que colapsa mal arrastra a todos los que quedaron con él. Sereth diseña las condiciones para que, cuando caigas, caigas de una forma que le permita a él sobrevivir intacto. Te sirve con lealtad aparente durante años. Cada consejo que te da tiene dos capas: la superficial (te ayuda a gobernar) y la profunda (te empuja imperceptiblemente hacia decisiones que erosionan tu régimen).
+
+Speck sostiene su mirada cada vez que Sereth pasa por el trono ([[Speck]] §Capa 4) — es la única lectura que Sereth nunca intenta hacer. Doscientos años leyendo intenciones, y a ella decide no leerla, porque hacerlo sería tratar la mirada como un dato más para usar.
 
 **Epílogo:** cuando finalmente caes (siempre caes), Sereth ya negoció con la sucesión. Reaparece en la Corte de quien te reemplace, sin manchas, y con un tratado en el bolsillo — el que empezó en F1 pero nunca terminó — que ahora sí termina, porque tiene el caso de estudio completo. Un manipulador ayudando a un tirano es, para su escuela, el trabajo más difícil documentado, y él lo ejecutó. Sereth muere respetado por la próxima generación de consejeros. El jugador, si sigue vivo bajo cualquier condición, nunca sabrá que la caída fue diseñada.
 
@@ -341,19 +351,29 @@ Esta es la variante Sereth que ninguna otra fila de la matriz puede reproducir: 
 
 ### F4 — The Warden's Choice (Speck elige Muda parcial, síntesis)
 
-Este final requiere que el jugador haya **perdonado** a Sereth en la persecución — que lo alcanzó, escuchó la escena del borde, y lo dejó ir en vez de neutralizarlo. Sin perdón, Sereth no está en F4; muere en el borde del cráter cuando el mensajero llega y él intenta cumplir igual.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Sereth**. El mensajero de la Royal Academy se aparta: la Corona no lo mandó a discutir con la variable.
 
-Con perdón: Speck elige. Sereth ve, en tiempo real, algo que su escuela no cataloga — **una persona que no fue conducida, decidiendo con autoridad propia.** Es el único final donde Sereth aprende algo. No es que su método haya sido incorrecto en abstracto; es que **existe una categoría de persona a la que la lectura larga no se puede aplicar sin destruirla como categoría.** Speck es esa persona.
+Speck responde y **cruza el borde sola**. Sereth abre los brazos y la deja ir. Ve, en tiempo real, algo que su escuela no cataloga — **una persona que no fue conducida, decidiendo con autoridad propia.** En F1 y F2b, Sereth diagnostica que su método falló; acá es distinto — es el único final donde el aprendizaje **le cambia el método** en vez de archivarlo. No es que su método haya sido incorrecto en abstracto; es que **existe una categoría de persona a la que la lectura larga no se puede aplicar sin destruirla como categoría.** Speck es esa persona.
 
-**Epílogo:** Sereth se reintegra al grupo — no al Council, no a la Royal Academy. Renuncia a su escuela — algo que ningún consejero de su linaje familiar había hecho antes. Aprende, lentamente y con torpeza (para un consejero de 200 años, es humillante), a **preguntar sin sembrar.** Sus primeras preguntas al jugador después del cráter suenan mal — se nota que aún no le sale. El jugador las recibe con paciencia, porque también le duele oírlas mal.
+**Epílogo — Sereth vivo.** Se reintegra al grupo — no al Council, no a la Royal Academy. Renuncia a su escuela, algo que ningún consejero de su linaje familiar había hecho antes. Aprende, lentamente y con torpeza (para un consejero de 200 años, es humillante), a **preguntar sin sembrar.** Sus primeras preguntas al jugador después del cráter suenan mal — se nota que aún no le sale. El jugador las recibe con paciencia, porque también le duele oírlas mal.
 
-En años, Sereth se convierte en consejero de Stillwood **diferente**: uno cuyo método público es "pregunto y no sé la respuesta". Es más lento, más impreciso, más cálido de una forma nueva. Único final donde **aprende a preguntar sin manipular** — literal, no metáfora. Su tratado privado del F1/F2b nunca se escribe aquí; en su lugar, deja notas sueltas al jugador, sin firma, con preguntas abiertas que no van a ninguna parte. El jugador las guarda todas.
+En años, Sereth se convierte en un consejero de Stillspire **diferente**: uno cuyo método público es "pregunto y no sé la respuesta". Es más lento, más impreciso, más cálido de una forma nueva. Único final donde **aprende a preguntar sin manipular** — literal, no metáfora. El tratado que escribe en otros finales nunca se escribe acá; en su lugar deja notas sueltas al jugador, sin firma, con preguntas abiertas que no van a ninguna parte. El jugador las guarda todas.
+
+Hay una pregunta que Sereth nunca deja suelta porque nunca la formula bien: doscientos años de lectura larga no le dieron vocabulario para extrañar a alguien sin querer usarla para algo. Lo intenta, en una de las notas, y tacha la mitad. El jugador se queda con la nota tachada también.
+
+**Epílogo — Sereth muerto** (cayó en la persecución o en el cráter). Muere sin haber visto la única escena que habría refutado su método, y esa ignorancia es exacta: Sereth pasó doscientos años convencido de que toda persona bien preparada elige lo que el terreno le dispone, y se muere creyéndolo.
+
+La Royal Academy lo registra como pérdida operativa y **archiva su método como éxito** — el encargo se completó, la variable llegó al cráter, lo que pasó después no figura en el expediente. Durante décadas, los consejeros jóvenes estudian la lectura larga de Sereth como caso modelo. Nadie les cuenta el final, porque el brazo que lo encargó nunca lo supo.
+
+El jugador es el único que carga la corrección, y no tiene dónde presentarla. Va una vez a The Stillspire, años después, a decirle a alguien que el método falla — y se encuentra con una institución que enseña el caso con su nombre bien puesto. **Lo que muere con Sereth no es Sereth: es la única refutación que su escuela iba a aceptar, porque tenía que venir de adentro.**
 
 ---
 
 ## Línea Canónica
 
-*"No te llevé a esta decisión. Te llevé a la persona que la toma."*
+*"I didn't lead you to this decision. I led you to the person who makes it."*
+
+(Ver escena completa, todavía en español — pendiente de la pasada de traducción general, regla 9 del repo — en §Traición: *"No te llevé a esta decisión. Te llevé a la persona que la toma."*)
 
 **Contexto:** el borde del cráter, mirando al jugador. No es defensa — es diagnóstico técnico. Sereth explica su método en una sola frase: nunca se manipula un evento, se manipula la disposición mental de quien va a llegar al evento. El jugador oye la frase y **se reconoce a sí mismo** en ella — reconoce que sí, que la persona que toma la decisión final es él, y que esa persona fue esculpida durante un año. Y aun así tiene que decidir. Ese es el punto exacto del arquetipo.
 
@@ -364,6 +384,8 @@ En años, Sereth se convierte en consejero de Stillwood **diferente**: uno cuyo 
 ### Sereth + Roen (Conductor vs. Conciencia Institucional)
 
 **Primera impresión:** Roen ve a alguien que trabaja en instituciones desde adentro. Sereth ve a alguien que renunció a instituciones por conciencia.
+
+**Este intercambio ocurre años después, en el epílogo de F2b** (ver §F2b — Sereth "pide baja de la Academy" en dos años), no durante la campaña: mientras dura la aventura, Sereth sigue activo, prestado por Queen Ithessa, y su mensajero en el cráter es de la Royal Academy.
 
 *"Dejaste la Royal Academy."*  
 *"La Academy no deja ir a nadie. Yo simplemente elegí no volver a presentarme."*  

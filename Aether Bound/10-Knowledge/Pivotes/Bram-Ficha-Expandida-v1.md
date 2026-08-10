@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Humano (the Restless) / Vanguard
 **Origen:** House Thorne, Rivermeet (huyó a los 15 a Mistbound Frontier)
-**Edad aparente:** 55-65 años (gastado por cuarenta años de servicio ajeno)
+**Edad aparente:** 55 años (gastado por cuarenta años de servicio ajeno)
 **Arquetipo de Traición:** Rechazo activo — **el único Pivote que rehúsa**. Superlativo: **el único rechazo activo** del elenco (ver [[Los 5 Finales]] — fila Rechazo/Ausencia).
 
 ---
@@ -25,7 +25,7 @@ Bram es la excepción intencional del elenco. Ocho Pivotes traicionan; Bram rech
 
 ## Afiliación de Casa (canon [[Estructura Política]])
 
-Bram nació en **House Thorne**, familia con historia diplomática en Rivermeet — el tipo de sangre que hubiera significado corte, negociación, papeleo hereditario. A los 15, en vez de aceptar el camino, **huyó** — cruzó la ciudad de noche, cortó el apellido, y se alistó en la primera compañía mercenaria que aceptaba menores en **Mistbound Frontier**, la franja humana remota al suroeste profundo ([[Geografía y Ciudades]] §Mistbound). Cortó lazos hace **cuarenta años, no veinte** — la aritmética es fija: 15 años cuando se fue, 55-65 hoy. Todas las referencias antiguas a "hace 20 años" pertenecen a una versión previa de esta ficha y están corregidas.
+Bram nació en **House Thorne**, familia con historia diplomática en Rivermeet — el tipo de sangre que hubiera significado corte, negociación, papeleo hereditario. A los 15, en vez de aceptar el camino, **huyó** — cruzó la ciudad de noche, cortó el apellido, y se alistó en la primera compañía mercenaria que aceptaba menores en **Mistbound Frontier**, la franja humana remota al suroeste profundo ([[Geografía y Ciudades]] §Mistbound). Cortó lazos hace **cuarenta años, no veinte** — la aritmética es fija: 15 años cuando se fue, **55 hoy**. Todas las referencias antiguas a "hace 20 años" pertenecen a una versión previa de esta ficha y están corregidas.
 
 No fue rechazo de su familia; fue rechazo del *camino* que su familia representaba. Cuarenta años después, sigue siendo "el muro de todos", y por primera vez alguien le ofrece una salida que **no** viene de House Thorne — viene del Council, viene por contrato, viene con precio explícito. Se especula (sin confirmación) que aún queda alguien en House Thorne que sabe dónde está y calla. Posible que conozca al **Regent Edrick Ashcombe**: dos hombres de Houses políticas de Rivermeet, uno que se quedó en el juego, otro que huyó de él. Su tipo de compañía mercenaria es exactamente el respaldo militar que **Lady Isolde Marrow** ([[Estructura Política]]) busca cortejar para su ascenso — gancho abierto, no desarrollado.
 
@@ -43,7 +43,7 @@ Bram odiaba todo eso. No por rebeldía — por instinto. Prefería el peso de al
 
 **No volvió a usar el apellido Thorne desde entonces.** Para el resto del mundo — incluso para Roen, incluso para el jugador — es solo Bram.
 
-### Mistbound Frontier: Cuarenta años de escolta (edades 15-55+)
+### Mistbound Frontier: Cuarenta años de escolta (edades 15-55)
 
 Mistbound Frontier — franja humana lejana al suroeste profundo, no la trinchera contra The Wilds sino la tierra donde el Council pierde control administrativo por pura distancia — se convirtió en su hogar real. Infancia terminó de golpe: **escoltas de convoy, defensas de fuertes menores, contratos privados** contra bestias que bajaban de laderas y contra bandidos que sabían aprovechar el hueco de autoridad.
 
@@ -145,7 +145,7 @@ Cuando el jugador finalmente decide, Bram dice: *"Sea lo que sea, cubro tu espal
 
 ### Escena: El Primero (Aceptación del Grupo)
 
-Roen ya está en el grupo. Valen aparece. Darro se integra en Driftmarket. Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[The Bound Five|El Quinteto]]).
+Roen ya está en el grupo. Valen aparece. Bram se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro, en Acto 1 — **no** en el Driftmarket, que es de Acto 2 y no tiene reclutamiento ([[Geografía y Ciudades]] §The Driftmarket). Se forma **The Bound Five**: Jugador + Roen + Valen + Bram + Darro. Nunca más de cinco personas ([[The Bound Five]]).
 
 **Bram aquí asume rol de protector del grupo:**
 - Se posiciona estratégicamente en campamento (siempre vigilante)
@@ -170,11 +170,15 @@ Internamente, Bram sigue conectado al Council por señal cifrada que llega en fo
 
 En privado, alrededor del fuego, después de dos meses de camino, Bram empieza a contar cosas que no había contado en cuarenta años. Cortas. Historias de escolta. Nombres de compañeros muertos. Un chiste viejo de fuerte. El jugador las escucha sin forzar. Bram nunca contó estas cosas ni a los hombres que las vivieron con él — es raro que salgan ahora, con un grupo que no conoce el mapa mental de lo que describe. Lo raro es exactamente el punto: por primera vez en cuarenta años, hay alguien que escucha sin necesitarlo profesionalmente.
 
+### Encuentro de mundo abierto: las Compañías Impagas
+
+Si el grupo se cruza con una de **las Compañías Impagas** ([[Villanos Menores]] §Capa 1) en River Road, Bram se queda callado más tiempo del normal — más que con cualquier otra amenaza del mapa. No pelea distinto, no explica por qué. Es la puerta que él sí cruzó a tiempo.
+
 ### Sub-Acto 2A: Rivermeet (evita a House Thorne)
 
 En Rivermeet, Bram **evita activamente** el ala de la ciudad donde vive House Thorne. Cambia rutas, propone rodeos, sugiere cantinas más lejanas. El jugador lo nota. Bram no explica. Cuando el jugador insiste — *"¿Hay algo aquí que no quieres cruzar?"* — Bram responde: *"Vieja historia. No es de esta aventura."* Cierra la puerta con la misma cortesía con que House Thorne le enseñó a cerrar puertas hace cuarenta años.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket.
 
@@ -283,11 +287,13 @@ Conversaciones en la persecución:
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-Se alcanza al segundo agente en el borde del cráter. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Bram** — **excepción declarada: holder = agente.** Quien sostiene a Speck es **Torgan** como segundo agente, y es también el agente a neutralizar: **no hay un mensajero aparte esperando en el borde.** Secuencia: §1, con la excepción del paso 1 — Bram rehúsa en el corredor y es Torgan quien toma a Speck afuera del Archive.
 
-**Rol de Bram en el cráter:** cuando cualquier amenaza física se acerca a Speck — una bestia despierta, el segundo agente en su último movimiento, un desprendimiento de terreno — Bram se pone entre Speck y la amenaza. Reflejo de cuarenta años. No es decisión heroica: es el cuerpo antes de la mente. En un momento específico, Bram se lleva un golpe que iba para Speck. No cae. Se sostiene con el mazo apoyado en el suelo. Roen lo mira y no dice nada.
+Bram no la carga. Está en el borde igual, del lado del grupo. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
 
-**Bram no toma la decisión del final** — la toma el jugador. Lo que Bram hace es mantener a Speck físicamente protegida hasta que el jugador elija. Después, se retira dos pasos y espera.
+**Rol de Bram en el cráter:** cuando cualquier amenaza física se acerca a Speck en brazos de Torgan — una bestia despierta, un desprendimiento de terreno — Bram se pone entre Speck y la amenaza. Reflejo de cuarenta años. No es decisión heroica: es el cuerpo antes de la mente. En un momento específico, Bram se lleva un golpe que iba para Speck. No cae. Se sostiene con el mazo apoyado en el suelo. Roen lo mira y no dice nada.
+
+**Bram no toma la decisión del final** — la toma el jugador. Lo que Bram hace es cubrir a Speck de amenazas externas mientras Torgan la sostiene, hasta que el jugador elija. Después, se retira dos pasos y espera.
 
 ---
 
@@ -297,7 +303,9 @@ Ver [[Los 5 Finales]] — Bram ocupa la fila "Rechazo / Ausencia". Cada final es
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Bram vive. La Muda cierra sobre sí misma. Los God-Cores dejan de responder. El paisaje del cráter cambia de raíz.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1, con la excepción **holder = agente** de su fila en §2 — acá detener a Torgan **sí** cumple el gate, porque es las dos cosas.
+
+Bram vive. **Bram no ejecuta.** La Muda cierra sobre sí misma. Los God-Cores dejan de responder. El paisaje del cráter cambia de raíz.
 
 **Epílogo:** Bram termina el juego en paz por primera vez en cuarenta años, **en el peor momento posible para estar en paz.** Regresa a Rivermeet — no al ala de House Thorne, no al ala del Council, a un barrio bajo cerca del río — y encuentra una ciudad en caída libre: talleres cerrados, bombas muertas, gente durmiendo en la calle por primera vez en generaciones.
 
@@ -309,7 +317,9 @@ Muere de viejo, unos años después. Su compañía original (los que quedan) man
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Bram **no ejecutó** — no aplica directo. El segundo agente cumplió. Speck viaja al Council, viva, y los God-Cores se apagan.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — Torgan completa la entrega.
+
+Bram **no ejecutó** — no aplica directo. El segundo agente cumplió. Speck viaja al Council **viva**, y los God-Cores se apagan.
 
 **Epílogo:** Bram vive con **una culpa nueva** — la de no haber traicionado antes. Racionalización dolorosa: *"Si yo hubiera cumplido en el corredor, el Council no habría activado al segundo. Yo la hubiera cargado hasta la superficie sin persecución, sin daño colateral, sin la escena del cráter. Quizás Speck no habría llegado tan rota. Quizás la 'custodia digna' que prometieron era menos mentira si la ejecutaba yo."*
 
@@ -319,7 +329,9 @@ Es peor que F1 porque F1 le dio paz. F2a le dio una duda que no cierra. Bram, ac
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-Bram vive. Speck no llegó viva al final — el jugador intentó arrancarla por la fuerza del segundo agente (o del punto de entrega, si ya había sido tomada) en vez de esperar o negociar, y el forcejeo sobrecargó el Fragmento. Nadie gana.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador, sobre Torgan.
+
+Bram vive. Speck no llegó viva al final: el forcejeo sobrecargó el Fragmento ([[Speck]] §Capa 5). Nadie gana.
 
 **Epílogo:** Bram vive con la **misma culpa duplicada** de F2a. *"Si yo hubiera cumplido, quizás Speck hubiera llegado viva a algún lugar. Quizás mi ejecución habría sido menos violenta que la del segundo agente. Quizás."* Falso, otra vez — la Fragmento no se controla, la persecución no es rescatable por delicadeza — pero Bram no puede saberlo.
 
@@ -327,7 +339,9 @@ Se retira a un pueblo pequeño de Mistbound Frontier, no a Rivermeet. Ahí, en e
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Bram **nunca te siguió tan lejos.** Se va antes del cráter — específicamente, en el momento en que el jugador decide cruzar el borde hacia el core central. No hay ceremonia, no hay discurso, no hay confrontación. Bram deja el equipo que el jugador le dio (armadura menor, mazo secundario, ración de campamento) en el suelo, apilado con orden militar, y camina en dirección opuesta.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Torgan suelta a Speck al verlo cruzar (no forcejea: eso la mataría). El jugador la recoge del otro lado.
+
+Bram **nunca te siguió tan lejos.** Se va antes del cráter — específicamente, en el momento en que el jugador, en vez de detener a Torgan o esperar, cruza el borde de largo. No hay ceremonia, no hay discurso, no hay confrontación. Bram deja el equipo que el jugador le dio (armadura menor, mazo secundario, ración de campamento) en el suelo, apilado con orden militar, y camina en dirección opuesta.
 
 No es traición ni deserción — es rechazo, que es lo único que Bram sabe hacer desde el corredor. Rechazó al Council y rechaza al jugador con el mismo mecanismo.
 
@@ -335,13 +349,17 @@ No es traición ni deserción — es rechazo, que es lo único que Bram sabe hac
 
 ### F4 — The Warden's Choice (síntesis — el único con consentimiento de Speck)
 
-Speck elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales. **Bram no tiene variante "muerta"**: no hay persecución en su ruta porque él no traiciona (matriz §4, nota de excepción).
+
+En el borde, frente a Torgan como segundo agente (ver §sub-beat 5), el jugador no forcejea ni espera: pregunta. Torgan no tiene orden para eso y baja a Speck cuando ve que responde. **Speck cruza el borde sola.** Elige. El Aether comienza a sanar. Las civilizaciones se adaptan.
 
 **Epílogo:** Bram **se queda por elección propia — único final donde lo hace.** Es el mejor destino posible para Bram y es canon exclusivo de F4 ([[Los 5 Finales]] §matriz — celda Rechazo/Ausencia × F4). No se queda como empleado, no como escolta, no como contratado por nadie. Se queda porque quiere.
 
 Elige asentarse cerca del cráter transformado — no dentro, no en Rivermeet, en el borde donde el nuevo paisaje empieza. Ayuda a construir el primer campamento estable de los peregrinos que van a ver el core central de Speck. No cobra. Cuando le preguntan por qué, responde: *"Cuarenta años cobrando. Prefiero unos cuantos gratis."*
 
 El jugador lo visita ocasionalmente. Bram sonríe — cosa rara. La pulsera con los nombres talladados sigue en la muñeca, pero ahora la lleva más suelta. Le agrega, una noche, un nombre más en el nudo interior — no se lo dice a nadie, y el nombre no es el de un caído. Es el nombre del jugador.
+
+**Casi le agrega otro.** Sostiene el hilo un rato largo pensando en el nombre de Speck, y no lo talla — no porque no le deba algo, sino porque no sabe clasificar lo que le debe. Al jugador le debe compañía, y eso entra en cuarenta años de práctica de saldar cuentas. A Speck le debe algo que no tiene nombre en su sistema: ella está en un cráter a la vista de todos, viva de una forma que Bram no sabe nombrar, ni deuda ni pérdida. No tallarla no es olvido. Es que su sistema entero — cuarenta años clasificando a quién le debe algo y a quién no — nunca tuvo categoría para esto, y por primera vez Bram deja un hilo sin usar en vez de forzar la cuenta.
 
 Último pensamiento (no dicho, no narrado, sembrado): *"Cuarenta años siendo el muro. El resto de la vida siendo la puerta. Balance."*
 
@@ -420,4 +438,4 @@ En el epílogo F4, Darro es el que va más seguido a visitar a Bram en el campam
 - **El único Pivote que rehúsa** — la excepción intencional del elenco
 
 **Línea privada de Bram (nunca dicha aloud):**
-*"Cuarenta años diciéndole a mi cuerpo que continue. Cuarenta años siendo la cosa que otros esconden detrás. Cuarenta años cobrando por hacer lo que me pedían. El Council me ofreció un contrato más — el mejor de todos, el que me hubiera dado retiro por escrito — y por primera vez no pude cerrar la mano. No es que sea mejor persona ahora. Es que este grupo me consideró gente, y a los sesenta uno se acostumbra a lo bueno más rápido que a los quince. La puerta era esta: dejar de ser útil. No me sale bien. Todavía cargo el peso en el cráter, todavía me pongo entre Speck y lo que venga. Pero al menos, esta vez, no lo cargué porque me pagaron. Lo cargué porque quise. Eso es la puerta."*
+*"Cuarenta años diciéndole a mi cuerpo que continue. Cuarenta años siendo la cosa que otros esconden detrás. Cuarenta años cobrando por hacer lo que me pedían. El Council me ofreció un contrato más — el mejor de todos, el que me hubiera dado retiro por escrito — y por primera vez no pude cerrar la mano. No es que sea mejor persona ahora. Es que este grupo me consideró gente, y a los cincuenta y cinco uno se acostumbra a lo bueno más rápido que a los quince. La puerta era esta: dejar de ser útil. No me sale bien. Todavía cargo el peso en el cráter, todavía me pongo entre Speck y lo que venga. Pero al menos, esta vez, no lo cargué porque me pagaron. Lo cargué porque quise. Eso es la puerta."*

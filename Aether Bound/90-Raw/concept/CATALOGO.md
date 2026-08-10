@@ -63,10 +63,16 @@ proceso a tener presente.)*
 — huevo/ajolotl bebé, diseño PRE-redirect; coincide de nombre con la locación
 "El Nido" del mapa pero es contenido no relacionado), `speck-rework-*.jpeg`.
 
-## ✅ G) Finales — canon intacto, legacy archivado
+## ✅ G) Finales — 5 láminas (2026-07-30, post-split F2a/F2b)
 
-Canon (`Final 1-4 The ....png`, sin tocar, ya coincide con nombres usados en
-Briefs §5c) queda igual. Movidos a `_legacy/`: `final-1-pre-reset-sacrificio-silencioso.png`,
+**Desactualizado el "4 finales" de más abajo.** Son 5 briefs en `Briefs de
+Concept Art §5c`, 6 archivos: `Final 1 The Guided Molt.png` (5c.1),
+`Final 2a The Long Winter Handed Over.png` (5c.2a, nuevo),
+`Final 2 The Long Winter.png` (5c.2b — nombre interno viejo `Speck - Imprisoned
+Warden Form Final 3`), `Final 3 The Conqueror's Clause.png` (5c.3),
+`Final 4 The Warden's Choice v2.png` (5c.4, ratificado — `v1` sin sufijo queda
+como referencia histórica del problema que corrigió: pedestal/halo/sin
+reciprocidad). Movidos a `_legacy/`: `final-1-pre-reset-sacrificio-silencioso.png`,
 `final-4-pre-reset-aether-renacido.png` (confirmado visualmente: paleta gris,
 Speck-ajolotl, no coincide con canon post-reset).
 

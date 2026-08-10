@@ -10,6 +10,7 @@ updated: 2026-07-27
 **Origen:** The Stillspire  
 **Edad aparente:** 230 años (joven para un elfo — ninguna Muda se ha completado en 550 años, así que no presenció ninguna; todo lo que sabe de ellas lo sabe leído)  
 **Slot en [[The Bound Five]]:** C2 — El Opuesto  
+**Link:** *The Long Calculus* — [[Los 3 Links de los Fijos]] §Valen (provisional)
 
 ---
 
@@ -63,11 +64,11 @@ Valen comprendió que no querían saber más. No porque fueran ignorantes, sino 
 
 Pasó 40 años solo, leyendo textos que nadie compartía. Desarrolló su propia teoría: si el Aether se rebalanceaba cada 300 años originalmente, pero ahora cada 100-150, algo lo estaba **acelerando**. Un factor externo. Un sistema fallando.
 
-**Acceso a los God-Cores:** Valen fue (en secreto) a The Wilds, tocó un God-Core dormido con su propio poder. Sintió la corrupción. Comprendió: **los God-Cores NO son núcleos de dioses muertos. Son cadáveres de Wardens.** Alguien los mató a mitad de la última Muda. El Aether quedó inconcluso, corrompido, acelerando el siguiente ciclo.
+**Acceso a los God-Cores:** Valen fue (en secreto) a The Wilds, tocó un God-Core dormido con su propio poder. Sintió la corrupción — no calor de culto, sino algo que reconoció, sin poder nombrarlo todavía, como **más orgánico que mineral.** No hay ningún texto de la Academy que confirme lo que sospecha; la palabra "Warden" ni siquiera existe en el conocimiento público ([[El Mundo y la Muda]]). Empezó a construir una teoría que no puede probar con lo que tiene: que los God-Cores no son núcleos de dioses muertos, sino cadáveres de algo. Que alguien los mató a mitad de la última Muda. Que el Aether quedó inconcluso, corrompido, acelerando el siguiente ciclo.
 
 Eso fue hace 30 años.
 
-**Conclusión de Valen:** Si Speck (un Warden vivo) madura, terminaría la Muda inconclusa. Sanaría el ecosistema. Pero destruiría la civilización actual, que depende del Aether corrupto como combustible tecnológico.
+**Conclusión de Valen (hipótesis, no certeza):** si en algún lugar existe un ser vivo de la misma naturaleza que esos cadáveres, y llega a completar la Muda en su cráter sin que nadie se lo impida, la Muda inconclusa terminaría. Sanaría el ecosistema. Pero destruiría la civilización actual, que depende del Aether corrupto como combustible tecnológico. Es cálculo especulativo sobre una variable que Valen nunca ha visto — no sabe todavía que existe, y mucho menos que tiene nombre.
 
 **Valen no contó esto a nadie. Guardó el cálculo.**
 
@@ -123,16 +124,32 @@ Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una var
 
 ### Escena 1: El Encuentro (Primeros 20 minutos)
 
-El jugador está haciendo el contrato del Triune Council, purgar The Wilds. Valen está ahí — no por el mismo motivo que Roen (Roen vino porque lo llamaste). Valen vino **porque calculó que serías variable importante**.
+**Actualizado 2026-08-10** para alinear con la estructura ratificada
+([[Geografía y Ciudades]] §Beats Narrativos, locación 1) y el guión ya
+escrito ([[Guion/Encuentro con Roen]]) — esta sección estaba en `draft`
+desde 2026-07-27 y ubicaba a Valen presente desde el inicio en The
+Wilds, junto a Roen. Valen **no** está en la emboscada de los 3
+Hollowed; se suma después, ya en la ciudad natal.
+
+El jugador y Roen llegan a la ciudad natal tras el tramo de Los
+Desfiladeros de Zephyr (incluida la emboscada de los 3 Hollowed, ya
+resuelta). En una taberna, Valen los está esperando — no por el mismo
+motivo que Roen (Roen vino porque lo llamaste). Valen vino **porque
+calculó que serías variable importante**, y ya sabe del encuentro con
+los Hollowed antes de que se lo cuenten.
 
 **Valen en esta escena:**
 - Frío. Eficiente. No sociable.
 - Observa más que actúa.
-- Cuando el jugador mata la primera bestia, Valen nota: "Ese movimiento sugiere entrenamiento de [raza]. Patrón esperado."
-- No está siendo insultante. Simplemente **categorizando.**
+- Ya sabe de la emboscada — Standing, rumor de taberna, o cálculo
+  propio, sin que nadie se lo diga — y lo nota de pasada: "Tres
+  Vaciados, tan cerca del reino. Eso no es ruido, es dato."
+- No está siendo insultante con el jugador. Simplemente **categorizando.**
 
 **Primer diálogo clave (potencialmente incómodo):**
-El jugador espera reconocimiento. Valen ofrece análisis: "Destreza consistente con tu rol. Nada inesperado aún."
+El jugador espera reconocimiento por la pelea que Valen ni vio. Valen
+ofrece análisis, no felicitación: "Sobreviviste a tres. Destreza
+consistente con tu rol. Nada inesperado — todavía."
 
 ---
 
@@ -194,33 +211,33 @@ Darro nota: "¿Por qué miras a Speck como si la conocieras?" Valen: "Porque he 
 
 ### Escena 3: La Verdad Comienza a Filtrarse (Cálculo Final)
 
-Hacia el final de Acto 2, Valen **finalmente habla** la verdad que ha estado guardando.
+Hacia el final de Acto 2, Valen **finalmente habla** la teoría que ha estado guardando. No es una revelación confirmada — eso solo llega con la inscripción del Sunken Archive, en Acto 3 (ver §Sunken Archive más abajo, y [[El Mundo y la Muda]]: "Warden" no existe en el conocimiento público de ninguna raza hasta ese hallazgo). Lo que Valen ofrece acá es su cálculo de 30 años, con el peso de quien lo cargó solo, pero dicho como lo que es: una hipótesis sin fuente.
 
 No de golpe. Lentamente. En conversaciones privadas, fragmento por fragmento.
 
-*"Los God-Cores no son dioses. Son Wardens. Cadáveres. Fueron asesinados a mitad de una Muda."*
+*"Tengo una teoría. No puedo probarla — no hay texto, ni de la Academy ni de nadie, que la respalde. Pero llevo treinta años cargándola sola y ya no puedo más."*
 
-*"Speck es la última. Si madura, la Muda se completa. El Aether sana."*
+*"Creo que los God-Cores no son dioses. Creo que son cadáveres. Que alguien los mató a mitad de una Muda que nunca terminó."*
 
-*"La civilización que construimos depende de Aether corrupto. Nosotros — todas nuestras ciudades, magia, tecnología — depender de un error que no ha sanado."*
+*"Y creo que Speck es de la misma naturaleza que ellos. Si eso es cierto, y si llega a The First Wound y nadie se lo impide, la Muda podría completarse. El Aether sanaría."*
 
-*"Si Speck vive, todo esto muere. Las ciudades, los reinos, nosotros."*
+*"La civilización que construimos depende de Aether corrupto. Nosotros — todas nuestras ciudades, magia, tecnología — dependemos de un error que no ha sanado. Si tengo razón, y la Muda se completa, todo esto muere. Las ciudades, los reinos, nosotros."*
 
-El jugador: "¿Entonces debemos destruirla?"
+El jugador: *"¿Entonces hay que matarla?"*
 
-Valen: *"No. Quiero decir: debes elegir entre lo que amas y lo que es correcto. Eso es lo que significa ser consciente. Eso es el precio del conocimiento."*
+Valen: *"Si mi teoría es correcta, matarla no apaga nada — el Aether seguiría corrupto y nosotros seguiríamos aquí, igual de condenados y con una muerte encima. Eso ni siquiera es una opción, es un error de cálculo."* Pausa. *"Todavía no sé si tengo razón. Lo sabremos cuando lleguemos al Archive. Pero si la tengo, lo que hay que elegir es entre lo que amas y lo que es correcto. Eso es lo que significa ser consciente. Ese es el precio del conocimiento."*
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. Si el Tether del jugador con Valen está en T2+, es **Valen quien pide al grupo desviarse a Grove of Cycles** antes de bajar a The Driftmarket — Vector A canónico. No explica del todo por qué: *"Hay gente que necesita ver algo, aunque no sepan que lo están viendo."* Es la única vez en el juego donde Valen inicia una desviación de ruta sin que se la pidan — coherente con su formación en la Academy of Sages, la misma de la que salen los 4 miembros de The Elder Circle que van a encontrar ahí.
 
 Dentro del Grove, Valen reconoce el lugar como propio: *"Aquí aprendí a leer ciclos."* Escucha el debate de los cuatro élderes en silencio casi total — es la única conversación del juego donde Valen, el que siempre tiene el dato, no interviene ni una vez. Se limita a observar cómo Threnn, Ilyara, Corwyn y Maelys llegan a las mismas fracturas que él lleva 30 años cargando solo. Si el jugador guardó silencio durante el debate (uno de los disparadores del encuentro individual), es **Maelys** quien busca a Valen después — reconocimiento entre dos que saben que la respuesta no les pertenece.
 
-**El beat de la cifra errónea:** es en este debate donde Valen escucha, de boca de uno de los élderes, que el "cada 300 años" que la Academy enseña a cada aprendiz no es un dato observado — es una cifra redondeada, transmitida sin revisión desde antes del cataclismo, para dar a los archivistas jóvenes una sensación de orden. Nadie mintió a propósito; nadie tampoco la corrigió nunca. Valen pasó 200 años calculando aceleraciones sobre una base que nunca fue sólida. No lo dice en voz alta en el Grove. Lo carga en silencio hasta el Sunken Archive, donde la inscripción Warden confirma que el verdadero patrón nunca tuvo período fijo — cada Muda llega cuando un Warden muere o madura, no por calendario. El texto de sus cálculos (Aether corrompido, God-Cores como cadáveres, Speck como llave) sigue siendo correcto — el marco temporal en el que Valen creció era el que estaba mal. **Y cae con él la otra cifra:** no hubo Muda hace 110 años. Ese registro que Valen leyó de niño, el que le dio la carrera entera, era un asiento de archivo mal fechado. Las dos puntas de su medición —el período y el último evento— eran de la Academy, y ninguna de las dos existió.
+**El beat de la cifra errónea:** es en este debate donde Valen escucha, de boca de uno de los élderes, que el "cada 300 años" que la Academy enseña a cada aprendiz no es un dato observado — es una cifra redondeada, transmitida sin revisión desde antes del cataclismo, para dar a los archivistas jóvenes una sensación de orden. Nadie mintió a propósito; nadie tampoco la corrigió nunca. Valen pasó 200 años calculando aceleraciones sobre una base que nunca fue sólida. No lo dice en voz alta en el Grove. Lo carga en silencio hasta el Sunken Archive, donde la inscripción Warden confirma que el verdadero patrón nunca tuvo período fijo — cada Muda depende de qué elige hacer un Warden vivo, en su cráter, con quien esté ahí para impedirlo o no — nunca de un calendario. La inscripción es también la primera confirmación real de la teoría que Valen viene cargando sin fuente desde el Acto 2 (Aether corrompido, God-Cores como cadáveres, Speck de la misma naturaleza) — treinta años de hipótesis se vuelven hecho en esta sala. El marco temporal en el que Valen creció, en cambio, era el que estaba mal. **Y cae con él la otra cifra:** no hubo Muda hace 110 años. Ese registro que Valen leyó de niño, el que le dio la carrera entera, era un asiento de archivo mal fechado. Las dos puntas de su medición —el período y el último evento— eran de la Academy, y ninguna de las dos existió.
 
 ### Sunken Archive — la lectura de la inscripción Warden
 
-Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — corresponde normalmente a **Sereth**. Cuando Sereth es el Pivote activo (y por tanto no está disponible para esa lectura sin comprometer la escena, o el diseño prefiere que no sea la voz que la ofrece), **es Valen quien hace la lectura** en su lugar. Reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador mira a través de the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo de la última Warden — que es Speck misma — Valen no ve la proyección (los Goggles son estrictamente privados, [[Nomenclatura]] §the Wanderer's Goggles), solo ve la cara del jugador cambiar, y no pregunta qué vio.
+Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La lectura ritual del Archive — que los God-Cores no son objetos de culto sino cadáveres enterrados de Wardens — **corresponde normalmente a Valen**. Cuando Sereth es el Pivote activo de esa partida, es ella quien hace la lectura en su lugar (beat exclusivo de su ruta, ver [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] §sub-beat 2). Valen reconoce el idioma como "de otro estrato, más antiguo que cualquier cosa en The Stillspire" — y aun con esa distancia, consigue leer lo suficiente para nombrar lo que ve: no son ornamentos, son cuerpos, dispuestos en formación ritual. Es el mismo momento en que el jugador mira a través de the Wanderer's Goggles y ve, de forma privada, la proyección residual del duelo de la última Warden — que es Speck misma — Valen no ve la proyección (los Goggles son estrictamente privados, [[Nomenclatura]] §the Wanderer's Goggles), solo ve la cara del jugador cambiar, y no pregunta qué vio.
 
 ---
 
@@ -228,9 +245,9 @@ Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La le
 
 ### Escena: The First Wound (Clímax Emocional)
 
-El Fragmento se activa. Speck reacciona. La verdad completa sale.
+El Pivote se llevó a Speck en el **corredor** del Archive y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse, Speck reacciona, y la verdad completa sale.
 
-**El Pivote decide.**
+**Lo que se decide acá no lo decide el Pivote — lo decide el jugador.**
 
 **Valen aquí:**
 
@@ -260,7 +277,7 @@ Proporciona datos: dónde fue el Pivote, qué recursos necesitará, qué ruta el
 
 ### The First Wound (Clímax Emocional)
 
-El Pivote actúa finalmente.
+El Pivote ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
@@ -289,7 +306,7 @@ Frío. Honesto. Sin malicia.
 #### **F2b — The Long Winter: Fallen (Speck muere en el intento)**
 Valen es quien **computa el precio final**.
 
-*"One variable removed. The system shifts. This was inevitable after the Fragment was taken. You didn't choose this — you chose seconds before this."*
+*"One variable removed. The system shifts. This wasn't inevitable — the Fragment doesn't kill on its own. Your hand did that, seconds ago. Own the seconds."*
 
 Frío. Honesto. Sin malicia.
 
@@ -364,7 +381,7 @@ Su línea final:
 ### Valen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Otra Strategist. Vekka construye, Valen calcula. Dinámicas de respeto mutuo raro.  
 **Tensión:** Vekka pregunta a Valen si sus cálculos incluyen el costo para ella. Valen: *"Always."* (Es verdad, y es aterrador).  
-**Traición:** Cuando Vekka desmonta el equipo del jugador, Valen: *"The Forging Dogma demands you finish what you started. I understand. I will not forgive."*
+**Traición:** cuando Vekka fija a Speck al yunque en el borde del cráter ([[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5), Valen: *"The Forging Dogma demands you finish what you started. I understand. I will not forgive."* Es el único del grupo que **nombra el dogma correctamente mientras ocurre** — y eso es peor que gritar, porque le concede la coherencia.
 
 ---
 
@@ -388,7 +405,7 @@ Valen: *"Because in 230 years of patterns, I've seen endings. You have not. That
 
 Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de verdad. Verdad sin escape es prisión.
 
-**Momento clave:** Cuando Darro llora por Dagna después del clímax, Valen está ahí (silenciosamente). Simplemente presente. Raro para Valen.
+**Momento clave:** Cuando Darro elige el silencio por Dagna después del clímax — no porque se le corten las palabras, sino porque decide no usarlas ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5) — Valen está ahí (silenciosamente). Simplemente presente. Raro para Valen.
 
 ---
 
@@ -400,6 +417,13 @@ Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de ve
 - Grabados teal en cuello y esternón — más contenidos que fenotipo base (él es académico, no guerrero)
 - Abrigo largo de viajero en slate-grey estructurado — nunca robes ceremoniales
 - Postura: erguida, manos a menudo guardadas o en gesto de reflexión
+- **Equipamiento (agregado 2026-08-07, cierra el hueco frente a Roen y
+  Darro):** una hoja corta ceremonial tipo estilete/plumín ("calculation
+  blade"), guardada en la manga o el cinturón — nunca la blande como
+  arma de combate, la usa para trazar/anclar físicamente sus marcas
+  (Discord/Harmony) sobre una superficie o un objetivo a corta distancia.
+  Herramienta de precisión, no arma — coherente con "académico, no
+  guerrero"
 - **Adorno personal único:** anillo de plata élfico grabado con fecha — el aniversario de la "última Muda" según los registros de la Academy, 110 años atrás. **La fecha es falsa** (§Grove of Cycles / §Sunken Archive): Valen lleva doscientos años usando un anillo que conmemora un evento que nunca ocurrió, y no lo sabe hasta el Acto 3. Después del Archive, no se lo quita.
 
 ---

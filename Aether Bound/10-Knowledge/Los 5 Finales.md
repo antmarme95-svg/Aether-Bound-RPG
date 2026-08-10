@@ -1,10 +1,16 @@
 ---
 status: ratificado
-source: "GDD §5.1 (v2 — 2026-07-27 partido F2)"
-updated: 2026-07-27
+source: "GDD §5.1 (v2 — 2026-07-27 partido F2). Mecánica de escena extraída a El Cráter — Matriz de Rutas el 2026-08-03."
+updated: 2026-08-03
 ---
 
 # Los 5 Finales — "¿Qué haces con Speck?"
+
+> **Qué vive acá:** la **filosofía** de cada final — qué significa, qué cuesta, a qué sabe,
+> su línea canónica, su eco Bond, y qué le pasa a cada arquetipo de Pivote.
+> **Qué NO vive acá:** la mecánica de la escena del cráter — staging, mensajero por ruta,
+> beats obligatorios. Eso es [[El Cráter — Matriz de Rutas]], y esta página la cita.
+> El gate de F4 es la excepción: se enuncia acá porque es fuente compartida con [[The Tether]].
 
 El eje canónico no es el destino del Pivote — es el destino de **Speck**. El clímax físico (llegar al cráter con Speck cargada por el Pivote) abre el abanico; qué eliges hacer con ella en The First Wound cierra el final. El Pivote sobrevive o cae como consecuencia, no como decisión aislada. Regla transversal mantenida de v1: cada final cierra con su eco del lenguaje Bond/Link Cam ([[Bond y el Bond Vacío]]).
 
@@ -14,16 +20,10 @@ El eje canónico no es el destino del Pivote — es el destino de **Speck**. El 
 
 ### F1 — The Guided Molt *(ganan los nuevos valores)*
 
-**Gate:** dos condiciones, en este orden.
-1. **Quien iba a completar la entrega quedó neutralizado — alcanzado y detenido, sin morir Speck en el forcejeo.** El momento es **el borde del cráter, no antes**: el canon de puesta en escena es que el Pivote (o, en las rutas donde él ya no está, el ejecutor que dejó activado) **carga a Speck hasta el centro** y el jugador llega segundos después ([[Geografía y Ciudades]] §ACTO 3 sub-beat 5). No hay versión de F1 en la que Speck llegue al cráter sola. Es indispensable porque mientras ese agente pueda actuar, la inacción del jugador resuelve a **F2a**: la entrega se completa por defecto.
-2. **El jugador no interviene con Speck.** No cruza hacia el core, no forcejea, no pregunta. Deja que la Muda termine.
+**Gate:** neutralizar al mensajero y después no intervenir con Speck.
+Mecánica completa y mensajero por ruta: [[El Cráter — Matriz de Rutas]] §3 y §2.
 
-**Por ruta, quién es "quien iba a completar la entrega":**
-- **7 rutas:** el Pivote mismo, detenido en el borde.
-- **Ruta Nyael:** el **equipo de extracción** que ella activó antes de retirarse. F1 exige detenerlo a él — si el jugador se aparta, el equipo completa la entrega y es F2a.
-- **Ruta Bram:** **Torgan como segundo agente**, que es el ejecutor real cuando Bram rehúsa.
-
-No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero a ese agente: es lo que convierte la quietud en una decisión en vez de un descuido.
+No requiere Tether alto. **F1 es el único final cuya acción de cráter es la ausencia de acción con nadie más capaz de actuar** — por eso exige neutralizar primero al mensajero: es lo que convierte la quietud del Pivote en una decisión del jugador en vez de un descuido.
 
 **F1 no usa el verbo de F4.** No hay rama de "hablar con Speck primero": preguntarle qué quiere es F4 y solo F4 ([[Speck]] §Capa 4 — el verbo de F1 es *aceptar*, el de F4 es *responder*). El jugador de F1 decide por Speck; que ella lo asuma con gracia no lo convierte en consentimiento.
 
@@ -57,28 +57,30 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F2a — The Long Winter: Handed Over *(Speck entregada viva al Council)*
 
-**Gate:** jugador entrega a Speck viva al Pivote o al mensajero del Council en el cráter. Speck no muere — es cedida, y por eso puede ser transportada: la entrega corta el hive mind y los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
+**Gate:** el mensajero completa la entrega, sea porque el jugador renuncia a intervenir o simplemente porque nadie lo detiene. Mecánica y mensajero por ruta: [[El Cráter — Matriz de Rutas]] §3 y §2.
 
-**Es también el final por defecto de la parálisis.** Si el jugador no decide nada en el cráter, el Pivote completa la entrega por él. No hacer nada no es neutral: hace ganar a la institución.
+**Speck no muere — es cedida, y por eso puede ser transportada:** la entrega corta el hive mind, los God-Cores dejan de pulsar, y es el cese del pulso lo que la suelta del centro ([[Speck]] §Capa 5). Mientras el pulso siguiera activo, ningún equipo podría moverla.
+
+**Es también el final por defecto de la parálisis.** No hacer nada no es neutral: hace ganar a la institución.
 
 **Línea canónica:** *"Un recurso administrado no es un futuro. Pero mañana amanece."*
 
-**Eco Bond/Link Cam:** epílogo en Rivermeet, dos años después. El jugador picas Bond por costumbre. Speck responde débilmente, desde muy lejos — está viva, catalogada, y el Council la usa. La respuesta llega en la misma frecuencia jade, pero apagada, como quien está siendo consultada contra su voluntad. Créditos con esa nota sostenida.
+**Eco Bond/Link Cam:** epílogo en Rivermeet, dos años después. El jugador pica Bond por costumbre. El eco vuelve débil y distante — está viva, catalogada, y el Council la usa — en la misma frecuencia jade de siempre, pero apagada. Es una señal, no una respuesta: el único beat de interioridad que le corresponde a este grado está en [[Speck]] §Capa 4, y no es este. Créditos con esa nota sostenida.
 
 **Sabor:** decepción, no tragedia. Compraste tiempo. El grupo se disuelve, y la disolución es fría — nadie odia al jugador, nadie lo perdona.
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* asciende. Recibe reconocimiento formal del Council. Se aparta del jugador con cortesía.
-- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: entregó a Speck viva al brazo encubierto de the Royal Academy, cumpliendo la orden real que recibió — pero sabe que el Council mintió sobre "custodia digna".
+- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: el equipo de extracción que ella activó completó la entrega en su lugar (es el único de los 9 donde el jugador mismo cierra la traición que el Pivote empezó — ver su ficha), cumpliendo la orden real que ella puso en marcha — pero sabe que el Council mintió sobre "custodia digna".
 - *Rechazo/Ausencia:* no aplica a Bram — nunca ejecutó. Lyris se aparta del grupo con calma que hiere.
 
 ---
 
 ### F2b — The Long Winter: Fallen *(Speck muere en el intento)*
 
-**Gate:** el jugador **intenta arrancarle a Speck por la fuerza** al Pivote (o al equipo de extracción, en la ruta Nyael) en vez de negociar la entrega, esperar, o retirarse — el forcejeo sobrecarga el Fragmento y la mata en el intento. Es una elección activa con consecuencia trágica, no un timeout: el jugador *hizo algo*, y lo que hizo fue precisamente lo que no debía hacerse en presencia del Fragmento ([[Speck]] §Capa 5 — la sobrecarga es por transferencia de fuerza mecánica cerca de un core activo; ni el tiempo ni la inacción la dañan).
+**Gate:** el jugador **intenta arrancarle a Speck por la fuerza** a quien la sostenga ([[El Cráter — Matriz de Rutas]] §2) en vez de negociar la entrega, esperar, o retirarse — el forcejeo sobrecarga el Fragmento y la mata en el intento. Es una elección activa con consecuencia trágica, no un timeout: el jugador *hizo algo*, y lo que hizo fue precisamente lo que no debía hacerse en presencia del Fragmento ([[Speck]] §Capa 5 — la sobrecarga es por transferencia de fuerza mecánica cerca de un core activo; ni el tiempo ni la inacción la dañan).
 
-**El forcejeo es la única vía.** Esperar no mata a Speck, y congelarse tampoco: si el jugador no actúa, el Pivote completa la entrega y el final es **F2a**, no este. F2b requiere que la mano que la arranca sea la del jugador.
+**El forcejeo es la única vía.** Esperar no mata a Speck, y congelarse tampoco: si el jugador no actúa, el mensajero completa la entrega y el final es **F2a**, no este. F2b requiere que la mano que la arranca sea la del jugador.
 
 **Línea canónica:** *"Nadie ganó. Nadie ganaba nunca."*
 
@@ -97,17 +99,21 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 ### F3 — The Conqueror's Clause *(beneficio propio — villano)*
 
-**Gate:** jugador cruza el borde del cráter hacia el core central con Speck en la mano y activa el vínculo por su cuenta. Encadena o entrega a Speck bajo sus propios términos, no los del Council. El Contrato cumplido hasta su última letra — pero renegociado a su favor.
+**Gate:** el jugador cruza el borde del cráter hacia el core central sin esperar la entrega. Mecánica del cruce y de la cesión: [[El Cráter — Matriz de Rutas]] §3 y §4.
+
+Una vez con Speck dentro del core, activa el vínculo por su cuenta y la encadena o entrega bajo sus propios términos, no los del Council. El Contrato cumplido hasta su última letra — pero renegociado a su favor.
 
 **Línea canónica:** *"El Council me pidió que la entregara. Nunca dijeron a quién."*
 
-**Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada. Ningún compañero. El multi-link es un solo-link.
+**Eco Bond/Link Cam:** en tu trono (Rivermeet reconfigurado, o donde sea que hayas consolidado poder), el único icono que responde a Bond es Speck — encadenada, trasladada desde el cráter una vez que el vínculo quedó bajo control del jugador, no del Council. **Ningún compañero, ni siquiera el que se queda a operar contigo** (Maren, Sereth en sus rutas): la traición corta el Bond aunque la persona siga presente — servir a un tirano no es lo mismo que estar vinculado a él. El multi-link es un solo-link.
+
+**El único beat de interioridad permitido en "cedida"** está en [[Speck]] §Capa 4 (fuente única — no se reescribe acá). Las dos fichas que la tienen cerca durante años bajo el régimen (Maren, Sereth — las únicas que se quedan) lo citan en vez de dejarla completamente ausente de su propio cautiverio.
 
 **Sabor:** villanía funcional. Los compañeros te abandonan uno por uno, cada uno con la despedida ritual de su cultura. Roen se va sin discurso. Valen escribe una carta y no la firma. Darro no dice adiós — solo deja su símbolo tallado en la mesa del último campamento.
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* se te une, en teoría. En la práctica, calcula tu caída desde el primer mes.
-- *Deber Institucional:* imposible — el arquetipo no puede convivir con esta ruta. Se va o muere confrontándote en el cráter mismo. Nyael desaparece antes de que amanezca, sin nota: es la única vez que no deja una.
+- *Deber Institucional:* imposible — el arquetipo no puede convivir con esta ruta. Se va o muere confrontándote en el cráter mismo. Nyael desaparece antes de que amanezca sin nota: es la única vez que no escribe.
 - *Rechazo/Ausencia:* Bram nunca te siguió tan lejos. Lyris no aparece en el epílogo.
 
 ---
@@ -115,10 +121,12 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 ### F4 — The Warden's Choice *(síntesis — el único con consentimiento de Speck)*
 
 **Gate compuesto — 2 condiciones, ambas discriminantes:**
-1. Mayoría "persona" en los Momentos de Persona de Speck.
+1. Mayoría "persona" en los Momentos de Persona **disponibles en esa partida** (no sobre un total fijo de 7 — el Momento 6 depende del Vector C del Grove).
 2. ≥2 compañeros en Tether T2+ ([[The Tether]]).
 
 Coincide con [[The Tether]] §Gate del Final 4 — **son la misma regla y no debe divergir.**
+
+**Son dos condiciones y nada más. Ninguna ficha puede agregar una tercera** (decisión de Boris, 2026-08-03). En particular, **el gate no depende del Pivote**: que el jugador lo haya perdonado, alcanzado, o matado en la persecución no abre ni cierra F4. Formulaciones del tipo *"este final requiere que el jugador haya perdonado a X"* o *"sin perdón, X no está en F4"* están **prohibidas** — inventan un gate que no existe. Lo que sí varía es el **estado del Pivote**, y por eso cada epílogo F4 se escribe en dos variantes (vivo / muerto): ver [[El Cráter — Matriz de Rutas]] §4.
 
 **Por qué el gate no incluye los Goggles ni los flashes.** Ambas cosas le pasan a todo jugador: los Goggles **no son retirables** desde The Reckoning ([[Nomenclatura]] — objeto no retirable) y los tres flashes están en la ruta principal ([[Speck]] §Capa 2). Una condición que el 100% de las partidas cumple no gatea nada. Los Goggles y los flashes son **contexto emocional**, no requisito: explican por qué el jugador *podría* preguntar. Lo que decide si pregunta son los dos sistemas que él sí maneja — cómo trató a Speck y cuánto se acercó a su gente.
 
@@ -137,7 +145,7 @@ Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un Go
 **Eco Bond/Link Cam:** años después, Bond responde un sting débil de dos notas — la melodía del Bond vacío, completada en otra tonalidad, la misma familia sonora que F2b, no una victoria limpia. El Council la bautiza oficialmente "the Warden"; The Bound Five talla **SPECK** en la base del core, porque el nombre es lo único que se llevan de vuelta.
 
 **Pivote — por arquetipo:**
-- *Aritmética/Manipulación:* se reintegra si el jugador lo perdonó en la persecución. No pide perdón en voz alta — cambia sus cuentas.
+- *Aritmética/Manipulación:* se reintegra sin condición de ruta (el gate de F4 no depende del Pivote — ver [[El Cráter — Matriz de Rutas]] §4). No pide perdón en voz alta — cambia sus cuentas.
 - *Deber Institucional:* Torgan renegocia su Juramento con su clan menor (única lectura ritual que lo permite). Dagna es liberada por su subclán como acto de reconocimiento a la síntesis. Nyael reaparece — no como Pivote, sino como alumna que vuelve al jugador (su par, no su maestro) para preguntar qué aprendió.
 - *Rechazo/Ausencia:* Bram se queda. Es el único final donde Bram se queda por elección propia y no por deber. Lyris regresa con el grupo — el patrón ahora la incluye.
 
@@ -153,9 +161,11 @@ Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, p
 | **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda | Bram no aplica; Lyris se aparta del grupo con calma que hiere |
 | **F2b Fallen** | Colapso interno — sus cuentas ya no cuadran | **Torgan: peor final canónico** (juramento incumplido, no roto); Dagna renuncia al clan; Nyael escribe la última nota | Bram vive con culpa por no haber traicionado antes; Lyris desaparece |
 | **F3 Conqueror** | Se te une, calcula tu caída | Imposible — muere confrontándote o se va sin volver | Bram nunca te siguió tan lejos; Lyris no aparece en el epílogo |
-| **F4 Warden's Choice** | Se reintegra si lo perdonaste; cambia sus cuentas | Torgan renegocia juramento; Dagna es liberada por su subclán; **Nyael vuelve como alumna** | **Bram se queda por elección propia — único final donde lo hace** |
+| **F4 Warden's Choice** | Se reintegra sin condición de ruta; cambia sus cuentas | Torgan renegocia juramento; Dagna es liberada por su subclán; **Nyael vuelve como alumna** | **Bram se queda por elección propia — único final donde lo hace** |
 
 **Regla para las 9 fichas:** cada epílogo debe expandir su celda de la matriz sin contradecir ninguna otra celda de su fila. Cada Pivote tiene 5 epílogos, uno por final.
+
+**Excepción declarada e intencional — Iven, fila Deber Institucional.** La fila tiene 5 miembros (Torgan, Dagna, Nyael, Vekka, Iven). Iven es el único de los 5 cuya institución le mintió activamente para reclutarlo (*"Deber Institucional en su variante envenenada"*, [[Pivotes/Iven-Ficha-Expandida-v1]]). Por eso su F1 no es "muere o se autoexilia" (sobrevive, querido, en su asentamiento) y su F2a no es "asciende sin celebración" (queda tolerado, no querido, sin institución que lo ascienda — su lealtad nunca fue a un clan o academia, sino a un pueblo). **Decisión de Boris (2026-07-30): la excepción se queda así, no se reescribe para calzar con la fila.** Ningún QA futuro debe reportarla como crítico.
 
 Rejugabilidad: el género emocional del clímax varía por Pivote ([[Los 9 Pivotes]]); los finales, por filosofía.
 

@@ -40,6 +40,11 @@ Cada celda de la [[Matriz Raza x Rol]] tiene verbos dominantes propios (GDD
 las cadenas de combo más largas del juego del Humano Duelist. Los movesets
 DERIVAN del esqueleto ([[Movilidad Realista]]).
 
+**Primer tramo compilado (borrador, 2026-08-07):** [[Armamento Base — Matriz
+Raza x Rol]] fija el verbo, el remate y el arma base de las 9 celdas para el
+ataque melee por defecto — arranca a compilar esta sección más allá de la
+cita al GDD congelado, `status: borrador` sin QA todavía.
+
 ## D. Semillas sensoriales (para la Game Feel Bible)
 
 Parry: time-dilation + sting de dos notas ([[Bond y el Bond Vacío]]). Vivo del

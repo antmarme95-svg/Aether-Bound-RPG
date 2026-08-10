@@ -14,6 +14,9 @@
   fusionado con `project-context` (auditoría de tokens, niveles
   equipo/privado, puentes) el 2026-07-20.
 - `scripts/check_vault.py` — auditoría de **peso** de arranque del Vault
+- `scripts/hook_current_state.sh` + `.claude/settings.json` (raíz del repo) —
+  hook `PostToolUse` que corre `check_vault.py` automáticamente al editar
+  `Current-State.md` y devuelve el semáforo al mismo turno
 - `scripts/check_canon.py` — auditoría de **consistencia** del canon (citas,
   aritmética, fuente única, clases incompletas). Correr ANTES de gastar
   subagentes de QA; exit 1 si hay críticos
@@ -25,23 +28,33 @@
 - [[Visión y Pilares]] — la frase de visión y los 4 filtros de toda decisión.
 - [[El Mundo y la Muda]] — lore público vs. la revelación: God-Cores = cadáveres de Wardens; la Muda inconclusa.
 - [[Geografía y Ciudades]] — mapeo completo: 3 reinos + ciudades secundarias + zonas neutras + beats por acto + viajes.
+- [[Bestiario]] — eje de salud del Aether (Sano/Ambiental/Corrupto/Aberración), los 4 bosses ya nombrados + 3 nuevos que completan los 5 dungeons formales.
+- [[Flora y Ecosistemas]] — mismo eje aplicado a vegetación; el Jacarandá de Rivermeet, la Hoja de Maelys (referencia cruzada a Dagna).
+- [[Villanos Menores]] — amenazas de mundo abierto: 3 facciones de las razas existentes (Compañías Impagas, Sin Nombre, No Licenciados) + 2 razas nuevas no sapientes nacidas de la corrupción (Vaciados, Motas). Sin jefe final — decisión deliberada.
 - [[Estructura Dramática]] — 3 actos + nudo del Fragmento + traición por convicción + gancho de 3 polos.
+- [[Voz Narrativa]] — sin narrador durante el juego; único bookend: Roen viejo en taberna, apertura neutra + 5 cierres variables por final. Ratificado 2026-08-07.
+- [[Guion/Apertura — Roen Viejo]] — primera escena literal del juego, guión en inglés, `status: ratificado`.
+- [[Guion/Cierres — Roen Viejo]] — 5 cierres variables por final (F1/F2a/F2b/F3/F4), formato conversación con un Barkeep fijo, `status: ratificado`. Bookend completo.
+- [[Guion/Encuentro con Roen]] — primer guión jugado del juego (no bookend): la emboscada de los 3 Hollowed (excepción de manada, [[Villanos Menores]] §The Hollowed) + intervención de Roen, cierre del tutorial de Los Desfiladeros de Zephyr. 2 modos por rol (Duelist/Strategist: Roen lanza un Hollowed y el jugador remata, arma por celda para Duelist / acción a distancia para Strategist; Vanguard: "doble ancla", T1), `status: provisional`. **17ª ronda de QA (2026-08-10): 13 críticos entre 2 subagentes, todos corregidos a la fuente** — detalle en [[LOG]]. Pendiente re-corrida antes de ratificar.
+- [[Armamento Base — Matriz Raza x Rol]] — arma/verbo/mecánica clave de las 9 celdas de [[Matriz Raza x Rol]] + equipamiento de los 3 fijos (Roen/Darro/Valen), `status: ratificado` (2026-08-07). Corrige un error de canon sobre el parry (sabor racial, no regla transversal — [[Combate]] §B4) y devuelve los 3 Strategist a su arquetipo original (manipulador psíquico / ingeniero / gadgeteer) en vez de converger en "sanador". Incluye la ventana de input del remate (whiff = se pierde el bonus del link, no el combate). El escudo de Roen se resolvió (regalo anónimo, mismo recurso que los Wanderer's Goggles). **Barrido 2026-08-07:** cruzado contra los 9 Pivotes, resolvió 2 colisiones de arma (Torgan/Darro, Lyris/Nyael, ambos pares Enano/Elfa Duelist con la misma arma).
 - [[Las Tres Razas]] — Elfos/Enanos/Humanos: temperamento, hábitat, por qué nadie quiere a Speck. Incluye tabla de longevidad (elfos 650-700 / enanos ~200-250 / humanos ~70-90).
 - [[Estructura Política]] — cómo se gobierna cada reino: Queen Ithessa + The Elder Circle + 2 Academias (elfos); King Borran + Great Forging Clan (enanos); Regent Edrick Ashcombe + Triune Council (humanos, sin dinastía estable). Nombres propios en inglés — ver [[Nomenclatura]].
 - [[La Rueda]] — mapa macro: cubo (Wilds), aro (3 reinos), 3 arterias co-op, Driftmarket, Sunken Archive, First Wound.
-- [[Speck]] — la última Warden: un estadio de revelación (no crece, se revela), bautizo, Momentos de Persona. **§Capa 5 = fuente única de la regla física del Fragmento**; §Capa 4 = los 3 grados de agencia de Speck por final.
+- [[Speck]] — la última Warden: un estadio de revelación (no crece, se revela), bautizo, Momentos de Persona. **§Capa 5 = fuente única de la regla física del Fragmento**; §Capa 4 = los 4 grados de agencia de Speck por final.
 - [[The Bound Five]] — jugador + C1 afín + C2 opuesto + C3 pivote + C4 chispa (+Speck); matchmaking orgánico.
 - [[Los 9 Pivotes]] — matriz y fichas v0: Maren/Torgan/Iven/Sereth/Bram/Lyris/Dagna/Nyael/Vekka.
 - **`10-Knowledge/Pivotes/` — 9 fichas narrativas expandidas COMPLETAS (2026-07-23):** [[Pivotes/Maren-Ficha-Expandida-v1|Maren]] / [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] / [[Pivotes/Iven-Ficha-Expandida-v1|Iven]] / [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] / [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] / [[Pivotes/Lyris-Ficha-Expandida-v1|Lyris]] / [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] / [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] / [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]]. Incluye: bio pre-aventura, Conocimiento Previo (fijo ve Pivote), encuentro player-único, arco 3-actos, traición, **5 epílogos** (F1/F2a/F2b/F3/F4), línea canónica/privada, dinámicas, diseño visual.
 - [[Acoplamientos]] — roles de co-dependencia sin ultimates; parejas fundadoras; tutorial geográfico.
 - [[Los 9 Links del Pivote]] — Skipping Stone…Warforging: qué hace cada uno y qué duele al perderlo.
+- [[Los 3 Links de los Fijos]] — Second Catch (Roen) / The Long Calculus (Valen) / Open Seam (Darro), provisional 2026-08-05, pendiente de QA.
 - [[Bond y el Bond Vacío]] — el único botón de vínculo; el beat del miembro fantasma; la Link Cam.
 - [[Matriz Raza x Rol]] — las 9 celdas de arquetipo mecánico.
 - [[Locomoción]] — FSM conservada + mantling + escalada zonificada + conservación de impulso.
 - [[Combate]] — 4 componentes + HitPayload; marcas como datos; parry racial; verbos 3×3.
 - [[Movilidad Realista]] — mandato §4.3: constraints + IK + ROM por raza; el esqueleto manda.
 - [[Progresión y Contrato]] — el Contrato que te persigue; loop principal.
-- [[Los 5 Finales]] — Guided Molt / Long Winter (Handed Over · Fallen) / Conqueror's Clause / Warden's Choice + ecos Bond.
+- [[Los 5 Finales]] — Guided Molt / Long Winter (Handed Over · Fallen) / Conqueror's Clause / Warden's Choice + ecos Bond. **Filosofía y sabor** de cada final; la mecánica de la escena vive en la Matriz de Rutas.
+- [[El Cráter — Matriz de Rutas]] — **fuente única de la mecánica del clímax** (2026-08-03): secuencia fija de 6 pasos (más un paso 0 de contexto), tabla de parámetros por ruta (mensajero y cadena institucional de cada Pivote), los 5 gates, beats obligatorios por final, y las reglas globales que las fichas citan en vez de re-enunciar. Las 9 fichas de Pivote + 3 fijos + [[Los 9 Pivotes]] **heredan de acá**.
 - [[The Tether]] — Contract Standing vs. Bond por compañero (T1–T3) + Momentos de Persona.
 - [[Grove of Cycles — Escena del Acto 2]] — el debate del Elder Circle (Threnn/Ilyara/Corwyn/Maelys) que siembra los finales; fuente primaria de por qué el grupo llega ahí y del Vector C (gate: mayoría "persona" en los Momentos de Persona, sin conteo de flashes).
 - [[Art Bible]] — "Melancolía Gráfica": Sable×BotW×Hinterberg, regla espacial, pipeline 4 capas.
@@ -51,13 +64,14 @@
 - [[Benchmark-Musculatura-Torso]] — rúbrica de aceptación para músculo esculpido en el rig procedural (torso sin playera + piernas). Canon visual: [[Art Bible]] + lámina fenotipo-humano-v1. `status: borrador`.
 - [[Principios de Anatomía 3D]] — minado de "Anatomy for 3D Artists" (157 páginas, 5 subagentes, 2026-07-16): torso en 3 masas (caja torácica 2/3 + cintura + pelvis 1/3), cintura escapular como bloque separado, sistema de mitades sucesivas para nudillos, pelo = masa completa primero + variación anti-paralelismo entre mechones. Insumo directo para `SHOULDER_X`/manos/pelo, nada aplicado aún en código.
 - [[Fenotipos y Creación de Personaje]] — silueta canónica por raza + slots fijos/raciales/libres.
-- [[Briefs de Concept Art]] — prompts Nano Banana 2 (fenotipos/keyframes/Speck/foliage/Dagna) + notas de pipeline; ratificada 2026-07-08 (sus outputs ya son canon). Página viva: se añaden los 8 pivotes restantes.
+- [[Briefs de Concept Art]] — prompts Nano Banana 2 (fenotipos/keyframes/Speck/foliage/Dagna) + notas de pipeline; ratificada 2026-07-08 (sus outputs ya son canon). Página viva: se añaden los 8 pivotes restantes. **§5c — los 5 finales visuales de Speck completos (2026-07-30):** F1/F2a/F2b/F3/F4, todos ratificados y consistentes con `Los 5 Finales` actual. **§15 (2026-08-07): Los Desfiladeros de Zephyr, 3 briefs (skin humana/enana/élfica) del tutorial de Acto 1 — 3/3 RATIFICADAS, cada una con nota menor no bloqueante.** **§16 (2026-08-07): emboscada de los 3 Hollowed + llegada de Roen — RATIFICADA, nota menor de continuidad de pelo de Roen vs. §14.1.** **§17 (2026-08-07): re-roll de Lyris (bumeranes élficos + limpieza de texto) — RATIFICADO, `lyris-v2.png`.** **§12.2 (2026-08-07): key-art-poster V2 — RATIFICADO retroactivamente (generado 2026-07-28, hallado sin evaluar en Downloads).**
 - [[Briefs de Mapa del Mundo]] — brief profesional para generar mapa Tolkien × Sable × BotW (45+ POI mapeados, fidedigno para RAW + concept). Estilo línea clara, desaturación cálida, isométrico.
 - [[Slice of Bond]] — vertical slice ratificado: Humano Duelist × Dagna; 4 escenas (Nido → Cinder Ascent → eco Sunken Archive → coda Bond vacío), 45–60 min.
 - [[Game Feel Bible]] — §6.3 ratificada: hit-stop por masa, shake modelo trauma, cámara libre + soft-assist, feel del Springboard.
 - [[Benchmark Biomecánico]] — v1 Sable/Hinterberg: el benchmark es timing y pose (animar en 2s), no más realismo. v2 AAA (B14): motion matching descartado; camino validado = Sifu handkey trifásico + foot IK de HZD. **RATIFICADO (2026-07-06)**. v3 (B15): mediciones frame a frame de los clips del director — hit-stop 2f/3f global, combo sincopado, contacto ≈60% del ciclo (valida 0.58), Sable con raíz continua = canon A/B validado 1:1. §B15d: nuestra build medida con el mismo método (AS IS vs TO BE) — feedback de combate hoy 100% cromático (flash/tinte), 0% corporal/temporal; locomoción ya alineada con Sable; running jump 42 f = analítica del código pero sin pose (canal airborne pendiente en C4). §B15e: playtest dirigido del kit Duelist — 8 tintes de daño en 11.4 s tapan la lectura (fix adelantado), jugador sin reacción de pose, trade-fest; el veredicto del director ("no es Sifu") queda medido. §B15f–B15g: alcance 3 verificado en juego — los 2 asesinos de B15e resueltos (vignette de bordes + reacción corporal), par light/heavy legible por silueta; hallazgo nuevo: presión enemiga baja (tuning); lo que faltaba contra Sifu era temporal — cerrado por el alcance 4 ✅ (2026-07-07, pendiente de playtest).
 - [[Pivotes/Dagna-Ficha-Expandida-v1]] — ficha viva del Pivote del slice (bio Deepstone, 5 años con el jugador, arco 3 actos, 5 finales, visual v2). Los tiers del Springboard y la Primera Cuña viven en [[Los 9 Links del Pivote]].
 - **Los 3 fijos — una sola fuente viva cada uno:** [[Roen-Ficha-Expandida-v1]] · [[Valen-Ficha-Expandida-v1]] · [[Darro-Ficha-Expandida-v1]].
+- [[Old-Tobin-Hale-Ficha-Expandida-v1]] — personaje de apoyo, sin arco de traición (2026-07-30). Único del elenco político sin agenda oculta; dispara el falso positivo del Reckoning + entrega the Wanderer's Goggles. El extraño que le dejó los Goggles queda deliberadamente sin resolver.
 
 > ⚠️ **Las 4 fichas cortas (`Dagna.md`, `Darro.md`, `Roen.md`, `Valen.md`) están ARCHIVADAS** en `90-Raw/*-ficha-v0-ARCHIVADA.md` (2026-07-29). Contradecían a sus expandidas en hechos centrales — origen y apellido de Dagna, si Darro y Dagna se conocían de antes, si Darro grita o se calla en la traición, el gesto de Roen en el cráter, la cosmología de Valen. **No crear fichas cortas nuevas:** dos archivos por personaje generaron 3 críticos en dos rondas de QA. Una sola fuente viva por personaje.
 
@@ -195,7 +209,7 @@
 - [[Propuesta-Recursos-de-Modelado]] — **RATIFICADA 2026-07-12**: 5 recursos para subir el techo del pipeline procedural de personajes (triplanar, loft/perfil, gradientes, banding MToon, iteración) + 3 ajustes al plan de rework C6/M10 de la sesión paralela; loft = mini-loop pre-C6b.
 - [[ADR-001 Adopción del Vault]] — por qué existe este sistema.
 - [[ADR-002 Motor diferido]] — CERRADA: **Godot confirmado** (2026-07-04) con la evidencia de la golden scene. ⚠️ Parcialmente superada por ADR-003.
-- [[ADR-003 Reset de desarrollo y motor]] — 🔴 **ABIERTA Y BLOQUEANTE** (2026-07-28): hard reset de código + revisión Godot→Unity. **No se toca código hasta cerrarla.** 5 criterios en orden: slice → plataforma → alcance v1 → motor → inventario.
+- [[ADR-003 Reset de desarrollo y motor]] — 🟡 **BORRADOR DE CIERRE, pendiente de firma del director** (2026-08-10). Tras el consejo: hard reset SÍ · **motor GODOT** (ADR-002 vuelve a plena vigencia) · slice = [[Slice of Bond]] recortado a 3 escenas con Dagna, greybox de entorno pero **no** de cuerpo · PC únicamente · alcance de v1 diferido hasta tener el costo real en horas. Más las 3 piezas pre-código: árbol de "¿y si no duele?", contador de horas, y 3 playtesters con nombre y fecha. **§Tercera vía:** gauntlet-loop es método de producción, no motor. Insumos: [[Brief para el Consejo — Motor y Fases de Desarrollo]] · transcript del consejo en `90-Raw/council-2026-08-10-motor-y-fases.md`.
 
 ## 30-Loops (cómo trabajar)
 

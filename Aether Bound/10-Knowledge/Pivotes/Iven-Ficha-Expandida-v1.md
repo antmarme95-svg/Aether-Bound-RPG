@@ -17,7 +17,7 @@ updated: 2026-07-28
 
 **La promesa que Iven cree es falsa. No ambigua, no exagerada, no bien intencionada y mal ejecutada: FALSA, y el Council lo sabe desde el primer día.**
 
-El Triune Council le prometió a Iven que sacrificar a Speck produciría un remedio capaz de purificar la zona de su asentamiento. Ese remedio **no puede existir**. Canon ratificado en [[El Mundo y la Muda]]: lo que sana el Aether no es la muerte de la Warden — es su **maduración**. Matar a Speck no produce cura alguna; **perpetúa la corrupción indefinidamente**. La promesa hecha a Iven es físicamente imposible en las reglas del mundo.
+El Triune Council le prometió a Iven que sacrificar a Speck produciría un remedio capaz de purificar la zona de su asentamiento. Ese remedio **no puede existir**. Canon ([[El Mundo y la Muda]] / [[Los 5 Finales]] §F1): lo que sana el Aether no es la muerte de la Warden — es que ella **complete la Muda, viva, en el cráter, sin que nadie se lo impida.** Matar a Speck no produce cura alguna; **perpetúa la corrupción indefinidamente**. La promesa hecha a Iven es físicamente imposible en las reglas del mundo — y la persecución en la que él mismo participa es, literalmente, lo único capaz de impedir la cura que le prometieron.
 
 **Por qué el Council miente:** ver [[Estructura Política]] §"Por qué el Council prefiere el statu quo". El Council no gestiona una crisis temporal — gestiona su razón de existir. Si la Muda se completa, el Council se vuelve obsoleto. Lo que necesita no es una cura: necesita a Speck **fuera de circulación** y la corrupción **estable**. Y para eso necesita un ejecutor con motivo propio, que no haga preguntas y que no pueda ser comprado por el otro lado. Un hombre desesperado con doscientas personas muriéndose atrás es la herramienta perfecta: **su motivación se sostiene sola durante meses sin necesidad de supervisión.**
 
@@ -45,7 +45,7 @@ La traición de Iven no es cálculo ni deber. Es **elección imposible entre dos
 
 Iven no tiene clan, gremio ni academia. **No tiene institución propia** — y eso lo distingue de los otros tres del arquetipo.
 
-Su cadena es la más corta y la más sucia del elenco:
+Su cadena es la más sucia del elenco — no la más corta (Maren, Vekka y Bram tratan directo, sin intermediarios; la de Iven tiene tres eslabones, empatada con la de Torgan), pero sí la que menos rastro institucional deja:
 
 **Triune Council → Trade Consortium → un agente sin nombre → Iven.**
 
@@ -227,9 +227,9 @@ Los dos caminos pierden algo. Iven elige el que le da más tiempo, que es lo que
 
 ### Escena: el primero (formación del grupo)
 
-Roen llega y lo reconoce. Valen aparece. Darro se suma.
+Roen ya está con el jugador y lo reconoce. Valen aparece. Iven se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro.
 
-**El Bound Five se forma: Jugador + Roen + Valen + Iven + Darro.** Nunca más de cinco ([[The Bound Five]]).
+**El Bound Five queda formado recién con Darro: Jugador + Roen + Valen + Iven + Darro.** Nunca más de cinco ([[The Bound Five]]).
 
 **Iven está en un rol imposible:**
 - Es compañero genuino (lo es, sin reserva).
@@ -274,7 +274,7 @@ Iven: *"Siempre. Pero también estoy aquí. Las dos cosas son verdad."*
 
 (Es el dilema de Iven entero, en una frase, dicho sin darse cuenta.)
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. Iven es **el más silencioso durante el debate del Elder Circle.** No habla. No participa. Escucha a Threnn, Ilyara, Corwyn y Maelys discutir con la cortesía absoluta que caracteriza a los elfos, y en su cabeza cada argumento se traduce a nombres específicos de su asentamiento: gente que va a morir mientras cuatro elfos, en un bosque que no está corrupto, debaten teorías con siglos de sobra.
 
@@ -459,13 +459,15 @@ No es negación de la información. Es un hombre pidiéndole a alguien que no le
 
 ### Sub-beat 5: quiebre final en The First Wound
 
-Iven llega al centro del cráter con Speck. El core central pulsa en frecuencia jade. Los God-Cores despiertan uno a uno alrededor.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Iven**. Secuencia: §1, pasos 1-6, sin excepciones. Su "mensajero" es el **contacto del Consortium** — y la promesa que lo trajo hasta acá es falsa (§2, columna de excepción).
 
-El contacto del Consortium espera en el borde opuesto: un hombre común, ropa buena, sin sello ni insignia, **con un maletín**. No trae equipo médico. No trae convoy. No trae nada que se parezca a un remedio.
+Iven llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor.
+
+El contacto del Consortium viene subiendo desde dentro del cráter hacia el borde: un hombre común, ropa buena, sin sello ni insignia, **con un maletín**. No trae equipo médico. No trae convoy. No trae nada que se parezca a un remedio.
 
 El jugador y los fijos llegan segundos después.
 
-Iven está de rodillas en el centro, sin aire, todavía con Speck en brazos. **Ha corrido más rápido que nadie y llegó al lugar donde no hay nada.**
+Iven está de rodillas en el borde, sin aire, todavía con Speck en brazos. **Ha corrido más rápido que nadie y llegó al lugar donde no hay nada.** Es la única ruta donde el Pivote llega al cráter y **el mensajero es la peor noticia de la escena** — en las otras ocho, el mensajero solo confirma lo que el Pivote ya decidió.
 
 **Diálogo del quiebre:**
 
@@ -501,7 +503,7 @@ Y después, dos segundos más tarde, en voz mucho más baja — la frase que nad
 
 *"Dime que hay otra forma. Dímela y la hago."*
 
-**Ese es el diseño del clímax de Iven:** no la ofrece, no la esconde, no corre hacia el contacto. **Se queda de rodillas en el centro con Speck en brazos y le pide al jugador una salida que el jugador no tiene.** Iven es el único Pivote que, en el último segundo, **pide ayuda**.
+**Ese es el diseño del clímax de Iven:** no la ofrece, no la esconde, no le sale al encuentro al contacto. **Se queda de rodillas en el borde con Speck en brazos y le pide al jugador una salida que el jugador no tiene.** Iven es el único Pivote que, en el último segundo, **pide ayuda**.
 
 **El Fragmento se activa.** Speck E1 → E3. La decisión del jugador abre uno de los 5 finales.
 
@@ -509,13 +511,15 @@ Y después, dos segundos más tarde, en voz mucho más baja — la frase que nad
 
 ## Finales — 5 variantes según matriz Deber Institucional
 
-Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epílogo expande su celda sin contradecir las de Torgan, Dagna ni Nyael.
+Ver [[Los 5 Finales]] — Iven ocupa la fila **Deber Institucional**. Cada epílogo expande su celda sin contradecir las de Torgan, Dagna, Nyael ni Vekka.
 
 **Constante transversal de los cinco:** el Council **jamás confirma la mentira.** No hay escena donde un funcionario admita nada. La verdad, cuando llega, llega por deducción, por ausencia, o por Roen — nunca por confesión. Iven no obtiene ni siquiera la dignidad de que alguien le diga a la cara lo que le hicieron.
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el contacto del Consortium queda neutralizado antes de llegar hasta él.
+
+Iven no se mueve — sigue de rodillas, sosteniendo a Speck. Speck alcanza forma Warden completa y el jugador la deja terminar. El Aether empieza a sanar de verdad — y de golpe, que es la parte que cobra. Todo lo que funcionaba con Aether corrupto se apaga en una generación: las forjas, las aeronaves, los tanques de Aethelgard, las minas. Las tres capitales entran en la peor década de su historia registrada (regla obligatoria en [[Los 5 Finales]] §El costo de F1).
 
 **Y ahí está la crueldad exacta de este final: la Muda era la cura, e Iven casi la mata.**
 
@@ -539,7 +543,7 @@ Si el jugador lo busca años después, Iven lo recibe, le da de comer, y **no me
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Iven **cumple.** Speck es entregada viva. El contacto se la lleva. Los God-Cores dejan de pulsar.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega. Iven **cumple.** Speck es entregada viva. El contacto se la lleva. Los God-Cores dejan de pulsar.
 
 **Epílogo:** Iven vuelve al asentamiento a esperar el remedio.
 
@@ -561,7 +565,7 @@ Muere viejo, en un asentamiento vivo, financiado por un pago que compró con una
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento) — **su peor destino canónico**
 
-Speck muere en el cráter. No fue entregada, no fue liberada, no completó nada. Nadie ganó ([[Los 5 Finales]] F2b).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador. No existe otra vía de muerte. Speck muere en el cráter. No fue entregada, no fue liberada, no completó nada. Nadie ganó ([[Los 5 Finales]] F2b).
 
 **Sin Speck viva no queda absolutamente nada.** No hay remedio falso — el Council no paga por un cadáver, y el trato de Iven se disuelve sin que nadie se lo comunique. Y no hay maduración — el único mecanismo que de verdad podía sanar la zona murió en el fondo del cráter. **Las dos vías, la real y la inventada, se cierran en el mismo instante.**
 
@@ -573,7 +577,7 @@ El asentamiento no colapsa ese año. Ni el siguiente. La corrupción sigue su cu
 
 Entierra a todos. **Con sus manos, como siempre.** Cava para la mujer que lo crió cuando murió Sael. Cava para los niños que entrenó como defensores. Cava para el hombre que le tejió la cuerda de la muñeca. Les cierra las manos una por una y los pone mirando hacia el asentamiento, hacia un asentamiento que cada año tiene menos gente adentro para hacerles guardia.
 
-**Y sabe, todo el tiempo, que él fue la variable que aceleró esto.** Speck estaba viva y en camino a madurar. Iven la sacó del grupo, la corrió por The Scar of Breaking, la llevó al cráter, y ahí se murió. **La única cura real del mundo murió cargada en sus brazos, por sus piernas, a su velocidad.**
+**Y sabe, todo el tiempo, que él fue la variable que abrió esa puerta.** Speck estaba viva, y el cráter era el único lugar donde algo podía cambiar de verdad para su gente. Iven la sacó del grupo, la corrió por The Scar of Breaking, la llevó ahí en sus propios brazos — y fue el jugador quien decidió arrancársela de ahí, en el borde, para impedir la entrega. Iven lo ve pasar de cerca: no es un accidente ni un forcejeo que se les fue de las manos a los dos. Es una decisión, tomada por otra persona, sobre algo que él cargó hasta ese punto exacto. **La única vía real de curar el mundo llegó cargada en sus brazos, por sus piernas, a su velocidad — y se cerró en una mano que no era la suya.**
 
 Nadie del asentamiento se lo echa en cara nunca — no saben. Lo quieren hasta el final. Lo llaman cuando hay que cavar. **Es la crueldad completa del final: muere querido por la gente a la que mató.**
 
@@ -583,13 +587,13 @@ Los últimos años queda casi solo. Se sienta a mirar el camino por donde llegar
 
 ### F3 — The Conqueror's Clause (el jugador toma el poder para sí)
 
-**Imposible para Iven.** El arquetipo del deber no puede convivir con esta ruta ([[Los 5 Finales]] F3).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Iven suelta. **Imposible para Iven.** El arquetipo del deber no puede convivir con esta ruta ([[Los 5 Finales]] F3).
 
 Y en su caso es más simple todavía: si el jugador encadena a Speck bajo sus propios términos, **el asentamiento no recibe nada de nadie.** Ni el remedio inventado, ni la maduración, ni el dinero. Iven cruzó la línea entera, quemó todo lo que tenía, y el resultado es que la criatura cambió de dueño.
 
 **Iven muere confrontándote en el cráter, o se va y no vuelve.**
 
-Si confronta: no lo hace con discurso. Suelta a Speck, la deja donde caiga, y va contra el jugador con las dos dagas y sin ningún plan — es la única pelea de su vida donde el acróbata **no esquiva**. Cae rápido.
+Si confronta: cuando el jugador pasa de largo junto a él y cruza el borde hacia el core central en vez de negociar o esperar, Iven suelta a Speck al verlo cruzar, la deja donde caiga, y va contra el jugador con las dos dagas y sin ningún plan — es la única pelea de su vida donde el acróbata **no esquiva**. Cae rápido.
 
 **Línea antes de caer:** *"Yo la vendí por doscientas personas. Tú la estás vendiendo por ti."*
 
@@ -597,7 +601,9 @@ Si se va: camina fuera del cráter sin mirar atrás, y no llega al asentamiento.
 
 ### F4 — The Warden's Choice (Speck elige la Muda parcial — síntesis)
 
-Requiere que el jugador haya **alcanzado a Iven y no lo haya matado**, y que en el cráter le haya **hecho la pregunta a Speck** en vez de decidir por ella ([[Los 5 Finales]] §F4 — no basta con no moverse: la quietud sin pregunta es F2a). Speck responde, y lo que responde es la Muda parcial: se calcifica voluntariamente en el core central. El Aether sana **lentamente**, no de golpe. Las civilizaciones no colapsan; se adaptan.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Iven**. No basta con no moverse: la quietud sin pregunta es F2a. El contacto del Consortium se aparta — cierra el maletín y se va sin decir nada, porque no le pagaron por presenciar esto.
+
+Speck responde, y lo que responde es la Muda parcial. **Cruza el borde sola** — Iven abre los brazos desde las rodillas — y se calcifica voluntariamente en el core central. El Aether sana **lentamente**, no de golpe. Las civilizaciones no colapsan; se adaptan.
 
 **Iven es, de los nueve, quien mejor entiende lo que acaba de pasar — y lo entiende antes que nadie en el cráter, incluido el jugador.**
 
@@ -605,7 +611,7 @@ Porque lo que Speck hizo es exactamente lo que Iven lleva haciendo desde los nue
 
 Se queda de rodillas y dice, sin dirigirse a nadie: *"Ella eligió cuánto."*
 
-**Epílogo — y esto no es F1, es su opuesto exacto: en F1 vive con culpa; en F4 vive con propósito.**
+**Epílogo — Iven vivo. Esto no es F1, es su opuesto exacto: en F1 vive con culpa; en F4 vive con propósito.**
 
 Iven vuelve al asentamiento. La zona no se limpia de golpe: **mejora año por año**, un pozo esta primavera, dos el otro invierno, el pasto volviendo desde el borde hacia adentro. **Prospera lentamente**, y esa lentitud es precisamente lo que Iven puede explicarle a su gente, porque es la única forma de curación que él ha visto funcionar alguna vez.
 
@@ -613,9 +619,21 @@ Y se convierte en **testigo de que existía una tercera vía.** No como penitenc
 
 A los defensores jóvenes que entrena les enseña combate por la mañana y otra cosa por la tarde. La otra cosa es siempre la misma lección, con distintas palabras: *"Cuando te digan que solo hay dos opciones y las dos son horribles, alguien está ganando dinero con eso. Búsquenle la tercera. A veces no está. Pero yo vi una."*
 
-Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y una vez al año baja al cráter transformado, solo, y apoya la palma sobre la base del core central un rato largo — el mismo gesto con el que en su pueblo se le cierra las manos a un muerto, hecho sobre algo que no está muerto.
+**Cuenta la historia entera, menos una parte.** Habla del maletín, del contacto, de la mentira, de la tercera vía que sí existió — se la sabe de memoria, la cuenta con detalle de testigo. Lo único que nunca cuenta es que fue **él** quien cargó a Speck hasta el borde, quien la sostuvo mientras el jugador decidía, quien la vio elegir. En su propia historia, Iven aparece como testigo, no como parte. No es modestia — es lo único que todavía le cuesta decir en voz alta: que quiso venderla, y que la persona a la que quiso vender terminó salvando a su gente de todos modos.
+
+Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto.
 
 No pide perdón en F4 tampoco. **Pero acepta que lo perdonen**, que en Iven es la distancia entera entre sobrevivir y vivir.
+
+**Epílogo — Iven muerto** (cayó en la persecución o en el cráter). **Iven es el único de los nueve que traicionó por un resultado medible** — no por un juramento, no por una tesis, no por un dogma: por doscientas personas y unos pozos que o se recuperan o no. Todos los demás pueden morir sin saber si tenían razón. Él no: lo suyo se podía verificar.
+
+**Y se muere sin verificarlo.**
+
+Su última certeza, la que se lleva, es que vendió a Speck a cambio de nada. Vio el maletín. Escuchó al contacto no contestar la pregunta. Entendió — o quedó a un milímetro de entender — que la cura no existía, y sobre esa comprensión, sin nada que la corrija, se le acaba el tiempo. Muere en el peor momento posible de su propio arco: después de saber que lo estafaron y antes de saber que el asentamiento se salva igual.
+
+Porque se salva. El Aether sana lento, el pasto vuelve desde el borde hacia adentro, los pozos se recuperan uno por primavera. **Doscientas personas viven, que es exactamente lo que Iven quería comprar** — y lo consiguió, y nunca lo supo.
+
+En el asentamiento queda como **el guardián que se fue con unos forasteros y no volvió.** Ni héroe ni traidor: ausente. Los defensores jóvenes que entrenaba siguen entrenando sin la lección de la tarde. El jugador es el único que carga las dos mitades de esa historia — lo que Iven pagó y lo que Iven compró — y no hay forma de juntarlas para él.
 
 Ver [[Los 5 Finales]].
 
@@ -689,21 +707,9 @@ Y eso es lo que rompe a Darro: **que Iven tiene razón, y la razón no lo absuel
 
 ---
 
-## Superlativo Consolidado
+## Superlativo
 
-**Iven es *la única traición sin respuesta correcta.***
-
-Coexiste sin colisión con el resto del elenco:
-- **Torgan** — el juramento sin escape.
-- **Vekka** — la traición más precisa.
-- **Dagna** — la traición que rompe al ancla.
-- **Bram** — el único rechazo activo.
-- **Maren** — la más peligrosa por cálculo puro.
-- **Sereth** — la más íntima.
-- **Nyael** — la traición como ausencia.
-- **Lyris** — la más fría.
-
-**Resolución del roce con Dagna.** [[Estructura Política]] y la ficha de Dagna la describen como la traición **más justificable institucionalmente**: hay una ley, la ley es legítima, la cadena es antigua y Dagna la cumple llorando. Es justificable **hacia afuera** — cualquiera puede señalar el estatuto que la obliga.
+Iven es *la única traición sin respuesta correcta* — tabla completa y sin colisión en [[Los 9 Pivotes]] §Superlativo Consolidado, incluida la resolución del roce con Dagna.
 
 Iven es otra cosa. **No tiene lado correcto que señalar.** Su traición no es defendible por una institución (no tiene ninguna), ni por un juramento (no juró nada), ni por un cálculo (nunca hizo cuentas frías). Es defendible únicamente por el hecho bruto de que **doscientas personas se están muriendo y él es lo único que tienen.** Y la posición contraria — que Speck no se toca — es igual de defendible por el hecho igual de bruto de que Speck es un ser vivo que confía en él.
 

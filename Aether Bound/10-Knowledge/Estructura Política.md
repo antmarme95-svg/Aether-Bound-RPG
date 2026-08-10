@@ -299,9 +299,15 @@ algo que de otro modo sería coincidencia narrativa sospechosa: **casi todas
 las órdenes de traición hacia los 9 Pivotes vienen de instituciones
 distintas pero conectadas al mismo cuerpo:**
 
-- Torgan/Vekka/Dagna → Great Forging Clan → King Borran → **Ambassador Kadrun**
-- Sereth/Nyael → Royal Academy → Queen Ithessa → **Ambassador Cyrion**
-- Maren → Trade Consortium → **Triune Council directamente**
+- Vekka → **círculo interno del Great Forging Clan** → Vekka, **sin intermediario** — no pasa por Kadrun
+- Torgan → Ambassador Kadrun → Great Forging Clan → **su clan menor** → Torgan (el Juramento es al clan menor, no al Great Forging Clan que lo rechazó — [[El Cráter — Matriz de Rutas]] §2)
+- Dagna → Ambassador Kadrun → Great Forging Clan → **consejo del subclán vasallo Deepstone** → Dagna
+- Sereth → Triune Council → Queen Ithessa → **Royal Academy** → Sereth (prestado por la Corona, nunca trató con el Council directamente)
+- Nyael → **brazo encubierto de la Royal Academy** → Nyael (sin Ithessa ni Cyrion — es una operación encubierta, no un préstamo formal)
+- Maren → Triune Council directamente
+- Bram → **contrato directo** con el Triune Council — puro mercenariado, sin institución intermedia
+- Iven → Triune Council → **Trade Consortium** → agente sin nombre (contacto con maletín) → Iven
+- Lyris → **Frontier High Command**, un tercer track fuera de las dos academias, que igual reporta arriba al Council
 
 No es que 9 personas decidieron traicionar por separado — es que **una sola
 institución supra-racial coordina la misma estrategia a través de 3 cadenas

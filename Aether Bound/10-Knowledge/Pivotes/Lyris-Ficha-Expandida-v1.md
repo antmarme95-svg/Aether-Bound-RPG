@@ -18,9 +18,9 @@ updated: 2026-07-27
 
 ## Esencia
 
-Duelist trazadora aérea — vive en movimiento, en el cielo, nunca en tierra. Velocidad y gracia combinadas con **distancia emocional radical.** Lyris es incapaz de mentir pero también es incapaz de sentir. O al menos, eso es lo que cree.
+Duelist trazadora aérea — vive en movimiento, en el cielo, nunca en tierra. Velocidad y gracia combinadas con **distancia emocional radical.** Lyris es incapaz de mentir, y capaz de sentir — pero convencida de que sentir es debilidad, así que suprime en vez de no sentir.
 
-La traición de Lyris es la más fría porque no viene de frialdad calculada como Maren ni manipulación como Sereth. Viene de **ausencia de capacidad para sentir lo que otros sienten.**
+La traición de Lyris es la más fría porque no viene de frialdad calculada como Maren ni manipulación como Sereth. Viene de **sentir y suprimirlo sistemáticamente**, hasta que la supresión se vuelve indistinguible de la ausencia — para ella y para todos los demás.
 
 **Arquetipos resonantes:** Cassandra (sabes pero no importa), asesina profesional que sigue órdenes, el guerrero que ve la guerra como juego de posiciones.
 
@@ -59,7 +59,7 @@ práctica sirve al Council.
 
 ## Biografía Pre-Aventura
 
-### The Frontier High Command: Rechazo (edades 0-80)
+### The Frontier High Command: Nunca Invitada (edades 0-80)
 
 Nacida cerca de The Stillspire pero **fuera de círculos políticos y
 académicos por completo.** Familia fue cazadores de frontera aérea — no
@@ -195,9 +195,9 @@ No es promesa emocional. Es oferta funcional.
 
 ### Escena: El Primero (Aceptación del Grupo — Asimetría)
 
-Roen llega. Valen aparece. Darro aparece.
+Roen ya está con el jugador. Valen aparece. Lyris se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro.
 
-El Bound Five se forma.
+El Bound Five queda formado recién con él.
 
 **Lyris aquí está en rol de observadora:**
 - Vuela arriba, siempre viendo
@@ -224,11 +224,11 @@ Frontier High Command: *"Continúa rastreando. Acción vendrá."*
 
 Speck revela inteligencia.
 
-**Lyris no siente nada.** Pero Lyris **reconoce patrón.** Speck es destello en el caos, punto de orden en desorden.
+**Lyris no lo deja mostrarse.** Pero Lyris **reconoce patrón.** Speck es destello en el caos, punto de orden en desorden.
 
 Lyris casi—casi—se permite fascinar. Pero se detiene a sí misma. No puede permitir fascinación.
 
-### Grove of Cycles (a mitad del Acto 2)
+### Grove of Cycles (cierre del Acto 2)
 
 Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove antes de bajar a Driftmarket. Lyris **incómoda en interior** — noventa años sin techo sobre la cabeza pasan factura. Se queda cerca de la salida sur, contra un árbol, con la vista alta hacia el follaje. Rastrea el techo de hojas por costumbre, buscando una salida de emergencia aérea que en el Grove no existe.
 
@@ -236,7 +236,7 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove ante
 
 ### The Reckoning en The Driftmarket
 
-Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, el grupo pasa por The Driftmarket y Harbormaster Tobin Hale aparta al jugador solo. Con Lyris como Pivote activo, Tobin oye una nota de Frontier High Command con instrucciones de ruta hacia el Archive — fragmento del idioma militar de frontera. La única elfa del grupo que Tobin ubica hablando esa burocracia es **Valen**, el único elfo fijo; Tobin no distingue Academy of Sages de Frontier High Command — para él son "asuntos de elfos con papeles". Señala a Valen por error.
+Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, el grupo pasa por The Driftmarket y Harbormaster Tobin Hale aparta al jugador solo. Con Lyris como Pivote activo, Tobin oye una nota de Frontier High Command con instrucciones de ruta hacia el Archive — fragmento del idioma militar de frontera. La única persona del grupo que Tobin ubica hablando esa burocracia es **Valen**, el único elfo fijo; Tobin no distingue Academy of Sages de Frontier High Command — para él son "asuntos de elfos con papeles". Señala a Valen por error.
 
 **Reacción de Lyris:** indiferencia visible. No defiende a Valen con vehemencia ni lo acusa con interés — se limita a observar la escena desde una distancia calculada, como observa todo. Si el jugador confronta a Valen, Lyris no interviene; si el jugador decide no confrontar, tampoco comenta. Por fuera, es la misma ausencia de reacción que ofrece a cualquier evento que no altere su patrón.
 
@@ -301,9 +301,11 @@ Conversación desde el cielo (Lyris bajando ocasionalmente):
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. La aritmética que Lyris trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Lyris** — **excepción declarada: holder aérea**, ver nota en la Matriz. Secuencia: §1, pasos 1-6. Su mensajero es de **Frontier High Command**, subiendo desde dentro del cráter hacia el borde.
 
-**No cruza al core central** — no es F3, no toma poder para sí. Sostiene a Speck y espera la orden siguiente que Frontier High Command no manda porque el Council mismo perdió el hilo del plan al llegar a este punto.
+Se alcanza a Lyris — o casi — en el borde del cráter. Está en el límite entre tierra y cielo, aérea pero vulnerable; el Fragmento se activa a sus pies, Speck en su transformación E1→E3, los God-Cores despertando alrededor. **Es la única del elenco que espera sin tocar el suelo**, y eso la vuelve la más fácil de alcanzar y la más imposible de detener: nadie sabe si va a bajar o irse. La aritmética que trajo desde Frontier High Command no incluía "el core central responde a la variable". Por primera vez en un siglo, un dato la sorprende.
+
+**No cruza al core central** — no es F3, no toma poder para sí. Se queda suspendida en el borde, sosteniendo a Speck, mientras un mensajero de Frontier High Command sube desde dentro del cráter a recibirla. Lyris no le sale al encuentro — la orden es que el mensajero complete la entrega, no ella.
 
 **La decisión es del jugador.**
 
@@ -315,7 +317,11 @@ Ver [[Los 5 Finales]] — Lyris ocupa la fila "Rechazo / Ausencia" junto con Bra
 
 ### F1 — The Guided Molt (Speck completa la Muda)
 
-Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Frontier High Command queda neutralizado antes de llegar hasta ella.
+
+Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, **sosteniendo a Speck sin bajarla** — no la suelta, no la entrega, no la lleva a ningún lado, y nadie se la quita. Sostiene la mirada del jugador mientras la Muda se completa ahí mismo, en sus brazos. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y sin cadena no hay instrucción para lo que sigue — así que se queda quieta hasta que deja de haber nada que sostener.
+
+Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
 **Y desde ahí arriba es la única del elenco que ve el costo completo.** Lyris sobrevuela las tres capitales en las semanas siguientes y las ve **apagarse una por una** — Emberdeep sin el resplandor de las forjas, Rivermeet a oscuras salvo por fuego real, The Stillspire con las luces de Aether muertas y los árboles, por primera vez en siglos, siendo lo único que brilla. Nadie más en el mundo tiene ese punto de vista. Nadie más entiende la escala de lo que se dejó pasar en el cráter. Ella no lo cuenta a nadie.
 
@@ -325,7 +331,9 @@ Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de 
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Lyris cumple. Traiciona, huye por aire, entrega a Speck en el punto acordado. No hay furia, no hay explicación, no hay confrontación.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — el mensajero completa la entrega.
+
+Lyris cumple. Traiciona, huye por aire con Speck hasta el cráter — no puede entregarla en ningún otro punto: mientras el pulso siga activo, nadie puede moverla lejos del centro ([[Speck]] §Capa 5). Ahí cede a Speck **viva** al mensajero de Frontier High Command, sin forcejeo. El cese del pulso es lo que la suelta. No hay furia, no hay explicación, no hay confrontación.
 
 **Se aparta con calma que hiere.** Después de entregar, asciende y no vuelve. El jugador la ve una vez más semanas después, en distancia — patrullando otra ruta al norte de Stillwood, cumpliendo un contrato distinto de Frontier High Command. No baja. No hace señal. Lyris no rompió con el jugador con palabras; simplemente cambió de patrón, y en su gramática esa es la ruptura más completa posible.
 
@@ -333,23 +341,43 @@ Ella asciende dentro de la cadena militar — Frontier High Command reconoce su 
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
-**Lyris desaparece.** No hay cuerpo, no hay nota, no hay comunicación a Frontier High Command reportando el resultado. Podría haber caído en la persecución, podría haber renunciado, podría haber elegido no volver. El vacío es el epílogo.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranca es la del jugador, en el aire, en el borde. No existe otra vía de muerte. Lyris no forcejea por retenerla: forcejear a esa altura las tira a las dos, y de cualquier modo el Fragmento ya hizo su trabajo antes de que el cuerpo de Speck llegue al suelo.
 
-Frontier High Command marca su expediente como "no retornada"; envían nueva rastreadora. El ciclo continúa. El Council, más arriba, tacha una línea de un registro que nadie verá. Nadie del Bound Five sabe si Lyris está viva. Nunca lo sabrán. Es exactamente el tipo de silencio que Lyris habría diseñado si hubiera diseñado un final propio.
+**Lyris desaparece después.** No hay cuerpo propio, no hay nota, no hay comunicación a Frontier High Command reportando el resultado. Podría haber caído en la persecución, podría haber renunciado, podría haber elegido no volver. El vacío es el epílogo.
+
+Frontier High Command marca su expediente como "no retornada"; envían nueva rastreadora. El ciclo continúa. El Council, más arriba, tacha una línea de un registro que nadie verá. Nadie del Bound Five sabe si Lyris está viva. Nunca lo sabrán.
+
+**Y a diferencia de Nyael, esto no es un final que Lyris hubiera elegido.** Nyael desaparece porque la ausencia es su método; Lyris desaparece porque nunca aprendió a estar presente, que no es lo mismo. Una se va. La otra simplemente no supo cómo quedarse.
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Lyris **no aparece en el epílogo.** Se va antes del cráter — literalmente asciende y no regresa al escenario final. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Lyris suelta.
+
+Lyris **no aparece en el epílogo.** Está sobre el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: desciende lo justo para dejar a Speck de pie del lado seguro del borde, sin forcejeo, y asciende de nuevo sin volver a bajar. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
 
 Años después, si el jugador convertido en tirano intenta rastrearla, no la encuentra — Lyris es rastreadora, sabe cómo no ser rastreada. Su ausencia es más completa que la de cualquier otro compañero que huyó de F3: nunca deja huella. Es como si Lyris nunca hubiera bajado del cielo, retroactivamente.
 
 ### F4 — The Warden's Choice (síntesis)
 
-Speck elige. El Aether comienza a sanar. El cielo mismo cambia — corrientes nuevas, presiones que Lyris nunca había leído, el patrón atmosférico se reescribe.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F4 — dos condiciones globales, **ninguna depende de Lyris**. El mensajero de Frontier High Command se aparta: su cadena transmite órdenes de ruta, no de conversación.
 
-**Lyris regresa con el grupo — el patrón ahora la incluye.** Cambio mínimo pero real: vuela más bajo, aterriza más seguido, pasa noches enteras en el campamento en vez de en los riscos. No se vuelve cálida — sigue siendo silenciosa, sigue calculando patrones antes de hablar — pero está **dentro del círculo** del grupo por primera vez. Cambio de patrón, no de personalidad.
+Speck responde y **cruza el borde sola**. Lyris baja el vuelo y abre las manos. El Aether comienza a sanar. El cielo mismo cambia — corrientes nuevas, presiones que Lyris nunca había leído, el patrón atmosférico se reescribe.
+
+**Epílogo — Lyris viva. Regresa con el grupo: el patrón ahora la incluye.** Cambio mínimo pero real: vuela más bajo, aterriza más seguido, pasa noches enteras en el campamento en vez de en los riscos. No se vuelve cálida — sigue siendo silenciosa, sigue calculando patrones antes de hablar — pero está **dentro del círculo** del grupo por primera vez. Cambio de patrón, no de personalidad.
 
 Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de campamento, se sienta al lado del jugador sin motivo aparente. Se queda hasta el amanecer. No hablan. Al amanecer despega. Vuelve la noche siguiente. Ese es su epílogo: presencia repetida donde antes había ausencia.
+
+**Hay un vuelo que no explica.** De vez en cuando, sola, sube más alto de lo necesario y traza un círculo lento sobre el cráter — la única vista aérea que existe del core central, la única persona con ángulo para verlo completo. Nunca aterriza ahí. Cualquiera que mire el cielo esos días la ve — no se esconde, no podría aunque quisiera — pero nadie sabe qué significa el círculo, y ella no se lo explica a quien pregunta. El jugador la ve hacerlo dos o tres veces a lo largo de los años y deja de preguntar después de la primera respuesta: *"Miro."*
+
+**Epílogo — Lyris muerta** (cayó en la persecución o en el cráter). Lo específico de su muerte no es lo que se pierde con ella. Es **cuándo ocurre.**
+
+Noventa años afuera. Un patrón que nunca la incluyó — ni la Academia, ni la ciudad, ni el grupo del todo. Lyris construyó una vida entera sobre la premisa de que el mundo estaba organizado y ella quedaba en el margen, y se le volvió cómodo: por eso vuela, por eso mira desde arriba, por eso su traición es fría. El margen era su lugar.
+
+**Y en F4 el patrón cambia.** El Aether sana, el cielo se reescribe, las tres capitales aprenden a vivir de otra cosa — y el mundo nuevo, el que empieza el día que Speck elige, es un mundo donde alguien que sabe leer corrientes y no pertenece a ningún reino **hace falta**. Por primera vez en noventa años, el patrón tenía un lugar para ella.
+
+Lyris muere el día anterior a eso. No un año antes ni una década antes: **el día anterior**, en el borde del cráter, mirando hacia arriba como siempre.
+
+El grupo la entierra en altura — el risco más alto que encuentran, porque a nadie le entra en la cabeza dejarla bajo tierra. Roen intenta decir algo y no le sale; después nadie más lo intenta, y el silencio se queda así. En el silencio todos entienden que así habría estado bien para ella, y ninguno se anima a decir en voz alta lo otro — que esta vez, por fin, no habría hecho falta.
 
 ---
 
@@ -379,7 +407,7 @@ Nunca dice "gracias" ni "perdón". Un año después, en una noche cualquiera de 
 - Ropa diseñada para movimiento aéreo: telas fluidas, sin peso, en grises y blancos
 - Ojos color ámbar brillante, siempre mirando arriba
 - **Postura:** incluso de pie en tierra, se ve como si estuviera punto de despegar
-- **Arma:** cuchillos dobles, cortos, para combate aéreo
+- **Arma:** par de bumeranes élficos de doble filo — vuelan en arco y vuelven a la mano, literal "trazadora aérea". (Cambiado 2026-08-07 desde "cuchillos dobles cortos" — colisionaba con [[Nyael-Ficha-Expandida-v1|Nyael]], mismo Elfa Duelist. Distinto también de los lanzadores de disco wrist-mounted de [[Maren-Ficha-Expandida-v1|Maren]] — los de Lyris son hoja élfica arrojada a mano, no gadget mecánico.)
 
 ---
 

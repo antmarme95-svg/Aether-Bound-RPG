@@ -72,16 +72,15 @@ updated: 2026-07-27
   - 5-10 años más aguanta si no ocurre la Muda
   - Arquitectura: granja, casas simples, pastoral
 
-- **Cinder Ascent Base** — puesto militar en paso de montaña
+- **Aethelgard Watch** — puesto militar de Aethelgard en el paso de montaña, mirando hacia **The Wilds** (no hacia Ignis Reach — §Topología: es una rueda, no una malla; los dos reinos no se conectan entre sí de forma directa). Ver perfil completo en §Los Cuatro Puestos de Vigilancia — es el mismo puesto, no uno adicional. **Cinder Ascent es el radio de Ignis Reach, del lado opuesto de la rueda — no confundir los dos nombres.**
   - Soldados humanos patrullan
-  - Conexión entre Rivermeet y Ignis Reach
-  - Control de tráfico comercial entre reinos
+  - Vigilancia del radio de Aethelgard hacia The Wilds, no tránsito a Ignis Reach
+  - Control de tráfico comercial hacia The Wilds
 
 **Geografía Física:**
 - Río central navegable (River Road)
 - Llanuras fértiles
-- Acceso via Cinder Ascent (paso montaña → Ignis Reach)
-- Acceso via Gloomvault (bosque → Stillwood)
+- Acceso a **The Wilds** via su propio radio, **River Road** (no hay tránsito directo a Ignis Reach ni a Stillwood — §Topología: es una rueda, no una malla)
 - Standing se "gasta" en Rivermeet (mecánica política)
 
 ---
@@ -111,7 +110,7 @@ updated: 2026-07-27
 **Geografía Física:**
 - Territorio montañoso/volcánico (Ignis = fuego)
 - Cavernas conectadas subterráneas
-- Acceso via Cinder Ascent (paso compartido con humanos)
+- Acceso a **The Wilds** via su propio radio, **Cinder Ascent** (no hay tránsito directo a Aethelgard — §Topología: es una rueda, no una malla)
 - Aether geotérmico como fuente de poder
 - Clima: calor constante, poca luz natural
 
@@ -237,7 +236,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Conexión narrativa: Donde se guardaban registros de La Muda
 - Mecanismo: Dungeon corto, acústica extraña (reverb infinito)
 - Loot: Mapa antiguo (muestra posición de otros God-Cores)
-- Enemigos: Guardianes automáticos dormidos (activables)
+- Enemigos: Guardianes automáticos dormidos (activables); boss: **The Mirror Stalker** ([[Bestiario]] §Los 4 bosses ya nombrados)
 - Momento de Speck: Speck reconoce símbolos, reacciona con miedo
 
 #### **The God's Throne** (Center, near El Nido)
@@ -316,7 +315,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Conexión narrativa: Río que alimenta Rivermeet nace aquí
 - Mecanismo: Co-op puzzle (cruzar cascada, plataformas mojadas resbaladizas)
 - Loot: Recursos de agua, minerales raros
-- Enemigos: Bestias de agua (teleportean por espuma)
+- Enemigos: **The Cascade Warden**, ave-bestia alfa territorial ([[Bestiario]] §Los 3 bosses nuevos)
 - Dinámicas: Si Roen/Maren juntos, comentan sobre origen del río de Rivermeet
 
 #### **The Ossuary Grove** (South, before First Wound)
@@ -332,9 +331,9 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 #### **The Hollow Deep** (East — Cueva conectada a Cinder Ascent)
 - Caverna extensa con múltiples niveles
 - Conexión narrativa: Túnel alternativo a Ignis Reach (avoid Cinder Ascent)
-- Mecanismo: Mini-dungeon corto (15-20 min), sin jefe final
+- Mecanismo: Mini-dungeon corto (15-20 min)
 - Loot: Recursos enanos, forja portátil (crafting point)
-- Enemigos: Bestias de cueva (ojos luminosos, evasivas en oscuridad)
+- Enemigos: **The Hollow Warden**, boss de cueva ([[Bestiario]] §Los 3 bosses nuevos)
 - Dinámicas: Si llevas Strategist puede "mapear" (reduce desorientación)
 
 #### **The Rift** (Center-East — Grieta del Aether)
@@ -350,7 +349,7 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Conexión narrativa: Antiguos pasillos de Warden (acceso alternativo a Sunken Archive?)
 - Mecanismo: Medio-acuático (movimiento restringido, oxígeno limitado)
 - Loot: Artefactos de Warden (equipo mágico avanzado)
-- Enemigos: Bestias acuáticas inteligentes (coordinadas, tácticas)
+- Enemigos: **The Drowned Choir**, boss coordinado de 3-5 unidades ([[Bestiario]] §Los 3 bosses nuevos)
 - Dinámicas: Roen puede "leer" escrituras de seguridad (es guardia)
 
 ### E) PUNTOS NARRATIVOS
@@ -515,12 +514,12 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   - Valen: "sé de este lugar. Respeto tu privacidad"
 
 #### **Bram's Last Stand** (Center, scorched earth)
-- Llanura quemada con cruces improvisadas y armaduras oxidadas
-- Conexión narrativa: Donde su compañía mercenaria fue masacrada
-- Mecanismo: Tumbas de soldados (nombre de Bram's fallen junto)
+- Llanura con cruces improvisadas y armaduras oxidadas, acumuladas a lo largo de años, no de una sola batalla
+- Conexión narrativa: donde se disolvió una de sus dos compañías, cuando el contrato terminó y nadie lo renovó — desgaste administrativo, no masacre puntual ([[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §Biografía)
+- Mecanismo: Tumbas de soldados caídos en distintos contratos a lo largo de los años (nombre de Bram's fallen junto)
 - Loot: Mercenary insignia (equipment token)
 - Dinámicas:
-  - Bram: llora aquí (única vez vulnerabilidad directa)
+  - Bram: se detiene más de lo normal, sin explicarlo
   - Bram: "no debería volver"
   - Roen: reconoce a algunos soldados caídos
 
@@ -703,37 +702,18 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - **Función:** Mercado negro, terreno franco entre reinos
 - **Habitantes:** Nómadas, comerciantes, "Mistbound" (grupo cultural divergente)
 - **Mecánica:** Standing vs Bond tensión (mercado no respeta Triune Council)
-- **NO hay reclutamiento acá.** Darro (C4) ya está en el grupo desde el primer campamento del Acto 1 — fue el primero en tocar la crisálida y quien nombró a Speck. El Driftmarket es de Acto 2/The Reckoning, muy posterior
+- **NO hay reclutamiento acá.** Darro (C4) se unió al grupo en el Acto 1, después del nido (último de los 4, orden: Roen → Valen → Pivote → Darro) — fue quien la nombró en Acto 2, cuando el grupo entero vio su comportamiento inteligente. El Driftmarket es de Acto 2/The Reckoning, muy posterior
 - **Arquitectura:** Plataformas flotantes, velas de tela, mercado caótico
 - **Política:** Neutral pero compleja (deuda, favores, crédito mercante)
 
 #### Harbormaster Tobin Hale — "Old Tobin"
 
-**El único personaje de poder sin agenda oculta en todo el juego.** Sin
-título nobiliario, sin sangre de House — pero controla derechos de
-atraque, rutas comerciales, y prácticamente el flujo económico completo
-del Driftmarket. No por corrupción: por reputación. Empezó como
-contrabandista/refugiado él mismo, décadas atrás, y construyó su fortuna
-con honestidad radical.
-
-**Por qué es querido:** nunca engaña. Da crédito a quien lo necesita.
-Protege refugiados y desertores sin preguntar de qué huyen — el
-Driftmarket es refugio en parte *por él*. Encarna "Bond sobre Standing":
-no le importa el rango oficial de nadie, solo si es decente con la gente
-— coherente con la tensión que ya define al Driftmarket.
-
-**Contraste con el resto del elenco político:** el Council tiene interés
-institucional oculto, Isolde Marrow calcula su ascenso, hasta Maren tiene
-que jugar política pese a querer evitarlo. Tobin es la excepción — ayuda
-porque puede, no porque calcula.
-
-**Línea canónica:** *"I don't care who you were before you got here. I
-care what you do while you're standing on my docks."*
-
-**Conexión con Darro:** posiblemente vouches por él desde antes — Darro ya
-lleva un acto entero en el grupo cuando llegan acá, así que el gesto no es
-reclutamiento sino **reconocimiento**: alguien de este mercado lo conoce y lo
-respalda, y el grupo lo ve.
+Harbormaster del Driftmarket, controla su flujo económico por reputación,
+no por título. Ficha completa (bio, esencia, contraste con el elenco
+político, línea canónica, el extraño de hace 40+ años) en
+[[Old-Tobin-Hale-Ficha-Expandida-v1]] — **fuente única del personaje**, no
+duplicar acá. Aparece en §THE RECKONING (Beat 1: el falso positivo; Beat
+2: entrega de los Wanderer's Goggles).
 
 ### MISTBOUND FRONTIER (Región Humana Interior — Oeste Profundo)
 - **Ubicación:** Tierra interior remota de Aethelgard, más allá de Rivermeet (sur-oeste profundo), lejos del río
@@ -782,6 +762,50 @@ respalda, y el grupo lo ve.
 - Encuentro con enredaderas/naturaleza hostil
 - Introducción a mecanismo de locomoción
 
+### El Encuentro con Roen — estructura confirmada (decisión de Boris, 2026-08-07)
+
+Sigue al prólogo ([[Voz Narrativa]], [[Guion/Apertura — Roen Viejo]]) y su
+puente narrado al Acto 1.
+
+1. **Tramo solo** — tutorial de movimiento/combate básico, sin
+   compañeros, mismo template de las 3 versiones raciales de arriba.
+2. **A mitad del tramo, TITLE CARD "AETHER BOUND".** Corta a mitad del
+   camino en solitario, no al final — queda un pedazo de caminata más
+   después del logo, no una transición directa al punto de encuentro.
+3. **Después del logo:** último tramo de caminata solo, acercándose al
+   punto de encuentro acordado con Roen para este trabajo — un arreglo
+   personal, no el Contrato de Conquistador del Triune Council que el
+   jugador firma por su cuenta ([[Roen-Ficha-Expandida-v1]] §Escena 1).
+   Ya se conocían de antes (1-2 años, ver §Conexión con el jugador de esa
+   ficha) — esta escena es el primer encuentro físico **de este trabajo**
+   en pantalla, no la primera vez que se ven.
+4. **Emboscada — 3 Hollowed** ([[Villanos Menores]] §The Hollowed). Solo,
+   es una pelea que el jugador no gana — la Zona B de
+   [[Acoplamientos]]: "obstáculo imposible sin tu primer compañero".
+5. **Roen interviene.** No es coincidencia pura: llega al punto de
+   encuentro justo cuando los Hollowed ya encontraron al jugador. Es acá
+   donde se enseña su link, *Second Catch*
+   ([[Los 3 Links de los Fijos]] §Roen) — **el camino de tutorial varía
+   por rol del jugador, no por raza**, porque el link no cambia con la
+   raza:
+   - **Duelist o Strategist:** modo estándar del link — Roen agarra a un
+     Hollowed y se lo lanza al jugador para que lo remate (sabor único
+     de esta escena, decisión de Boris 2026-08-07 2ª pasada — el sabor
+     "atrapa al jugador a media caída" sigue vigente como flavor
+     general de T1 en [[Los 3 Links de los Fijos]], pero no es el que
+     usa esta escena puntual).
+   - **Vanguard (rol duplicado):** modo "doble ancla" — los dos
+     sostienen terreno juntos, ya diseñado como caso de rol duplicado en
+     [[Los 3 Links de los Fijos]] §Roen.
+6. **Pelea resuelta.** Primera línea de Roen tras el combate — coherente
+   con [[Roen-Ficha-Expandida-v1]] (Escena 1, "El Encuentro"): competente
+   sin fanfarria, asiente, no aplaude.
+7. Roen y el jugador siguen juntos hacia la ciudad natal
+   (Rivermeet/Emberdeep/Stillspire). **En una taberna dentro de la
+   ciudad, tras la caminata, se suma Valen** (decisión de Boris,
+   2026-08-10) — ya fijado más abajo en este archivo (§Beats Narrativos
+   por Acto, locación 1).
+
 ---
 
 ## Beats Narrativos por Acto
@@ -790,23 +814,35 @@ respalda, y el grupo lo ve.
 **Duración:** ~20-30 min
 
 **Locaciones:**
-1. **Desfiladeros de Zephyr** (tutorial)
+1. **Desfiladeros de Zephyr** (tutorial) → **ciudad natal**
    - Tu ciudad natal (Rivermeet / Emberdeep / Stillspire)
    - Tutorial de locomoción y combate básico
+   - **Roen (C1) se une** — introducción a UI de bonds
+   - **Valen (C2) se une**, en una taberna dentro de la ciudad natal, tras
+     la caminata a solas Roen+jugador (decisión de Boris, 2026-08-10)
 
 2. **Frontera inmediata de tu reino**
-   - Primer campamento con C4 (Darro)
-   - Introducción a UI de bonds
+   - Tramo de viaje hacia El Nido, ya con Roen y Valen en el grupo — sin
+     nuevo compañero (Valen ya se sumó en la ciudad natal, locación 1)
 
-3. **El Nido (primer acto)**
+3. **El Nido — Escena 3, "El Primero"**
    - Encuentro con Speck (crisálida)
+   - **El Pivote (C3) se une** — Roen y Valen son testigos del encuentro, no
+     sus causantes ([[Estructura Dramática]])
    - Decisión: ¿salvar o destruir?
    - Primer God-Core destruido
 
+4. **Después del Nido**
+   - **Darro (C4) se une, último** — el bautizo ocurre recién en **Acto 2**,
+     después de que el grupo entero la ve comportarse de forma inteligente
+     ([[The Bound Five]], [[Darro-Ficha-Expandida-v1]] §Acto 2 Escena 2)
+
 **Beats:**
 - Razón para salir (Triune Council ordena purga / standing decae)
-- Encuentro con Speck
-- Primer aliado (C1 o C2, depende de raza)
+- Roen se une, luego Valen (taberna, ciudad natal)
+- Encuentro con Speck y el Pivote en el nido
+- Darro se une, cierra el grupo — orden fijo: Roen → Valen → Pivote → Darro
+  (decisión de Boris, 2026-08-02)
 - Primer jefe: bestia corrupta guardiana
 
 ---
@@ -820,22 +856,22 @@ respalda, y el grupo lo ve.
 **Locaciones:**
 1. **Entrada a Rivermeet**
    - River Road (co-op Tank/Strategist)
-   - Cinder Ascent Base (checkpoint)
+   - Aethelgard Watch (checkpoint) — no Cinder Ascent, que es el radio de Ignis Reach
 
 2. **Rivermeet interior**
    - Mercado central
    - Halls del Triune Council
-   - Encuentro con Maren (si es Pivote/Humana)
+   - **El Pivote humano (si aplica: Maren, Iven o Bram) ya está en el grupo desde el Acto 1** — acá es de vuelta en su territorio, no un encuentro. Guía, conoce gente, o evita activamente lugares/personas, según su ficha
    - Standing se gasta aquí
 
 3. **Iven's Settlement (si Pivote Humano)**
    - Pueblo moribundo
    - Dilema moral: Iven elige entre grupo y asentamiento
-   - Segunda traición visible
+   - Primera corrupción visible del reino
 
 **Beats:**
 - Mecánica de River Road (puentes, plataformas co-op)
-- Encuentro con Maren / dinámicas políticas
+- Dinámicas políticas del reino natal del Pivote humano (si aplica)
 - First visible corruption (asentamiento de Iven)
 - Second God-Core destruido (cerca de Rivermeet)
 
@@ -848,8 +884,7 @@ respalda, y el grupo lo ve.
 2. **Emberdeep interior**
    - Cavernas de minería
    - Forja central (Vekka territory)
-   - Encuentro con Torgan (si es Pivote/Enano)
-   - Encuentro con Dagna (si es Pivote/Enano)
+   - **El Pivote enano (si aplica: Torgan, Dagna o Vekka) ya está en el grupo desde el Acto 1** — territorio natal, no encuentro
    - Standing sigue cayendo (no reina mercado aquí)
 
 3. **Geothermal Vents**
@@ -858,7 +893,7 @@ respalda, y el grupo lo ve.
 **Beats:**
 - Mecánica de Cinder Ascent (escalada, co-op)
 - Calor geotérmico como hazard
-- Encuentro con Vekka / forja de equipo
+- Forja de equipo con Vekka (territorio del Pivote, no encuentro)
 - Third visible corruption (caverna infectada)
 - Third God-Core destruido (en profundidad)
 
@@ -872,8 +907,8 @@ respalda, y el grupo lo ve.
    - Ascenso por enredaderas (locomoción avanzada)
    - Bibliotecas de Valen
    - Círculos de ejecución (Nyael territory)
-   - Encuentro con Lyris (si es Pivote/Elfa)
-   - Encuentro con Sereth (si es Pivote/Elfo)
+   - **El Pivote élfico (si aplica: Sereth, Lyris o Nyael) ya está en el grupo desde el Acto 1** — territorio natal, no encuentro
+   - Valen (fijo, en el grupo desde el Acto 1) reconoce el lugar como propio
 
 3. **Crown of Stillwood**
    - Pico más alto del reino
@@ -882,7 +917,7 @@ respalda, y el grupo lo ve.
 **Beats:**
 - Mecánica de Gloomvault (oscuridad, Strategist lleva luz)
 - Ascenso vertical por locomoción naturaleza
-- Encuentro con Valen / dinámicas de ciclos
+- Dinámicas de ciclos con Valen (territorio del fijo, no encuentro)
 - Fourth visible corruption (árboles infectados)
 - Fourth God-Core destruido (en cúpula)
 
@@ -891,8 +926,8 @@ respalda, y el grupo lo ve.
 **Entre reinos:**
 - Descanso en **The Driftmarket**
 - Mecánica de Standing vs Bond
-- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, ya en Acto 3). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido y el bautizo en Acto 1, el primer flash, La Rueda, el Pivote y el Grove en Acto 2. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
-- **Darro no se recluta aquí.** Ya está en el grupo desde el primer campamento del Acto 1 (§ACTO 1 — Primer campamento); fue el primero en tocar la crisálida y quien nombró a Speck
+- **Un solo** Momento de Persona de Speck cae cerca de acá (el camino a Driftmarket, **final del Acto 2**, justo antes de The Reckoning). Los Momentos **no viven en Driftmarket**: se reparten por todo el juego — el nido en Acto 1; el primer flash, el bautizo, La Rueda, el Pivote, el Grove y el camino a Driftmarket en Acto 2, en ese orden. Lista y ubicaciones en [[Speck]] §Momentos de Persona, que es la fuente
+- **Darro no se recluta aquí.** Ya está en el grupo desde el Acto 1, unido el último de los cuatro después del nido (§ACTO 1 — 4. Después del Nido); fue quien la nombró en Acto 2, no el primero en tocar la crisálida — eso ocurrió antes de que él se uniera
 
 **Cada reino ofrece vista del pecado del vecino:**
 - Desde Rivermeet: ves corrupción en Ignis Reach
@@ -951,7 +986,7 @@ Los otros 8 Pivotes no existen en la partida actual (una celda = un Pivote). El 
 >
 > **Tobin:** *"No. Estoy seguro de que alguien va a hacer algo. No estoy seguro de quién. Pero prefiero equivocarme diciéndote a acertar callándome."*
 
-Tobin no miente ni exagera — es la lectura honesta de un hombre sin acceso al Council. Su honestidad es lo que hace posible el error. Y el error es lo que le da al jugador agencia real: puede confrontar, guardar silencio, o consultar con Speck (flash privado — el jugador puede leer una reacción de Speck si el Tether con ella es alto, pero Speck no sabe más que él).
+Tobin no miente ni exagera — es la lectura honesta de un hombre sin acceso al Council. Su honestidad es lo que hace posible el error. Y el error es lo que le da al jugador agencia real: puede confrontar, guardar silencio, o consultar con Speck (**lectura privada de Tether** — el jugador puede leer una reacción de Speck si el Tether con ella es alto, pero Speck no sabe más que él; no es uno de los tres flashes de [[Speck]] §Capa 2, es otro sistema).
 
 **Variante Bram:** en la ruta Bram, Tobin no oye una orden a ejecutarse — oye que el Council busca *"un segundo"*. Es decir, alguien más está siendo activado en la sombra porque Bram ya rechazó. Tobin no sabe quién es el segundo, y no sabe que Bram rechazó — solo sabe que hay actividad duplicada donde debería haber una sola pieza. El jugador entra al Archive con la incertidumbre de que su Pivote asignado (Bram) puede *no* ser el traidor real, sin saber quién es el segundo. Este beat prepara la variante del Sunken Archive: Bram rechaza en el corredor y afuera espera el segundo agente.
 
@@ -1001,7 +1036,7 @@ Lo que la escena realmente es: **cinco personas sonriendo, dos de las cuales ya 
 >
 > **Darro:** *(rompiendo el silencio)* *"Bien, bien. Menos poesía, más cerveza. Speck, ¿tú brindas?"*
 >
-> *(Speck no se mueve. Los mira uno por uno, se detiene en el Pivote real un segundo más que en los otros, y baja la cabeza. Solo el jugador lo nota — flash privado si Tether con Speck es alto.)*
+> *(Speck no se mueve. Los mira uno por uno, se detiene en el Pivote real un segundo más que en los otros, y baja la cabeza. Solo el jugador lo nota — lectura privada de Tether, no uno de los tres flashes de [[Speck]] §Capa 2.)*
 
 La escena cierra sin resolver. Nadie confiesa. Nadie confronta. Se acuestan temprano — al amanecer bajan al Archive.
 
@@ -1021,13 +1056,13 @@ Los siguientes 3-5 beats de la ruta Bram están marcados por esta incertidumbre:
 
 #### 1. Approach al Sunken Archive
 
-El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. Los flashes del jugador se han vuelto más frecuentes en los últimos beats — cristal debajo del pelaje, facetas donde deberían haber ojos — pero siguen siendo privados (canon en [[Speck]] §Capa 2), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
+El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. El último de los tres flashes del jugador — cristal debajo del pelaje, facetas donde deberían haber ojos — ya pasó y sigue siendo privado (canon en [[Speck]] §Capa 2, tres flashes fijos, ni uno más), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
 
 #### 2. Interior del Archive
 
 Bóveda Warden. Geometría imposible, cristal dormido, silencio con reverberación. El grupo camina por corredores que Valen intenta leer y no puede — el idioma es de otro estrato, más antiguo que cualquier cosa en The Stillspire. Al centro está el Fragmento, en un pedestal. Alrededor, tallados en las paredes, cadáveres calcificados en formación ritual — no ornamentos, cuerpos. Valen hace la lectura — o **Sereth**, si Sereth es el Pivote activo de esa partida (beat exclusivo de su ruta, ver [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] §sub-beat 2): la civilización Warden no adoraba God-Cores, **los enterraba**. Los God-Cores son sus muertos. Cada core que el grupo destruyó en el Acto 1 era un cadáver profanado.
 
-Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jugador no se los pone: los lleva puestos desde The Reckoning y no se los ha podido quitar (ver [[Nomenclatura]]). Lo que cambia no es el gesto, es el lugar — en la oficina de Tobin la lectura dorada era ruido bonito sobre objetos cotidianos; acá las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — **Speck misma** grabó su duelo en el Aether, milenios antes de que alguien la llamara Speck, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — que Valen no puede traducir sin los lentes — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
+Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jugador no se los pone: los lleva puestos desde The Reckoning y no se los ha podido quitar (ver [[Nomenclatura]]). Lo que cambia no es el gesto, es el lugar — en la oficina de Tobin la lectura dorada era ruido bonito sobre objetos cotidianos; acá las paredes se abren: sobre los cadáveres calcificados hay **proyecciones residuales** — **Speck misma** grabó su duelo en el Aether, milenios antes de que alguien la llamara Speck, y la lectura Warden que dan los Goggles la revela como una capa que el ojo desnudo no puede ver. Inscripciones marginales — invisibles para Valen, los Goggles son estrictamente privados y él nunca accede a esa capa ([[Nomenclatura]] §the Wanderer's Goggles) — nombran algo: la palabra *Warden* aparece por primera vez en superficie legible, y junto a ella un símbolo que coincide, sin lugar a duda, con el patrón geométrico del pelaje de Speck. El jugador ve lo que el grupo no ve. No lo dice. No sabe cómo decirlo. La escena no explica el poder — igual que The Monolith, siembra sin resolver.
 
 El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarrollará; lo que este documento fija es el espacio: Valen se sienta en el suelo. Darro deja caer un chiste que muere en el aire. Roen mira a Speck y no aparta la mirada. Speck permanece quieta, como si supiera que la mirada la ubica.
 
@@ -1035,7 +1070,11 @@ El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarr
 
 Fría, rápida, sin épica. El grupo empieza el ascenso hacia la superficie. En el último corredor, el Pivote se separa — pretexto menor (revisar una inscripción, cubrir la retaguardia, cualquier cosa que suene razonable durante tres segundos). Cuando el resto voltea, el Pivote tiene a Speck. Ruta lateral, salida secundaria, sin diálogo largo. El grupo queda desarmado momentáneamente — no golpeado, **desalojado**. El Pivote no explica; explicar es Acto 4. Aquí solo actúa. Si el jugador rompió el Bond equivocado en Driftmarket, la traición cae doblemente: perdió al Pivote real Y al que confrontó por error.
 
-**Variante Bram:** en la ruta Bram, este sub-beat no ocurre. En el corredor, Bram frena. Toma a Speck en brazos, sí — pero para devolverla al jugador. *"Me pidieron que la cargue afuera por otra ruta. No voy a hacerlo."* No confesión heroica: agotamiento. El grupo sale intacto. Pero afuera del Archive espera **Torgan** — activado por su propia cadena de mando (Great Forging Clan), no por un mensajero que lo busca a él: es el Council recurriendo a cualquier ejecutor con Juramento vigente, y Torgan ya estaba disponible. Ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 4a y [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram" para la escena completa. La advertencia de Tobin del Reckoning (variante Bram) se materializa en tiempo real: **un segundo Pivote está siendo activado en la sombra**, y el hecho de que Bram rechazó no salvó el plan del Council, solo lo redistribuyó. El Acto 3 se abre igual, con un traidor distinto. Bram vive el Acto 3 sabiendo que su rechazo no fue suficiente.
+Es el **paso 1** de [[El Cráter — Matriz de Rutas]] §1, con dos excepciones declaradas:
+
+**Variante Bram:** en la ruta Bram, este sub-beat no ocurre. En el corredor, Bram frena. Toma a Speck en brazos, sí — pero para devolverla al jugador. *"Me pidieron que la cargue afuera por otra ruta. No voy a hacerlo."* No confesión heroica: agotamiento. El grupo sale intacto. Pero afuera del Archive espera **Torgan** — activado por su propia cadena de mando (**su clan menor**, presionándolo, no el Great Forging Clan que lo rechazó), a través de un correo que lo buscó a él con un sello y una posición en un mapa. **Ese correo de activación no es el mensajero del cráter y no vuelve a aparecer:** en la ruta Bram, Torgan *es* el agente de la entrega, sin ningún tercero esperándolo en el borde (matriz §2, fila Bram). Ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 4a y [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram" para la escena completa. La advertencia de Tobin del Reckoning (variante Bram) se materializa en tiempo real: **un segundo Pivote está siendo activado en la sombra**, y el hecho de que Bram rechazó no salvó el plan del Council, solo lo redistribuyó. El Acto 3 se abre igual, con un traidor distinto. Bram vive el Acto 3 sabiendo que su rechazo no fue suficiente.
+
+**Variante Nyael:** el sub-beat ocurre normal — Nyael toma a Speck en el corredor — pero ella no continúa hacia el cráter. Pasa a Speck al **equipo de extracción** que activó antes de retirarse, y desaparece de la historia salvo por sus notas. Es el equipo quien la carga durante la persecución y quien el jugador encuentra en el borde (matriz §1 paso 2, y §2 fila Nyael).
 
 #### 4. Persecución hacia The First Wound
 
@@ -1043,26 +1082,26 @@ El corazón del Acto 3. El Pivote (o el segundo agente, en ruta Bram) huye por T
 
 Las pistas dramáticas que emergen aquí:
 - **Aliados momentáneos**: dependiendo de decisiones del Acto 2, pueden aparecer figuras que ayudan a interceptar — un contingente pequeño de Aethelgard Watch si Roen mantuvo su Bond con el puesto, un centinela de Stillwood Watch si Valen intercedió, un mercenario suelto de la vieja compañía de Bram. Nunca resuelven el clímax; solo mueven el tablero medio metro.
-- **Decisiones del jugador sobre el Pivote antes del cráter**: dos o tres puntos donde el jugador puede elegir entre cerrarle el paso al Pivote y detenerlo **en el borde del cráter** (la ruta que abre F1: más corta, elegíaca, con luto — **no cruel**) o dejarlo llegar hasta Speck y hablar (más larga, más dolorosa, única que permite F4). **En ninguna de las dos Speck llega al cráter sola:** el agente de la entrega la carga hasta el centro en todos los casos. Estas decisiones no se anuncian con UI — se juegan con el botón de Bond (rehusarlo es una decisión).
+- **Decisiones del jugador durante la persecución**: dos o tres puntos de fricción con el Pivote — alcanzarlo, hablarle, dejarlo ir. Ninguno resuelve el clímax ni abre un final: **la decisión que abre los 5 finales ocurre en el cráter, no acá** (secuencia y gates: [[El Cráter — Matriz de Rutas]] §1 y §3). Lo que sí definen es con qué carga emocional llega el jugador al borde. No se anuncian con UI — se juegan con el botón de Bond (rehusarlo es una decisión).
 - **Los Bonds acumulados se prueban aquí**: los 2-3 fijos restantes reaccionan a la persecución según su Tether. Roen carga peso emocional que no descarga; Valen ofrece lectura filosófica que suena a evasión; Darro insiste en bromas que fallan y luego pide perdón. Si el Bond con alguno cayó en el Acto 2, ese fijo pierde una línea completa aquí — su silencio es la penalidad.
 
 El paisaje va cambiando: The Wilds se vuelven The Scar of Breaking, la geometría del suelo se rompe, y en el horizonte empieza a verse el cráter latir. El grupo llega al borde de The First Wound cuando el sol se pone.
 
 #### 5. Quiebre final en The First Wound (cráter, God-Core cemetery)
 
-Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**. Empieza a pulsar en la misma frecuencia jade que Speck emite involuntariamente desde el descenso al Archive. El Pivote llega al centro con Speck. El jugador y los fijos llegan segundos después.
+> **Mecánica de esta escena: [[El Cráter — Matriz de Rutas]]** — secuencia fija (§1),
+> mensajero y parámetros por ruta (§2), los 5 gates (§3), beats obligatorios (§4).
+> Este documento fija el **lugar**; la matriz fija **qué pasa en él**.
 
-Aquí se activa el Fragmento ([[Speck]] §Capa 4 — reacción forzada, no elección). Hive mind involuntario. Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: cementerio, no armería. Speck E1 → E3, la transformación cruza el escenario en tiempo real. En este momento — no antes, no en el corredor del Archive, no en la persecución — el jugador toma la decisión final que abre uno de los 5 finales ([[Los 5 Finales]]). Los elementos rituales/físicos en juego: el core central respondiendo, el Pivote entre el jugador y Speck, el Fragmento en la mano de alguien (varía por decisiones previas), y el borde del cráter como línea moral literal — cruzarlo hacia el core central es F3, **forcejear por Speck es F2b** (la regla física está en [[Speck]] §Capa 5 — fuente única; este documento no la enuncia), retroceder y dejar que la entrega se complete es F2a — y también lo es no decidir nada, porque el Pivote entrega por defecto —, **preguntarle a Speck qué quiere** es F4, y **neutralizar al Pivote en el borde y después no intervenir con Speck es F1**. La diferencia entre F2a y F4 no es la quietud: es si la pausa termina en una pregunta. Y la diferencia entre F2a y F1 tampoco es la quietud: es si queda alguien capaz de completar la entrega.
+**El lugar.** Cráter masivo. God-Cores calcificados en la base, formación circular, y uno específico — el más grande, en el centro — **responde a Speck**: empieza a pulsar en la misma frecuencia jade que ella emite involuntariamente desde el descenso al Archive. El borde del cráter es una **línea moral literal**, y esa es su función geográfica: cruzarlo hacia el core central es la acción exclusiva de F3, así que ninguna otra cosa de la escena puede pedirle al jugador que lo cruce.
 
-**Los cinco gates del cráter, completos** (ninguno puede faltar de esta lista): cruzar = F3 · forcejear = F2b · retroceder o congelarse = F2a · preguntar = F4 · **neutralizar al agente de la entrega y no intervenir = F1**. En la ruta Nyael ese agente es el equipo de extracción que ella dejó activado, y en la ruta Bram es Torgan como segundo agente — **F1 exige detener a ése**, no a un Pivote que ya no está en escena ([[Los 5 Finales]] §F1).
+**Lo que se ve.** El Fragmento se activa ([[Speck]] §Capa 4 — reacción forzada, no elección). Los God-Cores despiertan uno a uno alrededor del cráter, y por primera vez el jugador entiende, sin necesidad de los Goggles, lo que estaba mirando: **cementerio, no armería**. Speck E1 → E3, la transformación cruza el escenario en tiempo real, con el sol ya puesto y la piedra respondiendo desde abajo.
 
-Los detalles del acto final quedan abstractos aquí — cada final los interpreta distinto y cada ficha de Pivote escribirá su variación. Lo que este documento fija: **el cráter es el escenario único de la decisión**, no hay clímax repartido en dos locaciones, y ningún Pivote decide por el jugador. El Pivote llegó cargando a Speck; el jugador decide qué pasa después.
-
-**Variante Nyael:** el pulso del core central no distingue quién carga a Speck — cualquier intento de transportarla más allá de este punto se rompe igual. En la ruta Nyael, ella misma ya no está presente (ver [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §sub-beat 5); quien el jugador encuentra en el borde es el equipo de extracción institucional que ella activó, deteniéndose por la misma fuerza que detendría a cualquiera. La decisión final ocurre igual, frente a ellos en vez de frente a Nyael.
+**Lo que este documento fija sobre el clímax:** el cráter es el **escenario único de la decisión** — no hay clímax repartido en dos locaciones —, la decisión ocurre acá y no antes (ni en el corredor del Archive ni en la persecución), y **ningún Pivote decide por el jugador**. El resto lo interpretan la matriz y cada ficha.
 
 #### 6. Nota transversal — Grove of Cycles florece aquí
 
-Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycles — Escena del Acto 2]]) tienen razón parcial en este cráter, y ninguno tiene toda la razón. Threnn tuvo razón en que dejar la Muda completarse cuesta civilizaciones (F1 lo confirma, con belleza y con luto). Ilyara tuvo razón en que no sanar es su propia forma de violencia (F2b lo confirma, con tragedia sin retorno). Corwyn tuvo razón en que negociar administradamente compra tiempo (F2a lo confirma, con sabor a decepción). Maelys — la que casi no habló — tuvo razón en que ninguna preferencia importa hasta que Speck elige (F4 lo confirma, y es el único final que la cita literalmente). El jugador nunca les debe una respuesta; el juego se las da en el cráter.
+Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycles — Escena del Acto 2]] §Siembras por Final — fuente única de este mapeo) tienen razón parcial en este cráter, y ninguno tiene toda la razón. Ilyara tuvo razón en que sanar aunque cueste civilizaciones era la única salida honesta (F1 lo confirma, con belleza y con luto). Threnn tuvo razón en que un statu quo administrado, aunque frío, compra tiempo (F2a lo confirma, con sabor a decepción). Corwyn tuvo razón en que la crisis es un recurso administrable — para uno mismo, en su lectura más cínica (F3 lo confirma). Maelys — la que casi no habló — tuvo razón en que ninguna preferencia importa hasta que Speck elige (F4 lo confirma, y es el único final que la cita literalmente). El jugador nunca les debe una respuesta; el juego se las da en el cráter.
 
 ---
 
@@ -1130,7 +1169,7 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 
 ### The Driftmarket
 - **Neutral Ground:** Donde Standing no aplica igual
-- **Tobin's Office:** donde entrega the Wanderer's Goggles (§ACTO 2 Interludios)
+- **Tobin's Office:** donde entrega the Wanderer's Goggles (§THE RECKONING)
 - **Un** Momento de Persona en el camino hacia acá — los demás están repartidos por todo el juego ([[Speck]] §Momentos de Persona)
 - **Old Tobin:** único personaje de poder sin agenda oculta — controla el
   comercio por reputación, no corrupción

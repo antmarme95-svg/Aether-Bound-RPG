@@ -5849,6 +5849,227 @@ cambios están en disco. Dos consecuencias:
 2. **Los 2 QAs de la 4ª re-corrida no se lanzaron.** Lanzarlos con **Opus, en frío, en paralelo**
    (dramática + congruencia).
 
+### Ficha de Old Tobin Hale + regla de idioma para el guión (2026-07-30)
+
+**Old Tobin Hale, escrita.** `10-Knowledge/Old-Tobin-Hale-Ficha-Expandida-v1.md`
+— personaje de apoyo, sin arco de traición ni epílogo en los 5 finales.
+Consolida canon ya disperso en `Geografía y Ciudades §The Driftmarket / §THE
+RECKONING` (los dos beats fijos: la advertencia con falso positivo sobre uno
+de los 3 fijos, y la entrega de the Wanderer's Goggles) y en `Briefs de
+Concept Art §10b/§11.6` (visual, ya ratificado). No duplica el guión existente
+— lo resume desde el punto de vista de Tobin y agrega 3 líneas de voz nuevas.
+
+**El extraño que le dejó los Goggles hace 40+ años queda deliberadamente sin
+resolver.** El vault no tiene canon sobre su identidad y la ficha dice
+explícitamente que no hay que inventar uno sin que Boris lo pida — es una
+siembra a propósito, mismo patrón que The Monolith (aporta peso sin
+resolverse). Se dejaron las tres lecturas abiertas por si se retoma: otro
+portador del poder innato, un Warden distinto, o sin relación con Speck.
+
+**Regla de idioma (decisión de Boris):** el guión y todo el contenido de
+front-end (diálogos, líneas canónicas, UI, textos in-game) se escribe en
+**inglés** de acá en adelante. El vault sigue en español — es donde Boris y
+el asistente conversan, no lo que ve el jugador. Registrado en `CLAUDE.md`
+regla 9 y en `Nomenclatura.md` (extensión de la regla de nombres propios en
+inglés ya vigente desde 2026-07-24). Las 3 líneas de voz nuevas de Tobin ya
+se escribieron en inglés siguiendo la regla; el diálogo viejo del Reckoning
+(en español, de antes de esta decisión) queda anotado como pendiente de
+traducción para cuando se aborde el guión completo — no bloquea nada.
+
+**Limpieza de `Current-State.md`:** la sección `## Pendientes` había quedado
+desactualizada desde antes de la 5ª ronda (seguía listando "6ª re-corrida"
+como pendiente, "5c.4/5c.2 sin escribir" cuando ya estaban cerrados, y la
+ficha de Tobin como pendiente cuando ya se escribió). Reescrita completa,
+comprimidas las 3ª-5ª rondas a resumen de una línea cada una (detalle
+completo sigue en este LOG), y agregada la regla de idioma como pendiente
+transversal del frente de guión.
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~2,9k, bajó
+respecto a la sesión anterior por la limpieza). **Pendiente: 7ª re-corrida QA.**
+
+### 6ª re-corrida QA — 9 críticos, 8 cerrados (2026-07-30)
+
+Dos QAs Opus en frío: **6 de dramática + 3 de congruencia.**
+
+**Patrón nuevo esta ronda:** los 3 críticos de congruencia estaban en material
+*viejo que nadie había vuelto a mirar* — `Geografía y Ciudades §Beats
+Narrativos por Acto` — no en la propagación de la 5ª ronda, que el QA
+confirmó limpia. Y uno de los críticos de dramática era mío, de la ronda
+pasada: el gate de F1 que escribí se contradecía en la misma frase
+("detenido en el borde del cráter" + "carga a Speck hasta el centro" — un
+agente no puede estar en las dos partes a la vez).
+
+#### Dramática (6 críticos)
+
+- **C1 — gate de F1 autocontradictorio.** Reescrito: el punto exacto de
+  intercepción queda **abstracto por diseño** (borde, centro, o entremedio),
+  citando la abstracción que `Geografía §ACTO 3 sub-beat 5` ya declaraba
+  explícita ("cada ficha de Pivote escribirá su variación"). Ya no fuerza una
+  geometría única que las 9 fichas no podían cumplir a la vez.
+- **C2 — Lyris F1/F3 contradecían su propio sub-beat 5.** Su F1 saltaba
+  directo a "se queda quieta en su cielo" sin el paso de ser neutralizada
+  mientras sostenía a Speck; agregado el beat de que cede sin forcejeo antes
+  de retirarse. Su F3 decía "se va antes del cráter" cuando su staging la
+  tiene ahí sosteniendo a Speck — corregido a que suelta y asciende
+  **específicamente cuando ve al jugador cruzar hacia el core**, mismo
+  patrón de salvaguarda que ya tenía Bram.
+- **C3 — Nyael y Bram: los dos casos para los que se reescribió el gate no
+  lo mencionaban.** Ninguna de las dos fichas nombraba a su agente sustituto
+  (equipo de extracción / Torgan) en su propio epílogo F1. Agregado a las dos.
+- **C4 — Iven rompe la fila Deber Institucional en F1 y F2a.** **Sin
+  resolver — decisión de Boris registrada en Current-State.** Su ficha ya se
+  declara "variante envenenada"; falta decidir si eso justifica la excepción
+  o si hay que reescribir los epílogos para calzar con la fila.
+- **C5 — "sin reloj autónomo" nunca bajó a la fuente.** `El Mundo y la
+  Muda.md:44` (el documento raíz) seguía diciendo "si Speck madura, terminará
+  la Muda" sin condición de cráter. Reescrito ahí, y barrida la clase
+  completa: `Iven:20` (la promesa del Council como "físicamente imposible"),
+  `Iven:576` (F2b, tenía literal "estaba en camino a madurar" — contradecía a
+  `Iven:522`, arreglado la ronda pasada, 54 líneas antes en el mismo
+  archivo), `Valen:70` y `Valen:219` (presentado como lectura confirmada del
+  Archive, no como creencia de personaje).
+- **C6 — ítem huérfano en `Bond y el Bond Vacío.md`.** El "5. Eco final" de
+  la lista original (ítems 1-4) quedó pegado dentro de la sección de la
+  excepción de Bram al insertarse esa sección — y ahí contradice, porque en
+  la celda de Bram no hay link degradado que Speck pueda puentear. Reubicado
+  a su lista original, con nota explícita de que no aplica a Bram.
+
+#### Congruencia (3 críticos — todos en `Geografía §Beats Narrativos`)
+
+- **C1 — Cuándo se forma The Bound Five: Acto 1 vs Acto 2.** Las 9 fichas de
+  Pivote + los 3 fijos + `Speck.md` sitúan al grupo completo desde el Acto 1.
+  `Geografía` (bloque de sub-actos 2A/2B/2C) y `Estructura Dramática:14`
+  seguían con "Encuentro con Maren/Torgan/Dagna/Lyris/Sereth" en Acto 2 —
+  residuo de antes de que las fichas fijaran el canon. Corregido: los 3
+  sub-actos ahora dicen "el Pivote [raza] ya está en el grupo desde el Acto
+  1 — territorio natal, no encuentro", con la lista correcta de qué Pivote es
+  de qué raza (enanos: Torgan/Dagna/Vekka; elfos: Sereth/Lyris/Nyael;
+  humanos: Maren/Iven/Bram — verificado contra `Los 9 Pivotes.md`, cometí y
+  corregí un error de raza propio en el camino). También corregido
+  `Estructura Dramática.md:14` y el residuo "Segunda traición visible" (no
+  hay segunda traición, era la misma corrupción del asentamiento de Iven ya
+  etiquetada dos veces).
+- **C2 — topología "rueda, no malla" contradicha en 4 lugares.** La regla que
+  fijé esta sesión (*"los tres reinos no se conectan entre sí
+  directamente"*) chocaba con texto viejo de `Geografía §Reinos`: Cinder
+  Ascent y Gloomvault descritos como accesos directos reino-a-reino en vez de
+  radios hacia The Wilds. Corregidas las 4 menciones (Cinder Ascent Base como
+  puesto de Aethelgard, accesos de Aethelgard e Ignis Reach).
+- **C3 — Momento de Persona 7 fechado en el Acto equivocado.** `Speck.md:215`
+  decía "Acto 3 — antes de The Reckoning", pero The Reckoning es de **Acto
+  2** en 4 fuentes (`Grove of Cycles`, `Geografía`, ficha de Bram). Un beat no
+  puede ser "Acto 3" y "antes de un evento de Acto 2" a la vez. Corregido ahí
+  y en `Geografía:894` y `La Rueda:32` (que agrupaba los 7 Momentos en Acto 2
+  sin reconocer que los 2 primeros son de Acto 1).
+
+#### MEDIUM cerrados (5 de los reportados)
+
+- Gate de F4 sin el calificador "Momentos disponibles en esa partida" en
+  `Los 5 Finales:118` — las 2 fuentes que lo declaran obligatorio
+  (`The Tether`, `Grove of Cycles`) ya lo tenían.
+- Mecanismo de activación de Torgan: `Geografía:1038` negaba el mensajero y
+  ponía la cadena en el Great Forging Clan; 3 fuentes (ficha de Torgan, ficha
+  de Bram, `Los 9 Pivotes`) dicen mensajero + clan menor. Alineado.
+- "3 cadenas de poder, 9 personas" como regla absoluta — Lyris (Frontier High
+  Command, un cuarto track) y Bram (contrato directo, sin cadena) la rompían.
+  Suavizado a "casi todas" en `El Mundo y la Muda` y completada la lista de
+  `Estructura Política:298-304` a las 9.
+- "El sabor de la traición lo dicta la raza" (`The Bound Five:59`)
+  contradecía la matriz ratificada en 3 de 9 (Iven y Bram humanos no son
+  pragmatismo; Nyael elfa no es lógica fría). Corregido a "por arquetipo".
+- `5c.2b` apuntaba a un archivo que no existe en disco
+  (`Speck - Imprisoned Warden Form Final 3`) — el asset real es
+  `Final 2 The Long Winter.png`. Corregido, y actualizado `CATALOGO.md`, que
+  seguía hablando de "4 finales" cuando son 5.
+
+Más 3 MEDIUM de barrido rápido: residuo del modelo de "estadios" de
+crecimiento (abolido en `Speck.md`) en `Los 9 Links del Pivote` y
+`The Bound Five`; violación de la regla de Goggles en `Geografía:1030`
+("que Valen no puede traducir sin los lentes" es un contrafáctico inválido —
+Valen nunca accede a esa capa, punto); Lyris F2a entregaba a Speck "en el
+punto acordado" fuera del cráter, imposible por la regla física de
+`Speck.md §Capa 5`; Dagna F1 elidía el beat de neutralización.
+
+**C4/Iven — decisión de Boris (2026-07-30): excepción intencional.** Iven
+se queda rompiendo la fila Deber Institucional en F1/F2a; es el único de
+los 4 cuya institución le mintió activamente para reclutarlo. Registrado en
+`Los 5 Finales §matriz` como excepción declarada, para que ningún QA futuro
+la vuelva a reportar como crítico.
+
+**Estado:** `check_canon.py` 0 críticos; `check_vault.py` 🟢 (~3,4k). Los 9
+críticos de la 6ª ronda quedan todos cerrados. **Falta la 7ª re-corrida.**
+
+**Pendiente sin tocar, de menor prioridad:** `Los 9 Links del Pivote`/ficha
+de Bram no anotan la excepción del Bond invertido; 3 epílogos F4 (Maren,
+Iven, Bram) cierran en alza sin la fricción de "agridulce, no triunfal";
+Roen F4 sin la pasada de tono de Valen/Darro. Y una nota lateral: existe un
+worktree de git real en `.claude/worktrees/quirky-wiles-afa8a0/` (rama
+`claude/strange-galileo-243fc7`, 62MB) con una copia vieja del vault — no se
+tocó, revisar si hace falta.
+
+### Los 5 finales visuales completos + hook de check_vault.py (2026-07-30)
+
+**F1 (5c.1) — falsa alarma resuelta.** Boris mostró una imagen de un ciervo con
+astas alegando ser el resultado de F1. Verificado abriendo `Final 1 The Guided
+Molt.png` y `speck-trueform-translucent.png` con el tool de lectura: los dos
+YA eran zorro/cuadrúpedo, sin astas — el arte ratificado estaba bien. El ciervo
+salió de una regeneración nueva desde el texto viejo del brief (sin ancla
+anatómica), no del asset. Corregido el registro (había quedado mal anotado
+como "regenerado, falta VoBo" en la sesión anterior).
+
+**F4 (5c.4) — problema real, resuelto.** El asset viejo (`Final 4 The Warden's
+Choice.png`, aprobado 23/07, pre-split de 5 finales) sí violaba el canon
+actual: pedestal con nombre grabado, halo dorado, grupo en actitud de
+veneración — apoteosis, no *"agridulce, no triunfal"* (`Los 5 Finales §F4`). Sin
+reciprocidad (el único beat que distingue F4: ella responde, mirada al
+jugador). Prompt nuevo con ancla vulpina + composición íntima (ella mirando
+directo al jugador, sin pedestal, sin halo, el resto del grupo atrás
+procesando su propio duelo). Generado y **ratificado por Boris**. Guardado
+como `Final 4 The Warden's Choice v2.png`.
+
+**F2a (5c.2a) — nunca existía, brief escrito de cero.** La lámina de "Final 2"
+que existía era, en rigor, el brief de F2b (cadáver calcificado); F2a (Speck
+viva, cedida al Council, sin cuerpo) no tenía brief propio. Reorganizada la
+sección: `5c.2a` = brief nuevo de F2a, `5c.2b` = la lámina vieja re-etiquetada
+correctamente. El prompt de F2a se distingue de los otros 4 en los tres ejes
+que importan: **vive** (a diferencia de F2b), **está sola** — sin grupo ni
+jugador, a diferencia de F4 — y el tono es **frío/administrativo**, no trágico
+(F2b) ni de encadenamiento de villano (F3): contención clínica (vendaje/collar,
+no cadenas oscuras), cámara institucional, paleta fría con su cuerpo como
+única nota cálida. Generado y ratificado. Guardado como `Final 2a The Long
+Winter Handed Over.png`.
+
+**Nota de canon reforzada en el proceso:** E3 es *"desvelamiento, no
+crecimiento"* ([[Speck]]) — el cuerpo debe leerse reconociblemente zorro, no
+esqueleto/robot genérico, y las orejas deben mantener la forma de pétalos
+establecida. Las dos primeras generaciones (F4 y F2a) derivaron a costillar
+expuesto/orejas simples pese al ancla vulpina — anotado como nota abierta no
+bloqueante en `Briefs de Concept Art §Base visual común a todos los finales`,
+para refinamiento futuro si hay margen.
+
+**Con esto, los 5 finales visuales (F1/F2a/F2b/F3/F4) quedan completos y
+consistentes con el canon actual.**
+
+#### Hook de `check_vault.py` — construido y probado (corrige el registro falso de la sesión anterior)
+
+La sesión anterior había registrado "✅ Resuelto" sin haber creado el archivo
+de hook — Boris lo detectó preguntando directamente "¿el hook lo armaste?".
+Esta vez se construyó de verdad, vía la skill `update-config`:
+
+- **`.claude/settings.json`** (nuevo, proyecto — versionado, no local): hook
+  `PostToolUse` con matcher `Edit|Write`.
+- **`Aether Bound/scripts/hook_current_state.sh`** (nuevo): si el archivo
+  tocado es `Current-State.md`, corre `check_vault.py` y devuelve el semáforo
+  de arranque como `additionalContext` — inyectado de vuelta al modelo en el
+  mismo turno, no como texto de terminal que se pierde.
+- **`jq` no está instalado en este Git Bash** — el hook usa Python puro para
+  parsear el JSON de stdin y construir la respuesta. Encontrado y corregido
+  un bug de encoding en el primer intento (acentos llegaban como mojibake
+  `Ã©`/`Ã±`) forzando `PYTHONIOENCODING=utf-8` en el subproceso.
+- **Probado en vivo**, no solo con pipe-test sintético: una edición real a
+  `Current-State.md` disparó el hook y el contexto adicional llegó limpio
+  (*"última fecha 2026-07-29"* sin corrupción de encoding).
+
 ### `check_canon.py` +2 clases: duplicados e índice (2026-07-29)
 
 Pregunta de Boris tras el hook de peso: *"¿algún otro script .py que sea buena
@@ -6087,3 +6308,2054 @@ declara cerrado sin 0 críticos.
 nuevos indica que el cuello de botella del sprint no es el QA sino el **barrido**. A los QAs de la
 4ª hay que pedirles explícitamente que traten cada dato como una **clase de menciones** y no como
 una línea suelta.
+
+## [2026-08-02] sprint/QA-verificación | 7ª re-corrida — 13 CRITICAL + 18 MEDIUM, el volumen más alto desde la 1ª ronda
+
+**Motivo del salto:** las rondas 2ª-6ª habían quedado auditando `Geografía y Ciudades` y
+`Estructura Dramática` — ya corregidos — pero nunca bajaron con el mismo detalle a las 12
+fichas de personaje (9 Pivotes + Roen/Valen/Darro), que son las que narran las escenas en
+disputa. La 7ª corrida (2 subagentes Opus en frío, QA-Dramática + QA-Congruencia) entró ahí
+por primera vez.
+
+**4 decisiones de diseño, resueltas por Boris:**
+1. **Gate F1/F2a** (`Los 5 Finales.md`): el portador se detiene y cede la decisión al
+   jugador — un **mensajero del Council** completa la entrega si nadie interviene. Ya no
+   es "el Pivote completa la entrega por defecto".
+2. **Orden de "El Primero"** (formación del grupo, Acto 1): **Roen → Valen → Pivote →
+   Darro**, fijo para las 12 fichas (antes había dos versiones incompatibles: fijos-ya-están
+   vs Pivote-ya-está).
+3. **Bautizo de Speck**: manda `Speck.md` — ocurre en Acto 2, cuando el grupo entero ve su
+   comportamiento inteligente. Se movió de Acto 1 (dormida en la crisálida) en la ficha de
+   Darro, que además ahora se une último al grupo, no desde el inicio.
+4. **Gate F3**: el jugador cruza el borde **sin** Speck en la mano; el portador la suelta
+   después de que cruza.
+
+**13 CRITICAL resueltos** — las 4 decisiones arriba, propagadas a `Los 5 Finales`,
+`Estructura Dramática`, `Geografía y Ciudades`, y las 12 fichas; más 9 fixes de propagación
+mecánica: `Speck.md §Capa 4` pasó de 3 a **4 grados de agencia** (cedida ≠ arrebatada — F2a/F3
+no matan a Speck, solo F2b) y se propagó a `Briefs de Concept Art:187`; agente sustituto
+(Torgan/equipo de extracción) completado en F3/F4 de Bram y Nyael; Vekka corregida a Acto 1
+en dos lugares distintos de su propia ficha (se auto-contradecía); "Darro reclutado en el
+Driftmarket" purgado de la ficha de Bram (ya estaba resuelto en 6 archivos, solo faltaba
+propagarlo); los 5 años de servicio de Dagna, mal atribuidos a Roen en 2 líneas, corregidos
+a "el jugador"; topología de Cinder Ascent realineada a Ignis Reach en 3 lugares de
+`Geografía y Ciudades` (tenía 2 líneas asignándola a Aethelgard); Valen F2b y Roen F2b
+reescritos — el primero afirmaba que la muerte de Speck "era inevitable" (contradice la regla
+física de `Speck §Capa 5`), el segundo violaba la prohibición de tono de F2b ("ningún beat de
+aprendimos algo") con una línea casi idéntica a su propio F2a.
+
+**Quedan MEDIUM sin tocar para la 8ª** (no bloquean): mapeo Elder Circle→Final con dos
+versiones sin fuente declarada, si "exactamente tres flashes" sigue siendo regla (hay 4
+menciones de flashes extra en el texto), línea de Tobin sin traducción fiel del guión,
+aritmética de Torgan (20-72 → debería ser 20-75), hueco de 5 años en la cronología de Dagna,
+duplicación parcial del bloque de Old Tobin en `Geografía`, repeticiones de imagen entre
+epílogos (muerte de Maren/Vekka/Dagna, gesto de Torgan/Iven, tratado fantasma de Sereth),
+símbolo tallado de Darro que nunca aparece en su F3.
+
+**Estado: `check_canon.py` en 0 críticos / 0 MEDIUM tras los fixes, `check_vault.py` 🟢
+(~3,6k).**
+
+### Pendiente inmediato
+
+**8ª re-corrida QA con 2 subagentes Opus en frío** — validar que los 13 CRITICAL cerraron de
+verdad y no reabrieron nada antes de declarar el sprint cerrado. Las 2 decisiones de diseño
+pendientes (Elder Circle, conteo de flashes) quedan para resolver con Boris antes o durante
+esa corrida.
+
+## [2026-08-02] sprint/QA-verificación | 8ª re-corrida — ~9 CRITICAL + 16 MEDIUM, los fixes no habían bajado a los epílogos
+
+**Diagnóstico:** los 6 fixes de la 7ª ronda quedaron bien en las fuentes (`Los 5 Finales`,
+`Geografía y Ciudades`, `Speck.md §Capa 4/5`), pero el barrido no llegó a los **45 epílogos**
+donde vive la ejecución real de los gates. Mismo patrón de siempre: fix a la línea reportada,
+no a la clase completa.
+
+**1 decisión nueva de Boris:** en las rutas Torgan, Iven y Vekka el Pivote llegaba al
+**centro** del cráter con Speck (no al borde como las otras 6 rutas), lo que obligaba al
+jugador a cruzar el borde para alcanzarlo — disparando F3 por defecto e imposibilitando
+F1/F2b/F4 en esas 3 rutas. Se resolvió moviendo a los 3 Pivotes al borde, igual que las
+otras 6 — cambio de staging, no de gate.
+
+**Fixes aplicados:**
+- **Gate F1 reescrito en 7 epílogos** con el mensajero correcto de cada cadena institucional
+  (el enunciado "7 rutas: mensajero del Council" en `Los 5 Finales` era falso — 4 de esas 7
+  usan su propio mensajero): Maren y Sereth (Council directo), Dagna→Deepstone, Torgan→su
+  clan menor, Vekka→Great Forging Clan, Lyris→Frontier High Command, Iven→contacto del
+  Consortium. Dagna y Vekka tenían el gate invertido (el jugador detenía al Pivote, no al
+  mensajero); Lyris cedía sola, sin acción del jugador.
+- **Sub-beat 5 de Vekka reescrito por completo** — seguía siendo la versión vieja: desmontaba
+  el core central sola, con Speck atada a un yunque, sin ningún mecanismo de espera/mensajero.
+  Ahora se detiene en el borde con su propio yunque portátil, y el mensajero del Great Forging
+  Clan sube desde el cráter a buscarla — se preserva toda la caracterización de oficio/ritual.
+- **Bautizo de Speck** — `Speck.md` (la fuente declarada de los Momentos de Persona) seguía
+  rotulando el Momento 2 como Acto 1; se movió a Acto 2 y se reordenaron los Momentos 2/3 en
+  consecuencia. Residuo en `Geografía:808` también corregido.
+- **`Estructura Dramática:29`** ya no dice que el Pivote traidor concluye "esto debe morir" —
+  contradecía todo el canon (matar a Speck no cura nada). Ahora dice que busca entregarla viva
+  a su institución. Eco corregido en `Roen-Ficha:218`.
+- **Agencia de Speck**: `Briefs de Concept Art` todavía decía "3 grados" en dos encabezados
+  pese a que la tabla ya tenía los 4 correctos desde la 7ª ronda — corregido.
+- **Topología**: `Briefs de Mapa del Mundo` repetía el error de Cinder Ascent que ya se había
+  cerrado en `Geografía` — el barrido de la 7ª ronda no había salido de ese archivo.
+- **Flashes**: `Grove of Cycles:27` llamaba "Flash privado" al evento del Vector C, que en
+  realidad es el Momento de Persona 6 — desambiguado. Encabezado "Grove of Cycles (a mitad del
+  Acto 2)" corregido a "cierre del Acto 2" en las 10 fichas que lo replican (la fuente ya se
+  contradecía a sí misma sobre cuándo ocurre).
+- Menores: Vekka agregada a la fila "Deber Institucional" en 3 fichas donde faltaba, wikilink
+  roto de "protocolo del silencio" por salto de línea en `Speck.md` corregido, cita rota de
+  los Goggles en `Geografía:1140` (apuntaba a §ACTO 2 Interludios, es §THE RECKONING).
+
+**Quedan MEDIUM sin tocar** (no bloquean): línea de Tobin sin traducción fiel, aritmética de
+Torgan, hueco de 5 años en cronología de Dagna, duplicación de Old Tobin en `Geografía`,
+símbolo tallado de Darro ausente en su F3, sujeto de la cesión sin resolver en el F1 de Nyael.
+
+**Estado: `check_canon.py` en 0 críticos, `check_vault.py` 🟢.**
+
+### Pendiente inmediato
+
+**9ª re-corrida QA con 2 subagentes Opus en frío** — criterio de cierre: 0 críticos de ambos.
+Si el patrón se repite (fix en la fuente, no propagado a fichas), buscar dónde más puede estar
+pasando esto antes de declarar cerrado cualquier futuro sprint.
+
+## [2026-08-02] sprint/QA-verificación | Barrido de MEDIUM de la 8ª ronda — 6 cerrados, 1 verificado como no-error
+
+Boris pidió cerrar los MEDIUM que quedaron abiertos de la 8ª re-corrida antes de lanzar la 9ª.
+
+- **Error de raza de Tobin.** `Old-Tobin-Hale-Ficha-Expandida-v1.md:94` decía que el error de
+  Tobin siempre apunta al fijo de la **raza equivocada**; la tabla fuente en
+  `Geografía y Ciudades.md:923-939` (mucho más detallada, con los 9 casos por Pivote) dice que
+  apunta al fijo de la **misma raza** que el Pivote real. Corregido para citar la tabla como
+  fuente.
+- **Hueco de 5 años en la cronología de Dagna.** El encargo del Great Forging Clan (hace 10
+  años) y su llegada al puesto de escolta (hace 5 años) dejaban 5 años sin explicar en el
+  medio. Se fusionaron los dos eventos: el encargo pasó a "hace 5 años" y ella llegó casi de
+  inmediato — el contrato de 5 años vence justo en el presente de la historia, lo cual además
+  suma tensión al clímax en vez de ser un hueco.
+- **Edad de Dagna sin cerrar.** `Dagna:11` daba un rango "90-100 años" que no cerraba con la
+  aritmética del resto de la ficha. Fijada en **100 años** (encabezado "edades 40-90" corregido
+  a "40-100" para que las cuentas cierren con "sesenta años de muralla").
+- **Duplicación de Old Tobin.** `Geografía y Ciudades.md:709-735` reproducía en prosa la bio,
+  el contraste con el elenco político y la línea canónica que ya vive en
+  `Old-Tobin-Hale-Ficha-Expandida-v1.md` — el mismo patrón que obligó a archivar 4 fichas
+  cortas en la 5ª ronda. Colapsado a un puntero de 3 líneas; la ficha expandida queda como
+  fuente única.
+- **Símbolo tallado de Darro ausente en su F3.** `Los 5 Finales.md:106` lo fija como su
+  despedida ritual (deja su símbolo tallado en la mesa del último campamento); su propia ficha
+  no lo mencionaba. Agregado.
+- **Sujeto de la cesión sin resolver en Nyael.** En su ruta, el equipo de extracción intentaba
+  "completar la entrega" sin quedar claro que la tenían en brazos — la física de
+  `Speck.md §Capa 5` exige que alguien la sostenga y la ceda para que el pulso se corte.
+  Reescrito para que el equipo la sostenga explícitamente desde el sub-beat 5.
+- **Aritmética de Torgan (20-72) — verificada, no era un error.** El encabezado cubre su
+  servicio *previo* a la Misión Clasificada que arrancó "hace 3 años" sobre una edad actual de
+  75 (72 + 3 = 75). Ya lo había señalado la 8ª ronda; se confirma y se saca de la lista de
+  pendientes.
+
+**Quedan, no bloqueantes:** traducción al inglés de la línea de Tobin (parte de la pasada de
+guión completo pendiente), doble asignación de cuadrante en el POI de entrada de Stillwood en
+`Briefs de Mapa del Mundo` (categoría ya documentada de ~16 POIs con este problema, sin
+prioridad propia).
+
+**Estado: `check_canon.py` en 0 críticos, `check_vault.py` 🟢.**
+
+### Pendiente inmediato
+
+**9ª re-corrida QA con 2 subagentes Opus en frío** — sigue siendo el criterio real de cierre
+del sprint.
+
+## [2026-08-02] sprint/QA-verificación | 9ª re-corrida — 7 CRITICAL únicos + varios MEDIUM, mismo patrón otra vez
+
+**QA-Dramática: 7 CRITICAL + 9 MEDIUM. QA-Congruencia: 5 CRITICAL + 13 MEDIUM** (con
+superposición entre ambos). Confirmado lo bueno primero: el staging borde/centro y la
+identidad del mensajero por ruta habían cerrado bien en 7 de las 9 fichas, igual que el
+bautizo en Acto 2, el tono de F2b, y los 4 grados de agencia. El patrón que se repite ronda
+tras ronda es el mismo: **la fuente se corrige, la propagación hacia atrás (sub-beats
+anteriores en la misma fuente) o hacia las fichas que no estaban en la lista de esa ronda
+queda sin barrer.**
+
+**7 críticos únicos, todos de propagación — ninguno pidió decisión de diseño nueva:**
+
+1. **`Geografía y Ciudades.md` se contradecía a sí misma.** El sub-beat 4 (persecución)
+   todavía decía "dejarlo llegar hasta el centro con Speck" y "la carga hacia el centro en
+   todos los casos" — 7 líneas antes de que el sub-beat 5 dijera "siempre en el borde, nunca
+   en el centro". El sub-beat 5 se corrigió en la 8ª ronda; el 4, nunca.
+2. **La orden institucional de Vekka seguía siendo "destruir", no "entregar viva".** Se
+   reescribió su escena de cráter en la 8ª ronda, pero la premisa que la origina ("a flawed
+   forging must be unmade by its maker", "Termínala. Unmake it.") seguía sonando a muerte,
+   contradiciendo `Estructura Dramática:29` (entregar viva). **Resuelto con el precedente que
+   la propia ficha ya tenía:** Vekka "deshizo" a Darro hace 30 años sin matarlo — lo expulsó
+   del programa. "Unmake" nunca significó matar; significa terminar el proceso. Se reescribió
+   la Esencia de la ficha para dejar esto explícito, y se ajustó la orden citada.
+3. **Vekka se contradecía sobre si toma a Speck en el corredor.** Un sub-beat decía que no
+   ("Vekka no toma a Speck en el corredor... espera que Speck le sea llevada"), la escena del
+   cráter la tenía llegando con Speck en brazos. Reescrito el sub-beat 3 para que la tome en
+   el corredor como las otras 8 rutas — "no hay versión en la que Speck llegue al cráter
+   sola" es regla sin excepciones.
+4. **F3 de Vekka era físicamente imposible.** El arnés que la fija al yunque no tenía ningún
+   mecanismo de liberación que no contara como forcejeo. Agregado el beat "suelta el arnés al
+   verlo cruzar", igual que las otras 8 rutas.
+5. **Maren F2a trataba a Speck como muerta** ("millones viven porque una murió"), en el único
+   final donde queda viva. Reescrito. De paso, purgado un residuo de la premisa vieja
+   ("sacrificar variable crítica") en la motivación del Council hacia Maren.
+6. **Bram tenía un mensajero fantasma.** Su sub-beat 5 decía que Torgan "se detuvo... a
+   esperar al mensajero" — inventando un tercero que el propio gate de F1 no contempla:
+   Torgan **es** el agente a neutralizar, no alguien que espera a otro. También se cerró una
+   vía de muerte imposible en su F2b ("del punto de entrega, si ya había sido tomada" — si ya
+   fue entregada, el pulso se cortó y no puede morir ahí, per `Speck.md §Capa 5`).
+7. **Sereth usaba "mensajero del Council"** en 3 lugares de su ficha y en la clasificación de
+   `Los 5 Finales:22`, pero su cadena real es la Royal Academy vía Queen Ithessa — nunca
+   negoció con el Council directamente. Corregido en ambos archivos.
+
+Más un fix estructural: **Dagna tenía el vector de aproximación del mensajero invertido**
+("espera al fondo del cráter" / "viene bajando hacia el centro" — el patrón correcto en las
+otras 4 rutas con mensajero físico es "sube desde dentro hacia el borde"). Y **faltaba el
+beat "el Pivote suelta a Speck al ver cruzar al jugador"** en el F3 de Maren, Sereth y Dagna
+(Vekka se resolvió con el fix #4 de arriba).
+
+**Estado: `check_canon.py` en 0 críticos, `check_vault.py` 🟢.**
+
+### Nota de método — el costo por ronda no está bajando
+
+Cuatro rondas seguidas (6ª→9ª) encontraron críticos del mismo mecanismo: un fix en la fuente
+no se re-grepea hacia atrás (otros sub-beats de la misma fuente) ni hacia los lados (fichas
+que no estaban en el radar de esa ronda). Si la 10ª repite el patrón, vale la pena parar de
+parchar línea por línea y hacer una pasada de reescritura completa de las 9 escenas de
+cráter como una sola unidad coherente, en vez de seguir corrigiendo por ronda.
+
+### Pendiente inmediato
+
+**10ª re-corrida QA con 2 subagentes Opus en frío** — criterio de cierre: 0 críticos de ambos.
+
+## [2026-08-03] design/arquitectura | Sesión de diseño — se corta el ciclo de re-corridas con un fix estructural
+
+**Contexto:** 10 re-corridas de QA, cinco de ellas (6ª-10ª) con el mismo mecanismo de falla y
+sin bajar el volumen de críticos (13 → ~9 → 7 → ~10). Boris planteó que repetir el método
+esperando otro resultado no iba a funcionar, y pidió una sesión de diseño con entregable de
+plan en vez de otra ronda de parches. Tenía razón.
+
+**Diagnóstico:** la escena del cráter mezcla dos capas en un mismo texto — una **mecánica**
+(idéntica en las 9 rutas salvo parámetros) y una **dramática** (única por Pivote). La capa
+mecánica estaba copiada a mano en **13 archivos**: 9 fichas de Pivote + Roen + Valen + Darro +
+`Los 9 Pivotes`. Cada corrección de regla exigía 13 transcripciones con redacción propia. No
+era un problema de disciplina en el barrido: era un método que garantizaba divergencia y que
+además no dejaba nada verificable por el linter.
+
+**Las 4 clases de error, con evidencia de 4 rondas:** (A) parámetro divergente — mensajero del
+Council vs cadena propia, vector de aproximación, borde vs centro; (B) regla global
+re-enunciada con variación — gate de F4 con condición inventada, "unmake"=matar, reloj de
+maduración; (C) beat obligatorio faltante — soltar a Speck en F3, el mensajero apartándose en
+F4; (D) cita cruzada podrida — cuatro archivos describiendo el quiebre de Vekka como su
+epílogo F2b.
+
+**Decisiones de Boris:** (1) el gate de F4 son 2 condiciones globales y **ninguna depende del
+Pivote** — en consecuencia cada epílogo F4 se escribe en dos variantes, Pivote vivo y Pivote
+muerto; (2) fuente única en ficha nueva dedicada; (3) reescritura quirúrgica, preservando toda
+la prosa dramática ya ratificada.
+
+**Fases 1-5 ejecutadas en la misma sesión** (plan completo en
+`~/.claude/plans/plan-craterculata-fix-arquitectura-crater.md`):
+
+- **F1 —** `10-Knowledge/El Cráter — Matriz de Rutas.md`: secuencia fija de 7 pasos, tabla de
+  parámetros por ruta (cadena institucional, mensajero, quién sostiene a Speck, excepciones),
+  los 5 gates enunciados una sola vez, beats obligatorios por final, y las 7 reglas globales
+  que las fichas citan y nunca reformulan.
+- **F2 —** `Los 5 Finales` y `Geografía §ACTO 3` podados. El primero se queda con filosofía,
+  sabor, líneas canónicas y ecos Bond; el segundo, con el lugar. Los dos archivos que se
+  autocontradijeron entre secciones vecinas en las rondas 9ª y 10ª ya no enuncian mecánica.
+- **F3 —** las 9 fichas heredan (verificado: 9/9 citan la matriz, 0 residuos del gate de F4
+  inventado). Se cerraron de paso todos los críticos de la 10ª y se escribieron las 7
+  variantes de epílogo F4 "Pivote muerto".
+- **F4 —** los 3 fijos y `Los 9 Pivotes`, barridos **por primera vez en todo el sprint**. De
+  ahí había salido la clase D entera.
+- **F5 —** 6 chequeos nuevos en `check_canon.py` (18 clases en total): `crater-mensajero`,
+  `crater-borde`, `gate-f4`, `premisas`, `crater-beats`, `quiebre-fijos`. Verificados contra
+  un fixture con los errores reales de la 10ª: los cazan todos, y dan 0 falsos positivos sobre
+  el vault corregido.
+
+**Reglas de canon nuevas que salieron del trabajo:**
+- **En F4, Speck cruza el borde sola.** Nadie la carga al core central — eso la devolvería a
+  la categoría de objeto que ese final existe para negar. Es el reverso exacto de F3.
+- **Nyael y Bram no tienen variante de epílogo "Pivote muerto"**, y es intencional: al jugador
+  nunca se le presenta la oportunidad de matarlos.
+- **Los superlativos de reacción de los fijos** ("la única vez que Darro se queda mudo") tienen
+  que existir en un solo lugar del vault. Dos fichas habían reclamado el mismo para escenas
+  distintas.
+- **La variante muerta no agrega tragedia genérica** — cobra algo específico que solo ese
+  personaje podía dar. Si se resume como "y además murió", está mal escrita.
+
+**Regla de método nueva:** si un QA encuentra un crítico de una clase que el linter ya cubre,
+**el bug es del linter** — se agrega el chequeo, no se parcha la línea.
+
+**Estado: `check_canon.py` en 0 críticos (18 clases), `check_vault.py` 🟢.**
+
+### Pendiente inmediato
+
+**11ª re-corrida (Fase 6)** — con las 4 clases mecánicas cubiertas por el linter, esta ronda
+debería medir dramaturgia real por primera vez en el sprint.
+
+## [2026-08-03] sprint/QA-verificación | 11ª re-corrida — el reporte cambia de naturaleza
+
+**Primera ronda del sprint donde el QA no reporta errores de propagación.** El encargo a los
+subagentes fue distinto: se les dijo explícitamente que **no re-verificaran lo mecánico** (el
+linter ya lo cubre) y que si encontraban algo de esas clases lo marcaran como **bug del
+linter**, no como hallazgo de ficha.
+
+**Lo que validaron (y no existía antes):** `Matriz §2` y `§4` coinciden celda por celda con
+las 9 fichas — las 9 cadenas, los 9 mensajeros, las 3 excepciones, las 7 variantes de F4. La
+aritmética completa del elenco cierra (Torgan 75, Vekka 80, Darro 63, Bram 55, Dagna 100,
+Lyris 180, Roen 45). Y las zonas que el sprint **nunca había tocado** — `The Tether`, `Bond y
+el Bond Vacío`, `La Rueda`, `Nomenclatura`, `Progresión y Contrato`, `Old-Tobin-Hale` — están
+sin contradicciones. Cita textual del reporte sobre la propagación del escudo de Roen en tres
+archivos: *"cero divergencia — es el modelo de cómo debería verse el resto"*.
+
+**Lo mecánico que quedaba, cerrado en esta pasada.** Los cinco eran defectos introducidos en
+esta misma sesión:
+
+- **`Matriz §1` tenía el orden mal.** La activación del Fragmento estaba en el paso 6 (después
+  del mensajero) cuando ocurre al llegar al borde. No era cosmético: `Speck §Capa 5` dice que
+  mientras los cores pulsan Speck no se deja transportar — que es *lo que sostiene la ruta de
+  Nyael*. Con el orden mal, **F2a de Nyael era mecánicamente imposible**. Se agregó un **paso 0**
+  explícito (el pulso viene desde el descenso al Archive) que además explica por qué las 9
+  rutas terminan en el cráter y no en otro lado.
+- **`Matriz §5` omitía la regla del tirón del cráter** — justamente la que seguía transcrita a
+  mano en tres archivos. Agregada; Nyael ahora la cita en vez de re-narrarla.
+- **La fila Vekka de `Los 9 Pivotes`** agregaba mecánica, violando la nota escrita tres líneas
+  arriba en el mismo archivo.
+- **Dos huecos del linter:** `quiebre-fijos` detectaba que un fijo *describiera* el quiebre
+  pero no que lo *ubicara* mal — los 3 fijos lo tenían escenificado en el cráter cuando ocurre
+  en el corredor. Y el corolario de superlativos estaba escrito en la Matriz y nunca
+  implementado: "Darro se queda mudo, la única vez en la campaña" estaba reclamado por cuatro
+  escenas.
+
+**Dos chequeos nuevos (20 clases en total):** `quiebre-lugar` (agrupa por sección y acepta la
+sección si declara dónde ocurrió la toma) y `superlativos` (un «única vez» de un fijo vale en
+un solo lugar; acepta los que tienen eje declarado, tipo "el único **donde** X elige Y").
+Verificados: cazan los hallazgos de la 11ª y dan 0 falsos positivos sobre el vault corregido.
+
+### Pendiente — 3 críticos de homogeneización de prosa
+
+Todos de la tanda de epílogos F4 escrita en esta misma sesión, y todos de la misma causa:
+
+- **Torgan y Dagna F4-muerto son el mismo epílogo** con distintos sustantivos (papeleo ritual
+  póstumo, consejo que delibera, registro que queda sin cerrar).
+- **Torgan e Iven F4-vivo cierran con el mismo gesto** (bajar al cráter una vez al año, apoyar
+  la palma sobre el core) — y la variante muerta de Torgan se lo dio también a Darro, así que
+  el beat está triplicado. Es un buen beat; es **uno solo**.
+- **5 de las 7 variantes F4-muerta usan el mismo molde:** *saber único que se pierde +
+  institución que archiva la versión equivocada + jugador como custodio impotente*. Cuatro
+  cierran con la misma frase estructural.
+
+**Lección de método, para el vault:** escribir N variantes en secuencia contra la misma regla
+**las homogeneiza**, aunque cada una cumpla la regla por separado. La regla de la Matriz ("la
+muerte cobra algo específico que solo ese personaje podía dar") se cumplió una por una y el
+conjunto igual falló, porque *lo específico terminó siendo idéntico*. La des-homogeneización
+tiene que hacerse **comparando las variantes entre sí**, en una sola pasada — de a una vuelven
+a converger.
+
+### Pendiente — 2 decisiones de diseño para Boris
+
+1. **El sabor de F4.** `Los 5 Finales` lo declara *agridulce, no triunfal*, pero hoy nueve
+   personajes alcanzan su mejor versión y **solo Darro paga el agridulce** (con una nota de
+   escritura que se lo ordena). Roen tiene una línea sin duelo. Es un problema de escala, no
+   de tres fichas.
+2. **Los grados de agencia de Speck.** De los 4 de `§Capa 4`, solo *responde* (F4) y
+   *arrebatada* (F2b) están dramatizados. *Acepta* (F1) se paga en un solo lugar del vault
+   (Darro F1) y *cedida* (F2a/F3) no tiene interioridad en ninguna parte: en los 12 epílogos
+   F3, Speck es un objeto sin punto de vista.
+
+## [2026-08-03] design/narrativa | Pasada de des-homogeneización — los 3 críticos de prosa de la 11ª
+
+**Hecha en una sola pasada comparativa, no de a una ficha.** Ese fue el punto: los 3 críticos
+venían de haber escrito 7 variantes de epílogo F4 en secuencia contra la misma regla, y
+corregirlas por separado las habría vuelto a hacer converger.
+
+**Método:** primero se asignó **un eje de pérdida distinto a cada una de las 7**, con la tabla
+completa a la vista; recién después se reescribió. Tres se conservaron por orgánicas (Vekka —
+el cuaderno; Sereth — la refutación; Torgan — el juramento sin enmendar) y cuatro cambiaron
+de eje:
+
+- **Maren → la redundancia.** Antes: "sus cálculos sobreviven y nadie recuerda de quién era la
+  letra". Ahora: Rivermeet se reconstruye **sin ella y sin su modelo**, mal y lento, y funciona
+  igual. Maren construyó su ética entera sobre *si yo no calculo, la gente muere* — y era lo
+  que le permitía entregar a Speck sin romperse. La corrección de su tesis existe y **ella
+  nunca la recibe**.
+- **Iven → muere creyendo que falló.** Es el único de los nueve que traicionó por un resultado
+  **medible** (doscientas personas, unos pozos). Todos los demás pueden morir sin saber si
+  tenían razón; lo suyo se podía verificar. Y se muere entre saber que lo estafaron y saber
+  que el asentamiento se salva igual. Consiguió exactamente lo que quería comprar y nunca lo
+  supo.
+- **Lyris → el timing.** No es lo que se pierde con ella, es **cuándo**. Noventa años en el
+  margen, y el mundo nuevo de F4 es el primero que tiene lugar para alguien que lee corrientes
+  y no pertenece a ningún reino. Muere el día anterior a eso.
+- **Dagna → Roen.** Se sacó el pergamino póstumo entero (colisionaba con Torgan). Su epílogo
+  ahora es relacional: los dos hicieron la misma pregunta con la vida, **el mundo le dio la
+  razón a Roen por accidente**, y él carga esa respuesta levantando otra vez el escudo que
+  dejó caer en el cráter y no soltándolo nunca más.
+
+**El gesto de la palma sobre el core** estaba en tres lugares (Torgan F4-vivo, Iven F4-vivo,
+Darro en Torgan F4-muerto). Queda solo en **Torgan**, que tiene la raíz establecida — el mismo
+gesto que le hizo a la piedra del Archive. Iven recibe uno propio y agrícola: lleva **un
+cántaro de agua del pozo que volvió** y la vuelca al borde del core. Darro, en la variante
+muerta de Torgan, hace algo que solo él puede hacer: **se agrega al propio tatuaje incompleto
+la línea que le habrían puesto a Torgan** si hubiera llegado vivo al consejo. Ningún tatuador
+enano debería habérselo grabado; encuentra uno que sí.
+
+**MEDIUM de prosa compartida, también cerrados:** Maren y Sereth ya no comparten la frase de
+F2a ("los ojos midiendo") ni el remate de F3 — ahora se diferencian por lo que hacen con la
+caída del tirano (Maren anota el reloj y no lo toca; Sereth interviene). Maren y Vekka ya no
+comparten el párrafo molde de F2b. Lyris y Nyael ya no comparten "el silencio que habría
+diseñado": ahora la ficha de Lyris **usa el contraste explícitamente** — Nyael desaparece
+porque la ausencia es su método, Lyris porque nunca aprendió a estar presente.
+
+**Registrado en la Matriz §4:** la tabla de los 7 ejes (para que la próxima tanda arranque con
+los ejes repartidos) y la lección de método como advertencia obligatoria antes de escribir
+variantes en tanda.
+
+**Estado: `check_canon.py` en 0 críticos (20 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+**2 decisiones de diseño para Boris**, ambas de la 11ª y ninguna resoluble sin él: el sabor de
+F4 (hoy se lee como final feliz — solo Darro paga el agridulce declarado) y los grados de
+agencia de Speck (*cedida* no tiene interioridad en ninguna parte del vault). Después de eso,
+**12ª re-corrida**.
+
+## [2026-08-03] design/narrativa | Sabor de F4 — beat de duelo obligatorio en las 9 rutas + fijos
+
+**Decisión de Boris:** "Beat de duelo obligatorio en las 9 (Recomendado)" — de las 3 opciones
+planteadas (solo los 3 fijos cargan el peso / excluir a Bram / obligatorio en las 9), se eligió
+que **todo epílogo F4-vivo** lleve un beat de duelo específico, no genérico, escrito **en una
+sola pasada comparativa** para no repetir el error de homogeneización de la ronda anterior.
+
+**Diagnóstico:** de 9 rutas + Roen (fijo), solo Darro y Valen tenían el costo agridulce
+declarado en [[Los 5 Finales]] §F4 realmente dramatizado. Los otros 8 cerraban en triunfo puro
+— Speck cruza, el mundo sana, nadie paga nada personal.
+
+**Método:** mismo que los 7 ejes de F4-muerta — tabla de ejes asignada *antes* de escribir,
+para que cada uno sea mecánicamente distinto de los demás. Los 9 (+Roen):
+
+| Personaje | Eje |
+|---|---|
+| Roen | lo dice en voz alta — distingue actuar bien de salir ileso |
+| Torgan | el cuerpo recuerda cargarla; el hábito no se rompe |
+| Iven | se excluye a sí mismo de la historia que cuenta |
+| Dagna | no puede volver al cráter transformado |
+| Vekka | deja una pieza sin cerrar — rompe su propia regla |
+| Lyris | vuela sola sobre el cráter, no lo cuenta |
+| Nyael | escribe una nota que no tiene a quién entregar |
+| Bram | casi talla un nombre en la pulsera y no lo hace |
+| Maren | deja de usar una variable sin decírselo a nadie |
+| Sereth | intenta escribir la pregunta que le falta y tacha la mitad |
+
+**Roen** recibe además una reescritura completa de su sección F4 (antes era una sola línea de
+"ve el futuro"): ahora es quien, esa misma noche y a solas con el jugador, dice la parte que
+no iba a decir — *"You did it right. That doesn't mean you get to keep her."* Es la única vez
+en el juego donde distingue haber actuado bien de haber salido ileso.
+
+**Maren y Sereth** ya tenían cobertura parcial de una ronda anterior (recalibración
+profesional); se reforzó con el eje específico de arriba para que el duelo sea por la persona,
+no solo por el método.
+
+**Registrado en la Matriz** (`El Cráter — Matriz de Rutas.md` §4, nueva sub-sección "La
+variante viva — beat de duelo obligatorio") como regla + tabla de los 9 ejes, con la misma
+advertencia de método que la tabla de F4-muerta.
+
+**Estado: `check_canon.py` en 0 críticos / 0 medium (20 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+**1 decisión de diseño para Boris**: los grados de agencia de Speck (*cedida* no tiene
+interioridad en ninguna parte del vault). Después de eso, **12ª re-corrida** (criterio de
+cierre del sprint: 0 críticos de 2 subagentes Opus en frío).
+
+## [2026-08-03] checkpoint | Cierre de sesión
+
+`Current-State.md` reordenado: la decisión de agencia de Speck queda como primer ítem de
+"Inmediato" para arrancar la próxima sesión directo ahí, seguida de la 12ª re-corrida y recién
+después la pregunta de bonds de fijos. Se corrigió además una referencia stale a "7ª
+re-corrida" en `## Estado general` que había quedado de antes del fix de arquitectura —
+apunta ahora a la 12ª.
+
+**Estado al cierre:** `check_canon.py` 0 críticos / 0 medium (20 clases). `check_vault.py`
+🟢, arranque de sesión ~3,670 tokens. Working tree limpio tras commit + push.
+
+## [2026-08-04] design/narrativa | Agencia de Speck — "cedida" recibe un beat mínimo
+
+**Decisión de Boris:** "beat mínimo de conciencia sin agencia (Recomendado)" — de las 3
+opciones planteadas (dejarlo intencionalmente vacío / interioridad solo en el epílogo / un
+beat mínimo escrito una vez y citado), se eligió la última.
+
+**Diagnóstico:** `Speck.md §Capa 4` declara 4 grados de agencia (F4 consentimiento, F1
+aceptación, F2a/F3 cedida, F2b arrebatada), pero de los 7 epílogos F3 que la tienen en escena
+bajo el régimen del tirano (Maren, Sereth, Torgan, Dagna, Iven, Nyael, Lyris), ninguno le da
+una sola línea de punto de vista. Revisión más fina: solo **Maren y Sereth** conviven con ella
+durante años (son las únicas dos que se quedan sirviendo al tirano); Torgan/Dagna/Iven/Vekka
+mueren confrontando al jugador en el mismo instante del cruce, Nyael/Lyris se retiran antes de
+que empiece el régimen, y Bram nunca llega a verla encadenada. El vacío de interioridad
+afectaba en la práctica solo a las dos fichas que realmente la tienen presente en el tiempo.
+
+**El beat:** Speck sostiene la mirada de quien la retiene, sin apartarla — ni desafío ni
+súplica, la misma atención inmóvil de un animal no domesticado ante lo que no controla.
+Confirma que hay alguien adentro sin cruzar a voluntad ni consentimiento: no es una pregunta
+que ella responde (exclusivo de F4) ni una resistencia que ella opone (eso la mataría, `Speck
+§Capa 5`).
+
+**Fuente única:** `Speck.md §Capa 4`, en la bala de "cedida". `Los 5 Finales §F3` cita el beat
+sin reescribirlo (regla de fuente única). Maren y Sereth reciben una línea cada una,
+diferenciada por cómo cada quien *no* la lee: Maren, que fuerza todo a una variable, es la
+única cosa de su modelo que nunca logra leer; Sereth, que lee intenciones hace 200 años,
+decide no leerla porque hacerlo sería tratarla como un dato más.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (20 clases), `check_vault.py` 🟢.**
+
+**Cierra la última de las 4 decisiones de diseño abiertas de la 11ª ronda** (gate F4,
+homogeneización F4-muerta, sabor de F4, agencia de Speck — las 4 resueltas). Solo queda la
+**12ª re-corrida** para cerrar formalmente el sprint.
+
+## [2026-08-04] sprint/QA | 12ª re-corrida — 6 críticos encontrados y cerrados
+
+**2 subagentes Opus en frío** (QA-Dramática, QA-Congruencia), sin contexto de los fixes
+previos, sobre el vault completo. Resultado combinado: **6 críticos únicos** (con
+solapamiento entre los dos reportes), ~15 medios, ~13 menores. El sprint no cerró en esta
+pasada — se resolvieron los 6 críticos y una porción sustancial de los medios en la misma
+sesión.
+
+**Los 6 críticos y su fix:**
+
+1. **"Darro se queda mudo" reclamado por 4 escenas** (cráter de Vekka, traición de Dagna,
+   Darro+Roen sentados, The Reckoning) — el corolario de superlativos de `Matriz:249` estaba
+   escrito pero el chequeo del linter no cubría las variantes de frase ("única traición",
+   "no tiene broma lista"). **Fix de contenido:** Vekka conserva el "se queda mudo" literal
+   (el más cargado, ligado a su propio pasado); Dagna pasa a "no le sale ningún chiste"
+   (pierde el registro, no la voz); The Reckoning pasa a "titubea un segundo". **Fix de
+   linter:** `RE_SUPERLATIVO` extendido con "la única traición", "el único de los nueve",
+   "la única que" — 21 clases en total.
+2. **Lyris sin beat obligatorio en F1 y F2b** — única de los 45 epílogos así. F1: ahora se
+   queda sosteniendo a Speck (no la suelta sola). F2b: gate agregado, el jugador se la
+   arranca en el aire.
+3. **Los 10 epílogos F4-vivo homogeneizados en FORMA** (9/10 "secreto que no comparte con
+   nadie", 3 con "peregrinaje anual al cráter" literal) — pese a que el contenido de cada
+   eje ya era distinto. **Segunda lección de método registrada en `Matriz §4`:** contenido
+   distinto con forma idéntica sigue siendo homogeneización. Fix: eliminado el peregrinaje
+   duplicado de Torgan (quedó solo en Iven); Lyris y Maren pasan a visibilidad parcial (el
+   jugador/un tercero nota algo sin que se explique) en vez de secreto total.
+4. **Iven F2b le sacaba la agencia al jugador** ("se murió antes de que nadie decidiera
+   nada") — reescrito: el jugador se la arranca activamente, Iven lo ve de cerca.
+5. **Ruta Nyael reinventaba la física del Fragmento** (el equipo forcejea junto al core y
+   Speck sobrevive, con un "se corta el hive mind al dejar de forcejear" inexistente en
+   ninguna otra parte). **Fix en la fuente:** nota de excepción nueva en `Matriz §2`
+   explicando cómo se satisface el beat de F2a cuando holder = agente (el equipo simplemente
+   espera, como cualquier mensajero retenido — no forcejea, no hay mecánica nueva). La ficha
+   de Nyael se reescribió para citarla.
+6. **"Solo Dagna rompe a Roen" contradicho dentro del mismo archivo que lo canoniza** —
+   residuo de propagación, no decisión nueva: `Dagna-Ficha` corrige explícitamente el
+   hallazgo ("es Dagna, no Lyris") y 300 líneas después lo reintroduce. Restaurado en las 3
+   menciones (`Dagna-Ficha`, `Roen-Ficha` ×2) a "Sereth y Lyris doblan, Dagna rompe".
+
+**Una decisión de diseño real, no residuo, consultada a Boris vía AskUserQuestion:** Iven
+declara "soy el único de los 9 Pivotes que llora en escena", pero Dagna tenía un sub-beat
+titulado "la única que llora" con múltiples menciones, y Geografía le daba a Bram una línea
+de "llora aquí, única vez". **Decisión de Boris:** Iven conserva la exclusividad; Dagna pasa
+a "se le quiebra la voz, una lágrima suelta" (no llanto); Bram pierde el "única vez". Barrido
+completo de la clase en `Dagna-Ficha` (×4), `Los 9 Pivotes`, `Slice of Bond`, `Geografía`,
+residuo cruzado en `Iven-Ficha:724`.
+
+**Medios cerrados en la misma pasada (no exhaustivo, ver commit):** rango "§1, pasos 1-7"
+corregido a "1-6" en 7 fichas + la plantilla de la Matriz (el rango real es paso 0 + pasos
+1-6); puntero circular entre `Speck.md` y `Los 5 Finales.md` sobre el beat de "cedida"
+resuelto (fuente única real: `Speck.md`); eco Bond de F3 aclarado (la traición corta el Bond
+aunque la persona se quede sirviendo); línea canónica de Sereth restaurada a inglés (única de
+las 9 que estaba en español, con nota de traducción pendiente para la escena completa); edad
+de Bram en línea privada corregida (60→55); Geografía de "Bram's Last Stand" reescrita
+(desgaste administrativo, no masacre puntual — contradecía la biografía de la ficha); Dagna
+F2b/F3 con lenguaje mecánico corregido (mensajero no puede ser holder; "eso la mataría", no
+"eso mataría al Fragmento"); 8 epílogos sin cita de gate ahora la tienen (Iven F2a/F3, Sereth
+F3, Torgan F3, Nyael F2a/F2b); Vekka's doble "única grieta" escalado (persecución = menor,
+cráter = la grande); M3 Roen/Valen (ambos "explicaban lo mismo" en F4) resuelto acotando la
+exclusividad de Roen a "él mismo lo distingue", no "es el único que se lo dicen al jugador".
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Quedan menores sin cerrar (ubicación de la negociación de Maren en Geografía vs su ficha,
+Sereth "calculista" vs su propio contraste declarado, cruce de fechas Maren×Roen contra la
+cadencia de Regents, aritmética interna de Nyael, fuerza mecánica de Nyael sobre Speck en el
+corredor) — no bloquean el cierre del sprint. **13ª re-corrida** pendiente de lanzar.
+
+## [2026-08-04] sprint/QA | 13ª re-corrida — 4 críticos únicos, todos de residuo
+
+**2 subagentes Opus en frío**, sin contexto de los fixes de la 12ª. Resultado combinado
+(con solapamiento): **4 críticos únicos**, ~10 medios, ~11 menores. Ninguno fue una decisión
+de canon nueva — los 4 eran **residuo**: la 12ª ronda arregló la línea reportada y no barrió
+la clase completa, o un fix de la 12ª introdujo un bug nuevo sin querer.
+
+**Los 4 críticos y su fix:**
+
+1. **"Darro se queda mudo" seguía colisionando** — la 12ª ronda arbitró el desempate en
+   `Dagna:439` (Vekka conserva el literal, Dagna pasa a "no le sale ningún chiste") pero no
+   tocó las 3 menciones que seguían reclamando el superlativo para la escena de Dagna+Roen:
+   `Darro-Ficha:402`, `Valen-Ficha:391`, `Dagna-Ficha:441`. Las tres reescritas a "elige el
+   silencio pudiendo hablar" — ya no compiten por la mudez, que queda solo en Vekka.
+2. **Bug nuevo introducido en el fix de Lyris F1 (12ª ronda):** al escribir "se queda
+   sosteniendo a Speck" se agregó sin querer "y él se la quita de los brazos" — es
+   literalmente el gate de F2b (arrancarla cerca de un core activo) escrito dentro de F1.
+   Corregido: la Muda se completa en sus brazos, nadie se la quita.
+3. **Cadena institucional de Iven contradicha en `Estructura Política.md:305`** ("sin cadena
+   intermedia") contra la fuente única de `Matriz §2` (Triune Council → Trade Consortium →
+   agente sin nombre → Iven). Reescrita la tabla completa de cadenas enanas y de Iven en
+   `Estructura Política` para coincidir con la Matriz, incluyendo los subclanes de Torgan y
+   Dagna que también faltaban ahí.
+4. *(Ya cerrado por un fix hecho al inicio de esta misma sesión, antes de que terminaran los
+   subagentes — QA-Congruencia lo confirmó de forma independiente sin saberlo.)*
+
+**Medios cerrados en la misma pasada:** tabla de duelo F4-vivo de la Matriz corregida para
+incluir a Darro y Valen (antes solo tenía a Roen entre los fijos, con conteos "9" y "10"
+inconsistentes); `00-Index.md` seguía diciendo "7 pasos" después de que la 12ª normalizara a
+1-6; `Los 5 Finales §F2a` describía a Nyael "entregando" a Speck cuando su ficha dice
+explícitamente que es el equipo, no ella; `Slice of Bond` tenía a Dagna llevándose "el
+Fragmento" en vez de a Speck; contradicción interna en el epílogo F4 de Bram (la pulsera "es
+para los que perdió" invalidaba el propio beat de agregar el nombre del jugador, que no está
+perdido); superlativo de Darro ("única vez que completa algo") alojado en la ficha de Torgan
+sin contraparte en la ficha de Darro; residuo de staging en `Darro-Ficha:228` ("no puede
+perseguir porque Speck ya se fue" cuando la Matriz dice que llega al borde en brazos del
+Pivote, no ausente).
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Menores sin cerrar de rondas anteriores más los nuevos de esta (aritmética de Vekka 50 vs 60
+años, "estuvo a un forcejeo de conseguirlo" en Iven, longevidad de los tres muertos que se
+leen como continuidad inmediata, frase rota en Vekka:326). No bloquean. **14ª re-corrida**
+pendiente de lanzar para confirmar el cierre.
+
+## [2026-08-04] sprint/QA | 14ª re-corrida — 10 críticos únicos, patrón nuevo identificado
+
+**2 subagentes Opus en frío.** Resultado combinado: **QA-Dramática 6 críticos**, **QA-Congruencia
+4 críticos** (sin solapamiento esta vez — son clases distintas), más ~12 medios entre ambos.
+**Diagnóstico de patrón, explícito en el propio reporte de QA-Dramática:** de los 6 críticos
+dramáticos, 4 eran el mismo bug estructural — **superlativos de exclusividad copiados en 3
+archivos distintos** (bloques "Superlativo Consolidado" idénticos en `Dagna-Ficha`, `Iven-Ficha`
+y `Torgan-Ficha`), que las secciones "Esencia" de **Vekka** y **Nyael** podían contradecir sin
+que ningún archivo lo notara — porque ninguno de los dos citaba la tabla, cada uno tenía su
+propia frase.
+
+**Fix estructural (no solo de línea):** se creó **`Los 9 Pivotes.md` §Superlativo Consolidado**
+como fuente única de los 9 ejes de traición. Las 3 copias en Dagna/Iven/Torgan se reemplazaron
+por una cita de una línea. Vekka ("la más fría" → "la más precisa") y Nyael ("la más peligrosa"
+→ sin reclamo, cede a Maren) se alinearon con la tabla ya establecida en vez de competir con
+ella. Mismo patrón que resolvió la Matriz del cráter en la 11ª ronda, aplicado ahora a un
+segundo tipo de dato triplicado.
+
+**Los otros críticos de QA-Dramática:** colisión residual "quién llora" (Dagna:243/261 seguían
+narrando llanto sostenido pese al desempate de la 12ª — corregido a coherente con "una
+lágrima"); "quién camina en vez de correr" (Dagna vs Vekka, diferenciado por motivo: Dagna para
+ser alcanzada, Vekka por eficiencia); "único quiebre de fijo en el cráter" (Dagna:269 vs la
+escena de Vekka/Darro, reformulado sin exclusividad); "cadena más corta" de Iven (factualmente
+falsa contra `Matriz §2` — Maren/Vekka/Bram son más cortas; corregido a "la que menos rastro
+deja").
+
+**Los 4 críticos de QA-Congruencia — todos residuo del propio fix de cadenas institucionales de
+la 13ª ronda:** al reescribir `Estructura Política.md` se insertó **King Borran** en las
+cadenas de Vekka, Torgan y Dagna de forma pareja, cuando el canon real no es uniforme (Vekka no
+pasa por Kadrun ni Borran; Torgan y Dagna sí pasan por Kadrun pero nunca por Borran). Reescritas
+las 3 líneas contra `Matriz §2` exacta. `Torgan-Ficha:38` tenía además una "nota de cadena" que
+citaba **verbatim** la versión vieja de `Estructura Política` para reconciliar una contradicción
+que ya no existía — eliminada. Y `Roen-Ficha:199` / `Darro-Ficha:220` describían al Pivote
+"llevándose el Fragmento" en el cráter — beat pre-Matriz (de cuando la traición ocurría ahí) que
+sobrevivió en los dos fijos con prohibición de narrar mecánica; corregido a que Speck simplemente
+reacciona, sin narrar qué pasa con el Fragmento.
+
+**Medios cerrados:** tabla de duelo F4-vivo de la Matriz ajustada para Darro (colapsa en público,
+no "a solas" — la ficha manda) y Roen (acotado a "él mismo lo distingue", no "el único que se lo
+dice al jugador"); doble beat de duelo de Iven en F4-vivo (se quitó el peregrinaje repetido,
+dejando solo la exclusión narrativa); Sereth F3 "de los pocos que se queda" → "el único"; segundo
+beat de interioridad de "cedida" en el eco Bond de F2a (Los 5 Finales:68) reformulado a señal
+mecánica, no respuesta con voluntad; superlativo de "traición más honesta" (Roen:282, de Sereth)
+realineado a "la más íntima"; "tercer/cuarto track" de Frontier High Command unificado a tercero,
+consistente con "las dos Academias"; rango "pasos 3-6" del equipo de extracción de Nyael
+corregido a "3-5" (el paso 6 es del jugador); "única vez que no deja nota" de Nyael en Los 5
+Finales alineado a "no escribe"; edad de Dagna corregida de 100 a 105 (la aritmética de la propia
+ficha suma 40+60+5); diálogo Sereth/Roen sobre dejar la Royal Academy re-anclado como epílogo de
+F1, no como algo que ya pasó durante la campaña activa.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Queda sin resolver un hueco de canon genuino (no un dato roto): en la ruta Iven, quien mueve el
+dinero de la promesa falsa es el Trade Consortium — que Maren dirige como Jefa de Ops — y ningún
+archivo aborda ni excluye esa intersección bajo el canon de "los 9 existen simultáneamente".
+No bloquea el cierre. Quedan menores de rondas anteriores + nuevos de esta sin cerrar.
+**15ª re-corrida** pendiente de lanzar.
+
+## [2026-08-04] design/worldbuilding | Bestiario, Flora, Villanos Menores — hueco de mundo abierto cerrado
+
+**Diagnóstico de Boris:** el vault tenía worldbuilding narrativo completo (9 Pivotes, fijos,
+Speck, geografía, política) pero **cero** contenido de mundo abierto: sin bestiario, sin flora
+sistemática, sin ecosistemas por región, sin villanos menores, y los 5 dungeons ya bocetados en
+`Geografía y Ciudades` no tenían bosses propios. Auditoría confirmó: 4 bosses ya nombrados sin
+ficha (Crowned Leviathan, Burning Shepherd, Mirror Stalker, Aether Wyrm — cada uno con una sola
+línea), fauna genérica dispersa sin sistematizar, flora solo ambiental ("musgo", "enredaderas"),
+y 0 facciones antagonistas de mundo abierto.
+
+**Decisiones de Boris antes de escribir:**
+1. **Sin jefe final de mundo abierto** — el antagonismo real es institucional y personal (los
+   Pivotes), no un villano de mapa. No se fuerza uno.
+2. **Villanos menores: ambas capas** — facciones de las 3 razas existentes + 2-3 razas
+   fantásticas nuevas, máximo.
+3. **Jacarandá** (árbol favorito de Boris) plantado en Rivermeet, avenidas/plazas de la capital
+   humana.
+4. **Dungeons: solo formalizar los 5 ya bocetados** (Echoing Archive, Hollow Deep, Submerged
+   Halls, Shattered Cascade, God's Throne), sin agregar dungeons nuevos — evita inflar más el
+   alcance ya señalado como riesgo mayor del proyecto.
+
+**3 archivos nuevos:**
+
+- **[[Bestiario]]** — eje de salud del Aether (Sano → Ambiental → Corrupto → Aberración)
+  aplicado a toda la fauna. Los 4 bosses ya nombrados reciben ficha completa (viven en landmarks,
+  grado Aberración). 3 bosses nuevos completan los dungeons formales: **The Hollow Warden**
+  (Hollow Deep, caza por eco), **The Drowned Choir** (Submerged Halls, 3-5 unidades coordinadas),
+  **The Cascade Warden** (Shattered Cascade, alfa territorial no corrupto — la excepción). God's
+  Throne queda deliberadamente sin boss nombrado: no debe competir con el peso de The First
+  Wound, mismo principio de fuente única que protege los superlativos de personaje.
+- **[[Flora y Ecosistemas]]** — mismo eje aplicado a plantas. **El Jacarandá de Rivermeet**:
+  crece en la avenida principal, florece en púrpura una vez al año, plantado por alguien que
+  nadie recuerda en una ciudad que no tiene tiempo para jardines — contraste deliberado con el
+  pragmatismo de Rivermeet. Explícitamente **sin** grado de corrupción: no todo tiene que
+  significar algo sobre Speck. Sistematiza también la Hoja de Maelys ya existente (ficha de
+  Dagna, fuente única, no reescrita) y agrega 2 especies menores (Sauce de Vidrio, Musgo de Eco).
+- **[[Villanos Menores]]** — Capa 1 (facciones de las 3 razas, ancladas a política ya escrita):
+  **Compañías Impagas** (mercenarios humanos sin contrato — el destino que Bram esquivó),
+  **Los Sin Nombre** (enanos expulsados de clan — la sombra de Torgan/Dagna), **Los No
+  Licenciados** (elfos rechazados por ambas Academias, contrabando de Aether — eco distorsionado
+  de Sereth). Capa 2 (2 razas nuevas, **no sapientes**, nacidas de la corrupción — no rompen
+  [[Las Tres Razas]]): **Los Vaciados** (ex-personas mutadas por exposición a Aether corrupto,
+  espejo oscuro de Speck — ella reacciona distinto frente a uno, sin diálogo que lo explique) y
+  **Las Motas** (enjambre pequeño nacido de Aether cristalizado, alivio cómico, roban objetos
+  brillantes).
+
+**Propagación:** 2 líneas de reacción agregadas a fichas existentes (Bram ante las Compañías
+Impagas, Torgan ante los Sin Nombre — *"Pude haber sido yo. Casi lo fui, dos veces."*); los 3
+bosses nuevos asignados en `Geografía y Ciudades` (Hollow Deep, Submerged Halls, Shattered
+Cascade); Mirror Stalker referenciado en Echoing Archive. `00-Index.md` actualizado con los 3
+archivos nuevos.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Mistbound Frontier sigue sin flora/fauna propia (anotado en `Flora y Ecosistemas`, no bloquea).
+**Esta pasada entra al loop de QA mañana** (decisión de Boris) — no se lanzó ronda de re-corrida
+hoy para este contenido nuevo.
+
+## [2026-08-04] concept-art | Briefs de Bestiario para NB2 (9 prompts)
+
+Boris pidió briefs de concept art sobre el bestiario recién diseñado, para correr en NB2 durante
+la tarde. Agregada `Briefs de Concept Art.md` §13, siguiendo el formato ya establecido del
+documento (bloque de estilo compartido, negativos estándar, nota de eje de corrupción por
+criatura).
+
+**9 prompts:**
+- **Los 4 bosses ya nombrados** (nunca habían tenido brief, solo una línea en Geografía): Crowned
+  Leviathan (superviviente sana, no mutada), Burning Shepherd (guardián corrupto de fuego/sombra),
+  Mirror Stalker (aberración pura que imita movimiento), Aether Wyrm (aberración semi-corpórea,
+  la más pura de las 4).
+- **Los 3 bosses nuevos de dungeon**: Hollow Warden (cueva, caza por eco, brillo jade mineral —
+  aclarado en el brief que no tiene relación real con el Bond), Drowned Choir (unidad coordinada
+  de 3-5, brief describe una sola unidad para repetir en implementación), Cascade Warden (la
+  excepción no corrompida del batch — vieja y territorial, no mutada).
+- **Los Vaciados y Las Motas** (Villanos Menores §Capa 2): nota narrativa explícita en el brief
+  de los Vaciados para que el artista no los diseñe como monstruo de fantasía genérico —
+  cicatrices de una anatomía que fue persona, no colmillos/cuernos inventados. Las Motas con tono
+  deliberadamente liviano (alivio cómico, no horror).
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Los 9 briefs están listos para correr en NB2 pero **no generados todavía** — ninguno tiene
+archivo en `90-Raw/concept/` ni ratificación de Boris. Sigue pendiente meter la pasada completa
+de bestiario/flora/villanos/briefs al loop de QA (mañana).
+
+## [2026-08-04] concept-art | Evaluación de los 9 renders — 7/9 ratificados
+
+Boris corrió los 9 briefs de §13 en NB2 durante la tarde. Evaluación contra cada brief + la
+regla estándar de "no text/labels/captions" (§10 de `Briefs de Concept Art.md`):
+
+**RATIFICADOS y copiados a `90-Raw/concept/`:**
+- `burning-shepherd-v1.png` — fuego contenido/sombra sin borde/vetas rojas, PASS sin reservas.
+- `hollow-warden-v1.png` — sin ojos, bigotes, vetas jade, match casi exacto.
+- `drowned-choir-v1.png` — cámara resonante y aletas violeta correctas; ojos más agresivos de
+  lo pedido ("milky, small") pero funcional para un boss de dungeon.
+- `cascade-warden-v1.png` — rapaz vieja sin corrupción, exactamente la excepción del batch.
+- `the-hollowed-v1.png` — el mejor resultado de los 9: tragedia física exacta, sin cliché de
+  orco (sin colmillos, sin piel verde).
+- `the-chaff-v1.png` — tono liviano logrado, sin deriva a mascota.
+
+**ARCHIVADOS pero pendientes de re-roll (el diseño sirve, la lámina no):**
+- `crowned-leviathan-v1.png` — corona de espinas y vetas teal correctas, pero trae texto y
+  etiquetas incrustadas ("FRONT VIEW", título, párrafo) — rompe la regla estándar §10.
+- `aether-wyrm-v1.png` — atmósfera correcta, pero (1) etiquetas "FRONT VIEW"/"SIDE VIEW"
+  incrustadas y (2) mandíbula de dragón visible, cuando el brief pedía explícitamente
+  *"no true head shape... no visible mouth"*.
+
+**RECHAZADO, no entra al vault:**
+- **Mirror Stalker** — se leyó como gólem de piedra genérico, con rostro tallado y textura
+  mineral en vez de superficie de espejo/vidrio reflectante. El concepto central del boss
+  ("copia tus movimientos") no se transmite visualmente. Pendiente de re-roll real (no solo de
+  texto) en la próxima corrida — reforzar en el prompt la superficie de vidrio explícita y la
+  ausencia total de rasgos faciales tallados.
+
+Evaluaciones completas anotadas en `Briefs de Concept Art.md` §13.1-13.9 (formato
+`**Archivo:**`/`**Evaluación:**` ya establecido en el documento) y cross-referenciadas en
+`Bestiario.md` y `Villanos Menores.md` en la entrada de cada criatura.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (21 clases), `check_vault.py` 🟢.**
+
+## [2026-08-04] sprint/QA | 15ª re-corrida — 10 críticos únicos, mejora estructural al linter
+
+**2 subagentes Opus en frío.** QA-Dramática: 4 críticos, 8 medios, 9 menores. QA-Congruencia:
+6 críticos, 9 medios, 8 menores. Con solapamiento (Sereth F1/F2b lo reportaron los dos), **10
+críticos únicos**. Todos cerrados en la fuente esta sesión.
+
+**Críticos, todos residuo de fixes previos a medias o del contenido nuevo del 04:**
+
+1. **Sereth F1 vs §Dinámicas** — el diálogo Roen+Sereth sobre "dejar la Royal Academy" citaba
+   una frase que en realidad vive en §F2b (`:338`), y §F1 declara explícitamente que no hay
+   Academy de la que renunciar. Referencia corregida a F2b, donde la institución sí sigue
+   existiendo.
+2. **Funeral mudo Lyris/Torgan** — Lyris reclamaba "el único funeral del elenco donde no se
+   dice una palabra", colisionando con el funeral silencioso de Torgan (ámbito distinto: clan
+   menor, no elenco). Quitada la exclusividad de elenco de Lyris.
+3. **Lyris "incapaz de sentir"** — el header y las Notas Narrativas ya decían "capaz de sentir,
+   convencida de que sentir es debilidad"; el cuerpo de §Esencia seguía diciendo "incapaz de
+   sentir" sin matiz, como causa de la traición. Reescrito para coincidir.
+4. **"Torgan el único que espera de frente"** — colisionaba con Dagna e Iven, que también
+   esperan de frente en su propia ruta. Quitada la exclusividad, queda la postura sin reclamo.
+5. **Cadenas élficas invertidas en `Estructura Política`** — Sereth y Nyael se habían escrito
+   con la jerarquía al revés (terminando en un asiento del Council en vez del Pivote) en la
+   reescritura de la 13ª ronda, que corrigió el tramo enano y no el élfico. Reescritas contra
+   `Matriz §2` exacta.
+6. **"Se lleva el Fragmento" sobreviviente en `Estructura Dramática.md`** — última mención viva
+   del beat pre-Matriz (lo que se lleva el Pivote es a Speck, no un dispositivo), y agravado
+   por ser la fuente declarada de la regla de orfandad mecánica. Corregido.
+7. **Escena del escudo caído, dos tiempos incompatibles** — Darro (×2 menciones) la ataba a
+   "cuando Dagna entrega a Speck" (F2a consumado); Roen la canoniza como "antes de que el
+   jugador decida nada", ocurre en las 5 rutas de la celda. Las 2 menciones de Darro corregidas
+   para coincidir con Roen.
+8. **Bestiario: superlativo de Speck contradicho por su propia fuente citada** — decía que el
+   Burning Shepherd era "la única de las 4" con reconocimiento de Speck, pero la fuente que el
+   propio archivo cita (Geografía §I) le da ese beat a 3 de las 4. Reformulado sin exclusividad.
+9. **Ruta Lyris: mecánica aérea no declarada** — su ficha decía "sin excepciones" y a la vez la
+   narraba suspendida en el aire en vez de parada en el borde (contra `Matriz §1 paso 3`), lo
+   que además rompía el beat obligatorio de F3 (Speck no se puede recoger "del otro lado del
+   borde" si cae desde altura). **Fix estructural, no de línea:** se declaró la excepción
+   "holder aérea" en `Matriz §2` — mismo patrón que las excepciones de Nyael/Bram — explicando
+   cómo se satisface cada gate sin que Lyris deje de ser la única duelist con vuelo del elenco.
+10. **(dedup)** — mismo hallazgo que #1, reportado independientemente por los dos subagentes.
+
+**Medios cerrados en la misma pasada:** contradicción real de regla en `Los 5 Finales` (F4
+tenía una condición de "si lo perdonaste" que el propio documento prohíbe — quitada); Vekka
+con una copia completa de la tabla de superlativos en vez de una cita (alineada al patrón que
+ya seguían Dagna/Torgan/Iven/Nyael); header residual "Rechazo" en la ficha de Lyris (el canon
+vigente dice que nunca la rechazaron); beat de F3 de Torgan incompleto ("deja que caiga hacia
+donde caiga" en vez de que el jugador la recoja); colisión de nomenclatura "Warden" entre los
+bosses nuevos y la especie de Speck (nota de desambiguación agregada); Villanos Menores:
+Roen citado como canon de una cultura mercenaria que no es la suya, superlativo de Bram
+endurecido respecto a su propia ficha, los Vaciados descritos como "raza nueva" cuando son
+personas transformadas (no nacen), cita a una sección de Estructura Política que no sostiene
+lo que se le atribuía; una línea inventada sobre Torgan ("casi expulsado dos veces") que no
+tiene base en su biografía, reemplazada por una reflexión real sobre la fragilidad de su clan
+menor; **regla 9 del repo aplicada retroactivamente**: los 5 nombres de facciones/criaturas
+nuevas de Villanos Menores pasan a inglés como canon primario (The Unpaid Companies, The
+Nameless, The Unlicensed, The Hollowed, The Chaff) — coincide además con los nombres de archivo
+que ya usaba el concept art (`the-hollowed-v1.png`, `the-chaff-v1.png`), que habían quedado
+desalineados del texto en español.
+
+**Mejora estructural al linter, sugerida por el propio QA-Dramática:** `check_superlativos`
+solo vigilaba a los 3 fijos y solo detectaba colisiones del mismo personaje repitiendo su
+propio superlativo en dos archivos. 3 de los 4 críticos de QA-Dramática eran la misma clase
+aplicada a Pivotes, o colisiones **entre dos personajes distintos** reclamando la misma
+exclusividad de elenco (el caso Lyris/Torgan). Extendido: `NOMBRES_ELENCO` ahora cubre a los 9
+Pivotes además de los 3 fijos; `RE_SUPERLATIVO` gana los patrones "el único que", "del elenco",
+"único funeral", "primera vez en (la/toda la) campaña" y los superlativos de grado ("más
+fría/precisa/corta/íntima/peligrosa/honesta"); y se agregó un segundo diccionario
+(`vistos_elenco`) que detecta colisiones cross-personaje cuando el reclamo es explícitamente
+"de elenco" — antes esa clase de bug era estructuralmente invisible al chequeo, sin importar
+cuántas rondas de subagentes se gastaran en encontrarla. 22 clases en total.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium (22 clases), `check_vault.py` 🟢.**
+
+### Pendiente
+
+Quedan algunos menores sin cerrar de ambos reportes (aritmética de Nyael y Darro con huecos de
+2-años y de tramos que no cierran del todo; algunas referencias § que apuntan a secciones con
+nombre distinto al real; un residuo en un worktree de git viejo que no se tocó). No bloquean.
+**16ª re-corrida** pendiente de lanzar para confirmar si la mejora del linter bajó el volumen
+de críticos de juicio narrativo, que es la hipótesis a probar.
+
+## [2026-08-05] canon-qa | 16ª re-corrida — 9 críticos reportados, 7 falsos positivos, 2 reales cerrados
+
+**Linter primero:** `check_canon.py` 0 críticos / 0 medium antes de spawnear (22 clases). Se
+lanzaron los 2 subagentes Opus en frío de rigor (dramaturgia + congruencia semántica), sin
+contexto de rondas previas.
+
+**Resultado combinado: 9 CRITICAL, 14 MEDIUM, 9 INFO.** Verificación manual línea por línea
+contra el archivo real (no contra la cita del subagente) mostró que **7 de los 9 críticos eran
+falsos positivos** — ambos subagentes citaron contenido que ya no existe en el vault. La causa:
+`El Cráter — Matriz de Rutas.md`, creada el 2026-08-03 como fuente única de la mecánica del
+clímax (geometría borde/centro, excepción Nyael, quién se lleva el Fragmento, gate F4), no fue
+descubierta por ninguno de los dos subagentes — auditaron una versión mental del canon anterior
+a esa sesión de diseño, no el archivo real. Los 5 críticos correspondientes (geometría del
+cráter en 8 fichas, gate de la ruta Nyael, línea "inevitable" de Valen en F2b, línea duplicada
+de Roen en F2b, Fragmento llevado por el Pivote en 3 fichas de fijos) estaban **ya bien** al
+leer el archivo directamente.
+
+**2 críticos reales, corregidos en la fuente:**
+- `Valen-Ficha-Expandida-v1.md:223` — tenía invertido quién lee la inscripción Warden del
+  Sunken Archive: decía que correspondía normalmente a Sereth y que Valen la reemplazaba cuando
+  Sereth era el Pivote activo. Es al revés y además lógicamente imposible (Sereth es 1 de 9
+  rutas — si fuera el default, 8 de 9 partidas no tendrían lector). Corregido contra
+  `Geografía y Ciudades.md:1016` y `Sereth-Ficha:216`, ambas ya correctas: Valen lee por
+  defecto, Sereth solo en su propia ruta.
+- `Valen-Ficha` — la Escena 3 del Acto 2 hacía que Valen revelara "los God-Cores son Wardens"
+  como hecho confirmado, contradiciendo `El Mundo y la Muda.md:31-36` (la palabra "Warden" no
+  existe en el conocimiento público de ninguna raza; el Sunken Archive del Acto 3 es "la primera
+  fuente que confirma, sin ambigüedad, lo que hasta entonces era mito"). Reescrita la escena y
+  el bloque de backstory de hace 30 años para que sea teoría/hipótesis sin fuente de Valen, con
+  la confirmación real ocurriendo recién en el Archive — incluyendo el beat de la cifra errónea,
+  que ya vivía correctamente ahí.
+
+**+ 3 residuos MEDIUM reales, corregidos en la fuente:** "9 traiciones" → reformulado (Bram no
+traiciona, son 8) en `El Mundo y la Muda.md` y `Bond y el Bond Vacío.md`; superlativo de Sereth
+en F4 ("único final donde aprende algo") suavizado a "único final donde el aprendizaje le
+cambia el método" para no contradecir el aprendizaje que también tiene en F1/F2b; línea
+residual de Lyris ("Lyris no siente nada") en `Lyris-Ficha:227`, que no se había actualizado
+cuando el header del arquetipo se corrigió a "siente y suprime, no ausencia de sentimiento".
+
+**Otros MEDIUM/INFO del reporte quedaron sin verificar/cerrar** (beats de duelo por final,
+Goggles/Tobin sin eco en los 60 epílogos, sección de Reckoning faltante en Nyael, aritmética
+menor) — no bloquean el criterio de cierre (0 críticos) y quedan para la 17ª si Boris quiere
+tratarlos.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
+
+**Nota de método para la 17ª:** el prompt de los subagentes de QA debe apuntar explícitamente a
+`[[El Cráter — Matriz de Rutas]]` como fuente única de la mecánica del clímax — es reciente
+(2026-08-03) y ninguno de los dos subagentes de esta ronda la encontró por su cuenta, lo que
+produjo la mayoría del ruido de esta corrida. Es la primera ronda con **más falsos positivos que
+críticos reales**: vale la pena verificar cada hallazgo contra el archivo real antes de tocar
+nada, no asumir que la cita del subagente refleja el estado actual del vault.
+
+## [2026-08-05] design | Links de los 3 fijos — Second Catch, The Long Calculus, Open Seam (provisional)
+
+**Origen:** pregunta abierta de Boris en `The Bound Five.md` — los bonds no debían suceder
+solo entre jugador y Pivote; faltaba desarrollar los links propios de Roen, Darro y Valen a
+partir de su raza y rol, de forma que la profundidad de vínculo se sintiera pareja sin importar
+la celda del jugador.
+
+**Diagnóstico de partida:** Roen, Valen y Darro son fijos (misma raza y rol en las 9 celdas) y
+**ya forman su propia tríada de acoplamiento** entre ellos (Vanguard + Strategist + Duelist) —
+a diferencia del Pivote, diseñado a propósito para nunca duplicar el rol del jugador. Consecuencia
+no documentada hasta ahora: el rol del jugador **siempre** coincide con el de uno de los tres
+fijos, en las 9 celdas.
+
+**Decisiones de la sesión:**
+- **3 links, no 9.** Ir a 3 fijos × 3 roles de jugador sumaría 9 links más a los 9 del Pivote
+  (18 en total) sin necesidad — de los 3 roles posibles, 2 son variantes de la misma
+  complementariedad y solo 1 (rol duplicado) es genuinamente distinto.
+- **Sin tope de tier visible.** Se descartó un primer diseño que capaba a los fijos en T2 para
+  simular "el bond del Pivote se vuelve el más útil con los actos": un tope de sistema detectable
+  es exactamente el tipo de pista que delata quién va a traicionar antes de que la historia lo
+  diga. Reemplazado por **pacing de contenido**: el arco de cada fijo (Encuentro, Nido de Speck,
+  El Primero / La Rueda, Speck Despierta, La Verdad) ya está concentrado en Actos 1-2: en Acto 3
+  su contenido es reactivo. El Pivote, en cambio, ya sigue sumando contenido propio hasta el
+  final (The Reckoning en Acto 2, corredor y cráter en Acto 3) — la asimetría que pedía Boris
+  ya estaba en la estructura existente, no hizo falta inventar una regla nueva.
+- **Mismo presupuesto de poder, distinto tipo de poder.** Los 3 links quedan en el mismo tier
+  numérico que un link de Pivote equivalente. La diferencia no es cuánto pegan: el Pivote
+  reconfigura el verbo de combate del jugador ("su partida rompe tu forma de jugar", ya canon en
+  `The Bound Five`); los fijos son fuertes y constantes sin alterar la identidad de combate. Así
+  el balance queda parejo sin abrir una segunda pista mecánica.
+- **3 tiers con objeto/beat firma en T3**, igual que Seismic Springboard (Dagna): cada T3 ata a
+  un beat de personaje ya existente en la ficha del fijo, no es solo un power-up — Roen usa por
+  primera vez el escudo real que dejó atrás (sus 15 años de guardia del Council), Valen aprende
+  a confiar en el dato de ahora en vez del cálculo heredado (eco directo del beat de la cifra
+  errónea), Darro pega en serio por primera vez sin chiste después.
+- **Roen — dos pitches, Boris eligió el segundo.** *Borrowed Ground* (relación con el mundo:
+  agarra objetos del entorno) vs *Second Catch* (relación con personas: agarra y reposiciona
+  aliados/enemigos, más cerca de "el corazón del grupo" de su Esencia). Queda **Second Catch**.
+- **Valen — pedido específico de Boris:** un link de dos botones estilo Zenyatta (Overwatch) —
+  Discord (marca de vulnerabilidad) + Harmony (regeneración sostenida), ambos justificados como
+  cálculo, no magia. Encaja con su arquetipo ya escrito en `Matriz Raza x Rol` (Elfo Strategist =
+  "manipulador psíquico: recoloca aliados/enemigos").
+
+**Archivo nuevo:** [[Los 3 Links de los Fijos]] — fuente única, `status: provisional`. Citado
+desde `Acoplamientos.md`, `The Bound Five.md` (resuelve la pregunta abierta de Boris) y las 3
+fichas de fijos (Roen, Valen, Darro), sin re-enunciarse en ninguna.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
+
+**Pendiente:** ronda de QA de dramaturgia + balance antes de pasar a `status: ratificado`;
+nombres de iconografía UI para los 6 estados T2/T3 nuevos; links directos de Speck en su fase
+de desvelamiento previa a E3 (pregunta que ya estaba abierta en `The Bound Five`).
+
+## [2026-08-05] design | Council: resolución del botón Bond con 4 links activos
+
+**Contexto:** con los links de los 3 fijos recién diseñados ([[Los 3 Links de los Fijos]]),
+la pregunta pendiente de `Bond y el Bond Vacío` ("¿a quién mapea Bond con dos links posibles?")
+dejó de ser teórica — el botón único ahora tiene 4 candidatos posibles en pantalla a la vez,
+no 1. Se corrió un council de 5 perspectivas (Contrarian, First Principles, Expansionist,
+Outsider, Executor) con ronda de revisión cruzada anonimizada antes de decidir.
+
+**Veredicto:** la pregunta original ("¿cuál de las 3 opciones — proximidad, prioridad por rol,
+ping manual — elegimos?") estaba mal planteada. Consenso 5/5 en la revisión cruzada: la
+respuesta más fuerte fue la que rechazó el marco de arbitraje y señaló que el conflicto es
+síntoma de **encounter/level design** (dos telegraphs simultáneos igual de válidos), no un
+problema de input.
+
+**Decisiones:**
+- **Regla primaria (fuente del problema):** un encuentro no debe generar dos telegraphs de
+  link igualmente válidos y simultáneos, salvo que sea un dilema narrativo intencional.
+  Aplica a diseño de encuentros cuando exista contenido jugable — no auditable hoy, sin
+  vertical slice, detrás de ADR-003.
+- **Sistema de respaldo, solo para el residuo:** proximidad/contexto dispara el link +
+  desempate por urgencia real (ventana de telegrafía más corta, no rol memorizable) +
+  feedback visual post-hoc de la oportunidad no elegida.
+- **Descartado:** prioridad fija por rol (memorizable, frágil ante nuevos compañeros); ping/
+  marca manual (viola "un solo botón" y agrega titubeo); **"caracterización emergente"**
+  (compañeros compitiendo por el link vía IA) — la idea más atractiva del council y también
+  la más peligrosa: rompe la atribución del jugador sobre el resultado, contaminando
+  exactamente el silencio que hace funcionar el beat de traición ("aprietas Bond y no
+  responde nadie"). Blind spot identificado por 5/5 revisores independientes.
+
+**Archivo actualizado:** [[Bond y el Bond Vacío]] §Resolución de Bond con más de un link
+posible — reemplaza el pendiente (❓) anterior.
+
+**Estado: `check_canon.py` 0 críticos / 0 medium, `check_vault.py` 🟢.**
+
+## [2026-08-05] concept-art | Links de los 3 fijos -- 3/3 ratificados
+
+Primer concept art de Roen, Valen y Darro en accion (antes solo tenian el fenotipo generico
+de su raza). 3 briefs nuevos en `Briefs de Concept Art.md` SS14, escritos y corregidos de
+formato para igualar el patron de brief pre-generacion ya establecido (SS7 Dagna, SS9
+Queen Ithessa/King Borran): parrafo de referencia en prosa plana, sin etiquetas en negrita,
+terminado en "Destino:", seguido del bloque de codigo con el prompt completo.
+
+**Resultado:**
+- `roen-second-catch-v1.png` -- RATIFICADO. Cumple el brief; nota menor no bloqueante:
+  expresion lee a esfuerzo en vez de instinto calmado.
+- `valen-long-calculus-v1.png` -- RATIFICADO. Broke el brief literal (pedia los dos orbes
+  activos a la vez en una sola pose de accion; salio como ficha frente/dorso, cada vista
+  con un solo orbe). Boris ratifica igual: funciona para el proposito del concept art,
+  diferencia con claridad Discord (rojo filoso) de Harmony (dorado fluido). Si hace falta
+  la pose de accion con ambos orbes simultaneos, es un brief nuevo, no un re-roll de este.
+- `darro-open-seam-v1.png` -- RATIFICADO. Cumple el brief; nota menor no bloqueante:
+  deriva de proporcion (menos trapezoide/4.5-cabezas que el fenotipo enano), mismo patron
+  ya visto con King Borran (SS9b-v2).
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+## [2026-08-05] concept-art | Re-rolls del Bestiario escritos + limpieza de flags viejos
+
+Continuacion del pase de concept art (lista de "Concept art pendiente" en Current-State).
+Antes de escribir nada nuevo se audito el estado real contra los flags que traia la lista,
+y aparecieron dos falsos pendientes:
+
+- **Driftmarket ya estaba resuelto desde el 2026-07-27** (SS11.1, `driftmarket-keyframe-v2.png`,
+  RATIFICADO) -- el 6D nunca actualizo su propio flag 🔴 despues de esa re-corrida, y
+  Current-State lo seguia arrastrando como pendiente. Limpiado en ambos lugares.
+- **Rivermeet daylight ya estaba 🟡 aprobado** (SS6d) sin ningun problema real -- tambien
+  arrastrado sin necesidad en la lista de pendientes.
+
+**Trabajo real, 4 briefs re-escritos:**
+- **SS13.1-v2 Crowned Leviathan** -- mismo diseno (ya aprobado en contenido), reescrito en
+  prosa corta estilo Kadrun (SS9e-v2) para sacar el texto/etiquetas "FRONT VIEW" quemadas
+  en la v1.
+- **SS13.4-v2 Aether Wyrm** -- mismo tratamiento de texto, mas refuerzo explicito y repetido
+  contra la mandibula de dragon que aparecio pese a que el brief v1 ya la prohibia una vez.
+- **SS13.3-v2 Mirror Stalker** -- rediseno real, no solo limpieza de texto: la v1 leyo como
+  golem de piedra porque "glass-like facets" es vocabulario ambiguo (tambien describe roca).
+  Fix: vocabulario inequivoco de vidrio -- especificamente el **respaldo plateado de un
+  espejo real**, visible en las grietas entre fragmentos, un detalle que ninguna roca tiene
+  y que un modelo de imagen no puede confundir. Negativos nuevos contra piedra/golem/tallado
+  que la v1 no tenia.
+- **SS9b-v3 King Borran** -- el propio doc ya marcaba que si se retomaba habia que aplicar el
+  formato de prosa corta que salvo a Kadrun; reescrito con el mismo tratamiento.
+
+Los 4 estan escritos y listos para correr en NB2 -- no se ejecutaron esta sesion (Boris corre
+NB2 externamente). Quedan sin tocar los items de la lista que no son briefs de imagen: revisar
+4 escenas de traicion (legacy o canon), set de combos sin doc, QA de 4 variantes de The Wilds,
+videos Higgsfield (bloqueo ffmpeg), POIs sueltos. key-art-poster (SS12.1/12.2) ya estaba
+completo y listo para correr, sin cambios.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+## [2026-08-06] concept-art | Evaluacion de los 4 re-rolls -- 3/4 ratificados, Mirror Stalker v3 escrito
+
+Boris genero los 4 briefs escritos la sesion anterior y los dejo en Descargas. Evaluacion
+contra brief:
+
+- **Crowned Leviathan v2** -- RATIFICADO. Cero texto, corona de espinas, vetas
+  bioluminiscentes, sin cristales de corrupcion. La prosa corta resolvio el glitch de la v1.
+- **Aether Wyrm v2** -- RATIFICADO. Cero texto, sin mandibula de dragon (cabeza cristalina
+  puntiaguda, sin boca), cuerpo alternando solido/traslucido.
+- **King Borran v3** -- RATIFICADO. Sin texto ni glitches, corona forjada sin gemas,
+  martillo en reposo. Nota menor no bloqueante: proporcion mejorada pero sigue sin ser tan
+  extrema como el trapezoide de 4.5 cabezas del canon.
+- **Mirror Stalker v2** -- FALLA DE NUEVO, no archivado en produccion. El vocabulario de
+  vidrio (SS13.3-v2, respaldo plateado) no alcanzo: el resultado leyo como armadura de
+  placas cristalinas/metalicas, mas caballero que espejo. Ningun panel mostro reflejo real.
+
+**Diagnostico del fallo repetido de Mirror Stalker:** el problema no era el vocabulario de
+material -- es la **estructura** de la descripcion. "Shards fused into a humanoid shape
+covering the body" lee como armadura sin importar que material se nombre. Escrito SS13.3-v3:
+cambia la estructura completa, describiendolo primero como un **panel de espejo roto** que
+apenas adopto contorno humanoide (plano antes que volumetrico, traslucido antes que solido),
+con un reflejo distorsionado real del entorno visible dentro del vidrio, y negativos directos
+contra armadura/caballero/robot que las dos versiones anteriores no tenian. Pendiente de
+correr en NB2.
+
+**Archivos movidos a `90-Raw/concept/`:** `crowned-leviathan-v2.png`, `aether-wyrm-v2.png`,
+`king-borran-v3.png`.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde. Concept art del
+Bestiario: 9/9 salvo Mirror Stalker, que va por su tercer intento.
+
+## [2026-08-06] concept-art | Mirror Stalker v3 -- pivote de canon aceptado, batch del Bestiario cerrado 9/9
+
+Tercer intento de Mirror Stalker (SS13.3-v3, estructura de "panel de espejo roto" en vez de
+"cuerpo cubierto de placas"). Resultado: mejora parcial -- huecos reales entre paneles con
+el fondo visible, luz teal en las grietas -- pero sigue sin mostrar reflejo literal ni
+respaldo plateado de espejo; lee como automata de cristal/vidrio articulado, no como espejo
+roto en sentido estricto.
+
+**Decision de Boris: aceptar el pivote en vez de un cuarto intento.** Tres corridas
+convergieron en la misma familia de resultado (cristal/vidrio articulado, no reflejo
+literal) pese a cambiar vocabulario y estructura -- señal de que es el limite razonable de
+la tecnica para este concepto exacto, no un prompt mal escrito.
+
+**Canon actualizado en `Bestiario.md` SSThe Mirror Stalker:** se mantiene la habilidad
+("copia tus movimientos", "aprende, no solo imita" -- cita de Valen intacta) pero la
+descripcion visual pasa de "superficie de espejo con reflejo literal" a "automata de
+cristal/vidrio fracturado, cuerpo articulado de facetas traslucidas con vetas de luz teal
+en las grietas". El nombre "Mirror Stalker" queda igual -- describe la habilidad, no la
+superficie.
+
+**Archivo:** `mirror-stalker-v3.png`, RATIFICADO, movido a `90-Raw/concept/`.
+
+**Estado: batch de concept art del Bestiario cerrado, 9/9** (los 4 re-rolls de esta sesion
+mas los 5 que ya habian pasado directo el 2026-08-04). `check_canon.py` 0 criticos / 0
+medium, `check_vault.py` verde.
+
+## [2026-08-06] decision | Regla de trafico para arrancar guion sin QA hasta el domingo
+
+Boris quiere empezar dialogos/screenplay manana (2026-08-07) pero conservar el presupuesto
+semanal de subagentes de QA hasta el domingo. Se evaluo si hacia falta una ronda de QA
+antes de arrancar: el linter mecanico sigue en 0 criticos (gratis, no consume presupuesto),
+y todo lo agregado desde la 16a re-corrida (links de los 3 fijos, resolucion del boton Bond,
+concept art) es mecanica/sistemas/visual -- no toca arcos, finales ni epilogos, que es lo
+que audita el QA de dramaturgia. El terreno narrativo ya paso limpio por la 16a.
+
+**Reglas de trafico establecidas para la semana, escritas en `Current-State.md`:**
+1. El linter sigue corriendo antes de cada checkpoint, sin excepcion.
+2. Dialogo sobre terreno ya auditado (arcos, encuentros, traiciones, los 60 epilogos) se
+   escribe con confianza.
+3. Cualquier linea de guion que toque los links de los 3 fijos se trata como provisional
+   hasta que pasen QA.
+4. El domingo, una sola ronda de subagentes audita todo lo acumulado de la semana (guion
+   nuevo + links de fijos) en vez de dos corridas separadas.
+
+**Estado de cierre de sesion:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py`
+verde. Sprint QA (16a) cerrado, links de los 3 fijos diseñados (provisional), boton Bond
+resuelto via council, concept art del Bestiario y de los links de fijos cerrado 9/9 + 3/3.
+Proximo frente: guion y dialogos por actos, en ingles, arrancando manana.
+
+## [2026-08-07] design | Voz Narrativa -- ratificada via 2 rondas de council
+
+Pregunta abierta desde hace semanas ("Voz narrativa" en Current-State, sin nada escrito en
+el vault) bloqueaba el arranque real del guion. Se resolvio con 2 rondas de council (5
+asesores + revision cruzada anonimizada cada una) antes de escribir una sola linea de
+dialogo.
+
+**Ronda 1 -- pregunta general (¿narrador si o no, y de que tipo?):** consenso fuerte hacia
+sin narrador. El pilar "el silencio es el beat mas fuerte del juego" (Bond y el Bond
+Vacio) fue el argumento decisivo -- cualquier narrador, externo tipo "Book" (It Takes Two)
+o diegetico recurrente tipo Gimli (Return to Moria), esta presente durante el cuerpo del
+juego aunque hable poco, y su silencio en el climax se vuelve una eleccion notable de la
+voz en vez de un vacio puro -- contamina exactamente el beat que se queria proteger.
+
+**Ronda 2 -- propuesta refinada de Boris:** no un narrador recurrente, sino un bookend
+estricto -- Roen viejo (60-70 anos, 20-30 anos despues) narra la apertura literal del
+juego (pantalla negra, antes de que exista nada que espoilear) y un cierre variable segun
+el final (5 versiones). Verificado contra el canon: Roen sobrevive los 5 finales sin
+excepcion. El council encontro que el bookend resuelve la mayoria de las objeciones de la
+ronda 1 (no compite con el silencio del climax porque vive fuera del tiempo de juego), pero
+el Contrarian (ganador 3/5 en la revision cruzada) señalo con precision que el riesgo de
+spoiler se **reubica, no se cierra**: la sola apertura ya confirma que hay una historia que
+merece contarse 30 anos despues, y cualquier tono que le den (eleccion, quien falta en la
+mesa) es informacion. La propuesta de Expansionist de vender "los 5 finales de Roen" como
+gancho de marketing/replay fue marcada como punto ciego por los 5 revisores independientes
+-- optimiza retencion antes de resolver si el objeto central es sano para el pilar, y abre
+una fuga de spoiler extra-diegetica (comunidad filtrando el final de un jugador que todavia
+no termino el suyo).
+
+**Decision final de Boris: adelante con el bookend**, con las 4 condiciones que salieron de
+la critica de la ronda 2 (ver [[Voz Narrativa]] para el detalle completo): apertura sin
+direccion tonal, auditar cada cierre contra fuga de info de los otros 8 Pivotes, no
+fabricar el gancho de marketing pre-lanzamiento, y un test de aprobacion (escribir la
+apertura sola, aplicarle la pregunta de spoiler) antes de tocar los 5 cierres. Taberna gano
+4/5 sobre fogata/feria como puesta en escena -- coherente con que Roen "nunca busca al
+jugador, no se explica de mas".
+
+**Archivo nuevo:** [[Voz Narrativa]] -- fuente unica, `status: ratificado`. Actualiza el
+pendiente de "voz narrativa" en Current-State y el indice.
+
+**Proximo paso inmediato:** escribir la apertura, sola, y correrla contra el test de la
+regla 4 antes de escribir ningun cierre.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+## [2026-08-07] guion | Apertura del bookend (Roen viejo) -- escrita y ratificada
+
+Primer guion real del juego, siguiendo la regla 4 de [[Voz Narrativa]]: escribir la
+apertura sola, testearla contra fuga de spoiler, antes de tocar ninguno de los 5 cierres.
+
+**Primer borrador y auto-test:** paso el test de la regla 1 (unico dato que se filtra es
+que Roen sobrevive, aceptado como residual del dispositivo). Presentado a Boris para
+lectura.
+
+**Revision de Boris, 2 cambios reales:**
+- La linea "Nine of us took that same job, near enough" le metia a Roen conocimiento de
+  la estructura de diseño (los 9 Pivotes) que no tendria manera de tener en la ficcion --
+  el vivio solo su propia version. Corregida a "Wasn't just me who got that job offer. I
+  know that much." -- insinua que hubo otros sin numero ni certeza.
+- Se saco tambien "Same girl" de la version anterior (no hacia falta confirmar genero del
+  "package" tan temprano).
+- **Agregado un bloque de worldbuilding publico** (pedido explicito de Boris, dado que la
+  escena transcurre en una taberna humana): el cataclismo, el Aether corrupto usado desde
+  entonces como combustible/tecnologia/comercio/poder -- sin tocar el secreto del Acto 3
+  (God-Cores = Wardens muertos, que sigue reservado para el Sunken Archive). La cifra
+  "almost six hundred years" es intencional, no error: el canon fija el cataclismo en 550
+  años, pero Roen es humano, y los humanos son la raza con memoria institucional mas
+  degradada (El Mundo y la Muda, tabla de memoria por raza). Que el mismo protagonista
+  redondee mal la cifra es la dramatizacion directa de esa regla de canon -- anotado en el
+  archivo para que una futura QA no lo "corrija" a 550 pensando que es un descuido, mismo
+  patron que las "cuatro Mudas" de Valen.
+
+**Archivo:** [[Guion/Apertura — Roen Viejo]] -- `status: ratificado`. Primera pagina de la
+nueva carpeta `10-Knowledge/Guion/`.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo paso:** escribir los 5 cierres (F1, F2a, F2b, F3, F4), auditando cada uno contra
+la regla 2 de [[Voz Narrativa]] (fuga de informacion sobre los otros 8 Pivotes).
+
+## [2026-08-07] guion | Los 5 cierres del bookend (Roen viejo) -- escritos y ratificados, bookend completo cerrado
+
+Continuacion de la apertura ([[Guion/Apertura — Roen Viejo]]). Escritos los 5 cierres
+variables por final (F1, F2a, F2b, F3, F4), cada uno anclado en la linea canonica que
+Roen ya tenia en su propia ficha para ese final -- no se invento contenido nuevo, se
+extendio el que ya existia.
+
+**Primer borrador:** monologo V.O. puro, igual que la apertura. Auditado contra la regla 2
+de [[Voz Narrativa]] (fuga de info sobre los otros 8 Pivotes) -- ninguno de los 5 nombra
+al Pivote ni menciona detalle institucional exclusivo de una ruta (Juramento de Forja,
+pagos del Council, Royal Academy), siguiendo el mismo patron que ya usaba la propia ficha
+de Roen.
+
+**2 rondas de ajuste de Boris:**
+- **Formato:** de monologo a conversacion -- se agrego un BARKEEP fijo (mismo personaje en
+  las 5 variantes, no uno nuevo por final) que le pregunta a Roen y saca sus lineas en vez
+  de que las narre corridas. Nunca pregunta por nombres, solo por hechos.
+- **Ritmo:** la primera version en conversacion quedo en ~45 segundos; Boris pidio
+  estirarla a ~1:30. El tiempo extra sale de que el Barkeep habla e insiste mas, no de que
+  Roen se explique de mas -- su economia de personaje ("no se explica de mas") se mantuvo
+  intacta a proposito, incluso en la version larga.
+
+**Nota de craft, F2b:** unico cierre donde estirar la duracion sin romper la prohibicion
+de moraleja ("aprendimos algo", regla ya establecida para F2b en QA anteriores) significo
+alargar el silencio, no el contenido -- el Barkeep insiste y es rechazado, Roen no dice
+mas de lo que ya tenia que decir.
+
+**Archivo:** [[Guion/Cierres — Roen Viejo]] -- `status: ratificado`.
+
+**Bookend completo, cerrado:** [[Voz Narrativa]] + [[Guion/Apertura — Roen Viejo]] +
+[[Guion/Cierres — Roen Viejo]], los 3 `ratificado`. Primer tramo de guion real del juego,
+de punta a punta.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo frente:** guion de actos, arrancando por el Encuentro del Acto 1.
+
+## [2026-08-07] guion | Puente narrado al Acto 1 -- apertura del bookend extendida, ratificada
+
+Boris pidio resolver el corte entre la apertura de Roen y la primera escena jugable: en
+vez de CUT TO BLACK duro, propuso que Roen siga hablando ~30-60 segundos mientras la
+camara ya muestra al jugador en su propia escena de origen -- valido para las 9 celdas
+(18 con genero) porque el audio de Roen nunca es especifico de raza/rol, solo la viñeta
+visual lo es.
+
+**Estructura acordada (propuesta como guionista senior, ratificada sin cambios de
+estructura):** match cut del fuego de la taberna a otra fuente de luz en la escena del
+jugador (fogata/forja/amanecer segun raza) -> Roen sigue narrando en terminos
+universales (por que la gente firma el Contrato de Conquistador, [[Progresión y
+Contrato]]) sobre una viñeta silenciosa del jugador sin dialogo propio todavia -> la voz
+de Roen se apaga bajo el ambiente de The Wilds -> handoff real es auditivo, no visual (ya
+no hay corte a negro intermedio).
+
+**Linea sobre el poder del jugador, pedido explicito de Boris:** una alusion al poder
+anti-ilusion sin nombrarlo. Verificado contra canon antes de escribir: el poder es
+explicitamente privado ([[Speck]] §Capa 2, "el Bound Five no ve lo que ves") -- Roen
+nunca lo supo en la ficcion. Se dieron 3 propuestas, todas como observacion externa sin
+explicacion; Boris eligio la mas seca: "Some walked in green and came out seeing things
+the rest of us never learned to see. Still don't know what that was. Wasn't my business
+to ask."
+
+**Nota de produccion:** la viñeta silenciosa no necesita 18 tomas distintas -- matriz 3x3
+de raza x rol (bosque/forja/rio cruzado con chequeo de arma/armadura/mapa segun Duelist/
+Vanguard/Strategist), genero como swap de asset sobre esas 9, no contenido nuevo.
+
+**Archivo:** [[Guion/Apertura — Roen Viejo]] actualizado, sigue `status: ratificado`
+(3a ronda de revision: linea de los 9 Pivotes, worldbuilding humano, puente al Acto 1).
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo frente:** guion de actos, Acto 1 - Encuentro (primera escena jugable completa,
+donde arranca la viñeta que el puente deja sembrada).
+
+## [2026-08-07] design | Estructura del Encuentro con Roen -- confirmada, Acto 1 empieza a cristalizar
+
+Boris pidio un desglose en bullets de todo lo que pasa en Acto 1 antes de empezar a
+comentar cada uno. Se reunio lo que ya estaba disperso en el vault (arco de 3 escenas en
+la ficha de Roen/Valen/Darro, secuencia macro de Estructura Dramatica, zona de tutorial
+de Geografia y Ciudades, los 2 primeros Momentos de Persona de Speck que La Rueda ya
+marcaba como parte del Acto 1) y se armo la cronologia real (las fichas narran "Escena
+1/2/3" relativas a cuando CADA personaje aparece, no un orden universal -- hubo que
+reconstruir la secuencia verdadera cruzando las 3 fichas).
+
+**Decision de Boris sobre estructura macro:** el prologo es el bookend completo de Roen
+(apertura + puente + handoff auditivo) MAS la zona tutorial en solitario (Los
+Desfiladeros de Zephyr, sin companeros). El title card "AETHER BOUND" corta **a mitad**
+de ese tramo solo -- no al final -- dejando un pedazo de caminata despues del logo antes
+de llegar al punto de encuentro con Roen.
+
+**Decision sobre el Encuentro con Roen, estructura completa:**
+1. Tramo solo (tutorial de movimiento) -> TITLE CARD a mitad de camino.
+2. Resto del tramo solo, acercandose al punto de encuentro ya acordado con Roen (la
+   contratacion ya es un hecho previo -- Roen-Ficha:101 ya dice "el jugador lo contrato"
+   -- esta escena es el primer encuentro FISICO en pantalla, no la contratacion en si;
+   resuelto asi para no pisar el dato ya escrito).
+3. Emboscada de 3 Hollowed (Villanos Menores, sin restriccion de ubicacion en canon) --
+   imposible en solitario, calza con la Zona B de Acoplamientos ("obstaculo imposible sin
+   tu primer companero").
+4. Roen interviene, llega justo cuando los Hollowed ya encontraron al jugador. Ahi se
+   enseña su link (Second Catch) -- **el camino de tutorial varia por ROL del jugador, no
+   por raza**, porque el link no cambia con la raza: Duelist/Strategist reciben el modo
+   estandar (Roen atrapa/lanza), Vanguard (rol duplicado) recibe el modo "doble ancla" ya
+   diseñado en Los 3 Links de los Fijos.
+5. Primera linea de Roen post-combate, coherente con su propia ficha (competente sin
+   fanfarria, asiente, no aplaude).
+6. Roen + jugador siguen a la ciudad natal, donde los alcanza Valen -- ya fijado en
+   Geografia y Ciudades.
+
+**Archivo actualizado:** [[Geografía y Ciudades]] §El Encuentro con Roen, dentro de §Los
+Desfiladeros de Zephyr.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium, `check_vault.py` verde.
+
+**Proximo paso:** escribir el guion real de la escena del Encuentro (dialogo, 3 variantes
+de rol) -- lo de hoy es estructura, todavia no hay texto escrito.
+
+## [2026-08-07] design | Briefs de concept art de Los Desfiladeros de Zephyr
+
+Boris pidio arrancar el concept art del tutorial de Acto 1 -- vital porque es el primer
+entorno jugable del juego (el tramo solo antes del title card y de la emboscada de
+Roen, ya estructurado en Geografia y Ciudades §El Encuentro con Roen). El vault no tenia
+ninguna pieza de esa zona todavia (confirmado por barrido de 90-Raw/concept/ y grep de
+"zephyr"/"canyon"/"desfiladero" -- cero archivos).
+
+**3 briefs nuevos en [[Briefs de Concept Art]] §15**, uno por skin racial ya fijada en
+Geografia y Ciudades §Los Desfiladeros de Zephyr:
+- §15.1 skin humana (Mistbound Frontier / Aethelgard) -- canon arido, paso de guardia
+  militar, introduce Standing.
+- §15.2 skin enana (Ignis Reach) -- descenso volcanico, geotermia/lava, introduce
+  recursos subterraneos.
+- §15.3 skin elfica (Stillwood) -- ascenso boscoso, enredaderas hostiles, introduce el
+  mecanismo de locomocion.
+
+Mismo bloque de estilo compartido (hand-painted graphic novel watercolor, Sable x BotW)
+que el resto de la pagina; formato calcado de los keyframes de lugar ya ratificados
+(§11.7a-c, torres de guardia). Ninguno de los 3 se corrio todavia en NB2 -- quedan
+listos para generar. Fuera de alcance: la escena de la emboscada de los 3 Hollowed (beat
+de guion, no de entorno) queda con brief propio pendiente.
+
+**Archivos actualizados:** [[Briefs de Concept Art]] §15 (nuevo) · [[Current-State]]
+§Concept art pendiente · [[00-Index]].
+
+**Estado:** `check_vault.py` verde tras el edit de Current-State (~3,857 tokens de
+arranque). `check_canon.py` no corrido -- el brief nuevo no toca canon narrativo, solo
+cita a Geografia y Ciudades ya ratificado.
+
+**Proximo paso:** correr los 3 briefs en NB2 y traer las 3 laminas para QA visual.
+
+## [2026-08-07] QA | Los Desfiladeros de Zephyr — 3/3 ratificadas
+
+Boris trajo las 3 laminas generadas de los briefs de §15 (Briefs de Concept Art) --
+zephyr-canyons-human-v1.png / -dwarf-v1.png / -elf-v1.png, corridas en NB2. Evaluacion
+contra brief + los 5 ejes de la Art Bible, sin subagente (juicio directo sobre imagen).
+
+**15.1 humana (Mistbound Frontier) -- Ratificada, nota menor.** Canon amplio, figura
+diminuta en el sendero, cartel de madera sin texto, paleta ochre lavada, perspectiva
+aerea correcta en la lejania. Nota no bloqueante: luz difusa en vez de la luz dura de
+mediodia del brief; arbustos algo mas verdes que "arido".
+
+**15.2 enana (Ignis Reach) -- Ratificada, nota menor.** Contraste calido/frio logrado
+con precision (magma abajo vs apertura azul-fria arriba, tal como pedia el brief),
+vapor, embers flotando, charcos de lava, escala vertiginosa. Nota no bloqueante:
+escalera de tablones de madera en vez de "narrow carved stone stairway".
+
+**15.3 elfica (Stillwood) -- Ratificada, nota menor -- la mas lograda de las 3.** Vides
+enredadas agresivamente, musgo, rayos de luz verde-dorada, sin cielo visible (ascenso
+sin terminar). Nota no bloqueante: composicion lee mas "parado entre raices" que
+pendiente en ascenso -- el mecanismo de locomocion (handholds) no es evidente.
+
+**Hallazgo transversal:** mismo icono de destello/diamante blanco repetido identico en
+esquina inferior derecha de las 3 -- probable filtracion de UI de NB2, no bloqueante.
+Nota agregada a §15.4 del brief para negativos de futuros re-rolls del batch.
+
+**Archivos:** las 3 laminas copiadas de Downloads a `90-Raw/concept/` (ahora canon
+inmutable). [[Briefs de Concept Art]] §15.1-15.4 actualizado con QA + RATIFICADO en
+cada header. [[Current-State]] §Concept art pendiente movido a cerrado. [[00-Index]]
+actualizado.
+
+**Estado:** `check_canon.py` pendiente de re-correr como cierre del checkpoint.
+
+## [2026-08-07] design | Brief de la Emboscada de los 3 Hollowed + llegada de Roen
+
+Boris pidio el brief pendiente de la escena que cierra el tutorial de Los Desfiladeros
+de Zephyr -- la emboscada ya estructurada en Geografia y Ciudades §El Encuentro con
+Roen (pasos 4-5): 3 Hollowed cierran el circulo sobre el jugador solo, Roen entra en
+cuadro justo a tiempo.
+
+**Nuevo brief en [[Briefs de Concept Art]] §16.** Decision de encuadre: el brief
+captura el INSTANTE ANTES del rescate (Hollowed ya cerraron el circulo, Roen recien
+entra en cuadro, sin contacto todavia) -- no el rescate en si, que ya existe ratificado
+en §14.1 (roen-second-catch-v1.png, el mecanismo del link Second Catch aislado sobre
+fondo neutro). Los dos son complementarios: §16 es el establishing shot narrativo con
+entorno, §14.1 es el close-up del link en accion.
+
+Ambientado en la skin humana de Zephyr Canyons (§15.1, ya ratificada) por ser el
+registro default del elenco fijo -- Roen y su brief de link ya usan esa referencia.
+Reusa el diseño ya ratificado de los Hollowed (§13.8: piel agrietada, vetas
+violeta-rojas, cara en blanco) y de Roen (§14.1: cuero remachado, capa tierra, sin
+VFX de contacto todavia). Regla de la Art Bible aplicada: peligro = rojo saturado,
+unico color intenso del frame son las vetas de los Hollowed.
+
+**Archivos actualizados:** [[Briefs de Concept Art]] §16 (nuevo) · [[Current-State]]
+§Concept art pendiente · [[00-Index]].
+
+**Estado:** brief escrito, sin correr en NB2 todavia.
+
+**Proximo paso:** correr §16 en NB2 y traer la lamina para QA.
+
+## [2026-08-07] QA | Emboscada de los 3 Hollowed + llegada de Roen — ratificada
+
+Boris trajo zephyr-ambush-roen-arrival-v1.png (brief §16), corrida en NB2 con las 3
+referencias adjuntas segun instruccion del brief (roen-second-catch-v1.png,
+the-hollowed-v1.png, zephyr-canyons-human-v1.png).
+
+**Ratificada, con nota menor.** Los 3 Hollowed correctos (piel agrietada, vetas
+violeta-rojas en las articulaciones, postura de manada agachada, ropa hecha jirones),
+Roen sin VFX de contacto todavia -- mano extendida, el rescate aun no paso, exactamente
+el instante que pedia el brief. Capa tierra ondeando, cuero remachado, entorno de
+cañon arido consistente con §15.1. El peligro (vetas violeta) es el unico color
+saturado del cuadro.
+
+**Nota no bloqueante:** el pelo de Roen sale gris/blanco aca, en la lamina ya
+ratificada del link (§14.1, roen-second-catch-v1.png) es castaño oscuro --
+inconsistencia de continuidad entre 2 laminas del mismo personaje. No se corrige ahora
+(no bloquea), queda anotada para si se re-corre algo de Roen a futuro. Nota menor
+adicional: el jugador queda en medio del sendero, no literalmente "acorralado contra
+la pared" como pedia el brief -- no afecta la lectura general.
+
+**Archivos:** lamina copiada de Downloads a `90-Raw/concept/`. [[Briefs de Concept
+Art]] §16 actualizado con QA + RATIFICADO en el header. [[Current-State]] §Concept art
+pendiente cerrado. [[00-Index]] actualizado.
+
+**Cierre de sesion:** con esto, el tutorial completo de Los Desfiladeros de Zephyr
+(3 skins raciales del entorno + la escena de la emboscada que lo cierra) tiene su
+concept art completo y ratificado. Proximo frente: guion real de la escena del
+Encuentro con Roen (dialogo, 3 variantes de rol) -- sigue siendo estructura sin texto
+todavia, como quedo anotado el 2026-08-07 anterior.
+
+## [2026-08-07] guion | Escena del Encuentro con Roen — primer guion jugado del juego
+
+Boris pidio escribir el guion real de la escena que ya tenia estructura confirmada
+(Geografia y Ciudades §El Encuentro con Roen, cerrado antes en la sesion): la emboscada
+de los 3 Hollowed que resuelve el tutorial de Los Desfiladeros de Zephyr, con Roen
+interviniendo justo a tiempo. Es el primer guion JUGADO del juego (distinto del
+bookend de Roen viejo, que es pre/post-partida).
+
+**Nuevo archivo: [[Guion/Encuentro con Roen]], `status: provisional`.** Retoma el
+tramo solo justo despues del title card, calca el staging de la lamina ya ratificada
+(zephyr-ambush-roen-arrival-v1.png, §16) y escribe las 3 variantes por rol:
+- Duelist: Roen agarra un Hollowed y lo lanza para que el jugador lo remate.
+- Strategist: Roen atrapa al jugador a media caida y lo repone en terreno firme.
+- Vanguard (rol duplicado): modo "doble ancla", ya fijado en Geografia y Ciudades,
+  no es decision nueva de hoy.
+
+**Decision nueva de esta sesion, sin fuente previa:** el split Duelist/Strategist
+dentro del "modo estandar" de Second Catch (Los 3 Links de los Fijos solo describia
+2 sabores de T1 sin asignarlos a un rol especifico). Queda marcado explicitamente en
+el archivo como pendiente de confirmacion/veto de Boris.
+
+**Asuncion de diseño sin regla escrita:** el jugador no tiene linea hablada en esta
+escena -- ninguna fuente fija "protagonista silencioso" de forma explicita, pero seguir
+el mismo patron de la viñeta muda de Guion/Apertura -- Roen Viejo se uso por
+consistencia. Anotado como asuncion a confirmar antes de generalizarla al resto del
+guion de actos.
+
+Verificado contra canon antes de escribir: la linea "Contract wasn't wrong" es la
+primera confirmacion hablada en pantalla de que el jugador ya contrato a Roen
+(Roen-Ficha:101), sin re-narrar la contratacion en si. El tono de la primera linea
+post-combate ("competente sin fanfarria, asiente, no aplaude") cita directo
+Roen-Ficha §Escena 1 y el paso 6 de Geografia y Ciudades.
+
+**`status: provisional`** -- toca Second Catch, que sigue provisional en Los 3 Links
+de los Fijos, pendiente de la ronda de QA del domingo (regla de trafico ya fijada en
+Current-State).
+
+**Archivos actualizados:** [[Guion/Encuentro con Roen]] (nuevo) · [[Current-State]]
+§Narrativa/guion · [[00-Index]].
+
+**Cierre de sesion (pedido de Boris):** con esto para hoy. Resumen de lo cerrado:
+concept art completo de Los Desfiladeros de Zephyr (3 skins + emboscada, todo
+ratificado) + primer guion jugado del juego escrito (provisional, pendiente 2 puntos
+de confirmacion: split de rol + asuncion de jugador silencioso). Proximo frente
+cuando retomen: caminata silenciosa hacia la ciudad natal donde los alcanza Valen, o
+la ronda de QA del domingo sobre todo lo provisional de la semana.
+
+## [2026-08-07] fix | Correccion: el link de Roen no cambia por rol (Duelist=Strategist)
+
+Boris corrigio el guion recien escrito de la Emboscada/Encuentro con Roen: el primer
+borrador de [[Guion/Encuentro con Roen]] inventaba un split Duelist/Strategist dentro
+del "modo estandar" del link (remate de enemigo lanzado para Duelist, atrapada a media
+caida para Strategist) -- **no tenia base en canon.** Los 3 Links de los Fijos §Roen
+describe 2 sabores del T1 de Second Catch, pero contextuales (segun la situacion de
+combate), no atados a rol. Geografia y Ciudades §El Encuentro con Roen ya decia esto
+con precision desde que se cerro la estructura: "Duelist o Strategist: modo estandar
+del link... Vanguard (rol duplicado): modo doble ancla" -- solo Vanguard difiere.
+
+**Fix a la fuente** (regla 8 del repo -- fix va a la fuente, no a la linea reportada):
+[[Guion/Encuentro con Roen]] fusiono las 2 variantes en una sola ("Variant A:
+Duelist/Strategist, modo estandar"), usando el sabor de "atrapa a media caida" por
+match directo con la lamina ya ratificada (roen-second-catch-v1.png, §14.1). El sabor
+de "lanza a un enemigo" del sistema no se descarta en general -- solo no es el que se
+uso en ESTE guion especifico, por consistencia visual con lo ya aprobado. Se elimino
+la nota de "pendiente de confirmacion de Boris" del split, porque ya no existe split
+que confirmar.
+
+**Archivos actualizados:** [[Guion/Encuentro con Roen]] · [[Current-State]] ·
+[[00-Index]].
+
+## [2026-08-07] fix | 2a correccion: modo estandar pasa a "lanza y remata", nuevo frente de verbos por celda
+
+Boris pidio simplificar aun mas: en vez de "atrapa a media caida" para el modo
+estandar (Duelist/Strategist), usar el otro sabor ya descripto en Los 3 Links de los
+Fijos -- Roen lanza un Hollowed, el jugador remata. Lo unico que varia es la animacion
+del remate, y eso deberia pensarse a nivel de la habilidad inicial/melee de cada
+raza x rol, no como coreografia completa de rescate por celda.
+
+**Pregunta de fork resuelta con Boris antes de tocar la fuente:** ¿Vanguard tambien se
+unifica a "lanza y remata", o mantiene el modo "doble ancla"? Boris eligio mantener
+doble ancla -- tiene razon narrativa propia (mismo arquetipo que Roen) que las otras 8
+celdas no comparten, y Geografia y Ciudades ya lo fijaba asi.
+
+**Fix aplicado en [[Guion/Encuentro con Roen]]:** el modo estandar (Duelist/Strategist)
+ahora usa "Roen lanza un Hollowed para que el jugador remate", con el remate escrito a
+NIVEL DE ROL (Duelist = melee, Strategist = ejecucion a distancia) -- no a nivel de las
+6 celdas raza x rol completas, porque esos verbos no estan compilados en el vault
+todavia (Combate.md §C y Matriz Raza x Rol citan al GDD §4.2C congelado sin
+reproducirlo). Vanguard sin cambios (doble ancla).
+
+**Frente nuevo detectado, sin ejecutar:** verbos/armas de ataque base por las 9 celdas
+raza x rol. Boris pidio llevarlo al consejo (skill llm-council) para que propongan
+base attacks coherentes con el lore, con ejemplos de referencia (mandoble, espada
+doble, dagas, arco+daga, espada, magia ignea, etc.) -- se corre a continuacion.
+
+**Archivos actualizados:** [[Guion/Encuentro con Roen]] · [[Current-State]] ·
+[[00-Index]].
+
+## [2026-08-07] design | Consejo de armamento base + tabla final de las 9 celdas raza x rol
+
+Boris pidio llevar al consejo (skill llm-council) el diseño del ataque base/remate de
+las 9 celdas de la Matriz Raza x Rol -- el hueco que quedo abierto al escribir
+Guion/Encuentro con Roen (el remate solo estaba resuelto a nivel de ROL, no de celda).
+
+**Ronda de consejo (5 asesores + peer review + chairman):** convergencia fuerte en
+tratar el remate como problema BIOMECANICO (Roen fija trayectoria/timing, el rig de
+cada raza define como intercepta) en vez de "que arma le queda linda a cada raza" --
+reduce las 9 celdas a 3 verbos por raza (Elfo=intercepcion, Enano=absorcion-negada,
+Humano=variable por rol) con el rol como inflexion. El consejo detecto 2 colisiones de
+identidad sin resolver (Enano Duelist vs. hachas de Darro, Humano Vanguard vs. agarre
+de Roen) y una pregunta abierta: que pasa si el jugador falla el remate (whiff).
+
+**Boris resolvio las 3 cosas en la misma sesion:**
+1. Whiff: hay ventana de input para apretar ataque/melee -- si falla, NO es fail state,
+   el combate sigue pero se anula el bonus de daño del link. Agregado a la fuente en
+   [[Los 3 Links de los Fijos]] §Roen (T1).
+2. Equipamiento final de las 9 celdas, con nombres concretos que resuelven las 2
+   colisiones detectadas (Enano Duelist = war pick & hammer, no hachas; Humano Vanguard
+   = war flail + kite shield, no agarre a mano limpia):
+   - Elfo Duelist: elven double-bladed sword
+   - Elfo Vanguard: elven glaive + escudo arcano
+   - Elfo Strategist: elven bow (debuffs+daño ligero) + magia de marcado tipo Valen
+   - Enano Duelist: dwarven war pick & hammer
+   - Enano Vanguard: dwarven great warhammer + brazaletes reforzados (escudo)
+   - Enano Strategist: dwarven hand cannon + kit ingeniero de curas (estilo Rocket
+     Raccoon, Marvel Rivals)
+   - Humano Duelist: scimitar + parrying dagger
+   - Humano Vanguard: war flail + kite shield
+   - Humano Strategist: Hunting Hanger + Signal Horn + granadas de cura
+
+**Archivo nuevo: [[Armamento Base — Matriz Raza x Rol]], `status: borrador`.** Tabla
+completa (verbo/ejecucion/arma/nota) + la regla de la ventana de remate. Arranca a
+compilar la seccion C de [[Combate]], enlazada desde ahi. [[Guion/Encuentro con Roen]]
+actualizado para citar el arma especifica en vez de la descripcion generica por rol, y
+para incluir la mecanica de ventana de input en el beat del remate.
+
+**Archivos actualizados:** [[Los 3 Links de los Fijos]] · [[Armamento Base — Matriz
+Raza x Rol]] (nuevo) · [[Combate]] · [[Guion/Encuentro con Roen]] · [[Current-State]] ·
+[[00-Index]].
+
+**Estado:** `status: borrador`, sin pasar por QA de canon todavia -- decisiones de
+Boris de esta sesion, no verificadas contra Movilidad Realista/Game Feel Bible
+(peso, timing de hit-stop por celda).
+
+## [2026-08-07] fix + design | Cierre de las 12 celdas: fix de canon del parry + giro de Strategist + equipamiento de los 3 fijos
+
+Boris trajo su propia propuesta de mecanicas clave para las 9 celdas y goteo hacia
+un problema real: yo habia introducido un error de canon en la ronda de consejo
+anterior, diciendo "parry redirige, no absorbe" como regla transversal del juego.
+Combate.md §B4 (ratificado) dice lo contrario -- el parry es de SABOR RACIAL: Elfo
+redirige, Enano absorbe-planta (roba Equilibrio), Humano roba-desarma (usa el
+VectorFuerza del rival). El error se habia filtrado a Armamento Base — Matriz Raza x
+Rol.md, donde el mecanismo del Enano Vanguard estaba mal etiquetado como
+"redireccion" en vez de "absorcion". Corregido a la fuente.
+
+**Revision celda por celda de la propuesta de Boris contra el canon real:**
+- 7 de 9 sin conflicto.
+- Enano Vanguard: la propuesta de Boris ("absorbe daño frontal") es la que estaba
+  BIEN -- coincide exacto con el canon. El error era mio (mi doc decia
+  "redireccion").
+- Elfo Vanguard: fix de framing, no de mecanica -- la carga del escudo sale de
+  "canalizar el impulso de cada redireccion exitosa", no de "absorber el golpe",
+  para no romper "no absorbe, redirige" (Matriz Raza x Rol + Combate §B4).
+- Humano Duelist: fix de lenguaje -- "le arrebata el control del golpe usando el
+  impulso del rival" en vez de "desvia", para coincidir con el sabor humano
+  (roba-desarma, no redirige).
+
+**Giro de los 3 Strategist (pedido explicito de Boris):** la primera pasada
+convergia los 3 en "sanador de area" (marca curativa / vapor curativo / granadas de
+cura), alejandose de los arquetipos originales de la Matriz. Vuelta al sabor
+original:
+- Elfo Strategist: Corriente Psiquica (Tether Arcano) -- marca que tira/empuja
+  enemigos y aliados, "manipulador psiquico: recoloca" literal.
+- Enano Strategist: Torreta de Forja -- torreta de area + buff de armadura,
+  "ingeniero: torretas/drones/buffs de armadura" literal.
+- Humano Strategist: Trampero de Caza -- trampas de red/cepo + Signal Horn como
+  detonador/señuelo, "gadgeteer: hooks/redes/trampas" literal.
+
+**Equipamiento de los 3 fijos (cierra las 12 celdas):**
+- Roen: mandoble + espada, cargados todo el juego pero SIN USAR -- pelea a mano
+  limpia hasta T3 ("Nothing Borrowed"). Reconcilia la contradiccion real que
+  aparecio al hacer el ejercicio: Roen-Ficha §Diseño Visual Ratificado ya decia que
+  carga un arma de dos manos + escudo, pero Los 3 Links de los Fijos y el concept
+  art ratificado (§14.1) lo muestran peleando sin arma. Reconciliado: carga el
+  mandoble/espada visibles pero no los usa hasta T3 -- no contradice "confia solo
+  en sus manos". **Cabo suelto sin resolver:** el escudo especifico de T3 se
+  describe como "su escudo real... no como herramienta encontrada", pero la ficha
+  tambien dice que lo dejo en la puerta del Council al irse -- falta el beat de
+  como volvio a sus manos. Anotado en ambos archivos, pendiente de Boris.
+- Darro: hachas cortas (ya ratificado) + cuchillas lanzables (agregado, sin
+  conflicto).
+- Valen: hueco real confirmado -- su Diseño Visual no tenia ningun objeto. Cierra
+  con una "calculation blade" (hoja corta ceremonial, herramienta de precision
+  para anclar sus marcas, nunca arma de combate) -- coherente con "academico, no
+  guerrero".
+
+**Archivos actualizados:** [[Armamento Base — Matriz Raza x Rol]] (reescrito
+completo, `status: ratificado`) · [[Roen-Ficha-Expandida-v1]] · [[Darro-Ficha-Expandida-v1]]
+· [[Valen-Ficha-Expandida-v1]] · [[Los 3 Links de los Fijos]] · [[Guion/Encuentro con
+Roen]] · [[Current-State]] · [[00-Index]].
+
+**Estado:** decisiones de diseño (arma/mecanica/verbo) RATIFICADAS por Boris.
+Implementacion (hitbox/timing/peso contra Movilidad Realista/Game Feel Bible) sigue
+sin verificar -- no bloquea. El cabo suelto del escudo de Roen tampoco bloquea nada.
+
+## [2026-08-07] guion | Reconciliacion del escudo de Roen -- regalo anonimo
+
+Boris eligio la opcion del regalo anonimo para cerrar el cabo suelto del escudo de
+Roen (dejado en la puerta del Triune Council al renunciar, pero descripto en T3 como
+"su escudo real... no una herramienta encontrada" -- contradiccion real detectada al
+hacer el ejercicio de equipamiento de los fijos).
+
+**Beat agregado a la fuente:** semanas despues de renunciar, el escudo aparece --
+dejado junto al fuego o en la puerta de una posada, sin nota ni testigo. Roen nunca
+sabe quien se lo devolvio. Reutiliza a proposito el mismo recurso narrativo de los
+Wanderer's Goggles de Old Tobin Hale (regalo/objeto que llega sin explicacion,
+deliberadamente sin resolver) -- consistencia de tono, cero maquinaria nueva. Roen
+carga el escudo (+ mandoble + espada) visible todo el juego pero no lo usa hasta T3,
+donde recien se permite aceptar el gesto.
+
+**Archivos actualizados:** [[Roen-Ficha-Expandida-v1]] (beat en la seccion de origen
++ Diseño Visual Ratificado) · [[Los 3 Links de los Fijos]] §Roen · [[Armamento Base
+— Matriz Raza x Rol]] (tabla de fijos) · [[Current-State]].
+
+**Estado:** cabo suelto CERRADO. Las 12 celdas de equipamiento (9 raza x rol + 3
+fijos) quedan sin pendientes de canon abiertos.
+
+## [2026-08-07] fix | Barrido de armamento contra los 9 Pivotes -- 2 colisiones cerradas
+
+Boris pregunto si los 9 Pivotes ya tenian equipamiento como los fijos y las 9
+opciones del jugador. Verificacion: 8 de 9 SI tenian arma ratificada (Sereth es la
+unica excepcion, consistente con Valen -- mismo Elfo Strategist sin arma, patron
+"academico, no guerrero" a proposito). El hallazgo real no fue un hueco general,
+fueron 2 colisiones literales entre Pivotes que nadie habia cruzado hasta ahora:
+
+- **Torgan vs. Darro** (ambos Enano Duelist): los dos con "dos hachas cortas",
+  identico. Ademas distinto del Enano Duelist del jugador (war pick & hammer, ya
+  elegido para no chocar con Darro -- pero nunca se cruzo contra Torgan).
+- **Lyris vs. Nyael** (ambas Elfa Duelist): los dos con dagas/cuchillos dobles
+  cortos, mismo tipo de arma.
+
+**Decisiones de Boris:**
+- Torgan -> warhammer de guerra a una mano (4 menciones corregidas en su ficha:
+  Esencia, epilogo x2, Diseño Visual Ratificado -- barrido completo, rule 8).
+- Lyris -> propuesta mia, confirmada por Boris: par de bumeranes elficos de doble
+  filo (vuelan en arco y vuelven a la mano) -- literal su epiteto "trazadora
+  aerea", distinto tambien de los lanzadores de disco mecanicos de Maren (gadget
+  tech, no hoja elfica arrojada a mano).
+- Nyael y Bram: confirmados sin cambios (dagas delgadas / mazo de dos manos).
+- Roen: arma fijada explicitamente como mandoble (greatsword), reemplaza la
+  ambiguedad "mandoble/maza" de la reconciliacion anterior.
+
+**Archivos actualizados:** [[Pivotes/Torgan-Ficha-Expandida-v1]] (4 menciones) ·
+[[Pivotes/Lyris-Ficha-Expandida-v1]] · [[Roen-Ficha-Expandida-v1]] · [[Armamento
+Base — Matriz Raza x Rol]] (nueva seccion §Colisiones con los Pivotes) ·
+[[Current-State]] · [[00-Index]].
+
+**Estado:** las 2 colisiones detectadas quedan cerradas. Bram/Roen (misma familia
+de maza, Humano Vanguard x2) queda anotado como cercania menor, no colision --
+el arma de Roen no se usa en pantalla hasta T3.
+
+## [2026-08-07] design | Brief de re-roll de Lyris (bumeranes + limpieza de texto)
+
+Tras cambiar el arma de Lyris (bumeranes elficos, cierre de la colision con Nyael),
+Boris pregunto si hacia falta re-roll de su lamina. Verificacion: lyris-v1.png
+muestra dos dagas curvas cortas claramente visibles en las caderas (arma vieja) +
+texto superpuesto (titulo, "Front View"/"Side View") -- lamina previa a la regla
+anti-texto de §0 y sin brief formal ratificado en Briefs de Concept Art.
+
+**Nuevo brief §17, edicion sobre la imagen existente (no regeneracion completa):**
+adjuntar lyris-v1.png, mantener pose/anatomia/arnes de cuerdas de traversal aereo
+intactos, reemplazar las dagas por un par de bumeranes elficos cruzados a la
+espalda baja, y sacar todo el texto superpuesto. Archivo destino: lyris-v2.png.
+
+**Archivos actualizados:** [[Briefs de Concept Art]] §17 (nuevo) · [[Current-State]]
+§Concept art pendiente · [[00-Index]].
+
+**Estado:** brief escrito, sin correr en NB2 todavia.
+
+## [2026-08-07] QA | Lyris v2 ratificada -- bumeranes elficos
+
+Boris trajo lyris-v2.png (brief §17), corrida en NB2 con lyris-v1.png adjunta como
+referencia. Evaluacion directa (sin subagente).
+
+**Ratificada.** Pose, anatomia, arnes y cuerdas de traversal aereo intactos; texto
+superpuesto eliminado por completo. Vista lateral muestra con claridad los dos
+bumeranes curvos cruzados en la espalda baja, reemplazando las dagas viejas. Nota
+menor no bloqueante: en la vista frontal el arma queda tapada por el arnes/capa --
+la lateral resuelve la lectura sin ambiguedad.
+
+**Archivos:** lamina copiada de Downloads a `90-Raw/concept/`. [[Briefs de Concept
+Art]] §17 actualizado con QA + RATIFICADO en el header. [[Current-State]] y
+[[00-Index]] actualizados.
+
+**Estado:** con esto, las 2 colisiones de armamento detectadas contra los Pivotes
+(Torgan/Darro, Lyris/Nyael) quedan cerradas tanto en canon de texto como en concept
+art -- Torgan no tenia lamina propia que corregir.
+
+## [2026-08-07] cierre de sesión | Compactación de Current-State + To Do de la próxima sesión
+
+Sesión larga (2026-08-07): tutorial de Zephyr completo en concept art (3 skins +
+emboscada + re-roll de Lyris, §15-17 de Briefs de Concept Art, 5/5 ratificadas) +
+primer guion jugado del juego escrito (Guion/Encuentro con Roen, provisional) +
+Armamento Base de las 12 celdas + barrido contra los 9 Pivotes (2 colisiones
+cerradas: Torgan, Lyris) + fix de canon del parry + reconciliacion del escudo de
+Roen. Detalle completo de cada paso en las entradas de arriba, todas fechadas
+2026-08-07.
+
+**Cierre:** Current-State.md compactado (estaba +823t sobre el techo tras la
+sesion larga, bajo a +88t) -- el detalle ya vive completo en este LOG, Current-State
+solo guarda resumen + pendientes. Bloque "Inmediato" reescrito con el To Do real de
+la proxima sesion (reemplaza el bloque stale del 08-06).
+
+**To Do de la proxima sesion:**
+1. Guion: la caminata silenciosa hacia la ciudad natal donde alcanza Valen
+   (Geografia y Ciudades §Beats Narrativos por Acto, punto 2) -- sigue directo de
+   Guion/Encuentro con Roen.
+2. Domingo pendiente: una sola ronda de subagentes de QA audita todo lo
+   provisional acumulado (Los 3 Links de los Fijos + Guion/Encuentro con Roen).
+   No antes de esa fecha.
+3. Concept art listo para correr sin ejecutar (no bloquea): King Borran §9b-v3,
+   key-art-poster §12.1/12.2.
+4. Reglas de trafico sin cambios: linter antes de cada checkpoint, cualquier
+   guion nuevo que toque un Link de los Fijos queda provisional hasta el domingo.
+
+**Estado:** `check_canon.py` 0 criticos / 0 medium. `check_vault.py` verde
+(~3,850 tokens de arranque). Sesion cerrada.
+
+## [post-cierre] fix | King Borran ya estaba cerrado + hallazgo de key-art-poster-v2 sin evaluar
+
+Boris senalo que King Borran v3 ya estaba hecho -- error mio: lo deje en el To Do
+de cierre sin cruzarlo contra Briefs de Concept Art (que ya tenia "Evaluacion: ✅
+GENERADO 2026-08-06, RATIFICADO por Boris" registrado) ni contra 90-Raw/concept
+(donde king-borran-v3.png ya estaba copiado). Corregido en Current-State.
+
+**Hallazgo adicional al verificar:** `marketing_key-art-poster-v2.png` (brief
+§12.2) tambien existe -- sentado en Downloads desde 2026-07-28, coincide exacto
+con el nombre de archivo destino del brief, pero nunca se evaluo ni se copio al
+vault. Pendiente de QA la proxima vez que se retome concept art.
+
+**Archivos actualizados:** [[Current-State]] (bloque Inmediato + Concept art
+pendiente).
+
+**Leccion de metodo:** antes de escribir un To Do de cierre con items de concept
+art, cruzar contra `Briefs de Concept Art` (¿tiene Evaluacion ya?) y contra
+`90-Raw/concept/` (¿el archivo ya existe?) -- no confiar en el estado previo de
+Current-State sin verificar.
+
+## [post-cierre 2] QA | key-art-poster V2 ratificado retroactivamente
+
+Boris pidio evaluar marketing_key-art-poster-v2.png (brief §12.2), encontrado sin
+evaluar en Downloads desde 2026-07-28. Evaluacion directa contra el brief completo.
+
+**Ratificado.** Las 3 franjas de horizonte correctas (rio/Rivermeet izquierda,
+Stillspire sobre el dosel de Gloomvault al centro, terreno volcanico con
+resplandor de Ignis Reach a la derecha), sur ausente sin indicios de First Wound,
+hueco de composicion donde estaba Speck, cielo con el gradiente exacto y espacio
+limpio para el logo, perspectiva aerea correcta, sin armas desenvainadas ni poses
+heroicas. Nota menor no bloqueante: mismo icono de destello de NB2 ya trackeado
+desde el batch de Zephyr (§15.4).
+
+**Archivos:** lamina copiada de Downloads a `90-Raw/concept/`. [[Briefs de Concept
+Art]] §12.2 actualizado con QA + RATIFICADO en el header (insertado via awk por un
+problema de encoding NBSP en la linea de negativos original -- Edit normal fallaba
+por mismatch de espacios no-rompibles ocultos en el texto). [[Current-State]] y
+[[00-Index]] actualizados.
+
+**Estado:** con esto, los 2 hallazgos de concept art "generado pero olvidado sin
+evaluar" (King Borran ya estaba cerrado, key-art-poster V2 recien se cerro) quedan
+resueltos. §12.1 (V1) sigue siendo el unico brief de esta seccion sin correr.
+
+## [2026-08-10] canon-qa | 17a ronda -- 13 criticos entre 2 subagentes, corregidos a la fuente
+
+Ronda de QA sobre todo el canon `provisional` acumulado: [[Los 3 Links de los
+Fijos]] + [[Guion/Encuentro con Roen]]. Linter primero (0 criticos, 28 INFO
+preexistentes) -> 2 subagentes en frio (Opus, dramaturgia + congruencia
+semantica), sin contexto entre si. Resultado: **13 criticos unicos** (fuerte
+solapamiento entre ambos reportes, senal de que no era ruido).
+
+**4 decisiones de diseno resueltas por Boris (AskUserQuestion):**
+1. **Donde se suma Valen:** en una taberna dentro de la ciudad natal, tras la
+   caminata a solas Roen+jugador (no en la "Frontera inmediata" que decia
+   §Beats Narrativos -- [[Geografía y Ciudades]] se contradecia a si misma,
+   punto 7 vs §Beats). Corregidos ambos + propagado a
+   [[Guion/Encuentro con Roen]].
+2. **Rol duplicado de Roen:** "doble ancla" (lo ya escrito en el guion) es
+   canon, no "cadena de rescate" (lo que decia la fuente unica). Ademas
+   bajado de T2 a T1 en [[Los 3 Links de los Fijos]] -- es estructural
+   (character creation), no earned via bond, y se dispara en el primer
+   encuentro a bond cero. Queda pendiente (❓) revisar si Valen/Darro tienen
+   el mismo problema en sus propios casos de rol duplicado.
+3. **Los 3 Hollowed de la emboscada:** excepcion de manada (solo 3, no la
+   manada normal de 4-8) registrada en [[Villanos Menores]] §The Hollowed,
+   con justificacion de habitat (filtracion aislada, no una manada asentada
+   en zona sana).
+4. **Ubicacion de "El Encuentro":** [[Roen-Ficha-Expandida-v1]] y
+   [[Valen-Ficha-Expandida-v1]] (draft desde 2026-07-27) describian la
+   escena en The Wilds, con ambos ya presentes -- desactualizado contra
+   [[Geografía y Ciudades]]/[[Estructura Dramática]] (ratificadas) y el
+   guion ya escrito. Reescritas ambas §Escena 1 a Zephyr: Roen rescata (no
+   "ya presente"), Valen ausente (se suma despues, en la taberna). Resuelve
+   tambien el beat duplicado de "primera bestia" (Valen ya no lo tiene --
+   no estaba ahi).
+
+**5 fixes directos** (sin decision nueva -- restauraban decisiones ya
+tomadas o corregian texto obsoleto):
+- Escudo/"shield arm" de Roen en el guion quemaba T3 "Nothing Borrowed" --
+  reescrito a mano limpia.
+- Remate de las 3 celdas Strategist restaurado a "accion a distancia", no
+  melee -- la distincion por rol (Duelist=melee, Strategist=distancia) que
+  Boris ya habia aprobado el 2026-08-07 (ver entrada de esa fecha) se habia
+  perdido en un borrador intermedio de [[Armamento Base — Matriz Raza x
+  Rol]]. Corregido ahi y en el guion.
+- "Los fijos no alteran tu identidad de combate" ([[Los 3 Links de los
+  Fijos]]) contradecia [[Acoplamientos]] (ratificado) para el jugador
+  Duelist -- matizado.
+- 4 menciones de "Roen recogio el escudo al inicio del juego" (residuo
+  previo a la reconciliacion del 2026-08-07) corregidas a la version
+  vigente (regalo anonimo, anios antes del juego).
+- La lamina §16 (`zephyr-ambush-roen-arrival-v1.png`, ratificada) prometia
+  un rescate que el guion no entrega en la Variante A -- aclarado en el
+  guion que §16 es el instante de la llegada de Roen, no el catch en si
+  (eso es §14.1).
+
+**Metodo:** todos los fixes fueron a la fuente (regla 8 del repo), no a la
+linea reportada. Re-grep + linter en 0 criticos / 0 medium tras los fixes
+(28 INFO preexistentes sin cambios).
+
+**Pendiente:** re-corrida de los 2 subagentes antes de pasar
+[[Los 3 Links de los Fijos]] y [[Guion/Encuentro con Roen]] a `ratificado`
+(criterio de cierre del sprint: 0 criticos en ambos). Queda tambien la
+pregunta abierta sobre tier de Valen/Darro (punto 2 arriba).
+
+## [2026-08-10, 2a pasada] canon-qa | re-corrida -- 3 nuevos criticos por subagente (uno mio), corregidos
+
+Re-corri los 2 subagentes (mismo alcance, en frio otra vez) para verificar los
+fixes de la entrada anterior. **No cerro.** 6 criticos entre ambos (fuerte
+solapamiento -- 2 eran el mismo hallazgo desde los dos angulos).
+
+**Bug propio detectado:** el fix de la ronda anterior (bajar el rol duplicado
+de Roen de T2 a T1) dejo a Roen sin ningun T2 -- unico de los 3 fijos sin tier
+medio, contradiciendo [[The Tether]] §B ("T1->T2->T3", sin excepcion) y el
+gate del Final 4 (>=2 companieros en T2+). Peor: mi propio texto agregado a
+[[Roen-Ficha-Expandida-v1]] ("todavia no lo conoce en persona") contradecia
+una seccion YA EXISTENTE de esa misma ficha (18 variantes de encuentro, se
+conocen hace 1-2 anios) que no habia leido con cuidado antes de escribir.
+
+**Fixes de esta pasada:**
+1. **T2 de Roen restaurado:** el contenido original "cadena de rescate" (que
+   la pasada anterior habia reasignado a la variante T1 "doble ancla") se
+   reasigna de nuevo, esta vez como **T2 generico** para los 3 roles, earned
+   por bond -- no exclusivo de rol duplicado. [[Los 3 Links de los Fijos]]
+   ahora: T1 base + T1-variante (doble ancla, solo combate compartido
+   Vanguard) + T2 (cadena) + T3 (Nothing Borrowed). Aclarado tambien que
+   "doble ancla" NO reemplaza el traversal base del link fuera de combate
+   compartido -- ambiguedad que el subagente de dramaturgia marco como
+   critico (perdida de la unica herramienta de traversal del jugador Vanguard
+   en Acto 1).
+2. **Corregido mi error:** Roen y el jugador YA se conocian (1-2 anios,
+   [[Roen-Ficha-Expandida-v1]] §Conexion con el jugador). Zephyr es la
+   primera vez que trabajan juntos en este contrato, no la primera vez que se
+   ven. Ajustado tambien el guion (la linea "not the kind you give a
+   stranger" ya era compatible, no necesito tocarla).
+3. **Linea "Contract said you could handle yourself" reescrita** a "Told
+   myself you could handle yourself before I took this job. Wasn't wrong." --
+   la version anterior confundia 3 lecturas de "contrato" (el Contrato de
+   Conquistador del Triune Council que firma el jugador vs. la contratacion
+   personal de Roen, mercenario). [[Geografía y Ciudades]] tambien ajustada
+   para distinguir ambos.
+4. **Remate Strategist: de "no melee" a "no dano directo" de verdad.** El fix
+   anterior solo saco el boton de melee pero el hand cannon (Enano) y la
+   hanger (Humano) seguian siendo golpes de muerte en la prosa -- violaba
+   [[Acoplamientos]] ("Strategist no dana") pese a citarlo. Reescrito en
+   [[Armamento Base — Matriz Raza x Rol]] y el guion: las 3 celdas
+   Strategist ahora neutralizan/marcan (Elfo: Tether Arcano: Enano: ronda de
+   marcaje del hand cannon, no bala letal; Humano: Signal Horn detona la
+   trampa, no la hanger) -- el Hollowed cae igual, pero no por el golpe del
+   Strategist.
+5. **[[Geografía y Ciudades]] ya no ofrece el sabor "atrapa a media caida"**
+   para esta escena puntual (seguia listado como opcion viva pese a que el
+   guion ya lo habia descartado explicitamente).
+
+**Metodo:** de nuevo, todos los fixes a la fuente. Linter en 0 criticos / 0
+medium tras esta pasada. Lanzando 3a re-corrida de los 2 subagentes.
+
+## [2026-08-10, 3a pasada] canon-qa | 3a re-corrida -- 4 criticos mas, mas profundos, corregidos
+
+3a re-corrida (2 subagentes, mismo alcance, en frio). **Buena noticia:** los 3
+temas que la 2a pasada habia arreglado (contrato personal vs. Contrato de
+Conquistador, "ya se conocian", cantidad/habitat de Hollowed) salieron
+**verificados limpios** en los 2 reportes -- primera vez que un barrido
+sobrevive intacto a una re-corrida completa en esta ronda.
+
+**4 criticos nuevos, mas sistemicos que los anteriores:**
+1. **T1 de los 3 links asumia "golpe del jugador"** en la fuente unica
+   ([[Los 3 Links de los Fijos]]) -- rompia para las 3 celdas Strategist
+   (violaba [[Acoplamientos]], "Strategist no dana") pese a que el guion y
+   Armamento Base ya tenian el split de rol correcto. Era literalmente el
+   fallo de la regla 8: se habia arreglado la linea reportada (el guion) dos
+   veces sin tocar la fuente que originaba el problema. Corregido en la
+   fuente para Roen (ventana de remate), Valen (Marked Variable ya no exige
+   "golpe" del jugador) y Darro (T1 con rama de control para Strategist).
+   Agregada tambien una nota de co-dependencia: el "expuesto" que genera
+   Roen al lanzar un enemigo funciona como equivalente de marca de
+   Strategist para el Duelist, solo en esa ventana puntual -- fuera de ella,
+   sin Strategist en el grupo, el Duelist no tiene dano pleno.
+2. **Darro sin T2 general** (solo tenia el caso de rol duplicado, a
+   diferencia de Roen y Valen). Agregado "Doble Quiebre", T2 generico
+   disponible para los 3 roles.
+3. **"Objeto firma en T3" (afirmado en [[The Bound Five]], ratificado) era
+   falso para Valen y Darro** -- solo Roen tiene uno (el escudo). Corregido
+   en la fuente que originaba la promesa; queda como pendiente de diseño
+   abierto en [[Los 3 Links de los Fijos]], no como hecho ya resuelto.
+4. **El bookend ratificado ([[Guion/Apertura — Roen Viejo]] y [[Voz
+   Narrativa]]) seguia diciendo "The Wilds"** como ambiente del handoff de
+   control, pese a que la estructura ratificada (2026-08-07) arranca en Los
+   Desfiladeros de Zephyr. El barrido de esta clase (rondas 1a y 2a) nunca
+   habia llegado a estos 2 archivos ratificados -- se corrigieron ahi.
+
+**Fixes menores en la misma pasada:** T2 "Cadena" de Roen no tenia sentido
+para el jugador Vanguard (T1 no incluye agarres para ese rol) -- agregada
+variante "Ancla Movil"; T3 de Roen aclarado a "solo el escudo" (mandoble y
+espada siguen dormidos con o sin T3), propagado a Roen-Ficha y Armamento
+Base, que tenian redaccion ambigua sobre "las tres piezas".
+
+**Metodo:** linter en 0 criticos tras esta pasada (un critical propio de
+cita rota en el primer intento, corregido de inmediato).
+
+**Sesion cortada aca por Boris (2026-08-10):** la 4a re-corrida no se
+lanzo. Primer paso de la proxima sesion: lanzarla (2 subagentes, mismo
+alcance) antes de cualquier otra cosa -- criterio de cierre sigue siendo
+0 criticos en ambos. Tres rondas seguidas encontraron problemas reales
+(nunca ruido, siempre solapamiento fuerte entre los 2 subagentes), asi
+que no asumir que esta vez cierra limpio solo porque van 3 pasadas.
+
+## [2026-08-10] research | gauntlet-loop investigado + brief para el consejo
+
+Boris pidio empezar a preparar el terreno para los 2 pendientes grandes
+ingestados fuera de sesion: (1) revisar gauntlet-loop como tercer metodo de
+desarrollo, (2) llevar al consejo la decision de motor/fases con su premisa
+de vertical slice.
+
+**Gauntlet-loop, How I Prompt Fable, y Workbench fetcheados y leidos.**
+Conclusion: gauntlet-loop **no es una tercera via de motor** -- es un metodo
+de produccion (constructor + critico independiente, loop sin limite de
+rondas contra un estandar de calidad medible), ortogonal a Godot/Unity, no
+un reemplazo. Ya disponible parcialmente en esta sesion via skill `/loop`;
+lo que falta es disciplina de prompt, no tooling nuevo. Candidato natural de
+"estandar medible" para Aether Bound: [[Benchmark Biomecánico]] (ya mide
+frame a frame contra Sable/Sifu/HZD). Workbench (coordinacion multi-agente
+via markdown compartido) no tiene caso de uso claro mientras el equipo sea
+Boris + 1 agente. Todo el analisis completo agregado a [[ADR-003 Reset de
+desarrollo y motor]] §Tercera via.
+
+**Brief para el consejo escrito:** [[Brief para el Consejo — Motor y Fases
+de Desarrollo]] compila la premisa de fases que Boris escribio (vertical
+slice = creacion de personaje x18 + prologo + tutorial + titulo + Encuentro
+con Roen, sin limite de tiempo para el desarrollo completo) + los insumos ya
+resueltos (Godot vs Unity de ADR-002/003, gauntlet-loop de arriba).
+**Tension detectada:** el candidato de slice de ADR-003 ([[Slice of Bond]],
+4 escenas narrativas, Humano Duelist x Dagna) no es el mismo alcance que
+pide la premisa de Boris (slice de onboarding/produccion, no de profundidad
+narrativa) -- marcado explicitamente en el brief para que el consejo no lo
+pise por error.
+
+**Estado:** ambos pendientes tienen el terreno preparado. Falta que Boris
+confirme si corre `/llm-council` con el brief ahora o prefiere ajustar la
+premisa primero -- la sesion de decision de ADR-003 sigue siendo no
+delegable, este brief la hace mas eficiente, no la reemplaza.

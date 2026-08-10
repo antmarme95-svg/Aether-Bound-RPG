@@ -10,6 +10,7 @@ updated: 2026-07-27
 **Origen:** Emberdeep, Ignis Reach  
 **Edad:** ~63 años (joven para enano bajo el canon de ~200-250 de [[Las Tres Razas]] — adulto completo, sin cicatrices de edad). La cifra no es libre: se deriva de haber sido aprendiz de Vekka a los 30 y de que ese rechazo fue **hace ~30 años** (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §Darro).  
 **Slot en [[The Bound Five]]:** C4 — La Chispa  
+**Link:** *Open Seam* — [[Los 3 Links de los Fijos]] §Darro (provisional)
 
 ---
 
@@ -115,15 +116,15 @@ A diferencia de Roen (quien vino porque lo llamaste) o Valen (quien vio patrón)
 
 ## Arco Acto 1 — Lealtad (Accidental, Bromista, Honesto)
 
-### Escena 1: El Encuentro (Primeros 20 minutos)
+### Escena 1: El Encuentro (Darro se une, último)
 
-El jugador está en The Wilds con contrato del Triune Council. Darro está aquí porque... bueno, la versión cambia. Mercenario pasando. Huyendo de algo. Buscando dinero. La historia es diferente cada vez y siempre divertida.
+Darro es el cuarto y último en unirse — el jugador, Roen, Valen y el Pivote ya vienen viajando juntos desde el nido cuando lo cruzan ([[Estructura Dramática]], orden fijo: Roen → Valen → Pivote → Darro). Darro está en el camino porque... bueno, la versión cambia. Mercenario pasando. Huyendo de algo. Buscando dinero. La historia es diferente cada vez y siempre divertida.
 
 **Darro en esta escena:**
 - Energía. Mucho movimiento. Sonrisa constante.
-- Bromea sobre ABSOLUTAMENTE TODO — el nido, el peligro, el Triune Council.
-- Es bueno peleando. Mejor que esperarías para alguien tan burlón.
-- Cuando el jugador mata la primera bestia, Darro aplaude: "¡Excelente! Eso fue casi competencia de gremio."
+- Bromea sobre ABSOLUTAMENTE TODO — el grupo recién formado, el peligro, el Triune Council.
+- Es bueno peleando. Mejor que esperarías para alguien tan burlón — el grupo lo comprueba en la primera escaramuza junto a él.
+- Cuando termina la pelea, Darro aplaude: "¡Excelente! Eso fue casi competencia de gremio."
 
 **Primer diálogo clave:**
 Jugador espera que Darro sea serio alguna vez. Darro: "¿Serio? Hermano, la seriedad mató a mi padre. Voy a mantenerme feliz, gracias."
@@ -132,32 +133,9 @@ Jugador espera que Darro sea serio alguna vez. Darro: "¿Serio? Hermano, la seri
 
 ---
 
-### Escena 2: El Nido de Speck (Primer Toque, Primer Nombre)
+### Escena 2: El Primero (Encuentro con el Pivote, ya en el grupo)
 
-Llegan al nido. Bestias guardianas. La crisálida.
-
-**Darro aquí:**
-- Es el PRIMERO en tocar la crisálida — sin permiso, sin consideración, con curiosidad de niño.
-- Ella no reacciona (está dormida).
-- Darro: "Mira, es una piedra brillante. Bonita. Rara."
-
-El jugador debe decidir: destruir o salvar.
-
-**Darro interviene:** "¿Destruir eso? Hermano, apenas hace algo. Si vas a destruir algo tan pequeño, dame primero un nombre. Las cosas destruidas merecen nombre."
-
-No es argumento serio. Es **broma que contiene seriedad.**
-
-**Cualquiera que sea tu decisión, Darro la honra sin drama:**
-- Si destruyes: "Está bien. Se llamaba Speck. Adiós, Speck."
-- Si lo salvas: "Excelente. Speck viene con nosotros. Hablé."
-
-**Es decidido.** Punto final. Darro no argumenta — simplemente **nombraba como acto de honra.**
-
----
-
-### Escena 3: El Primero (Encuentro con Pivote)
-
-El Pivote llega.
+El Pivote ya viaja con Roen y Valen desde el nido cuando Darro se suma — acá el que llega nuevo es Darro, no el Pivote.
 
 **Darro y el Pivote (primera vez):**
 
@@ -166,6 +144,19 @@ Darro hace broma sobre ellos: "¿De dónde vienes?" "¿Cuál es tu historia?" Pe
 Algunos Pivotes responden con humor (Maren, Iven). Otros responden en serio (Torgan, Vekka). Darro nota la diferencia y **se adapta.**
 
 Con Pivotes fríos, Darro reduce bromas pero **mantiene energía**. Con Pivotes cálidos, Darro aumenta. Es **calibración social**, no frivolidad.
+
+---
+
+### Escena 3: Primer contacto con Speck (todavía sin nombre)
+
+Speck ya viaja con el grupo desde el nido — sobrevivió a la decisión del jugador y del Pivote, en la que Darro no estuvo presente. Para Darro, en esta primera escena, es solo un zorro raro que el grupo carga con demasiado cuidado.
+
+**Darro aquí:**
+- Es el PRIMERO en meterse con ella sin permiso, con curiosidad de niño.
+- Ella lo evade o lo ignora — todavía no hay señal de que entienda nada.
+- Darro: "Es un zorro raro. Bonito. Nervioso. ¿Por qué todos lo tratan como si fuera a explotar?"
+
+**Todavía no tiene nombre.** Eso llega después, cuando el grupo entero vea lo que Darro todavía no vio.
 
 ---
 
@@ -187,21 +178,21 @@ El Bound Five viaja La Rueda — lugares pesados, verdades pesadas.
 
 Darro habla a Speck como si Speck entendiese: "¿Escuchas estos elfos pomposos? Adorable. Recuérdame enseñarte a burlarte de ellos."
 
-### Escena 2: Speck Despierta, Darro Siente Responsabilidad
+### Escena 2: El Bautizo — Speck Despierta, Darro le da Nombre
 
-Durante Acto 2, Speck claramente **no es animal normal.**
-
-Darro lo ve. Darro reconoce: **esto no es mascota. Es alguien.**
+Durante Acto 2, el Bound Five entero ha visto comportamientos antinatural-inteligentes: Speck razona, tiene intenciones, entiende. Darro reconoce: **esto no es mascota. Es alguien.**
 
 **Primera vez que Darro es serio** (de verdad, no broma):
 
 Cuando Speck lo mira directamente — cuando Speck lo VE — Darro calla. Está ahí sentado. Mirando a Speck. Sin sonrisa.
 
-Después dice: "Okay. Esto cambió algo."
+Después dice, con su ironía marca registrada: *"It's nothing but a speck with opinions."* No es argumento serio — es broma que contiene seriedad, y en el momento en que la dice se vuelve nombre.
 
 El jugador: "¿Qué cambió?"
 
 Darro: "Yo. Eres responsable de esto ahora. No es mascota. Es nombre. Nombre es promesa."
+
+**Es decidido.** Punto final. Darro no argumenta — simplemente **nombró como acto de honra.** En el endgame the Triune Council la llama "the Warden"; el grupo insiste en "Speck" ([[Speck]] §El bautizo).
 
 ### Escena 3: La Verdad Filtra, Darro Ve el Peso Llegar
 
@@ -217,7 +208,7 @@ Darro: "No sé de Mudas ni ciclos, hermano. Sé que esta pequeña es **mía** �
 
 Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive, Harbormaster Tobin Hale aparta al jugador solo en su oficina y da un dato concreto sobre un fragmento de idioma institucional que oyó en los muelles. Cuando el Pivote activo es enano (Torgan, Dagna o Vekka), Tobin no distingue el idioma ritual del Great Forging Clan del idioma del clan menor o del subclán vasallo — para él es todo "asuntos de enanos con juramentos". La única persona del grupo que reconocería ese idioma, para Tobin, es **Darro** — enano, hijo de forja, aprendiz rechazado del mismo Clan. Tobin señala a Darro por error.
 
-**Si el jugador confronta a Darro con la sospecha:** es la única vez en el juego donde Darro no tiene broma lista. Se queda en silencio un segundo — raro en él — y después contesta sin la energía habitual: *"¿Yo? Hermano, a mí ni me dejaron entrar. ¿Qué juramento iba a tener?"* No es indignación teatral. Es la culpa técnica de ser señalado sin haber hecho nada, agravada por el hecho de que el rechazo del Clan es la herida más vieja y más real que Darro carga — y ahora esa herida se usa en su contra por error, no por nadie que la conozca de verdad. Si el jugador insiste, Darro no se defiende más — se aparta del grupo un rato, algo que casi nunca hace. Vuelve cuando el verdadero Pivote actúa y confirma que no era él.
+**Si el jugador confronta a Darro con la sospecha:** titubea un segundo antes de la broma de siempre — raro en él, aunque no la pierde del todo — y contesta con menos energía de la habitual: *"¿Yo? Hermano, a mí ni me dejaron entrar. ¿Qué juramento iba a tener?"* No es indignación teatral. Es la culpa técnica de ser señalado sin haber hecho nada, agravada por el hecho de que el rechazo del Clan es la herida más vieja y más real que Darro carga — y ahora esa herida se usa en su contra por error, no por nadie que la conozca de verdad. Si el jugador insiste, Darro no se defiende más — se aparta del grupo un rato, algo que casi nunca hace. Vuelve cuando el verdadero Pivote actúa y confirma que no era él.
 
 **Si el jugador no lo confronta pero la sospecha queda en el aire:** Darro la siente igual — nota las miradas, nota el silencio distinto de Roen o Valen. No pregunta qué le dijo Tobin. Hace una broma más floja de lo normal, algo que Darro mismo nota y no puede explicar.
 
@@ -227,15 +218,15 @@ Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive,
 
 ### Escena: The First Wound (Clímax Emocional — Darro Explota)
 
-El Fragmento se activa. Speck reacciona. El Pivote actúa.
+El Pivote se llevó a Speck en el **corredor** del Archive y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse y Speck reacciona.
 
-**El Pivote se lleva a Speck. Se lleva el Fragmento.**
+**Para Darro, la pérdida ya ocurrió río arriba. Esto es verla confirmarse.**
 
 **Darro aquí:**
 
 Es **el que más explota emocionalmente en el momento.**
 
-- Grita. Ataques erráticos. Quiere perseguir pero no puede porque Speck ya se fue.
+- Grita. Ataques erráticos. Quiere cargar contra el Pivote ahí mismo, y no puede — forcejear cerca del core mataría a Speck, y hasta furioso Darro lo sabe.
 - Por primera vez en la campaña, **Darro está furioso y serio.**
 
 *"¿QUÉ HICISTE? ¡SPECK NO ES TUYO PARA TOMAR!"*
@@ -268,7 +259,7 @@ Darro **lidera la búsqueda.** No tácicamente como Valen, no emocionalmente com
 
 ### The First Wound (Clímax Emocional)
 
-El Pivote actúa finalmente.
+El Pivote ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
@@ -312,9 +303,9 @@ Darro es quien **rechaza tu justicia.**
 
 *"Speck no es trofeo. Prisión no es victoria. Esto es... hermano, esto es peor que perderla. La tienes y está muerta por ello."*
 
-Darro se va. Es lo más devastador posible viniendo de él. No grita — simplemente no está.
+Darro se va. Es lo más devastador posible viniendo de él. No grita — simplemente no está. No dice adiós: antes de irse, talla en silencio su símbolo en la mesa del último campamento — el mismo gesto de honra que usó para nombrar a Speck, esta vez de despedida ([[Los 5 Finales]] §F3).
 
-Años después, nota que Darro nunca volvió.
+Años después, el jugador nota que Darro nunca volvió. La mesa, si todavía existe, sigue teniendo el símbolo tallado.
 
 #### **F4 — The Warden's Choice (síntesis, Speck elige su rol)**
 Darro es quien **celebra primero** — y el único del elenco al que la celebración se le cae encima a mitad de camino.
@@ -325,7 +316,7 @@ Es su alegría más genuina en cualquier final, y **dura poco.** Porque después
 
 *"¿Y ahora la dejamos acá."* No es pregunta. *"Le pusimos nombre para que fuera de alguien. Y la dejamos acá."*
 
-**El costo de F4 le pega a él más que a nadie**, porque el nombre fue suyo: fue el primero en tocar la crisálida y el que la bautizó ([[Los 5 Finales]] §F4 — la calcificación es permanente; nadie vuelve por ella). Que Speck haya elegido no le devuelve a Speck. Es exactamente lo agridulce que el final promete: **preguntarle fue lo correcto, y la respuesta se la lleva.**
+**El costo de F4 le pega a él más que a nadie**, porque el nombre fue suyo: fue el primero en meterse con ella sin permiso y el que la bautizó ([[Los 5 Finales]] §F4 — la calcificación es permanente; nadie vuelve por ella). Que Speck haya elegido no le devuelve a Speck. Es exactamente lo agridulce que el final promete: **preguntarle fue lo correcto, y la respuesta se la lleva.**
 
 Años después, Darro es el que cuenta historias de "el día que nombramos a Speck" — es la historia que repite cada vez que alguien le pregunta. La cuenta bien, la cuenta con gracia, y **nunca cuenta el final.** Cuando alguien pregunta qué pasó con ella, Darro cambia de tema con un chiste, y quien lo conoce sabe que ese chiste es una puerta cerrada.
 
@@ -337,7 +328,7 @@ Años después, Darro es el que cuenta historias de "el día que nombramos a Spe
 
 *"Her name is Speck. I don't care what you think of the name. Her name is Speck."*
 
-**Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Triune Council, el Pivote, incluso el jugador si lo considera sacrificar.
+**Contexto:** Dicho a CUALQUIERA que cuestione a Speck o su nombre — el Triune Council, el Pivote, incluso el jugador si lo considera entregar.
 
 No es argumento. Es **declaración de promesa.**
 
@@ -347,7 +338,7 @@ No es argumento. Es **declaración de promesa.**
 
 ### Darro + Maren (Humana Strategist → Ella)
 **Primera impresión:** Maren es táctica, tiene gadgets. Darro la bromea. Ella responde con humor seco. Conexión.  
-**Tensión:** Cuando Maren empieza a "calcular" qué sacrificar (incluyendo Speck), Darro pregunta: "¿Dónde estoy yo en tu ecuación?" No es amenaza — es pregunta honesta.  
+**Tensión:** Cuando Maren empieza a "calcular" qué se entrega y qué se conserva (incluyendo a Speck), Darro pregunta: "¿Dónde estoy yo en tu ecuación?" No es amenaza — es pregunta honesta.  
 **Traición:** Cuando Maren actúa, Darro: *"Las personas calculadas, cuando deciden — deciden completo. Eso da miedo."* Pero después: *"Prometiste algo. Speck era eso. Rompiste tu palabra. Eso se honra con justicia, no perdón."*
 
 ### Darro + Torgan (Enano Duelist → Él)
@@ -380,7 +371,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Tensión:** Darro bromea menos con Dagna que con cualquier otro del grupo — no porque ella lo pida, sino porque siente que las bromas rebotarían contra algo demasiado sólido. Es el único Pivote frente al que Darro se calla antes de que se lo pidan.
 
-**Traición — el quiebre suave de Darro para Deber Institucional:** cuando Dagna entrega a Speck en el cráter, Darro no grita como con las demás. Se acerca, se sienta en el suelo junto a Roen (ver [[#Darro + Roen]] abajo para la escena completa) y baja su propia arma. No es su quiebre más hondo — ese es Vekka — pero es el único momento donde Darro elige el silencio de otro antes que el suyo propio: se calla porque entiende que la escena no es sobre él.
+**Traición — el quiebre suave de Darro para Deber Institucional:** en el cráter, al ver a Dagna quieta en el borde con Speck en brazos —antes de que el jugador decida nada, ver [[Roen-Ficha-Expandida-v1|Roen]] para la escena completa— Darro no grita como con las demás. Se acerca, se sienta en el suelo junto a Roen (ver [[#Darro + Roen]] abajo para la escena completa) y baja su propia arma. No es su quiebre más hondo — ese es Vekka — pero es el único momento donde Darro elige el silencio de otro antes que el suyo propio: se calla porque entiende que la escena no es sobre él.
 
 ### Darro + Nyael (Elfa Duelist → Ella)
 **Primera impresión:** Nyael es sombra. Darro es luz. Extraña balance.  
@@ -393,7 +384,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Tensión:** treinta años de silencio no resuelto. Ninguno lo nombra directamente frente al grupo. Vekka nunca le corrige la técnica — sería reabrir el taller. Darro nunca le pide consejo — sería aceptar que sigue siendo su maestra.
 
-**Traición:** cuando Vekka desmonta el equipo del jugador por última vez, Darro reconoce el gesto en su propio cuerpo — es el mismo con que lo desmontó a él, treinta años atrás. Darro es quien siempre grita; en este momento se queda mudo, la única vez en la campaña. Después, si el jugador lo acompaña, Darro dice una sola cosa: *"Ahora sé por qué me despidió. Es porque sabía que iba a doler menos rápido que si me quedaba."* No es toda la verdad, pero es lo único que puede sostener sin romperse.
+**Traición:** en el cráter, cuando Vekka fija a Speck al yunque y se pone a revisar los tornillos con la misma calma de taller ([[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5), Darro reconoce el gesto en su propio cuerpo — es el mismo con que lo deshizo a él, treinta años atrás. Darro es quien siempre grita; en este momento se queda mudo, la única vez en la campaña. Después, si el jugador lo acompaña, Darro dice una sola cosa: *"Ahora sé por qué me despidió. Es porque sabía que iba a doler menos rápido que si me quedaba."* No es toda la verdad, pero es lo único que puede sostener sin romperse.
 
 **Este es el quiebre más hondo de Darro en todo el elenco** — Maren y Sereth pueden dolerle desde la Aritmética, y Torgan desde el deber compartido (ver abajo), pero solo Vekka fue, literalmente, la persona que lo desmontó primero. Es la única traición donde Darro no tiene chiste ni siquiera de reserva.
 
@@ -409,7 +400,7 @@ No es argumento. Es **declaración de promesa.**
 
 **Momento clave:** Cuando Darro llora por Speck/Pivote, Roen lo deja llorar. No intenta arreglarlo. Simplemente está. Darro después dice: *"Gracias por no hacer broma de mi llanto."* Roen: *"El llanto es honesto. Tú eres honesto. Sigue siendo Darro."*
 
-**La escena más grande de Darro en todo el juego (ruta Dagna):** cuando Dagna es el Pivote y entrega a Speck en el cráter, Roen deja caer el escudo por primera vez desde que lo recogió al inicio del juego — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. Es, de todo el elenco, el único momento donde Darro — el que siempre tiene frase — se queda sin ninguna. Que sea justo él quien elige el silencio es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
+**La escena más grande de Darro en todo el juego (ruta Dagna):** en el cráter, antes de que el jugador decida nada, al ver a Dagna quieta en el borde con Speck en brazos, Roen deja caer el escudo por primera vez desde que volvió a sus manos, años antes del juego (regalo anónimo) — gesto pequeño, silencioso, sin lágrima visible (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] para la escena completa). Darro es el único que se acerca. No dice nada. Se sienta al lado de Roen, en el suelo, y baja también su propia arma. Dura hasta que el jugador decide moverse. **No es que se quede mudo** — eso solo le pasa una vez, con Vekka (ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]]) — es que elige el silencio pudiendo hablar. Esa elección es lo que le da peso a la escena: reconocimiento entre compañeros de que uno se acaba de romper y no hay chiste que sirva.
 
 ### Darro + Valen
 **Energía:** Valen es información pesada. Darro es humor ligero. Parecen opuestos.
@@ -431,7 +422,7 @@ Después: Darro bromea sobre predicciones de Valen fallando. Valen permite la br
 - Cabello rojizo/castaño en topknot corto o trenza de guerrero — siempre en movimiento
 - Sin barba (decisión estilística diferente de otros enanos)
 - Tatuaje ámbar **incompleto** en un antebrazo — un símbolo, no el patrón completo de maestría
-- **Build más ligero que Dagna o Torgan** — cuero en lugar de plata, sin armadura pesada, hachas cortas en cinturón
+- **Build más ligero que Dagna o Torgan** — cuero en lugar de plata, sin armadura pesada, hachas cortas en cinturón + un par de cuchillas lanzables en bandolera cruzada al pecho (equipamiento agregado 2026-08-07, sin conflicto con lo ya ratificado — extiende el kit, no lo reemplaza)
 - Expresión **abierta, gesto suelto, en movimiento constante**
 - Ojos que brillan constantemente (humor o maquinación — a veces indistinguible)
 - **Adorno personal único:** nada oficial. Pero a veces lleva pequeño trozo de metal en bolsillo — de su última obra en Emberdeep antes de irse.

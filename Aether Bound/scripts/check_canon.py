@@ -128,8 +128,129 @@ RE_POI = re.compile(r"^####\s+\*\*(.+?)\*\*\s*\((.+?)\)\s*$")
 RE_SUFIJO_V = re.compile(r"-v\d+$", re.IGNORECASE)
 RE_SUFIJO_FICHA = re.compile(r"-Ficha-Expandida$", re.IGNORECASE)
 
+# --- La escena del cráter ----------------------------------------------------
+# Fuente: 10-Knowledge/El Cráter — Matriz de Rutas.md §2. Estas cuatro clases de
+# error (mensajero, borde, gate de F4, premisas) aparecieron en CUATRO rondas de
+# QA seguidas, siempre igual: un fix entra en la fuente y no baja a las fichas.
+# Cada chequeo de acá es un crítico que ya no hay que pagarle a un subagente.
+
+RUTAS_CRATER = {
+    # pivote -> (regex de su cadena institucional, cómo se llama su mensajero)
+    "maren":  (r"council",                    "mensajero del Council"),
+    "sereth": (r"royal academy",              "mensajero de la Royal Academy"),
+    "torgan": (r"clan menor",                 "mensajero del clan menor"),
+    "iven":   (r"consortium",                 "contacto del Consortium"),
+    "dagna":  (r"deepstone|subclan",          "mensajero de Deepstone"),
+    "vekka":  (r"great forging clan|gremio",  "mensajero del Great Forging Clan"),
+    "lyris":  (r"frontier high command",      "mensajero de Frontier High Command"),
+    "nyael":  (r"extraccion",                 "el equipo de extracción"),
+    "bram":   (r"torgan",                     "Torgan como segundo agente"),
+}
+
+# Quién sostiene a Speck es el agente a neutralizar solo en estas dos rutas.
+HOLDER_ES_AGENTE = {"nyael", "bram"}
+
+RE_MENSAJERO_DE = re.compile(
+    r"(?:mensajero|contacto|emisario)\s+(?:de\s+la\s+|del\s+|de\s+)([^,.;:—\n()]{3,45})",
+    re.IGNORECASE)
+
+# El Pivote se detiene SIEMPRE en el borde (Matriz §1, paso 3).
+RE_PIVOTE_ADENTRO = re.compile(
+    r"(?:llega|entra|est[aá]|baja|camina|se detiene|espera)\w*\s+"
+    r"(?:[^.\n]{0,40}?)\b(?:al|en\s+el|hacia\s+el|hasta\s+el)\s+"
+    r"(?:centro|fondo)\s+del\s+cr[aá]ter", re.IGNORECASE)
+# "ya está adentro" solo cuenta si habla del cráter — "adentro del asunto" no.
+RE_YA_ADENTRO = re.compile(
+    r"ya\s+est[aá]\s+adentro(?:[^.\n]{0,30}(?:cr[aá]ter|First\s+Wound))", re.IGNORECASE)
+# El mensajero SÍ sube desde dentro; Speck SÍ cruza en F4. No son el Pivote.
+RE_BORDE_OK = re.compile(
+    r"mensajero|contacto\s+del|equipo\s+de\s+extracci|sube\s+desde|viene\s+subiendo|"
+    r"speck\s+cruza|cruza\s+el\s+borde|core\s+central\s+responde|jugador\s+cruza",
+    re.IGNORECASE)
+
+# El gate de F4 son 2 condiciones globales y NINGUNA depende del Pivote.
+RE_GATE_RUTA = re.compile(
+    r"(?:requiere\s+que\s+el\s+jugador\s+haya|sin\s+perd[oó]n|"
+    r"no\s+est[aá]\s+en\s+F4|este\s+final\s+requiere)", re.IGNORECASE)
+
+# Premisas derogadas: matar a Speck no sana nada, y no hay reloj autónomo.
+PREMISAS_PROHIBIDAS = [
+    (re.compile(r"si\s+(?:ella\s+|speck\s+)?muere", re.IGNORECASE),
+     "«si muere» — el plan institucional es entrega VIVA (Estructura Dramática, Speck §Capa 5)"),
+    (re.compile(r"live\s+if\s+she\s+dies", re.IGNORECASE),
+     "«live if she dies» — matarla no sana nada"),
+    (re.compile(r"si\s+(?:speck\s+)?madura", re.IGNORECASE),
+     "«si madura» — no hay reloj de maduración autónomo (El Mundo y la Muda)"),
+    (re.compile(r"sacrificar\s+a\s+speck|sacrificio\s+de\s+speck", re.IGNORECASE),
+     "«sacrificar a Speck» — el plan es capturarla y entregarla viva"),
+    (re.compile(r"si\s+speck\s+vive", re.IGNORECASE),
+     "«si Speck vive» — lo que amenaza al Council es que llegue al cráter, no que viva"),
+]
+# Enunciar la premisa PARA DESMENTIRLA es correcto y necesario.
+RE_DESMIENTE = re.compile(
+    r"no\s+sana|no\s+apaga|error\s+de\s+c[aá]lculo|matarla\s+no|no\s+produce|"
+    r"est[aá]\s+prohibid|no\s+existe|mundo\s+hipot|hipot[eé]tic|prohibicion|"
+    r"crítico\s+de\s+premisa|premisa\s+vieja|derogad", re.IGNORECASE)
+
+# Beats obligatorios por final (Matriz §4).
+BEATS_OBLIGATORIOS = {
+    "f3": (re.compile(r"suelta|abre\s+el\s+arn[eé]s|baja\s+a\s+speck|abre\s+las\s+manos|"
+                      r"la\s+deja\s+ir|cede", re.IGNORECASE),
+           "el holder debe SOLTAR a Speck al ver cruzar al jugador (Matriz §4, F3)"),
+    "f4": (re.compile(r"se\s+aparta|se\s+apartan|no\s+tiene\s+protocolo|no\s+tiene\s+orden|"
+                      r"cierra\s+el\s+malet[ií]n|se\s+va\s+sin\s+decir|baja\s+a\s+speck",
+                      re.IGNORECASE),
+           "el mensajero debe APARTARSE al ver que Speck responde (Matriz §4, F4)"),
+}
+RE_HEAD_FINAL = re.compile(r"^#{2,4}\s*\**\s*(F1|F2a|F2b|F3|F4)\b", re.IGNORECASE)
+
+# Los fijos narran su reacción, nunca el quiebre en sí (Matriz §Regla de uso).
+FIJOS = ("Roen-Ficha", "Valen-Ficha", "Darro-Ficha")
+
+# La traición ocurre en el CORREDOR del Archive (Matriz §1, paso 1), no en el
+# cráter. Los 3 fijos la tenían escenificada en el lugar equivocado y el chequeo
+# de descripción no lo veía: detectaba el QUÉ, no el DÓNDE.
+RE_ENCABEZADO_CRATER = re.compile(
+    r"^#{2,5}.*(?:First\s+Wound|cr[aá]ter)", re.IGNORECASE)
+RE_TOMA_A_SPECK = re.compile(
+    r"se\s+lleva\s+a\s+speck|el\s+pivote\s+act[uú]a|toma\s+a\s+speck|"
+    r"se\s+lleva\s+el\s+fragmento", re.IGNORECASE)
+
+# Un superlativo de reacción vale en UN solo lugar del vault (Matriz §Corolario).
+RE_SUPERLATIVO = re.compile(
+    r"(?:la\s+[uú]nica\s+vez|el\s+[uú]nico\s+momento|la\s+escena\s+m[aá]s\s+grande|"
+    r"lo\s+m[aá]s\s+raro\s+posible|la\s+[uú]nica\s+traici[oó]n|el\s+[uú]nico\s+de\s+los\s+nueve|"
+    r"la\s+[uú]nica\s+que\b|el\s+[uú]nico\s+que\b|la\s+[uú]nica\s+del\s+elenco|"
+    r"el\s+[uú]nico\s+del\s+elenco|el\s+[uú]nico\s+funeral|primera\s+vez\s+en\s+(?:la|toda\s+la)\s+campaña|"
+    r"m[aá]s\s+(?:fr[ií]a|precisa|corta|[ií]ntima|peligrosa|honesta)\b)[^.\n]{0,80}",
+    re.IGNORECASE)
+NOMBRES_FIJOS = ("darro", "roen", "valen")
+# 15ª ronda: el check de superlativos solo miraba a los 3 fijos. 3 de 4
+# críticos de esa ronda eran el mismo patrón aplicado a Pivotes (Torgan
+# "único que espera de frente", Lyris/Torgan funeral mudo). Se amplía el
+# universo de nombres vigilados a todo el elenco.
+NOMBRES_ELENCO = NOMBRES_FIJOS + (
+    "maren", "sereth", "torgan", "iven", "dagna", "vekka", "lyris",
+    "nyael", "bram")
+# Solo verbos de ESCENA (los que reconstruyen el quiebre paso a paso). Mencionar
+# el evento en subordinada para hablar de la reacción propia es correcto y es lo
+# que los fijos deben hacer: "cuando ella se lleva a Speck, Roen pierde…".
+RE_QUIEBRE_VERBO = re.compile(
+    r"desmonta\s+(?:el|tu)\s+equipo|fija\s+a\s+speck\s+al\s+yunque|"
+    r"la\s+inmoviliza|cierra\s+los\s+ojos\s+un\s+segundo", re.IGNORECASE)
+
 CLASES = ["links", "citas", "fuente-unica", "edades", "rangos", "longevidad",
-          "genero", "reinos", "cuadrantes", "dialogo", "duplicados", "indice"]
+          "genero", "reinos", "cuadrantes", "dialogo", "duplicados", "indice",
+          "crater-mensajero", "crater-borde", "gate-f4", "premisas",
+          "crater-beats", "quiebre-fijos", "quiebre-lugar", "superlativos"]
+
+
+def _pivote_de(rel):
+    """Nombre de Pivote si el archivo es una de las 9 fichas, si no None."""
+    if "/Pivotes/" not in rel:
+        return None
+    stem = _personaje_stem(rel)
+    return stem if stem in RUTAS_CRATER else None
 
 
 def norm(s):
@@ -535,8 +656,229 @@ def check_indice(docs, idx, f):
                 "no está referenciado desde 00-Index.md — huérfano, o falta indexarlo")
 
 
+def _secciones_final(doc):
+    """línea -> cuál de los 5 finales la contiene ('f1'...'f4'), o None."""
+    actual = None
+    out = {}
+    for i, ln in enumerate(doc["lines"], 1):
+        m = RE_HEAD_FINAL.match(ln)
+        if m:
+            actual = m.group(1).lower()
+        elif RE_HEADING.match(ln):
+            actual = None          # otro encabezado cierra la sección de final
+        out[i] = actual
+    return out
+
+
+def check_crater_mensajero(docs, f):
+    """Cada Pivote responde a SU cadena institucional, no al Council por
+    defecto. Sereth usando 'mensajero del Council' fue crítico en la 9ª."""
+    for rel, doc in docs.items():
+        piv = _pivote_de(rel)
+        if not piv:
+            continue
+        permitido, esperado = RUTAS_CRATER[piv]
+        for i, ln in enumerate(doc["lines"], 1):
+            for cadena in RE_MENSAJERO_DE.findall(ln):
+                c = norm(cadena)
+                if re.search(permitido, c):
+                    continue
+                # Otras cadenas se pueden nombrar si NO es el mensajero del cráter
+                if re.search(r"cr[aá]ter|borde|entrega|recibirla|F1|F2a", ln, re.IGNORECASE):
+                    add(f, "CRITICAL", "crater-mensajero", rel, i,
+                        f"mensajero de «{cadena.strip()}» en la ruta {piv.capitalize()} — "
+                        f"su cadena es otra: {esperado} "
+                        f"(El Cráter — Matriz de Rutas §2)")
+
+
+def check_crater_borde(docs, f):
+    """El Pivote se detiene SIEMPRE en el borde, nunca en el centro. Si cruzara,
+    F1/F2b/F4 quedarían inalcanzables en esa ruta."""
+    for rel, doc in docs.items():
+        piv = _pivote_de(rel)
+        if not piv:
+            continue
+        for i, ln in enumerate(doc["lines"], 1):
+            if RE_BORDE_OK.search(ln):
+                continue
+            if RE_PIVOTE_ADENTRO.search(ln) or RE_YA_ADENTRO.search(ln):
+                add(f, "CRITICAL", "crater-borde", rel, i,
+                    f"{piv.capitalize()} aparece en el centro/fondo del cráter — "
+                    f"el Pivote se detiene SIEMPRE en el borde "
+                    f"(El Cráter — Matriz de Rutas §1, paso 3)")
+
+
+def check_gate_f4(docs, f):
+    """El gate de F4 son 2 condiciones globales y ninguna depende del Pivote.
+    Cinco fichas habían inventado un «si lo perdonaste» que no existe."""
+    for rel, doc in docs.items():
+        if not _pivote_de(rel):
+            continue
+        secs = _secciones_final(doc)
+        for i, ln in enumerate(doc["lines"], 1):
+            if secs.get(i) != "f4":
+                continue
+            if "Matriz de Rutas" in ln or "condiciones globales" in ln:
+                continue
+            if RE_GATE_RUTA.search(ln):
+                add(f, "CRITICAL", "gate-f4", rel, i,
+                    "el epílogo F4 agrega una condición de ruta — el gate son 2 "
+                    "condiciones globales (Momentos + Tether) y ninguna depende "
+                    "del Pivote (Los 5 Finales §F4, Matriz §4)")
+
+
+def check_premisas(docs, f):
+    """Premisas derogadas: matar a Speck no sana nada, y no hay reloj de
+    maduración autónomo. Dos excepciones legítimas: enunciarlas PARA
+    DESMENTIRLAS, y hablar de F2b — el único final donde Speck sí muere."""
+    for rel, doc in docs.items():
+        if doc["append_only"] or not rel.startswith("10-Knowledge/"):
+            continue
+        secs = _secciones_final(doc)
+        for i, ln in enumerate(doc["lines"], 1):
+            if RE_DESMIENTE.search(ln):
+                continue
+            if secs.get(i) == "f2b" or re.search(r"\bF2b\b", ln):
+                continue
+            for rx, msg in PREMISAS_PROHIBIDAS:
+                if rx.search(ln):
+                    add(f, "CRITICAL", "premisas", rel, i, msg)
+                    break
+
+
+def check_crater_beats(docs, f):
+    """F3 exige que el holder suelte a Speck; F4, que el mensajero se aparte.
+    Sin esos beats el epílogo no ejecuta el gate que dice ejecutar."""
+    for rel, doc in docs.items():
+        piv = _pivote_de(rel)
+        if not piv:
+            continue
+        secs = _secciones_final(doc)
+        texto = {}
+        for i, ln in enumerate(doc["lines"], 1):
+            s = secs.get(i)
+            if s in BEATS_OBLIGATORIOS:
+                texto.setdefault(s, []).append(ln)
+        for final, (rx, msg) in BEATS_OBLIGATORIOS.items():
+            cuerpo = "\n".join(texto.get(final, []))
+            if not cuerpo:
+                continue
+            if not rx.search(cuerpo):
+                add(f, "MEDIUM", "crater-beats", rel, 0,
+                    f"el epílogo {final.upper()} de {piv.capitalize()} no tiene su "
+                    f"beat obligatorio: {msg}")
+
+
+def check_quiebre_fijos(docs, f):
+    """Los fijos narran su REACCIÓN al quiebre, no el quiebre. Cuatro archivos
+    describían el de Vekka como su epílogo de F2b — clase entera de la 10ª."""
+    for rel, doc in docs.items():
+        if not any(nombre in rel for nombre in FIJOS):
+            continue
+        for i, ln in enumerate(doc["lines"], 1):
+            if not RE_QUIEBRE_VERBO.search(ln):
+                continue
+            if "[[" in ln:      # cita la ficha del Pivote: correcto
+                continue
+            add(f, "MEDIUM", "quiebre-fijos", rel, i,
+                "ficha de fijo describe el quiebre de un Pivote sin citar su ficha — "
+                "los fijos narran su reacción, no el evento "
+                "(El Cráter — Matriz de Rutas §Regla de uso)")
+
+
+def check_quiebre_lugar(docs, f):
+    """La traición ocurre en el CORREDOR del Archive, no en el cráter. Los 3
+    fijos la tenían bajo un encabezado de First Wound — el chequeo anterior
+    veía el QUÉ y no el DÓNDE, y por eso la 11ª ronda lo encontró igual."""
+    for rel, doc in docs.items():
+        if not any(nombre in rel for nombre in FIJOS):
+            continue
+        # Agrupar por sección: una sección que declara dónde ocurrió la toma
+        # (menciona el corredor o cita la Matriz) está bien ubicada aunque
+        # después mencione el evento varias veces.
+        secciones, actual = [], None
+        for i, ln in enumerate(doc["lines"], 1):
+            if RE_HEADING.match(ln):
+                actual = {"linea": i, "crater": bool(RE_ENCABEZADO_CRATER.match(ln)),
+                          "cuerpo": [], "primera": None}
+                secciones.append(actual)
+                continue
+            if actual is None:
+                continue
+            actual["cuerpo"].append(ln)
+            if actual["primera"] is None and RE_TOMA_A_SPECK.search(ln):
+                actual["primera"] = i
+        for s in secciones:
+            if not s["crater"] or s["primera"] is None:
+                continue
+            cuerpo = "\n".join(s["cuerpo"])
+            if re.search(r"corredor|Matriz\s+de\s+Rutas|ya\s+lleg[oó]", cuerpo, re.IGNORECASE):
+                continue
+            add(f, "CRITICAL", "quiebre-lugar", rel, s["primera"],
+                f"la traición está escenificada bajo un encabezado de cráter "
+                f"(línea {s['linea']}) sin aclarar que la toma ocurrió en el "
+                f"CORREDOR del Sunken Archive (El Cráter — Matriz de Rutas §1, "
+                f"paso 1). En el cráter el Pivote ya llegó con Speck")
+
+
+def check_superlativos(docs, f):
+    """Un superlativo de reacción de un personaje ('la única vez que Darro se
+    queda mudo') vale en UN solo lugar del vault. La 11ª encontró cuatro
+    escenas reclamando el mismo — el corolario estaba escrito y no
+    implementado. La 15ª encontró la misma clase aplicada a Pivotes, no solo
+    a fijos, y colisiones ENTRE dos personajes distintos reclamando la misma
+    exclusividad "de elenco" (ver vistos_elenco abajo)."""
+    vistos = {}
+    vistos_elenco = {}
+    for rel, doc in docs.items():
+        if doc["append_only"] or not rel.startswith("10-Knowledge/"):
+            continue
+        for i, ln in enumerate(doc["lines"], 1):
+            for frase in RE_SUPERLATIVO.findall(ln):
+                fn = norm(frase)
+                quien = next((n for n in NOMBRES_ELENCO if n in norm(ln)), None)
+                if not quien:
+                    continue
+                # Un superlativo con eje declarado ("el único donde X elige Y")
+                # es legítimo: acota en vez de reclamar exclusividad global.
+                if re.search(r"\bdonde\b|\bpor\b|no\s+es\s+su", fn):
+                    continue
+                # Reclamos explícitamente "de elenco/campaña" colisionan entre
+                # SÍ mismos aunque el sujeto sea otro personaje — dos Pivotes
+                # pueden reclamar cada uno "el único funeral silencioso" sin
+                # que compartan nombre, y siguen colisionando entre sí.
+                if re.search(r"elenco|campaña|funeral", fn):
+                    fn_e = re.sub(r"\d+", "", fn)[:45]
+                    if fn_e in vistos_elenco and vistos_elenco[fn_e][0] != rel:
+                        prev_rel, prev_i = vistos_elenco[fn_e]
+                        add(f, "MEDIUM", "superlativos", rel, i,
+                            f"superlativo de exclusividad de elenco ya reclamado "
+                            f"(por otro personaje) en {prev_rel}:{prev_i} — "
+                            f"«{frase.strip()[:60]}» vale en un solo lugar del "
+                            f"vault aunque el sujeto sea distinto")
+                    else:
+                        vistos_elenco.setdefault(fn_e, (rel, i))
+                clave = (quien, re.sub(r"\d+", "", fn)[:45])
+                if clave in vistos and vistos[clave][0] != rel:
+                    prev_rel, prev_i = vistos[clave]
+                    add(f, "MEDIUM", "superlativos", rel, i,
+                        f"superlativo de {quien.capitalize()} ya reclamado en "
+                        f"{prev_rel}:{prev_i} — un «única vez» vale en un solo lugar "
+                        f"del vault (Matriz §Corolario). Re-escopar uno de los dos")
+                else:
+                    vistos.setdefault(clave, (rel, i))
+
+
 CHEQUEOS = {
     "links": lambda d, i, f: check_links(d, i, f),
+    "crater-mensajero": lambda d, i, f: check_crater_mensajero(d, f),
+    "crater-borde": lambda d, i, f: check_crater_borde(d, f),
+    "gate-f4": lambda d, i, f: check_gate_f4(d, f),
+    "premisas": lambda d, i, f: check_premisas(d, f),
+    "crater-beats": lambda d, i, f: check_crater_beats(d, f),
+    "quiebre-fijos": lambda d, i, f: check_quiebre_fijos(d, f),
+    "quiebre-lugar": lambda d, i, f: check_quiebre_lugar(d, f),
+    "superlativos": lambda d, i, f: check_superlativos(d, f),
     "citas": lambda d, i, f: check_citas(d, i, f),
     "fuente-unica": lambda d, i, f: check_fuente_unica(d, f),
     "edades": lambda d, i, f: check_edades(d, f),

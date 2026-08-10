@@ -56,17 +56,31 @@ Cinco personas + Speck, siempre. Ver [[Los 9 Pivotes]] §Canon.
 
 **Constantes del Pivote:** (1) nunca de tu raza, rol co-dependiente del tuyo;
 (2) te enseña la virtud que tu cultura no tiene y su traición usa esa virtud
-en tu contra; (3) el sabor de la traición lo dicta su raza — Humano =
-pragmatismo · Enano = deber · Elfo = lógica fría.
+en tu contra; (3) el sabor de la traición lo dicta su **arquetipo**, no su
+raza — Aritmética/Manipulación, Deber Institucional, o Rechazo/Ausencia (ver
+matriz ratificada en [[Los 5 Finales]] §matriz — 3 de las 9 razas rompen
+cualquier regla fija por raza: Iven y Bram, humanos, están en Deber
+Institucional y Rechazo/Ausencia respectivamente; Nyael, elfa, está en Deber
+Institucional).
 
 Control en juego: [[Bond y el Bond Vacío]] (autónomos + un botón, cero menús).
 Vínculos y progresión de intimidad: [[The Tether]].
 
-**Pendiente (❓):** tablas de C1/C2/C4 por celda de jugador + sus links (y los
-links directos de Speck estadio 2). → Task-Board.
+**Resuelto (2026-08-05, provisional):** Roen, Valen y Darro tienen ahora
+sus propios links nombrados — ver [[Los 3 Links de los Fijos]]. Ya no son
+solo función genérica de rol; cada uno tiene T1→T3 y una resolución
+específica para cuando el rol del jugador coincide con el suyo.
+**Corregido 2026-08-10 (3ª pasada):** esta línea prometía "objeto firma
+en T3" para los 3 — falso, solo Roen tiene uno (el escudo); Valen y
+Darro no. Si Valen/Darro necesitan objeto o escena firma propia queda
+como pendiente de diseño en [[Los 3 Links de los Fijos]] §Pendiente, no
+como hecho ya resuelto. El "bond más útil es el del Pivote conforme
+avanzan los actos"
+que pedía Boris se resuelve por **pacing de contenido**, no por un tope
+de sistema visible — ver la página para el detalle completo.
 
-
-**Preguntas/Dudas Toño a Claude:** 
-
-*Links/Bonds:* Los bonds no deben suceder únicamente entre jugador y pivote, debemos desarrollar los bonds/links fijos de Roen, Darro y Valen. Siempre a partir de su raza y rol. Todos los links son útiles pero conforme van avanzando los actos, el bond más útil es el del pivote, esto construye dramatismo silencioso. Debemos idear un mecanismo narrativo y de worldbuilding donde los 9 bonds son protagonistas y la experiencia del jugador sea la misma sin importar el personaje (raza/rol) que escoge.
+**Pendiente (❓):** links directos de Speck en su fase de desvelamiento
+previa a E3; nombres de UI/iconografía de los 7 estados T1-variante/T2/T3
+nuevos (ver [[Los 3 Links de los Fijos]] §Pendiente); ronda de QA antes
+de ratificar [[Los 3 Links de los Fijos]]. → Task-Board.
 

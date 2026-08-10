@@ -158,8 +158,9 @@ Representa así:
 **Geografía:**
 - Río central navegable (prominente, azul desaturado)
 - Llanuras fértiles
-- Conexión vía Cinder Ascent (norte)
-- Conexión vía Gloomvault (este)
+- Conexión a The Wilds vía **River Road** (radio propio de Aethelgard) — **no** vía
+  Cinder Ascent (radio de Ignis Reach) ni Gloomvault (radio de Stillwood): es una
+  rueda, no una malla, los tres reinos no se conectan entre sí de forma directa
 
 **Color dominante:** Ocre cálido, verdes pálidos
 

@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"Aether Bound/scripts/hook_current_state.sh\"",
+            "timeout": 20,
+            "statusMessage": "Chequeando peso de Current-State.md..."
+          }
+        ]
+      }
+    ]
+  }
+}

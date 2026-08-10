@@ -14,6 +14,12 @@ Aether Bound/*/*/.obsidian/
 .mcp.json
 godot/.mcp.json
 
+# Eje Inversión — NUNCA se versiona. Contiene saldos, posiciones y cartera
+# real de Boris; el informe del gestor viene marcado "strictly confidential".
+# Este repo empuja a un GitHub remoto: nada de aquí debe viajar ahí.
+# Vive solo en OneDrive. Ver Inversión/METODO.md §4.5.
+Inversión/
+
 # Privados del Vault (SCHEMA §8 / VAULT-STARTER §5.5) — glob, no línea
 # literal: cubre el archivo y cualquier split futuro (ej. -Archivo.md) sin
 # volver a tocar este .gitignore. No existen todavía; se crean solo si
