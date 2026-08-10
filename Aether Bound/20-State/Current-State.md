@@ -146,16 +146,18 @@ motor resuelve eso.
    ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
    2026-08-10, ver [[LOG]]). Sigue directo de
    [[Guion/Encuentro con Roen]].
-2. **Re-corrida de QA pendiente (3ª vez).** La 17ª ronda (2026-08-10)
-   encontró 13 críticos → re-corrida: 6 más (uno propio) → re-corrida:
-   4 más, esta vez sistémicos (T1 de los 3 links asumía "golpe del
-   jugador", rompía para Strategist; Darro sin T2 general; "objeto
-   firma en T3" falso para Valen/Darro; el bookend ratificado seguía
-   diciendo "The Wilds"). Todos corregidos a la fuente. Falta lanzar
-   una **4ª re-corrida** para confirmar cierre real (criterio: 0
-   críticos en ambos subagentes) antes de pasar [[Los 3 Links de los
-   Fijos]] y [[Guion/Encuentro con Roen]] a `ratificado`. Detalle
-   completo en [[LOG]].
+2. **Re-corrida de QA pendiente (4ª vez) — empezar por acá.** La 17ª
+   ronda (2026-08-10) encontró 13 críticos → re-corrida: 6 más (uno
+   propio) → re-corrida: 4 más, esta vez sistémicos (T1 de los 3 links
+   asumía "golpe del jugador", rompía para Strategist; Darro sin T2
+   general; "objeto firma en T3" falso para Valen/Darro; el bookend
+   ratificado seguía diciendo "The Wilds"). Todos corregidos a la
+   fuente — **la 4ª re-corrida quedó sin lanzar, cortada a propósito
+   por Boris para cerrar la sesión** (2026-08-10). Lanzarla es el
+   primer paso de la próxima sesión, antes de cualquier otra cosa —
+   criterio de cierre: 0 críticos en ambos subagentes, recién ahí pasa
+   [[Los 3 Links de los Fijos]] y [[Guion/Encuentro con Roen]] a
+   `ratificado`. Detalle completo en [[LOG]].
 3. **Pregunta abierta:** ninguno de los 3 T3 de los fijos tiene "escena
    firma" propia (solo Roen tiene objeto firma, el escudo) —
    [[The Tether]] promete ambos para todo T3. Es decisión de diseño, no

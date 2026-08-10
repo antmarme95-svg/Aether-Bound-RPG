@@ -8316,5 +8316,11 @@ espada siguen dormidos con o sin T3), propagado a Roen-Ficha y Armamento
 Base, que tenian redaccion ambigua sobre "las tres piezas".
 
 **Metodo:** linter en 0 criticos tras esta pasada (un critical propio de
-cita rota en el primer intento, corregido de inmediato). Lanzando 4a
-re-corrida.
+cita rota en el primer intento, corregido de inmediato).
+
+**Sesion cortada aca por Boris (2026-08-10):** la 4a re-corrida no se
+lanzo. Primer paso de la proxima sesion: lanzarla (2 subagentes, mismo
+alcance) antes de cualquier otra cosa -- criterio de cierre sigue siendo
+0 criticos en ambos. Tres rondas seguidas encontraron problemas reales
+(nunca ruido, siempre solapamiento fuerte entre los 2 subagentes), asi
+que no asumir que esta vez cierra limpio solo porque van 3 pasadas.
