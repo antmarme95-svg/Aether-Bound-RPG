@@ -21,3 +21,8 @@ updated: 2026-07-04
   componentes), ya no como cobertura; el ítem A3 del [[Task-Board]] se
   cierra; el riesgo "export a consolas requiere partner externo" queda como
   ítem de producción tardía en [[Current-State]].
+- **Re-confirmado en [[ADR-003 Reset de desarrollo y motor]] (2026-08-10):**
+  la revisión Godot→Unity que abrió ADR-003 se cerró a favor de Godot, con
+  evidencia (no con la nostalgia de "ya está instalado"). Esta decisión
+  vuelve a estar en **plena vigencia**, sin la nota de "en revisión" que
+  cargó durante 2 semanas.

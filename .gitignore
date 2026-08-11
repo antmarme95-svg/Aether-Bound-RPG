@@ -2,6 +2,29 @@
 godot/.godot/
 godot/test_out/
 
+# Unity — caché regenerable + artifacts locales (equivalente a godot/.godot/)
+unity/Library/
+unity/Temp/
+unity/Logs/
+unity/UserSettings/
+unity/MemoryCaptures/
+unity/Obj/
+unity/Build/
+unity/Builds/
+unity/.vs/
+unity/.vsconfig
+unity/*.csproj
+unity/*.sln
+unity/*.unityproj
+unity/sysinfo.txt
+unity/crashlytics-build.txt
+unity/*.apk
+unity/*.aab
+unity/*.unitypackage
+unity/*.app
+# Unity MCP: relay/binarios locales del bridge, no versionar
+unity/.unity/
+
 # Obsidian volatile UI state (el vault sí se trackea)
 Aether Bound/.obsidian/workspace.json
 

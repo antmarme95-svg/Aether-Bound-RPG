@@ -1,16 +1,16 @@
 ---
-status: BORRADOR DE CIERRE — pendiente de firma del director
+status: CERRADO — ratificado por el director
 updated: 2026-08-10
 supersede_parcial: "ADR-002 Motor diferido"
 ---
 
-# ADR-003 — Reset de desarrollo y revisión de motor 🟡 BORRADOR DE CIERRE
+# ADR-003 — Reset de desarrollo y revisión de motor ✅ CERRADO
 
-> **BLOQUEANTE: no se toca una línea de código hasta que este ADR se cierre.**
-> Planteado por el director el 2026-07-28.
-> **Borrador de cierre escrito el 2026-08-10** tras el consejo — ver
-> §Cierre al final. **La firma es del director; nada de lo de abajo está
-> ratificado hasta que Boris lo confirme.**
+> Planteado por el director el 2026-07-28. **Cerrado el 2026-08-10** tras
+> el consejo — ver §Cierre al final. Hard reset **ejecutado**: `godot/`
+> eliminado del árbol de trabajo, recuperable en el tag
+> `archive/prototipo`. El frente C (técnico) del [[Task-Board]] queda
+> **descongelado**.
 
 ## Contexto
 
@@ -398,7 +398,25 @@ mejor vestuario.
 
 ## Firma
 
-**Pendiente del director.** Nada de este cierre está ratificado hasta que
-Boris lo confirme, ítem por ítem si hace falta. Los dos puntos que más
-piden su ojo: el recorte a 3 escenas (§3) y la revisión de 30 minutos
-sobre si Dagna sigue siendo el Pivote correcto post-rework.
+**Ratificado por Boris, 2026-08-10** ("Master, y hazlo" — confirmación
+explícita de ejecutar el hard reset sobre `master`, tras revisar el
+cierre completo). Los 3 playtesters (Diego, Santiago, Delmer) quedaron
+registrados en §C con protocolo de sesión. La revisión de "¿sigue Dagna
+siendo el Pivote correcto?" se resolvió con evidencia del vault —
+`Seismic Springboard` es el único de los 9 links con los tres tiers
+completamente escritos y el molde de referencia explícito para los
+otros 8 — sin necesitar los 30 minutos de lectura propuestos.
+
+**Ejecutado el mismo día:**
+- `git tag archive/prototipo` sobre el HEAD de `master` previo al reset.
+- `godot/` eliminado del árbol de trabajo (código + caché local
+  `.godot/` no versionada).
+- Lanzadores muertos que apuntaban al proyecto Godot borrado
+  (`Start-Godot.bat`, `Start-GoldenScene.bat`, `Start-Playtest-Duelist.bat`,
+  `Start-Playtest-Greybox.bat`) eliminados.
+- `CLAUDE.md` regla 5 y `README.md` actualizados para reflejar el reset.
+
+**Sin confirmar explícitamente todavía** (no bloquea el reset en sí,
+pero conviene cerrarlo antes de escribir la primera escena del slice):
+el recorte exacto a 3 escenas de §3. Si Boris quiere ajustar tiempos o
+beats de esa tabla, se edita ahí — el resto del cierre no depende de eso.

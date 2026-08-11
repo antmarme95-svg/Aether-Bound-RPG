@@ -8359,3 +8359,62 @@ pise por error.
 confirme si corre `/llm-council` con el brief ahora o prefiere ajustar la
 premisa primero -- la sesion de decision de ADR-003 sigue siendo no
 delegable, este brief la hace mas eficiente, no la reemplaza.
+
+## [2026-08-10] design | consejo corrido + ADR-003 CERRADO + hard reset ejecutado
+
+Boris confirmo correr `/llm-council` con el brief tal cual. 5 asesores (Contrarian,
+First Principles, Expansionist, Outsider, Executor) -> revision cruzada anonima ->
+sintesis del chairman. Transcript completo en
+`90-Raw/council-2026-08-10-motor-y-fases.md`.
+
+**Veredicto del consejo (resumen):** el bloqueo de 6 semanas no era tecnico, era
+de firma -- el ADR daba permiso para seguir haciendo lo comodo (worldbuilding,
+QA) en vez de lo que podia fallar (codigo). El Candidato B (creacion de
+personaje x18 + prologo + tutorial + titulo + Encuentro con Roen) no tiene
+condicion de muerte -- no es un vertical slice, es produccion de assets.
+Candidato A ([[Slice of Bond]]) si tiene criterio de falla explicito ("si la
+coda no duele, el slice falla"). Motor: Godot, evidencia medida vence a
+argumentos de catalogo. El chairman discrepo de la unanimidad de los 5
+revisores en un punto: la premisa de Boris ("game feel y biomecanica
+correctos") no era vanidad de arte -- es la afirmacion de que la biomecanica
+es el canal por el que viaja la perdida, y eso se conservo en el recorte.
+
+**Error del consejo, detectado al aterrizarlo:** propuso resolver "Dagna o
+Roen" para el slice con 30 min de lectura. Pregunta malformada -- **Roen es un
+fijo, los fijos no traicionan**, no puede sostener la coda del Bond vacio.
+Dagna gana por defecto. Se verifico ademas con evidencia del vault (sin
+necesitar los 30 min): `Seismic Springboard` es el UNICO de los 9 links del
+Pivote con los 3 tiers completamente escritos y el molde de referencia
+explicito para los otros 8 -- Dagna se confirma con margen.
+
+**Cierre escrito en [[ADR-003 Reset de desarrollo y motor]] §Cierre**
+(borrador -> Boris registro los 3 playtesters -- Diego, Santiago, Delmer,
+gamers sin exposicion previa al lore -- y agrego el protocolo de sesion: NO
+ponerlos al corriente del lore antes de jugar (su ignorancia es el
+instrumento, no un obstaculo) + orden obligatorio de preguntas post-sesion
+(abiertas -> comprension -> emocional, porque el arbol de fallas §A solo
+discrimina ejecucion vs diseno si la comprension se mide antes que la
+emocion).
+
+**Boris confirmo "Master, y hazlo"** -- ejecucion del hard reset:
+1. `feat/c6-anatomy-rework` mergeado a `master` primero (master estaba 189
+   commits atras de origin, y sin el trabajo de esta sesion completa --
+   se sincronizo y mergeo sin conflictos antes de tocar codigo).
+2. `git tag archive/prototipo` sobre el HEAD pre-reset -- snapshot recuperable
+   para siempre.
+3. `godot/` eliminado del arbol de trabajo (codigo versionado + cache local
+   `.godot/` no versionada, 242MB).
+4. Lanzadores muertos (`Start-Godot.bat`, `Start-GoldenScene.bat`,
+   `Start-Playtest-Duelist.bat`, `Start-Playtest-Greybox.bat`) eliminados --
+   apuntaban al proyecto borrado.
+5. `CLAUDE.md` regla 5, `README.md`, y [[Task-Board]] §Frente C actualizados
+   para reflejar el reset (Task-Board queda como registro historico, no se
+   reescribe tarea por tarea).
+6. [[ADR-002 Motor diferido]] vuelve a plena vigencia -- deja de estar "en
+   revision".
+7. [[ADR-003 Reset de desarrollo y motor]] cerrado y ratificado.
+
+**Estado:** frente C del Task-Board descongelado. Proximo codigo de
+produccion: el vertical slice (3 escenas, Dagna, Godot) segun el cierre de
+ADR-003. Pendiente sin bloquear: VoBo explicito de Boris al recorte exacto de
+3 escenas si quiere ajustar tiempos/beats.

@@ -92,43 +92,42 @@ Con el sprint y los links de fijos cerrados, el frente siguiente es
 
 ---
 
-## 🔴 BLOQUEO ACTIVO — no se toca código
+## ✅ ADR-003 CERRADO (2026-08-10) — hard reset ejecutado
 
-**[[ADR-003 Reset de desarrollo y motor]] está ABIERTO** (2026-07-28). El
-director planteó hard reset de código + revisión de la decisión de motor
-(Godot → posiblemente Unity).
+**[[ADR-003 Reset de desarrollo y motor]] está cerrado y ratificado.**
+`godot/` fue eliminado del árbol de trabajo (recuperable en el tag
+`archive/prototipo`). El frente C (técnico) del Task-Board queda
+**descongelado**.
 
-- ❌ No se escribe código de producción, ni en Godot ni en Unity. Frente C del
-  Task-Board congelado.
-- ✅ **Sigue desbloqueado:** worldbuilding, guión, concept art, mockups de UI,
-  diseño de sistemas en papel.
+**Lo que salió del consejo + el cierre:** motor **GODOT** (ADR-002 vuelve
+a plena vigencia) · vertical slice = [[Slice of Bond]] recortado a 3
+escenas con **Dagna**, greybox de entorno pero **no de cuerpo** (rig con
+biomecánica y game feel correctos) · PC únicamente para v1 · alcance de
+v1 diferido hasta medir el costo real en horas de un Pivote · método:
+gauntlet-loop solo sobre traversal, con [[Benchmark Biomecánico]] como
+estándar. Detalle completo y las 3 piezas pre-código (árbol de "¿y si no
+duele?", contador de horas, 3 playtesters — Diego/Santiago/Delmer, con
+protocolo de sesión) en el §Cierre del ADR.
 
-**5 criterios a resolver, en orden:** (1) vertical slice mínimo → (2) target
-de plataforma → (3) alcance v1 vs post-lanzamiento → (4) motor evaluado
-contra el slice → (5) inventario de qué se conserva. Requiere sesión con el
-director; no delegable.
-
-**Nota clave:** el riesgo mayor no es el motor — es que el alcance narrativo
-(9 Pivotes × 5 finales × 9 celdas) creció a escala de estudio mediano. Ningún
-motor resuelve eso.
+**Próximo código de producción:** el vertical slice, sobre Godot, según
+ese cierre. Nada más está autorizado todavía — sigue sin sentido escribir
+combate genérico o sistemas fuera del slice hasta que dé veredicto.
 
 ---
 
 ## Hechos vigentes
 
-- **Branch:** `feat/c6-anatomy-rework`. Playtest: `Start-Playtest-Greybox.bat`.
-  Gates: `autotest_combat.gd`, `autotest_springboard.gd`. **Congelados por
-  ADR-003.**
+- **Branch:** `master` (el hard reset se ejecutó y mergeó ahí, 2026-08-10).
+  Los playtests viejos (`Start-Playtest-Greybox.bat` y demás lanzadores de
+  `godot/`) fueron eliminados junto con el código que apuntaban.
 - **Speck:** la última Warden cristalina superviviente, shapeshifteada como
   zorro. Narrativa + diseño visual 100% completo. Detalle en
   [[Current-State-Historico]].
-- **Anatomía/rework (C6):** oreja élfica 75%, nacimiento de oreja 74/70/78%.
-  Queda: ROM por raza (C4), pies sin IK.
-- **Motor:** GODOT confirmado (ADR-002), en revisión por ADR-003.
-- **Deuda técnica visible:** pies sin IK, ROM enano/elfo (C4 restante), mesh
-  de bloques = etapa.
-- **Riesgos abiertos:** frame budget frágil RTX 2060 (~58 fps warm); export a
-  consolas requiere partner externo.
+- **Anatomía/rework (C6):** todo el trabajo de C6 (oreja élfica, nacimiento
+  de oreja, etc.) vivía en el código Godot archivado — queda como
+  conocimiento en [[Lecciones]] / [[Benchmark Biomecánico]] / [[Art Bible]],
+  no como código vigente. Se reconstruye si el slice lo requiere.
+- **Motor:** GODOT, re-confirmado (ADR-002 + cierre de ADR-003).
 
 ---
 

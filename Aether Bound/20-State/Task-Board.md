@@ -41,6 +41,14 @@ updated: 2026-07-10
 
 ## Frente C — Técnico (hereda del prototipo)
 
+> ⚠️ **Hard reset ejecutado (2026-08-10, [[ADR-003 Reset de desarrollo y
+> motor]]).** El código que documenta la tabla de abajo fue eliminado del
+> árbol de trabajo — recuperable en el tag `archive/prototipo`. Queda
+> como **registro histórico** de qué se probó y qué funcionó (insumo
+> para no repetir errores), no como estado de código vigente. El
+> siguiente código de producción es el vertical slice del §Cierre de
+> ADR-003, y arranca una tabla nueva cuando exista.
+
 | ID | Tarea | Status | Notas |
 |---|---|---|---|
 | C1 | Renombrar V&V → AETHER BOUND (repo/README/strings) | ✅ | 2026-07-05: config/name, boot prints, README (título + roadmap V&V histórico). Identificadores internos retenidos adrede (save path, sentinels, web congelado) |
