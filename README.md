@@ -4,6 +4,14 @@
 internal identifiers retain the old name). The living design truth is the
 Vault: `Aether Bound/` (see `CLAUDE.md`); `docs/GDD.md` v2.2 is frozen.*
 
+> ⚠️ **Hard reset ejecutado (2026-08-10, `ADR-003`).** `godot/` — el
+> prototipo técnico descrito abajo — fue eliminado del árbol de trabajo;
+> se conserva como referencia en el tag `archive/prototipo`. Este README
+> queda como registro histórico de esa arquitectura, no como estado
+> actual del código. Próximo código de producción: el vertical slice de
+> `Aether Bound/20-State/Decisiones/ADR-003 Reset de desarrollo y motor.md`
+> §Cierre.
+
 An original open-world Action RPG: **Vox Machina** irreverence × **Breath of
 the Wild** cel-shaded exploration. You are not a chosen one — you are a
 mercenary with a freshly signed **Conqueror's Contract** and three bad ideas

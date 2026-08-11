@@ -20,9 +20,14 @@
    `Aether Bound/10-Knowledge/`; el estado, en `Aether Bound/20-State/`.
 4. Ningún loop termina sin actualizar `00-Index.md`, `LOG.md` y
    `Current-State.md` (checkpoint tras **cada** tarea).
-5. Código: `godot/` es la implementación (Godot 4.6.3); `src/` (Three.js) es
-   referencia congelada. Lecciones técnicas obligatorias antes de tocar
-   código: `Aether Bound/20-State/Lecciones.md`.
+5. **Código: hard reset ejecutado (2026-08-10, ADR-003).** `godot/`
+   (prototipo técnico pre-rework narrativo) fue eliminado del árbol de
+   trabajo — recuperable en el tag `archive/prototipo`. Motor
+   confirmado: **Godot** (`ADR-002` vigente). Próximo código de
+   producción: el vertical slice de `ADR-003` §Cierre (Slice of Bond
+   recortado, Dagna). `src/` (Three.js) sigue como referencia congelada.
+   Lecciones técnicas obligatorias antes de tocar código:
+   `Aether Bound/20-State/Lecciones.md`.
 6. Arranque de sesión barato por diseño (SCHEMA §8): nada se auto-carga vía
    `@import` salvo lo indispensable en CADA sesión. Auditoría de peso:
    `Aether Bound/scripts/check_vault.py` (semáforo 🟢<10k/🟡10-30k/🔴>30k
