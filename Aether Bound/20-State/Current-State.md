@@ -236,36 +236,29 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-1. **✅ Guión: siguiente escena — ESCRITA (2026-08-12).**
-   [[Guion/Caminata y Taberna — Valen se suma]]: caminata silenciosa
-   Roen+jugador hasta la ciudad natal + taberna donde se suma Valen
-   ([[Geografía y Ciudades]] §Beats Narrativos, locación 1). Sigue
-   directo de [[Guion/Encuentro con Roen]]. Linter en 0 críticos,
-   indexada. `status: provisional` — comparte re-corrida con
-   `Encuentro con Roen` (los dos tocan links de fijos que siguen
-   provisionales).
-   **✅ Las 3 decisiones abiertas — cerradas por Boris el mismo día
-   (2026-08-12), las 3 escritas a fuente:**
-   - **Roen y Valen no se conocían.** El guión queda firme.
-   - **✅ Voz del protagonista — decisión nueva, la de más alcance del
-     día.** No es silent protagonist clásico: **arranca mudo y gana voz
-     acto a acto** (elemento coming-of-age). Fuente única y gradiente
-     completo en [[Voz Narrativa]] §Voz del protagonista — Acto 1 mudo ·
-     Acto 2 primeras palabras (candidata: **"Speck"**, el nombre que le
-     puso Darro) · Acto 3 líneas completas · **vuelve al silencio en el
-     Bond Vacío**, que es donde el arco se paga (el silencio deja de ser
-     el default y pasa a ser pérdida) · el cráter es la única vez que
-     habla **eligiendo**. Las escenas ya escritas no cambian.
-   - **✅ Tabernas nombradas:** **The Braided Oar** (Rivermeet) ·
-     **The Last Ladle** (Emberdeep) · **Underfall** (The Stillspire) —
-     [[Nomenclatura]] §Tabernas de la ciudad natal.
-   **Lo único que quedó abierto de este bloque:** si la taberna del
-   bookend ([[Guion/Apertura — Roen Viejo]]) es The Braided Oar. No se
-   asume por defecto — el Roen viejo contando la historia en la mesa
-   donde el grupo se formó es una decisión con peso, y es tuya.
-   **Siguiente escena natural:** locación 2 (frontera hacia El Nido, ya
-   con grupo de tres), que es donde toca enseñar el T1 de Valen **y
-   donde hay que colocar la primera palabra del jugador**.
+1. **✅ Guión Acto 1 — escena 2 escrita y 4 decisiones de canon cerradas
+   (2026-08-12).** Detalle completo en [[LOG]] §2026-08-12.
+   [[Guion/Caminata y Taberna — Valen se suma]] (`provisional`, comparte
+   re-corrida con [[Guion/Encuentro con Roen]]). Lo que salió, todo ya
+   escrito a fuente:
+   - **Voz del protagonista** — la de más alcance: no es silent
+     protagonist clásico, **arranca mudo y gana voz acto a acto**
+     (coming-of-age). Gradiente y 5 reglas en [[Voz Narrativa]] §Voz del
+     protagonista (fuente única). Vuelve al silencio en el Bond Vacío,
+     que es donde el arco se paga.
+   - **Waypost** ([[Geografía y Ciudades]] §K) — posta del centro de The
+     Wilds, terreno de nadie. Es el bookend **y** la sala donde el grupo
+     se vuelve equipo, con 30 años de diferencia. Nombre **no
+     pronunciado en pantalla**.
+   - **Beat de formación del equipo** ([[Geografía y Ciudades]] §Beats
+     Narrativos por Acto, locación 4, fuente única): roster ≠ equipo; a
+     los cuatro se les termina el trabajo a la vez y ninguno usa su
+     boleto de salida. Los ata **desconfianza, no afecto**.
+   - **Tabernas de la ciudad natal:** The Braided Oar / The Last Ladle /
+     Underfall ([[Nomenclatura]]). Roen y Valen **no se conocían**.
+
+   **Siguiente escena:** locación 2 (frontera hacia El Nido), donde toca
+   el T1 de Valen **y la primera palabra del jugador**.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:

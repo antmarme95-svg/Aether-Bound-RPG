@@ -15,6 +15,13 @@ literalmente a quiénes protagonizan la historia.
 **5 contando al jugador** + [[Speck]] como +1 no-combatiente que se vuelve
 puente.
 
+**El roster y el equipo son dos cosas distintas.** El roster se completa por
+acumulación en el Acto 1 (orden fijo Roen → Valen → Pivote → Darro); el
+momento en que dejan de ser cuatro contratos y se vuelven un equipo es **un
+solo beat**, en Waypost, después del nido. **Fuente única de ese beat:**
+[[Geografía y Ciudades]] §Beats Narrativos por Acto, Acto 1 locación 4 — no
+se re-enuncia acá.
+
 **No hay matriz de roles fija.** La composición del grupo **varía según la celda del jugador** y no se promete constante. La regla anterior (1 Vanguard / 2 Duelists / 2 Strategists) era residuo de cuando los 5 slots eran libres: con C1, C2 y C4 fijos (Roen Vanguard, Valen Strategist, Darro Duelist), solo 4 de las 9 celdas podían cumplirla — fallaba incluso el arco de referencia, Humano Duelist + Dagna. **El balance de combate se verifica por celda, no se hereda de una promesa global.**
 
 | Slot | Función narrativa | Función mecánica |

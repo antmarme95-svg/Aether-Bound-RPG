@@ -13,11 +13,18 @@ updated: 2026-08-07
 
 ## Puesta en escena
 
-Taberna **humana** (Roen es humano — coherente con que el bloque de
-worldbuilding de abajo hable desde el punto de vista de la raza con
-memoria más degradada del cataclismo, ver §Nota sobre el worldbuilding),
-sin nombre propio todavía (candidato: alguna taberna de Rivermeet — a
-confirmar cuando se aborde geografía de guión). Roen tiene 70-75 años,
+**Waypost** — la posta de camino del centro de The Wilds, ficha completa
+en [[Geografía y Ciudades]] §K (decisión de Boris, 2026-08-12; antes decía
+"sin nombre, candidato alguna taberna de Rivermeet"). Sigue siendo una
+taberna de clientela **humana** en lo visual y en el registro, coherente
+con que el bloque de worldbuilding de abajo hable desde el punto de vista
+de la raza con memoria más degradada del cataclismo (ver §Nota sobre el
+worldbuilding) — Waypost es terreno de nadie, con clientela mezclada de
+frontera, y el barman es humano. **El nombre no se pronuncia en pantalla**
+y esta escena no lo nombra: la elección es de dirección de arte, no de
+guión. Es además **la misma sala** donde el grupo se vuelve equipo al
+final del Acto 1 ([[Geografía y Ciudades]] §Beats Narrativos por Acto,
+locación 4), treinta años antes. Roen tiene 70-75 años,
 20-30 años después de los eventos jugables. No hay indicios de qué final
 vivió el jugador — la escena tiene que funcionar idénticamente para las 5
 ramas.
@@ -261,8 +268,12 @@ fuga de tono ni de identidad del Pivote.
 - **✅ Puente narrado al Acto 1 — escrito y ratificado (2026-08-07).**
   Reemplaza el corte duro a negro; handoff ahora es auditivo (la voz de
   Roen se apaga, no vuelve).
-- Confirmar taberna específica (o dejarla sin nombrar/genérica — a
-  decidir cuando se aborde el guión de Rivermeet).
+- **✅ Taberna resuelta (2026-08-12): Waypost**, la posta del centro de
+  The Wilds ([[Geografía y Ciudades]] §K), la misma sala donde el grupo se
+  vuelve equipo en el Acto 1. Nombre **no pronunciado en pantalla**. Se
+  descartaron Rivermeet (la resonancia solo funcionaba en partidas
+  humanas) y Mistbound Frontier (filtraba tono). Detalle en
+  [[Nomenclatura]] §La taberna del bookend.
 - Producir las 9 combinaciones de la viñeta silenciosa (matriz raza×rol)
   cuando se aborde el guión visual del Acto 1, Encuentro.
 - Voz actoral / dirección de tono de grabación: fuera de scope de este

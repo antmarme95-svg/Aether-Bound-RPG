@@ -1,5 +1,92 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon/decisión | Waypost: la taberna del bookend + el beat donde el grupo se vuelve equipo
+
+**La pregunta de Boris fue si la taberna del bookend debía ser The Braided
+Oar (Rivermeet) o la de un poblado más chico.** La respuesta corta es
+ninguna de las dos, y la larga la decidió una restricción de topología que
+apareció al verificar.
+
+**La trampa.** [[La Rueda]] / §Topología: la rueda **no es malla**, cada
+reino entra a The Wilds por su propio radio y no hay tránsito directo entre
+reinos. Una partida enana **nunca pisa territorio de Aethelgard en el Acto
+1**. Así que cualquier taberna en Rivermeet —o en cualquier poblado
+humano— tiene el mismo defecto: la resonancia de "la mesa donde el grupo se
+formó" le llegaría a **1 de 3** jugadores, y a los otros dos tercios les
+sería una sala que nunca vieron. Un símbolo que falla en 2 de 3 partidas no
+es un símbolo.
+
+**Lo que sí es común a las 3 razas: el centro.** Las tres torres de guardia
+están del lado salvaje y "todas mirando hacia el centro"
+([[Geografía y Ciudades]] §M). Los tres radios apuntan al mismo punto.
+
+**Decisión (Boris, 2026-08-12): Waypost**, ficha nueva en
+[[Geografía y Ciudades]] §K (Refugios / Descanso). Una **sola
+construcción**, no un asentamiento: posta de camino que el Triune Council
+levantó cuando todavía pretendía administrar rutas dentro de The Wilds, hoy
+medio abandonada y sostenida por gente de frontera. Taberna abajo, camas
+arriba. **Es el primer lugar del juego que no pertenece a nadie**, y por eso
+las 3 razas pasan por ahí en el Acto 1 sin violar la topología.
+
+Descartados y por qué queda escrito: **Rivermeet** (resonancia de 1/3, y
+además es la ciudad donde Roen renunció — un Roen viejo bebiendo en la
+capital del Council dice, sin decirlo, que volvió adentro de lo que dejó, y
+eso filtra tono contra la regla 1 de [[Voz Narrativa]]); **Mistbound
+Frontier** (donde *decidió* renunciar — cerrar el círculo ahí lee como
+redención, mismo problema de tono).
+
+**Cuidado de canon anotado en la ficha:** Waypost **no es el Driftmarket**.
+El Driftmarket es la ciudad flotante del centro, con comercio, política y
+Old Tobin Hale, y es de Acto 2. Waypost es un edificio con un barman: sin
+mercado, sin facción, sin nadie con poder. Si una escena necesita comercio o
+intriga, no es Waypost.
+
+**El beat de formación — [[Geografía y Ciudades]] §Beats Narrativos por
+Acto, Acto 1 locación 4, fuente única.** Separa dos cosas que el vault venía
+mezclando: el **roster** (Roen → Valen → Pivote → Darro, acumulación) y el
+**equipo** (un solo beat). Cómo se escribe:
+
+- **El detonante es que a los cuatro se les termina el trabajo al mismo
+  tiempo.** Roen fue contratado para limpiar un nido y el nido está limpio.
+  Valen ya tiene su dato. Darro cobró. El Pivote nunca tuvo razón formal
+  para seguir. Los cuatro tienen boleto de salida y **ninguno lo usa**.
+- **Los ata desconfianza, no afecto:** ninguno sabe qué hacer con lo que
+  sacaron del nido —que todavía no tiene nombre, el Bautizo es Acto 2— y
+  ninguno la deja en manos de los otros tres. Quedarse es vigilarse.
+  **Siembra la traición sin costo extra:** el grupo nace de una sospecha que
+  tres actos después tendrá razón.
+- **Regla de escritura:** nadie dice "sigamos juntos" y nadie explica por
+  qué se queda. El gesto es que Roen —el único con contrato explícito, el
+  único que *debería* levantarse— pide la segunda ronda, y nadie lo comenta.
+- **Encaja con el gradiente de voz cerrado horas antes:** el jugador no
+  habla (Acto 1 mudo), los demás fracasan en decirlo, y se quedan igual. Por
+  eso la primera palabra del Acto 2 —"Speck", el nombre que pone Darro— es
+  **lo primero que ese grupo consigue nombrar**. Los dos arcos se pagan con
+  el mismo golpe.
+
+**El regalo barato:** en el Acto 1 hay un barman que no dice nada; treinta
+años después, en la misma sala, es el que insiste ("I keep count of
+everything in this room", [[Guion/Cierres — Roen Viejo]]). Que sea el mismo
+hombre envejecido o su hijo/a **se deja sin resolver a propósito**.
+
+**El nombre NUNCA se pronuncia en pantalla** (decisión de Boris). Existe
+para dirección de arte y para que el vault pueda referirse al lugar.
+Verificado que hoy ni la apertura ni los 5 cierres lo nombran.
+
+**Barrido de la clase:** grep de "taberna humana / sin nombre / candidato
+Rivermeet / misma taberna" → 3 lugares la describían
+([[Guion/Apertura — Roen Viejo]] §Puesta en escena y §Pendiente,
+[[Voz Narrativa]]). Los 3 apuntan ahora a la ficha de §K.
+[[The Bound Five]] recibió **un puntero, no una re-enunciación**, para que
+el beat sea encontrable desde la página del grupo sin duplicar fuente.
+
+**Qué se tocó:** [[Geografía y Ciudades]] (§K ficha nueva + locación 4
+reescrita) · [[Nomenclatura]] (§La taberna del bookend, reemplaza el párrafo
+que dejaba The Braided Oar como candidato) · [[Guion/Apertura — Roen Viejo]]
+· [[Voz Narrativa]] · [[The Bound Five]] ·
+[[Guion/Caminata y Taberna — Valen se suma]] · [[Current-State]] (el bloque
+del día comprimido — su detalle vive acá). **Linter en 0 críticos.**
+
 ## [2026-08-12] canon/decisión | Voz del protagonista: mudo que aprende a hablar + 3 tabernas nombradas
 
 **Boris cerró las 3 decisiones** que la escena de la taberna (entrada de

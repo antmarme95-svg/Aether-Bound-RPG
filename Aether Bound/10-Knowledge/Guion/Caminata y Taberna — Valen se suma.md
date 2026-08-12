@@ -284,9 +284,11 @@ paso del tiempo.
 - **✅ Nombres de las 3 tabernas — fijados (Boris, 2026-08-12):**
   **The Braided Oar** (Rivermeet) · **The Last Ladle** (Emberdeep) ·
   **Underfall** (The Stillspire). Fuente única: [[Nomenclatura]]
-  §Tabernas de la ciudad natal. **Sigue abierto** si la del bookend
-  ([[Guion/Apertura — Roen Viejo]]) es The Braided Oar — decisión con
-  peso, deliberadamente no asumida.
+  §Tabernas de la ciudad natal. **✅ Y la del bookend quedó resuelta el
+  mismo día: no es ninguna de las tres** — es **Waypost**, la posta del
+  centro de The Wilds ([[Geografía y Ciudades]] §K), que es además donde
+  el grupo se vuelve equipo al final del Acto 1. Esta escena no cambia:
+  acá el grupo todavía son tres y siguen siendo un contrato.
 - **Las 18 líneas de reconocimiento** existen como prosa en español en
   [[Valen-Ficha-Expandida-v1]]; hay que pasarlas a inglés de guión
   (regla 9) cuando se haga la pasada de traducción general.

@@ -70,13 +70,28 @@ el jugador solo verá uno por partida.
 | **Emberdeep** (enano) | **The Last Ladle** | La cuchara de colada con la que se vacía el crisol al final del turno. Doble lectura enana, sin chiste: la última colada de la jornada y la última ronda de la noche son la misma hora. Sala de nivel medio, ruido de forja que nunca para. |
 | **The Stillspire** (elfo) | **Underfall** | Terraza cubierta detrás de la cortina de agua, en la cadena de The Ascending Falls. Nombre compuesto y sin artículo, misma economía que Stillwood/Stillspire. |
 
-**El bookend sigue sin resolverse a propósito.** [[Guion/Apertura — Roen
-Viejo]] pasa en una taberna humana sin nombre, y **The Braided Oar** es el
-candidato natural (Roen es humano, Rivermeet es su ciudad). Que sean la
-misma —el Roen viejo contando la historia en la mesa donde el grupo se
-terminó de formar— es una decisión con peso que **no se toma por defecto**:
-sigue pendiente de Boris. Hasta entonces, ningún archivo debe afirmar que
-lo son.
+### ✅ La taberna del bookend es **Waypost** (decisión de Boris, 2026-08-12)
+
+**No es ninguna de las tres de arriba, y no está en Rivermeet.** Es
+**Waypost**, la posta del centro de The Wilds — ficha completa en
+[[Geografía y Ciudades]] §K. Ahí pasa el bookend
+([[Guion/Apertura — Roen Viejo]], [[Guion/Cierres — Roen Viejo]]) **y** el
+beat donde el grupo se vuelve equipo (Acto 1, locación 4), con treinta años
+de diferencia y en la misma sala.
+
+**Por qué no The Braided Oar**, que era el candidato obvio: la resonancia
+de "la mesa donde el grupo se formó" **solo existiría en las partidas
+humanas** — en las otras dos terceras partes el jugador nunca vio esa
+taberna. Waypost está en terreno de nadie, las 3 razas pasan por ahí en el
+Acto 1 sin violar la topología de rueda, y el beat le llega a **3 de 3**
+partidas. Se descartó también Mistbound Frontier (donde Roen decidió
+renunciar): cerrarle el círculo ahí lee como redención y filtra tono, que
+es justo lo que prohíbe la regla 1 de [[Voz Narrativa]].
+
+**El nombre NUNCA se pronuncia en pantalla.** Existe para dirección de arte
+y para poder referirse al lugar en el vault. Ningún personaje lo dice,
+ninguna UI lo rotula. Lo mismo vale para las 3 tabernas de la ciudad natal
+mientras nadie escriba una escena que necesite nombrarlas.
 
 ### the Wanderer's Goggles — reglas del objeto (fuente única)
 

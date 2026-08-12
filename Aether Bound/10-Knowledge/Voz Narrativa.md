@@ -40,6 +40,16 @@ Roen treinta años después encontrando por fin las palabras que no tuvo esa
 noche. No es narración genérica — es pago de un beat que la ficha ya
 sembró.
 
+**Qué taberna: Waypost** (decisión de Boris, 2026-08-12) — la posta de
+camino del centro de The Wilds, ficha en [[Geografía y Ciudades]] §K.
+**Misma sala** donde el grupo deja de ser cuatro contratos y se vuelve
+equipo, al final del Acto 1. Es terreno de nadie, así que las 3 razas pasan
+por ahí sin violar la topología de rueda y el eco le llega a **3 de 3**
+partidas — cosa que una taberna de Rivermeet no podía dar (solo funcionaba
+en partidas humanas). **El nombre no se pronuncia en pantalla:** ni la
+apertura ni los 5 cierres lo nombran, y no deben empezar a hacerlo. Lo que
+el jugador puede reconocer es la sala, no la palabra.
+
 **Por qué taberna y no fogata/feria:** Roen "nunca busca al jugador" y "no
 se explica de más" ([[Roen-Ficha-Expandida-v1]] §Dinámicas). Una fogata
 con niños o guerreros jóvenes, o una feria en Rivermeet, fuerzan una

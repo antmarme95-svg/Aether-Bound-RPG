@@ -642,6 +642,45 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   - Roen: incomodo (traidor al Triune Council = aliado a Mistbound?)
   - Info sobre las operaciones más oscuras del Triune Council
 
+#### **Waypost** (Centro, donde los tres caminos se juntan) — decisión de Boris, 2026-08-12
+
+> **Es el escenario del bookend** ([[Guion/Apertura — Roen Viejo]],
+> [[Guion/Cierres — Roen Viejo]]) **y del beat donde el grupo se vuelve
+> equipo** (§Beats Narrativos por Acto, Acto 1 locación 4). Las dos cosas
+> pasan en la misma sala, con treinta años de diferencia.
+
+- **Qué es:** una sola construcción, no un asentamiento. Posta de camino
+  levantada por el Triune Council en otra época, cuando todavía pretendía
+  administrar rutas dentro de The Wilds; hoy medio abandonada por la
+  institución y sostenida por gente de frontera. Planta baja de taberna,
+  unas camas arriba, un establo que ya no se usa para lo que se construyó.
+- **Dónde:** en el terreno común del centro, donde los tres radios
+  (River Road / Cinder Ascent / The Ascending Falls) dejan de ser de un
+  reino y pasan a ser de nadie — las tres torres de guardia miran hacia
+  acá (§M). **Es la razón de diseño de su existencia:** las 3 razas pasan
+  por Waypost en el Acto 1 sin violar "la rueda no es malla" (§Topología),
+  porque ninguna de las tres necesita entrar al territorio de otra para
+  llegar. Es el primer lugar del juego que no pertenece a nadie.
+- **No confundir con [[Geografía y Ciudades]] §THE DRIFTMARKET**, que es
+  la ciudad flotante del centro, tiene comercio, política y a Old Tobin
+  Hale, y es de Acto 2. Waypost es un edificio con un barman: **sin
+  mercado, sin facción, sin nadie con poder.** Si una escena necesita
+  comercio o intriga, no es Waypost.
+- **Quién atiende:** un barman humano, sin nombre propio
+  ([[Guion/Cierres — Roen Viejo]] lo fija como personaje fijo de las 5
+  variantes). En el Acto 1 no habla; treinta años después es el que
+  insiste. Que sea el mismo hombre envejecido o su hijo/a **se deja sin
+  resolver a propósito** — el jugador no necesita reconocerlo, y si lo
+  reconoce el cierre le pega distinto.
+- **Cultura:** clientela mezclada de frontera (los **Mistbound** ya son
+  canon como subcultura de The Wilds, ver [[Las Tres Razas]] y
+  [[La Rueda]]) — por eso un barman humano ahí no necesita explicación,
+  ni tampoco un elfo sentado a una mesa.
+- **El nombre NUNCA se pronuncia en pantalla** (decisión de Boris,
+  2026-08-12). Existe para dirección de arte y para que el vault pueda
+  referirse al lugar. Ningún personaje lo dice, ninguna UI lo rotula.
+  Verificado: ni la apertura ni los 5 cierres lo nombran hoy.
+
 #### **Warden's Crypt** (Hidden, under The Monolith)
 - Tumba subterránea de **uno** de los Wardens caídos (no de Speck — ella es la
   última Warden y está viva; los God-Cores del cráter son los demás cadáveres)
@@ -846,10 +885,43 @@ puente narrado al Acto 1.
      destruirla se ofrece y no se completa ([[Speck]] §El encuentro)
    - Primer God-Core destruido
 
-4. **Después del Nido**
+4. **Después del Nido — Waypost, y el grupo se vuelve equipo**
    - **Darro (C4) se une, último** — el bautizo ocurre recién en **Acto 2**,
      después de que el grupo entero la ve comportarse de forma inteligente
      ([[The Bound Five]], [[Darro-Ficha-Expandida-v1]] §Acto 2 Escena 2)
+   - **Locación: [[Geografía y Ciudades]] §K, Waypost** — la posta del
+     centro, misma sala del bookend (decisión de Boris, 2026-08-12)
+
+   **El beat de formación (fuente única del tema).** El vault venía
+   mezclando dos cosas distintas: el **roster** y el **equipo**. El roster
+   se completa por acumulación (Roen → Valen → Pivote → Darro, orden fijo,
+   §Beats). El equipo se forma **acá, en un solo beat**, y así se escribe:
+
+   - **El detonante es que a los cuatro se les termina el trabajo al mismo
+     tiempo.** Roen fue contratado para limpiar un nido y el nido está
+     limpio: su contrato venció. Valen ya tiene el dato que vino a buscar.
+     Darro cobró. El Pivote nunca tuvo razón formal para seguir. **Los
+     cuatro tienen boleto de salida y ninguno lo usa.** Eso —y no un
+     discurso— es el momento en que el grupo existe.
+   - **Lo que los ata no es afecto, es desconfianza.** Ninguno sabe qué
+     hacer con lo que sacaron del nido (que **todavía no tiene nombre** —
+     el Bautizo es Acto 2) y ninguno está dispuesto a dejarla en manos de
+     los otros tres. Quedarse es vigilarse. **Regla de escritura: nadie
+     dice "sigamos juntos" y nadie explica por qué se queda.**
+   - **El gesto en pantalla es económico:** Roen, el único con contrato
+     explícito y por lo tanto el único que *debería* levantarse, es el que
+     no se levanta. Pide la segunda ronda. Nadie comenta que la pidió.
+   - **El jugador no habla** — Acto 1, piso del gradiente de
+     [[Voz Narrativa]] §Voz del protagonista. Los demás fracasan en
+     decirlo, el protagonista no dice nada, y se quedan igual. **Es lo que
+     carga la primera palabra del Acto 2:** "Speck", el nombre que pone
+     Darro, es lo primero que alguien de ese grupo consigue nombrar.
+   - **Siembra de la traición, gratis:** un grupo que nace de una sospecha
+     mutua es un grupo donde la sospecha, tres actos después, **tenía
+     razón**. No hay que plantar nada extra.
+   - **UI:** es donde los bonds sueltos pasan a leerse como grupo. Sin
+     texto explicativo, mismo criterio que la aparición de los dos
+     primeros ([[Guion/Caminata y Taberna — Valen se suma]]).
 
 **Beats:**
 - Razón para salir (Triune Council ordena purga / standing decae)
