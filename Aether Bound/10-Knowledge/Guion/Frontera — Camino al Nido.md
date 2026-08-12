@@ -284,7 +284,7 @@ no como carencia.
 
 **La mecánica es la caracterización.** "Calculé cuánto de esto vas a
 recibir y empecé a pagarlo por adelantado" es la descripción literal de
-Steady Variable — [[Los 3 Links de los Fijos]] §Valen lo define como
+Steady Variable, definido en [[Los 3 Links de los Fijos]] §Valen —
 *"proyecta sobre un aliado la trayectoria de daño que calculó que va a
 recibir y lo compensa por adelantado"* — y **al mismo tiempo** la cosa más fría que se le puede
 decir a alguien: te vi lastimado antes de salir de la ciudad. Que Roen

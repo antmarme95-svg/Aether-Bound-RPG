@@ -291,7 +291,7 @@ agachada. El jugador sigue idle en los dos motores.
    ([[Bestiario]] lo permite explícitamente); el paso a Corrupto anuncia
    el nido. `status: provisional`.
    **1 ambigüedad de fuente para vos, no bloquea:**
-   [[Geografía y Ciudades]] §M dice que Roen *"fue este puesto, en otra
+   en [[Geografía y Ciudades]] §M — Roen *"fue este puesto, en otra
    vida"* sobre Aethelgard Watch, y su ficha lo pone en la frontera
    Mistbound, que es **tierra interior**. El guión escribió lo que las
    dos lecturas soportan (reconoce el ritual, no se afirma que estuvo
