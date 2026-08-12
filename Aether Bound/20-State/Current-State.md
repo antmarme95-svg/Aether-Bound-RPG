@@ -286,9 +286,8 @@ agachada. El jugador sigue idle en los dos motores.
    escrito a fuente:
    - **Voz del protagonista** — la de más alcance: no es silent
      protagonist clásico, **arranca mudo y gana voz acto a acto**
-     (coming-of-age). Gradiente y 5 reglas en [[Voz Narrativa]] §Voz del
-     protagonista (fuente única). Vuelve al silencio en el Bond Vacío,
-     que es donde el arco se paga.
+     (coming-of-age). **Revisado el mismo día — ver el bloque de abajo,
+     que es la versión vigente.**
    - **Waypost** ([[Geografía y Ciudades]] §K) — posta del centro de The
      Wilds, terreno de nadie. Es el bookend **y** la sala donde el grupo
      se vuelve equipo, con 30 años de diferencia. Nombre **no
@@ -322,11 +321,23 @@ agachada. El jugador sigue idle en los dos motores.
    **Siguiente escena:** locación 3, **El Nido** — encuentro con Speck,
    el Pivote se suma, la crisálida como elección ilusoria, primer
    God-Core. Después, locación 4 (Waypost, el beat de formación).
-   **Corrección a una nota anterior de este archivo:** decía que la
-   primera palabra del jugador iba en el tramo de la frontera. Es falso
-   — va en el **Bautizo, Acto 2** ([[Voz Narrativa]] §Voz del
-   protagonista). **El Acto 1 entero es mudo, Waypost incluido**, y eso
-   es justamente lo que carga el beat de formación.
+   **✅ Gradiente de voz — 2ª pasada de Boris (2026-08-12), es la versión
+   vigente.** Subió todo un acto y agregó un pico de elocuencia. Tabla
+   completa y 8 reglas en [[Voz Narrativa]] §Voz del protagonista —
+   **tramo mudo inicial → primeras palabras en el Acto 1 → líneas
+   completas en el 2 → un discurso, uno solo, en el 3 → silencio en la
+   traición → grado variable por final.** Los 5 finales tienen ahora
+   **grados de voz distintos** (F2b: mudo total, nunca se levanta · F3:
+   elocuencia usada para justificarse · **F4: voz y carisma intactos,
+   porque Speck eligió por sí misma** — decisión explícita tuya).
+   **Las 3 escenas escritas no cambian** (caen en el tramo mudo).
+   **3 anclajes son propuesta mía, no decisión tuya:** El Nido (primera
+   palabra) · la oficina de Tobin (pico del Acto 2) · **el Archive, a
+   solas con Speck, después de la revelación de los Goggles** (el
+   discurso). Tus dos candidatos originales resultaron ser **de Acto 2**:
+   Tobin quedó como pico del Acto 2, y **Grove of Cycles se descartó** —
+   ahí el silencio del jugador ya es un disparador mecánico del encuentro
+   individual, convertirlo en discurso rompería un trigger existente.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:

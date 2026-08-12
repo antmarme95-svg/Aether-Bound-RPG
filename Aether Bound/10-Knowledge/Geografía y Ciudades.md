@@ -911,11 +911,13 @@ puente narrado al Acto 1.
    - **El gesto en pantalla es económico:** Roen, el único con contrato
      explícito y por lo tanto el único que *debería* levantarse, es el que
      no se levanta. Pide la segunda ronda. Nadie comenta que la pidió.
-   - **El jugador no habla** — Acto 1, piso del gradiente de
-     [[Voz Narrativa]] §Voz del protagonista. Los demás fracasan en
-     decirlo, el protagonista no dice nada, y se quedan igual. **Es lo que
-     carga la primera palabra del Acto 2:** "Speck", el nombre que pone
-     Darro, es lo primero que alguien de ese grupo consigue nombrar.
+   - **El jugador no habla — y a esta altura ya podría** (revisado
+     2026-08-12, 2ª pasada del gradiente de [[Voz Narrativa]] §Voz del
+     protagonista). Sus primeras palabras llegan en El Nido, una locación
+     antes: cuando el grupo se sienta en Waypost, el protagonista **tiene
+     voz y no la usa**, igual que los otros tres. Su silencio acá dejó de
+     ser el estado por defecto y pasó a ser **una elección más de la
+     mesa** — la escena no cambia, el beat se fortalece solo.
    - **Siembra de la traición, gratis:** un grupo que nace de una sospecha
      mutua es un grupo donde la sospecha, tres actos después, **tenía
      razón**. No hay que plantar nada extra.

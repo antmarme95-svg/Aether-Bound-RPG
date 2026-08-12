@@ -257,9 +257,11 @@ chiste suelto.
 **Por qué el jugador no tiene línea — ya es regla (2026-08-12).** Dejó de
 ser asunción: en [[Voz Narrativa]] §Voz del protagonista — el
 protagonista arranca mudo y **gana voz acto a acto** (elemento
-coming-of-age, decisión de Boris). El Acto 1 es el piso del gradiente, así
-que esta escena y [[Guion/Encuentro con Roen]] quedan exactamente como
-estaban — ahora con fuente detrás. La primera palabra llega en el Acto 2.
+coming-of-age, decisión de Boris). Esta escena cae en el **tramo mudo
+previo a El Nido**, que es donde llegan las primeras palabras (gradiente
+revisado 2026-08-12, 2ª pasada), así que queda exactamente como estaba —
+igual que [[Guion/Encuentro con Roen]] y [[Guion/Frontera — Camino al
+Nido]].
 
 **Sin combate y sin enseñar el link de Valen.** *The Long Calculus*
 ([[Los 3 Links de los Fijos]] §Valen) necesita blancos: sus dos orbes
@@ -297,8 +299,9 @@ paso del tiempo.
   bloque "That's not a coincidence" / "For the record" queda firme.
 - **✅ Protagonista silencioso — resuelto y ampliado (Boris, 2026-08-12):**
   no es mudo permanente, es un **gradiente coming-of-age** por acto
-  ([[Voz Narrativa]] §Voz del protagonista, fuente única). Esta escena no
-  cambia; el que hereda trabajo es el guión del Acto 2, que tiene que
-  colocar la primera palabra del jugador.
+  ([[Voz Narrativa]] §Voz del protagonista, fuente única). **Gradiente
+  revisado por Boris el mismo día (2ª pasada):** las primeras palabras
+  suben al Acto 1 y el ancla propuesta es **El Nido**. Esta escena sigue
+  sin cambiar — cae antes de ese punto.
 - Momentos de Persona de Speck y bautizo de Darro: no tocan esta escena
   (Speck aparece en locación 3, Darro después).

@@ -41,8 +41,9 @@ especie base. **No lleva ficha ni nombre propio**: es ruido de fondo
 generado por sistema, y esta escena no debe inventarle uno. Los Hollowed
 del tutorial no vuelven acá.
 
-**El jugador no habla** (Acto 1, piso del gradiente de [[Voz Narrativa]]
-§Voz del protagonista).
+**El jugador no habla.** Es la última escena del tramo mudo: sus primeras
+palabras llegan en la locación siguiente, El Nido ([[Voz Narrativa]] §Voz
+del protagonista, gradiente revisado 2026-08-12).
 
 ## Guión
 

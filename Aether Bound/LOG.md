@@ -1,5 +1,84 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon/decisión | Gradiente de voz, 2ª pasada: sube un acto, gana un discurso, y los 5 finales devuelven voz distinta
+
+**Boris revisó el gradiente que se había fijado horas antes** (entrada de
+más abajo). Dos cambios de fondo: **todo sube un acto** y aparece un **pico
+de elocuencia** en el Acto 3. Además, el cráter deja de tener un grado
+único de voz. Reescrito en [[Voz Narrativa]] §Voz del protagonista, que
+sigue siendo fuente única.
+
+**Gradiente vigente:** tramo mudo inicial → **primeras palabras en el Acto
+1** (cortas, reactivas, nunca discursos) → **líneas completas en el Acto
+2**, donde por primera vez *inicia* intercambios → **un discurso, uno solo,
+en el Acto 3** → **silencio en la traición** → **grado variable por final**.
+
+**Los 5 finales, grados de voz** (decisión de Boris, F4 explícita):
+**F1** mínima (no interviene; el precio lo nombra Valen) · **F2a** presente
+pero vaciada, registro casi administrativo — la elocuencia del Acto 3
+gastada en un trámite · **F2b** **silencio total, no se levanta nunca**:
+la mano fue suya y el arco del habla queda sin pagar a propósito · **F3**
+plena pero al servicio de justificarse · **F4** **plena y con el carisma
+intacto, porque Speck eligió por sí misma y por nadie más** — el único
+final donde hablar bien no es culpa, defensa ni trámite. Regla que ata la
+tabla: **en ningún final el jugador explica el final** — la lectura de
+consecuencias le sigue tocando a Valen en las 5 ramas.
+
+**Verificación que cambió la propuesta: los dos candidatos de Boris para el
+discurso del Acto 3 son de Acto 2.** Old Tobin Hale vive en el Driftmarket,
+que es Acto 2 / The Reckoning; Grove of Cycles es explícitamente el cierre
+del Acto 2 ([[Valen-Ficha-Expandida-v1]] §Grove of Cycles). Resolución:
+- **Tobin queda, pero como pico del Acto 2** — es donde el jugador recibe
+  los Goggles y entiende su propio poder, y es **el único personaje de
+  poder sin agenda oculta** del juego: el único interlocutor seguro que el
+  protagonista va a tener. Que su tramo más largo hablado hasta ahí sea con
+  el único que no lo está midiendo es coherente con todo el elenco.
+- **Grove of Cycles se descarta como escena de discurso** — y esto es un
+  choque real, no una preferencia: ahí el **silencio del jugador durante el
+  debate de los élderes ya es un disparador mecánico** del encuentro
+  individual. Convertirlo en discurso rompería un trigger existente. Queda
+  anotado "dejar el silencio del Grove intacto".
+
+**Propuesta para el discurso del Acto 3: el Archive, a solas con Speck**,
+justo después de que los Goggles revelan la proyección residual del duelo
+de la última Warden —que es ella misma— y minutos antes de la ruptura en la
+sala del Fragmento. **Compatibilidad verificada con el canon de los
+Goggles:** [[Geografía y Ciudades]] §ACTO 3 sub-beat 2 dice *"El jugador ve
+lo que el grupo no ve. No lo dice. No sabe cómo decirlo"* — esa frase es
+sobre **el grupo**, y el discurso no la viola: le habla **a ella**, la
+única que ya lo sabe y la única que no puede repetirlo. Los Goggles siguen
+estrictamente privados, Valen sigue sin ver la capa, y la revelación se
+sigue cargando en soledad todo el Acto 3. Habla mejor que nunca, y lo
+próximo que le pasa es quedarse mudo: **la distancia entre las dos cosas es
+el arco entero.**
+
+**Efecto colateral bueno, gratis, sobre el beat de Waypost:** con las
+primeras palabras en El Nido (locación 3), cuando el grupo se sienta en
+Waypost (locación 4) el protagonista **ya tiene voz y no la usa**. Su
+silencio en la formación deja de ser el estado por defecto y pasa a ser una
+elección más de la mesa, igual que la de los otros tres. **El beat no se
+reescribió — se fortaleció solo.**
+
+**Lo que NO cambió:** las 3 escenas ya escritas
+([[Guion/Encuentro con Roen]], [[Guion/Caminata y Taberna — Valen se
+suma]], [[Guion/Frontera — Camino al Nido]]) caen todas en el tramo mudo
+previo a El Nido. Cero líneas tocadas. Y el beat de "Speck" se conserva
+**demotado**: ya no es la primera palabra del juego, pero sigue siendo el
+**primer nombre** que el protagonista dice — un nombre que inventó otro.
+
+**Barrido de la clase:** grep de "Acto 1 mudo / piso del gradiente /
+primera palabra" → 5 lugares enunciaban el gradiente viejo (las 3 escenas,
+el beat de Waypost en [[Geografía y Ciudades]], el [[Current-State]]).
+Los 5 corregidos. Las entradas viejas de este LOG **no se tocan** (es
+append-only: describen lo que era cierto cuando se escribieron).
+
+**Pendiente anotado:** los 3 anclajes concretos (El Nido, Tobin, Archive)
+son **propuesta, no decisión de Boris** — el gradiente y los grados de los
+5 finales sí son suyos. Y la tabla de finales hay que cotejarla contra
+[[Los 5 Finales]] cuando se escriba ese guión, sobre todo F4 (donde la que
+responde es Speck) y F2b (donde el silencio total tiene que sostenerse sin
+que la escena se sienta incompleta). **Linter en 0 críticos.**
+
 ## [2026-08-12] guión | Frontera — Camino al Nido (Acto 1, locación 2): el T1 de Valen y la torre como puerta
 
 **Qué se escribió:** [[Guion/Frontera — Camino al Nido]], tercera escena

@@ -173,8 +173,9 @@ generalizaba "melee" a las 6 celdas Duelist+Strategist. Coherente con
 Boris la resolvió y la amplió: el protagonista **no es un silent
 protagonist clásico, arranca mudo y gana voz acto a acto** (elemento
 coming-of-age). Fuente única: [[Voz Narrativa]] §Voz del protagonista.
-Esta escena es Acto 1, el piso del gradiente, así que **no cambia una
-sola línea** — lo que cambia es que ahora hay canon detrás en vez de una
+Esta escena es el piso del gradiente —el tramo mudo previo a El Nido,
+donde llegan las primeras palabras (gradiente revisado 2026-08-12, 2ª
+pasada)— así que **no cambia una sola línea** — lo que cambia es que ahora hay canon detrás en vez de una
 inferencia desde [[Bond y el Bond Vacío]] y la viñeta muda de
 [[Guion/Apertura — Roen Viejo]].
 
