@@ -31,10 +31,11 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
 
 1. **El Pivote toma a Speck** en el último corredor del ascenso del Sunken Archive. Sin
    forcejeo largo, sin discurso — el grupo queda desalojado, no golpeado.
-   **Este paso es la culminación de la traición, no su inicio** (corregido 2026-08-11):
-   la ruptura y la muerte del link ocurren antes del descenso al Archive
-   ([[Geografía y Ciudades]] §ACTO 3 sub-beat 0, [[Bond y el Bond Vacío]] §La traición
-   tiene dos tiempos). Por eso acá no hay discurso: ya se dijo todo dos tramos atrás.
+   **Este paso es la culminación de la traición, no su inicio** (corregido 2026-08-12):
+   la ruptura y la muerte del link ocurren **en la sala del Fragmento**, y el ascenso
+   entero transcurre con el link ya muerto ([[Geografía y Ciudades]] §ACTO 3 sub-beat 2b,
+   [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). Por eso acá no hay
+   discurso: ya se dijo todo abajo.
    *Excepción — ruta Bram:* Bram **rehúsa** en el corredor y devuelve a Speck al jugador; el
    grupo sale intacto y es **Torgan**, esperando afuera del Archive, quien la toma.
 2. **Persecución** por The Wilds hacia The First Wound

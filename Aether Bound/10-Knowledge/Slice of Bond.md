@@ -34,8 +34,8 @@ con ella; picas Bond; nadie golpea el suelo.
 ### Tramo de [[La Rueda]] (4 escenas, comprimido)
 
 1. **Cold open — El Nido (The Wilds, ~10 min).** Incidente incitante
-   comprimido: la purga, la crisálida de [[Speck]], eliges no matar →
-   prófugo. Dagna presencia el pregón y te abre paso (*"You kept the wrong
+   comprimido: la purga, la crisálida de [[Speck]], no la matás (elección
+   ilusoria, [[Speck]] §El encuentro) → prófugo. Dagna presencia el pregón y te abre paso (*"You kept the wrong
    promise."*). **T1 Springboard** desde el primer encuentro — el link se
    enseña jugando la huida.
 2. **Espina — Cinder Ascent, versión corta (~20 min).** La arteria enana:

@@ -160,7 +160,7 @@ es la **progresión de cómo el jugador la ve**, no cómo ella cambia:
 | Fase visual | Acto | Narrativa | Gameplay |
 |---|---|---|---|
 | **Zorro shapeshifted** | 1 | Ilusión completa. El mundo ve "zorro extraño de The Wilds" | Pasiva; radar diegético (olfatea Aether) |
-| **Flashes 1-3** | 1→2 | Descubrimiento silencioso. Tu poder revela seams aether → pata cristal → ojos facetas | **Progresión privada** (el Bound Five no ve lo que ves) |
+| **Flashes 1-3** | 2 | Descubrimiento silencioso. Tu poder revela seams aether → pata cristal → ojos facetas | **Progresión privada** (el Bound Five no ve lo que ves) |
 | **Forma Warden E1 (jade)** | 2→Clímax | La verdad completa revelada. Speck SIEMPRE fue esto — el shapeshifting simplemente ocultaba | Verdadera naturaleza: **guardiana de eras perdidas** |
 | **Forma God-Core E3 (rojo)** | Clímax | **Involuntario.** Fragmento se activa → Speck reacciona por hive mind forzado. No elige transformarse. Es víctima del dispositivo. | Poder del Fragmento impone la verdad final sin consentimiento |
 

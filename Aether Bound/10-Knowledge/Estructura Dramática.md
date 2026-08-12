@@ -9,7 +9,9 @@ updated: 2026-08-02
 **Acto 1 — Lealtad.** Firmas el Contrato de Conquistador
 ([[Progresión y Contrato]]) y entras a The Wilds a purgar nidos y apagar
 God-Cores. Incidente incitante: las "bestias" del nido eran guardianas de la
-crisálida de [[Speck]]. Eliges no matar al último espécimen → prófugo.
+crisálida de [[Speck]]. **No matás al último espécimen** —el juego ofrece el
+gesto y no lo completa, es una elección ilusoria ([[Speck]] §El encuentro)—
+→ prófugo.
 
 **Acto 2 — Comunidad.** [[The Bound Five]] ya está formado desde el Acto 1.
 Orden de incorporación al grupo, fijo para las 12 fichas (decisión de Boris,
@@ -31,11 +33,16 @@ ser entregada a su institución — viva, no muerta: matarla no sana nada y
 perpetúa la corrupción ([[Speck]] §Capa 5). No es malvado. Y no actúa de una
 sola vez:
 
-- **La ruptura**, antes del descenso al Sunken Archive: el Pivote declara su
-  convicción y rompe con el jugador. **Acá ocurre la orfandad mecánica** —
-  pierdes tu link firma, porque perdiste al compañero, no un dispositivo
-  ([[Los 9 Links del Pivote]], [[Bond y el Bond Vacío]]). El Pivote **sigue en
-  el grupo**: necesita el Fragmento tanto como ellos.
+- **La ruptura**, en la sala del Fragmento dentro del Sunken Archive: el Pivote
+  declara su convicción y rompe con el jugador. **El Fragmento es el detonante**
+  — su verdad parcial está diseñada para dividir al grupo (§Nudo, arriba).
+  **Acá ocurre la orfandad mecánica** — pierdes tu link firma, porque perdiste
+  al compañero, no un dispositivo ([[Los 9 Links del Pivote]],
+  [[Bond y el Bond Vacío]]). El Pivote **sube con el grupo**: no puede irse.
+  **Dos excepciones, enunciadas en [[Bond y el Bond Vacío]] y ubicadas en
+  [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b — no las re-enuncies acá:** en la
+  celda de **Bram** el link no muere (declara y no obedece), y **Nyael** declara
+  por ausencia (no está en la sala del Fragmento).
 - **La toma**, en el último corredor del ascenso: se lleva a Speck
   ([[El Cráter — Matriz de Rutas]] §1, paso 1).
 

@@ -17,27 +17,56 @@ Justificación: la memoria muscular del vínculo solo se forma con un gesto
 físico repetido. **La traición debe sentirse en el pulgar: aprietas Bond y no
 responde nadie.**
 
-## La traición tiene dos tiempos (decisión de Boris, 2026-08-11)
+## La traición tiene dos tiempos — FUENTE ÚNICA
+
+*(Decisión de Boris 2026-08-11; ubicación corregida 2026-08-12, 5ª re-corrida.)*
 
 **Esto es lo que le da ventana al beat de abajo, y sin esto el beat no existe.**
 La traición del Pivote **no es un solo momento**. Son dos, separados por un tramo
 jugable:
 
-1. **La ruptura** — el Pivote declara su convicción y rompe con el jugador
-   **antes** del descenso al Sunken Archive, en el desalineamiento que deja The
-   Reckoning en Driftmarket ([[Geografía y Ciudades]] §ACTO 3). **Acá muere el
-   link.** El Pivote sigue caminando con el grupo: no se va, no puede irse
-   todavía — necesita el Fragmento tanto como ellos. Es peor que si se fuera.
-2. **La toma** — en el último corredor del ascenso del Archive, el Pivote se
-   lleva a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). **Es la
-   culminación, no el inicio.**
+1. **La ruptura** — **en la sala del Fragmento, dentro del Sunken Archive**
+   ([[Geografía y Ciudades]] §ACTO 3, sub-beat 2b). El Fragmento es el detonante:
+   la verdad parcial que trae está diseñada para dividir al grupo
+   ([[Estructura Dramática]] §Nudo), y le da al Pivote el argumento que le
+   faltaba. **Acá muere el link.** El Pivote sube con el grupo: no se va, no
+   puede irse — están a media ruina de profundidad. Es peor que si se fuera.
+2. **La toma** — en el último corredor del ascenso, el Pivote se lleva a Speck
+   ([[El Cráter — Matriz de Rutas]] §1, paso 1). **Es la culminación, no el
+   inicio.**
 
-**Entre los dos hay tramo jugable con el link muerto y Speck todavía con el
-jugador**: el approach al Archive y el interior entero. Ésa es la ventana de los
-ítems 2-3 de abajo, y es la razón de la corrección. Antes de 2026-08-11 la
-traición era un solo golpe en el corredor seguido de persecución y cráter, y el
-beat obligatorio no tenía dónde ocurrir — el pilar 2 del juego sin lugar donde
-pagarse (4ª re-corrida de QA).
+**La ventana es el ascenso entero**, con el link muerto y Speck todavía con el
+jugador. Ésa es la ventana de los ítems 2-3 de abajo, y es la razón de todo el
+cambio: antes de 2026-08-11 la traición era un solo golpe en el corredor seguido
+de persecución y cráter, y el beat obligatorio no tenía dónde ocurrir — el pilar
+2 del juego sin lugar donde pagarse.
+
+> **Por qué NO va en Driftmarket** (se ubicó ahí primero y se movió). Chocaba con
+> tres cosas: The Reckoning declara *"nadie confiesa, nadie confronta"*; la trampa
+> de Tobin —confrontar al fijo equivocado— perdía su ventana de error si el Pivote
+> se autodenunciaba minutos después en la misma locación; y en las rutas **Lyris,
+> Iven y Maren** la orden que motiva la traición **llega dentro del Archive**, así
+> que la convicción precedía a su propio detonante. Dentro del Archive las tres se
+> resuelven solas.
+
+**Dos excepciones de la ruptura** (las dos son de celda, las dos están
+declaradas — ningún QA debe reportarlas como contradicción):
+
+- **Bram:** declara lo mismo que los otros ocho y **no obedece**. Su link nunca
+  muere. Ver §La excepción de Bram, abajo.
+- **Nyael:** **declara por ausencia.** No anuncia nada en voz alta — **no está
+  en la sala del Fragmento**: se separó en el descenso con un pretexto y no
+  volvió. El link muere ahí igual; el grupo entiende sin que nadie lo diga. Es
+  la única celda donde el Pivote no sube con el grupo, y es coherente con su
+  superlativo ("la traición como ausencia", [[Los 9 Pivotes]]): obligarla a
+  declarar en voz alta habría sido lo contrario de su diseño.
+
+**Forma de la ruptura — nueve formas desiguales** (decisión de Boris,
+2026-08-12). El beat se define por su **función**, no por su formato: el link
+muere y el Pivote no se va. Una frase seca para Maren; quince líneas para
+Sereth; casi ninguna palabra para Vekka. **No lo escribas como plantilla** —
+homogeneizar beats obligatorios es el error que [[El Cráter — Matriz de Rutas]]
+§4 documenta.
 
 ## "El Bond vacío" — beat obligatorio post-traición
 
@@ -68,14 +97,14 @@ queda con el jugador hasta el cráter ([[Pivotes/Bram-Ficha-Expandida-v1]]), as�
 nunca pierde su link (**Mobile Foundry**) y el beat de arriba no tiene ruta. **No es
 un hueco: es la única celda donde el beat se juega invertido.**
 
-1. **Misma preparación, misma trampa — y misma ventana.** En la celda de Bram el
-   sub-beat 0 **sí ocurre**, y ocurre completo: en Driftmarket, Bram dice en voz alta
-   que su cadena de mando le pidió entregar a Speck. Lo dice con las mismas palabras
-   con las que los otros ocho anuncian que van a hacerlo. **Lo que no dice es que va a
-   obedecer.** El jugador sale de esa escena convencido de que perdió el link, porque
-   el juego entero le enseñó qué significa esa conversación.
-   Después, en el approach y el interior del Archive, el tramo coloca el obstáculo
-   firma del Mobile Foundry, exactamente igual que en las otras ocho celdas.
+1. **Misma preparación, misma trampa — y misma ventana.** En la celda de Bram la
+   ruptura **sí ocurre**, y ocurre completa: en la sala del Fragmento, Bram dice en
+   voz alta que su cadena de mando le pidió entregar a Speck. Lo dice con las mismas
+   palabras con las que los otros ocho anuncian que van a hacerlo. **Lo que no dice es
+   que va a obedecer.** El jugador empieza el ascenso convencido de que perdió el
+   link, porque el juego entero le enseñó qué significa esa conversación.
+   Después, durante el ascenso, el tramo coloca el obstáculo firma del Mobile
+   Foundry, exactamente igual que en las otras ocho celdas.
 2. **Y Bram responde.** Pica Bond esperando el vacío, y la Link Cam barre **y lo
    encuentra**: Bram ya está en posición, cargando los desplegables encima como
    siempre. El sting suena completo. Nadie lo comenta.

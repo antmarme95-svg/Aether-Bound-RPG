@@ -1066,31 +1066,17 @@ Los siguientes 3-5 beats de la ruta Bram están marcados por esta incertidumbre:
 
 ### ACTO 3: El Centro del Centro (Clímax)
 
-**Duración:** ~45-60 min. **Estructura:** 5 sub-beats en cadena continua — sin puntos de guardado clásicos entre ellos, sin regreso posible al Acto 2. Todo lo que se sembró en Grove of Cycles ([[Grove of Cycles — Escena del Acto 2]]) y en The Reckoning florece o se quiebra aquí.
+**Duración:** ~45-60 min. **Estructura:** 6 sub-beats en cadena continua — sin puntos de guardado clásicos entre ellos, sin regreso posible al Acto 2. Todo lo que se sembró en Grove of Cycles ([[Grove of Cycles — Escena del Acto 2]]) y en The Reckoning florece o se quiebra aquí.
 
-#### 0. La ruptura del Pivote (antes del descenso)
-
-> **Sub-beat agregado 2026-08-11 (4ª re-corrida).** La traición tiene dos tiempos:
-> la **ruptura** acá y la **toma** en el sub-beat 3. Antes eran uno solo y el beat
-> obligatorio del Bond vacío no tenía ventana — ver [[Bond y el Bond Vacío]]
-> §La traición tiene dos tiempos y [[Estructura Dramática]] §Clímax.
-
-En Driftmarket, después de The Reckoning, el Pivote deja de fingir. No huye, no
-ataca, no hace un discurso: **dice lo que va a hacer.** Que Speck tiene que ir a
-su institución, viva, y por qué — la convicción que su ficha desarrolla, dicha en
-voz alta, delante de todos, sin pedir permiso ni perdón. El grupo no lo expulsa
-porque no puede: nadie más sabe leer lo que hay abajo, y el Fragmento no espera.
-
-**Acá muere el link.** El botón de Bond deja de responder al Pivote a partir de
-esta escena, y el juego no lo anuncia con UI — el jugador lo descubre picándolo.
-Lo que hace de esto un golpe distinto a la desaparición es que **el Pivote sigue
-caminando con el grupo**: come, monta guardia, cubre flancos. Está a tres metros
-todo el tramo siguiente. La pérdida no es una ausencia, es una presencia que ya
-no responde.
-
-Si el jugador confrontó al Pivote equivocado en Driftmarket, la ruptura llega
-sobre un grupo que ya estaba roto por el lado incorrecto, y el error se vuelve
-irreversible acá, no en el corredor.
+> **Corrección 2026-08-12 (5ª re-corrida).** La traición tiene **dos tiempos**: la
+> **ruptura** (sub-beat 2b, dentro del Archive) y la **toma** (sub-beat 3, el
+> corredor). Antes eran uno solo y el beat obligatorio del Bond vacío no tenía
+> ventana. **La ruptura se ubicó primero en Driftmarket y se movió acá** — en
+> Driftmarket chocaba con tres cosas: The Reckoning declara "nadie confiesa, nadie
+> confronta", la trampa de Tobin perdía su ventana de error, y en las rutas Lyris,
+> Iven y Maren la orden que motiva la traición **llega dentro del Archive**, así
+> que la convicción precedía a su propio detonante. Ver [[Bond y el Bond Vacío]]
+> §La traición tiene dos tiempos.
 
 #### 1. Approach al Sunken Archive
 
@@ -1104,10 +1090,59 @@ Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jug
 
 El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarrollará; lo que este documento fija es el espacio: Valen se sienta en el suelo. Darro deja caer un chiste que muere en el aire. Roen mira a Speck y no aparta la mirada. Speck permanece quieta, como si supiera que la mirada la ubica.
 
+#### 2b. La ruptura — el Pivote declara, dentro del Archive
+
+**El Fragmento es el detonante.** La verdad parcial que trae —diseñada para
+dividir al grupo ([[Estructura Dramática]] §Nudo)— es lo que le da al Pivote el
+argumento que le faltaba, y en las rutas **Lyris, Iven y Maren** es literalmente
+acá donde les llega la orden. El Pivote deja de fingir en la sala del Fragmento,
+con los cadáveres calcificados en las paredes y el grupo todavía procesando lo
+que acaba de leer.
+
+No huye, no ataca, no hace un discurso: **dice lo que va a hacer.** Que Speck
+tiene que ir a su institución, viva, y por qué. El grupo no lo expulsa porque no
+puede — están a media ruina de profundidad, la salida es el ascenso, y nadie
+deja a nadie atrás en un sitio Warden.
+
+**Acá muere el link** (regla enunciada en [[Bond y el Bond Vacío]]; este
+documento solo la ubica). El botón de Bond deja de responder al Pivote a partir
+de esta escena, y el juego no lo anuncia con UI — el jugador lo descubre
+picándolo. Lo que hace de esto un golpe distinto a la desaparición es que **el
+Pivote sube con el grupo**: cubre flancos, abre puertas, sigue siendo el mejor
+en lo suyo. **El ascenso entero es la ventana** del beat obligatorio del Bond
+vacío — ahí se coloca el obstáculo firma del link perdido, y el Pivote está a
+tres metros mirando cómo el jugador pica un botón que ya no responde.
+
+**Dos excepciones declaradas:**
+
+- **Bram — el link NO muere.** Bram declara lo mismo que los otros ocho (que su
+  cadena de mando le pidió entregar a Speck) y **no dice que vaya a obedecer**.
+  El jugador sube el Archive convencido de que perdió el link, y no lo perdió:
+  el Mobile Foundry responde. Es la inversión completa del beat, y depende de
+  que la declaración exista — ver [[Bond y el Bond Vacío]] §La excepción de Bram.
+- **Nyael — declara por ausencia.** Su método es no estar, y forzarla a anunciar
+  en voz alta sería lo contrario de su diseño ([[Los 9 Pivotes]]: "la traición
+  como ausencia"). Su ruptura es que **no está en la sala del Fragmento**: se
+  separó en el descenso con un pretexto y no volvió. El link muere ahí igual, y
+  el grupo entiende sin que nadie lo diga. Su nota sigue siendo lo único que
+  dice en toda la ruta.
+
+**Forma de la ruptura (decisión de Boris, 2026-08-12): nueve formas desiguales,
+no una plantilla.** El beat se define por su **función** —el link muere y el
+Pivote no se va— no por su formato. Maren lo resuelve en una frase seca; Sereth
+se toma quince líneas y ninguna es una disculpa; Vekka casi no usa palabras.
+Homogeneizarlos es el error documentado en [[El Cráter — Matriz de Rutas]] §4,
+sobre los beats obligatorios.
+
+Si el jugador confrontó al fijo equivocado en Driftmarket, la ruptura llega
+sobre un grupo que ya estaba roto por el lado incorrecto — la trampa de Tobin
+conserva su ventana completa (todo el Reckoning más el descenso) y su costo se
+cobra acá.
+
 #### 3. La toma al salir del Archive — culminación de la traición
 
-Fría, rápida, sin épica. **No es la revelación** — eso ya pasó en el sub-beat 0, y
-todos llevan dos tramos sabiéndolo. Es el Pivote ejecutando lo que anunció, y la
+Fría, rápida, sin épica. **No es la revelación** — eso ya pasó en el sub-beat 2b, y
+todos llevan el ascenso entero sabiéndolo. Es el Pivote ejecutando lo que anunció, y la
 escena tiene que jugarse como algo que el grupo vio venir y no pudo impedir: sin
 sorpresa, sin música de giro. El grupo empieza el ascenso hacia la superficie. En el último corredor, el Pivote se separa — pretexto menor (revisar una inscripción, cubrir la retaguardia, cualquier cosa que suene razonable durante tres segundos). Cuando el resto voltea, el Pivote tiene a Speck. Ruta lateral, salida secundaria, sin diálogo largo. El grupo queda desarmado momentáneamente — no golpeado, **desalojado**. El Pivote no explica; explicar es Acto 4. Aquí solo actúa. Si el jugador rompió el Bond equivocado en Driftmarket, la traición cae doblemente: perdió al Pivote real Y al que confrontó por error.
 
