@@ -257,6 +257,50 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] design/motor | Comparativa Godot vs Unity — pros/contras + FODA
+
+Pedido del director tras mirar la lámina cuadro a cuadro. Escrita en
+[[Comparativa de Motores — Godot vs Unity]].
+
+**No reabre la decisión** — Godot sigue confirmado ([[ADR-002 Motor
+diferido]] + cierre de ADR-003). El documento existe para sostenerla con
+los ojos abiertos y para que el veredicto del spike compare lo mismo de
+los dos lados. Cada afirmación va marcada por origen: 🔬 medido en el
+spike · 📋 hecho verificable de plataforma · ⚖️ juicio.
+
+**Punto de partida — una observación del director que resultó medio
+cierta:** "Unity sí renderiza pies y Godot no". Verificado subiendo el
+brillo del recorte: **la geometría está**, es que en la captura de Godot
+Dagna quedó del lado en sombra (la cámara se movió de costado al corregir
+la orientación, y el greybox no tiene GI). Pero abajo de eso **sí había
+algo real**: el pie de Godot apunta la punta hacia abajo y penetra la
+superficie, mientras el de Unity apoya con la suela plana. `SkeletonIK3D`
+coloca el tobillo y rota al normal, pero no ajusta pelvis ni dedo.
+
+**Lo que el spike probó:** el foot IK stock y el retargeting stock
+alcanzan en los dos motores; la diferencia visual grande de la lámina es
+de **clip**, no de motor (1.12 m de zancada contra 0.825 m).
+
+**Lo que el spike NO probó, escrito explícitamente en el documento:** nada
+de rendimiento comparado, combate, IA, UI, audio, build/export ni look
+final.
+
+**El eje que más pesa resultó no ser técnico sino de método:** Godot se
+deja automatizar y verificar desde CLI (todo el spike se hizo con
+`--headless --script`), y Unity mucho menos — hubo que entrar a play mode
+en batchmode sobreviviendo el domain reload con `SessionState`, y pelear
+el culling del Animator. Para un proyecto que se construye con un
+asistente que necesita medir su propio trabajo, eso es un argumento a
+favor de Godot que no estaba en la mesa cuando se decidió.
+
+**El contraargumento más fuerte para Unity:** los 55 paquetes del Asset
+Store ya comprados (~2.3 GB) funcionan ahí sin conversión.
+
+**Pregunta abierta que debería decidir el veredicto:** si el foot IK y la
+animación de Godot alcanzan el estándar del [[Benchmark Biomecánico]] o
+si hay que escribir un `SkeletonModifier3D` propio. Tiene respuesta
+empírica y todavía no se corrió.
+
 ## [2026-08-12] spike/godot | Cierre del moonwalk — la causa raíz era el frente del modelo, y me costó tres rondas
 
 **Boris lo reportó tres veces. Las tres tenía razón, y las dos primeras

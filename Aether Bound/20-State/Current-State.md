@@ -157,6 +157,21 @@ zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. Lo
 comparable de motor a motor (retargeting stock + foot IK stock) funciona
 en los dos.
 
+**Comparativa de motores escrita** (pedido del director, 2026-08-12):
+[[Comparativa de Motores — Godot vs Unity]] — pros/contras + FODA de los
+dos, con cada afirmación marcada por origen (medido / hecho de plataforma
+/ juicio). **No reabre la decisión.** El eje que más pesa resultó ser de
+método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
+menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
+assets ya comprados, que ahí funcionan sin convertir.
+
+**Pregunta abierta que debería decidir el veredicto:** si el foot IK y la
+animación de Godot alcanzan el estándar del [[Benchmark Biomecánico]], o
+si hay que escribir un `SkeletonModifier3D` propio (`SkeletonIK3D` está
+deprecado, y en la lámina el pie apunta la punta hacia abajo y penetra la
+superficie, cosa que Unity resuelve más limpio con el mismo esfuerzo).
+Tiene respuesta empírica y todavía no se corrió.
+
 **Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
 empareja las condiciones para que ese veredicto compare lo mismo de los
 dos lados. Deuda anotada y no bloqueante: el clip es de una mano y Dagna
