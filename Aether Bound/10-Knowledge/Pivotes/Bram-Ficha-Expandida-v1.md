@@ -15,7 +15,7 @@ updated: 2026-07-27
 
 ## Esencia
 
-Vanguard brawler — cuerpo como escudo, músculo como promesa de protección. Pero **lleva cuarenta años diciéndole "sí" a órdenes ajenas.** Su quiebre no es traición ni cálculo ni deber. Es el momento en que el muro, en el último corredor, decide **no cargar la carga que se le paga por cargar.** No confesión heroica: agotamiento. La primera vez en cuarenta años que Bram cobra por hacer algo y no lo hace.
+Vanguard brawler — cuerpo como escudo, músculo como promesa de protección. Pero **lleva cuarenta años diciéndole "sí" a órdenes ajenas.** Su quiebre no es traición ni cálculo ni deber. Es el momento en que el muro, en la sala del Fragmento, decide **no cargar la carga que se le paga por cargar.** No confesión heroica: agotamiento. La primera vez en cuarenta años que Bram cobra por hacer algo y no lo hace.
 
 Bram es la excepción intencional del elenco. Ocho Pivotes traicionan; Bram rechaza. Su superlativo no compite con nadie porque es el único que hace esto.
 
@@ -89,7 +89,7 @@ Bram, por su parte, ve a Roen como *el que tuvo la suerte de saber cuándo parar
 
 Ni saludo cálido ni saludo tenso. Reconocimiento profesional entre dos hombres que compartieron un clima.
 
-**Cuando Bram rechaza en el corredor:** Roen es el primero en entender lo que acaba de pasar. No dice nada durante segundos. Después, en voz baja: *"Cuarenta años cobrando por lo que te decían. Primera vez que cobras por algo que no puedes hacer. Lo sé porque casi me pasa a mí. La diferencia es que yo me fui antes."*
+**Cuando Bram rechaza en la sala del Fragmento:** Roen es el primero en entender lo que acaba de pasar. No dice nada durante segundos. Después, en voz baja: *"Cuarenta años cobrando por lo que te decían. Primera vez que cobras por algo que no puedes hacer. Lo sé porque casi me pasa a mí. La diferencia es que yo me fui antes."*
 
 Bram: *"Tú eres el afortunado, entonces."*
 
@@ -186,7 +186,7 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove ante
 
 **Threnn**, **Ilyara** y **Corwyn** no lo miran. Para ellos, Bram es escenario. **Maelys** sí lo mira, una vez, en el momento en que el debate se atasca. La mirada dura menos de un segundo. Bram le devuelve la mirada corta. Después Maelys vuelve a mirar el techo.
 
-**Disparadores para el encuentro individual** ([[Grove of Cycles — Escena del Acto 2]] §5): Bram no dispara acercamiento — no habla, no toma postura. Pero si **Ilyara** se acerca al jugador y el jugador está lejos de Bram, Ilyara puede pasar antes por él en el camino y dejar una línea corta: *"Cargas peso viejo. No lo apoyes contra árbol nuevo — el árbol es más joven que tú."* Bram no responde. Ilyara sigue. Si **Maelys** se acerca al jugador por Vector C, puede detenerse antes frente a Bram y decirle, sin sentarse: *"Tú ya elegiste. Ellos aún no."* Se retira. Bram no entiende la frase hasta el corredor del Archive, semanas después.
+**Disparadores para el encuentro individual** ([[Grove of Cycles — Escena del Acto 2]] §5): Bram no dispara acercamiento — no habla, no toma postura. Pero si **Ilyara** se acerca al jugador y el jugador está lejos de Bram, Ilyara puede pasar antes por él en el camino y dejar una línea corta: *"Cargas peso viejo. No lo apoyes contra árbol nuevo — el árbol es más joven que tú."* Bram no responde. Ilyara sigue. Si **Maelys** se acerca al jugador por Vector C, puede detenerse antes frente a Bram y decirle, sin sentarse: *"Tú ya elegiste. Ellos aún no."* Se retira. Bram no entiende la frase hasta la sala del Fragmento, semanas después.
 
 **A la salida del Grove:** el grupo sale tenso, sin comentar el debate. Bram es el único que hace un chiste — corto, malo, sobre elfos y hojas. Nadie se ríe. Darro lo intenta y no le sale. Bram acepta el silencio; el intento era el punto, no el chiste.
 
@@ -204,11 +204,13 @@ Ver [[Geografía y Ciudades]] §THE RECKONING. En la ruta Bram, **Tobin no oye u
 
 Tobin le pasa el dato al jugador en la oficina trasera. La escena queda así de sesgada: el jugador entra al Archive sabiendo que el Council mueve piezas de más, pero **no sabiendo** que su Pivote asignado (Bram) ya intuye que no va a ejecutar. La pregunta del jugador durante el descenso no es "¿me va a traicionar Bram?" — es "¿por qué el Council necesita dos?"
 
-En la cena de la última noche en Driftmarket (ver [[Geografía y Ciudades]] §Beat 3 — variante Bram), Bram no levanta el vaso primero. Cuando lo hace es tarde y sin mirar a nadie. Después de que el grupo se retira a dormir, Bram se queda con el jugador un momento y pregunta: *"Si alguien más recibiera la orden que a mí me dieron... ¿tú qué crees que haría?"* El jugador no sabe todavía que Bram rechazó. La pregunta queda flotando. Al amanecer, en el corredor del Archive, tendrá sentido.
+En la cena de la última noche en Driftmarket (ver [[Geografía y Ciudades]] §Beat 3 — variante Bram), Bram no levanta el vaso primero. Cuando lo hace es tarde y sin mirar a nadie. Después de que el grupo se retira a dormir, Bram se queda con el jugador un momento y pregunta: *"Si alguien más recibiera la orden que a mí me dieron... ¿tú qué crees que haría?"* El jugador no sabe todavía que Bram rechazó. La pregunta queda flotando. Al amanecer, en la sala del Fragmento, tendrá sentido.
 
 ---
 
 ## Nudo → Clímax: La traición-que-no-ocurre
+
+Estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)** en [[Geografía y Ciudades]] §ACTO 3, con la numeración propia de esta ruta: 1-2 → **2b (la ruptura, sala del Fragmento)** → **3 (el corredor donde no pasa nada)** → **4a (afuera espera el segundo agente)** → 4b (persecución) → 5 (cráter). Bram **declara igual que los otros ocho y no obedece**: su link nunca muere ([[Bond y el Bond Vacío]] §La excepción de Bram).
 
 ### Sub-beat 1-2 (Approach + Interior Archive)
 
@@ -218,11 +220,13 @@ El jugador mira a través de the Wanderer's Goggles y ve la proyección Warden �
 
 Su reacción visible en el Archive: se acerca a Speck sin ostentación, la mira una vez completa — cristal debajo del pelaje que Bram no puede ver pero que su instinto le pinta — y aparta la mirada. En ese aparte, Bram decide algo que aún no se dice a sí mismo.
 
-### Sub-beat 3: Traición-que-no-ocurre en el corredor
+### Sub-beat 2b: La ruptura — la sala del Fragmento
 
-El grupo empieza el ascenso hacia la superficie por el último corredor. Es un tramo largo y estrecho, con nichos laterales donde alguien podría desviarse. **Aquí ocurre la escena canónica de Bram — 20-30 líneas que la ficha desarrolla porque es el corazón del personaje:**
+**Ubicación corregida (2026-08-12).** Esta escena ocurría en el corredor de salida; ahora ocurre **en la sala del Fragmento**, con los otros ocho ([[Geografía y Ciudades]] §ACTO 3 sub-beat 2b, [[Bond y el Bond Vacío]] §La excepción de Bram). El contenido no cambió — cambió el lugar, y el cambio es el que hace funcionar todo el ascenso posterior.
 
-Bram se retrasa cinco pasos. Pretexto menor — revisar una inscripción, cubrir la retaguardia. Cuando el resto voltea, Bram tiene a Speck en brazos. La cargó de Roen sin resistencia, con la misma calma con la que carga cualquier peso. El grupo se congela — todos piensan lo mismo, incluso el jugador. Todos piensan que Bram va a huir por la ruta lateral.
+**Aquí ocurre la escena canónica de Bram — 20-30 líneas que la ficha desarrolla porque es el corazón del personaje:**
+
+Con el grupo todavía de pie frente al pedestal y los cadáveres calcificados en las paredes, Bram se adelanta. Cuando el resto voltea, Bram tiene a Speck en brazos. La cargó de Roen sin resistencia, con la misma calma con la que carga cualquier peso. El grupo se congela — todos piensan lo mismo, incluso el jugador. Todos piensan que Bram va a salir por uno de los pasajes laterales.
 
 Bram no huye. Camina de vuelta hacia el jugador. Le devuelve a Speck, con las dos manos, como se devuelve una cosa que uno reconoce que no es suya. La escena tarda diez segundos completos porque Bram no se apura. Nadie interrumpe.
 
@@ -254,7 +258,23 @@ Bram no huye. Camina de vuelta hacia el jugador. Le devuelve a Speck, con las do
 
 La línea sale ahí. No como grito épico — como resolución callada de un hombre que ya decidió y solo lo está diciendo en voz alta porque el grupo necesita oírlo.
 
-El grupo sale del Archive **intacto**. Speck en brazos del jugador. Bram detrás, sin apurar el paso.
+**Lo que el grupo oye — y lo que no.** Bram dijo, con las mismas palabras con las que los otros ocho anuncian que van a hacerlo, que su cadena de mando le pidió entregar a Speck. La frase que niega la obediencia (*"No voy a hacerlo"*) está ahí, dicha en voz alta, y sin embargo **el juego entero enseñó al jugador qué significa esa conversación en esa sala.** El jugador empieza el ascenso convencido de que perdió el link. **No lo perdió: Mobile Foundry nunca muere en esta ruta** ([[Bond y el Bond Vacío]] §La excepción de Bram — fuente única del beat invertido).
+
+#### La trampa amorosa invertida — el Bond que SÍ responde
+
+En el ascenso, el tramo coloca **el obstáculo firma del Mobile Foundry** exactamente igual que en las otras ocho celdas ([[Los 9 Links del Pivote]]): una posición de fuego que hay que sostener con los desplegables del jugador y sin cobertura fija.
+
+El jugador pica Bond preparado para que le duela. La Link Cam barre **y lo encuentra**: Bram ya está en posición, con los desplegables cargados encima, como las cien veces anteriores. **El sting suena completo** — no truncado a dos notas. Nadie lo comenta.
+
+El peso de este beat no sale de la ausencia sino de **la expectativa de ausencia que no se cumple**. Es la única celda donde el gesto de la pérdida devuelve presencia. Dirección, nota de sonido (el sting completo no debe confundirse con el truncado de las otras ocho) y la ausencia de eco final: [[Bond y el Bond Vacío]] §La excepción de Bram.
+
+### Sub-beat 3: El corredor donde no pasa nada
+
+**Ésta es la única ruta sin toma.** En las otras ocho, el último corredor del ascenso es donde el Pivote se separa con un pretexto y se lleva a Speck. Acá el corredor se juega igual — largo, estrecho, con nichos laterales donde alguien podría desviarse, y el grupo cerrando filas alrededor de Speck sin decírselo — **y no pasa nada.**
+
+Bram va detrás, sin apurar el paso, sin acercarse a Speck ni una vez. El grupo sale del Archive **intacto**. Speck en brazos del jugador.
+
+**Regla de escritura:** el corredor no debe leerse como alivio. Se juega como un tramo largo en el que nadie habla y todos esperan, y el alivio llega recién cuando la luz de la superficie aparece adelante — **cinco segundos antes del sub-beat 4a**, que es exactamente donde se lo quitan.
 
 ### Sub-beat 4a: Afuera espera el segundo agente
 
@@ -268,7 +288,7 @@ La traición mecánica ocurre igual, por otras manos. Torgan activa la escena de
 
 ### Sub-beat 4b: Persecución hacia The First Wound
 
-Ver [[Geografía y Ciudades]] §Acto 3 sub-beat 4. El grupo persigue al segundo agente por The Wilds hacia el cráter. Bram es el **único Pivote que se queda en Acto 3 completo** — no huye, no traiciona, no es cazado. Está del lado del jugador desde el corredor hasta el cráter.
+Ver [[Geografía y Ciudades]] §Acto 3 sub-beat 4. El grupo persigue al segundo agente por The Wilds hacia el cráter. Bram es el **único Pivote que se queda en Acto 3 completo** — no huye, no traiciona, no es cazado. Está del lado del jugador desde la sala del Fragmento hasta el cráter.
 
 **Rol de Bram en la persecución:** Vanguard, como siempre. Se pone entre el jugador y el peligro físico. Carga el peso emocional que Roen no puede sostener solo — cuando Roen se ancla, Bram carga. En un momento específico, cerca de The Scar of Breaking, cuando el grupo pierde momentáneamente al segundo agente, Bram organiza el reagrupamiento sin dar órdenes explícitas: mira a Roen, mira al jugador, hace un gesto corto con la mano. Es el liderazgo que nunca ejerció formalmente en cuarenta años porque nadie se lo dejó.
 
@@ -287,7 +307,7 @@ Conversaciones en la persecución:
 
 ### Sub-beat 5: Quiebre en The First Wound
 
-**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Bram** — **excepción declarada: holder = agente.** Quien sostiene a Speck es **Torgan** como segundo agente, y es también el agente a neutralizar: **no hay un mensajero aparte esperando en el borde.** Secuencia: §1, con la excepción del paso 1 — Bram rehúsa en el corredor y es Torgan quien toma a Speck afuera del Archive.
+**Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Bram** — **excepción declarada: holder = agente.** Quien sostiene a Speck es **Torgan** como segundo agente, y es también el agente a neutralizar: **no hay un mensajero aparte esperando en el borde.** Secuencia: §1, con la excepción del paso 1 — Bram rehúsa en la sala del Fragmento (sub-beat 2b), el corredor de salida pasa sin toma, y es Torgan quien toma a Speck afuera del Archive.
 
 Bram no la carga. Está en el borde igual, del lado del grupo. El Fragmento se activa. Los God-Cores despiertan uno a uno. Speck entra en la transformación E1→E3.
 
@@ -321,7 +341,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — Torgan completa la en
 
 Bram **no ejecutó** — no aplica directo. El segundo agente cumplió. Speck viaja al Council **viva**, y los God-Cores se apagan.
 
-**Epílogo:** Bram vive con **una culpa nueva** — la de no haber traicionado antes. Racionalización dolorosa: *"Si yo hubiera cumplido en el corredor, el Council no habría activado al segundo. Yo la hubiera cargado hasta la superficie sin persecución, sin daño colateral, sin la escena del cráter. Quizás Speck no habría llegado tan rota. Quizás la 'custodia digna' que prometieron era menos mentira si la ejecutaba yo."*
+**Epílogo:** Bram vive con **una culpa nueva** — la de no haber traicionado antes. Racionalización dolorosa: *"Si yo hubiera cumplido cuando me lo pidieron, el Council no habría activado al segundo. Yo la hubiera cargado hasta la superficie sin persecución, sin daño colateral, sin la escena del cráter. Quizás Speck no habría llegado tan rota. Quizás la 'custodia digna' que prometieron era menos mentira si la ejecutaba yo."*
 
 Todo eso es falso — el Council mentía igual — pero Bram no puede saberlo. Vive con la duda. Sigue en Rivermeet, sigue haciendo trabajo pequeño, sigue callando. La pulsera se tensa cada noche.
 
@@ -343,7 +363,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el bo
 
 Bram **nunca te siguió tan lejos.** Se va antes del cráter — específicamente, en el momento en que el jugador, en vez de detener a Torgan o esperar, cruza el borde de largo. No hay ceremonia, no hay discurso, no hay confrontación. Bram deja el equipo que el jugador le dio (armadura menor, mazo secundario, ración de campamento) en el suelo, apilado con orden militar, y camina en dirección opuesta.
 
-No es traición ni deserción — es rechazo, que es lo único que Bram sabe hacer desde el corredor. Rechazó al Council y rechaza al jugador con el mismo mecanismo.
+No es traición ni deserción — es rechazo, que es lo único que Bram sabe hacer desde la sala del Fragmento. Rechazó al Council y rechaza al jugador con el mismo mecanismo.
 
 **Epílogo:** Bram desaparece. No vuelve a Rivermeet, no vuelve a Mistbound. Alguien lo ve en un fuerte perdido meses después, un año quizás; después no lo ve nadie. Es el epílogo más corto de los cinco porque Bram, en F3, ya no es narrable. Un hombre que rechazó dos veces no vuelve a ser útil como personaje.
 
@@ -381,7 +401,7 @@ El jugador lo visita ocasionalmente. Bram sonríe — cosa rara. La pulsera con 
 
 **Tensión:** Roen entiende exactamente lo que Bram carga porque él mismo casi lo cargó. No lo dice hasta que Bram rechaza. En el camino, cuando se cruzan alrededor del fuego, hablan poco. Cuando hablan es sobre cosas menores: la calidad del pan de fuerte, un nombre común de teniente, el año en que un puesto se cayó.
 
-**Cuando Bram rechaza en el corredor:** ver diálogo arriba. Roen es el primero en entender, y su reacción es reconocimiento, no absolución.
+**Cuando Bram rechaza en la sala del Fragmento:** ver diálogo arriba. Roen es el primero en entender, y su reacción es reconocimiento, no absolución.
 
 ### Bram + Valen (Soldado vs. Observador)
 
@@ -391,7 +411,7 @@ Conversación una noche en Emberdeep: Valen le pregunta a Bram si piensa antes d
 
 **Tensión:** respeto mutuo sobre diferencia irreconciliable. Valen nunca le pregunta a Bram sobre House Thorne (Valen no lo sabe; si lo intuyera, no preguntaría por decoro élfico).
 
-**Cuando Bram rechaza:** Valen dice, en el corredor, tras el silencio: *"Tu cálculo fue el más simple que he visto. Un veterano de cuarenta años decidiendo en cinco minutos. Impresionante."* Bram: *"No fue cálculo. Fue cansancio."* Valen: *"En un veterano de cuarenta años, es la misma cosa."*
+**Cuando Bram rechaza:** Valen dice, en la sala del Fragmento, tras el silencio: *"Tu cálculo fue el más simple que he visto. Un veterano de cuarenta años decidiendo en cinco minutos. Impresionante."* Bram: *"No fue cálculo. Fue cansancio."* Valen: *"En un veterano de cuarenta años, es la misma cosa."*
 
 ### Bram + Darro (Peso vs. Ligereza)
 
@@ -416,7 +436,7 @@ En el epílogo F4, Darro es el que va más seguido a visitar a Bram en el campam
 - Cabello castaño grisáceo, cortado corto y práctico (sin tiempo para vanidad)
 - Piel bronceada de frontera, **cubierta de cicatrices visibles** — brazos, cuello, frente, mano izquierda con un dedo torcido de una fractura vieja mal soldada
 - Ojos marrones, con líneas profundas de cansancio alrededor — no cansancio de una noche, cansancio de cuarenta años
-- **Postura:** erguida incluso en cansancio, peso plantado, listo para combate incluso dormido. En Acto 3, ligeramente más relajada — como si el rechazo del corredor le hubiera aflojado una tensión invisible
+- **Postura:** erguida incluso en cansancio, peso plantado, listo para combate incluso dormido. En Acto 3, ligeramente más relajada — como si el rechazo en el Archive le hubiera aflojado una tensión invisible
 - **Movimiento:** lento pero intencionado, economía de movimiento de veterano
 - **Gear:** ropa práctica de soldado en grises/negros, refuerzos de cuero sobre puntos críticos, sin armadura pesada (movilidad > protección)
 - **Arma:** mazo de dos manos (arma de brawler, impacto puro), daga de sidearm

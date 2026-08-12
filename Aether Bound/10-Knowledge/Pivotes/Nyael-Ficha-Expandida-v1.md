@@ -210,25 +210,59 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. El grupo se desvía al Grove ante
 
 ## Nudo → Clímax: La Traición Sin Confrontación (al salir del Archive)
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Nyael **no traiciona en el cráter** — la captura ocurre **al salir del Sunken Archive**. La persecución asincrónica y la ausencia en First Wound son consecuencias.
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. La traición de Nyael tiene **dos tiempos** como las otras ocho, pero es la única celda donde el primero **no se dice**: la **ruptura por ausencia** (sub-beat 2b) y la **captura** en el corredor de salida (sub-beat 3). Excepción declarada en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos — ningún QA debe reportarla como contradicción. **No traiciona en el cráter**; la persecución asincrónica y la ausencia en First Wound son consecuencias.
 
-### Sub-beat 1-2: Approach + Interior Archive
+### Sub-beat 1-2: Approach + descenso interno del Archive
 
 El grupo desciende al Archive. Nyael se mueve sin sonido — ya conocía la ruta, la memorizó en registros del brazo encubierto meses atrás.
 
-En el interior, cuerpos calcificados de la civilización Warden. **Reacción visible de Nyael: es la que menos tiempo pasa en el Archive.** Entra, escanea, sale. No lee inscripciones (no puede), no examina cadáveres, no toca cristales. Ve todo, no comenta. Su reacción emocional al Archive es privada y no se transcribe — Nyael es la que menos rastro deja incluso en su propio proceso interno.
+En los corredores exteriores, los primeros cuerpos calcificados de la civilización Warden. **Reacción visible de Nyael: es la que menos tiempo pasa en el Archive.** No lee inscripciones (no puede), no examina cadáveres, no toca cristales. Ve todo, no comenta. Su reacción emocional al Archive es privada y no se transcribe — Nyael es la que menos rastro deja incluso en su propio proceso interno.
 
-Antes de salir, hace algo que nadie le ha visto hacer con nadie: **acaricia el cuello de Speck una vez.** Un segundo. La palma sobre el pelaje, después la mano vuelve al costado. Es el gesto más íntimo que Nyael ha ofrecido en su vida — despedida silenciosa a un objetivo que va a capturar en horas. Speck no reacciona. Solo el jugador ve el gesto, y solo si está en el ángulo correcto; si no, no lo ve nadie. Es un beat privado incluso dentro de la ficha.
+En ese tramo hace algo que nadie le ha visto hacer con nadie: **acaricia el cuello de Speck una vez.** Un segundo. La palma sobre el pelaje, después la mano vuelve al costado. Es el gesto más íntimo que Nyael ha ofrecido en su vida — despedida silenciosa a un objetivo que va a capturar en horas. Speck no reacciona. Solo el jugador ve el gesto, y solo si está en el ángulo correcto; si no, no lo ve nadie. Es un beat privado incluso dentro de la ficha.
 
-El jugador mira a través de the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2). **Nyael no ve la proyección** (los Goggles son privados; Nyael, aun habiendo observado al jugador semanas antes, no accede a los flashes). Su plan no cambia. La revelación Warden no es dato operativo — es contexto emocional del jugador, y Nyael no opera con contexto emocional ajeno.
+**Y a los pocos pasos, Nyael se separa.** Pretexto operativo, del tamaño de los cien que dio antes: *"Reviso el ramal de atrás. Los alcanzo."* Nadie discute — es literalmente su función en el grupo desde el Acto 1. El grupo sigue bajando hacia la cámara del Fragmento.
 
-### Sub-beat 3: Captura al salir del Archive
+**Nyael no vuelve.**
 
-En el corredor de ascenso, Nyael se retrasa medio paso — no cinco, medio. La ventaja de Nyael sobre cualquier otro Pivote es que no necesita distancia para desaparecer. Cuando el grupo voltea, **Nyael no está y Speck no está.** No hay ruta lateral visible, no hay señal de forcejeo. Simplemente ausencia.
+### Sub-beat 2b: La ruptura — la ausencia en la sala del Fragmento
 
-El mensaje del brazo encubierto llegó horas antes por señal muerta que solo Nyael sabe leer: *"Ahora. Captura viva. Extracción por ruta 7."*
+**Ésta es la única ruptura del elenco que no tiene diálogo, y la única en la que el Pivote no está en la sala** ([[Bond y el Bond Vacío]]: *"declara por ausencia"*). Forzarla a anunciar en voz alta sería lo contrario de su diseño — su superlativo es **la traición como ausencia** ([[Los 9 Pivotes]]).
 
-Nyael se mueve con eficiencia quirúrgica — sin forcejeo, sin herirla, sin tocar el Fragmento: la guía, no la arrastra, y Speck la sigue porque la conoce y no la lee como amenaza. Viva y transportable, como la orden pide. Sale del Archive por rutas que ella misma diseñó meses antes en reconocimiento previo. No hay confrontación, no hay palabras, no hay línea de traición gritada. Solo hueco donde había dos figuras.
+La escena, entonces, es del grupo. En la cámara del Fragmento, el jugador mira a través de the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §ACTO 3 sub-beat 2). **Nyael no ve la proyección — no está ahí para verla**, y aunque estuviera no accedería (los Goggles son privados). La revelación Warden no es dato operativo, y Nyael no opera con contexto emocional ajeno.
+
+Es **Roen** quien lo nombra, y lo nombra en el peor momento posible: con la lectura recién terminada y el grupo todavía de pie frente al pedestal, cuenta cabezas por costumbre de guardia y se detiene en cuatro.
+
+> **Roen:** *"¿Hace cuánto que no la oímos?"*
+>
+> *(Nadie contesta, porque a Nyael nunca se la oye. Ése es exactamente el problema y todos lo entienden a la vez.)*
+>
+> **Darro:** *"Dijo que revisaba atrás."* Y se le apaga la voz a mitad de la frase, porque se está oyendo decirlo.
+
+No hay discusión. No hay nadie que proponga volver a buscarla. **El grupo entiende sin que nadie lo diga**, que es la fórmula exacta del canon, y lo que sigue es que cierran filas alrededor de Speck y siguen subiendo. Valen es el único que dice algo, y lo dice para sí: *"She never said goodbye because she already had."* Solo el jugador sabe a qué se refiere, y solo si vio la caricia.
+
+**Acá muere el link**, exactamente igual que en las otras ocho celdas: The Weaver's Net deja de responder desde esta escena. El juego no lo anuncia; el jugador lo descubre picándolo.
+
+#### La trampa amorosa — la red que nadie atraviesa
+
+En el ascenso, un pasaje angosto con un enjambre Warden despierto: el problema exacto que el juego enseñó a resolver con **The Weaver's Net** ([[Los 9 Links del Pivote]]) — el jugador tiende la red de Aether, Nyael la atraviesa y electrifica sus hojas al pasar.
+
+El jugador tiende la red y pica Bond. La Link Cam barre el tramo de la red igual que las cien veces anteriores. **No hay nadie a quien encuadrar.** La red se queda tendida, sin cargar, y se apaga sola a los cuatro segundos. Dos notas y silencio.
+
+**Variante obligatoria de esta ruta:** en las otras siete celdas con link muerto, el Pivote está a tres metros mirando. **Acá no hay nadie a tres metros**, y el encuadre vacío de la Link Cam es literal en vez de figurado. Es la única celda donde el beat no tiene a quién culpar en cuadro — el silencio del botón es toda la información que el jugador recibe, y llega antes que cualquier confirmación de lo que pasó.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: La captura al salir del Archive
+
+**No es la revelación.** El grupo sabe desde la sala del Fragmento, y subió el Archive entero sabiendo. Lo que Nyael ejecuta acá es la parte que nunca dependió de que ellos supieran.
+
+El mensaje del brazo encubierto le llegó horas antes por señal muerta que solo Nyael sabe leer: *"Ahora. Captura viva. Extracción por ruta 7."*
+
+En el último corredor de ascenso, **Nyael reaparece por primera vez desde el descenso**, y reaparece el tiempo justo. Cuando el grupo voltea, **Speck no está.** No hay ruta lateral visible, no hay señal de forcejeo. Simplemente ausencia — otra vez, y ésa es la firma de la ruta: el mismo hueco dos veces, primero el suyo y después el de Speck.
+
+Nadie se sorprende. El grupo llevaba el ascenso entero cerrando filas alrededor de Speck **y no alcanzó igual**, que es peor que no haberlo intentado.
+
+Nyael se mueve con eficiencia quirúrgica — sin forcejeo, sin herirla, sin tocar el Fragmento: la guía, no la arrastra, y Speck la sigue porque la conoce y no la lee como amenaza. Viva y transportable, como la orden pide. Sale del Archive por rutas que ella misma diseñó meses antes en reconocimiento previo. No hay confrontación, no hay palabras, no hay línea de traición gritada. Solo el hueco donde estaba Speck — el segundo hueco de la ruta, idéntico al primero.
 
 **El jugador nunca la ve actuar.** Solo ve que Speck se va. Solo después, en un nicho de la pared del corredor, descubre la nota — pluma corta, tinta gris:
 
@@ -237,6 +271,8 @@ Nyael se mueve con eficiencia quirúrgica — sin forcejeo, sin herirla, sin toc
 **Línea canónica** (nueva, reemplaza la anterior en la que el jugador figuraba como maestro/a):
 
 *"I set traps my teacher would have waited on. She's older than you'll ever be. She was also wrong."*
+
+**Dónde se dice:** en ninguna parte — se **lee**. Es la decisión de forma de esta ruta y la única posible: Nyael no habla en la ruptura (no está) ni en la captura (no se la ve), así que su línea canónica vive donde vivió siempre, en la nota del nicho, y es lo único que dice en todo el Acto 3.
 
 La línea nombra implícitamente a una **maestra anterior** — la instructora del brazo encubierto que entrenó a Nyael cien años atrás, a quien Nyael no traiciona ejecutando, sino **actuando antes del momento que su maestra hubiera elegido.** El jugador no es maestro de Nyael; el jugador es la razón nueva por la que Nyael, por primera vez en su vida, adelanta un tiempo que su tradición dice que hay que esperar. En términos de la mecánica emocional: aprendizaje entre pares, no maestro→alumno.
 

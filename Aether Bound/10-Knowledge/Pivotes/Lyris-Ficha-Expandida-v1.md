@@ -244,9 +244,9 @@ Por dentro, calcula algo específico: **el jugador todavía no la sospecha a ell
 
 ---
 
-## Nudo → Clímax: La Traición al Salir del Archive
+## Nudo → Clímax: La Traición en Dos Tiempos
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Lyris **no traiciona en el cráter** — traiciona **al salir del Sunken Archive**. El descenso, la persecución aérea y el cierre en First Wound son consecuencias.
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. La traición de Lyris tiene **dos tiempos** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos): la **ruptura** en la sala del Fragmento (sub-beat 2b) y la **toma** en el corredor de salida (sub-beat 3). **No traiciona en el cráter.** La persecución aérea y el cierre en First Wound son consecuencias.
 
 ### Sub-beat 1-2: Approach + Interior Archive
 
@@ -256,22 +256,59 @@ En el interior, cuerpos calcificados de la civilización Warden. **Reacción vis
 
 El jugador mira a través de the Wanderer's Goggles y ve la proyección Warden ([[Geografía y Ciudades]] §Acto 3 sub-beat 2) — símbolo geométrico que coincide con el pelaje de Speck. **Lyris no ve la proyección** (los Goggles son privados; los flashes son invisibles incluso desde el aire). Lo que Lyris ve es la cara del jugador. No le cambia el patrón — el patrón es más viejo que la piedad. Ya estaba activo antes del Archive.
 
-### Sub-beat 3: Traición al salir del Archive
+### Sub-beat 2b: La ruptura — la sala del Fragmento
 
-En el último corredor de ascenso, Lyris se retrasa cinco pasos. Cuando el grupo voltea, tiene a Speck en brazos y una ruta lateral que sube por una grieta natural — pequeña, vertical, exactamente del ancho para que suba sola y no la sigan.
+Ubicación: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
 
-El **mensaje cifrado** llega por la primera corriente de aire real que Lyris siente desde que entró al Archive — Frontier High Command lo mandó horas atrás y ella lo lee en la presión atmosférica del corredor: *"Ahora. Trae la variable."* Lyris no sabe que la orden fue plantada por el Council; obedece a la cadena que conoce.
+**A Lyris la orden le llega acá.** La bóveda del Fragmento es la primera cámara del Archive con altura real, y con la altura vuelve el aire en movimiento: el **mensaje cifrado** de **Frontier High Command** lo mandaron horas atrás y ella lo lee en la presión atmosférica, como lee todo. *"Ahora. Trae la variable."* Lyris no sabe que la orden fue plantada por el Council; obedece a la cadena que conoce.
 
-Antes de subir, Lyris desciende un metro y mira al jugador a los ojos. Por primera vez, dice verdad incómoda:
+Lo que hace primero es lo que a Valen le hiela la sangre: **vuelve a volar.** Se despega del suelo por primera vez desde la entrada, sube dos metros, y desde ahí habla. Toda la deferencia del interior del Archive se termina en ese despegue, y el grupo lo entiende sin traducción.
 
-> **Lyris:** *"Eras stillness. Eras razón para estar en tierra. Pero la tierra te destruirá. El cielo es verdad. Y la verdad requiere sacrificio."*
+**Tres frases. No hay más, y no le hablan a nadie del grupo — le habla a Speck.**
+
+> **Lyris:** *(a Speck, no al jugador)* *"Te van a llevar arriba. Va a ser rápido."*
 >
-> **Jugador:** *"¿Me usaste?"*
+> **Lyris:** *"Frontier High Command pidió la variable. La variable eres tú."*
 >
-> **Lyris:** *"No. Eras útil. También eras verdadero. Ambas cosas pueden ser."*
+> **Lyris:** *"No hay más que decir de esto."*
 
-**Línea de traición:**
-*"You were my stillness. Be still now. The world needs sky, not earth. I choose sky."*
+Y no hay más. **Lyris es la única que declara sin dirigirle una palabra a la persona que traiciona.** Si el jugador le grita, no baja. Si Darro le grita, no gira. Contesta exactamente una pregunta si se la hacen —*"¿Cuándo?"*— con un dato: *"Arriba."* Después se calla el ascenso entero.
+
+**Acá muere el link.** Skyhook deja de responder desde esta escena.
+
+**Y Lyris sube con el grupo**, en el aire, tres metros por encima de todos, abriendo camino y señalando rutas. No se va porque no puede: la grieta que va a usar está arriba, y hasta la superficie hay un solo camino. Es la única que hace el ascenso sin tocar el suelo, y esa distancia física es la escena.
+
+**Reacción del grupo — acá:**
+
+**Roen** hace la única pregunta que le importa, y la hace hacia arriba: *"Is she a person to you?"* Lyris tarda. *"Es una variable. También podría ser persona. La orden no preguntó."* Roen no vuelve a hablarle.
+
+**Valen** es el que peor la pasa, y es el único que no dice nada — **él fue el único que leyó bien el gesto de caminar** durante todo el interior del Archive, y ahora entiende que lo que leyó como respeto era una despedida. Se lo guarda. Al jugador, mucho después, en la superficie: *"She walked the whole way in. I told myself it was reverence."*
+
+**Darro** grita hacia arriba hasta quedarse ronco y no obtiene ni una mirada. Gritarle a Lyris no produce ningún efecto — ni respuesta, ni desprecio, ni gesto —, y a Darro esa nada lo desarma más que una respuesta cruel.
+
+#### La trampa amorosa — el ancla sin nadie del otro lado
+
+En el ascenso, un pozo vertical con la única repisa útil a diez metros y fuera de alcance: el problema exacto que el juego enseñó a resolver con **Skyhook** ([[Los 9 Links del Pivote]]) — el jugador se planta y ancla, Lyris describe el arco atada al tether, el jugador tira.
+
+El jugador se planta. Clava el ancla. Pica Bond. La Link Cam sube por la línea del tether igual que las cien veces anteriores y **la línea termina en nada** — cuelga, se tensa contra su propio peso, y baja. Dos notas y silencio. *"Tu solidez es soledad"*, literal y a la primera.
+
+**Lyris está a tres metros — arriba, no al lado.** Suspendida, mirando. Podría hacerlo sin costo. No lo hace y no lo explica. El jugador sube el pozo a pulso, tramo por tramo, con ella flotando a la par del avance.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: La toma al salir del Archive
+
+**No es la revelación** — se dijo abajo, en tres frases, y el grupo subió mirándola volar.
+
+Último corredor de ascenso. Lyris se retrasa cinco pasos, que en ella es descender medio metro y quedarse atrás. Cuando el grupo voltea, tiene a Speck en brazos y una grieta natural ya elegida — pequeña, vertical, exactamente del ancho para que suba sola y no la sigan.
+
+Nadie forcejea. Roen no intenta alcanzarla: ya sabía, y sabía también que no llegaría.
+
+Antes de subir, Lyris desciende un metro y **por fin mira al jugador a los ojos** — la única vez desde la sala del Fragmento. No explica nada. Dice la frase y se va:
+
+**Línea canónica, dicha acá:**
+
+***"You were my stillness. Be still now."***
 
 Sube por la grieta. En cuestión de segundos está en la superficie, con Speck. En el aire.
 
@@ -279,7 +316,7 @@ Sube por la grieta. En cuestión de segundos está en la superficie, con Speck. 
 
 ## Arco Acto 3 — Persecución Aérea y Quiebre en el Cráter
 
-Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → Traición al salir → Persecución → Quiebre en First Wound. Lyris cubre los cinco sub-beats; su decisión de traicionar ya ocurrió al salir del Archive.
+Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → **Ruptura (2b)** → Toma al salir → Persecución → Quiebre en First Wound. Lyris cubre los seis sub-beats; su decisión ya estaba dicha en voz alta desde la sala del Fragmento.
 
 ### Sub-beat 4: Persecución hacia The First Wound
 
@@ -387,7 +424,7 @@ El grupo la entierra en altura — el risco más alto que encuentran, porque a n
 
 *"You were my stillness. Be still now."*
 
-**Contexto:** La verdad más brutal de Lyris — que el jugador fue hermoso precisamente porque fue tierra en un mundo de cielo, pero que la tierra debe ser sacrificada para el cielo.
+**Contexto:** se dice **en la toma** (sub-beat 3, el corredor de salida), no en la ruptura. Es la decisión de forma de esta ruta: en la sala del Fragmento Lyris declara en tres frases dirigidas a Speck y **no le habla al jugador ni una vez**; la única frase que le dirige en todo el Acto 3 es ésta, ya con Speck en brazos y sin explicación detrás. La verdad más brutal de Lyris — que el jugador fue hermoso precisamente porque fue tierra en un mundo de cielo, pero que la tierra debe ser sacrificada para el cielo. Fría por retención, no por dureza.
 
 ---
 
