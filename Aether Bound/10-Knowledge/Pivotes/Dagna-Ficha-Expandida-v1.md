@@ -200,7 +200,7 @@ Ni Maelys ni Dagna vuelven a hablarse. Nadie más se entera del intercambio. **L
 
 ## Nudo → Clímax: El Archive sin Descubrimiento, la Traición Consciente
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Dagna cubre los cinco, pero con un carácter único en el elenco: **llega al Archive sin nada nuevo por descubrir.** Su decisión de traicionar es de meses atrás. El Archive solo confirma.
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. Dagna los cubre los seis, con un carácter único en el elenco: **llega al Archive sin nada nuevo por descubrir.** Su decisión de traicionar es de meses atrás; el Archive solo confirma. Su traición tiene **dos tiempos** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos): la **ruptura** en la sala del Fragmento (2b) y la **toma** en el corredor de salida (3).
 
 ### Sub-beat 1-2: Approach + Interior Archive
 
@@ -226,13 +226,61 @@ El jugador mira las paredes a través de los Goggles ([[Geografía y Ciudades]] 
 
 Lo único que Dagna hace en ese momento es ajustar el escudo. Ni siquiera mira al jugador. **Ese desapego es el rasgo del arquetipo aplicado a su forma más pura:** el deber institucional no negocia con revelaciones.
 
-### Sub-beat 3: Traición al salir del Archive
+### Sub-beat 2b: La ruptura — la sala del Fragmento
+
+Ubicación: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
+
+**Dagna es la única que no le declara al jugador. Le declara a Roen.**
+
+Ésa es la forma de esta ruptura y es deliberada: Dagna no puede sostener la cara del jugador mientras lo dice —cinco años y nunca dijo la palabra— y sí puede sostener la de otro veterano que entiende cadenas de mando. Así que se para frente a Roen, con el escudo todavía en el brazo, y habla mirándolo a él mientras el jugador la escucha desde un metro y medio a la izquierda. **El jugador oye la declaración de costado.** Es peor.
+
+**Le tiembla la voz desde la primera palabra**, y no la controla en ninguna de las que siguen. Ése es el rasgo que la separa del resto del elenco: los otros ocho declaran con la voz entera.
+
+> **Dagna:** *(a Roen)* *"El subclán Deepstone me la reclamó. Viva. La orden es anterior a este grupo."*
+>
+> **Roen:** *"¿Cuánto antes?"*
+>
+> **Dagna:** *"Meses. Bajé sabiendo."*
+>
+> *(Silencio. Roen no pregunta nada más. Es la respuesta que se temía y la única que él, de todo el grupo, entiende hasta el fondo.)*
+>
+> **Dagna:** *"No lo estoy pidiendo. No hay nada que pedir. Solo no quería que se enteraran arriba, de golpe, y pensaran que fue algo que pasó en el camino."*
+
+Y después, lo único que dice mirando al jugador — dos palabras, sin girar el cuerpo entero, apenas la cara:
+
+> **Dagna:** *"Lo siento."*
+
+No vuelve a hablar en toda la sala. Si le preguntan por qué, no contesta: **Dagna no argumenta la ley, la carga.** La justificación completa —la línea canónica— llega recién en el cráter, después de haber abrazado a Speck y antes de entregarla, y no antes.
+
+**Acá muere el link.** Seismic Springboard deja de responder desde esta escena. Si el Tether llegó a **T3**, lo que muere es *The Mountain's Answer* — la respuesta en el aire, el pulso que la enseñó a llamar — y la pérdida se siente proporcionalmente peor ([[Los 9 Links del Pivote]] §Tiers por Tether).
+
+**Y Dagna sube con el grupo.** Va delante, escudo levantado, en formación defensiva por costumbre, exactamente como bajó. **Cubre a gente que acaba de oírla anunciar lo que va a hacer, y lo hace bien**, porque no sabe hacerlo de otra forma. En dos tramos del ascenso se pone entre el jugador y algo que cae. Nadie se lo agradece.
+
+**Reacción del grupo — acá:**
+
+- **Roen:** silencio, y el silencio empieza acá, no en el cráter. Roen entiende antes que los demás porque se lo dijeron a él. Ya empieza a quebrarse por dentro y todavía falta el ascenso entero, la persecución y el borde. **Ésta es la ruta que lo rompe** ([[Los 9 Pivotes]]: *"la única que quiebra al ancla"*), y la grieta se abre en esta sala.
+- **Valen:** *"Las cartas desde Emberdeep. Debí haber preguntado."* No es reproche a los demás — es reconocimiento de que él vio el patrón y lo dejó pasar por respeto élfico. Ahora sabe que el respeto costó.
+- **Darro:** grita. *"¡DAGNA!"* Una sola vez. Dagna no responde. Darro se queda con la mano a medio subir hacia ella, luego la baja. Y a partir de ahí sigue hablando durante todo el ascenso — **nada con forma de broma**, frases a medias que no cierran, porque con Dagna nunca supo qué era esa relación y la incertidumbre no se resuelve gritando un nombre.
+
+#### La trampa amorosa — la onda que no llega
+
+En el ascenso, una fractura vertical con la repisa de salida a una altura que solo se alcanza con el triple salto: el problema exacto que el juego enseñó a resolver con **Seismic Springboard** ([[Los 9 Links del Pivote]]) — el golpe de suelo de Dagna crea la onda, el jugador usa la inercia.
+
+El jugador se coloca en el punto de siempre y pica Bond. **La Link Cam barre el suelo**, buscando el impacto, y el suelo se queda quieto. Dos notas y silencio. Se acabó la verticalidad, literal y a la primera.
+
+Dagna está a tres metros y **tiene el martillo en la mano** — lo levantó por reflejo cuando el jugador se colocó, porque el cuerpo aprendió el gesto antes que la cabeza aprendiera la orden. Lo baja despacio. Es lo más cerca que Dagna está de romperse antes del cráter, y no dice nada. El jugador escala la fractura a mano, tramo por tramo, con ella esperando arriba.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: La toma al salir del Archive
+
+**No es la revelación** — se dijo abajo, con la voz temblando, y el grupo subió el Archive entero sabiéndolo.
 
 En el corredor de ascenso, mientras el grupo se reagrupa después del tramo colapsado, Dagna se retrasa dos pasos. Cuando el grupo voltea, tiene a Speck en los brazos.
 
-**Le tiembla la voz.** No llora — se le suelta una sola lágrima, la nota justo cuando ya rodó, y no se la limpia porque hacerlo sería reconocerla. Sostiene a Speck con las dos manos, contra el pecho, con la misma firmeza con que sostiene el escudo. No hay violencia. Speck no forcejea — la conoce, la olió durante meses posicionándose entre ella y el ruido, no la lee como amenaza.
+Nadie forcejea, y **nadie se sorprende**, que es lo que hace la escena. Sostiene a Speck con las dos manos, contra el pecho, con la misma firmeza con que sostiene el escudo. Speck no forcejea — la conoce, la olió durante meses posicionándose entre ella y el ruido, no la lee como amenaza. Se le suelta una sola lágrima, la nota justo cuando ya rodó, y no se la limpia porque hacerlo sería reconocerla.
 
-Dagna no dice palabra al tomarla. No se disculpa. **No huye rápido — camina.** Da la vuelta y empieza a subir el corredor con paso firme y ancho, sin ocultarse, dejando pasos claros en la ceniza del suelo.
+Dagna no dice palabra al tomarla. No se disculpa: ya se disculpó abajo, y una disculpa dicha dos veces sería pedir algo. **No huye rápido — camina.** Da la vuelta y empieza a subir el corredor con paso firme y ancho, sin ocultarse, dejando pasos claros en la ceniza del suelo.
 
 **Quiere que el jugador la alcance.** Es la única Pivote que camina despacio *a propósito de que la alcancen* — Vekka también camina en su persecución, pero por eficiencia, no para ser encontrada. Dagna sabe que no puede irse sin que él la mire de frente. Es su forma de honrar cinco años sin haber dicho nunca la palabra: **darse tiempo para que él llegue.**
 
@@ -242,17 +290,11 @@ Dagna no se detiene. Contesta sin girar la cara: *"Sube. Voy a esperarte arriba.
 
 Nada más. Sube el corredor. Speck en brazos. La lágrima ya seca. Escudo golpeando la cadera con cada paso.
 
-**Reacción del grupo:**
-
-- **Roen:** silencio. Roen entiende antes que los demás. Ya empieza a quebrarse por dentro, y todavía no llegan al cráter.
-- **Valen:** *"Las cartas desde Emberdeep. Debí haber preguntado."* No es reproche a los demás — es reconocimiento de que él vio el patrón y lo dejó pasar por respeto élfico. Ahora sabe que el respeto costó.
-- **Darro:** grita. *"¡DAGNA!"* Una sola vez, al aire. Dagna no responde. Darro se queda con la mano a medio subir hacia ella, luego la baja.
-
 ---
 
 ## Arco Acto 3 — La Persecución Más Corta y el Quiebre en el Cráter
 
-Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → Traición al salir → Persecución → Quiebre en First Wound. Dagna cubre los cinco, pero la persecución es **la más corta del elenco.**
+Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → **Ruptura (2b)** → Toma al salir → Persecución → Quiebre en First Wound. Dagna cubre los seis, y la persecución es **la más corta del elenco.**
 
 ### Sub-beat 4: persecución
 
@@ -398,7 +440,7 @@ La hoja de Maelys aparece en el compartimento interior del cinturón, todavía v
 
 ***"The mountain doesn't forgive. And I am the mountain's."***
 
-**Contexto:** la verdad de Dagna en el cráter. No es excusa — es diagnóstico. La montaña no perdona porque la montaña no elige; Dagna es de la montaña porque la asignación es más antigua que ella. La frase se dice después de haber abrazado a Speck y antes de entregarla. Es lo único que Dagna dice en el clímax que no es respuesta a una pregunta directa.
+**Contexto:** el cráter (sub-beat 5). **NO se dice en la ruptura:** en la sala del Fragmento Dagna le declara a Roen con la voz temblando y no argumenta la ley — solo la carga —, y al jugador le dice dos palabras (*"Lo siento."*). La justificación completa espera hasta el borde, después del abrazo. No es excusa — es diagnóstico. La montaña no perdona porque la montaña no elige; Dagna es de la montaña porque la asignación es más antigua que ella. La frase se dice después de haber abrazado a Speck y antes de entregarla. Es lo único que Dagna dice en el clímax que no es respuesta a una pregunta directa.
 
 ---
 

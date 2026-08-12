@@ -181,7 +181,9 @@ Es la primera vez que el grupo entiende que **para Vekka los Warden no son mitol
 
 ---
 
-## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición al Salir
+## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición en Dos Tiempos
+
+Estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)** en [[Geografía y Ciudades]] §ACTO 3. La traición de Vekka tiene **dos tiempos** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos): la **ruptura** en la sala del Fragmento (sub-beat 2b) y la **separación con Speck** en el corredor de salida (sub-beat 3).
 
 **Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Vekka**. Secuencia: §1, pasos 1-6, sin excepciones — toma a Speck en el corredor, la carga hasta el **borde** del cráter, y espera ahí al mensajero del Great Forging Clan.
 
@@ -215,25 +217,65 @@ Lo que pasó por su cabeza en ese instante, si lo tradujera a palabras (no lo tr
 
 **Vekka decide ejecutar igual, después de saber.** Ese es el punto exacto de su arquetipo: el dogma resiste la revelación. Conocer el linaje de la forja no cambia el diagnóstico — solo aumenta el respeto con que se opera. Y Vekka siempre estuvo dispuesta a operar con respeto.
 
-### Sub-beat 3: Separación al salir del Archive
+### Sub-beat 2b: La ruptura — la sala del Fragmento
 
-En el último corredor del ascenso, Vekka se separa igual que cualquier otro Pivote — no hay versión de esta escena en la que Speck llegue al cráter sola ([[Geografía y Ciudades]] §ACTO 3 sub-beat 3). Con un pretexto técnico:
+Ubicación: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
+
+**Vekka es la que menos habla de los nueve, y es la única cuya ruptura es una operación de taller.** No hay anuncio, no hay párrafo, no hay razón dicha en voz alta. La declaración es un trabajo hecho a la vista de todos.
+
+Con el grupo todavía frente al pedestal, Vekka se acerca al jugador, le pone dos dedos en el antebrazo — el gesto con el que pide una pieza sobre la mesa, el mismo desde el Acto 1 — y espera medio segundo la costumbre de que el jugador extienda el brazo. El jugador lo extiende, porque llevan un año haciendo esto.
+
+**Y entonces desmonta los módulos.** Uno por uno, con la llave calibrada, sin apuro y sin daño: los mismos que le fue atornillando durante toda la campaña ([[Los 9 Links del Pivote]], **Warforging** — *"los desmonta al irse: pierdes verbos del cuerpo"*). Cada módulo que sale es un verbo que el cuerpo del jugador pierde, y todos en la sala lo entienden a la mitad del segundo módulo. Nadie la detiene: para cuando alguien reacciona, ya está guardando el tercero.
+
+Los guarda en el estuche. Cierra el estuche. Y dice lo único que dice, y **no se lo dice al jugador — se lo dice al trabajo**, en el tono de quien cierra una anotación de bitácora:
+
+> **Vekka:** *"El gremio pidió la pieza. Va conmigo."*
+
+Pausa. Ajusta la correa del arnés técnico.
+
+> **Vekka:** *"Esto no era tuyo. Era prestado, y bien prestado."*
+
+Eso es todo. **Dos frases, ninguna dirigida a una persona.** Vekka no explica el dogma acá — el dogma del Great Forging Clan es cosa de gremio, no de conversación, y quien no lo tiene no lo entendería con una explicación. Si le preguntan por qué, contesta con un dato técnico que no responde nada. Si le gritan, sigue guardando herramienta.
+
+**Acá muere el link**, y en esta celda muere **de la forma más literal del elenco**: no deja de responder, se lo llevan en un estuche. Es la única ruptura donde el jugador **ve** el link morir en vez de descubrirlo picando un botón.
+
+**Y Vekka sube con el grupo.** Va adelante, leyendo la construcción en tiempo real como bajó, señalando qué bloque aguanta y cuál no. **Sigue haciendo su trabajo perfectamente**, con el estuche del jugador colgado del arnés.
+
+**Reacción del grupo — acá:**
+
+**Roen** es el que nombra lo que nadie quiere nombrar, y lo nombra mirando el arnés, no la cara: *"Cargó el arnés técnico desde Ignis Reach. Ese arnés no es de camino. Es de taller. Va a inmovilizar algo del tamaño de un cuerpo."* Nadie le contesta, y a partir de ahí nadie deja a Speck fuera del brazo de alguien.
+
+**Valen** es el único que había visto los dos gestos mínimos del Archive —el cuaderno que se cierra, la correa que se ajusta— y su reacción es de método, no de emoción: *"Two adjustments, forty minutes apart. I logged both."* Pausa larga. *"I did not connect them."*
+
+**Darro** sí grita acá, y grita mucho — *"¿¡QUÉ ESTÁS HACIENDO!? ¿¡QUÉ CARAJO ESTÁS HACIENDO!?"* — y no obtiene ni una respuesta ni una mirada, exactamente como no la obtuvo hace treinta años en el taller. **Esto no es su beat de silencio:** el mutismo de Darro es del cráter y de ningún otro lugar ([[Darro-Ficha-Expandida-v1|Darro]] §Traición, fuente única del superlativo). Acá lo que hay es un hombre gritándole a una puerta cerrada por segunda vez en su vida.
+
+#### La trampa amorosa — el módulo que no llega
+
+En el ascenso, un tramo de brawler puro: un vano estrecho con enemigos pesados donde el juego enseñó a resolverlo pidiendo **un módulo nuevo a mitad de pelea** ([[Los 9 Links del Pivote]], Warforging) — Vekka atornilla, el verbo cambia, el encuentro se abre.
+
+El jugador extiende el brazo y pica Bond en el mismo movimiento. La Link Cam barre el antebrazo desnudo. Dos notas y silencio. **El brazo se queda extendido medio segundo de más**, que es lo que dura la memoria muscular en descubrir que no viene nadie.
+
+Vekka está a tres metros, con el estuche a la vista, colgado del arnés. **No aparta la mirada y no cierra el estuche** — y esa es la diferencia de esta celda: en las otras seis el Pivote mira el vacío; acá el jugador puede ver, físicamente, dónde está lo que perdió.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: La separación al salir del Archive
+
+**No es la revelación** — se hizo abajo, con una llave calibrada, y el grupo subió mirándole el estuche.
+
+En el último corredor del ascenso, Vekka se separa igual que cualquier otro Pivote — no hay versión de esta escena en la que Speck llegue al cráter sola ([[Geografía y Ciudades]] §ACTO 3 sub-beat 3). Con un pretexto técnico que ya no engaña a nadie y que da igual:
 
 *"Voy a verificar la estructura de un pilar marginal. La disposición del corredor sur no me cuadra. Sigan. Los alcanzo arriba."*
 
-Nadie desconfía. Vekka ha hecho paradas técnicas en todo el viaje. Es su forma. Cuando el grupo voltea, ya tiene a Speck — sin forcejeo, sin drama, con la misma eficiencia con la que hace todo. Sale por una ruta lateral que ya identificó en el descenso, rumbo al cráter de First Wound. Camina, no corre — Vekka no corre nunca. Va con propósito.
+Nadie desconfía **y nadie la sigue**: Vekka ha hecho paradas técnicas en todo el viaje, y a esta altura del ascenso el grupo no tiene terreno ni fuerzas para impedir nada. Cuando el grupo voltea, ya tiene a Speck — sin forcejeo, sin drama, con la misma eficiencia con la que hace todo. No dice nada al irse; ya dijo sus dos frases abajo. Sale por una ruta lateral que identificó en el descenso, rumbo a First Wound. Camina, no corre — Vekka no corre nunca. Va con propósito.
 
-Cuando el grupo se da cuenta, Vekka ya no está. Roen lo entiende primero. Dice, con la calma más seca posible:
-
-*"Cargó el arnés técnico desde Ignis Reach. Ese arnés no es de camino. Es de taller. Va a inmovilizar algo del tamaño de un cuerpo."*
-
-Y ahora, además, se llevó a Speck. **Vekka va al cráter a terminar el trabajo** — con la pieza ya en sus manos, no esperando que se la traigan.
+**Vekka va al cráter a terminar el trabajo** — con la pieza ya en sus manos, no esperando que se la traigan.
 
 ---
 
 ## Arco Acto 3 — Persecución y Quiebre en el Cráter
 
-Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → Traición al salir → Persecución → Quiebre en First Wound. Vekka cubre los cinco sub-beats, pero la persecución tiene un carácter único: **Vekka no huye.** Camina con propósito, hace paradas, revisa herramientas.
+Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → **Ruptura (2b)** → Separación al salir → Persecución → Quiebre en First Wound. Vekka cubre los seis sub-beats, y la persecución tiene un carácter único: **Vekka no huye.** Camina con propósito, hace paradas, revisa herramientas.
 
 ### Sub-beat 4: Persecución
 
@@ -387,7 +429,7 @@ Ver [[Los 5 Finales]].
 
 ***"I built you. Forgive me for finishing the job."***
 
-**Contexto:** la verdad de Vekka en el cráter. No es excusa — es rezo profesional. Ella puede terminar la operación porque construir y desmontar son la misma disciplina bajo el dogma del Great Forging Clan. La frase la dice sobre cada pieza que ha desmontado en sesenta años. Speck es solo la más grande.
+**Contexto:** el cráter (sub-beat 5). **Deliberadamente NO se dice en la ruptura:** en la sala del Fragmento Vekka dice dos frases y ninguna es ésta — su ruptura es un trabajo de taller (desmonta los módulos del jugador ahí mismo), no un discurso, y ponerle la línea encima la volvería explicativa. Es la única del elenco cuya declaración se ejecuta con las manos. No es excusa — es rezo profesional. Ella puede terminar la operación porque construir y desmontar son la misma disciplina bajo el dogma del Great Forging Clan. La frase la dice sobre cada pieza que ha desmontado en sesenta años. Speck es solo la más grande.
 
 ---
 
