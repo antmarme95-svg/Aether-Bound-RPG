@@ -25,6 +25,61 @@ unity/*.app
 # Unity MCP: relay/binarios locales del bridge, no versionar
 unity/.unity/
 
+# Biblioteca de Asset Store de Boris (55 paquetes importados 2026-08-11
+# como material de partida) — se queda en disco para el editor, pero NO
+# se versiona: ~2.3GB, GitHub rechaza el push por tamaño/timeout, y son
+# free assets descargables de nuevo, no fuente propia. Solo se versionan
+# los ~4 que el spike usa de verdad (ver ADR-003 §Cierre): Starter Assets,
+# el warrior de Dagna (asoliddev), el Cliff Pack (BrokenVector), y las
+# animaciones RPG (ExplosiveLLC). Si se empieza a usar alguno de los de
+# abajo, sacarlo de esta lista antes de commitear.
+unity/Assets/ALP_Assets/
+unity/Assets/Altar_Ruins_FREE/
+unity/Assets/AurynSky/
+unity/Assets/Barrels/
+unity/Assets/Blink/
+unity/Assets/Brawler Animations Sample/
+unity/Assets/Daniel Mistage/
+unity/Assets/DoubleL/
+unity/Assets/Elven Weapons/
+unity/Assets/Fantasy Forest Environment Free Sample/
+unity/Assets/FastSky/
+unity/Assets/FightingMotionsVolume1/
+unity/Assets/Free medieval weapons/
+unity/Assets/GDS/
+unity/Assets/GreatswordofFrozenNight/
+unity/Assets/Hovl Studio/
+unity/Assets/ithappy/
+unity/Assets/Kevin Iglesias/
+unity/Assets/L3D_Assets/
+unity/Assets/LowPoly Environment Pack/
+unity/Assets/LowPoly Nature Pack/
+unity/Assets/Medieval Bridge/
+unity/Assets/Medieval_Weapons_Collection/
+unity/Assets/minotaur1/
+unity/Assets/MS_WeaponVol01/
+unity/Assets/Packages/
+unity/Assets/Polygonal Particles/
+unity/Assets/Polytope Studio/
+unity/Assets/Rabbits/
+unity/Assets/Rotary Heart/
+unity/Assets/Seven Swords/
+unity/Assets/SimpleNaturePack/
+unity/Assets/Skyden_Games/
+unity/Assets/StarterParticles/
+unity/Assets/StoneKeep/
+unity/Assets/Stylize Water Texture/
+unity/Assets/Stylized Crystal/
+unity/Assets/Stylized Nature Environment/
+unity/Assets/Tower/
+unity/Assets/Warrior free set/
+# BrokenVector: se versiona el Cliff Pack (usado), se ignora el resto del
+# publisher si trae mas contenido no usado — hoy es solo Cliff+TreePack,
+# TreePack no se usa; se deja el folder completo adentro por simplicidad
+# (es chico) y se revisa si crece.
+# ExplosiveLLC: idem, se versiona completo (chico, y el pack de animaciones
+# que sí usamos vive ahi).
+
 # Obsidian volatile UI state (el vault sí se trackea)
 Aether Bound/.obsidian/workspace.json
 
