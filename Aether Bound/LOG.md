@@ -344,6 +344,68 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Medición sobre el render — el foot IK no produce salida, ahora sí probado
+
+Encargo del director: medir sobre el render y volver a correr el benchmark.
+Hecho. Y el resultado cierra un ida y vuelta que se dio **dos veces** hoy
+por instrumentos mal validados — vale más la lección de método que el
+número.
+
+**El instrumento nuevo.** `footik_benchmark.gd` ahora mide sobre la
+imagen: cámara **ortográfica** con su "arriba" en la normal del terreno y
+su eje de vista dentro del plano del terreno (así la superficie es una
+línea horizontal exacta), fondo de color puro, y se ocultan el otro
+personaje, las mallas del suelo —los cuerpos de colisión quedan, para que
+el IK tenga contra qué tirar rayos— y **el hacha**, que cuelga por debajo
+de los pies y era la que marcaba el píxel más bajo. Penetración =
+distancia del píxel más bajo de la silueta a la línea del suelo. Se
+descartan las muestras recortadas por el borde inferior en vez de
+publicarlas.
+
+**Resultado:**
+
+| Métrica | Con IK | Sin IK | Estándar |
+|---|---|---|---|
+| Raíz continua | ✅ desvío 7.8% | — | Sable: continua |
+| Penetración, plano | −0.213 m | −0.213 m | ~0 |
+| Penetración, rampa 21.8° | −0.328 m | −0.323 m | ~0 |
+
+**La validación, hecha bien esta vez.** Con la animación **congelada**
+(`pause()` + `speed_scale = 0`), mover el objetivo del pie 45 cm da **0
+píxeles de diferencia**. Y con el `AnimationPlayer` **detenido del todo**,
+también 0 — así que tampoco es que el mixer le pise el resultado al
+modifier.
+
+**Conclusión: ni `SkeletonIK3D` ni `TwoBoneIK3D` producen salida en
+nuestro montaje.** Lo que se ve es la animación cruda con el cuerpo
+apoyado por física. Lo que **no** se sabe es por qué: los huesos resuelven
+a índices válidos, el target resuelve, `active == true`, el esqueleto es
+el correcto.
+
+**El error de método, tres veces el mismo día.** Cada vez que un
+instrumento me dio un número cómodo, lo tomé por cierto:
+1. El estimador de "qué pie está apoyado" — inservible con foot IK.
+2. El búfer de poses: `get_bone_global_pose()` y `BoneAttachment3D`
+   devuelven la pose ANTERIOR a los modifiers.
+3. **Y la propia validación del punto 2**: la A/B de renders que dio 9.053
+   píxeles y me hizo retractar la conclusión correcta. Era falsa —
+   **me había dejado la animación corriendo entre las dos capturas**, así
+   que medí el ciclo avanzando, no el IK.
+
+Regla que queda en [[Lecciones]]: una A/B solo prueba algo si la única
+variable que cambia es la que estás probando. Congelar todo lo demás,
+explícitamente, antes de mirar el número.
+
+**No se corrió el lado Unity, otra vez a propósito.** Comparar animación
+cruda contra un IK que sí funciona le daría a Unity una ventaja que no es
+del motor sino de nuestro montaje.
+
+**Próximo paso:** encontrar el requisito que falta en el modifier
+(candidatos: cadena de huesos padre-hijo contigua, `use_virtual_end` /
+`extend_end_bone`, o el manejo de `mutable_bone_axes`).
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] spike/godot | Foot IK migrado a `TwoBoneIK3D` — y me equivoqué de instrumento otra vez
 
 Encargo del director: reemplazar `SkeletonIK3D` por `SkeletonModifier3D` y
@@ -401,9 +463,10 @@ después portar la medición a Unity para poner las dos columnas juntas.
 
 ## [2026-08-12] spike/godot | Medición del foot IK contra el Benchmark — `SkeletonIK3D` es un no-op
 
-> **⚠️ RETRACTADA en parte.** La conclusión "`SkeletonIK3D` es un no-op"
-> **no está probada**: el instrumento estaba ciego a la salida de los
-> `SkeletonModifier3D`. Ver la entrada siguiente.
+> **⚠️ La conclusión de esta entrada es CORRECTA, pero la evidencia que
+> traía no lo era.** Se retractó y después se re-confirmó con un test
+> válido el mismo día. Ver la entrada de cierre "medición sobre el
+> render".
 
 Encargo del director: correr la pregunta abierta que quedó de la
 comparativa de motores. El resultado **invalida una afirmación que yo

@@ -81,14 +81,18 @@ updated: 2026-08-12
   Consecuencia práctica: **un foot IK que funciona perfecto se mide como
   un no-op** — pasó exactamente eso el 2026-08-12, y produjo una
   conclusión falsa que llegó a escribirse en tres archivos del vault.
-  Lo único que se demostró que refleja la salida del modifier es **el
-  render**: una A/B de dos capturas con el target movido dio 9.053
-  píxeles de diferencia mientras los dos instrumentos numéricos decían
-  "cero".
-  **Regla:** antes de sacar cualquier conclusión de una medición sobre
-  huesos con modifiers activos, validar el instrumento con un caso donde
-  el efecto sea innegable (mover el target medio metro). Si el
-  instrumento dice cero, el instrumento está ciego.
+  El único canal que puede reflejar la salida del modifier es **el
+  render**.
+  **Regla:** antes de concluir de una medición sobre huesos con modifiers
+  activos, validar el instrumento con un caso de efecto innegable — mover
+  el target medio metro.
+  **Y validar bien:** el primer intento de esa validación dio 9.053
+  píxeles de diferencia y lo tomé por prueba de que el modifier actuaba.
+  Era falso: **me había dejado la animación corriendo entre las dos
+  capturas**, así que la diferencia era el ciclo avanzando. Con la pose
+  congelada (`pause()` + `speed_scale = 0`) la diferencia es **0**. Una
+  A/B solo prueba algo si la única variable que cambia es la que estás
+  probando — parece obvio y me comió medio día.
 - **`SkeletonIK3D` está deprecado en 4.x.** El camino vigente son las
   subclases de `SkeletonModifier3D`, y 4.7 trae varias de fábrica —
   `TwoBoneIK3D` (el que sirve para pies), `FABRIK3D`, `CCDIK3D`,

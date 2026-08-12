@@ -165,7 +165,7 @@ método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
 menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
 assets ya comprados, que ahí funcionan sin convertir.
 
-### ⚠️ Foot IK: migrado a `TwoBoneIK3D` — y la medición anterior estaba ciega
+### ⛔ Foot IK: migrado a `TwoBoneIK3D`, y sigue sin producir salida (probado 2026-08-12)
 
 **Hecho:** `SkeletonIK3D` (deprecado en 4.x) fue reemplazado por
 **`TwoBoneIK3D`**, subclase stock de `SkeletonModifier3D` que Godot 4.7
@@ -174,19 +174,35 @@ El objetivo del IK ahora es *suelo + altura del tobillo sobre la planta*
 (medida del rig en reposo), no el punto del suelo: poner el tobillo en el
 suelo entierra el pie entero.
 
-**RETRACTADO:** la conclusión de hace un rato —"`SkeletonIK3D` es un
-no-op"— **no está probada, y probablemente sea falsa**. El instrumento
-estaba ciego: `get_bone_global_pose()` devuelve la pose ANTERIOR a los
-modifiers, y `BoneAttachment3D` lee el mismo búfer. Con los dos
-instrumentos dando "cero diferencia", una A/B de renders con el target
-movido medio metro dio **9.053 píxeles distintos** — o sea que el
-modifier sí actúa. Ver [[Lecciones]] §Godot 4.7.
+**El instrumento ahora mide sobre el RENDER**, que es el único canal que
+puede reflejar la salida de un `SkeletonModifier3D` (los getters de hueso
+y `BoneAttachment3D` devuelven la pose anterior a los modifiers). Cámara
+ortográfica con su "arriba" en la normal del terreno, se ocultan el otro
+personaje, las mallas del suelo y **el hacha** (colgaba por debajo de los
+pies y era ella la que marcaba el píxel más bajo).
 
-**Estado real: no hay número.** El foot IK está migrado a la herramienta
-vigente y se ve actuando, pero **la medición contra el Benchmark sigue
-pendiente** porque falta un instrumento válido. Los números de
-penetración/adaptación que se publicaron antes describen la **animación
-cruda**, no el resultado final.
+**Resultado, con instrumento validado:**
+
+| Métrica | Con IK | Sin IK | Estándar |
+|---|---|---|---|
+| Raíz continua | ✅ desvío 7.8% | — | Sable: continua |
+| Penetración, plano | −0.213 m | −0.213 m | ~0 |
+| Penetración, rampa 21.8° | −0.328 m | −0.323 m | ~0 |
+
+**La validación que faltaba, hecha bien:** con la animación **congelada**
+(`pause()` + `speed_scale = 0`), mover el objetivo del pie 45 cm da **0
+píxeles de diferencia**. Y con el `AnimationPlayer` **detenido del todo**,
+también 0 — así que tampoco es que el mixer le pise el resultado al
+modifier.
+
+**Conclusión: ni `SkeletonIK3D` ni `TwoBoneIK3D` producen salida en
+nuestro montaje.** Lo que se ve en pantalla es la animación cruda con el
+cuerpo apoyado por física.
+
+**Lo que NO se sabe todavía:** por qué. Los bones resuelven (índices
+válidos), el target resuelve, `active == true`, el esqueleto es el
+correcto. Falta encontrar qué requisito del modifier no estamos
+cumpliendo.
 
 | Métrica | Medido | Estándar del Benchmark |
 |---|---|---|
@@ -196,11 +212,17 @@ cruda**, no el resultado final.
 | Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ ángulo del terreno |
 | Aporte del IK | ❌ 1.4 mm | — |
 
-**Próximo paso:** conseguir un instrumento que lea la pose final. La
-única vía demostrada hasta ahora es **medir sobre el render** (silueta del
-pie contra la línea del suelo), que es como se detectó que el modifier
-actúa. Con eso resuelto se vuelve a correr `footik_benchmark.gd`, y recién
-después se porta la medición a Unity para comparar.
+**Próximo paso:** averiguar el requisito que falta en el modifier
+(candidatos: la cadena de huesos tiene que ser padre-hijo contigua, algún
+`use_virtual_end`/`extend_end_bone`, o el manejo de ejes de
+`mutable_bone_axes`). Hasta que el IK produzca salida, la comparación
+contra Unity no se corre: mediría animación cruda contra un IK que sí
+funciona, y le daría a Unity una ventaja que no es del motor.
+
+**Aviso de método para quien lea esto:** esta conclusión se dio vuelta
+DOS veces en el mismo día por instrumentos mal validados. La versión
+actual es la primera que se apoya en un test de efecto innegable con
+todas las demás variables congeladas. Ver [[Lecciones]] §Godot 4.7.
 
 **Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
 empareja las condiciones para que ese veredicto compare lo mismo de los

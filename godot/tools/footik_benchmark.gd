@@ -1,28 +1,40 @@
 extends SceneTree
 
 ## Spike ADR-003: mide el foot IK contra el estandar del Benchmark
-## Biomecanico (§v2, fila HZD: "foot IK contra el terreno cada frame --
-## pies creibles en terreno"; y el canon de Sable: raiz continua).
+## Biomecanico (§v2, fila de HZD: "foot IK contra el terreno cada frame --
+## pies creibles en terreno"), mas el canon de Sable de raiz continua.
 ##
-## "Pie creible en pendiente" no es una opinion: son tres cosas medibles.
+## SE MIDE SOBRE EL RENDER, y no es capricho: los getters de hueso
+## (`get_bone_global_pose`, y `BoneAttachment3D`, que lee el mismo bufer)
+## devuelven la pose ANTERIOR a los SkeletonModifier3D. Midiendo ahi, un
+## foot IK que funciona perfecto se lee como un no-op -- paso el 2026-08-12
+## y produjo una conclusion falsa. El unico canal que refleja la salida del
+## modifier es la imagen. Ver Lecciones, seccion Godot 4.7.
 ##
-##   1. PENETRACION -- que parte del pie queda POR DEBAJO de la superficie.
-##      Se mide la altura con signo del tobillo y del dedo sobre el suelo
-##      real (raycast vertical en su propio XZ). Negativo = atraviesa.
-##   2. ANGULO DE PLANTA -- angulo entre el vector tobillo->dedo y el plano
-##      del terreno. 0 = la planta acompana la pendiente. Positivo = punta
-##      levantada; negativo = punta clavada en el suelo.
-##   3. RAIZ CONTINUA -- el Benchmark (Sable, medido frame a frame) exige
-##      que la raiz avance suave TODOS los frames. Se mide la dispersion
-##      del avance por frame.
+## Metodo:
+##   - Camara ORTOGRAFICA con su "arriba" en la normal del terreno y su eje
+##     de vista DENTRO del plano del terreno: asi la superficie es una linea
+##     horizontal exacta en la imagen.
+##   - Se ocultan el otro personaje y las MALLAS del suelo (los cuerpos de
+##     colision quedan, asi el IK sigue teniendo contra que tirar rayos), de
+##     modo que cualquier pixel que no sea el fondo es Dagna.
+##   - PENETRACION = distancia del pixel MAS BAJO de la silueta a la linea
+##     del suelo, en metros. Negativa = el pie atraviesa el piso.
 ##
-## El equivalente de Unity vive en
-## unity/Assets/_Spike/Editor/SpikeFootIKBenchmark.cs y usa las mismas
-## tres metricas, para que los numeros se puedan poner uno al lado del otro.
+## Uso:  godot --path . --script tools/footik_benchmark.gd [-- --noik]
+## Windowed a proposito: sin render no hay medicion.
 
-const SAMPLES := 24
+const SAMPLES := 16
+const FLAT_Z := -5.0
 const RAMP_Z := 8.0
 const ROOT_FRAMES := 180
+const ORTHO_SIZE := 1.80
+const FOCUS_UP := 0.55   # centro del encuadre sobre el suelo: deja ~0.35 m de margen ABAJO
+const BG := Color(0.0, 0.6, 0.0)   # verde puro: no existe en el greybox
+
+var _exclude: Array[RID] = []
+var _cam: Camera3D
+var _mpp: float = 0.0
 
 func _initialize() -> void:
 	change_scene_to_file("res://scenes/spike_slope.tscn")
@@ -37,19 +49,27 @@ func _run() -> void:
 		printerr("footik_benchmark: sin Dagna")
 		quit(1)
 		return
-	var skel: Skeleton3D = _find(dagna, "Skeleton3D")
 	var ap: AnimationPlayer = _find(dagna, "AnimationPlayer")
 
-	# Los propios personajes son cuerpos de colision: sin excluirlos, el
-	# rayo vertical le pega a la CAPSULA de Dagna antes que al suelo y la
-	# "penetracion" sale de -1.9 m, que es la altura de la capsula, no un
-	# defecto del IK.
 	for n in ["Dagna_Placeholder", "PlayerArmature"]:
 		var b: CollisionObject3D = root.find_child(n, true, false)
 		if b:
 			_exclude.append(b.get_rid())
 
-	# --- Parte A: raiz continua, durante la caminata real ---
+	if "--noik" in OS.get_cmdline_user_args():
+		var ikn: Node = dagna.find_child("SpikeFootIK", true, false)
+		if ikn:
+			ikn.set_physics_process(false)
+		var skel: Skeleton3D = _find(dagna, "Skeleton3D")
+		for c in skel.get_children():
+			if c is SkeletonModifier3D:
+				(c as SkeletonModifier3D).active = false
+		print(">>> FOOT IK APAGADO (linea base: la animacion sola)")
+	else:
+		print(">>> FOOT IK ACTIVO (TwoBoneIK3D)")
+
+	# --- Raiz continua. Esto NO pasa por modifiers: es el transform del nodo,
+	# asi que el getter es valido.
 	var steps: Array[float] = []
 	var prev: Vector3 = dagna.global_position
 	for i in range(ROOT_FRAMES):
@@ -65,116 +85,135 @@ func _run() -> void:
 	for s in steps:
 		sd += (s - mean) * (s - mean)
 	sd = sqrt(sd / float(steps.size()))
-	print("RAIZ  avance medio por frame = %.4f m  desvio = %.4f m  (%.1f%% del avance)" % [mean, sd, 100.0 * sd / maxf(mean, 0.0001)])
+	print("RAIZ  avance medio %.4f m/frame  desvio %.4f m  (%.1f%%)" % [mean, sd, 100.0 * sd / maxf(mean, 0.0001)])
 
-	# --- Pie, medido en DOS lugares ---
-	# El angulo absoluto tobillo->dedo no dice nada: depende de como esta
-	# armado el rig, no del IK. Lo que si dice algo es cuanto CAMBIA ese
-	# angulo al pasar de piso plano a una pendiente de 21.8 grados: un foot
-	# IK que adapta la planta deberia girarla ~21.8; uno que no adapta, ~0.
-	# Con `-- --noik` se apaga el foot IK: da la linea base de lo que hace
-	# la animacion sola, que es contra lo que hay que comparar el IK para
-	# saber si aporta o si solo esta hundiendo el pie.
-	if "--noik" in OS.get_cmdline_user_args():
-		var ikn: Node = dagna.find_child("SpikeFootIK", true, false)
-		if ikn:
-			ikn.set_physics_process(false)
-		for c in skel.get_children():
-			if c is SkeletonIK3D:
-				(c as SkeletonIK3D).stop()
-		print(">>> FOOT IK APAGADO (linea base de la animacion sola)")
+	_prepare_scene()
 
-	dagna.set("walk_speed", 0.0)
-	var flat := await _measure(dagna, skel, ap, -5.0, "PLANO")
-	var ramp := await _measure(dagna, skel, ap, RAMP_Z, "RAMPA 21.8 grados")
+	var flat: Dictionary = await _measure(dagna, ap, FLAT_Z, "PLANO")
+	var ramp: Dictionary = await _measure(dagna, ap, RAMP_Z, "RAMPA 21.8 grados")
 	print("")
-	print("ADAPTACION A LA PENDIENTE = %.2f grados  (ideal 21.80; 0 = la planta no se entera)" % absf(ramp["ang"] - flat["ang"]))
+	print("PLANO -> RAMPA  = %+.4f m  (0 = el pie se apoya igual de bien en pendiente)" % (ramp["mean"] - flat["mean"]))
 	quit(0)
 
-func _measure(dagna: Node3D, skel: Skeleton3D, ap: AnimationPlayer, z: float, label: String) -> Dictionary:
-	dagna.set_physics_process(true)
-	dagna.global_position = Vector3(0.0, 8.0, z)
-	dagna.global_transform.basis = Basis.looking_at(Vector3(0, 0, 1), Vector3.UP)
-	for i in range(600):
-		await physics_frame
-		if dagna.is_on_floor():
-			break
+func _prepare_scene() -> void:
+	var other: Node3D = root.find_child("PlayerArmature", true, false)
+	if other:
+		other.visible = false
+	var slope: Node3D = root.find_child("Slope_Root", true, false)
+	if slope:
+		for m in _meshes(slope):
+			m.visible = false
+	# El hacha cuelga POR DEBAJO de los pies: si se deja visible, el pixel
+	# mas bajo de la silueta es el filo, no el pie, y la medicion mide el
+	# arma. Se oculta.
+	var dg: Node3D = root.find_child("Dagna_Placeholder", true, false)
+	if dg:
+		for m in _meshes(dg):
+			if m.name.to_lower().contains("axe"):
+				m.visible = false
+	var we: WorldEnvironment = root.find_child("WorldEnvironment", true, false)
+	if we and we.environment:
+		we.environment.background_mode = Environment.BG_COLOR
+		we.environment.background_color = BG
+
+	_cam = Camera3D.new()
+	_cam.name = "BenchCam"
+	root.add_child(_cam)
+	_cam.current = true
+	_cam.projection = Camera3D.PROJECTION_ORTHOGONAL
+	_cam.size = ORTHO_SIZE
+	_cam.near = 0.05
+	_mpp = ORTHO_SIZE / float(root.size.y)
+
+func _measure(dagna: Node3D, ap: AnimationPlayer, z: float, label: String) -> Dictionary:
+	# Se la PLANTA por raycast en vez de dejarla caer: el bucle de caida
+	# usaba is_on_floor(), que venia en true del tramo anterior y cortaba en
+	# el primer frame con Dagna todavia a 4 m de altura.
 	dagna.set_physics_process(false)
+	dagna.global_transform.basis = Basis.looking_at(Vector3(0, 0, 1), Vector3.UP)
+	var probe := _ground(Vector3(0.0, 12.0, z))
+	if probe.is_empty():
+		printerr("no hay terreno en z=", z)
+		return {"mean": 0.0, "worst": 0.0}
+	dagna.global_position = probe["pos"]
+	await physics_frame
 	ap.play("walk")
 	var anim: Animation = ap.get_animation("walk")
 
-	var rows: Array = []
-	for side in ["Left", "Right"]:
-		var ankle := skel.find_bone(side + "Foot")
-		var toe := skel.find_bone(side + "Toes")
-		if ankle < 0 or toe < 0:
+	var p: Vector3 = probe["pos"]
+	var n: Vector3 = probe["normal"]
+	# Eje transversal a la pendiente: vive DENTRO del plano del terreno, asi
+	# que mirando por ahi la superficie es una linea horizontal.
+	var side: Vector3 = n.cross(Vector3(0, 0, 1)).normalized()
+
+	var samples: Array[float] = []
+	var clipped := 0
+	for i in range(SAMPLES):
+		ap.seek(anim.length * i / float(SAMPLES), true)
+		await physics_frame
+		await physics_frame
+
+		var focus: Vector3 = p + n * FOCUS_UP
+		_cam.global_position = focus + side * 3.0
+		_cam.look_at(focus, n)
+		await process_frame
+		await RenderingServer.frame_post_draw
+
+		var img: Image = root.get_texture().get_image()
+		var low := _lowest_silhouette_row(img)
+		if low < 0:
 			continue
-		for i in range(SAMPLES):
-			ap.seek(anim.length * i / float(SAMPLES), true)
-			await physics_frame
-			await physics_frame
-			var a: Vector3 = _world(skel, ankle)
-			var d: Vector3 = _world(skel, toe)
-			var ga := _ground(a)
-			var gd := _ground(d)
-			if ga.is_empty() or gd.is_empty():
-				continue
-			var v: Vector3 = d - a
-			var ang := 0.0
-			if v.length() > 0.0001:
-				ang = 90.0 - rad_to_deg(acos(clampf(v.normalized().dot(ga["normal"]), -1.0, 1.0)))
-			rows.append({"h_toe": d.y - (gd["pos"] as Vector3).y, "h_ankle": a.y - (ga["pos"] as Vector3).y, "ang": ang})
+		# Si la silueta toca el borde inferior, la medicion esta recortada y
+		# mentiria hacia arriba: se descarta en vez de publicarla.
+		if low >= img.get_height() - 2:
+			clipped += 1
+			continue
+		var ground_row: float = _cam.unproject_position(p).y
+		samples.append((ground_row - float(low)) * _mpp)
 
-	# Apoyo = el 40% de muestras con el dedo mas bajo.
-	rows.sort_custom(func(x, y): return x["h_toe"] < y["h_toe"])
-	var stance: Array = rows.slice(0, maxi(1, int(rows.size() * 0.4)))
-	var min_toe := INF
-	var sum_toe := 0.0
-	var min_ankle := INF
-	var sum_ang := 0.0
-	for r in stance:
-		min_toe = minf(min_toe, r["h_toe"])
-		sum_toe += r["h_toe"]
-		min_ankle = minf(min_ankle, r["h_ankle"])
-		sum_ang += r["ang"]
-	var mean_ang: float = sum_ang / float(stance.size())
+	if samples.is_empty():
+		printerr("no se pudo segmentar la silueta en ", label)
+		return {"mean": 0.0, "worst": 0.0}
+
+	samples.sort()
+	# El pie de apoyo es el que llega mas abajo: 40% de muestras con mayor
+	# penetracion, mismo criterio que la version por huesos.
+	var stance := samples.slice(0, maxi(1, int(samples.size() * 0.4)))
+	var sum := 0.0
+	for v in stance:
+		sum += v
+	var mean_pen: float = sum / float(stance.size())
 	print("")
-	print("%s  (%d muestras en apoyo de %d)" % [label, stance.size(), rows.size()])
-	print("   penetracion del DEDO     media %+.4f m   peor %+.4f m   (negativo = atraviesa)" % [sum_toe / float(stance.size()), min_toe])
-	print("   penetracion del TOBILLO  peor  %+.4f m" % min_ankle)
-	print("   angulo de planta         %.2f grados" % mean_ang)
-	return {"ang": mean_ang, "min_toe": min_toe}
+	print("%s  (%d muestras utiles, %d en apoyo, %d descartadas por recorte)" % [label, samples.size(), stance.size(), clipped])
+	print("   penetracion  media %+.4f m   peor %+.4f m   (negativo = atraviesa el piso)" % [mean_pen, stance[0]])
+	return {"mean": mean_pen, "worst": stance[0]}
 
-var _exclude: Array[RID] = []
+func _lowest_silhouette_row(img: Image) -> int:
+	var h := img.get_height()
+	var w := img.get_width()
+	for y in range(h - 1, -1, -1):
+		for x in range(0, w, 2):
+			var c := img.get_pixel(x, y)
+			if absf(c.r - BG.r) > 0.12 or absf(c.g - BG.g) > 0.12 or absf(c.b - BG.b) > 0.12:
+				return y
+	return -1
+
+func _meshes(n: Node) -> Array:
+	var out: Array = []
+	if n is MeshInstance3D:
+		out.append(n)
+	for c in n.get_children():
+		out.append_array(_meshes(c))
+	return out
 
 func _ground(p: Vector3) -> Dictionary:
 	var space := root.get_world_3d().direct_space_state
-	var q := PhysicsRayQueryParameters3D.create(p + Vector3.UP * 2.0, p + Vector3.DOWN * 2.0)
+	var q := PhysicsRayQueryParameters3D.create(p + Vector3.UP * 2.0, p + Vector3.DOWN * 40.0)
 	q.exclude = _exclude
 	var r := space.intersect_ray(q)
 	if r:
 		return {"pos": r.position, "normal": r.normal}
 	return {}
-
-## OJO -- ESTE ES EL PUNTO QUE ARRUINO LA PRIMERA MEDICION.
-## `get_bone_global_pose()` devuelve la pose ANTES de los
-## SkeletonModifier3D: leyendo ahi, un foot IK que funciona perfecto
-## parece un no-op. Lo que refleja la pose FINAL (la que se ve y la que
-## deforma la malla) es un `BoneAttachment3D` colgado del hueso.
-var _att: Dictionary = {}
-
-func _attach(skel: Skeleton3D, bone: String) -> Node3D:
-	if _att.has(bone):
-		return _att[bone]
-	var a := BoneAttachment3D.new()
-	a.name = "Probe_" + bone
-	skel.add_child(a)
-	a.bone_name = bone
-	_att[bone] = a
-	return a
-
-func _world(skel: Skeleton3D, idx: int) -> Vector3:
-	return _attach(skel, skel.get_bone_name(idx)).global_position
 
 func _find(n: Node, t: String) -> Node:
 	for c in n.get_children():
