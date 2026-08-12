@@ -492,6 +492,50 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Escena minima: `TwoBoneIK3D` no produce salida en 4.7.1 — y el valor del CONTROL
+
+Encargo del director: probar con la escena minima aislada. **Cerro la
+pregunta.** No es nuestro rig: es el modifier.
+
+**El montaje.** Nada de Dagna, nada de retargeting, nada de 198 huesos: un
+esqueleto de **3 huesos hecho a mano**, en cadena, y un target. El juez es
+el **render de una malla pesada 100% al hueso punta** — lo unico que no
+depende del bufer de poses, que devuelve la pose anterior a los modifiers.
+
+**Nueve variantes de configuracion, todas en 0 pixeles:** base · `reset()`
+despues de configurar · `use_virtual_end` · `extend_end_bone` con largo
+explicito · `mutable_bone_axes` en false · configurado ANTES de entrar al
+arbol · con un hueso hijo en la punta (como `LeftToes`) · la cadena
+colgando de un hueso padre en vez de la raiz · reescribiendo la pose de un
+hueso cada frame para ensuciar el esqueleto.
+
+**Y la fila que le da sentido a las otras nueve: CONTROL.** Sin IK,
+rotando el hueso raiz 0.5 rad a mano: **2.127 pixeles**. O sea que la
+malla, el skin y el render responden perfecto a los huesos. **Los nueve
+ceros son reales.**
+
+**Conclusion: `TwoBoneIK3D` no produce salida en Godot 4.7.1**, al menos
+armado desde codigo. Queda sin explicar si es un requisito no documentado
+o un bug de la build. El repro minimo queda versionado en
+`godot/tools/min_ik_repro.gd`, en calidad de reporte de bug.
+
+**Consecuencia para la decision de motor, que es lo que importa:** el foot
+IK de Godot **no es "stock, cero codigo"**. Hay que escribir el solver de
+dos huesos a mano — unas 40 lineas de trigonometria. Del lado Unity,
+`OnAnimatorIK` funciona. Esa fila de
+[[Comparativa de Motores — Godot vs Unity]] **cambia de signo**: pasa de
+"empate, los dos resuelven con herramienta stock" a un punto duro a favor
+de Unity. Actualizada.
+
+**La leccion de metodo del dia, y quedo escrita en [[Lecciones]]:** toda
+suite de medicion necesita un **control**. Sin la fila CONTROL, esos nueve
+ceros no probaban nada — podrian haber sido una malla mal pesada. El
+control es lo que convierte un cero en evidencia. Hoy tres conclusiones se
+dieron vuelta antes de aprenderlo: el estimador de pie apoyado, el bufer
+de poses, y la A/B con la animacion corriendo.
+
+**Indice:** sin cambios.
+
 ## [2026-08-12] spike/godot | Por que el modifier no produce salida — sin causa raiz, pero con el campo despejado
 
 Encargo del director: averiguar por que. **No lo encontre.** Lo que si hay

@@ -115,6 +115,14 @@ el IK del lado Godot; recién después la comparación significa algo.**
   `Animator.GetIKPosition()`. Ninguna dio un mensaje de error: todas se
   manifestaron como "se ve raro". Están inventariadas en [[Lecciones]]
   §Godot 4.7.
+- 🔬 **El foot IK stock NO FUNCIONA (medido 2026-08-12).** `SkeletonIK3D`
+  está deprecado, y su reemplazo vigente **`TwoBoneIK3D` no produce
+  salida en 4.7.1**: escena mínima aislada, 9 variantes de configuración,
+  0 píxeles de efecto en las 9, contra una variante de control que sí
+  mueve el render. **Consecuencia concreta: el foot IK de Godot cuesta
+  escribir un solver a mano** (unas 40 líneas), mientras que del lado
+  Unity `OnAnimatorIK` funciona con el mismo esfuerzo que ya invertimos.
+  Es el punto más duro en contra que salió del spike.
 - 🔬 **El foot IK stock es más pobre que el de Unity.** En la lámina, el
   pie de Godot apunta la punta hacia abajo y penetra la superficie;
   `SkeletonIK3D` coloca el tobillo y rota al normal, pero no ajusta la

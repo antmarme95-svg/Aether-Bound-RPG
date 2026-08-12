@@ -212,7 +212,26 @@ cumpliendo.
 | Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ ángulo del terreno |
 | Aporte del IK | ❌ 1.4 mm | — |
 
-**Causa raíz: sin encontrar.** Descartados con medición: la cadena de
+**CAUSA ACOTADA (escena mínima, 2026-08-12): `TwoBoneIK3D` no produce
+salida en Godot 4.7.1.** No es nuestro rig. Esqueleto de 3 huesos hecho a
+mano, malla pesada 100% al hueso punta, juez = el render, **9 variantes de
+configuración** (base · `reset()` · `use_virtual_end` · `extend_end_bone` ·
+`mutable_bone_axes` off · configurado antes de entrar al árbol · con hueso
+hijo en la punta · cadena colgando de un padre · pose reescrita cada
+frame): **las 9 dan 0 píxeles**. La variante **CONTROL** —sin IK, rotando
+el hueso raíz a mano— da **2.127 píxeles**, así que el instrumento es
+válido y los ceros son reales. Repro: `godot/tools/min_ik_repro.gd`.
+
+**Consecuencia para la comparativa de motores:** el foot IK de Godot **no
+es "stock, cero código"** como decía [[Comparativa de Motores — Godot vs
+Unity]]. Hay que escribir el solver de dos huesos a mano (unas 40 líneas
+de trigonometría). Del lado Unity, `OnAnimatorIK` funciona. Esa fila de la
+comparativa cambia de signo y es un dato real a favor de Unity.
+
+**Lo que queda sin explicar:** por qué el modifier no aplica. Puede ser un
+requisito no documentado o un bug de esta build.
+
+**Descartado antes de llegar a la escena mínima:** Descartados con medición: la cadena de
 huesos ES contigua padre-hijo · `active`/`influence`/esqueleto/target
 correctos · el `AnimationPlayer` no le pisa el resultado (probado con el
 mixer detenido) · el pole (estaba mal seteado, se corrigió, sigue igual).

@@ -93,12 +93,25 @@ updated: 2026-08-12
   congelada (`pause()` + `speed_scale = 0`) la diferencia es **0**. Una
   A/B solo prueba algo si la única variable que cambia es la que estás
   probando — parece obvio y me comió medio día.
-- **`SkeletonIK3D` está deprecado en 4.x.** El camino vigente son las
-  subclases de `SkeletonModifier3D`, y 4.7 trae varias de fábrica —
-  `TwoBoneIK3D` (el que sirve para pies), `FABRIK3D`, `CCDIK3D`,
-  `SplineIK3D`, `LookAtModifier3D`, `AimModifier3D`. **Buscar en
-  `ClassDB` antes de escribir un solver a mano**: `TwoBoneIK3D` estuvo
-  disponible todo el tiempo.
+- **`SkeletonIK3D` está deprecado en 4.x**, y las subclases de
+  `SkeletonModifier3D` que 4.7 trae de fábrica son varias: `TwoBoneIK3D`,
+  `FABRIK3D`, `CCDIK3D`, `SplineIK3D`, `LookAtModifier3D`,
+  `AimModifier3D`. Vale mirar `ClassDB` antes de escribir un solver.
+  **PERO (medido 2026-08-12): `TwoBoneIK3D` no produce salida en
+  4.7.1.** Escena mínima aislada —esqueleto de 3 huesos hecho a mano,
+  malla pesada 100% al hueso punta, juez = el render— y **9 variantes de
+  configuración**: base · `reset()` · `use_virtual_end` ·
+  `extend_end_bone` · `mutable_bone_axes` off · configurado antes de
+  entrar al árbol · con hueso hijo en la punta · cadena colgando de un
+  padre · escribiendo la pose cada frame. **Las 9 dan 0 píxeles.** El
+  repro vive en `godot/tools/min_ik_repro.gd`.
+- **⚠️ TODA suite de medición necesita un CONTROL, y este es el ejemplo
+  de por qué.** En ese mismo barrido, la variante `CONTROL` no usa el IK:
+  rota el hueso raíz 0.5 rad a mano. Da **2.127 píxeles**. Sin esa fila,
+  los nueve ceros no habrían probado nada — podrían haber sido una malla
+  mal pesada o un skin mal armado. **El control no es opcional: es lo que
+  convierte un cero en evidencia.** Hoy costó tres conclusiones dadas
+  vuelta antes de aprenderlo.
 - **`SkeletonIK3D`: asignar `root_bone`/`tip_bone` ANTES de meterlo al
   árbol.** Cada setter revalida la cadena y con el otro extremo sin poner
   escupe errores de motor.
