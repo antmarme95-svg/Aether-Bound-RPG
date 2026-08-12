@@ -6,9 +6,17 @@ class_name SpikeFootIK
 ## Se auto-configura en _ready() buscando el Skeleton3D hermano -- no
 ## depende de que nada externo lo llame durante la construccion de la
 ## escena, evita el problema de llamar start() fuera del arbol vivo.
+##
+## Los nombres de hueso son los de SkeletonProfileHumanoid, no los del
+## rig Rigify original (`thigh.L`, `foot.L`): el importador los renombra al
+## perfil al aplicar el BoneMap de retargeting.
 
 @export var raycast_distance: float = 0.6
 @export var foot_offset_y: float = 0.05
+@export var thigh_left: String = "LeftUpperLeg"
+@export var thigh_right: String = "RightUpperLeg"
+@export var foot_left: String = "LeftFoot"
+@export var foot_right: String = "RightFoot"
 
 var skeleton: Skeleton3D
 var ik_left: SkeletonIK3D
@@ -30,24 +38,24 @@ func _ready() -> void:
 	target_right.name = "IKTarget_RightFoot"
 	add_child(target_right)
 
-	ik_left = SkeletonIK3D.new()
-	ik_left.name = "IK_LeftFoot"
-	skeleton.add_child(ik_left)
-	ik_left.root_bone = "thigh.L"
-	ik_left.tip_bone = "foot.L"
-	ik_left.target_node = ik_left.get_path_to(target_left)
-	ik_left.interpolation = 1.0
-
-	ik_right = SkeletonIK3D.new()
-	ik_right.name = "IK_RightFoot"
-	skeleton.add_child(ik_right)
-	ik_right.root_bone = "thigh.R"
-	ik_right.tip_bone = "foot.R"
-	ik_right.target_node = ik_right.get_path_to(target_right)
-	ik_right.interpolation = 1.0
+	# root_bone/tip_bone se asignan ANTES de entrar al arbol: cada setter
+	# revalida la cadena, y con el otro extremo todavia sin poner la
+	# validacion falla y escupe errores de motor. Fuera del arbol no corre.
+	ik_left = _make_ik("IK_LeftFoot", thigh_left, foot_left, target_left)
+	ik_right = _make_ik("IK_RightFoot", thigh_right, foot_right, target_right)
 
 	ik_left.start()
 	ik_right.start()
+
+func _make_ik(ik_name: String, root_bone: String, tip_bone: String, target: Node3D) -> SkeletonIK3D:
+	var ik := SkeletonIK3D.new()
+	ik.name = ik_name
+	ik.root_bone = root_bone
+	ik.tip_bone = tip_bone
+	ik.interpolation = 1.0
+	skeleton.add_child(ik)
+	ik.target_node = ik.get_path_to(target)
+	return ik
 
 func _find_skeleton(node: Node) -> Skeleton3D:
 	if node == null:
@@ -69,7 +77,7 @@ func _physics_process(_delta: float) -> void:
 func _place_foot(target: Node3D) -> void:
 	if target == null:
 		return
-	var bone_name := "foot.L" if target == target_left else "foot.R"
+	var bone_name := foot_left if target == target_left else foot_right
 	var bone_idx := skeleton.find_bone(bone_name)
 	if bone_idx < 0:
 		return

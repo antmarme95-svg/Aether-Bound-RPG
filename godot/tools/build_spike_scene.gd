@@ -2,7 +2,14 @@ extends SceneTree
 
 const FootIKScript = preload("res://scripts/foot_ik.gd")
 const CompanionWalkScript = preload("res://scripts/companion_walk.gd")
+const AnimInstallerScript = preload("res://scripts/anim_installer.gd")
 const WarriorScene = preload("res://assets/dagna/low_poly_warrior.fbx")
+
+# El warrior solo trae 2 poses estaticas; la caminata sale del pack DoubleL
+# retargeteada por el importador (BoneMap -> SkeletonProfileHumanoid, ver
+# tools/make_bone_maps.gd). Con los dos esqueletos renombrados al mismo
+# perfil, las pistas caen sobre los huesos de Dagna sin tocar nada mas.
+# El armado del AnimationPlayer lo hace SpikeAnimInstaller en _ready().
 
 func _initialize():
 	var root := Node3D.new()
@@ -146,8 +153,19 @@ func _build_character(root: Node3D, char_name: String, pos: Vector3) -> Characte
 	var model: Node3D = WarriorScene.instantiate()
 	model.name = "Model"
 	body.add_child(model)
+	# Solo el nodo raiz del modelo se apropia: el resto es contenido de la
+	# instancia del FBX y se resuelve al cargar. Re-apropiar los hijos hacia
+	# que PackedScene los re-declarara con `type=` ADEMAS de guardar el
+	# `instance=`, y la escena cargaba con dos arboles -- uno huerfano, que
+	# era justo el que encontraba SpikeFootIK (is_inside_tree()==false,
+	# errores cada frame) y el que tenia la escala del FBX sin corregir.
 	model.owner = root
-	_reown_recursive(model, root)
+
+	var anim_node := Node.new()
+	anim_node.name = "SpikeAnimInstaller"
+	anim_node.set_script(AnimInstallerScript)
+	body.add_child(anim_node)
+	anim_node.owner = root
 
 	var ik_node := Node3D.new()
 	ik_node.name = "SpikeFootIK"
@@ -160,17 +178,3 @@ func _build_character(root: Node3D, char_name: String, pos: Vector3) -> Characte
 	# hangs the process).
 
 	return body
-
-func _find_skeleton(node: Node) -> Skeleton3D:
-	if node is Skeleton3D:
-		return node
-	for child in node.get_children():
-		var found := _find_skeleton(child)
-		if found:
-			return found
-	return null
-
-func _reown_recursive(node: Node, owner: Node) -> void:
-	for child in node.get_children():
-		child.owner = owner
-		_reown_recursive(child, owner)

@@ -107,6 +107,34 @@ playtesters — Diego/Santiago/Delmer) en el §Cierre del ADR.
 ese cierre. Nada más está autorizado todavía — sigue sin sentido escribir
 combate genérico o sistemas fuera del slice hasta que dé veredicto.
 
+### 🧪 Spike comparativo Godot/Unity — condiciones emparejadas (2026-08-12)
+
+**Dagna ya camina en Godot con animación real**, no solo traslación. Ciclo
+retargeteado con la herramienta **stock** (`BoneMap` +
+`SkeletonProfileHumanoid`), mismo criterio que el retargeting Mecanim del
+lado Unity: cero solver escrito a mano. Fuente: el Walk in-place del pack
+**DoubleL** (ExplosiveLLC descartado — su FBX de caminata no trae
+esqueleto; Kevin Iglesias — rig Rigify como el nuestro, pero la versión
+free no trae Walk).
+
+Verificación repetible: `godot/tools/verify_and_capture.gd` corre la
+escena, sigue a Dagna con cámara de costado, captura, y **mide la rotación
+del muslo** — exit 1 si el hueso no se mueve. Hoy da 24° y ciclo alternado,
+con los pies apoyados en la pendiente vía IK sobre el pose animado.
+
+En el camino salieron **3 bugs de importación pre-existentes** que el spike
+anterior tapaba (árbol duplicado al re-apropiar una instancia · pista de
+escala ×100 dentro de la pose del FBX · rig del pack mirando al revés →
+moonwalk, que **detectó Boris a ojo**). Los tres están en [[Lecciones]]
+§Godot 4.7 — leer antes de tocar importación de FBX otra vez.
+
+**Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
+empareja las condiciones para que ese veredicto compare lo mismo de los
+dos lados. Deuda anotada y no bloqueante: el clip es de una mano y Dagna
+lleva hacha a dos manos (los brazos no cuadran, las piernas sí), y el foot
+IK baja los pies sin ajustar la pelvis, así que en pendiente la deja algo
+agachada. El jugador sigue idle en los dos motores.
+
 ---
 
 ## Hechos vigentes

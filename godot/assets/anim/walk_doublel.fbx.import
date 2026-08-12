@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://db3cd0y1flp7i"
-path="res://.godot/imported/low_poly_warrior.fbx-d8372e575a0deb972df7f3aa8d6bb707.scn"
+uid="uid://doqfjb87gg14t"
+path="res://.godot/imported/walk_doublel.fbx-6ae38e0c2bde2d7b7a8a8beb1509248e.scn"
 
 [deps]
 
-source_file="res://assets/dagna/low_poly_warrior.fbx"
-dest_files=["res://.godot/imported/low_poly_warrior.fbx-d8372e575a0deb972df7f3aa8d6bb707.scn"]
+source_file="res://assets/anim/walk_doublel.fbx"
+dest_files=["res://.godot/imported/walk_doublel.fbx-6ae38e0c2bde2d7b7a8a8beb1509248e.scn"]
 
 [params]
 
@@ -41,8 +41,8 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:human warrior/Skeleton3D": {
-"retarget/bone_map": Resource("res://assets/bonemap_dagna_rigify.tres"),
+"PATH:Armature/Skeleton/Skeleton3D": {
+"retarget/bone_map": Resource("res://assets/bonemap_doublel.tres"),
 "retarget/bone_renamer/rename_bones": true,
 "retarget/bone_renamer/unique_node/make_unique": true,
 "retarget/bone_renamer/unique_node/skeleton_name": "GeneralSkeleton",

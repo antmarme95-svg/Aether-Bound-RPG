@@ -1,5 +1,85 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] spike/godot | Dagna camina de verdad — retargeting stock + 3 bugs de importación que el spike anterior tapaba
+
+**Qué se cerró:** la brecha de *feel* entre los dos motores del spike de
+ADR-003. En Unity, Dagna caminaba con animación real (retargeting Mecanim
+desde Starter Assets). En Godot solo se trasladaba — el FBX del warrior
+(`asoliddev`) trae **2 poses estáticas** y ningún ciclo. Ahora camina con un
+ciclo real, retargeteado con la herramienta **stock** de Godot
+(`BoneMap` + `SkeletonProfileHumanoid`), mismo criterio que en Unity: cero
+solver escrito a mano.
+
+**Inventario de packs (paso 1 del plan).** De los 3 candidatos que Boris ya
+tenía en disco:
+- **ExplosiveLLC** (`RPG Character Mecanim Animation Pack FREE`) — el FBX de
+  caminata **no trae Skeleton3D**, solo pistas (`Take 001`, 23 tracks). Sin
+  esqueleto no hay `BoneMap`. Descartado.
+- **Kevin Iglesias** (`Human Animations`) — rig **también Rigify**
+  (`B-thigh.L`, `B-shin.L`, `B-foot.L`), lo más cercano a Dagna de los tres,
+  pero la versión free **no trae Walk**, solo Run. Descartado para esta pasada.
+- **DoubleL** (`RPG_Animations_Pack`) — 70 huesos con nomenclatura Unity
+  Humanoid (`Hips`, `Left_UpperLeg`, `Left_Foot`) y un Walk in-place real de
+  1.07s / 81 pistas. **Elegido.**
+
+**Los dos BoneMap** (`godot/assets/bonemap_*.tres`, generados por
+`godot/tools/make_bone_maps.gd`, que valida cada nombre contra los huesos
+reales del FBX antes de escribir): 55/56 slots del perfil humanoide mapeados
+en los dos rigs — solo `Root` queda sin mapear, porque ninguno de los dos
+tiene hueso raíz. Con los dos esqueletos renombrados al mismo perfil, las
+pistas del pack caen sobre los huesos de Dagna sin tocar nada más.
+
+**Tres bugs encontrados en el camino — los tres pre-existentes, tapados por
+el spike anterior.** Están escritos en [[Lecciones]] §Godot 4.7:
+1. **Re-apropiar los hijos de una escena instanciada** hacía que
+   `PackedScene` guardara el modelo como `instance=` *y* re-declarara cada
+   hijo con `type=`: la escena cargaba con **dos árboles**, uno huérfano.
+   Era justo el que encontraba `SpikeFootIK` — `is_inside_tree() == false` y
+   errores cada frame — y el que se renderizaba, con la escala del FBX sin
+   corregir.
+2. **Las poses del warrior traen una pista de escala `(100,100,100)`** sobre
+   el nodo raíz del modelo (centímetros del FBX original). El importador la
+   saca del transform pero la deja en la animación: reproducir "idle"
+   inflaba al personaje 100×. Se veía en las capturas como una figura gigante
+   detrás de la rampa.
+3. **El clip "forward" del pack hacía moonwalk.** El rig de DoubleL tiene el
+   rest mirando al revés (+Z, convención de Unity); el retargeting normaliza
+   los ejes de cada hueso pero no el rumbo global, así que el torso quedaba
+   bien orientado y las piernas caminaban en reversa. **Lo detectó Boris a
+   ojo, en mitad de la sesión.** Medido después con el pie plantado: con el
+   clip `_F` viajaba hacia adelante durante el apoyo. Bajo el giro de 180°
+   que separa los dos rests, el clip **backward** del pack es el forward
+   nuestro — con la inclinación y el balanceo de brazos correspondientes.
+
+**Verificación** (`godot/tools/verify_and_capture.gd`, se conserva): corre la
+escena ~6.5s, sigue a Dagna con una cámara de costado, saca 4 capturas y
+**mide la rotación del muslo izquierdo** — falla con exit 1 si el hueso no se
+mueve, que es la única forma de distinguir traslación de caminata. Resultado:
+**24° de rotación de muslo, ciclo alternado, pies apoyados en la pendiente
+vía IK sobre el pose animado**. `SpikeFootIK` no necesitó cambios de lógica,
+solo los nombres de hueso del perfil (`LeftUpperLeg`/`LeftFoot` en vez de
+`thigh.L`/`foot.L`).
+
+**Archivos:** `godot/scripts/anim_installer.gd` (nuevo, instala las
+animaciones en `_ready()`), `companion_walk.gd` (reproduce walk/idle),
+`foot_ik.gd` (nombres del perfil + orden de configuración del
+`SkeletonIK3D`), `tools/build_spike_scene.gd`, `tools/make_bone_maps.gd`
+(nuevo), `assets/anim/walk_doublel.fbx` + los 2 `.tres`. `.gitignore`
+anotado: el pack DoubleL sigue ignorado del lado Unity, se versiona solo el
+FBX copiado.
+
+**No entró, por diseño:** nada del lado Unity (ya tenía animación real), la
+caminata del jugador (sigue idle en los dos motores), y el veredicto
+Godot-vs-Unity. Esta pasada solo empareja las condiciones para que ese
+veredicto compare lo mismo de los dos lados.
+
+**Deuda anotada, no bloqueante:** el clip es `1Hand_Up_Walk` — Dagna sostiene
+un hacha a dos manos, así que los brazos no cuadran con el arma. Las piernas,
+que es lo que esta pasada tenía que probar, sí. Y el foot IK baja los pies
+sin ajustar la pelvis, así que en pendiente la deja un poco agachada.
+
+**Índice:** sin cambios — esta pasada no creó notas nuevas del vault.
+
 ## [2026-08-12] QA de canon | 5ª re-corrida — 13 críticos, la ruptura reubicada, y una deuda de propagación de 12 fichas
 
 **Fase 0 — linter:** 0 CRITICAL / 0 MEDIUM / 27 INFO antes de spawnear.

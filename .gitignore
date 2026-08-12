@@ -33,6 +33,11 @@ unity/.unity/
 # el warrior de Dagna (asoliddev), el Cliff Pack (BrokenVector), y las
 # animaciones RPG (ExplosiveLLC). Si se empieza a usar alguno de los de
 # abajo, sacarlo de esta lista antes de commitear.
+# Excepcion del lado Godot (2026-08-12): el ciclo de caminata retargeteado
+# sale de DoubleL, no de ExplosiveLLC (el walk de ExplosiveLLC viene sin
+# esqueleto en el FBX, no se puede mapear). El pack entero sigue ignorado
+# aca; lo que se versiona es el unico FBX copiado a
+# godot/assets/anim/walk_doublel.fbx.
 unity/Assets/ALP_Assets/
 unity/Assets/Altar_Ruins_FREE/
 unity/Assets/AurynSky/

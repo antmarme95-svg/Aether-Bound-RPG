@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-07-22
+updated: 2026-08-12
 ---
 
 # Lecciones y entorno técnico
@@ -9,6 +9,41 @@ updated: 2026-07-22
 > todo brief de ejecutor (Feature Loop).
 
 ## Lecciones (no repetir)
+
+### Godot 4.7 — importación de FBX y retargeting (spike ADR-003, 2026-08-12)
+
+- **No re-apropiar (`owner = root`) los hijos de una escena instanciada
+  antes de `PackedScene.pack()`.** Godot guarda el nodo padre como
+  `instance=ExtResource(...)` **y además** re-declara cada hijo con
+  `type=`. Al cargar quedan **dos árboles**: el de la instancia y uno
+  huérfano. Síntoma cruel: `is_inside_tree() == false` en un nodo que
+  `find_child()` sí encuentra, errores de `get_global_transform` cada
+  frame, y el modelo visible con la escala del FBX sin corregir mientras
+  las mediciones dan bien. Apropiar **solo la raíz** del modelo.
+- **Las animaciones instaladas en tiempo de construcción se pierden.** Si
+  el modelo se guarda como instancia, la `AnimationLibrary` del
+  `AnimationPlayer` pertenece al `.scn` importado y el `.tscn` la guarda
+  por referencia. Instalar las animaciones en `_ready()` (patrón de
+  auto-cableado que ya usan `SpikeFootIK` y `SpikeCompanionWalk`), no al
+  construir la escena.
+- **Las poses/animaciones de un FBX pueden traer una pista de ESCALA
+  sobre el nodo raíz del modelo** con el factor de unidades del original
+  (en el warrior de Dagna: `(100,100,100)`, centímetros). El importador
+  la saca del transform del nodo pero la deja en la animación:
+  reproducirla vuelve a inflar el personaje 100×. **Al reusar una
+  animación, descartar toda pista que no apunte a un hueso.**
+- **Un pack de animación de Unity trae el rest mirando al revés**
+  (+Z adelante; Godot usa −Z). El retargeting normaliza los ejes de cada
+  hueso pero **no el rumbo global del rest**, así que el torso queda bien
+  orientado y las piernas caminan en reversa — moonwalk. La diferencia es
+  un giro de 180° en Y, y bajo ese giro el clip *backward* del pack es el
+  *forward* nuestro. **Verificarlo midiendo el pie plantado** (durante el
+  apoyo debe viajar hacia +Z local), no a ojo ni por el nombre del clip.
+- **`SkeletonIK3D`: asignar `root_bone`/`tip_bone` ANTES de meterlo al
+  árbol.** Cada setter revalida la cadena y con el otro extremo sin poner
+  escupe errores de motor.
+
+### Prototipo (Godot 4.6, código archivado)
 
 - **Nunca usar `class_name` cruzado entre scripts** en Godot — race de
   load-order en CLI. Siempre `const _X = preload("res://…")`.
