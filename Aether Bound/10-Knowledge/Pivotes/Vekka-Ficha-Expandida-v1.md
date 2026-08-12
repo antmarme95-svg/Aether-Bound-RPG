@@ -117,7 +117,7 @@ Roen la nota. Nota, específicamente, que el arnés técnico no es herramienta d
 
 ### Escena: El detalle mínimo
 
-Alrededor de una fogata en Acto 1, Vekka se sienta al lado del jugador. Le pide su espada. La mira dos minutos. Señala una micro-fisura en la guarda que el jugador no había notado. Dice:
+Alrededor de una fogata en Acto 1, Vekka se sienta al lado del jugador. Le pide su arma — sea cual sea la de su celda ([[Armamento Base — Matriz Raza x Rol]]; en la suya, el war flail del Humano Vanguard). La mira dos minutos. Señala una micro-fisura que el jugador no había notado. Dice:
 
 *"Esto te mata en tres meses. No hoy. En tres meses. El detalle mínimo es lo que salva vidas — o las termina. Nada en el medio."*
 

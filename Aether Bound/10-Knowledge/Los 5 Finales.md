@@ -71,7 +71,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* asciende. Recibe reconocimiento formal del Council. Se aparta del jugador con cortesía.
-- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: el equipo de extracción que ella activó completó la entrega en su lugar (es el único de los 9 donde el jugador mismo cierra la traición que el Pivote empezó — ver su ficha), cumpliendo la orden real que ella puso en marcha — pero sabe que el Council mintió sobre "custodia digna".
+- *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: el equipo de extracción que ella activó completó la entrega en su lugar (es el único de los 9 donde **el Pivote no está presente en el cierre de su propia traición** — se retira antes de la persecución y la entrega se consuma sin ella; ver su ficha y [[El Cráter — Matriz de Rutas]] §2), cumpliendo la orden real que ella puso en marcha — pero sabe que el Council mintió sobre "custodia digna".
 - *Rechazo/Ausencia:* no aplica a Bram — nunca ejecutó. Lyris se aparta del grupo con calma que hiere.
 
 ---
@@ -134,7 +134,7 @@ Coincide con [[The Tether]] §Gate del Final 4 — **son la misma regla y no deb
 
 **La quietud de F4 no es la parálisis de F2a.** Son gestos idénticos por fuera y opuestos por dentro: el jugador que no decide nada deja que el Pivote entregue a Speck (F2a); el jugador que llega con este contexto guarda silencio *porque va a hacer una pregunta*, y la hace. Lo que separa los dos finales no es cuánto tarda en moverse, sino si esa pausa termina en una pregunta.
 
-**Línea canónica:** *"¿Qué quieres tú?"* — el jugador es el primero en preguntarle a Speck en lugar de decidir por ella.
+**Línea canónica:** *"¿Qué quieres tú?"* — el jugador le pregunta a Speck **qué quiere**, en lugar de decidir por ella. Precisado 2026-08-11: el superlativo no es "la primera vez que alguien le pregunta algo" (el Momento de Persona 5 en su lectura *persona* ya es preguntarle en voz alta qué ve — [[Speck]] §Momento 5), sino que es **la única vez que alguien le pregunta qué quiere, en el único momento en que su respuesta puede cambiar lo que pasa.**
 
 Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un God-Core vivo, dentro del cráter, sin necesidad de que el Fragmento la fuerce. La transformación E1→E3 sigue ocurriendo, pero esta vez con consentimiento — su cuerpo se vuelve el punto de equilibrio entre la Muda completada y la civilización preservada. El Aether sana lentamente, no de golpe. Las civilizaciones no colapsan; se adaptan.
 
@@ -142,7 +142,7 @@ Speck responde. Elige la **Muda parcial**: se calcifica voluntariamente en un Go
 
 **Sabor:** agridulce, no triunfal. El mundo mejora. El jugador pierde a su amiga de todos modos — solo que esta vez la pérdida tuvo su consentimiento, y eso es lo único que lo distingue de F2b.
 
-**Eco Bond/Link Cam:** años después, Bond responde un sting débil de dos notas — la melodía del Bond vacío, completada en otra tonalidad, la misma familia sonora que F2b, no una victoria limpia. El Council la bautiza oficialmente "the Warden"; The Bound Five talla **SPECK** en la base del core, porque el nombre es lo único que se llevan de vuelta.
+**Eco Bond/Link Cam:** años después, Bond responde un sting débil de dos notas — la melodía del Bond vacío, completada en otra tonalidad, la misma familia sonora que F2b, no una victoria limpia. El Council la bautiza oficialmente "the Warden"; los que quedan tallan **SPECK** en la base del core (no siempre son cinco: en F4 con el Pivote muerto, y en la ruta Nyael, el grupo que llega al borde es menor — [[The Bound Five]] §headcount), porque el nombre es lo único que se llevan de vuelta.
 
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* se reintegra sin condición de ruta (el gate de F4 no depende del Pivote — ver [[El Cráter — Matriz de Rutas]] §4). No pide perdón en voz alta — cambia sus cuentas.

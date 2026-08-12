@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-10
+updated: 2026-08-11
 ---
 
 # Current State
@@ -32,25 +32,17 @@ español. Registrado en `CLAUDE.md` regla 9 y en `Nomenclatura.md`.
 decisión — necesitan pasada de traducción cuando se aborde el guión completo.
 No bloquea nada mientras tanto.
 
-### ✅ Sprint QA — cerrado (16ª re-corrida, 2026-08-05)
+### Rondas 7ª-16ª — cerradas (detalle completo en [[LOG]])
 
-Rondas 7ª-15ª (2026-08-02/04): decisiones de canon y arquitectura resueltas
-(gate F1/F2a con mensajero, cráter centralizado en [[El Cráter — Matriz de
-Rutas]], 4 grados de agencia, linter ampliado a 22 clases). Detalle completo
-en [[LOG]].
+Decisiones de canon y arquitectura resueltas ahí: gate F1/F2a con mensajero,
+cráter centralizado en [[El Cráter — Matriz de Rutas]], 4 grados de agencia,
+linter ampliado a 22 clases.
 
-**16ª (2026-08-05):** linter 0 críticos → 2 subagentes en frío → **9
-críticos reportados, 7 falsos positivos** (citaban mecánica del cráter que
-`El Cráter — Matriz de Rutas` ya centralizó el 08-03 y que las fichas ya
-citan bien — los subagentes no la encontraron). 2 críticos reales
-corregidos en la fuente: `Valen-Ficha` tenía invertido quién lee la
-inscripción Warden (es Valen por defecto, Sereth solo en su ruta) y
-revelaba "God-Cores = Wardens" como hecho confirmado en Acto 2 en vez de
-teoría sin probar hasta el Sunken Archive (Acto 3). + 3 residuos MEDIUM
-("9 traiciones"→8, superlativo de Sereth en F4, línea vieja de Lyris).
-**Nota de método para la 17ª:** los prompts de QA deben apuntar
-explícitamente a `[[El Cráter — Matriz de Rutas]]` como fuente única —
-evita el ruido que dominó esta ronda. Detalle en [[LOG]].
+**Nota de método que sigue vigente (salió de la 16ª, confirmada en la 4ª
+re-corrida):** los prompts de QA deben apuntar explícitamente a
+`[[El Cráter — Matriz de Rutas]]` como fuente única. En la 16ª, no hacerlo
+produjo 7 falsos positivos sobre 9; en la 4ª re-corrida, hacerlo produjo
+**cero**.
 
 Queda 1 hueco de canon genuino (quién mueve el dinero de Iven, cruza con
 Maren) y menores sin cerrar (no bloquean).
@@ -80,10 +72,9 @@ probado 2026-07-30.
 
 ### Nota de método
 
-El cuello de botella no es el QA, es el **barrido**: fixes hechos en la línea
-reportada y no en la clase completa causaron que críticos ya "cerrados"
-reaparecieran en la ronda siguiente (pasó en la 4ª→5ª y otra vez en la
-5ª→6ª). Ver [[Lecciones]] y [[QA de Canon Loop]].
+El cuello de botella no es el QA, es el **barrido**: los 8 críticos de la 4ª
+re-corrida fueron todos fallas de propagación, no de escritura. Ver
+[[Lecciones]] y [[QA de Canon Loop]].
 
 Con el sprint y los links de fijos cerrados, el frente siguiente es
 **guión y diálogos por actos** (ahora en inglés).
@@ -145,18 +136,26 @@ combate genérico o sistemas fuera del slice hasta que dé veredicto.
    ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
    2026-08-10, ver [[LOG]]). Sigue directo de
    [[Guion/Encuentro con Roen]].
-2. **Re-corrida de QA pendiente (4ª vez) — empezar por acá.** La 17ª
-   ronda (2026-08-10) encontró 13 críticos → re-corrida: 6 más (uno
-   propio) → re-corrida: 4 más, esta vez sistémicos (T1 de los 3 links
-   asumía "golpe del jugador", rompía para Strategist; Darro sin T2
-   general; "objeto firma en T3" falso para Valen/Darro; el bookend
-   ratificado seguía diciendo "The Wilds"). Todos corregidos a la
-   fuente — **la 4ª re-corrida quedó sin lanzar, cortada a propósito
-   por Boris para cerrar la sesión** (2026-08-10). Lanzarla es el
-   primer paso de la próxima sesión, antes de cualquier otra cosa —
-   criterio de cierre: 0 críticos en ambos subagentes, recién ahí pasa
-   [[Los 3 Links de los Fijos]] y [[Guion/Encuentro con Roen]] a
-   `ratificado`. Detalle completo en [[LOG]].
+2. **5ª re-corrida de QA — empezar por acá.** La **4ª corrió el
+   2026-08-11**: 8 críticos (4+4), todos corregidos a la fuente con
+   re-grep, más ~14 medios. **Sigue sin cerrar** — el criterio es 0
+   críticos en ambos subagentes. Detalle completo en [[LOG]].
+
+   **6 decisiones de canon tomadas en esa ronda, ya escritas:** la
+   decisión de la crisálida es **elección ilusoria** (no hay rama
+   "destruida"); Roen **decide** renunciar en la frontera y lo
+   **formaliza** en Rivermeet; en F3 Roen **se va después** del clímax;
+   la traición del Pivote ahora tiene **dos tiempos** (ruptura en
+   Driftmarket → tramo jugable con el link muerto → toma en el corredor),
+   que es lo que le da ventana al beat del Bond vacío; entre gates
+   solapados **gana F4** si sus 2 condiciones globales están cumplidas; y
+   el arco de Valen son **90 años**, no 200.
+
+   El cambio 4 (traición en dos tiempos) es el más grande: tocó
+   [[Estructura Dramática]], [[Geografía y Ciudades]] §ACTO 3 (sub-beat 0
+   nuevo), [[Bond y el Bond Vacío]] y [[El Cráter — Matriz de Rutas]] §1.
+   **La 5ª tiene que barrerlo específicamente** — es canon fresco y
+   ninguna ficha de Pivote se revisó todavía contra él.
 3. **Pregunta abierta:** ninguno de los 3 T3 de los fijos tiene "escena
    firma" propia (solo Roen tiene objeto firma, el escudo) —
    [[The Tether]] promete ambos para todo T3. Es decisión de diseño, no
@@ -199,6 +198,38 @@ bajado a T1), excepción de manada de los 3 Hollowed, reubicación de
 Wilds), remate Strategist restaurado a distancia, escudo de Roen
 quitado de la escena del tutorial, y 3 fixes menores de residuos.
 Pendiente re-corrida antes de ratificar (ver punto 2 arriba).
+
+### Abiertos de la 4ª re-corrida — medios sin cerrar
+
+No bloquean el guión, pero la 5ª los va a volver a reportar si no se tocan:
+
+- **Edad de Roen en el bookend:** ficha dice 45, [[Voz Narrativa]] dice
+  60-70 "20-30 años después", y los cierres dicen "thirty years" ×4.
+  45+30 = 75, fuera de banda. Decidir: bookend a 20-25 años, o banda a
+  70-75.
+- **Timeline de Darro:** los 2 años que espera tras el rechazo de Vekka no
+  caben en la cadena 33→38→63. O sale a los 35, o los 2 años van dentro
+  de las edades 30-33.
+- **Momentos de Persona en el Acto 1:** [[La Rueda]] dice 2, [[Speck]]
+  dice 1 (+1 ambiguo), [[Geografía y Ciudades]] dice 1. Importa porque el
+  gate de F4 se calcula sobre los Momentos disponibles.
+- **`Valen-Ficha` no tiene entrada para Dagna** — 8 de 9 Pivotes. Único
+  hueco de la matriz 3 fijos × 9 Pivotes.
+- **Torgan y Dagna con ritos duplicados en dos POIs:** el Juramento de
+  Torgan aparece en Shrine of the First Hammer y en el altar de su clan
+  menor; la renovación de votos de Dagna, en Shrine of the First Hammer y
+  en Dagna's Clan Stone.
+- **Nyael y Bram (holder = agente):** cumplir el gate de F1 exige combatir
+  a quien sostiene a Speck junto a un core activo, que es la definición
+  física de F2b ([[Speck]] §Capa 5). Las dos rutas donde F1 y F2b se tocan
+  son las dos sin resolución escrita.
+- **Lyris en F2a** ejecuta el beat de la fila "Deber Institucional"
+  (asciende por mecánica institucional) además del suyo, sin estar
+  declarada como excepción — la única declarada es Iven.
+- **Rol duplicado en tiers distintos:** T1 para Roen, T2 para Valen y
+  Darro, sin razón declarada.
+- **Nota de trabajo cruda dentro de `Nomenclatura` (ratificado):**
+  "Preguntas/Dudas Toño a Claude" — resolver o mover al Task-Board.
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond

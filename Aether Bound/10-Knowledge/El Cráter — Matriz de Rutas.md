@@ -31,6 +31,10 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
 
 1. **El Pivote toma a Speck** en el último corredor del ascenso del Sunken Archive. Sin
    forcejeo largo, sin discurso — el grupo queda desalojado, no golpeado.
+   **Este paso es la culminación de la traición, no su inicio** (corregido 2026-08-11):
+   la ruptura y la muerte del link ocurren antes del descenso al Archive
+   ([[Geografía y Ciudades]] §ACTO 3 sub-beat 0, [[Bond y el Bond Vacío]] §La traición
+   tiene dos tiempos). Por eso acá no hay discurso: ya se dijo todo dos tramos atrás.
    *Excepción — ruta Bram:* Bram **rehúsa** en el corredor y devuelve a Speck al jugador; el
    grupo sale intacto y es **Torgan**, esperando afuera del Archive, quien la toma.
 2. **Persecución** por The Wilds hacia The First Wound
@@ -111,7 +115,30 @@ Enunciados una sola vez. Filosofía, sabor y epílogos de cada final:
 | **Retroceder o congelarse** — el mensajero llega y completa la entrega por defecto | **F2a** |
 | **Arrancarle a Speck por la fuerza** al holder, cerca del core activo | **F2b** |
 | **Cruzar el borde** hacia el core central sin esperar la entrega | **F3** |
-| **Preguntarle a Speck qué quiere** | **F4** |
+| **Preguntarle a Speck qué quiere** — **y** las 2 condiciones globales (abajo) | **F4** |
+
+**Las 2 condiciones globales de F4 son parte del gate, no un requisito aparte:**
+mayoría "persona" en los Momentos disponibles + ≥2 compañeros en Tether T2+ (§Las dos
+variantes de F4, abajo; [[Los 5 Finales]] §F4 = [[The Tether]] §Gate del Final 4).
+**Preguntar sin las 2 condiciones no gatea F4** — Speck no responde, y la escena cae al
+gate que corresponda por la acción siguiente. Añadido 2026-08-11: la fila decía solo
+"preguntarle a Speck", que leída como fuente única gateaba F4 en cualquier partida.
+
+**Regla de precedencia — F4 gana (decisión de Boris, 2026-08-11).** Los gates **no** son
+mutuamente excluyentes: un jugador puede neutralizar al mensajero (F1) y después
+preguntar, o cruzar el borde (F3) habiendo preguntado antes. Cuando se cumple más de uno,
+**gana F4 si sus 2 condiciones globales están cumplidas**; si no lo están, gana el gate
+de la acción ejecutada. El criterio es que preguntar es el acto más tardío y el único que
+exige haber tratado a Speck como persona durante toda la partida — los otros cuatro se
+pueden cumplir por accidente, ese no.
+
+- **Caso F1 + F4 (mensajero ya neutralizado):** el beat obligatorio de §4 ("el mensajero
+  **se aparta** al ver que Speck responde") se ejecuta como **no volver a levantarse**.
+  El mensajero neutralizado sigue consciente y mirando; cuando Speck contesta, deja de
+  intentar incorporarse. Lee igual: la entrega se cae porque el que iba a completarla
+  decide que ya no.
+- **Caso F3 + F4:** cruzar el borde después de que Speck contestó **no** es F3 — es el
+  jugador ejecutando lo que ella pidió. F3 exige cruzar **sin** que ella haya respondido.
 
 **Las tres distinciones que se confunden solas:**
 

@@ -158,7 +158,9 @@ Llegan al nido donde está la crisálida de Speck. Las bestias guardianas están
 - El Triune Council ordenó destruir todo lo que brille con Aether. La crisálida brilla.
 - Roen no dice: "Deberías dejarla". Solo dice: "Qué haces, es tu llamado."
 
-**La decisión es del jugador.** Roen honra eso. Si el jugador destruye la crisálida, Roen lo ayuda. Si el jugador la salva, Roen la lleva.
+**La duda es del jugador.** Roen honra eso: no empuja en ninguna dirección, y espera todo lo que haga falta. Cuando el jugador finalmente no puede hacerlo, Roen no lo comenta — se agacha y la lleva él. Es el primer favor que hace sin que se lo pidan.
+
+> **Elección ilusoria** — el juego ofrece el gesto de destruirla y no lo completa. Fuente única: [[Speck]] §El encuentro. No hay rama "crisálida destruida".
 
 **Línea narrativa:** Sin importar la decisión, Roen nota algo: "El Triune Council no sabía que esto estaba aquí. Eso dice algo."
 

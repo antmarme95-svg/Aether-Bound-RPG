@@ -145,7 +145,7 @@ Sereth ve la crisálida y **la reconoce**. Ya sabía lo que era desde hace meses
 
 Su reacción visible es contemplativa. No de "gotcha", no de dueño del secreto — de **peso**. Deja que se le note el peso porque **quiere que el jugador registre esa cara**: cuando la traición se revele, el jugador va a repasar sus recuerdos y va a encontrar este momento. Sereth necesita que lo encuentre.
 
-Cuando el jugador decide salvar o destruir, Sereth dice: *"Cualquiera sea tu elección, cambias el mundo. Ten eso presente."*
+Cuando el jugador duda frente a la crisálida, Sereth dice: *"Cualquiera sea tu elección, cambias el mundo. Ten eso presente."*
 
 **Siembra concreta (Acto 1):** Sereth acaba de instalar la primera pieza — la idea de que **el jugador es quien cambia el mundo, no una víctima del mundo.** Esa idea le será útil en el cráter, cuando el jugador tenga que decidir si aceptar el peso de haber sido conducido o rechazarlo. Sereth quiere que lo acepte: quiere que el jugador se responsabilice de la elección final, incluso sabiendo que fue empujado hasta ella.
 

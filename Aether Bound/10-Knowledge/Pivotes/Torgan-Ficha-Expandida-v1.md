@@ -164,7 +164,7 @@ Llegan al nido. Bestias guardianas. Crisálida.
 
 **Torgan ve la crisálida y reconoce la variable de inmediato.** Mantiene silencio.
 
-Cuando el jugador decide salvar o destruir, Torgan dice: *"Tuya es la decisión. Sea cual sea, te sigo."*
+Cuando el jugador duda frente a la crisálida, Torgan dice: *"Tuya es la decisión. Sea cual sea, te sigo."*
 
 **Mentira.** Ya sabe que no puede seguirlo. Pero en este nido, Torgan **permite al jugador elegir sin conocer el costo.** Es acto de amor: le da un momento donde la decisión es genuina, no contaminada por lo que viene.
 

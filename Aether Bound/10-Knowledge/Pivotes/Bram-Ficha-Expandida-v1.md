@@ -135,7 +135,7 @@ Bram: *"Siempre."* (Mentira que ambos aceptan porque es mentira de soldado.)
 
 ### Escena: El Nido de Speck (Instinto de Protector, contenido)
 
-Llegan al nido. Crisálida. Bestias guardianas. El jugador decide salvar o destruir.
+Llegan al nido. Crisálida. Bestias guardianas. El jugador duda frente a la crisálida.
 
 Bram lo mira. Primera reacción, dicha en voz alta: *"No es mi problema."*
 

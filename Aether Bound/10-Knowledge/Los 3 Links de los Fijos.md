@@ -85,9 +85,15 @@ atrapa a media caída (red de seguridad) o te lanza a una cornisa que no
 alcanzás solo — es él sosteniéndote, no una plataforma improvisada.
 
 **Ventana de remate — split por rol (decisión de Boris, 2026-08-07;
-corregido a la fuente 2026-08-10, 3ª pasada).** En el sabor "lanza a un
-enemigo", hay una ventana de input acotada. **Duelist/Vanguard:**
-conectan un golpe directo — daño/impacto extra si aciertan la ventana.
+corregido a la fuente 2026-08-10, 3ª pasada; **Vanguard corregido
+2026-08-11, 4ª re-corrida**).** En el sabor "lanza a un enemigo", hay una
+ventana de input acotada. **Duelist:** conecta un golpe directo —
+daño/impacto extra si acierta la ventana. **Vanguard: no tiene ventana de
+remate en T1** — su T1 en combate compartido es la variante "doble ancla"
+(abajo), que no incluye agarre ni lanzamiento; recién ve el
+agarre/lanzamiento del T1 base en **T2** (§T2 de Roen). Es la única celda
+donde el jugador no vive el beat firma de Roen en la escena de
+presentación, y es intencional: el Vanguard lo gana en vez de recibirlo.
 **Strategist:** no golpea — su ventana se resuelve con su propia acción
 de control (ver [[Armamento Base — Matriz Raza x Rol]]: Tether Arcano/
 marca del hand cannon/trampa del Signal Horn), coherente con
@@ -195,7 +201,7 @@ el cálculo se sobre-satura y dispara un pulso de daño extra único.
 
 **T3 — "Recalculated."** Valen puede reubicar un orbe ya puesto (Discord
 o Harmony) a un blanco nuevo sin cooldown, reaccionando en vivo en vez de
-calculando de antemano. Eco directo de su propio arco: 200 años confiando
+calculando de antemano. Eco directo de su propio arco: noventa años confiando
 en un patrón heredado que resultó falso (el beat de la cifra errónea de
 la Academy, [[Valen-Ficha-Expandida-v1]] §El beat de la cifra errónea) —
 T3 es Valen aprendiendo a confiar en el dato de ahora, no en el cálculo

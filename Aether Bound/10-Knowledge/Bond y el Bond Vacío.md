@@ -17,22 +17,49 @@ Justificación: la memoria muscular del vínculo solo se forma con un gesto
 físico repetido. **La traición debe sentirse en el pulgar: aprietas Bond y no
 responde nadie.**
 
+## La traición tiene dos tiempos (decisión de Boris, 2026-08-11)
+
+**Esto es lo que le da ventana al beat de abajo, y sin esto el beat no existe.**
+La traición del Pivote **no es un solo momento**. Son dos, separados por un tramo
+jugable:
+
+1. **La ruptura** — el Pivote declara su convicción y rompe con el jugador
+   **antes** del descenso al Sunken Archive, en el desalineamiento que deja The
+   Reckoning en Driftmarket ([[Geografía y Ciudades]] §ACTO 3). **Acá muere el
+   link.** El Pivote sigue caminando con el grupo: no se va, no puede irse
+   todavía — necesita el Fragmento tanto como ellos. Es peor que si se fuera.
+2. **La toma** — en el último corredor del ascenso del Archive, el Pivote se
+   lleva a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). **Es la
+   culminación, no el inicio.**
+
+**Entre los dos hay tramo jugable con el link muerto y Speck todavía con el
+jugador**: el approach al Archive y el interior entero. Ésa es la ventana de los
+ítems 2-3 de abajo, y es la razón de la corrección. Antes de 2026-08-11 la
+traición era un solo golpe en el corredor seguido de persecución y cráter, y el
+beat obligatorio no tenía dónde ocurrir — el pilar 2 del juego sin lugar donde
+pagarse (4ª re-corrida de QA).
+
 ## "El Bond vacío" — beat obligatorio post-traición
 
 1. **Preparación (todo el juego):** cada link con el Pivote dispara la **Link
    Cam** (~1s de barrido celebratorio) + su sting musical. Se vuelve gramática.
-2. **La trampa amorosa:** la primera misión post-traición coloca el obstáculo
-   firma del link perdido ([[Los 9 Links del Pivote]]). El prompt de Bond
-   aparece por memoria muscular.
+2. **La trampa amorosa:** el tramo entre la ruptura y la toma coloca el obstáculo
+   firma del link perdido ([[Los 9 Links del Pivote]]). El prompt de Bond aparece
+   por memoria muscular. **Y el Pivote está ahí, a tres metros, mirando** — no
+   murió, no desapareció: decidió. Es la vuelta de tuerca que la versión de un
+   solo tiempo no podía dar.
 3. **El silencio:** picas Bond. La misma Link Cam barre… el espacio vacío. El
    sting muere a las dos notas. Sin música. Nadie dice nada. [[Speck]]
    gimotea. La cámara vuelve al hombro sin corte.
 4. **Regla de dirección:** el dramatismo sale de **reusar el lenguaje de la
    celebración sobre la ausencia** — cuanto más idéntico, más duele.
-5. **Eco final:** cuando Speck puentea el link degradado, la Link Cam regresa
-   encuadrándola *imitando la postura* del Pivote. El sting suena en otra
-   tonalidad. Aplica a las 8 celdas con traición — **no a la celda de Bram**,
-   ver excepción abajo.
+5. **Eco final — en el cráter, no antes.** Speck solo puede puentear el link
+   degradado en su forma God-Core (**E3**), y E3 ocurre **únicamente** en The
+   First Wound, cuando el Fragmento se activa ([[Speck]] §Capa 4 — fuente
+   única). Ahí la Link Cam regresa encuadrándola *imitando la postura* del
+   Pivote, y el sting suena en otra tonalidad. Aplica a las 8 celdas con
+   traición — **no a la celda de Bram**, ver excepción abajo. **No lo escribas
+   antes del cráter:** Speck no tiene la forma que el beat requiere.
 
 ## La excepción de Bram — el Bond que SÍ responde
 
@@ -41,10 +68,14 @@ queda con el jugador hasta el cráter ([[Pivotes/Bram-Ficha-Expandida-v1]]), as�
 nunca pierde su link (**Mobile Foundry**) y el beat de arriba no tiene ruta. **No es
 un hueco: es la única celda donde el beat se juega invertido.**
 
-1. **Misma preparación, misma trampa.** La primera misión después del corredor del
-   Archive coloca el obstáculo firma del Mobile Foundry, exactamente igual que en las
-   otras ocho celdas. El jugador ya sabe lo que viene: el juego entero le enseñó que
-   después de la traición, ahí es donde el Bond se muere.
+1. **Misma preparación, misma trampa — y misma ventana.** En la celda de Bram el
+   sub-beat 0 **sí ocurre**, y ocurre completo: en Driftmarket, Bram dice en voz alta
+   que su cadena de mando le pidió entregar a Speck. Lo dice con las mismas palabras
+   con las que los otros ocho anuncian que van a hacerlo. **Lo que no dice es que va a
+   obedecer.** El jugador sale de esa escena convencido de que perdió el link, porque
+   el juego entero le enseñó qué significa esa conversación.
+   Después, en el approach y el interior del Archive, el tramo coloca el obstáculo
+   firma del Mobile Foundry, exactamente igual que en las otras ocho celdas.
 2. **Y Bram responde.** Pica Bond esperando el vacío, y la Link Cam barre **y lo
    encuentra**: Bram ya está en posición, cargando los desplegables encima como
    siempre. El sting suena completo. Nadie lo comenta.

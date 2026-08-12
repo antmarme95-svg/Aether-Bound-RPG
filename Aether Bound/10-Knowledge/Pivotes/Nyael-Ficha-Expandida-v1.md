@@ -159,7 +159,7 @@ Llegan al nido. Crisálida.
 
 Reconoce. Esto es variable asignada hace 1 año.
 
-Cuando el jugador decide salvar o destruir, Nyael dice: *"Tu decisión. Mía es permanecer."*
+Cuando el jugador duda frente a la crisálida, Nyael dice: *"Tu decisión. Mía es permanecer."*
 
 Promesa silenciosa.
 

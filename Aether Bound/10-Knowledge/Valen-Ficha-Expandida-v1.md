@@ -58,7 +58,15 @@ A los 140 años, Valen trajo sus hallazgos a los ancianos de Stillspire. Propues
 
 **Respuesta de los ancianos:** *"Los ciclos son inevitables. The Stillspire ha sobrevivido cuatro Mudas. Sobreviviremos la quinta."*
 
-**La frase es falsa y hay que escribirla sabiéndolo.** Ninguna Muda se ha completado en 550 años ([[El Mundo y la Muda]]): esas "cuatro Mudas" son la misma cosmología heredada de the Academy of Sages que Valen desmonta en el Grove (§Grove of Cycles). Los ancianos no mienten — repiten. Es el beat que hace que la escena duela dos veces: la primera vez Valen escucha una negativa, y doscientos años después descubre que la negativa se apoyaba en un recuento que nunca existió.
+**La frase es falsa y hay que escribirla sabiéndolo.** Ninguna Muda se ha completado en 550 años ([[El Mundo y la Muda]]): esas "cuatro Mudas" son la misma cosmología heredada de the Academy of Sages que Valen desmonta en el Grove (§Grove of Cycles). Los ancianos no mienten — repiten. Es el beat que hace que la escena duela dos veces: la primera vez Valen escucha una negativa, y noventa años después descubre que la negativa se apoyaba en un recuento que nunca existió.
+
+> **Aritmética fijada (4ª re-corrida, 2026-08-11) — no es cifra libre.** Valen tiene
+> **230**; llevó los hallazgos a los ancianos a los **140**; por lo tanto la negativa fue
+> hace **90 años**, y ése es el número de toda la clase "tiempo que Valen pasó calculando
+> sobre una base falsa" (§El beat de la cifra errónea, [[Los 3 Links de los Fijos]] §T3
+> "Recalculated", y el anillo en §Diseño Visual Ratificado). **No confundir** con dos
+> clases distintas que sí dicen 200 y están bien: la **antigüedad de los registros** que
+> Valen consulta, y **cuándo estudió en The Shattered Spire** (a los ~30).
 
 Valen comprendió que no querían saber más. No porque fueran ignorantes, sino porque **el conocimiento sin capacidad de actuar es tortura.**
 
@@ -102,7 +110,7 @@ Valen NO "rescata" como Roen. Valen **reconoce patrones**. El jugador es una var
 |---|---|---|
 | **Duelist** | Guerrero élfico de linaje antiguo, probablemente de Stillspire o cercano. Valen lo conoce hace décadas. Valen no "lo sacó" — simplemente le ofreció contexto hace años, plantó una pregunta. Encuentro: Valen regresa porque el tiempo de la pregunta llegó. Valen: *"Hace 60 años te mostré ciertos registros. Sabía que tardaran en destruirte. He vuelto porque el plazo se agota."* | Guerrera élfica cuyo honor es precisamente el que el sistema élfico sacrificará. Valen tiene 200+ años de registros que prueban el patrón. Encuentro premeditado. Valen: *"He leído tu caso cinco veces, con cinco nombres distintos, en cinco archivos que nadie volvió a abrir. El sistema no cambia. Vine porque esta vez alguien necesita escoger diferente."* |
 | **Vanguard** | Guardián élfico cuyas órdenes vienen de cálculos que Valen escribió — NO SABE esto. Valen estudió si el Guardián cuestionaría sus órdenes. Encuentro: cuando el momento llega, Valen está ahí. Valen: *"Tus órdenes vienen de cálculos de hace 70 años. Yo escribí algunos. Vine porque mereces saber quién está coreografiando tu lealtad."* | Protectora de un lugar sagrado, que Valen ha calculado será destruido en X años. Valen le ofrece conocimiento maldito. Encuentro: deliberado. Valen: *"El lugar que proteges — lo he visto caer en los modelos futuros. Vine a ofrecerte información para que no caiga sorprendida."* |
-| **Strategist** | Estratega élfico que piensa como Valen — raro. Posiblemente se cruzaron en bibliotecas. Valen lo respeta y eso es incómodo (Valen no respeta fácil). Encuentro: reconocimiento mutuo. Valen: *"Lees los ciclos como yo. Eso significa sabes lo que viene. Vine porque la gente que sabe está sola. He estado 200 años solo. No quería que fuera otro siglo."* | Estratega élfica, tal vez rival intelectual de Valen en el pasado. Valen necesita saber de qué lado estará ella cuando la verdad llegue. Encuentro: confrontación disfrazada de alianza. Valen: *"Siempre fuiste más inteligente que yo en los detalles. Vine porque voy a necesitar quién vea lo que debo perder de vista."* |
+| **Strategist** | Estratega élfico que piensa como Valen — raro. Posiblemente se cruzaron en bibliotecas. Valen lo respeta y eso es incómodo (Valen no respeta fácil). Encuentro: reconocimiento mutuo. Valen: *"Lees los ciclos como yo. Eso significa sabes lo que viene. Vine porque la gente que sabe está sola. He estado noventa años solo. No quería que fuera otro siglo."* | Estratega élfica, tal vez rival intelectual de Valen en el pasado. Valen necesita saber de qué lado estará ella cuando la verdad llegue. Encuentro: confrontación disfrazada de alianza. Valen: *"Siempre fuiste más inteligente que yo en los detalles. Vine porque voy a necesitar quién vea lo que debo perder de vista."* |
 
 ---
 
@@ -163,7 +171,7 @@ Llegan al nido. Las bestias guardianas. La crisálida.
 - Toca la crisálida con poder élfico — siente el Aether interior.
 - Sus ojos se enfocan en un lugar distante. "Esto no estaba en los registros."
 
-El jugador vuelve a buscar validación. Valen dice: *"Hacer o no hacer — ambas tienen consecuencias que no podemos calcular. Tu elección define los siguientes tres actos. Elige sabiendo que no sabes suficiente."*
+El jugador vuelve a buscar validación. Valen dice: *"Hacer o no hacer — ambas tienen consecuencias que no podemos calcular. Lo que hagas acá define los siguientes tres actos. Actúa sabiendo que no sabes suficiente."*
 
 **Es la verdad cruda.** No es ayuda. Es honestidad sin compasión.
 
@@ -233,7 +241,7 @@ Ver [[Grove of Cycles — Escena del Acto 2]]. Si el Tether del jugador con Vale
 
 Dentro del Grove, Valen reconoce el lugar como propio: *"Aquí aprendí a leer ciclos."* Escucha el debate de los cuatro élderes en silencio casi total — es la única conversación del juego donde Valen, el que siempre tiene el dato, no interviene ni una vez. Se limita a observar cómo Threnn, Ilyara, Corwyn y Maelys llegan a las mismas fracturas que él lleva 30 años cargando solo. Si el jugador guardó silencio durante el debate (uno de los disparadores del encuentro individual), es **Maelys** quien busca a Valen después — reconocimiento entre dos que saben que la respuesta no les pertenece.
 
-**El beat de la cifra errónea:** es en este debate donde Valen escucha, de boca de uno de los élderes, que el "cada 300 años" que la Academy enseña a cada aprendiz no es un dato observado — es una cifra redondeada, transmitida sin revisión desde antes del cataclismo, para dar a los archivistas jóvenes una sensación de orden. Nadie mintió a propósito; nadie tampoco la corrigió nunca. Valen pasó 200 años calculando aceleraciones sobre una base que nunca fue sólida. No lo dice en voz alta en el Grove. Lo carga en silencio hasta el Sunken Archive, donde la inscripción Warden confirma que el verdadero patrón nunca tuvo período fijo — cada Muda depende de qué elige hacer un Warden vivo, en su cráter, con quien esté ahí para impedirlo o no — nunca de un calendario. La inscripción es también la primera confirmación real de la teoría que Valen viene cargando sin fuente desde el Acto 2 (Aether corrompido, God-Cores como cadáveres, Speck de la misma naturaleza) — treinta años de hipótesis se vuelven hecho en esta sala. El marco temporal en el que Valen creció, en cambio, era el que estaba mal. **Y cae con él la otra cifra:** no hubo Muda hace 110 años. Ese registro que Valen leyó de niño, el que le dio la carrera entera, era un asiento de archivo mal fechado. Las dos puntas de su medición —el período y el último evento— eran de la Academy, y ninguna de las dos existió.
+**El beat de la cifra errónea:** es en este debate donde Valen escucha, de boca de uno de los élderes, que el "cada 300 años" que la Academy enseña a cada aprendiz no es un dato observado — es una cifra redondeada, transmitida sin revisión desde antes del cataclismo, para dar a los archivistas jóvenes una sensación de orden. Nadie mintió a propósito; nadie tampoco la corrigió nunca. Valen pasó noventa años calculando aceleraciones sobre una base que nunca fue sólida. No lo dice en voz alta en el Grove. Lo carga en silencio hasta el Sunken Archive, donde la inscripción Warden confirma que el verdadero patrón nunca tuvo período fijo — cada Muda depende de qué elige hacer un Warden vivo, en su cráter, con quien esté ahí para impedirlo o no — nunca de un calendario. La inscripción es también la primera confirmación real de la teoría que Valen viene cargando sin fuente desde el Acto 2 (Aether corrompido, God-Cores como cadáveres, Speck de la misma naturaleza) — treinta años de hipótesis se vuelven hecho en esta sala. El marco temporal en el que Valen creció, en cambio, era el que estaba mal. **Y cae con él la otra cifra:** no hubo Muda hace 110 años. Ese registro que Valen leyó de niño, el que le dio la carrera entera, era un asiento de archivo mal fechado. Las dos puntas de su medición —el período y el último evento— eran de la Academy, y ninguna de las dos existió.
 
 ### Sunken Archive — la lectura de la inscripción Warden
 
@@ -424,7 +432,7 @@ Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de ve
   (Discord/Harmony) sobre una superficie o un objetivo a corta distancia.
   Herramienta de precisión, no arma — coherente con "académico, no
   guerrero"
-- **Adorno personal único:** anillo de plata élfico grabado con fecha — el aniversario de la "última Muda" según los registros de la Academy, 110 años atrás. **La fecha es falsa** (§Grove of Cycles / §Sunken Archive): Valen lleva doscientos años usando un anillo que conmemora un evento que nunca ocurrió, y no lo sabe hasta el Acto 3. Después del Archive, no se lo quita.
+- **Adorno personal único:** anillo de plata élfico grabado con fecha — el aniversario de la "última Muda" según los registros de la Academy, fechado 110 años atrás. **La fecha es falsa** (§Grove of Cycles / §Sunken Archive). Valen se lo hizo grabar a los 140, al salir de la sala donde los ancianos lo rechazaron — no como consuelo sino como ancla: la fecha que él sí podía probar. **Lleva noventa años usando un anillo que conmemora un evento que nunca ocurrió**, y no lo sabe hasta el Acto 3. Después del Archive, no se lo quita.
 
 ---
 
@@ -432,7 +440,9 @@ Pero Valen permite las bromas. De hecho, **las necesita.** Humor es escape de ve
 
 **Valen NO es:**
 - Sabio que todo sabe
-- Moralizador (el moralizador es Roen)
+- Moralizador (Valen juzga el dato, no a la persona — y **Roen tampoco es
+  moralizador**: Roen sostiene el peso moral sin dictaminar, ver
+  [[Roen-Ficha-Expandida-v1]] §Roen NO es. Corregido 2026-08-11)
 - Frío porque sea malvado
 
 **Valen SÍ es:**

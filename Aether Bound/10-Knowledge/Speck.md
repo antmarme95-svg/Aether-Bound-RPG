@@ -45,6 +45,20 @@ Encuentras la crisálida con Speck dentro — debería destruirla, pero no lo ha
 **No es destino, es convergencia:** Speck despertando, guardianas fallando, tú
 en el lugar correcto en el momento correcto.
 
+**FUENTE ÚNICA — la decisión del nido es una elección ilusoria (decisión de
+Boris, 2026-08-11).** El juego **ofrece** el gesto de destruir la crisálida: el
+prompt existe, el jugador puede intentarlo, y los compañeros presentes reaccionan
+al intento. Pero **no se completa** — el personaje no puede, y el juego no
+bifurca. Lo que el jugador elige no es el resultado, es **cuánto tarda en no
+hacerlo** y quién lo ve dudar.
+
+Es un beat de complicidad, no una rama: establece desde el Acto 1 que el
+protagonista ya desobedeció al Triune Council una vez, y le da a cada Pivote su
+primera lectura del jugador. **No existe rama "crisálida destruida"** — sin Speck
+no hay Bound Five, Acto 2, Acto 3 ni ninguno de los 5 finales. Ninguna ficha
+puede describirla como bifurcación con dos resultados; la formulación correcta es
+que el jugador **duda** y el Pivote responde a la duda.
+
 ## Las capas de verdad
 
 **Capa 1 — Lo que ve el mundo:**

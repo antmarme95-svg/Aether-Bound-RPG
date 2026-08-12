@@ -49,8 +49,8 @@ The Barkeep sets a drink down without being asked. Doesn't leave right
 away.
 
 BARKEEP
-You never did finish. Told me you'd get to it, that was —
-what, three winters ago now?
+You never did finish. Been sitting there with it a good
+while now.
 
 ROEN
 Didn't think you were keeping count.
@@ -243,11 +243,18 @@ CUT TO BLACK.
 
 **Ancla canónica:** *"I've buried people I should've protected. I'm not
 doing that again."* — dicha, según su ficha, **antes** de irse, no
-después. Roen se fue sin ceremonia y no volvió a ver al grupo. El cierre
-tiene que sonar distinto a los otros cuatro: **más corto en lo que Roen
-sabe, más frío, con menos certeza sobre cómo terminó**, porque Roen
-genuinamente no estuvo ahí para el final. Acá el Barkeep empuja más que
-en los otros, porque Roen da menos por su cuenta.
+después. **Roen estuvo en el cráter** (su escudo cae ahí en las cinco
+rutas — [[Pivotes/Dagna-Ficha-Expandida-v1]] §El quiebre físico de Roen);
+de lo que se va es de **lo que vino después**, durante el reinado, en la
+disolución del grupo que describe [[Los 5 Finales]] §F3. Corregido
+2026-08-11: la versión anterior lo tenía yéndose antes del clímax y sin
+saber cómo terminó, lo que contradecía la ficha y la matriz del cráter.
+
+El cierre tiene que sonar distinto a los otros cuatro: **más frío, más
+corto, sin ninguna nota de reconciliación**. La diferencia no es que
+Roen no sepa cómo terminó — sabe perfectamente, estuvo ahí. Es que no
+quiere contar la parte de después. Acá el Barkeep empuja más que en los
+otros, porque Roen da menos por su cuenta.
 
 ```
 BARKEEP
@@ -255,40 +262,46 @@ You keep saying "that one" different than the rest. Like
 it's not finished.
 
 ROEN
-Because it isn't. Not for me.
+It finished. I just didn't stay for what it turned into.
 
 BARKEEP
 Explain that.
 
 ROEN
-I left before the end of that one. Told them why, once, and
-meant it.
+I was there at the end. Saw it done. Then there was an after,
+and the after went on a long time, and I wasn't in it.
+
+BARKEEP
+You walked.
+
+ROEN
+I walked.
 
 BARKEEP
 Why?
 
 ROEN
 I've buried people I should've protected. Wasn't going to do
-it again. So I didn't stay to watch.
+it again. And what came after — I'd have had a hand in it.
+Every day. On purpose.
 
 BARKEEP
-That's not really an answer either. Watch what?
+Did you tell them? Any of them?
 
 ROEN
-(flat, closing the door on it)
-Something I didn't want a hand in.
-
-BARKEEP
-Fair enough. And after? You never went back, asked around?
-
-ROEN
-I don't know how it finished. Not really. Heard pieces, years
-later, secondhand. Didn't ask for more than that.
+Once. Meant it. Didn't make a speech out of it.
 
 He looks at the fire, not at anything in particular.
 
 BARKEEP
-That bother you? Not knowing?
+And since? You ever go back? Ask how they are?
+
+ROEN
+No. I know how they are. That's the part I don't say out
+loud.
+
+BARKEEP
+That bother you?
 
 ROEN
 Some nights.
@@ -297,8 +310,8 @@ BARKEEP
 And tonight?
 
 ROEN
-Some stories, you don't get the ending. You get the part
-where you left.
+Some stories don't end where you'd want them to. They just
+keep going without you, and you let them.
 
 The Barkeep doesn't ask again.
 

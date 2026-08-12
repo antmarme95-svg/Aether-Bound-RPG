@@ -187,7 +187,7 @@ Llegan al nido. Crisálida.
 
 Reconoce inmediatamente: esto es lo que Frontier High Command mencionó. Variable.
 
-Cuando el jugador decide salvar o destruir, Lyris dice: *"Cualquiera sea la decisión, requiere movimiento. Yo facilito."*
+Cuando el jugador duda frente a la crisálida, Lyris dice: *"Cualquiera sea la decisión, requiere movimiento. Yo facilito."*
 
 No es promesa emocional. Es oferta funcional.
 

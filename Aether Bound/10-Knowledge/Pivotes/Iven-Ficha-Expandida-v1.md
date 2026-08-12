@@ -219,11 +219,11 @@ Llegan al nido. Bestias guardianas. Crisálida.
 
 **Iven ve la crisálida y su cuerpo lo sabe antes que su cabeza.** No reconoce a Speck — nadie le dijo nunca qué buscaba. Reconoce **la sensación** de estar frente a la cosa por la que dos años de esperanza estaban esperando. Se le seca la boca. Se aleja tres pasos sin darse cuenta.
 
-Cuando el jugador decide salvarla o destruirla, Iven dice: *"Tu decisión. La respeto."*
+Cuando el jugador duda frente a la crisálida, Iven dice: *"Tu decisión. La respeto."*
 
-**Por dentro está haciendo cuentas.** Si la salvan, su asentamiento espera. Si la destruyen aquí y ahora, quizá el Council la considere entregada y quizá el remedio llegue igual — y quizá el jugador nunca sepa que Iven lo dejó pasar.
+**Por dentro está haciendo cuentas.** Si la sacan de ahí, su asentamiento espera. Si el jugador llegara a poder terminarla aquí y ahora, quizá el Council la considere entregada y quizá el remedio llegue igual — y quizá nadie sepa nunca que Iven lo dejó pasar.
 
-Los dos caminos pierden algo. Iven elige el que le da más tiempo, que es lo que siempre elige.
+Los dos caminos pierden algo. Iven no interviene en ninguno, que es lo que siempre hace: **deja correr el que le da más tiempo.** Cuando el jugador no puede hacerlo, Iven siente alivio y no sabe de qué — el cálculo se le resolvió solo, sin costo, y esa es exactamente la clase de suerte en la que un hombre así aprende a confiar demasiado.
 
 ### Escena: el primero (formación del grupo)
 

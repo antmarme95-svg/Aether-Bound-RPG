@@ -33,7 +33,9 @@ El mundo enseña el acoplamiento antes que cualquier texto. Zona de
 referencia: **Los Desfiladeros de Zephyr** ([[La Rueda]]) — Zona A (solo) →
 Zona B (obstáculo imposible sin tu primer compañero).
 
-[[Speck]] estadio 2 es fuente de acoplamientos nuevos; el input único en
+[[Speck]] en su fase de desvelamiento previa a E3 es fuente de acoplamientos
+nuevos (**no hay "estadios" de crecimiento** — corregido 2026-08-11 contra
+[[Speck]] §Un estadio de revelación, que derogó ese modelo); el input único en
 juego es [[Bond y el Bond Vacío|Bond]]; la intimidad los profundiza
 ([[The Tether]]: T1→T3 = variantes del link).
 

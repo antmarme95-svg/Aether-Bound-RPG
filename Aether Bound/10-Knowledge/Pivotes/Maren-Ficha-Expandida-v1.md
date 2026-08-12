@@ -145,7 +145,7 @@ Jugador: *"¿Viniste desde Rivermeet?"*
 
 Maren: *"No. Estaba viajando. Ruta comercial. Tu mensaje aceleró mis planes."* (Es mentira calculada — vino porque lo necesitaba, pero enmarcado como coincidencia profesional.)
 
-**En combate:** Maren usa gadgets — lanzadores de disco, herramientas de ingeniería como armas. Es táctica pura, sin emoción. Mata con precisión.
+**En combate:** Maren usa gadgets — lanzadores de disco, herramientas de ingeniería como armas. Es táctica pura, sin emoción. **No mata:** es Strategist, y el Strategist no inflige daño directo ([[Acoplamientos]]) — sus gadgets abren, marcan, inmovilizan y exponen, y el golpe lo da otro. Su precisión es la del que decide dónde va a caer el golpe ajeno.
 
 Cuando el jugador pelea a su lado, Maren nota: *"Tu forma mejoró desde Rivermeet. Alguien te entrenó."* (Observación envuelta en cumplido.)
 
@@ -164,7 +164,7 @@ Jugador: *"¿Qué es?"*
 
 Maren: *"Depósito de energía. O contenedor. Necesitaría verlo de cerca para saber si está vivo o es solo... cristal."*
 
-Cuando el jugador decide salvar o destruir, Maren simplemente asiente. *"Tuya es la elección. Yo solo te ayudaré a vivir con ella."*
+Cuando el jugador duda frente a la crisálida, Maren simplemente asiente. *"Tuya es la elección. Yo solo te ayudaré a vivir con ella."*
 
 **No está siendo fría — está siendo compañera.** Honra la decisión sin juzgar.
 

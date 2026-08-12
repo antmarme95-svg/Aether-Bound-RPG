@@ -25,15 +25,32 @@ Fellowship (LotR) con fricción (Vox Machina).
 que Speck es la llave de [[El Mundo y la Muda|la Muda]] — con una verdad
 parcial diseñada para dividir al grupo.
 
-**Clímax — La Traición por Convicción.** El Compañero 3 ([[Los 9 Pivotes]])
-concluye que Speck tiene que ser entregada a su institución — viva, no muerta:
-matarla no sana nada y perpetúa la corrupción ([[Speck]] §Capa 5) — y actúa.
-No es malvado. Se lleva a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1):
-**orfandad mecánica** — pierdes tu link firma, porque perdiste al compañero,
-no un dispositivo ([[Los 9 Links del Pivote]], [[Bond y el Bond Vacío]]).
+**Clímax — La Traición por Convicción, en dos tiempos** (corregido 2026-08-11,
+4ª re-corrida). El Compañero 3 ([[Los 9 Pivotes]]) concluye que Speck tiene que
+ser entregada a su institución — viva, no muerta: matarla no sana nada y
+perpetúa la corrupción ([[Speck]] §Capa 5). No es malvado. Y no actúa de una
+sola vez:
 
-**Acto 3.** Perseguir/entender a C3 → los tres reinos movilizan ejércitos →
-The First Wound: clímax y [[Los 5 Finales]].
+- **La ruptura**, antes del descenso al Sunken Archive: el Pivote declara su
+  convicción y rompe con el jugador. **Acá ocurre la orfandad mecánica** —
+  pierdes tu link firma, porque perdiste al compañero, no un dispositivo
+  ([[Los 9 Links del Pivote]], [[Bond y el Bond Vacío]]). El Pivote **sigue en
+  el grupo**: necesita el Fragmento tanto como ellos.
+- **La toma**, en el último corredor del ascenso: se lleva a Speck
+  ([[El Cráter — Matriz de Rutas]] §1, paso 1).
+
+El tramo entre las dos —approach e interior del Archive, con el link muerto y
+Speck todavía con el jugador— es la ventana obligatoria del beat del Bond vacío.
+**No se puede colapsar en un solo golpe:** sin ese tramo el pilar 2 no tiene
+dónde pagarse.
+
+**Acto 3.** Perseguir/entender a C3 → The First Wound: clímax y
+[[Los 5 Finales]]. **No hay movilización de ejércitos** (corregido 2026-08-11):
+la escala del Acto 3 es deliberadamente mínima — contingentes sueltos que
+"mueven el tablero medio metro" ([[Geografía y Ciudades]] §ACTO 3, sub-beat 4) y
+un mensajero en el borde del cráter ([[El Cráter — Matriz de Rutas]] §2). La
+línea anterior prometía escala militar que ninguna ficha ni la matriz sostienen;
+era residuo del GDD congelado.
 
 ## El gancho interno
 

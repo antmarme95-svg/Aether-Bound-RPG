@@ -143,7 +143,7 @@ El grupo llega al nido. Bestias guardianas. Crisálida.
 
 **Dagna en combate:** cuerpo de fortaleza. Se planta entre las bestias y el resto del grupo, absorbe el primer golpe siempre. No se mueve del centro. Es la Vanguard clásica — no busca gloria, busca no perder a nadie de los suyos.
 
-Cuando el jugador decide salvar o destruir la crisálida, Dagna asiente. No opina. *"Tuya es la elección."* Es la misma frase que le ha dicho al jugador docenas de veces en cinco años. Es su fórmula.
+Cuando el jugador duda frente a la crisálida, Dagna asiente. No opina. *"Tuya es la elección."* Es la misma frase que le ha dicho al jugador docenas de veces en cinco años. Es su fórmula.
 
 **Detalle clave:** cuando Speck sale de la crisálida, Dagna **no la toca, no la comenta, no la mira mucho.** Pero desde ese momento, sin decírselo a nadie, **se posiciona siempre entre Speck y cualquier ruido.** Es reflejo de Vanguard aplicado a lo pequeño. Speck le fascina en silencio; Dagna nunca lo verbaliza. El jugador tarda semanas en notar el patrón. Roen lo nota en horas.
 
@@ -268,7 +268,7 @@ No hay diálogo en la persecución. Roen y Dagna se miran una vez a media distan
 
 Lo que distingue a esta ruta no es solo lo que hace Dagna — es también **lo que le hace a Roen**: es la única ruta donde el quiebre de un fijo (Roen — ver [[Los 9 Pivotes]] §Superlativo Consolidado, "la traición que rompe al ancla") pesa tanto como el de la propia Pivote.
 
-El jugador llega al borde del cráter. Se detiene a cinco pasos. Roen se detiene detrás, un poco a un lado. Valen queda más atrás. Darro queda el último, escudo bajo.
+El jugador llega al borde del cráter. Se detiene a cinco pasos. Roen se detiene detrás, un poco a un lado. Valen queda más atrás. Darro queda el último, hachas bajas.
 
 Dagna hace algo que nadie del elenco hace: **abraza a Speck antes de entregarla.** Se agacha, sostiene a Speck con las dos manos contra el pecho durante unos segundos, con la cara enterrada un momento en el pelaje. Nadie ve la cara de Dagna en ese instante — el escudo la tapa por el ángulo. Cuando se endereza, Speck sigue en sus brazos, pero ya está separada del pecho, ofrecida hacia el jugador y hacia el mensajero de Deepstone que viene subiendo desde dentro del cráter hacia el borde.
 
@@ -304,7 +304,7 @@ En ese momento — con Dagna quieta, Speck todavía en sus brazos, el mensajero 
 
 El jugador lo nota. Darro lo nota. Nadie más — Dagna sigue con los ojos en el mensajero que se acerca, no en Roen.
 
-**Darro se acerca a Roen** mientras el jugador decide qué hacer. No dice nada. Se sienta a su lado, en el suelo, escudo también bajado — un gesto sin palabras, dirigido a un compañero al que respeta, sin juzgar todavía a la enana que puede o no traicionar. Dura hasta que el jugador decide moverse. El peso que tiene esto desde el lado de Darro está en [[Darro-Ficha-Expandida-v1|Darro]] §Dinámicas con Roen y Valen (El Triángulo del Grupo).
+**Darro se acerca a Roen** mientras el jugador decide qué hacer. No dice nada. Se sienta a su lado, en el suelo, hachas guardadas — un gesto sin palabras, dirigido a un compañero al que respeta, sin juzgar todavía a la enana que puede o no traicionar. Dura hasta que el jugador decide moverse. El peso que tiene esto desde el lado de Darro está en [[Darro-Ficha-Expandida-v1|Darro]] §Dinámicas con Roen y Valen (El Triángulo del Grupo).
 
 ---
 

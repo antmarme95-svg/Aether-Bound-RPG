@@ -92,20 +92,22 @@ really. I know the part I lived.
 
 (beat)
 
-Long time ago, I took a job. Wasn't supposed to be anything.
-Pack it up, deliver a package, go home.
+Long time ago, I hired on to somebody's crew. Wasn't
+supposed to be anything. Clear out a few nests, put out the
+lights in a few old stones, go home.
 
 (beat)
 
-Package turned out to be a person.
+One of the things in those nests turned out to be a person.
 
 (beat)
 
-Wasn't just me who got that job offer. I know that much.
+I wasn't the only one who signed on to that crew, either.
+Took me a long while to work out why.
 
 (beat)
 
-I'm going to tell you what happened on mine.
+I'm going to tell you what happened to us.
 
 He looks up — not at the room, at nothing in particular. The fire
 catches in his eyes for a second, then fades.
@@ -116,13 +118,17 @@ dawn light — whichever fits the player's race, see "Nota sobre el
 puente al Acto 1" abajo). Roen's voice carries over, unbroken.
 
 ROEN (V.O.)
-Everybody signs that contract for their own reasons. Some for
+People sign that contract for their own reasons. Some for
 the coin. Some because a debt came due. Some just needed
 somewhere to put themselves that wasn't here.
 
 (beat)
 
 Nobody signs it because they read the fine print.
+
+(beat)
+
+I never signed one. Doesn't mean I didn't pay.
 
 (beat)
 

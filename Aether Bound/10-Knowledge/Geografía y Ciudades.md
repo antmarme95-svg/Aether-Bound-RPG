@@ -59,7 +59,8 @@ updated: 2026-07-27
   con bestias de Aether sino porque está demasiado lejos de todo.
   - Donde Roen fue guardia del Triune Council (puesto de vigilancia interior, no
     trinchera contra The Wilds)
-  - Donde Roen eligió renunciar
+  - Donde Roen **decidió** renunciar (el acto formal fue después, en la puerta
+    del Triune Council en Rivermeet — ver [[Roen-Ficha-Expandida-v1]] §Quiebre)
   - Arquitectura: fuertes, postas de vigilancia, simplicidad defensiva
   - Clima: ventoso, árido — contraste con la humedad fluvial de Rivermeet
   - **Corrección de mapa:** en el macro-mapa debe leerse detrás/lejos de
@@ -72,7 +73,7 @@ updated: 2026-07-27
   - 5-10 años más aguanta si no ocurre la Muda
   - Arquitectura: granja, casas simples, pastoral
 
-- **Aethelgard Watch** — puesto militar de Aethelgard en el paso de montaña, mirando hacia **The Wilds** (no hacia Ignis Reach — §Topología: es una rueda, no una malla; los dos reinos no se conectan entre sí de forma directa). Ver perfil completo en §Los Cuatro Puestos de Vigilancia — es el mismo puesto, no uno adicional. **Cinder Ascent es el radio de Ignis Reach, del lado opuesto de la rueda — no confundir los dos nombres.**
+- **Aethelgard Watch** — puesto militar de Aethelgard **junto a River Road**, con entrada desde Rivermeet, mirando hacia **The Wilds** (no hacia Ignis Reach — §Topología: es una rueda, no una malla; los dos reinos no se conectan entre sí de forma directa). Ver perfil completo en **§M) TORRES DE GUARDIA POR RAZA** — es el mismo puesto, no uno adicional. (Corregido 2026-08-11: decía "en el paso de montaña", que contradecía §M —River Road es ruta fluvial—, y citaba una "§Los Cuatro Puestos de Vigilancia" que no existe; las torres son **tres**, una por reino.) **Cinder Ascent es el radio de Ignis Reach, del lado opuesto de la rueda — no confundir los dos nombres.**
   - Soldados humanos patrullan
   - Vigilancia del radio de Aethelgard hacia The Wilds, no tránsito a Ignis Reach
   - Control de tráfico comercial hacia The Wilds
@@ -465,11 +466,17 @@ BOTTOM:   The First Wound (cementerio God-Cores)
   - Valen: "no toquen, está desnaturalizado"
   - Bram: "podría limpiarla? No. Sabría mal."
 
-### H) LUGARES PRIVADOS DE LOS PIVOTES (Donde cada uno fue roto/reclutado)
+### H) LUGARES PRIVADOS DE LOS PIVOTES Y LOS FIJOS (Donde cada uno fue roto/reclutado)
+
+> Incluye sitios de los 3 fijos (Roen, Darro, Valen), no solo de los 9 Pivotes —
+> el encabezado decía "de los Pivotes" y listaba **Roen's Vigil Post**, que es de
+> un fijo C1. Corregido 2026-08-11.
 
 #### **Roen's Vigil Post** (West, edge of Mistbound)
 - Ruina pequeña de puesto de guardia (Triune Council colors faded)
-- Conexión narrativa: Donde Roen renunció
+- Conexión narrativa: Donde Roen **decidió** renunciar — la purgación del
+  asentamiento Mistbound que fue su quiebre ocurrió bajo su guardia desde este
+  puesto. El acto formal (dejar el escudo) fue después, en Rivermeet
 - Mecanismo: Espacio vacío, melancólico (poco loot)
 - Dinámicas:
   - Roen vuelve aquí en silencio (contemplation)
@@ -829,7 +836,8 @@ puente narrado al Acto 1.
    - Encuentro con Speck (crisálida)
    - **El Pivote (C3) se une** — Roen y Valen son testigos del encuentro, no
      sus causantes ([[Estructura Dramática]])
-   - Decisión: ¿salvar o destruir?
+   - La duda frente a la crisálida — **elección ilusoria**: el gesto de
+     destruirla se ofrece y no se completa ([[Speck]] §El encuentro)
    - Primer God-Core destruido
 
 4. **Después del Nido**
@@ -1054,6 +1062,30 @@ Los siguientes 3-5 beats de la ruta Bram están marcados por esta incertidumbre:
 
 **Duración:** ~45-60 min. **Estructura:** 5 sub-beats en cadena continua — sin puntos de guardado clásicos entre ellos, sin regreso posible al Acto 2. Todo lo que se sembró en Grove of Cycles ([[Grove of Cycles — Escena del Acto 2]]) y en The Reckoning florece o se quiebra aquí.
 
+#### 0. La ruptura del Pivote (antes del descenso)
+
+> **Sub-beat agregado 2026-08-11 (4ª re-corrida).** La traición tiene dos tiempos:
+> la **ruptura** acá y la **toma** en el sub-beat 3. Antes eran uno solo y el beat
+> obligatorio del Bond vacío no tenía ventana — ver [[Bond y el Bond Vacío]]
+> §La traición tiene dos tiempos y [[Estructura Dramática]] §Clímax.
+
+En Driftmarket, después de The Reckoning, el Pivote deja de fingir. No huye, no
+ataca, no hace un discurso: **dice lo que va a hacer.** Que Speck tiene que ir a
+su institución, viva, y por qué — la convicción que su ficha desarrolla, dicha en
+voz alta, delante de todos, sin pedir permiso ni perdón. El grupo no lo expulsa
+porque no puede: nadie más sabe leer lo que hay abajo, y el Fragmento no espera.
+
+**Acá muere el link.** El botón de Bond deja de responder al Pivote a partir de
+esta escena, y el juego no lo anuncia con UI — el jugador lo descubre picándolo.
+Lo que hace de esto un golpe distinto a la desaparición es que **el Pivote sigue
+caminando con el grupo**: come, monta guardia, cubre flancos. Está a tres metros
+todo el tramo siguiente. La pérdida no es una ausencia, es una presencia que ya
+no responde.
+
+Si el jugador confrontó al Pivote equivocado en Driftmarket, la ruptura llega
+sobre un grupo que ya estaba roto por el lado incorrecto, y el error se vuelve
+irreversible acá, no en el corredor.
+
 #### 1. Approach al Sunken Archive
 
 El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. El último de los tres flashes del jugador — cristal debajo del pelaje, facetas donde deberían haber ojos — ya pasó y sigue siendo privado (canon en [[Speck]] §Capa 2, tres flashes fijos, ni uno más), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
@@ -1066,9 +1098,12 @@ Aquí the Wanderer's Goggles muestran, por primera vez, algo que importa. El jug
 
 El grupo reacciona. Cada Pivote tiene su reacción canónica que su ficha desarrollará; lo que este documento fija es el espacio: Valen se sienta en el suelo. Darro deja caer un chiste que muere en el aire. Roen mira a Speck y no aparta la mirada. Speck permanece quieta, como si supiera que la mirada la ubica.
 
-#### 3. Traición mecánica al salir del Archive
+#### 3. La toma al salir del Archive — culminación de la traición
 
-Fría, rápida, sin épica. El grupo empieza el ascenso hacia la superficie. En el último corredor, el Pivote se separa — pretexto menor (revisar una inscripción, cubrir la retaguardia, cualquier cosa que suene razonable durante tres segundos). Cuando el resto voltea, el Pivote tiene a Speck. Ruta lateral, salida secundaria, sin diálogo largo. El grupo queda desarmado momentáneamente — no golpeado, **desalojado**. El Pivote no explica; explicar es Acto 4. Aquí solo actúa. Si el jugador rompió el Bond equivocado en Driftmarket, la traición cae doblemente: perdió al Pivote real Y al que confrontó por error.
+Fría, rápida, sin épica. **No es la revelación** — eso ya pasó en el sub-beat 0, y
+todos llevan dos tramos sabiéndolo. Es el Pivote ejecutando lo que anunció, y la
+escena tiene que jugarse como algo que el grupo vio venir y no pudo impedir: sin
+sorpresa, sin música de giro. El grupo empieza el ascenso hacia la superficie. En el último corredor, el Pivote se separa — pretexto menor (revisar una inscripción, cubrir la retaguardia, cualquier cosa que suene razonable durante tres segundos). Cuando el resto voltea, el Pivote tiene a Speck. Ruta lateral, salida secundaria, sin diálogo largo. El grupo queda desarmado momentáneamente — no golpeado, **desalojado**. El Pivote no explica; explicar es Acto 4. Aquí solo actúa. Si el jugador rompió el Bond equivocado en Driftmarket, la traición cae doblemente: perdió al Pivote real Y al que confrontó por error.
 
 Es el **paso 1** de [[El Cráter — Matriz de Rutas]] §1, con dos excepciones declaradas:
 
@@ -1146,7 +1181,8 @@ Los 4 elementos que se sembraron en el debate del Elder Circle ([[Grove of Cycle
 ## Notas de Narrativa por Locación
 
 ### Mistbound Frontier
-- **Roen's Refusal:** Donde Roen renunció al Triune Council
+- **Roen's Refusal:** Donde Roen decidió renunciar al Triune Council (la
+  renuncia formal fue en Rivermeet, semanas después)
 - **Culture:** Baja política, Standing irrelevante
 - **Mechanical:** Primera introducción a Standing system (se gasta rápido)
 

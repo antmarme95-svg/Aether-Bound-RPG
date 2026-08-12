@@ -1,5 +1,102 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-11] QA de canon | 4ª re-corrida del ciclo de la 17ª — 8 críticos, 6 decisiones de Boris, todos corregidos a la fuente
+
+**Fase 0 — linter:** `check_canon.py` en **0 CRITICAL / 0 MEDIUM / 28 INFO**
+antes de spawnear nada. Los 28 INFO son cifras en diálogo (verificación
+manual) y wikilinks rotos que viven todos en `LOG.md` y
+`Current-State-Historico.md` — bitácora, no canon. Vía libre.
+
+**Fase 1 — 2 subagentes Opus en frío, en paralelo**, los dos con el contrato
+de reportar la clase completa y los dos apuntados explícitamente a
+`El Cráter — Matriz de Rutas` como fuente única (la nota de método que dejó
+la 16ª tras 7 falsos positivos por no encontrarla). **Funcionó: ninguno de
+los dos reportó un solo falso positivo de la mecánica del cráter.**
+
+Resultado: **congruencia 4C/12M/6L · dramaturgia 4C/8M/8L.**
+
+### Los 8 críticos y cómo se cerraron
+
+1. **La decisión de la crisálida** (10 archivos la daban como bifurcación
+   real; `Speck.md` y `Estructura Dramática` decían que no ocurre).
+   **Decisión de Boris: elección ilusoria.** El juego ofrece el gesto y no
+   lo completa; lo que el jugador elige es cuánto tarda en no hacerlo y
+   quién lo ve dudar. Fuente única nueva en `Speck.md` §El encuentro;
+   propagado a los 11 sitios. Re-grep: 0 residuos.
+2. **Dónde renunció Roen** (POI de frontera con flashback vs. la puerta del
+   Council). **Decisión de Boris: dos momentos, un arco** — decide en la
+   frontera, formaliza en Rivermeet. Precisado en `Geografía` ×3.
+3. **Darro con escudo** en la escena del cráter de Dagna, contra la matriz
+   de armamento ratificada (hachas cortas, sin armadura pesada). Su propia
+   ficha ya resolvía la escena bien. Corregido en `Dagna-Ficha` ×2.
+4. **El cierre F3 del bookend** tenía a Roen ausente del clímax ("I don't
+   know how it finished"), contra su ficha, `Los 5 Finales` §F3 y
+   `Dagna-Ficha` (su escudo cae en el cráter en las cinco rutas). **Decisión
+   de Boris: se va después del clímax.** Diálogo F3 reescrito: sabe cómo
+   terminó, se fue de lo que vino después. Tono frío conservado.
+5. **El "Eco final" del Bond Vacío no tenía ventana** — el Pivote se llevaba
+   a Speck en el corredor y de ahí iba directo al cráter. El pago entero del
+   pilar 2 sin lugar donde ocurrir, y la excepción de Bram apoyada en aire.
+   **Decisión de Boris: adelantar la traición.** Ahora tiene **dos tiempos**:
+   la **ruptura** en Driftmarket (ahí muere el link, y el Pivote sigue
+   caminando con el grupo — la pérdida es una presencia que ya no responde) y
+   la **toma** en el corredor, que pasa a ser culminación. El tramo entre las
+   dos (approach + interior del Archive) es la ventana de los beats 2-3.
+   **El Eco final se ancla en el cráter**, porque E3 solo ocurre ahí
+   (`Speck` §Capa 4). Nuevo sub-beat 0 en `Geografía` §ACTO 3; reescrito
+   `Bond y el Bond Vacío` §La traición tiene dos tiempos; `Estructura
+   Dramática` §Clímax; `El Cráter` §1 paso 1. Excepción de Bram reconciliada:
+   en su celda el sub-beat 0 **sí ocurre** (anuncia que se lo pidieron, no
+   que vaya a obedecer), lo que hace más fuerte la inversión.
+6. **Los 5 gates no eran mutuamente excluyentes** y la fila F4 de la tabla
+   omitía las 2 condiciones globales — leída como fuente única, gateaba F4
+   en cualquier partida. **Decisión de Boris: F4 gana** si sus 2 condiciones
+   están cumplidas; si no, gana el gate de la acción. Añadida regla de
+   precedencia + los dos casos resueltos (F1+F4: el mensajero neutralizado
+   "no vuelve a levantarse"; F3+F4: cruzar después de que ella contestó no
+   es F3).
+7. **Vanguard con ventana de remate en T1**, contra la misma sección que
+   dice que recién ve el lanzamiento en T2 (dos pasadas distintas, la vieja
+   quedó muerta) y contra el guión ya escrito. Corregida la línea vieja.
+8. **La cifra de Valen.** **Decisión de Boris: son ~90 años** (230 − 140).
+   Corregida la clase real —tiempo desde la negativa de los ancianos— en
+   `Valen-Ficha` ×3 y `Los 3 Links` §T3. **Acotación de la 4ª:** de los 7
+   sitios que el subagente reportó, **3 no eran de esa clase** (antigüedad
+   de los registros, y cuándo estudió en Shattered Spire — con 230 años,
+   "hace 200" ahí es correcto). Aritmética fijada en nota de canon. El
+   anillo se resolvió como beat: se lo hizo grabar a los 140, al salir de la
+   sala donde lo rechazaron.
+
+### Medios cerrados en la misma pasada
+
+Maren "mata con precisión" → Strategist no inflige daño directo · Roen
+"moralizador" con signo opuesto en dos fichas vivas · `Acoplamientos` seguía
+citando el modelo de "estadios" de Speck que `Speck.md` derogó · el bookend
+F1 metía "three winters ago" entre apertura y cierre, rompiendo el
+dispositivo · Aethelgard Watch "en el paso de montaña" vs. §M (River Road) +
+cita a una "§Los Cuatro Puestos" inexistente (son tres) · Vekka pedía "su
+espada" a un jugador cuya celda usa war flail · el superlativo de F4
+precisado contra el Momento de Persona 5 · "los tres reinos movilizan
+ejércitos" en `Estructura Dramática` era residuo del GDD y contradecía la
+escala mínima del Acto 3 · redacción autocontradictoria del epílogo F2a de
+Nyael · "The Bound Five talla SPECK" cuando el grupo no siempre es cinco ·
+§H listaba un sitio de un fijo bajo "de los Pivotes".
+
+**Y el más visible:** `Guion/Apertura — Roen Viejo` (ratificado, primera
+línea del juego) describía el trabajo de Roen como una entrega — *"deliver a
+package"*, *"everybody signs that contract"* — reintroduciendo la ambigüedad
+del Contrato de Conquistador que se había corregido el 08-10 **solo en la
+escena jugable**. Mismo bug, posición más visible del guión. Reescrito.
+
+**Nota de método de la 4ª:** los 8 críticos y la mayoría de los medios son
+fallas de **propagación**, no de escritura — un fix correcto aplicado en un
+archivo y no en la clase completa. El linter no los ve porque ninguno rompe
+un enlace ni una cita §. Es exactamente el cuello de botella que
+[[Lecciones]] ya nombra, y sigue siendo el que más cuesta.
+
+**Un crítico propio:** una cita §  que agregué en el fix de Nyael no
+resolvía; el linter lo cazó en el checkpoint. Corregido antes de commitear.
+
 ## [2026-07-24] design/QA | §10 generado — 5/6 aprobados + regla nueva anti-texto-en-imagen
 
 **Ronda de QA de los 6 briefs de §10** (Isolde Marrow, Tobin Hale, Threnn,
