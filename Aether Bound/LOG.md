@@ -1,5 +1,113 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon/propagación | La ruptura de dos tiempos llega a las 12 fichas — bloque cerrado
+
+**Qué se cerró:** el bloque de propagación que era el pendiente más grande del
+vault (punto 2 de *Inmediato*). El canon estructural de la 4ª y la 5ª
+re-corrida —**la traición del Pivote tiene dos tiempos**— vivía solo en sus
+fuentes ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos,
+[[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3) y no estaba en ninguna de
+las 12 fichas. Ahora está en las 12. **Cuatro tandas, linter en 0 críticos
+antes de cada commit.**
+
+**Qué se escribió en cada ficha de Pivote:**
+- **Sub-beat 2b — la ruptura**, en la sala del Fragmento: el Pivote declara,
+  no huye, y **ahí muere el link**. Sube con el grupo el ascenso entero.
+- **El obstáculo firma del link perdido** durante el ascenso — contenido nuevo,
+  no existía en ninguna ficha. Es la ventana del beat del Bond vacío, y sin él
+  el pilar 2 no se pagaba.
+- **Sub-beat 3 podado**: la toma deja de ser revelación. Fuera el
+  *"¿lo sabías TODO ESTE TIEMPO?"*, fuera el shock de los tres fijos, fuera la
+  explicación — todo eso se mudó al 2b. Lo que queda es la acción física y, a
+  lo sumo, una frase.
+- **Índice a 6 sub-beats** (1, 2, 2b, 3, 4, 5) en el título de sección y en las
+  líneas de "estructura ratificada".
+- **Ubicación de la línea canónica declarada explícitamente** en la sección
+  §Línea Canónica de cada ficha.
+
+**Las nueve formas — se repartieron ANTES de escribir, en una sola pasada
+comparativa**, siguiendo la lección de método de [[El Cráter — Matriz de
+Rutas]] §4 (escribir N variantes en secuencia contra un mismo criterio las
+homogeneiza). El eje anti-convergencia elegido fue **a quién le habla cada
+uno**, y no se repite ninguno:
+
+| Pivote | Forma de la ruptura | Le habla a | Línea canónica |
+|---|---|---|---|
+| **Maren** | dos frases, parte de operaciones; no se justifica | al grupo entero | **2b** — no se repite en el corredor |
+| **Torgan** | cuatro líneas, notificación de cláusula | al jugador, de frente | **2b** — en el corredor solo *"Fue verdad todo."* |
+| **Iven** | desborde entrecortado; el único que declara pidiendo que lo detengan | al suelo, después a gritos | **2b** — lo único que le sale ordenado |
+| **Sereth** | quince líneas didácticas y **ninguna explica el método** | solo al jugador, ignorando al resto | **cráter (5)** — retención deliberada |
+| **Bram** | declara igual que los ocho y **no obedece** | al grupo; la negativa al jugador | ya estaba en su escena, que se movió entera |
+| **Lyris** | tres frases y vuelve a volar | **a Speck**, a ninguna persona | **toma (3)** — la única frase que le dirige al jugador |
+| **Nyael** | **sin diálogo**: no está en la sala | nadie | la nota del nicho, como siempre |
+| **Vekka** | dos frases + **desmonta los módulos del jugador ahí mismo** | al trabajo, no a una persona | **cráter (5)** — su declaración se ejecuta con las manos |
+| **Dagna** | voz quebrada desde la primera palabra | **a Roen**, no al jugador | **cráter (5)** — abajo solo *"Lo siento."* |
+
+**Decisiones tomadas donde el canon no cerraba (conservadoras, ninguna
+re-decide canon):**
+1. **Sereth.** Su §sub-beat 5 declara que el cráter es *"la única escena de
+   Acto 3 donde Sereth explica su método"*, y la nueva forma le pide quince
+   líneas en la ruptura. Se resolvió separando **decisión** de **método**: en
+   la sala del Fragmento expone qué va a hacer con precisión total y **aplaza**
+   toda pregunta sobre la conducción (*"esa pregunta tiene una respuesta larga
+   y este no es el lugar"*). El superlativo del cráter queda intacto, y la
+   retención pasa a ser en sí misma su arquetipo — es la única declaración
+   larga del elenco que no contiene la tesis de quien la dice.
+2. **Vekka.** Su ruptura es **una operación de taller**, no un discurso: le
+   desmonta al jugador los módulos del Warforging en la sala del Fragmento.
+   Es la única celda donde el jugador **ve** morir el link en vez de
+   descubrirlo picando un botón, y sale directo de la regla ya escrita en
+   [[Los 9 Links del Pivote]] (*"los desmonta al irse"*).
+3. **Nyael.** Se movió su separación al **descenso interno del Archive** (antes
+   estaba presente en todo el interior): hace la caricia en el cuello de Speck
+   en los corredores exteriores y no vuelve. La ruptura la juega el grupo —
+   Roen cuenta cabezas y se detiene en cuatro. Su trampa amorosa es la única
+   sin Pivote en cuadro: el encuadre vacío de la Link Cam es literal.
+4. **Bram.** Su escena de rechazo **no se reescribió** — se movió entera del
+   corredor a la sala del Fragmento, que es donde el canon nuevo la ubica. Se
+   le agregó la trampa amorosa **invertida** (el sting completo) y un sub-beat
+   3 nuevo: *"El corredor donde no pasa nada"*, con regla de escritura para que
+   no lea como alivio.
+5. **Valen — convergencia de tanda rota.** Sus reacciones en Maren/Sereth/Iven
+   usaban las tres la misma fórmula (*"noté X, lo modelé, esperé estar
+   equivocado"*). Se le cambió la **forma** a las tres sin tocar el dato: con
+   Maren **pregunta** en vez de afirmar; con Sereth **clasificó mal** el dato
+   que sí tenía (*"I filed it as intellectual growth"*); con Iven se lo dice
+   **al jugador**, después, como falla de método propio (*"I filed it as
+   homesickness"*). La versión duplicada en §Dinámicas de Iven se alineó.
+
+**Los 3 fijos (tanda 4) — pasada de verificación.** La única infracción real de
+la regla de [[El Cráter — Matriz de Rutas]] §Regla de uso (*narran su reacción,
+nunca el quiebre*) estaba en **Roen**: su §Escena 1 re-narraba la intención de
+cada Pivote en una lista propia. Se recortó a una frase de contexto + puntero,
+y la tinta se puso en lo que le pasa a Roen durante el ascenso — carga a Speck
+y no la suelta, y deja que el Pivote lo ayude aunque le duela más aceptarlo que
+negárselo. **Valen y Darro ya cumplían**: sus entradas por Pivote son reacción
++ puntero. Solo se les actualizaron los punteros al par 2b/3 y el encabezado de
+la escena de Bram.
+
+**Corolario de superlativos frágiles — verificado, sin contradicción nueva.**
+*"Darro se queda mudo, la única vez en la campaña"* sigue siendo exclusivo del
+cráter de Vekka ([[Darro-Ficha-Expandida-v1]] §Traición, arbitrado en la 12ª
+ronda). La ruptura de Vekka se escribió **con Darro gritando**, no mudo, y con
+un puntero explícito a la fuente para que ninguna re-corrida futura lo reclame
+dos veces.
+
+**Fuera de las 12 fichas — un fix a la fuente.** [[Geografía y Ciudades]] §ACTO
+3 sub-beat 3, *Variante Bram*, seguía narrando el rechazo de Bram **en el
+corredor** (residuo del canon viejo, en el mismo documento que ya declaraba el
+2b arriba). Corregido: el corredor pasa sin toma y el rechazo apunta al 2b.
+
+**Ambigüedad anotada, sin resolver (no bloquea nada).** [[Los 9 Links del
+Pivote]] §Tiers por Tether dice que Dagna clava la **Primera Cuña** *"en la roca
+del nido"* durante la traición — pero su traición ocurre en el Archive y el
+cráter, no en El Nido. La ruptura de Dagna se escribió **sin** la cuña para no
+contradecir ninguna de las dos fuentes. Queda decidir dónde vive ese objeto
+firma (y, si llegó a T3, dónde deja el martillo).
+
+**Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
+`23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
+
 ## [2026-08-12] spike/godot | Dagna camina de verdad — retargeting stock + 3 bugs de importación que el spike anterior tapaba
 
 **Qué se cerró:** la brecha de *feel* entre los dos motores del spike de

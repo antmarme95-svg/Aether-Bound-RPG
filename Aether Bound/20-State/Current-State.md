@@ -167,44 +167,29 @@ agachada. El jugador sigue idle en los dos motores.
    ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
    2026-08-10, ver [[LOG]]). Sigue directo de
    [[Guion/Encuentro con Roen]].
-2. **🔨 BLOQUE DE PROPAGACIÓN — las 12 fichas. Empezar por acá, y no
-   mezclarlo con más QA.** Es el pendiente más grande del vault y la
-   única razón por la que el sprint no cierra.
+2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
+   Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
+   linter en **0 críticos** y commit por tanda:
+   - **Tanda 1** — Maren, Torgan, Iven, Sereth.
+   - **Tanda 2** — Bram, Lyris, Nyael (+ [[Geografía y Ciudades]] §3,
+     variante Bram, que seguía ubicando su rechazo en el corredor).
+   - **Tanda 3** — Vekka, Dagna.
+   - **Tanda 4** — Roen, Valen, Darro (pasada de verificación: se recortó
+     la re-narración del quiebre en Roen y se rompió la convergencia de
+     fórmula de Valen).
 
-   **Qué pasó:** la 4ª y la 5ª re-corrida cambiaron canon estructural
-   (ver punto siguiente) y ese canon **no está en ninguna de las 12
-   fichas**. Los dos subagentes de la 5ª lo reportaron por separado,
-   sin verse. No es un fix de línea: es escritura.
+   Cada ficha de Pivote tiene ahora **sub-beat 2b (la ruptura, sala del
+   Fragmento)**, el **obstáculo firma del link perdido** en el ascenso, el
+   **sub-beat 3 podado** a culminación sin sorpresa, el índice en **6
+   sub-beats (1, 2, 2b, 3, 4, 5)**, y la línea canónica con ubicación
+   declarada explícitamente en su sección.
 
-   **Qué hay que hacer, por ficha (9 Pivotes + Roen/Valen/Darro):**
-   - Escribir la **ruptura** — el Pivote declara en la sala del
-     Fragmento y el link muere ahí. **Nueve formas desiguales, no una
-     plantilla** (decisión de Boris): una frase seca para Maren, quince
-     líneas para Sereth, casi ninguna palabra para Vekka. El beat se
-     define por su función, no por su formato.
-   - **Reescribir las 9 escenas del corredor**, que hoy están escritas
-     como la revelación (*"¿lo sabías TODO ESTE TIEMPO?"*, el shock de
-     los tres fijos, "nadie lo nota"). Ahora el grupo lleva el ascenso
-     entero sabiéndolo: sin sorpresa, sin música de giro.
-   - **Colocar el obstáculo firma del link perdido durante el ascenso**
-     — es la ventana del beat del Bond vacío, y hoy no existe en
-     ninguna ficha. Sin esto el pilar 2 sigue sin pagarse.
-   - Corregir el índice: cada ficha declara **5 sub-beats** y ahora son
-     **6** — 1, 2, **2b**, 3, 4, 5.
-   - **Migrar la línea canónica de traición** de cada Pivote: las 9
-     están escritas para el corredor (ver la columna *Línea* de la matriz
-     en [[Los 9 Pivotes]]).
-     Decidir por ficha si migra a la ruptura o si el corredor la repite
-     en frío.
-   - Los 3 fijos: su coro de reacción está escrito para una revelación
-     que ya no ocurre ahí. **Ojo con Valen** — sus reacciones en
-     Maren/Sereth/Iven usan todas la misma estructura ("noté X, lo
-     modelé, esperé estar equivocado"): es convergencia de tanda, hay
-     que variarlas al tocarlas.
-
-   **Método:** por tandas, con linter + commit por tanda. **La 6ª
-   re-corrida va después del bloque, no antes** — correrla ahora es
-   pagar tokens por hallazgos que ya están inventariados en [[LOG]].
+   **Ambigüedad anotada, sin resolver (no bloquea):** [[Los 9 Links del
+   Pivote]] §Tiers dice que Dagna clava la Primera Cuña *"en la roca del
+   nido"* durante la traición, pero la traición ocurre en el Archive y el
+   cráter, no en El Nido. La ruptura de Dagna se escribió **sin** la cuña
+   para no contradecir ninguna de las dos fuentes. → decidir dónde queda
+   ese objeto firma.
 
 3. **Canon estructural vigente** (4ª y 5ª re-corrida, todo ya escrito en
    las fuentes — es lo que el bloque de arriba tiene que propagar):
