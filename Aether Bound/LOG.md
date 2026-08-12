@@ -257,7 +257,74 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Cierre del moonwalk — la causa raíz era el frente del modelo, y me costó tres rondas
+
+**Boris lo reportó tres veces. Las tres tenía razón, y las dos primeras
+veces yo "arreglé" otra cosa.** Vale escribirlo completo porque el error de
+método es más caro que el bug.
+
+**La causa raíz, única:** el FBX del warrior está exportado **mirando a
++Z**, y Godot asume que el frente de un modelo es **−Z** —
+`Basis.looking_at()` apunta el −Z al objetivo salvo que le pases
+`use_model_front = true`. Así que `SpikeCompanionWalk` venía orientando a
+Dagna **de espaldas** a su destino desde la primera versión. Subía la rampa
+caminando hacia atrás.
+
+**Medido, no supuesto:** los dedos del pie están +0.11 m por delante del
+talón en Z, y la nariz +0.11 m por delante de las caderas. Frente = +Z, sin
+ambigüedad.
+
+**Por qué me costó tres rondas:**
+1. El síntoma visible —"moonwalk"— lo producen **al menos tres causas
+   distintas**: orientación invertida, clip espejado, y desajuste de
+   cadencia. Arreglar una y ver que mejora **no prueba** que era la causa.
+2. La orientación invertida **da vuelta el signo de toda medición sobre los
+   huesos**. Yo medí el recorrido del pie plantado, lo leí con el signo
+   cambiado, concluí que el clip estaba al revés, y lo cambié por el
+   *backward* — o sea, empeoré el sistema mientras el número decía que
+   mejoraba. Ese es el peor modo de falla posible de una medición.
+3. Hubo una señal clara y la pasé por alto: un barrido de calibración salió
+   **monótono al revés de lo que manda la física**. Lo atribuí al
+   instrumento. Era el sistema.
+
+**El arreglo, en un solo lugar:** el nodo `Model` se gira 180° al construir
+la escena (`build_spike_scene.gd`). Todo lo demás —`Basis.looking_at`, el
+vector `forward = -basis.z`— se queda con la convención del motor.
+**Aplicar las dos correcciones a la vez (el giro del modelo Y
+`use_model_front`) la deja caminando de espaldas igual**, que es como se
+rompió en el intento intermedio. También se revirtió el cambio de clip: el
+correcto es el *forward*.
+
+**Lo que sí queda de las rondas anteriores** (era real, solo que no era la
+causa raíz): el clip in-place aporta su propia velocidad —0.825 m por paso,
+2 pasos por ciclo de 1.067 s = **1.55 m/s**— y si el cuerpo se traslada a
+otra, el pie patina. La cadencia (`speed_scale`) se ata a la velocidad real
+cuadro a cuadro, lo que además resuelve solo el caso de la pendiente, donde
+el avance efectivo cae bastante por debajo del pedido.
+
+**Verificación final, con la prueba limpia** (cuánto avanza el cuerpo por
+vuelta del clip contra la zancada que el clip aporta): **0% en régimen**
+(ciclos 3 y 4: 1.649 m y 1.650 m contra 1.65 m). Y sube la rampa: z va de
+−4.16 a +0.06 hacia el objetivo, en vez de alejarse.
+
+**La lámina comparativa Unity/Godot se regeneró** con Dagna orientada bien
+en los dos motores. Lo que muestra sigue siendo lo mismo: la diferencia
+grande es de **clip**, no de motor — 1.12 m de zancada en Starter Assets
+contra 0.825 m en DoubleL.
+
+**Todo esto está en [[Lecciones]] §Godot 4.7**, con la viñeta del frente
++Z marcada como la trampa grande y el chequeo de 30 segundos para
+detectarla (dedos contra talón, nariz contra caderas).
+
+**Índice:** sin cambios — no se crearon notas nuevas del vault.
+
 ## [2026-08-12] spike/godot | El moonwalk eran DOS problemas, no uno — y comparador cuadro a cuadro Unity/Godot
+
+> **⚠️ PARCIALMENTE SUPERADA.** El diagnóstico de esta entrada era
+> incompleto: la causa raíz del moonwalk no era ni la dirección del clip
+> ni la cadencia, sino que **el modelo tiene el frente en +Z** y Dagna
+> caminaba de espaldas. Ver la entrada de cierre más abajo en esta misma
+> fecha ("la causa raíz era el frente del modelo").
 
 Boris volvió a ver el moonwalk en la ventana viva **después** del cambio de
 clip. Tenía razón, y la lección es de método: **dos causas distintas con el
@@ -312,6 +379,12 @@ revirtió).
 **Índice:** sin cambios — no se crearon notas nuevas del vault.
 
 ## [2026-08-12] spike/godot | Dagna camina de verdad — retargeting stock + 3 bugs de importación que el spike anterior tapaba
+
+> **⚠️ CORRECCIÓN.** El punto 3 de esta entrada ("el clip forward hacía
+> moonwalk, el rig del pack viene espejado") **es falso**. El rig del pack
+> está bien; lo que estaba invertido era la orientación de Dagna. El clip
+> correcto es, y siempre fue, el *forward*. Ver la entrada de cierre.
+
 
 **Qué se cerró:** la brecha de *feel* entre los dos motores del spike de
 ADR-003. En Unity, Dagna caminaba con animación real (retargeting Mecanim

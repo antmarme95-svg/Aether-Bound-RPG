@@ -16,18 +16,15 @@ class_name SpikeCompanionWalk
 @export var idle_anim: String = "idle"
 
 ## Velocidad de avance que el clip de caminata "produce" por si solo: la
-## zancada del pie izquierdo mide 0.65 m y el ciclo de 1.067 s tiene dos
-## pasos, o sea 1.30 m por ciclo = 1.22 m/s. Medido con
+## zancada del pie izquierdo mide 0.825 m y el ciclo de 1.067 s tiene dos
+## pasos, o sea 1.65 m por ciclo = 1.55 m/s. Medido con
 ## tools/frame_strip.gd, no estimado.
 ##
 ## Si el cuerpo se traslada a una velocidad distinta a esta, el pie de
-## apoyo se desliza contra el suelo: eso es el moonwalk. A 1.5 m/s en
-## plano el desfase era del 19% (el cuerpo corria mas que los pasos), y en
-## la rampa se invertia, porque trepando la pendiente el avance real cae a
-## ~0.6 m/s y ahi los pasos sobran. Por eso no alcanza con bajar
-## walk_speed: hay que atar la CADENCIA a la velocidad real cuadro a
-## cuadro.
-@export var clip_ground_speed: float = 1.22
+## apoyo se desliza contra el suelo. Por eso no alcanza con elegir un
+## walk_speed: en la rampa el avance real cae bastante por debajo del
+## pedido, asi que la CADENCIA se ata a la velocidad real cuadro a cuadro.
+@export var clip_ground_speed: float = 1.55
 @export var min_anim_scale: float = 0.25
 @export var max_anim_scale: float = 2.0
 
@@ -78,6 +75,14 @@ func _physics_process(delta: float) -> void:
 
 		if distance > stop_distance:
 			var dir := to_target.normalized()
+			# Convencion de Godot: el -Z del cuerpo es el frente, y el
+			# `forward` de mas abajo la respeta. El warrior esta exportado
+			# mirando a +Z, y ese desajuste se corrige UNA sola vez girando
+			# el nodo Model 180 grados al construir la escena (ver
+			# build_spike_scene.gd). Corregirlo tambien aca obligaria a
+			# invertir el signo en cada lugar que toque direccion -- y con
+			# las DOS correcciones puestas a la vez camina de espaldas, que
+			# es exactamente como se rompio esto una vez.
 			var target_basis := Basis.looking_at(dir, Vector3.UP)
 			global_transform.basis = global_transform.basis.slerp(target_basis, delta * 5.0)
 			speed = walk_speed

@@ -43,8 +43,10 @@ func _run() -> void:
 	# sobre la pendiente con el driver vivo...
 	dagna.set("walk_speed", 0.0)
 	dagna.global_position = Vector3(0.0, 6.0, RAMP_Z)
-	# Mirando rampa arriba, que es como camina en la corrida real. Con
-	# walk_speed = 0 el driver nunca la gira, y quedaba encarada rampa abajo.
+	# Mirando rampa arriba, que es como camina en la corrida real. Se usa la
+	# convencion de Godot a secas (-Z al frente): el desajuste del modelo,
+	# que esta exportado mirando a +Z, ya viene corregido en el nodo Model
+	# de la escena. Poner ademas use_model_front aca la encara al reves.
 	dagna.global_transform.basis = Basis.looking_at(Vector3(0, 0, 1), Vector3.UP)
 	# OJO: hay que esperar frames de FISICA, no de render. En ventana el
 	# render corre a cientos de fps y 60 frames de render son ~0.1s de
@@ -68,8 +70,8 @@ func _run() -> void:
 	var lf := skel.find_bone("LeftFoot")
 
 	# --- Fase 0 = contacto del talon izquierdo ---
-	# El personaje mira a -Z local (convencion de Godot), asi que el pie mas
-	# adelantado del ciclo es el de Z minimo en espacio de esqueleto.
+	# El modelo mira a +Z (medido con los huesos, no asumido), asi que el
+	# pie mas adelantado del ciclo es el de Z MAXIMA en espacio de esqueleto.
 	#
 	# El foot IK se apaga mientras se busca: escribe la pose del pie cada
 	# physics frame, y leerla con el IK activo devuelve el pie ya pegado al
@@ -89,16 +91,18 @@ func _run() -> void:
 	print("SkeletonIK3D encontrados: ", ik_nodes.size())
 
 	var contact_t := 0.0
+	var max_z := -INF
 	var min_z := INF
 	for i in range(SAMPLES):
 		var t := anim.length * i / float(SAMPLES)
 		ap.seek(t, true)
 		await process_frame
 		var z: float = skel.get_bone_global_pose(lf).origin.z
-		if z < min_z:
-			min_z = z
+		if z > max_z:
+			max_z = z
 			contact_t = t
-	print("contacto del talon izquierdo en t=%.3f (z=%.3f) de un ciclo de %.3fs" % [contact_t, min_z, anim.length])
+		min_z = minf(min_z, z)
+	print("contacto del talon izquierdo en t=%.3f | zancada del clip = %.3f m | ciclo %.3fs" % [contact_t, max_z - min_z, anim.length])
 	if ik:
 		ik.set_physics_process(true)
 	for c in ik_nodes:
@@ -121,7 +125,11 @@ func _run() -> void:
 		await process_frame
 
 		var focus: Vector3 = dagna.global_position + Vector3.UP * LOOK_UP
-		var side: Vector3 = dagna.global_transform.basis.x.normalized()
+		# -basis.x, no +basis.x: Unity es zurdo y Godot diestro, asi que el
+		# mismo "costado derecho del personaje" cae en lados opuestos del
+		# mundo. Sin el signo, una tira sale con Dagna caminando hacia la
+		# izquierda y la otra hacia la derecha, y no se pueden comparar.
+		var side: Vector3 = -dagna.global_transform.basis.x.normalized()
 		cam.global_position = focus + side * CAM_SIDE + Vector3.UP * CAM_UP
 		cam.look_at(focus, Vector3.UP)
 		await process_frame

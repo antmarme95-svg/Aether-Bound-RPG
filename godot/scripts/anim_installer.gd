@@ -13,16 +13,15 @@ class_name SpikeAnimInstaller
 ## referencia al recurso importado y se pierde al cargar. Mismo criterio
 ## de auto-cableado que SpikeFootIK y SpikeCompanionWalk.
 
-## OJO con el clip de origen: `walk_doublel.fbx` es
-## `1Hand_Up_Walk_A_B_InPlace` -- el clip **backward** del pack, no el
-## forward. El rig de DoubleL tiene el rest mirando al reves del nuestro
-## (convencion de Unity, +Z adelante; la de Godot es -Z), y el retargeting
-## normaliza los ejes de cada hueso pero no el rumbo global del rest. Con el
-## clip "_F" el pie plantado viajaba hacia adelante: moonwalk. La diferencia
-## entre los dos rests es un giro de 180 grados en Y, y bajo ese giro el
-## "caminar hacia atras" del pack ES el caminar hacia adelante nuestro --
-## con la inclinacion y el balanceo de brazos que le corresponden. Medido
-## con el pie plantado, no supuesto.
+## El clip es `1Hand_Up_Walk_A_F_InPlace`, el FORWARD del pack.
+##
+## Nota historica, porque costo tres rondas: se llego a cambiar al clip
+## "backward" creyendo que el rig del pack venia espejado. Era un error de
+## signo mio, no del pack. El modelo del warrior tiene el FRENTE en +Z, y
+## `Basis.looking_at` de Godot apunta el -Z al objetivo salvo que le pases
+## `use_model_front = true` -- asi que Dagna caminaba de espaldas y yo lei
+## el recorrido del pie con el signo invertido. El arreglo esta en
+## companion_walk.gd; el clip correcto es, y siempre fue, el forward.
 @export var walk_scene_path: String = "res://assets/anim/walk_doublel.fbx"
 @export var idle_source: String = "human warrior|human warrior stand 1"
 @export var autoplay_on_ready: String = "idle"

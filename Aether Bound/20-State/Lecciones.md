@@ -32,19 +32,29 @@ updated: 2026-08-12
   la saca del transform del nodo pero la deja en la animación:
   reproducirla vuelve a inflar el personaje 100×. **Al reusar una
   animación, descartar toda pista que no apunte a un hueso.**
-- **Un pack de animación de Unity trae el rest mirando al revés**
-  (+Z adelante; Godot usa −Z). El retargeting normaliza los ejes de cada
-  hueso pero **no el rumbo global del rest**, así que el torso queda bien
-  orientado y las piernas caminan en reversa — moonwalk. La diferencia es
-  un giro de 180° en Y, y bajo ese giro el clip *backward* del pack es el
-  *forward* nuestro. **Verificarlo midiendo el pie plantado** (durante el
-  apoyo debe viajar hacia +Z local), no a ojo ni por el nombre del clip.
+- **⚠️ LA TRAMPA GRANDE — el modelo puede venir con el frente en +Z, y
+  Godot asume −Z.** `Basis.looking_at()` apunta el **−Z** al objetivo
+  salvo que le pases `use_model_front = true`. El warrior de Dagna está
+  exportado mirando a **+Z**, así que caminaba **de espaldas** hacia su
+  destino. Costó tres rondas porque el síntoma que se ve —"moonwalk"— es
+  el mismo que dan otras dos causas, y porque invierte el signo de
+  cualquier medición que hagas sobre los huesos: yo leí el recorrido del
+  pie al revés y "arreglé" el clip cambiándolo por el *backward*, que era
+  exactamente lo contrario de lo que hacía falta.
+  **Cómo verificarlo en 30 segundos, sin suponer:** los dedos del pie
+  contra el talón, y la nariz contra las caderas. Si el delta en Z es
+  positivo, el frente es +Z.
+  **Dónde corregirlo:** UNA sola vez, girando el nodo del modelo 180° al
+  armar la escena — no con `use_model_front` en cada `looking_at`, porque
+  el vector de avance (`-basis.z`) y todo lo demás siguen la convención
+  del motor. Con las **dos** correcciones puestas a la vez, camina de
+  espaldas igual.
 - **Un clip de caminata *in-place* tiene una velocidad propia, y si el
   driver traslada a otra, el pie patina contra el suelo — eso es el
   moonwalk.** No es un problema de dirección ni de retargeting: es
-  aritmética. El clip de Dagna aporta 0.65 m de zancada por paso, 2 pasos
-  por ciclo de 1.067 s = **1.22 m/s**; el driver la movía a 1.5 m/s, 23%
-  de más. Y en pendiente se invierte, porque el avance real cae. La
+  aritmética. El clip de Dagna aporta 0.825 m de zancada por paso, 2 pasos
+  por ciclo de 1.067 s = **1.55 m/s**; el driver la movía a 1.5 m/s fijos,
+  y en pendiente el avance real cae bastante por debajo de eso. La
   solución no es bajar `walk_speed`: es **atar `speed_scale` a la
   velocidad real cuadro a cuadro** (`get_real_velocity()`, 3D completa
   sobre el piso — achatar la Y deja la cadencia ~10% lenta cuesta
@@ -55,6 +65,11 @@ updated: 2026-08-12
   basura: un barrido de calibración daba monótono al revés. La medición
   limpia es **cuánto avanza el cuerpo por vuelta del clip** contra la
   zancada que el clip aporta. 0% = pie plantado.
+  **Y ojo:** ese barrido "monótono al revés" no era solo el estimador —
+  era la señal de que el personaje estaba orientado al revés (ver la
+  viñeta del frente en +Z). Cuando un instrumento da lo contrario de lo
+  que manda la física, revisá el signo del sistema antes que el
+  instrumento.
 - **Un script `SceneTree` que revienta dentro de una función `async`
   cuelga la corrida entera**: el error se imprime pero `quit()` nunca
   llega y el proceso queda vivo hasta el timeout. Después de

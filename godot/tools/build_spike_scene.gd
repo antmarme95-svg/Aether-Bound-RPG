@@ -152,6 +152,15 @@ func _build_character(root: Node3D, char_name: String, pos: Vector3) -> Characte
 
 	var model: Node3D = WarriorScene.instantiate()
 	model.name = "Model"
+	# El warrior esta exportado mirando a +Z, y Godot asume que el frente de
+	# un modelo es -Z (es lo que apunta Basis.looking_at, y lo que usa el
+	# `forward` de SpikeCompanionWalk). Sin este giro Dagna sube la rampa DE
+	# ESPALDAS: fue la causa real del "moonwalk" que el director reporto tres
+	# veces. Se corrige una sola vez aca, en el modelo, para no tener que
+	# invertir el signo en cada script que toque direccion.
+	# Medido, no supuesto: los dedos del pie estan +0.11 por delante del
+	# talon en +Z, y la nariz +0.11 por delante de las caderas.
+	model.rotation_degrees = Vector3(0, 180, 0)
 	body.add_child(model)
 	# Solo el nodo raiz del modelo se apropia: el resto es contenido de la
 	# instancia del FBX y se resuelve al cargar. Re-apropiar los hijos hacia

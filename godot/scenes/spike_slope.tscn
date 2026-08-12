@@ -41,81 +41,83 @@ ambient_light_source = 2
 ambient_light_color = Color(0.5, 0.5, 0.55, 1)
 ambient_light_energy = 0.6
 
-[node name="SpikeSlope" type="Node3D" unique_id=719441108]
+[node name="SpikeSlope" type="Node3D" unique_id=1750357814]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=972004748]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=982631293]
 transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Slope_Root" type="Node3D" parent="." unique_id=1162164768]
+[node name="Slope_Root" type="Node3D" parent="." unique_id=1076175289]
 
-[node name="Platform_Bottom" type="StaticBody3D" parent="Slope_Root" unique_id=1057663213]
+[node name="Platform_Bottom" type="StaticBody3D" parent="Slope_Root" unique_id=453787229]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -5)
 
-[node name="Mesh" type="MeshInstance3D" parent="Slope_Root/Platform_Bottom" unique_id=778207378]
+[node name="Mesh" type="MeshInstance3D" parent="Slope_Root/Platform_Bottom" unique_id=1414290505]
 mesh = SubResource("BoxMesh_7xolu")
 surface_material_override/0 = SubResource("StandardMaterial3D_mgi7a")
 
-[node name="Collision" type="CollisionShape3D" parent="Slope_Root/Platform_Bottom" unique_id=788561612]
+[node name="Collision" type="CollisionShape3D" parent="Slope_Root/Platform_Bottom" unique_id=51571985]
 shape = SubResource("BoxShape3D_dj4lm")
 
-[node name="Ramp" type="StaticBody3D" parent="Slope_Root" unique_id=1636821824]
+[node name="Ramp" type="StaticBody3D" parent="Slope_Root" unique_id=355965963]
 transform = Transform3D(1, 0, 0, 0, 0.9284767, 0.37139067, 0, -0.37139067, 0.9284767, 0, 3.2139068, 9.284767)
 
-[node name="Mesh" type="MeshInstance3D" parent="Slope_Root/Ramp" unique_id=1381282593]
+[node name="Mesh" type="MeshInstance3D" parent="Slope_Root/Ramp" unique_id=150003306]
 mesh = SubResource("BoxMesh_7urcu")
 surface_material_override/0 = SubResource("StandardMaterial3D_mgi7a")
 
-[node name="Collision" type="CollisionShape3D" parent="Slope_Root/Ramp" unique_id=2077064625]
+[node name="Collision" type="CollisionShape3D" parent="Slope_Root/Ramp" unique_id=348132816]
 shape = SubResource("BoxShape3D_aycgg")
 
-[node name="Platform_Top" type="StaticBody3D" parent="Slope_Root" unique_id=1536474045]
+[node name="Platform_Top" type="StaticBody3D" parent="Slope_Root" unique_id=1444617373]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 23.569534)
 
-[node name="Mesh" type="MeshInstance3D" parent="Slope_Root/Platform_Top" unique_id=1173660005]
+[node name="Mesh" type="MeshInstance3D" parent="Slope_Root/Platform_Top" unique_id=1213008641]
 mesh = SubResource("BoxMesh_hcrfy")
 surface_material_override/0 = SubResource("StandardMaterial3D_mgi7a")
 
-[node name="Collision" type="CollisionShape3D" parent="Slope_Root/Platform_Top" unique_id=1640638971]
+[node name="Collision" type="CollisionShape3D" parent="Slope_Root/Platform_Top" unique_id=1601678816]
 shape = SubResource("BoxShape3D_1lmn0")
 
-[node name="PlayerArmature" type="CharacterBody3D" parent="." unique_id=380187733]
+[node name="PlayerArmature" type="CharacterBody3D" parent="." unique_id=1661318709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, -6)
 
-[node name="Collision" type="CollisionShape3D" parent="PlayerArmature" unique_id=1378367686]
+[node name="Collision" type="CollisionShape3D" parent="PlayerArmature" unique_id=1791415949]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_32gg1")
 
 [node name="Model" type="Node3D" parent="PlayerArmature" unique_id=2136695279 instance=ExtResource("1_txclm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="SpikeAnimInstaller" type="Node" parent="PlayerArmature" unique_id=205207079]
+[node name="SpikeAnimInstaller" type="Node" parent="PlayerArmature" unique_id=759014407]
 script = ExtResource("2_3dcgh")
 
-[node name="SpikeFootIK" type="Node3D" parent="PlayerArmature" unique_id=1486676580]
+[node name="SpikeFootIK" type="Node3D" parent="PlayerArmature" unique_id=2076802381]
 script = ExtResource("3_spbsy")
 
-[node name="Dagna_Placeholder" type="CharacterBody3D" parent="." unique_id=287571502]
+[node name="Dagna_Placeholder" type="CharacterBody3D" parent="." unique_id=1562486804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.05, -6)
 script = ExtResource("4_p2w4f")
 
-[node name="Collision" type="CollisionShape3D" parent="Dagna_Placeholder" unique_id=111887519]
+[node name="Collision" type="CollisionShape3D" parent="Dagna_Placeholder" unique_id=398591001]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_b51c2")
 
-[node name="Model" type="Node3D" parent="Dagna_Placeholder" unique_id=91490958 instance=ExtResource("1_txclm")]
+[node name="Model" type="Node3D" parent="Dagna_Placeholder" unique_id=1460289808 instance=ExtResource("1_txclm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="SpikeAnimInstaller" type="Node" parent="Dagna_Placeholder" unique_id=1304329467]
+[node name="SpikeAnimInstaller" type="Node" parent="Dagna_Placeholder" unique_id=2018122768]
 script = ExtResource("2_3dcgh")
 
-[node name="SpikeFootIK" type="Node3D" parent="Dagna_Placeholder" unique_id=1873520496]
+[node name="SpikeFootIK" type="Node3D" parent="Dagna_Placeholder" unique_id=1749453996]
 script = ExtResource("3_spbsy")
 
-[node name="TargetTop" type="Node3D" parent="." unique_id=1468281847]
+[node name="TargetTop" type="Node3D" parent="." unique_id=1148733799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 23.569534)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1115395820]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1083640180]
 transform = Transform3D(0, -0.18428855, 0.98287225, 0, 0.98287225, 0.18428855, -1, 0, 0, 12, 6, 9.284767)
 current = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2093953707]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=870338950]
 environment = SubResource("Environment_rpes6")

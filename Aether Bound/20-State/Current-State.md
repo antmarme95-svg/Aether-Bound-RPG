@@ -122,29 +122,38 @@ escena, sigue a Dagna con cámara de costado, captura, y **mide la rotación
 del muslo** — exit 1 si el hueso no se mueve. Hoy da 24° y ciclo alternado,
 con los pies apoyados en la pendiente vía IK sobre el pose animado.
 
-En el camino salieron **3 bugs de importación pre-existentes** que el spike
+En el camino salieron **2 bugs de importación pre-existentes** que el spike
 anterior tapaba (árbol duplicado al re-apropiar una instancia · pista de
-escala ×100 dentro de la pose del FBX · rig del pack mirando al revés →
-moonwalk, que **detectó Boris a ojo**). Los tres están en [[Lecciones]]
-§Godot 4.7 — leer antes de tocar importación de FBX otra vez.
+escala ×100 dentro de la pose del FBX). Están en [[Lecciones]] §Godot 4.7
+— leer antes de tocar importación de FBX otra vez.
 
-**Moonwalk cerrado (2ª pasada del mismo día).** Boris lo siguió viendo en
-la corrida viva después del cambio de clip, y tenía razón: eran **dos
-problemas distintos con el mismo síntoma**. El primero era de dirección
-(clip espejado, ya resuelto). El segundo es de **velocidad**: el clip
-in-place aporta 1.22 m/s de zancada y el driver la trasladaba a 1.5 m/s
-— 23% de patinada en plano, y del otro signo en la rampa. Arreglado
-atando la cadencia a la velocidad real cuadro a cuadro
-(`companion_walk.gd`). Medido con una prueba limpia — cuánto avanza el
-cuerpo por vuelta del clip contra lo que el clip aporta: **de +23% a
-+0%** en régimen.
+**Moonwalk CERRADO — la causa raíz era otra, y Boris la reportó tres
+veces.** El FBX del warrior está exportado **mirando a +Z** y Godot asume
+−Z (`Basis.looking_at` apunta el −Z al objetivo), así que Dagna subía la
+rampa **de espaldas** desde la primera versión. Se corrige girando el nodo
+`Model` 180° al construir la escena — en un solo lugar; poner además
+`use_model_front` en los `looking_at` la deja de espaldas igual.
+Se revirtió también el cambio de clip: el correcto es el *forward*.
+
+Queda además, y era real aunque no fuera la causa raíz, el ajuste de
+**cadencia**: el clip in-place aporta 1.55 m/s de zancada propia, y la
+cadencia se ata a la velocidad real cuadro a cuadro (resuelve solo el caso
+de la pendiente, donde el avance efectivo cae). Verificado con la prueba
+limpia —cuánto avanza el cuerpo por vuelta del clip contra lo que el clip
+aporta—: **0% en régimen**.
+
+**Lección de método, en [[Lecciones]] §Godot 4.7:** un mismo síntoma
+("moonwalk") lo producen tres causas distintas, y la orientación invertida
+**da vuelta el signo de toda medición sobre huesos** — llegué a "arreglar"
+el clip en la dirección opuesta a la correcta mientras el número decía que
+mejoraba.
 
 **Comparador cuadro a cuadro Unity/Godot listo** (`godot/tools/frame_strip.gd`
 + `unity/Assets/_Spike/Editor/SpikeFrameStrip.cs`): mismo punto de la
 rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el
 contacto del talón izquierdo **detectado midiendo el hueso**. Lo que la
 lámina muestra: la diferencia grande **no es de motor, es de clip** — la
-zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.65 m. Lo
+zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. Lo
 comparable de motor a motor (retargeting stock + foot IK stock) funciona
 en los dos.
 
