@@ -257,6 +257,60 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Medición del foot IK contra el Benchmark — `SkeletonIK3D` es un no-op
+
+Encargo del director: correr la pregunta abierta que quedó de la
+comparativa de motores. El resultado **invalida una afirmación que yo
+mismo había escrito en el vault dos veces**.
+
+**El estándar, tomado del [[Benchmark Biomecánico]] (§v2), fila de HZD:**
+*"foot IK contra el terreno cada frame — pies creíbles en terreno"*, más
+el canon de Sable de **raíz continua**. Traducido a tres métricas
+medibles en `godot/tools/footik_benchmark.gd`: penetración del pie bajo la
+superficie, adaptación del ángulo de planta a la pendiente, y dispersión
+del avance de la raíz.
+
+| Métrica | Godot | Estándar |
+|---|---|---|
+| Raíz continua | ✅ 0.0249 m/frame, desvío 7.7% | Sable: continua, cero pop |
+| Penetración del dedo, plano | ❌ −0.132 m | ~0 |
+| Penetración del dedo, rampa 21.8° | ❌ −0.205 m (peor −0.247) | ~0 |
+| Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ el ángulo del terreno |
+| **Aporte del IK (on vs off)** | ❌ **1.4 mm** | — |
+
+**El hallazgo:** con el foot IK apagado los números son idénticos hasta el
+cuarto decimal. Verificado además de forma directa: `is_running() == true`,
+`target_node` resuelve al nodo correcto, y aun así el hueso del pie se
+mueve **1.4 mm** entre tener el IK corriendo y detenido, con el dedo 20 cm
+bajo la superficie. **`SkeletonIK3D` no está haciendo nada.** Es coherente
+con que esté marcado como deprecado en 4.x — el camino vigente es
+`SkeletonModifier3D`.
+
+**Qué se corrigió en el vault, porque estaba mal escrito:** la afirmación
+"el foot IK stock alcanza en los dos motores" venía de la sesión anterior
+del spike, y yo la repetí en [[Comparativa de Motores — Godot vs Unity]] y
+en [[Current-State]]. Es falsa del lado Godot. El grounding que se veía en
+las capturas venía del cuerpo apoyado por física, no del IK. Las dos
+fuentes quedan corregidas con la medición.
+
+**Por qué NO se corrió el lado Unity todavía, que era la otra mitad del
+encargo:** medir Godot en este estado y ponerlo al lado de Unity daría una
+ventaja falsa a Unity, por una razón que no es del motor sino del cableado
+nuestro. Sería un número engañoso metido en una decisión de motor. Primero
+hay que hacer funcionar el IK del lado Godot.
+
+**Próximo paso propuesto:** reemplazar `SkeletonIK3D` por un
+`SkeletonModifier3D`, volver a correr `footik_benchmark.gd` (ya deja los
+números listos para comparar), y recién ahí portar la medición a Unity y
+poner las dos columnas una al lado de la otra.
+
+**Nota de método:** el linter cazó un crítico propio en este mismo
+checkpoint — `§v2 pide` sin cerrar la cita de sección, exactamente la
+trampa que [[Current-State]] §Pendientes ya advierte. Corregido a
+`(§v2) pide`.
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] design/motor | Comparativa Godot vs Unity — pros/contras + FODA
 
 Pedido del director tras mirar la lámina cuadro a cuadro. Escrita en

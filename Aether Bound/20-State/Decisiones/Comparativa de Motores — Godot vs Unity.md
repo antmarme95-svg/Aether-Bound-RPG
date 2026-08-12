@@ -28,10 +28,13 @@ los dos motores, con foot IK **stock** de cada uno.
 
 **Lo que quedó probado:**
 
-- 🔬 **El foot IK stock alcanza en los dos.** `Animator IK`
-  (`OnAnimatorIK`) en Unity y `SkeletonIK3D` en Godot plantan el pie en la
-  pendiente sin escribir un solver. El problema original —"no pasaba ni el
-  ojo ni el feel"— era de construir todo a mano, no del motor.
+- ⚠️ **CORREGIDO (2026-08-12, medición contra el Benchmark).** Esta línea
+  decía que "el foot IK stock alcanza en los dos". **Es falso del lado de
+  Godot.** Medido: con `SkeletonIK3D` corriendo (`is_running() == true`,
+  target resuelto) el pie se mueve **1.4 mm** respecto de tenerlo apagado
+  — es un **no-op**, mientras el dedo queda **20 cm por debajo** de la
+  superficie de la rampa. El grounding que se veía en las capturas venía
+  del cuerpo apoyado por física, no del IK. Detalle abajo, §5.
 - 🔬 **El retargeting stock alcanza en los dos.** Mecanim en Unity;
   `BoneMap` + `SkeletonProfileHumanoid` en Godot. En Godot hubo que armar
   el `BoneMap` a mano (el rig de Dagna es Rigify, no Mixamo), pero es una
@@ -46,6 +49,35 @@ los dos motores, con foot IK **stock** de cada uno.
 - Nada de combate, IA, UI, audio, guardado, ni build/export.
 - Nada del look final: los dos corren greybox plano.
 - El jugador sigue idle en los dos.
+
+### Medición contra el Benchmark (2026-08-12)
+
+El [[Benchmark Biomecánico]] (§v2) pide, en la fila de HZD, **"foot IK
+contra el terreno cada frame — pies creíbles en terreno"**, y en el canon
+de Sable, **raíz continua**. Traducido a tres métricas y corrido en Godot
+(`godot/tools/footik_benchmark.gd`):
+
+| Métrica | Godot medido | Estándar |
+|---|---|---|
+| Raíz continua | ✅ avance 0.0249 m/frame, desvío 7.7% | Sable: raíz continua, cero pop |
+| Penetración del dedo, piso plano | ❌ **−0.132 m** (media en apoyo) | ~0 |
+| Penetración del dedo, rampa 21.8° | ❌ **−0.205 m** (peor: −0.247 m) | ~0 |
+| Adaptación de la planta a la pendiente | ❌ **10.9°** de 21.8° | ≈ el ángulo del terreno |
+| **Aporte del IK** (IK on vs IK off) | ❌ **1.4 mm** | — |
+
+**La fila que importa es la última.** Con el foot IK apagado los números
+son idénticos hasta el cuarto decimal (−0.1323 contra −0.1320 en plano;
+−0.2051 contra −0.2048 en rampa). `SkeletonIK3D` **no está haciendo
+nada**, aunque reporte `is_running() == true` y su `target_node` resuelva
+bien. Es coherente con que esté **marcado como deprecado** en 4.x: el
+camino vigente es `SkeletonModifier3D`.
+
+**Lo que esto significa para el veredicto:** la pregunta "¿alcanza el foot
+IK stock de Godot?" **todavía no tiene respuesta**, porque lo que se probó
+no era foot IK — era animación cruda con el cuerpo apoyado por física.
+Comparar este número contra Unity daría un resultado engañoso a favor de
+Unity por una razón que no es del motor. **Primero hay que hacer funcionar
+el IK del lado Godot; recién después la comparación significa algo.**
 
 ---
 

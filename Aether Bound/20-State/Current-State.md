@@ -165,12 +165,31 @@ método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
 menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
 assets ya comprados, que ahí funcionan sin convertir.
 
-**Pregunta abierta que debería decidir el veredicto:** si el foot IK y la
-animación de Godot alcanzan el estándar del [[Benchmark Biomecánico]], o
-si hay que escribir un `SkeletonModifier3D` propio (`SkeletonIK3D` está
-deprecado, y en la lámina el pie apunta la punta hacia abajo y penetra la
-superficie, cosa que Unity resuelve más limpio con el mismo esfuerzo).
-Tiene respuesta empírica y todavía no se corrió.
+### ⛔ El foot IK de Godot NO está funcionando (medido 2026-08-12)
+
+Se corrió la medición contra el [[Benchmark Biomecánico]]
+(`godot/tools/footik_benchmark.gd`) y el resultado **invalida una
+afirmación que estaba escrita en el vault**: no es cierto que "el foot IK
+stock alcanza en los dos motores".
+
+**`SkeletonIK3D` es un no-op.** Con el IK corriendo (`is_running() == true`,
+target resuelto) el pie se mueve **1.4 mm** respecto de tenerlo apagado, y
+los números de penetración son idénticos hasta el cuarto decimal. El
+grounding que se veía en las capturas venía del cuerpo apoyado por física.
+
+| Métrica | Medido | Estándar del Benchmark |
+|---|---|---|
+| Raíz continua | ✅ desvío 7.7% | Sable: raíz continua |
+| Penetración del dedo (plano) | ❌ −0.132 m | ~0 |
+| Penetración del dedo (rampa 21.8°) | ❌ −0.205 m | ~0 |
+| Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ ángulo del terreno |
+| Aporte del IK | ❌ 1.4 mm | — |
+
+**Consecuencia:** la comparación de foot IK contra Unity **queda
+suspendida** — medir Godot así daría una ventaja falsa a Unity por una
+razón que no es del motor. **Próximo paso: reemplazar `SkeletonIK3D`
+(deprecado en 4.x) por un `SkeletonModifier3D`**, volver a medir, y recién
+ahí correr el lado Unity y comparar.
 
 **Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
 empareja las condiciones para que ese veredicto compare lo mismo de los
