@@ -134,8 +134,14 @@ rhythm.]
 ```
 
 **Modo estándar único para Duelist y Strategist, sabor "lanza a un
-enemigo" (decisión de Boris, 2026-08-07, 2ª pasada).** El link no cambia
-por rol — solo Vanguard tiene un modo distinto ("rol duplicado"), tal
+enemigo" (decisión de Boris, 2026-08-07, 2ª pasada).** **La acción de
+Roen** no cambia por rol — solo Vanguard tiene un modo distinto ("rol
+duplicado"). **Lo que sí se divide por rol es la respuesta del jugador:**
+la ventana de remate ([[Los 3 Links de los Fijos]] §Roen).
+Duelist conecta un golpe, Strategist resuelve con su acción de control, y
+Vanguard no tiene ventana en T1. Precisado 2026-08-11: este párrafo
+decía "el link no cambia por rol" y la fuente dice "split por rol",
+hablando de cosas distintas con formulaciones opuestas. Tal
 como ya fijaba [[Geografía y Ciudades]] §El Encuentro con Roen, punto 5
 de la lista. Dos correcciones sobre el primer borrador de este archivo:
 (1) el split Duelist/Strategist que inventaba dos coreografías de Roen

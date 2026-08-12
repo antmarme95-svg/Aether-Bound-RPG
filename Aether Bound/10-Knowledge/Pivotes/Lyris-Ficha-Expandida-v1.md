@@ -337,7 +337,9 @@ Lyris cumple. Traiciona, huye por aire con Speck hasta el cráter — no puede e
 
 **Se aparta con calma que hiere.** Después de entregar, asciende y no vuelve. El jugador la ve una vez más semanas después, en distancia — patrullando otra ruta al norte de Stillwood, cumpliendo un contrato distinto de Frontier High Command. No baja. No hace señal. Lyris no rompió con el jugador con palabras; simplemente cambió de patrón, y en su gramática esa es la ruptura más completa posible.
 
-Ella asciende dentro de la cadena militar — Frontier High Command reconoce su ejecución impecable, le asigna franja más amplia, más autonomía. El Council recibe a Speck y ni siquiera pronuncia el nombre de Lyris; para ellos fue "el activo de la cadena élfica que respondió como se esperaba".
+Frontier High Command no la asciende. **No pasa nada** — ni reconocimiento, ni franja más amplia, ni una línea en un registro: la cadena recibe lo que pidió y sigue como estaba, porque para una cadena así cumplir no es mérito, es lo mínimo. El Council recibe a Speck y ni siquiera pronuncia el nombre de Lyris; para ellos fue "el activo de la cadena élfica que respondió como se esperaba". Lyris cambia de patrón y nadie registra que cambió.
+
+> Corregido 2026-08-11: la versión anterior la hacía ascender "por mecánica institucional", que es el beat definitorio de la fila **Deber Institucional** de [[Los 5 Finales]] §Matriz. Lyris es de la fila **Rechazo/Ausencia**, y la única excepción de fila declarada en todo el vault es Iven. Prestarse el beat ajeno diluía la distinción de arquetipo que la matriz existe para sostener.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 

@@ -199,37 +199,31 @@ Wilds), remate Strategist restaurado a distancia, escudo de Roen
 quitado de la escena del tutorial, y 3 fixes menores de residuos.
 Pendiente re-corrida antes de ratificar (ver punto 2 arriba).
 
-### Abiertos de la 4ª re-corrida — medios sin cerrar
+### ✅ Medios de la 4ª — cerrados (2026-08-11, 2ª tanda)
 
-No bloquean el guión, pero la 5ª los va a volver a reportar si no se tocan:
+4 decisiones más de Boris, ya escritas: **Roen en el bookend tiene 70-75**
+(los cierres mandan, "thirty years" ×4) · **los 2 años de espera de Darro
+van dentro de las edades 30-33** (sale a los 33, la cadena 33→38→63 y la
+edad ~63 quedan intactas) · **el Acto 1 tiene un solo Momento de Persona**,
+el del nido · **derribar al portador no mata a Speck** — la sobrecarga
+necesita que la fuerza entre por su cuerpo, así que F1 es jugable en las
+rutas Nyael y Bram con la regla de escritura "el jugador nunca pone una
+mano sobre Speck en F1".
 
-- **Edad de Roen en el bookend:** ficha dice 45, [[Voz Narrativa]] dice
-  60-70 "20-30 años después", y los cierres dicen "thirty years" ×4.
-  45+30 = 75, fuera de banda. Decidir: bookend a 20-25 años, o banda a
-  70-75.
-- **Timeline de Darro:** los 2 años que espera tras el rechazo de Vekka no
-  caben en la cadena 33→38→63. O sale a los 35, o los 2 años van dentro
-  de las edades 30-33.
-- **Momentos de Persona en el Acto 1:** [[La Rueda]] dice 2, [[Speck]]
-  dice 1 (+1 ambiguo), [[Geografía y Ciudades]] dice 1. Importa porque el
-  gate de F4 se calcula sobre los Momentos disponibles.
-- **`Valen-Ficha` no tiene entrada para Dagna** — 8 de 9 Pivotes. Único
-  hueco de la matriz 3 fijos × 9 Pivotes.
-- **Torgan y Dagna con ritos duplicados en dos POIs:** el Juramento de
-  Torgan aparece en Shrine of the First Hammer y en el altar de su clan
-  menor; la renovación de votos de Dagna, en Shrine of the First Hammer y
-  en Dagna's Clan Stone.
-- **Nyael y Bram (holder = agente):** cumplir el gate de F1 exige combatir
-  a quien sostiene a Speck junto a un core activo, que es la definición
-  física de F2b ([[Speck]] §Capa 5). Las dos rutas donde F1 y F2b se tocan
-  son las dos sin resolución escrita.
-- **Lyris en F2a** ejecuta el beat de la fila "Deber Institucional"
-  (asciende por mecánica institucional) además del suyo, sin estar
-  declarada como excepción — la única declarada es Iven.
-- **Rol duplicado en tiers distintos:** T1 para Roen, T2 para Valen y
-  Darro, sin razón declarada.
-- **Nota de trabajo cruda dentro de `Nomenclatura` (ratificado):**
-  "Preguntas/Dudas Toño a Claude" — resolver o mover al Task-Board.
+También cerrados: la entrada **Valen + Dagna** (la matriz 3 fijos × 9
+Pivotes quedó completa) · Torgan y Dagna con ritos duplicados en dos POIs ·
+Lyris tomando prestado el beat de "Deber Institucional" en F2a · el arnés
+de Vekka condicionado a la variante viva · el beat de duelo de Maren ·
+Encuentro con Roen "el link no cambia por rol" vs. "split por rol" ·
+Sereth citando F1 dentro de la ficción de F3 · "sub-acto 1B" · los tres
+flashes colapsados en dos · la nota cruda de `Nomenclatura`.
+
+**Sigue abierto, es decisión de diseño, no de QA:** el caso "rol duplicado"
+vive en **T1 para Roen y en T2 para Valen y Darro**, sin razón declarada — y
+solo en Roen *sustituye* el sabor base en vez de sumarse. Si "la intimidad
+es el árbol" ([[The Tether]]), una variante fijada en la pantalla de
+creación de personaje no debería vivir en el árbol. Revisar junto con la
+pregunta abierta de las escenas firma de T3 (punto 3 de arriba).
 
 ### Pendientes menores, sin bloquear nada
 - `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond

@@ -21,7 +21,7 @@ cero narración externa mediando la experiencia.
 por Roen viejo.**
 
 - **Apertura — literal primera escena del juego, pantalla negra.** Roen,
-  60-70 años, 20-30 años después de los eventos del juego, en una
+  70-75 años, treinta años después de los eventos del juego, en una
   **taberna**, da un poco de contexto en voz — una voz vieja que cuenta
   algo que ya pasó. Después, handoff directo al personaje jugable: de ahí
   en más, cero narración hasta el final.

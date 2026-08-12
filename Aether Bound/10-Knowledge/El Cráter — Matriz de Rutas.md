@@ -79,6 +79,16 @@ crítico.** En las otras 7 rutas, "detener al Pivote" **no** cumple el gate de F
 detener al mensajero. En estas dos, el que sostiene a Speck **es** el agente de la entrega,
 así que detenerlo sí lo cumple.
 
+**Y por qué eso no cae en F2b** (escrito 2026-08-11, 4ª re-corrida — antes la matriz
+aseguraba que F1 funcionaba acá sin explicar por qué la fuerza no entraba por el cuerpo de
+Speck). La regla física la enuncia [[Speck]] §Capa 5, y este documento solo la cita: la
+sobrecarga necesita que la fuerza entre **por Speck**. Derribar al portador es fuerza que
+entra por el portador; Speck cae suelta, que es la condición de "cederla", no de
+"arrebatarla". **Regla de escritura para estas dos rutas:** el jugador **no pone una mano
+sobre Speck** en F1. Si la agarra —aunque sea para apartarla del forcejeo— es F2b. Es la
+única parte de la matriz donde las dos lecturas están a un gesto de distancia, así que la
+escena tiene que dejar clarísimo qué cuerpo recibe el golpe.
+
 **La excepción de holder aérea (Lyris) es intencional.** El paso 3 de §1 dice que el
 Pivote "se detiene en el borde"; Lyris se detiene **sobre** el borde, suspendida, sin
 tocar tierra — es la única duelist con vuelo del elenco y la ficha lo declara rasgo
@@ -168,9 +178,11 @@ Speck se calcifica **en el core central**, y el Pivote se detuvo en el borde. Qu
 distancia es **ella**: nadie la carga, nadie la arrastra.
 
 **F4 es el único final donde Speck cruza el borde, y lo cruza sola.** El jugador preguntó, ella
-respondió, y la respuesta es caminar. Quien la sostenía **abre las manos** — en la ruta Vekka,
-eso significa soltar el arnés del yunque con sus propias manos, que es el gesto más contrario
-a su dogma que ejecuta en toda la campaña. Es el reverso exacto de F3, donde el que cruza el
+respondió, y la respuesta es caminar. Quien la sostenía **abre las manos** — en la ruta Vekka
+**con Vekka viva**, eso significa soltar el arnés del yunque con sus propias manos, que es el
+gesto más contrario a su dogma que ejecuta en toda la campaña. **En la variante F4-Vekka
+muerta el arnés lo abre el jugador** ([[Pivotes/Vekka-Ficha-Expandida-v1]] §F4; condicionado
+2026-08-11, la matriz lo enunciaba sin variante). Es el reverso exacto de F3, donde el que cruza el
 borde es el jugador y Speck es recogida del otro lado.
 
 Ninguna ficha puede tener a Speck **transportada** al centro en F4: la cargaría alguien, y eso
@@ -270,7 +282,7 @@ antes de escribir**, para no homogeneizar.
 | **Lyris** | vuela sola sobre el cráter y no se lo cuenta a nadie |
 | **Nyael** | escribe una nota de cierre que por primera vez no tiene a quién entregar |
 | **Bram** | casi talla un nombre en la pulsera y no lo hace — no tiene categoría para esto |
-| **Maren** | deja de usar una variable de su modelo sin decírselo a nadie |
+| **Maren** | deja de usar una variable de su modelo, y años después se lo confiesa al jugador en una nota sin firma — a nadie más |
 | **Sereth** | intenta escribir la pregunta que le falta y tacha la mitad |
 | **Darro** (fijo) | celebra primero, colapsa delante del grupo en el mismo beat — y en privado, años después, es el único que nunca cuenta el final de la historia que sí cuenta — ver su ficha, nota de escritura |
 | **Valen** (fijo) | nombra el costo directamente al jugador: *"those cancel out"* que no cancelan nada |

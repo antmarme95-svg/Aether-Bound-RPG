@@ -391,6 +391,12 @@ Su línea final:
 **Tensión:** Vekka pregunta a Valen si sus cálculos incluyen el costo para ella. Valen: *"Always."* (Es verdad, y es aterrador).  
 **Traición:** cuando Vekka fija a Speck al yunque en el borde del cráter ([[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 5), Valen: *"The Forging Dogma demands you finish what you started. I understand. I will not forgive."* Es el único del grupo que **nombra el dogma correctamente mientras ocurre** — y eso es peor que gritar, porque le concede la coherencia.
 
+### Valen + Dagna (Enana Vanguard → Ella)
+*(Escrita 2026-08-11: era el único hueco de la matriz 3 fijos × 9 Pivotes — Roen y Darro tenían las 9, Valen tenía 8.)*
+**Primera impresión:** Valen no la registra. Dagna no habla en los primeros tramos, no pregunta, no ofrece lectura de nada — y el instrumento con el que Valen mide a la gente es qué preguntan. Durante semanas la clasifica como músculo leal, que es exactamente el error que todo el mundo comete con Dagna y el que su ficha existe para castigar.  
+**Tensión:** la corrige ella, una sola vez, sin levantar la voz. Valen explica por qué el patrón de Mudas se acelera y termina con su formulación de siempre — que nadie eligió esto, que es un sistema fallando. Dagna: *"Alguien lo eligió. Solo que hace tanto que ya nadie tiene que volver a elegirlo."* Valen se queda callado más tiempo del que se queda callado nunca. Es la primera vez en noventa años que alguien le señala que su marco —el sistema como fenómeno sin autor— es también una forma de no mirar. Después de eso le habla distinto: menos cátedra, más pregunta.  
+**Traición:** es la que peor le cae, y no por ella. Valen ve venir la de casi todos —los lee, es lo que hace— y a Dagna no la vio venir, porque la había archivado como incapaz de iniciativa. Cuando Dagna abraza a Speck antes de entregarla ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5), Valen es el que está más atrás y el que tiene el mejor ángulo, y lo único que dice, para nadie: *"I measured her wrong. Ninety years of this, and I still measure people wrong."* **Es la única traición del set que Valen convierte en dato sobre sí mismo** en vez de sobre el traidor — y es el ensayo del beat de la cifra errónea, que llega poco después.
+
 ---
 
 ## Dinámicas con Roen y Darro (El Triángulo del Grupo)

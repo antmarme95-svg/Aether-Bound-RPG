@@ -65,5 +65,7 @@ sigue siendo español para la prosa de diseño.
 2. **Estrictamente privados.** Lo que revelan lo ve **solo el jugador**. Ningún compañero, Pivote ni NPC ve la capa Warden, las proyecciones residuales ni las inscripciones marginales — Valen tampoco, y él es quien más cerca está de poder leerlas. Lo que los demás ven es la cara del jugador cambiar. Esta privacidad es la razón estructural por la que el jugador carga la revelación en soledad durante todo el Acto 3.
 3. **No son un gate.** Por ser no retirables, todo jugador los tiene desde The Reckoning: no pueden condicionar ningún final ni ninguna rama. Son contexto emocional, nunca requisito ([[Los 5 Finales]] §F4).
 
-**Preguntas/Dudas Toño a Claude:**
-*Cambios en las tablas:* revisar control de cambios porque agregué a propósito ciertos puntos.
+<!-- Nota de trabajo de Boris, movida fuera del cuerpo del canon 2026-08-11
+     (estaba dentro de un archivo `ratificado` y se podía leer como canon):
+     "Cambios en las tablas: revisar control de cambios porque agregué a
+     propósito ciertos puntos." — pendiente de revisar juntos. -->

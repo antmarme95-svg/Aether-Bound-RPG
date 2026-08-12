@@ -17,7 +17,7 @@ Taberna **humana** (Roen es humano — coherente con que el bloque de
 worldbuilding de abajo hable desde el punto de vista de la raza con
 memoria más degradada del cataclismo, ver §Nota sobre el worldbuilding),
 sin nombre propio todavía (candidato: alguna taberna de Rivermeet — a
-confirmar cuando se aborde geografía de guión). Roen tiene 60-70 años,
+confirmar cuando se aborde geografía de guión). Roen tiene 70-75 años,
 20-30 años después de los eventos jugables. No hay indicios de qué final
 vivió el jugador — la escena tiene que funcionar idénticamente para las 5
 ramas.
@@ -58,7 +58,7 @@ BLACK SCREEN.
 
 Tavern ambience: low murmur, a fire, glass against wood. No music yet.
 
-FADE IN, slow, close on ROEN — 65 to 70 years old now, hair gone
+FADE IN, slow, close on ROEN — 75 years old now, hair gone
 grey-white, still cropped short. The same weathered face, more creased.
 He is not performing for anyone. He turns a copper ring on his finger,
 looking at nothing in particular. The old warpaint mark on his cheek has

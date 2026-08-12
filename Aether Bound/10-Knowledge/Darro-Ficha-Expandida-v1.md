@@ -52,7 +52,7 @@ Al tercer año, sin previo aviso ni explicación, Vekka lo rechazó del programa
 
 **Castigo del gremio:** No fue expulsión pública — algo peor. **Aislamiento.** Se le prohibió forjar bajo cualquier otro maestro. Se le dijo, por terceros, que "la maestra Vekka no explica sus rechazos, y nadie pregunta dos veces."
 
-Darro esperó 2 años, en parte por si Vekka cambiaba de idea. Nunca lo hizo, ni volvió a dirigirle la palabra directamente. En esos 2 años, vio la realidad: **nunca iba a cambiar lo suficiente.** El gremio no quería enano que riese. Quería máquina enano. Y la persona que mejor lo sabía — porque lo había visto de cerca dos años — decidió no darle ni la cortesía de una razón.
+El rechazo llegó al primer año del aprendizaje, no al final: **Darro se quedó los 2 años restantes** (edades 31-33), en parte por si Vekka cambiaba de idea. Nunca lo hizo, ni volvió a dirigirle la palabra directamente. En esos 2 años, vio la realidad: **nunca iba a cambiar lo suficiente.** El gremio no quería enano que riese. Quería máquina enano. Y la persona que mejor lo sabía — porque lo había visto de cerca dos años — decidió no darle ni la cortesía de una razón.
 
 **Nota narrativa:** este rechazo es el motivo por el que, cuando Darro se reencuentra con Vekka como Pivote décadas después, la escena carga un peso que va más allá del arquetipo de "maestra distante" — es la persona específica que lo dejó fuera sin explicarse jamás. Ver [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] para la escena desde su lado.
 

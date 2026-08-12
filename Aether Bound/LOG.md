@@ -97,6 +97,58 @@ un enlace ni una cita §. Es exactamente el cuello de botella que
 **Un crítico propio:** una cita §  que agregué en el fix de Nyael no
 resolvía; el linter lo cazó en el checkpoint. Corregido antes de commitear.
 
+### 2ª tanda del mismo día — los medios abiertos, cerrados
+
+4 decisiones más de Boris, todas escritas a la fuente:
+
+- **Roen en el bookend: 70-75 años.** Los cierres dicen "thirty years" ×4 y
+  el peso del beat de F2b depende de que sea mucho tiempo, así que manda la
+  banda, no al revés. Corregidos `Voz Narrativa` y la puesta en escena +
+  la línea de acción de `Apertura` ("75 years old now").
+- **Los 2 años de espera de Darro van dentro de las edades 30-33.** El
+  rechazo de Vekka llega al primer año del aprendizaje, no al final; Darro
+  se queda los 2 restantes. Sale a los 33 y la cadena 33→38→63 y la edad
+  ~63 (declarada "no libre") quedan intactas.
+- **El Acto 1 tiene un solo Momento de Persona**, el del nido. `La Rueda`
+  decía "los 2 primeros" contra `Speck` y `Geografía`; corregida `La Rueda`
+  y desambiguado el "Acto 1→2" del Momento 2. Importa porque el gate de F4
+  se calcula sobre los Momentos disponibles.
+- **Derribar al portador no mata a Speck** — escrita la excepción física en
+  `Speck` §Capa 5, que es lo que hace jugable F1 en las dos rutas donde el
+  holder es el agente (Nyael, Bram). La sobrecarga necesita que la fuerza
+  entre **por el cuerpo de Speck**; golpear al portador la deja caer suelta,
+  que es la condición de "cederla". **Regla de escritura nueva:** el jugador
+  no pone una mano sobre Speck en F1 — si la agarra, es F2b, y en esas dos
+  rutas la tentación de escribirlo mal es máxima. La matriz aseguraba que F1
+  funcionaba ahí sin explicar nunca por qué.
+
+**Hueco de contenido cerrado:** escrita la entrada **Valen + Dagna**. Era el
+único hueco de la matriz 3 fijos × 9 Pivotes (Roen y Darro tenían 9, Valen
+8). Valen la archiva como músculo leal —el error que todo el mundo comete
+con Dagna— hasta que ella le señala que "el sistema como fenómeno sin autor"
+es también una forma de no mirar. Su traición es la única que Valen convierte
+en dato sobre sí mismo, y es el ensayo del beat de la cifra errónea.
+
+**Resto de medios y bajos cerrados:** ritos duplicados de Torgan y Dagna en
+dos POIs · Lyris tomando prestado el beat de "Deber Institucional" en F2a
+(ahora **no la asciende nadie** — para una cadena así cumplir no es mérito,
+es el mínimo) · arnés de Vekka condicionado a la variante viva · beat de
+duelo de Maren alineado con su ficha · `Encuentro con Roen` decía "el link no
+cambia por rol" contra "split por rol" de su fuente (hablaban de cosas
+distintas: la acción de Roen vs. la respuesta del jugador) · Sereth citando
+F1 dentro de la ficción de F3 · "sub-acto 1B" (los sub-actos son del Acto 2)
+· los tres flashes de Speck colapsados en dos en `Geografía` · nota de
+trabajo cruda dentro de `Nomenclatura`, que es `ratificado`.
+
+**Tres críticos propios más**, todos de la misma clase y todos cazados por
+el linter en el checkpoint: citas `§` donde el texto que seguía al nombre de
+sección se parseaba como parte del nombre. Reformuladas. **Vale como lección
+de escritura:** cerrar la cita `§` antes de seguir la frase.
+
+**Queda abierto como decisión de diseño, no de QA:** el caso "rol duplicado"
+vive en T1 para Roen y en T2 para Valen y Darro, sin razón declarada, y solo
+en Roen sustituye el sabor base en vez de sumarse.
+
 ## [2026-07-24] design/QA | §10 generado — 5/6 aprobados + regla nueva anti-texto-en-imagen
 
 **Ronda de QA de los 6 briefs de §10** (Isolde Marrow, Tobin Hale, Threnn,

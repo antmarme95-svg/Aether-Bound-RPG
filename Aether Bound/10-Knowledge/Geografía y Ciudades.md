@@ -406,8 +406,14 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Enemigos: Guardianes automáticos dormidos
 - Dinámicas:
   - Vekka: reconoce símbolos, comprende peso del deber
-  - Torgan: aquí hizo su juramento de 55 años (lo ve grabado)
-  - Dagna: aquí renovaría votos al clan (escena emocional)
+  - Torgan: **no** juró acá — su Juramento de Forja fue al **altar de su clan
+    menor**, en Emberdeep ([[Pivotes/Torgan-Ficha-Expandida-v1]], que manda
+    sobre este documento por §Regla de uso de [[El Cráter — Matriz de Rutas]]).
+    Lo que hace acá es reconocer la **forma** del rito en piedra ajena y no
+    poder mirarla mucho rato. Corregido 2026-08-11.
+  - Dagna: su vínculo ritual es con **Deepstone**, y la renovación de votos vive
+    en **Dagna's Clan Stone** (§H). Acá no renueva nada — corregido 2026-08-11,
+    el beat estaba duplicado en dos POIs.
 
 #### **Grove of Cycles** (North-East, connecting Stillwood)
 - Templo élfico a los ciclos antiguos (árboles vivos, arquitectura orgánica)
@@ -1088,7 +1094,7 @@ irreversible acá, no en el corredor.
 
 #### 1. Approach al Sunken Archive
 
-El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. El último de los tres flashes del jugador — cristal debajo del pelaje, facetas donde deberían haber ojos — ya pasó y sigue siendo privado (canon en [[Speck]] §Capa 2, tres flashes fijos, ni uno más), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
+El grupo desciende desde The Driftmarket hacia la grieta que baja al Archive. Es la primera vez desde el Acto 1 que The Bound Five viaja sin destino comercial ni diplomático — van a una ruina, y todos lo saben. Darro no hace bromas. Valen no cita ciclos. Roen carga a Speck en silencio, aunque nadie se lo pidió. El último de los tres flashes del jugador — los ojos como facetas de gema viva ([[Speck]] §Capa 2, fuente única: el flash de la pata de cristal es el segundo, no el mismo) — ya pasó y sigue siendo privado (canon en [[Speck]] §Capa 2, tres flashes fijos, ni uno más), y el jugador no ha compartido nada. La advertencia de Tobin del Reckoning ya trabajó su daño: si el jugador confrontó al Pivote equivocado en Driftmarket, ese Bond está roto y el grupo bajó desalineado. Si el jugador se guardó la información, la baja es una sonrisa fingida entre cinco personas. Speck se comporta distinta desde Grove of Cycles — una quietud que Valen y Darro notan sin nombrar. El descenso al Archive es el último tramo donde la palabra "grupo" tiene sentido literal.
 
 #### 2. Interior del Archive
 

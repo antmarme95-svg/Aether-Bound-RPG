@@ -151,7 +151,7 @@ Cuando el jugador duda frente a la crisálida, Dagna asiente. No opina. *"Tuya e
 
 Roen ya está. Valen aparece. Dagna se une — el Pivote llega tercero, con Roen y Valen como testigos, no como causa (orden fijo: Roen → Valen → Pivote → Darro, [[Estructura Dramática]]). Darro se suma después, aparte, el último de los cuatro. El Bound Five queda formado recién con él.
 
-- **Con Roen:** deferencia mutua tácita. La primera guardia nocturna compartida ocurre en el sub-acto 1B, y ahí sucede la escena canónica: Roen pregunta *"¿Cómo aguantaste sesenta años en el mismo puesto?"*, Dagna contesta *"No tuve tu opción."* Roen no vuelve a preguntar. La frase se queda entre los dos.
+- **Con Roen:** deferencia mutua tácita. La primera guardia nocturna compartida ocurre en el tramo posterior al Nido (locación 4 del Acto 1, [[Geografía y Ciudades]] §Beats Narrativos — corregido 2026-08-11: decía "sub-acto 1B", y los sub-actos son exclusivos del Acto 2), y ahí sucede la escena canónica: Roen pregunta *"¿Cómo aguantaste sesenta años en el mismo puesto?"*, Dagna contesta *"No tuve tu opción."* Roen no vuelve a preguntar. La frase se queda entre los dos.
 - **Con Valen:** silencio respetuoso.
 - **Con Darro:** las primeras bromas. La primera risa silenciosa. Darro sale de la escena diciendo *"Creo que le caí bien"* con cero confianza en la afirmación.
 - **Con Speck:** el patrón de posicionamiento entre Speck y el ruido comienza aquí y no se rompe hasta el clímax.

@@ -130,6 +130,17 @@ Lo que se deriva de esto — y no debe reescribirse como regla aparte en ningún
   Es por eso que F2a la deja viva.
 - **Arrebatarla la mata.** Es el gate de F2b, y la única vía por la que Speck muere en el
   cráter.
+- **Derribar al que la carga NO la mata** (escrito 2026-08-11, 4ª re-corrida). La
+  sobrecarga requiere que la fuerza entre **por el cuerpo de Speck**: tirar de ella,
+  arrancarla, forcejear teniéndola agarrada. Golpear al portador es fuerza que entra por
+  **el cuerpo del portador** — Speck se le cae de los brazos y llega al suelo suelta, que
+  es exactamente la condición de "cederla". Puede lastimarse en la caída; no se sobrecarga.
+  **Esto es lo que hace jugable F1 en las dos rutas donde el holder es el agente**
+  (Nyael y Bram — [[El Cráter — Matriz de Rutas]] §2): el jugador neutraliza al portador
+  sin tocarla a ella, y no cae en F2b por hacerlo. La distinción que importa al escribir
+  la escena: **el jugador nunca pone una mano sobre Speck en F1.** Si la agarra para
+  "sacarla del medio", es F2b, y en esas dos rutas la tentación de escribirlo así es
+  máxima porque ella está en el centro del forcejeo.
 - **El tirón del cráter cede cuando el pulso se corta.** Mientras los God-Cores pulsan,
   Speck no puede ser transportada lejos del centro sin importar quién la cargue. La
   entrega corta el hive mind, y recién entonces se la puede mover — el transporte de F2a
@@ -227,7 +238,10 @@ sub-gate, así que en la mayoría de las partidas son 6
 
 1. **Acto 1 — El nido, antes de que nadie le pida nada.** Segundos antes de que el grupo doble una esquina hacia una bestia semi-corrompida, Speck se detiene sola, orejas planas, y no avanza — no ladra, no huye, simplemente se niega a seguir caminando. Herramienta: el jugador la lee como sensor de Aether y avanza igual, confiando en el dato. Mascota: alguien la carga para "protegerla" del peligro que ella misma señaló. Persona: el grupo cambia de ruta porque ella dijo que no. Las tres lecturas son razonables — solo una la trata como alguien con criterio, no como instrumento o cría asustada.
 
-2. **Acto 1→2 — Después del primer flash privado del jugador.** La primera vez que el jugador la ve sin el velo (seams aether, no pelaje), Speck nota que la están mirando distinto — un instante donde ella devuelve la mirada más tiempo del que un zorro sostendría contacto visual, y después rompe el contacto primero. Herramienta: el jugador sigue caminando, fue "un momento raro". Mascota: el jugador la abraza, asumiendo que necesita consuelo. Persona: el jugador no hace nada — la deja romper el contacto a su propio ritmo, sin invadir el momento que claramente es de ella.
+2. **Acto 2 — Después del primer flash privado del jugador.** (Desambiguado
+2026-08-11: decía "Acto 1→2". **El Acto 1 tiene un solo Momento, el 1**; el
+primer flash ocurre ya en el Acto 2, ver [[Geografía y Ciudades]] §Beats
+Narrativos y [[La Rueda]] §Beats por acto.) La primera vez que el jugador la ve sin el velo (seams aether, no pelaje), Speck nota que la están mirando distinto — un instante donde ella devuelve la mirada más tiempo del que un zorro sostendría contacto visual, y después rompe el contacto primero. Herramienta: el jugador sigue caminando, fue "un momento raro". Mascota: el jugador la abraza, asumiendo que necesita consuelo. Persona: el jugador no hace nada — la deja romper el contacto a su propio ritmo, sin invadir el momento que claramente es de ella.
 
 3. **Acto 2 — El bautizo, el instante después del nombre.** Darro se une al grupo al final del Acto 1 y pasa un tramo de La Rueda observándola antes de nombrarla ([[Darro-Ficha-Expandida-v1]] §Acto 2, Escena 2). Cuando dice *"It's nothing but a speck with opinions"*, hay medio segundo de silencio antes de que el grupo ría. En ese medio segundo, Speck inclina la cabeza — su gesto de ironía, ya establecido (§Personalidad & Humor) — directo a Darro, no al vacío. Herramienta: nadie lo nota, la escena sigue. Mascota: alguien dice "aww" y la acaricia por el gesto "gracioso". Persona: el jugador es quien nota que le respondió a Darro específicamente, no al chiste en general — que entendió quién lo dijo.
 
