@@ -191,6 +191,60 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | El moonwalk eran DOS problemas, no uno — y comparador cuadro a cuadro Unity/Godot
+
+Boris volvió a ver el moonwalk en la ventana viva **después** del cambio de
+clip. Tenía razón, y la lección es de método: **dos causas distintas con el
+mismo síntoma visual**, y haber arreglado la primera me hizo dar la segunda
+por resuelta.
+
+1. **Dirección** (cerrado en la pasada anterior): el rig de DoubleL tiene el
+   rest mirando al revés, y el clip "forward" del pack hacía caminar al
+   revés. Se cambió al clip backward.
+2. **Velocidad** (esto): el clip es *in-place* y aporta una zancada propia —
+   0.65 m por paso, 2 pasos por ciclo de 1.067 s = **1.22 m/s**. El driver
+   la trasladaba a **1.5 m/s**: 23% de patinada contra el suelo en plano. Y
+   en la rampa se invierte de signo, porque trepando el avance real cae.
+   **La solución no es bajar `walk_speed`** — es atar la cadencia
+   (`speed_scale`) a la velocidad real cuadro a cuadro, con la velocidad 3D
+   completa sobre el piso (achatar la Y dejaba ~10% de desfase cuesta
+   arriba). Es lo que hace cualquier sistema de locomoción real.
+
+**Cómo se midió, que es la parte que costó.** El primer estimador
+—"el pie apoyado es el más bajo / el más lento"— **daba basura**: con foot
+IK los dos pies tocan el suelo, así que ni la altura ni la velocidad mínima
+discriminan. Un barrido de calibración salió monótono **al revés** de lo que
+la física manda, que fue la señal de que el instrumento estaba roto, no el
+sistema. La medición limpia, sin heurística: **cuánto avanza el cuerpo por
+vuelta del clip**, contra la zancada que el clip aporta. De **+23% a +0%** en
+régimen.
+
+**Comparador cuadro a cuadro** (lo que Boris pidió): `frame_strip.gd` del
+lado Godot y `SpikeFrameStrip.cs` del lado Unity, mismo protocolo —
+mismo punto de la rampa con Dagna quieta ahí, mismos 8 cuadros de un
+ciclo, misma cámara, y **la fase inicial alineada por el contacto del talón
+izquierdo detectado midiendo el hueso**, no elegida a ojo. Sin esa
+alineación las dos tiras arrancan en puntos arbitrarios del paso y las
+columnas no significan nada.
+
+**Lo que la lámina dice:** la diferencia grande **no es de motor, es de
+clip**. La zancada de Starter Assets recorre 1.12 m; la de DoubleL, 0.65 m —
+una caminata civil de paso largo contra un paso corto de combate con el
+arma arriba. Lo que sí es comparable motor a motor —retargeting stock y
+foot IK stock sosteniendo el pie en la pendiente— **funciona en los dos**.
+
+**Trampas del camino, todas en [[Lecciones]] §Godot 4.7:** el culling de
+Animator de Unity (en batchmode deja de escribir los Transform de los
+huesos: el pose se renderiza bien pero `GetBoneTransform` devuelve siempre
+lo mismo) · esperar frames de física y no de render para que Dagna se
+asiente · `SpikeCompanionWalk` pisando el `seek()` del capturador con
+`play("idle")` · y que `SkeletonIK3D` en 4.7 es un `SkeletonModifier3D`, así
+que `get_bone_global_pose_no_override()` **no** es el equivalente de
+`Animator.GetIKPosition()` (verificado midiendo: no movió la aguja, se
+revirtió).
+
+**Índice:** sin cambios — no se crearon notas nuevas del vault.
+
 ## [2026-08-12] spike/godot | Dagna camina de verdad — retargeting stock + 3 bugs de importación que el spike anterior tapaba
 
 **Qué se cerró:** la brecha de *feel* entre los dos motores del spike de

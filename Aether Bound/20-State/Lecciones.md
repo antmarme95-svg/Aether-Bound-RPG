@@ -39,6 +39,32 @@ updated: 2026-08-12
   un giro de 180° en Y, y bajo ese giro el clip *backward* del pack es el
   *forward* nuestro. **Verificarlo midiendo el pie plantado** (durante el
   apoyo debe viajar hacia +Z local), no a ojo ni por el nombre del clip.
+- **Un clip de caminata *in-place* tiene una velocidad propia, y si el
+  driver traslada a otra, el pie patina contra el suelo — eso es el
+  moonwalk.** No es un problema de dirección ni de retargeting: es
+  aritmética. El clip de Dagna aporta 0.65 m de zancada por paso, 2 pasos
+  por ciclo de 1.067 s = **1.22 m/s**; el driver la movía a 1.5 m/s, 23%
+  de más. Y en pendiente se invierte, porque el avance real cae. La
+  solución no es bajar `walk_speed`: es **atar `speed_scale` a la
+  velocidad real cuadro a cuadro** (`get_real_velocity()`, 3D completa
+  sobre el piso — achatar la Y deja la cadencia ~10% lenta cuesta
+  arriba).
+- **Para medir deslizamiento, NO uses heurísticas de "cuál pie está
+  apoyado".** Con foot IK los dos pies tocan el suelo, así que ni la
+  altura ni la velocidad mínima discriminan, y el número que sale es
+  basura: un barrido de calibración daba monótono al revés. La medición
+  limpia es **cuánto avanza el cuerpo por vuelta del clip** contra la
+  zancada que el clip aporta. 0% = pie plantado.
+- **Un script `SceneTree` que revienta dentro de una función `async`
+  cuelga la corrida entera**: el error se imprime pero `quit()` nunca
+  llega y el proceso queda vivo hasta el timeout. Después de
+  `change_scene_to_file()` hacen falta **dos** `await process_frame`
+  antes de buscar nodos, y guarda de null en todo lo que se busque.
+- **`SkeletonIK3D` en 4.7 es un `SkeletonModifier3D`**: escribe con
+  `set_bone_global_pose`, no por el sistema de override. O sea que
+  `get_bone_global_pose_no_override()` NO te devuelve la pose animada
+  previa al IK — no sirve como equivalente de `Animator.GetIKPosition()`
+  de Unity. Verificado midiendo: cambiarlo no movió la aguja.
 - **`SkeletonIK3D`: asignar `root_bone`/`tip_bone` ANTES de meterlo al
   árbol.** Cada setter revalida la cadena y con el otro extremo sin poner
   escupe errores de motor.

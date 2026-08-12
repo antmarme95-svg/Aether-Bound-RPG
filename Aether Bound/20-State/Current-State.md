@@ -128,6 +128,26 @@ escala ×100 dentro de la pose del FBX · rig del pack mirando al revés →
 moonwalk, que **detectó Boris a ojo**). Los tres están en [[Lecciones]]
 §Godot 4.7 — leer antes de tocar importación de FBX otra vez.
 
+**Moonwalk cerrado (2ª pasada del mismo día).** Boris lo siguió viendo en
+la corrida viva después del cambio de clip, y tenía razón: eran **dos
+problemas distintos con el mismo síntoma**. El primero era de dirección
+(clip espejado, ya resuelto). El segundo es de **velocidad**: el clip
+in-place aporta 1.22 m/s de zancada y el driver la trasladaba a 1.5 m/s
+— 23% de patinada en plano, y del otro signo en la rampa. Arreglado
+atando la cadencia a la velocidad real cuadro a cuadro
+(`companion_walk.gd`). Medido con una prueba limpia — cuánto avanza el
+cuerpo por vuelta del clip contra lo que el clip aporta: **de +23% a
++0%** en régimen.
+
+**Comparador cuadro a cuadro Unity/Godot listo** (`godot/tools/frame_strip.gd`
++ `unity/Assets/_Spike/Editor/SpikeFrameStrip.cs`): mismo punto de la
+rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el
+contacto del talón izquierdo **detectado midiendo el hueso**. Lo que la
+lámina muestra: la diferencia grande **no es de motor, es de clip** — la
+zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.65 m. Lo
+comparable de motor a motor (retargeting stock + foot IK stock) funciona
+en los dos.
+
 **Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
 empareja las condiciones para que ese veredicto compare lo mismo de los
 dos lados. Deuda anotada y no bloqueante: el clip es de una mano y Dagna
