@@ -162,11 +162,27 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-1. **Guión: siguiente escena.** El tramo de caminata silenciosa hacia la
-   ciudad natal, y la escena en la taberna donde se suma Valen
-   ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
-   2026-08-10, ver [[LOG]]). Sigue directo de
-   [[Guion/Encuentro con Roen]].
+1. **✅ Guión: siguiente escena — ESCRITA (2026-08-12).**
+   [[Guion/Caminata y Taberna — Valen se suma]]: caminata silenciosa
+   Roen+jugador hasta la ciudad natal + taberna donde se suma Valen
+   ([[Geografía y Ciudades]] §Beats Narrativos, locación 1). Sigue
+   directo de [[Guion/Encuentro con Roen]]. Linter en 0 críticos,
+   indexada. `status: provisional` — comparte re-corrida con
+   `Encuentro con Roen` (los dos tocan links de fijos que siguen
+   provisionales).
+   **3 decisiones que dejó abiertas, para tu VoBo:**
+   - **¿Roen y Valen se conocían de antes?** El guión asume que **no**
+     (ninguna fuente los cruza) y sobre eso monta la desconfianza de
+     Roen en la mesa. Si se conocían, hay que reescribir ese bloque.
+   - **Protagonista silencioso:** sigue siendo asunción de diseño, no
+     regla escrita — ya son dos escenas seguidas que la usan. Conviene
+     fijarla o tirarla antes de escribir el Acto 2.
+   - **Nombre de la taberna:** sin fijar, igual que la del bookend. Si
+     terminan siendo la misma (Roen viejo contando la historia en la
+     mesa donde empezó), es decisión con peso — el guión deliberadamente
+     **no** la asume.
+   **Siguiente escena natural:** locación 2 (frontera hacia El Nido, ya
+   con grupo de tres), que es donde toca enseñar el T1 de Valen.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:
@@ -182,15 +198,8 @@ agachada. El jugador sigue idle en los dos motores.
    Fragmento)**, el **obstáculo firma del link perdido** en el ascenso, el
    **sub-beat 3 podado** a culminación sin sorpresa, el índice en **6
    sub-beats (1, 2, 2b, 3, 4, 5)**, y la línea canónica con ubicación
-   declarada explícitamente en su sección.
-
-   **✅ Ambigüedad de la Cuña de Dagna — cerrada (2026-08-12).** [[Los 9
-   Links del Pivote]] §Tiers movió el objeto firma: ya no se clava "en la
-   roca del nido" (lugar por el que la traición no pasa desde el rework),
-   sino **en la piedra del borde del cráter, en First Wound** — su última
-   guardia. Sub-beat 5 de [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] ahora
-   incluye el gesto, y en T3 el martillo (el mismo del obstáculo del
-   ascenso) queda junto a la cuña. Linter en 0 críticos tras el cambio.
+   declarada explícitamente. **La Cuña de Dagna también cerró**: el objeto
+   firma pasó a la piedra del borde del cráter, en First Wound.
 
 3. **Canon estructural vigente** (4ª y 5ª re-corrida, todo ya escrito en
    las fuentes — es lo que el bloque de arriba tiene que propagar):

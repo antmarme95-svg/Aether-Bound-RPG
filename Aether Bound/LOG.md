@@ -1,5 +1,59 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] guión | Caminata silenciosa + taberna — Valen se suma (Acto 1, locación 1)
+
+**Qué se escribió:** [[Guion/Caminata y Taberna — Valen se suma]], la
+**segunda escena jugada** del juego. Cubre el Inmediato #1 del
+[[Current-State]] y sigue directo de [[Guion/Encuentro con Roen]], que
+terminaba con Roen ya caminando hacia la ciudad natal. Dos tramos sin corte:
+la caminata a solas Roen+jugador (sin una sola línea de diálogo) y la
+taberna donde Valen está esperando. `status: provisional`.
+
+**Decisiones de escritura, todas ancladas a fuente:**
+- **El silencio del tramo 1 es contenido.** Lo único que "habla" ahí es la
+  UI de bonds apareciendo por primera vez, sin caja de tutorial. Coherente
+  con [[Bond y el Bond Vacío]] y con el handoff auditivo de la apertura.
+- **Valen no rescata: reconoce patrón y ofrece información**
+  ([[Valen-Ficha-Expandida-v1]]). Frío, categorizando, no insultante.
+  Recicla verbatim los dos beats que la ficha ya fijaba ("Tres Vaciados...
+  eso no es ruido, es dato" / "Sobreviviste a tres... nada inesperado —
+  todavía"), pasados a inglés por regla 9.
+- **Producción acotada:** blocking único + 3 ambientaciones por raza
+  (Rivermeet baja al río / Emberdeep desciende a la caverna / Stillspire
+  sube por The Ascending Falls) + **una sola línea variable**, la de
+  reconocimiento, que sale de la celda raza×rol×género de las 3 tablas de
+  18 variantes de la ficha. Mismo criterio que la matriz 3×3 de la viñeta
+  muda de la apertura.
+- **Lo que Valen NO dice:** nada de su teoría (God-Cores como cadáveres,
+  Muda inconclusa) — eso es Acto 2 — y **nunca la palabra "Warden"**, que
+  no existe públicamente hasta el Archive en Acto 3
+  ([[El Mundo y la Muda]]). Es el mismo error que la 16ª QA ya había
+  corregido en su ficha; se escribió sabiéndolo.
+- **Sin combate y sin enseñar el T1 de Valen:** *The Long Calculus* necesita
+  blancos (Discord/Harmony), y una taberna no los tiene. Se difiere a
+  locación 2, que es también el primer punto donde un jugador Duelist tiene
+  daño pleno sostenido (hasta ahí no había Strategist en el grupo,
+  [[Acoplamientos]]).
+- **Variante élfica:** Valen en Stillspire no comenta el lugar. Es
+  deliberado (salió de ahí a los 140 tras la negativa de los ancianos) y va
+  anotado en el archivo como "no arreglar en una futura pasada".
+
+**Tres supuestos que quedan para VoBo de Boris**, anotados en el archivo y
+en el Current-State: (a) Roen y Valen **no** se conocían de antes —ninguna
+fuente los cruza— y sobre eso se monta la desconfianza de Roen en la mesa;
+(b) protagonista silencioso, que sigue siendo asunción de diseño y ya lleva
+dos escenas; (c) el nombre de la taberna, sin fijar, y deliberadamente **sin
+asumir** que sea la misma del bookend.
+
+**Qué se tocó:** archivo nuevo · [[00-Index]] (entrada nueva junto a las
+otras 3 de `Guion/`) · [[Guion/Encuentro con Roen]] §Pendiente (el ítem "no
+escrito todavía" pasó a ✅ con link) · [[Current-State]] (Inmediato #1
+cerrado, +compresión del bloque de propagación ya cerrado, cuyo detalle vive
+acá). **Linter en 0 críticos** — los 3 que salieron en la primera corrida
+fueron míos y de la misma clase de siempre: `§` sin cerrar antes de seguir
+la frase (regla 6 del Current-State). Sigue siendo la trampa más barata de
+pisar del vault.
+
 ## [2026-08-12] canon/fix | Cuña de Dagna reubicada — cierra la ambigüedad del bloque de propagación
 
 **Qué se cerró:** la única ambigüedad que el bloque de propagación (entrada

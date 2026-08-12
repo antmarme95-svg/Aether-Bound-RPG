@@ -197,8 +197,8 @@ solo gesto de reconocimiento) es la dramatización directa de esa nota.
 
 - **`status: provisional`** hasta la ronda de QA del domingo — toca
   *Second Catch*, que sigue provisional en [[Los 3 Links de los Fijos]].
-- No escrito todavía: el tramo de caminata silenciosa hacia la ciudad
-  natal, y la escena en la taberna donde se suma Valen
-  ([[Geografía y Ciudades]] §Beats Narrativos por Acto, locación 1;
-  decisión de Boris, 2026-08-10) — es la escena siguiente, fuera de
-  alcance de este archivo.
+- **✅ Escena siguiente — escrita (2026-08-12):**
+  [[Guion/Caminata y Taberna — Valen se suma]] cubre el tramo de
+  caminata silenciosa hacia la ciudad natal y la taberna donde se suma
+  Valen ([[Geografía y Ciudades]] §Beats Narrativos por Acto, locación 1;
+  decisión de Boris, 2026-08-10). También `status: provisional`.
