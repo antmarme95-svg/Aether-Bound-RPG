@@ -190,19 +190,28 @@ agachada. El jugador sigue idle en los dos motores.
    indexada. `status: provisional` — comparte re-corrida con
    `Encuentro con Roen` (los dos tocan links de fijos que siguen
    provisionales).
-   **3 decisiones que dejó abiertas, para tu VoBo:**
-   - **¿Roen y Valen se conocían de antes?** El guión asume que **no**
-     (ninguna fuente los cruza) y sobre eso monta la desconfianza de
-     Roen en la mesa. Si se conocían, hay que reescribir ese bloque.
-   - **Protagonista silencioso:** sigue siendo asunción de diseño, no
-     regla escrita — ya son dos escenas seguidas que la usan. Conviene
-     fijarla o tirarla antes de escribir el Acto 2.
-   - **Nombre de la taberna:** sin fijar, igual que la del bookend. Si
-     terminan siendo la misma (Roen viejo contando la historia en la
-     mesa donde empezó), es decisión con peso — el guión deliberadamente
-     **no** la asume.
+   **✅ Las 3 decisiones abiertas — cerradas por Boris el mismo día
+   (2026-08-12), las 3 escritas a fuente:**
+   - **Roen y Valen no se conocían.** El guión queda firme.
+   - **✅ Voz del protagonista — decisión nueva, la de más alcance del
+     día.** No es silent protagonist clásico: **arranca mudo y gana voz
+     acto a acto** (elemento coming-of-age). Fuente única y gradiente
+     completo en [[Voz Narrativa]] §Voz del protagonista — Acto 1 mudo ·
+     Acto 2 primeras palabras (candidata: **"Speck"**, el nombre que le
+     puso Darro) · Acto 3 líneas completas · **vuelve al silencio en el
+     Bond Vacío**, que es donde el arco se paga (el silencio deja de ser
+     el default y pasa a ser pérdida) · el cráter es la única vez que
+     habla **eligiendo**. Las escenas ya escritas no cambian.
+   - **✅ Tabernas nombradas:** **The Braided Oar** (Rivermeet) ·
+     **The Last Ladle** (Emberdeep) · **Underfall** (The Stillspire) —
+     [[Nomenclatura]] §Tabernas de la ciudad natal.
+   **Lo único que quedó abierto de este bloque:** si la taberna del
+   bookend ([[Guion/Apertura — Roen Viejo]]) es The Braided Oar. No se
+   asume por defecto — el Roen viejo contando la historia en la mesa
+   donde el grupo se formó es una decisión con peso, y es tuya.
    **Siguiente escena natural:** locación 2 (frontera hacia El Nido, ya
-   con grupo de tres), que es donde toca enseñar el T1 de Valen.
+   con grupo de tres), que es donde toca enseñar el T1 de Valen **y
+   donde hay que colocar la primera palabra del jugador**.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:

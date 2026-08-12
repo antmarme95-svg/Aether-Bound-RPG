@@ -57,6 +57,27 @@ sigue siendo español para la prosa de diseño.
 | "Rey" informal del Driftmarket                   | **Harbormaster Tobin Hale** ("Old Tobin") | Sin título nobiliario — controla el comercio del Driftmarket por reputación, no corrupción; único personaje de poder sin agenda oculta                                                                                 |
 | Regalo de Tobin al jugador                       | **the Wanderer's Goggles**                | Lentes/goggles de un extraño del pasado de Tobin con "la misma mirada" — detona que el jugador entienda su poder innato. Una vez que los usa por primera vez, se queda como objeto/accesorio no retirable del jugador. |
 
+### Tabernas de la ciudad natal — 3 nombres (decisión de Boris, 2026-08-12)
+
+La escena donde se suma Valen ([[Guion/Caminata y Taberna — Valen se suma]])
+pasa en una taberna de la ciudad natal, que cambia con la raza del jugador.
+Son **la misma escena en tres lugares**, no tres lugares distintos del mundo:
+el jugador solo verá uno por partida.
+
+| Ciudad | Taberna | De dónde sale el nombre |
+|---|---|---|
+| **Rivermeet** (humano) | **The Braided Oar** | Rivermeet es "donde el río se trenza" (tabla de arriba). Un remo trenzado no sirve para remar — es un objeto de río que renunció a su función, colgado sobre la barra. Ciudad de puentes, molinos y comercio fluvial. |
+| **Emberdeep** (enano) | **The Last Ladle** | La cuchara de colada con la que se vacía el crisol al final del turno. Doble lectura enana, sin chiste: la última colada de la jornada y la última ronda de la noche son la misma hora. Sala de nivel medio, ruido de forja que nunca para. |
+| **The Stillspire** (elfo) | **Underfall** | Terraza cubierta detrás de la cortina de agua, en la cadena de The Ascending Falls. Nombre compuesto y sin artículo, misma economía que Stillwood/Stillspire. |
+
+**El bookend sigue sin resolverse a propósito.** [[Guion/Apertura — Roen
+Viejo]] pasa en una taberna humana sin nombre, y **The Braided Oar** es el
+candidato natural (Roen es humano, Rivermeet es su ciudad). Que sean la
+misma —el Roen viejo contando la historia en la mesa donde el grupo se
+terminó de formar— es una decisión con peso que **no se toma por defecto**:
+sigue pendiente de Boris. Hasta entonces, ningún archivo debe afirmar que
+lo son.
+
 ### the Wanderer's Goggles — reglas del objeto (fuente única)
 
 **Esta sección es la fuente única de las tres reglas de los Goggles. Ningún otro documento debe enunciarlas por su cuenta — cítenla.**

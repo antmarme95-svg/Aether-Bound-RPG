@@ -168,13 +168,15 @@ distancia de su propia celda) — restaura la decisión original de Boris
 generalizaba "melee" a las 6 celdas Duelist+Strategist. Coherente con
 [[Acoplamientos]] (ratificado): el Strategist no inflige daño directo.
 
-**Jugador sin línea de diálogo hablada.** Ninguna fuente fija
-explícitamente "protagonista silencioso", pero [[Bond y el Bond Vacío]]
-establece el silencio como el beat más fuerte del juego, y la viñeta
-muda del jugador en [[Guion/Apertura — Roen Viejo]] ya usa el mismo
-recurso. Este guión sigue ese patrón por consistencia — **asunción de
-diseño, no regla escrita, a confirmar con Boris antes de generalizarla
-al resto del guión de actos.**
+**Jugador sin línea de diálogo hablada — ya es regla escrita
+(2026-08-12).** Cuando se escribió esta escena era asunción de diseño;
+Boris la resolvió y la amplió: el protagonista **no es un silent
+protagonist clásico, arranca mudo y gana voz acto a acto** (elemento
+coming-of-age). Fuente única: [[Voz Narrativa]] §Voz del protagonista.
+Esta escena es Acto 1, el piso del gradiente, así que **no cambia una
+sola línea** — lo que cambia es que ahora hay canon detrás en vez de una
+inferencia desde [[Bond y el Bond Vacío]] y la viñeta muda de
+[[Guion/Apertura — Roen Viejo]].
 
 **"Told myself... wasn't wrong" — corregido 2026-08-10 (2ª pasada).**
 La versión anterior ("Contract said you could handle yourself") usaba

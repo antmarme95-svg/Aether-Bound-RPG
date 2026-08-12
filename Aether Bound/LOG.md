@@ -1,5 +1,71 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon/decisión | Voz del protagonista: mudo que aprende a hablar + 3 tabernas nombradas
+
+**Boris cerró las 3 decisiones** que la escena de la taberna (entrada de
+abajo) había dejado abiertas, el mismo día. Las tres se escribieron **a
+fuente**, no en el guión, y de ahí se propagaron.
+
+**1. Roen y Valen no se conocían — confirmado.** El bloque "That's not a
+coincidence" / "For the record" queda firme en
+[[Guion/Caminata y Taberna — Valen se suma]].
+
+**2. Voz del protagonista — la de más alcance, y una decisión nueva, no la
+confirmación de la asunción que estaba sobre la mesa.** Lo que se preguntó
+fue si el protagonista es mudo; lo que Boris contestó fue **que es mudo al
+principio y va desarrollando su voz a medida que pasan los actos, como
+elemento coming-of-age**. Fuente única nueva: [[Voz Narrativa]] §Voz del
+protagonista (el archivo estaba `ratificado` y ya era la autoridad de la
+pregunta "¿silent protagonist?", que hasta hoy quedaba sin contestar en su
+propia cabecera).
+
+Gradiente fijado: **Acto 1 mudo** (cero líneas) → **Acto 2 primeras
+palabras** (cortas, reactivas) → **Acto 3 líneas completas**, y es donde
+por primera vez *inicia* intercambios → **la traición / Bond Vacío: vuelve
+al silencio** → **el cráter: la decisión, dicha.**
+
+Lo que hace que la decisión no toque el pilar del silencio sino que lo
+refuerce: al volver mudo en el Bond Vacío, el silencio deja de ser el
+estado por defecto y pasa a ser **pérdida** — el mismo recurso de
+[[Bond y el Bond Vacío]], ahora con precio. Y 5 reglas de escritura que la
+sostienen: la primera palabra es un nombre ajeno (candidata: **"Speck"**,
+la que puso Darro en el Bautizo — a confirmar cuando se escriba ese guión);
+el gradiente es **de acto, no de bond** (atarlo al Tether lo convertiría en
+unlock y dejaría rutas donde el protagonista nunca habla, rompiendo el
+clímax); ninguna línea nombra raza/rol/género, que es lo que mantiene el
+costo en **6 tomas máximo, nunca 18**; escasez deliberada; y nunca habla
+para explicar mecánicas.
+
+Anotado como pendiente de la propia decisión: **VO sí/no no está decidido
+en ningún lado del vault** (el gradiente funciona igual en texto), y hay que
+verificar contra [[Los 5 Finales]] que las 5 ramas soporten una línea
+hablada del jugador — F4 es la de más riesgo, porque ahí la que responde es
+Speck.
+
+**3. Tabernas de la ciudad natal — 3 nombres**, a [[Nomenclatura]]
+§Tabernas de la ciudad natal: **The Braided Oar** (Rivermeet — el remo
+trenzado no rema, y Rivermeet es "donde el río se trenza"), **The Last
+Ladle** (Emberdeep — la última colada del turno y la última ronda de la
+noche son la misma hora), **Underfall** (The Stillspire — terraza detrás de
+la cortina de agua, compuesto sin artículo, misma economía que
+Stillwood/Stillspire). **Deliberadamente sin resolver:** si la taberna del
+bookend es The Braided Oar. Es el candidato natural (Roen es humano) pero
+la coincidencia tiene peso dramático y no se toma por defecto.
+
+**Barrido de la clase, no de la línea:** grep de "silent protagonist /
+protagonista silencioso / sin línea de diálogo / asunción de diseño" en
+todo el vault → 3 lugares la enunciaban por su cuenta
+([[Guion/Encuentro con Roen]], la escena nueva y el [[Current-State]]).
+Los 3 ahora **citan** [[Voz Narrativa]] en vez de razonar el tema de nuevo.
+Ninguna línea de guión cambió — el Acto 1 ya estaba escrito en el piso del
+gradiente.
+
+**Qué se tocó:** [[Voz Narrativa]] (sección nueva) · [[Nomenclatura]]
+(sección nueva) · [[Guion/Caminata y Taberna — Valen se suma]] (3 supuestos
+→ canon citado, nombres en la tabla de variantes) ·
+[[Guion/Encuentro con Roen]] (su nota de asunción → regla con fuente) ·
+[[Current-State]]. **Linter en 0 críticos.**
+
 ## [2026-08-12] guión | Caminata silenciosa + taberna — Valen se suma (Acto 1, locación 1)
 
 **Qué se escribió:** [[Guion/Caminata y Taberna — Valen se suma]], la

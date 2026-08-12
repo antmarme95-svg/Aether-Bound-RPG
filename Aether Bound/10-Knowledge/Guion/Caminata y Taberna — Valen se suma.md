@@ -35,10 +35,16 @@ reconocimiento, que sale de la celda raza×rol×género del jugador
 demás de la escena es texto único — mismo criterio de producción que la
 viñeta silenciosa de la apertura (matriz acotada, no 18 escenas).
 
-**Roen y Valen no se conocen.** Ninguna fuente los pone juntos antes de
-esta mesa: Roen viene porque el jugador lo llamó, Valen porque calculó.
-La escena se escribe con esa asimetría — Roen es el que desconfía, Valen
-el que ya tenía la silla ocupada.
+**Roen y Valen no se conocen — confirmado por Boris (2026-08-12).** Ya no
+es asunción: Roen viene porque el jugador lo llamó, Valen porque calculó,
+y ésta es literalmente su primera mesa compartida. La escena se escribe
+con esa asimetría — Roen es el que desconfía, Valen el que ya tenía la
+silla ocupada.
+
+**El jugador no habla, y eso ahora tiene fuente.** [[Voz Narrativa]]
+§Voz del protagonista fija el gradiente: mudo en el Acto 1, primeras
+palabras en el 2, líneas completas en el 3, silencio otra vez en el Bond
+Vacío. Esta escena es Acto 1 — **cero líneas, sin excepción.**
 
 ## Guión
 
@@ -169,8 +175,8 @@ will do it whether or not I am at that table.
 
 I would rather be at the table.
 
-[The player takes the chair. No line. (Silent-protagonist assumption —
-see [[Guion/Encuentro con Roen]], same assumption, still unconfirmed.)]
+[The player takes the chair. No line — Act 1 is mute by rule, see
+[[Voz Narrativa]] §Voz del protagonista.]
 
 [Roen sits last, and only after the player does. He pulls his chair
 around so his back isn't to the room.]
@@ -200,11 +206,14 @@ frontier, toward El Nido. No new companion until then.]
 
 Fuente: [[Geografía y Ciudades]] §Los Tres Reinos.
 
-| Raza | Ciudad | Llegada (fin de la caminata) | La taberna |
-|---|---|---|---|
-| **Humano** | Rivermeet | El sendero baja a la confluencia de ríos; puentes de madera y piedra, molinos, tráfico comercial. La ciudad **se ve desde arriba** antes de entrar. | Sala baja con vigas, olor a río y a grano húmedo. Es la ciudad del Triune Council: hay gente que sabe leer un contrato de conquistador de un vistazo, y Valen eligió la mesa más lejos de ellos. |
-| **Enano** | Emberdeep | El sendero **entra hacia abajo**: la ciudad es una caverna excavada en vertical, luz de Aether azul, olor a metal caliente. La llegada es un descenso, no una vista. | Nivel medio de la caverna, calor geotérmico constante, ruido de forja de fondo que nunca para. Valen —elfo, en Ignis Reach— es la única cosa fuera de lugar en la sala, y lo sabe. |
-| **Elfo** | The Stillspire | El sendero **sube** entre árboles gigantes por The Ascending Falls; neblina de cascada, crepúsculo permanente bajo el dosel. La llegada es un ascenso. | Terraza cubierta, agua cayendo cerca, luz Aether teal. Única variante donde Valen está **en casa** (§Origen en The Stillspire) — y la única donde eso lo incomoda: no hace comentario alguno sobre el lugar, que en él es una respuesta. |
+Nombres de las 3 tabernas: fijados por Boris (2026-08-12), fuente única
+[[Nomenclatura]] §Tabernas de la ciudad natal.
+
+| Raza | Ciudad | Taberna | Llegada (fin de la caminata) | La sala |
+|---|---|---|---|---|
+| **Humano** | Rivermeet | **The Braided Oar** | El sendero baja a la confluencia de ríos; puentes de madera y piedra, molinos, tráfico comercial. La ciudad **se ve desde arriba** antes de entrar. | Sala baja con vigas, olor a río y a grano húmedo, un remo trenzado colgado sobre la barra. Es la ciudad del Triune Council: hay gente que sabe leer un contrato de conquistador de un vistazo, y Valen eligió la mesa más lejos de ellos. |
+| **Enano** | Emberdeep | **The Last Ladle** | El sendero **entra hacia abajo**: la ciudad es una caverna excavada en vertical, luz de Aether azul, olor a metal caliente. La llegada es un descenso, no una vista. | Nivel medio de la caverna, calor geotérmico constante, ruido de forja de fondo que nunca para. Valen —elfo, en Ignis Reach— es la única cosa fuera de lugar en la sala, y lo sabe. |
+| **Elfo** | The Stillspire | **Underfall** | El sendero **sube** entre árboles gigantes por The Ascending Falls; neblina de cascada, crepúsculo permanente bajo el dosel. La llegada es un ascenso. | Terraza cubierta detrás de la cortina de agua, luz Aether teal. Única variante donde Valen está **en casa** (§Origen en The Stillspire) — y la única donde eso lo incomoda: no hace comentario alguno sobre el lugar, que en él es una respuesta. |
 
 **Nota de escritura para la variante élfica:** que Valen no diga nada
 sobre Stillspire es deliberado y no debe "arreglarse" agregándole una
@@ -245,11 +254,12 @@ ausencia deliberada. La tensión fundamental entre los dos está escrita en
 mesa compartida — "For the record" es la semilla de esa dinámica, no un
 chiste suelto.
 
-**Por qué el jugador no tiene línea.** Mismo criterio que la nota
-"Jugador sin línea de diálogo hablada" de [[Guion/Encuentro con Roen]]:
-asunción de diseño consistente con la viñeta muda de la apertura,
-**no regla escrita** — sigue pendiente de confirmar con Boris antes de
-generalizarla al guión de actos.
+**Por qué el jugador no tiene línea — ya es regla (2026-08-12).** Dejó de
+ser asunción: en [[Voz Narrativa]] §Voz del protagonista — el
+protagonista arranca mudo y **gana voz acto a acto** (elemento
+coming-of-age, decisión de Boris). El Acto 1 es el piso del gradiente, así
+que esta escena y [[Guion/Encuentro con Roen]] quedan exactamente como
+estaban — ahora con fuente detrás. La primera palabra llega en el Acto 2.
 
 **Sin combate y sin enseñar el link de Valen.** *The Long Calculus*
 ([[Los 3 Links de los Fijos]] §Valen) necesita blancos: sus dos orbes
@@ -271,17 +281,21 @@ paso del tiempo.
 - **`status: provisional`** hasta ronda de QA — toca el link de Valen
   (provisional en [[Los 3 Links de los Fijos]]) y depende de
   [[Guion/Encuentro con Roen]], que también sigue provisional.
-- **Nombre de la taberna** — sigue sin fijarse, igual que la del bookend
-  ([[Guion/Apertura — Roen Viejo]] §Pendiente). Las dos se deciden juntas
-  cuando se aborde geografía de guión de Rivermeet. Ojo: si la del
-  bookend termina siendo ésta, es una decisión de diseño con peso (el
-  Roen viejo contando la historia en la mesa donde empezó) — **no
-  asumirla por defecto**.
+- **✅ Nombres de las 3 tabernas — fijados (Boris, 2026-08-12):**
+  **The Braided Oar** (Rivermeet) · **The Last Ladle** (Emberdeep) ·
+  **Underfall** (The Stillspire). Fuente única: [[Nomenclatura]]
+  §Tabernas de la ciudad natal. **Sigue abierto** si la del bookend
+  ([[Guion/Apertura — Roen Viejo]]) es The Braided Oar — decisión con
+  peso, deliberadamente no asumida.
 - **Las 18 líneas de reconocimiento** existen como prosa en español en
   [[Valen-Ficha-Expandida-v1]]; hay que pasarlas a inglés de guión
   (regla 9) cuando se haga la pasada de traducción general.
-- **Confirmar con Boris** si Roen y Valen se conocían de antes. Este
-  guión asume que **no** (ninguna fuente los cruza), y ese supuesto es lo
-  que sostiene el bloque "That's not a coincidence" / "For the record".
+- **✅ Roen y Valen no se conocían — confirmado (Boris, 2026-08-12).** El
+  bloque "That's not a coincidence" / "For the record" queda firme.
+- **✅ Protagonista silencioso — resuelto y ampliado (Boris, 2026-08-12):**
+  no es mudo permanente, es un **gradiente coming-of-age** por acto
+  ([[Voz Narrativa]] §Voz del protagonista, fuente única). Esta escena no
+  cambia; el que hereda trabajo es el guión del Acto 2, que tiene que
+  colocar la primera palabra del jugador.
 - Momentos de Persona de Speck y bautizo de Darro: no tocan esta escena
   (Speck aparece en locación 3, Darro después).
