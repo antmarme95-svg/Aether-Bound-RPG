@@ -218,7 +218,7 @@ Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive,
 
 ### Escena: The First Wound (Clímax Emocional — Darro Explota)
 
-El Pivote se llevó a Speck en el **corredor** del Archive y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse y Speck reacciona.
+El Pivote declaró en la sala del Fragmento y se llevó a Speck en el **corredor** de salida, y llegó con ella al borde del cráter ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; [[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse y Speck reacciona.
 
 **Para Darro, la pérdida ya ocurrió río arriba. Esto es verla confirmarse.**
 
@@ -259,7 +259,7 @@ Darro **lidera la búsqueda.** No tácicamente como Valen, no emocionalmente com
 
 ### The First Wound (Clímax Emocional)
 
-El Pivote ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
+El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
@@ -359,7 +359,7 @@ No es argumento. Es **declaración de promesa.**
 ### Darro + Bram (Humano Vanguard → Él)
 **Primera impresión:** Bram es soldado veterano, Darro es ex-aprendiz. Diferente trasfondo pero mismo peso.  
 **Tensión:** Darro pregunta: *"¿Cuándo fue que dejó de importar?"* (sobre el valor del trabajo). Bram no tiene respuesta clara.  
-**El corredor del Archive:** cuando Bram rechaza la oferta del Council, Darro tarda tres segundos más que Roen y Valen en entender. Cuando entiende, abraza a Bram — cosa rara. *"Gracias por no llevártela. Sé que te iba a costar."* Bram: *"Costó. No importa."* Darro: *"Sí importa."* Cuarenta años cargando el peso de otros, y elige no cargar este. Darro lo honra sin necesitar explicárselo dos veces.
+**La sala del Fragmento:** cuando Bram declara la oferta del Council y la rechaza, Darro tarda tres segundos más que Roen y Valen en entender. Cuando entiende, abraza a Bram — cosa rara. *"Gracias por no llevártela. Sé que te iba a costar."* Bram: *"Costó. No importa."* Darro: *"Sí importa."* Cuarenta años cargando el peso de otros, y elige no cargar este. Darro lo honra sin necesitar explicárselo dos veces.
 
 ### Darro + Lyris (Elfa Duelist → Ella)
 **Primera impresión:** Lyris es ligera, aérea. Darro es tierra. Conexión extraña pero genuina — dos criaturas que miran el mundo desde alturas opuestas.  

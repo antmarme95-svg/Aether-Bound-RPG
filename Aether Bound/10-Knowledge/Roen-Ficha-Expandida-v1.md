@@ -213,23 +213,21 @@ Hacia el final de Acto 2, el Fragmento se acerca (Sunken Archive), y Roen comien
 
 ---
 
-## Nudo → Clímax: El Corredor del Archive y el Cráter
+## Nudo → Clímax: la ruptura, el ascenso y el cráter
 
-### Escena 1: El corredor del Sunken Archive (Acto 3 — la traición se revela)
+### Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso
 
-En el corredor del Archive, con la lectura Warden hecha y la oferta del Triune Council sobre la mesa, la intención de cada Pivote queda expuesta — no como "giro de tuerca", sino como **conclusión de toda su lógica anterior**.
+**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]]; nueve formas distintas, una por ficha).
 
-- Maren hizo las cuentas. Su ciudad no sobrevive.
-- Torgan cumple su Juramento anterior.
-- Iven sacrifica a los desconocidos por los suyos.
-- Bram, en cambio, rechaza — ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §Dinámicas con Roen, Valen y Darro.
-- etc.
+**Roen en la ruptura:** observa, no interviene, y es donde entiende — antes de que nadie lo diga en voz alta — qué va a pasar en el cráter. No discute la decisión de nadie: **Roen renunció una vez a una cadena de mando y sabe exactamente cuánto cuesta**, así que reconoce el precio del que no renuncia en vez de condenarlo. Esa contención es lo que lo deja sin descarga durante todo el Acto 3.
 
-**Roen en el corredor:** observa, no interviene. Es aquí donde entiende — antes de que nadie más lo diga en voz alta — qué va a pasar en el cráter.
+**Roen en el ascenso — su tramo, y es el único del grupo que hace algo:** carga a Speck y no la suelta hasta arriba. Nadie se lo pide y nadie se lo agradece. Es la forma que Roen tiene de sostener un grupo que ya no existe: seguir haciendo el turno cuando el puesto ya cayó. Cuando el Pivote se acerca a ayudar en un tramo difícil —y se acerca, porque sigue siendo el mejor en lo suyo— Roen no lo rechaza. Deja que ayude. **Le duele más aceptarlo que negárselo**, y lo acepta igual, porque negárselo sería teatro y el grupo todavía tiene que subir.
+
+Cuando el Pivote es **Bram**, el ascenso es lo contrario y Roen lo lee primero: ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §Dinámicas con Roen, Valen y Darro.
 
 ### Escena 2: The First Wound, en el cráter (el quiebre)
 
-La traición ya ocurrió: fue en el **corredor** del Archive, donde el Pivote se llevó a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). Roen pasó toda la persecución sabiéndolo. Acá, en el borde del cráter, el Fragmento termina de activarse y Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado).
+La traición ya ocurrió en dos tiempos: se declaró en la **sala del Fragmento** y se ejecutó en el **corredor** de salida, donde el Pivote se llevó a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). Roen pasó el ascenso entero y toda la persecución sabiéndolo. Acá, en el borde del cráter, el Fragmento termina de activarse y Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado).
 
 **Roen y el momento del quiebre:**
 
@@ -325,7 +323,7 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 ### Roen + Bram (Humano Vanguard → Él)
 **Primera impresión:** Dos humanos de culturas distintas. Bram de guerras, Roen de fronteras. Entienden cansancio similar.  
 **Tensión:** Bram empieza a ceder bajo el peso de cuarenta años cargando la compañía de otros. Roen ve el colapso llegar. Intenta sostenerlo.  
-**El corredor del Archive:** cuando Bram rechaza la orden que el Council le pagó por ejecutar, Roen es el primero en entender, y su reacción es reconocimiento, no absolución. *"I get it. I really do."* No es despedida — Bram no se va. Es la confirmación silenciosa de que cuarenta años de cargar a otros no necesitan terminar en traición para terminar.
+**La sala del Fragmento:** cuando Bram declara la orden que el Council le pagó por ejecutar y dice que no va a cumplirla, Roen es el primero en entender, y su reacción es reconocimiento, no absolución. *"I get it. I really do."* No es despedida — Bram no se va. Es la confirmación silenciosa de que cuarenta años de cargar a otros no necesitan terminar en traición para terminar.
 
 ### Roen + Lyris (Elfa Duelist → Ella)
 **Primera impresión:** Lyris es ligera, aérea. Roen es tierra. Se complementan naturalmente.  
@@ -349,6 +347,8 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 **El vínculo no es amistad — es reconocimiento entre dos anclas.** Nunca lo verbalizan. Se manifiesta en gestos: Roen la deja pasar primero por los pasos estrechos, Dagna acepta la deferencia sin dar las gracias porque no la necesita.
 
 **La escena del Acto 1:** en una guardia nocturna compartida, Roen pregunta, casi sin voz: *"¿Cómo aguantaste sesenta años en el mismo puesto?"* Dagna contesta: *"No tuve tu opción."* No es reproche. Es constatación. Pero Roen carga esa frase el resto del juego — reaparece cada vez que duda, en el cráter, en el final.
+
+**Dagna le declara a él, no al jugador** — es la única ruptura del elenco dirigida a un fijo (ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 2b), y Roen entiende en el acto por qué: Dagna necesitaba decírselo a alguien que supiera lo que cuesta una cadena. Se lo dice, y le cobra el resto del Acto 3.
 
 **La traición de Dagna es la única que rompe a Roen.** Sereth y Lyris lo doblan (ver sus entradas arriba) — Sereth le muestra que amar no alcanza, Lyris le muestra que confundió calma con paz — pero doblarse es recuperable, y de las dos se recupera. Dagna es distinta porque es la prueba viviente de que el puesto sí se podía aguantar, y de que él no lo hizo. Cuando ella se lleva a Speck, Roen pierde esa prueba — no una lección sobre sí mismo, sino la última persona que demostraba que la otra opción existía.
 

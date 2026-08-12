@@ -253,7 +253,7 @@ Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La le
 
 ### Escena: The First Wound (Clímax Emocional)
 
-El Pivote se llevó a Speck en el **corredor** del Archive y llegó con ella al borde del cráter ([[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse, Speck reacciona, y la verdad completa sale.
+El Pivote declaró en la sala del Fragmento y se llevó a Speck en el **corredor** de salida, y llegó con ella al borde del cráter ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; [[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse, Speck reacciona, y la verdad completa sale.
 
 **Lo que se decide acá no lo decide el Pivote — lo decide el jugador.**
 
@@ -285,7 +285,7 @@ Proporciona datos: dónde fue el Pivote, qué recursos necesitará, qué ruta el
 
 ### The First Wound (Clímax Emocional)
 
-El Pivote ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
+El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
@@ -374,7 +374,7 @@ Su línea final:
 ### Valen + Bram (Humano Vanguard → Él)
 **Primera impresión:** Bram es humano, medidas de corta escala. Valen lo ve como "insecto con intención".  
 **Tensión:** Bram pregunta por qué Valen actúa como si todo estuviera predeterminado. Valen: *"Because 230 years shows patterns. You have a few more decades to see them too."*  
-**El corredor del Archive:** cuando Bram rechaza la oferta del Council, Valen dice, tras el silencio: *"Tu cálculo fue el más simple que he visto. Un veterano de cuarenta años decidiendo en cinco minutos. Impresionante."* Bram: *"No fue cálculo. Fue cansancio."* Valen: *"En un veterano de cuarenta años, es la misma cosa."* No es validación — es diagnóstico de finitud, dicho con el único registro de calidez que Valen permite.
+**La sala del Fragmento:** cuando Bram declara la oferta del Council y la rechaza, Valen dice, tras el silencio: *"Tu cálculo fue el más simple que he visto. Un veterano de cuarenta años decidiendo en cinco minutos. Impresionante."* Bram: *"No fue cálculo. Fue cansancio."* Valen: *"En un veterano de cuarenta años, es la misma cosa."* No es validación — es diagnóstico de finitud, dicho con el único registro de calidez que Valen permite.
 
 ### Valen + Lyris (Elfa Duelist → Ella)
 **Primera impresión:** Lyris es ligera, Valen es pesado. Pero Lyris piensa claro — eso conecta.  

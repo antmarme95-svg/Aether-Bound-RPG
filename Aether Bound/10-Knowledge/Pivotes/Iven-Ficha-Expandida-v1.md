@@ -705,7 +705,7 @@ Valen: *"Exactamente. Y a la gente se le puede contar, que es lo único decente 
 
 Es de las pocas veces que Valen dice algo cálido y suena frío igual.
 
-**Cuando traiciona:** Valen: *"Hace tres meses empezó a desviarse a los mismos puntos de contacto. Lo modelé. También esperé estar equivocado."*
+**Cuando traiciona:** Valen no se lo dice a Iven — se lo dice al jugador, en el ascenso, y no como predicción sino como falla de método propio: *"He was diverting to the same contact points for three months. I logged it. I filed it as homesickness."*
 
 **En F1 y F2a:** Valen es quien reconstruye técnicamente que el remedio era imposible, y quien lo escribe. En F2a manda ese documento al asentamiento, sin firmarlo. Iven nunca lo lee entero — llega hasta la tercera página y lo guarda. **No lo tira.** Lo guarda.
 
