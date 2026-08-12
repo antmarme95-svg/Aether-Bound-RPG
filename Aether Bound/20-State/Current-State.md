@@ -212,12 +212,33 @@ cumpliendo.
 | Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ ángulo del terreno |
 | Aporte del IK | ❌ 1.4 mm | — |
 
-**Próximo paso:** averiguar el requisito que falta en el modifier
-(candidatos: la cadena de huesos tiene que ser padre-hijo contigua, algún
-`use_virtual_end`/`extend_end_bone`, o el manejo de ejes de
-`mutable_bone_axes`). Hasta que el IK produzca salida, la comparación
-contra Unity no se corre: mediría animación cruda contra un IK que sí
-funciona, y le daría a Unity una ventaja que no es del motor.
+**Causa raíz: sin encontrar.** Descartados con medición: la cadena de
+huesos ES contigua padre-hijo · `active`/`influence`/esqueleto/target
+correctos · el `AnimationPlayer` no le pisa el resultado (probado con el
+mixer detenido) · el pole (estaba mal seteado, se corrigió, sigue igual).
+Test decisivo: misma fase de animación, esqueleto actualizándose, objetivo
+movido 50 cm → **0 píxeles**. El modifier se ejecuta y no hace nada.
+
+**Sin descartar:** `IKModifier3D.reset()` tras configurar · configurar los
+settings ANTES de entrar al árbol (es lo que exigía el `SkeletonIK3D`
+viejo) · `use_virtual_end`/`extend_end_bone` · asignar por ruta de
+propiedad en vez de por setter.
+
+**Próximo paso recomendado:** escena mínima aislada (esqueleto de 3 huesos
+a mano + `TwoBoneIK3D` + target) para decidir si el problema es la API o
+nuestro rig. Si ahí tampoco anda, el camino barato es escribir el solver
+de dos huesos a mano (unas 40 líneas) — y entonces el argumento de
+"herramienta stock" del lado Godot deja de sostenerse igual, que es un
+dato para la comparativa de motores.
+
+**Bug propio pendiente, anotado en el código:** `_rest_ankle_height()` da
+0.037 m cuando un tobillo real está a 0.08-0.10 m de la planta (lee el
+rest pose, que tras `fix_silhouette` no es una pose de pie apoyado). Hoy
+no cambia nada medible, pero hay que arreglarlo el día que el IK aplique.
+
+Hasta que el IK produzca salida, la comparación contra Unity no se corre:
+mediría animación cruda contra un IK que sí funciona, y le daría a Unity
+una ventaja que no es del motor.
 
 **Aviso de método para quien lea esto:** esta conclusión se dio vuelta
 DOS veces en el mismo día por instrumentos mal validados. La versión

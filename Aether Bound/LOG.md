@@ -413,6 +413,67 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Por que el modifier no produce salida — sin causa raiz, pero con el campo despejado
+
+Encargo del director: averiguar por que. **No lo encontre.** Lo que si hay
+es una lista de descartes con prueba, dos bugs propios hallados en el
+camino, y un test decisivo bien construido.
+
+**El test decisivo, que cierra la ambiguedad que quedaba.** El intento
+anterior congelaba la animacion, y eso abria la duda de si el esqueleto
+directamente no corria el pase de modifiers. Este corre las dos capturas a
+la **misma fase** pero con el esqueleto **actualizandose** (cada captura
+hace su propio `seek`), y mueve el objetivo 50 cm entre una y otra.
+Resultado: **0 pixeles**. No es que el modifier no se ejecute por falta de
+actualizacion: se ejecuta y no hace nada.
+
+**Descartado, cada uno con su medicion:**
+- La cadena de huesos ES contigua padre-hijo: Hips → LeftUpperLeg →
+  LeftLowerLeg → LeftFoot (indices 184/185/186, cada uno padre del
+  siguiente).
+- `active == true`, `influence == 1.0`, el esqueleto que reporta
+  `get_skeleton()` es el correcto, y el `target_node` resuelve al nodo.
+- El `AnimationPlayer` **no** le pisa el resultado: con el mixer detenido
+  del todo, sigue dando 0.
+- El pole no era: estaba mal seteado (ver abajo), se corrigio, y sigue 0.
+
+**Bug propio 1 — el pole nunca se aplico.** `pole_direction` es un **enum**
+(`SecondaryDirection`), no un vector. Se llamaba solo a
+`set_pole_direction_vector()`, que sin el enum en CUSTOM no hace nada: el
+enum quedaba en NONE y el vector en cero. Corregido a
+`SECONDARY_DIRECTION_PLUS_Z`. **No era la causa**, pero era un bug real y
+habria mordido despues.
+
+**Bug propio 2 — la altura del tobillo esta mal calculada.**
+`_rest_ankle_height()` devuelve **0.037 m**, y un tobillo real esta a
+0.08-0.10 m de la planta. Sale de leer el *rest pose*, que despues del
+retargeting con `fix_silhouette` no es una pose de pie apoyado. Queda
+anotado en el codigo y sin corregir a proposito: hoy no cambia nada
+medible, porque el modifier no aplica igual. **Hay que arreglarlo el dia
+que aplique**, o el pie va a quedar 5 cm hundido incluso con el IK
+funcionando.
+
+**Dato lateral util:** el objetivo del IK y el hueso estan separados entre
+0.02 y 0.12 m durante la caminata — o sea que el solver tiene un problema
+real que resolver, no esta inactivo por falta de trabajo.
+
+**Sin descartar todavia:** `IKModifier3D.reset()` despues de configurar ·
+configurar los settings ANTES de que el nodo entre al arbol (es lo que
+exigia el `SkeletonIK3D` viejo, asi que es un candidato con precedente) ·
+`use_virtual_end` / `extend_end_bone` · asignar por ruta de propiedad en
+vez de por setter.
+
+**Recomendacion para la proxima pasada:** una escena minima aislada —
+esqueleto de 3 huesos hecho a mano, un `TwoBoneIK3D`, un target— para
+decidir de una si el problema es la API o nuestro rig. Si la escena minima
+tampoco anda, el camino barato deja de ser pelear con el modifier stock:
+un solver de dos huesos son unas 40 lineas de trigonometria que
+controlamos nosotros, y el criterio de "herramienta stock" del lado Godot
+ya no se sostendria igual — que es un dato para
+[[Comparativa de Motores — Godot vs Unity]].
+
+**Indice:** sin cambios.
+
 ## [2026-08-12] spike/godot | Medición sobre el render — el foot IK no produce salida, ahora sí probado
 
 Encargo del director: medir sobre el render y volver a correr el benchmark.

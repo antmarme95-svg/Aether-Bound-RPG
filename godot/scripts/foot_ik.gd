@@ -4,11 +4,28 @@ class_name SpikeFootIK
 ## Spike ADR-003: foot IK contra el terreno, con la herramienta STOCK de
 ## Godot 4.7 -- `TwoBoneIK3D`, una de las subclases de `SkeletonModifier3D`.
 ##
-## Reemplaza al `SkeletonIK3D` que habia antes. Ese estaba **deprecado y no
-## hacia nada**: medido, movia el hueso del pie 1.4 mm entre correr y estar
-## detenido, mientras el dedo quedaba 20 cm bajo la superficie. Lo que se
-## veia como "grounding" era el cuerpo apoyado por fisica, no el IK.
-## Ver [[Lecciones]] y tools/footik_benchmark.gd.
+## ⛔ ESTADO: EL MODIFIER NO PRODUCE SALIDA TODAVIA. Medido sobre el render
+## (unico canal valido; los getters de hueso devuelven la pose ANTERIOR a
+## los modifiers): con la MISMA fase de animacion y el esqueleto
+## actualizandose, mover el objetivo 50 cm da **0 pixeles** de diferencia.
+## Lo mismo pasaba con el `SkeletonIK3D` deprecado que habia antes. Lo que
+## se ve como "grounding" es el cuerpo apoyado por fisica.
+##
+## Descartado como causa: la cadena de huesos es contigua padre-hijo
+## (Hips -> LeftUpperLeg -> LeftLowerLeg -> LeftFoot) · `active == true` ·
+## `influence == 1.0` · el target resuelve al nodo correcto · el
+## AnimationPlayer no le pisa el resultado (probado con el mixer detenido) ·
+## el pole ya esta bien seteado.
+##
+## Sin descartar: `IKModifier3D.reset()` despues de configurar · configurar
+## los settings ANTES de entrar al arbol · `use_virtual_end` /
+## `extend_end_bone` · asignar por ruta de propiedad en vez de por setter.
+##
+## ⚠️ Ademas hay un bug propio pendiente: `_rest_ankle_height()` devuelve
+## 0.037 m, y un tobillo real esta a ~0.08-0.10 m de la planta. Sale de leer
+## el rest pose, que despues del retargeting con `fix_silhouette` no es una
+## pose de pie apoyado. No se corrigio porque hoy no cambia nada medible --
+## el modifier no aplica igual -- pero hay que arreglarlo cuando aplique.
 ##
 ## Sigue el criterio del [[Benchmark Biomecánico]] (§v2), fila de HZD: foot
 ## IK contra el terreno cada frame. Dos cosas que ese estandar exige y que
@@ -75,7 +92,12 @@ func _setup_leg(index: int, thigh: String, shin: String, foot: String,
 	# La rodilla apunta hacia adelante del personaje. El modelo mira a +Z en
 	# su propio espacio (ver build_spike_scene.gd), y el esqueleto vive
 	# dentro de ese modelo, asi que aca el frente es +Z.
-	modifier.set_pole_direction_vector(index, Vector3(0.0, 0.0, 1.0))
+	#
+	# OJO: `pole_direction` es un enum (SecondaryDirection), no un vector.
+	# Llamar solo a set_pole_direction_vector() deja el enum en NONE y el
+	# vector en (0,0,0) -- o sea, sin polo. Hay que fijar el enum; el vector
+	# solo se usa cuando el enum esta en CUSTOM.
+	modifier.set_pole_direction(index, SkeletonModifier3D.SECONDARY_DIRECTION_PLUS_Z)
 
 ## Altura del tobillo sobre la planta, EN REPOSO. Es el numero que evita
 ## que el pie se entierre: el objetivo del IK es el suelo + esta altura.
