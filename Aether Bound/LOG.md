@@ -1,5 +1,103 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] QA de canon | 5ª re-corrida — 13 críticos, la ruptura reubicada, y una deuda de propagación de 12 fichas
+
+**Fase 0 — linter:** 0 CRITICAL / 0 MEDIUM / 27 INFO antes de spawnear.
+
+**Fase 1 — 2 subagentes Opus en frío**, los dos con instrucción explícita de
+barrer las 12 fichas contra el canon escrito el 08-11 (que nunca había sido
+auditado). Resultado: **dramaturgia 5C/6M/4L · congruencia 8C/7M/4L.**
+
+**Los dos convergieron en el mismo hallazgo sin verse**, que es la señal más
+fuerte que dio cualquier ronda hasta ahora: **el cambio de la traición en dos
+tiempos no se propagó a ninguna de las 12 fichas.** Nueve escenas de corredor
+siguen escritas como la revelación (*"¿lo sabías TODO ESTE TIEMPO?"*, el shock
+de los tres fijos, "nadie lo nota"), ninguna ficha tiene sección de ruptura,
+ninguna coloca el obstáculo firma del link en la ventana, y los índices
+declaran 5 sub-beats cuando son 6.
+
+### La ubicación estaba mal elegida — corregida
+
+El hallazgo que obligó a rehacer la decisión del 08-11. La ruptura se había
+puesto en **Driftmarket**, y chocaba con tres cosas que no se habían leído
+antes de decidir:
+
+1. `Geografía` §THE RECKONING declara *"Nadie confiesa. Nadie confronta. Se
+   acuestan temprano — al amanecer bajan al Archive"*, cien líneas antes del
+   sub-beat que se insertó. El archivo se contradecía consigo mismo.
+2. La **trampa de Tobin** (confrontar al fijo equivocado) perdía casi todo su
+   valor: la ventana de error se cerraba en minutos si el Pivote se
+   autodenunciaba en la misma locación.
+3. **En las rutas Lyris, Iven y Maren la orden que motiva la traición llega
+   dentro del Archive** — a Lyris el mensaje cifrado en el corredor, a Iven
+   una orden condicional (*"cuando entren al Archive…"*), a Maren una señal
+   cifrada ahí mismo. La convicción precedía a su propio detonante.
+
+**Decisión de Boris (2026-08-12): la ruptura se muda a la sala del Fragmento,
+dentro del Archive.** El Fragmento pasa a ser el detonante — su verdad parcial
+está *diseñada para dividir al grupo* ([[Estructura Dramática]] §Nudo), así que
+era el disparador natural desde el principio. **La ventana del Bond vacío es
+ahora el ascenso.** Las tres colisiones se resuelven solas.
+
+Tocado: `Geografía` §ACTO 3 (sub-beat 0 eliminado, **sub-beat 2b** nuevo,
+estructura a 6), `Bond y el Bond Vacío` (fuente única), `Estructura Dramática`
+§Clímax, `El Cráter` §1 paso 1.
+
+**Excepciones, ahora en la fuente y no dispersas:** **Bram** declara lo mismo
+que los otros ocho y no obedece — su link nunca muere, y la inversión de su
+beat firma depende de que la declaración exista. **Nyael declara por
+ausencia**: no está en la sala del Fragmento, se separó en el descenso. Su
+superlativo ("la traición como ausencia") sobrevive intacto, que era el riesgo
+real de aplicarle el beat estándar.
+
+**Forma de la ruptura — nueve formas desiguales, no plantilla** (decisión de
+Boris). El beat se define por su función (el link muere y el Pivote no se va),
+no por su formato: una frase seca para Maren, quince líneas para Sereth, casi
+ninguna palabra para Vekka.
+
+### Errores propios, corregidos
+
+- **La entrada Valen + Dagna escrita el 08-11 estaba mal en dos cosas.** Decía
+  que Valen "no la vio venir"; la ficha de Dagna —que es la fuente del beat— lo
+  tiene diciendo *"Las cartas desde Emberdeep. Debí haber preguntado"*: sí vio
+  el patrón y lo omitió por respeto élfico. Y decía que el beat de la cifra
+  errónea llega "poco después", cuando llega **antes** (Grove of Cycles, Acto
+  2). Reescrita, y quedó mejor: es la única traición del set donde la falla de
+  Valen no es de modelo sino de carácter, y por eso la única que no puede
+  convertir en dato sobre el traidor.
+- **Dos críticos más de la clase "cita § sin cerrar"**, la misma que ya se
+  registró el 08-11. El linter los cazó en el checkpoint. **La lección no
+  prendió a la primera: cerrar la cita `§` antes de continuar la oración.**
+
+### Verificado limpio (sin hallazgo)
+
+El barrido confirmó explícitamente que el arco de **90 años de Valen** quedó
+correcto, incluidos los dos "200 años" que se dejaron a propósito (antigüedad
+de los registros y The Shattered Spire); que **Roen 70-75** es consistente en
+las dos fuentes; que la regla de **derribar al portador** está enunciada una
+sola vez y citada, no re-enunciada; y que **los 60 epílogos no tienen
+desviaciones** de sabor ni de tono (los 12 F2b respetan la prohibición de
+"aprendimos algo", los 12 F1 respetan las tres prohibiciones del costo, y los
+4 grados de agencia de Speck se respetan en todos).
+
+### Lo que queda — ver [[Current-State]] §Bloque de propagación
+
+La deuda de las 12 fichas se convierte en **su propio bloque de trabajo**, no
+en un ítem de QA. Además quedaron ~15 medios y bajos sin tocar, dos de ellos
+**pre-existentes y con peso propio**: `Vekka` usa la palabra "Warden" en Actos
+1 y 2 (el canon dice que no existe públicamente hasta el Archive, y siendo
+enana no tiene vía al término), y la **Primera Cuña de Dagna** —el único pago
+mecánico del bond alto con el Pivote— está anclada a "la roca del nido", un
+lugar por el que la traición ya no pasa, y ni la cuña ni el martillo heredado
+aparecen en su ficha.
+
+**Nota de método de la 5ª:** el patrón de las últimas dos rondas es que **una
+decisión de canon tomada sin leer las fichas que la consumen genera más trabajo
+del que resuelve.** La reubicación de la ruptura no se descubrió porque un
+subagente fuera severo, sino porque leyó tres fichas que no se habían abierto
+al decidir. Antes de la próxima decisión estructural: leer los consumidores
+primero.
+
 ## [2026-08-11] QA de canon | 4ª re-corrida del ciclo de la 17ª — 8 críticos, 6 decisiones de Boris, todos corregidos a la fuente
 
 **Fase 0 — linter:** `check_canon.py` en **0 CRITICAL / 0 MEDIUM / 28 INFO**

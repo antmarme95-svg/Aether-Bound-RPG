@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-11
+updated: 2026-08-12
 ---
 
 # Current State
@@ -14,13 +14,12 @@ updated: 2026-08-11
 Old Tobin Hale + toda la estructura política y geográfica están escritos.
 Sprint QA cerrado (16ª). El vault ya soporta escribir guión.
 
-**Sprint QA de reparación — rondas 3ª a 6ª cerradas.** Historial completo en
-[[LOG]] y [[Current-State-Historico]]. Canon que quedó fijado ahí y sigue
-vigente: costo de F1 = colapso tecnológico (no exterminio); una sola fuente
-viva por personaje; Speck durmió 550 años en crisálida; Bound Five formado en
-Acto 1; topología "rueda, no malla"; **Iven es excepción intencional** de la
-fila Deber Institucional (registrada en `Los 5 Finales §matriz` — ningún QA
-debe reportarla). Los 5 finales visuales están completos y ratificados.
+**Canon de base que sigue vigente** (fijado en las rondas 3ª-6ª; historial en
+[[LOG]] y [[Current-State-Historico]]): costo de F1 = colapso tecnológico, no
+exterminio · una sola fuente viva por personaje · Speck durmió 550 años ·
+Bound Five formado en Acto 1 · topología "rueda, no malla" · **Iven es
+excepción intencional** de la fila Deber Institucional (ningún QA debe
+reportarla). Los 5 finales visuales, completos y ratificados.
 
 ### ✅ Regla de idioma establecida (decisión de Boris, 2026-07-30)
 
@@ -90,15 +89,19 @@ Con el sprint y los links de fijos cerrados, el frente siguiente es
 `archive/prototipo`). El frente C (técnico) del Task-Board queda
 **descongelado**.
 
-**Lo que salió del consejo + el cierre:** motor **GODOT** (ADR-002 vuelve
-a plena vigencia) · vertical slice = [[Slice of Bond]] recortado a 3
-escenas con **Dagna**, greybox de entorno pero **no de cuerpo** (rig con
-biomecánica y game feel correctos) · PC únicamente para v1 · alcance de
-v1 diferido hasta medir el costo real en horas de un Pivote · método:
-gauntlet-loop solo sobre traversal, con [[Benchmark Biomecánico]] como
-estándar. Detalle completo y las 3 piezas pre-código (árbol de "¿y si no
-duele?", contador de horas, 3 playtesters — Diego/Santiago/Delmer, con
-protocolo de sesión) en el §Cierre del ADR.
+**Lo que salió:** motor **GODOT** · vertical slice = [[Slice of Bond]]
+recortado a 3 escenas con **Dagna**, greybox de entorno pero **no de
+cuerpo** · PC únicamente para v1 · alcance de v1 diferido hasta medir el
+costo real en horas de un Pivote · método: gauntlet-loop solo sobre
+traversal, con [[Benchmark Biomecánico]] como estándar. Detalle y las 3
+piezas pre-código (árbol de "¿y si no duele?", contador de horas, 3
+playtesters — Diego/Santiago/Delmer) en el §Cierre del ADR.
+
+> **Nota de la 5ª re-corrida:** [[Slice of Bond]] comprime la traición en
+> un solo golpe al salir del mini-dungeon, y el canon nuevo pide dos
+> tiempos. Como el pilar que el slice existe para probar **es** el Bond
+> vacío, hay que decidir si el slice adopta los dos tiempos o se declara
+> excepción explícita. Bloquea el diseño del slice, no el guión.
 
 **Próximo código de producción:** el vertical slice, sobre Godot, según
 ese cierre. Nada más está autorizado todavía — sigue sin sentido escribir
@@ -136,41 +139,93 @@ combate genérico o sistemas fuera del slice hasta que dé veredicto.
    ([[Geografía y Ciudades]] §Beats Narrativos, locación 1 — corregido
    2026-08-10, ver [[LOG]]). Sigue directo de
    [[Guion/Encuentro con Roen]].
-2. **5ª re-corrida de QA — empezar por acá.** La **4ª corrió el
-   2026-08-11**: 8 críticos (4+4), todos corregidos a la fuente con
-   re-grep, más ~14 medios. **Sigue sin cerrar** — el criterio es 0
-   críticos en ambos subagentes. Detalle completo en [[LOG]].
+2. **🔨 BLOQUE DE PROPAGACIÓN — las 12 fichas. Empezar por acá, y no
+   mezclarlo con más QA.** Es el pendiente más grande del vault y la
+   única razón por la que el sprint no cierra.
 
-   **6 decisiones de canon tomadas en esa ronda, ya escritas:** la
-   decisión de la crisálida es **elección ilusoria** (no hay rama
-   "destruida"); Roen **decide** renunciar en la frontera y lo
-   **formaliza** en Rivermeet; en F3 Roen **se va después** del clímax;
-   la traición del Pivote ahora tiene **dos tiempos** (ruptura en
-   Driftmarket → tramo jugable con el link muerto → toma en el corredor),
-   que es lo que le da ventana al beat del Bond vacío; entre gates
-   solapados **gana F4** si sus 2 condiciones globales están cumplidas; y
-   el arco de Valen son **90 años**, no 200.
+   **Qué pasó:** la 4ª y la 5ª re-corrida cambiaron canon estructural
+   (ver punto siguiente) y ese canon **no está en ninguna de las 12
+   fichas**. Los dos subagentes de la 5ª lo reportaron por separado,
+   sin verse. No es un fix de línea: es escritura.
 
-   El cambio 4 (traición en dos tiempos) es el más grande: tocó
-   [[Estructura Dramática]], [[Geografía y Ciudades]] §ACTO 3 (sub-beat 0
-   nuevo), [[Bond y el Bond Vacío]] y [[El Cráter — Matriz de Rutas]] §1.
-   **La 5ª tiene que barrerlo específicamente** — es canon fresco y
-   ninguna ficha de Pivote se revisó todavía contra él.
-3. **Pregunta abierta:** ninguno de los 3 T3 de los fijos tiene "escena
-   firma" propia (solo Roen tiene objeto firma, el escudo) —
-   [[The Tether]] promete ambos para todo T3. Es decisión de diseño, no
-   de QA — revisar antes de ratificar [[Los 3 Links de los Fijos]].
-4. **Reglas de tráfico mientras tanto:** linter (`check_canon.py`) antes
-   de cada checkpoint, siempre.
-5. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr — es
+   **Qué hay que hacer, por ficha (9 Pivotes + Roen/Valen/Darro):**
+   - Escribir la **ruptura** — el Pivote declara en la sala del
+     Fragmento y el link muere ahí. **Nueve formas desiguales, no una
+     plantilla** (decisión de Boris): una frase seca para Maren, quince
+     líneas para Sereth, casi ninguna palabra para Vekka. El beat se
+     define por su función, no por su formato.
+   - **Reescribir las 9 escenas del corredor**, que hoy están escritas
+     como la revelación (*"¿lo sabías TODO ESTE TIEMPO?"*, el shock de
+     los tres fijos, "nadie lo nota"). Ahora el grupo lleva el ascenso
+     entero sabiéndolo: sin sorpresa, sin música de giro.
+   - **Colocar el obstáculo firma del link perdido durante el ascenso**
+     — es la ventana del beat del Bond vacío, y hoy no existe en
+     ninguna ficha. Sin esto el pilar 2 sigue sin pagarse.
+   - Corregir el índice: cada ficha declara **5 sub-beats** y ahora son
+     **6** — 1, 2, **2b**, 3, 4, 5.
+   - **Migrar la línea canónica de traición** de cada Pivote: las 9
+     están escritas para el corredor (ver la columna *Línea* de la matriz
+     en [[Los 9 Pivotes]]).
+     Decidir por ficha si migra a la ruptura o si el corredor la repite
+     en frío.
+   - Los 3 fijos: su coro de reacción está escrito para una revelación
+     que ya no ocurre ahí. **Ojo con Valen** — sus reacciones en
+     Maren/Sereth/Iven usan todas la misma estructura ("noté X, lo
+     modelé, esperé estar equivocado"): es convergencia de tanda, hay
+     que variarlas al tocarlas.
+
+   **Método:** por tandas, con linter + commit por tanda. **La 6ª
+   re-corrida va después del bloque, no antes** — correrla ahora es
+   pagar tokens por hallazgos que ya están inventariados en [[LOG]].
+
+3. **Canon estructural vigente** (4ª y 5ª re-corrida, todo ya escrito en
+   las fuentes — es lo que el bloque de arriba tiene que propagar):
+   - **La traición tiene dos tiempos.** *Ruptura* en la **sala del
+     Fragmento**, dentro del Archive (el Fragmento es el detonante) →
+     el **ascenso** es la ventana del Bond vacío → *toma* en el último
+     corredor, que es culminación, no sorpresa. **Ojo: se ubicó primero
+     en Driftmarket y se movió el 08-12** — ahí chocaba con el
+     Reckoning ("nadie confiesa"), con la trampa de Tobin, y con que en
+     Lyris/Iven/Maren la orden llega dentro del Archive.
+   - **Excepciones:** Bram declara y **no obedece** (su link nunca
+     muere); Nyael **declara por ausencia** (no está en la sala del
+     Fragmento) y conserva su superlativo.
+   - La crisálida es **elección ilusoria** — no hay rama "destruida".
+   - Roen **decide** renunciar en la frontera, **formaliza** en
+     Rivermeet. En F3 **se va después** del clímax. En el bookend tiene
+     **70-75**.
+   - Entre gates solapados **gana F4** si sus 2 condiciones globales se
+     cumplen.
+   - El arco de Valen son **90 años**. El Acto 1 tiene **un** Momento de
+     Persona. **Derribar al portador no mata a Speck** (habilita F1 en
+     Nyael y Bram; el jugador nunca pone una mano sobre ella en F1).
+
+4. **Medios y bajos sin tocar de la 5ª (~15).** Inventario completo en
+   [[LOG]]. Los dos que más pesan son **pre-existentes, no de estas
+   rondas**:
+   - **`Vekka` usa la palabra "Warden" en Actos 1 y 2**, cuando
+     [[El Mundo y la Muda]] dice que el término no existe públicamente
+     hasta el Archive en Acto 3 — y siendo enana no tiene vía canónica
+     a él.
+   - **La Primera Cuña de Dagna** —el único pago mecánico del bond alto
+     con el Pivote— está anclada a "la roca del nido", lugar por el que
+     la traición ya no pasa, y ni la cuña ni el martillo heredado
+     aparecen en su ficha. Además [[The Tether]] no contiene la "regla
+     T3" que [[Los 9 Links del Pivote]] le atribuye.
+5. **Dos decisiones de diseño abiertas** (no son de QA; las dos bloquean
+   la ratificación de [[Los 3 Links de los Fijos]]):
+   - Ninguno de los 3 T3 de los fijos tiene **escena firma** propia
+     (solo Roen tiene objeto firma, el escudo) — [[The Tether]] promete
+     ambos para todo T3.
+   - El caso **"rol duplicado"** vive en T1 para Roen y en T2 para Valen
+     y Darro, sin razón declarada, y solo en Roen *sustituye* el sabor
+     base en vez de sumarse.
+6. **Reglas de tráfico mientras tanto:** linter (`check_canon.py`) antes
+   de cada checkpoint, siempre. **Y al citar una sección, cerrar el `§`
+   antes de seguir la frase** — el linter parsea lo que sigue como parte
+   del nombre; costó 5 críticos propios entre la 4ª y la 5ª.
+7. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr — es
    el único brief pendiente de la sección 12.
-6. **✅ Investigación de gauntlet-loop — hecha (2026-08-10).** No es una
-   tercera vía de motor: es un método de producción (constructor +
-   crítico en loop contra un estándar medible) ortogonal a Godot/Unity,
-   aplicable sobre cualquiera de los dos. Ya disponible parcialmente vía
-   skill `/loop`; candidato de estándar medible: [[Benchmark
-   Biomecánico]]. Detalle completo en [[ADR-003 Reset de desarrollo y
-   motor]] §Tercera vía.
 7. **✅ Consejo corrido (2026-08-10) → [[ADR-003 Reset de desarrollo y
    motor]] tiene BORRADOR DE CIERRE, pendiente de tu firma.** Salió:
    hard reset SÍ · **Godot** (no se reabre hasta que el slice dé
