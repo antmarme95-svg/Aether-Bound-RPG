@@ -264,8 +264,9 @@ estaban — ahora con fuente detrás. La primera palabra llega en el Acto 2.
 **Sin combate y sin enseñar el link de Valen.** *The Long Calculus*
 ([[Los 3 Links de los Fijos]] §Valen) necesita blancos: sus dos orbes
 son Discord/Harmony sobre enemigos y aliados. La escena de taberna no
-los tiene, así que el T1 de Valen se enseña en el tramo siguiente
-(locación 2, frontera hacia El Nido), donde ya hay grupo de tres. Nota
+los tiene, así que el T1 de Valen se enseña en el tramo siguiente —
+[[Guion/Frontera — Camino al Nido]], locación 2, ya con grupo de tres
+(escrita 2026-08-12). Nota
 de sistemas: es también el primer punto del juego donde un jugador
 Duelist tiene daño pleno de forma sostenida — hasta acá no había ningún
 Strategist en el grupo ([[Acoplamientos]]; ver la nota de co-dependencia

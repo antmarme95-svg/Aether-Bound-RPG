@@ -1,5 +1,74 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] guión | Frontera — Camino al Nido (Acto 1, locación 2): el T1 de Valen y la torre como puerta
+
+**Qué se escribió:** [[Guion/Frontera — Camino al Nido]], tercera escena
+jugada, `status: provisional`. Sigue directo de
+[[Guion/Caminata y Taberna — Valen se suma]]. Tres tramos: el radio del
+reino → la torre de guardia → The Wilds hasta la boca del nido. Sin nuevo
+compañero (el Pivote se suma en el nido).
+
+**El hallazgo estructural: la torre ya era la puerta.** [[Geografía y
+Ciudades]] §M pone las 3 torres **del lado salvaje**, no en territorio
+propio. Así que cruzarlas *es* dejar el reino, y no hubo que inventar
+ninguna frontera nueva. Cada variante dice algo distinto del reino con el
+mismo trámite: **los humanos anotan** (el puesto es el registro de purgas,
+llevan bitácora de qué nidos se limpiaron), **los enanos recuerdan**
+(guarnición fija, la misma familia por generaciones: *"Third crossing this
+season. Two came back." / "Which two?" / "The ones who turned around."*),
+**los elfos miran** (nadie los detiene, nadie anota nada, y el centinela
+sigue mirando después — con la línea canónica de Valen, *"vigilamos, pero
+rara vez actuamos"*).
+
+**El beat de Roen en el puesto humano sale gratis de la geografía.** Roen
+sirvió 15 años como guardia del Council y **renunció por una purga**
+([[Roen-Ficha-Expandida-v1]] §Quiebre). Que ahora lo anoten a él en el
+registro de purgas, para un trabajo que aceptó, es la ironía que el mapa
+ya tenía puesta. No la subraya nadie: pregunta si alguien lee el libro, el
+chico contesta una tontería, siguen caminando.
+
+**El T1 de Valen, enseñado en dos beats separados y en ese orden.** Discord
+primero (marca a un enemigo — el jugador ve el efecto en el daño que él
+mismo hace), Harmony después (marca al jugador — el efecto es sobre su
+propio cuerpo). Juntos se leerían como "dos botones"; separados se leen
+como un personaje con dos formas de intervenir sin tocar a nadie. El swap
+forzado (un solo orbe a la vez en T1) convierte la limitación en decisión.
+
+**La mecánica es la caracterización.** *"I calculated how much of this
+they're going to take, and I started paying it back early." / "You
+calculated that." / "Before we left the city."* — es la descripción
+literal de Steady Variable y, a la vez, la cosa más fría que se le puede
+decir a alguien. La tensión Roen/Valen avanza sin escribir una discusión.
+
+**[[Acoplamientos]] sin caja de tutorial:** es el primer tramo donde un
+Duelist tiene daño **pleno** sostenido, porque por primera vez hay un
+Strategist en el grupo. El jugador lo va a *sentir*; nadie se lo explica.
+
+**Sin fauna con nombre**, a propósito: [[Bestiario]] es explícito en que
+los grados Sano y Ambiental no llevan ficha y se generan por sistema. El
+primer bicho con nombre del juego debería ser un boss, no relleno de
+camino. Lo único que la escena informa de bestiario es el paso de
+Ambiental a **Corrupto** cerca del nido, y lo informa visualmente.
+
+**⚠️ Ambigüedad de fuente encontrada, no resuelta:** [[Geografía y
+Ciudades]] §M anota que Roen *"fue este puesto, en otra vida"* sobre
+Aethelgard Watch, y su ficha lo pone en la frontera **Mistbound**, que es
+tierra interior de Aethelgard y no la torre de The Wilds. El guión escribió
+lo que las dos lecturas soportan (reconoce el ritual; no se afirma que
+estuvo destinado ahí) y dejó la pregunta anotada. Fix de una línea en la
+fuente, en el sentido que Boris elija.
+
+**Corrección a una nota propia del [[Current-State]]:** decía que la
+primera palabra del jugador iba en este tramo. Es falso — va en el
+**Bautizo, Acto 2** ([[Voz Narrativa]] §Voz del protagonista). El Acto 1
+entero es mudo, Waypost incluido, y eso es exactamente lo que carga el beat
+de formación.
+
+**Qué se tocó:** archivo nuevo · [[00-Index]] · la escena anterior (su
+nota de "el T1 se enseña en el tramo siguiente" ahora enlaza) ·
+[[Current-State]]. **Linter en 0 críticos** — los 2 de la primera corrida
+fueron, otra vez, `§` sin cerrar antes de seguir la frase.
+
 ## [2026-08-12] canon/decisión | Waypost: la taberna del bookend + el beat donde el grupo se vuelve equipo
 
 **La pregunta de Boris fue si la taberna del bookend debía ser The Braided

@@ -279,8 +279,33 @@ agachada. El jugador sigue idle en los dos motores.
    - **Tabernas de la ciudad natal:** The Braided Oar / The Last Ladle /
      Underfall ([[Nomenclatura]]). Roen y Valen **no se conocían**.
 
-   **Siguiente escena:** locación 2 (frontera hacia El Nido), donde toca
-   el T1 de Valen **y la primera palabra del jugador**.
+   **✅ Locación 2 — ESCRITA (2026-08-12):**
+   [[Guion/Frontera — Camino al Nido]]. El cruce de la torre de guardia
+   del reino hacia The Wilds (las 3 torres ya estaban del lado salvaje,
+   así que **la torre es la puerta** — no hubo que inventar frontera),
+   con las 3 variantes diciendo algo distinto del reino con el mismo
+   trámite: los humanos anotan, los enanos recuerdan, los elfos miran.
+   Enseña el **T1 de Valen** en dos beats separados (Discord sobre
+   enemigo → Harmony sobre el jugador) y es el primer tramo con daño
+   pleno de Duelist ([[Acoplamientos]]). Fauna **Ambiental sin nombre**
+   ([[Bestiario]] lo permite explícitamente); el paso a Corrupto anuncia
+   el nido. `status: provisional`.
+   **1 ambigüedad de fuente para vos, no bloquea:**
+   [[Geografía y Ciudades]] §M dice que Roen *"fue este puesto, en otra
+   vida"* sobre Aethelgard Watch, y su ficha lo pone en la frontera
+   Mistbound, que es **tierra interior**. El guión escribió lo que las
+   dos lecturas soportan (reconoce el ritual, no se afirma que estuvo
+   destinado ahí). Fix de una línea en la fuente, en el sentido que
+   elijas.
+
+   **Siguiente escena:** locación 3, **El Nido** — encuentro con Speck,
+   el Pivote se suma, la crisálida como elección ilusoria, primer
+   God-Core. Después, locación 4 (Waypost, el beat de formación).
+   **Corrección a una nota anterior de este archivo:** decía que la
+   primera palabra del jugador iba en el tramo de la frontera. Es falso
+   — va en el **Bautizo, Acto 2** ([[Voz Narrativa]] §Voz del
+   protagonista). **El Acto 1 entero es mudo, Waypost incluido**, y eso
+   es justamente lo que carga el beat de formación.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:
