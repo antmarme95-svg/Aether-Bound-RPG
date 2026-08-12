@@ -2,6 +2,10 @@
 godot/.godot/
 godot/test_out/
 
+# Unity: capturas locales del comparador de frames (regenerables con
+# SpikeFrameStrip.Run, ver unity/Assets/_Spike/Editor/)
+unity/test_out/
+
 # Unity — caché regenerable + artifacts locales (equivalente a godot/.godot/)
 unity/Library/
 unity/Temp/
