@@ -129,7 +129,7 @@ Material dramático central. **Ninguna de las tres tiene marcador, prompt de UI 
 
 **Grieta 2 — The Reckoning, Driftmarket.** Tobin describe lo que oyó: **un pago del Consortium disfrazado de subsidio agrícola a un asentamiento fronterizo.** Es dinero. No es un cargamento de reactivo, no es un equipo de purga, no es un convoy médico. **Si el Council de verdad estuviera preparando un remedio, el movimiento logístico sería visible en los muelles de Driftmarket** — y no lo es. Lo único que se mueve es efectivo. El jugador tiene delante la forma exacta de la mentira y la va a leer como prueba de la traición, que es lo que Tobin quería que leyera. Ironía completa: el dato correcto, interpretado en la dirección correcta, y aun así se pierde la parte que salvaba a alguien.
 
-**Grieta 3 — Sunken Archive, con los Goggles puestos.** La proyección Warden establece que los God-Cores son cadáveres y que la corrupción es la Muda inconclusa ([[El Mundo y la Muda]]). De ahí se deduce en un paso que matar a la última Warden **no puede** sanar nada. El jugador tiene esa deducción en la mano **minutos antes** de que Iven la tome en el corredor. Los Goggles son privados ([[Nomenclatura]] §the Wanderer's Goggles): Iven no ve nada. Pero el jugador puede decírselo con palabras, y el diseño debe permitirlo — es la única ventana real de persuasión de toda la ruta.
+**Grieta 3 — Sunken Archive, con los Goggles puestos.** La proyección Warden establece que los God-Cores son cadáveres y que la corrupción es la Muda inconclusa ([[El Mundo y la Muda]]). De ahí se deduce en un paso que matar a la última Warden **no puede** sanar nada. El jugador tiene esa deducción en la mano **minutos antes** de que Iven declare en la sala del Fragmento (sub-beat 2b), y sigue teniéndola durante todo el ascenso. Los Goggles son privados ([[Nomenclatura]] §the Wanderer's Goggles): Iven no ve nada. Pero el jugador puede decírselo con palabras, y el diseño debe permitirlo — es la única ventana real de persuasión de toda la ruta.
 
 **Regla:** ninguna de las tres grietas cancela la traición por sí sola. Iven lleva dos años sosteniéndose sobre esa promesa; no la suelta por un argumento. Lo que cambian es **el epílogo** — cuánto tarda en entenderlo, y si lo entiende de boca de alguien que lo quería o de boca del silencio.
 
@@ -314,9 +314,9 @@ Esa noche no duerme. Al amanecer bajan al Archive.
 
 ---
 
-## Nudo → Clímax: el Archive, la revelación Warden, y la traición al salir
+## Nudo → Clímax: el Archive, la revelación Warden, y la traición en dos tiempos
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Iven los cubre los cinco: Approach → Interior del Archive → **traición mecánica al salir** → persecución → quiebre en el cráter. **Iven toma a Speck en el corredor de salida del Archive, no en el cráter.**
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. Iven los cubre los seis: Approach → Interior del Archive → **ruptura en la sala del Fragmento (2b)** → **toma al salir (3)** → persecución → quiebre en el cráter. **Iven declara en la sala del Fragmento y toma a Speck en el corredor de salida, nunca en el cráter** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos).
 
 ### Sub-beat 1: Approach al Sunken Archive
 
@@ -374,46 +374,72 @@ El jugador mira las paredes a través de los Goggles (regalo de Tobin en Driftma
 
 **→ Grieta 3.** El jugador tiene ahora la deducción completa: los cores son cadáveres, la corrupción es la Muda inconclusa, matar a la última Warden no sana nada. **Iven está a cuatro metros y todavía se puede hablar con él.** Si el jugador se lo dice — con lo que tenga, sin pruebas, con la voz que le salga — es la única ventana real de persuasión de toda la ruta. No cancela la traición. Cambia el epílogo.
 
-Si el jugador no dice nada, no pasa nada. Iven se levanta solo, se sacude el polvo, y empieza a caminar hacia el corredor de salida.
+Si el jugador no dice nada, no pasa nada. Iven se levanta solo, se sacude el polvo, y camina hacia el pedestal del Fragmento.
 
-**Detalle canónico:** cuando Iven camina hacia el corredor, el jugador lo ve **desde atrás, llorando**, con la lectura Aether encima temblándole alrededor de las manos. Iven no sabe que lo están viendo. Es lo último que el jugador ve de él antes de la traición, y está diseñado para que lo recuerde en el cráter.
+### Sub-beat 2b: la ruptura — la sala del Fragmento
 
-### Sub-beat 3: la traición al salir del Archive
+Ubicación: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
 
-El grupo empieza el ascenso por el último corredor — largo, estrecho, con nichos laterales.
+**A Iven la orden le llega acá.** Su cadena es la del **Trade Consortium** — el agente sin nombre que lo ha estado esperando dos años, nunca el Council de frente ([[El Cráter — Matriz de Rutas]] §2, fila Iven) — y la señal le entra a Iven todavía con la cara mojada, en el momento en que el Fragmento aparece en el pedestal. Es la peor coincidencia posible: se entera de que puede cumplir en el mismo cuarto donde acaba de entender qué es lo que va a entregar.
 
-Iven se adelanta cuatro pasos en vez de retrasarse. Pretexto mínimo: *"Voy viendo la salida."* Nadie duda; lo ha hecho cien veces.
+Y entonces **se le sale**. Ésa es la forma de su ruptura y no se parece a ninguna otra: Iven **no elige el momento** — los otros ocho declaran, él revienta. Habla de más, se interrumpe, arranca frases que no termina, se contesta solo. Le habla al suelo primero y al jugador después, a gritos, y ninguna de las dos partes suena preparada:
 
-Cuando el resto voltea, **Iven ya tiene a Speck y ya está a diez metros.**
+*"Tengo que llevármela."* Pausa. *"No — déjame decirlo bien. Empecé mal."*
 
-No hubo forcejeo. La levantó al pasar, en movimiento, sin frenar — es acróbata, y el gesto es de una fluidez casi obscena para lo que significa. Speck no chilla. Roen ni alcanzó a girar el hombro.
+*"Hace dos años el Council me prometió salvar mi asentamiento si traía a la criatura. Yo no sabía que la criatura eras tú, Speck. Sospechaba, sospechaba, pero no sabía que eras tú, no sabía que eras suya, no—"*
 
-El jugador: *"Iven. ¿¡QUÉ!?"*
+*"Doscientas personas. Doscientas trece. Sé el número. Lo sé todos los días."*
 
-Iven, de espaldas, sin detenerse del todo: *"Lo siento. Hace dos años el Council me prometió salvar mi asentamiento si traía la criatura. Debí decírtelo. No lo hice porque quería este tiempo contigo sin que lo supieras."*
+*"Y sí, sí, ya sé lo que son ellos"* — señalando las paredes, los cadáveres, sin mirarlos — *"les cerraron las manos. Ya lo dije. Yo lo dije. ¿Y qué hago con eso? Dime qué hago con eso."*
 
-Jugador: *"¿¡Lo sabías TODO ESTE TIEMPO!?"*
+Nadie le contesta. Iven se queda esperando la respuesta un segundo de más, y ese segundo es la escena entera: **es el único de los nueve que declara pidiendo que alguien lo detenga**, y nadie puede.
 
-Iven: *"No. Sospechaba. No sabía que era Speck. No sabía que era tuya."*
+Cuando el jugador reacciona —*"¿Los cambiarías a ellos por desconocidos?"*— le sale lo único que tenía ordenado de antes:
 
-Jugador: *"¿Eso lo hace mejor?"*
-
-Iven: *"No. Pero es verdad."*
-
-Un segundo. Después, más bajo, casi para sí mismo:
-
-*"Tenía nueve años la primera vez que alguien decidió a quién salvar delante de mí. Esa vez no decidí yo. Ahora sí. Pensé que iba a ser más fácil siendo yo el que elige."*
-
-**Línea de traición:**
+**Línea de la ruptura:**
 
 ***"You'd trade her for strangers? I'm trading her for everyone I've ever known. They're my people. I can't let them die. Even for her. Even for you."***
 
-Y **corre.**
+Y después, mucho más bajo, casi para sí mismo:
 
-**Reacción del grupo:**
+*"Tenía nueve años la primera vez que alguien decidió a quién salvar delante de mí. Esa vez no decidí yo. Ahora sí. Pensé que iba a ser más fácil siendo yo el que elige."*
+
+**Acá muere el link.** Riposte Runner deja de responder desde esta escena.
+
+**Y no se va.** No puede: están a media ruina de profundidad y él es el que abre camino desde el Acto 1. **Iven sube adelante, como siempre**, señalando dónde pisar, avisando de los desniveles, sosteniendo la cuerda para gente que acaba de oírlo anunciar lo que va a hacer. Nadie le habla y él tampoco vuelve a hablar — el hombre que en el approach no paraba de hablar hace el ascenso entero en silencio.
+
+**Reacción del grupo — acá:**
 - **Roen:** *"Le vi la cara en Driftmarket y no hice nada."* Es lo único que dice. No grita. Se queda con eso el resto del Acto 3.
-- **Valen:** *"Hace tres meses empezó a desviarse a los mismos puntos de contacto. Lo modelé. También esperé estar equivocado."* Lo dice con vergüenza real, que en Valen es rarísimo.
-- **Darro:** **explota.** *"¡¡¡IVEN!!! ¡¡SPECK CONFIABA EN TI!!"* Al corredor vacío. Después, mucho más bajo: *"Le daba de comer, carajo."*
+- **Valen** no le habla a Iven: se lo dice **al jugador**, en el ascenso, dos horas después, y no como predicción sino como una disculpa por su propio oficio. *"He was diverting to the same contact points for three months. I logged it. I filed it as homesickness."* Es la vergüenza de haber tenido el dato y haberlo archivado bien clasificado en la carpeta equivocada — que en Valen es rarísima.
+- **Darro:** **explota**, y explota a la cara. *"¡¡¡IVEN!!! ¡¡SPECK CONFIABA EN TI!!"* Iven no se defiende, lo cual es peor. Después, mucho más bajo: *"Le daba de comer, carajo."*
+
+**Detalle canónico:** durante el ascenso, con Iven adelante abriendo camino, el jugador lo ve **desde atrás, llorando**, con la lectura Aether encima temblándole alrededor de las manos. Iven no sabe que lo están viendo. Es lo último que el jugador ve de él antes de que se lo lleve, y está diseñado para que lo recuerde en el cráter.
+
+#### La trampa amorosa — el parry que no lanza a nadie
+
+En el ascenso, un guardián Warden despierto bloquea el paso: el encuentro exacto que el juego enseñó a resolver con **Riposte Runner** ([[Los 9 Links del Pivote]]) — el parry-redirect del jugador como vector de lanzamiento de Iven al flanco.
+
+El jugador para el golpe y pica Bond en el mismo movimiento, porque llevan un año haciéndolo así. La Link Cam barre el flanco abierto y no hay nadie en él. Dos notas y silencio. **El parry vuelve a ser solo un parry**, y el jugador tiene que resolver el encuentro de frente, largo y feo.
+
+Iven está a tres metros. **Y hace el gesto igual** — arranca el paso de salida, medio metro, y se frena. Es lo más cerca que va a estar de pedir perdón.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: la toma al salir del Archive
+
+**No es la revelación.** Se dijo abajo, entre gritos, y llevan el ascenso entero cargándolo.
+
+Último corredor — largo, estrecho, con nichos laterales. Iven va adelante, como fue todo el ascenso. No necesita pretexto: **su posición ya es el pretexto**, y eso es lo cruel de esta ruta — el grupo lleva un año dejándolo ir primero.
+
+Cuando el resto voltea, **Iven ya tiene a Speck y ya está a diez metros.**
+
+No hubo forcejeo. La levantó al pasar, en movimiento, sin frenar — es acróbata, y el gesto es de una fluidez casi obscena para lo que significa. Speck no chilla. Roen ni alcanzó a girar el hombro; Roen **ya sabía** y giró el hombro igual, tarde y a propósito.
+
+Iven no explica nada nuevo. De espaldas, sin detenerse:
+
+*"Perdón. Perdón. Perdón."*
+
+Tres veces, cada una más lejos. Y **corre.**
 
 ---
 
@@ -643,7 +669,7 @@ Ver [[Los 5 Finales]].
 
 ***"You'd trade her for strangers? I'm trading her for everyone I've ever known."***
 
-**Contexto:** la verdad de Iven en el cráter. No es defensa de su traición — es la exposición limpia de un dilema genuino. Iven quiere al jugador. También quiere a su pueblo. Las dos cosas son reales, y la frase funciona porque **el jugador no tiene una buena respuesta.** Cualquier cosa que conteste es cierta y también insuficiente.
+**Contexto:** se dice **en la ruptura** (sub-beat 2b, la sala del Fragmento), y es lo único de esa escena que le sale ordenado — el resto de su declaración es un desborde entrecortado. En el corredor no repite nada: solo *"Perdón"*, tres veces, corriendo. No es defensa de su traición — es la exposición limpia de un dilema genuino. Iven quiere al jugador. También quiere a su pueblo. Las dos cosas son reales, y la frase funciona porque **el jugador no tiene una buena respuesta.** Cualquier cosa que conteste es cierta y también insuficiente.
 
 La frase gana peso retroactivo en F1 y F2a, donde el intercambio nunca fue real: no cambió a Speck por doscientas personas. La cambió por nada, o por dinero.
 

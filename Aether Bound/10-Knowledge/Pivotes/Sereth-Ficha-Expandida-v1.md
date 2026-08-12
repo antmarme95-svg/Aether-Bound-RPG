@@ -203,9 +203,9 @@ Si el jugador no confronta a Valen, mejor. Si confronta, mejor todavía. Sereth 
 
 ---
 
-## Nudo → Clímax: El Archive, la Confirmación Warden, y la Traición al Salir
+## Nudo → Clímax: El Archive, la Confirmación Warden, y la Traición en Dos Tiempos
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Sereth no traiciona en el cráter — traiciona **al salir del Sunken Archive**. La persecución hasta First Wound y el quiebre en el cráter son consecuencias.
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. La traición de Sereth tiene **dos tiempos** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos): la **ruptura** en la sala del Fragmento (sub-beat 2b) y la **toma** en el corredor de salida (sub-beat 3). No traiciona en el cráter; la persecución hasta First Wound y el quiebre son consecuencias.
 
 ### Sub-beats 1-2: Approach + Interior Archive
 
@@ -229,29 +229,67 @@ En su cabeza, en ese instante, la línea sería (si la dijera — no la dice):
 
 *"Ya lo sabes. Ahora sabes lo mismo que yo sabía desde antes de que nos conociéramos. Bien. La decisión que vas a tomar en el cráter tiene que tomarla alguien que sepa esto. No tiene sentido tomarla sabiendo menos."*
 
-### Sub-beat 3: Traición al salir del Archive
+### Sub-beat 2b: La ruptura — la sala del Fragmento
 
-En el corredor de ascenso, Sereth se retrasa con un pretexto menor — *"Vi una inscripción marginal, quiero verificar una lectura, alcánzame en cinco minutos."* Nadie desconfía; es exactamente el tipo de cosa que Sereth haría por interés propio. Ese es el punto: **el pretexto es plausible porque toda su vida en el grupo ha entrenado al grupo a esperarlo.**
+Ubicación: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
 
-Ruta lateral, salida secundaria — la que estudió hace treinta años. Toma a Speck sin violencia. Speck no forcejea. No hay diálogo largo. No hay explicación.
+**Sereth es el que más habla de los nueve, y es el único que elige el momento a conciencia.** No espera a que la señal le llegue ni a que alguien pregunte: espera a que el grupo haya terminado de procesar la lectura Warden — porque una declaración hecha antes de que el otro entienda el contexto es una declaración desperdiciada. Cuenta hasta que Valen se sienta en el suelo. Entonces habla.
 
-**Ese es el shock deliberado.** Sereth no explica al salir. El grupo se queda con la traición y sin palabras — porque la explicación es para después, en la persecución, y solamente si el jugador la busca.
+Le habla **solo al jugador**, y lo hace explícito desde la primera línea. Los otros tres están en la sala y él no los mira ni una vez. Son unas quince líneas, dichas sin subir la voz, en la cadencia de tutoría con la que ha hablado el año entero.
+
+**Ninguna es una disculpa. Y ninguna explica el método** — eso es lo que hay que entender de esta escena: Sereth expone **la decisión** con precisión absoluta y **no dice cómo llegó el jugador hasta ahí.** Esa parte se la guarda para el borde del cráter (sub-beat 5), que es el único lugar donde la dice.
+
+> **Sereth:** *"Voy a decirte una cosa y prefiero decírtela acá, con luz, y no allá arriba con prisa."*
+>
+> **Sereth:** *"Speck tiene que ir a the Royal Academy. Viva. Yo la voy a llevar."*
+>
+> **Sereth:** *"No fue una orden. No hubo un sobre, no hubo un pago, no hubo un momento en que alguien me convenciera. Es la conclusión de mi propia lectura, y la tengo desde hace ocho meses. Si te sirve de algo, es peor así."*
+>
+> **Sereth:** *"Sabía lo que era ella antes de conocerte. El expediente Warden existe, yo tuve acceso, y no te lo dije. Eso es lo único de todo esto por lo que podrías tener derecho a odiarme, y no es lo que te va a doler más."*
+>
+> **Sereth:** *"No voy a huir. No podría, y aunque pudiera no me conviene. Vamos a subir juntos, y va a ser largo, y vas a tener todo el ascenso para pensar. Quiero que lo tengas."*
+>
+> **Sereth:** *"No me preguntes ahora por qué me creíste. Pregúntamelo cuando importe."*
+
+Y se queda parado ahí, disponible, esperando preguntas que puede o no contestar. **Contesta todo lo que sea sobre Speck, la Academy o el expediente. No contesta nada sobre el jugador.** Si le preguntan *"¿todo este año fue esto?"*, dice: *"Esa pregunta tiene una respuesta larga y este no es el lugar."* Es la única vez de la campaña en que Sereth **aplaza** una respuesta.
+
+**Acá muere el link.** Guided Avalanche deja de responder desde esta escena.
+
+**Y Sereth sube con el grupo.** Camina en su posición habitual, sostiene lámparas, corrige rutas, y —esto es lo insoportable— **sigue siendo mejor compañía que nadie**. Nadie logra odiarlo con comodidad durante el ascenso, y eso también estaba previsto.
+
+**Reacción del grupo — acá, que es donde hay revelación:**
+
+**Roen:** silencio. Roen entiende el arquetipo mejor que nadie del grupo — es humano que trabajó en instituciones. No grita. Aprieta la mandíbula. Lo único que dice, mucho más tarde y al jugador: *"He didn't lie once. Check it. Not once."*
+
+**Valen** no predijo esto, y ése es su golpe: tuvo el dato y lo clasificó bien en la carpeta equivocada. *"You changed the shape of his questions three months ago. Same content, different angles. I saw it."* Pausa. *"I filed it as intellectual growth."* Valen, que se enorgullece de leer trayectorias, fue leído.
+
+**Darro:** *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* Darro entiende engaño como ausencia de amor, no como amor con función. No puede procesar la coexistencia, y durante el ascenso entero le vuelve a preguntar lo mismo de tres maneras distintas.
+
+**El jugador:** parálisis. Todavía no entiende el patrón — entiende el hecho. Va a entender el patrón durante la persecución, solo, y ése es el corazón de la ruta.
+
+#### La trampa amorosa — la carga que nadie curva
+
+En el ascenso, una compuerta Warden atascada con el punto de impacto fuera del eje de la rampa: el problema exacto que el juego enseñó a resolver con **Guided Avalanche** ([[Los 9 Links del Pivote]]) — Sereth dobla la gravedad y curva la carga imparable del jugador hasta el blanco.
+
+El jugador carga y pica Bond a mitad de la embestida. La Link Cam barre la curva que debería aparecer y barre línea recta. Dos notas, silencio. **La carga llega derecho a la pared** y el jugador rebota, con toda la fuerza bruta intacta y ningún blanco.
+
+Sereth está a tres metros. No aparta la vista y **no ofrece consejo**, que es lo que haría normalmente y ambos lo saben. Cuando el jugador resuelve el paso por su cuenta, dice una sola cosa: *"Bien."* Y no vuelve a hablar en el resto del tramo.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: La toma al salir del Archive
+
+**No es la revelación** — Sereth la dio entera, con luz, abajo. Lo que ocurre acá es que cumple lo que dijo, y el grupo lo mira cumplirlo.
+
+En el último corredor, Sereth se retrasa con el pretexto de siempre — *"Vi una inscripción marginal, quiero verificar una lectura."* Todos saben para qué es. **Nadie lo detiene, y ésa es la escena:** el pretexto ya no engaña a nadie, y funciona igual, porque a esta altura del ascenso el grupo no tiene ni fuerzas ni terreno para impedirlo.
+
+Ruta lateral, salida secundaria — la que estudió hace treinta años. Toma a Speck sin violencia. Speck no forcejea.
 
 **Línea al salir (única, breve):**
 
 *"Ustedes lo hicieron bien. Alcáncenme si pueden."*
 
-Se va con Speck. Camina rápido. No corre.
-
-### Reacción del Grupo
-
-**Roen:** silencio. Roen entiende el arquetipo mejor que nadie del grupo — es humano que trabajó en instituciones. No grita. Aprieta la mandíbula y empieza a caminar detrás.
-
-**Valen:** *"Three months ago your questions to him changed shape. Same content, different angles — long-read consolidation. I calculated this then. I hoped I was wrong."*
-
-**Darro:** *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* Darro entiende engaño como ausencia de amor, no como amor con función. No puede procesar la coexistencia.
-
-**El jugador:** parálisis breve. Sereth, el que ha sido su interlocutor filosófico durante un año entero, acaba de irse con Speck sin discutir. Todavía no entiende el patrón. Va a entenderlo durante la persecución.
+Se va con Speck. Camina rápido. No corre. Nadie grita: Darro ya gastó los gritos abajo, y Roen empieza a caminar detrás antes de que Sereth termine de doblar la esquina.
 
 ---
 
@@ -375,7 +413,7 @@ El jugador es el único que carga la corrección, y no tiene dónde presentarla.
 
 (Ver escena completa, todavía en español — pendiente de la pasada de traducción general, regla 9 del repo — en §Traición: *"No te llevé a esta decisión. Te llevé a la persona que la toma."*)
 
-**Contexto:** el borde del cráter, mirando al jugador. No es defensa — es diagnóstico técnico. Sereth explica su método en una sola frase: nunca se manipula un evento, se manipula la disposición mental de quien va a llegar al evento. El jugador oye la frase y **se reconoce a sí mismo** en ella — reconoce que sí, que la persona que toma la decisión final es él, y que esa persona fue esculpida durante un año. Y aun así tiene que decidir. Ese es el punto exacto del arquetipo.
+**Contexto:** el borde del cráter (sub-beat 5), mirando al jugador. **Deliberadamente NO se dice en la ruptura**: en la sala del Fragmento Sereth habla quince líneas y ninguna contiene su tesis — expone la decisión y se guarda el método, y si le preguntan lo aplaza (*"esa pregunta tiene una respuesta larga y este no es el lugar"*). Es la única declaración larga del elenco que no incluye el porqué del personaje, y esa retención es en sí misma su arquetipo. No es defensa — es diagnóstico técnico. Sereth explica su método en una sola frase: nunca se manipula un evento, se manipula la disposición mental de quien va a llegar al evento. El jugador oye la frase y **se reconoce a sí mismo** en ella — reconoce que sí, que la persona que toma la decisión final es él, y que esa persona fue esculpida durante un año. Y aun así tiene que decidir. Ese es el punto exacto del arquetipo.
 
 ---
 

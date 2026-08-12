@@ -224,9 +224,9 @@ Sale del Grove con un dato nuevo que no reordena la ecuación pero la afila: Thr
 
 ---
 
-## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición al Salir
+## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición en Dos Tiempos
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Maren no traiciona en el cráter — traiciona **al salir del Sunken Archive**. La persecución hasta First Wound y el quiebre en el cráter son consecuencias.
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. La traición de Maren tiene **dos tiempos** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos): la **ruptura** en la sala del Fragmento (sub-beat 2b) y la **toma** en el corredor de salida (sub-beat 3). No traiciona en el cráter. La persecución hasta First Wound y el quiebre en el cráter son consecuencias.
 
 ### Sub-beat 1-2: Approach + Interior Archive
 
@@ -250,38 +250,63 @@ Lo que pasó por su cabeza en esos diez segundos, ella lo diría así (si lo dij
 
 **Maren decide traicionar igual, después de saber.** Ese es el punto exacto de su arquetipo: la aritmética resiste la revelación. Saber más no cambia el resultado — solo lo vuelve más caro de cargar. Y Maren siempre estuvo dispuesta a cargar el costo.
 
-### Sub-beat 3: Traición al salir del Archive
+### Sub-beat 2b: La ruptura — la sala del Fragmento
 
-En el corredor de ascenso, mientras el grupo se reagrupa después de un puente inestable, Maren se retrasa 15 pasos. Cuando el grupo voltea, tiene a Speck en los brazos y una ruta lateral ya elegida.
+Ubicación y regla general: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
 
-El **Triune Council** la contacta por señal cifrada — hay agentes esperando en la superficie. Necesitan a Maren porque decretar no basta; necesitan a alguien que pueda *ejecutar*.
+**La orden le llega acá adentro, no antes.** El Fragmento en el pedestal es la confirmación que el Consortium llevaba semanas esperando, y la instrucción del **Triune Council** entra pegada a la confirmación: a Speck la quieren viva, en Rivermeet, y la necesitan a ella porque decretar no basta — hace falta alguien que pueda *ejecutar*. Maren lee la señal cifrada de pie, junto al pedestal, y no cambia de postura.
 
-Maren mira al jugador. Dice, sin subir la voz:
+Después habla. **Una sola vez, y no al jugador: al grupo entero**, con el registro exacto de un parte de operaciones dado en el muelle de Rivermeet — nadie levanta la voz para informar un cambio de ruta.
 
-*"Te amo. Eso es verdad. Pero Rivermeet es más que tú. Eso también es verdad."*
+***"The Council wants her alive in Rivermeet, and I'm the one taking her. I'm saying it now so nobody has to spend the climb guessing."***
 
-**Se lleva a Speck.** No corre — camina rápido. La escena "por qué traiciona" ocurre AQUÍ, no en First Wound. First Wound es solo el cierre físico.
+Y después:
 
-**Línea de traición:**
-*"I can love her and still do the math. The math says millions live if she's handed over. Even after what the Goggles showed you. Especially after."*
+***"I can love her and still do the math."***
 
-No es malvada. Es **exactamente lo que dijo que era: alguien que piensa en sistemas.** Y los sistemas no se disuelven porque una civilización antigua tuviera nombre.
+Eso es todo. **No hay párrafo de justificación** — Maren es la única de los nueve que no lo necesita, porque para ella la operación ya está probada y una demostración terminada no se repite en voz alta. Si alguien le pregunta por qué, contesta con la magnitud, no con un argumento. Si nadie pregunta, no agrega nada.
 
-### Reacción del Grupo
+**Acá muere el link.** Skipping Stone deja de responder desde esta escena, sin aviso de UI.
 
-**Roen:** *"Lo viste venir. Calculaste esto."* Frío. Reconocimiento sin ira.
+Y Maren **sube con el grupo**. No huye, no la expulsan — están a media ruina de profundidad y ella es quien mejor lee la ruta de salida. Sigue cubriendo, sigue señalando dónde pisar. Ese es su costo: pasar el ascenso entero siendo útil a gente que ya sabe.
 
-**Valen:** *"Three weeks ago you adjusted your gear distribution. Weight changed, spine straighter — preparation for bearing extra load. I calculated this trajectory then. I hoped I was wrong."*
+**Reacción del grupo — acá, que es donde hay revelación:**
 
-**Darro:** *"¿¡MAREN!? ¡¿QUÉ HACES?!"* Darro ve a persona que amaba, ahora viendo traición pura. Para él es incomprensible.
+**Roen:** *"You calculated this. You calculated us."* Frío. Reconocimiento sin ira.
 
-**Maren se va calmadamente.** No corre. No hay drama. Solo: *"Voy a hacer lo que debo."*
+**Valen** no afirma: pregunta, y es la única vez del Acto 3 en que le pide a alguien que le confirme un dato en lugar de exponerlo. *"Three weeks ago you redistributed your gear. Extra load, borne on the spine. Was that for her?"* Maren: *"Yes."* Valen asiente una vez y no vuelve a hablar hasta la superficie.
+
+**Darro** es el único que no entiende el género de lo que acaba de pasar. *"¿¡MAREN!? ¡¿ASÍ NADA MÁS?!"* Ve a la persona que amaba anunciando una entrega con voz de inventario, y no tiene dónde poner eso.
+
+**Speck** se acerca a Maren durante el ascenso, dos veces, como siempre. Maren no la aparta. Ése es el detalle que a Darro le resulta insoportable.
+
+#### La trampa amorosa — Skipping Stone que no llega
+
+En mitad del ascenso, un tramo de bóveda colapsada deja un vano sin suelo: el salto es exactamente el que el juego enseñó a resolver con **Skipping Stone** ([[Los 9 Links del Pivote]]) — los discos-boya de Maren en el aire y una cadena de dashes rebotando entre ellos.
+
+El jugador pica Bond por memoria muscular. La Link Cam barre el vano igual que en las cien veces anteriores y encuentra aire. El sting muere a las dos notas. **Maren está a tres metros, mirando**, con el ábaco quieto entre los dedos. No comenta, no se disculpa, no aparta la vista. Espera a que el jugador encuentre la cornisa larga y lo sigue por ella.
+
+Regla de dirección y eco final (en el cráter, no antes): [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: La toma al salir del Archive
+
+**No es la revelación.** Todos llevan el ascenso entero sabiéndolo; lo que ocurre acá es la ejecución de algo anunciado.
+
+Último corredor. El grupo se reagrupa después de un puente inestable. Maren se retrasa quince pasos — sin pretexto elaborado, porque a esta altura ninguno haría falta. Cuando el grupo voltea, tiene a Speck en los brazos y una ruta lateral ya elegida.
+
+Nadie grita. Roen ya estaba girando antes de que pasara. Darro dice el nombre una vez, a media voz, y es peor que el grito.
+
+Maren mira al jugador el tiempo justo de una frase, y **no explica nada nuevo**:
+
+*"Voy a hacer lo que dije."*
+
+**Se lleva a Speck.** No corre — camina rápido. First Wound es solo el cierre físico.
 
 ---
 
 ## Arco Acto 3 — Persecución y Quiebre en el Cráter
 
-Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → Traición al salir → Persecución → Quiebre en First Wound. Maren cubre los cinco sub-beats, pero su decisión de traicionar ya ocurrió al salir del Archive.
+Estructura ratificada en [[Geografía y Ciudades]] §ACTO 3: Approach → Interior Archive → **Ruptura (2b)** → Toma al salir → Persecución → Quiebre en First Wound. Maren cubre los seis sub-beats, pero su decisión ya estaba tomada antes del descenso y **ya está dicha en voz alta** desde la sala del Fragmento.
 
 ### Sub-beat 4: Persecución
 
@@ -296,7 +321,7 @@ Conversaciones clave:
 
 **Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Maren**. Secuencia: §1, pasos 1-6, sin excepciones. El mensajero del Council sube desde dentro del cráter hacia el borde.
 
-Lo que distingue a Maren es que **no hay escena.** Los otros ocho Pivotes tienen un quiebre — un discurso, un forcejeo, una grieta visible. Maren simplemente sostiene a Speck y espera, con la misma cara con la que espera un envío atrasado en el muelle de Rivermeet. Ya tuvo su escena en el corredor del Archive; esto es la parte administrativa. Si el jugador viene buscando una confrontación, no la va a encontrar: encuentra a una mujer haciendo tiempo hasta que llegue quien tiene que llegar.
+Lo que distingue a Maren es que **no hay escena.** Los otros ocho Pivotes tienen un quiebre — un discurso, un forcejeo, una grieta visible. Maren simplemente sostiene a Speck y espera, con la misma cara con la que espera un envío atrasado en el muelle de Rivermeet. Ya tuvo su escena en la sala del Fragmento; esto es la parte administrativa. Si el jugador viene buscando una confrontación, no la va a encontrar: encuentra a una mujer haciendo tiempo hasta que llegue quien tiene que llegar.
 
 **La decisión es del jugador.**
 
@@ -380,7 +405,7 @@ Maren no vive para descubrirlo. **La corrección de su tesis existe y ella nunca
 
 *"I can love her and still do the math."*
 
-**Contexto:** La verdad de Maren en clímax. No es excusa — es diagnóstico. Ella puede amar y traicionar simultáneamente porque ambas son variables en ecuación más grande.
+**Contexto:** se dice **en la ruptura** (sub-beat 2b, la sala del Fragmento), pegada al anuncio y sin nada detrás. No es excusa — es diagnóstico. Ella puede amar y traicionar simultáneamente porque ambas son variables de una ecuación más grande. **No se repite en el corredor:** en el sub-beat 3 Maren no explica nada nuevo, y esa economía es el punto de su forma — la única de los nueve cuya ruptura cabe en dos frases.
 
 ---
 

@@ -230,9 +230,9 @@ En la última cena (§Beat 3), Torgan **levanta el vaso primero**, mira al jugad
 
 ---
 
-## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición al Salir
+## Nudo → Clímax: El Archive, la Revelación Warden, y la Traición en Dos Tiempos
 
-Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de 5 sub-beats. Torgan los cubre los cinco: Approach → Interior del Archive → **traición mecánica al salir** → persecución → quiebre en el cráter. **Torgan toma a Speck en el corredor de salida del Archive, no en el cráter.**
+Ver [[Geografía y Ciudades]] §ACTO 3 para la estructura de **6 sub-beats (1, 2, 2b, 3, 4, 5)**. Torgan los cubre los seis: Approach → Interior del Archive → **ruptura en la sala del Fragmento (2b)** → **toma al salir (3)** → persecución → quiebre en el cráter. **Torgan declara en la sala del Fragmento y toma a Speck en el corredor de salida — nunca en el cráter** ([[Bond y el Bond Vacío]] §La traición tiene dos tiempos).
 
 ### Sub-beat 1: Approach al Sunken Archive
 
@@ -276,36 +276,64 @@ El jugador mira las paredes a través de los Goggles (regalo de Tobin en Driftma
 
 No se acerca. No pregunta. Hace una sola cosa: **se pasa el pulgar por el antebrazo izquierdo, siguiendo la línea del tatuaje**, de la muñeca al codo. Es un tic que nadie del grupo le ha visto en tres meses y que va a repetir exactamente dos veces más en toda la campaña.
 
-### Sub-beat 3: la traición al salir del Archive
+### Sub-beat 2b: la ruptura — la sala del Fragmento
 
-El grupo empieza el ascenso por el último corredor — largo, estrecho, con nichos laterales.
+Ubicación: [[Geografía y Ciudades]] §ACTO 3 sub-beat 2b. Mecanismo del link: [[Bond y el Bond Vacío]].
 
-Torgan se retrasa cuatro pasos. Pretexto mínimo: *"Cubro atrás."* Nadie duda; lo ha hecho cien veces.
+Torgan no espera a que nadie le pregunte y no espera a estar cerca de la salida. Con el Fragmento todavía en el pedestal y los cadáveres calcificados en las paredes que acaba de saludar, **da un paso al centro de la sala y lo declara de frente al jugador** — no al grupo, no a Roen: al jugador, a un metro y medio, en la postura con la que ha cargado contratos toda su vida.
 
-Cuando el resto voltea, Torgan tiene a Speck.
+La forma es la de una notificación de cláusula. Cuatro líneas, ninguna de más, ninguna en tono de confesión:
 
-**No hay violencia.** La levantó de los brazos de Roen con una mano en el lomo y otra bajo el pecho, del modo en que se carga algo que se respeta. Speck no forcejea. Roen ni siquiera alcanzó a cerrar los dedos.
+*"Un Juramento de Forja me obliga. Hace cincuenta y cinco años juré servir a mi clan."*
 
-El jugador: *"Torgan. ¿¡QUÉ!?"*
+*"Mi clan pidió a la criatura. Viva."*
 
-Torgan, ya girando hacia el nicho lateral: *"Un Juramento de Forja me obliga. Hace cincuenta y cinco años juré servir a mi clan. Ese Juramento precede este viaje."*
+*"Ese Juramento precede este viaje y precede a todos ustedes."*
 
-Jugador: *"¿¡Sabías!? ¿¡TODO ESTE TIEMPO SABÍAS!?"*
+*"Te lo digo acá para que no tengas que enterarte de otra manera."*
 
-Torgan (una sola pausa, sin soltar a Speck): *"Sí. Quería este tiempo antes. Egoísta, quizá. Necesitaba saber que eras real."*
+El jugador: *"¿¡Sabías!? ¿¡TODO ESTE TIEMPO SABÍAS!?"*
 
-**No se disculpa. Un enano no se disculpa por un deber.** Pero hay peso en la voz — el peso de elegir deber sobre amor con las dos cosas todavía calientes.
+Torgan (una sola pausa): *"Sí. Quería este tiempo antes. Egoísta, quizá. Necesitaba saber que eras real."*
 
-**Línea de traición:**
+**No se disculpa. Un enano no se disculpa por un deber.** Pero hay peso en la voz — el peso de elegir deber sobre amor con las dos cosas todavía calientes. Y no agrega nada más: el resto de la escena la ocupa el silencio de los otros.
+
+**Línea de la ruptura:**
 
 ***"An oath doesn't care how I feel about you. An oath is oath. I chose to wear this tattoo. Now the tattoo chooses for me."***
 
-Sale por la ruta lateral. **Rápido, no violento.** Torgan es Duelist de impacto: el cuerpo hace en dos segundos lo que a otro le toma diez. Para cuando el grupo reacciona, el corredor está vacío.
+**Acá muere el link.** Arcane Ballistics deja de responder desde esta escena.
 
-**Reacción del grupo:**
+**Y Torgan no se va.** No podría — están a media ruina de profundidad y él es el único capaz de abrir lo que hay que abrir. Sube con el grupo, en tercer lugar, donde siempre. Cubre atrás. Carga peso. **Sigue siendo el mejor en lo suyo mientras nadie le habla**, y eso es específicamente su castigo: un enano de oficio soportando el ascenso entero sin que nadie le acepte una mano.
+
+**Reacción del grupo — acá:**
 - **Roen:** *"Nunca soltó el brazo derecho en tres meses. Debí leerlo."* Serio, no roto. A Roen lo rompe Dagna, no Torgan.
 - **Valen:** *"El Juramento era una variable que superaba mis modelos."* Lo dice sin ironía. Le interesa genuinamente, y eso lo avergüenza al segundo siguiente.
-- **Darro:** grita. *"¡¡MALDITA SEA, TORGAN!!"* Una vez, al corredor vacío. Después, más bajo: *"El tatuaje siempre cobra."*
+- **Darro:** grita, y grita **de frente** — no al corredor vacío, como haría después, sino a un hombre que lo está mirando y no se defiende. *"¡¡MALDITA SEA, TORGAN!!"* Torgan lo deja gritar. Después, mucho más bajo, para nadie: *"El tatuaje siempre cobra."*
+
+#### La trampa amorosa — la marca que nadie golpea
+
+A mitad del ascenso, un contrapeso Warden trabado a ocho metros de altura: el problema exacto que el juego enseñó a resolver con **Arcane Ballistics** ([[Los 9 Links del Pivote]]) — el jugador marca, Torgan es el misil.
+
+El jugador marca. Es un gesto de un cuarto de segundo, hecho sin pensarlo. **La marca se queda flotando sola**, girando, hasta que se apaga. La Link Cam barre el vector vacío y el sting se corta a las dos notas. Torgan está a tres metros, con el peso en la pierna de atrás, **en posición de salida** — el cuerpo se le preparó igual, por costumbre, y no se movió. Ninguno de los dos lo comenta. El jugador rodea por el andamio derrumbado.
+
+Regla de dirección y eco final: [[Bond y el Bond Vacío]].
+
+### Sub-beat 3: la toma al salir del Archive
+
+**No es la revelación** — se anunció en la sala del Fragmento y llevan el ascenso entero cargándola.
+
+Último corredor, largo, estrecho, con nichos laterales. Torgan se retrasa cuatro pasos. Pretexto mínimo: *"Cubro atrás."* **Y nadie duda igual**, aunque todos sepan — eso es lo que hace la escena: el grupo se lo permite porque no tiene modo de impedirlo y porque lo ha hecho cien veces.
+
+Cuando el resto voltea, Torgan tiene a Speck.
+
+**No hay violencia.** La levantó de los brazos de Roen con una mano en el lomo y otra bajo el pecho, del modo en que se carga algo que se respeta. Speck no forcejea. Roen ni siquiera intentó cerrar los dedos.
+
+Torgan no explica: ya explicó. Solo dice, sin girar del todo:
+
+*"Fue verdad todo."*
+
+Sale por la ruta lateral. **Rápido, no violento.** Torgan es Duelist de impacto: el cuerpo hace en dos segundos lo que a otro le toma diez. Para cuando el grupo reacciona, el corredor está vacío. Nadie grita esta vez. Darro ya había gritado abajo.
 
 ---
 
@@ -374,7 +402,7 @@ Y baja los brazos, sosteniendo a Speck entre él y el mensajero que se acerca, s
 
 **Canon 2026-07-28.** Ver [[Los 9 Pivotes]] §"Canon: los 9 existen simultáneamente" y [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 4a. Los nueve Pivotes existen a la vez; la celda del jugador decide cuál de ellos lo conoció.
 
-Cuando el Pivote del jugador es **Bram**, y Bram rechaza la orden en el corredor del Archive, el Triune Council no se queda sin piezas: activa a **Torgan**, que en esa partida no conoce al jugador, no viajó con el grupo, no cenó con nadie — pero existe igual, con su Juramento intacto y su clan menor presionándolo desde antes de que el grupo se formara.
+Cuando el Pivote del jugador es **Bram**, y Bram rechaza la orden en la sala del Fragmento, el Triune Council no se queda sin piezas: activa a **Torgan**, que en esa partida no conoce al jugador, no viajó con el grupo, no cenó con nadie — pero existe igual, con su Juramento intacto y su clan menor presionándolo desde antes de que el grupo se formara.
 
 **Qué significa para él.** La orden le baja por la misma cadena de tres eslabones, en el mismo registro traducido de Kadrun, sobre un grupo del que no forma parte y una criatura que nunca vio. No hay nido, no hay taberna fronteriza, no hay tres meses de camino. Hay un mensajero, un sello, y una posición en un mapa.
 
@@ -492,7 +520,7 @@ Ver [[Los 5 Finales]].
 
 ***"An oath doesn't care how I feel about you."***
 
-**Contexto:** la verdad de Torgan en el cráter. No es excusa — es límite. Hay cosas que no negocian con la emoción, y una promesa es una de ellas. La frase funciona porque Torgan **sí** siente: si no sintiera, la línea sería una obviedad. Dicha por alguien que quiere al jugador, es una sentencia.
+**Contexto:** se dice **en la ruptura** (sub-beat 2b, la sala del Fragmento), como cierre de la notificación de cláusula. En el corredor **no se repite**: ahí Torgan solo dice *"Fue verdad todo."* No es excusa — es límite. Hay cosas que no negocian con la emoción, y una promesa es una de ellas. La frase funciona porque Torgan **sí** siente: si no sintiera, la línea sería una obviedad. Dicha por alguien que quiere al jugador, es una sentencia.
 
 ---
 
