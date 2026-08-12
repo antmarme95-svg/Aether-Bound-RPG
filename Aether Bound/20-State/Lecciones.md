@@ -75,11 +75,26 @@ updated: 2026-08-12
   llega y el proceso queda vivo hasta el timeout. Después de
   `change_scene_to_file()` hacen falta **dos** `await process_frame`
   antes de buscar nodos, y guarda de null en todo lo que se busque.
-- **`SkeletonIK3D` en 4.7 es un `SkeletonModifier3D`**: escribe con
-  `set_bone_global_pose`, no por el sistema de override. O sea que
-  `get_bone_global_pose_no_override()` NO te devuelve la pose animada
-  previa al IK — no sirve como equivalente de `Animator.GetIKPosition()`
-  de Unity. Verificado midiendo: cambiarlo no movió la aguja.
+- **⚠️ NO SE PUEDE MEDIR LA SALIDA DE UN `SkeletonModifier3D` CON
+  `get_bone_global_pose()`.** Ese getter devuelve la pose **anterior** a
+  los modifiers. `BoneAttachment3D` tampoco sirve: lee el mismo búfer.
+  Consecuencia práctica: **un foot IK que funciona perfecto se mide como
+  un no-op** — pasó exactamente eso el 2026-08-12, y produjo una
+  conclusión falsa que llegó a escribirse en tres archivos del vault.
+  Lo único que se demostró que refleja la salida del modifier es **el
+  render**: una A/B de dos capturas con el target movido dio 9.053
+  píxeles de diferencia mientras los dos instrumentos numéricos decían
+  "cero".
+  **Regla:** antes de sacar cualquier conclusión de una medición sobre
+  huesos con modifiers activos, validar el instrumento con un caso donde
+  el efecto sea innegable (mover el target medio metro). Si el
+  instrumento dice cero, el instrumento está ciego.
+- **`SkeletonIK3D` está deprecado en 4.x.** El camino vigente son las
+  subclases de `SkeletonModifier3D`, y 4.7 trae varias de fábrica —
+  `TwoBoneIK3D` (el que sirve para pies), `FABRIK3D`, `CCDIK3D`,
+  `SplineIK3D`, `LookAtModifier3D`, `AimModifier3D`. **Buscar en
+  `ClassDB` antes de escribir un solver a mano**: `TwoBoneIK3D` estuvo
+  disponible todo el tiempo.
 - **`SkeletonIK3D`: asignar `root_bone`/`tip_bone` ANTES de meterlo al
   árbol.** Cada setter revalida la cadena y con el otro extremo sin poner
   escupe errores de motor.

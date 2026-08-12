@@ -165,17 +165,28 @@ método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
 menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
 assets ya comprados, que ahí funcionan sin convertir.
 
-### ⛔ El foot IK de Godot NO está funcionando (medido 2026-08-12)
+### ⚠️ Foot IK: migrado a `TwoBoneIK3D` — y la medición anterior estaba ciega
 
-Se corrió la medición contra el [[Benchmark Biomecánico]]
-(`godot/tools/footik_benchmark.gd`) y el resultado **invalida una
-afirmación que estaba escrita en el vault**: no es cierto que "el foot IK
-stock alcanza en los dos motores".
+**Hecho:** `SkeletonIK3D` (deprecado en 4.x) fue reemplazado por
+**`TwoBoneIK3D`**, subclase stock de `SkeletonModifier3D` que Godot 4.7
+trae de fábrica — junto con `FABRIK3D`, `CCDIK3D`, `SplineIK3D` y otras.
+El objetivo del IK ahora es *suelo + altura del tobillo sobre la planta*
+(medida del rig en reposo), no el punto del suelo: poner el tobillo en el
+suelo entierra el pie entero.
 
-**`SkeletonIK3D` es un no-op.** Con el IK corriendo (`is_running() == true`,
-target resuelto) el pie se mueve **1.4 mm** respecto de tenerlo apagado, y
-los números de penetración son idénticos hasta el cuarto decimal. El
-grounding que se veía en las capturas venía del cuerpo apoyado por física.
+**RETRACTADO:** la conclusión de hace un rato —"`SkeletonIK3D` es un
+no-op"— **no está probada, y probablemente sea falsa**. El instrumento
+estaba ciego: `get_bone_global_pose()` devuelve la pose ANTERIOR a los
+modifiers, y `BoneAttachment3D` lee el mismo búfer. Con los dos
+instrumentos dando "cero diferencia", una A/B de renders con el target
+movido medio metro dio **9.053 píxeles distintos** — o sea que el
+modifier sí actúa. Ver [[Lecciones]] §Godot 4.7.
+
+**Estado real: no hay número.** El foot IK está migrado a la herramienta
+vigente y se ve actuando, pero **la medición contra el Benchmark sigue
+pendiente** porque falta un instrumento válido. Los números de
+penetración/adaptación que se publicaron antes describen la **animación
+cruda**, no el resultado final.
 
 | Métrica | Medido | Estándar del Benchmark |
 |---|---|---|
@@ -185,11 +196,11 @@ grounding que se veía en las capturas venía del cuerpo apoyado por física.
 | Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ ángulo del terreno |
 | Aporte del IK | ❌ 1.4 mm | — |
 
-**Consecuencia:** la comparación de foot IK contra Unity **queda
-suspendida** — medir Godot así daría una ventaja falsa a Unity por una
-razón que no es del motor. **Próximo paso: reemplazar `SkeletonIK3D`
-(deprecado en 4.x) por un `SkeletonModifier3D`**, volver a medir, y recién
-ahí correr el lado Unity y comparar.
+**Próximo paso:** conseguir un instrumento que lea la pose final. La
+única vía demostrada hasta ahora es **medir sobre el render** (silueta del
+pie contra la línea del suelo), que es como se detectó que el modifier
+actúa. Con eso resuelto se vuelve a correr `footik_benchmark.gd`, y recién
+después se porta la medición a Unity para comparar.
 
 **Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
 empareja las condiciones para que ese veredicto compare lo mismo de los

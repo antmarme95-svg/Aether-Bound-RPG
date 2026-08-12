@@ -156,8 +156,25 @@ func _ground(p: Vector3) -> Dictionary:
 		return {"pos": r.position, "normal": r.normal}
 	return {}
 
+## OJO -- ESTE ES EL PUNTO QUE ARRUINO LA PRIMERA MEDICION.
+## `get_bone_global_pose()` devuelve la pose ANTES de los
+## SkeletonModifier3D: leyendo ahi, un foot IK que funciona perfecto
+## parece un no-op. Lo que refleja la pose FINAL (la que se ve y la que
+## deforma la malla) es un `BoneAttachment3D` colgado del hueso.
+var _att: Dictionary = {}
+
+func _attach(skel: Skeleton3D, bone: String) -> Node3D:
+	if _att.has(bone):
+		return _att[bone]
+	var a := BoneAttachment3D.new()
+	a.name = "Probe_" + bone
+	skel.add_child(a)
+	a.bone_name = bone
+	_att[bone] = a
+	return a
+
 func _world(skel: Skeleton3D, idx: int) -> Vector3:
-	return (skel.global_transform * skel.get_bone_global_pose(idx)).origin
+	return _attach(skel, skel.get_bone_name(idx)).global_position
 
 func _find(n: Node, t: String) -> Node:
 	for c in n.get_children():

@@ -257,7 +257,66 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Foot IK migrado a `TwoBoneIK3D` — y me equivoqué de instrumento otra vez
+
+Encargo del director: reemplazar `SkeletonIK3D` por `SkeletonModifier3D` y
+volver a medir. Lo primero está hecho. Lo segundo **no**, y hay que
+retractar lo de hace un rato.
+
+**Lo hecho — la migración.** Antes de escribir un solver a mano, se
+consultó `ClassDB`: Godot 4.7 trae **`TwoBoneIK3D`** de fábrica (junto con
+`FABRIK3D`, `CCDIK3D`, `SplineIK3D`, `LookAtModifier3D`, `AimModifier3D`).
+O sea que el criterio de "herramienta stock" se mantiene intacto — no hizo
+falta escribir nada. `foot_ik.gd` ahora arma un `TwoBoneIK3D` con dos
+settings (una pierna cada uno: cadera→rodilla→tobillo) y le da un objetivo
+por pierna. Dos cosas del planteo anterior estaban mal y se corrigieron:
+- El objetivo del IK **no es el punto del suelo**: es el punto del suelo
+  **más la altura del tobillo sobre la planta**, medida del rig en reposo
+  (con los huesos `heel.02.*` y `*Toes`). Poner el tobillo en el suelo
+  entierra el pie entero.
+- El rayo vertical ahora **excluye la cápsula del propio personaje**, que
+  antes se comía el impacto.
+
+**Lo NO hecho, y por qué — la trampa del instrumento.** La medición sigue
+dando exactamente lo mismo con el IK encendido y apagado. Antes de
+concluir nada por segunda vez, se validó el instrumento con un caso donde
+el efecto tenía que ser innegable: mover el objetivo del pie **45 cm hacia
+arriba** y comparar dos renders. Resultado: **9.053 píxeles de diferencia**
+— el modifier **sí actúa**. Los que están ciegos son los dos instrumentos
+numéricos:
+
+- `get_bone_global_pose()` devuelve la pose **anterior** a los modifiers.
+- `BoneAttachment3D` **lee el mismo búfer**, así que tampoco sirve.
+
+**Consecuencia — se retracta la conclusión anterior.** "`SkeletonIK3D` es
+un no-op" **no está probado y probablemente sea falso**: salió del mismo
+instrumento ciego. Los números de penetración y adaptación publicados hoy
+describen la **animación cruda**, no el resultado final que se ve en
+pantalla. Corregido en [[Current-State]] y en [[Comparativa de Motores —
+Godot vs Unity]].
+
+**El error de método, que es el mismo de esta mañana.** Es la segunda vez
+en el día que un instrumento me da un número tranquilizador y lo tomo por
+cierto: primero el estimador de "qué pie está apoyado", después el barrido
+de calibración monótono al revés, ahora el búfer de poses. La regla que
+queda escrita en [[Lecciones]]: **antes de concluir de una medición sobre
+huesos con modifiers activos, validar el instrumento con un caso de efecto
+innegable. Si el instrumento dice cero, el ciego puede ser el
+instrumento.**
+
+**Próximo paso:** el único canal que demostró reflejar la salida del
+modifier es **el render**. Medir la penetración sobre la imagen (silueta
+del pie contra la línea del suelo, con cámara ortogonal a la pendiente),
+volver a correr `footik_benchmark.gd` con ese instrumento, y recién
+después portar la medición a Unity para poner las dos columnas juntas.
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] spike/godot | Medición del foot IK contra el Benchmark — `SkeletonIK3D` es un no-op
+
+> **⚠️ RETRACTADA en parte.** La conclusión "`SkeletonIK3D` es un no-op"
+> **no está probada**: el instrumento estaba ciego a la salida de los
+> `SkeletonModifier3D`. Ver la entrada siguiente.
 
 Encargo del director: correr la pregunta abierta que quedó de la
 comparativa de motores. El resultado **invalida una afirmación que yo
