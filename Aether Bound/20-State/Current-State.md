@@ -184,12 +184,13 @@ agachada. El jugador sigue idle en los dos motores.
    sub-beats (1, 2, 2b, 3, 4, 5)**, y la línea canónica con ubicación
    declarada explícitamente en su sección.
 
-   **Ambigüedad anotada, sin resolver (no bloquea):** [[Los 9 Links del
-   Pivote]] §Tiers dice que Dagna clava la Primera Cuña *"en la roca del
-   nido"* durante la traición, pero la traición ocurre en el Archive y el
-   cráter, no en El Nido. La ruptura de Dagna se escribió **sin** la cuña
-   para no contradecir ninguna de las dos fuentes. → decidir dónde queda
-   ese objeto firma.
+   **✅ Ambigüedad de la Cuña de Dagna — cerrada (2026-08-12).** [[Los 9
+   Links del Pivote]] §Tiers movió el objeto firma: ya no se clava "en la
+   roca del nido" (lugar por el que la traición no pasa desde el rework),
+   sino **en la piedra del borde del cráter, en First Wound** — su última
+   guardia. Sub-beat 5 de [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] ahora
+   incluye el gesto, y en T3 el martillo (el mismo del obstáculo del
+   ascenso) queda junto a la cuña. Linter en 0 críticos tras el cambio.
 
 3. **Canon estructural vigente** (4ª y 5ª re-corrida, todo ya escrito en
    las fuentes — es lo que el bloque de arriba tiene que propagar):
@@ -220,11 +221,9 @@ agachada. El jugador sigue idle en los dos motores.
      [[El Mundo y la Muda]] dice que el término no existe públicamente
      hasta el Archive en Acto 3 — y siendo enana no tiene vía canónica
      a él.
-   - **La Primera Cuña de Dagna** —el único pago mecánico del bond alto
-     con el Pivote— está anclada a "la roca del nido", lugar por el que
-     la traición ya no pasa, y ni la cuña ni el martillo heredado
-     aparecen en su ficha. Además [[The Tether]] no contiene la "regla
-     T3" que [[Los 9 Links del Pivote]] le atribuye.
+   - **✅ La Primera Cuña de Dagna — reubicada (2026-08-12)**, ver punto 2.
+     Sigue abierto: [[The Tether]] no contiene la "regla T3" que
+     [[Los 9 Links del Pivote]] le atribuye — falta verificar esa cita.
 5. **Dos decisiones de diseño abiertas** (no son de QA; las dos bloquean
    la ratificación de [[Los 3 Links de los Fijos]]):
    - Ninguno de los 3 T3 de los fijos tiene **escena firma** propia

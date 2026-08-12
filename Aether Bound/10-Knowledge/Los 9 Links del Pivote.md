@@ -30,7 +30,7 @@ Molde de referencia para los 8 restantes. Escala por tier de [[The Tether]]:
 - **T2 — Fault Line:** la onda se vuelve **direccional** — una fisura que corre por el suelo y te lanza *en carrera*, encadenando con el slide (momentum de PRD-005).
 - **T3 — The Mountain's Answer:** ella responde tu llamada **en el aire** — segundo pulso vertical que te relanza en pleno vuelo, más escena firma (la noche en que te enseña el ritual de tocar la tierra).
 
-**Objeto firma y regla T3:** la **Primera Cuña** — la cuña de hierro de su juramento, que todo guardián clava donde monta su guardia definitiva. En la traición la clava en la roca del nido. Si llegaste a T3, junto a la cuña deja **su martillo**: eligió la ley, pero te heredó la puerta (regla T3 de [[The Tether]] — la traición con bond alto deja algo atrás).
+**Objeto firma y regla T3:** la **Primera Cuña** — la cuña de hierro de su juramento, que todo guardián clava donde monta su guardia definitiva. En la traición la clava en la piedra del borde del cráter, en First Wound — su última guardia (corregido 2026-08-12: no la roca del nido, lugar por el que su traición ya no pasa desde el rework de la ruptura de dos tiempos; ver [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5). Si llegaste a T3, junto a la cuña deja **su martillo** — el mismo que sostuvo por reflejo y bajó sin usar en el obstáculo del ascenso: eligió la ley, pero te heredó la puerta (regla T3 de [[The Tether]] — la traición con bond alto deja algo atrás).
 
 **Regla post-traición:** [[Speck]] en su forma God-Core (E3 — no hay "estadios" de crecimiento, es desvelamiento, ver [[Speck]]) puentea una versión
 *degradada* del link — funciona distinto, se siente distinto, nunca es igual

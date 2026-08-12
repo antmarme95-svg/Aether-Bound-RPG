@@ -338,7 +338,9 @@ Roen no contesta. Dagna vuelve al jugador. Dice, sin subir la voz, la línea can
 
 ***"The mountain doesn't forgive. And I am the mountain's."***
 
-Se detiene ahí mismo, con Speck en brazos, y espera. El mensajero de Deepstone sigue subiendo desde dentro del cráter hacia el borde — Dagna no camina a su encuentro: sostiene el escudo en alto, calculando, y deja que sea el mensajero quien cierre la distancia. Lo que pase en los siguientes segundos ya no depende solo de ella.
+Se detiene ahí mismo, con Speck en brazos, y espera. Antes de que el mensajero termine de subir, hace algo que no le pide nadie: se agacha una vez más, con Speck todavía contra el pecho sostenida con un solo brazo, y con el otro clava en la piedra del borde la **Primera Cuña** — la cuña de hierro de su juramento, la que todo guardián de Deepstone clava donde monta su guardia definitiva ([[Los 9 Links del Pivote]] §Tiers). Nunca lo había hecho. Sesenta años de puesto y esta es la primera vez que marca uno como definitivo. **Si el Tether llegó a T3**, deja el martillo apoyado junto a la cuña — el mismo que sostuvo por reflejo y bajó sin usar en el obstáculo del ascenso: eligió la ley, pero le heredó la puerta.
+
+El mensajero de Deepstone sigue subiendo desde dentro del cráter hacia el borde — Dagna no camina a su encuentro: sostiene el escudo en alto, calculando, y deja que sea el mensajero quien cierre la distancia. Lo que pase en los siguientes segundos ya no depende solo de ella.
 
 **El quiebre físico de Roen:**
 

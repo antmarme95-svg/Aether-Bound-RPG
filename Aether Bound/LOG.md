@@ -1,5 +1,34 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon/fix | Cuña de Dagna reubicada — cierra la ambigüedad del bloque de propagación
+
+**Qué se cerró:** la única ambigüedad que el bloque de propagación (entrada
+de arriba) dejó anotada sin resolver. [[Los 9 Links del Pivote]] §Tiers
+decía que Dagna clava la **Primera Cuña** *"en la roca del nido"* durante la
+traición — pero con la ruptura de dos tiempos ya propagada, su traición
+entera pasa en el Sunken Archive y en First Wound, y no vuelve a pisar El
+Nido. La ficha de Dagna se había escrito **sin** la cuña para no contradecir
+ninguna de las dos fuentes.
+
+**Decisión (Boris, 2026-08-12):** releer la regla completa —*"la cuña...
+que todo guardián clava donde monta su guardia definitiva"*— y ubicarla en
+el **borde del cráter, en First Wound**, donde Dagna se detiene con Speck en
+brazos, escudo en alto, esperando al mensajero de Deepstone: es literalmente
+su última guardia. Cierra el símbolo sin inventar escena nueva.
+
+**Qué se tocó:**
+- [[Los 9 Links del Pivote]] §Tiers — "roca del nido" → "piedra del borde
+  del cráter... su última guardia".
+- [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5 — agregado el gesto
+  de clavar la cuña antes de que llegue el mensajero. **En T3**, deja el
+  martillo al lado — el mismo que sostuvo por reflejo y bajó sin usar en el
+  obstáculo del ascenso (sub-beat 2b), cerrando el arco del objeto en dos
+  escenas ya escritas en vez de crear una tercera.
+
+Linter: 0 críticos / 0 medios tras el cambio (27 INFO preexistentes, sin
+tocar). Pendiente aparte, no bloquea: [[The Tether]] no contiene la "regla
+T3" que [[Los 9 Links del Pivote]] le atribuye — falta verificar esa cita.
+
 ## [2026-08-12] canon/propagación | La ruptura de dos tiempos llega a las 12 fichas — bloque cerrado
 
 **Qué se cerró:** el bloque de propagación que era el pendiente más grande del
