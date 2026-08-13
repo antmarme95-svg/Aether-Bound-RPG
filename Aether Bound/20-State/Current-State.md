@@ -203,6 +203,28 @@ penetración. Corrige que el rest pose del rig, tras el retargeting con
 `fix_silhouette`, no es una pose de pie apoyado y da una altura de tobillo
 de 0.037 m en vez de los ~0.08 reales.
 
+### ✅ Comparación de foot IK Godot vs Unity — CERRADA (2026-08-12)
+
+Mismo protocolo y **los dos calibrados con el mismo criterio**:
+
+| Métrica | **Godot** (solver propio) | **Unity** (`Animator IK`) |
+|---|---|---|
+| Penetración, plano | −0.004 m | +0.005 m |
+| Penetración, rampa 21.8° | +0.006 m | +0.031 m |
+| Plano → rampa | +0.010 m | +0.027 m |
+
+**Los dos cumplen el estándar.** La ventaja de Godot en pendiente **no es
+del motor**: nuestro script de Unity desplaza el objetivo verticalmente y
+el de Godot a lo largo de la normal — error de coseno, se arregla en una
+línea. Leído honesto: **empate en resultado**.
+
+**La diferencia real de motor** es de costo, no de calidad: en Unity el
+foot IK viene funcionando; en Godot hay que escribirlo.
+
+Detalle, salvedades y la métrica que se descartó por no ser comparable
+(raíz continua, atada al timestep de cada motor):
+[[Comparativa de Motores — Godot vs Unity]].
+
 **Comparador cuadro a cuadro Unity/Godot listo** (`godot/tools/frame_strip.gd`
 + `unity/Assets/_Spike/Editor/SpikeFrameStrip.cs`): mismo punto de la
 rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el

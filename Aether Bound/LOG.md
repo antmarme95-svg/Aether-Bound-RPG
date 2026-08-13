@@ -578,6 +578,64 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike | Foot IK medido de los DOS lados — empate en resultado, diferencia en costo
+
+Encargo del director: correr la medición del lado Unity y comparar. Hecho.
+`unity/Assets/_Spike/Editor/SpikeFootIKBenchmark.cs` porta el mismo
+protocolo que el de Godot: cámara ortográfica con su "arriba" en la normal
+del terreno, silueta contra la línea del suelo, 16 muestras por terreno,
+apoyo = el 40% más bajo.
+
+**La decisión de método que hace válida la comparación:** los dos lados se
+**calibran con el mismo criterio**. El `SpikeFootIK.cs` de Unity tenía el
+mismo defecto que tenía el nuestro —un offset de tobillo fijo, sin
+medir— y sin calibrarlo estaríamos comparando nuestras calibraciones, no
+los motores. Se barrió por reflexión hasta minimizar la penetración en
+plano: quedó en 0.21 (contra 0.045 del lado Godot).
+
+| Métrica | Godot (solver propio) | Unity (`Animator IK`) | Estándar |
+|---|---|---|---|
+| Penetración, plano | −0.004 m | +0.005 m | ~0 |
+| Penetración, rampa 21.8° | +0.006 m | +0.031 m | ~0 |
+| Plano → rampa | +0.010 m | +0.027 m | 0 |
+
+**Los dos cumplen el estándar del [[Benchmark Biomecánico]].**
+
+**La ventaja de Godot en pendiente NO es del motor.** Nuestro script de
+Unity desplaza el objetivo **verticalmente** (`hit.point + Vector3.up *
+offset`); el de Godot lo desplaza **a lo largo de la normal**. En
+pendiente el vertical se queda corto: es error de coseno, y arreglarlo en
+Unity es una línea. Decirlo así importa — publicar ese +6 mm contra +31 mm
+como "Godot planta mejor el pie" sería falso.
+
+**Diferencia real de motor, la única que queda en pie:** en Unity el foot
+IK **viene funcionando**; en Godot **hay que escribirlo** (el
+`TwoBoneIK3D` de fábrica no produce salida). Es costo, no calidad, y no es
+recurrente.
+
+**Una métrica se descartó por no ser comparable.** La raíz continua da
+0.0249 m/frame con 7.8% en Godot y 0.0003 m/frame con 600% en Unity. El
+número de Unity no dice que su raíz sea peor: el driver mueve en
+`Update()` y en batchmode corre a miles de fps, así que el desplazamiento
+por frame es minúsculo y el desvío relativo se dispara. La métrica está
+atada al timestep de cada motor. Los dos mueven la raíz por código sin
+stepping, o sea que cumplen el criterio de Sable por construcción — se
+anota como no comparable en vez de publicarla como si dijera algo.
+
+**El CONTROL volvió a ganarse el lugar.** El de Unity hunde al personaje
+10 cm y verifica que la penetración medida cambie ~10 cm. La primera
+corrida dio **0.0205** y marcó SOSPECHOSO — y no era el instrumento: era
+el **foot IK volviendo a plantar el pie**, o sea el sistema funcionando.
+Se corrigió corriendo el control con el IK apagado: **0.0995 m,
+instrumento válido**. Un control que falla no siempre acusa al
+instrumento; a veces te está mostrando el sistema.
+
+**Estado del spike:** el frente de foot IK queda cerrado y medido de los
+dos lados. [[Comparativa de Motores — Godot vs Unity]] y [[Current-State]]
+actualizados.
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] spike/godot | Solver de dos huesos propio — el foot IK cumple el Benchmark
 
 Encargo del director: escribir el solver y seguir. Hecho, y **el criterio

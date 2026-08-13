@@ -214,9 +214,54 @@ Con el solver propio, el pie queda a ±6 mm del suelo y se apoya igual de
 bien en pendiente que en plano. El costo fue una tarde, y es
 **no recurrente**.
 
-**Lo que queda sin correr para cerrar el veredicto:** la misma medición
-del lado Unity, para poner las dos columnas juntas. Ahora sí es una
-comparación justa, porque de los dos lados hay un foot IK que funciona.
+### El foot IK, medido de los dos lados (2026-08-12)
+
+Mismo protocolo en los dos motores (`godot/tools/footik_benchmark.gd` ·
+`unity/Assets/_Spike/Editor/SpikeFootIKBenchmark.cs`): cámara ortográfica
+con su "arriba" en la normal del terreno, silueta contra la línea del
+suelo, 16 muestras por terreno, apoyo = el 40% de muestras más bajas.
+**Y los dos calibrados con el mismo criterio** — barriendo el offset del
+tobillo hasta minimizar la penetración en plano.
+
+| Métrica | **Godot** (solver propio) | **Unity** (`Animator IK`) | Estándar |
+|---|---|---|---|
+| Penetración, plano | **−0.004 m** | **+0.005 m** | ~0 |
+| Penetración, rampa 21.8° | **+0.006 m** | **+0.031 m** | ~0 |
+| Plano → rampa (consistencia) | **+0.010 m** | **+0.027 m** | 0 |
+| Offset calibrado | 0.045 | 0.21 | — |
+
+**Los dos cumplen el estándar en plano** (±5 mm). En pendiente, el pie de
+Godot queda más pegado a la superficie (+6 mm contra +31 mm), y su
+consistencia plano→rampa es casi el triple de buena.
+
+⚠️ **Pero esa diferencia NO es del motor: es de nuestros dos scripts.** El
+`SpikeFootIK.cs` de Unity desplaza el objetivo **verticalmente**
+(`hit.point + Vector3.up * offset`), mientras que el de Godot lo desplaza
+**a lo largo de la normal del terreno**. En pendiente, el vertical se
+queda corto — es exactamente el error de coseno que se ve en la fila de la
+rampa. Arreglarlo en Unity es una línea. **Leído honestamente: los dos
+motores dan el mismo resultado con el mismo esfuerzo de calibración.**
+
+**Lo que sí es diferencia de motor** sigue siendo lo de antes: en Unity el
+foot IK **viene funcionando**; en Godot **hay que escribirlo**, porque el
+`TwoBoneIK3D` de fábrica no produce salida.
+
+**Métrica no comparable — raíz continua.** Godot da 0.0249 m/frame con
+7.8% de desvío; Unity da 0.0003 m/frame con 600%. **El número de Unity no
+sirve para comparar**: el driver mueve en `Update()` y en batchmode corre a
+miles de fps, así que el desplazamiento por frame es minúsculo y el desvío
+relativo se dispara. No es que la raíz de Unity sea peor — es que la
+métrica está atada al timestep de cada motor. Los dos mueven la raíz por
+código sin stepping, así que **los dos cumplen el criterio de Sable por
+construcción**; el número no aporta nada y se deja anotado como no
+comparable en vez de publicarlo como si dijera algo.
+
+**Instrumento validado de los dos lados.** El de Unity tiene un CONTROL
+que hunde al personaje 10 cm y verifica que la penetración medida cambie
+~10 cm: da **0.0995 m**. La primera corrida del control dio 0.0205 y marcó
+"SOSPECHOSO" — no era el instrumento, era el **foot IK volviendo a plantar
+el pie**. Se corrigió corriendo el control con el IK apagado. Es el mismo
+tipo de trampa que del lado Godot costó medio día.
 
 ---
 
