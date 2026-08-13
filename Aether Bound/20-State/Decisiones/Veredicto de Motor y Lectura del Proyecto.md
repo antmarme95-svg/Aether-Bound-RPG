@@ -229,16 +229,92 @@ Humano Duelist→Dagna, Enano Vanguard→Lyris… O sea **3 razas × 3 roles = 9
 celdas = 9 Pivotes**. No se puede recortar uno sin recortar el otro: son
 la misma decisión.
 
-### Trío propuesto: **Humano × (Duelist, Strategist, Vanguard)**
+### Trío elegido (2026-08-12): **Bram + Dagna + Vekka**
 
-**Dagna** (Enana Vanguard) · **Nyael** (Elfa Duelist) · **Vekka** (Enana
-Strategist) — los tres Pivotes que emparejan con las tres celdas del
-jugador **Humano**.
+Salido de evaluar las **84 combinaciones posibles** de 3 Pivotes sobre dos
+ejes de producción: **celdas** (kits raza×rol distintos a construir, sumando
+los del jugador y los propios de cada Pivote) y **cuerpos jugables**
+(superficies de alta fidelidad, que es lo caro).
 
-**Por qué, y con la aritmética correcta.** El ahorro **no** está en la
-anatomía: las tres razas hacen falta igual, porque los Pivotes mismos son
-enana, elfa y enana. El ahorro está en la **superficie jugable**, que es
-otra cosa y es la cara:
+> **Corrección de modelo:** las *anatomías* no son variable. Los 3 fijos
+> —Roen humano, Darro enano, Valen elfo— acompañan al jugador todo el
+> juego, así que **las 3 anatomías hacen falta siempre**. Y sus kits son
+> bespoke (Roen pelea a mano limpia, Valen nunca usa arma de combate), o
+> sea costo constante que no discrimina entre tríos.
+
+| Trío (incluyendo a Dagna) | Celdas | Cuerpos | Gemelos |
+|---|---|---|---|
+| **Bram + Dagna + Vekka** | **4** | **2** | 0 |
+| Dagna + Maren + Nyael | 4 | 2 | 0 |
+| Dagna + Lyris + Nyael | 4 | 2 | 1 ⚠️ |
+| Dagna + Sereth + Torgan | 4 | 3 | 0 |
+| *Dagna + Nyael + Vekka* (propuesta anterior) | *6* | *1* | *0* |
+
+Empata en números con Dagna+Maren+Nyael, pero **gana en variedad de la
+pérdida** — el otro co-óptimo repite eje (Dagna pierde verticalidad y Maren
+movilidad aérea; las dos son traversal).
+
+| Pivote | Celda del jugador | Qué pierdes |
+|---|---|---|
+| **Dagna** | Humano Duelist | **el mundo** — se acabó la verticalidad |
+| **Vekka** | Humano Vanguard | **partes de ti mismo** — te desmonta los verbos del cuerpo |
+| **Bram** | Enano Strategist | **la protección** — eres cristal, nadie cuida tu setup |
+
+### La objeción de Bram, y cómo la resolvió el director
+
+**Bram es la excepción cuyo link nunca muere** ([[Current-State]]: *declara
+y no obedece*). O sea que una de las tres rutas **no entrega el Bond
+vacío**, que es justo lo que v1 existe para probar.
+
+**Decisión del director (2026-08-12): la ruta de Bram no se puede elegir de
+inicio — se desbloquea**, al estilo de los personajes de Smash Bros.
+
+Es una solución temática, no solo de orden: **solo te dejan quedarte con el
+vínculo después de haberlo perdido.** La ruta que sobrevive se gana; no se
+elige. Y hace que las otras dos peguen más fuerte hacia atrás, porque el
+jugador aprende que podía haber sido de otra manera — la pérdida deja de
+sentirse como guion inevitable.
+
+**Lo que hay que decidir con los ojos abiertos:** el link acopla Pivote y
+celda del jugador, así que **bloquear a Bram bloquea también la celda
+Enano Strategist en la pantalla de creación de personaje**. No es
+desbloquear un compañero: es desbloquear una **build jugable**. Consecuencias:
+
+- La primera partida ofrece **2 builds, no 3** (Humano Duelist y Humano
+  Vanguard). Para un v1 de tres rutas, eso es una vitrina inicial flaca —
+  hay que ver si se banca.
+- El jugador que quiere ser enano no puede en su primera partida. En Smash
+  todos los personajes son la misma clase de cosa; acá se está gateando la
+  **identidad** con la que juegas.
+- A favor: onboarding y tutorial solo cubren 2 builds en el lanzamiento —
+  ahorro de producción real.
+- A favor: la ruta contraejemplo no aparece en la cobertura de prensa ni de
+  streamers, que suelen quedarse en la primera partida. Protección de
+  spoiler gratis.
+
+**Recomendación de forma:** que el desbloqueo sea **diegético**, no un
+mensaje de menú. Que algo dentro de la ficción se abra tras la primera
+pérdida y sea eso lo que habilita a Bram. Cuesta casi lo mismo y convierte
+un unlock en un beat.
+
+### Por qué NO el trío anterior (Humano × 3 roles)
+
+La propuesta anterior era **Dagna + Nyael + Vekka** — los tres Pivotes que
+emparejan con las tres celdas del jugador Humano. Se descarta: **cuesta 6
+celdas contra 4**, por ahorrar un solo cuerpo jugable. El argumento se
+sostenía sobre un supuesto falso (ver abajo).
+
+**El supuesto que falló.** Se creyó que un solo jugador humano construía
+"una superficie jugable en vez de tres". Falso por dos razones que el
+director marcó:
+1. **La anatomía no se ahorra:** los Pivotes mismos son de otras razas, y
+   los fijos cubren las tres igual.
+2. **La locomoción tampoco:** el Pivote es un compañero de combate, no un
+   NPC que camina. Persigue, esquiva, recibe golpes, se reposiciona.
+   Comparte casi toda la suite con el jugador.
+
+Lo que sí queda del lado exclusivo del jugador —y por eso el eje "cuerpos"
+sigue contando, aunque menos de lo que se dijo:
 
 | | Pivote (NPC) | Raza jugable |
 |---|---|---|
