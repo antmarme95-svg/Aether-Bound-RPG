@@ -210,8 +210,11 @@ Mismo protocolo y **los dos calibrados con el mismo criterio**:
 | Métrica | **Godot** (solver propio) | **Unity** (`Animator IK`) |
 |---|---|---|
 | Penetración, plano | −0.004 m | +0.005 m |
-| Penetración, rampa 21.8° | +0.006 m | +0.031 m |
-| Plano → rampa | +0.010 m | +0.027 m |
+| Penetración, rampa 21.8° | +0.005 m | +0.031 m |
+| Plano → rampa | +0.009 m | +0.027 m |
+
+(Línea base sin IK, para escala: −0.213 m en plano y −0.323 m en rampa.
+Repetibilidad de una misma columna: ±1 mm.)
 
 **Las dos columnas son confiables.** Hubo una falsa alarma sobre el
 encuadre del instrumento de Unity: se volcaron **las 16 muestras con la
