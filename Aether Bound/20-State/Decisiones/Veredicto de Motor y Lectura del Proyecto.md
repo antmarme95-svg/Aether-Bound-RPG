@@ -174,13 +174,27 @@ público premia exactamente lo que este proyecto tiene: identidad,
 coherencia, una idea que se cuenta en una frase. **Es el techo correcto
 para apuntar.**
 
-**Consola: posible, pero no como objetivo de v1 — y no por el motor.**
-Godot exige un partner de porteo, que es dinero o publisher; y ese partner
-aparece **después** de una tracción demostrada en PC, no antes. El camino
-realista es Steam → números → publisher → port. Diseñar para consola desde
-ahora agrega restricciones (certificación, input, memoria, TRC) a un
-proyecto que todavía no probó que es divertido. **Es una consecuencia del
-éxito, no una vía hacia él.**
+**Consola: posible, y NO exige rehacer el juego** (verificado 2026-08-12).
+La página oficial de Godot lo dice: los proveedores de middleware entregan
+*"una versión de Godot que corre nativamente en la consola"*, y como el
+motor ya está porteado **el trabajo se reduce mucho**. Es el mismo
+proyecto con otros export templates, no una reescritura. Hay **ocho**
+proveedores listados; W4 Games (fundada por gente del core) vende
+templates de Switch/PS5/Xbox optimizados para 4.3+, y RAWRLAB da el de
+Switch gratis a devs ya autorizados por Nintendo. Estar en **GDScript**
+juega a favor: es la vía nativa del motor, sin la capa extra de .NET.
+
+Lo que sí es real: hay que ser dev aprobado por plataforma, hay que pagar
+al partner (o que lo pague un publisher), y hay un pase de ingeniería de
+memoria, performance, TRC y certificación. **La diferencia honesta con
+Unity no es "rewrite vs no rewrite" — es checkbox contra contratar a
+alguien. Es una puerta de costo, no un muro técnico.**
+
+**Recomendación revisada:** no sacar consola del alcance, sino **del
+diseño**. Que no meta certificación ni TRC en las decisiones de hoy, pero
+que tampoco se tomen decisiones que la cierren. Lo único que conviene
+mantener desde ya, porque es barato ahora y carísimo de retrofitear:
+**presupuesto de memoria** e **input gamepad-first**.
 
 **Lo que puede bajar el techo por debajo de "viable en Steam":** no la
 escritura ni el motor, sino **el volumen de producción 3D**. Nueve Pivotes
@@ -208,8 +222,54 @@ tres el trabajo 3D más caro del proyecto para agregar **variación**, no
 **profundidad**. El Bond vacío no pega más fuerte porque haya nueve
 maneras de perderlo. Pega fuerte porque perdiste **esa**.
 
-Tres Pivotes bien producidos con rutas que se sienten distintas superan a
-nueve a medio hacer, y **la diferencia en meses es enorme**.
+### Hallazgo estructural: raza×rol y Pivotes son EL MISMO eje
+
+La matriz de [[Los 9 Links del Pivote]] es 1:1 — Elfo Duelist→Maren,
+Humano Duelist→Dagna, Enano Vanguard→Lyris… O sea **3 razas × 3 roles = 9
+celdas = 9 Pivotes**. No se puede recortar uno sin recortar el otro: son
+la misma decisión.
+
+### Trío propuesto: **Humano × (Duelist, Strategist, Vanguard)**
+
+**Dagna** (Enana Vanguard) · **Nyael** (Elfa Duelist) · **Vekka** (Enana
+Strategist) — los tres Pivotes que emparejan con las tres celdas del
+jugador **Humano**.
+
+**Por qué, y con la aritmética correcta.** El ahorro **no** está en la
+anatomía: las tres razas hacen falta igual, porque los Pivotes mismos son
+enana, elfa y enana. El ahorro está en la **superficie jugable**, que es
+otra cosa y es la cara:
+
+| | Pivote (NPC) | Raza jugable |
+|---|---|---|
+| Qué necesita | idle, caminar, las animaciones de su link, sus escenas firma y el beat de traición | la **suite completa de locomoción** del [[Benchmark Biomecánico]] (stand/crouch, starts, cycles, banks, strafing, turns, stops, hit reactions, dive roll) + kit de combate + IK + todos los estados de la FSM |
+
+Con un solo jugador humano se construye **una** superficie jugable en vez
+de tres. Los tres roles son kits de combate sobre el mismo cuerpo — mucho
+más barato que tres cuerpos jugables. Y **Humano ya es el rig de
+referencia** por decisión previa de [[Slice of Bond]] (*"el esqueleto más
+barato de hacer bien primero"*).
+
+**Bonus no menor:** con ese trío las tres razas siguen en pantalla — el
+jugador es humano y sus Pivotes son dos enanas y una elfa. No se pierde la
+identidad visual del mundo.
+
+**Y las tres pérdidas son de formas distintas**, que es lo que el pilar
+necesita:
+- Dagna → *"se acabó la verticalidad"*: **perdés el mundo**.
+- Nyael → *"trampas que nadie atraviesa"*: **perdés el pago de tus
+  propias herramientas**.
+- Vekka → *"los desmonta al irse: perdés verbos del cuerpo"*: **te perdés
+  a vos mismo**.
+
+**El costo, dicho claro:** el jugador siempre es humano en v1. Se pierde la
+fantasía racial jugable. La contra-opción —una raza jugable por Pivote—
+cuesta **tres superficies jugables**, que es la decisión más cara de toda
+esta lista. Es una elección de valores, no técnica.
+
+**Nota para v2/DLC:** como las tres anatomías existen igual por los
+Pivotes, habilitar elfo y enano jugables después es **más barato de lo que
+parece** — lo que falta es la suite de animación jugable, no el cuerpo.
 
 Segunda recomendación, más chica: **medir el fun antes que seguir
 escribiendo.** El siguiente frente del vault es "guión y diálogos por
@@ -228,9 +288,9 @@ diseño no va a cambiar.
    ADR-003? (Mi opinión: el contador va a decir 3; adelantarlo ahorra
    meses de producción mal dirigida.)
 3. ¿**Playtest antes que guión**, o guión antes que playtest?
-4. ¿Consola se saca explícitamente del alcance de v1, o se deja como
-   ambición declarada? (Mi opinión: sacarla, y volver a mirarla con
-   números de Steam en la mano.)
+4. ¿Consola se saca del **diseño** de v1 manteniendo abierta la puerta?
+   (Mi opinión: sí — no exige rehacer el juego, es una puerta de costo.
+   Mantener solo presupuesto de memoria e input gamepad-first.)
 5. ¿Qué instrumento se construye para medir **diversión**, que hoy es el
    único eje sin métrica?
 
