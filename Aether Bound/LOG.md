@@ -1,5 +1,58 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-13] consejo | Veredicto de motor y alcance de v1 — segundo consejo
+
+Boris cerró la decisión del desbloqueo de Bram (**se deja en 2 builds en la
+primera partida**, la vitrina flaca se acepta a cambio del beat y del ahorro
+de onboarding) y mandó a consejo
+[[Veredicto de Motor y Lectura del Proyecto]].
+
+Transcript completo en
+`90-Raw/council-2026-08-13-veredicto-motor-y-alcance.md`. Nota de método:
+la ronda de peer review corrió con **3 revisores en vez de 5** — la primera
+tanda de 5 murió por límite de gasto.
+
+**Unanimidad:** playtest antes que guión (5 de 5) · Godot ratificado y
+congelado, cero re-evaluaciones de motor hasta que exista un slice jugable ·
+el pilar es una hipótesis sin un solo dato — cinco consejeros
+independientes escribieron la misma frase: nadie midió que la ausencia
+produzca **duelo** y no simplemente **molestia**.
+
+**Choque principal:** ¿1 Pivote o 3? El Ejecutor y el Contrarian piden
+construir Dagna sola cronometrada y dejar que el número decida; el
+Expansionista defiende el 3 como enfoque vendible. Resolución del
+presidente: **el trío queda en el papel como intención, no como compromiso
+de producción**, hasta tener la constante horas/Pivote.
+
+**Bram sobrevive, por una razón distinta a la que se lo eligió.** Tres de
+cinco consejeros lo querían fuera de v1 (es la única ruta que no entrega el
+pilar). Pero al ser la ruta que se desbloquea es **lo último que se
+construye**, o sea cortable a costo cero hasta el final. La objeción del
+Outsider —*"nadie rejuega para NO perder algo"; el jugador nuevo percibe
+menos contenido, no un misterio*— queda como riesgo a medir en el playtest.
+
+**Corrección del presidente al consejo:** los cinco piden abstinencia total
+de escritura. No se acepta. Escribir es donde el director es rápido y donde
+se repone, y este proyecto no tiene fecha de fracaso pero sí riesgo de
+abandono. **Cadencia mixta:** el guión sigue, deja de ser el frente
+principal y se limita al material del slice.
+
+**Lo primero, y único:** el **test gris del Bond** — escena gris, cápsula,
+una cornisa, Dagna reducida a un botón que lanza hacia arriba, 5 minutos con
+ella y 5 sin ella, sin arte ni diálogo. Métrica contable: pulsaciones del
+botón muerto frente a la cornisa, y segundos hasta que el jugador deja de
+intentar. **Con el criterio de muerte escrito ANTES de correrlo** — medir
+sin umbral pre-comprometido es confirmación disfrazada de método.
+
+**Puntos ciegos que atrapó la revisión por pares y que nadie del proyecto
+había nombrado:** el gancho es una ausencia y no se captura en un GIF de 6
+segundos (riesgo de wishlists, no de diseño) · el golpe de la pérdida es
+**50% audio** · el acoplamiento 1:1 Pivote↔build raza×rol es la causa
+estructural de que cortar cueste builds jugables, y desacoplarlo cambiaría
+toda la aritmética del trío · el dato de la rampa es costo de curva de
+aprendizaje, no ritmo estable · Brothers, Ico y BT en Titanfall 2 ya
+validaron variantes del pilar, gratis.
+
 ## [2026-08-12] canon + guión | The Long Vigil (primer jefe) y Waypost — Los Cinco: el Acto 1 queda completo
 
 Dos piezas en una tanda, a pedido de Boris: cerrar el hueco del primer

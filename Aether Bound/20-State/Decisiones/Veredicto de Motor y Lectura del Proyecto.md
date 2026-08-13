@@ -275,14 +275,15 @@ elige. Y hace que las otras dos peguen más fuerte hacia atrás, porque el
 jugador aprende que podía haber sido de otra manera — la pérdida deja de
 sentirse como guion inevitable.
 
-**Lo que hay que decidir con los ojos abiertos:** el link acopla Pivote y
+**Lo que se decidió con los ojos abiertos:** el link acopla Pivote y
 celda del jugador, así que **bloquear a Bram bloquea también la celda
 Enano Strategist en la pantalla de creación de personaje**. No es
 desbloquear un compañero: es desbloquear una **build jugable**. Consecuencias:
 
 - La primera partida ofrece **2 builds, no 3** (Humano Duelist y Humano
-  Vanguard). Para un v1 de tres rutas, eso es una vitrina inicial flaca —
-  hay que ver si se banca.
+  Vanguard). **Decisión del director (2026-08-13): se deja en 2.** La
+  vitrina inicial flaca se acepta a cambio del beat del desbloqueo y del
+  ahorro de onboarding.
 - El jugador que quiere ser enano no puede en su primera partida. En Smash
   todos los personajes son la misma clase de cosa; acá se está gateando la
   **identidad** con la que juegas.

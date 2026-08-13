@@ -524,6 +524,31 @@ agachada. El jugador sigue idle en los dos motores.
    de los **9 Pivotes** post-rework; (c) tu VoBo al recorte de 3
    escenas.
 
+8. **✅ Segundo consejo corrido (2026-08-13)** sobre
+   [[Veredicto de Motor y Lectura del Proyecto]]. Transcript en
+   `90-Raw/council-2026-08-13-veredicto-motor-y-alcance.md`. Salió:
+   **Godot ratificado y congelado** (cero re-evaluaciones de motor hasta
+   que exista un slice jugable) · **playtest antes que guión, 5 de 5** ·
+   **no defender el 3 como final**: construir Dagna sola end-to-end,
+   cronometrada, con link de 1 tier, y que el número de horas decida si
+   v1 son 3, 2 o 1 · **Bram queda**, porque al ser la ruta que se
+   desbloquea es lo último que se construye y por lo tanto cortable a
+   costo cero hasta el final.
+   **Lo primero que hay que hacer:** el **test gris del Bond** — escena
+   gris, cápsula, una cornisa, Dagna reducida a un botón que lanza hacia
+   arriba, 5 min con ella y 5 sin ella, sin arte ni diálogo. Telemetría:
+   pulsaciones del botón muerto frente a la cornisa y segundos hasta que
+   el jugador deja de intentar.
+   ⚠️ **Y antes de dárselo a nadie: escribir el criterio de muerte** —
+   qué número significa que el pilar existe y qué número significa que
+   no. El consejo marcó que medir sin umbral pre-comprometido es
+   confirmación disfrazada de método.
+   **Riesgos abiertos que nadie había nombrado:** el gancho es una
+   ausencia y **no se captura en un GIF** (problema de wishlists, no de
+   diseño) · el golpe de la pérdida es **50% audio** · el acoplamiento
+   1:1 Pivote↔build raza×rol es la causa estructural de que cortar cueste
+   builds — desacoplarlo cambia toda la aritmética.
+
 **Resumen de la 17ª ronda de QA (2026-08-10)** (detalle completo en
 [[LOG]]): 13 críticos entre 2 subagentes en frío sobre todo el
 `provisional` acumulado — corregidos a la fuente: dónde/cuándo se suma
