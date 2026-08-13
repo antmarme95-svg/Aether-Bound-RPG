@@ -519,6 +519,59 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/godot | Solver de dos huesos propio — el foot IK cumple el Benchmark
+
+Encargo del director: escribir el solver y seguir. Hecho, y **el criterio
+de foot IK del [[Benchmark Biomecánico]] queda cumplido**.
+
+**El solver.** `godot/scripts/two_bone_ik.gd` (`SpikeTwoBoneIK`): ley de
+cosenos analítica, sin iteraciones, determinista. Se implementó como
+**`SkeletonModifier3D` propio** y no escribiendo huesos desde un
+`_physics_process`, porque el framework de modifiers es el que garantiza
+el ORDEN — corre dentro del update del Skeleton3D, después de que el
+AnimationMixer escribió la pose. **El framework funciona bien; lo que no
+funciona es la clase `TwoBoneIK3D`.**
+
+**Validado en el mismo banco mínimo donde el stock falla:** el solver
+propio da **2.730 píxeles** de efecto; `TwoBoneIK3D` da 0 en sus 9
+variantes; el CONTROL da 2.127.
+
+**Resultado contra el estándar** (§v2 del Benchmark, fila de HZD: *"foot
+IK contra el terreno cada frame — pies creíbles en terreno"*):
+
+| Métrica | Sin IK | Con solver propio |
+|---|---|---|
+| Penetración, plano | −0.213 m | **−0.004 m** |
+| Penetración, rampa 21.8° | −0.323 m | **+0.006 m** |
+| Plano → rampa | −0.110 m | **+0.010 m** |
+| Raíz continua | — | ✅ desvío 7.8% |
+
+**El pie queda a ±6 mm del suelo en los dos terrenos, y se apoya igual de
+bien en pendiente que en plano.** Eso es exactamente lo que pide la fila
+de HZD. Mejora de ~53× en plano y ~59× en rampa contra la animación sola.
+
+**Calibración medida, no estimada.** El bug del tobillo que quedaba
+pendiente se cerró barriendo `ankle_height_offset` con
+`tools/footik_benchmark.gd` (0.030 → −0.020 m · 0.045 → −0.004 m · 0.055 →
++0.006 m) y quedándose con **0.045**. Corrige que el rest pose del rig,
+tras el retargeting con `fix_silhouette`, no es una pose de pie apoyado y
+reporta una altura de tobillo de 0.037 m en vez de los ~0.08 reales.
+
+**Qué le hace esto a la comparativa de motores.** La fila del foot IK
+queda con dos caras, y las dos son ciertas:
+- **En contra de Godot:** el stock no funciona y hay que escribir el
+  solver (~130 líneas con comentarios). Unity lo trae andando.
+- **A favor de Godot:** una vez escrito, **cumple el estándar**. No es una
+  limitación del motor, es una deuda de una tarde, y no es recurrente.
+
+[[Comparativa de Motores — Godot vs Unity]] actualizada con las dos caras.
+
+**Lo que queda para cerrar el veredicto:** portar esta misma medición al
+lado Unity. Ahora sí es comparación justa — de los dos lados hay un foot
+IK que funciona.
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] spike/godot | Escena minima: `TwoBoneIK3D` no produce salida en 4.7.1 — y el valor del CONTROL
 
 Encargo del director: probar con la escena minima aislada. **Cerro la

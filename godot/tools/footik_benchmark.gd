@@ -66,7 +66,7 @@ func _run() -> void:
 				(c as SkeletonModifier3D).active = false
 		print(">>> FOOT IK APAGADO (linea base: la animacion sola)")
 	else:
-		print(">>> FOOT IK ACTIVO (TwoBoneIK3D)")
+		print(">>> FOOT IK ACTIVO (SpikeTwoBoneIK, solver propio)")
 
 	# --- Raiz continua. Esto NO pasa por modifiers: es el transform del nodo,
 	# asi que el getter es valido.

@@ -115,14 +115,19 @@ el IK del lado Godot; recién después la comparación significa algo.**
   `Animator.GetIKPosition()`. Ninguna dio un mensaje de error: todas se
   manifestaron como "se ve raro". Están inventariadas en [[Lecciones]]
   §Godot 4.7.
-- 🔬 **El foot IK stock NO FUNCIONA (medido 2026-08-12).** `SkeletonIK3D`
-  está deprecado, y su reemplazo vigente **`TwoBoneIK3D` no produce
-  salida en 4.7.1**: escena mínima aislada, 9 variantes de configuración,
-  0 píxeles de efecto en las 9, contra una variante de control que sí
-  mueve el render. **Consecuencia concreta: el foot IK de Godot cuesta
-  escribir un solver a mano** (unas 40 líneas), mientras que del lado
-  Unity `OnAnimatorIK` funciona con el mismo esfuerzo que ya invertimos.
-  Es el punto más duro en contra que salió del spike.
+- 🔬 **El foot IK stock NO FUNCIONA, y hubo que escribirlo (medido
+  2026-08-12).** `SkeletonIK3D` está deprecado, y su reemplazo vigente
+  **`TwoBoneIK3D` no produce salida en 4.7.1**: escena mínima aislada, 9
+  variantes de configuración, 0 píxeles en las 9, contra un control que sí
+  mueve el render. **Costo real: un solver de dos huesos escrito a mano**
+  (`scripts/two_bone_ik.gd`, ~130 líneas con comentarios) — mientras que
+  del lado Unity `OnAnimatorIK` funciona de fábrica.
+  **Matiz importante, y va a favor de Godot:** una vez escrito, el
+  resultado **cumple el estándar del [[Benchmark Biomecánico]]** — el pie
+  queda a ±6 mm del suelo y se apoya igual de bien en pendiente que en
+  plano. O sea: no es una limitación del motor, es una **deuda de una
+  tarde**. Y el framework de `SkeletonModifier3D` en sí funciona bien; lo
+  que falla es una clase concreta.
 - 🔬 **El foot IK stock es más pobre que el de Unity.** En la lámina, el
   pie de Godot apunta la punta hacia abajo y penetra la superficie;
   `SkeletonIK3D` coloca el tobillo y rota al normal, pero no ajusta la
@@ -202,11 +207,16 @@ que el spike hizo visible.
 paquetes de assets. Pero el spike también mostró que la conversión
 funciona, y que el pipeline se arma una vez.
 
-**Lo que sigue sin estar probado, y es lo que debería decidir el
-veredicto:** si el foot IK y la animación de Godot alcanzan para el
-estándar del [[Benchmark Biomecánico]] —que es el pilar del que depende
-[[Slice of Bond]]— o si hay que escribir un `SkeletonModifier3D` propio.
-Eso es una pregunta con respuesta empírica, y todavía no se corrió.
+**Esa pregunta ya se corrió (2026-08-12) y tiene respuesta:** el foot IK
+de Godot **sí alcanza el estándar del [[Benchmark Biomecánico]]**, pero
+**hay que escribirlo** — el `TwoBoneIK3D` de fábrica no produce salida.
+Con el solver propio, el pie queda a ±6 mm del suelo y se apoya igual de
+bien en pendiente que en plano. El costo fue una tarde, y es
+**no recurrente**.
+
+**Lo que queda sin correr para cerrar el veredicto:** la misma medición
+del lado Unity, para poner las dos columnas juntas. Ahora sí es una
+comparación justa, porque de los dos lados hay un foot IK que funciona.
 
 ---
 

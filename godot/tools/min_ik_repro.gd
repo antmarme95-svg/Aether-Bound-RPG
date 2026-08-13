@@ -14,6 +14,7 @@ extends SceneTree
 ## Uso: godot --path . --script tools/min_ik_repro.gd --resolution 400x400
 
 const OUT := "res://test_out/minik"
+const SolverScript = preload("res://scripts/two_bone_ik.gd")
 const VARIANTS := [
 	"base",                # tal cual lo veniamos usando
 	"reset",               # + IKModifier3D.reset() despues de configurar
@@ -24,6 +25,7 @@ const VARIANTS := [
 	"con_hueso_hijo",      # el hueso punta tiene un hijo (como LeftToes)
 	"raiz_con_padre",      # la cadena cuelga de un hueso padre, no de la raiz
 	"pose_sucia",          # se escribe la pose de un hueso CADA FRAME
+	"SOLVER_PROPIO",       # nuestro SpikeTwoBoneIK escrito a mano
 	"CONTROL",             # sin IK: se rota el hueso raiz 30 grados a mano.
 	                       # Si ESTO no cambia el render, el juez esta roto y
 	                       # los ceros de arriba no significan nada.
@@ -81,6 +83,23 @@ func _variant(variant: String) -> void:
 	scene.add_child(target)
 	target.global_position = tip_rest
 
+	_setup_view(scene)
+	await process_frame
+
+	if variant == "SOLVER_PROPIO":
+		var mine := SolverScript.new()
+		mine.name = "MiIK"
+		skel.add_child(mine)
+		var ok: bool = mine.add_chain("root", "mid", "tip", target,
+			Vector3(0, 0, 1), false)
+		print("[%s] add_chain ok=%s  cadenas=%d" % [variant, ok, mine.chains.size()])
+		await _shot(OUT + "/" + variant + "_a.png", skel, false)
+		target.global_position = Vector3(0.45, -0.72, 0)
+		await _shot(OUT + "/" + variant + "_b.png", skel, false)
+		scene.queue_free()
+		await process_frame
+		return
+
 	var mod := TwoBoneIK3D.new()
 	if variant != "config_antes":
 		skel.add_child(mod)
@@ -102,9 +121,6 @@ func _variant(variant: String) -> void:
 	mod.set_target_node(0, mod.get_path_to(target))
 	if variant == "reset":
 		mod.reset()
-
-	_setup_view(scene)
-	await process_frame
 
 	print("[%s] root=%d mid=%d tip=%d  target=%s" % [
 		variant, mod.get_root_bone(0), mod.get_middle_bone(0), mod.get_end_bone(0),

@@ -105,6 +105,14 @@ updated: 2026-08-12
   entrar al árbol · con hueso hijo en la punta · cadena colgando de un
   padre · escribiendo la pose cada frame. **Las 9 dan 0 píxeles.** El
   repro vive en `godot/tools/min_ik_repro.gd`.
+  **Solución adoptada:** solver propio en `godot/scripts/two_bone_ik.gd`
+  (`SpikeTwoBoneIK`) — ley de cosenos analítica, sin iteraciones,
+  implementado como `SkeletonModifier3D` propio. **El framework de
+  modifiers SÍ funciona**; lo que falla es la clase `TwoBoneIK3D`. Usar el
+  framework (y no escribir huesos desde `_physics_process`) es lo que
+  garantiza el orden correcto respecto del AnimationMixer. Da 2.730
+  píxeles en el mismo banco donde el stock da 0, y con él el pie queda a
+  ±6 mm del suelo.
 - **⚠️ TODA suite de medición necesita un CONTROL, y este es el ejemplo
   de por qué.** En ese mismo barrido, la variante `CONTROL` no usa el IK:
   rota el hueso raíz 0.5 rad a mano. Da **2.127 píxeles**. Sin esa fila,

@@ -153,9 +153,64 @@ mejoraba.
 rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el
 contacto del talón izquierdo **detectado midiendo el hueso**. Lo que la
 lámina muestra: la diferencia grande **no es de motor, es de clip** — la
-zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. Lo
-comparable de motor a motor (retargeting stock + foot IK stock) funciona
-en los dos.
+zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. El
+**retargeting** stock sí funciona en los dos; el **foot IK** stock no —
+del lado Godot hubo que escribirlo (ver arriba).
+
+**Comparativa de motores escrita** (pedido del director, 2026-08-12):
+[[Comparativa de Motores — Godot vs Unity]] — pros/contras + FODA de los
+dos, con cada afirmación marcada por origen (medido / hecho de plataforma
+/ juicio). **No reabre la decisión.** El eje que más pesa resultó ser de
+método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
+menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
+assets ya comprados, que ahí funcionan sin convertir.
+
+### ✅ Foot IK RESUELTO con solver propio — cumple el Benchmark (2026-08-12)
+
+**El `TwoBoneIK3D` de fábrica no produce salida en Godot 4.7.1.** Probado
+en escena mínima aislada (esqueleto de 3 huesos hecho a mano, malla pesada
+100% al hueso punta, juez = el render) con **9 variantes de
+configuración**: las 9 dan 0 píxeles, contra una variante de **CONTROL**
+—sin IK, rotando el hueso raíz a mano— que da 2.127. Repro versionado en
+`godot/tools/min_ik_repro.gd`. No es nuestro rig.
+
+**Se escribió el solver a mano**: `godot/scripts/two_bone_ik.gd`
+(`SpikeTwoBoneIK`), ley de cosenos analítica, sin iteraciones. Implementado
+como `SkeletonModifier3D` propio — el framework de modifiers sí funciona,
+lo que no funciona es la clase `TwoBoneIK3D`; y usarlo garantiza el orden
+correcto respecto del AnimationMixer. En el mismo banco mínimo da **2.730
+píxeles**.
+
+**Resultado contra el estándar del [[Benchmark Biomecánico]]** (§v2, fila
+de HZD: *"foot IK contra el terreno cada frame — pies creíbles en
+terreno"*; y canon de Sable, raíz continua):
+
+| Métrica | Sin IK | **Con solver propio** | Estándar |
+|---|---|---|---|
+| Raíz continua | — | ✅ desvío 7.8% | Sable: continua |
+| Penetración, plano | −0.213 m | **−0.004 m** | ~0 |
+| Penetración, rampa 21.8° | −0.323 m | **+0.006 m** | ~0 |
+| Plano → rampa | −0.110 m | **+0.010 m** | 0 |
+
+**El pie queda a ±6 mm del suelo en los dos terrenos**, y se apoya
+igual de bien en pendiente que en plano — que es exactamente lo que pide
+la fila de HZD. **El Benchmark, en su criterio de foot IK, está
+cumplido.**
+
+**Calibración medida, no estimada:** `ankle_height_offset = 0.045`, hallado
+barriendo valores con `tools/footik_benchmark.gd` hasta minimizar la
+penetración. Corrige que el rest pose del rig, tras el retargeting con
+`fix_silhouette`, no es una pose de pie apoyado y da una altura de tobillo
+de 0.037 m en vez de los ~0.08 reales.
+
+**Comparador cuadro a cuadro Unity/Godot listo** (`godot/tools/frame_strip.gd`
++ `unity/Assets/_Spike/Editor/SpikeFrameStrip.cs`): mismo punto de la
+rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el
+contacto del talón izquierdo **detectado midiendo el hueso**. Lo que la
+lámina muestra: la diferencia grande **no es de motor, es de clip** — la
+zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. El
+**retargeting** stock sí funciona en los dos; el **foot IK** stock no —
+del lado Godot hubo que escribirlo (ver arriba).
 
 **Comparativa de motores escrita** (pedido del director, 2026-08-12):
 [[Comparativa de Motores — Godot vs Unity]] — pros/contras + FODA de los

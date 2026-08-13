@@ -1,31 +1,13 @@
 extends Node3D
 class_name SpikeFootIK
 
-## Spike ADR-003: foot IK contra el terreno, con la herramienta STOCK de
-## Godot 4.7 -- `TwoBoneIK3D`, una de las subclases de `SkeletonModifier3D`.
+## Spike ADR-003: foot IK contra el terreno.
 ##
-## ⛔ ESTADO: EL MODIFIER NO PRODUCE SALIDA TODAVIA. Medido sobre el render
-## (unico canal valido; los getters de hueso devuelven la pose ANTERIOR a
-## los modifiers): con la MISMA fase de animacion y el esqueleto
-## actualizandose, mover el objetivo 50 cm da **0 pixeles** de diferencia.
-## Lo mismo pasaba con el `SkeletonIK3D` deprecado que habia antes. Lo que
-## se ve como "grounding" es el cuerpo apoyado por fisica.
-##
-## Descartado como causa: la cadena de huesos es contigua padre-hijo
-## (Hips -> LeftUpperLeg -> LeftLowerLeg -> LeftFoot) · `active == true` ·
-## `influence == 1.0` · el target resuelve al nodo correcto · el
-## AnimationPlayer no le pisa el resultado (probado con el mixer detenido) ·
-## el pole ya esta bien seteado.
-##
-## Sin descartar: `IKModifier3D.reset()` despues de configurar · configurar
-## los settings ANTES de entrar al arbol · `use_virtual_end` /
-## `extend_end_bone` · asignar por ruta de propiedad en vez de por setter.
-##
-## ⚠️ Ademas hay un bug propio pendiente: `_rest_ankle_height()` devuelve
-## 0.037 m, y un tobillo real esta a ~0.08-0.10 m de la planta. Sale de leer
-## el rest pose, que despues del retargeting con `fix_silhouette` no es una
-## pose de pie apoyado. No se corrigio porque hoy no cambia nada medible --
-## el modifier no aplica igual -- pero hay que arreglarlo cuando aplique.
+## Usa `SpikeTwoBoneIK` (scripts/two_bone_ik.gd), solver escrito a mano.
+## NO el `TwoBoneIK3D` de fabrica: ese no produce salida en Godot 4.7.1
+## -- probado en escena minima con 9 variantes de configuracion, 0 pixeles
+## en las 9, contra un CONTROL que si mueve el render
+## (tools/min_ik_repro.gd). El nuestro da 2730 pixeles en ese mismo banco.
 ##
 ## Sigue el criterio del [[Benchmark Biomecánico]] (§v2), fila de HZD: foot
 ## IK contra el terreno cada frame. Dos cosas que ese estandar exige y que
@@ -48,9 +30,17 @@ class_name SpikeFootIK
 @export var sole_bones_left: PackedStringArray = ["heel.02.L", "LeftToes"]
 @export var sole_bones_right: PackedStringArray = ["heel.02.R", "RightToes"]
 @export var fallback_ankle_height: float = 0.10
+## Correccion de calibracion sobre la altura de tobillo leida del rig. El
+## rest pose, despues del retargeting con `fix_silhouette`, no es una pose
+## de pie apoyado, asi que el numero que sale de los huesos (0.037 m) deja
+## el pie hundido. Este offset se ajusta MIDIENDO con
+## tools/footik_benchmark.gd hasta que la penetracion en plano de ~0.
+@export var ankle_height_offset: float = 0.045
+
+const TwoBoneIKScript = preload("res://scripts/two_bone_ik.gd")
 
 var skeleton: Skeleton3D
-var modifier: TwoBoneIK3D
+var modifier: SkeletonModifier3D
 var targets: Array[Node3D] = []
 var ankle_heights: PackedFloat32Array = PackedFloat32Array()
 var foot_bones: PackedStringArray = PackedStringArray()
@@ -68,10 +58,9 @@ func _ready() -> void:
 	if body is CollisionObject3D:
 		_exclude.append((body as CollisionObject3D).get_rid())
 
-	modifier = TwoBoneIK3D.new()
+	modifier = TwoBoneIKScript.new()
 	modifier.name = "FootTwoBoneIK"
 	skeleton.add_child(modifier)
-	modifier.setting_count = 2
 
 	_setup_leg(0, thigh_left, shin_left, foot_left, sole_bones_left, "IKTarget_LeftFoot")
 	_setup_leg(1, thigh_right, shin_right, foot_right, sole_bones_right, "IKTarget_RightFoot")
@@ -85,19 +74,10 @@ func _setup_leg(index: int, thigh: String, shin: String, foot: String,
 	foot_bones.append(foot)
 	ankle_heights.append(_rest_ankle_height(foot, sole))
 
-	modifier.set_root_bone_name(index, thigh)
-	modifier.set_middle_bone_name(index, shin)
-	modifier.set_end_bone_name(index, foot)
-	modifier.set_target_node(index, modifier.get_path_to(target))
 	# La rodilla apunta hacia adelante del personaje. El modelo mira a +Z en
 	# su propio espacio (ver build_spike_scene.gd), y el esqueleto vive
 	# dentro de ese modelo, asi que aca el frente es +Z.
-	#
-	# OJO: `pole_direction` es un enum (SecondaryDirection), no un vector.
-	# Llamar solo a set_pole_direction_vector() deja el enum en NONE y el
-	# vector en (0,0,0) -- o sea, sin polo. Hay que fijar el enum; el vector
-	# solo se usa cuando el enum esta en CUSTOM.
-	modifier.set_pole_direction(index, SkeletonModifier3D.SECONDARY_DIRECTION_PLUS_Z)
+	modifier.add_chain(thigh, shin, foot, target, Vector3(0, 0, 1), true)
 
 ## Altura del tobillo sobre la planta, EN REPOSO. Es el numero que evita
 ## que el pie se entierre: el objetivo del IK es el suelo + esta altura.
@@ -157,7 +137,7 @@ func _place_foot(index: int) -> void:
 	var normal: Vector3 = result.normal
 	# El tobillo va a la altura que tiene en reposo sobre la planta, medida
 	# a lo largo de la normal del terreno.
-	target.global_position = (result.position as Vector3) + normal * ankle_heights[index]
+	target.global_position = (result.position as Vector3) + normal * (ankle_heights[index] + ankle_height_offset)
 
 	# La planta acompana la pendiente: se rota la pose del hueso llevando su
 	# "arriba" a la normal del terreno, conservando el rumbo.
