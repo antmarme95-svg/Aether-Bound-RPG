@@ -670,6 +670,58 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike | Encuadre de Unity: falsa alarma mía — y el coseno, rechazado por medición
+
+Encargo del director: arreglar el encuadre y volver a medir las dos
+columnas. **El encuadre no estaba roto.** La alarma la levanté yo, y
+estaba mal.
+
+**Cómo se comprobó.** Se volcaron **las 16 muestras** del terreno plano con
+la **línea del suelo dibujada encima** y una marca en el píxel más bajo que
+el instrumento detecta. El encuadre está bien: vista lateral, personaje
+derecho, pies apoyados sobre la línea. Mi alarma salió de mirar **una sola
+miniatura**, y encima de una fase del ciclo con **los dos pies en el
+aire** — que leí como "personaje rotado y cortado".
+
+**El error de coseno: probado y rechazado.** Desplazar el objetivo del IK a
+lo largo de la normal en vez de en vertical **empeoró** la rampa (+0.031 →
++0.055 m). Revertido.
+
+**Y ahora sí hay explicación de por qué el coseno no aplicaba.** El
+`footOffsetY` calibrado de Unity da **0.21 m**, cuando un tobillo real está
+a 0.08-0.10. Ese número **no es una altura de tobillo**: es un factor que
+absorbe la geometría **tobillo→punta de la bota**, que es lo que marca el
+píxel más bajo de la silueta. Un factor de corrección así no tiene
+dirección física que respetar; girarlo con la pendiente solo lo desalinea.
+**El argumento del coseno vale para una altura real, no para un fudge.**
+Ese mismo 0.21 que me había olido raro era la pista, y la leí como "el
+instrumento miente" en vez de "el parámetro no es lo que creo".
+
+**Tabla final, las dos columnas medidas con el mismo protocolo y
+calibradas con el mismo criterio:**
+
+| Métrica | Godot (solver propio) | Unity (`Animator IK`) | Estándar |
+|---|---|---|---|
+| Penetración, plano | −0.004 m | +0.005 m | ~0 |
+| Penetración, rampa 21.8° | +0.005 m | +0.031 m | ~0 |
+| Plano → rampa | +0.009 m | +0.027 m | 0 |
+
+**Los dos cumplen el estándar del [[Benchmark Biomecánico]].** La
+diferencia en pendiente **queda sin explicar** — puede ser el script, los
+clips (el de Starter Assets tiene un despegue de punta más marcado, y el
+punto más bajo de la silueta depende de eso) o el motor. **No hay
+evidencia para atribuirlo a ninguno**, y no alcanza para decir que un motor
+planta mejor el pie.
+
+**La lección, y es distinta de la de la mañana.** Hoy aprendí a desconfiar
+de los instrumentos. Esta vez desconfié **de más**: declaré roto un
+instrumento sano por mirar una miniatura, y escribí esa alarma en tres
+archivos del vault. La regla que faltaba: **antes de declarar rota una
+medición, mirar la evidencia completa con la misma exigencia que le pedís
+a la conclusión que querés tumbar.** Dudar es barato; declarar, no.
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] spike/unity | El arreglo del coseno no confirmó — y el instrumento de Unity tiene el encuadre mal
 
 Encargo del director: arreglar el error de coseno en el script de Unity.

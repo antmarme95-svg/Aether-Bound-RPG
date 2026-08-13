@@ -37,20 +37,24 @@ public class SpikeFootIK : MonoBehaviour
             animator.SetIKPositionWeight(foot, 1f);
             animator.SetIKRotationWeight(foot, 1f);
 
-            // El offset va a lo largo de la NORMAL del terreno, no de
-            // Vector3.up: el tobillo se separa de la superficie
-            // perpendicularmente a ella, no en vertical. Con `up`, en
-            // pendiente el objetivo se queda corto por un factor
-            // cos(angulo). Es el mismo criterio que usa el lado Godot
-            // (godot/scripts/foot_ik.gd).
+            // OFFSET VERTICAL, a proposito -- y no es el error de coseno que
+            // parece.
             //
-            // ⚠️ CAMBIO POR PRINCIPIO, NO VALIDADO POR MEDICION. El
-            // instrumento que deberia confirmarlo
-            // (Editor/SpikeFootIKBenchmark.cs) tiene el encuadre mal: la
-            // captura muestra al personaje rotado y cortado, asi que sus
-            // numeros de penetracion no son confiables todavia. No tomar
-            // como bueno el "antes/despues" hasta arreglar el encuadre.
-            Vector3 targetPos = hit.point + hit.normal * footOffsetY;
+            // Se probo desplazar a lo largo de la normal del terreno (que es
+            // lo que hace el lado Godot y lo que pediria la fisica si
+            // `footOffsetY` fuera la altura del tobillo sobre la planta). La
+            // rampa EMPEORO: +0.031 -> +0.055 m de flotacion. Medido, no
+            // supuesto.
+            //
+            // La razon: `footOffsetY` calibrado da 0.21 m, y un tobillo real
+            // esta a 0.08-0.10. O sea que este numero NO es una altura de
+            // tobillo: es un factor que absorbe la geometria tobillo->punta
+            // de la bota, que es lo que marca el punto mas bajo de la
+            // silueta. Un factor de correccion asi no tiene una direccion
+            // fisica que respetar, y girarlo con la pendiente solo lo
+            // desalinea. El argumento del coseno vale para una altura real;
+            // no vale para un fudge.
+            Vector3 targetPos = hit.point + Vector3.up * footOffsetY;
             animator.SetIKPosition(foot, targetPos);
 
             Quaternion footRotation = Quaternion.FromToRotation(Vector3.up, hit.normal) * animator.GetIKRotation(foot);

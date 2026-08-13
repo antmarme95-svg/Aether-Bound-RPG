@@ -203,7 +203,7 @@ penetración. Corrige que el rest pose del rig, tras el retargeting con
 `fix_silhouette`, no es una pose de pie apoyado y da una altura de tobillo
 de 0.037 m en vez de los ~0.08 reales.
 
-### ⚠️ Comparación de foot IK Godot vs Unity — REABIERTA (2026-08-12)
+### ✅ Comparación de foot IK Godot vs Unity — CERRADA (2026-08-12)
 
 Mismo protocolo y **los dos calibrados con el mismo criterio**:
 
@@ -213,23 +213,21 @@ Mismo protocolo y **los dos calibrados con el mismo criterio**:
 | Penetración, rampa 21.8° | +0.006 m | +0.031 m |
 | Plano → rampa | +0.010 m | +0.027 m |
 
-**⚠️ La columna de Unity no es confiable.** Al mirar las capturas que su
-instrumento usa, apareció que **el encuadre está mal**: el personaje sale
-rotado y cortado, así que el "píxel más bajo de la silueta" puede no ser
-el pie. Segunda señal: su offset calibrado da **0.21 m** cuando un tobillo
-real está a 0.08-0.10 (el equivalente de Godot es 0.082, físicamente
-sensato).
+**Las dos columnas son confiables.** Hubo una falsa alarma sobre el
+encuadre del instrumento de Unity: se volcaron **las 16 muestras con la
+línea del suelo dibujada encima** y el encuadre está bien — vista lateral,
+personaje derecho, pies sobre la línea. La alarma salió de mirar **una sola
+miniatura de una fase con los dos pies en el aire**.
 
-Se probó la explicación del error de coseno —desplazar el objetivo a lo
-largo de la normal en vez de en vertical— y la rampa **empeoró**
-(+0.031 → +0.055 m). La hipótesis no se confirmó. El cambio quedó aplicado
-**por principio**, marcado en el código como no validado.
+**Se probó el error de coseno y la medición lo rechazó** (+0.031 →
++0.055 m al desplazar a lo largo de la normal). Revertido. El motivo: el
+`footOffsetY` de Unity calibrado da 0.21 m, que **no es una altura de
+tobillo** sino un factor que absorbe la geometría tobillo→punta de la
+bota — y un fudge así no tiene dirección física que respetar.
 
-**La columna de Godot sí es confiable** (encuadre verificado a ojo,
-control validando el instrumento).
-
-**Próximo paso:** arreglar el encuadre del instrumento de Unity y volver a
-medir. Hasta entonces, la comparación **no da veredicto**.
+**La diferencia en pendiente queda sin explicar** (script, clips o motor),
+y **no alcanza para decir que un motor planta mejor el pie**. Lo que sí
+está establecido: **los dos cumplen el estándar**.
 
 **La diferencia real de motor** es de costo, no de calidad: en Unity el
 foot IK viene funcionando; en Godot hay que escribirlo.

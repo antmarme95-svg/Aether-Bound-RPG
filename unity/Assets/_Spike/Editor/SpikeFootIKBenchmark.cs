@@ -81,6 +81,7 @@ public class SpikeBenchDriver : MonoBehaviour
     private Texture2D _shot;
     private float _mpp;
     private bool _failed;
+    public static bool DumpFrames = false;
 
     private IEnumerator Start()
     {
@@ -289,22 +290,34 @@ public class SpikeBenchDriver : MonoBehaviour
             _shot.Apply();
             RenderTexture.active = null;
 
-            // Se guarda la primera muestra de cada terreno para poder MIRAR
-            // que esta midiendo el instrumento en vez de suponerlo.
-            if (i == 0)
+            int low = LowestSilhouetteRow(_shot);
+            float groundRowDbg = _cam.WorldToScreenPoint(p).y;
+
+            // Se guardan TODAS las muestras con la LINEA DEL SUELO dibujada
+            // encima y una marca en el pixel mas bajo detectado. Mirar una
+            // sola muestra no alcanza: la fase 0 puede tener los dos pies
+            // en el aire y hacer creer que el encuadre esta roto.
+            if (DumpFrames)
             {
                 string dir = Path.Combine(Directory.GetParent(Application.dataPath).FullName, "test_out/bench");
                 Directory.CreateDirectory(dir);
-                File.WriteAllBytes(Path.Combine(dir, label.Replace(" ", "_").Replace("=", "").Replace(".", "") + ".png"),
-                    _shot.EncodeToPNG());
+                var dbg = new Texture2D(_shot.width, _shot.height, TextureFormat.RGB24, false);
+                dbg.SetPixels32(_shot.GetPixels32());
+                int gy = Mathf.Clamp(Mathf.RoundToInt(groundRowDbg), 0, dbg.height - 1);
+                for (int x = 0; x < dbg.width; x++) dbg.SetPixel(x, gy, Color.red);
+                if (low >= 0)
+                    for (int x = 0; x < dbg.width; x += 6) dbg.SetPixel(x, Mathf.Clamp(low, 0, dbg.height - 1), Color.yellow);
+                dbg.Apply();
+                File.WriteAllBytes(Path.Combine(dir,
+                    string.Format("{0}_{1:D2}.png", label.Replace(" ", "_").Replace("=", "").Replace(".", ""), i)),
+                    dbg.EncodeToPNG());
+                Object.DestroyImmediate(dbg);
             }
 
-            int low = LowestSilhouetteRow(_shot);
             if (low < 0) continue;
             if (low <= 1) { clipped++; continue; }
 
-            float groundRow = _cam.WorldToScreenPoint(p).y;
-            samples.Add((low - groundRow) * _mpp);
+            samples.Add((low - groundRowDbg) * _mpp);
             _cam.targetTexture = null;
         }
 

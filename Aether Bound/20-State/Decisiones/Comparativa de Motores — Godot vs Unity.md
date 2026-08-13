@@ -214,22 +214,6 @@ Con el solver propio, el pie queda a ±6 mm del suelo y se apoya igual de
 bien en pendiente que en plano. El costo fue una tarde, y es
 **no recurrente**.
 
-### ⚠️ El foot IK, medido de los dos lados — LA COLUMNA DE UNITY ESTA EN DUDA
-
-> **Aviso (2026-08-12, mismo día):** al mirar las capturas que el
-> instrumento de Unity estaba usando, apareció que **su encuadre está
-> mal** — el personaje sale rotado y cortado, así que el "píxel más bajo
-> de la silueta" no es necesariamente el pie. **Los números de la columna
-> Unity de abajo no son confiables** hasta arreglarlo. La columna de Godot
-> sí lo es (su encuadre se verificó mirando las capturas, y su control
-> valida el instrumento).
->
-> Segunda señal en el mismo sentido: el offset calibrado de Unity da
-> **0.21 m**, cuando un tobillo real está a 0.08-0.10 m. Del lado Godot el
-> equivalente total es 0.082 m, que sí es físicamente sensato. Un
-> parámetro que hay que llevar al doble de lo físico para que el número
-> cierre suele indicar que el número está mal, no el parámetro.
-
 ### El foot IK, medido de los dos lados (2026-08-12)
 
 Mismo protocolo en los dos motores (`godot/tools/footik_benchmark.gd` ·
@@ -250,16 +234,26 @@ tobillo hasta minimizar la penetración en plano.
 Godot queda más pegado a la superficie (+6 mm contra +31 mm), y su
 consistencia plano→rampa es casi el triple de buena.
 
-⚠️ **Hipótesis que la medición NO confirmó.** Se atribuyó la diferencia en
-pendiente a que el `SpikeFootIK.cs` de Unity desplaza el objetivo
-**verticalmente** (`hit.point + Vector3.up * offset`) y el de Godot **a lo
-largo de la normal** — error de coseno. Se aplicó el cambio a Unity… y la
-rampa **empeoró** (+0.031 → +0.055 m), no mejoró. O sea que la explicación
-era incorrecta, o el instrumento no está midiendo lo que se cree. Dado el
-problema de encuadre del aviso de arriba, lo segundo es lo más probable.
-**El cambio se dejó aplicado por principio** (el tobillo se separa
-perpendicular a la superficie, y es lo que hace el lado Godot), pero
-marcado en el código como **no validado**.
+**Se probó explicar la diferencia por un error de coseno, y la medición lo
+rechazó.** La hipótesis era que el `SpikeFootIK.cs` de Unity desplaza el
+objetivo **verticalmente** (`hit.point + Vector3.up * offset`) mientras el
+de Godot lo desplaza **a lo largo de la normal**. Se aplicó el cambio a
+Unity y la rampa **empeoró**: +0.031 → +0.055 m. Se revirtió.
+
+**Por qué el argumento del coseno no aplica acá:** el `footOffsetY`
+calibrado de Unity da **0.21 m**, y un tobillo real está a 0.08-0.10. O sea
+que ese número **no es una altura de tobillo**: es un factor que absorbe la
+geometría tobillo→punta de la bota, que es lo que marca el píxel más bajo
+de la silueta. Un factor de corrección así **no tiene una dirección física
+que respetar**, y girarlo con la pendiente solo lo desalinea. El coseno
+vale para una altura real; no vale para un fudge.
+
+**Entonces la diferencia en pendiente queda SIN explicar.** Puede ser el
+script, pueden ser los clips (el de Starter Assets tiene un despegue de
+punta más marcado que el de DoubleL, y el punto más bajo de la silueta
+depende de eso), o puede ser el motor. **No hay evidencia para atribuirlo a
+ninguno de los tres**, y en particular no alcanza para decir "Godot planta
+mejor el pie".
 
 **Lo que sí es diferencia de motor** sigue siendo lo de antes: en Unity el
 foot IK **viene funcionando**; en Godot **hay que escribirlo**, porque el
