@@ -218,6 +218,7 @@
 ## 30-Loops (cómo trabajar)
 
 - [[Comparativa de Motores — Godot vs Unity]] — pros/contras y FODA de los dos motores (pedido del director, 2026-08-12). **No reabre la decisión** — Godot sigue confirmado; existe para sostenerla con los ojos abiertos. Marca qué es medido en el spike, qué es hecho de plataforma y qué es juicio.
+- [[Veredicto de Motor y Lectura del Proyecto]] — **opinión del asistente**, pedida por el director (2026-08-12) como insumo para el consejo: ratifica Godot (por instrumentabilidad y licencia, no por capacidad — la comparación técnica dio empate), y lee la solidez y el techo del proyecto sin timeline. Recomendación incómoda: v1 con 3 Pivotes, no 9; y playtest antes que guión.
 - [[Ingest Loop]] — fuente nueva en raw → conocimiento compilado.
 - [[Design Loop]] — frente abierto → propuesta → ratificación del director.
 - [[Feature Loop]] — spec ratificada → implementación → gates QA → sync.
