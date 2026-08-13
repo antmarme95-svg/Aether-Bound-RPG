@@ -327,6 +327,7 @@ palabras. Es el único guiño de la escena y no se subraya.
   nombres de UI o descripciones internas. Este guión los usa solo en
   acotación, nunca en boca de un personaje — Valen describe el efecto,
   no lo nombra.
-- **Locación 3 (El Nido)** es la escena siguiente: encuentro con Speck,
-  el Pivote se suma, la crisálida como **elección ilusoria**, primer
-  God-Core destruido.
+- **✅ Locación 3 (El Nido) — escrita (2026-08-12):**
+  [[Guion/El Nido — El Primero]]. Encuentro con Speck, el Pivote se suma,
+  la elección ilusoria, primer God-Core — y las primeras palabras del
+  protagonista.

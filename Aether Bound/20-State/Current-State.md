@@ -353,69 +353,42 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-1. **✅ Guión Acto 1 — escena 2 escrita y 4 decisiones de canon cerradas
-   (2026-08-12).** Detalle completo en [[LOG]] §2026-08-12.
-   [[Guion/Caminata y Taberna — Valen se suma]] (`provisional`, comparte
-   re-corrida con [[Guion/Encuentro con Roen]]). Lo que salió, todo ya
-   escrito a fuente:
-   - **Voz del protagonista** — la de más alcance: no es silent
-     protagonist clásico, **arranca mudo y gana voz acto a acto**
-     (coming-of-age). **Revisado el mismo día — ver el bloque de abajo,
-     que es la versión vigente.**
-   - **Waypost** ([[Geografía y Ciudades]] §K) — posta del centro de The
-     Wilds, terreno de nadie. Es el bookend **y** la sala donde el grupo
-     se vuelve equipo, con 30 años de diferencia. Nombre **no
-     pronunciado en pantalla**.
-   - **Beat de formación del equipo** ([[Geografía y Ciudades]] §Beats
-     Narrativos por Acto, locación 4, fuente única): roster ≠ equipo; a
-     los cuatro se les termina el trabajo a la vez y ninguno usa su
-     boleto de salida. Los ata **desconfianza, no afecto**.
-   - **Tabernas de la ciudad natal:** The Braided Oar / The Last Ladle /
-     Underfall ([[Nomenclatura]]). Roen y Valen **no se conocían**.
+1. **✅ ACTO 1 — GUIÓN CASI COMPLETO (2026-08-12).** Detalle de cada
+   decisión en [[LOG]] §2026-08-12. **4 de 5 locaciones escritas**, todas
+   `provisional` y compartiendo una sola re-corrida de QA:
+   [[Guion/Encuentro con Roen]] (tutorial) →
+   [[Guion/Caminata y Taberna — Valen se suma]] (loc. 1) →
+   [[Guion/Frontera — Camino al Nido]] (loc. 2, enseña el T1 de Valen) →
+   [[Guion/El Nido — El Primero]] (loc. 3: Speck, el Pivote, la elección
+   ilusoria, el primer God-Core). **Falta solo la loc. 4, Waypost**
+   (Darro se suma, el grupo se vuelve equipo) — su beat ya está escrito
+   en [[Geografía y Ciudades]], falta el guión.
 
-   **✅ Locación 2 — ESCRITA (2026-08-12):**
-   [[Guion/Frontera — Camino al Nido]]. El cruce de la torre de guardia
-   del reino hacia The Wilds (las 3 torres ya estaban del lado salvaje,
-   así que **la torre es la puerta** — no hubo que inventar frontera),
-   con las 3 variantes diciendo algo distinto del reino con el mismo
-   trámite: los humanos anotan, los enanos recuerdan, los elfos miran.
-   Enseña el **T1 de Valen** en dos beats separados (Discord sobre
-   enemigo → Harmony sobre el jugador) y es el primer tramo con daño
-   pleno de Duelist ([[Acoplamientos]]). Fauna **Ambiental sin nombre**
-   ([[Bestiario]] lo permite explícitamente); el paso a Corrupto anuncia
-   el nido. `status: provisional`.
-   **1 ambigüedad de fuente para vos, no bloquea:**
-   en [[Geografía y Ciudades]] §M — Roen *"fue este puesto, en otra
-   vida"* sobre Aethelgard Watch, y su ficha lo pone en la frontera
-   Mistbound, que es **tierra interior**. El guión escribió lo que las
-   dos lecturas soportan (reconoce el ritual, no se afirma que estuvo
-   destinado ahí). Fix de una línea en la fuente, en el sentido que
-   elijas.
+   **Canon nuevo que salió en el camino, todo escrito a fuente:**
+   **Voz del protagonista** ([[Voz Narrativa]], sección entera, canon:
+   gradiente coming-of-age + 8 reglas + 3 anclajes + grados de voz por
+   final) · **Waypost** en [[Geografía y Ciudades]] §K — bookend y sala
+   de la formación, nombre no pronunciado · **beat de formación del
+   equipo** (locación 4, fuente única) · **3 tabernas nombradas**
+   ([[Nomenclatura]]).
 
-   **Siguiente escena:** locación 3, **El Nido** — encuentro con Speck,
-   el Pivote se suma, la crisálida como elección ilusoria, primer
-   God-Core. Después, locación 4 (Waypost, el beat de formación).
-   **✅ Gradiente de voz — 2ª pasada de Boris (2026-08-12), es la versión
-   vigente.** Subió todo un acto y agregó un pico de elocuencia. Tabla
-   completa y 8 reglas en [[Voz Narrativa]] §Voz del protagonista —
-   **tramo mudo inicial → primeras palabras en el Acto 1 → líneas
-   completas en el 2 → un discurso, uno solo, en el 3 → silencio en la
-   traición → grado variable por final.** Los 5 finales tienen ahora
-   **grados de voz distintos** (F2b: mudo total, nunca se levanta · F3:
-   elocuencia usada para justificarse · **F4: voz y carisma intactos,
-   porque Speck eligió por sí misma** — decisión explícita tuya).
-   **Las 3 escenas escritas no cambian** (caen en el tramo mudo).
-   **✅ Los 3 anclajes, ratificados por vos:** El Nido (primera palabra) ·
-   la oficina de Tobin (pico del Acto 2) · **el Archive, a solas con
-   Speck, después de la revelación de los Goggles** (el discurso). Tus
-   dos candidatos originales eran **de Acto 2**: Tobin quedó como pico de
-   ese acto, y **Grove of Cycles se descartó** — ahí el silencio del
-   jugador ya es un disparador mecánico del encuentro individual, y
-   convertirlo en discurso rompería un trigger existente.
-   **La sección entera de [[Voz Narrativa]] es canon**; lo único abierto
-   es cotejar la tabla de finales contra [[Los 5 Finales]] cuando se
-   escriba ese guión (F4 y F2b son las de riesgo), y la decisión de VO,
-   que no está tomada en ningún lado del vault.
+   **⚠️ 2 cosas abiertas para vos, ninguna bloquea:**
+   - **El primer jefe del juego no tiene ficha.**
+     [[Geografía y Ciudades]] lo lista como "bestia corrupta guardiana" y
+     [[Bestiario]] no lo tiene (sus 7 bosses están todos en
+     landmarks/dungeons). No le inventé nombre — nombre = ficha, y una
+     ficha de boss es decisión de diseño. Es el primer combate memorable
+     del juego y hoy no existe en ningún documento.
+   - **Ambigüedad en [[Geografía y Ciudades]] §M** — dice que Roen *"fue
+     este puesto, en otra vida"* sobre Aethelgard Watch, y su ficha lo
+     pone en la frontera Mistbound, que es tierra interior. El guión
+     escribió lo que las dos lecturas soportan. Fix de una línea, en el
+     sentido que elijas.
+
+   **Lo único abierto del canon de voz:** cotejar la tabla de finales
+   contra [[Los 5 Finales]] cuando se escriba ese guión (F4 y F2b son las
+   de riesgo) y la decisión de **voice-over sí/no**, que no está tomada
+   en ningún lado del vault.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:

@@ -1,5 +1,64 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] guión | El Nido — El Primero (Acto 1, locación 3): la primera palabra del juego
+
+**Qué se escribió:** [[Guion/El Nido — El Primero]], `status: provisional`
+— la escena más cargada del Acto 1. Cinco cosas en orden: guardianas
+semi-corrompidas que escalan al **primer jefe** · la crisálida · **el
+Pivote se suma** · **la elección ilusoria** · **el primer God-Core**. Entre
+las dos últimas cae el **Momento de Persona 1**, el único del Acto 1.
+
+**La decisión de la escena: la primera palabra es "No.", y no es un adorno
+— arregla algo.** La elección ilusoria ([[Speck]] §El encuentro, fuente
+única) tenía un riesgo de lectura: el jugador aprieta y el juego no lo
+deja, lo que se puede sentir como **el motor anulándolo**. Poniendo ahí la
+primera palabra del protagonista, el beat se da vuelta: no es que el juego
+no te deja, es que **el personaje se niega**. Mecánica y personaje dicen lo
+mismo al mismo tiempo, y una limitación pasa a ser caracterización.
+
+Cumple el gradiente al pie de la letra ([[Voz Narrativa]] §Voz del
+protagonista): una palabra, reactiva, no propone nada, y **no se la dice a
+ninguna persona** — se la dice al contrato, que es lo único que le estaba
+dando una orden. Primera desobediencia al Triune Council, en una sílaba.
+**Es su única línea en toda la escena** (regla 6, escasez).
+
+**La regla invariable que la escena aporta:** el Pivote **tiene que estar
+mirando cuando el jugador duda**, porque la elección ilusoria *"le da a
+cada Pivote su primera lectura del jugador"*. Si una ficha lo hace llegar
+después, la que está mal es la ficha. Lo demás varía y ya estaba escrito:
+**4 slots por Pivote** (llegada · combate · lectura de la duda · reacción
+a Speck saliendo), los 9 juegos completos en las fichas — la escena no
+duplica ninguno, solo tipifica el hueco. Las 3 preguntas de Valen por rol
+cubren los 9 Pivotes.
+
+**La siembra del God-Core.** El jugador apaga el primero **con Speck
+mirando**, y en el Acto 3 el Archive revela que *"cada core que el grupo
+destruyó en el Acto 1 era un cadáver profanado"*. Ella ya lo sabe acá. La
+escena no lo insinúa con música ni primer plano: la deja mirando y sigue.
+El único subrayado permitido es el *"That's one." / "That's one."*
+duplicado de Roen y Valen — funciona porque el jugador todavía no puede
+entenderlo.
+
+**Chequeo que evitó un bug de sistema:** la reacción de Speck al God-Core
+**no es un Momento de Persona**. El Acto 1 tiene uno solo (el 1,
+desambiguado 2026-08-11) y el gate de F4 se calcula sobre los Momentos
+disponibles en esa partida — agregar uno acá habría alterado el cálculo de
+**todas** las partidas. Queda como puesta en escena, sin lectura
+herramienta/mascota/persona.
+
+**⚠️ Hueco de canon detectado, no cerrado:** **el primer jefe del juego no
+tiene ficha.** [[Geografía y Ciudades]] §Beats lo lista como *"Primer jefe:
+bestia corrupta guardiana"* y [[Bestiario]] no tiene entrada — sus 7 bosses
+con ficha están todos en landmarks o dungeons del mundo abierto. **No se le
+inventó nombre**: por la regla del propio Bestiario, lo que tiene nombre
+tiene ficha, y una ficha de boss es decisión de diseño, no de guión. Es el
+primer combate memorable del juego y hoy no existe en ningún documento.
+
+**Qué se tocó:** archivo nuevo · [[00-Index]] ·
+[[Guion/Frontera — Camino al Nido]] §Pendiente · [[Current-State]].
+**Linter en 0 críticos** (2 de la primera corrida, ambos `§` sin cerrar —
+la trampa de siempre).
+
 ## [2026-08-12] canon/ratificación | Los 3 anclajes del gradiente de voz — aprobados
 
 **Boris ratificó la propuesta completa de la entrada anterior** ("de acuerdo
