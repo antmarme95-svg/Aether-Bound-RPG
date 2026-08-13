@@ -534,20 +534,43 @@ agachada. El jugador sigue idle en los dos motores.
    v1 son 3, 2 o 1 · **Bram queda**, porque al ser la ruta que se
    desbloquea es lo último que se construye y por lo tanto cortable a
    costo cero hasta el final.
-   **Lo primero que hay que hacer:** el **test gris del Bond** — escena
-   gris, cápsula, una cornisa, Dagna reducida a un botón que lanza hacia
-   arriba, 5 min con ella y 5 sin ella, sin arte ni diálogo. Telemetría:
-   pulsaciones del botón muerto frente a la cornisa y segundos hasta que
-   el jugador deja de intentar.
-   ⚠️ **Y antes de dárselo a nadie: escribir el criterio de muerte** —
-   qué número significa que el pilar existe y qué número significa que
-   no. El consejo marcó que medir sin umbral pre-comprometido es
-   confirmación disfrazada de método.
-   **Riesgos abiertos que nadie había nombrado:** el gancho es una
-   ausencia y **no se captura en un GIF** (problema de wishlists, no de
-   diseño) · el golpe de la pérdida es **50% audio** · el acoplamiento
-   1:1 Pivote↔build raza×rol es la causa estructural de que cortar cueste
-   builds — desacoplarlo cambia toda la aritmética.
+   **✅ PROTOCOLO DE PLAYTEST ESCRITO (2026-08-13)** →
+   [[Protocolo-de-Playtest]]. **Son dos**, en orden: **A** (test gris del
+   Bond — cápsula, cornisa, 5 min con el botón y 5 sin él, sin arte ni
+   diálogo) y **B** (sesión completa del slice, registro separado por eje
+   gameplay/visual/narrativa + recuerdo a 7 días). Cada uno con guión
+   minuto a minuto, redacción literal de lo que se dice y lo que **no**,
+   disciplina de silencio, hojas de registro y mapeo de cada pregunta al
+   árbol de fallos del ADR. Los 4 instrumentos acordados están dentro
+   (botón en la cornisa · inputs por minuto · recuerdo a 7 días · frase
+   al amigo), y los 4 riesgos del consejo tienen pregunta o registro
+   propio.
+
+   ⚠️ **§0 — el criterio de muerte está escrito y ESPERA TU FIRMA.**
+   Propuesta: 🟢 **P ≥ 3 pulsaciones y T ≥ 20 s** en 2 de 3 testers ·
+   🟡 P = 2 o divergencia (rama INSTRUMENTO, no concluye) · 🔴 P ≤ 1 en
+   2 de 3. **Condición de validez previa:** si el tester usó el botón
+   menos de **2 veces/minuto** cuando lo tenía, la fase sin él **no se
+   interpreta** — es la objeción del Outsider vuelta gate (un poder que
+   nunca fue divertido no duele al desaparecer).
+   **Y la regla que más importa, ya escrita:** un 🔴 en el test gris
+   **NO puede falsear el pilar** — un cubo sin vínculo mide un reflejo
+   motor, no duelo. Solo habilita conclusiones de ejecución mecánica.
+   **Ningún tester toca el build hasta que §0 esté firmado.**
+
+   **Dependencia que bloquea:** el **hook de telemetría** está
+   especificado evento por evento y campo por campo en
+   [[Protocolo-de-Playtest]] §4.1, para que lo implemente la sesión
+   técnica. Sin eso no hay métrica primaria.
+
+   **Riesgos abiertos que nadie había nombrado** (los 3 primeros ya con
+   instrumento en el protocolo): el gancho es una ausencia y **no se
+   captura en un GIF** — lo miden las preguntas 13 y 14 · el golpe de la
+   pérdida es **50% audio**, y mientras el build esté mudo **está
+   prohibido concluir la rama DISEÑO** · la objeción del Outsider al
+   desbloqueo de Bram la mide la pregunta 12, con redacción neutra · el
+   acoplamiento 1:1 Pivote↔build raza×rol sigue sin instrumento porque
+   no es de playtest: desacoplarlo cambia toda la aritmética.
 
 **Resumen de la 17ª ronda de QA (2026-08-10)** (detalle completo en
 [[LOG]]): 13 críticos entre 2 subagentes en frío sobre todo el

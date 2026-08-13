@@ -1,5 +1,94 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-13] método/playtest | Protocolo de Playtest — dos protocolos y el criterio de muerte firmable
+
+**Encargo de la sesión técnica**, derivado del consejo del 2026-08-13
+(`90-Raw/council-2026-08-13-veredicto-motor-y-alcance.md`). Escrito en
+[[Protocolo-de-Playtest]].
+
+**Son dos protocolos, no uno**, porque el consejo partió el playtest en
+dos etapas de costo muy distinto: **A**, el test gris del Bond (cápsula,
+cornisa, 5 min con el botón y 5 sin él, sin arte ni diálogo), y **B**, la
+sesión completa del slice con registro separado por eje. **B se corre solo
+con verde en A.**
+
+### Lo que el documento resuelve
+
+**§0, el criterio de muerte, va primero y se firma antes de que un tester
+toque el build** — es la única sección que pierde todo su valor si se
+escribe después. Propuesta de umbrales sobre los 3 testers: 🟢 **P ≥ 3 y
+T ≥ 20 s** en 2 de 3 · 🟡 P = 2 o divergencia (rama INSTRUMENTO) · 🔴 P ≤ 1
+en 2 de 3. El razonamiento del 3 quedó escrito: **una pulsación es error de
+dedo, dos es comprobar, tres es negarse a aceptarlo.**
+
+**Condición de validez previa al resultado**, que es la objeción del
+Outsider convertida en gate: si **U < 2 pulsaciones/minuto** durante la
+fase con el botón vivo, la fase sin él **no se interpreta**. No es
+"resultado negativo": es **sin resultado**. Primero hay que probar que
+tener el poder es adictivo.
+
+**La regla anti-suicidio (§0.4), que es lo más importante del documento.**
+Un 🔴 en el test gris **no puede falsear el pilar**: un cubo sin vínculo ni
+fidelidad mide un reflejo motor, no duelo. Queda prohibido por escrito usar
+un negativo de A para replantear el juego, recortar alcance o abandonar el
+pilar — solo habilita conclusiones de **ejecución mecánica**. Y la trampa
+simétrica también quedó escrita: un 🟢 tampoco prueba el pilar, solo compra
+permiso para gastar en B.
+
+**Simetría con el audio (§9.3):** mientras el build esté mudo, **está
+prohibido concluir la rama DISEÑO** del árbol de ADR-003, porque con la
+mitad del canal ausente "entendieron todo y no les importó" es
+indistinguible de "faltaba la mitad del golpe".
+
+### Los 4 riesgos del consejo, con instrumento
+
+**GIF/wishlists** → preguntas 13 (*"contale este juego a un amigo en una
+frase"*) y 14 (*"¿qué seis segundos le mostrarías?"*), con una casilla que
+codifica si lo que mostraría es **una ausencia**. **Audio** → pregunta 10
+más la regla de §9.3. **Objeción del Outsider a Bram** → pregunta 12, con
+redacción deliberadamente neutra (no dice "se desbloquea al perder" ni
+vende el misterio) y codificación de tres valores. **Posesión antes que
+pérdida** → la condición de validez de A, más la pregunta 2 (*"¿qué fue lo
+más divertido?"*, ubicada **antes** de cualquier mención de la pérdida) y
+los inputs por minuto partidos en tres tramos para ver si el uso **creció**.
+
+### Decisiones de método que quedaron escritas
+
+- **El orden de las preguntas es parte del instrumento**: abierto antes que
+  cerrado, comprensión antes que emoción, y ninguna pregunta puede adelantar
+  información de las siguientes. En A, la pregunta 5 es la primera que
+  revela que el botón dejó de funcionar y **no puede ir antes**.
+- **Frase única de deflexión** para las dos sesiones — *"Seguí como te
+  parezca."* — con la excepción explícita de que después de la traición
+  también aplica, porque ahí es donde más tienta consolar.
+- **Cada pregunta mapea a una rama del árbol de fallos o a un riesgo
+  declarado**, en columna. Regla escrita: si una pregunta no mapea, sobra.
+- **En el Protocolo A el botón NO es Dagna** y no se le pone nombre: meter
+  media ficción contamina sin comprar fidelidad, y es justamente lo que
+  hace que A no pueda falsear el pilar.
+- **El autoinforme se contrasta con la telemetría** (pregunta 6 vs. P
+  real): la brecha entre lo que el tester recuerda y lo que hizo es dato.
+
+### Dependencia especificada, no resuelta
+
+**Hook de telemetría** (§4.1), para la sesión técnica: 5 eventos
+(`session_start`, `phase_change`, `ledge_zone_enter`/`exit`, `bond_press`,
+`session_end`) con sus campos, y la definición operativa de "frente a la
+cornisa" como volumen de disparo — **sin filtrar por orientación de
+cámara**, porque filtrar mete criterio interpretable justo donde el
+documento promete conteo. P, T y U salen del CSV sin trabajo manual.
+
+### Discrepancia detectada y NO resuelta
+
+[[Slice of Bond]] describe **4 escenas** y [[ADR-003 Reset de desarrollo y
+motor]] lo recorta a **3**; el slice pide **T1→T3** y el consejo del 08-13
+pide **un link de 1 tier**. El Protocolo B funciona con cualquiera de las
+dos versiones, pero la hoja del eje gameplay cambia si hay un solo tier.
+Anotado como pendiente de alcance, no de protocolo.
+
+**Qué se tocó:** archivo nuevo en `20-State/` · [[00-Index]] ·
+[[Current-State]] punto 8. **Linter en 0 críticos, sin correcciones.**
+
 ## [2026-08-13] consejo | Veredicto de motor y alcance de v1 — segundo consejo
 
 Boris cerró la decisión del desbloqueo de Bram (**se deja en 2 builds en la
