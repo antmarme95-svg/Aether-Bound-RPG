@@ -1,5 +1,32 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon/ratificación | Los 3 anclajes del gradiente de voz — aprobados
+
+**Boris ratificó la propuesta completa de la entrada anterior** ("de acuerdo
+con todo"). Los 3 anclajes dejan de ser propuesta y pasan a canon en
+[[Voz Narrativa]] §Voz del protagonista:
+
+- **Primera palabra → El Nido** (Acto 1, locación 3).
+- **Pico del Acto 2 → la oficina de Old Tobin Hale.**
+- **El discurso, único del juego → el Archive, a solas con Speck**, después
+  de la revelación de los Goggles y minutos antes de la ruptura en la sala
+  del Fragmento.
+
+Con esto, **toda la sección es canon**: gradiente, las 8 reglas de
+escritura, los 3 anclajes y los grados de voz de los 5 finales. Se quitó el
+lenguaje de "propuesta / candidato" de la tabla y de las reglas 1 y 3.
+
+**Lo único que queda abierto** (anotado en §Pendiente de esa sección):
+cotejar la tabla de finales contra [[Los 5 Finales]] cuando se escriba ese
+guión —F4, donde la que responde es Speck, y F2b, donde el silencio total
+tiene que sostenerse sin que la escena se sienta incompleta— y la decisión
+de **voice-over sí/no**, que sigue sin tomarse en ningún lado del vault y de
+la que depende cuánto pesa la regla 5 (ninguna línea nombra raza/rol/género,
+para que una línea escrita sean 6 tomas y no 18).
+
+**Qué se tocó:** [[Voz Narrativa]] · [[Current-State]]. Ninguna escena de
+guión cambió. **Linter en 0 críticos.**
+
 ## [2026-08-12] canon/decisión | Gradiente de voz, 2ª pasada: sube un acto, gana un discurso, y los 5 finales devuelven voz distinta
 
 **Boris revisó el gradiente que se había fijado horas antes** (entrada de

@@ -350,13 +350,17 @@ agachada. El jugador sigue idle en los dos motores.
    elocuencia usada para justificarse · **F4: voz y carisma intactos,
    porque Speck eligió por sí misma** — decisión explícita tuya).
    **Las 3 escenas escritas no cambian** (caen en el tramo mudo).
-   **3 anclajes son propuesta mía, no decisión tuya:** El Nido (primera
-   palabra) · la oficina de Tobin (pico del Acto 2) · **el Archive, a
-   solas con Speck, después de la revelación de los Goggles** (el
-   discurso). Tus dos candidatos originales resultaron ser **de Acto 2**:
-   Tobin quedó como pico del Acto 2, y **Grove of Cycles se descartó** —
-   ahí el silencio del jugador ya es un disparador mecánico del encuentro
-   individual, convertirlo en discurso rompería un trigger existente.
+   **✅ Los 3 anclajes, ratificados por vos:** El Nido (primera palabra) ·
+   la oficina de Tobin (pico del Acto 2) · **el Archive, a solas con
+   Speck, después de la revelación de los Goggles** (el discurso). Tus
+   dos candidatos originales eran **de Acto 2**: Tobin quedó como pico de
+   ese acto, y **Grove of Cycles se descartó** — ahí el silencio del
+   jugador ya es un disparador mecánico del encuentro individual, y
+   convertirlo en discurso rompería un trigger existente.
+   **La sección entera de [[Voz Narrativa]] es canon**; lo único abierto
+   es cotejar la tabla de finales contra [[Los 5 Finales]] cuando se
+   escriba ese guión (F4 y F2b son las de riesgo), y la decisión de VO,
+   que no está tomada en ningún lado del vault.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:

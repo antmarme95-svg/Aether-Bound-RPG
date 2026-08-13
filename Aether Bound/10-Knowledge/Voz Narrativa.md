@@ -83,15 +83,15 @@ en el 3. Lo que sigue reemplaza aquella tabla.
 | Tramo | Voz | Qué suena |
 |---|---|---|
 | **Apertura → primeras escenas del Acto 1** | Mudo. | El piso del arco. El jugador **actúa** y los demás leen sus acciones. Es lo ya escrito en [[Guion/Encuentro con Roen]], [[Guion/Caminata y Taberna — Valen se suma]] y [[Guion/Frontera — Camino al Nido]] — **ninguna de las tres cambia.** |
-| **Acto 1 — primeras palabras** | Cortas, reactivas, **nunca discursos**. | Una palabra, dos. Confirmaciones, negativas, un nombre. **Voz que responde, no que propone.** Ancla propuesta: **El Nido** (locación 3) — ver regla 1. |
+| **Acto 1 — primeras palabras** | Cortas, reactivas, **nunca discursos**. | Una palabra, dos. Confirmaciones, negativas, un nombre. **Voz que responde, no que propone.** Ancla: **El Nido** (locación 3) — ver regla 1. |
 | **Acto 2 — líneas completas** | Frases enteras, todavía económicas. Por primera vez **inicia** intercambios en vez de contestarlos. | Es donde el jugador suena a alguien que pertenece al grupo. **Pico del acto: la oficina de Old Tobin Hale** — ver regla 2. |
-| **Acto 3 pre-traición — elocuencia** | El pico del arco: **un discurso**, uno solo. | La única vez en todo el juego que el protagonista habla largo y bien. Ancla propuesta: **el Archive, a solas con Speck**, después de la revelación de los Goggles — ver regla 3. |
+| **Acto 3 pre-traición — elocuencia** | El pico del arco: **un discurso**, uno solo. | La única vez en todo el juego que el protagonista habla largo y bien. Ancla: **el Archive, a solas con Speck**, después de la revelación de los Goggles — ver regla 3. |
 | **La traición → el Bond Vacío** | **Vuelve al silencio.** | El pago del arco. El silencio ahora **cuesta**: acaba de demostrar que sabe hablar, y se queda sin palabras. El pilar de [[Bond y el Bond Vacío]] no solo sobrevive — se refuerza, porque el mismo recurso pasa de ser el estado por defecto a ser **pérdida**. |
 | **El cráter / los 5 finales** | **Grado variable por final.** | Ver §Los 5 finales, grados de voz. |
 
 ### Reglas de escritura (obligatorias)
 
-1. **La primera palabra llega en el Acto 1, y el candidato es El Nido.** Es
+1. **La primera palabra llega en el Acto 1, en El Nido.** Es
    el primer momento del juego donde pasa algo que no se puede resolver
    actuando: la crisálida, y la elección ilusoria de destruirla
    ([[Speck]] §El encuentro). Una palabra o dos, reactivas.
@@ -182,11 +182,11 @@ consecuencias le sigue tocando a Valen en las 5 ramas
   Si el juego no lleva VO de protagonista, el gradiente funciona igual en
   texto (y la regla 3 pasa a ser gratis). Si lleva, la regla 3 es lo que
   hace que el presupuesto cierre. **No asumir ninguna de las dos.**
-- **Los 3 anclajes concretos son propuesta, no decisión de Boris:** El
-  Nido (primera palabra), la oficina de Tobin (pico del Acto 2) y el
-  Archive a solas con Speck (el discurso). **El gradiente y los grados de
-  los 5 finales sí son decisión suya.** Si alguno de los 3 anclajes no
-  te cierra, se mueve sin tocar el resto de la estructura.
+- **✅ Los 3 anclajes — ratificados por Boris (2026-08-12, misma sesión):**
+  El Nido (primera palabra), la oficina de Tobin (pico del Acto 2) y el
+  Archive a solas con Speck (el discurso). Junto con el gradiente y los
+  grados de los 5 finales, **toda esta sección es canon**, no propuesta.
+  Lo único que sigue abierto es lo de abajo.
 - **La tabla de finales hay que cotejarla contra [[Los 5 Finales]]** cuando
   se escriba ese guión — sobre todo F4, donde la que responde es Speck, y
   F2b, donde el silencio total tiene que sostenerse sin que la escena se
