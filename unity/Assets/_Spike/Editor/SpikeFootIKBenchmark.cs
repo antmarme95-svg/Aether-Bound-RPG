@@ -226,6 +226,11 @@ public class SpikeBenchDriver : MonoBehaviour
 
         // El hacha cuelga por debajo de los pies: si queda visible, el pixel
         // mas bajo de la silueta es el filo y estariamos midiendo el arma.
+        // Se listan TODOS los renderers de Dagna: si el arma se llama de
+        // otra forma, sigue colgando por debajo de los pies y el "pixel mas
+        // bajo" seria el filo, no el pie.
+        foreach (var r in dagna.GetComponentsInChildren<Renderer>())
+            Debug.Log("[bench] renderer de Dagna: " + r.name + "  (bounds min y=" + r.bounds.min.y.ToString("F3") + ")");
         foreach (var r in dagna.GetComponentsInChildren<Renderer>())
             if (r.name.ToLower().Contains("axe")) r.enabled = false;
 
@@ -283,6 +288,16 @@ public class SpikeBenchDriver : MonoBehaviour
             _shot.ReadPixels(new Rect(0, 0, SpikeFootIKBenchmark.Width, SpikeFootIKBenchmark.Height), 0, 0);
             _shot.Apply();
             RenderTexture.active = null;
+
+            // Se guarda la primera muestra de cada terreno para poder MIRAR
+            // que esta midiendo el instrumento en vez de suponerlo.
+            if (i == 0)
+            {
+                string dir = Path.Combine(Directory.GetParent(Application.dataPath).FullName, "test_out/bench");
+                Directory.CreateDirectory(dir);
+                File.WriteAllBytes(Path.Combine(dir, label.Replace(" ", "_").Replace("=", "").Replace(".", "") + ".png"),
+                    _shot.EncodeToPNG());
+            }
 
             int low = LowestSilhouetteRow(_shot);
             if (low < 0) continue;

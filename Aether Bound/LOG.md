@@ -670,6 +670,54 @@ firma (y, si llegó a T3, dónde deja el martillo).
 **Commits:** `6803688` (tanda 1), `03f2d13` (tanda 2), `18b6b70` (tanda 3),
 `23b26f7` (tanda 4). Linter final: **0 críticos, 0 medios**.
 
+## [2026-08-12] spike/unity | El arreglo del coseno no confirmó — y el instrumento de Unity tiene el encuadre mal
+
+Encargo del director: arreglar el error de coseno en el script de Unity.
+Se aplicó, **y la medición lo contradijo**. Mirando las capturas apareció
+un problema más de fondo.
+
+**Lo aplicado.** `SpikeFootIK.cs` ahora desplaza el objetivo del IK a lo
+largo de la **normal del terreno** (`hit.point + hit.normal * offset`) en
+vez de en vertical (`Vector3.up`). Es lo que hace el lado Godot y es lo
+correcto por principio: el tobillo se separa de la superficie
+perpendicular a ella.
+
+**Lo que pasó al medir: la rampa EMPEORÓ**, de +0.031 m a +0.055 m. La
+explicación del error de coseno **no se confirmó**. O estaba mal, o el
+instrumento no mide lo que yo creía.
+
+**Se miró la captura, y es lo segundo.** Guardando el PNG que el
+instrumento estaba analizando: **el encuadre está mal — el personaje sale
+rotado y cortado**, así que el "píxel más bajo de la silueta" no es
+necesariamente el pie. **Los números de la columna Unity publicados hoy no
+son confiables.**
+
+**Había una segunda señal que dejé pasar.** El offset calibrado de Unity
+salió **0.21 m**, cuando un tobillo real está a 0.08-0.10 m. Del lado
+Godot el equivalente total es 0.082 m — físicamente sensato. Un parámetro
+que hay que llevar al doble de lo físico para que el número cierre suele
+estar tapando un error de medición, no describiendo el sistema. Lo anoté
+como raro en su momento y seguí igual.
+
+**Estado corregido:**
+- **Columna Godot: confiable.** Encuadre verificado mirando las capturas,
+  control validando el instrumento.
+- **Columna Unity: en duda.** [[Comparativa de Motores — Godot vs Unity]] y
+  [[Current-State]] marcados; la comparación **no da veredicto** hasta
+  arreglar el encuadre.
+- El cambio del coseno **queda aplicado por principio**, marcado en el
+  código como no validado por medición.
+
+**La lección, que es la misma de todo el día en otra forma:** hoy validé
+el instrumento de Godot mirando sus capturas y por eso confío en él. Del
+lado Unity **no miré las capturas hasta que un resultado me contradijo**.
+El control de Unity daba "válido" —y lo era, para lo que probaba: que la
+escala píxel→metro responde—, pero **un control no cubre lo que no mide**.
+Ninguno de mis chequeos miraba el encuadre. **Mirar la imagen es barato y
+lo dejé para el final, otra vez.**
+
+**Índice:** sin cambios.
+
 ## [2026-08-12] spike | Foot IK medido de los DOS lados — empate en resultado, diferencia en costo
 
 Encargo del director: correr la medición del lado Unity y comparar. Hecho.
