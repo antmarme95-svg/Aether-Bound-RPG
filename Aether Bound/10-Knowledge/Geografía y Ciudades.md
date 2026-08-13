@@ -931,7 +931,9 @@ puente narrado al Acto 1.
 - Encuentro con Speck y el Pivote en el nido
 - Darro se une, cierra el grupo — orden fijo: Roen → Valen → Pivote → Darro
   (decisión de Boris, 2026-08-02)
-- Primer jefe: bestia corrupta guardiana
+- Primer jefe: **The Long Vigil** ([[Bestiario]] §The Long Vigil, ficha
+  escrita 2026-08-12) — la última de las bestias guardianas que pusieron a
+  Speck en la crisálida, corrupta y con el propósito vaciado
 
 ---
 

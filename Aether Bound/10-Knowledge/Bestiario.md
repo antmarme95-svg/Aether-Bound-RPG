@@ -132,6 +132,69 @@ del salto para empujar al jugador de las plataformas. **Loot:** pluma de
 corriente (mejora movilidad/planeo). **Concept art:**
 `cascade-warden-v1.png` — RATIFICADO ([[Briefs de Concept Art]] §13.7).
 
+---
+
+## El primer jefe del juego — The Long Vigil (El Nido, Acto 1)
+
+**Hueco cerrado 2026-08-12.** [[Geografía y Ciudades]] §Beats Narrativos
+por Acto lo listaba como *"Primer jefe: bestia corrupta guardiana"* y no
+tenía ficha en ningún lado — los 7 bosses de arriba están todos en
+landmarks o dungeons de mundo abierto, ninguno en el nido del Acto 1.
+Detectado al escribir [[Guion/El Nido — El Primero]].
+
+### The Long Vigil (El Nido)
+
+**Grado:** Corrupto. **Qué es:** la última de las **bestias guardianas que
+pusieron a Speck en la crisálida** poco después del cataclismo
+([[Speck]] §Por qué el shapeshifting falla, fuente de ese dato). No es una
+bestia que *encontró* el nido: es la que lo construyó y se quedó. Lleva
+550 años de guardia y la corrupción del Aether se le comió, no el cuerpo,
+sino **la memoria de para qué estaba ahí** — sigue ejecutando la conducta
+con el propósito vaciado. Cuadrúpeda, grande, de una especie que ya no
+tiene parientes vivos; la silueta se lee como animal, las articulaciones
+no.
+
+**Por qué es el primer jefe y no un encuentro más:** es la primera vez que
+el jugador mata algo que **está haciendo exactamente lo que debía**. El
+grupo entra a purgar un nido; lo que defiende el nido es lo único que
+quedó cuidando a Speck. Nadie en la ficción lo sabe, y la escena no lo
+insinúa — es la segunda profanación involuntaria del Acto 1, hermana del
+primer God-Core apagado ([[Guion/El Nido — El Primero]] §La siembra del
+God-Core).
+
+**Mecánica — el moveset ES la caracterización:**
+- **No persigue.** Si el grupo retrocede, vuelve a su posición frente a la
+  cámara de la crisálida. Es el único boss del juego que **cede terreno y
+  lo recupera** en vez de avanzar. Un jugador atento nota que nunca lo
+  siguió fuera de la sala.
+- **Siempre se interpone.** Su lógica de posicionamiento no busca al
+  objetivo más cercano ni al más débil: busca quedar **entre el grupo y la
+  crisálida**. Todo su repertorio defensivo se dispara por proximidad a
+  ella, no a sí misma.
+- **Fase 2 por amenaza, no por vida:** no cambia al bajar de X% de salud
+  —cambia cuando alguien se acerca demasiado a la crisálida—, y ahí sí
+  ataca sin contenerse. Es lo más parecido al pánico que puede sentir algo
+  que ya no recuerda por qué le importa.
+- **Función de tutorial:** al ser una pelea de posición y no de carrera de
+  daño, es el primer combate que obliga a usar el vocabulario de links ya
+  enseñado — el control de Valen para moverla de la línea de la crisálida,
+  Roen para sostener terreno, y el link del Pivote recién sumado.
+
+**Loot:** placa de la muda — una lámina del caparazón, del mismo material
+que la crisálida (crafting, primera pieza de armadura de resistencia a
+Aether). **Que el loot y la crisálida sean el mismo material es la única
+pista física que la escena deja**, y no se explica.
+
+**Concept art:** pendiente, sin brief. Sería el primer boss del juego sin
+lámina — anotarlo en [[Briefs de Concept Art]] cuando se abra el próximo
+batch.
+
+**Lo que esta ficha NO decide** (queda para diseño de combate): números,
+duración, y si el jugador puede terminar la pelea **sin matarla** haciendo
+que el grupo se retire. Esa última pregunta es tentadora y cruza con la
+elección ilusoria —dos "no puedo hacerlo" seguidos serían uno de más—,
+así que se deja explícitamente abierta y **no se asume**.
+
 **God's Throne no recibe boss nuevo — decisión de diseño:** sus
 "bestias élite (God-touched)" quedan como encuentro múltiple sin boss
 único, a propósito. Es el dungeon más cercano temáticamente a los Wardens

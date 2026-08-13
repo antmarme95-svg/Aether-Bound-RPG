@@ -375,16 +375,23 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-1. **✅ ACTO 1 — GUIÓN CASI COMPLETO (2026-08-12).** Detalle de cada
-   decisión en [[LOG]] §2026-08-12. **4 de 5 locaciones escritas**, todas
+1. **✅ ACTO 1 — GUIÓN COMPLETO (2026-08-12).** Detalle de cada decisión
+   en [[LOG]] §2026-08-12. **Las 5 escenas escritas**, todas
    `provisional` y compartiendo una sola re-corrida de QA:
    [[Guion/Encuentro con Roen]] (tutorial) →
    [[Guion/Caminata y Taberna — Valen se suma]] (loc. 1) →
    [[Guion/Frontera — Camino al Nido]] (loc. 2, enseña el T1 de Valen) →
    [[Guion/El Nido — El Primero]] (loc. 3: Speck, el Pivote, la elección
-   ilusoria, el primer God-Core). **Falta solo la loc. 4, Waypost**
-   (Darro se suma, el grupo se vuelve equipo) — su beat ya está escrito
-   en [[Geografía y Ciudades]], falta el guión.
+   ilusoria, el primer God-Core, la primera palabra) →
+   [[Guion/Waypost — Los Cinco]] (loc. 4: Darro, *Open Seam*, y el grupo
+   se vuelve equipo — cierre del acto).
+   **✅ El primer jefe también quedó cerrado:** **The Long Vigil**
+   ([[Bestiario]] §The Long Vigil) — la última de las bestias guardianas
+   que pusieron a Speck en la crisálida, 550 años de guardia con el
+   propósito vaciado. **Su moveset es la caracterización:** no persigue,
+   cede terreno y lo recupera, y todo se dispara por proximidad **a la
+   crisálida**, no a sí misma. El jugador mata, en su primer jefe, a lo
+   único que seguía cuidándola — y nadie en la ficción lo sabe.
 
    **Canon nuevo que salió en el camino, todo escrito a fuente:**
    **Voz del protagonista** ([[Voz Narrativa]], sección entera, canon:
@@ -394,23 +401,33 @@ agachada. El jugador sigue idle en los dos motores.
    equipo** (locación 4, fuente única) · **3 tabernas nombradas**
    ([[Nomenclatura]]).
 
-   **⚠️ 2 cosas abiertas para vos, ninguna bloquea:**
-   - **El primer jefe del juego no tiene ficha.**
-     [[Geografía y Ciudades]] lo lista como "bestia corrupta guardiana" y
-     [[Bestiario]] no lo tiene (sus 7 bosses están todos en
-     landmarks/dungeons). No le inventé nombre — nombre = ficha, y una
-     ficha de boss es decisión de diseño. Es el primer combate memorable
-     del juego y hoy no existe en ningún documento.
+   **⚠️ Abierto para vos, nada bloquea:**
    - **Ambigüedad en [[Geografía y Ciudades]] §M** — dice que Roen *"fue
      este puesto, en otra vida"* sobre Aethelgard Watch, y su ficha lo
      pone en la frontera Mistbound, que es tierra interior. El guión
      escribió lo que las dos lecturas soportan. Fix de una línea, en el
      sentido que elijas.
+   - **Las tarjetas por Pivote del Acto 1 no están extraídas.** El Nido
+     pide 4 slots por Pivote (llegada · combate · lectura de la duda ·
+     reacción a Speck) — **los 4 ya existen en las 9 fichas**, en prosa y
+     en español. Waypost pide 2 más, y **uno de ellos es nuevo**: la
+     silla en la mesa (acotación muda, no línea) no existe en ninguna
+     ficha. Trabajo de extracción + traducción (regla 9), no de diseño.
+   - **Concept art:** The Long Vigil sería el primer boss del juego sin
+     lámina — anotarlo cuando se abra el próximo batch.
+   - **The Long Vigil deja una pregunta de diseño de combate abierta a
+     propósito:** si se puede terminar la pelea **sin matarla**
+     retirándose. Cruza con la elección ilusoria (dos "no puedo hacerlo"
+     seguidos serían uno de más), así que **no se asumió**.
 
-   **Lo único abierto del canon de voz:** cotejar la tabla de finales
-   contra [[Los 5 Finales]] cuando se escriba ese guión (F4 y F2b son las
-   de riesgo) y la decisión de **voice-over sí/no**, que no está tomada
-   en ningún lado del vault.
+   **Del canon de voz sigue abierto:** cotejar la tabla de finales contra
+   [[Los 5 Finales]] cuando se escriba ese guión (F4 y F2b son las de
+   riesgo) y la decisión de **voice-over sí/no**, que no está tomada en
+   ningún lado del vault.
+
+   **Frente siguiente: el Acto 2** — La Rueda, el **Bautizo** (donde el
+   jugador dice su primer nombre) y el **pico de voz en la oficina de Old
+   Tobin Hale**.
 2. **✅ BLOQUE DE PROPAGACIÓN — las 12 fichas: CERRADO (2026-08-12).**
    Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
    linter en **0 críticos** y commit por tanda:

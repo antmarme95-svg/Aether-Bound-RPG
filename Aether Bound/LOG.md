@@ -1,5 +1,97 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-12] canon + guión | The Long Vigil (primer jefe) y Waypost — Los Cinco: el Acto 1 queda completo
+
+Dos piezas en una tanda, a pedido de Boris: cerrar el hueco del primer
+jefe y escribir la escena que cierra el acto.
+
+### 1. The Long Vigil — [[Bestiario]] §The Long Vigil (grado Corrupto)
+
+Cierra el hueco detectado al escribir [[Guion/El Nido — El Primero]]:
+[[Geografía y Ciudades]] lo listaba como *"Primer jefe: bestia corrupta
+guardiana"* y no existía en ningún documento.
+
+**Qué es, y sale entero de canon ya escrito:** [[Speck]] dice que *"Speck
+fue colocada en crisálida por bestias guardianas poco después del
+cataclismo"* y que hoy están semi-corrompidas y atacan. The Long Vigil es
+**la última de ésas**. No encontró el nido: lo construyó y se quedó. 550
+años de guardia, y lo que la corrupción le comió no es el cuerpo sino **la
+memoria de para qué estaba ahí** — ejecuta la conducta con el propósito
+vaciado.
+
+**El moveset ES la caracterización**, y ése es el punto de la ficha:
+- **No persigue.** Si el grupo retrocede, vuelve a su posición frente a la
+  crisálida. Único boss del juego que **cede terreno y lo recupera**.
+- **Siempre se interpone:** su lógica de posición no busca al más cercano
+  ni al más débil, busca quedar **entre el grupo y la crisálida**.
+- **Fase 2 por amenaza, no por vida:** cambia cuando alguien se acerca
+  demasiado a la crisálida, no al bajar de X% de salud.
+- Como es pelea de posición y no carrera de daño, obliga a usar el
+  vocabulario de links ya enseñado.
+
+**Lo que le hace a la escena:** el jugador mata, en su primer jefe, a lo
+único que seguía cuidando a Speck — **y nadie en la ficción lo sabe**. Es
+la hermana de la siembra del God-Core: dos profanaciones involuntarias en
+la misma locación, ninguna subrayada. El **loot** es una lámina del
+caparazón **del mismo material que la crisálida**: única pista física, sin
+explicación.
+
+**Deliberadamente sin decidir:** si la pelea se puede terminar sin matarla,
+retirándose. Cruza con la elección ilusoria —dos "no puedo hacerlo"
+seguidos serían uno de más— así que queda abierto y anotado, no asumido.
+
+### 2. [[Guion/Waypost — Los Cinco]] — cierre del Acto 1
+
+Darro se suma último (casual, nunca noble: su ficha dice *"estaban en el
+mismo bar bebiendo sus fracasos"* — **Waypost es ese bar**), se enseña su
+link *Open Seam*, conoce al Pivote y a Speck, y el grupo se vuelve equipo.
+
+**El aporte de la escena al beat de formación** (cuya fuente única sigue
+siendo [[Geografía y Ciudades]] §Beats Narrativos por Acto, locación 4 —
+el guión lo dramatiza, no lo re-enuncia): **quién lo dispara.** Es
+**Darro**, con una pregunta de cortesía — *"So what happens tomorrow?"*.
+Es el único que puede hacerla sin que pese: acaba de llegar y no le debe
+nada a nadie. Si la hace Roen es liderazgo, si la hace Valen es
+diagnóstico, si la hace el Pivote es sospechosa en retrospectiva. **El
+grupo se forma porque el recién llegado preguntó algo de cortesía.**
+
+**Nadie contesta**, y eso es el beat: en el lugar de la respuesta hay una
+acotación —para el lector, no para el jugador— que dice que los cuatro
+tienen a dónde ir, que la puerta está a treinta pasos y que no es tarde.
+Roen, el único con contrato explícito y el único que *debería* levantarse,
+pide *"Same again."* Nadie comenta que la pidió.
+
+**El puente con el bookend, sin señalarlo:** Roen gira el vaso un cuarto
+de vuelta; el Roen viejo gira el anillo de cobre en la misma sala treinta
+años después ([[Guion/Apertura — Roen Viejo]]). El guión **no lo marca**.
+Si el jugador lo nota, lo nota en la segunda partida o nunca — que es la
+forma correcta de cobrar que bookend y formación compartan lugar.
+
+**El silencio del jugador acá ya no es gratis:** habló en El Nido, así que
+en esta mesa **puede** hablar y no lo hace. Es la ganancia que dio subir
+el gradiente un acto, y la razón por la que la escena no necesitó
+reescribirse cuando el gradiente cambió.
+
+**Verificaciones que evitaron errores:** el **Bautizo NO es acá** (es Acto
+2, después de que el grupo entero la vea comportarse de forma inteligente)
+— para Darro, Speck todavía es *"un zorro raro que el grupo carga con
+demasiado cuidado"*. Y Speck bajo la mesa al final **no es un Momento de
+Persona**: el Acto 1 tiene uno solo y agregar otro alteraría el gate de F4.
+
+### Estado
+
+**El Acto 1 queda con guión completo**: las 5 escenas escritas, todas
+`provisional`, compartiendo una sola re-corrida de QA. Lo que queda es
+extracción, no diseño: las **tarjetas por Pivote** (4 slots en El Nido, ya
+existentes en las fichas; 2 en Waypost, de los cuales **el de la silla es
+nuevo** y no existe en ninguna ficha) y la traducción al inglés de guión.
+
+**Qué se tocó:** [[Bestiario]] (sección nueva) · archivo de guión nuevo ·
+[[Geografía y Ciudades]] §Beats (el "primer jefe" ahora nombra la ficha) ·
+[[Guion/El Nido — El Primero]] (§Hueco → §cerrado, y el boss entra en el
+cuerpo del guión) · [[00-Index]] · [[Current-State]].
+**Linter en 0 críticos, sin una sola corrección** — primera vez en el día.
+
 ## [2026-08-12] guión | El Nido — El Primero (Acto 1, locación 3): la primera palabra del juego
 
 **Qué se escribió:** [[Guion/El Nido — El Primero]], `status: provisional`

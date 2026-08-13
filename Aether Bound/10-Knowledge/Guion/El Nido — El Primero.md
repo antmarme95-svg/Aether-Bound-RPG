@@ -57,8 +57,12 @@ They're guarding, and they're wrong. Both. Note that.
 ROEN
 Note it later.
 
-[GAMEPLAY: the fight escalates to the game's FIRST BOSS — an alpha
-guardian. See §Hueco de canon: no tiene ficha en el Bestiario.]
+[GAMEPLAY: the fight escalates to the game's FIRST BOSS — **The Long
+Vigil** ([[Bestiario]] §The Long Vigil). It does not pursue. It gives
+ground and takes it back. Every defensive move it has triggers on
+proximity to the chrysalis, not to itself — it is trying to stay between
+the party and her, and nobody in the room reads it as anything but a
+corrupted animal.]
 
 [PIVOTE SLOT — COMBAT: how they fight, per ficha. Dagna plants herself
 and eats the first hit every time; others do otherwise. No line needed.]
@@ -263,16 +267,21 @@ tienen. La escena aporta el blocking común y **la regla invariable**. Es
 el mismo criterio de las escenas anteriores: un solo cuerpo de escena,
 huecos tipificados, cero contenido duplicado.
 
-## Hueco de canon detectado (no bloquea, pero hay que cerrarlo)
+## ✅ El primer jefe — cerrado (2026-08-12)
 
-**El primer jefe del juego no tiene ficha.** [[Geografía y Ciudades]]
-§Beats lo lista como *"Primer jefe: bestia corrupta guardiana"* y
-[[Bestiario]] no tiene ninguna entrada para él — sus 7 bosses con ficha
-están todos en landmarks o dungeons del mundo abierto, ninguno en el nido
-del Acto 1. **Deliberadamente no le inventé nombre acá**: por la regla de
-[[Bestiario]], lo que tiene nombre tiene ficha, y una ficha de boss es
-decisión de diseño, no de guión. Queda anotado para Boris — es el primer
-combate memorable del juego y hoy no existe en ningún documento.
+Se escribió como **The Long Vigil**, ficha en [[Bestiario]] §The Long
+Vigil (grado Corrupto). Es **la última de las bestias guardianas que
+pusieron a Speck en la crisálida**, con 550 años de guardia y el propósito
+vaciado por la corrupción. Su moveset es la caracterización: no persigue,
+cede terreno y lo recupera, y todo su repertorio se dispara por proximidad
+**a la crisálida**, no a sí misma.
+
+**Lo que eso le hace a esta escena:** el jugador mata, en su primer jefe,
+a lo único que seguía cuidando a Speck — y **nadie en la ficción lo sabe**.
+Es la hermana de la siembra del God-Core: dos profanaciones involuntarias
+en la misma locación, ninguna subrayada. El loot (una lámina del caparazón,
+**del mismo material que la crisálida**) es la única pista física, y no se
+explica.
 
 ## Pendiente
 
@@ -290,6 +299,5 @@ combate memorable del juego y hoy no existe en ningún documento.
   depende de que "cuánto tardás en no hacerlo" se sienta como decisión y
   no como un input que no responde. Es riesgo de implementación, no de
   guión.
-- **Locación 4 (Waypost)** es la escena siguiente: Darro se suma y el
-  grupo se vuelve equipo ([[Geografía y Ciudades]] §Beats Narrativos por
-  Acto, locación 4, que ya tiene el beat escrito).
+- **✅ Locación 4 (Waypost) — escrita (2026-08-12):**
+  [[Guion/Waypost — Los Cinco]]. Cierra el Acto 1.
