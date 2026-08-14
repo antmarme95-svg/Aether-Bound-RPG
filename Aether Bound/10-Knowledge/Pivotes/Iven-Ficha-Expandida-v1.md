@@ -487,7 +487,7 @@ No es negación de la información. Es un hombre pidiéndole a alguien que no le
 
 **Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Iven**. Secuencia: §1, pasos 1-6, sin excepciones. Su "mensajero" es el **contacto del Consortium** — y la promesa que lo trajo hasta acá es falsa (§2, columna de excepción).
 
-Iven llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor.
+Iven llega al borde con Speck, y **el Fragmento termina de activarse al llegar, no después** ([[El Cráter — Matriz de Rutas]] §1, paso 3): Speck entra en la transformación **E1 → E3** y los God-Cores despiertan uno a uno alrededor. Todo el diálogo del quiebre ocurre **con eso ya encendido de fondo**, y en esta ruta eso es lo cruel: Iven negocia con el contacto mientras la cosa que cargó hasta acá se le está transformando en los brazos.
 
 El contacto del Consortium viene subiendo desde dentro del cráter hacia el borde: un hombre común, ropa buena, sin sello ni insignia, **con un maletín**. No trae equipo médico. No trae convoy. No trae nada que se parezca a un remedio.
 
@@ -531,7 +531,7 @@ Y después, dos segundos más tarde, en voz mucho más baja — la frase que nad
 
 **Ese es el diseño del clímax de Iven:** no la ofrece, no la esconde, no le sale al encuentro al contacto. **Se queda de rodillas en el borde con Speck en brazos y le pide al jugador una salida que el jugador no tiene.** Iven es el único Pivote que, en el último segundo, **pide ayuda**.
 
-**El Fragmento se activa.** Speck E1 → E3. La decisión del jugador abre uno de los 5 finales.
+La decisión del jugador abre uno de los 5 finales. **(La activación del Fragmento no va acá: ocurrió al llegar al borde, arriba — §1, paso 3 de la Matriz.)**
 
 ---
 
@@ -647,7 +647,11 @@ A los defensores jóvenes que entrena les enseña combate por la mañana y otra 
 
 **Cuenta la historia entera, menos una parte.** Habla del maletín, del contacto, de la mentira, de la tercera vía que sí existió — se la sabe de memoria, la cuenta con detalle de testigo. Lo único que nunca cuenta es que fue **él** quien cargó a Speck hasta el borde, quien la sostuvo mientras el jugador decidía, quien la vio elegir. En su propia historia, Iven aparece como testigo, no como parte. No es modestia — es lo único que todavía le cuesta decir en voz alta: que quiso venderla, y que la persona a la que quiso vender terminó salvando a su gente de todos modos.
 
-Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto.
+**Y hay una cosa que hace todas las noches y que no tiene nada que ver con la historia que cuenta.** Cuando sirve, **aparta una ración** — poca, la que se le daría a algo pequeño — y la deja en el borde de la piedra del fuego, del lado que da a la oscuridad. No la come. No deja que nadie más la coma. A la mañana la tira y a la noche la vuelve a apartar. Los del asentamiento aprendieron a no preguntar; los chicos creen que es una costumbre de frontera y la copian sin saber qué copian. Iven nunca la explica, y **la única vez que casi lo hace se le sale entera**: *"Le daba de comer. Todos los días del camino. Era mi turno y nunca se lo cedí a nadie."*
+
+Ése es su duelo, y **no es vergüenza**: la vergüenza es lo que le hace excluirse de la historia (arriba). Esto es otra cosa — es el turno de un hábito que sigue existiendo sin la criatura que lo justificaba. Iven puede vivir sin haber sido perdonado. Lo que no aprendió es a servir la cena sin apartar la ración.
+
+Si el jugador lo visita, Iven lo recibe distinto que en F1: **no lo acompaña hasta el camino para despedirlo.** Le prepara un cuarto. Y la primera noche, cuando sirve, el jugador **ve la ración apartada** y ninguno de los dos dice nada.
 
 No pide perdón en F4 tampoco. **Pero acepta que lo perdonen**, que en Iven es la distancia entera entre sobrevivir y vivir.
 

@@ -139,7 +139,7 @@ centros de poder que conviven por tradición pero no siempre están alineados.
 | Personaje | Afiliación | Consecuencia |
 |---|---|---|
 | **Vekka** | 100% Great Forging Clan (clan real) | Su autoridad como Maestra ES autoridad real, no solo técnica — cuando desarma lo que construyó por orden del gremio, obedece directamente al poder central |
-| **Dagna** | Subclán vasallo de Great Forging Clan | Cadena de obligación de dos eslabones, no uno: obedece a su clan, que a su vez debe lealtad al clan real — encaja con que su traición sea la más "justa" de las 9 |
+| **Dagna** | Subclán **Deepstone**, vasallo del Great Forging Clan | Cadena de obligación de **tres eslabones** (Ambassador Kadrun → Great Forging Clan → consejo del subclán Deepstone → Dagna, [[El Cráter — Matriz de Rutas]] §2): obedece al consejo de Deepstone, que debe lealtad al clan real, que responde a Kadrun. Dagna solo trata con el último eslabón — encaja con que su traición sea la más "justa" de las 9 |
 | **Torgan** | Fuera del clan real — rechazado como aprendiz a los 15, en años distintos y por vías distintas que Darro (no juntos, no el mismo día) | Su Juramento de Forja de 55 años NO fue jurado al clan que lo rechazó — fue jurado a un clan propio/menor donde encontró pertenencia después del rechazo. Vuelve el juramento MÁS preciado, no menos |
 
 **Consecuencia para "Cómo lo ve Darro":** Darro y Torgan comparten rechazo
@@ -307,7 +307,7 @@ distintas pero conectadas al mismo cuerpo:**
 - Maren → Triune Council directamente
 - Bram → **contrato directo** con el Triune Council — puro mercenariado, sin institución intermedia
 - Iven → Triune Council → **Trade Consortium** → agente sin nombre (contacto con maletín) → Iven
-- Lyris → **Frontier High Command**, un tercer track fuera de las dos academias, que igual reporta arriba al Council
+- Lyris → Triune Council → **Frontier High Command** → Lyris (escolta aérea de frontera **dentro** de ese mando, no un eslabón aparte) — un tercer track fuera de las dos academias, que igual reporta arriba al Council
 
 No es que 9 personas decidieron traicionar por separado — es que **una sola
 institución supra-racial coordina la misma estrategia a través de 3 cadenas

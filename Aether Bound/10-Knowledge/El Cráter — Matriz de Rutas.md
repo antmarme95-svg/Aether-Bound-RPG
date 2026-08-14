@@ -285,7 +285,7 @@ antes de escribir**, para no homogeneizar.
 |---|---|
 | **Roen** (fijo) | lo dice en voz alta al jugador — es la única vez que **él mismo** distingue actuar bien de salir ileso (no la única vez que alguien se lo dice al jugador; Valen tiene su propia versión, ver fila abajo) |
 | **Torgan** | el cuerpo recuerda cargarla; el hábito no se rompe con el tiempo |
-| **Iven** | se excluye a sí mismo de la historia que cuenta, como testigo y no como parte |
+| **Iven** | **aparta una ración en cada cena y nunca la come** — el turno de darle de comer, sin la criatura. (Su vergüenza —excluirse de la historia que cuenta, como testigo y no como parte— es un beat aparte y **no cuenta como duelo**: son categorías distintas) |
 | **Dagna** | no puede volver al cráter transformado, ni una vez |
 | **Vekka** | deja una pieza sin cerrar — rompe su propia regla de oficio |
 | **Lyris** | vuela sola sobre el cráter y no se lo cuenta a nadie |

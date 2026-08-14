@@ -341,7 +341,9 @@ Maren no forcejea ni interviene — se queda sosteniendo a Speck, y sobrevive qu
 
 Rivermeet pasa la peor década de su historia y **no se muere nadie que ella pudiera haber salvado.** Es un logro enorme y suena a poco, y esa distancia entre las dos cosas es exactamente su epílogo. No pide perdón — no puede; el arquetipo lo prohíbe.
 
-Nunca vuelve a ver al jugador. Le llega un mensaje años después, corto: *"La ecuación resultó. No de la forma que calculé. Pero resultó."* No firma. No hace falta. Y el jugador, si lleva la cuenta, sabe lo que Maren no escribe: que su cálculo fue **correcto e insuficiente** desde el principio, y que ella se pasó el resto de su vida administrando la diferencia.
+Nunca vuelve a ver al jugador, y **nunca le escribe** — Maren no manda nada, en esta ruta, jamás. Lo que llega es **un tercero**: años después, en un camino cualquiera, alguien reconoce al jugador. Es una mujer que pasó ese invierno en Rivermeet, en una de las casas que Maren censó. Cuenta una sola cosa, sin saber a quién se la está contando: que en una reunión de raciones, con el pizarrón lleno, la Jefa de Ops se quedó parada mirando una columna y dijo en voz alta, para nadie, *"El cálculo estaba bien."* Y no siguió. Nadie entendió a qué se refería y nadie preguntó, porque había que repartir la harina.
+
+El jugador sí entiende, y entiende lo que la frase no dice: que fue **correcto e insuficiente** desde el principio, y que Maren se pasó el resto de su vida administrando la diferencia. **Ésa es toda la comunicación que hay entre los dos en F1** — de segunda mano, incompleta, y llegada por accidente.
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council en el cráter)
 

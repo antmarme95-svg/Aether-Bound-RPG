@@ -218,7 +218,7 @@ A la salida, si el jugador le pregunta qué le pareció, Torgan contesta lo mín
 
 ### The Reckoning en The Driftmarket
 
-Ver [[Geografía y Ciudades]] §THE RECKONING. Con Torgan como Pivote activo, lo que Harbormaster Tobin Hale oye es un **mensajero del Great Forging Clan grabando un juramento nuevo** — fragmento del idioma ritual enano. Tobin no conoce a Torgan lo suficiente para ubicar su voz institucional; el único del grupo que Tobin ubica hablando ese idioma es **Darro**, el otro enano, hijo de forja y aprendiz despedido del Clan. **Tobin señala a Darro por error.**
+Ver [[Geografía y Ciudades]] §THE RECKONING. Con Torgan como Pivote activo, lo que Harbormaster Tobin Hale oye es un **mensajero del clan menor de Torgan confirmando un juramento de 55 años** — fragmento del idioma ritual enano. **No es el Great Forging Clan y no es un juramento nuevo**: el Juramento de Torgan es al clan menor que lo acogió, no al clan real que lo rechazó ([[El Cráter — Matriz de Rutas]] §2, fila Torgan). Tobin, que no distingue un clan enano de otro, lo oye como "asuntos de enanos con juramentos" y ahí empieza su error. Tobin no conoce a Torgan lo suficiente para ubicar su voz institucional; el único del grupo que Tobin ubica hablando ese idioma es **Darro**, el otro enano, hijo de forja y aprendiz despedido del Clan. **Tobin señala a Darro por error.**
 
 **Si el jugador confronta a Darro:** Torgan presencia la escena en silencio pesado. No interviene, no corrige, no dice *"no es él"* — porque decirlo sería admitir que sabe de qué habla Tobin, y admitirlo es adelantar su sentencia. Es la culpa técnica que carga hasta el Archive: dejar que acusen al hombre equivocado sabiendo que el correcto es él. Cuando Darro se defiende — confundido, dolido, sin entender de dónde salió la sospecha — Torgan pone la cara más quieta de toda la aventura. Si el jugador le pregunta directo qué opina, contesta solo: *"Darro no tiene nada que esconder. Eso debería bastar."* Verdad literal, blindaje moral perfecto, y una frase que releída después de su traición se vuelve casi cruel.
 
@@ -362,7 +362,7 @@ En el último tramo, cuando ya se ve el cráter latir en el horizonte, Torgan **
 
 **Parámetros de esta ruta:** [[El Cráter — Matriz de Rutas]] §2, fila **Torgan**. Secuencia: §1, pasos 1-6, sin excepciones. Su mensajero es del **clan menor** — no del Great Forging Clan, que es el que lo rechazó.
 
-Torgan llega al borde con Speck. Los God-Cores despiertan uno a uno alrededor. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Torgan espera de frente, sin darle la espalda al jugador ni al mensajero — postura deliberada, la misma con la que ha cargado contratos toda su vida: lo que se hace, se hace mirando a la cara.
+Torgan llega al borde con Speck, y **el Fragmento termina de activarse al llegar, no después** ([[El Cráter — Matriz de Rutas]] §1, paso 3): Speck entra en la transformación **E1 → E3** y los God-Cores despiertan uno a uno alrededor. Todo el diálogo del quiebre ocurre **con eso ya encendido de fondo** — el aire vibrando, el pulso subiendo, y Torgan hablando igual de quieto. El mensajero del clan menor viene subiendo desde dentro del cráter — un enano viejo, sin nombre, con el sello de un clan que nadie del grupo reconocería. Torgan espera de frente, sin darle la espalda al jugador ni al mensajero — postura deliberada, la misma con la que ha cargado contratos toda su vida: lo que se hace, se hace mirando a la cara.
 
 El jugador y los fijos llegan segundos después.
 
@@ -394,7 +394,7 @@ Y baja los brazos, sosteniendo a Speck entre él y el mensajero que se acerca, s
 
 **Ese es el diseño del clímax de Torgan:** no la arrebata, no la esconde, no le sale al encuentro al mensajero. La **sostiene quieto en el borde y deja que el jugador decida.** Torgan cumplió su parte — llegó, la trajo, la puso donde el Juramento pedía que estuviera. Lo que pase en los siguientes diez segundos ya no le corresponde a él, y eso es lo único parecido a un alivio que Torgan siente en toda la campaña.
 
-**El Fragmento se activa.** Speck E1 → E3. La decisión del jugador abre uno de los 5 finales.
+La decisión del jugador abre uno de los 5 finales. **(La activación del Fragmento no va acá: ocurrió al llegar al borde, arriba — §1, paso 3 de la Matriz.)**
 
 ---
 

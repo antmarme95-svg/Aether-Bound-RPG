@@ -46,8 +46,11 @@ pertenecer a algo — es que su gente nunca estuvo en la mesa donde se discute
 el "por qué" de nada. Solo reciben coordenadas. Ella hace lo mismo, sin
 cuestionar, porque es lo único que su tradición le enseñó a hacer.
 
-**Cadena hasta el Council:** Frontier High Command → escolta aérea de
-frontera → Lyris. En su ruta, **the Triune Council usa el propio Frontier
+**Cadena hasta el Council:** **Triune Council → Frontier High Command →
+Lyris** — dos eslabones, sin ningún tercero ([[El Cráter — Matriz de Rutas]]
+§2, fila Lyris, fuente de las cadenas del clímax). La *escolta aérea de
+frontera* **no es un eslabón de la cadena**: es el rol de Lyris **dentro** de
+Frontier High Command, la unidad en la que sirve. En su ruta, **the Triune Council usa el propio Frontier
 High Command como canal encubierto** — la orden de captura llega por el
 mismo aparato militar bajo el que Lyris siempre operó, empaquetada como
 "objetivo prioritario de frontera". Ni Lyris ni su cadena inmediata saben
