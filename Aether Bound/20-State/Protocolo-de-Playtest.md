@@ -157,11 +157,11 @@ insiste**, antes de gastar un peso en arte, diálogo o historia.
 > *"Es un prototipo muy temprano, sin arte: cubos y cápsulas grises. No
 > está feo, está sin hacer — eso no lo evalúes.*
 >
-> *Vas a jugar diez minutos. Tenés dos cosas: moverte, y un botón que te
+> *Vas a jugar diez minutos. Tienes dos cosas: moverte, y un botón que te
 > impulsa hacia arriba. No hay objetivo escrito ni forma de perder.
-> Explorá y subí lo que puedas.*
+> Explora y sube lo que puedas.*
 >
-> *Mientras jugás yo no voy a hablar. Si me preguntás algo te voy a
+> *Mientras juegas yo no voy a hablar. Si me preguntas algo te voy a
 > contestar siempre lo mismo, así que no te preocupes si sueno raro.
 > Después te hago unas preguntas."*
 
@@ -174,7 +174,7 @@ insiste**, antes de gastar un peso en arte, diálogo o historia.
   compañera. En A no existe tal cosa.
 - Nada del proyecto, el lore o Dagna — regla de oro de [[ADR-003 Reset de
   desarrollo y motor]] §C: **su ignorancia es el instrumento.**
-- Después del minuto 10: **cualquier cosa**. Ni "seguí", ni "tranquilo".
+- Después del minuto 10: **cualquier cosa**. Ni "sigue", ni "tranquilo".
 
 ### 3.3 — Disciplina de observación silenciosa
 
@@ -212,13 +212,13 @@ es dato: preguntar "¿se rompió?" es una forma de insistir.
 
 | # | Pregunta (literal) | Por qué está |
 |---|---|---|
-| 1 | *"Contame qué pasó."* | Máxima apertura. Lo que menciona primero es lo que le importó. |
+| 1 | *"Cuéntame qué pasó."* | Máxima apertura. Lo que menciona primero es lo que le importó. |
 | 2 | *"¿Hubo algún momento en que quisieras hacer algo y no pudieras?"* | Primera oportunidad de que aparezca la pérdida **sin nombrarla**. Si aparece acá, es la señal más fuerte del test. |
 | 3 | *"¿Notaste algún cambio durante los diez minutos?"* | Si **no** menciona el botón, es dato: la pérdida no fue legible. |
 | 4 | *"¿Qué hacía el botón?"* | Comprensión mecánica. Es el eje discriminador del árbol de fallos: no entender ≠ no importarle. |
 | 5 | *"Cuando dejó de funcionar, ¿qué pensaste?"* | Primera que revela explícitamente que dejó de funcionar. **No puede ir antes.** |
 | 6 | *"¿Cuántas veces dirías que lo intentaste después?"* | Se compara con **P** real. La brecha entre lo que recuerda y lo que hizo es dato en sí misma. |
-| 7 | *"¿Te dio bronca, te dio lo mismo, o ni lo pensaste?"* | Cerrada, tres opciones, la más contaminante. Va última. |
+| 7 | *"¿Te dio coraje, te dio igual, o ni lo pensaste?"* | Cerrada, tres opciones, la más contaminante. Va última. |
 
 ## 4. Dependencias técnicas — **no se resuelven acá, se especifican**
 
@@ -286,7 +286,7 @@ RESPUESTAS (literal, sin parafrasear)
   4 ______________________________________________________________
   5 ______________________________________________________________
   6 ______________________________________________________________
-  7  bronca / lo mismo / ni lo pensé
+  7  coraje / igual / ni lo pensé
 
 INCIDENTES: ______________________________________________________
 ```
@@ -343,8 +343,8 @@ ajeno al proyecto **sienta la pérdida dos veces**, mecánica y emocional.
 > *Es un RPG de acción. Vas a subir una montaña con una compañera. Dura
 > como una hora.*
 >
-> *Mientras jugás no voy a hablar; si me preguntás algo te voy a contestar
-> siempre lo mismo. Después charlamos."*
+> *Mientras juegas no voy a hablar; si me preguntas algo te voy a contestar
+> siempre lo mismo. Después platicamos."*
 
 Es el encuadre mínimo autorizado por [[ADR-003 Reset de desarrollo y
 motor]] §C, palabra por palabra: género, la montaña, la compañera. **Nada
@@ -385,7 +385,7 @@ más daño hace.
 
 | # | Pregunta (literal) | Mapea a |
 |---|---|---|
-| 1 | *"Contame qué pasó."* | Todo. Lo que menciona primero ordena el resto. |
+| 1 | *"Cuéntame qué pasó."* | Todo. Lo que menciona primero ordena el resto. |
 | 2 | *"¿Qué fue lo más divertido?"* | **Riesgo 4** (¿tener a Dagna era adictivo?). Va **antes** de cualquier mención de la pérdida, o se contamina. |
 | 3 | *"¿Hubo algo que quisieras hacer y no pudieras?"* | EJECUCIÓN vs DISEÑO — pérdida mecánica sin nombrarla. |
 
@@ -426,7 +426,7 @@ más daño hace.
 ### 9.1 — El botón en la cornisa
 Mismo hook de telemetría de §4.1, mismo `bond_press` con `button_alive` e
 `in_ledge_zone`, aplicado a **la cornisa de la coda** de [[Slice of Bond]]
-(*"la cornisa que sabés que alcanzabas con ella"*). Se reporta **P** y
+(*"la cornisa que sabías que alcanzabas con ella"*). Se reporta **P** y
 **T** igual que en A, y se cruza con la pregunta 6.
 
 ### 9.2 — Inputs por minuto
