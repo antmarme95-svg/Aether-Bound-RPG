@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-12
+updated: 2026-08-13
 ---
 
 # Current State
@@ -388,6 +388,25 @@ agachada. El jugador sigue idle en los dos motores.
 > de quién lo escribió.
 
 ### 🗓 Inmediato — próxima sesión
+
+0. **⏳ RE-CORRIDA DE QA DEL 08-13 — FIXES APLICADOS, VALIDACIÓN PENDIENTE.**
+   Se corrieron 2 subagentes en frío (dramaturgia + congruencia semántica) sobre
+   el bloque de propagación de "la traición tiene dos tiempos", y **las 7 tandas
+   de fixes ya están aplicadas y commiteadas** (una por tanda; detalle completo en
+   [[LOG]] §2026-08-13). Linter en **0 críticos / 0 medios**.
+
+   Cerraron: (1) la ruptura de Bram movida a la sala del Fragmento en la Matriz,
+   [[Los 9 Pivotes]] y el Reckoning; (2) **F2a existe en la ruta Bram** — decisión
+   de Boris, mismo mecanismo de holder=agente que Nyael; (3) origen de Roen
+   reescrito como Mistbound interior, sin bestias; (4) Darro — dos años de
+   aprendizaje con Vekka, rechazo al tercero, versión única; (5) **Valen y Darro
+   migrados al sub-beat 2b** con escena de cráter recortada a reacción contenida;
+   (6) siete medios; (7) cuatro menores + bloque de aritmética canónica de Nyael.
+
+   > ⛔ **El sprint NO está cerrado.** Falta la **re-corrida final con 2 subagentes
+   > en frío, todavía no ejecutada** — y no la puede correr quien aplicó los fixes
+   > (skill `canon-qa` §Anti-objetivos: nadie valida su propio trabajo). Es el
+   > primer trabajo de la próxima sesión de canon.
 
 1. **✅ ACTO 1 — GUIÓN COMPLETO (2026-08-12).** Detalle de cada decisión
    en [[LOG]] §2026-08-12. **Las 5 escenas escritas**, todas

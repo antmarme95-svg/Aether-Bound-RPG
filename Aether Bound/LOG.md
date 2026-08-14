@@ -1,5 +1,106 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-13] canon | Re-corrida de QA del bloque "dos tiempos" — 7 tandas de fixes
+
+Dos subagentes en frío (dramaturgia + congruencia semántica), en paralelo y sin
+verse, sobre el bloque de propagación cerrado el 08-12. Todos los hallazgos se
+arreglaron **a la fuente** con re-grep de la clase completa (regla 8 del
+`CLAUDE.md`). Linter en **0 críticos / 0 medios** tras cada tanda; un commit por
+tanda.
+
+**Tanda 1 — la ruptura de Bram, en la fuente única.** `[[El Cráter — Matriz de
+Rutas]]` §1 seguía diciendo que Bram rehúsa "en el corredor"; corregido a la
+**sala del Fragmento (sub-beat 2b)**, con el corredor pasando sin toma. Mismo fix
+en `[[Los 9 Pivotes]]` §segundo agente y en `[[Geografía y Ciudades]]` §THE
+RECKONING variante Bram — esta última reescrita con cuidado de que **la profecía
+de Tobin no anticipe lugar ni momento**, solo que hay "un segundo". Salió de paso
+un residuo de la misma clase en la última cena ("al amanecer, en el corredor…").
+
+**Tanda 2 — F2a en la ruta Bram (decisión de Boris).** F2a **sí existe** ahí, por
+el mismo mecanismo de holder=agente que Nyael. La nota de la Matriz §2 pasó de
+"solo ruta Nyael — Bram no llega a F2a" a cubrir las dos rutas, dejando explícito
+que **"Bram no traiciona" sigue siendo cierto** y que el gate mide la acción del
+jugador frente al holder, no si el Pivote traicionó. El epílogo F2a de Bram ya no
+dice que *"Torgan completa la entrega"* (pisaba el paso 5): ahora Torgan
+**sostiene y espera**, mudo, y la quietud del jugador es la entrega.
+
+**Tanda 3 — origen de Roen.** Su biografía lo hacía nacer en un puesto entre The
+Wilds y las ciudades humanas, con nidos acercándose cada generación —
+contradecía `[[Geografía y Ciudades]]` §Mistbound Frontier (**tierra interior
+remota, no la trinchera**). Reescrito como **puesto de vigilancia interior**:
+libro de novedades que dice *sin novedad*, guarnición que existe por inercia
+administrativa. El padre ya no muere defendiendo el puesto — lo mandan con una
+columna a una purgación en otro distrito. Se ajustaron además §Años de Guardia y
+§Quiebre para que el tono sea **burocracia y aislamiento**, no veteranía de
+guerra, y para que la acusación de "albergaba corrupción" se lea como lo que es:
+papeleo.
+
+**Tanda 4 — Darro y Vekka.** La ficha tenía dos versiones en la misma sección
+("al tercer año" vs. "el rechazo llegó al primer año, se quedó los 2 restantes").
+Se eliminó la segunda y se agregó un bloque de **aritmética canónica fija**: dos
+años de aprendizaje real (30-32), rechazo al tercero (33). Concuerda con
+`Vekka` §Darro y `Torgan` §"Lo que Torgan sabe de Darro". El resto de la
+cronología (salida a los 33, 5 años a la deriva, 38-63) cierra sin tocarse.
+
+**Tanda 5 — Valen y Darro migran al sub-beat 2b.** Era el más grande. Las dos
+fichas tenían todavía una escena de clímax única en el cráter, escrita para la
+revelación vieja de un solo tiempo:
+
+- **Valen** decía *"I know"* (saber y callar), lo cual contradice las nueve
+  celdas, donde su beat es **haber archivado mal la señal** ("I filed it as
+  homesickness", "I logged both… I did not connect them"). Se escribió §Escena 1
+  con el patrón general + **las nueve líneas citadas por wikilink, no
+  reescritas**, y una regla de escritura que prohíbe toda formulación de
+  saber-y-callar.
+- **Darro** "explotaba por primera vez en la campaña" en el cráter, lo cual
+  rompía las ocho líneas de grito ya escritas en 2b y las dos excepciones de ruta
+  (mudo con Vekka, sentado en silencio con Dagna). Mismo tratamiento.
+
+Las escenas del cráter se **recortaron, no se borraron**: quedan como reacción
+contenida de quien ya lo sabía. **Corolario resuelto:** la frase genérica de
+"se sienta lejos del grupo en silencio absoluto" ya no aplica a las nueve rutas —
+está condicionada explícitamente a las siete que no son Vekka ni Dagna, así que
+el superlativo *"la única vez que Darro se queda mudo"* vuelve a ser verdadero.
+
+**Tanda 6 — siete medios.** Cadena de Dagna en `[[Estructura Política]]` (dos →
+**tres eslabones**) · Reckoning de Dagna sin vocabulario de "unmaking", que es
+dogma exclusivo de Vekka · Reckoning de Torgan con **mensajero del clan menor
+confirmando un juramento de 55 años**, no del Great Forging Clan ni nuevo ·
+activación del Fragmento **al llegar al borde** en Torgan e Iven, no como remate
+post-diálogo · cadena de Lyris unificada a **Triune Council → Frontier High
+Command → Lyris**, con la escolta aérea como aposición y no como eslabón · beat
+de duelo F4-vivo de Iven, que era vergüenza y no duelo · Maren F1, que repetía el
+dispositivo de F4.
+
+> **Criterio para el duelo de Iven:** la vergüenza (excluirse de la historia que
+> cuenta) **no es duelo** y se dejó como beat aparte. El duelo nuevo es un
+> hábito: **aparta una ración en cada cena y nunca la come** — el turno de darle
+> de comer, sin la criatura. No colisiona con ningún otro de los 12 ejes, y se
+> ancla en su propia línea de 2b (*"Le daba de comer, carajo"*).
+>
+> **Criterio para Maren F1:** se cambió el vehículo, no el contenido. F4 conserva
+> la nota sin firma (es su eje asignado); **F1 ya no tiene nota** — lo que llega
+> al jugador es **un tercero**, años después, contando de segunda mano una frase
+> que Maren dijo en voz alta para nadie en una reunión de raciones.
+
+**Tanda 7 — cuatro menores.** "las otras ocho celdas" → **siete** (Bram no pierde
+su link) · Lyris F1, donde el sujeto de "neutralizada" era ella y debía ser el
+mensajero · Lyris F3, "lado seguro del borde" → **el lado del core central**,
+según la Matriz · **bloque de aritmética canónica fija de Nyael**, que no tenía:
+edad **190**, formación hasta los 90, **siglo de servicio pleno 90→190**, y
+**240 ejecuciones totales** (40 en formación + las 200 del siglo que nombra su
+línea canónica).
+
+> ⛔ **El sprint no está cerrado.** Falta la re-corrida final con 2 subagentes en
+> frío, **todavía no ejecutada** — no la puede correr quien aplicó los fixes.
+
+**Ambigüedad detectada y no resuelta (para Boris):** `Bram` §Mistbound describe
+cuarenta años de contratos "contra bestias que bajaban de laderas". Es defendible
+como fauna local y no como nidos de The Wilds, pero conviene decidirlo
+explícitamente ahora que la ficha de Roen fija Mistbound como **interior y sin
+bestias**.
+
+
 ## [2026-08-13] decisión | §0 FIRMADO — el criterio de muerte del Protocolo A
 
 Boris firmó §0 de [[Protocolo-de-Playtest]]: umbrales (§0.3), condición de

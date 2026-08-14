@@ -629,11 +629,17 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
   negativa). **Bloquea correr el Protocolo A.**
 - ~~**Implementar el hook de telemetría de §4.1**~~ ✅ **hecho 2026-08-13**,
   con test propio (50 verificaciones). Detalle en §4.1.
-- **Construir la escena gris** (geometría de caja, cápsula, una cornisa
-  alcanzable solo con el botón) y cablear los tres scripts. El hook está
-  listo; falta el nivel. **Regla que salió del test: el jugador nace donde
-  arranca, no se teletransporta después** — spawnear en el origen y mover
-  produce un enter/exit fantasma en el CSV.
+- ~~**Construir la escena gris**~~ ✅ **hecha 2026-08-13** →
+  `godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
+  con `tools/test_gray_scene.gd` (18 verificaciones) probando **con física
+  real** que la mesa no se sube caminando desde ninguna de 8 direcciones.
+  Se corre con `godot --path godot -- --tester=Diego`.
+- **Congelar el build y anotar su hash en §0.5.** Es la única casilla de §0
+  que sigue abierta.
+- **Pasada de feel del jugador con Boris en la máquina.** Velocidad,
+  sensibilidad de cámara y altura del salto están puestas por número, no
+  probadas a mano. Si el control se siente mal, un 🔴 sería de ejecución y
+  el test habría costado tres sesiones para decir eso.
 - **Fijar fecha con Diego, Santiago y Delmer.** Disponibilidad ya
   confirmada ([[ADR-003 Reset de desarrollo y motor]] §C); falta fecha,
   que depende de la entrega del build.
