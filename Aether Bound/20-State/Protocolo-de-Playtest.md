@@ -189,7 +189,7 @@ excepciones y ninguna más:
 "¿está bien así?"— la respuesta es **siempre la misma frase, con el mismo
 tono plano**:
 
-> *"Seguí como te parezca."*
+> *"Sigue como te parezca."*
 
 Nada más. No se amplía, no se sonríe, no se asiente, no se niega. **Cada
 pregunta del tester después del minuto 10 se anota con su hora exacta** —
@@ -367,7 +367,7 @@ Protocolo A (fallo técnico, incomodidad física) más una tercera:
    2 minutos. Se anota la hora, se destraba con la mínima intervención
    posible, y **el tramo queda marcado como contaminado** en las 3 hojas.
 
-**Frase única de deflexión**, igual que en A: *"Seguí como te parezca."*
+**Frase única de deflexión**, igual que en A: *"Sigue como te parezca."*
 
 **Excepción de la traición:** si el tester se detiene después de la
 traición y pregunta algo, **la deflexión se aplica igual**. La tentación de
@@ -461,7 +461,7 @@ haber una segunda instancia** (no se anuncia en la sesión).
 **Cómo:** mensaje escrito, no llamada — la llamada empuja a rellenar el
 silencio. **Un solo mensaje, con esta redacción exacta:**
 
-> *"Hola, sin volver a mirar nada ni pensarlo mucho: ¿qué te acordás del
+> *"Hola, sin volver a mirar nada ni pensarlo mucho: ¿qué recuerdas del
 > prototipo que jugaste?"*
 
 **Prohibido:** nombrar a Dagna, la montaña, la traición o el final. Si el
