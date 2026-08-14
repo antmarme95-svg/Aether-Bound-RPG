@@ -1,5 +1,53 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-13] código | Escena gris del Protocolo A — construida y verificada
+
+Era lo último que bloqueaba el test gris del Bond. `godot/scenes/gray_test.tscn`,
+generada por `tools/build_gray_scene.gd`, con `tools/test_gray_scene.gd`
+(**18 verificaciones, ALL_PASS**).
+
+**Lo que hay:** arena de 44×44 con muros de contención, una mesa central de
+12×12 a **2.4 m**, y sobre la mesa una torre de dos peldaños a **4.6 m** y
+**7.0 m**. El jugador es una cápsula que solo camina — **no tiene salto
+propio**, porque el encuadre que se le lee al tester dice "moverte y un botón
+que te impulsa hacia arriba", y de eso depende que la cornisa sea alcanzable
+solo con el botón. El botón da **7.5 m/s**, o sea un ápice de **2.87 m**, y
+solo responde con los pies en el suelo.
+
+**El test que importa no verifica que el código corra, verifica que la
+afirmación de diseño sea cierta:** camina contra la mesa **desde 8
+direcciones** con física real y mide la altura máxima. Da **0.00 m**. Si
+hubiera cualquier otra vía de subida, al minuto 5 el tester subiría por ahí,
+P daría 0 y el 🔴 sería mentira.
+
+**Dos problemas de diseño que solo aparecieron al mirar las capturas:**
+
+1. **El nivel no se leía.** Suelo, mesa y cielo estaban a menos de 0.25 de
+   distancia en valor y todo era una mancha plana. Con ambiente alto, además,
+   la cara superior de la mesa y su cara frontal quedaban del mismo tono y el
+   borde desaparecía. Corregido: tres grises bien separados y ambiente bajo
+   con direccional fuerte, que es lo que hace que un borde sea un borde.
+2. **Desde el suelo la mesa se leía como un MURO.** Vista a la altura de la
+   cámara del juego, una mesa de 2.4 m tiene la cara superior casi de canto y
+   nada dice que arriba se pueda estar. Eso rompía el test por un motivo
+   ajeno al pilar. **La torre se movió de al lado de la mesa a ENCIMA de la
+   mesa:** dos bloques parados sobre una superficie son la forma más barata
+   que existe de decir "esto es una superficie", sin cartel ni flecha ni
+   objetivo escrito. Beneficio extra: ahora **toda** la verticalidad del
+   nivel está del otro lado del botón, así que al minuto 5 no se pierde una
+   cornisa — se pierde el piso de arriba entero, que es exactamente la forma
+   de la pérdida de Dagna.
+
+**Lección de método, otra vez la misma:** un `str.replace` de Python falló en
+silencio al editar el test y dejó un bloque viejo apuntando a coordenadas que
+ya no existían. Ya está en [[Lecciones]] desde el 2026-08-12 y volvió a pasar.
+**Para editar archivos del repo, la herramienta que falla ruidosamente.**
+
+**Pendiente que abre esto:** una pasada de *feel* con Boris en la máquina.
+Velocidad, sensibilidad de cámara y altura del salto están puestas por número
+y nadie las jugó. Si el control se siente mal, un 🔴 sería de ejecución y el
+test habría costado tres sesiones para decir eso.
+
 ## [2026-08-13] canon | Re-corrida de QA del bloque "dos tiempos" — 7 tandas de fixes
 
 Dos subagentes en frío (dramaturgia + congruencia semántica), en paralelo y sin

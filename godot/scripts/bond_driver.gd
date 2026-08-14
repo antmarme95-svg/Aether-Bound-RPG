@@ -91,8 +91,14 @@ func press() -> void:
 		_apply_impulse(p)
 
 
+## El impulso puede no aplicarse (por ejemplo, con el jugador en el aire) y
+## eso NO cambia lo que se registra: `button_alive` describe el estado del
+## boton, no si produjo efecto. Una pulsacion en el aire durante la fase CON
+## es una pulsacion con el boton vivo.
 func _apply_impulse(p: Node3D) -> void:
 	if p == null:
+		return
+	if p.has_method("can_bond") and not p.call("can_bond"):
 		return
 	if p is CharacterBody3D:
 		var cb := p as CharacterBody3D

@@ -108,7 +108,7 @@ el duelo sea posible. Es permiso para gastar en B, nada más.
 | Umbrales de §0.3 | ✅ **firmados por Boris el 2026-08-13** |
 | Condición de validez §0.2 | ✅ **firmada el 2026-08-13** |
 | Regla de lectura negativa §0.4 | ✅ **firmada el 2026-08-13** |
-| Build congelado (hash) | ⬜ pendiente — la escena gris todavía no existe |
+| Build congelado (hash) | ⬜ pendiente — la escena gris ya existe (`godot/scenes/gray_test.tscn`); falta congelar y hashear |
 
 **Ningún tester toca el build hasta que las tres casillas estén marcadas.**
 Las tres lo están. Lo que falta ahora es el build, no el criterio — y por

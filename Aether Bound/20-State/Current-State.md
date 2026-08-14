@@ -599,12 +599,28 @@ agachada. El jugador sigue idle en los dos motores.
    se pueden pasar por línea de comandos: moverlos es un commit con fecha
    y autor, que es lo que §6 pide.
 
-   **⬜ Lo que ahora bloquea: la ESCENA GRIS.** Geometría de caja,
-   cápsula, y una cornisa alcanzable **solo** con el botón, puesta en una
-   ruta que el jugador recorra varias veces. El hook está listo y
-   probado; falta el nivel. Regla que salió del test: **el jugador nace
-   donde arranca** — spawnear en el origen y teletransportar produce un
-   enter/exit fantasma en el CSV.
+   **✅ ESCENA GRIS construida y verificada (2026-08-13).**
+   `godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
+   con `tools/test_gray_scene.gd` (**18 verificaciones, ALL_PASS**).
+   Arena de 44×44, mesa central a **2.4 m**, y sobre la mesa una torre de
+   dos peldaños a **4.6 m** y **7.0 m**. La cápsula **no tiene salto
+   propio**; el botón da 7.5 m/s (ápice 2.87 m) y solo responde con los
+   pies en el suelo. El test camina contra la mesa **desde 8 direcciones**
+   con física real: altura máxima **0.00 m** — no hay vía sin botón.
+   Se corre con `godot --path godot -- --tester=Diego`; F10 corta por
+   fallo técnico y F11 por incomodidad del tester.
+   **La torre está ARRIBA de la mesa y no al lado**: desde el suelo una
+   mesa de 2.4 m se lee como un muro, y dos bloques parados encima son lo
+   más barato que dice "esto es una superficie". De paso, toda la
+   verticalidad queda del otro lado del botón — al minuto 5 no se pierde
+   una cornisa, se pierde el piso de arriba entero.
+
+   **⬜ Lo que ahora bloquea, y son dos cosas chicas:**
+   (a) **congelar el build y anotar el hash** en §0.5 — última casilla
+   abierta de §0; (b) **una pasada de feel con vos en la máquina**:
+   velocidad, sensibilidad de cámara y altura del salto están puestas por
+   número y nadie las jugó. Si el control se siente mal, un 🔴 sería de
+   ejecución y el test habría costado tres sesiones para decir eso.
 
    **Riesgos abiertos que nadie había nombrado** (los 3 primeros ya con
    instrumento en el protocolo): el gancho es una ausencia y **no se

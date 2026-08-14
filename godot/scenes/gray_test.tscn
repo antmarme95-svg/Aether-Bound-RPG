@@ -1,0 +1,213 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/gray_session.gd" id="1_jf587"]
+[ext_resource type="Script" path="res://scripts/ledge_zone.gd" id="2_v626g"]
+[ext_resource type="Script" path="res://scripts/gray_player.gd" id="3_k12i2"]
+[ext_resource type="Script" path="res://scripts/telemetry.gd" id="4_3pt31"]
+[ext_resource type="Script" path="res://scripts/bond_driver.gd" id="5_2g0ro"]
+
+[sub_resource type="Environment" id="Environment_4c8jb"]
+background_mode = 1
+background_color = Color(0.46, 0.5, 0.58, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.5, 0.52, 0.6, 1)
+ambient_light_energy = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ttb1c"]
+albedo_color = Color(0.3, 0.3, 0.33, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rqbcn"]
+size = Vector3(44, 1, 44)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_165xx"]
+size = Vector3(44, 1, 44)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbg2c"]
+albedo_color = Color(0.17, 0.17, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_47824"]
+size = Vector3(44, 7, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pr5x5"]
+size = Vector3(44, 7, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8etsn"]
+size = Vector3(44, 7, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2a6v5"]
+size = Vector3(44, 7, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rso6t"]
+size = Vector3(1, 7, 44)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmt47"]
+size = Vector3(1, 7, 44)
+
+[sub_resource type="BoxMesh" id="BoxMesh_77tkr"]
+size = Vector3(1, 7, 44)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwvxc"]
+size = Vector3(1, 7, 44)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k8klt"]
+albedo_color = Color(0.78, 0.78, 0.8, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g6ab7"]
+size = Vector3(12, 2.4, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u3vfk"]
+size = Vector3(12, 2.4, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ytaf"]
+size = Vector3(5, 4.6, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_odasv"]
+size = Vector3(5, 4.6, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2eqmg"]
+size = Vector3(5, 7, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntm8b"]
+size = Vector3(5, 7, 5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x8nsr"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qiu5"]
+albedo_color = Color(0.8, 0.8, 0.84, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7383a"]
+radius = 0.4
+height = 1.8
+
+[node name="GrayTest" type="Node3D" unique_id=1406404847]
+script = ExtResource("1_jf587")
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=1927094558]
+environment = SubResource("Environment_4c8jb")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1082717143]
+transform = Transform3D(0.7880108, 0.48514786, -0.37903908, 0, 0.6156615, 0.7880107, 0.6156615, -0.62096095, 0.4851479, 0, 0, 0)
+light_energy = 1.15
+shadow_enabled = true
+
+[node name="Suelo" type="StaticBody3D" parent="." unique_id=259134214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Suelo" unique_id=1424801385]
+material_override = SubResource("StandardMaterial3D_ttb1c")
+mesh = SubResource("BoxMesh_rqbcn")
+
+[node name="Col" type="CollisionShape3D" parent="Suelo" unique_id=2035432584]
+shape = SubResource("BoxShape3D_165xx")
+
+[node name="Muros" type="Node3D" parent="." unique_id=1582803292]
+
+[node name="Norte" type="StaticBody3D" parent="Muros" unique_id=2041761548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -22)
+
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Norte" unique_id=2026821698]
+material_override = SubResource("StandardMaterial3D_fbg2c")
+mesh = SubResource("BoxMesh_47824")
+
+[node name="Col" type="CollisionShape3D" parent="Muros/Norte" unique_id=9966333]
+shape = SubResource("BoxShape3D_pr5x5")
+
+[node name="Sur" type="StaticBody3D" parent="Muros" unique_id=1100560706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 22)
+
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Sur" unique_id=461073138]
+material_override = SubResource("StandardMaterial3D_fbg2c")
+mesh = SubResource("BoxMesh_8etsn")
+
+[node name="Col" type="CollisionShape3D" parent="Muros/Sur" unique_id=1201867818]
+shape = SubResource("BoxShape3D_2a6v5")
+
+[node name="Este" type="StaticBody3D" parent="Muros" unique_id=269975792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Este" unique_id=2077128198]
+material_override = SubResource("StandardMaterial3D_fbg2c")
+mesh = SubResource("BoxMesh_rso6t")
+
+[node name="Col" type="CollisionShape3D" parent="Muros/Este" unique_id=2068510505]
+shape = SubResource("BoxShape3D_cmt47")
+
+[node name="Oeste" type="StaticBody3D" parent="Muros" unique_id=1790580625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 3.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Oeste" unique_id=1856929353]
+material_override = SubResource("StandardMaterial3D_fbg2c")
+mesh = SubResource("BoxMesh_77tkr")
+
+[node name="Col" type="CollisionShape3D" parent="Muros/Oeste" unique_id=164736712]
+shape = SubResource("BoxShape3D_cwvxc")
+
+[node name="Mesa" type="StaticBody3D" parent="." unique_id=407734720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Mesa" unique_id=1247307195]
+material_override = SubResource("StandardMaterial3D_k8klt")
+mesh = SubResource("BoxMesh_g6ab7")
+
+[node name="Col" type="CollisionShape3D" parent="Mesa" unique_id=219616724]
+shape = SubResource("BoxShape3D_u3vfk")
+
+[node name="LedgeZone" type="Area3D" parent="." unique_id=1003478819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.5)
+script = ExtResource("2_v626g")
+zone_width = 12.0
+
+[node name="Torre" type="Node3D" parent="." unique_id=1251208157]
+
+[node name="Escalon" type="StaticBody3D" parent="Torre" unique_id=1745369216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.3, -2)
+
+[node name="Mesh" type="MeshInstance3D" parent="Torre/Escalon" unique_id=658745007]
+material_override = SubResource("StandardMaterial3D_k8klt")
+mesh = SubResource("BoxMesh_3ytaf")
+
+[node name="Col" type="CollisionShape3D" parent="Torre/Escalon" unique_id=520209350]
+shape = SubResource("BoxShape3D_odasv")
+
+[node name="Mirador" type="StaticBody3D" parent="Torre" unique_id=1786463643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.5, -2)
+
+[node name="Mesh" type="MeshInstance3D" parent="Torre/Mirador" unique_id=508629124]
+material_override = SubResource("StandardMaterial3D_k8klt")
+mesh = SubResource("BoxMesh_2eqmg")
+
+[node name="Col" type="CollisionShape3D" parent="Torre/Mirador" unique_id=1820570828]
+shape = SubResource("BoxShape3D_ntm8b")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=2014795056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 16)
+script = ExtResource("3_k12i2")
+
+[node name="Col" type="CollisionShape3D" parent="Player" unique_id=845801007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_x8nsr")
+
+[node name="Mesh" type="MeshInstance3D" parent="Player" unique_id=698650236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_4qiu5")
+mesh = SubResource("CapsuleMesh_7383a")
+
+[node name="CameraPivot" type="Node3D" parent="Player" unique_id=1598291969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="SpringArm" type="SpringArm3D" parent="Player/CameraPivot" unique_id=1903696787]
+spring_length = 5.0
+margin = 0.3
+
+[node name="Camera" type="Camera3D" parent="Player/CameraPivot/SpringArm" unique_id=444772370]
+current = true
+
+[node name="Telemetry" type="Node" parent="." unique_id=581275872]
+script = ExtResource("4_3pt31")
+
+[node name="BondDriver" type="Node" parent="." unique_id=19180108]
+script = ExtResource("5_2g0ro")
+impulse = 7.5
+scene_id = "gray_test"
