@@ -337,9 +337,11 @@ Muere de viejo, unos años después. Su compañía original (los que quedan) man
 
 ### F2a — The Long Winter: Handed Over (Speck entregada viva al Council)
 
-Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a — Torgan completa la entrega.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2a, con la excepción **holder = agente** de su fila en §2 — **la entrega se completa por quietud, no por iniciativa de Torgan.** Torgan sostiene a Speck en el borde y espera, igual que esperaría un mensajero retenido en cualquier otra ruta: no forcejea, no le sale al encuentro a nadie — él ya es holder y agente, no hay un tercero a quien entregarle la pieza. Cuando el jugador decide no interponerse, ese vacío es la entrega, y el pulso se corta (§2, nota de F2a cuando holder = agente).
 
-Bram **no ejecutó** — no aplica directo. El segundo agente cumplió. Speck viaja al Council **viva**, y los God-Cores se apagan.
+Bram **no ejecutó** — no aplica directo, y **Bram tampoco traiciona en esta ruta**: su rechazo de la sala del Fragmento sigue en pie. Lo que falla es que el rechazo no bastó. Speck viaja al Council **viva**, y los God-Cores se apagan.
+
+**Torgan no dice nada, en ningún momento** — la ruta Bram es su versión sin discurso ([[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram"). Sostiene, espera, y cuando ya no hay nada que sostener se acomoda el mazo al hombro y baja del borde con el paso de quien terminó un turno.
 
 **Epílogo:** Bram vive con **una culpa nueva** — la de no haber traicionado antes. Racionalización dolorosa: *"Si yo hubiera cumplido cuando me lo pidieron, el Council no habría activado al segundo. Yo la hubiera cargado hasta la superficie sin persecución, sin daño colateral, sin la escena del cráter. Quizás Speck no habría llegado tan rota. Quizás la 'custodia digna' que prometieron era menos mentira si la ejecutaba yo."*
 

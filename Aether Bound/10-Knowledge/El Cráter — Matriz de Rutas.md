@@ -102,13 +102,19 @@ jugador cruza, Lyris desciende lo justo para dejar a Speck de pie del otro lado 
 borde antes de volver a ascender — el beat ("el jugador la recoge del otro lado del
 borde") se cumple igual, solo que el último tramo lo hace ella en vez de dejarla caer.
 
-**Cómo se satisface el beat de F2a cuando holder = agente (solo ruta Nyael — Bram no llega
-a F2a, no traiciona).** El equipo de extracción no puede completar la entrega mientras el
+**Cómo se satisface el beat de F2a cuando holder = agente (rutas Nyael y Bram).** Las dos
+usan **el mismo mecanismo**, y en las dos el holder es el equipo/agente, no el Pivote de
+la partida: el equipo de extracción en Nyael, **Torgan** en Bram. **"Bram no traiciona"
+sigue siendo cierto** — Bram personalmente rehúsa en la sala del Fragmento y no vuelve
+atrás —, pero el gate de F2a **mide la acción del jugador frente al holder**, no si el
+Pivote de la partida traicionó; y en la ruta Bram el holder es Torgan, que sí ejecuta la
+entrega mecánica. El holder no puede completar la entrega mientras el
 pulso siga activo — **el tirón del cráter aplica exactamente igual que en las otras 8
 rutas** ([[Speck]] §Capa 5): nadie mueve a Speck lejos del centro hasta que el hive mind se
-corte, y eso solo pasa con la entrega, nunca con forcejeo. El equipo **no forcejea** — no
-hay ninguna razón dramática para que lo haga, son operativos entrenados, no un Pivote en
-crisis emocional. Simplemente esperan con Speck sostenida, igual que esperaría un mensajero
+corte, y eso solo pasa con la entrega, nunca con forcejeo. El holder **no forcejea** — no
+hay ninguna razón dramática para que lo haga: son operativos entrenados en Nyael, y en Bram
+es Torgan cumpliendo un contrato ajeno, sin afecto y sin crisis emocional de por medio.
+Simplemente esperan con Speck sostenida, igual que esperaría un mensajero
 retenido en cualquier otra ruta, hasta que el jugador decide no interponerse. Ahí se
 completa la entrega y el pulso se corta. **No hay mecánica nueva que inventar:** es la
 misma regla de siempre, aplicada a un holder que no tiene un mensajero aparte a quien
