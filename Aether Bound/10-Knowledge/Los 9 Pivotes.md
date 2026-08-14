@@ -54,7 +54,7 @@ contra él, o ser mencionado — pero no se sienta a su mesa, no participa de su
 dinámicas internas, y no aparece en las escenas de formación del grupo.
 
 **Caso canónico — el segundo agente de la ruta Bram.** Cuando Bram rechaza la
-orden en el corredor del Sunken Archive, el Triune Council no se queda sin
+orden en la sala del Fragmento del Sunken Archive, el Triune Council no se queda sin
 opciones: activa a otro de los nueve. Canónicamente **Torgan**, que en esa partida
 no es el Pivote del jugador pero existe igual, con su Juramento de Forja intacto y
 su clan menor presionándolo desde antes de que el grupo se formara. No es un deus

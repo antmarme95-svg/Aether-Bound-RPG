@@ -36,8 +36,10 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
    entero transcurre con el link ya muerto ([[Geografía y Ciudades]] §ACTO 3 sub-beat 2b,
    [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). Por eso acá no hay
    discurso: ya se dijo todo abajo.
-   *Excepción — ruta Bram:* Bram **rehúsa** en el corredor y devuelve a Speck al jugador; el
-   grupo sale intacto y es **Torgan**, esperando afuera del Archive, quien la toma.
+   *Excepción — ruta Bram:* Bram **rehúsa abajo, en la sala del Fragmento** (sub-beat 2b),
+   donde toma a Speck en brazos solo para devolvérsela al jugador. **El corredor del ascenso
+   pasa sin toma** — ése es el beat de la ruta. El grupo sale intacto y es **Torgan**,
+   esperando afuera del Archive, quien la toma.
 2. **Persecución** por The Wilds hacia The First Wound
    ([[Geografía y Ciudades]] §ACTO 3, sub-beat 4). Cada ruta tiene su sabor; ninguna cambia
    el destino, porque el destino no lo elige el Pivote (paso 0).
