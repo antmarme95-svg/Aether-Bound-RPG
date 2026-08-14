@@ -251,25 +251,37 @@ Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La le
 
 ## Nudo → Clímax: La Traición y Valen
 
-### Escena: The First Wound (Clímax Emocional)
+### Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso
 
-El Pivote declaró en la sala del Fragmento y se llevó a Speck en el **corredor** de salida, y llegó con ella al borde del cráter ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; [[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse, Speck reacciona, y la verdad completa sale.
+**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). **Acá es donde Valen reacciona.** El cráter, después, ya lo encuentra sabiendo.
 
-**Lo que se decide acá no lo decide el Pivote — lo decide el jugador.**
+**El patrón de Valen en 2b — el mismo en las nueve rutas, con nueve formas.** Valen **no sabía la traición y no la calló.** Lo que hace en esta sala es descubrir, en tiempo real, que **tenía el dato y lo archivó en la carpeta equivocada**. Su vergüenza es de método, no de complicidad: no es *"lo vi venir y no dije nada"*, es *"lo registré, lo clasifiqué mal, y la clasificación era yo."* Es la única cosa en noventa años que Valen no puede convertir en dato sobre otro, porque el dato es sobre él.
 
-**Valen aquí:**
+**Regla de escritura (obligatoria):** Valen **nunca dice que ya sabía**. Cualquier línea con forma de *"I know"* — superioridad, anticipación, saber-y-callar — está fuera de canon y contradice las nueve celdas.
 
-Valen **ya sabía.** No la traición específica, pero **la estructura de ella.** Notó cuando el Pivote comenzó a hacer cálculos paralelos hace semanas.
+**Forma por ruta — las líneas ya están escritas y esta ficha las cita, no las reescribe** ([[El Cráter — Matriz de Rutas]] §"Regla de uso para las 13 fichas": los fijos narran su reacción, nunca el quiebre en sí):
 
-Su reacción es la más **fría** del grupo — la más devastadora es el silencio de Roen ([[Roen-Ficha-Expandida-v1]]); la de Valen es la más difícil de responder: **dos palabras, sin emoción.**
+- **Maren** — no afirma, **pregunta**, única vez del Acto 3 que le pide a alguien confirmar un dato en vez de exponerlo: [[Pivotes/Maren-Ficha-Expandida-v1|Maren]] §sub-beat 2b.
+- **Sereth** — *"I filed it as intellectual growth."* El lector de trayectorias, leído: [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] §sub-beat 2b.
+- **Iven** — *"I filed it as homesickness."* No se lo dice a Iven: se lo dice al jugador dos horas después, en el ascenso: [[Pivotes/Iven-Ficha-Expandida-v1|Iven]] §sub-beat 2b.
+- **Torgan** — *"El Juramento era una variable que superaba mis modelos."* Le interesa genuinamente, y eso lo avergüenza al segundo siguiente: [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §sub-beat 2b.
+- **Vekka** — *"I logged both… I did not connect them."* Dos gestos mínimos, cuarenta minutos de distancia, ninguna línea entre ellos: [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 2b.
+- **Dagna** — *"Las cartas desde Emberdeep. Debí haber preguntado."* **La única del set donde la falla no es de modelo sino de carácter** (§Valen + Dagna): [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 2b.
+- **Lyris** — el único que no dice nada en la sala; la línea llega mucho después, en la superficie: *"She walked the whole way in. I told myself it was reverence."* [[Pivotes/Lyris-Ficha-Expandida-v1|Lyris]] §sub-beat 2b.
+- **Nyael** — ruptura por ausencia; Valen lo dice para sí, no para nadie: *"She never said goodbye because she already had."* [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §sub-beat 2b.
+- **Bram** — la excepción: no hay traición que archivar. Valen es **el segundo en entender**, detrás de Roen y tres segundos antes que Darro: [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 2b.
 
-*"I know."*
+**Valen en el ascenso.** Vuelve al oficio, que es lo único que tiene: mide el tramo, calcula la ruta, dice en voz alta las distancias. **Nadie se lo pide.** Es un hombre que acaba de descubrir que su método falló usando el método para no pensar. En las rutas donde su línea llega tarde (Iven, Lyris), llega en este tramo — nunca en el cráter.
 
-No es "ya lo sabía" con superioridad. Es **"vi venir tu dolor y no pude salvarte de él."**
+### Escena 2: The First Wound, en el cráter
 
-Después, cuando el caos termina: Valen mira al jugador.
+**Acá ya no hay revelación para Valen.** Subió el Archive entero y cruzó la persecución sabiéndolo, y llega al borde con la reacción ya gastada abajo. Lo que queda es **contención**: el Fragmento termina de activarse, Speck reacciona (E3, hive mind forzado), y Valen nombra lo que ve con la voz de siempre, más baja.
 
-*"No hice nada. Podría haber advertido diferente, dicho más claro. No lo hice. Eso es en mí."*
+**Lo que se decide acá no lo decide el Pivote — lo decide el jugador.** Valen tampoco decide: **ofrece la lectura y se calla.** Si el jugador se lo pregunta, dice qué cree que va a pasar con cada opción, sin recomendar ninguna — es la única forma de ayuda que sabe dar y él sabe que no alcanza. Si el jugador no le pregunta nada, no interviene.
+
+Su cierre no es reproche a nadie ni confesión de haber sabido. Es contable: mira al jugador cuando el caos termina y dice qué archivó mal, con qué etiqueta, y cuándo. **La línea exacta la fija la ruta** (arriba); en el cráter solo se repite si el jugador se la pide.
+
+Su beat de ruta en el cráter —la línea que le dirige al Pivote, cuando la tiene— vive en §Dinámicas con el Pivote, no acá.
 
 ---
 
@@ -283,9 +295,9 @@ Proporciona datos: dónde fue el Pivote, qué recursos necesitará, qué ruta el
 
 **No es venganza.** Es **eficiencia de información**.
 
-### The First Wound (Clímax Emocional)
+### The First Wound — Valen en los cinco finales
 
-El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
+El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1). La reacción de Valen al quiebre ya ocurrió abajo (§Escena 1); lo que sigue son sus líneas **después** de que el jugador decide.
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
@@ -395,7 +407,7 @@ Su línea final:
 *(Escrita 2026-08-11: era el único hueco de la matriz 3 fijos × 9 Pivotes — Roen y Darro tenían las 9, Valen tenía 8.)*
 **Primera impresión:** Valen no la registra. Dagna no habla en los primeros tramos, no pregunta, no ofrece lectura de nada — y el instrumento con el que Valen mide a la gente es qué preguntan. Durante semanas la clasifica como músculo leal, que es exactamente el error que todo el mundo comete con Dagna y el que su ficha existe para castigar.  
 **Tensión:** la corrige ella, una sola vez, sin levantar la voz. Valen explica por qué el patrón de Mudas se acelera y termina con su formulación de siempre — que nadie eligió esto, que es un sistema fallando. Dagna: *"Alguien lo eligió. Solo que hace tanto que ya nadie tiene que volver a elegirlo."* Valen se queda callado más tiempo del que se queda callado nunca. Es la primera vez en noventa años que alguien le señala que su marco —el sistema como fenómeno sin autor— es también una forma de no mirar. Después de eso le habla distinto: menos cátedra, más pregunta.  
-**Traición:** es la que peor le cae, y no por sorpresa — por lo contrario. Valen **sí vio el patrón**: las cartas desde Emberdeep, la frecuencia, el remitente. Lo vio y lo dejó pasar, por respeto élfico a un silencio ajeno, que es su forma más cara de cortesía. Su línea en la escena de la toma es *"Las cartas desde Emberdeep. Debí haber preguntado"* ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5, que es la fuente del beat), y el peso está en que **el respeto costó**. Con las otras ocho traiciones Valen calcula y espera estar equivocado; con ésta no calculó nada — decidió no mirar. **Es la única del set donde su falla no es de modelo sino de carácter**, y por eso es la que no puede convertir en dato sobre el traidor: el dato es sobre él.
+**Traición:** es la que peor le cae, y no por sorpresa — por lo contrario. Valen **sí vio el patrón**: las cartas desde Emberdeep, la frecuencia, el remitente. Lo vio y lo dejó pasar, por respeto élfico a un silencio ajeno, que es su forma más cara de cortesía. Su línea en la escena de la toma es *"Las cartas desde Emberdeep. Debí haber preguntado"* ([[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 2b, que es la fuente del beat), y el peso está en que **el respeto costó**. Con las otras ocho traiciones Valen calcula y espera estar equivocado; con ésta no calculó nada — decidió no mirar. **Es la única del set donde su falla no es de modelo sino de carácter**, y por eso es la que no puede convertir en dato sobre el traidor: el dato es sobre él.
 
 Llega después del beat de la cifra errónea (Grove of Cycles, Acto 2 — §El beat de la cifra errónea) y **lo dobla**: primero descubre que su método se apoyaba en un número falso, y después que el método no era el problema.
 

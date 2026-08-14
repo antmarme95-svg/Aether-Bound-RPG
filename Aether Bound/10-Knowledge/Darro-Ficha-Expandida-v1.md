@@ -216,36 +216,44 @@ Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive,
 
 ## Nudo → Clímax: La Traición y Darro Quiebra
 
-### Escena: The First Wound (Clímax Emocional — Darro Explota)
+### Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso
 
-El Pivote declaró en la sala del Fragmento y se llevó a Speck en el **corredor** de salida, y llegó con ella al borde del cráter ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; [[El Cráter — Matriz de Rutas]] §1). Acá el Fragmento termina de activarse y Speck reacciona.
+**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). **Acá es donde Darro grita.** El cráter, después, ya no tiene grito que dar.
 
-**Para Darro, la pérdida ya ocurrió río arriba. Esto es verla confirmarse.**
+**El patrón de Darro en 2b — el mismo en las nueve rutas, con nueve formas.** Darro es **el que explota**, y explota **abajo, en la sala**: el nombre del Pivote a todo volumen, una o varias veces, de frente, sin cálculo. Es su función dramática en esa escena — el grupo entero contiene y él no. Quiere cargar contra el Pivote ahí mismo y no puede: nadie forcejea con Speck cerca del Fragmento y hasta furioso Darro lo sabe ([[Speck]] §Capa 5). Lo que grita no es *"yo quería eso"*, es **"violaste promesa. Nombre es promesa."**
 
-**Darro aquí:**
+**Regla de escritura (obligatoria):** el grito de Darro es **de la sala del Fragmento**, no del cráter, y **su beat de silencio es del cráter y de una sola ruta** (Vekka). Ninguna escena genérica puede decir que Darro grita por primera vez en el cráter, ni que se queda mudo en las nueve rutas: las dos formulaciones rompen superlativos ya fijados.
 
-Es **el que más explota emocionalmente en el momento.**
+**Forma por ruta — las líneas ya están escritas y esta ficha las cita, no las reescribe** ([[El Cráter — Matriz de Rutas]] §"Regla de uso para las 13 fichas": los fijos narran su reacción, nunca el quiebre en sí):
 
-- Grita. Ataques erráticos. Quiere cargar contra el Pivote ahí mismo, y no puede — forcejear cerca del core mataría a Speck, y hasta furioso Darro lo sabe.
-- Por primera vez en la campaña, **Darro está furioso y serio.**
+- **Maren** — *"¿¡MAREN!? ¡¿ASÍ NADA MÁS?!"* No entiende el género de lo que pasó: [[Pivotes/Maren-Ficha-Expandida-v1|Maren]] §sub-beat 2b.
+- **Sereth** — *"¿¡SERETH!? ¿¡QUÉ MIERDA!?"* y después la misma pregunta de tres maneras durante todo el ascenso: [[Pivotes/Sereth-Ficha-Expandida-v1|Sereth]] §sub-beat 2b.
+- **Iven** — *"¡¡¡IVEN!!! ¡¡SPECK CONFIABA EN TI!!"*, y mucho más bajo: *"Le daba de comer, carajo."* [[Pivotes/Iven-Ficha-Expandida-v1|Iven]] §sub-beat 2b.
+- **Torgan** — *"¡¡MALDITA SEA, TORGAN!!"*, **de frente**, a un hombre que lo mira y no se defiende: [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §sub-beat 2b.
+- **Vekka** — grita mucho y no obtiene ni una mirada, igual que hace treinta años en el taller. **Su mutismo no es acá**: [[Pivotes/Vekka-Ficha-Expandida-v1|Vekka]] §sub-beat 2b.
+- **Dagna** — *"¡DAGNA!"* una sola vez, la mano a medio subir; después habla todo el ascenso **sin una sola broma**: [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 2b.
+- **Lyris** — grita hacia arriba hasta quedar ronco y no recibe **nada**, que es lo que lo desarma: [[Pivotes/Lyris-Ficha-Expandida-v1|Lyris]] §sub-beat 2b.
+- **Nyael** — no hay a quién gritarle. *"Dijo que revisaba atrás."* Y se le apaga la voz a mitad de la frase: [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §sub-beat 2b.
+- **Bram** — la excepción: no hay traición. Darro tarda **tres segundos más que Roen y Valen** en entender, y lo que sigue es alivio, no grito: [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 2b.
 
-*"¿QUÉ HICISTE? ¡SPECK NO ES TUYO PARA TOMAR!"*
+**Darro en el ascenso.** Sube hablando o sube callado según la ruta (ver arriba), pero en las nueve **no hace un solo chiste** — y ése es el marcador que el grupo registra sin comentarlo. El humor de Darro es oficio de veinticinco años en el camino (§Salida de Emberdeep); que se apague es la señal más legible de que algo se rompió.
 
-No es "yo quería eso" — es **"violaste promesa. Nombre es promesa."**
+### Escena 2: The First Wound, en el cráter
 
----
+**Acá ya no hay revelación para Darro.** Gritó abajo, subió el Archive entero sabiéndolo y cruzó la persecución con eso encima. En el borde llega con la furia ya gastada, y lo que queda es **una determinación sin volumen**: se planta donde pueda cubrir a Speck y no se mueve de ahí. **No vuelve a gritar el nombre del Pivote** — repetirlo sería pedir algo, y a esta altura Darro ya sabe que no le van a contestar.
 
-Después, cuando los ánimos se calman:
+**Su comentario del cráter es corto, y es al jugador, no al Pivote:** *"Nombre es promesa, hermano. Sigue siéndolo."* No es discurso ni exigencia — es recordarle al jugador que él está ahí, con la decisión que sea.
 
-Darro simplemente se **sienta.** Lejos del grupo. Silencio absoluto — lo más raro posible de Darro.
+**Excepciones de ruta, ya escritas, que mandan sobre esta escena genérica:**
 
-Roen lo deja. Valen lo observa. El jugador puede ir o no.
+- **Vekka:** Darro **se queda mudo — la única vez en toda la campaña** (§Darro + Vekka, fuente única del superlativo). Ninguna línea de esta escena aplica en esa ruta.
+- **Dagna:** Darro **se sienta en el suelo junto a Roen** y baja su propia arma, en silencio elegido, no mudez (§Darro + Roen; [[Pivotes/Dagna-Ficha-Expandida-v1|Dagna]] §sub-beat 5).
 
-Si vas con él, Darro está llorando. **De verdad.** No bronceando.
+**Después, cuando el jugador ya decidió** — y **solo en las siete rutas que no son Vekka ni Dagna** —, Darro se aparta unos pasos. Si el jugador va con él, está llorando de verdad, sin brillo:
 
-Darro: "La primera responsabilidad que acepté voluntariamente. Y la pierdo. Hermano, eso duele diferente."
+Darro: *"La primera responsabilidad que acepté voluntariamente. Y la pierdo. Hermano, eso duele diferente."*
 
-Luego: "No voy a dejar de buscar a Speck. Aunque tenga que matar al Pivote para hacerlo. Aunque el mundo se acabe. Speck es Speck. Nombre es promesa."
+Luego, si Speck no está: *"Nombre es promesa. La promesa no se cae porque ella no esté para oírla."*
 
 ---
 
@@ -257,9 +265,9 @@ Darro **lidera la búsqueda.** No tácicamente como Valen, no emocionalmente com
 
 *"Vamos. Dijo Speck. Cumplimos promesa."*
 
-### The First Wound (Clímax Emocional)
+### The First Wound — Darro en los cinco finales
 
-El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1).
+El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1). La reacción de Darro al quiebre ya ocurrió abajo (§Escena 1); lo que sigue son sus líneas **después** de que el jugador decide.
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 
