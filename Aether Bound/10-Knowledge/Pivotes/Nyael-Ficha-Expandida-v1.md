@@ -8,7 +8,7 @@ updated: 2026-07-27
 
 **Raza / Rol:** Elfa (the Aether-Born) / Duelist  
 **Origen:** The Stillspire — reclutada de niña por el brazo encubierto de the Royal Academy  
-**Edad aparente:** 180-210 años (adulta, veterana)  
+**Edad:** **190 años** (adulta plena para elfa de 650-700 de esperanza, [[Las Tres Razas]] — veterana, no anciana; aritmética fija, ver §Aritmética canónica)  
 **Arquetipo de Traición:** Ausencia — no confrontación, solo nota dejada. Superlativo: **la traición como ausencia** — única del elenco que no confronta (ver [[Los 5 Finales]] — fila Deber Institucional).  
 
 ---
@@ -55,7 +55,9 @@ dedicados a **ejecución perfecta.** No asesinato — ejecución. Hay diferencia
 
 Nyael fue entrenada desde niña para ser **invisible.** No literalmente (aunque técnicas llegan cerca). Invisible en el sentido de no dejar rastro emocional, no dejar rastro físico, no dejar rastro mental.
 
-A los 50 años, Nyael era ejecutora perfecta — había completado 40 ejecuciones, ninguna dejó evidencia de ella.
+**Aritmética canónica de la ficha (fija, no negociable):** edad hoy **190**. Reclutada de niña; **formación bajo su maestra hasta los 90** — por eso "la maestra que la entrenó **cien años atrás**" es literal, no aproximación. **Siglo de servicio pleno: 90 → 190 = cien años exactos.** Ejecuciones: **40 durante la formación** (las primeras 40 ya completadas a los 50) y **200 en el siglo de servicio pleno** — **total: 240**. La línea canónica *"Ejecuté 200 blancos en cien años"* se refiere al siglo de servicio, no al total de su vida, y es correcta como está. Todo rango del tipo "180-210" es residuo de versiones anteriores y está corregido aquí.
+
+A los 50 años, todavía en formación, Nyael ya era ejecutora perfecta — había completado **40 ejecuciones**, ninguna dejó evidencia de ella.
 
 ### Años de Eficiencia Silenciosa (edades 100-180)
 
@@ -240,7 +242,7 @@ Es **Roen** quien lo nombra, y lo nombra en el peor momento posible: con la lect
 
 No hay discusión. No hay nadie que proponga volver a buscarla. **El grupo entiende sin que nadie lo diga**, que es la fórmula exacta del canon, y lo que sigue es que cierran filas alrededor de Speck y siguen subiendo. Valen es el único que dice algo, y lo dice para sí: *"She never said goodbye because she already had."* Solo el jugador sabe a qué se refiere, y solo si vio la caricia.
 
-**Acá muere el link**, exactamente igual que en las otras ocho celdas: The Weaver's Net deja de responder desde esta escena. El juego no lo anuncia; el jugador lo descubre picándolo.
+**Acá muere el link**, exactamente igual que en las otras **siete** celdas donde muere — **Bram es la excepción del elenco: su link nunca muere** ([[Bond y el Bond Vacío]] §La excepción de Bram). The Weaver's Net deja de responder desde esta escena. El juego no lo anuncia; el jugador lo descubre picándolo.
 
 #### La trampa amorosa — la red que nadie atraviesa
 
@@ -376,7 +378,7 @@ El jugador la ve, con el tiempo, dejar de necesitar la maestra centenaria del br
 
 **Contexto:** El momento de Nyael donde **rompe con la maestra centenaria del brazo encubierto** que la formó — no con el jugador, no con Stillspire, no con la Corona. Con la mujer específica que le enseñó a esperar. El jugador es la razón nueva por la que Nyael, por primera vez en cien años de servicio, se atreve a decir en voz alta que su tradición estuvo equivocada — pero no es maestro de Nyael. Es par. La lección no bajó; se compartió lateralmente.
 
-**Nota histórica:** la versión previa de esta línea (*"You taught me to set the trap and wait. I could not wait."*) hacía al jugador maestro de Nyael, lo cual contradice la aritmética del personaje (180-210 años, 200 ejecuciones, entrenada desde niña por una institución centenaria). Reemplazada 2026-07-27.
+**Nota histórica:** la versión previa de esta línea (*"You taught me to set the trap and wait. I could not wait."*) hacía al jugador maestro de Nyael, lo cual contradice la aritmética del personaje (190 años, un siglo de servicio pleno, entrenada desde niña por una institución centenaria — ver §Aritmética canónica). Reemplazada 2026-07-27.
 
 ---
 

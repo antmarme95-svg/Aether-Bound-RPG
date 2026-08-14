@@ -361,7 +361,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F1 — el mensajero de Fronti
 
 Lyris no forcejea por eso: sin nadie a quien entregarle la pieza, se queda suspendida donde está, **sosteniendo a Speck sin bajarla** — no la suelta, no la entrega, no la lleva a ningún lado, y nadie se la quita. Sostiene la mirada del jugador mientras la Muda se completa ahí mismo, en sus brazos. Es lo más parecido a un dato que Lyris puede procesar en el momento: la cadena se cortó, y sin cadena no hay instrucción para lo que sigue — así que se queda quieta hasta que deja de haber nada que sostener.
 
-Neutralizada, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
+**Con el mensajero neutralizado** — el neutralizado es él, no ella; a Lyris nadie la toca —, Lyris **se queda quieta en su cielo.** No baja al grupo. Sobrevuela el sitio de la Muda durante días — cinco, quizás siete — sin descender, sin comunicar. Es su forma de "estar sin estar": presencia sostenida en altitud, ausencia sostenida en tierra.
 
 **Y desde ahí arriba es la única del elenco que ve el costo completo.** Lyris sobrevuela las tres capitales en las semanas siguientes y las ve **apagarse una por una** — Emberdeep sin el resplandor de las forjas, Rivermeet a oscuras salvo por fuego real, The Stillspire con las luces de Aether muertas y los árboles, por primera vez en siglos, siendo lo único que brilla. Nadie más en el mundo tiene ese punto de vista. Nadie más entiende la escala de lo que se dejó pasar en el cráter. Ella no lo cuenta a nadie.
 
@@ -395,7 +395,7 @@ Frontier High Command marca su expediente como "no retornada"; envían nueva ras
 
 Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Lyris suelta.
 
-Lyris **no aparece en el epílogo.** Está sobre el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: desciende lo justo para dejar a Speck de pie del lado seguro del borde, sin forcejeo, y asciende de nuevo sin volver a bajar. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
+Lyris **no aparece en el epílogo.** Está sobre el borde sosteniendo a Speck (§sub-beat 5) cuando ve al jugador cruzar hacia el core central — **específicamente en ese instante**, no antes: desciende lo justo para dejar a Speck de pie **del otro lado del borde — el lado del core central, donde queda el jugador después de cruzar** ([[El Cráter — Matriz de Rutas]] §2, nota de la excepción de holder aérea, y §4; el jugador la recoge ahí), sin forcejeo, y asciende de nuevo sin volver a bajar. No confronta, no desafía, no negocia. El cielo es la salida, y Lyris toma la salida en cuanto el dato — el jugador quiere el poder para sí — queda claro.
 
 Años después, si el jugador convertido en tirano intenta rastrearla, no la encuentra — Lyris es rastreadora, sabe cómo no ser rastreada. Su ausencia es más completa que la de cualquier otro compañero que huyó de F3: nunca deja huella. Es como si Lyris nunca hubiera bajado del cielo, retroactivamente.
 
