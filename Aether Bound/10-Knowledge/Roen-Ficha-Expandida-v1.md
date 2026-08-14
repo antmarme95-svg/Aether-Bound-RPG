@@ -64,21 +64,21 @@ Roen conoce al jugador en un **momento de fracaso cultural específico**. No sie
 
 ### Origen Mistbound (Infancia/Adolescencia)
 
-Nació en un puesto fronterizo entre The Wilds y las ciudades humanas — lugar donde la corrupción del Aether es tangible, no abstracta. Los nidos de bestias se acercaban cada generación. Su infancia fue vigilancia constante.
+Nació en un **puesto de vigilancia interior** de Mistbound Frontier — **no la trinchera contra The Wilds**, sino la tierra remota donde el Triune Council pierde control administrativo por pura distancia ([[Geografía y Ciudades]] §Mistbound Frontier). No hay nidos acercándose, no hay corrupción de Aether tangible: hay un puesto que registra convoyes que casi nunca llegan, un libro de novedades donde la mayoría de los renglones dicen *sin novedad*, y una guarnición que existe porque alguien en Rivermeet la anotó una vez y nadie la volvió a mirar. **Su infancia fue vigilancia constante de nada.** Esa es la lección primera de Roen y la que explica todo lo demás: plantarse no es emocionante, y se hace igual.
 
-Su padre fue guardián fronterizo. No fue héroe — fue alguien que se plantaba cada mañana sabiendo que quizá no volvería. Roen lo vio hacer eso todos los días. Cuando su padre murió en una purgación (Roen tenía 12 años), nadie lo dramaturzó: el trabajo siguió. Eso fue la lección.
+Su padre fue guardián de ese puesto. No fue héroe — fue alguien que se plantaba cada mañana sabiendo que probablemente no iba a pasar nada, y que ese "probablemente" era exactamente el trabajo. Roen lo vio hacer eso todos los días. Cuando su padre murió (Roen tenía 12 años), no murió defendiendo el puesto: lo mandaron con una columna a una purgación en otro distrito, porque el Council saca hombres de donde haya hombres, y la noticia tardó semanas en volver a Mistbound. Nadie lo dramaturzó: el trabajo siguió. Eso fue la segunda lección.
 
-**Marca cultural:** Warpaint fronterizo geométrico verde — personal, no oficial. Lo lleva desde los 15 años. Nunca lo ha quitado, aunque hace 5 años que no vive en la frontera (sirvió allí como guardia del Council de los 25 a los 40 y renunció a los 40 — ver §Años de Guardia). Long-faded ahora. Es la única conexión visible a su origen.
+**Marca cultural:** Warpaint geométrico verde de Mistbound — personal, no oficial. Lo lleva desde los 15 años. Nunca lo ha quitado, aunque hace 5 años que no vive allá (sirvió en Mistbound como guardia del Council de los 25 a los 40 y renunció a los 40 — ver §Años de Guardia). Long-faded ahora. Es la única conexión visible a su origen.
 
 ### Años de Guardia del Triune Council (15 años, edades 25-40)
 
 Se alistó en el Triune Council como guardia de élite. Fue bueno en eso — disciplinado, presente, de confianza. Ascendió lentamente porque no buscaba poder, solo hacer el trabajo bien.
 
-**Lo que vio en el Triune Council:** políticos tomando decisiones sobre vidas que nunca verían. Cálculos que sacrificaban fronteras a cambio de estabilidad urbana. El sistema funcionaba, pero pagaban los de afuera — gente como la de su infancia.
+**Lo que vio en el Triune Council:** políticos tomando decisiones sobre vidas que nunca verían. Cálculos que sacrificaban la periferia a cambio de estabilidad urbana — y la periferia, en el papeleo, ni siquiera es un frente que defender: es un renglón de costo que se puede recortar sin que nadie en Rivermeet lo note. El sistema funcionaba, pero pagaban los de afuera — gente como la de su infancia.
 
 Pasó 15 años siendo la espada del sistema, sabiendo que el sistema no funcionaba para todos.
 
-**Quiebre:** Hace 5 años, tras una purgación donde el Triune Council ordenó destruir un asentamiento Mistbound completo porque "albergaba corrupción", Roen vio morir a civiles. Niños. El Triune Council los llamó "sacrificio necesario".
+**Quiebre:** Hace 5 años, tras una purgación donde el Triune Council ordenó destruir un asentamiento Mistbound completo porque "albergaba corrupción", Roen vio morir a civiles. Niños. El Triune Council los llamó "sacrificio necesario". **Roen sabe que en Mistbound no hay corrupción de Aether que albergar** — se crió ahí, el libro de novedades de su padre lo decía todos los días. La palabra "corrupción" era papeleo: la excusa administrativa más barata para borrar un renglón que costaba y no rendía. Y el eco es exacto: al padre lo sacaron de ese mismo puesto para una purgación, y volvió como noticia con semanas de retraso.
 
 Roen fue a la reunión del Triune Council después. No gritó. Simplemente dijo: "Ya no". Dejó el escudo en la puerta. Se fue.
 
