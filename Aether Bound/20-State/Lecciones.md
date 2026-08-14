@@ -10,6 +10,30 @@ updated: 2026-08-12
 
 ## Lecciones (no repetir)
 
+### Godot 4.7 — hook de telemetría del playtest (2026-08-13)
+
+- **Un error de compilación NO hace fallar un test de GDScript.** El test
+  del hook imprimió `ALL_PASS` con un bloque entero muerto: `ledge_zone.gd`
+  no compilaba, `LedgeZoneScript.new()` devolvió basura, el bloque murió con
+  `SCRIPT ERROR` en la salida — y el contador de fallas quedó en cero,
+  porque un error de script no lo toca. **Regla: todo script que un test
+  instancia se verifica con `can_instantiate()` en un bloque previo.** Es la
+  cuarta vez en dos días que un instrumento reporta verde sin haber medido;
+  el patrón no es el bug, es confiar en el reporte sin mirar la salida
+  completa.
+- **En `--script`, no inferir tipos desde funciones que devuelven una clase
+  global (`class_name`).** `var t := _resolve_telemetry()` con retorno
+  `-> BondTelemetry` falla con *"Cannot infer the type"*: la caché de
+  `class_name` no está garantizada en ese modo. Tipar contra el script
+  **precargado** (`const X = preload(...)`) o dejarlo sin tipo. Vale también
+  para constantes: `BondTelemetry.PHASE_CON` → `TelemetryScript.PHASE_CON`.
+- **Un cuerpo físico que nace en el origen y se teletransporta después
+  dispara un `body_entered`/`body_exited` fantasma.** Queda registrado en el
+  servidor de física en su posición de nacimiento y el `Area3D` lo detecta
+  antes de que el teletransporte se aplique. En la escena del playtest eso
+  ensucia el CSV en cada respawn. **El jugador nace donde arranca**: fijar
+  `position` **antes** del `add_child`.
+
 ### Godot 4.7 — importación de FBX y retargeting (spike ADR-003, 2026-08-12)
 
 - **No re-apropiar (`owner = root`) los hijos de una escena instanciada

@@ -1,5 +1,47 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-13] código | Hook de telemetría del Protocolo A — implementado y verificado
+
+Primera línea de código escrita después del consejo, y es la que el
+[[Protocolo-de-Playtest]] §4.1 marcaba como bloqueante de la métrica
+primaria: sin esto, el test gris del Bond no tiene P, T ni U.
+
+**Seis archivos en `godot/`:** `scripts/telemetry.gd` (el grabador),
+`scripts/ledge_zone.gd` (el volumen de la cornisa), `scripts/bond_driver.gd`
+(el botón y el corte del minuto 5), `tools/telemetry_analysis.gd` (deriva y
+clasifica), `tools/telemetry_report.gd` (informe y veredicto) y
+`tools/test_telemetry.gd` (**50 verificaciones, ALL_PASS**).
+
+**Tres decisiones del código que son del protocolo y no de ingeniería:**
+1. **El hook no filtra.** Registra cada pulsación —viva o muerta, dentro o
+   fuera de la zona— y filtra el derivador. Si filtrara el hook, el dato se
+   perdería sin forma de recuperarlo terminada la sesión.
+2. **Flush por línea.** Una sesión no se puede repetir: si el build se
+   cuelga en el minuto 9, los 9 minutos tienen que estar en disco.
+3. **Los umbrales no se pasan por línea de comandos.** Son constantes.
+   Cambiarlos es un commit con fecha y autor, que es lo que §6 pide.
+
+**Un hueco encontrado al correr el informe de punta a punta:** una sesión
+cuya fase CON duró 0.1 s salió clasificada 🔴 como si fuera un resultado. El
+protocolo lo cubre por el lado humano (el facilitador la marca como fallo
+técnico) pero depende de que se acuerde. Se agregó una **bandera** que avisa
+cuando la fase CON duró mucho menos de lo diseñado — **y no reclasifica**.
+Un umbral que Boris no firmó no puede mover un resultado.
+
+**Tres lecciones a [[Lecciones]], las tres verificadas:**
+- **Un error de compilación no hace fallar un test de GDScript.** El test
+  imprimió `ALL_PASS` con un bloque entero muerto. Cuarta vez en dos días
+  que un instrumento reporta verde sin haber medido. Regla nueva: todo
+  script que el test instancia se verifica con `can_instantiate()` antes.
+- En `--script` no se puede inferir tipo desde una función que devuelve una
+  clase global; la caché de `class_name` no está garantizada.
+- Un cuerpo físico que nace en el origen y se teletransporta dispara un
+  enter/exit fantasma. **El jugador nace donde arranca.**
+
+**Lo que sigue siendo trabajo:** la escena gris. El hook está listo y
+probado; falta el nivel — geometría de caja, cápsula, y una cornisa
+alcanzable solo con el botón.
+
 ## [2026-08-13] método/playtest | Protocolo de Playtest — dos protocolos y el criterio de muerte firmable
 
 **Encargo de la sesión técnica**, derivado del consejo del 2026-08-13

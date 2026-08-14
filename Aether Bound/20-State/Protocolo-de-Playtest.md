@@ -227,6 +227,40 @@ es dato: preguntar "¿se rompió?" es una forma de insistir.
 Es código y va en el build. **Sin esto el Protocolo A no tiene métrica
 primaria y no se corre.**
 
+> ### ✅ Implementado y verificado (2026-08-13)
+>
+> | Archivo | Qué es |
+> |---|---|
+> | `godot/scripts/telemetry.gd` | El grabador. Un CSV por sesión, **flush por línea** |
+> | `godot/scripts/ledge_zone.gd` | El volumen de la cornisa (`Area3D`) |
+> | `godot/scripts/bond_driver.gd` | El botón y el corte del minuto 5, **en silencio** |
+> | `godot/tools/telemetry_analysis.gd` | Deriva P, T, U y clasifica |
+> | `godot/tools/telemetry_report.gd` | Imprime el informe y el veredicto |
+> | `godot/tools/test_telemetry.gd` | 50 verificaciones, `ALL_PASS` |
+>
+> ```
+> godot --headless --path godot --script res://tools/test_telemetry.gd
+> godot --headless --path godot --script res://tools/telemetry_report.gd -- --dir=user://telemetry
+> ```
+>
+> **Tres decisiones que tomó el código y conviene que estén acá:**
+>
+> 1. **El hook no filtra nada.** Registra *cada* pulsación —viva o muerta,
+>    dentro o fuera de la zona— y el filtrado lo hace el derivador. Si el
+>    hook filtrara, el dato se perdería y no habría cómo recuperarlo después
+>    de la sesión.
+> 2. **Flush por línea, no al cerrar.** Una sesión de playtest no se puede
+>    repetir: si el build se cuelga en el minuto 9, los 9 minutos tienen que
+>    estar en disco.
+> 3. **Los umbrales no se pueden pasar por línea de comandos.** Están como
+>    constantes en `telemetry_analysis.gd`. Cambiarlos es un commit, con
+>    fecha y autor — que es lo que §6 pide.
+>
+> **Y una que el código NO tomó:** el derivador levanta una bandera cuando
+> la fase CON duró mucho menos de 5 minutos (la sesión se cortó y nadie la
+> marcó como fallo técnico), pero **no reclasifica**. Avisa y nada más. Un
+> umbral que no firmaste no puede mover un resultado.
+
 **Eventos a registrar**, uno por línea, a CSV por sesión:
 
 | Evento | Cuándo se dispara | Campos |
@@ -572,8 +606,13 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
 
 - **Firmar §0** (umbrales, condición de validez, regla de lectura
   negativa). **Bloquea correr el Protocolo A.**
-- **Implementar el hook de telemetría de §4.1** — sesión técnica. Bloquea
-  la métrica primaria.
+- ~~**Implementar el hook de telemetría de §4.1**~~ ✅ **hecho 2026-08-13**,
+  con test propio (50 verificaciones). Detalle en §4.1.
+- **Construir la escena gris** (geometría de caja, cápsula, una cornisa
+  alcanzable solo con el botón) y cablear los tres scripts. El hook está
+  listo; falta el nivel. **Regla que salió del test: el jugador nace donde
+  arranca, no se teletransporta después** — spawnear en el origen y mover
+  produce un enter/exit fantasma en el CSV.
 - **Fijar fecha con Diego, Santiago y Delmer.** Disponibilidad ya
   confirmada ([[ADR-003 Reset de desarrollo y motor]] §C); falta fecha,
   que depende de la entrega del build.

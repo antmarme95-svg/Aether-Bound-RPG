@@ -558,10 +558,28 @@ agachada. El jugador sigue idle en los dos motores.
    motor, no duelo. Solo habilita conclusiones de ejecución mecánica.
    **Ningún tester toca el build hasta que §0 esté firmado.**
 
-   **Dependencia que bloquea:** el **hook de telemetría** está
-   especificado evento por evento y campo por campo en
-   [[Protocolo-de-Playtest]] §4.1, para que lo implemente la sesión
-   técnica. Sin eso no hay métrica primaria.
+   **✅ Hook de telemetría IMPLEMENTADO y verificado (2026-08-13).** Era
+   la dependencia que bloqueaba la métrica primaria. 6 archivos en
+   `godot/`: `scripts/telemetry.gd` (grabador, un CSV por sesión con
+   flush por línea), `scripts/ledge_zone.gd` (el volumen de la cornisa),
+   `scripts/bond_driver.gd` (el botón y el corte del minuto 5 **en
+   silencio**), `tools/telemetry_analysis.gd` (deriva P/T/U y clasifica),
+   `tools/telemetry_report.gd` (informe + veredicto) y
+   `tools/test_telemetry.gd` (**50 verificaciones, ALL_PASS**).
+   ```
+   godot --headless --path godot --script res://tools/test_telemetry.gd
+   godot --headless --path godot --script res://tools/telemetry_report.gd -- --dir=user://telemetry
+   ```
+   Los umbrales viven como constantes en `telemetry_analysis.gd` y **no**
+   se pueden pasar por línea de comandos: moverlos es un commit con fecha
+   y autor, que es lo que §6 pide.
+
+   **⬜ Lo que ahora bloquea: la ESCENA GRIS.** Geometría de caja,
+   cápsula, y una cornisa alcanzable **solo** con el botón, puesta en una
+   ruta que el jugador recorra varias veces. El hook está listo y
+   probado; falta el nivel. Regla que salió del test: **el jugador nace
+   donde arranca** — spawnear en el origen y teletransportar produce un
+   enter/exit fantasma en el CSV.
 
    **Riesgos abiertos que nadie había nombrado** (los 3 primeros ya con
    instrumento en el protocolo): el gancho es una ausencia y **no se
