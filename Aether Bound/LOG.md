@@ -1,5 +1,34 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-13] decisión | §0 FIRMADO — el criterio de muerte del Protocolo A
+
+Boris firmó §0 de [[Protocolo-de-Playtest]]: umbrales (§0.3), condición de
+validez (§0.2) y regla de lectura negativa (§0.4). Las tres casillas.
+
+**Lo que queda cerrado, textual:**
+- 🟢 **P ≥ 3 y T ≥ 20 s** en 2 de 3 testers.
+- 🟡 P = 2 en la mayoría, o los 3 divergen. Rama INSTRUMENTO.
+- 🔴 P ≤ 1 en 2 de 3. Rama EJECUCIÓN mecánica.
+- **Validez previa:** con **U < 2 pulsaciones/min** en la fase CON, la
+  sesión no tiene resultado y la fase SIN no se interpreta.
+- Un 🔴 **no falsea el pilar**, y está prohibido usarlo para replantear el
+  juego, recortar alcance o abandonar. Un 🟢 tampoco lo prueba: es permiso
+  para gastar en B.
+
+**Por qué el orden importa y conviene dejarlo escrito:** se firmó **antes de
+que existiera la escena gris**, o sea antes de que hubiera un solo dato que
+pudiera contaminar el criterio. Era la condición que el consejo del 08-13
+puso como no negociable — *medir sin umbral pre-comprometido es confirmación
+disfrazada de método*. Cumplida.
+
+Los cuatro números están replicados como constantes en
+`godot/tools/telemetry_analysis.gd`, con el comentario de que a partir de
+ahora tocarlos es un commit con fecha y autor. El informe imprime la fecha
+de firma en cada corrida.
+
+**Casilla que sigue abierta:** el hash del build congelado, porque la escena
+gris todavía no existe. Lo que falta ya no es el criterio — es el build.
+
 ## [2026-08-13] código | Hook de telemetría del Protocolo A — implementado y verificado
 
 Primera línea de código escrita después del consejo, y es la que el

@@ -8,12 +8,22 @@ class_name TelemetryAnalysis
 ## veinte segundos reales, y verificar el veredicto de "2 de 3" no puede
 ## depender de conseguir tres personas.
 
-# --- §0.3, propuesta pendiente de firma de Boris -------------------------
+# --- §0.3, FIRMADO POR BORIS EL 2026-08-13 -------------------------------
+#
+# Estos cuatro numeros son el criterio de muerte del Protocolo A y estan
+# firmados. Se firmaron ANTES de que existiera la escena gris -- o sea antes
+# de que hubiera un solo dato que pudiera contaminarlos, que es la unica
+# forma de que el criterio valga.
+#
+# Cambiar cualquiera de ellos es un commit con fecha y autor, y §6 pide que
+# el impulso de moverlos se anote en el LOG aunque no se ejecute. Si estas
+# por editar esta seccion despues de ver un resultado: eso es exactamente lo
+# que el documento prohibe.
 const P_VERDE: int = 3
 const T_VERDE_S: float = 20.0
 const P_ROJO: int = 1
 const MAYORIA: int = 2          # "2 de 3"
-# --- §0.2, condicion de validez ------------------------------------------
+# --- §0.2, condicion de validez (firmada 2026-08-13) ---------------------
 const U_MINIMO: float = 2.0     # pulsaciones/min con el boton vivo
 # -------------------------------------------------------------------------
 ## Duracion de la fase CON segun §2 (5 minutos). NO es un umbral de

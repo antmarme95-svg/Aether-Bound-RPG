@@ -32,6 +32,7 @@ func _initialize() -> void:
 	print("PROTOCOLO A — derivados por sesion   (%s)" % dir_path)
 	print("umbrales: verde P>=%d y T>=%.0fs | rojo P<=%d | validez U>=%.1f/min"
 		% [TA.P_VERDE, TA.T_VERDE_S, TA.P_ROJO, TA.U_MINIMO])
+	print("§0 firmado por Boris el 2026-08-13, antes de que existiera un dato.")
 	print("=".repeat(74))
 
 	var analyses: Array = []

@@ -105,12 +105,33 @@ el duelo sea posible. Es permiso para gastar en B, nada más.
 
 | Campo | Valor |
 |---|---|
-| Umbrales de §0.3 | ⬜ firmados por Boris el ____________ |
-| Condición de validez §0.2 | ⬜ firmada |
-| Regla de lectura negativa §0.4 | ⬜ firmada |
-| Build congelado (hash) | ____________ |
+| Umbrales de §0.3 | ✅ **firmados por Boris el 2026-08-13** |
+| Condición de validez §0.2 | ✅ **firmada el 2026-08-13** |
+| Regla de lectura negativa §0.4 | ✅ **firmada el 2026-08-13** |
+| Build congelado (hash) | ⬜ pendiente — la escena gris todavía no existe |
 
 **Ningún tester toca el build hasta que las tres casillas estén marcadas.**
+Las tres lo están. Lo que falta ahora es el build, no el criterio — y por
+diseño ese orden es el correcto: **el criterio se firmó antes de que
+existiera nada que medir**, que es la única forma de que no lo contamine el
+resultado.
+
+> **Lo que la firma cierra, textual, para que no haya relectura después:**
+>
+> - **🟢 verde** = P ≥ 3 **y** T ≥ 20 s, en **2 de 3** testers.
+> - **🟡 amarillo** = P = 2 en la mayoría, o los 3 divergen. Rama
+>   INSTRUMENTO. No se concluye nada.
+> - **🔴 rojo** = P ≤ 1 en **2 de 3**. Rama EJECUCIÓN mecánica.
+> - **Validez previa:** con **U < 2 pulsaciones/min** en la fase CON, la
+>   sesión **no tiene resultado** y la fase SIN no se interpreta.
+> - **Un 🔴 no falsea el pilar** y está prohibido usarlo para replantear el
+>   juego, recortar alcance o abandonar. Un 🟢 tampoco lo prueba: es permiso
+>   para gastar en B.
+>
+> A partir de acá, mover cualquiera de estos números **es un commit con
+> fecha y autor**, y el impulso de moverlos se anota en el [[LOG]] aunque
+> no se ejecute (§6). Están replicados como constantes en
+> `godot/tools/telemetry_analysis.gd`.
 
 ---
 

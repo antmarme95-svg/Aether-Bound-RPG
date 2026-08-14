@@ -546,8 +546,13 @@ agachada. El jugador sigue idle en los dos motores.
    al amigo), y los 4 riesgos del consejo tienen pregunta o registro
    propio.
 
-   ⚠️ **§0 — el criterio de muerte está escrito y ESPERA TU FIRMA.**
-   Propuesta: 🟢 **P ≥ 3 pulsaciones y T ≥ 20 s** en 2 de 3 testers ·
+   ✅ **§0 — el criterio de muerte está FIRMADO (Boris, 2026-08-13),**
+   y se firmó **antes de que existiera la escena gris** — o sea antes de
+   que hubiera un solo dato que pudiera contaminarlo, que es la única
+   forma de que el criterio valga. A partir de acá, mover cualquiera de
+   estos números es un commit con fecha y autor, y el impulso de moverlos
+   se anota en el [[LOG]] aunque no se ejecute (§6).
+   Firmado: 🟢 **P ≥ 3 pulsaciones y T ≥ 20 s** en 2 de 3 testers ·
    🟡 P = 2 o divergencia (rama INSTRUMENTO, no concluye) · 🔴 P ≤ 1 en
    2 de 3. **Condición de validez previa:** si el tester usó el botón
    menos de **2 veces/minuto** cuando lo tenía, la fase sin él **no se
@@ -556,7 +561,8 @@ agachada. El jugador sigue idle en los dos motores.
    **Y la regla que más importa, ya escrita:** un 🔴 en el test gris
    **NO puede falsear el pilar** — un cubo sin vínculo mide un reflejo
    motor, no duelo. Solo habilita conclusiones de ejecución mecánica.
-   **Ningún tester toca el build hasta que §0 esté firmado.**
+   Un 🟢 tampoco prueba el pilar: es permiso para gastar en B.
+   **Lo que falta ya no es el criterio, es el build.**
 
    **✅ Hook de telemetría IMPLEMENTADO y verificado (2026-08-13).** Era
    la dependencia que bloqueaba la métrica primaria. 6 archivos en
