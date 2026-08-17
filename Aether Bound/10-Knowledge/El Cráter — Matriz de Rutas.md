@@ -333,6 +333,22 @@ fijo. Es la clase de error que dejó a cuatro archivos describiendo el quiebre d
 su epílogo de F2b, y que además reventó dos beats de "única vez en la campaña" al ubicarlos
 en la escena equivocada.
 
+**Regla de prescience — vale para los TRES fijos, no solo para Valen (fuente única).**
+Ningún fijo (Roen, Valen, Darro) anticipa la traición. En ninguna celda de Pivote, ni en
+2b, ni en la persecución, ni en el cráter, ni en §Dinámicas, un fijo dice ni se narra como
+*"ya sabía"*, *"esperaba estar equivocado"*, *"no está sorprendido"*, *"lo vio venir"*,
+*"as expected"* ni *"I know"*. **La forma canónica es la opuesta: el fijo archivó mal la
+señal** — la tuvo delante, la catalogó como otra cosa (cansancio, cariño, oficio,
+crecimiento intelectual, cortesía) y descubre en 2b que no conectó los puntos. "Ya sabía"
+implica prescience pasiva y complicidad; "archivé mal" implica un error de lectura genuino,
+que es lo que la escena necesita. Detalle del caso de Valen y sus nueve formas en
+[[Valen-Ficha-Expandida-v1|Valen]] §Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso.
+**Salvedad de tiempo:** después de 2b el grupo entero sabe. En los sub-beats 3, 4 y 5 un
+fijo puede saber — pero hay que **declarar de dónde viene el saber** (*"lo sabe desde la
+sala del Fragmento"*), nunca dejarlo como un "ya sabía" suelto que se lee como anticipación.
+Esta clase sobrevivió tres rondas de QA porque cada ronda la grepeó para un solo personaje.
+**Se grepea para los tres.**
+
 **Corolario — los superlativos de los fijos son frágiles.** Cuando una ficha dice "la única
 vez que Darro se queda mudo" o "la única grieta visible que Vekka permite", ese momento tiene
 que estar **en un solo lugar del vault**. Antes de escribir un superlativo de reacción,

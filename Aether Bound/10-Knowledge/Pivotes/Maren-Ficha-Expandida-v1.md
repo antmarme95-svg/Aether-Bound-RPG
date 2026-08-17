@@ -105,7 +105,7 @@ Cuando Maren se une al grupo, Roen la saluda: *"Maren del Consortium. Pensé que
 
 Maren: *"Estoy. Pero también aquí."* (Frase típica de ella — en múltiples lugares mentalmente.)
 
-**Cuando traiciona:** Roen dice: *"Lo viste venir, ¿verdad? Calculaste esto hace meses."* 
+**Cuando traiciona:** Roen no discute — constata. Su línea vive en §sub-beat 2b (*"You calculated this. You calculated us."*) y no se reescribe acá.
 
 Maren no niega. Eso es lo devastador — no es impulso. Es **decisión deliberada.**
 
@@ -422,7 +422,7 @@ Maren no vive para descubrirlo. **La corrección de su tesis existe y ella nunca
 
 **Tensión:** Roen pregunta si Rivermeet está bien. Maren responde con datos — ciudad funciona, pero frágil. Roen nota: **ella sabe más de lo que dice.**
 
-**Cuando traiciona:** Roen es quien menos sorprendido está. *"Lo calculaste. Sabía que podrías hacerlo. Esperaba que no lo hicieras."*
+**Cuando traiciona:** a Roen lo deja frío, no furioso — y lo deja frío porque no la vio venir: pasó un año midiéndole la cabeza a Maren y nunca se preguntó para qué la estaba usando. Su línea es la de la sala del Fragmento y no se reescribe acá (§sub-beat 2b, fuente única): *"You calculated this. You calculated us."*
 
 ### Maren + Valen (Ambos Strategists — Respeto Intelectual)
 

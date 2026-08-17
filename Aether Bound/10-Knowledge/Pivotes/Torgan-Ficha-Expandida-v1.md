@@ -536,7 +536,7 @@ Ver [[Los 5 Finales]].
 
 **Tensión:** Roen le pregunta, en el Acto 2, si podría romper el Juramento por el jugador. Torgan: *"No. Pero quería que fuera algo que considerara de verdad."*
 
-**Cuando traiciona:** Roen dice: *"Sabía que cuando llegara el momento cumplirías. Esperaba estar equivocado. No lo estaba."* A Roen esta traición lo pone **serio**, no roto — el que lo rompe es Dagna, y solo Dagna.
+**Cuando traiciona:** Roen no lo anticipó. Tuvo la señal tres meses a la vista —el brazo derecho que Torgan no suelta nunca— y la archivó como manía de oficio, no como juramento. Su línea es la de la sala del Fragmento y no se reescribe acá (§sub-beat 2b, fuente única): *"Nunca soltó el brazo derecho en tres meses. Debí leerlo."* A Roen esta traición lo pone **serio**, no roto — el que lo rompe es Dagna, y solo Dagna.
 
 **En el Archive:** Roen es el único que ve la mano de Torgan sobre el tallado y entiende que significa algo. Es también el único que se atreve a preguntárselo después, en la persecución, y el único que se queda sin respuesta.
 

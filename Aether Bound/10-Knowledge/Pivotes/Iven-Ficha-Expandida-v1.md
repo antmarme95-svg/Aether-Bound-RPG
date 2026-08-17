@@ -433,7 +433,7 @@ Regla de dirección y eco final: [[Bond y el Bond Vacío]].
 
 Cuando el resto voltea, **Iven ya tiene a Speck y ya está a diez metros.**
 
-No hubo forcejeo. La levantó al pasar, en movimiento, sin frenar — es acróbata, y el gesto es de una fluidez casi obscena para lo que significa. Speck no chilla. Roen ni alcanzó a girar el hombro; Roen **ya sabía** y giró el hombro igual, tarde y a propósito.
+No hubo forcejeo. La levantó al pasar, en movimiento, sin frenar — es acróbata, y el gesto es de una fluidez casi obscena para lo que significa. Speck no chilla. Roen ni alcanzó a girar el hombro; **lo sabe desde la sala del Fragmento**, como todos, y giró el hombro igual, tarde y a propósito.
 
 Iven no explica nada nuevo. De espaldas, sin detenerse:
 
@@ -691,7 +691,7 @@ La frase gana peso retroactivo en F1 y F2a, donde el intercambio nunca fue real:
 
 **Tensión:** Roen pregunta si Iven podría traicionar al grupo. Iven: *"¿Podrías tú traicionar tu conciencia por una frontera que alguna vez guardaste?"* Roen no contesta, porque la respuesta es que ya lo hizo al revés.
 
-**Cuando traiciona:** Roen no grita. Dice: *"Sabía que pasaría. El Council te prometió salvar tu asentamiento. Eso siempre te iba a ganar."* Es reconocimiento de límite, no ira. Roen conoce ese anzuelo — se lo pusieron a él quince años.
+**Cuando traiciona:** Roen no grita, y no dice que lo esperaba — dice lo que vio y no supo leer. Su línea es la de la sala del Fragmento y no se reescribe acá (§sub-beat 2b, fuente única): *"Le vi la cara en Driftmarket y no hice nada."* Roen conoce ese anzuelo — se lo pusieron a él quince años —, y eso es exactamente lo que le pesa: de todo el grupo, él era el único que podía haberlo reconocido a tiempo, y lo leyó como cansancio de camino.
 
 **Lo que Roen no vio y no se perdona:** que la promesa era falsa. Roen pasó quince años dentro del aparato, sabe cómo se ven los pagos, **y aun así asumió que el Council al menos pensaba cumplir.** En F2a es él quien lo entiende primero, desde lejos, y quien manda aviso al asentamiento — llega tarde, y el aviso no cambia nada, pero Roen necesitaba mandarlo.
 

@@ -106,7 +106,7 @@ Dagna lo mira un segundo. Contesta: *"No tuve tu opción."*
 
 No es reproche. Es constatación. Pero **Roen carga esa frase el resto del juego.** Aparece en su cabeza cada vez que duda; aparece en el cráter cuando ve a Dagna con Speck en los brazos; aparece en la escena final. La frase entera es su respeto y su condena al mismo tiempo, sin que Dagna lo haya calculado — Dagna solo dijo la verdad literal.
 
-**Cuando Dagna traiciona:** Roen no se sorprende. Roen no la juzga. Roen se quiebra — no delante de ella, después. Es la única traición del elenco que hace eso a Roen. Otros Pivotes lo doblan (Lyris lo pone frío, Torgan lo pone serio, Maren lo pone reconocedor). Dagna lo **rompe.** Porque Dagna es la prueba viviente de que sí se podía aguantar el puesto, y de que él no lo hizo.
+**Cuando Dagna traiciona:** Roen no la juzga, y tampoco puede decir que la vio venir — Dagna bajó al Archive con la orden encima desde hacía meses, y él le sostuvo la mirada todo ese tiempo leyéndola como aguante, no como carga. Roen se quiebra — no delante de ella, después. Es la única traición del elenco que hace eso a Roen. Otros Pivotes lo doblan (Lyris lo pone frío, Torgan lo pone serio, Maren lo pone reconocedor). Dagna lo **rompe.** Porque Dagna es la prueba viviente de que sí se podía aguantar el puesto, y de que él no lo hizo.
 
 Este bloque se canoniza aquí. Corrige el hallazgo intermedio del QA narrativo que colocaba a Lyris como "la que quiebra a Roen": **es Dagna.** Lyris puede doblarlo, Sereth puede herirlo, Maren puede desilusionarlo. Solo Dagna lo rompe. La entrada Roen+Dagna definitiva vive en la sección "Dinámicas" más abajo; este bloque es la vista desde el lado de Dagna.
 
@@ -259,7 +259,7 @@ No vuelve a hablar en toda la sala. Si le preguntan por qué, no contesta: **Dag
 **Reacción del grupo — acá:**
 
 - **Roen:** silencio, y el silencio empieza acá, no en el cráter. Roen entiende antes que los demás porque se lo dijeron a él. Ya empieza a quebrarse por dentro y todavía falta el ascenso entero, la persecución y el borde. **Ésta es la ruta que lo rompe** ([[Los 9 Pivotes]]: *"la única que quiebra al ancla"*), y la grieta se abre en esta sala.
-- **Valen:** *"Las cartas desde Emberdeep. Debí haber preguntado."* No es reproche a los demás — es reconocimiento de que él vio el patrón y lo dejó pasar por respeto élfico. Ahora sabe que el respeto costó.
+- **Valen:** *"Las cartas desde Emberdeep. Debí haber preguntado."* No es reproche a los demás — es reconocimiento de que tuvo el dato delante y lo archivó como correspondencia privada de clan, por respeto élfico a un silencio ajeno. Nunca lo miró de cerca. Ahora sabe que el respeto costó.
 - **Darro:** grita. *"¡DAGNA!"* Una sola vez. Dagna no responde. Darro se queda con la mano a medio subir hacia ella, luego la baja. Y a partir de ahí sigue hablando durante todo el ascenso — **nada con forma de broma**, frases a medias que no cierran, porque con Dagna nunca supo qué era esa relación y la incertidumbre no se resuelve gritando un nombre.
 
 #### La trampa amorosa — la onda que no llega

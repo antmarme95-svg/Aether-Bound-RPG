@@ -459,7 +459,7 @@ Sereth: *"Eso es cálculo enano, no cálculo élfico. Eso es lo que subestimé."
 
 **Cuando traiciona:** Darro **no grita**. Simplemente dice:
 
-*"Sabía que eras conductor. No sabía que usarías amor como herramienta."*
+*"Creí que te conocía entero. Ni se me cruzó que el cariño fuera herramienta."*
 
 Sereth: *"El amor es la única herramienta que funciona cuando nada más importa. Eso es lo que me hace monstruo."*
 

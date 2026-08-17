@@ -303,7 +303,7 @@ Regla de dirección y eco final: [[Bond y el Bond Vacío]].
 
 Último corredor de ascenso. Lyris se retrasa cinco pasos, que en ella es descender medio metro y quedarse atrás. Cuando el grupo voltea, tiene a Speck en brazos y una grieta natural ya elegida — pequeña, vertical, exactamente del ancho para que suba sola y no la sigan.
 
-Nadie forcejea. Roen no intenta alcanzarla: ya sabía, y sabía también que no llegaría.
+Nadie forcejea. Roen no intenta alcanzarla: **lo sabe desde la sala del Fragmento**, como todos, y sabe también que no llegaría.
 
 Antes de subir, Lyris desciende un metro y **por fin mira al jugador a los ojos** — la única vez desde la sala del Fragmento. No explica nada. Dice la frase y se va:
 

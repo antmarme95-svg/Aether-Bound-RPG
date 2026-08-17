@@ -444,9 +444,9 @@ Ver [[Los 5 Finales]].
 *"Escuché que sigues en el yunque."*
 *"El yunque no me suelta."*
 
-**Tensión:** Roen es el único que nota los detalles antes que los demás — el arnés técnico, la ruta desde Ignis Reach, el silencio con Darro. Los archiva sin decirlos. Vekka lo sabe. No lo comenta. Hay un pacto tácito entre los dos de dejar en paz lo que el otro guarda.
+**Tensión:** Roen registra detalles que a los demás se les pasan — el arnés técnico, la ruta desde Ignis Reach, el silencio con Darro — y los archiva como lo que parecen: oficio, geografía, historia vieja entre enanos. No los calla por discreción; los guarda porque no los lee como señal de nada. Vekka lo nota mirar y no lo comenta. Hay un pacto tácito entre los dos de dejar en paz lo que el otro guarda.
 
-**Cuando traiciona:** Roen es quien menos sorprendido está. En el cráter, después del quiebre, Roen dice a los demás: *"Cargó el arnés desde el primer día. Ya sabía."* No es reproche a los demás — es reconocimiento de que Vekka fue transparente en su cuerpo desde el principio, y nadie supo leerla salvo él.
+**Cuando traiciona:** Roen es el que nombra la señal, y la nombra **ahí, en la sala del Fragmento**, no antes — leyendo el arnés en voz alta mientras cae (§sub-beat 2b, fuente única de su línea: *"Ese arnés no es de camino. Es de taller."*). No es un "ya sabía": es la vergüenza de haber tenido el objeto delante desde Ignis Reach y haberlo leído como costumbre de herrera. Vekka fue transparente en su cuerpo desde el principio, y nadie la supo leer — Roen tampoco, hasta ese segundo.
 
 ### Vekka + Valen (Ambos Strategists — Silencios Productivos)
 
