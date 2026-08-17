@@ -48,7 +48,7 @@ orden de **captura y entrega en custodia** — ejecutar sería fracaso.
 
 ## Biografía Pre-Aventura
 
-### The Stillspire: La Sombra (edades 0-100) — reclutada por el brazo encubierto de the Royal Academy
+### The Stillspire: La Sombra (edades 0-90) — reclutada por el brazo encubierto de the Royal Academy
 
 Nacida y reclutada de niña por los círculos encubiertos de la Royal Academy
 dedicados a **ejecución perfecta.** No asesinato — ejecución. Hay diferencia: asesino mata por encargo, ejecutor mata porque la muerte es resultado inevitable de verdades no confrontadas.
@@ -59,9 +59,9 @@ Nyael fue entrenada desde niña para ser **invisible.** No literalmente (aunque 
 
 A los 50 años, todavía en formación, Nyael ya era ejecutora perfecta — había completado **40 ejecuciones**, ninguna dejó evidencia de ella.
 
-### Años de Eficiencia Silenciosa (edades 100-180)
+### Años de Eficiencia Silenciosa (edades 90-190)
 
-80 años de ejecutar con perfección. Cada tarea asignada, completada. Cada objetivo, muerto sin saber que fue ejecutado.
+Cien años exactos de ejecutar con perfección. Cada tarea asignada, completada. Cada objetivo, muerto sin saber que fue ejecutado.
 
 Pero Nyael desarrolló **costumbre rara:** después de cada ejecución exitosa, dejaba nota. Nunca dirigida al muerto (estaban muertos). Dirigida a alguien que **pudiera leerla.**
 
