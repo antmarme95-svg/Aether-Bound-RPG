@@ -75,7 +75,7 @@ otro lado — nadie *elige* ir ahí, es el único lugar al que Speck se deja lle
 | **Vekka** | Círculo interno del **Great Forging Clan** → Vekka (sin intermediario) | Mensajero del Great Forging Clan | Vekka, con Speck **fijada al yunque portátil con el arnés técnico** | **Única ruta con Speck inmovilizada a un objeto.** Ver §4, nota de liberación |
 | **Lyris** | Triune Council → **Frontier High Command** → Lyris | Mensajero de Frontier High Command | Lyris | **Holder aérea** — se detiene sobre el borde, no parada en él. Ver nota abajo |
 | **Nyael** | Brazo encubierto de la **Royal Academy** → Nyael | **El equipo de extracción** (2-3 operativos) | **El equipo de extracción** | **Holder = agente a neutralizar.** Nyael toma a Speck en el corredor, la pasa al equipo y se retira: no está en el cráter (§1, paso 2) |
-| **Bram** | Contrato directo del Triune Council → Bram **(rechaza)** → **Torgan** como segundo agente | **Torgan** | **Torgan** | **Holder = agente a neutralizar. No hay un tercero.** Bram está presente pero no carga a Speck |
+| **Bram** | Dos cadenas, no una. Contrato directo del Triune Council → Bram **(rechaza)**; y en paralelo, por su **propia** cadena enana, Kadrun → Great Forging Clan → su clan menor → **Torgan**, activado como segundo agente. Torgan **no** cuelga del contrato de Bram ni responde al Council: cumple su Juramento de Forja | **Torgan** | **Torgan** | **Holder = agente a neutralizar. No hay un tercero.** Bram está presente pero no carga a Speck |
 
 **La excepción de holder = agente (Nyael y Bram) es intencional y no se reporta como
 crítico.** En las otras 7 rutas, "detener al Pivote" **no** cumple el gate de F1 — hay que

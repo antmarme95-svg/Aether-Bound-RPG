@@ -16,7 +16,7 @@ combate *y* traversal; su pérdida es la orfandad mecánica de
 | Elfo Strategist + Torgan | **Arcane Ballistics** | Tú marcas; él es el misil humano contra la marca | Marcas que ya nadie golpea |
 | Elfo Vanguard + Iven | **Riposte Runner** | Tu parry-redirect es su vector de lanzamiento al flanco | Tus paradas vuelven a ser solo defensa |
 | Enano Duelist + Sereth | **Guided Avalanche** | Él dobla gravedad/terreno para curvar tu carga imparable | Fuerza bruta sin blanco |
-| Enano Strategist + Bram | **Mobile Foundry** | Carga tus desplegables encima; tu tecnología dispara desde su cuerpo | Eres cristal: nadie protege tu setup |
+| Enano Strategist + Bram | **Mobile Foundry** | Carga tus desplegables encima; tu tecnología dispara desde su cuerpo | **Excepción — no muere.** Bram rechaza y se queda: Mobile Foundry sigue respondiendo el ascenso entero, y el vacío se juega invertido (el jugador cree haberlo perdido y no es así). Fuente única: [[Bond y el Bond Vacío]] §La excepción de Bram. Fuera de esa ruta el sabor sería *"eres cristal: nadie protege tu setup"* |
 | Enano Vanguard + Lyris | **Skyhook** | Tú te anclas; ella describe arcos aéreos atada a ti; tiras del tether | Tu solidez es soledad |
 | Humano Duelist + Dagna | **Seismic Springboard** | Su golpe de suelo crea la onda; tú usas la inercia para saltos imposibles | Se acabó la verticalidad |
 | Humano Strategist + Nyael | **The Weaver's Net** | Tú tiendes redes de Aether; ella las atraviesa y electrifica sus hojas | Trampas que nadie atraviesa |

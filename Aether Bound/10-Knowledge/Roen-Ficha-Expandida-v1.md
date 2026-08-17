@@ -333,7 +333,7 @@ Cuando el jugador vuelve del borde sin ella, Roen no lo felicita. Espera a que e
 ### Roen + Nyael (Elfa Duelist → Ella)
 **Primera impresión:** Nyael es la sombra del grupo, precisa. Roen confía en gente precisa.  
 **Tensión:** Nyael no avisa. Roen lo siente en el silencio.  
-**Traición:** La traición de Nyael es ausencia. Una nota. Roen relee esa nota infinitas veces.
+**Traición:** La traición de Nyael es ausencia. Una nota. Roen la lee **una sola vez**, de pie, y no la vuelve a tocar — lo suyo con los ausentes es dejarlos en paz, y ya cargó una desaparición sin cierre a los 12 años. **El que la relee una y otra vez es Darro** ([[Darro-Ficha-Expandida-v1|Darro]] §Darro + Nyael); no duplicar el beat.
 
 ### Roen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Vekka construye. Roen protege. Trabajan bien juntos.  

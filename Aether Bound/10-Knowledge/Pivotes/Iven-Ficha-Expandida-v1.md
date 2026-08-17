@@ -613,7 +613,7 @@ Los últimos años queda casi solo. Se sienta a mirar el camino por donde llegar
 
 ### F3 — The Conqueror's Clause (el jugador toma el poder para sí)
 
-Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Iven suelta. **Imposible para Iven.** El arquetipo del deber no puede convivir con esta ruta ([[Los 5 Finales]] F3).
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Iven suelta. No forcejea — eso la mataría. **El jugador la recoge del otro lado del borde** (§4, fila F3: el beat obligatorio son las dos mitades, no solo la soltada). **Imposible para Iven.** El arquetipo del deber no puede convivir con esta ruta ([[Los 5 Finales]] F3).
 
 Y en su caso es más simple todavía: si el jugador encadena a Speck bajo sus propios términos, **el asentamiento no recibe nada de nadie.** Ni el remedio inventado, ni la maduración, ni el dinero. Iven cruzó la línea entera, quemó todo lo que tenía, y el resultado es que la criatura cambió de dueño.
 

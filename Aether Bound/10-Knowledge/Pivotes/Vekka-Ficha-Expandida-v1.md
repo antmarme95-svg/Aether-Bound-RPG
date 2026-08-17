@@ -389,7 +389,7 @@ No es culpa lo que la detiene: es que **el gremio que lleva adentro le retira el
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí, encadena a Speck)
 
-Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Vekka suelta.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Vekka suelta: libera el arnés del yunque portátil (§2, nota de liberación) sin forcejeo, porque forcejear la mataría. **El jugador la recoge del otro lado del borde** (§4, fila F3: el beat obligatorio son las dos mitades, no solo la soltada).
 
 **Imposible para Vekka.** El arquetipo del dogma no puede vivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la operación — la deja abierta indefinidamente. Y una forja incompleta que camina con un tirano es peor que una forja incompleta que camina sola.
 

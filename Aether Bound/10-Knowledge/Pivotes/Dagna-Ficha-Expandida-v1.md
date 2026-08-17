@@ -400,7 +400,7 @@ Nunca vuelve a ser vista con certeza. Se pierde en las montañas altas — puede
 
 ### F3 — The Conqueror's Clause (jugador toma el poder para sí)
 
-Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Dagna suelta.
+Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Dagna suelta. No forcejea — eso la mataría. **El jugador la recoge del otro lado del borde** (§4, fila F3: el beat obligatorio son las dos mitades, no solo la soltada).
 
 **Imposible para Dagna.** El arquetipo del deber institucional no puede convivir con un jugador que se roba la variable para sí. Que Speck sea encadenada por un tirano no cierra la orden — la deja incumplida indefinidamente, y sostenida por la persona a la que Dagna sirvió cinco años. No hay salida.
 

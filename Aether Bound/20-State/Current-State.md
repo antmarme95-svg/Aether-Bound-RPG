@@ -668,8 +668,11 @@ creación de personaje no debería vivir en el árbol. Revisar junto con la
 pregunta abierta de las escenas firma de T3 (punto 3 de arriba).
 
 ### Pendientes menores, sin bloquear nada
-- `Los 9 Links del Pivote`/ficha de Bram no anotan la excepción del Bond
-  invertido (solo vive en `Bond y el Bond Vacío.md`).
+- ✅ **CERRADO (2026-08-17).** Excepción del Bond invertido de Bram: la ficha
+  de Bram ya la anotaba bien (§sub-beat 2b, citando la fuente única); el hueco
+  real era solo la fila **Mobile Foundry** de `Los 9 Links del Pivote`, que ya
+  quedó anotada. Fuente única sigue siendo `Bond y el Bond Vacío` §La excepción
+  de Bram.
 - Orejas de Speck en las 5 láminas de finales: forma de zorro simple, no la
   forma de pétalos establecida en canon. Refinamiento visual futuro.
 - Traducción pendiente de los beats de diálogo ya escritos en español (ver

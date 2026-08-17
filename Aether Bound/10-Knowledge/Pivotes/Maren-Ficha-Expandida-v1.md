@@ -371,7 +371,7 @@ Maren no se rompe por culpa — se rompe porque **una ecuación suya no cerró**
 
 Gate: [[El Cráter — Matriz de Rutas]] §4, fila F3 — el jugador cruza el borde y Maren suelta.
 
-No forcejea: suelta a Speck al verlo cruzar, calculando en el acto que retenerla no cambia el resultado. Maren **se te une, en teoría.** Es la única del grupo que no se va — todos los demás abandonan, ella se queda. Sus habilidades son demasiado útiles como para desperdiciarlas por sentimentalismo. El jugador tiene ejército sofisticado, red de suministro impecable, contingencias en cada frente. Maren opera todo.
+No forcejea: suelta a Speck al verlo cruzar, calculando en el acto que retenerla no cambia el resultado. **El jugador la recoge del otro lado del borde** (§4, fila F3: el beat obligatorio son las dos mitades). Maren **se te une, en teoría.** Es la única del grupo que no se va — todos los demás abandonan, ella se queda. Sus habilidades son demasiado útiles como para desperdiciarlas por sentimentalismo. El jugador tiene ejército sofisticado, red de suministro impecable, contingencias en cada frente. Maren opera todo.
 
 **En la práctica, te da fecha de vencimiento el primer mes.** No como venganza — como diagnóstico. Un tirano con Speck encadenada no es un sistema estable, y Maren solo sabe trabajar con sistemas estables. Modela tu régimen, ve con precisión cuándo colapsará, **y no hace nada para acelerarlo ni para impedirlo.** Se limita a anotar la fecha y a operar bien hasta que llegue. Es la diferencia con Sereth, que en su ruta sí interviene: Maren observa el reloj, no lo toca.
 

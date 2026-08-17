@@ -45,7 +45,7 @@ Bram odiaba todo eso. No por rebeldía — por instinto. Prefería el peso de al
 
 ### Mistbound Frontier: Cuarenta años de escolta (edades 15-55)
 
-Mistbound Frontier — franja humana lejana al suroeste profundo, no la trinchera contra The Wilds sino la tierra donde el Council pierde control administrativo por pura distancia — se convirtió en su hogar real. Infancia terminó de golpe: **escoltas de convoy, defensas de fuertes menores, contratos privados** contra bestias que bajaban de laderas y contra bandidos que sabían aprovechar el hueco de autoridad.
+Mistbound Frontier — franja humana lejana al suroeste profundo, no la trinchera contra The Wilds sino la tierra donde el Council pierde control administrativo por pura distancia — se convirtió en su hogar real. Infancia terminó de golpe: **escoltas de convoy, defensas de fuertes menores, contratos privados** contra fauna grande de ladera —lobos de altura, felinos de risco: animales, no criaturas de Aether; en Mistbound interior no hay nidos ni corrupción que las tuerza ([[Roen-Ficha-Expandida-v1|Roen]] §Origen Mistbound)— y contra bandidos que sabían aprovechar el hueco de autoridad.
 
 Bram fue bueno. Muy bueno. Cuerpo masivo, reflejos rápidos, umbral de dolor alto. Fue ascendido a **líder de compañía** dos veces — dos compañías distintas, en dos décadas distintas, ambas disueltas cuando el contrato terminó y nadie renovó. Nunca ganó una guerra propia; solo escoltó las de otros. Fronteras humanas se defienden en pedazos, no en frentes.
 
