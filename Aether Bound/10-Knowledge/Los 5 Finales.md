@@ -72,7 +72,7 @@ No requiere Tether alto. **F1 es el único final cuya acción de cráter es la a
 **Pivote — por arquetipo:**
 - *Aritmética/Manipulación:* asciende. Recibe reconocimiento formal del Council. Se aparta del jugador con cortesía.
 - *Deber Institucional:* cumple. Regresa a su clan/juramento; asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda. Los enanos vuelven a Emberdeep. Nyael queda en un limbo: el equipo de extracción que ella activó completó la entrega en su lugar (es el único de los 9 donde **el Pivote no está presente en el cierre de su propia traición** — se retira antes de la persecución y la entrega se consuma sin ella; ver su ficha y [[El Cráter — Matriz de Rutas]] §2), cumpliendo la orden real que ella puso en marcha — pero sabe que el Council mintió sobre "custodia digna".
-- *Rechazo/Ausencia:* no aplica a Bram — nunca ejecutó. Lyris se aparta del grupo con calma que hiere.
+- *Rechazo/Ausencia:* Bram **sí alcanza este final, y lo alcanza sin haber traicionado**. Su rechazo en la sala del Fragmento sigue en pie y no se revisa; lo que pasa es que el gate no depende de él: en su ruta el holder es **Torgan**, segundo agente activado por el Council, y holder = agente sin tercero (misma excepción que Nyael, [[El Cráter — Matriz de Rutas]] §2). Torgan sostiene y espera; si el jugador no se interpone, ese vacío es la entrega. Bram mira cómo se completa lo que él se negó a hacer. Lyris se aparta del grupo con calma que hiere.
 
 ---
 
@@ -158,7 +158,7 @@ Referencia para las 9 fichas — cada Pivote debe traducir esta fila a su voz, p
 | Final | Aritmética / Manipulación (Maren, Sereth) | Deber Institucional (Torgan, Iven, Dagna, Nyael, **Vekka**) | Rechazo / Ausencia (Bram, Lyris) |
 |---|---|---|---|
 | **F1 Guided Molt** | Sobrevive quebrado, no pide perdón | Muere o se autoexilia — juramento reventado sin cierre | Bram en paz por primera vez; Lyris se queda quieta en su cielo |
-| **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda | Bram no aplica; Lyris se aparta del grupo con calma que hiere |
+| **F2a Handed Over** | Asciende con reconocimiento del Council | Cumple. Asciende por mecánica institucional, sin celebración — el ascenso es automático, nadie brinda | Bram alcanza el final sin traicionar — el holder es Torgan (holder = agente, §2); Lyris se aparta del grupo con calma que hiere |
 | **F2b Fallen** | Colapso interno — sus cuentas ya no cuadran | **Torgan: peor final canónico** (juramento incumplido, no roto); Dagna renuncia al clan; Nyael escribe la última nota | Bram vive con culpa por no haber traicionado antes; Lyris desaparece |
 | **F3 Conqueror** | Se te une, calcula tu caída | Imposible — muere confrontándote o se va sin volver | Bram nunca te siguió tan lejos; Lyris no aparece en el epílogo |
 | **F4 Warden's Choice** | Se reintegra sin condición de ruta; cambia sus cuentas | Torgan renegocia juramento; Dagna es liberada por su subclán; **Nyael vuelve como alumna** | **Bram se queda por elección propia — único final donde lo hace** |
