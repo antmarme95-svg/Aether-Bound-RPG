@@ -87,7 +87,7 @@ Darro contesta: *"Guild Master."* Nunca por el nombre. Nunca.
 
 **Cuando Vekka traiciona:** el momento devastador de toda la ficha es la mirada entre Darro y Vekka en el cráter de First Wound, cuando Darro entiende — no antes que los demás, pero sí más profundamente — que Vekka está haciendo el mismo gesto que le hizo a él hace treinta años. Deshacer sin explicación. Esa es su firma como maestra. La reconoce en su propio cuerpo.
 
-Darro no grita. Darro se queda mudo. Es la única vez en la campaña que Darro se queda mudo.
+Darro no grita: se queda mudo. **El superlativo no se re-enuncia acá** — su fuente única es [[Darro-Ficha-Expandida-v1|Darro]] §Traición, y esta ficha lo cita, no lo formula ([[El Cráter — Matriz de Rutas]] §Regla de uso para las 13 fichas → *Corolario: los superlativos de los fijos son frágiles*).
 
 ---
 

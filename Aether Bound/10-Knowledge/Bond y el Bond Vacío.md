@@ -77,6 +77,15 @@ homogeneizar beats obligatorios es el error que [[El Cráter — Matriz de Rutas
    por memoria muscular. **Y el Pivote está ahí, a tres metros, mirando** — no
    murió, no desapareció: decidió. Es la vuelta de tuerca que la versión de un
    solo tiempo no podía dar.
+   > **Excepción declarada — la ruta Nyael (7 celdas con esto, no 8).** Nyael
+   > declara **por ausencia** y no está en el Archive durante el ascenso, así que
+   > **no hay nadie a tres metros**: el encuadre vacío de la Link Cam es literal
+   > en vez de figurado, y es la única celda donde el beat no tiene a quién
+   > culpar en cuadro. El silencio del botón es toda la información que el
+   > jugador recibe, y llega antes que cualquier confirmación
+   > ([[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §Sub-beat 2b: La ruptura — la
+   > ausencia en la sala del Fragmento). En la ruta **Bram** el beat también es
+   > distinto, pero por el otro lado — ver §La excepción de Bram, abajo.
 3. **El silencio:** picas Bond. La misma Link Cam barre… el espacio vacío. El
    sting muere a las dos notas. Sin música. Nadie dice nada. [[Speck]]
    gimotea. La cámara vuelve al hombro sin corte.
