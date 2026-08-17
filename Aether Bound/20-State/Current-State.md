@@ -389,7 +389,47 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-0. **⏳ RONDA 2 DE FIXES APLICADA (2026-08-17) — SIGUE SIN CERRAR.**
+0. **⏳ RONDA 3 DE FIXES APLICADA (2026-08-17) — SIGUE SIN CERRAR.**
+   6 tandas, linter en **0 críticos / 0 medios** tras cada una, commit por tanda.
+   Detalle completo en [[LOG]] §2026-08-17 (ronda 3).
+
+   **Lo que cambió de método, y es lo importante:** la clase *"un fijo anticipa o
+   calla la traición"* sobrevivió tres rondas porque cada una la grepeó **para un
+   solo personaje (Valen)**. Esta ronda la grepeó para los **tres fijos (Roen,
+   Valen, Darro)** en todo `10-Knowledge/` y aparecieron **seis instancias que
+   ningún QA había reportado**, casi todas con **Roen** de sujeto (`Iven:436` y
+   `:694`, `Maren:425` y `:108`, `Lyris:306`, `Dagna:109`) más una con **Darro**
+   (`Sereth:462`). La regla dejó de vivir en la ficha de Valen: ahora es **fuente
+   única en [[El Cráter — Matriz de Rutas]] §Regla de uso para las 13 fichas →
+   *Regla de prescience***, declarada para los tres, con la salvedad de tiempo que
+   faltaba (después de 2b todos saben, pero hay que **declarar de dónde viene el
+   saber**).
+
+   **Decisión de criterio:** **Dagna no es excepción** a la regla de Valen — se
+   mantiene *"la falla no es de modelo sino de carácter"*, pero reformulado como
+   archivo mal hecho (la carpeta equivocada se llamaba *cortesía*), así que
+   `Valen:258` (*"el mismo en las nueve rutas"*) queda intacto y las dos fuentes
+   concuerdan.
+
+   También cerraron: causalidad de la activación de Torgan en la ruta Bram
+   (precaución **en paralelo**, cadena **propia** — y apareció un tercer archivo,
+   `Los 5 Finales:75`) · Bram **todavía no ha rechazado** en Driftmarket ·
+   encabezados de aritmética de Nyael (0-90 / 90-190 / cien años) · los dos
+   superlativos físicos de Iven separados por eje (**cara** vs. **equilibrio**) ·
+   líneas de Valen unificadas a 2b en Torgan y Dagna · excepción de la ruta Bram
+   en el ascenso de Roen (y verificado que **Nyael no es excepción** ahí) ·
+   excepción de Nyael escrita en la fuente del Bond vacío · 2 menores más.
+
+   **Grep final de verificación, doble pasada: 0 residuos** de la clase para los
+   tres fijos en todo el vault.
+
+   > ⛔ **HACE FALTA OTRA RE-CORRIDA EN FRÍO, y no la puede correr quien aplicó
+   > estos fixes** (skill `canon-qa` §Anti-objetivos). Es el primer trabajo de la
+   > próxima sesión de canon.
+
+   Bloque histórico de la ronda 2, para contexto:
+
+   **⏳ RONDA 2 DE FIXES APLICADA (2026-08-17) — SIGUE SIN CERRAR.**
    La re-corrida en frío de los 2 subagentes **sí se ejecutó** sobre la ronda 1:
    congruencia semántica dio 0 críticos / 1 medio / 5 menores, dramaturgia dio
    **3 críticos / 4 medios / 3 menores**. Las 5 tandas de la ronda 2 están

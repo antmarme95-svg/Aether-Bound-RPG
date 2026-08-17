@@ -1,5 +1,83 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-17] canon | Ronda 3 de fixes — 6 tandas, y la clase "fijo anticipa" por fin a la fuente
+
+Tercera vez que el mismo bug vuelve disfrazado. Las rondas 1 y 2 grepearon el patrón
+**para Valen**; esta ronda lo grepeó **para la clase entera (Roen, Valen, Darro)** en todo
+`10-Knowledge/`, y apareció donde nadie había mirado. Linter en 0 críticos / 0 medios
+después de cada tanda, commit por tanda.
+
+**Tanda 1 — la clase "fijo anticipa/calla la traición", los tres fijos.** Los 3 casos
+conocidos (`Valen:410` Dagna, `Torgan:539` Roen, `Vekka:447,449` Roen) **eran menos de la
+mitad.** El grep inicial encontró **seis instancias más que ningún QA había reportado**,
+todas con Roen de sujeto salvo una: `Iven:436` (*"Roen **ya sabía** y giró el hombro
+igual"*), `Iven:694` (*"Sabía que pasaría"*), `Maren:425` (*"menos sorprendido… Sabía que
+podrías hacerlo. Esperaba que no lo hicieras"*), `Maren:108` (línea de Roen duplicada y
+con forma de prescience), `Lyris:306` (*"ya sabía, y sabía también que no llegaría"*),
+`Dagna:109` (*"Roen no se sorprende"*), y `Sereth:462` con **Darro** (*"Sabía que eras
+conductor"*, que además contradecía su propio 2b de incomprensión total). Se sumaron dos
+más al leer las fuentes: `Dagna:262` y `Dagna:469-473`, que glosaban a Valen como *"vio el
+patrón y lo dejó pasar"*.
+**Fix a la fuente, no a las líneas:** la regla dejó de vivir solo en la ficha de Valen y
+ahora es **fuente única en [[El Cráter — Matriz de Rutas]] §Regla de uso para las 13
+fichas → *Regla de prescience***, declarada para los tres fijos, con la **salvedad de
+tiempo** que faltaba: después de 2b el grupo entero sabe, pero hay que *declarar de dónde
+viene el saber* (*"lo sabe desde la sala del Fragmento"*) en vez de dejar un "ya sabía"
+suelto — que es exactamente lo que producía los falsos residuos en 3, 4 y 5.
+**Decisión de criterio — Dagna NO es excepción a la regla de Valen.** Se mantiene el matiz
+canónico (*"la única del set donde la falla no es de modelo sino de carácter"*) pero
+reformulado: Valen **archivó mal igual que en las otras ocho**, solo que la carpeta
+equivocada se llamaba *cortesía* — el respeto élfico le prohibió mirar de cerca, no lo hizo
+mirar y callar. `Valen:258` queda intacto ("el mismo en las nueve rutas") y las dos fuentes
+concuerdan.
+
+**Tanda 2 — causalidad de la activación de Torgan (ruta Bram).** `Torgan:405` y
+`Los 9 Pivotes:56-58` seguían con la versión vieja (el Council activa a Torgan *como
+reacción* al rechazo de Bram). Reescritos a la correcta: activación **por precaución y en
+paralelo**, ya corriendo la noche del Reckoning en Driftmarket, cuando Bram todavía no ha
+rechazado nada; y **por la cadena propia de Torgan** (Kadrun → Great Forging Clan → clan
+menor), no por el contrato de Bram. El re-grep encontró un **tercer** lugar:
+`Los 5 Finales:75` (*"segundo agente activado por el Council"*), también corregido. Se
+reforzó además `Bram:281`. `El Cráter §2 fila Bram` y `Geografía:1230` ya estaban bien.
+
+**Tanda 3 — el Reckoning de Bram.** `Geografía:1140` y `Bram:205,207` decían que Bram *ya
+había rechazado* o *ya intuía* en Driftmarket. Corregidos contra su propia línea canónica
+(*"Iba a hacerlo hasta hace cinco minutos"*, dicha al día siguiente en la sala del
+Fragmento): en Driftmarket Bram **todavía piensa cumplir**, y su pregunta al jugador pesa
+algo que todavía cree que va a hacer, no confiesa una decisión tomada.
+
+**Tanda 4 — encabezados de aritmética de Nyael.** `:51` 0-100 → **0-90**, `:62` 100-180 →
+**90-190**, `:64` "80 años" → **cien años exactos**. El resto de la ficha (edad 190, 40
+ejecuciones a los 50, 200 en el siglo, línea canónica de 422) ya cuadraba.
+
+**Tanda 5 — medios.** (a) Los dos superlativos físicos de Iven se separaron por **eje**:
+`:295` Driftmarket = *la única vez que se le nota **en la cara*** (falla de máscara, el
+cuerpo le responde intacto) · `:335` Archive = *la única vez que **pierde el equilibrio***
+(falla de control motor, la cara no dice nada). Cada uno declara al otro. (b) Las líneas de
+Valen triplicadas: `Torgan:351` y `:549` dejaron de tener redacción propia y ahora citan la
+de 2b; ídem `Dagna:473`. (c) `Roen:224` declara la **excepción de la ruta Bram** al "único
+que hace algo en el ascenso" (ahí Speck la carga el jugador desde 2b), y `Roen:226` dejó de
+apuntar a una sección que no resolvía nada. **Se verificó que Nyael NO es excepción**: ella
+está ausente, Speck no, y Roen la carga como en las otras siete.
+
+**Tanda 6 — menores.** La excepción de Nyael al beat *"el Pivote está ahí, a tres metros"*
+se escribió **en la fuente única** ([[Bond y el Bond Vacío]] §El Bond vacío, punto 2: son 7
+celdas, no 8) · `Roen:321` deja de llamar "su asentamiento" al asentamiento purgado
+(`Roen:81` aclara que se crió en un puesto de vigilancia) · `Vekka:90` cita el superlativo
+del mutismo de Darro en vez de re-enunciarlo.
+
+**Verificación de cierre.** Doble grep final de los patrones para los tres fijos en todo
+`10-Knowledge/`: **0 residuos.** Lo único que queda son los enunciados de la regla misma y
+casos donde el sujeto es un Pivote o el Council (Dagna:225, Iven:186, Sereth:144/222,
+Bram:78) — legítimos y fuera de la clase.
+
+> ⛔ **El sprint sigue sin cerrar. Hace falta OTRA re-corrida en frío**, y no la puede
+> correr quien aplicó estos fixes (skill `canon-qa` §Anti-objetivos). Tres rondas seguidas
+> encontraron algo que la anterior no vio; el cambio de esta ronda es que la regla quedó a
+> la fuente y grepeable para los tres fijos, no solo para Valen.
+
+---
+
 ## [2026-08-17] canon | Ronda 2 de fixes de la re-corrida — 5 tandas, el sprint sigue abierto
 
 Los 2 subagentes en frío que faltaban de la ronda 1 se corrieron y validaron el
