@@ -253,7 +253,7 @@ Ver [[Geografía y Ciudades]] §ACTO 3, sub-beat 2 (Interior del Archive). La le
 
 ### Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso
 
-**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). **Acá es donde Valen reacciona.** El cráter, después, ya lo encuentra sabiendo.
+**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). **Excepción de dos rutas:** en la ruta **Bram** el corredor pasa **sin toma** — Torgan la toma afuera del Archive; en la ruta **Nyael** la toma es suya pero Speck queda de inmediato en manos del equipo de extracción ([[El Cráter — Matriz de Rutas]] §2). **Acá es donde Valen reacciona.** El cráter, después, ya lo encuentra sabiendo.
 
 **El patrón de Valen en 2b — el mismo en las nueve rutas, con nueve formas.** Valen **no sabía la traición y no la calló.** Lo que hace en esta sala es descubrir, en tiempo real, que **tenía el dato y lo archivó en la carpeta equivocada**. Su vergüenza es de método, no de complicidad: no es *"lo vi venir y no dije nada"*, es *"lo registré, lo clasifiqué mal, y la clasificación era yo."* Es la única cosa en noventa años que Valen no puede convertir en dato sobre otro, porque el dato es sobre él.
 
@@ -297,7 +297,7 @@ Proporciona datos: dónde fue el Pivote, qué recursos necesitará, qué ruta el
 
 ### The First Wound — Valen en los cinco finales
 
-El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1). La reacción de Valen al quiebre ya ocurrió abajo (§Escena 1); lo que sigue son sus líneas **después** de que el jugador decide.
+El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1). **Salvo Bram y Nyael:** ahí quien está en el borde con Speck es Torgan y el equipo de extracción, respectivamente, y son a la vez holder y agente — no hay mensajero aparte (§2). La reacción de Valen al quiebre ya ocurrió abajo (§Escena 1); lo que sigue son sus líneas **después** de que el jugador decide.
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 

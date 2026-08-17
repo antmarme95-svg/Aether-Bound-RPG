@@ -187,7 +187,7 @@ El Bound Five viaja el aro de La Rueda, tocando las tres ciudades (humana, élfi
 **Roen en La Rueda:**
 - En cada ciudad, Roen ve cómo su propia cultura explota The Wilds.
 - No es una revelación repentina. Es una acumulación: tanques de Aether en Aethelgard, esclavitud ecológica en Stillwood, minería en Ignis Reach.
-- Nadie le explicó esto. Él lo vio en su infancia, lo confirmó en el Triune Council, lo ve ahora confirmado en tripleta.
+- Nadie le explicó esto. **Su infancia no se lo mostró** — Mistbound es puesto interior, y lo que Roen aprendió ahí fue a vigilar de nada. Lo que sí vio, ya adulto, fueron los reportes y la logística que pasaban por sus manos en el Triune Council: cifras de extracción, rutas de tanques, bitácoras de purga que nadie leía. Ahora lo ve confirmado en tripleta, con los ojos en vez de en papel, y ésa es la diferencia que le duele.
 
 **Dinámicas con cada Pivote durante La Rueda:**
 
@@ -217,7 +217,7 @@ Hacia el final de Acto 2, el Fragmento se acerca (Sunken Archive), y Roen comien
 
 ### Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso
 
-**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]]; nueve formas distintas, una por ficha).
+**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]]; nueve formas distintas, una por ficha). **Excepción de dos rutas:** en la ruta **Bram** el corredor pasa **sin toma** — Torgan la toma afuera del Archive; en la ruta **Nyael** la toma es suya pero Speck queda de inmediato en manos del equipo de extracción ([[El Cráter — Matriz de Rutas]] §2).
 
 **Roen en la ruptura:** observa, no interviene, y es donde entiende — antes de que nadie lo diga en voz alta — qué va a pasar en el cráter. No discute la decisión de nadie: **Roen renunció una vez a una cadena de mando y sabe exactamente cuánto cuesta**, así que reconoce el precio del que no renuncia en vez de condenarlo. Esa contención es lo que lo deja sin descarga durante todo el Acto 3.
 
@@ -227,7 +227,7 @@ Cuando el Pivote es **Bram**, el ascenso es lo contrario y Roen lo lee primero: 
 
 ### Escena 2: The First Wound, en el cráter (el quiebre)
 
-La traición ya ocurrió en dos tiempos: se declaró en la **sala del Fragmento** y se ejecutó en el **corredor** de salida, donde el Pivote se llevó a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1). Roen pasó el ascenso entero y toda la persecución sabiéndolo. Acá, en el borde del cráter, el Fragmento termina de activarse y Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado).
+La traición ya ocurrió en dos tiempos: se declaró en la **sala del Fragmento** y se ejecutó en el **corredor** de salida, donde el Pivote se llevó a Speck ([[El Cráter — Matriz de Rutas]] §1, paso 1) — **Excepción de dos rutas:** en la ruta **Bram** el corredor pasa **sin toma** — Torgan la toma afuera del Archive; en la ruta **Nyael** la toma es suya pero Speck queda de inmediato en manos del equipo de extracción ([[El Cráter — Matriz de Rutas]] §2). Roen pasó el ascenso entero y toda la persecución sabiéndolo. Acá, en el borde del cráter, el Fragmento termina de activarse y Speck reacciona involuntariamente (E3, God-Core, hive-mind forzado).
 
 **Roen y el momento del quiebre:**
 
@@ -235,7 +235,7 @@ Roen **no intenta detenerlo.** No porque sea débil, sino porque **entiende**. V
 
 Su reacción es la más devastadora del grupo: **silencio.**
 
-Mientras Speck reacciona en brazos del Pivote, Roen pone una mano en el hombro del jugador.
+Mientras Speck reacciona en brazos de quien la sostenga en el borde —el Pivote en siete rutas, el equipo de extracción en la de Nyael, Torgan en la de Bram (§The First Wound, más abajo)—, Roen pone una mano en el hombro del jugador.
 
 Una mano. Sin palabras. **"Te sostengo."**
 

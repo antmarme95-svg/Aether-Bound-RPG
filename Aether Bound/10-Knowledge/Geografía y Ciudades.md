@@ -722,7 +722,10 @@ BOTTOM:   The First Wound (cementerio God-Cores)
 - Función: puesto de registro de "purgas" — humanos llevan bitácora de qué
   nidos fueron limpiados (burocracia hasta en la frontera salvaje)
 - Guarnición: rotativa, moral baja, soldados jóvenes o castigados
-- Dinámicas: Roen reconoce el protocolo (fue este puesto, en otra vida);
+- Dinámicas: Roen reconoce el protocolo — no el puesto: la bitácora de purgas
+  es formato estándar del Triune Council y él la llenó durante años en
+  Mistbound, del lado interior, donde nunca hubo nada que registrar
+  ([[Roen-Ficha-Expandida-v1|Roen]]). Nunca estuvo destacado acá;
   Maren puede usar Standing para pasar sin registro
 
 #### **Ignis Reach Watch** (East — junto a Cinder Ascent, entrada desde Emberdeep)
@@ -1078,7 +1081,7 @@ Los otros 8 Pivotes no existen en la partida actual (una celda = un Pivote). El 
 
 Tobin no miente ni exagera — es la lectura honesta de un hombre sin acceso al Council. Su honestidad es lo que hace posible el error. Y el error es lo que le da al jugador agencia real: puede confrontar, guardar silencio, o consultar con Speck (**lectura privada de Tether** — el jugador puede leer una reacción de Speck si el Tether con ella es alto, pero Speck no sabe más que él; no es uno de los tres flashes de [[Speck]] §Capa 2, es otro sistema).
 
-**Variante Bram:** en la ruta Bram, Tobin no oye una orden a ejecutarse — oye que el Council busca *"un segundo"*. Es decir, alguien más está siendo activado en la sombra porque Bram ya rechazó. Tobin no sabe quién es el segundo, y no sabe que Bram rechazó — solo sabe que hay actividad duplicada donde debería haber una sola pieza. El jugador entra al Archive con la incertidumbre de que su Pivote asignado (Bram) puede *no* ser el traidor real, sin saber quién es el segundo. Este beat prepara la variante del Sunken Archive — **pero Tobin no anticipa ni el lugar ni el momento, solo que hay "un segundo"**: lo que el jugador verá después es que Bram declara y rehúsa abajo, en la sala del Fragmento (sub-beat 2b), que el corredor del ascenso pasa sin toma, y que el segundo agente lo está esperando afuera del Archive.
+**Variante Bram:** en la ruta Bram, Tobin no oye una orden a ejecutarse — oye que el Council busca *"un segundo"*. Es decir, alguien más está siendo activado en la sombra **como respaldo, no como reemplazo**: en el momento del Reckoning Bram todavía no ha rechazado nada — sigue con la orden confirmada encima y la va a rechazar recién en la sala del Fragmento, al día siguiente ([[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 2b, *"Iba a hacerlo hasta hace cinco minutos"*). El Council no reacciona a una negativa que aún no existe: dobla la pieza por precaución, porque una entrega de este tamaño no se le confía a un solo agente. Tobin no sabe quién es el segundo, no sabe que Bram tiene su propia orden, y no sabe si Bram va a cumplirla — solo sabe que hay actividad duplicada donde debería haber una sola pieza. El jugador entra al Archive con la incertidumbre de que su Pivote asignado (Bram) puede *no* ser el traidor real, sin saber quién es el segundo. Este beat prepara la variante del Sunken Archive — **pero Tobin no anticipa ni el lugar ni el momento, solo que hay "un segundo"**: lo que el jugador verá después es que Bram declara y rehúsa abajo, en la sala del Fragmento (sub-beat 2b), que el corredor del ascenso pasa sin toma, y que el segundo agente lo está esperando afuera del Archive.
 
 ---
 

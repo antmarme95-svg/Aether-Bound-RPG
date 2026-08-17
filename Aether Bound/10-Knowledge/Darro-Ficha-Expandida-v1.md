@@ -218,7 +218,7 @@ Ver [[Geografía y Ciudades]] §THE RECKONING. Antes de bajar al Sunken Archive,
 
 ### Escena 1: la sala del Fragmento (Acto 3 — la ruptura) y el ascenso
 
-**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). **Acá es donde Darro grita.** El cráter, después, ya no tiene grito que dar.
+**Contexto en una frase, y el detalle vive en la ficha del Pivote.** En la sala del Fragmento, el Pivote activo declara lo que va a hacer y **el link del jugador muere ahí**; después el grupo sube el Archive entero con el Pivote adentro, y la toma llega recién en el corredor de salida ([[Geografía y Ciudades]] §ACTO 3 sub-beats 2b y 3; mecanismo en [[Bond y el Bond Vacío]] §La traición tiene dos tiempos). **Excepción de dos rutas:** en la ruta **Bram** el corredor pasa **sin toma** — Torgan la toma afuera del Archive; en la ruta **Nyael** la toma es suya pero Speck queda de inmediato en manos del equipo de extracción ([[El Cráter — Matriz de Rutas]] §2). **Acá es donde Darro grita.** El cráter, después, ya no tiene grito que dar.
 
 **El patrón de Darro en 2b — el mismo en las nueve rutas, con nueve formas.** Darro es **el que explota**, y explota **abajo, en la sala**: el nombre del Pivote a todo volumen, una o varias veces, de frente, sin cálculo. Es su función dramática en esa escena — el grupo entero contiene y él no. Quiere cargar contra el Pivote ahí mismo y no puede: nadie forcejea con Speck cerca del Fragmento y hasta furioso Darro lo sabe ([[Speck]] §Capa 5). Lo que grita no es *"yo quería eso"*, es **"violaste promesa. Nombre es promesa."**
 
@@ -267,7 +267,7 @@ Darro **lidera la búsqueda.** No tácicamente como Valen, no emocionalmente com
 
 ### The First Wound — Darro en los cinco finales
 
-El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1). La reacción de Darro al quiebre ya ocurrió abajo (§Escena 1); lo que sigue son sus líneas **después** de que el jugador decide.
+El Pivote ya declaró abajo y ya se llevó a Speck en el corredor; acá se detiene en el borde con ella y espera al mensajero ([[El Cráter — Matriz de Rutas]] §1). **Salvo Bram y Nyael:** ahí quien está en el borde con Speck es Torgan y el equipo de extracción, respectivamente, y son a la vez holder y agente — no hay mensajero aparte (§2). La reacción de Darro al quiebre ya ocurrió abajo (§Escena 1); lo que sigue son sus líneas **después** de que el jugador decide.
 
 **La decisión es del jugador — qué hacer con Speck en el cráter** (ver [[Los 5 Finales]]). El Pivote sobrevive o cae como consecuencia, no como elección aislada.
 

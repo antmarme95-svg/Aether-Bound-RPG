@@ -343,11 +343,13 @@ Bram **no ejecutó** — no aplica directo, y **Bram tampoco traiciona en esta r
 
 **Torgan no dice nada, en ningún momento** — la ruta Bram es su versión sin discurso ([[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram"). Sostiene, espera, y cuando ya no hay nada que sostener se acomoda el mazo al hombro y baja del borde con el paso de quien terminó un turno.
 
-**Epílogo:** Bram vive con **una culpa nueva** — la de no haber traicionado antes. Racionalización dolorosa: *"Si yo hubiera cumplido cuando me lo pidieron, el Council no habría activado al segundo. Yo la hubiera cargado hasta la superficie sin persecución, sin daño colateral, sin la escena del cráter. Quizás Speck no habría llegado tan rota. Quizás la 'custodia digna' que prometieron era menos mentira si la ejecutaba yo."*
+**Epílogo — no es culpa, es intrascendencia.** Bram no se reprocha nada: hizo exactamente lo que quería hacer, lo hizo a tiempo, y le costó cuarenta años de carrera decirlo. Lo que no había calculado es que **no importara**. El Council obtuvo a Speck igual, el mismo día, en el mismo borde, sin que su negativa moviera un solo renglón del expediente. La única cosa limpia que hizo en su vida entera resultó ser un asunto privado entre él y él.
 
-Todo eso es falso — el Council mentía igual — pero Bram no puede saberlo. Vive con la duda. Sigue en Rivermeet, sigue haciendo trabajo pequeño, sigue callando. La pulsera se tensa cada noche.
+Su racionalización, cuando aparece, no mira hacia atrás sino hacia el mecanismo: *"Yo creí que negarme era detener algo. Negarse no detiene nada. Detener es otro verbo, y yo ese ya no lo tenía."*
 
-Es peor que F1 porque F1 le dio paz. F2a le dio una duda que no cierra. Bram, acostumbrado a la culpa de cuarenta años de servicio, absorbe esta también — con la diferencia de que esta se la puso él mismo, no un contrato.
+Sigue en Rivermeet, sigue haciendo trabajo pequeño, sigue callando. No duerme mal. La pulsera no se tensa: **se afloja** — y ésa es la imagen del final, porque el gesto que se le va apagando no es la culpa, es la creencia de que plantarse sirve para algo. Un hombre que hizo lo correcto y descubrió que el mundo no estaba mirando.
+
+Es peor que F1 porque F1 le dio paz **con consecuencia**: ahí su decisión pesó. F2a le da la misma paz, vaciada. No hay duda que cerrar; hay un acto sin efecto, que en Bram —que se define entero por servir para algo— es la forma más exacta de derrota. **Distinción obligatoria:** la culpa de *"debí traicionar antes"* es de **F2b y solo de F2b** ([[Los 5 Finales]] §F2b), y no debe aparecer acá.
 
 ### F2b — The Long Winter: Fallen (Speck muere en el intento)
 
@@ -355,7 +357,7 @@ Gate: [[El Cráter — Matriz de Rutas]] §4, fila F2b — la mano que la arranc
 
 Bram vive. Speck no llegó viva al final: el forcejeo sobrecargó el Fragmento ([[Speck]] §Capa 5). Nadie gana.
 
-**Epílogo:** Bram vive con la **misma culpa duplicada** de F2a. *"Si yo hubiera cumplido, quizás Speck hubiera llegado viva a algún lugar. Quizás mi ejecución habría sido menos violenta que la del segundo agente. Quizás."* Falso, otra vez — la Fragmento no se controla, la persecución no es rescatable por delicadeza — pero Bram no puede saberlo.
+**Epílogo — acá sí, y solo acá: la culpa de no haber traicionado antes** ([[Los 5 Finales]] §F2b, fila Rechazo/Ausencia). Es el único de sus cinco finales que la carga, porque es el único donde el resultado es un cadáver: *"Si yo hubiera cumplido, Speck hubiera llegado viva a algún lugar. Mi ejecución habría sido menos violenta que la del segundo agente. Ella estaría en una jaula, pero estaría."* Falso, otra vez — el Fragmento no se controla, la persecución no es rescatable por delicadeza — pero Bram no puede saberlo, y a diferencia de F2a acá no hay forma de que la duda se disuelva sola.
 
 Se retira a un pueblo pequeño de Mistbound Frontier, no a Rivermeet. Ahí, en el clima ventoso y árido que conoció a los quince años, muere unos años después. La pulsera se queda en el cajón del último cuarto que rentó. Un mesonero la encuentra, no sabe quién es, la tira. Nadie visita la tumba.
 
