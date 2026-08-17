@@ -292,7 +292,7 @@ Iven no contesta. Ella se retira.
 
 Ver [[Geografía y Ciudades]] §THE RECKONING. En la ruta Iven, Harbormaster Tobin Hale oye **un pago del Consortium disfrazado de subsidio agrícola a un asentamiento fronterizo**, y se lo atribuye por error a **Roen** — el único humano del grupo que sabe cómo se ven los pagos del Council por dentro.
 
-**Si el jugador confronta a Roen:** Iven presencia la escena entera. No lo desmiente — no puede sin autoincriminarse. Pero es la única vez en toda la campaña que se le nota físicamente: se le va el color, y sale de la taberna a mitad de la discusión. Si el jugador lo sigue afuera y le pregunta qué le pasa, contesta: *"Nada. Es que ya vi esto antes. Acusar al que estaba más cerca."* Verdad literal, confesión perfecta, y absolutamente indetectable.
+**Si el jugador confronta a Roen:** Iven presencia la escena entera. No lo desmiente — no puede sin autoincriminarse. Pero es **la única vez en toda la campaña que se le nota en la cara**: se le va el color, y sale de la taberna a mitad de la discusión. Es una falla de máscara, no de cuerpo — el control motor le responde perfecto, camina firme hasta la puerta. (El otro superlativo físico de Iven es de otro eje y ocurre en el Archive: ahí lo que falla es el equilibrio, no el gesto — ver §Sub-beat 2: Interior del Archive — el beat Warden.) Si el jugador lo sigue afuera y le pregunta qué le pasa, contesta: *"Nada. Es que ya vi esto antes. Acusar al que estaba más cerca."* Verdad literal, confesión perfecta, y absolutamente indetectable.
 
 **Si el jugador se guarda la información:** Iven nota la tensión nueva pero no la ubica. Esas horas camina más cerca de Roen que de costumbre, sin saber por qué.
 
@@ -332,7 +332,7 @@ Bóveda Warden. Geometría imposible, cristal dormido, silencio con reverberaci�
 
 **El grupo se detiene. Iven se detiene distinto — Iven se cae.**
 
-No metafóricamente: se le doblan las rodillas y termina apoyado con una mano en el suelo. Es un acróbata; es la primera y única vez en toda la campaña que su cuerpo le falla.
+No metafóricamente: se le doblan las rodillas y termina apoyado con una mano en el suelo. Es un acróbata; es **la primera y única vez en toda la campaña que pierde el equilibrio** — que el cuerpo, el instrumento del que vive, deja de obedecerle. Es un eje distinto del de Driftmarket, donde lo que se le cae es la máscara (se le va el color) y el cuerpo le responde intacto: acá la cara no dice nada y son las piernas las que hablan.
 
 Vekka, en su ruta, lee la **técnica**. Dagna lee la **posición ritual**. Torgan lee **oficio y linaje**. Iven lee lo único que sabe leer, y es lo peor de todo:
 

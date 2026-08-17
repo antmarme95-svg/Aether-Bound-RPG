@@ -348,7 +348,7 @@ El grupo lo alcanza tres veces en el trayecto por The Wilds y The Scar of Breaki
 **Jugador:** *"¿Por qué viniste? ¿Por qué te ganaste mi confianza si sabías esto?"*
 **Torgan:** *"Porque necesitaba quererte de verdad antes. Un Juramento cumplido sin amor es solo mecánica. Quería que supieras que elegí esto queriéndote."*
 
-**Valen:** *"El Juramento se anticipa al grupo. Eso no lo calculé."*
+**Valen** no dice nada nuevo acá: repite, más bajo y para sí, la línea que ya dijo abajo (§sub-beat 2b, fuente única — *"El Juramento era una variable que superaba mis modelos"*).
 **Torgan:** *"Los Juramentos de Forja no son números. Son acero."*
 
 **Darro:** *"Maldita sea, Torgan. Pudiste haber dicho."*
@@ -548,7 +548,7 @@ Ver [[Los 5 Finales]].
 
 Valen pregunta si el Juramento es variable mutable. Torgan: *"No. Es piedra."* Valen intenta calcular cuándo actuará. Torgan: *"Cuando ordenen. No es ecuación. Es activación."*
 
-**Cuando traiciona:** Valen: *"No calculé bien. El Juramento superaba mis modelos."* Lo dice con interés genuino, y medio segundo después se da cuenta de que sonó a entusiasmo. No se corrige. Torgan, si lo escucha, no se ofende — entiende perfectamente que a un Strategist le fascine lo que no pudo predecir.
+**Cuando traiciona:** Valen no reescribe nada acá — su línea es la de la sala del Fragmento (§sub-beat 2b, fuente única): *"El Juramento era una variable que superaba mis modelos."* La dice con interés genuino, y medio segundo después se da cuenta de que sonó a entusiasmo. No se corrige. Torgan, si lo escucha, no se ofende — entiende perfectamente que a un Strategist le fascine lo que no pudo predecir.
 
 **En F4:** Valen es quien redacta el argumento técnico que Torgan presenta ante el consejo del clan menor. No viaja a Emberdeep — lo escribe y lo manda. Es su forma de disculparse por haber querido calcularlo.
 

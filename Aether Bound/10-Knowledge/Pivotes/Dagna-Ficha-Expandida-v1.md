@@ -466,11 +466,11 @@ Roen no recupera el escudo hasta el final del juego. En F2a lo sigue teniendo ca
 
 ### Dagna + Valen (Distancia Respetuosa)
 
-Valen lee a Dagna desde el primer día. Sabe que carga carta. Sabe que carga silencio. **No interviene.** No por indiferencia — por respeto élfico. En la cultura de Valen, los enanos vasallos se cargan a sí mismos; ofrecer ayuda no pedida es insulto.
+Valen registra a Dagna desde el primer día: ve que llega correspondencia, ve que la lee sola, ve el silencio alrededor. **Y lo archiva como lo que en su cultura significa** — un enano vasallo cargando lo suyo, que se carga solo. En la cultura de Valen, ofrecer ayuda no pedida es insulto, y mirar de cerca lo que alguien lee es peor. Así que no mira. **No es que sepa y calle: es que la cortesía le prohíbe averiguar**, y por eso nunca junta el remitente con la fecha.
 
-**Cuando llegan las cartas de Deepstone:** Valen las nota antes que Roen. No las comenta. Simplemente ajusta la marcha del grupo levemente — hace paradas un poco más largas para que Dagna tenga espacio para leer sola. Dagna nunca lo agradece verbalmente. Es probable que ni siquiera lo registre en el momento. Roen sí lo nota, y respeta a Valen por ello.
+**Cuando llegan las cartas de Deepstone:** Valen las nota antes que Roen, y lo que hace con el dato es cortesía, no vigilancia — ajusta la marcha del grupo levemente, hace paradas un poco más largas para que Dagna tenga espacio para leer sola. Le da privacidad, no seguimiento. Dagna nunca lo agradece verbalmente. Es probable que ni siquiera lo registre en el momento. Roen sí lo nota, y respeta a Valen por ello.
 
-**En la persecución:** Valen es el único que dice la frase de reconocimiento explícito: *"Las cartas desde Emberdeep. Debí haber preguntado."* No es autocrítica emocional — es constatación estratega de un patrón que se dejó pasar. Dagna, si escucha, no responde.
+**Su frase de reconocimiento** —*"Las cartas desde Emberdeep. Debí haber preguntado."*— es la de la **sala del Fragmento** y vive en §sub-beat 2b, que es su fuente única; no se reescribe ni se repite en la persecución. No es autocrítica emocional: es un estratega constatando que tuvo el dato archivado en la carpeta de la buena educación.
 
 **En F4:** Valen es el primero que le habla a Dagna cuando vuelve al grupo. Le dice, en élfico bajo: *"Bien vuelta."* Dos palabras. Dagna asiente. Es la única interacción verbal registrada entre los dos después del cráter.
 
