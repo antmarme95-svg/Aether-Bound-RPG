@@ -1,5 +1,68 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-17] canon | Ronda 2 de fixes de la re-corrida — 5 tandas, el sprint sigue abierto
+
+Los 2 subagentes en frío que faltaban de la ronda 1 se corrieron y validaron el
+bloque. **Congruencia semántica: 0 críticos / 1 medio / 5 menores. Dramaturgia:
+3 críticos / 4 medios / 3 menores.** Esta entrada cierra los tres críticos y el
+resto. Linter en 0/0 después de cada tanda.
+
+**Tanda 1 — "Valen ya lo sabía" seguía vivo fuera de los sub-beats 2b.** La regla
+de `Valen-Ficha-Expandida-v1.md` §Regla de escritura prohíbe cualquier línea con
+forma de *"I know"*, y la ronda 1 la aplicó solo a los 2b. Quedaron seis líneas
+señaladas (Valen §Dinámicas con Maren/Torgan/Iven/Nyael, y las fichas de Nyael y
+Lyris) **más cuatro que aparecieron al barrer la clase completa** y que ningún QA
+había reportado: `Maren:435`, `Sereth:86-90`, `Vekka:459` (los tres con
+*"Calculé esta trayectoria entonces / Esperaba estar equivocado"*) y `Nyael:387`
+(*"Valen es el único que sabe para quién trabaja Nyael"*). Las diez ahora citan la
+línea 2b de su propia ruta, con forma variada — el patrón es **archivó mal la
+señal**, nunca vio-y-calló.
+
+**Tanda 2 — la escena Valen↔Nyael era físicamente imposible.** `Nyael:108-112`
+tenía un diálogo cara a cara (*"Dejaste nota." / "Siempre dejo nota." / "Sé."*) en
+un Acto 3 donde Nyael **no está presente en ningún momento**: su ruptura es la
+ausencia en la sala del Fragmento, su captura no se ve, y su única línea es la nota
+del nicho. Reescrito como reacción de Valen **a la nota**, leída de pie y devuelta
+al nicho. Sobrevivió cinco rondas de QA.
+
+**Tanda 3 — F2a-Bram no se había propagado a [[Los 5 Finales]].** La ronda 1 corrigió
+la Matriz y la ficha de Bram pero dejó `Los 5 Finales:75` y `:161` diciendo
+*"no aplica a Bram"*. Corregido con el matiz correcto: Bram **no traiciona** —eso sigue
+en pie— pero el gate se cumple igual porque el holder es Torgan (holder = agente, sin
+tercero), espejo exacto de la ruta Nyael.
+
+**Tanda 4 — cinco medios.** (a) Causalidad invertida en el Reckoning de Bram
+(`Geografía:1081`): el Council activa a Torgan **como respaldo**, no *"porque Bram ya
+rechazó"* — Bram rechaza al día siguiente, en la sala del Fragmento. (b) §La Rueda de
+Roen atribuía a su infancia lo que solo pudo ver en el Triune Council (Mistbound es
+puesto interior). (c) Las 3 fichas de fijos describían el corredor sin las excepciones
+Bram/Nyael — `Roen:257` ya tenía la versión correcta veintitantas líneas después, o sea
+autocontradicción interna. (d) El epílogo F2a de Bram duplicaba la culpa que
+[[Los 5 Finales]] asigna en exclusiva a F2b; se le escribió motor propio —
+**intrascendencia**, no culpa: hizo lo correcto y no cambió nada, y la pulsera **se
+afloja** en vez de tensarse. F2b conserva la culpa y ahora lo dice explícitamente.
+(e) Aethelgard Watch ya no dice que Roen *"fue este puesto, en otra vida"*.
+
+**Tanda 5 — seis menores.** Beat de "releer la nota de Nyael" duplicado entre Roen y
+Darro → **se queda Darro**; Roen la lee una sola vez y no la vuelve a tocar. Fauna de
+Mistbound en `Bram:48` aclarada como animales, no criaturas de Aether. Cadena de Torgan
+en la fila Bram de la Matriz: se activa por **su propia** cadena enana, no por el
+contrato del Council. Segunda mitad del beat obligatorio de F3 (*"el jugador la recoge
+del otro lado del borde"*) agregada en Dagna, Iven, Maren, Sereth y Vekka. Excepción del
+Bond invertido anotada en la fila Mobile Foundry de [[Los 9 Links del Pivote]] — la
+ficha de Bram ya la tenía, el pendiente estaba mal descrito y quedó cerrado.
+
+**⛔ El sprint sigue sin cerrar.** Esta re-corrida encontró 3 críticos que la anterior
+no vio, uno de ellos una escena imposible con cinco rondas de antigüedad. Hace falta
+otra pasada de 2 subagentes en frío, y no la puede correr quien aplicó estos fixes.
+
+**Ambigüedad sin resolver, para el director:** `Torgan:311` tiene a Roen diciendo
+*"Nunca soltó el brazo derecho en tres meses. Debí leerlo"* y `Torgan:539` tiene al mismo
+Roen diciendo *"Sabía que cuando llegara el momento cumplirías. Esperaba estar
+equivocado"*. Roen no está sujeto a la regla de Valen, pero las dos líneas son sobre la
+misma traición y se contradicen. Requiere decisión de diseño, no se tocó.
+
+
 ## [2026-08-13] código | Escena gris del Protocolo A — construida y verificada
 
 Era lo último que bloqueaba el test gris del Bond. `godot/scenes/gray_test.tscn`,

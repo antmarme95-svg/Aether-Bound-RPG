@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-13
+updated: 2026-08-17
 ---
 
 # Current State
@@ -389,7 +389,32 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-0. **⏳ RE-CORRIDA DE QA DEL 08-13 — FIXES APLICADOS, VALIDACIÓN PENDIENTE.**
+0. **⏳ RONDA 2 DE FIXES APLICADA (2026-08-17) — SIGUE SIN CERRAR.**
+   La re-corrida en frío de los 2 subagentes **sí se ejecutó** sobre la ronda 1:
+   congruencia semántica dio 0 críticos / 1 medio / 5 menores, dramaturgia dio
+   **3 críticos / 4 medios / 3 menores**. Las 5 tandas de la ronda 2 están
+   aplicadas y commiteadas; linter en **0 críticos / 0 medios**.
+
+   Cerraron: (1) **residuos de "Valen ya lo sabía"** fuera de los sub-beats 2b —
+   seis líneas señaladas más cuatro que aparecieron al barrer la clase (Maren,
+   Sereth, Vekka §Dinámicas, y Nyael §Dinámicas); (2) **la escena Valen↔Nyael era
+   imposible** (Nyael no está presente en el Acto 3) — reescrita como reacción a
+   la nota del nicho; (3) **F2a-Bram no se había propagado a [[Los 5 Finales]]**;
+   (4) cinco medios (causalidad del Reckoning de Bram, §La Rueda de Roen, corredor
+   con las excepciones Bram/Nyael en las 3 fichas de fijos, epílogo F2a de Bram
+   con motor propio, Aethelgard Watch); (5) seis menores.
+
+   > ⛔ **EL SPRINT SIGUE SIN CERRAR — hace falta OTRA re-corrida en frío.**
+   > La re-corrida que validó la ronda 1 encontró **3 críticos que la ronda
+   > anterior no vio**, incluida una escena físicamente imposible que sobrevivió
+   > cinco rondas. El patrón histórico es claro: cada re-corrida encuentra algo.
+   > No cerrar sin una pasada nueva de 2 subagentes en frío, y **no la puede
+   > correr quien aplicó estos fixes** (skill `canon-qa` §Anti-objetivos).
+   > Es el primer trabajo de la próxima sesión de canon.
+
+   Bloque histórico de la ronda 1, para contexto:
+
+   **⏳ RE-CORRIDA DE QA DEL 08-13 — FIXES APLICADOS, VALIDACIÓN PENDIENTE.**
    Se corrieron 2 subagentes en frío (dramaturgia + congruencia semántica) sobre
    el bloque de propagación de "la traición tiene dos tiempos", y **las 7 tandas
    de fixes ya están aplicadas y commiteadas** (una por tanda; detalle completo en
@@ -403,10 +428,8 @@ agachada. El jugador sigue idle en los dos motores.
    migrados al sub-beat 2b** con escena de cráter recortada a reacción contenida;
    (6) siete medios; (7) cuatro menores + bloque de aritmética canónica de Nyael.
 
-   > ⛔ **El sprint NO está cerrado.** Falta la **re-corrida final con 2 subagentes
-   > en frío, todavía no ejecutada** — y no la puede correr quien aplicó los fixes
-   > (skill `canon-qa` §Anti-objetivos: nadie valida su propio trabajo). Es el
-   > primer trabajo de la próxima sesión de canon.
+   > *(Nota histórica: esa re-corrida ya se ejecutó — es la que produjo la ronda 2
+   > de arriba. El pendiente vigente es la re-corrida **siguiente**.)*
 
 1. **✅ ACTO 1 — GUIÓN COMPLETO (2026-08-12).** Detalle de cada decisión
    en [[LOG]] §2026-08-12. **Las 5 escenas escritas**, todas
