@@ -278,7 +278,7 @@ Bram va detrás, sin apurar el paso, sin acercarse a Speck ni una vez. El grupo 
 
 ### Sub-beat 4a: Afuera espera el segundo agente
 
-Cuando el grupo emerge a la superficie, **Torgan** ya está ahí — no un mensajero, no un intermediario. La orden que Bram acaba de rechazar le llegó a él por su propia cadena de mando (su clan menor, presionándolo desde antes de que este grupo existiera). Ver [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram" para la escena completa desde su lado — es una vida paralela que intersecta la del jugador en el peor momento posible, no un NPC improvisado.
+Cuando el grupo emerge a la superficie, **Torgan** ya está ahí — no un mensajero, no un intermediario. **No es el contrato de Bram reasignado:** a Torgan le bajó su propia orden, por su propia cadena de mando (Kadrun → Great Forging Clan → su clan menor), y le bajó **antes** de que Bram contestara nada — el Council lo activó por precaución la noche del Reckoning, no como reacción a una negativa que todavía no existía. Ver [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §"Torgan como Segundo Agente de la Ruta Bram" para la escena completa desde su lado — es una vida paralela que intersecta la del jugador en el peor momento posible, no un NPC improvisado.
 
 **El Council ya había movido otra pieza mientras Bram dudaba.** La advertencia de Tobin en Driftmarket (*"un segundo"*) se materializa en tiempo real. El grupo entiende, con un segundo de retraso, que el plan del Council no dependía de Bram — dependía de **cualquier** ejecutor con Juramento. Bram no salvó a Speck rechazando; solo redistribuyó el problema.
 

@@ -53,13 +53,18 @@ externo** — nunca como miembro de The Bound Five. El grupo es siempre cinco
 contra él, o ser mencionado — pero no se sienta a su mesa, no participa de sus
 dinámicas internas, y no aparece en las escenas de formación del grupo.
 
-**Caso canónico — el segundo agente de la ruta Bram.** Cuando Bram rechaza la
-orden en la sala del Fragmento del Sunken Archive, el Triune Council no se queda sin
-opciones: activa a otro de los nueve. Canónicamente **Torgan**, que en esa partida
-no es el Pivote del jugador pero existe igual, con su Juramento de Forja intacto y
-su clan menor presionándolo desde antes de que el grupo se formara. No es un deus
-ex machina — es una vida paralela que el jugador nunca conoció, intersectando la
-suya en el peor momento posible. Ver [[Pivotes/Bram-Ficha-Expandida-v1|Bram]].
+**Caso canónico — el segundo agente de la ruta Bram.** El Council **no espera a que
+Bram conteste**: dobla la pieza por precaución, porque una entrega de este tamaño no
+se le confía a un solo agente. La activación ya está corriendo la noche del Reckoning
+en Driftmarket —es el *"un segundo"* que Tobin alcanza a oír— y ahí Bram todavía no ha
+rechazado nada; lo rechaza recién al día siguiente, en la sala del Fragmento. El
+segundo agente es canónicamente **Torgan**, y **no lo activa el contrato de Bram sino
+su propia cadena** (Kadrun → Great Forging Clan → su clan menor), la misma por la que
+le baja la orden en su ruta propia. En esa partida no es el Pivote del jugador pero
+existe igual, con su Juramento de Forja intacto. No es un deus ex machina — es una
+vida paralela que el jugador nunca conoció, intersectando la suya en el peor momento
+posible. Secuencia y fuente única: [[Geografía y Ciudades]] §THE RECKONING, variante
+Bram. Ver también [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 4a.
 
 **Implicación de rejugabilidad.** Cada celda no solo cambia quién te traiciona:
 cambia **qué vida paralela conociste** y cuáles ignoraste. Los otros ocho arcos

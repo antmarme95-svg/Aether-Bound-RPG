@@ -402,7 +402,9 @@ La decisión del jugador abre uno de los 5 finales. **(La activación del Fragme
 
 **Canon 2026-07-28.** Ver [[Los 9 Pivotes]] §"Canon: los 9 existen simultáneamente" y [[Pivotes/Bram-Ficha-Expandida-v1|Bram]] §sub-beat 4a. Los nueve Pivotes existen a la vez; la celda del jugador decide cuál de ellos lo conoció.
 
-Cuando el Pivote del jugador es **Bram**, y Bram rechaza la orden en la sala del Fragmento, el Triune Council no se queda sin piezas: activa a **Torgan**, que en esa partida no conoce al jugador, no viajó con el grupo, no cenó con nadie — pero existe igual, con su Juramento intacto y su clan menor presionándolo desde antes de que el grupo se formara.
+Cuando el Pivote del jugador es **Bram**, el Council **no espera la respuesta de Bram para doblar la pieza**: lo hace por precaución, porque una entrega de este tamaño no se le confía a un solo agente. La activación de **Torgan** ya está en marcha en Driftmarket, la noche del Reckoning —es el *"un segundo"* que Tobin alcanza a oír ([[Geografía y Ciudades]] §THE RECKONING, variante Bram, fuente única de la secuencia)— y en ese momento Bram **todavía no ha rechazado nada**: rechaza recién al día siguiente, en la sala del Fragmento. Torgan no es un reemplazo de Bram, es un respaldo levantado en paralelo.
+
+**Y no lo levanta el Council sobre el contrato de Bram: lo levanta su propia cadena.** El pedido baja por Kadrun → Great Forging Clan → su clan menor, exactamente igual que en su ruta propia, y Torgan cumple porque el Juramento lo obliga a él, no porque alguien le haya reasignado el trabajo de otro. En esa partida no conoce al jugador, no viajó con el grupo, no cenó con nadie — pero existe igual, con su Juramento intacto y su clan menor presionándolo desde antes de que el grupo se formara.
 
 **Qué significa para él.** La orden le baja por la misma cadena de tres eslabones, en el mismo registro traducido de Kadrun, sobre un grupo del que no forma parte y una criatura que nunca vio. No hay nido, no hay taberna fronteriza, no hay tres meses de camino. Hay un mensajero, un sello, y una posición en un mapa.
 
