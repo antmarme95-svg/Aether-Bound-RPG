@@ -366,17 +366,17 @@ Su línea final:
 ### Valen + Maren (Humana Strategist → Ella)
 **Primera impresión:** Maren hace cálculos. Valen hace cálculos. Se entienden matemáticamente pero no emocionalmente.  
 **Tensión:** Cuando Maren comienza a "solucionar" el dilema de Speck en números, Valen la mira. *"¿Incluiste el costo humano en tu ecuación?"* No es pregunta — es verificación.  
-**Traición:** Cuando Maren elige matemáticamente, Valen dice: *"I calculated this path three weeks ago. I hoped you wouldn't take it."*
+**Traición:** Cuando Maren elige matemáticamente, Valen no afirma nada — **pregunta**, y en él preguntar es la confesión: *"Three weeks ago you redistributed your gear. Extra load, borne on the spine. Was that for her?"* Tuvo ese dato tres semanas y lo archivó como disciplina de marcha. Ver [[Pivotes/Maren-Ficha-Expandida-v1|Maren]] §sub-beat 2b.
 
 ### Valen + Torgan (Enano Duelist → Él)
 **Primera impresión:** Estrategia élfica vs. deber enano. Valen ve la estructura de sacrificio en Torgan — es patrón que ha visto antes.  
 **Tensión:** Valen pregunta sobre el Juramento. Torgan resiste. Valen: *"I'm not judging. I'm predicting. They're different."*  
-**Traición:** Cuando Torgan elige el Juramento, Valen asiente. *"As expected. Your people's chains are older than mine."*
+**Traición:** Cuando Torgan elige el Juramento, Valen asiente una vez, y lo que dice es una falla de método declarada en voz alta: *"El Juramento era una variable que superaba mis modelos."* Le interesa genuinamente, y eso lo avergüenza al segundo siguiente. Ver [[Pivotes/Torgan-Ficha-Expandida-v1|Torgan]] §sub-beat 2b.
 
 ### Valen + Iven (Humano Duelist → Él)
 **Primera impresión:** Dos razas, mismo rol. Valen nota que Iven ama su asentamiento más que el grupo. Ese peso es medible.  
 **Tensión:** Valen menciona el dilema. Iven: "¿No confías en mí?" Valen: "I trust your logic perfectly. That's the problem."  
-**Traición:** Cuando Iven elige a su pueblo, Valen no habla. Simplemente: *"As calculated."*
+**Traición:** Cuando Iven elige a su pueblo, Valen no habla — no en la sala, y no con Iven. La línea llega dos horas después, en el ascenso, dicha al jugador: *"He was diverting to the same contact points for three months. I logged it. I filed it as homesickness."* Ver [[Pivotes/Iven-Ficha-Expandida-v1|Iven]] §sub-beat 2b.
 
 ### Valen + Sereth (Elfo Strategist → Él)
 **Primera impresión:** Elfo manipulador vs. elfo observador. Hay tensión inteligencia-a-inteligencia.  
@@ -395,8 +395,8 @@ Su línea final:
 
 ### Valen + Nyael (Elfa Duelist → Ella) — la que lo rompe más hondo
 **Primera impresión:** Nyael es la sombra. Valen puede ser sombra. Complicidad silenciosa.  
-**Tensión:** Valen sabe lo que Nyael está considerando semanas antes. No dice nada — la misma decisión que tomó con Speck, con el jugador, con cada verdad que "guardó el cálculo" en vez de intervenir.  
-**Traición:** Nyael no dice nada, solo se va. Valen la deja ir. *"The cleanest betrayals are silent ones."* Pausa larga. *"I would know."* Es el reconocimiento más hondo de todo su arco: Nyael no es una calculadora fría como Sereth ni una ejecutora institucional como Torgan — es **observación pura eligiendo no intervenir**, exactamente el entrenamiento de la Academy of Sages que a Valen le enseñaron como virtud. Verla hacerlo es verse a sí mismo desde afuera, sin la excusa de los 230 años que usa con todos los demás.
+**Tensión:** Valen es el único que registra la quietud de Nyael — la noche del campamento en que ella mira a Speck cinco minutos completos sin moverse ([[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]] §Grove of Cycles). **La archiva como parentesco de oficio**: dos observadores que no necesitan hablarse. Ése es exactamente el error. Lo que estaba mirando no era contemplación; era medición.  
+**Traición:** **No hay escena.** Nyael no se despide, no discute y no está — la ruptura es la ausencia misma en la sala del Fragmento, y Valen no la ve irse porque no hay nada que ver. Su línea la dice para sí, en el ascenso, sin destinatario: *"She never said goodbye because she already had."* Es el reconocimiento más hondo de todo su arco: Nyael no es una calculadora fría como Sereth ni una ejecutora institucional como Torgan — es **observación pura que sí terminó actuando**, y Valen, formado en la misma disciplina de mirar sin tocar, tuvo la señal delante y la leyó como si fuera un espejo. Ver §sub-beat 2b de su ficha; el detalle del beat, en [[Pivotes/Nyael-Ficha-Expandida-v1|Nyael]].
 
 ### Valen + Vekka (Enana Strategist → Ella)
 **Primera impresión:** Otra Strategist. Vekka construye, Valen calcula. Dinámicas de respeto mutuo raro.  

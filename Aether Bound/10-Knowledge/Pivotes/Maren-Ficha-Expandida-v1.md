@@ -432,9 +432,9 @@ Conversación rápida sobre ciclos de Mudas. Ambos entienden la matemática.
 
 **Tensión:** Valen pregunta si Maren ha calculado las variables. Maren: *"Hace semanas."* Valen: *"Y aun así viniste."* Maren: *"Las variables humanas no siempre son matemáticas."*
 
-**Cuando traiciona:** Valen dice: *"Tres semanas atrás ajustaste tu distribución de peso. Preparación para cargar carga extra. Calculé esta trayectoria entonces. Esperaba estar equivocado."*
+**Cuando traiciona:** Valen no afirma — pregunta, y es la única vez del Acto 3 en que le pide a alguien que le confirme un dato en lugar de exponerlo: *"Three weeks ago you redistributed your gear. Extra load, borne on the spine. Was that for her?"* Maren: *"Yes."* Valen asiente una vez y no vuelve a hablar hasta la superficie.
 
-No hay sorpresa en Valen. Solo verificación de patrón.
+No es verificación de un pronóstico. Es un hombre pidiéndole a otra que le confirme lo que él ya tenía anotado y había clasificado como disciplina de marcha. Ver §sub-beat 2b.
 
 ### Maren + Darro (Diferentes Roles, Energía Opuesta)
 

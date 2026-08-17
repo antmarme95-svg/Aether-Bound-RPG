@@ -105,11 +105,13 @@ Nyael: *"Lo que hago en todos lados. Observar. Calcular. Esperar."*
 
 **Primera impresión:** Valen ve a alguien tan silencioso que es casi transparente. Hay respeto. También hay **advertencia de que, cuando actúe, no habrá forma de verla venir.**
 
-**Cuando traiciona:** Valen no está sorprendido. Simplemente dice: *"Dejaste nota."* Como observación, no pregunta.
+**Cuando traiciona:** **no hay escena entre los dos, y no puede haberla.** La ruptura de Nyael es su ausencia en la sala del Fragmento y la captura es un hueco en el corredor que nadie ve ocurrir (§sub-beats 2b y 3): Nyael no está delante de Valen en ningún momento del Acto 3, así que Valen no tiene con quién hablar. Lo suyo es lo que le queda a un archivista cuando el sujeto ya se fue: **la nota del nicho.**
 
-Nyael: *"Siempre dejo nota."*
+La lee de pie, en el corredor, sin apurarse y sin comentarla. Devuelve el papel al nicho exactamente como lo encontró — el gesto de quien no se siente con derecho a quedarse con él. Al jugador, si el jugador está ahí, le dice una sola cosa, y la dice mirando la pared:
 
-Valen: *"Sé."*
+Valen: *"Ella dejaba nota siempre. Yo lo tenía anotado. Lo anoté como cortesía."*
+
+Nadie contesta. Es lo único que Valen dice de ella en todo el Acto 3 en voz audible; su línea de ruta —*"She never said goodbye because she already had."*— ya la había dicho antes, para sí, cuando el grupo entendió que Nyael no iba a volver a la sala (§sub-beat 2b).
 
 ---
 
@@ -384,7 +386,7 @@ El jugador la ve, con el tiempo, dejar de necesitar la maestra centenaria del br
 
 ## Dinámicas
 
-**Nyael + Valen:** Dos observadores. Pero Valen observa para entender; Nyael observa para actuar en silencio. Tensión profunda: Valen es el único del grupo que **sabe** para quién trabaja Nyael, y no la delata — regla élfica de no acusar sin evidencia formal.
+**Nyael + Valen:** Dos observadores. Pero Valen observa para entender; Nyael observa para actuar en silencio. Tensión profunda: Valen es el único del grupo que ubica **de dónde viene** Nyael —el brazo encubierto de the Royal Academy— y no lo comenta, por la regla élfica de no acusar sin evidencia formal. Pero ubicar la escuela no es leer la operación: Valen archiva esa procedencia como dato biográfico, no como cuenta regresiva, y ahí está su falla. Nunca supo lo que Nyael iba a hacer.
 
 **Nyael + Roen:** Soldado y sombra. Roen protege visiblemente; Nyael actúa sin ser vista. Roen ve en Nyael a alguien que **conoce el peso** de cargar órdenes ajenas — reconoce el mecanismo aunque no comparte el oficio.
 

@@ -128,11 +128,9 @@ Valen: *"Elegancia fría. Conozco ese idioma."*
 
 **Primera impresión:** Valen ve espejo distorsionado de sí mismo. Ambos calculan. Pero Valen calcula **emociones**, Lyris calcula **patrones.** Hay afinidad silenciosa.
 
-**Cuando traiciona:** Valen no está sorprendido. Simplemente dice: *"Debí preverlo. Lyris no elige grupo. Elige patrón."*
+**Cuando traiciona:** Valen es el que peor la pasa, y en la sala del Fragmento **no dice absolutamente nada** — no por control, sino porque no tiene qué decir: leyó el gesto correcto y le puso la etiqueta equivocada. Durante todo el interior del Archive, Lyris caminó en vez de volar, y Valen fue el único del grupo que lo notó y el único que lo interpretó mal. La línea llega mucho después, ya en la superficie, y se la dice al jugador, no a ella: *"She walked the whole way in. I told myself it was reverence."*
 
-Lyris: *"El patrón requería ausencia."*
-
-Valen: *"Entonces te vas sin mentira ni drama. Así debe ser. Respeto eso, aunque duela."*
+Lyris no le contesta nunca. Sube tres metros por encima del grupo el ascenso entero y esa distancia es toda la respuesta que da. Detalle del beat en §sub-beat 2b.
 
 ---
 

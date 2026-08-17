@@ -83,11 +83,11 @@ Sereth: *"También tiene precio. Yo elegí pagar diferente — y elegí a quién
 
 Hay respeto. También hay fricción irreconciliable — dos productos de la misma ciudad, entrenados por instituciones que se desprecian mutuamente.
 
-**Cuando traiciona:** Valen dice: *"Tres meses atrás tus preguntas al jugador cambiaron de tono. Empezaron a repetirse en variaciones. Reconocí el patrón — es lectura larga, fase de consolidación. Calculé esta trayectoria entonces."*
+**Cuando traiciona:** Valen dice: *"You changed the shape of his questions three months ago. Same content, different angles. I saw it."* Pausa. *"I filed it as intellectual growth."*
 
-Sereth: *"¿Y aun así viniste?"*
+Sereth: *"¿Y aun así no dijiste nada?"*
 
-Valen: *"Porque esperaba estar equivocado. También porque quería verte elegir diferente."*
+Valen: *"No callé nada. Guardé el dato en el cajón equivocado, que es peor — callar por lo menos es una decisión."* El lector de trayectorias, leído. Ver §sub-beat 2b.
 
 ---
 

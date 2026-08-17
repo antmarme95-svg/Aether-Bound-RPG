@@ -456,7 +456,7 @@ Comparten conversaciones largas sobre proporciones, ciclos constructivos, arqueo
 
 **Tensión:** Valen pregunta, en el tramo tardío del Acto 2, si Vekka ha considerado que Speck es una obra en proceso, no una forja fallida. Vekka contesta: *"Lo consideré. La distinción no altera la operación bajo el dogma."* Valen no insiste — sabe que ha topado con el muro.
 
-**Cuando traiciona:** Valen dice, en la persecución: *"Cuando llegamos al Archive supe que estabas ejecutando algo. No supe qué. Esperaba estar equivocado."* Vekka: *"No estabas."* Es su intercambio más íntimo — dos observadores reconociendo el otro sin necesidad de más palabras.
+**Cuando traiciona:** Valen dice, en la sala: *"Two adjustments, forty minutes apart. I logged both."* Pausa larga. *"I did not connect them."* Vekka, en la persecución, mucho después: *"Estaban conectados."* No es reproche — es una herrera corrigiendo una medición mal tomada, que es la forma más cruel que tiene de ser amable. Ver §sub-beat 2b.
 
 ### Vekka + Darro (El Peso de Treinta Años)
 
