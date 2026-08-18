@@ -12,10 +12,12 @@ Eje **Boda**. Implementa el [[Seguimiento Loop]]. Su propósito es que
 
 ```bash
 python "Boda/scripts/cronograma.py"
+python "Boda/scripts/dashboard.py"
 ```
 
-Da lo vencido y lo que entra en ventana de 45 días. Es el esqueleto del
-reporte.
+El primero da lo vencido y lo que entra en ventana de 45 días. El segundo
+da el semáforo de proveedores. **Ambos salen con código 1 si hay algo en
+rojo.** Son el esqueleto del reporte; el LLM interpreta, no recalcula.
 
 ## Fase 1 — Verificar los conectores
 
@@ -46,12 +48,26 @@ Cada cosa nueva es **una** de estas:
 | Cambio de fecha o de precio | `hitos.json` / [[Presupuesto]], y se **marca como contradicción** |
 | Publicidad | se ignora, no se reporta |
 
-## Fase 4 — Lo que NO llegó
+## Fase 4 — Lo que NO llegó, y de quién es el turno
 
-La parte que más valor tiene y la que se olvida: **quién no ha contestado.**
-Revisar `30-Proveedores/` por fichas en `sondeado` o `cotizó` sin respuesta
-en más de 10 días. Un proveedor que no contesta en temporada de puente
-normalmente ya se comprometió con alguien más.
+La parte que más valor tiene y la que se olvida.
+
+**El silencio se cuenta desde que NOSOTROS escribimos** (`yo_escribi` en la
+ficha), no desde el último mensaje del hilo. Un acuse automático de
+"recibimos tu mensaje" mueve `ultimo_mensaje` pero el silencio real sigue
+corriendo. Umbral: **14 días** — lo aplica `dashboard.py`, no el criterio
+del día.
+
+Un proveedor callado 14 días en temporada de puente normalmente ya se
+comprometió con alguien más.
+
+**Y al revés, que es lo que de verdad se cae:** revisar qué fichas tienen
+`turno: nosotros`. Es muy fácil creer que uno está esperando al proveedor
+cuando el proveedor lleva tres semanas esperándonos. Esos van en amarillo y
+se nombran uno por uno.
+
+Después de cada contacto hay que actualizar `turno` y `yo_escribi` en la
+ficha. Si no, el tablero miente.
 
 ## Fase 4.5 — Lente financiero
 
@@ -71,8 +87,9 @@ el trade-off nombrado (ver [[Prioridades]]: flores, luego extras).
 
 Corto y accionable, en este orden:
 
-1. **Vencido o en riesgo** (del script).
-2. **Necesita decisión de Mariana y Toño.**
+1. **Vencido o en riesgo** (de los dos scripts: hitos y proveedores en rojo).
+2. **A quién le debemos respuesta** (fichas con `turno: nosotros`).
+3. **Necesita decisión de Mariana y Toño.**
 3. **Llegó esto** (una línea cada cosa).
 4. **Sin respuesta desde hace X días.**
 5. **Las tres líneas de finanzas** (`boda-finanzas` fase 3): dónde vamos

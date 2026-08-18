@@ -46,10 +46,20 @@ calcular el total a 200 **y** a 215.
 
 ## Fase 3 — Ficha del proveedor
 
-Crear o actualizar `30-Proveedores/<rubro>-<proveedor>.md`: contacto,
-cotización con su cita, qué incluye y qué no, estatus
-(`sondeado` / `cotizó` / `contratado` / `descartado`), hilo de correo, y
-por qué se descartó si aplica — eso evita volver a sondearlo en seis meses.
+**Copiar `30-Proveedores/_PLANTILLA.md`** a `<rubro>-<proveedor>.md` y
+llenar. Respetar los nombres del frontmatter: los lee `dashboard.py` y una
+ficha con campos mal escritos **no aparece en el tablero**.
+
+Los tres campos que se olvidan y son los que más valen:
+
+- **`turno`** — quién debe la siguiente respuesta. Se actualiza en **cada**
+  contacto, sin excepción.
+- **`yo_escribi`** — la última vez que Mariana o Toño escribieron. De ahí se
+  cuenta el silencio de 14 días, no del último mensaje del hilo.
+- **`cotizado_200` y `cotizado_215`** — los dos siempre.
+
+Si se descarta, escribir **por qué** — evita volver a sondearlo en seis
+meses.
 
 ## Fase 4 — Propagar
 
