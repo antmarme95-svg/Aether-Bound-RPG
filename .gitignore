@@ -118,3 +118,9 @@ Aether Bound/20-State/Bitacora-Privada*
 # contratos, invitados). Mismo criterio que Inversión: vive solo en
 # OneDrive, no viaja al remoto. Ver Boda/METODO.md §4.
 Boda/
+
+# Privados del eje Boda (VAULT-STARTER §5.5) — glob, no linea literal.
+# Redundante con `Boda/` de arriba, a proposito: si algun dia el eje se
+# desanida o se versiona parcialmente, los privados siguen cubiertos.
+Boda/20-State/Notas-Privadas*
+Boda/20-State/Bitacora-Privada*
