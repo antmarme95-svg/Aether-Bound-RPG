@@ -40,6 +40,7 @@ Cada cosa nueva es **una** de estas:
 | Qué es | A dónde va |
 |---|---|
 | Cotización o contrato | skill `boda-cotizacion` |
+| **Anticipo, recibo o confirmación de pago** | skill `boda-finanzas` — **se propone, NO se escribe solo** |
 | Proveedor pide una decisión | [[Task-Board]] + se le nombra a Boris |
 | Confirmación de invitado | lista de invitados |
 | Cambio de fecha o de precio | `hitos.json` / [[Presupuesto]], y se **marca como contradicción** |
@@ -52,6 +53,20 @@ Revisar `30-Proveedores/` por fichas en `sondeado` o `cotizó` sin respuesta
 en más de 10 días. Un proveedor que no contesta en temporada de puente
 normalmente ya se comprometió con alguien más.
 
+## Fase 4.5 — Lente financiero
+
+Además de los correos de proveedores, buscar comprobantes: *anticipo,
+depósito, recibo, factura, pago, transferencia, saldo*. Por cada uno
+extraer proveedor, rubro, monto, fecha y **si es anticipo o saldo**.
+
+🔴 **Proponer, nunca escribir solo.** Un LLM que mete montos al presupuesto
+sin supervisión corrompe el registro en silencio: confunde anticipo con
+total, revuelve precios con y sin IVA, toma una cotización por un pago. Se
+presenta la lista, Boris confirma, y **entonces** entra por `boda-finanzas`.
+
+Si algún rubro va >10% sobre su techo, **va hasta arriba del reporte** con
+el trade-off nombrado (ver [[Prioridades]]: flores, luego extras).
+
 ## Fase 5 — Reportar
 
 Corto y accionable, en este orden:
@@ -60,7 +75,9 @@ Corto y accionable, en este orden:
 2. **Necesita decisión de Mariana y Toño.**
 3. **Llegó esto** (una línea cada cosa).
 4. **Sin respuesta desde hace X días.**
-5. **Nada más pendiente**, si es el caso — decirlo, no rellenar.
+5. **Las tres líneas de finanzas** (`boda-finanzas` fase 3): dónde vamos
+   contra el techo · el rubro a vigilar · el próximo pago a 30 días.
+6. **Nada más pendiente**, si es el caso — decirlo, no rellenar.
 
 Si no pasó nada, la respuesta correcta es "no hay nada nuevo". Un reporte
 inflado entrena a ignorarlo.
