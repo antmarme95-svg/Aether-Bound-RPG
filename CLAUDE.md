@@ -2,16 +2,20 @@
 
 0. **Al usuario (el director) siempre le contestarás iniciando por "Boris".**
 1. **Toda sesión empieza leyendo el `Current-State` de SU eje.** El repo
-   tiene dos ejes independientes:
+   tiene tres ejes independientes:
    - **Aether Bound** (el juego) → `Aether Bound/20-State/Current-State.md`.
      Es el default: si no está claro de qué trata la sesión, es este.
    - **Inversión** (cartera personal) → `Inversión/10-Portafolios/…/Current-State.md`,
      con su propio método en `Inversión/METODO.md`. Carpeta en `.gitignore`,
      puede no existir en un clon.
+   - **Boda** (planeación de la boda de Boris) → `Boda/20-State/Current-State.md`,
+     con su propio método en `Boda/METODO.md`. Usa los conectores de Google
+     (Gmail, Drive, Calendar). Carpeta en `.gitignore`, puede no existir en
+     un clon.
 
-   **No se cargan los dos.** Mezclarlos desperdicia contexto en ambos
-   sentidos. Las reglas 2-9 de abajo son de Aether Bound y no aplican al eje
-   Inversión, que se rige por su propio `METODO.md`.
+   **No se cargan dos a la vez.** Mezclarlos desperdicia contexto en ambos
+   sentidos. Las reglas 2-9 de abajo son de Aether Bound y no aplican a los
+   ejes Inversión ni Boda, que se rigen por su propio `METODO.md`.
 2. El modelo de trabajo (capas, loops, plantillas) está en
    `Aether Bound/SCHEMA.md` — toda operación sigue un loop de
    `Aether Bound/30-Loops/`.
