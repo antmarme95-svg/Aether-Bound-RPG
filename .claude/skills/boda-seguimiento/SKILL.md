@@ -29,8 +29,11 @@ bandeja equivocada sale vacío y parece concluyente ([[Lecciones]]).
 
 Desde la fecha del último barrido registrado en [[LOG]]:
 
-- **Gmail** — etiqueta `Boda` si ya existe; si no, buscar por nombre de
-  proveedor de `30-Proveedores/` y por términos del rubro.
+- **Gmail** — `label:Label_1` (etiqueta `Boda`). ⚠️ La búsqueda de Gmail
+  filtra por **`labelId`, no por el nombre visible**: `label:Boda` no es lo
+  que la API espera. Además, buscar por nombre de proveedor de
+  `30-Proveedores/` y por términos del rubro — los hilos nuevos llegan sin
+  etiquetar.
 - **Drive** — archivos nuevos en la carpeta `Boda`.
 - **Calendar** — calendario "Wedding HQ": próximas citas, y choques contra
   el calendario personal.
