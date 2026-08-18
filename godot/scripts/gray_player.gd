@@ -33,6 +33,17 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	# ESC libera el mouse y un clic lo vuelve a capturar. Es control del
+	# FACILITADOR, no del tester: sin esto el mouse queda atrapado y para
+	# tocar cualquier cosa de la maquina hay que matar el proceso, que
+	# ademas se llevaria el cierre limpio del CSV.
+	if event is InputEventKey and event.pressed and (event as InputEventKey).keycode == KEY_ESCAPE:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		return
+	if event is InputEventMouseButton and event.pressed and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		return
+
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		var mm := event as InputEventMouseMotion
 		_yaw -= mm.relative.x * mouse_sensitivity

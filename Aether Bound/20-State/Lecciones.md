@@ -12,6 +12,15 @@ updated: 2026-08-12
 
 ### Godot 4.7 — hook de telemetría del playtest (2026-08-13)
 
+- **`--` es un OPERADOR de PowerShell y rompe cualquier invocación de Godot
+  que pase argumentos al proyecto.** `godot --path godot -- --tester=Diego`
+  falla con *"Token 'path' inesperado"* antes de llegar al ejecutable. Sortear
+  con el token de parada de parseo (`& "…\godot.exe" --% --path godot --
+  --tester=Diego`) o, mejor, con un `.bat`. **Nunca darle a Boris una línea
+  con `--` para pegar en PowerShell** — y menos una que tenga que correr con
+  un playtester sentado al lado. Lanzadores: `Start-Playtest.bat` y
+  `Report-Playtest.bat` en la raíz.
+
 - **Un error de compilación NO hace fallar un test de GDScript.** El test
   del hook imprimió `ALL_PASS` con un bloque entero muerto: `ledge_zone.gd`
   no compilaba, `LedgeZoneScript.new()` devolvió basura, el bloque murió con

@@ -633,7 +633,10 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
   `godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
   con `tools/test_gray_scene.gd` (18 verificaciones) probando **con física
   real** que la mesa no se sube caminando desde ninguna de 8 direcciones.
-  Se corre con `godot --path godot -- --tester=Diego`.
+  **La sesión se lanza con `Start-Playtest.bat Diego`** (raíz del repo) y los
+  resultados se leen con `Report-Playtest.bat`. No usar la línea de Godot a
+  mano en PowerShell: el `--` que Godot necesita es un operador del shell y
+  la rompe — ver [[Lecciones]] §Godot 4.7.
 - **Congelar el build y anotar su hash en §0.5.** Es la única casilla de §0
   que sigue abierta.
 - **Pasada de feel del jugador con Boris en la máquina.** Velocidad,

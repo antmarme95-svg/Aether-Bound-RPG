@@ -670,8 +670,11 @@ agachada. El jugador sigue idle en los dos motores.
    propio**; el botón da 7.5 m/s (ápice 2.87 m) y solo responde con los
    pies en el suelo. El test camina contra la mesa **desde 8 direcciones**
    con física real: altura máxima **0.00 m** — no hay vía sin botón.
-   Se corre con `godot --path godot -- --tester=Diego`; F10 corta por
-   fallo técnico y F11 por incomodidad del tester.
+   Se lanza con **`Start-Playtest.bat Diego`** y se lee con
+   **`Report-Playtest.bat`** (los dos en la raíz del repo); F10 corta por
+   fallo técnico, F11 por incomodidad del tester, ESC libera el mouse.
+   ⚠️ No correr la línea de Godot a mano en PowerShell: el `--` que Godot
+   necesita es un operador del shell y la rompe.
    **La torre está ARRIBA de la mesa y no al lado**: desde el suelo una
    mesa de 2.4 m se lee como un muro, y dos bloques parados encima son lo
    más barato que dice "esto es una superficie". De paso, toda la
