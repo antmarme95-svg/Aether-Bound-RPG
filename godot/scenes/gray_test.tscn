@@ -81,133 +81,133 @@ albedo_color = Color(0.8, 0.8, 0.84, 1)
 radius = 0.4
 height = 1.8
 
-[node name="GrayTest" type="Node3D" unique_id=1406404847]
+[node name="GrayTest" type="Node3D" unique_id=1485979154]
 script = ExtResource("1_jf587")
 
-[node name="Environment" type="WorldEnvironment" parent="." unique_id=1927094558]
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=1580890349]
 environment = SubResource("Environment_4c8jb")
 
-[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1082717143]
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=133743193]
 transform = Transform3D(0.7880108, 0.48514786, -0.37903908, 0, 0.6156615, 0.7880107, 0.6156615, -0.62096095, 0.4851479, 0, 0, 0)
 light_energy = 1.15
 shadow_enabled = true
 
-[node name="Suelo" type="StaticBody3D" parent="." unique_id=259134214]
+[node name="Suelo" type="StaticBody3D" parent="." unique_id=2132837163]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 
-[node name="Mesh" type="MeshInstance3D" parent="Suelo" unique_id=1424801385]
+[node name="Mesh" type="MeshInstance3D" parent="Suelo" unique_id=588327820]
 material_override = SubResource("StandardMaterial3D_ttb1c")
 mesh = SubResource("BoxMesh_rqbcn")
 
-[node name="Col" type="CollisionShape3D" parent="Suelo" unique_id=2035432584]
+[node name="Col" type="CollisionShape3D" parent="Suelo" unique_id=691515428]
 shape = SubResource("BoxShape3D_165xx")
 
-[node name="Muros" type="Node3D" parent="." unique_id=1582803292]
+[node name="Muros" type="Node3D" parent="." unique_id=1309315472]
 
-[node name="Norte" type="StaticBody3D" parent="Muros" unique_id=2041761548]
+[node name="Norte" type="StaticBody3D" parent="Muros" unique_id=1003460565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -22)
 
-[node name="Mesh" type="MeshInstance3D" parent="Muros/Norte" unique_id=2026821698]
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Norte" unique_id=1415825242]
 material_override = SubResource("StandardMaterial3D_fbg2c")
 mesh = SubResource("BoxMesh_47824")
 
-[node name="Col" type="CollisionShape3D" parent="Muros/Norte" unique_id=9966333]
+[node name="Col" type="CollisionShape3D" parent="Muros/Norte" unique_id=667698464]
 shape = SubResource("BoxShape3D_pr5x5")
 
-[node name="Sur" type="StaticBody3D" parent="Muros" unique_id=1100560706]
+[node name="Sur" type="StaticBody3D" parent="Muros" unique_id=918530664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 22)
 
-[node name="Mesh" type="MeshInstance3D" parent="Muros/Sur" unique_id=461073138]
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Sur" unique_id=1848698664]
 material_override = SubResource("StandardMaterial3D_fbg2c")
 mesh = SubResource("BoxMesh_8etsn")
 
-[node name="Col" type="CollisionShape3D" parent="Muros/Sur" unique_id=1201867818]
+[node name="Col" type="CollisionShape3D" parent="Muros/Sur" unique_id=195195776]
 shape = SubResource("BoxShape3D_2a6v5")
 
-[node name="Este" type="StaticBody3D" parent="Muros" unique_id=269975792]
+[node name="Este" type="StaticBody3D" parent="Muros" unique_id=636887823]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3.5, 0)
 
-[node name="Mesh" type="MeshInstance3D" parent="Muros/Este" unique_id=2077128198]
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Este" unique_id=59050425]
 material_override = SubResource("StandardMaterial3D_fbg2c")
 mesh = SubResource("BoxMesh_rso6t")
 
-[node name="Col" type="CollisionShape3D" parent="Muros/Este" unique_id=2068510505]
+[node name="Col" type="CollisionShape3D" parent="Muros/Este" unique_id=857388902]
 shape = SubResource("BoxShape3D_cmt47")
 
-[node name="Oeste" type="StaticBody3D" parent="Muros" unique_id=1790580625]
+[node name="Oeste" type="StaticBody3D" parent="Muros" unique_id=314447774]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 3.5, 0)
 
-[node name="Mesh" type="MeshInstance3D" parent="Muros/Oeste" unique_id=1856929353]
+[node name="Mesh" type="MeshInstance3D" parent="Muros/Oeste" unique_id=416627538]
 material_override = SubResource("StandardMaterial3D_fbg2c")
 mesh = SubResource("BoxMesh_77tkr")
 
-[node name="Col" type="CollisionShape3D" parent="Muros/Oeste" unique_id=164736712]
+[node name="Col" type="CollisionShape3D" parent="Muros/Oeste" unique_id=1421188054]
 shape = SubResource("BoxShape3D_cwvxc")
 
-[node name="Mesa" type="StaticBody3D" parent="." unique_id=407734720]
+[node name="Mesa" type="StaticBody3D" parent="." unique_id=2065651976]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 
-[node name="Mesh" type="MeshInstance3D" parent="Mesa" unique_id=1247307195]
+[node name="Mesh" type="MeshInstance3D" parent="Mesa" unique_id=368685556]
 material_override = SubResource("StandardMaterial3D_k8klt")
 mesh = SubResource("BoxMesh_g6ab7")
 
-[node name="Col" type="CollisionShape3D" parent="Mesa" unique_id=219616724]
+[node name="Col" type="CollisionShape3D" parent="Mesa" unique_id=2126219105]
 shape = SubResource("BoxShape3D_u3vfk")
 
-[node name="LedgeZone" type="Area3D" parent="." unique_id=1003478819]
+[node name="LedgeZone" type="Area3D" parent="." unique_id=693785256]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.5)
 script = ExtResource("2_v626g")
 zone_width = 12.0
 
-[node name="Torre" type="Node3D" parent="." unique_id=1251208157]
+[node name="Torre" type="Node3D" parent="." unique_id=1691236578]
 
-[node name="Escalon" type="StaticBody3D" parent="Torre" unique_id=1745369216]
+[node name="Escalon" type="StaticBody3D" parent="Torre" unique_id=623609646]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2.3, -2)
 
-[node name="Mesh" type="MeshInstance3D" parent="Torre/Escalon" unique_id=658745007]
+[node name="Mesh" type="MeshInstance3D" parent="Torre/Escalon" unique_id=1600640633]
 material_override = SubResource("StandardMaterial3D_k8klt")
 mesh = SubResource("BoxMesh_3ytaf")
 
-[node name="Col" type="CollisionShape3D" parent="Torre/Escalon" unique_id=520209350]
+[node name="Col" type="CollisionShape3D" parent="Torre/Escalon" unique_id=1109923996]
 shape = SubResource("BoxShape3D_odasv")
 
-[node name="Mirador" type="StaticBody3D" parent="Torre" unique_id=1786463643]
+[node name="Mirador" type="StaticBody3D" parent="Torre" unique_id=1181863783]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3.5, -2)
 
-[node name="Mesh" type="MeshInstance3D" parent="Torre/Mirador" unique_id=508629124]
+[node name="Mesh" type="MeshInstance3D" parent="Torre/Mirador" unique_id=1359924650]
 material_override = SubResource("StandardMaterial3D_k8klt")
 mesh = SubResource("BoxMesh_2eqmg")
 
-[node name="Col" type="CollisionShape3D" parent="Torre/Mirador" unique_id=1820570828]
+[node name="Col" type="CollisionShape3D" parent="Torre/Mirador" unique_id=1161272523]
 shape = SubResource("BoxShape3D_ntm8b")
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=2014795056]
+[node name="Player" type="CharacterBody3D" parent="." unique_id=2116799091]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 16)
 script = ExtResource("3_k12i2")
 
-[node name="Col" type="CollisionShape3D" parent="Player" unique_id=845801007]
+[node name="Col" type="CollisionShape3D" parent="Player" unique_id=1073508536]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_x8nsr")
 
-[node name="Mesh" type="MeshInstance3D" parent="Player" unique_id=698650236]
+[node name="Mesh" type="MeshInstance3D" parent="Player" unique_id=168071444]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 material_override = SubResource("StandardMaterial3D_4qiu5")
 mesh = SubResource("CapsuleMesh_7383a")
 
-[node name="CameraPivot" type="Node3D" parent="Player" unique_id=1598291969]
+[node name="CameraPivot" type="Node3D" parent="Player" unique_id=1019576284]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="SpringArm" type="SpringArm3D" parent="Player/CameraPivot" unique_id=1903696787]
+[node name="SpringArm" type="SpringArm3D" parent="Player/CameraPivot" unique_id=1691620160]
 spring_length = 5.0
 margin = 0.3
 
-[node name="Camera" type="Camera3D" parent="Player/CameraPivot/SpringArm" unique_id=444772370]
+[node name="Camera" type="Camera3D" parent="Player/CameraPivot/SpringArm" unique_id=351780525]
 current = true
 
-[node name="Telemetry" type="Node" parent="." unique_id=581275872]
+[node name="Telemetry" type="Node" parent="." unique_id=1252818596]
 script = ExtResource("4_3pt31")
 
-[node name="BondDriver" type="Node" parent="." unique_id=19180108]
+[node name="BondDriver" type="Node" parent="." unique_id=1664474577]
 script = ExtResource("5_2g0ro")
-impulse = 7.5
+impulse = 11.2372
 scene_id = "gray_test"

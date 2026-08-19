@@ -656,10 +656,15 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
 > si el nombre es Diego, Santiago o Delmer. Las dos corridas de prueba están
 > archivadas fuera de la muestra en
 > `%APPDATA%\Godotpp_userdata\Aether Bound — Spike	elemetry-descartadas\`.
-- **Pasada de feel del jugador con Boris en la máquina.** Velocidad,
-  sensibilidad de cámara y altura del salto están puestas por número, no
-  probadas a mano. Si el control se siente mal, un 🔴 sería de ejecución y
-  el test habría costado tres sesiones para decir eso.
+- ~~**Pasada de feel del jugador**~~ ✅ **hecha 2026-08-19.** Veredicto del
+  director: *"moverse se siente muy bien, al igual que la cámara"*, el botón
+  se siente bien, y **desde el suelo se entiende perfecto que arriba hay
+  adónde subir** — que era el riesgo de legibilidad de §0.4.
+  Un solo ajuste: **la gravedad pasa de 9.8 a 22**. Con la gravedad real el
+  salto duraba 1.53 s en el aire y se leía como flotado; con 22 baja a
+  1.02 s. **El alcance no cambió**: el impulso se recalculó a 11.24 para
+  conservar los mismos 2.87 m, así que toda la geometría del nivel sigue
+  valiendo sin tocarse.
 - **Fijar fecha con Diego, Santiago y Delmer.** Disponibilidad ya
   confirmada ([[ADR-003 Reset de desarrollo y motor]] §C); falta fecha,
   que depende de la entrega del build.

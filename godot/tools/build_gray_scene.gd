@@ -59,8 +59,18 @@ extends SceneTree
 ## lado del boton: al minuto 5 no se pierde una cornisa, se pierde el piso
 ## de arriba entero.
 
-const IMPULSO: float = 7.5
-const GRAVEDAD: float = 9.8
+## Gravedad y impulso, decididos por tacto el 2026-08-19.
+##
+## La gravedad NO es la de la Tierra a proposito. Con 9.8 el salto duraba
+## 1.53 s en el aire y el director lo reporto como "raro" -- flotado, que es
+## como se lee la gravedad real en un juego. Con 22 el vuelo baja a 1.02 s.
+##
+## El IMPULSO esta calculado para conservar EXACTAMENTE el alcance que ya
+## estaba validado (2.87 m): v = sqrt(2 * g * apice) = sqrt(2 * 22 * 2.8699).
+## Por eso todas las alturas del nivel siguen valiendo sin tocarse: lo unico
+## que cambio es el tiempo en el aire.
+const IMPULSO: float = 11.2372
+const GRAVEDAD: float = 22.0
 ## Altura maxima que gana el jugador con una pulsacion desde el piso:
 ## v^2 / 2g = 7.5^2 / 19.6 = 2.87 m.
 const APICE: float = (IMPULSO * IMPULSO) / (2.0 * GRAVEDAD)
@@ -141,6 +151,16 @@ func _check_alturas() -> void:
 	assert(ALTURA_ESCALON > APICE, "el escalon se alcanzaria desde el piso")
 	assert(ALTURA_MIRADOR < ALTURA_ESCALON + APICE, "el mirador quedaria inalcanzable")
 	assert(ALTURA_MIRADOR > ALTURA_MESA + APICE, "el mirador se alcanzaria desde la mesa")
+
+	# El jugador NO usa esta constante: saca su gravedad de ProjectSettings.
+	# Si las dos se separan, el nivel queda disenado para una fisica y jugado
+	# con otra, y todas las alturas mienten sin que nada avise. Se chequea con
+	# un if y no con un assert porque los assert se sacan en release.
+	var g_proyecto: float = float(ProjectSettings.get_setting("physics/3d/default_gravity", 9.8))
+	if absf(g_proyecto - GRAVEDAD) > 0.01:
+		push_error("gravedad desincronizada: project.godot dice %.2f y el nivel se diseno con %.2f"
+			% [g_proyecto, GRAVEDAD])
+		quit(1)
 
 
 # --------------------------------------------------------------------------

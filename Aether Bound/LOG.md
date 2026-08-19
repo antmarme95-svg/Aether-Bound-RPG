@@ -1,5 +1,57 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-19] código | Pasada de feel de la escena gris — gravedad a 22, y dos bugs graves
+
+Boris jugó dos corridas del test gris. **Veredicto de tacto: bien.**
+Movimiento y cámara *"se sienten muy bien"*, el botón se siente bien, y
+**desde el suelo se entiende perfecto que arriba hay adónde subir** — que
+era exactamente el riesgo de legibilidad que §0.4 pone en juego.
+
+**Único ajuste: la gravedad pasa de 9.8 a 22.** Boris reportó que "se sentía
+rara" y tenía razón: 9.8 es la de la Tierra y da **1.53 s de vuelo por
+salto**, que en un juego se lee como flotado. Con 22 baja a 1.02 s. **El
+alcance no cambió**: el impulso se recalculó a 11.24 para conservar los
+mismos 2.87 m de ápice, así que ninguna altura del nivel se tocó.
+Queda `--gravedad=` como argumento para comparar variantes sin romper la
+geometría, y un chequeo que **falla la construcción** si `project.godot` y
+el script del nivel se desincronizan.
+
+### Los dos bugs, que salieron de mirar los CSV y no de un test
+
+**1. El minuto 5 no era el minuto 5.** El driver acumulaba `delta`
+redondeado a milisegundos por frame; con la escena vacía y sin tope de FPS
+cada frame dura ~0.7 ms y redondea a 1, así que el contador corría **45%
+rápido**. Medido: la fase CON duró 208.8 s y 224.1 s contra 300 de diseño —
+el botón murió a los tres minutos y medio. Lo peor no es el error sino que
+**dependía del FPS de la máquina**: cada tester habría recibido un test
+distinto. Arreglado con reloj monotónico, que además es la misma base de
+tiempo que estampa la telemetría.
+
+**2. Cerrar la ventana descartaba la sesión entera.** Las dos corridas
+quedaron sin `session_end` y el derivador las tiró teniendo todos los datos
+adentro. Cerrar la ventana es la forma más natural de terminar; que eso
+invalide una sesión irrepetible es un bug del hook, no del facilitador.
+
+**Y un error mío de etiquetado:** la corrida del 18 quedó grabada como
+`diego` porque el ejemplo del comando que le pasé llevaba ese nombre. Diego
+sigue limpio como tester ciego. El lanzador ahora **pide confirmación** si
+el nombre es uno de los tres registrados, y los ejemplos usan `prueba`.
+
+### Lección de método que se repitió dos veces hoy
+
+Los dos bugs los encontré **leyendo los CSV**, no corriendo tests. Los tres
+tests que existían daban ALL_PASS con el reloj roto. Y al escribir el test
+nuevo produje un **verde falso**: medía un salto que nunca ocurrió, porque
+pulsaba antes de que la cápsula tocara el suelo, y la altura máxima salía
+*por debajo* del punto de partida. Ahora el helper espera el suelo y
+verifica que el salto **existió** antes de afirmar que no llegó alto.
+Es la quinta vez en la semana que un instrumento reporta verde sin medir.
+
+**Pendiente que abre esto, y lo decide el director:** en las dos corridas
+hubo **2 pulsaciones muertas dentro de la zona contra 34 y 63 fuera**. No es
+que no insistiera — insistió mucho, en otro lado. La zona cubre una sola
+cara de una mesa que tiene cuatro. Propuesta: que rodee la mesa entera.
+
 ## [2026-08-17] canon | Ronda 3 de fixes — 6 tandas, y la clase "fijo anticipa" por fin a la fuente
 
 Tercera vez que el mismo bug vuelve disfrazado. Las rondas 1 y 2 grepearon el patrón

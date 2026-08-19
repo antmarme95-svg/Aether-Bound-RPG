@@ -681,12 +681,25 @@ agachada. El jugador sigue idle en los dos motores.
    verticalidad queda del otro lado del botón — al minuto 5 no se pierde
    una cornisa, se pierde el piso de arriba entero.
 
-   **⬜ Lo que ahora bloquea, y son dos cosas chicas:**
+   **✅ Pasada de feel hecha (2026-08-19).** Boris jugó dos corridas:
+   movimiento y cámara *"se sienten muy bien"*, el botón se siente bien, y
+   **desde el suelo se entiende perfecto que arriba hay adónde subir** —
+   que era el riesgo de legibilidad de §0.4. Único ajuste: **gravedad de
+   9.8 a 22** (el salto duraba 1.53 s en el aire y se leía flotado; ahora
+   1.02 s). El impulso se recalculó a 11.24 para conservar el mismo
+   alcance de 2.87 m, así que la geometría del nivel no se tocó.
+
+   **⬜ Lo que ahora bloquea:**
    (a) **congelar el build y anotar el hash** en §0.5 — última casilla
-   abierta de §0; (b) **una pasada de feel con vos en la máquina**:
-   velocidad, sensibilidad de cámara y altura del salto están puestas por
-   número y nadie las jugó. Si el control se siente mal, un 🔴 sería de
-   ejecución y el test habría costado tres sesiones para decir eso.
+   abierta; (b) **decidir la forma de la zona de la cornisa** (ver abajo);
+   (c) **agendar a Diego, Santiago y Delmer**.
+
+   ⚠️ **Hallazgo del instrumento, pendiente de tu decisión.** En las dos
+   corridas de prueba hubo **2 pulsaciones muertas dentro de la zona
+   contra 34 y 63 fuera**. No es que no insistiera: insistió mucho, en
+   otro lado. La zona cubre una sola cara de una mesa que tiene cuatro y
+   el jugador da vueltas. Propuesta: **que rodee la mesa entera**. No
+   mueve umbrales firmados, pero toca el instrumento firmado.
 
    **Riesgos abiertos que nadie había nombrado** (los 3 primeros ya con
    instrumento en el protocolo): el gancho es una ausencia y **no se

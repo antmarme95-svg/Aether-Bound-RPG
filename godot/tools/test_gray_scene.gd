@@ -186,8 +186,17 @@ func _test_encadenado_al_mirador() -> void:
 	_check(y1 >= BUILD.ALTURA_ESCALON,
 		"desde la mesa se alcanza el escalon (%.2f m >= %.2f m)"
 		% [y1, BUILD.ALTURA_ESCALON])
-	_check(y1 < BUILD.ALTURA_MIRADOR,
-		"pero NO el mirador (%.2f m < %.2f m)" % [y1, BUILD.ALTURA_MIRADOR])
+
+	# "No se alcanza el mirador desde la mesa" es sobre UN salto, no sobre
+	# 2.5 s de pulsaciones repetidas: encadenando por el escalon si se llega,
+	# y ese es justamente el camino que el nivel quiere. Medirlo con la
+	# ventana larga daba un falso rojo al bajar el airtime.
+	var y_uno: float = await _un_salto(Vector3(0.0, BUILD.ALTURA_MESA + 0.2, 3.0), 2.0)
+	# Las dos mitades: que el salto haya pasado de veras, y que no llegue.
+	_check(y_uno >= BUILD.ALTURA_MESA + 1.0,
+		"un salto desde la mesa despega de verdad (%.2f m)" % y_uno)
+	_check(y_uno < BUILD.ALTURA_MIRADOR,
+		"y NO alcanza el mirador (%.2f m < %.2f m)" % [y_uno, BUILD.ALTURA_MIRADOR])
 
 	# Parado en el escalon, caminando hacia el mirador.
 	var y2: float = await _caminar(
@@ -228,6 +237,40 @@ func _caminar(desde: Vector3, dir: Vector3, segundos: float, bond: bool) -> floa
 		await physics_frame
 		y_max = maxf(y_max, _player.global_position.y)
 	_soltar_todo()
+	return y_max
+
+
+## Una sola pulsacion, quieto, y la altura maxima del vuelo. Sirve para las
+## afirmaciones que son sobre el ALCANCE de un salto y no sobre lo que se
+## puede encadenar.
+func _un_salto(desde: Vector3, segundos: float) -> float:
+	_soltar_todo()
+	_player.velocity = Vector3.ZERO
+	_player.global_position = desde
+	# ESPERAR EL SUELO ANTES DE PULSAR. El boton solo responde con los pies
+	# apoyados; pulsar mientras todavia cae no hace nada y la altura maxima
+	# sale por debajo del punto de partida -- un verde falso que parece un
+	# salto corto. La primera version de este helper fallaba justo asi.
+	var apoyado: bool = false
+	for i in range(180):
+		await physics_frame
+		if _player.is_on_floor():
+			apoyado = true
+			break
+	if not apoyado:
+		push_error("_un_salto: el jugador nunca toco el suelo en %s" % desde)
+		return -1.0
+
+	var y_pie: float = _player.global_position.y
+	_driver.press()
+	var y_max: float = y_pie
+	for i in range(int(segundos * 60.0)):
+		await physics_frame
+		y_max = maxf(y_max, _player.global_position.y)
+
+	# Y verificar que el salto EXISTIO, no solo que no llego alto.
+	if y_max - y_pie < 1.0:
+		push_error("_un_salto: no despego (subio %.2f m)" % (y_max - y_pie))
 	return y_max
 
 

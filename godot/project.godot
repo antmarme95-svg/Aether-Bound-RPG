@@ -52,6 +52,14 @@ bond={
 ]
 }
 
+[physics]
+
+; 22 y no 9.8: decidido por tacto el 2026-08-19. Con la gravedad real el
+; salto dura 1.53 s en el aire y se siente flotado. El impulso del boton se
+; calcula desde este numero en tools/build_gray_scene.gd para conservar el
+; alcance de 2.87 m -- si cambias uno sin el otro, la construccion falla.
+3d/default_gravity=22.0
+
 [rendering]
 
 renderer/rendering_method="forward_plus"
