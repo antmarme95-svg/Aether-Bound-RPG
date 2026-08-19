@@ -639,6 +639,23 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
   la rompe — ver [[Lecciones]] §Godot 4.7.
 - **Congelar el build y anotar su hash en §0.5.** Es la única casilla de §0
   que sigue abierta.
+- **Decidir la forma de la zona de la cornisa.** En las dos corridas de
+  prueba hubo **2 pulsaciones muertas dentro de la zona contra 34 y 63
+  fuera**. No es que no insistieran: insistieron mucho, en otro lado. La
+  causa es estructural — la zona cubre una sola cara de una mesa que tiene
+  cuatro, y el jugador da vueltas. Propuesta: que **rodee la mesa entera**.
+  No mueve los umbrales firmados; hace que *"frente a la cornisa"* signifique
+  lo que el jugador realmente hace. **Toca el instrumento firmado, así que
+  lo decide el director.**
+
+> **⚠️ Regla de etiquetado, salida de un error real (2026-08-18).** Una
+> corrida de prueba del director quedó grabada como `diego` porque el ejemplo
+> del comando llevaba ese nombre, y estuvo a punto de contaminar la muestra.
+> **Para probar, cualquier nombre menos los tres registrados**
+> (`Start-Playtest.bat prueba`); el lanzador ahora pide confirmación explícita
+> si el nombre es Diego, Santiago o Delmer. Las dos corridas de prueba están
+> archivadas fuera de la muestra en
+> `%APPDATA%\Godotpp_userdata\Aether Bound — Spike	elemetry-descartadas\`.
 - **Pasada de feel del jugador con Boris en la máquina.** Velocidad,
   sensibilidad de cámara y altura del salto están puestas por número, no
   probadas a mano. Si el control se siente mal, un 🔴 sería de ejecución y

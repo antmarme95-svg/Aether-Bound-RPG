@@ -8,8 +8,13 @@ rem argumentos de los del proyecto es un OPERADOR del shell, y la linea se
 rem rompe con "Token 'path' inesperado". Se puede sortear con --% pero eso
 rem no es algo que convenga estar peleando con un tester sentado al lado.
 rem
-rem   Start-Playtest.bat Diego
+rem   Start-Playtest.bat prueba
 rem   Start-Playtest.bat          (pregunta el nombre)
+rem
+rem OJO CON EL NOMBRE. El 2026-08-18 una sesion de prueba quedo grabada como
+rem "diego" porque el ejemplo del comando llevaba ese nombre. Un CSV mal
+rem etiquetado contamina la muestra sin avisar, asi que los tres nombres
+rem registrados piden confirmacion explicita.
 
 set "GODOT=C:\Users\tonom\Downloads\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64.exe"
 
@@ -32,6 +37,27 @@ if "%TESTER%"=="" (
   echo.
   pause
   exit /b 1
+)
+
+rem Los tres testers registrados (ADR-003) son sesion REAL: se confirma.
+set "REAL="
+if /i "%TESTER%"=="Diego" set "REAL=1"
+if /i "%TESTER%"=="Santiago" set "REAL=1"
+if /i "%TESTER%"=="Delmer" set "REAL=1"
+if defined REAL (
+  echo.
+  echo   "%TESTER%" es uno de los tres testers registrados.
+  echo   Esta sesion va a ENTRAR EN LA MUESTRA del Protocolo A.
+  echo.
+  set /p "OK=Es la sesion real de %TESTER%? (s/n): "
+  if /i not "!OK!"=="s" (
+    echo.
+    echo   Cancelado. Para probar vos mismo, usa un nombre cualquiera:
+    echo     Start-Playtest.bat prueba
+    echo.
+    pause
+    exit /b 1
+  )
 )
 
 echo.
