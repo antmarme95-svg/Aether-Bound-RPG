@@ -23,9 +23,15 @@ var _tester_id: String = "sin_id"
 
 
 func _ready() -> void:
+	var gravedad: float = -1.0
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--tester="):
 			_tester_id = a.substr(9)
+		elif a.begins_with("--gravedad="):
+			gravedad = a.substr(11).to_float()
+
+	if gravedad > 0.0:
+		_aplicar_gravedad(gravedad)
 
 	if _tester_id == "sin_id":
 		# No se aborta: una sesion sin id es recuperable a mano si el
@@ -42,6 +48,28 @@ func _ready() -> void:
 	# Sin esto, el arbol se cierra solo al tocar la X y no hay margen para
 	# escribir el cierre en el CSV.
 	get_tree().set_auto_accept_quit(false)
+
+
+## Cambia la gravedad SIN cambiar el alcance vertical del salto.
+##
+## El apice se deriva de lo que ya hay configurado (v^2 / 2g) y el impulso se
+## recalcula para mantenerlo: v = sqrt(2 * g_nueva * apice). Asi el nivel
+## sigue siendo valido en todas las variantes -- la mesa se alcanza igual, el
+## escalon sigue fuera de alcance desde el piso, y las 18 verificaciones de
+## tools/test_gray_scene.gd siguen valiendo. Lo unico que cambia es cuanto
+## tiempo pasas en el aire, que es exactamente la pregunta de tacto.
+func _aplicar_gravedad(g: float) -> void:
+	var player := get_tree().get_first_node_in_group("player")
+	if player == null or not player.has_method("set_gravity"):
+		return
+	var g_vieja: float = player.get_bond_gravity()
+	var v_vieja: float = float(_driver.impulse)
+	var apice: float = (v_vieja * v_vieja) / (2.0 * g_vieja)
+	var v_nueva: float = sqrt(2.0 * g * apice)
+	player.set_gravity(g)
+	_driver.impulse = v_nueva
+	print("[playtest] gravedad %.1f -> impulso %.2f | apice %.2f m | aire %.2f s"
+		% [g, v_nueva, apice, 2.0 * v_nueva / g])
 
 
 func _unhandled_input(event: InputEvent) -> void:

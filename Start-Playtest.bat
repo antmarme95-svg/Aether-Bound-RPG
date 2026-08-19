@@ -9,7 +9,12 @@ rem rompe con "Token 'path' inesperado". Se puede sortear con --% pero eso
 rem no es algo que convenga estar peleando con un tester sentado al lado.
 rem
 rem   Start-Playtest.bat prueba
-rem   Start-Playtest.bat          (pregunta el nombre)
+rem   Start-Playtest.bat                       (pregunta el nombre)
+rem   Start-Playtest.bat prueba --gravedad=22  (variante de tacto)
+rem
+rem --gravedad= cambia cuanto dura el salto en el aire SIN cambiar su
+rem alcance: el impulso se recalcula solo para que la mesa se siga
+rem alcanzando igual. Es para comparar tacto, no para el playtest real.
 rem
 rem OJO CON EL NOMBRE. El 2026-08-18 una sesion de prueba quedo grabada como
 rem "diego" porque el ejemplo del comando llevaba ese nombre. Un CSV mal
@@ -75,7 +80,7 @@ echo    Recorda anotar esta hora en la hoja de registro.
 echo   ============================================================
 echo.
 
-"%GODOT%" --path "%~dp0godot" -- --tester=%TESTER%
+"%GODOT%" --path "%~dp0godot" -- --tester=%TESTER% %2 %3
 
 echo.
 echo   Sesion terminada. El CSV quedo en:

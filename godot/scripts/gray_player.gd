@@ -85,6 +85,19 @@ func bond_impulse(amount: float) -> void:
 	velocity.y = amount
 
 
+## Cambia la gravedad en caliente. La usa `--gravedad=` para poder comparar
+## variantes de tacto en una sola sesion (ver gray_session.gd): "se siente
+## flotado" no es un numero que se pueda calcular, hay que jugarlo.
+func set_gravity(g: float) -> void:
+	_gravity = g
+
+
+## NO se llama get_gravity(): ese nombre ya existe en PhysicsBody3D y
+## devuelve un Vector3. Redefinirlo es un error de parseo, no un warning.
+func get_bond_gravity() -> float:
+	return _gravity
+
+
 ## El boton solo responde con los pies en el suelo. Sin esto, encadenar
 ## pulsaciones en el aire daria altura infinita y las alturas del nivel
 ## dejarian de significar algo.
