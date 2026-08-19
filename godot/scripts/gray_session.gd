@@ -39,6 +39,9 @@ func _ready() -> void:
 		% Time.get_datetime_string_from_system(false, true))
 	_driver.begin()
 	_telemetry.session_ended.connect(_on_session_ended)
+	# Sin esto, el arbol se cierra solo al tocar la X y no hay margen para
+	# escribir el cierre en el CSV.
+	get_tree().set_auto_accept_quit(false)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -53,6 +56,18 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_F11:
 				print("[playtest] CORTE — incomodidad del tester")
 				_driver.abort("abortada")
+
+
+## Cerrar la ventana termina la sesion como 'abortada', no como 'completa':
+## el tester no llego al final de los 10 minutos. Queda registrado y el
+## derivador decide -- pero los datos quedan en disco con su cierre.
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		print("[playtest] ventana cerrada antes de terminar")
+		if _driver != null:
+			_driver.abort("abortada")
+		else:
+			get_tree().quit()
 
 
 func _on_session_ended(reason: String) -> void:

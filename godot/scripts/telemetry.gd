@@ -65,6 +65,16 @@ func _ready() -> void:
 	add_to_group("bond_telemetry")
 
 
+## Red de seguridad. Las dos primeras sesiones reales quedaron sin
+## `session_end` porque se cerro la ventana en vez de dejar correr los 10
+## minutos, y el derivador las descarto enteras teniendo todos los datos
+## adentro. Cerrar la ventana es la forma MAS natural de terminar; que eso
+## invalide una sesion irrepetible es un bug del hook, no del facilitador.
+func _exit_tree() -> void:
+	if _file != null:
+		end_session(REASON_ABORTADA)
+
+
 # --------------------------------------------------------------------------
 # Ciclo de sesion
 # --------------------------------------------------------------------------

@@ -32,7 +32,8 @@ const TelemetryScript = preload("res://scripts/telemetry.gd")
 @export var read_input: bool = true
 
 var button_alive: bool = true
-var _elapsed_ms: int = 0
+## Ancla de reloj REAL, no acumulador de deltas. Ver la nota en `_process`.
+var _begin_ms: int = 0
 var _started: bool = false
 var _ended: bool = false
 var _player: Node3D = null
@@ -47,22 +48,33 @@ func begin() -> void:
 	_started = true
 	_ended = false
 	button_alive = true
-	_elapsed_ms = 0
+	_begin_ms = Time.get_ticks_msec()
 	var t = _resolve_telemetry()
 	if t != null:
 		t.set_phase(TelemetryScript.PHASE_CON)
 	set_process(true)
 
 
-func _process(delta: float) -> void:
+## El tiempo se lee del reloj monotonico, NO se acumula sumando deltas.
+##
+## La version anterior hacia `_elapsed_ms += int(round(delta * 1000.0))` y
+## eso rompio las dos primeras sesiones reales: con la escena gris vacia y el
+## FPS sin tope, delta ronda los 0.7 ms y redondea a 1, asi que el contador
+## corria ~45% rapido y el boton murio a los 3.5 minutos en vez de a los 5.
+## El error dependia del FPS de la maquina, o sea que cada tester habria
+## recibido un test distinto -- y el minuto 5 es el experimento entero.
+##
+## Time.get_ticks_msec() es ademas la MISMA base de tiempo que estampa la
+## telemetria, asi que el corte y el CSV no pueden desincronizarse.
+func _process(_delta: float) -> void:
 	if not _started or _ended:
 		return
-	_elapsed_ms += int(round(delta * 1000.0))
+	var elapsed: int = Time.get_ticks_msec() - _begin_ms
 
-	if button_alive and _elapsed_ms >= con_phase_ms:
+	if button_alive and elapsed >= con_phase_ms:
 		_kill_button()
 
-	if _elapsed_ms >= con_phase_ms + sin_phase_ms:
+	if elapsed >= con_phase_ms + sin_phase_ms:
 		_finish()
 
 
