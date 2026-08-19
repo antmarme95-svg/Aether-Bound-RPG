@@ -82,6 +82,10 @@ const MESA_LADO: float = 12.0
 const ALTURA_ESCALON: float = 4.6   # 2.4 + 2.2, sobre la mesa
 const ALTURA_MIRADOR: float = 7.0   # 4.6 + 2.4, sobre el escalon
 const TORRE_LADO: float = 5.0
+## Cuanto se extiende la zona de la cornisa mas alla de cada cara de la
+## mesa. 3 m es la profundidad que §4.1 fijo para la version de una sola
+## cara; se conserva, aplicada a las cuatro.
+const ZONA_MARGEN: float = 3.0
 const SUELO_LADO: float = 44.0
 const MURO_ALTO: float = 7.0
 
@@ -256,17 +260,33 @@ func _add_mesa(root: Node3D) -> void:
 	_box(root, "Mesa", Vector3(0, ALTURA_MESA * 0.5, 0),
 		Vector3(MESA_LADO, ALTURA_MESA, MESA_LADO), _mat_pisable)
 
-	var frente_z: float = MESA_LADO * 0.5
+	# --- LA ZONA DE LA CORNISA -------------------------------------------
+	#
+	# RODEA LA MESA ENTERA. Decision del director, 2026-08-19, sobre dato.
+	#
+	# La primera version cubria solo la cara frontal, 3 m de fondo, que es la
+	# lectura literal de §4.1 ("caja delante de la cornisa"). Las dos corridas
+	# de prueba mostraron que esa lectura no describe lo que pasa: hubo 2
+	# pulsaciones muertas DENTRO de la zona contra 34 y 63 FUERA. No es que no
+	# se insistiera -- se insistio mucho, en otro lado.
+	#
+	# La causa es geometrica y no de conducta: la mesa tiene cuatro caras y el
+	# jugador da vueltas, asi que tres de cada cuatro aproximaciones caian
+	# fuera por construccion. Con una sola cara cubierta, P medía "insistio
+	# desde el lado que elegimos nosotros", no "insistio frente a la cornisa".
+	#
+	# NO mueve los umbrales firmados en §0.3: cambia que "frente a la cornisa"
+	# signifique lo que el jugador realmente hace.
 	var zone := Area3D.new()
 	zone.name = "LedgeZone"
 	zone.set_script(load("res://scripts/ledge_zone.gd"))
 	zone.set("ledge_id", "cornisa_01")
-	zone.set("zone_width", MESA_LADO)
-	zone.set("zone_depth", 3.0)
-	zone.set("zone_height", 3.0)
-	# El volumen arranca en la cara de la mesa y se extiende 3 m hacia
-	# afuera: es la definicion textual de §4.1.
-	zone.position = Vector3(0, 0, frente_z + 1.5)
+	zone.set("zone_width", MESA_LADO + 2.0 * ZONA_MARGEN)
+	zone.set("zone_depth", MESA_LADO + 2.0 * ZONA_MARGEN)
+	# La altura queda POR DEBAJO de la mesa a proposito: parado arriba, el
+	# jugador no cuenta como "frente a la cornisa" -- ya esta del otro lado.
+	zone.set("zone_height", ALTURA_MESA - 0.2)
+	zone.position = Vector3.ZERO
 	root.add_child(zone)
 
 

@@ -36,8 +36,18 @@ Dos números por tester, ambos contables y ninguno interpretable:
 | **U** | Pulsaciones por minuto del botón **vivo**, durante la fase CON | Telemetría |
 
 **Definición operativa de "frente a la cornisa":** el jugador está dentro
-del volumen de disparo delante de la cornisa. Sin esa definición el conteo
-es barro — la implementación está en §4.1.
+del volumen de disparo, que **rodea la mesa entera** — 3 m hacia afuera
+desde cada una de sus cuatro caras, y por debajo de la altura de la mesa.
+Sin esa definición el conteo es barro; la implementación está en §4.1.
+
+> **Corregido el 2026-08-19, sobre dato y por decisión del director.** La
+> primera versión cubría **solo la cara frontal**. Las dos corridas de prueba
+> dieron **2 pulsaciones muertas dentro de la zona contra 34 y 63 fuera**: no
+> es que no se insistiera, se insistió mucho desde los otros lados. La causa
+> era geométrica y no de conducta — la mesa tiene cuatro caras y el jugador
+> da vueltas, así que tres de cada cuatro aproximaciones caían fuera **por
+> construcción**, y P medía *"insistió desde el lado que elegimos nosotros"*.
+> **No mueve los umbrales de §0.3.**
 
 ## 0.2 — Condición de validez (se evalúa ANTES que el resultado)
 
@@ -108,13 +118,19 @@ el duelo sea posible. Es permiso para gastar en B, nada más.
 | Umbrales de §0.3 | ✅ **firmados por Boris el 2026-08-13** |
 | Condición de validez §0.2 | ✅ **firmada el 2026-08-13** |
 | Regla de lectura negativa §0.4 | ✅ **firmada el 2026-08-13** |
-| Build congelado (hash) | ⬜ pendiente — la escena gris ya existe (`godot/scenes/gray_test.tscn`); falta congelar y hashear |
+| Build congelado (hash) | ✅ **`91e3d293934f`** — congelado 2026-08-19 con `python godot/tools/freeze_build.py` |
 
 **Ningún tester toca el build hasta que las tres casillas estén marcadas.**
-Las tres lo están. Lo que falta ahora es el build, no el criterio — y por
-diseño ese orden es el correcto: **el criterio se firmó antes de que
-existiera nada que medir**, que es la única forma de que no lo contamine el
-resultado.
+Las cuatro lo están. El criterio se firmó **antes de que existiera nada que
+medir**, que es la única forma de que no lo contamine el resultado.
+
+El hash es de **contenido** (SHA-256 sobre `project.godot`, la escena y los
+5 scripts del build), no el commit de git: se puede recalcular meses después
+y comparar contra el `build_hash` que quedó estampado en cada CSV. Así se
+puede **demostrar**, y no solo afirmar, que los tres testers jugaron el mismo
+build. Si se cambia cualquier archivo del build hay que volver a congelar y
+anotar el hash nuevo acá — **y las sesiones ya corridas dejan de ser
+comparables con las nuevas**.
 
 > **Lo que la firma cierra, textual, para que no haya relectura después:**
 >
@@ -292,11 +308,13 @@ primaria y no se corre.**
 | `bond_press` | **Cada** pulsación del botón, viva o muerta | `session_id`, `timestamp_ms`, `phase`, `button_alive` (bool), `in_ledge_zone` (bool), `ledge_id` (o vacío), `player_pos` (x,y,z), `ms_since_phase_start`, `press_index` |
 | `session_end` | Al minuto 10 o al corte | `session_id`, `reason` (`completa` \| `fallo_tecnico` \| `abortada`), `timestamp_ms` |
 
-**Definición del volumen de disparo:** caja delante de la cornisa, del
-ancho de la cornisa y ~3 m de profundidad, a la altura del suelo desde el
-que se saltaría. `in_ledge_zone` es simplemente "el jugador está adentro".
-**No se filtra por orientación de cámara** — filtrar agrega criterio
-interpretable justo donde el documento promete conteo.
+**Definición del volumen de disparo (corregida 2026-08-19):** caja que
+**rodea la mesa entera**, extendida **3 m hacia afuera desde cada cara**, y
+con altura **por debajo del tope de la mesa** — parado arriba el jugador ya
+está del otro lado de la cornisa y no cuenta. `in_ledge_zone` es simplemente
+"el jugador está adentro". **No se filtra por orientación de cámara** —
+filtrar agrega criterio interpretable justo donde el documento promete
+conteo. Verificado en las cuatro caras por `tools/test_gray_scene.gd`.
 
 **Derivados que salen del CSV, sin trabajo manual:** `P` = pulsaciones con
 `button_alive=false` e `in_ledge_zone=true` · `T` = última menos primera de
@@ -625,37 +643,26 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
 
 ## Pendiente
 
-- **Firmar §0** (umbrales, condición de validez, regla de lectura
-  negativa). **Bloquea correr el Protocolo A.**
+- ~~**Firmar §0**~~ ✅ **firmado por Boris el 2026-08-13** (umbrales,
+  condición de validez y regla de lectura negativa), **antes de que
+  existiera la escena gris**.
 - ~~**Implementar el hook de telemetría de §4.1**~~ ✅ **hecho 2026-08-13**,
   con test propio (50 verificaciones). Detalle en §4.1.
 - ~~**Construir la escena gris**~~ ✅ **hecha 2026-08-13** →
   `godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
   con `tools/test_gray_scene.gd` (18 verificaciones) probando **con física
   real** que la mesa no se sube caminando desde ninguna de 8 direcciones.
-  **La sesión se lanza con `Start-Playtest.bat Diego`** (raíz del repo) y los
-  resultados se leen con `Report-Playtest.bat`. No usar la línea de Godot a
+  **La sesión se lanza con `Start-Playtest.bat <tester>`** (raíz del repo) y
+  los resultados se leen con `Report-Playtest.bat`. Para probar uno mismo,
+  **cualquier nombre menos los tres registrados** (`Start-Playtest.bat
+  prueba`): el lanzador pide confirmación si el nombre es Diego, Santiago o
+  Delmer, porque esa sesión entra en la muestra. No usar la línea de Godot a
   mano en PowerShell: el `--` que Godot necesita es un operador del shell y
   la rompe — ver [[Lecciones]] §Godot 4.7.
-- **Congelar el build y anotar su hash en §0.5.** Es la única casilla de §0
-  que sigue abierta.
-- **Decidir la forma de la zona de la cornisa.** En las dos corridas de
-  prueba hubo **2 pulsaciones muertas dentro de la zona contra 34 y 63
-  fuera**. No es que no insistieran: insistieron mucho, en otro lado. La
-  causa es estructural — la zona cubre una sola cara de una mesa que tiene
-  cuatro, y el jugador da vueltas. Propuesta: que **rodee la mesa entera**.
-  No mueve los umbrales firmados; hace que *"frente a la cornisa"* signifique
-  lo que el jugador realmente hace. **Toca el instrumento firmado, así que
-  lo decide el director.**
-
-> **⚠️ Regla de etiquetado, salida de un error real (2026-08-18).** Una
-> corrida de prueba del director quedó grabada como `diego` porque el ejemplo
-> del comando llevaba ese nombre, y estuvo a punto de contaminar la muestra.
-> **Para probar, cualquier nombre menos los tres registrados**
-> (`Start-Playtest.bat prueba`); el lanzador ahora pide confirmación explícita
-> si el nombre es Diego, Santiago o Delmer. Las dos corridas de prueba están
-> archivadas fuera de la muestra en
-> `%APPDATA%\Godotpp_userdata\Aether Bound — Spike	elemetry-descartadas\`.
+- ~~**Congelar el build y anotar su hash en §0.5**~~ ✅ **hecho 2026-08-19**
+  — `91e3d293934f`, con `python godot/tools/freeze_build.py`.
+- ~~**Decidir la forma de la zona de la cornisa**~~ ✅ **resuelto
+  2026-08-19: rodea la mesa entera.** Detalle en §0.1 y §4.1.
 - ~~**Pasada de feel del jugador**~~ ✅ **hecha 2026-08-19.** Veredicto del
   director: *"moverse se siente muy bien, al igual que la cámara"*, el botón
   se siente bien, y **desde el suelo se entiende perfecto que arriba hay
@@ -666,8 +673,9 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
   conservar los mismos 2.87 m, así que toda la geometría del nivel sigue
   valiendo sin tocarse.
 - **Fijar fecha con Diego, Santiago y Delmer.** Disponibilidad ya
-  confirmada ([[ADR-003 Reset de desarrollo y motor]] §C); falta fecha,
-  que depende de la entrega del build.
+  confirmada ([[ADR-003 Reset de desarrollo y motor]] §C). **El build ya no
+  es excusa: está congelado.** Es lo único que queda entre el protocolo y el
+  primer dato real.
 - **Cerrar las 2 discrepancias de alcance del Protocolo B** (3 vs 4
   escenas; 1 tier vs T1→T3). No las resuelve este documento.
 - **Decidir si se graba audio o video de las sesiones.** El protocolo

@@ -156,6 +156,29 @@ func _test_zona_de_cornisa() -> void:
 	await physics_frame
 	_check(not _telemetry.in_ledge_zone(), "a 16 m del frente esta fuera de la zona")
 
+	# La zona rodea la mesa entera (decision del director, 2026-08-19), asi
+	# que hay que verificar LAS CUATRO caras. Con la version de una sola cara
+	# tres de cada cuatro aproximaciones caian fuera por construccion, y eso
+	# es lo que hundio P en las corridas de prueba.
+	var d: float = BUILD.MESA_LADO * 0.5 + 1.5
+	for lado in [["sur", Vector3(0, 0.1, d)], ["norte", Vector3(0, 0.1, -d)],
+			["este", Vector3(d, 0.1, 0)], ["oeste", Vector3(-d, 0.1, 0)]]:
+		_player.velocity = Vector3.ZERO
+		_player.global_position = lado[1]
+		await physics_frame
+		await physics_frame
+		_check(_telemetry.in_ledge_zone(),
+			"al pie de la cara %s esta dentro de la zona" % lado[0])
+
+	# Y parado ARRIBA no cuenta: ya esta del otro lado de la cornisa.
+	_player.velocity = Vector3.ZERO
+	_player.global_position = Vector3(0, BUILD.ALTURA_MESA + 0.1, 3.0)
+	for i in range(20):
+		await physics_frame
+	_check(not _telemetry.in_ledge_zone(),
+		"parado ARRIBA de la mesa NO cuenta como estar frente a la cornisa")
+
+	_player.velocity = Vector3.ZERO
 	_player.global_position = Vector3(0, 0.1, 7.5)
 	await physics_frame
 	await physics_frame
