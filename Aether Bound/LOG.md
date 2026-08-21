@@ -1,5 +1,81 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-21] código | Dagna vive en el motor — el rig no había que construirlo, había que rescatarlo
+
+Boris preguntó si valía la pena avanzar un render de personaje con los assets
+que salieron de Unity, y luego pidió crear a Dagna usando `_apply_build`. La
+respuesta corta: **`_apply_build` existe, pero no estaba en el proyecto vivo —
+y Dagna ya estaba construida.**
+
+**Hallazgo que cambia el plan.** El hard reset de [[ADR-003 Reset de desarrollo
+y motor]] dejó `godot/` con solo el spike gris del playtest. Pero el tag
+`archive/prototipo` (2026-08-10, ya con `feat/c6-anatomy-rework` mergeado)
+tiene a Dagna **entera**: `data/characters.gd` la describe como
+`origin: ironblooded` + `class: warrior` + fenotipo + **8 piezas firma**
+(túnica de guardiana, hombreras-compuerta, espinilleras, cuña en la trenza
+izquierda, tatuajes de gremio en antebrazos, martillo-ariete a la espalda,
+cinturón de herramientas, faldón), y `character_signature.gd` las construye.
+No hubo que diseñar nada: hubo que **trasplantar**.
+
+**Ojo con la fuente.** Hay dos `character_rig.gd` en el repo y el obvio es el
+equivocado: el worktree `.claude/worktrees/quirky-wiles-afa8a0` tiene uno de
+2115 líneas de **julio** (pre-rework anatómico). El bueno es el del tag:
+**3609 líneas, 2026-08-10**, con toda la escultura por masas. Regla: para
+cualquier rescate del prototipo, la fuente es `archive/prototipo`, no un
+worktree suelto.
+
+**Trasplante (commit `6d167a1`, rama `feat/dagna-rig`).** Cerradura mínima de
+dependencias, verificada archivo por archivo: `character/` (rig, firma,
+outfit, pelo, warpaint, biomech), 4 de `data/` (characters, origins, palette,
+phenotype) y `rendering/` (toon, toon_opaque, toon_golden, chrono_field,
+toon_ramp, materiales, pipeline_config). **Cero autoloads** — se comprobó que
+ninguno depende de `EventBus`/`Debug`/`Config`/`Feel`, así que
+`project.godot` del spike no se toca y **el build congelado del playtest
+queda intacto**. Corre en Godot 4.7.1 sin un solo cambio de API.
+
+**Lámina de contraste** (`scenes/dagna_sheet.tscn` + `tests/dagna_sheet.gd`):
+sonda autocontenida — no usa `GameDirector` como la vieja `tmp_dagna.gd` —
+que monta a Dagna desde su config y la captura en frente / perfil / espalda /
+detalle 3-4, sobre el mismo fondo de papel cálido que
+`90-Raw/concept/dagna-v2.png`, en retrato 900×1200. La cámara **deriva** su
+distancia del fov y del AABB real del rig, en vez de un múltiplo fijo del
+alto: con el múltiplo fijo, cada ajuste de proporción cambiaba el llenado del
+cuadro y las láminas dejaban de ser comparables entre rondas.
+
+**Medición del rig: 1.534 m de alto, 0.879 m de ancho (ratio 0.57).** La
+lámina pide *"nearly as wide as tall"* a 4.5 cabezas — el ratio es la primera
+desviación dura y es medible, no de gusto.
+
+**Lo que SÍ lee contra la lámina:** trenzas cobrizas con anillas, hombreras de
+compuerta en ambos hombros, martillo de cabezal plano a la espalda (lee como
+ariete, no como martillo de guerra ✓), túnica olivo con correa y botonadura,
+cinturón, faldón, espinilleras, tatuajes ámbar en antebrazos, piel bronce,
+sin barba. **La identidad de Dagna es reconocible.**
+
+**Lo que NO, en orden de daño a la silueta:**
+1. **El torso es una bola**, más ancha que los hombros; la lámina tiene pecho
+   ancho con V-taper al cinturón. Las hombreras quedan *fuera* de los brazos,
+   desconectadas.
+2. **Rim naranja de forja demasiado fuerte** — toda la silueta brilla. La
+   [[Art Bible]] dice explícitamente *no neon glow*.
+3. **No hay cuello**: la cabeza se apoya en un bloque, y en el detalle se ve
+   una masa de mandíbula que lee como cubo suelto.
+4. Ojos como barras negras planas — la ficha pide *"la mirada calma y paciente
+   de quien lleva décadas de guardia"*.
+5. Pelo como casco duro de una pieza; faldón casi negro, sin lectura.
+
+Esto **confirma el baseline ya registrado** (rostro 35%, torso ~40%) y por
+tanto confirma que [[PRDs/PRD-Reescritura-Escultura-Rig-v1]] sigue siendo el
+trabajo correcto: el problema es de escultura, no de configuración de Dagna.
+
+**Sobre los assets de Unity:** `unity/Assets/` es biblioteca de tienda —
+entorno y armas, y solo tres humanoides usables. Sirven de maniquí de
+playtest (el puente Unity→Godot ya está resuelto en `godot/assets/dagna/` con
+su bonemap), **no** para dar identidad a un Pivote. Los Pivotes salen del rig
+procedural. Queda decidido cuál es cuál.
+
+---
+
 ## [2026-08-19] código | Pasada de feel de la escena gris — gravedad a 22, y dos bugs graves
 
 Boris jugó dos corridas del test gris. **Veredicto de tacto: bien.**

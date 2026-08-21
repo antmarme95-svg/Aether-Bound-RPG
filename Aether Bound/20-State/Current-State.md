@@ -377,6 +377,17 @@ agachada. El jugador sigue idle en los dos motores.
   conocimiento en [[Lecciones]] / [[Benchmark Biomecánico]] / [[Art Bible]],
   no como código vigente. Se reconstruye si el slice lo requiere.
 - **Motor:** GODOT, re-confirmado (ADR-002 + cierre de ADR-003).
+- **Dagna está en el motor otra vez (2026-08-21, rama `feat/dagna-rig`,
+  commit `6d167a1`).** El `CharacterRig` procedural y su cerradura de
+  dependencias se rescataron del tag `archive/prototipo` al proyecto vivo —
+  **sin autoloads y sin tocar `project.godot`**, así que el build congelado
+  del playtest queda intacto. Dagna se monta desde `data/characters.gd`
+  (fenotipo + 8 piezas firma) y se contrasta con su lámina canónica vía
+  `res://scenes/dagna_sheet.tscn`. Su **identidad lee** (trenzas, hombreras
+  de compuerta, martillo-ariete, tatuajes); la **escultura no** — bola de
+  torso, rim de forja quemado, sin cuello. Corrige el matiz del bullet de
+  arriba: el código de C6 **no** hubo que reconstruirlo, estaba recuperable.
+  Detalle y las 5 desviaciones medidas, en [[LOG]] §2026-08-21.
 
 ---
 
