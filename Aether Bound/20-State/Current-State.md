@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-08-17
+updated: 2026-08-21
 ---
 
 # Current State
@@ -107,268 +107,50 @@ playtesters — Diego/Santiago/Delmer) en el §Cierre del ADR.
 ese cierre. Nada más está autorizado todavía — sigue sin sentido escribir
 combate genérico o sistemas fuera del slice hasta que dé veredicto.
 
-### 🧪 Spike comparativo Godot/Unity — condiciones emparejadas (2026-08-12)
+### Spike Godot/Unity con condiciones emparejadas (2026-08-12) — CERRADO
 
-**Dagna ya camina en Godot con animación real**, no solo traslación. Ciclo
-retargeteado con la herramienta **stock** (`BoneMap` +
-`SkeletonProfileHumanoid`), mismo criterio que el retargeting Mecanim del
-lado Unity: cero solver escrito a mano. Fuente: el Walk in-place del pack
-**DoubleL** (ExplosiveLLC descartado — su FBX de caminata no trae
-esqueleto; Kevin Iglesias — rig Rigify como el nuestro, pero la versión
-free no trae Walk).
+**Lo vigente en una línea: los dos motores cumplen el estándar de foot IK del
+[[Benchmark Biomecánico]], y la decisión de motor no se reabre.**
 
-Verificación repetible: `godot/tools/verify_and_capture.gd` corre la
-escena, sigue a Dagna con cámara de costado, captura, y **mide la rotación
-del muslo** — exit 1 si el hueso no se mueve. Hoy da 24° y ciclo alternado,
-con los pies apoyados en la pendiente vía IK sobre el pose animado.
+- **Godot necesita solver propio.** `TwoBoneIK3D` de fábrica **no produce
+  salida** en Godot 4.7.1 — acotado en escena mínima, 9 variantes a 0 píxeles
+  contra un CONTROL a 2.127 (`godot/tools/min_ik_repro.gd`). El solver escrito
+  a mano (`godot/scripts/two_bone_ik.gd`) deja el pie a **±6 mm** del suelo en
+  plano y en rampa. Unity trae el suyo funcionando: la diferencia entre motores
+  es de **costo, no de calidad**.
+- **Dagna camina con animación real**, retargeteada con herramienta stock
+  (`BoneMap` + `SkeletonProfileHumanoid`), clip del pack **DoubleL**.
+- **Comparativa escrita:** [[Comparativa de Motores — Godot vs Unity]]. **No
+  reabre la decisión** — ADR-003 y el 2º consejo (08-13) congelaron Godot.
 
-En el camino salieron **2 bugs de importación pre-existentes** que el spike
-anterior tapaba (árbol duplicado al re-apropiar una instancia · pista de
-escala ×100 dentro de la pose del FBX). Están en [[Lecciones]] §Godot 4.7
-— leer antes de tocar importación de FBX otra vez.
+⚠️ **Leer [[Lecciones]] §Godot 4.7 antes de tocar importación de FBX otra vez.**
+Ahí viven los 3 hallazgos que cuestan días si se repiten: el FBX del warrior
+exporta mirando a **+Z** y Godot asume −Z (causa raíz del moonwalk, que Boris
+reportó tres veces) · pista de escala ×100 dentro de la pose del FBX · árbol
+duplicado al re-apropiar una instancia. Y la lección de método: la orientación
+invertida **da vuelta el signo de toda medición sobre huesos**.
 
-**Moonwalk CERRADO — la causa raíz era otra, y Boris la reportó tres
-veces.** El FBX del warrior está exportado **mirando a +Z** y Godot asume
-−Z (`Basis.looking_at` apunta el −Z al objetivo), así que Dagna subía la
-rampa **de espaldas** desde la primera versión. Se corrige girando el nodo
-`Model` 180° al construir la escena — en un solo lugar; poner además
-`use_model_front` en los `looking_at` la deja de espaldas igual.
-Se revirtió también el cambio de clip: el correcto es el *forward*.
-
-Queda además, y era real aunque no fuera la causa raíz, el ajuste de
-**cadencia**: el clip in-place aporta 1.55 m/s de zancada propia, y la
-cadencia se ata a la velocidad real cuadro a cuadro (resuelve solo el caso
-de la pendiente, donde el avance efectivo cae). Verificado con la prueba
-limpia —cuánto avanza el cuerpo por vuelta del clip contra lo que el clip
-aporta—: **0% en régimen**.
-
-**Lección de método, en [[Lecciones]] §Godot 4.7:** un mismo síntoma
-("moonwalk") lo producen tres causas distintas, y la orientación invertida
-**da vuelta el signo de toda medición sobre huesos** — llegué a "arreglar"
-el clip en la dirección opuesta a la correcta mientras el número decía que
-mejoraba.
-
-**Comparador cuadro a cuadro Unity/Godot listo** (`godot/tools/frame_strip.gd`
-+ `unity/Assets/_Spike/Editor/SpikeFrameStrip.cs`): mismo punto de la
-rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el
-contacto del talón izquierdo **detectado midiendo el hueso**. Lo que la
-lámina muestra: la diferencia grande **no es de motor, es de clip** — la
-zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. El
-**retargeting** stock sí funciona en los dos; el **foot IK** stock no —
-del lado Godot hubo que escribirlo (ver arriba).
-
-**Comparativa de motores escrita** (pedido del director, 2026-08-12):
-[[Comparativa de Motores — Godot vs Unity]] — pros/contras + FODA de los
-dos, con cada afirmación marcada por origen (medido / hecho de plataforma
-/ juicio). **No reabre la decisión.** El eje que más pesa resultó ser de
-método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
-menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
-assets ya comprados, que ahí funcionan sin convertir.
-
-### ✅ Foot IK RESUELTO con solver propio — cumple el Benchmark (2026-08-12)
-
-**El `TwoBoneIK3D` de fábrica no produce salida en Godot 4.7.1.** Probado
-en escena mínima aislada (esqueleto de 3 huesos hecho a mano, malla pesada
-100% al hueso punta, juez = el render) con **9 variantes de
-configuración**: las 9 dan 0 píxeles, contra una variante de **CONTROL**
-—sin IK, rotando el hueso raíz a mano— que da 2.127. Repro versionado en
-`godot/tools/min_ik_repro.gd`. No es nuestro rig.
-
-**Se escribió el solver a mano**: `godot/scripts/two_bone_ik.gd`
-(`SpikeTwoBoneIK`), ley de cosenos analítica, sin iteraciones. Implementado
-como `SkeletonModifier3D` propio — el framework de modifiers sí funciona,
-lo que no funciona es la clase `TwoBoneIK3D`; y usarlo garantiza el orden
-correcto respecto del AnimationMixer. En el mismo banco mínimo da **2.730
-píxeles**.
-
-**Resultado contra el estándar del [[Benchmark Biomecánico]]** (§v2, fila
-de HZD: *"foot IK contra el terreno cada frame — pies creíbles en
-terreno"*; y canon de Sable, raíz continua):
-
-| Métrica | Sin IK | **Con solver propio** | Estándar |
-|---|---|---|---|
-| Raíz continua | — | ✅ desvío 7.8% | Sable: continua |
-| Penetración, plano | −0.213 m | **−0.004 m** | ~0 |
-| Penetración, rampa 21.8° | −0.323 m | **+0.006 m** | ~0 |
-| Plano → rampa | −0.110 m | **+0.010 m** | 0 |
-
-**El pie queda a ±6 mm del suelo en los dos terrenos**, y se apoya
-igual de bien en pendiente que en plano — que es exactamente lo que pide
-la fila de HZD. **El Benchmark, en su criterio de foot IK, está
-cumplido.**
-
-**Calibración medida, no estimada:** `ankle_height_offset = 0.045`, hallado
-barriendo valores con `tools/footik_benchmark.gd` hasta minimizar la
-penetración. Corrige que el rest pose del rig, tras el retargeting con
-`fix_silhouette`, no es una pose de pie apoyado y da una altura de tobillo
-de 0.037 m en vez de los ~0.08 reales.
-
-### ✅ Comparación de foot IK Godot vs Unity — CERRADA (2026-08-12)
-
-Mismo protocolo y **los dos calibrados con el mismo criterio**:
-
-| Métrica | **Godot** (solver propio) | **Unity** (`Animator IK`) |
-|---|---|---|
-| Penetración, plano | −0.004 m | +0.005 m |
-| Penetración, rampa 21.8° | +0.005 m | +0.031 m |
-| Plano → rampa | +0.009 m | +0.027 m |
-
-(Línea base sin IK, para escala: −0.213 m en plano y −0.323 m en rampa.
-Repetibilidad de una misma columna: ±1 mm.)
-
-**Las dos columnas son confiables.** Hubo una falsa alarma sobre el
-encuadre del instrumento de Unity: se volcaron **las 16 muestras con la
-línea del suelo dibujada encima** y el encuadre está bien — vista lateral,
-personaje derecho, pies sobre la línea. La alarma salió de mirar **una sola
-miniatura de una fase con los dos pies en el aire**.
-
-**Se probó el error de coseno y la medición lo rechazó** (+0.031 →
-+0.055 m al desplazar a lo largo de la normal). Revertido. El motivo: el
-`footOffsetY` de Unity calibrado da 0.21 m, que **no es una altura de
-tobillo** sino un factor que absorbe la geometría tobillo→punta de la
-bota — y un fudge así no tiene dirección física que respetar.
-
-**La diferencia en pendiente queda sin explicar** (script, clips o motor),
-y **no alcanza para decir que un motor planta mejor el pie**. Lo que sí
-está establecido: **los dos cumplen el estándar**.
-
-**La diferencia real de motor** es de costo, no de calidad: en Unity el
-foot IK viene funcionando; en Godot hay que escribirlo.
-
-Detalle, salvedades y la métrica que se descartó por no ser comparable
-(raíz continua, atada al timestep de cada motor):
-[[Comparativa de Motores — Godot vs Unity]].
-
-**Comparador cuadro a cuadro Unity/Godot listo** (`godot/tools/frame_strip.gd`
-+ `unity/Assets/_Spike/Editor/SpikeFrameStrip.cs`): mismo punto de la
-rampa, mismos cuadros, misma cámara, y la fase inicial alineada por el
-contacto del talón izquierdo **detectado midiendo el hueso**. Lo que la
-lámina muestra: la diferencia grande **no es de motor, es de clip** — la
-zancada de Starter Assets recorre 1.12 m y la de DoubleL 0.825 m. El
-**retargeting** stock sí funciona en los dos; el **foot IK** stock no —
-del lado Godot hubo que escribirlo (ver arriba).
-
-**Comparativa de motores escrita** (pedido del director, 2026-08-12):
-[[Comparativa de Motores — Godot vs Unity]] — pros/contras + FODA de los
-dos, con cada afirmación marcada por origen (medido / hecho de plataforma
-/ juicio). **No reabre la decisión.** El eje que más pesa resultó ser de
-método: Godot se automatiza y se autoverifica desde CLI, Unity mucho
-menos. El contraargumento más fuerte del otro lado son los 55 paquetes de
-assets ya comprados, que ahí funcionan sin convertir.
-
-### ⛔ Foot IK: migrado a `TwoBoneIK3D`, y sigue sin producir salida (probado 2026-08-12)
-
-**Hecho:** `SkeletonIK3D` (deprecado en 4.x) fue reemplazado por
-**`TwoBoneIK3D`**, subclase stock de `SkeletonModifier3D` que Godot 4.7
-trae de fábrica — junto con `FABRIK3D`, `CCDIK3D`, `SplineIK3D` y otras.
-El objetivo del IK ahora es *suelo + altura del tobillo sobre la planta*
-(medida del rig en reposo), no el punto del suelo: poner el tobillo en el
-suelo entierra el pie entero.
-
-**El instrumento ahora mide sobre el RENDER**, que es el único canal que
-puede reflejar la salida de un `SkeletonModifier3D` (los getters de hueso
-y `BoneAttachment3D` devuelven la pose anterior a los modifiers). Cámara
-ortográfica con su "arriba" en la normal del terreno, se ocultan el otro
-personaje, las mallas del suelo y **el hacha** (colgaba por debajo de los
-pies y era ella la que marcaba el píxel más bajo).
-
-**Resultado, con instrumento validado:**
-
-| Métrica | Con IK | Sin IK | Estándar |
-|---|---|---|---|
-| Raíz continua | ✅ desvío 7.8% | — | Sable: continua |
-| Penetración, plano | −0.213 m | −0.213 m | ~0 |
-| Penetración, rampa 21.8° | −0.328 m | −0.323 m | ~0 |
-
-**La validación que faltaba, hecha bien:** con la animación **congelada**
-(`pause()` + `speed_scale = 0`), mover el objetivo del pie 45 cm da **0
-píxeles de diferencia**. Y con el `AnimationPlayer` **detenido del todo**,
-también 0 — así que tampoco es que el mixer le pise el resultado al
-modifier.
-
-**Conclusión: ni `SkeletonIK3D` ni `TwoBoneIK3D` producen salida en
-nuestro montaje.** Lo que se ve en pantalla es la animación cruda con el
-cuerpo apoyado por física.
-
-**Lo que NO se sabe todavía:** por qué. Los bones resuelven (índices
-válidos), el target resuelve, `active == true`, el esqueleto es el
-correcto. Falta encontrar qué requisito del modifier no estamos
-cumpliendo.
-
-| Métrica | Medido | Estándar del Benchmark |
-|---|---|---|
-| Raíz continua | ✅ desvío 7.7% | Sable: raíz continua |
-| Penetración del dedo (plano) | ❌ −0.132 m | ~0 |
-| Penetración del dedo (rampa 21.8°) | ❌ −0.205 m | ~0 |
-| Adaptación de la planta | ❌ 10.9° de 21.8° | ≈ ángulo del terreno |
-| Aporte del IK | ❌ 1.4 mm | — |
-
-**CAUSA ACOTADA (escena mínima, 2026-08-12): `TwoBoneIK3D` no produce
-salida en Godot 4.7.1.** No es nuestro rig. Esqueleto de 3 huesos hecho a
-mano, malla pesada 100% al hueso punta, juez = el render, **9 variantes de
-configuración** (base · `reset()` · `use_virtual_end` · `extend_end_bone` ·
-`mutable_bone_axes` off · configurado antes de entrar al árbol · con hueso
-hijo en la punta · cadena colgando de un padre · pose reescrita cada
-frame): **las 9 dan 0 píxeles**. La variante **CONTROL** —sin IK, rotando
-el hueso raíz a mano— da **2.127 píxeles**, así que el instrumento es
-válido y los ceros son reales. Repro: `godot/tools/min_ik_repro.gd`.
-
-**Consecuencia para la comparativa de motores:** el foot IK de Godot **no
-es "stock, cero código"** como decía [[Comparativa de Motores — Godot vs
-Unity]]. Hay que escribir el solver de dos huesos a mano (unas 40 líneas
-de trigonometría). Del lado Unity, `OnAnimatorIK` funciona. Esa fila de la
-comparativa cambia de signo y es un dato real a favor de Unity.
-
-**Lo que queda sin explicar:** por qué el modifier no aplica. Puede ser un
-requisito no documentado o un bug de esta build.
-
-**Descartado antes de llegar a la escena mínima:** Descartados con medición: la cadena de
-huesos ES contigua padre-hijo · `active`/`influence`/esqueleto/target
-correctos · el `AnimationPlayer` no le pisa el resultado (probado con el
-mixer detenido) · el pole (estaba mal seteado, se corrigió, sigue igual).
-Test decisivo: misma fase de animación, esqueleto actualizándose, objetivo
-movido 50 cm → **0 píxeles**. El modifier se ejecuta y no hace nada.
-
-**Sin descartar:** `IKModifier3D.reset()` tras configurar · configurar los
-settings ANTES de entrar al árbol (es lo que exigía el `SkeletonIK3D`
-viejo) · `use_virtual_end`/`extend_end_bone` · asignar por ruta de
-propiedad en vez de por setter.
-
-**Próximo paso recomendado:** escena mínima aislada (esqueleto de 3 huesos
-a mano + `TwoBoneIK3D` + target) para decidir si el problema es la API o
-nuestro rig. Si ahí tampoco anda, el camino barato es escribir el solver
-de dos huesos a mano (unas 40 líneas) — y entonces el argumento de
-"herramienta stock" del lado Godot deja de sostenerse igual, que es un
-dato para la comparativa de motores.
-
-**Bug propio pendiente, anotado en el código:** `_rest_ankle_height()` da
-0.037 m cuando un tobillo real está a 0.08-0.10 m de la planta (lee el
-rest pose, que tras `fix_silhouette` no es una pose de pie apoyado). Hoy
-no cambia nada medible, pero hay que arreglarlo el día que el IK aplique.
-
-Hasta que el IK produzca salida, la comparación contra Unity no se corre:
-mediría animación cruda contra un IK que sí funciona, y le daría a Unity
-una ventaja que no es del motor.
-
-**Aviso de método para quien lea esto:** esta conclusión se dio vuelta
-DOS veces en el mismo día por instrumentos mal validados. La versión
-actual es la primera que se apoya en un test de efecto innegable con
-todas las demás variables congeladas. Ver [[Lecciones]] §Godot 4.7.
-
-**Sigue sin decidirse el veredicto Godot-vs-Unity.** Esta pasada solo
-empareja las condiciones para que ese veredicto compare lo mismo de los
-dos lados. Deuda anotada y no bloqueante: el clip es de una mano y Dagna
-lleva hacha a dos manos (los brazos no cuadran, las piernas sí), y el foot
-IK baja los pies sin ajustar la pelvis, así que en pendiente la deja algo
-agachada. El jugador sigue idle en los dos motores.
+Todas las tablas de medición, las tres vueltas que dio la conclusión del foot
+IK en un mismo día, y el detalle del comparador cuadro a cuadro:
+[[Current-State-Historico]] §Spike Godot/Unity (2026-08-12).
 
 ---
 
 ## Hechos vigentes
 
-- **Branch:** `master` (el hard reset se ejecutó y mergeó ahí, 2026-08-10).
-  Los playtests viejos (`Start-Playtest-Greybox.bat` y demás lanzadores de
-  `godot/`) fueron eliminados junto con el código que apuntaban.
+- **Branch:** `master` (el hard reset se ejecutó y mergeó ahí, 2026-08-10),
+  con el **build del playtest congelado en `8c45bab`**, hash de contenido
+  `91e3d293934f`. Rama viva en paralelo: **`feat/dagna-rig`** (el rescate del
+  rig, ver abajo) — deliberadamente fuera de `master` para no descongelar el
+  build mientras los testers estén corriendo. Los lanzadores viejos
+  (`Start-Playtest-Greybox.bat` y demás) fueron eliminados junto con el
+  código que apuntaban.
+- **Dónde vive el código del prototipo:** en el tag **`archive/prototipo`**
+  (2026-08-10, ya con `feat/c6-anatomy-rework` mergeado). **Es la única
+  fuente válida para rescatar código viejo.** El worktree
+  `.claude/worktrees/quirky-wiles-afa8a0/` tiene una copia de **julio** del
+  mismo `character_rig.gd` (2115 líneas, pre-rework anatómico, contra 3609
+  del tag) — es una trampa fácil de pisar.
 - **Speck:** la última Warden cristalina superviviente, shapeshifteada como
   zorro. Narrativa + diseño visual 100% completo. Detalle en
   [[Current-State-Historico]].
@@ -400,87 +182,25 @@ agachada. El jugador sigue idle en los dos motores.
 
 ### 🗓 Inmediato — próxima sesión
 
-0. **⏳ RONDA 3 DE FIXES APLICADA (2026-08-17) — SIGUE SIN CERRAR.**
-   6 tandas, linter en **0 críticos / 0 medios** tras cada una, commit por tanda.
-   Detalle completo en [[LOG]] §2026-08-17 (ronda 3).
+0. **⏳ SPRINT DE CANON: 3 RONDAS DE FIXES APLICADAS (hasta 2026-08-17) —
+   SIGUE SIN CERRAR.** Linter en **0 críticos / 0 medios** tras cada tanda.
+   Detalle ronda por ronda en [[LOG]], entradas del 2026-08-13 y del
+   2026-08-17; el relato completo, en [[Current-State-Historico]]
+   §Sprint de canon (rondas 1-3).
 
-   **Lo que cambió de método, y es lo importante:** la clase *"un fijo anticipa o
-   calla la traición"* sobrevivió tres rondas porque cada una la grepeó **para un
-   solo personaje (Valen)**. Esta ronda la grepeó para los **tres fijos (Roen,
-   Valen, Darro)** en todo `10-Knowledge/` y aparecieron **seis instancias que
-   ningún QA había reportado**, casi todas con **Roen** de sujeto (`Iven:436` y
-   `:694`, `Maren:425` y `:108`, `Lyris:306`, `Dagna:109`) más una con **Darro**
-   (`Sereth:462`). La regla dejó de vivir en la ficha de Valen: ahora es **fuente
-   única en [[El Cráter — Matriz de Rutas]] §Regla de uso para las 13 fichas →
-   *Regla de prescience***, declarada para los tres, con la salvedad de tiempo que
-   faltaba (después de 2b todos saben, pero hay que **declarar de dónde viene el
-   saber**).
-
-   **Decisión de criterio:** **Dagna no es excepción** a la regla de Valen — se
-   mantiene *"la falla no es de modelo sino de carácter"*, pero reformulado como
-   archivo mal hecho (la carpeta equivocada se llamaba *cortesía*), así que
-   `Valen:258` (*"el mismo en las nueve rutas"*) queda intacto y las dos fuentes
-   concuerdan.
-
-   También cerraron: causalidad de la activación de Torgan en la ruta Bram
-   (precaución **en paralelo**, cadena **propia** — y apareció un tercer archivo,
-   `Los 5 Finales:75`) · Bram **todavía no ha rechazado** en Driftmarket ·
-   encabezados de aritmética de Nyael (0-90 / 90-190 / cien años) · los dos
-   superlativos físicos de Iven separados por eje (**cara** vs. **equilibrio**) ·
-   líneas de Valen unificadas a 2b en Torgan y Dagna · excepción de la ruta Bram
-   en el ascenso de Roen (y verificado que **Nyael no es excepción** ahí) ·
-   excepción de Nyael escrita en la fuente del Bond vacío · 2 menores más.
-
-   **Grep final de verificación, doble pasada: 0 residuos** de la clase para los
-   tres fijos en todo el vault.
+   **La lección de método, que es lo que sobrevive:** la clase *"un fijo
+   anticipa o calla la traición"* sobrevivió tres rondas porque cada una la
+   grepeó **para un solo personaje**. Grepeada para los **tres fijos** apareció
+   en seis lugares que ningún QA había reportado. La regla ya no vive en la
+   ficha de Valen: es fuente única en [[El Cráter — Matriz de Rutas]]
+   §Regla de uso para las 13 fichas → *Regla de prescience*. Es el mismo
+   principio de la regla 8 de `CLAUDE.md`: **barrer la clase, no la línea.**
 
    > ⛔ **HACE FALTA OTRA RE-CORRIDA EN FRÍO, y no la puede correr quien aplicó
-   > estos fixes** (skill `canon-qa` §Anti-objetivos). Es el primer trabajo de la
-   > próxima sesión de canon.
-
-   Bloque histórico de la ronda 2, para contexto:
-
-   **⏳ RONDA 2 DE FIXES APLICADA (2026-08-17) — SIGUE SIN CERRAR.**
-   La re-corrida en frío de los 2 subagentes **sí se ejecutó** sobre la ronda 1:
-   congruencia semántica dio 0 críticos / 1 medio / 5 menores, dramaturgia dio
-   **3 críticos / 4 medios / 3 menores**. Las 5 tandas de la ronda 2 están
-   aplicadas y commiteadas; linter en **0 críticos / 0 medios**.
-
-   Cerraron: (1) **residuos de "Valen ya lo sabía"** fuera de los sub-beats 2b —
-   seis líneas señaladas más cuatro que aparecieron al barrer la clase (Maren,
-   Sereth, Vekka §Dinámicas, y Nyael §Dinámicas); (2) **la escena Valen↔Nyael era
-   imposible** (Nyael no está presente en el Acto 3) — reescrita como reacción a
-   la nota del nicho; (3) **F2a-Bram no se había propagado a [[Los 5 Finales]]**;
-   (4) cinco medios (causalidad del Reckoning de Bram, §La Rueda de Roen, corredor
-   con las excepciones Bram/Nyael en las 3 fichas de fijos, epílogo F2a de Bram
-   con motor propio, Aethelgard Watch); (5) seis menores.
-
-   > ⛔ **EL SPRINT SIGUE SIN CERRAR — hace falta OTRA re-corrida en frío.**
-   > La re-corrida que validó la ronda 1 encontró **3 críticos que la ronda
-   > anterior no vio**, incluida una escena físicamente imposible que sobrevivió
-   > cinco rondas. El patrón histórico es claro: cada re-corrida encuentra algo.
-   > No cerrar sin una pasada nueva de 2 subagentes en frío, y **no la puede
-   > correr quien aplicó estos fixes** (skill `canon-qa` §Anti-objetivos).
-   > Es el primer trabajo de la próxima sesión de canon.
-
-   Bloque histórico de la ronda 1, para contexto:
-
-   **⏳ RE-CORRIDA DE QA DEL 08-13 — FIXES APLICADOS, VALIDACIÓN PENDIENTE.**
-   Se corrieron 2 subagentes en frío (dramaturgia + congruencia semántica) sobre
-   el bloque de propagación de "la traición tiene dos tiempos", y **las 7 tandas
-   de fixes ya están aplicadas y commiteadas** (una por tanda; detalle completo en
-   [[LOG]] §2026-08-13). Linter en **0 críticos / 0 medios**.
-
-   Cerraron: (1) la ruptura de Bram movida a la sala del Fragmento en la Matriz,
-   [[Los 9 Pivotes]] y el Reckoning; (2) **F2a existe en la ruta Bram** — decisión
-   de Boris, mismo mecanismo de holder=agente que Nyael; (3) origen de Roen
-   reescrito como Mistbound interior, sin bestias; (4) Darro — dos años de
-   aprendizaje con Vekka, rechazo al tercero, versión única; (5) **Valen y Darro
-   migrados al sub-beat 2b** con escena de cráter recortada a reacción contenida;
-   (6) siete medios; (7) cuatro menores + bloque de aritmética canónica de Nyael.
-
-   > *(Nota histórica: esa re-corrida ya se ejecutó — es la que produjo la ronda 2
-   > de arriba. El pendiente vigente es la re-corrida **siguiente**.)*
+   > estos fixes** (skill `canon-qa` §Anti-objetivos). Cada re-corrida histórica
+   > encontró algo que la anterior no vio — incluida una escena físicamente
+   > imposible que sobrevivió cinco rondas. **Es el primer trabajo de la próxima
+   > sesión de canon.**
 
 1. **✅ ACTO 1 — GUIÓN COMPLETO (2026-08-12).** Detalle de cada decisión
    en [[LOG]] §2026-08-12. **Las 5 escenas escritas**, todas
@@ -599,10 +319,10 @@ agachada. El jugador sigue idle en los dos motores.
    del nombre; costó 5 críticos propios entre la 4ª y la 5ª.
 7. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr — es
    el único brief pendiente de la sección 12.
-7. **✅ Consejo corrido (2026-08-10) → [[ADR-003 Reset de desarrollo y
-   motor]] tiene BORRADOR DE CIERRE, pendiente de tu firma.** Salió:
-   hard reset SÍ · **Godot** (no se reabre hasta que el slice dé
-   veredicto) · slice = [[Slice of Bond]] recortado a **3 escenas** con
+8. **✅ Consejo corrido (2026-08-10) → [[ADR-003 Reset de desarrollo y
+   motor]], hoy CERRADO Y RATIFICADO** (ver §ADR-003 arriba; este ítem
+   decía "pendiente de tu firma" y era residuo). Salió: hard reset SÍ ·
+   **Godot** · slice = [[Slice of Bond]] recortado a **3 escenas** con
    Dagna, greybox de entorno pero **no de cuerpo** (la biomecánica es el
    canal por el que viaja la pérdida — es el punto de tu premisa que el
    consejo casi tira junto con los tatuajes) · PC únicamente · alcance
@@ -611,13 +331,11 @@ agachada. El jugador sigue idle en los dos motores.
    **Corrección al consejo:** propuso "Dagna o Roen" para el slice —
    malformado, **Roen es fijo y no traiciona**, no puede sostener la
    coda del Bond vacío. Dagna gana por defecto.
-   **Falta para firmar:** (a) los 3 playtesters con nombre y fecha
-   (Boris los tiene definidos, hay que registrarlos en §C del cierre);
-   (b) 30 min de lectura para confirmar que Dagna sigue siendo el mejor
-   de los **9 Pivotes** post-rework; (c) tu VoBo al recorte de 3
-   escenas.
+   **Lo único que quedó abierto de la firma, y no bloquea:** tu VoBo
+   explícito al recorte exacto de 3 escenas. Los 3 playtesters ya están
+   con nombre (Diego, Santiago, Delmer) y el playtest ya corrió.
 
-8. **✅ Segundo consejo corrido (2026-08-13)** sobre
+9. **✅ Segundo consejo corrido (2026-08-13)** sobre
    [[Veredicto de Motor y Lectura del Proyecto]]. Transcript en
    `90-Raw/council-2026-08-13-veredicto-motor-y-alcance.md`. Salió:
    **Godot ratificado y congelado** (cero re-evaluaciones de motor hasta
@@ -700,17 +418,18 @@ agachada. El jugador sigue idle en los dos motores.
    1.02 s). El impulso se recalculó a 11.24 para conservar el mismo
    alcance de 2.87 m, así que la geometría del nivel no se tocó.
 
-   **⬜ Lo que ahora bloquea:**
-   (a) **congelar el build y anotar el hash** en §0.5 — última casilla
-   abierta; (b) **decidir la forma de la zona de la cornisa** (ver abajo);
-   (c) **agendar a Diego, Santiago y Delmer**.
+   **✅ Las dos casillas técnicas cerraron (2026-08-19, commit `8c45bab`).**
+   (a) **Build congelado**, hash de contenido **`91e3d293934f`** anotado en
+   [[Protocolo-de-Playtest]] §0.5 (`godot/tools/freeze_build.py`;
+   `godot/build_hash.txt`). (b) **La zona de la cornisa ahora rodea la mesa
+   entera** — venía de un hallazgo del instrumento: en las dos corridas de
+   prueba hubo **2 pulsaciones muertas dentro de la zona contra 34 y 63
+   fuera**, y no era falta de insistencia sino que la zona cubría una sola
+   cara de una mesa de cuatro mientras el jugador daba vueltas. No movió
+   umbrales firmados.
 
-   ⚠️ **Hallazgo del instrumento, pendiente de tu decisión.** En las dos
-   corridas de prueba hubo **2 pulsaciones muertas dentro de la zona
-   contra 34 y 63 fuera**. No es que no insistiera: insistió mucho, en
-   otro lado. La zona cubre una sola cara de una mesa que tiene cuatro y
-   el jugador da vueltas. Propuesta: **que rodee la mesa entera**. No
-   mueve umbrales firmados, pero toca el instrumento firmado.
+   **⬜ Lo único que bloquea el playtest ahora: agendar a Diego, Santiago
+   y Delmer.** Todo lo técnico está listo.
 
    **Riesgos abiertos que nadie había nombrado** (los 3 primeros ya con
    instrumento en el protocolo): el gancho es una ausencia y **no se
@@ -768,8 +487,10 @@ pregunta abierta de las escenas firma de T3 (punto 3 de arriba).
 - Traducción pendiente de los beats de diálogo ya escritos en español (ver
   arriba, regla de idioma).
 - `.claude/worktrees/quirky-wiles-afa8a0/` — worktree real de git (rama
-  `claude/strange-galileo-243fc7`, 62MB) con vault viejo adentro. No se tocó;
-  revisar si hace falta.
+  `claude/strange-galileo-243fc7`, 62MB, punta del **2026-07-09**) con vault
+  y código viejos adentro. **Candidato a borrar:** todo lo que contiene está
+  superado por el tag `archive/prototipo`, y su copia vieja del rig ya casi
+  hace que un rescate tome la fuente equivocada (ver §Hechos vigentes).
 
 ### ✅ Bestiario/Flora/Villanos menores — cerrado (2026-08-04)
 

@@ -248,7 +248,14 @@
 - `reviews/` — reviews de arte del director, verbatim (checklist de
   aceptación en [[Task-Board]]): **Character-Blockout-Review-v0.1**
   (cuerpo humano, 2026-07-10) · **Character-Head-Review v0.2–v0.5**
-  (cabeza/busto, rondas M9/M10, 2026-07-10).
+  (cabeza/busto, rondas M9/M10, 2026-07-10) · **QA-Auditoria-Codigo**
+  y **QA-Auditoria-Output-vs-RAW** (2026-07-12) ·
+  **QA-Auditoria-Tronco-Superior** (2026-07-13) — las tres, auditorías
+  de subagente en frío contra las láminas.
+- `ui/REVIEW-2026-07-28.md` — review de UI del director.
+- `*-ficha-v0-ARCHIVADA.md` — las fichas v0 de **Dagna, Darro, Roen y
+  Valen**, anteriores al rework. Archivo: la fuente viva de cada uno es su
+  ficha expandida en `10-Knowledge/` (regla de fuente única por personaje).
 - `research/Plugin-Evaluation-2026-07-11.md` — evaluación de 13 plugins
   Godot + Chickensoft + research cabello/facial: Dialogue Manager =
   adoptar en Fase 2; shaders minables de HTerrain/Scatter/godot-vrm(MToon)

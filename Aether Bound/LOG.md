@@ -1,5 +1,126 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-21] lint | Lint Loop — el `Current-State` tenía tres versiones del mismo hallazgo
+
+Corrido a pedido de Boris tras el rescate del rig de Dagna. Las 6 fases del
+[[Lint Loop]]. **Resultado: 🟡 → 🟢, y una contradicción de las que hacen daño.**
+
+### Fase 1 — contradicciones (lo importante de esta corrida)
+
+**`Current-State.md` afirmaba tres cosas incompatibles sobre el foot IK, las
+tres fechadas 2026-08-12, una debajo de la otra:**
+
+1. §*"✅ Foot IK RESUELTO con solver propio — cumple el Benchmark"* (±6 mm).
+2. §*"✅ Comparación de foot IK Godot vs Unity — CERRADA"*.
+3. §*"⛔ Foot IK: migrado a `TwoBoneIK3D`, y sigue sin producir salida"* —
+   que cerraba diciendo *"hasta que el IK produzca salida, la comparación
+   contra Unity no se corre"* y **"sigue sin decidirse el veredicto
+   Godot-vs-Unity"**.
+
+El (3) es una **instantánea superada del mismo día** que nunca se borró. Su
+última frase contradice además [[ADR-003 Reset de desarrollo y motor]] (cerrado
+el 08-10) y el 2º consejo (08-13), que **congelaron Godot**. Cualquiera que
+arrancara sesión leyendo eso podía creer que la decisión de motor estaba
+abierta.
+
+Otras dos, del mismo bloque:
+
+- **Duplicación literal**: los párrafos *"Comparador cuadro a cuadro
+  Unity/Godot listo"* y *"Comparativa de motores escrita"* aparecían **dos
+  veces, palabra por palabra**.
+- **Tabla huérfana** de 5 filas sin encabezado, con números viejos que
+  contradecían las dos tablas de arriba.
+
+**Fix:** los 254 renglones del bloque 08-12 se movieron verbatim a
+[[Current-State-Historico]] §Spike Godot/Unity y se reemplazaron por un
+resumen de 26 renglones que dice lo único vigente — los dos motores cumplen
+el estándar, Godot necesita solver propio, la decisión no se reabre — más el
+puntero a [[Lecciones]] §Godot 4.7, que es lo que hay que leer antes de tocar
+importación de FBX.
+
+### Fase 3 — status desactualizados
+
+- **Pendiente 7 decía que ADR-003 *"tiene BORRADOR DE CIERRE, pendiente de tu
+  firma"*** mientras el §ADR-003 del mismo archivo lo daba por *cerrado y
+  ratificado*. Y de las 3 casillas que listaba como faltantes, 2 estaban
+  hechas (los playtesters ya tienen nombre; el playtest ya corrió). Corregido:
+  **lo único abierto es tu VoBo al recorte de 3 escenas**, y no bloquea.
+- **Dos ítems numerados `7`** en la lista de Inmediato. Renumerado.
+- **`⬜ Lo que ahora bloquea`** listaba congelar el build y decidir la forma
+  de la zona de la cornisa: **las dos cerraron el 08-19** (commit `8c45bab`,
+  hash `91e3d293934f`). Lo único que bloquea el playtest ahora es **agendar a
+  Diego, Santiago y Delmer**.
+
+**Reportado, NO tocado — son decisiones tuyas, no de lint:**
+
+- `10-Knowledge/Principios de Anatomía 3D.md` sigue en **`propuesto`** aunque
+  [[PRDs/PRD-Reescritura-Escultura-Rig-v1]] lo cita como insumo y de hecho se
+  usa como estándar. Candidato claro a ratificar.
+- `10-Knowledge/Catálogo Técnico Godot.md` sigue en **`propuesto`** con el
+  motor ratificado y congelado dos veces.
+- Las fichas de **Roen, Valen y Darro** siguen en `draft` mientras las 9 de
+  Pivote están ratificadas: los 3 fijos quedaron atrás.
+
+### Fase 4 — Index vs. realidad
+
+9 archivos existían sin figurar en [[00-Index]]: las 3 auditorías QA de
+`90-Raw/reviews/` (código, output-vs-RAW, tronco superior), `ui/REVIEW-2026-07-28`
+y las 4 fichas `*-v0-ARCHIVADA` (Dagna, Darro, Roen, Valen). **Agregados**, las
+fichas v0 con la nota de que la fuente viva es la expandida de `10-Knowledge/`.
+
+### Fase 2 — links y huérfanos
+
+`check_canon.py`: **0 críticos / 0 medios / 27 info**. Los 17 wikilinks rotos
+viven casi todos en `LOG.md` y `Current-State-Historico.md`, que son
+**append-only e histórico** — se listan y no se tocan, por regla del loop.
+Los apuntados desde archivos vivos son 4 nombres viejos ([[Dagna]] antes del
+rename a la ficha expandida, [[Los 4 Finales]] antes de ser 5).
+
+Huérfanos reales: ninguno en `10-Knowledge/` ni `20-State/`.
+
+### Fase 5 — State vs. repo
+
+`Current-State` decía **`Branch: master`** a secas. Corregido con lo que el
+repo dice de verdad: `master` con el build del playtest **congelado en
+`8c45bab`**, más la rama viva **`feat/dagna-rig`** deliberadamente fuera de
+master para no descongelar el build con los testers a punto de correr.
+
+Se agregó además el hecho que casi cuesta caro hoy: **la única fuente válida
+para rescatar código del prototipo es el tag `archive/prototipo`**; el
+worktree `quirky-wiles-afa8a0` tiene una copia de **julio** del mismo
+`character_rig.gd` (2115 líneas contra 3609). Ese worktree pasó de *"revisar
+si hace falta"* a **candidato a borrar**.
+
+### Fase 6 — peso de arranque
+
+| | Antes | Después |
+|---|---|---|
+| `Current-State.md` | 11,935t | **8,133t** |
+| Arranque de sesión | 12,844t (🟡) | **9,042t (🟢)** |
+
+Movidos al archivo: el bloque del spike 08-12 (254 renglones) y el relato de
+las 3 rondas de fixes de canon (81 renglones), este último reducido a lo que
+de verdad sobrevive — **el pendiente de la re-corrida en frío y la lección de
+barrer la clase y no la línea**, que es la regla 8 de `CLAUDE.md`.
+
+**Sigue sobre el techo blando de 3,000t** (+5,133t). Bajarlo más ya no es
+mover bloques: exige decidir qué de las secciones de Pendientes es estado y
+qué es bitácora. Queda como el trabajo del próximo Lint Loop.
+
+### Lección de método, y la pisé yo mismo en esta corrida
+
+El resumen que escribí citaba *"[[LOG]] §2026-08-13 y §2026-08-17"* y el
+linter lo marcó **crítico**: encadenar dos `§` en una frase hace que parsee lo
+que sigue como parte del nombre de la sección. Es exactamente lo que el punto
+6 de Pendientes ya advertía —*"cerrar el `§` antes de seguir la frase"*— y
+costó 5 críticos propios entre la 4ª y la 5ª ronda. **Un lint que no se
+verifica con el linter no es un lint.**
+
+**Cierre:** `check_canon.py` en **0 críticos / 0 medios**; `check_vault.py` en
+**🟢**.
+
+---
+
 ## [2026-08-21] código | Dagna vive en el motor — el rig no había que construirlo, había que rescatarlo
 
 Boris preguntó si valía la pena avanzar un render de personaje con los assets
