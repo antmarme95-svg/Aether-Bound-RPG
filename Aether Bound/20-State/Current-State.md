@@ -229,11 +229,12 @@ IK en un mismo día, y el detalle del comparador cuadro a cuadro:
    ([[Nomenclatura]]).
 
    **⚠️ Abierto para vos, nada bloquea:**
-   - **Ambigüedad en [[Geografía y Ciudades]] §M** — dice que Roen *"fue
-     este puesto, en otra vida"* sobre Aethelgard Watch, y su ficha lo
-     pone en la frontera Mistbound, que es tierra interior. El guión
-     escribió lo que las dos lecturas soportan. Fix de una línea, en el
-     sentido que elijas.
+   - ~~Ambigüedad Roen/Aethelgard Watch~~ **✅ RESUELTA** (LOG tanda 4,
+     punto e): ya no dice "fue este puesto, en otra vida" — ahora *"Roen
+     reconoce el protocolo, no el puesto"* ([[Geografía y Ciudades]]
+     línea 725). Nota vieja detectada como residuo el 2026-08-21 al
+     revisar un hallazgo de lint sobre Los 3 Fijos (ver abajo); corregida
+     aquí para no re-litigarla.
    - **Las tarjetas por Pivote del Acto 1 no están extraídas.** El Nido
      pide 4 slots por Pivote (llegada · combate · lectura de la duda ·
      reacción a Speck) — **los 4 ya existen en las 9 fichas**, en prosa y
@@ -313,6 +314,16 @@ IK en un mismo día, y el detalle del comparador cuadro a cuadro:
    - El caso **"rol duplicado"** vive en T1 para Roen y en T2 para Valen
      y Darro, sin razón declarada, y solo en Roen *sustituye* el sabor
      base en vez de sumarse.
+5b. **✅ Fichas de Los 3 Fijos → `status: ratificado` (2026-08-21).** Lint Loop
+   paralelo (rama `feat/dagna-rig`) reportó `draft` + "sin lámina propia" —
+   el status sí estaba atrasado, pero la lámina es falso positivo: buscó
+   nombres viejos (`Roen (The Kindred).png`) en vez de los vigentes
+   (`roen-v1.png`, `valen-v1.png`, `darro-v1.png` + escenas extra
+   `roen-second-catch-v1.png`, `zephyr-ambush-roen-arrival-v1.png`,
+   `valen-long-calculus-v1.png`). Verificado roen-v1.png contra la sección
+   "Diseño Visual Ratificado" de su ficha — coincide 100%. Corregido el
+   frontmatter de las 3 fichas. Punto 5 arriba (T3 firma + rol duplicado)
+   sigue abierto, es lo único real que sobrevivió del reporte.
 6. **Reglas de tráfico mientras tanto:** linter (`check_canon.py`) antes
    de cada checkpoint, siempre. **Y al citar una sección, cerrar el `§`
    antes de seguir la frase** — el linter parsea lo que sigue como parte
@@ -393,7 +404,7 @@ IK en un mismo día, y el detalle del comparador cuadro a cuadro:
 
    **✅ ESCENA GRIS construida y verificada (2026-08-13).**
    `godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
-   con `tools/test_gray_scene.gd` (**18 verificaciones, ALL_PASS**).
+   con `tools/test_gray_scene.gd` (**24 verificaciones, ALL_PASS**).
    Arena de 44×44, mesa central a **2.4 m**, y sobre la mesa una torre de
    dos peldaños a **4.6 m** y **7.0 m**. La cápsula **no tiene salto
    propio**; el botón da 7.5 m/s (ápice 2.87 m) y solo responde con los

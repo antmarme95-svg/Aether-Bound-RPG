@@ -650,7 +650,7 @@ alta + indiferencia = DISEÑO. No hay tercera lectura, y no se busca una.
   con test propio (50 verificaciones). Detalle en §4.1.
 - ~~**Construir la escena gris**~~ ✅ **hecha 2026-08-13** →
   `godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
-  con `tools/test_gray_scene.gd` (18 verificaciones) probando **con física
+  con `tools/test_gray_scene.gd` (24 verificaciones) probando **con física
   real** que la mesa no se sube caminando desde ninguna de 8 direcciones.
   **La sesión se lanza con `Start-Playtest.bat <tester>`** (raíz del repo) y
   los resultados se leen con `Report-Playtest.bat`. Para probar uno mismo,

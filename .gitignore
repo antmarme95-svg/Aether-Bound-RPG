@@ -2,6 +2,13 @@
 godot/.godot/
 godot/test_out/
 
+# Godot 4.4+ genera un .uid por script. Se ignoran a proposito: la escena
+# del spike (godot/scenes/gray_test.tscn) referencia los scripts POR RUTA,
+# no por uid, asi que no hacen falta para que resuelva -- y ademas la genera
+# un script, no el editor. Si algun dia una escena pasa a referenciar por
+# uid://, hay que dejar de ignorarlos y commitearlos.
+godot/**/*.uid
+
 # Unity: capturas locales del comparador de frames (regenerables con
 # SpikeFrameStrip.Run, ver unity/Assets/_Spike/Editor/)
 unity/test_out/

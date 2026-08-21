@@ -12,6 +12,16 @@ updated: 2026-08-12
 
 ### Godot 4.7 — hook de telemetría del playtest (2026-08-13)
 
+- **Un build congelado se rompe con un comentario.** Al cerrar la sesión del
+  2026-08-19 edité una línea de comentario en `gray_session.gd` —cosmética,
+  cambiar "18 verificaciones" por "las verificaciones"— y el hash de
+  contenido pasó de `91e3d293934f` a `d885e8cd04f8`. Nada del juego cambió y
+  aun así el build dejó de ser el mismo. **Correr
+  `python godot/tools/freeze_build.py` al cerrar cualquier sesión que toque
+  `godot/`**: si el número cambió y no era la intención, revertir; si era la
+  intención, anotar el hash nuevo en §0.5 del [[Protocolo-de-Playtest]] y
+  asumir que las sesiones ya corridas dejan de ser comparables.
+
 - **`--` es un OPERADOR de PowerShell y rompe cualquier invocación de Godot
   que pase argumentos al proyecto.** `godot --path godot -- --tester=Diego`
   falla con *"Token 'path' inesperado"* antes de llegar al ejecutable. Sortear
