@@ -1,7 +1,8 @@
 ---
 status: propuesto
 source: "Minado 2026-07-16 de 'Anatomy for 3D Artists — The Essential Guide for CG Professionals' (Chris Legaspi, Laura Braga, Djordje Nagulov, Mario Anger, César Zambelli, Daniel Peteuil; 3dtotal Publishing) — copia personal de Boris, NUNCA copiada al repo. 5 subagentes leyeron las 157 páginas (renderizadas a JPEG vía mutool/MuPDF) y reportaron principios en su propia síntesis, sin transcribir texto ni reproducir imágenes. Esta página es una segunda pasada de síntesis + cruce contra el código y las Lecciones del proyecto. **Ampliada 2026-07-16 (misma sesión, más tarde):** la primera pasada NO cubrió cabeza/cara — Boris señaló los capítulos exactos ('Sculpting an archetypal figure — 3D male — Part 01 | Basic form', secciones 10-11, pp.96-97; y 'Sculpting an archetypal figure — Advanced 3D male — Part 01 | Head, neck, and face' por Djordje Nagulov, pp.116-121) y se re-abrió el PDF (mutool, sin outline — se ubicó el rango renderizando muestras y leyendo cabeceras de capítulo) para minar esas 6 páginas específicas, agregadas como sección nueva abajo."
-updated: 2026-07-16
+updated: 2026-08-21
+revisión: "2026-08-21 — barrido completo del libro (10 de 12 capítulos, 10 subagentes) como prep técnico de Roen/Darro/Valen. Aplicadas 5 correcciones sobre errores de la pasada de 2026-07-16, marcadas en línea como ⚠️ CORRECCIÓN 1-5. Reportes crudos en `90-Raw/research/minado-anatomia-3d-2026-08-21/`. El status sigue en `propuesto`: ratificar es decisión del director."
 ---
 
 # Principios de Anatomía 3D — minados para el pipeline procedural
@@ -14,17 +15,48 @@ updated: 2026-07-16
 > en [[Propuesta-Recursos-de-Modelado]] y las prioridades abiertas de
 > [[PRD-Rework-Fenotipo-Humano-Cuerpo-Completo]].
 
+> ⚠️ **Revisión 2026-08-21 — leer antes de usar esta página.** Un barrido
+> completo (10 capítulos, 10 subagentes) encontró **5 errores** de la pasada
+> original, marcados en línea abajo como **CORRECCIÓN 1-5**. Tres son de
+> contenido, uno es una cita sin fuente, y uno es una premisa que envejeció.
+> Los reportes crudos están en
+> `90-Raw/research/minado-anatomia-3d-2026-08-21/`.
+>
+> **Dos límites de la fuente, que conviene saber antes de citarla:**
+> 1. **El libro no trae medidas horizontales.** En 10 capítulos apareció
+>    una sola: ancho de hombros = 2 alturas de cabeza. No hay ancho de pecho,
+>    cintura ni cadera, ni la razón hombro/cadera, ni largo de cuello, ni
+>    profundidad en Z. Es estructural — el libro enseña un sistema
+>    **vertical**, de contar cabezas. **Los anchos hay que medirlos sobre las
+>    láminas ratificadas de `90-Raw/concept/`**, que además miden nuestras
+>    razas y no la figura académica.
+> 2. **Su conteo de cabezas no es estable ni internamente.** Los capítulos 2D
+>    usan 8, el de *curvy female* usa 7, y el de *slim female* **rechaza el
+>    sistema de cabezas** y mide con calibre contra una foto. Corolario: **el
+>    7.5 del humano del proyecto no sale de este libro** — sale de los
+>    [[Briefs de Concept Art]], es decisión del director, y no debe
+>    "corregirse" a 8 creyendo que se arregla algo.
+
 ## Principio general: qué primitiva para qué masa
 
-El libro es explícito y consistente en las 157 páginas sobre una regla que el
-proyecto ya venía descubriendo a mano, ronda por ronda:
+El libro es explícito y consistente sobre una regla que el proyecto ya venía
+descubriendo a mano, ronda por ronda (la pasada original decía "en las 157
+páginas"; 157 son páginas del **PDF** — el libro tiene ~285, y desde la p.50
+del PDF cada página es un pliego de dos):
 
 - **Esfera** → solo articulaciones reales tipo bola-y-cuenco (hombro, cadera,
   a veces codo/rodilla) y masas genuinamente redondeadas (mejilla llena,
   glúteo). Nunca para un plano óseo.
 - **Cilindro** → segmentos rígidos entre articulaciones (brazo, antebrazo,
-  muslo, pantorrilla) y la caja torácica en su forma más simple ("bullet" o
-  "birdcage": cilindro redondeado, no caja recta).
+  muslo, pantorrilla). ~~Y la caja torácica en su forma más simple ("bullet"
+  o "birdcage": cilindro redondeado, no caja recta).~~
+  > ⚠️ **CORRECCIÓN 1 (barrido 2026-08-21).** La caja torácica **NO es un
+  > cilindro**. Los capítulos 4 y 6, leídos por agentes ciegos entre sí,
+  > coinciden: se bloquea como **caja con X≠Z y más angosta arriba**, y el
+  > cap. 5 la llama caja rígida inviolable. Esta línea rechazaba
+  > explícitamente la primitiva correcta, y es **la causa raíz del "torso
+  > bola"**: un cilindro de revolución no puede dar frente ancho y costado
+  > angosto. Ver `90-Raw/research/minado-anatomia-3d-2026-08-21/`.
 - **Caja** → cualquier zona con un plano o borde definido: pelvis, palma de
   la mano, dedos (sí, dedos — ver abajo), acromion, pómulo bajo luz dura. La
   caja "captura la naturaleza rígida" donde la hay; se suaviza después, nunca
@@ -45,13 +77,26 @@ tramos leídos en el mismo diagnóstico:
 
 **El torso se bloquea como 3 masas independientes, nunca como un cilindro
 continuo con un solo taper.** Proporción de referencia: caja torácica
-(cilindro/huevo redondeado) ocupa **2/3** de la altura del torso, pelvis
-(caja rígida, inclinada levemente hacia atrás) ocupa el **1/3** inferior, y
+(~~cilindro/huevo redondeado~~ **caja X≠Z, más angosta arriba** — ver
+Corrección 1) ocupa ~~**2/3**~~ de la altura del torso, pelvis
+(caja rígida, inclinada levemente hacia atrás) ocupa el ~~**1/3**~~ inferior, y
 entre ambas vive la cintura — el único tramo que se comprime/estira, con un
 volumen real más angosto y deformable, NO una curva estética aplicada sobre
 un cilindro. El "maniquí sin cintura ni trapecio real" que reporta el QA es
 consistente con tratar el torso como una sola forma continua en vez de estas
 3 masas con quiebre real entre ellas.
+
+> ⚠️ **CORRECCIÓN 2 (barrido 2026-08-21) — la fracción 2/3–1/3 no tiene
+> fuente.** Ninguno de los 10 capítulos barridos la enuncia, y **no deja
+> lugar al abdomen**, que el cap. 6 trata como **masa propia** entre caja
+> torácica y pelvis. Son 4 masas, no 3. Hasta que aparezca su origen, esta
+> fracción **no se usa como número** — se mide sobre las láminas ratificadas.
+>
+> Y el hallazgo de arquitectura que sí quedó firme: **el ancho de hombro no
+> debe ser un parámetro.** El cap. 6 atribuye causalmente el ancho de hombros
+> al **ancho de la caja torácica**, y de ahí deriva hasta el ángulo del codo.
+> Parametrizar `SHOULDER_X` directamente es parametrizar el síntoma; el slider
+> correcto es el ancho de la caja, con hombro y codo derivados.
 
 **Advertencia explícita para el cuerpo masculino:** el torso masculino NO
 lleva quiebre de cintura tipo reloj de arena (eso es exageración femenina).
@@ -283,6 +328,15 @@ angular, con cambios de plano más marcados que la femenina** — coherente
 con la elección ya hecha en código de esfera+ángulo goníaco en vez de una
 esfera lisa.
 
+> ⚠️ **CORRECCIÓN 3 (barrido 2026-08-21) — media regla, y el código se
+> justificó con la mitad que faltaba.** El **mismo autor** advierte que la
+> línea de mandíbula es **suave**, y que el error común es hacerla
+> **demasiado angular**. "Más angular que la femenina" es un comparativo, no
+> una licencia para facetarla. El render de Dagna devolvió exactamente el
+> error advertido: **la mandíbula lee como un cubo suelto**. La pieza
+> estructural que falta es el **arco cigomático** como puente pómulo→oreja
+> del que cuelga el pivote mandibular.
+
 **Proporción y orden de refinamiento (§11, "Refining the head"):** la línea
 horizontal de los ojos va aproximadamente a la mitad de la cara — error
 común: ponerlos demasiado alto. Los ojos se separan por aproximadamente el
@@ -322,23 +376,52 @@ cigomático — dato concreto útil si el proyecto alguna vez anima apertura de
 mandíbula (hoy `character_rig.gd` no lo hace, la mandíbula es geometría
 fija).
 
-**Oreja — única mención encontrada, tangencial:** el libro NO tiene una
-sección dedicada a proporción/estructura de oreja. La única referencia
-encontrada es de paso (§10 "happy and smiling": "las orejas también se
-levantan un poco" al sonreír) — un dato de animación de expresión, no de
-proporción base. **Para proporción/estructura de oreja en reposo, este
-libro no aporta nada más allá del principio general esfera-vs-caja** (la
-oreja es masa redondeada tipo articulación bola-cuenco → esfera, coherente
-con la elección ya hecha en `_build_origin_features`).
+~~**Oreja — única mención encontrada, tangencial:** el libro NO tiene una
+sección dedicada a proporción/estructura de oreja.~~ La referencia de este
+capítulo es de paso (§10 "happy and smiling": las orejas se levantan un poco
+al sonreír) — dato de animación de expresión, no de proporción base.
 
-**Nota de aplicabilidad — el capítulo es sobre EXPRESIONES, el rig es
-ESTÁTICO:** buena parte de "Head, neck, and face" (§03-05, 09-13) describe
-cómo cambian las masas al girar/inclinar la cabeza o gesticular (enojo,
-miedo, sonrisa, beso) — no aplica directo a una malla facial fija sin
-blendshapes. Lo transferible a Fase 5 es específicamente lo de arriba
-(bloqueo §10-11, hueso-vs-músculo §06, mecánica de globo ocular §02/08) —
-el resto queda como referencia para el día que el proyecto anime
-expresiones faciales, no para esta fase.
+> ⚠️ **CORRECCIÓN 4 (barrido 2026-08-21) — la afirmación de arriba es falsa,
+> y el error es de método.** El libro **sí** trae estructura de oreja, en
+> **dos** capítulos distintos: el cap. 4 reporta una sección completa
+> (p.109 §19) más la proporción en p.108 §17 (del rabillo del ojo a la base
+> de la nariz), y el cap. 6 reporta la construcción **por tubos curvos**
+> (p.154). Ninguna de las dos es una esfera.
+>
+> **La lección importa más que el dato:** esa pasada minó **6 páginas** y
+> generalizó la conclusión **al libro entero**. Es la misma falla que la
+> regla 8 de `CLAUDE.md` nombra para el canon — *barrer la clase, no la
+> línea* —, aquí aplicada a una fuente. **Una ausencia solo se declara sobre
+> el alcance que de verdad se leyó.**
+
+~~**Nota de aplicabilidad — el capítulo es sobre EXPRESIONES, el rig es
+ESTÁTICO:**~~ buena parte de "Head, neck, and face" (§03-05, 09-13) describe
+cómo cambian las masas al girar/inclinar la cabeza o gesticular — lo que en
+2026-07-16 se juzgó no aplicable a una malla facial fija sin blendshapes.
+
+> ⚠️ **CORRECCIÓN 5 (barrido 2026-08-21) — premisa caducada, y cara.** Esta
+> nota y su gemela en §Brazos descartaron los capítulos *Advanced* con el
+> argumento de que el rig es estático. **Hoy son la fuente principal del
+> frente de animación**, y de ellos salieron los **dos únicos hallazgos
+> cifrados** de todo el barrido — que además contestan defectos abiertos:
+>
+> - **El cuello son tres masas, no un cilindro** (cap. 5): núcleo inclinado
+>   hacia adelante + dos elipsoides diagonales (esternocleidomastoideos) que
+>   cruzan en V desde detrás de la oreja al hueco supraesternal. El cap. 10
+>   agrega el detalle que faltaba: el ECM **se divide en dos cabezas**, una a
+>   la clavícula y otra al esternón — meter ambas a la clavícula es el error
+>   común. Y **el pivote de rotación de la cabeza va bajo las orejas**, no en
+>   el centro del cráneo (distinto del pivote de apertura de mandíbula, que
+>   sí está bien descrito arriba).
+> - **Los "hombros que se tragan el cuello" son rotación de clavícula**
+>   (hasta ~45°) más el trapecio subiendo, no cuello corto (caps. 5 y 8).
+>   **El cuello no se acorta: se tapa.** Es masa añadida, no proporción
+>   distinta — así que el enano puede compartir esqueleto con humano y elfo.
+>
+> **Regla que sale de esto:** "no aplica porque el rig es estático" **no es
+> criterio de minado**. Lo estático es una fase del proyecto, no una
+> propiedad de la anatomía; descartar por fase deja el conocimiento sin
+> minar justo cuando la fase cambia.
 
 ## Piernas y pies (minado 2026-07-16, tercera pasada — completa el rework humano)
 
@@ -394,12 +477,27 @@ que el antebrazo porque gran parte de su largo lo cubre el deltoides"**
 qué un brazo "se ve" corto/largo en cámara aunque las medidas sean
 correctas.
 
-**Nota de aplicabilidad — la mayor parte de "Shoulders, arms, and hands"
+~~**Nota de aplicabilidad — la mayor parte de "Shoulders, arms, and hands"
 (Advanced 3D male Part 02) es sobre POSADO dinámico** (brazo a 30°/90°/
 180°, supinación/pronación, ritmo escapulohumeral) — no aplica a
-`character_rig.gd`, que arma primitivas rígidas sin deformación muscular
-por pose. Queda como referencia para el día que el proyecto anime
-deformación de brazo, no para esta fase.
+`character_rig.gd`.~~
+
+> ⚠️ **CORRECCIÓN 5b (barrido 2026-08-21) — esta nota descartó por nombre
+> justo lo que hacía falta.** El **ritmo escapulohumeral** que aquí se lista
+> como "no aplica" es la fórmula que arregla el defecto #1 del rig, y viene
+> con números (cap. 7): de 0° a 30° de abducción la escápula no se mueve; de
+> ahí en adelante aporta **1° por cada 2° del húmero**, con techo de ~75° de
+> elevación → `escapula = clamp((abducción − 30) / 2, 0, 75)`. Y con el brazo
+> arriba **el acromion cambia de orientación**: la hombrera no solo sube,
+> gira su cara — que es exactamente el defecto de las hombreras-compuerta de
+> Dagna flotando fuera del brazo.
+>
+> La **supinación/pronación** también se descartó aquí, y también hace falta:
+> sin ella no se sostiene creíblemente un arma a dos manos, y sin acoplar el
+> roll del húmero **la abducción se traba anatómicamente a 90°**.
+>
+> Detalle y el recorte propuesto de DOF:
+> `90-Raw/research/minado-anatomia-3d-2026-08-21/DOF-propuesta.md`.
 
 ## Piel y pliegues — nota breve (Part 03 | Skin, aplicabilidad indirecta)
 
