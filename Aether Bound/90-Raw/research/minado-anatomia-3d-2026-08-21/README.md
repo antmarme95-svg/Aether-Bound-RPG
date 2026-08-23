@@ -5,7 +5,7 @@ updated: 2026-08-21
 
 # Minado del libro de anatomía 3D — barrido 2026-08-21
 
-**Qué es esto:** los reportes crudos de 7 subagentes que barrieron, capítulo
+**Qué es esto:** los reportes crudos de 10 subagentes que barrieron, capítulo
 por capítulo, *Anatomy for 3D Artists* (3dtotal) contra las necesidades del
 rig procedural. Encargados por Boris como **prep técnico** antes de construir
 a **Roen (humano 7.5 cabezas), Darro (enano 4.5) y Valen (elfo 8)** — tres
@@ -35,12 +35,16 @@ es un hecho, no expresión protegida.
 | `cap05-advanced-3D-male.md` | Advanced 3D male (Nagulov) | pp.116–135 | Cabeza por masas, cuello, mandíbula ancha vs. fina |
 | `cap06-3D-female.md` | Sculpting an archetypal figure — 3D female | pp.136–159 | Qué cambia y qué NO entre sexos = qué es slider y qué constante |
 | `cap07-advanced-3D-female.md` | Advanced 3D female (Anger) | pp.160–181 | Deformación en pose; el omóplato al levantar el brazo |
+| `cap08-male-bodybuilder.md` | Master projects — Male bodybuilder | pp.182–207 | Variación por físico; el trapecio de Darro |
+| `cap09-curvy-female.md` | Master projects — Curvy female | pp.208–225 | Dónde se deposita el volumen = cómo debe portarse el slider de peso |
+| `cap10-slim-female.md` | Master projects — Slim female | pp.226–249 | Landmarks que emergen sin masa; el cuello. Referencia de **Valen** |
 | `cap11-advanced-topology.md` | Advanced topology (Peteuil) | pp.250–259 | **Traducción** a loft procedural, no resumen |
 | `DOF-propuesta.md` | — | — | **No es minado.** Borrador propio que contesta la pregunta de DOF del director; pendiente de dónde vive |
 
-**Pendientes de barrer:** caps 8-10 (*Master projects*: bodybuilder, curvy,
-slim — pp.182–249) y cap 12 (*3D reference gallery*, pp.260–281). El cap 3
-(*2D reference gallery*) se descartó: son bocetos sin texto.
+**Pendiente de barrer:** solo el cap 12 (*3D reference gallery*, pp.260–281) —
+esculturas de 7 artistas con los grupos musculares etiquetados; sirve de
+calibración, no de fuente de reglas. El cap 3 (*2D reference gallery*) se
+descartó: son bocetos sin texto.
 
 ## Los tres hallazgos que justificaron el barrido
 
@@ -57,21 +61,48 @@ slim — pp.182–249) y cap 12 (*3D reference gallery*, pp.260–281). El cap 3
 3. **La asimetría lumbar/torácico** (cap 7): en extensión el lumbar se acorta
    ~30% y el torácico ~1%. **No es un DOF: es una escala longitudinal**, y el
    rig no tiene ninguna.
+4. **El esqueleto es invariante — dicho explícitamente, y confirmado tres
+   veces** (caps 6, 8 y 10): mismos huesos, misma estructura y mismas
+   proporciones entre figura promedio, bodybuilder y delgada. **Regla de
+   arquitectura: los sliders mueven radios y rellenos, jamás posiciones de
+   junta.** Corolario del cap 8: muñecas y tobillos conservan el tamaño de la
+   figura promedio aunque todo lo demás crezca — es el **contraste**, no el
+   engrosamiento uniforme, lo que hace leer la masa. El rig hoy escala
+   extremidades enteras por un multiplicador, que es justo el error.
+5. **El "hombros que se tragan el cuello" del enano es masa añadida, no
+   proporción distinta** — y hay **tres fuentes independientes**: rotación de
+   clavícula hasta ~45° (cap 5), caja torácica más ancha y corta (cap 6), y el
+   trapecio que al crecer se parte en dos masas y la superior invade el ángulo
+   del cuello (cap 8). **El cuello no se acorta: se tapa.** Darro puede
+   compartir esqueleto con Roen y Valen.
+6. **El slider de peso está mal concebido** (cap 9): el peso tiene **dos**
+   efectos independientes — sube volumen por zona **y baja la amplitud del
+   relieve de los landmarks**. El rig solo hace lo primero, y por eso lee
+   *inflado* en vez de *graso*. Excepción a respetar: trapecio y escápula
+   siguen legibles en figura llena. Y la cadera es prominente incluso en
+   cuerpo pasado de peso: **es parámetro de identidad, no producto del peso** —
+   fusionarlos es otra vía al torso-bola.
 
 ## Los hallazgos negativos, que también son resultado
 
-- **El libro no trae medidas horizontales.** Apareció una sola: ancho de
-  hombros = 2 alturas de cabeza. Faltan pecho, cintura, cadera, la razón
-  hombro/cadera, largo de cuello, grosores y **toda profundidad en Z**. Es
-  estructural: el libro enseña un sistema **vertical**, de contar cabezas.
-  Confirmado por tres agentes por separado. Si los caps 8-10 tampoco los dan,
-  hay que **medirlos en píxeles sobre las láminas ratificadas de
-  `90-Raw/concept/`** — medición del proyecto, no cita.
-- **El libro usa 8 cabezas; el proyecto usa 7.5 para el humano.** No son la
-  misma escala: toda vertical tomada del libro se reescala por 0.9375 o se
-  ancla a un landmark. **El 7.5 del proyecto no sale de este libro** — sale de
-  los briefs de concept art, es decisión del director, y conviene que quede
-  escrito antes de que alguien lo "corrija" a 8 creyendo que arregla algo.
+- **El libro no trae medidas horizontales. CERRADO como hallazgo.** Apareció
+  una sola en 10 capítulos: ancho de hombros = 2 alturas de cabeza. Faltan
+  pecho, cintura, cadera, la **razón hombro/cadera**, largo de cuello,
+  grosores y **toda profundidad en Z**. Es estructural: el libro enseña un
+  sistema **vertical**, de contar cabezas. Seis agentes la buscaron por
+  separado —incluidos los tres *Master projects*, que eran los candidatos más
+  probables— y ninguno la encontró. **Ya no es un vacío de barrido: es una
+  propiedad del libro.** Los anchos hay que **medirlos en píxeles sobre las
+  láminas ratificadas de `90-Raw/concept/`** — medición del proyecto, no cita,
+  con la ventaja de que mide nuestras razas y no la figura académica.
+- **El conteo de cabezas del libro no es estable, ni siquiera dentro del
+  libro.** Los capítulos 2D usan 8; el de *curvy female* usa 7; el de *slim
+  female* **rechaza explícitamente el sistema de cabezas** y mide con calibre
+  contra una foto de referencia. Conclusión práctica: **el 7.5 del humano del
+  proyecto no sale de este libro** — sale de los briefs de concept art, es
+  decisión del director, y conviene que quede escrito antes de que alguien lo
+  "corrija" creyendo que arregla algo. Toda vertical tomada del libro se
+  reescala o se ancla a un landmark.
 - **El cap 11 rinde poco**: 5 principios geométricos, cero números, y no
   contesta el patrón de aristas de la unión brazo-torso. Para eso hace falta
   otra fuente — topología de personajes de juego, no este libro.
