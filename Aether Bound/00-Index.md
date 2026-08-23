@@ -272,6 +272,15 @@
   mayoría asume Godot **2D** (`CharacterBody2D`/`move_and_slide`) — choque
   de dimensión con el proyecto 100% 3D analítico, no solo de estilo.
   Único ítem portable: Audio Manager Pattern de `godot-effects`.
+- `research/minado-anatomia-3d-2026-08-21/` — reportes crudos de 7 subagentes
+  que barrieron el libro de anatomía 3D capítulo por capítulo, como prep
+  técnico de Roen/Darro/Valen (las tres razas). **CRUDO, no canon:** insumo
+  para decidir qué asciende a [[Principios de Anatomía 3D]]. El libro es copia
+  personal del director y no está en el repo; los reportes son síntesis
+  propia, sin transcripción. Incluye `DOF-propuesta.md`, borrador que contesta
+  la pregunta de DOF del director. Ver su `README.md` — trae los hallazgos
+  negativos (el libro **no** tiene medidas horizontales; usa 8 cabezas y el
+  proyecto 7.5) y 5 correcciones pendientes a [[Principios de Anatomía 3D]].
 - `research/quality-benchmarks/` — capturas EXTERNAS de calidad de
   render (no concept art canon, no confundir con `concept/`): 3 PNG del
   addon godot-vrm (avatar VRM "AliciaSolid"), aportados por el director
