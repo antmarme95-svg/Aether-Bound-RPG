@@ -1,5 +1,162 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-21] anatomía | Barrido completo del libro, DOF ratificado, y los 3 fijos salen de draft
+
+Prep técnico pedido por Boris antes de tocar código de personaje. **Cambio de
+plan del director que resultó ser el correcto:** en vez de re-esculpir a Dagna
+como piloto, construir a **Roen (humano 7.5 cabezas), Darro (enano 4.5) y
+Valen (elfo 8)**. Dagna sola es la desviación más extrema del elenco — buena
+prueba de estrés, mal testigo único. Los tres fijos cubren las **tres razas**
+y por lo tanto **validan** [[Principios de Anatomía 3D]] en vez de solo
+estresarlo.
+
+### El barrido — 10 de 12 capítulos, 10 subagentes
+
+157 páginas del PDF partidas en **261 imágenes, una por página impresa** (el
+PDF mezcla dos formatos: hasta la 48 es una página, de la 50 en adelante cada
+una es un pliego de dos — sin partirlas el texto queda al límite). El libro no
+trae outline ni capa de texto; la estructura de capítulos se reconstruyó
+renderizando las 157 páginas y leyendo el **encabezado vivo** de cada una en 6
+hojas de contacto. Reportes crudos, con su README:
+`90-Raw/research/minado-anatomia-3d-2026-08-21/`.
+
+Cada agente llevó un ángulo distinto en vez del mismo encargo diez veces, y
+orden explícita de **leer primero el vault y reportar solo deltas**. Sin eso,
+la prioridad del director (capítulos 4-7, donde el vault ya había minado)
+habría devuelto lo que ya teníamos.
+
+**Disciplina de derechos, la misma que ya registraba el `source:` del doc:**
+síntesis propia, cero transcripción, cero reproducción de imágenes, máximo una
+cita corta atribuida. Las **medidas numéricas sí completas** — un número es un
+hecho, no expresión protegida. El libro es copia personal de Boris y no entró
+al repo.
+
+### Lo que convergió
+
+**Tres capítulos ciegos entre sí dieron la misma causa raíz del "torso bola":**
+el torso arranca de una **caja (X≠Z)**, no de un cilindro de revolución; la
+caja torácica va **más angosta arriba**; y el V-taper lo produce el
+*latissimus dorsi* como masa añadida, no el tórax. Corolario de arquitectura:
+**el ancho de hombro no debe ser un parámetro** — se deriva del ancho de la
+caja torácica. Parametrizar `SHOULDER_X` es parametrizar el síntoma.
+
+**Y tres fuentes independientes coincidieron en que los "hombros que se tragan
+el cuello" del enano son masa añadida, no proporción distinta:** rotación de
+clavícula hasta ~45° (cap 5), caja torácica más ancha y corta (cap 6), y el
+trapecio que al crecer se parte en dos masas y la superior invade el ángulo
+del cuello (cap 8). **El cuello no se acorta: se tapa.** Darro puede compartir
+esqueleto con Roen y Valen.
+
+**El esqueleto es invariante — dicho explícitamente y confirmado tres veces**
+(caps 6, 8, 10). Regla dura: **los sliders mueven radios y rellenos, jamás
+posiciones de junta.** Corolario del cap 8: muñecas y tobillos conservan el
+tamaño de la figura promedio aunque todo lo demás crezca — es el **contraste**,
+no el engrosamiento uniforme, lo que hace leer la masa. El rig hoy escala
+extremidades enteras por un multiplicador, que es justo el error.
+
+**El slider de peso está mal concebido** (cap 9): el peso tiene **dos** efectos
+independientes — sube volumen por zona **y baja la amplitud del relieve de los
+landmarks**. El rig solo hace lo primero, y por eso lee *inflado* en vez de
+*graso*.
+
+### Los dos hallazgos negativos, que valen tanto como los positivos
+
+**El libro no trae medidas horizontales. CERRADO.** Una sola en 10 capítulos:
+ancho de hombros = 2 alturas de cabeza. Faltan pecho, cintura, cadera, la razón
+hombro/cadera, largo de cuello, grosores y toda profundidad en Z. **Seis
+agentes la buscaron por separado**, incluidos los tres *Master projects* que
+eran los candidatos más probables. Ya no es un vacío de barrido: es una
+propiedad del libro, que enseña un sistema **vertical** de contar cabezas.
+**Los anchos hay que medirlos en píxeles sobre las láminas ratificadas de
+`90-Raw/concept/`** — medición del proyecto, no cita, y mide nuestras razas en
+vez de la figura académica. **Ese es el único insumo que falta antes de tocar
+código.**
+
+**El conteo de cabezas del libro no es estable ni internamente:** los capítulos
+2D usan 8, *curvy female* usa 7, y *slim female* **rechaza el sistema de
+cabezas** y mide con calibre contra una foto. Corolario: **el 7.5 del humano
+del proyecto no sale de este libro** — sale de los [[Briefs de Concept Art]],
+es decisión del director, y no debe "corregirse" a 8 creyendo que se arregla
+algo. Queda escrito en la cabecera del doc.
+
+### Las 5 correcciones a [[Principios de Anatomía 3D]] (aprobadas por Boris)
+
+Aplicadas en línea, marcadas `⚠️ CORRECCIÓN 1-5`, **con el original tachado en
+vez de borrado**: quien vuelva al doc tiene que poder ver qué se creía antes.
+
+1. La caja torácica **no es un cilindro** — la línea rechazaba explícitamente
+   la primitiva correcta.
+2. La fracción **2/3–1/3** del torso no tiene fuente en ninguno de los 10
+   capítulos, y omite el **abdomen**, que el cap 6 trata como masa propia. Son
+   4 masas, no 3.
+3. **Mandíbula: media regla.** El doc se quedó con "más angular que la
+   femenina" y con esa mitad justificó el ángulo goniaco del código. El mismo
+   autor advierte que la línea es **suave** y que el error común es hacerla
+   demasiado angular — que es el "cubo suelto" que devolvió el render.
+4. El doc afirmaba que el libro **no tiene sección de oreja**. Falso: la trae
+   en dos capítulos distintos.
+5. y 5b. Los capítulos *Advanced* estaban descartados dos veces por "el rig es
+   estático", y la 5b descarta **por nombre** el ritmo escapulohumeral — justo
+   la fórmula que arregla las hombreras flotantes.
+
+**Dos reglas de método salieron de esas correcciones, y valen más que los
+fixes:**
+- De la #4: **una ausencia solo se declara sobre el alcance que de verdad se
+  leyó.** Esa pasada minó 6 páginas y concluyó sobre el libro entero — la misma
+  falla que la regla 8 de `CLAUDE.md` nombra para el canon, aplicada a una
+  fuente.
+- De la #5: **"no aplica porque el rig es estático" no es criterio de minado.**
+  Lo estático es una fase del proyecto, no una propiedad de la anatomía;
+  descartar por fase deja el conocimiento sin minar justo cuando la fase cambia.
+
+### [[Grados de Libertad del Rig]] — página nueva, RATIFICADA
+
+Contesta el bloque *"Preguntas/Dudas Toño a Claude"* que llevaba abierto
+**dentro** de [[Principios de Anatomía 3D]] y que era una de las razones por
+las que ese doc no podía ratificarse. Vive como página propia por decisión del
+director: es **tecnología de personaje**, no anatomía minada de un libro, y es
+**agnóstica de motor** a propósito.
+
+- **Inventario medido: 32 DOF**, contados sobre la tabla de ROM y las llamadas
+  a `clamp_node` de `character_rig.gd:3890-3908`.
+- **Miembro inferior completo, 9/9** — el eje z del tobillo ya modela la
+  subastragalina. No es casualidad: es el que pasó por playtest y por el frente
+  de foot IK. *Lo que se mide, se completa.*
+- **Superior 4/10.** Ratificado construir **12 DOF y ni uno más**: escápula
+  (+3 por lado), pronosupinación (+1), muñeca (+2). **32 → 44.**
+- Descartados explícitamente columna vértebra a vértebra, dedos y un cervical
+  propio. Criterio: **el conteo de DOF no es meta, es diagnóstico** — la
+  pregunta por cada DOF ausente es si su ausencia produce un defecto que se ve.
+- **El hallazgo que pesa más que el conteo:** `rig_biomech.gd` trata cada eje
+  como **independiente**, y la anatomía funciona por **cadenas acopladas**. El
+  rig no tiene ninguna. La tabla de ROM define el espacio *legal*; hace falta
+  una de **acoplamientos** que defina el espacio *anatómicamente probable*
+  dentro de él. Tres listas para escribirse, con números.
+- Bonus barato: **el pivote de rotación de la cabeza va bajo las orejas**, no
+  en el centro del cráneo. Es mover un número.
+
+### Canon: los 3 fijos salen de draft
+
+**Roen, Darro y Valen pasan de `draft` a `ratificado`.** Es el resultado del
+ítem que el [[Lint Loop]] de hoy detectó (los tres fijos seguían en draft
+mientras las 9 fichas de Pivote estaban ratificadas) y que se le pasó a la
+conversación "Concept Art" para revisión. **Caen 2 de los 3 status
+reportados**; sigue en `propuesto` [[Principios de Anatomía 3D]], y es
+correcto — sus 5 correcciones son de hoy y conviene que reposen.
+
+### Error de proceso, anotado a propósito
+
+Esas tres ratificaciones se colaron en el commit de DOF por un **`git add -A`
+de alcance ancho**: estaban sin commitear en el árbol desde antes de la sesión
+y no eran trabajo de esta sesión. El contenido es correcto, pero el mensaje de
+commit hablaba solo de DOF y escondía una decisión de canon adentro. Se
+enmendó el mensaje (commit `a70371b`) para que la declare. **Regla:
+`git add` con rutas explícitas cuando el árbol trae cambios ajenos** — y el
+árbol los trae seguido, porque Boris y otras sesiones editan el vault en
+paralelo.
+
+---
+
 ## [2026-08-21] lint | Lint Loop — el `Current-State` tenía tres versiones del mismo hallazgo
 
 Corrido a pedido de Boris tras el rescate del rig de Dagna. Las 6 fases del
