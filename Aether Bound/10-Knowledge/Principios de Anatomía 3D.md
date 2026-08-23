@@ -569,6 +569,18 @@ manos (sistema de mitades sucesivas + curva de convergencia); luego pelo
 geometría con el loft de [[Propuesta-Recursos-de-Modelado]].
 
 
+> ✅ **CERRADA (2026-08-21).** La pregunta de DOF de abajo está contestada y
+> **ratificada** en [[Grados de Libertad del Rig]] — página propia, agnóstica
+> de motor, con el inventario medido del rig (32 DOF), el recorte aprobado de
+> **12 DOF nuevos** y las tres leyes de acoplamiento. Las notas de referencia
+> del director se conservan verbatim abajo como el insumo que fueron.
+>
+> Resultado en corto: **miembro inferior completo (9/9)**; faltan 6 por lado
+> en el superior; se construyen **escápula (+3 por lado), pronosupinación
+> (+1) y muñeca (+2)** y nada más. Y el hallazgo que pesó más que el conteo:
+> `rig_biomech.gd` trata cada eje como **independiente**, y la anatomía
+> funciona por **cadenas acopladas** — el rig no tiene ninguna.
+
 **Preguntas/Dudas Toño a Claude:**
 * *DOF (Degrees of Freedom):* incorporar DOF en la documentación técnica agnóstica (sin importar el motor) de los personajes. Notas de referencia Toño:
 	* El Complejo Escápulotorácico (+3 DOF)La escápula (omóplato) no está unida al tórax por una diartrosis típica, sino por una "articulación funcional" (músculos que la deslizan sobre las costillas). Sus movimientos añaden tres grados de libertad independientes:Elevación y Depresión (1 DOF): Desplazamiento vertical (encoger los hombros hacia arriba y hacia abajo).Abducción y Aducción / Proto-retracción (1 DOF): Desplazamiento lateral (separar las escápulas al abrazar a alguien o juntarlas al sacar el pecho).Rotación hacia arriba y hacia abajo / Báscula (1 DOF): Giro del ángulo inferior de la escápula hacia afuera (necesario para poder levantar el brazo por encima de la cabeza más allá de los 90°).Desglose Completo del Miembro Superior (10 DOF)Sumando secuencialmente desde la base del tronco hasta la mano:Región ArticularArticulación EspecíficaTipo de Diartrosis / MecanismoDOFMovimientosCintura EscapularEscápulotorácico (y Clavícula)Articulación funcional / Deslizamiento3 DOFElevación/depresión, proto/retracción, báscula.HombroGlenohumeralEnartrosis (Esferoidea)3 DOFFlexión/extensión, abducción/aducción, rotación.CodoHúmeroulnarTrocleartrosis (Bisagra)1 DOFFlexión y extensión.AntebrazoRadiocubital proximal/distalTrocoide (Pivote)1 DOFPronación y supinación.MuñecaRadiocarpianaCondilartrosis (Elipsoidea)2 DOFFlexión/extensión, desviación radial/cubital.\(\text{Total\ con\ Escápula}=3\text{\ (Escápula)}+3\text{\ (Hombro)}+1\text{\ (Codo)}+1\text{\ (Antebrazo)}+2\text{\ (Muñeca)}=\mathbf{10}\text{\ DOF}\)Impacto Biomecánico: El Margen de AlcanceEn la ingeniería de robótica, pasar de 7 a 10 DOF expande exponencialmente el espacio de trabajo (workspace).Sin escápula: Tu hombro solo podría rotar desde un punto fijo en el espacio. El alcance de tu mano estaría limitado estrictamente por la longitud del hueso húmero.Con escápula: El "eje" del hombro se mueve. Al proyectar la escápula hacia adelante (protracción), ganas entre 5 y 10 centímetros extra de alcance horizontal para tomar un objeto lejano sin necesidad de inclinar toda la columna vertebral.

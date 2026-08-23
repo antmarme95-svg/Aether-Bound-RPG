@@ -39,7 +39,10 @@ es un hecho, no expresión protegida.
 | `cap09-curvy-female.md` | Master projects — Curvy female | pp.208–225 | Dónde se deposita el volumen = cómo debe portarse el slider de peso |
 | `cap10-slim-female.md` | Master projects — Slim female | pp.226–249 | Landmarks que emergen sin masa; el cuello. Referencia de **Valen** |
 | `cap11-advanced-topology.md` | Advanced topology (Peteuil) | pp.250–259 | **Traducción** a loft procedural, no resumen |
-| `DOF-propuesta.md` | — | — | **No es minado.** Borrador propio que contesta la pregunta de DOF del director; pendiente de dónde vive |
+*(`DOF-propuesta.md` vivió acá como borrador y **se movió**: el director lo
+ratificó el 2026-08-21 y ahora es [[Grados de Libertad del Rig]], página
+propia de `10-Knowledge/`. No quedó copia acá para que no haya dos versiones
+del mismo dato.)*
 
 **Pendiente de barrer:** solo el cap 12 (*3D reference gallery*, pp.260–281) —
 esculturas de 7 artistas con los grupos musculares etiquetados; sirve de
@@ -56,8 +59,9 @@ descartó: son bocetos sin texto.
    no debe ser un parámetro** — se deriva del ancho de la caja torácica.
 2. **El ritmo escapulohumeral, cifrado** (cap 7): de 0° a 30° de abducción la
    escápula no se mueve; luego aporta 1° por cada 2° del húmero, con techo de
-   ~75°. Es la respuesta a las hombreras flotantes, y de paso convierte los
-   +3 DOF escapulares de teoría a fórmula.
+   ~75°. Es la respuesta a las hombreras flotantes, y de paso convirtió los
+   +3 DOF escapulares de teoría a fórmula — ver [[Grados de Libertad del Rig]],
+   ya ratificada.
 3. **La asimetría lumbar/torácico** (cap 7): en extensión el lumbar se acorta
    ~30% y el torácico ~1%. **No es un DOF: es una escala longitudinal**, y el
    rig no tiene ninguna.

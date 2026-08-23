@@ -1,7 +1,7 @@
 ---
-status: draft
+status: ratificado
 source: "Sesión 2026-07-23 — Expansión narrativa"
-updated: 2026-07-27
+updated: 2026-08-21
 ---
 
 # Darro — C4, La Chispa (Ficha Narrativa Expandida)
