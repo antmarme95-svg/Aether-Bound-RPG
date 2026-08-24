@@ -2198,3 +2198,395 @@ agachada. El jugador sigue idle en los dos motores.
 
    > *(Nota histórica: esa re-corrida ya se ejecutó — es la que produjo la ronda 2
    > de arriba. El pendiente vigente es la re-corrida **siguiente**.)*
+
+## [2026-08-23] Higiene de contexto — relato movido aquí VERBATIM (4ta vez)
+
+> `check_vault.py` marcó `Current-State.md` en 8,480 tokens — 5,480 sobre el
+> techo blando de 2,500 (el vault seguía 🟢 VERDE en conjunto, pero el techo
+> individual del archivo llevaba semanas roto: acumuló todo el relato de las
+> rondas 7ª-16ª, el cierre completo de ADR-003 y del spike Godot/Unity, el
+> protocolo de playtest y la implementación de telemetría/escena gris punto
+> por punto, y el detalle cerrado de cada bloque de propagación de canon).
+> Todo ese relato se mueve aquí VERBATIM (copia exacta, sin editar
+> contenido). `Current-State.md` queda recortado a solo lo vigente: qué
+> sigue, qué está bloqueado, y qué decisión espera a Boris. El registro
+> append-only autoritativo sigue siendo [[LOG]].
+
+### Estado general (2026-08-05) — snapshot previo al recorte
+
+**Worldbuilding narrativo:** las 9 fichas de Pivote + los 3 fijos + Speck +
+Old Tobin Hale + toda la estructura política y geográfica están escritos.
+Sprint QA cerrado (16ª). El vault ya soporta escribir guión.
+
+**Canon de base que sigue vigente** (fijado en las rondas 3ª-6ª; historial en
+[[LOG]] y este archivo): costo de F1 = colapso tecnológico, no
+exterminio · una sola fuente viva por personaje · Speck durmió 550 años ·
+Bound Five formado en Acto 1 · topología "rueda, no malla" · **Iven es
+excepción intencional** de la fila Deber Institucional (ningún QA debe
+reportarla). Los 5 finales visuales, completos y ratificados.
+
+### Rondas 7ª-16ª — cerradas (detalle completo en [[LOG]])
+
+Decisiones de canon y arquitectura resueltas ahí: gate F1/F2a con mensajero,
+cráter centralizado en [[El Cráter — Matriz de Rutas]], 4 grados de agencia,
+linter ampliado a 22 clases.
+
+**Nota de método que sigue vigente (salió de la 16ª, confirmada en la 4ª
+re-corrida):** los prompts de QA deben apuntar explícitamente a
+`[[El Cráter — Matriz de Rutas]]` como fuente única. En la 16ª, no hacerlo
+produjo 7 falsos positivos sobre 9; en la 4ª re-corrida, hacerlo produjo
+**cero**.
+
+`check_canon.py` — **22 clases** (12 base + 6 de la escena del cráter +
+2 de la 11ª: `quiebre-lugar`, `superlativos`). Detalle de cada clase y su
+origen: [[LOG]].
+
+**Regla nueva (2026-08-03):** si un QA encuentra un crítico de una clase que el
+linter ya cubre, **el bug es del linter** — se agrega el chequeo, no se parcha
+la línea.
+
+Hook `.claude/settings.json` + `Aether Bound/scripts/hook_current_state.sh`:
+corre `check_vault.py` automáticamente al editar este archivo — construido y
+probado 2026-07-30.
+
+### Nota de método
+
+El cuello de botella no es el QA, es el **barrido**: los 8 críticos de la 4ª
+re-corrida fueron todos fallas de propagación, no de escritura. Ver
+[[Lecciones]] y [[QA de Canon Loop]].
+
+### ✅ ADR-003 CERRADO (2026-08-10) — hard reset ejecutado
+
+**[[ADR-003 Reset de desarrollo y motor]] está cerrado y ratificado.**
+`godot/` fue eliminado del árbol de trabajo (recuperable en el tag
+`archive/prototipo`). El frente C (técnico) del Task-Board quedó
+**descongelado**.
+
+**Lo que salió:** motor **GODOT** · vertical slice = [[Slice of Bond]]
+recortado a 3 escenas con **Dagna**, greybox de entorno pero **no de
+cuerpo** · PC únicamente para v1 · alcance de v1 diferido hasta medir el
+costo real en horas de un Pivote · método: gauntlet-loop solo sobre
+traversal, con [[Benchmark Biomecánico]] como estándar. Detalle y las 3
+piezas pre-código (árbol de "¿y si no duele?", contador de horas, 3
+playtesters — Diego/Santiago/Delmer) en el §Cierre del ADR.
+
+> **Nota de la 5ª re-corrida:** [[Slice of Bond]] comprime la traición en
+> un solo golpe al salir del mini-dungeon, y el canon nuevo pide dos
+> tiempos. Como el pilar que el slice existe para probar **es** el Bond
+> vacío, hay que decidir si el slice adopta los dos tiempos o se declara
+> excepción explícita. Bloquea el diseño del slice, no el guión.
+
+### Spike Godot/Unity con condiciones emparejadas (2026-08-12) — CERRADO
+
+**Lo vigente en una línea: los dos motores cumplen el estándar de foot IK del
+[[Benchmark Biomecánico]], y la decisión de motor no se reabre.**
+
+- **Godot necesita solver propio.** `TwoBoneIK3D` de fábrica **no produce
+  salida** en Godot 4.7.1 — acotado en escena mínima, 9 variantes a 0 píxeles
+  contra un CONTROL a 2.127 (`godot/tools/min_ik_repro.gd`). El solver escrito
+  a mano (`godot/scripts/two_bone_ik.gd`) deja el pie a **±6 mm** del suelo en
+  plano y en rampa. Unity trae el suyo funcionando: la diferencia entre motores
+  es de **costo, no de calidad**.
+- **Dagna camina con animación real**, retargeteada con herramienta stock
+  (`BoneMap` + `SkeletonProfileHumanoid`), clip del pack **DoubleL**.
+- **Comparativa escrita:** [[Comparativa de Motores — Godot vs Unity]]. **No
+  reabre la decisión** — ADR-003 y el 2º consejo (08-13) congelaron Godot.
+
+⚠️ **Leer [[Lecciones]] §Godot 4.7 antes de tocar importación de FBX otra vez.**
+Ahí viven los 3 hallazgos que cuestan días si se repiten: el FBX del warrior
+exporta mirando a **+Z** y Godot asume −Z (causa raíz del moonwalk, que Boris
+reportó tres veces) · pista de escala ×100 dentro de la pose del FBX · árbol
+duplicado al re-apropiar una instancia. Y la lección de método: la orientación
+invertida **da vuelta el signo de toda medición sobre huesos**.
+
+### Pendiente 1 (Acto 1) — detalle cerrado del guión completo
+
+**✅ ACTO 1 — GUIÓN COMPLETO (2026-08-12).** Detalle de cada decisión
+en [[LOG]] §2026-08-12. **Las 5 escenas escritas**, todas
+`provisional` y compartiendo una sola re-corrida de QA:
+[[Guion/Encuentro con Roen]] (tutorial) →
+[[Guion/Caminata y Taberna — Valen se suma]] (loc. 1) →
+[[Guion/Frontera — Camino al Nido]] (loc. 2, enseña el T1 de Valen) →
+[[Guion/El Nido — El Primero]] (loc. 3: Speck, el Pivote, la elección
+ilusoria, el primer God-Core, la primera palabra) →
+[[Guion/Waypost — Los Cinco]] (loc. 4: Darro, *Open Seam*, y el grupo
+se vuelve equipo — cierre del acto).
+**✅ El primer jefe también quedó cerrado:** **The Long Vigil**
+([[Bestiario]] §The Long Vigil) — la última de las bestias guardianas
+que pusieron a Speck en la crisálida, 550 años de guardia con el
+propósito vaciado. **Su moveset es la caracterización:** no persigue,
+cede terreno y lo recupera, y todo se dispara por proximidad **a la
+crisálida**, no a sí misma. El jugador mata, en su primer jefe, a lo
+único que seguía cuidándola — y nadie en la ficción lo sabe.
+
+**Canon nuevo que salió en el camino, todo escrito a fuente:**
+**Voz del protagonista** ([[Voz Narrativa]], sección entera, canon:
+gradiente coming-of-age + 8 reglas + 3 anclajes + grados de voz por
+final) · **Waypost** en [[Geografía y Ciudades]] §K — bookend y sala
+de la formación, nombre no pronunciado · **beat de formación del
+equipo** (locación 4, fuente única) · **3 tabernas nombradas**
+([[Nomenclatura]]).
+
+**Del canon de voz sigue abierto:** cotejar la tabla de finales contra
+[[Los 5 Finales]] cuando se escriba ese guión (F4 y F2b son las de
+riesgo) y la decisión de **voice-over sí/no**, que no está tomada en
+ningún lado del vault.
+
+### Pendiente 2 — bloque de propagación de las 12 fichas: CERRADO (2026-08-12)
+
+Detalle completo en [[LOG]] §2026-08-12. Las 4 tandas se cerraron con
+linter en **0 críticos** y commit por tanda:
+- **Tanda 1** — Maren, Torgan, Iven, Sereth.
+- **Tanda 2** — Bram, Lyris, Nyael (+ [[Geografía y Ciudades]] §3,
+  variante Bram, que seguía ubicando su rechazo en el corredor).
+- **Tanda 3** — Vekka, Dagna.
+- **Tanda 4** — Roen, Valen, Darro (pasada de verificación: se recortó
+  la re-narración del quiebre en Roen y se rompió la convergencia de
+  fórmula de Valen).
+
+Cada ficha de Pivote tiene ahora **sub-beat 2b (la ruptura, sala del
+Fragmento)**, el **obstáculo firma del link perdido** en el ascenso, el
+**sub-beat 3 podado** a culminación sin sorpresa, el índice en **6
+sub-beats (1, 2, 2b, 3, 4, 5)**, y la línea canónica con ubicación
+declarada explícitamente. **La Cuña de Dagna también cerró**: el objeto
+firma pasó a la piedra del borde del cráter, en First Wound.
+
+### Pendiente 3 — Canon estructural vigente (4ª y 5ª re-corrida, ya propagado)
+
+Todo esto ya está escrito en las fuentes (fichas de personaje,
+[[El Cráter — Matriz de Rutas]], [[Bond y el Bond Vacío]]) — queda acá como
+snapshot de lo que el bloque de propagación de arriba tuvo que llevar a
+cada ficha:
+- **La traición tiene dos tiempos.** *Ruptura* en la **sala del
+  Fragmento**, dentro del Archive (el Fragmento es el detonante) →
+  el **ascenso** es la ventana del Bond vacío → *toma* en el último
+  corredor, que es culminación, no sorpresa. **Ojo: se ubicó primero
+  en Driftmarket y se movió el 08-12** — ahí chocaba con el
+  Reckoning ("nadie confiesa"), con la trampa de Tobin, y con que en
+  Lyris/Iven/Maren la orden llega dentro del Archive.
+- **Excepciones:** Bram declara y **no obedece** (su link nunca
+  muere); Nyael **declara por ausencia** (no está en la sala del
+  Fragmento) y conserva su superlativo.
+- La crisálida es **elección ilusoria** — no hay rama "destruida".
+- Roen **decide** renunciar en la frontera, **formaliza** en
+  Rivermeet. En F3 **se va después** del clímax. En el bookend tiene
+  **70-75**.
+- Entre gates solapados **gana F4** si sus 2 condiciones globales se
+  cumplen.
+- El arco de Valen son **90 años**. El Acto 1 tiene **un** Momento de
+  Persona. **Derribar al portador no mata a Speck** (habilita F1 en
+  Nyael y Bram; el jugador nunca pone una mano sobre ella en F1).
+
+### Pendiente 5b — Fichas de Los 3 Fijos → `status: ratificado` (2026-08-21)
+
+**✅ CERRADO.** Lint Loop paralelo (rama `feat/dagna-rig`) reportó `draft` +
+"sin lámina propia" — el status sí estaba atrasado, pero la lámina es falso
+positivo: buscó nombres viejos (`Roen (The Kindred).png`) en vez de los
+vigentes (`roen-v1.png`, `valen-v1.png`, `darro-v1.png` + escenas extra
+`roen-second-catch-v1.png`, `zephyr-ambush-roen-arrival-v1.png`,
+`valen-long-calculus-v1.png`). Verificado roen-v1.png contra la sección
+"Diseño Visual Ratificado" de su ficha — coincide 100%. Corregido el
+frontmatter de las 3 fichas. El punto de T3 firma + rol duplicado sigue
+abierto (ver Pendientes vigentes), es lo único real que sobrevivió del
+reporte.
+
+### Pendiente 8 — Consejo corrido (2026-08-10), cerrado y ratificado
+
+**✅ [[ADR-003 Reset de desarrollo y motor]], CERRADO Y RATIFICADO** (ver
+detalle arriba). Salió: hard reset SÍ · **Godot** · slice = [[Slice of
+Bond]] recortado a **3 escenas** con Dagna, greybox de entorno pero **no de
+cuerpo** (la biomecánica es el canal por el que viaja la pérdida — es el
+punto de la premisa de Boris que el consejo casi tira junto con los
+tatuajes) · PC únicamente · alcance de v1 diferido hasta medir el costo real
+en horas de un Pivote. Transcript en
+`90-Raw/council-2026-08-10-motor-y-fases.md`.
+**Corrección al consejo:** propuso "Dagna o Roen" para el slice —
+malformado, **Roen es fijo y no traiciona**, no puede sostener la
+coda del Bond vacío. Dagna gana por defecto.
+
+### Pendiente 9 — Segundo consejo, protocolo de playtest y telemetría (todo cerrado)
+
+**✅ Segundo consejo corrido (2026-08-13)** sobre
+[[Veredicto de Motor y Lectura del Proyecto]]. Transcript en
+`90-Raw/council-2026-08-13-veredicto-motor-y-alcance.md`. Salió:
+**Godot ratificado y congelado** (cero re-evaluaciones de motor hasta
+que exista un slice jugable) · **playtest antes que guión, 5 de 5** ·
+**no defender el 3 como final**: construir Dagna sola end-to-end,
+cronometrada, con link de 1 tier, y que el número de horas decida si
+v1 son 3, 2 o 1 · **Bram queda**, porque al ser la ruta que se
+desbloquea es lo último que se construye y por lo tanto cortable a
+costo cero hasta el final.
+
+**✅ PROTOCOLO DE PLAYTEST ESCRITO (2026-08-13)** →
+[[Protocolo-de-Playtest]]. **Son dos**, en orden: **A** (test gris del
+Bond — cápsula, cornisa, 5 min con el botón y 5 sin él, sin arte ni
+diálogo) y **B** (sesión completa del slice, registro separado por eje
+gameplay/visual/narrativa + recuerdo a 7 días). Cada uno con guión
+minuto a minuto, redacción literal de lo que se dice y lo que **no**,
+disciplina de silencio, hojas de registro y mapeo de cada pregunta al
+árbol de fallos del ADR. Los 4 instrumentos acordados están dentro
+(botón en la cornisa · inputs por minuto · recuerdo a 7 días · frase
+al amigo), y los 4 riesgos del consejo tienen pregunta o registro
+propio.
+
+✅ **§0 — el criterio de muerte está FIRMADO (Boris, 2026-08-13),**
+y se firmó **antes de que existiera la escena gris** — o sea antes de
+que hubiera un solo dato que pudiera contaminarlo, que es la única
+forma de que el criterio valga. A partir de acá, mover cualquiera de
+estos números es un commit con fecha y autor, y el impulso de moverlos
+se anota en el [[LOG]] aunque no se ejecute (§6).
+Firmado: 🟢 **P ≥ 3 pulsaciones y T ≥ 20 s** en 2 de 3 testers ·
+🟡 P = 2 o divergencia (rama INSTRUMENTO, no concluye) · 🔴 P ≤ 1 en
+2 de 3. **Condición de validez previa:** si el tester usó el botón
+menos de **2 veces/minuto** cuando lo tenía, la fase sin él **no se
+interpreta** — es la objeción del Outsider vuelta gate (un poder que
+nunca fue divertido no duele al desaparecer).
+**Y la regla que más importa, ya escrita:** un 🔴 en el test gris
+**NO puede falsear el pilar** — un cubo sin vínculo mide un reflejo
+motor, no duelo. Solo habilita conclusiones de ejecución mecánica.
+Un 🟢 tampoco prueba el pilar: es permiso para gastar en B.
+**Lo que falta ya no es el criterio, es el build.**
+
+**✅ Hook de telemetría IMPLEMENTADO y verificado (2026-08-13).** Era
+la dependencia que bloqueaba la métrica primaria. 6 archivos en
+`godot/`: `scripts/telemetry.gd` (grabador, un CSV por sesión con
+flush por línea), `scripts/ledge_zone.gd` (el volumen de la cornisa),
+`scripts/bond_driver.gd` (el botón y el corte del minuto 5 **en
+silencio**), `tools/telemetry_analysis.gd` (deriva P/T/U y clasifica),
+`tools/telemetry_report.gd` (informe + veredicto) y
+`tools/test_telemetry.gd` (**50 verificaciones, ALL_PASS**).
+```
+godot --headless --path godot --script res://tools/test_telemetry.gd
+godot --headless --path godot --script res://tools/telemetry_report.gd -- --dir=user://telemetry
+```
+Los umbrales viven como constantes en `telemetry_analysis.gd` y **no**
+se pueden pasar por línea de comandos: moverlos es un commit con fecha
+y autor, que es lo que §6 pide.
+
+**✅ ESCENA GRIS construida y verificada (2026-08-13).**
+`godot/scenes/gray_test.tscn`, generada por `tools/build_gray_scene.gd`,
+con `tools/test_gray_scene.gd` (**24 verificaciones, ALL_PASS**).
+Arena de 44×44, mesa central a **2.4 m**, y sobre la mesa una torre de
+dos peldaños a **4.6 m** y **7.0 m**. La cápsula **no tiene salto
+propio**; el botón da 7.5 m/s (ápice 2.87 m) y solo responde con los
+pies en el suelo. El test camina contra la mesa **desde 8 direcciones**
+con física real: altura máxima **0.00 m** — no hay vía sin botón.
+Se lanza con **`Start-Playtest.bat Diego`** y se lee con
+**`Report-Playtest.bat`** (los dos en la raíz del repo); F10 corta por
+fallo técnico, F11 por incomodidad del tester, ESC libera el mouse.
+⚠️ No correr la línea de Godot a mano en PowerShell: el `--` que Godot
+necesita es un operador del shell y la rompe.
+**La torre está ARRIBA de la mesa y no al lado**: desde el suelo una
+mesa de 2.4 m se lee como un muro, y dos bloques parados encima son lo
+más barato que dice "esto es una superficie". De paso, toda la
+verticalidad queda del otro lado del botón — al minuto 5 no se pierde
+una cornisa, se pierde el piso de arriba entero.
+
+**✅ Pasada de feel hecha (2026-08-19).** Boris jugó dos corridas:
+movimiento y cámara *"se sienten muy bien"*, el botón se siente bien, y
+**desde el suelo se entiende perfecto que arriba hay adónde subir** —
+que era el riesgo de legibilidad de §0.4. Único ajuste: **gravedad de
+9.8 a 22** (el salto duraba 1.53 s en el aire y se leía flotado; ahora
+1.02 s). El impulso se recalculó a 11.24 para conservar el mismo
+alcance de 2.87 m, así que la geometría del nivel no se tocó.
+
+**✅ Las dos casillas técnicas cerraron (2026-08-19, commit `8c45bab`).**
+(a) **Build congelado**, hash de contenido **`91e3d293934f`** anotado en
+[[Protocolo-de-Playtest]] §0.5 (`godot/tools/freeze_build.py`;
+`godot/build_hash.txt`). (b) **La zona de la cornisa ahora rodea la mesa
+entera** — venía de un hallazgo del instrumento: en las dos corridas de
+prueba hubo **2 pulsaciones muertas dentro de la zona contra 34 y 63
+fuera**, y no era falta de insistencia sino que la zona cubría una sola
+cara de una mesa de cuatro mientras el jugador daba vueltas. No movió
+umbrales firmados.
+
+### Resumen de la 17ª ronda de QA (2026-08-10)
+
+Detalle completo en [[LOG]]: 13 críticos entre 2 subagentes en frío sobre
+todo el `provisional` acumulado — corregidos a la fuente: dónde/cuándo se
+suma Valen (taberna, ciudad natal), rol duplicado de Roen ("doble ancla" +
+bajado a T1), excepción de manada de los 3 Hollowed, reubicación de
+"El Encuentro" en las fichas draft de Roen/Valen (Zephyr, no The
+Wilds), remate Strategist restaurado a distancia, escudo de Roen
+quitado de la escena del tutorial, y 3 fixes menores de residuos.
+
+### ✅ Medios de la 4ª — cerrados (2026-08-11, 2ª tanda)
+
+4 decisiones más de Boris, ya escritas: **Roen en el bookend tiene 70-75**
+(los cierres mandan, "thirty years" ×4) · **los 2 años de espera de Darro
+van dentro de las edades 30-33** (sale a los 33, la cadena 33→38→63 y la
+edad ~63 quedan intactas) · **el Acto 1 tiene un solo Momento de Persona**,
+el del nido · **derribar al portador no mata a Speck** — la sobrecarga
+necesita que la fuerza entre por su cuerpo, así que F1 es jugable en las
+rutas Nyael y Bram con la regla de escritura "el jugador nunca pone una
+mano sobre Speck en F1".
+
+También cerrados: la entrada **Valen + Dagna** (la matriz 3 fijos × 9
+Pivotes quedó completa) · Torgan y Dagna con ritos duplicados en dos POIs ·
+Lyris tomando prestado el beat de "Deber Institucional" en F2a · el arnés
+de Vekka condicionado a la variante viva · el beat de duelo de Maren ·
+Encuentro con Roen "el link no cambia por rol" vs. "split por rol" ·
+Sereth citando F1 dentro de la ficción de F3 · "sub-acto 1B" · los tres
+flashes colapsados en dos · la nota cruda de `Nomenclatura`.
+
+### ✅ Bestiario/Flora/Villanos menores — cerrado (2026-08-04)
+
+3 archivos nuevos ([[Bestiario]], [[Flora y Ecosistemas]],
+[[Villanos Menores]]) llenando el hueco de mundo abierto — detalle
+completo en [[LOG]]. **Concept art del batch: 9/9 cerrado (2026-08-06).**
+Los 3 re-rolls de texto (Leviathan v2, Wyrm v2, Borran v3) ratificados
+sin cambios de canon. Mirror Stalker cerró distinto: tras 3 intentos sin
+lograr la superficie de espejo literal, Boris aceptó la v3 (autómata de
+cristal/vidrio) como pivote de diseño — [[Bestiario]] §The Mirror
+Stalker ya actualizado. Mistbound Frontier sigue sin flora/fauna propia
+(no bloquea).
+
+### Narrativa/guión y concept art — ítems cerrados movidos aquí
+
+**✅ Bookend de Roen viejo — cerrado.** [[Voz Narrativa]] +
+[[Guion/Apertura — Roen Viejo]] + [[Guion/Cierres — Roen Viejo]], los 3
+`ratificado`. Sin narrador durante el juego; único bookend.
+**✅ Encuentro con Roen — estructura + guión escritos.**
+[[Geografía y Ciudades]] fija la secuencia (title card a mitad del
+tramo solo → emboscada de 3 Hollowed → Roen interviene → *Second
+Catch* variable por rol, no raza). [[Guion/Encuentro con Roen]] la
+escribe, `status: provisional` (toca *Second Catch*, pendiente QA del
+domingo).
+**✅ Armamento Base ratificado — 12 celdas + 9 Pivotes sin
+colisiones.** [[Armamento Base — Matriz Raza x Rol]]: arma/verbo/
+mecánica por celda, ventana de input del remate, equipamiento de
+Roen/Darro/Valen, escudo de Roen reconciliado. Barrido contra los
+Pivotes cerró 2 colisiones (Torgan, Lyris). Implementación
+(hitbox/timing/peso) sin verificar todavía — no bloquea.
+
+**✅ Tutorial de Zephyr completo — 5/5 ratificadas.** [[Briefs de
+Concept Art]] §15 (entorno ×3 skins) + §16 (emboscada/Roen) + §17
+(re-roll de Lyris, bumeranes). Todas copiadas a `90-Raw/concept/`.
+Notas menores no bloqueantes anotadas en el brief de cada una (§15-17).
+**✅ King Borran — ya cerrado (§9b-v3, ratificado 2026-08-06).**
+`king-borran-v3.png` en `90-Raw/concept/`.
+**Driftmarket y Rivermeet daylight: ya resueltos** (Driftmarket
+ratificado desde 2026-07-27 en §11.1; Rivermeet daylight ya estaba 🟡
+aprobado, no bloqueaba nada).
+**✅ key-art-poster V2 — ratificado retroactivamente (2026-08-07).**
+[[Briefs de Concept Art]] §12.2, `marketing_key-art-poster-v2.png`
+(generado 2026-07-28, hallado sin evaluar), copiado a
+`90-Raw/concept/`. Nota menor no bloqueante: mismo ícono de destello
+de NB2 ya trackeado desde §15.4.
+
+### Ambigüedad Roen/Aethelgard Watch — cerrado (residuo detectado 2026-08-21)
+
+~~Ambigüedad Roen/Aethelgard Watch~~ **✅ RESUELTA** (LOG tanda 4,
+punto e): ya no dice "fue este puesto, en otra vida" — ahora *"Roen
+reconoce el protocolo, no el puesto"* ([[Geografía y Ciudades]]
+línea 725). Nota vieja detectada como residuo el 2026-08-21 al
+revisar un hallazgo de lint sobre Los 3 Fijos; corregida ahí para no
+re-litigarla.
+
+### Pendientes menores — ítem cerrado movido aquí
+
+**✅ CERRADO (2026-08-17).** Excepción del Bond invertido de Bram: la ficha
+de Bram ya la anotaba bien (§sub-beat 2b, citando la fuente única); el hueco
+real era solo la fila **Mobile Foundry** de `Los 9 Links del Pivote`, que ya
+quedó anotada. Fuente única sigue siendo `Bond y el Bond Vacío` §La excepción
+de Bram.

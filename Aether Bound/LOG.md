@@ -1,5 +1,19 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-23] lint | Current-State.md recortado — 8,480t a 1,904t, higiene de contexto 4ta vez
+
+`check_vault.py` marcó `Current-State.md` 5,480 tokens sobre su techo blando
+de 2,500 (el vault seguía 🟢 VERDE en conjunto, pero el archivo individual
+llevaba semanas creciendo con relato sesión-por-sesión: cierre completo de
+ADR-003, del spike Godot/Unity, del protocolo de playtest/telemetría, y el
+detalle cerrado de cada bloque de propagación de canon). Todo ese relato se
+movió VERBATIM a [[Current-State-Historico]] (nueva sección
+`[2026-08-23] Higiene de contexto`, 4ta pasada de este tipo desde 07-16).
+`Current-State.md` quedó en **1,904 tokens**, solo lo vigente: estado
+general, hechos vigentes (branch/tag/dagna-rig), y pendientes reales sin
+resolver. Arranque de sesión total bajó de ~9,389 a ~2,813 tokens, ambos
+🟢 VERDE. Sin pérdida de dato — todo lo movido está íntegro en el histórico.
+
 ## [2026-08-21] anatomía | Barrido completo del libro, DOF ratificado, y los 3 fijos salen de draft
 
 Prep técnico pedido por Boris antes de tocar código de personaje. **Cambio de
