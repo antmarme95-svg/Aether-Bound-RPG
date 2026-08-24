@@ -99,6 +99,11 @@ unity/Assets/Warrior free set/
 # Obsidian volatile UI state (el vault sí se trackea)
 Aether Bound/.obsidian/workspace.json
 
+# .obsidian en la RAIZ del repo — Obsidian abierto sobre el repo entero en vez
+# de sobre Aether Bound/. Misma razon que los anidados de abajo: estado de UI
+# local, no se versiona.
+/.obsidian/
+
 # Sub-vaults accidentales de Obsidian (abrir subcarpetas como vault crea
 # .obsidian anidados — UI local, no se versionan; el vault root es Aether Bound/)
 Aether Bound/*/.obsidian/
