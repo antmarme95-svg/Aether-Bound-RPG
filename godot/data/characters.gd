@@ -44,6 +44,77 @@ const CHARACTERS: Dictionary = {
 			"waist_skirt": true,           # faldón de cuero a la rodilla (silueta de la lámina)
 		},
 	},
+	# --- Pasada 1 (2026-08-23): Roen, Darro, Valen SIN piezas firma todavía.
+	# Solo fenotipo + origen + clase, para renderizar el rig TAL COMO ESTÁ hoy
+	# y ver si los defectos de Dagna (torso-bola, sin cuello, hombreras
+	# flotantes) son sistémicos en las 3 razas o propios de ella. El vestuario
+	# (capa de Roen, hachas de Darro, grabados de Valen) es Pasada 2, después
+	# de que el rig tenga algo digno de vestir.
+	#
+	# Valores de fenotipo: primera pasada de calibración a ojo contra
+	# roen-v3.png / darro-v1.png / valen-v4.png en 90-Raw/concept/ y las
+	# fichas expandidas — NO medidos en píxeles todavía (a diferencia de la
+	# escultura del cuerpo, la cara no tiene el mismo instrumento de
+	# medición). Revisar cuando haya QA visual.
+	"roen": {
+		"display_name": "Roen",
+		"origin": "miststalker",  # raza "the Restless"; el origin YA es la Frontera Mistbound de su ficha
+		"class": "warrior",       # Vanguard
+		"phenotype": {
+			"weight": 0.5, "height": 0.55,
+			"jaw": 0.65, "cheek": 0.5, "eyeTilt": 0.5, "eyeShape": 0.5,
+			"hair": 8,          # Shorn Scout: corte corto militar (roen-v3.png)
+			"beard": 1,         # Stubble
+			"beardDensity": 0.6,  # barba corta pareja, no solo sombra de 3 días (más llena que el default 0.35)
+			"hairColor": 4,     # chestnut — castaño oscuro (roen-v3.png)
+			"skinTone": 1,      # sun-kissed
+			"warpaint": 6,      # Scout Marks — coherente con su cultura Mistbound de frontera
+			"paintColor": 4,    # wyld green desaturado — el warpaint verde geométrico de Mistbound (ficha línea 71)
+			"arcaneMod": 0.0,   # humano sin modificación arcana
+		},
+		"signature": {},  # Pasada 2: capa, escudo (retirado en v2/v3 de concept, revisar si vuelve), espada
+	},
+	"darro": {
+		"display_name": "Darro",
+		"origin": "ironblooded",
+		"class": "thief",  # Duelist
+		"phenotype": {
+			# Más liviano que Dagna a propósito (canon: "build más liviano que
+			# Dagna o Torgan, hachas cortas" — Briefs de Concept Art §14).
+			"weight": 0.6, "height": 0.35,
+			"jaw": 0.75, "cheek": 0.4, "eyeTilt": 0.5, "eyeShape": 0.55,
+			"hair": 2,          # Elven Topknot — el moño/coleta corta de darro-v1.png (el nombre no ata la raza)
+			"beard": 2,         # Braided Jarl
+			"beardDensity": 0.7,
+			"hairColor": 2,     # ember copper — mismo tono que Dagna, coherente entre enanos
+			"skinTone": 2,      # bronze
+			"warpaint": 0,      # None — sus marcas ámbar van en los ANTEBRAZOS (pieza firma, Pasada 2), no en la cara
+			"paintColor": 0,
+			"arcaneMod": 0.0,
+		},
+		"signature": {},  # Pasada 2: bandas ámbar de antebrazo, hacha corta, dagas del cinturón
+	},
+	"valen": {
+		"display_name": "Valen",
+		"origin": "aetherborn",
+		"class": "mage",  # Strategist
+		"phenotype": {
+			"weight": 0.15, "height": 0.8,  # esbelto, alto dentro del rango aetherborn
+			"jaw": 0.25, "cheek": 0.6, "eyeTilt": 0.75, "eyeShape": 0.3,  # mandíbula fina, pómulos altos, ojos almendrados de inclinación alta
+			"hair": 5,          # Curtain Long — pelo negro largo liso (valen-v4.png)
+			"beard": 0,         # Clean
+			"hairColor": 0,     # void black
+			"skinTone": 6,      # pale lavender (aether-marked) — "cold pale tones, faint lavender undertone" (Briefs de Concept Art §1)
+			"warpaint": 0,      # None — sin pintura facial
+			"paintColor": 0,
+			# >0.06 hace visibles las venas: son los grabados aether teal de
+			# garganta/pecho de la lámina. El color sale del accent de
+			# `aetherborn` (#46e6ff aether cyan) vía apply_phenotype, así que
+			# no hace falta hair_tint ni paintColor para el teal.
+			"arcaneMod": 0.3,
+		},
+		"signature": {},  # Pasada 2: si hay pieza de vestuario específica (hoy la lámina lo muestra sin ropa de torso)
+	},
 }
 
 static func get_character(id: String) -> Dictionary:
