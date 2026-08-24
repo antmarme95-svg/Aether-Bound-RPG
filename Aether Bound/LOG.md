@@ -1,5 +1,81 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-24] código | Pasada 1 del piloto: los defectos del rig son sistémicos, y Darro es el peor caso
+
+Primera mitad del piloto Roen/Darro/Valen. **El objetivo no era que se vieran
+bien** — era tener el "antes" de control contra el cual medir la Pasada 2, y
+responder si los defectos que la lámina de Dagna midió son propios de ella o
+del rig.
+
+**Respuesta: sistémicos.** Torso-bola (la masa del pecho lee como óvalo más
+ancho que los hombros, sobresaliendo por delante), **cero cuello** (cabeza
+apoyada directo sobre el bloque del torso) y brazos despegados aparecen en las
+**tres razas**. Eso valida el cambio de plan del director: los fixes van a ser
+medibles en tres cuerpos distintos en vez de en uno solo.
+
+**Hallazgo nuevo, y es el peor: Darro.** Sus brazos están **literalmente
+flotando**, con hueco de fondo visible entre hombro y brazo en ambos lados —
+no el despegue sutil de los demás, desconexión total. Y su ratio ancho/alto
+(**0.54**) es casi idéntico al de Dagna (0.57) cuando el canon lo pide **más
+liviano** que ella. Hipótesis: el escalado enano (`limb_len 0.48`,
+`shoulder_x 1.60`) empuja los brazos hacia afuera sin que la masa del hombro
+los siga — exactamente el hueco de cintura escapular de
+[[Grados de Libertad del Rig]]. **Es el caso de prueba más duro que tenemos, y
+no habría aparecido sin renderizar a Darro.**
+
+Medidas del rig (VFX excluidos):
+
+| | altura | ancho | ratio |
+|---|---|---|---|
+| Dagna | 1.44 m | 0.82 | 0.57 |
+| Darro | 1.47 m | 0.79 | 0.54 |
+| Roen | 2.00 m | 0.61 | 0.30 |
+| Valen | 2.22 m | 0.53 | 0.24 |
+
+Las **alturas relativas sí respetan el canon** (enanos ~1.45, humano 2.0, elfo
+2.2). El eje que falla es el **ancho** — justo lo que el barrido del libro no
+pudo dar y que hay que medir de las láminas.
+
+### Dos bugs de instrumento, no del rig
+
+El AABB que encuadra la cámara incluía los **VFX de arquetipo**. Primero el
+anillo de sigilo y el orbe flotante inflaron la caja a **3.10 m** (Roen) y
+**3.34 m** (Valen) contra 1.44 de Dagna, y la cámara se alejaba tanto que el
+personaje salía diminuto. Corregido eso, Valen seguía dando 1.92 m de ancho:
+era el **`chrono_dome`** del Strategist aetherborn, una esfera de **0.88 m de
+radio**. La lista de nodos VFX se sacó de los `.name =` de `character_rig.gd`
+en vez de adivinarla. **Lección: un efecto no es anatomía y no debe influir en
+el encuadre** — y el síntoma (personaje diminuto en el cuadro) no se parecía en
+nada a la causa.
+
+### Las láminas de referencia: 4 rondas y un techo del generador
+
+`roen-v2/v3` y `valen-v3/v4` en `90-Raw/concept/`, **pendientes de VoBo**. Se
+resolvió el escudo y la capa de Roen, el chaleco cerrado que fundía brazo y
+torso, el pelo de Valen que tapaba pecho y espalda, y la barra de escala sin
+etiqueta que no llegaba a los pies.
+
+**Lo que no se resolvió en cuatro rondas, medido y no estimado: el ángulo de
+brazo.** El brief pidió 30-40° de separación y el generador nunca pasó de
+**~13°**, con asimetría entre los dos brazos (valen-v4: 10.2 / 7.7 · roen-v3:
+13.0 / 7.7). Medido por regresión lineal sobre el borde exterior de la
+silueta. Instrucciones cada vez más agresivas dieron el mismo techo: **parece
+límite del generador, no del brief.** Consecuencia: el ancho de **hombros** no
+se puede separar del borde exterior del brazo en ninguna lámina.
+
+Los anchos de torso tampoco salieron: a esas alturas el detector confunde
+líneas de anatomía (marcas de abdomen, grabados de Valen, mechones) con
+separaciones reales y devuelve números absurdos. **No se reportan como dato.**
+
+**Higiene de ramas (2026-08-23):** 17 ramas locales y 8 remotas borradas, todas
+verificadas como ancestros de `master` antes de tocarlas. Y se detectó que 6
+commits llevaban rato **solo en local** — `feat/dagna-rig` se había fusionado
+en GitHub pero la copia local quedó congelada, así que los `git push` a esa
+rama eran no-ops silenciosos. **Regla: verificar `origin/master..master` antes
+de dar por respaldado un trabajo.**
+
+---
+
 ## [2026-08-23] lint | Current-State.md recortado — 8,480t a 1,904t, higiene de contexto 4ta vez
 
 `check_vault.py` marcó `Current-State.md` 5,480 tokens sobre su techo blando

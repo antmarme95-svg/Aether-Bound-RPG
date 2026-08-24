@@ -41,10 +41,12 @@ frase** — el linter la lee como parte del nombre si no.
 
 ## Hechos vigentes
 
-- **Branch:** `master`, con el **build del playtest congelado en `8c45bab`**
-  (hash `91e3d293934f`). Rama viva en paralelo: **`feat/dagna-rig`**
-  (rescate del rig), deliberadamente fuera de `master` para no descongelar
-  el build mientras corren los testers.
+- **Branch:** `master` — **rama única**. El build del playtest sigue
+  congelado en `8c45bab` (hash `91e3d293934f`). `feat/dagna-rig` ya se
+  fusionó; el 2026-08-23 se limpiaron **17 ramas locales y 8 remotas**, todas
+  verificadas como ancestros de `master` antes de borrarlas (0 commits
+  propios sin fusionar). Sobrevive `claude/strange-galileo-243fc7` solo
+  porque está atada al worktree de abajo.
 - **Código del prototipo:** solo en el tag **`archive/prototipo`**
   (2026-08-10). `.claude/worktrees/quirky-wiles-afa8a0/` tiene una copia
   de julio del rig (pre-rework, 2115 líneas) — **candidato a borrar**, es
@@ -55,6 +57,17 @@ frase** — el linter la lee como parte del nombre si no.
   hombreras, martillo-ariete, tatuajes); la escultura no (bola de torso,
   rim de forja quemado, sin cuello). El código de C6 no hubo que
   reconstruirlo — estaba recuperable. Detalle: [[LOG]] §2026-08-21.
+- **Roen, Darro y Valen están en el motor** (Pasada 1, commit `276e0c6`):
+  las tres razas montadas desde `data/characters.gd` y renderizadas con el
+  rig **sin ningún fix**, como control. Confirmó que **el torso-bola, la
+  ausencia de cuello y los brazos despegados son sistémicos en las tres
+  razas**, no defectos de Dagna. Los renders salen con
+  `res://scenes/character_lineup_sheet.tscn`.
+- 🔴 **Darro es el caso más roto:** brazos literalmente flotando, con hueco
+  de fondo visible entre hombro y brazo. Y su ratio ancho/alto (0.54) es casi
+  el de Dagna (0.57) cuando el canon lo pide **más liviano**. Hipótesis: el
+  escalado enano abre los brazos sin que la masa del hombro los siga — el
+  hueco de cintura escapular de [[Grados de Libertad del Rig]].
 - ⚠️ Antes de tocar importación de FBX: leer [[Lecciones]] §Godot 4.7
   (orientación +Z/−Z, escala ×100, árbol duplicado al re-apropiar).
 
