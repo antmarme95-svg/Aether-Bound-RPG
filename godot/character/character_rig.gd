@@ -589,11 +589,67 @@ func _build() -> void:
 	torso.add_child(chest_mass)
 	_add_outline_pass(chest_mass, Color("#f2b186"))
 
+	# Pasada 2 (2026-08-21): se probo ABSORBERLA en el dorsal y se
+	# DESCARTO viendo el render. Sin ella la espalda pierde la convexidad
+	# toracica alta, aparece una costura vertical dura sobre la columna, y
+	# en perfil Roen vuelve a leer "en tabla" -- que es exactamente el
+	# defecto (QA 40% HIGH) que esta masa existe para tapar. No compiten:
+	# back_mass es profundidad en Z sobre el eje central, el dorsal es
+	# ancho en X sobre los flancos. Ejes distintos, las dos hacen falta.
 	var back_mass = _sphere_mesh(0.10, skin_mat)
 	back_mass.scale = Vector3(1.5, 1.3, 0.4)
 	back_mass.position = Vector3(0.0, 0.10, -0.115)
 	torso.add_child(back_mass)
 	_add_outline_pass(back_mass, Color("#f2b186"))
+
+	# DORSAL ANCHO (latissimus dorsi) — Pasada 2, 2026-08-21.
+	#
+	# Hallazgo B3 del barrido de anatomia (cap04-3D-male.md, pp.96 §05 y
+	# 105 §07): el V-taper NO se consigue estirando el torax en X. Se
+	# consigue con una masa dorsal que nace ancha bajo la axila y converge
+	# a la cintura, envolviendo el torax por los flancos. Esa pieza no
+	# existia en ninguna forma -- `DORSAL_CURVE_X` es una rotacion, no una
+	# masa, y `back_mass` es convexidad toracica ALTA y central, no un
+	# dorsal. Por eso el torso leia como bola: nada tapaba los flancos.
+	#
+	# La asimetria ancho/profundidad ya estaba hecha (CHEST_X 1.16 /
+	# CHEST_Z 0.92 = 1.26, el ratio frente/perfil medido en el render), o
+	# sea que NO era lo que faltaba.
+	#
+	# ELIPSOIDE SEMI-HUNDIDA, no caja: leccion de :511-515 -- las placas
+	# planas leyeron como "armadura de placas, no como cuerpo". Y HIJA DE
+	# `torso`, no de `upper_spine`, por la razon de :526-541 (los pecs):
+	# hereda la escala x/z del build de peso/clase. Los trapecios y el
+	# acromion cuelgan de upper_spine y por eso NO siguen al torso; no se
+	# imita eso aca.
+	#
+	# UNA elipsoide por lado, ROTADA, y no dos: la convergencia la da la
+	# inclinacion del eje largo (arriba afuera, abajo adentro), y el
+	# historial del archivo pide restriccion con el Sobel -- cada masa
+	# extra agrega una curva de interseccion que se entinta ("menos es mas
+	# bajo el Sobel", :576). Si al render le falta estrechamiento se parte
+	# en dos, que es el camino 2 del plan.
+	#
+	# Geometria: el radio del cilindro interpolado da r≈0.142 en y=0.05 y
+	# r≈0.113 en y=-0.15. Centro en x=±0.10 con semieje x 0.050 → el borde
+	# externo llega a 0.150 arriba (≈8 mm proud sobre el flanco) y queda
+	# hundido abajo, que es exactamente el estrechamiento buscado.
+	# z=-0.02: el dorsal es masa de ESPALDA que envuelve hacia el costado,
+	# no un flotador lateral centrado.
+	#
+	# La rotacion propia de una malla hija es segura: la advertencia del
+	# encabezado (:44-54) sobre rotaciones que "se borran solas en <150ms"
+	# vale SOLO para upper_spine.rotation.x, que el settle sobreescribe
+	# cada frame.
+	for dside in [-1, 1]:
+		var lat = _sphere_mesh(0.09, skin_mat)
+		lat.scale = Vector3(0.55, 1.50, 0.85)
+		lat.position = Vector3(float(dside) * 0.10, -0.01, -0.02)
+		# Arriba hacia AFUERA, abajo hacia ADENTRO: la diagonal
+		# axila→cintura. Signo opuesto por lado para que sea simetrica.
+		lat.rotation.z = float(-dside) * 0.22
+		torso.add_child(lat)
+		_add_outline_pass(lat, Color("#f2b186"))
 
 	# ABDOMEN: SIN masa elevada — PRD Geometría Nueva (2026-07-14,
 	# ratificado por Boris). El `abs_plate` (elipsoide que sobresalía del
