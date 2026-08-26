@@ -1,5 +1,84 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-24] código | Pasada 2 validada: el dorsal arregló la espalda, y el "torso bola" de frente resultó ser otra cosa
+
+La ejecutó la sesión "Rama de Código" (Sonnet) desde un plan escrito acá;
+**esta sesión validó**. El plan vive en
+`~/.claude/plans/haz-el-plan-de-idempotent-lobster.md`.
+
+### El plan cambió de premisa antes de escribirse
+
+Boris había pedido "torso de cilindro a caja con X≠Z, más el dorsal". Al leer
+el código, **el torso ya tenía X≠Z**: `CHEST_X = 1.16` / `CHEST_Z = 0.92`
+(`character_rig.gd:58-59`) aplicados como escala no uniforme. Ese 1.16/0.92 =
+**1.26** es exactamente el ratio frente/perfil que se había medido en el render
+de Dagna. La asimetría ya estaba hecha; **no era lo que faltaba**.
+
+Lo que sí faltaba era el **dorsal**, que no existía en ninguna forma
+(`DORSAL_CURVE_X` es una rotación; `back_mass` es convexidad torácica central).
+Y el minado lo señalaba explícito: *"nada tapaba los flancos"*. Se invirtió el
+orden — el dorsal primero porque es **puramente aditivo** (cero acoplamientos,
+reversible), y el cambio de primitiva se difirió por caro: **6 puntos de
+acoplamiento** y 3 masas hijas con Z calibrada contra el radio del cilindro.
+
+### Cómo se validó, y por qué importa el cómo
+
+El "antes" **se había perdido** — `godot/test_out/` está en `.gitignore` y la
+corrida nueva lo sobrescribió. Se **regeneró**: `character_rig.gd` vuelto al
+commit anterior, render, guardar, restaurar. Comparación real, no contra
+recuerdo. **Lección: si el juez es un render y el directorio está ignorado,
+copiar el "antes" ANTES de correr, o queda irreproducible.**
+
+### Veredicto
+
+**El dorsal funciona — de espaldas.** Aparece un pliegue diagonal en cada
+flanco bajando de la axila hacia la cintura; antes el flanco era una superficie
+lisa sin información. Es exactamente el hallazgo **B3** y lee. En Darro también,
+más discreto entre tanta masa.
+
+**De frente no cambió nada, y ahí está el hallazgo:** el óvalo que sobresale y
+proyecta la sombra dura cruzando el pecho **no es el flanco — es `chest_mass`**,
+que lee como un disco montado ENCIMA del torso en vez de como parte de él. O
+sea: **el "torso bola" tiene dos causas distintas**, una por vista. El dorsal
+resolvió la de espaldas; la de frente es el hallazgo **B4**: *el pecho es una
+placa metida DEBAJO del deltoides*, y hoy está montado encima y por fuera.
+
+**Sin regresiones:** las 8 piezas firma de Dagna intactas y alineadas,
+incluidas las tres de riesgo que cuelgan de `upper_spine` (túnica, hombreras,
+martillo) — se esperaba, porque no se tocó la primitiva.
+
+**El juicio de la sesión sobre `back_mass` fue correcto:** conservarla. Su
+argumento se sostiene en el render — `back_mass` es profundidad en Z sobre el
+eje central, el dorsal es ancho en X sobre los flancos. **Ejes distintos, no
+compiten.**
+
+### Una trampa de instrumento, anotada
+
+**El ratio ancho/alto del lineup NO sirve para juzgar masas internas al
+torso.** Dio **idéntico** con y sin dorsal (0.57 / 0.30 / 0.54 / 0.24) porque
+el AABB lo dominan los brazos. No es que el cambio no hiciera nada — es que ese
+número es ciego a este tipo de cambio. Para escultura de torso el único juez es
+el render. Ya estaba anticipado en el plan ("no trates una subida del ratio como
+fallo"), pero conviene decirlo más fuerte: **tampoco lo trates como
+confirmación.**
+
+### Reordenamiento de las pasadas
+
+El plan tenía la primitiva del tórax como Pasada 3. **Baja a 5**, y sube el
+pecho-bajo-el-hombro (**B4**), que es el defecto más visible que queda y el más
+barato. Orden nuevo en [[Current-State]] §Inmediato:
+**3 = pecho bajo el hombro · 4 = cintura escapular · 5 = primitiva del tórax.**
+
+Los hallazgos técnicos de la primitiva **ya están hechos y no hay que
+re-derivarlos** (verificados contra el fuente de Godot, no de memoria):
+`radial_segments = 6` da caras planas exactas en ±X sin rotar — con 4 u 8 los
+costados vuelven a ser aristas; **no invertir el taper de `torso`**, porque su
+fondo es la unión con `waist` y hay una pieza propia que debe ser la caja
+torácica; y si se hexagona hay que bajar `pec.position.z` a ~0.108-0.112 o el
+pec pasa de 8 mm hundido a 19 mm sobresaliendo. Todo en el plan citado arriba.
+
+---
+
 ## [2026-08-24] código | Pasada 1 del piloto: los defectos del rig son sistémicos, y Darro es el peor caso
 
 Primera mitad del piloto Roen/Darro/Valen. **El objetivo no era que se vieran

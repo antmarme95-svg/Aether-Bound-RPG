@@ -51,7 +51,7 @@ frase** — el linter la lee como parte del nombre si no.
   (2026-08-10). `.claude/worktrees/quirky-wiles-afa8a0/` tiene una copia
   de julio del rig (pre-rework, 2115 líneas) — **candidato a borrar**, es
   una trampa fácil de pisar si se busca código viejo ahí en vez del tag.
-- **Dagna está en el motor** (rama `feat/dagna-rig`, commit `6d167a1`):
+- **Dagna está en el motor** (commit `6d167a1`, ya en `master`):
   `CharacterRig` rescatado del tag al proyecto vivo, sin tocar
   `project.godot` ni el build congelado. Identidad lee bien (trenzas,
   hombreras, martillo-ariete, tatuajes); la escultura no (bola de torso,
@@ -68,6 +68,20 @@ frase** — el linter la lee como parte del nombre si no.
   el de Dagna (0.57) cuando el canon lo pide **más liviano**. Hipótesis: el
   escalado enano abre los brazos sin que la masa del hombro los siga — el
   hueco de cintura escapular de [[Grados de Libertad del Rig]].
+- **Pasada 2 hecha — dorsal ancho** (commit `6ce094f`): una elipsoide
+  semi-hundida por flanco, hija de `torso`, rotada para converger axila→
+  cintura. **Funciona de espaldas** (aparece el pliegue diagonal del flanco,
+  antes liso), **no de frente**. Validado con antes/después regenerado, no
+  contra recuerdo.
+- 🔴 **El "torso bola" de FRENTE no era el flanco: es `chest_mass`**, la
+  esfera del pecho, que lee como disco montado ENCIMA del torso. Es el
+  hallazgo **B4** del barrido — *el pecho va metido DEBAJO del deltoides*.
+  Ese es el próximo fix de mayor apalancamiento, por delante del cambio de
+  primitiva del tórax.
+- ⚠️ **El ratio ancho/alto del lineup NO sirve** para juzgar masas internas
+  al torso: el AABB lo dominan los brazos. En la Pasada 2 dio idéntico
+  (0.57/0.30/0.54/0.24) con y sin dorsal. Para escultura de torso, el juez
+  es el render.
 - ⚠️ Antes de tocar importación de FBX: leer [[Lecciones]] §Godot 4.7
   (orientación +Z/−Z, escala ×100, árbol duplicado al re-apropiar).
 
@@ -90,7 +104,34 @@ frase** — el linter la lee como parte del nombre si no.
    La lección de método que sobrevive: barrer la clase completa (los tres
    fijos), no un personaje a la vez — misma regla 8 de `CLAUDE.md`.
 
-1. **Playtest — único bloqueo real: agendar a Diego, Santiago y Delmer.**
+1. **🎨 ANATOMÍA DEL RIG — orden REORDENADO tras validar la Pasada 2.**
+   Piloto: Roen (humano) / Darro (enano) / Valen (elfo), las tres razas, para
+   que cada fix se valide en tres cuerpos y no en uno. Render de contraste:
+   `Godot --path godot res://scenes/character_lineup_sheet.tscn`.
+   - ✅ **Pasada 1** — control sin fixes (`276e0c6`).
+   - ✅ **Pasada 2** — dorsal ancho (`6ce094f`). Arregló el flanco vacío, que
+     se ve de espaldas. **De frente no cambió nada.**
+   - ⬜ **Pasada 3 — pecho DEBAJO del hombro** (hallazgo **B4**). *Subió al
+     primer lugar*: el "torso bola" que se ve de frente es `chest_mass`
+     leyendo como disco montado encima, no el flanco. Es el defecto más
+     visible que queda y el más barato de los pendientes.
+   - ⬜ **Pasada 4 — cintura escapular.** Arregla los brazos flotando de
+     Darro y las hombreras. Fórmula del ritmo escapulohumeral ya escrita en
+     [[Grados de Libertad del Rig]].
+   - ⬜ **Pasada 5 — primitiva del tórax.** *Bajó de puesto*: es la más cara
+     (6 acoplamientos, recalibrar 3 masas hijas) y ya no es la más urgente.
+     Los hallazgos técnicos ya están hechos y **no hay que re-derivarlos** —
+     `radial_segments = 6` (no 4), no invertir el taper de `torso`, y bajar
+     `pec.position.z` a ~0.108-0.112. Están en el plan de la Pasada 2:
+     `~/.claude/plans/haz-el-plan-de-idempotent-lobster.md`.
+   - ⬜ Abdomen como masa propia (**B2**), oblicuos montando sobre la cresta
+     ilíaca (**B5**).
+   - **Insumo que sigue faltando para todas:** los **anchos** (pecho,
+     cintura, cadera, razón hombro/cadera). El libro no los trae — hay que
+     **medirlos en píxeles sobre las láminas ratificadas**. Ver [[LOG]]
+     §2026-08-24.
+
+2. **Playtest — único bloqueo real: agendar a Diego, Santiago y Delmer.**
    Todo lo técnico está listo (protocolo, telemetría, escena gris, feel
    pass, build congelado — detalle en [[Current-State-Historico]]).
    **Riesgos abiertos sin instrumento todavía:** el gancho es una ausencia
@@ -100,7 +141,7 @@ frase** — el linter la lee como parte del nombre si no.
    el acoplamiento 1:1 Pivote↔build raza×rol no tiene instrumento porque
    no es de playtest.
 
-2. **Dos decisiones de diseño abiertas** (bloquean ratificar
+3. **Dos decisiones de diseño abiertas** (bloquean ratificar
    [[Los 3 Links de los Fijos]]):
    - Ninguno de los 3 T3 de los fijos tiene **escena firma** propia (solo
      Roen tiene objeto firma, el escudo) — [[The Tether]] promete ambos.
@@ -108,7 +149,7 @@ frase** — el linter la lee como parte del nombre si no.
      Darro, sin razón declarada, y solo en Roen *sustituye* el sabor base
      en vez de sumarse.
 
-3. **Abierto en Acto 1, sin bloquear nada:**
+4. **Abierto en Acto 1, sin bloquear nada:**
    - Extraer las tarjetas por Pivote (4 slots ya existen en las 9 fichas,
      en prosa y español — falta extracción + traducción). Waypost pide 2
      más, una nueva (silla en la mesa, acotación muda).
@@ -118,14 +159,14 @@ frase** — el linter la lee como parte del nombre si no.
    - **Frente siguiente: Acto 2** — La Rueda, el Bautizo, el pico de voz
      en la oficina de Old Tobin Hale.
 
-4. **Medios/bajos sin cerrar (no bloquean):**
+5. **Medios/bajos sin cerrar (no bloquean):**
    - `Vekka` usa la palabra "Warden" en Actos 1-2, cuando
      [[El Mundo y la Muda]] dice que el término no existe públicamente
      hasta el Archive en Acto 3 — y siendo enana no tiene vía canónica.
    - [[The Tether]] cita una "regla T3" que [[Los 9 Links del Pivote]] le
      atribuye — falta verificar esa cita.
 
-5. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr.
+6. **Concept art:** §12.1 (V1 del key-art-poster) sigue sin correr.
 
 ### Pendientes menores, sin bloquear nada
 - Orejas de Speck en las 5 láminas de finales: forma de zorro simple, no
