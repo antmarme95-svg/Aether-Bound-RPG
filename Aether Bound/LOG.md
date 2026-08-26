@@ -1,5 +1,76 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-24] código | Pasada 3 revertida y Pasada 4 resuelta: los brazos de Darro vuelven al cuerpo
+
+Dos pasadas en la misma sesión, una fallida y una que salió muy bien. **La
+fallida se cuenta primero porque su resultado negativo es lo que orientó la
+siguiente.**
+
+### Pasada 3 — REVERTIDA. El pectoral no se puede rotar
+
+Se intentó el hallazgo **B4**: los pectorales *"convergen y se retuercen bajo la
+axila"*. Antes de tocar se midió, y **no era problema de alcance** — el pec ya
+llegaba lateralmente bajo el deltoide (borde externo ≈0.230 contra borde interno
+del deltoide ≈0.161). Era de **orientación**: estaban planos y rectos.
+
+Se rotaron para que el extremo externo subiera hacia la axila y girara hacia
+atrás. **Salió una muesca en V en el centro del pecho** que lee como forma
+dibujada: al rotar, los dos elipsoides se cruzan en ángulo y el Sobel entinta el
+cruce. Es el modo de fallo que el propio archivo documenta tres veces — *"dos
+ojos en el torso"*, *"dos trazos flotantes dibujados"*, **"menos es más bajo el
+Sobel"**. Una segunda variante sin la rotación culpable mejoró pero la V seguía.
+Comparadas las tres lado a lado, **la Pasada 2 sin tocar era la mejor**. Revertido
+entero; no llegó al repositorio.
+
+**Lo que deja, que vale más que el fix fallido:** a esta escala de estilo **el
+pectoral NO se puede rotar** — cualquier ángulo entre las dos masas produce una
+arista que el contorno convierte en línea. Eso **descarta una familia entera de
+soluciones**, explica retroactivamente por qué las rondas anteriores terminaron
+con los pecs planos y coplanares (no fue pereza, fue el mismo muro), y sugiere la
+salida: si el pec no puede moverse, *"pecho debajo del hombro"* hay que
+conseguirlo **moviendo el deltoides sobre el pec**.
+
+### Pasada 4 — puente escapular (`f412c22`). El cambio más visible de todos
+
+**El diagnóstico corrigió la premisa.** El plan apuntaba al ritmo escapulohumeral
+cifrado en [[Grados de Libertad del Rig]], pero **eso es una ley de abducción y
+el defecto de Darro es estático**. Lo que había que medir era otra cosa: la
+distancia entre la superficie del torso y el borde interno del deltoide.
+
+| | borde torso | borde deltoide | hueco |
+|---|---|---|---|
+| **Darro** (enano/Duelist) | 0.165 | 0.279 | **+0.115 · aire** |
+| Dagna (enana/Vanguard) | 0.314 | 0.279 | −0.035 · solapa |
+| Roen (humano/Vanguard) | 0.256 | 0.153 | −0.103 · solapa |
+| Valen (elfo/Strategist) | 0.165 | 0.115 | −0.050 · solapa |
+
+**Darro es el único con hueco, y no por azar.** Es la peor combinación posible
+del elenco: `shoulder_x` 1.60 del enano empuja el brazo a 0.336 mientras
+`arch_xz` 0.80 del Duelist angosta el torso a 0.165. **Nadie más junta hombros
+anchos con torso angosto** — por eso el defecto parecía aleatorio y era
+**determinista**.
+
+Por eso la pieza **no puede tener tamaño fijo**: el hueco depende de raza × clase
+× peso. Se construye en `_build()` y se **dimensiona en `_apply_build()`**, que es
+donde `torso.scale.x` y `arm.position.x` ya están resueltos. Tiende de un lado al
+otro con solape en los dos extremos para que **funda** en vez de tocar. Elipsoide
+semi-hundida, no caja.
+
+**Resultado:** los brazos de Darro vuelven al cuerpo — el cambio más visible de
+todas las pasadas. Y los otros tres **no cambian**, que es lo correcto: cuando el
+deltoide ya está dentro del torso el span sale chico y la pieza queda enterrada.
+Las 8 piezas firma de Dagna intactas en las tres vistas.
+
+### Comparativo visual
+
+Artifact **Banco de Anatomía del Rig** — los 4 personajes × 3 vistas × 3 pasadas,
+con interruptor que las cambia todas de golpe (que es la única forma de ver una
+diferencia sutil: el ojo se queda quieto). Incluye la tabla del hueco medido y la
+Pasada 3 fallida documentada, porque un intento que falla acota el problema tanto
+como uno que funciona.
+
+---
+
 ## [2026-08-24] código | Pasada 2 validada: el dorsal arregló la espalda, y el "torso bola" de frente resultó ser otra cosa
 
 La ejecutó la sesión "Rama de Código" (Sonnet) desde un plan escrito acá;

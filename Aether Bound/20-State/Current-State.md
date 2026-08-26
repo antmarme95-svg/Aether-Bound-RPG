@@ -57,31 +57,20 @@ frase** — el linter la lee como parte del nombre si no.
   hombreras, martillo-ariete, tatuajes); la escultura no (bola de torso,
   rim de forja quemado, sin cuello). El código de C6 no hubo que
   reconstruirlo — estaba recuperable. Detalle: [[LOG]] §2026-08-21.
-- **Roen, Darro y Valen están en el motor** (Pasada 1, commit `276e0c6`):
-  las tres razas montadas desde `data/characters.gd` y renderizadas con el
-  rig **sin ningún fix**, como control. Confirmó que **el torso-bola, la
-  ausencia de cuello y los brazos despegados son sistémicos en las tres
-  razas**, no defectos de Dagna. Los renders salen con
-  `res://scenes/character_lineup_sheet.tscn`.
-- 🔴 **Darro es el caso más roto:** brazos literalmente flotando, con hueco
-  de fondo visible entre hombro y brazo. Y su ratio ancho/alto (0.54) es casi
-  el de Dagna (0.57) cuando el canon lo pide **más liviano**. Hipótesis: el
-  escalado enano abre los brazos sin que la masa del hombro los siga — el
-  hueco de cintura escapular de [[Grados de Libertad del Rig]].
-- **Pasada 2 hecha — dorsal ancho** (commit `6ce094f`): una elipsoide
-  semi-hundida por flanco, hija de `torso`, rotada para converger axila→
-  cintura. **Funciona de espaldas** (aparece el pliegue diagonal del flanco,
-  antes liso), **no de frente**. Validado con antes/después regenerado, no
-  contra recuerdo.
-- 🔴 **El "torso bola" de FRENTE no era el flanco: es `chest_mass`**, la
-  esfera del pecho, que lee como disco montado ENCIMA del torso. Es el
-  hallazgo **B4** del barrido — *el pecho va metido DEBAJO del deltoides*.
-  Ese es el próximo fix de mayor apalancamiento, por delante del cambio de
-  primitiva del tórax.
-- ⚠️ **El ratio ancho/alto del lineup NO sirve** para juzgar masas internas
-  al torso: el AABB lo dominan los brazos. En la Pasada 2 dio idéntico
-  (0.57/0.30/0.54/0.24) con y sin dorsal. Para escultura de torso, el juez
-  es el render.
+- **Las tres razas están en el motor** y el frente de anatomía va por la
+  **Pasada 4**. Detalle pasada por pasada, hipótesis viva y trampas ya
+  pagadas: §Pendientes §1. Los defectos que quedan son **sistémicos en las
+  tres**, no de un personaje.
+- ✅ **Los brazos flotantes de Darro: RESUELTOS** (`f412c22`). Eran **11.5 cm
+  de aire** entre torso y deltoides — la única combinación del elenco que lo
+  produce: enano (`shoulder_x` 1.60) × Duelist (`arch_xz` 0.80). **Nadie más
+  junta hombros anchos con torso angosto**, por eso parecía aleatorio y era
+  determinista.
+- ⚠️ **El ritmo escapulohumeral de [[Grados de Libertad del Rig]] NO era el fix
+  de esto.** Es una ley de **abducción** y el defecto era **estático**. Sigue
+  vigente para cuando se anime el brazo; no aplicaba en reposo.
+- 🔴 **El "torso bola" de FRENTE no es el flanco: es `chest_mass`**, que lee
+  como disco montado ENCIMA del torso. Único defecto grande que sigue abierto.
 - ⚠️ Antes de tocar importación de FBX: leer [[Lecciones]] §Godot 4.7
   (orientación +Z/−Z, escala ×100, árbol duplicado al re-apropiar).
 
@@ -104,32 +93,42 @@ frase** — el linter la lee como parte del nombre si no.
    La lección de método que sobrevive: barrer la clase completa (los tres
    fijos), no un personaje a la vez — misma regla 8 de `CLAUDE.md`.
 
-1. **🎨 ANATOMÍA DEL RIG — orden REORDENADO tras validar la Pasada 2.**
+1. **🎨 ANATOMÍA DEL RIG — 3 pasadas aplicadas, 1 revertida.**
    Piloto: Roen (humano) / Darro (enano) / Valen (elfo), las tres razas, para
-   que cada fix se valide en tres cuerpos y no en uno. Render de contraste:
-   `Godot --path godot res://scenes/character_lineup_sheet.tscn`.
+   que cada fix se valide en tres cuerpos y no en uno. Dagna va de **control de
+   regresión** (es la única con las 8 piezas firma).
+   Render de contraste: `Godot --path godot res://scenes/character_lineup_sheet.tscn`.
+   Comparativo visual de las tres pasadas: artifact **Banco de Anatomía del Rig**.
    - ✅ **Pasada 1** — control sin fixes (`276e0c6`).
    - ✅ **Pasada 2** — dorsal ancho (`6ce094f`). Arregló el flanco vacío, que
      se ve de espaldas. **De frente no cambió nada.**
-   - ⬜ **Pasada 3 — pecho DEBAJO del hombro** (hallazgo **B4**). *Subió al
-     primer lugar*: el "torso bola" que se ve de frente es `chest_mass`
-     leyendo como disco montado encima, no el flanco. Es el defecto más
-     visible que queda y el más barato de los pendientes.
-   - ⬜ **Pasada 4 — cintura escapular.** Arregla los brazos flotando de
-     Darro y las hombreras. Fórmula del ritmo escapulohumeral ya escrita en
-     [[Grados de Libertad del Rig]].
-   - ⬜ **Pasada 5 — primitiva del tórax.** *Bajó de puesto*: es la más cara
-     (6 acoplamientos, recalibrar 3 masas hijas) y ya no es la más urgente.
-     Los hallazgos técnicos ya están hechos y **no hay que re-derivarlos** —
-     `radial_segments = 6` (no 4), no invertir el taper de `torso`, y bajar
-     `pec.position.z` a ~0.108-0.112. Están en el plan de la Pasada 2:
+   - ❌ **Pasada 3 — REVERTIDA.** Se rotaron los pecs para que se "retorcieran
+     bajo la axila" (B4) y salió una **muesca en V** en el centro del pecho: al
+     rotar, los dos elipsoides se cruzan en ángulo y el Sobel entinta el cruce.
+     Dos variantes, las dos peores que no tocar. **Restricción que deja: a esta
+     escala de estilo el pectoral NO se puede rotar.** Descarta una familia
+     entera de soluciones.
+   - ✅ **Pasada 4 — puente escapular** (`f412c22`). **El cambio más visible de
+     todos:** los brazos de Darro vuelven al cuerpo. Se dimensiona en
+     `_apply_build` contra el hueco real, porque depende de raza × clase × peso.
+   - ⬜ **Pasada 5 — pecho de frente.** Sigue leyendo como disco montado encima
+     (`chest_mass`). **Hipótesis viva, salida del fracaso de la 3:** mover el
+     **deltoides sobre el pecho**, no el pecho bajo el deltoides — es la palanca
+     que no toca la intersección que causó la V.
+   - ⬜ **Pasada 6 — primitiva del tórax.** La más cara (6 acoplamientos,
+     recalibrar 3 masas hijas). Los hallazgos técnicos ya están hechos y **no hay
+     que re-derivarlos** — `radial_segments = 6` (no 4), no invertir el taper de
+     `torso`, y bajar `pec.position.z` a ~0.108-0.112. En el plan:
      `~/.claude/plans/haz-el-plan-de-idempotent-lobster.md`.
-   - ⬜ Abdomen como masa propia (**B2**), oblicuos montando sobre la cresta
-     ilíaca (**B5**).
-   - **Insumo que sigue faltando para todas:** los **anchos** (pecho,
-     cintura, cadera, razón hombro/cadera). El libro no los trae — hay que
-     **medirlos en píxeles sobre las láminas ratificadas**. Ver [[LOG]]
-     §2026-08-24.
+   - ⬜ Abdomen como masa propia (**B2**), oblicuos sobre la cresta ilíaca (**B5**),
+     y el **cuello de Valen**, que sigue sin existir.
+   - ⚠️ **Dos trampas de instrumento, ya pagadas:** el **ratio ancho/alto** del
+     lineup es **ciego** a la escultura del torso (el AABB lo dominan los brazos —
+     dio idéntico en las 3 pasadas). Y `godot/test_out/` está en `.gitignore`, así
+     que **el "antes" se copia ANTES de correr** o se pierde.
+   - **Insumo que sigue faltando para todas:** los **anchos** (pecho, cintura,
+     cadera, razón hombro/cadera). El libro no los trae — hay que **medirlos en
+     píxeles sobre las láminas ratificadas**. Ver [[LOG]] §2026-08-24.
 
 2. **Playtest — único bloqueo real: agendar a Diego, Santiago y Delmer.**
    Todo lo técnico está listo (protocolo, telemetría, escena gris, feel
