@@ -1,5 +1,67 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-24] código | Hipótesis del deltoides: falló, y al fallar corrigió el diagnóstico
+
+Segundo intento fallido seguido sobre el pecho de frente. Se registra porque
+**entre los dos acotaron el problema más de lo que lo habría hecho un fix que
+funcionara a la primera.**
+
+### Lo que se probó
+
+La hipótesis salía del fracaso de la Pasada 3: si el pectoral no se puede rotar,
+entonces *"pecho debajo del hombro"* (**B4**) hay que conseguirlo **moviendo el
+deltoide sobre el pec**. Medido primero (Roen, frame `upper_spine`): deltoide y
+pec **ya solapaban en X** (0.161-0.275 contra pec hasta 0.230) **y en Y**
+(0.168-0.302 contra pec en 0.210), pero estaban a **10.5 cm en Z** — el deltoide
+llegaba a z=0.066 y el pec vivía en 0.151-0.191.
+
+Se creció el deltoide **solo hacia adelante**, manteniendo el borde trasero
+(−0.026 → −0.024). Eso era deliberado: dos rondas de QA lo habían recogido en Z
+porque de espalda leía *"esfera inflada / hombrera de fútbol"* y *"hombreras de
+armadura"* (CRITICAL), y crecer simétrico reabría eso.
+
+### Resultado: negativo
+
+- **El borde trasero se respetó** — la espalda no cambió, que era el riesgo
+  declarado. La precaución funcionó.
+- **De frente el disco del pecho quedó idéntico.** Objetivo no cumplido.
+- **De perfil empeoró:** el hombro pasó a ser una masa redonda que sobresale y
+  lee como almohadilla — el mismo defecto *"hombrera de fútbol"*, solo que
+  desplazado de atrás hacia adelante.
+
+Revertido. No llegó al repositorio.
+
+### El hallazgo real: el diagnóstico estaba mal, no la ejecución
+
+**B4 habla del borde LATERAL del pectoral** — el que se mete bajo el deltoide.
+**Pero el defecto que se ve es el borde INFERIOR de `chest_mass`:** la línea de
+sombra dura que cruza el pecho en horizontal, a la altura del esternón. Está
+lejos del deltoide, y **mover el deltoide nunca podía alcanzarla**. Los dos se
+conflataron al formular la hipótesis.
+
+### Lo que queda acotado tras dos fracasos
+
+- **Pasada 3 descartó** rotar el pectoral: cualquier ángulo entre las dos masas
+  crea una arista que el Sobel entinta.
+- **Este intento descartó** mover el deltoide: no alcanza la zona del defecto y
+  de perfil cuesta caro.
+- **Diagnóstico corregido:** el defecto no es el encaje lateral del pecho bajo el
+  hombro. Es que **`chest_mass` termina en una arista horizontal abrupta**, y esa
+  arista es lo que lee como borde de disco.
+
+**Palanca siguiente, con su costo declarado:** `chest_mass` misma — su borde
+inferior o su protrusión. Pero esa masa existe porque un QA leyó el perfil como
+*"tabla plana"* (40% HIGH), así que aplanarla **reabre ese defecto**. Es un
+intercambio, no un fix libre.
+
+### Decisión de frente
+
+Se para de esculpir y se va por **los anchos medidos de las láminas** — el
+insumo que le falta a *todas* las pasadas y que ninguna puede inventar. Seguir
+sin las medidas es tantear, y van dos tanteos fallidos seguidos en la misma zona.
+
+---
+
 ## [2026-08-24] código | Pasada 3 revertida y Pasada 4 resuelta: los brazos de Darro vuelven al cuerpo
 
 Dos pasadas en la misma sesión, una fallida y una que salió muy bien. **La

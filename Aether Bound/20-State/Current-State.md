@@ -111,10 +111,16 @@ frase** — el linter la lee como parte del nombre si no.
    - ✅ **Pasada 4 — puente escapular** (`f412c22`). **El cambio más visible de
      todos:** los brazos de Darro vuelven al cuerpo. Se dimensiona en
      `_apply_build` contra el hueco real, porque depende de raza × clase × peso.
-   - ⬜ **Pasada 5 — pecho de frente.** Sigue leyendo como disco montado encima
-     (`chest_mass`). **Hipótesis viva, salida del fracaso de la 3:** mover el
-     **deltoides sobre el pecho**, no el pecho bajo el deltoides — es la palanca
-     que no toca la intersección que causó la V.
+   - ⬜ **Pasada 5 — pecho de frente. DOS INTENTOS FALLIDOS, diagnóstico
+     corregido.** El defecto **no** es el encaje lateral del pecho bajo el hombro
+     (que es lo que dice B4): es que **`chest_mass` termina en una arista
+     horizontal abrupta** a la altura del esternón, y esa arista lee como borde
+     de disco. Descartado rotar el pectoral (Pasada 3: cualquier ángulo crea
+     arista que el Sobel entinta) y descartado mover el deltoides (no alcanza la
+     zona, y de perfil reabre la "hombrera de fútbol"). **Palanca siguiente con
+     su costo:** `chest_mass` misma — pero existe porque un QA leyó el perfil
+     como "tabla plana" (40% HIGH), así que aplanarla reabre ese defecto. Es un
+     intercambio, no un fix libre.
    - ⬜ **Pasada 6 — primitiva del tórax.** La más cara (6 acoplamientos,
      recalibrar 3 masas hijas). Los hallazgos técnicos ya están hechos y **no hay
      que re-derivarlos** — `radial_segments = 6` (no 4), no invertir el taper de
