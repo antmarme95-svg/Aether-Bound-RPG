@@ -55,6 +55,15 @@ const DORSAL_CURVE_X: float = -0.09
 # V-taper del tronco (multiplicadores base sobre el build de peso/clase):
 # pecho con VOLUMEN (review CRITICAL 1) y cintura recogida marcando el
 # cambio tórax→pelvis.
+# Puente escapular (Pasada 4). TORSO_R_AT_SHOULDER es el radio del cilindro
+# del torso interpolado a la altura del hombro: el torso es
+# _cylinder_mesh(0.16, 0.11, 0.34) en upper_spine y=0.12, o sea que abarca y
+# de −0.05 a 0.29; a SHOULDER_Y=0.26 da 0.11 + (0.31/0.34)*0.05 = 0.1556.
+# Si se cambia la geometría del torso hay que recalcular esto.
+const TORSO_R_AT_SHOULDER: float = 0.1556
+const DELTOID_HALF_X: float = 0.0568   # 0.066 * 0.86, semieje X del deltoide
+const BRIDGE_OVERLAP: float = 0.022    # solape a cada extremo, para FUNDIR
+const BRIDGE_MIN_HALF: float = 0.030   # nunca degenera a cero
 const CHEST_X: float = 1.16
 const CHEST_Z: float = 0.92
 const WAIST_XZ: float = 0.90
@@ -203,6 +212,9 @@ var accent: Color = Color("#46e6ff")
 # Per-origin visual state
 var _spark_particles: GPUParticles3D = null   # ironblooded sparks node
 var _iron_armor: Array = []                   # ironblooded armor pieces: [{node, base}]
+# Puente escapular (Pasada 4): [{node, side}]. Se dimensiona en _apply_build
+# porque el hueco torso→brazo depende de raza × clase × peso.
+var _shoulder_bridges: Array = []
 
 # Motion / animation state
 var _t: float = 0.0
@@ -835,6 +847,36 @@ func _build() -> void:
 		acromion.visible = true
 		upper_spine.add_child(acromion)
 		_add_outline_pass(acromion, Color("#f2b186"))
+
+	# ---- PUENTE ESCAPULAR (Pasada 4, 2026-08-24) --------------------
+	# El rig no tenía cintura escapular: el hombro era una bola anclada a
+	# un punto y NADA unía el torso con el brazo ([[Grados de Libertad del
+	# Rig]] §1). Se veía como brazos flotando con hueco de fondo visible,
+	# y era el defecto más grave que dejó la Pasada 1.
+	#
+	# Medido antes de tocar — es un defecto ESTÁTICO, no de animación (el
+	# ritmo escapulohumeral es una ley de abducción y no aplica en reposo).
+	# Distancia entre la superficie del torso y el borde interno del
+	# deltoide, en frame `upper_spine`:
+	#   Darro (enano/Duelist)   torso 0.165 · deltoide 0.279 → +0.115 AIRE
+	#   Dagna (enana/Vanguard)  torso 0.314 · deltoide 0.279 → −0.035 solapa
+	#   Roen  (humano/Vanguard) torso 0.256 · deltoide 0.153 → −0.103 solapa
+	#   Valen (elfo/Strategist) torso 0.165 · deltoide 0.115 → −0.050 solapa
+	# Darro es el ÚNICO con hueco, y por la peor combinación posible:
+	# `shoulder_x` 1.60 del enano empuja el brazo a 0.336 mientras
+	# `arch_xz` 0.80 del Duelist angosta el torso a 0.165. Ningún otro
+	# personaje junta hombros anchos con torso angosto.
+	#
+	# Por eso la pieza NO puede tener tamaño fijo: el hueco depende de
+	# raza × clase × peso. Se construye acá y se dimensiona en
+	# `_apply_build()`, que es donde `torso.scale.x` y `arm.position.x` ya
+	# están resueltos. Elipsoide semi-hundida, no caja (lección :511-515).
+	for bside in [-1, 1]:
+		var bridge = _sphere_mesh(0.06, skin_mat)
+		bridge.name = "shoulder_bridge_" + ("l" if bside == -1 else "r")
+		upper_spine.add_child(bridge)
+		_add_outline_pass(bridge, Color("#f2b186"))
+		_shoulder_bridges.append({"node": bridge, "side": bside})
 
 	# jerkin/strap MIGRARON a character_outfit.gd (Fase Migración de Ropa,
 	# debate orquestador↔QA 2026-07-13, GO del director): el cilindro de
@@ -1991,6 +2033,32 @@ func _apply_build() -> void:
 		hand.scale = Vector3.ONE * hand_mult
 		var side2: int = int(arm.get_meta("side"))
 		arm.position.x = float(side2) * SHOULDER_X * shoulder_mult
+
+	# ---- PUENTE ESCAPULAR: dimensionado contra el hueco REAL ----------
+	# Va acá y no en `_build()` porque necesita `torso.scale` (arriba) y
+	# `arm.position.x` (recién resuelto). Tiende de la superficie del torso
+	# al borde interno del deltoide, con solape en los dos extremos para
+	# que FUNDA en vez de tocar (lección: dos esferas que solo se tocan
+	# leen como piezas pegadas; tienen que interpenetrar).
+	var arm_x: float = SHOULDER_X * shoulder_mult
+	var torso_edge: float = TORSO_R_AT_SHOULDER * torso.scale.x
+	var delt_in: float = arm_x - DELTOID_HALF_X
+	# Solape fijo a cada lado. Si el deltoide ya está DENTRO del torso
+	# (Dagna, Roen, Valen) el span sale chico y la pieza queda enterrada,
+	# que es lo correcto: no hay hueco que tapar, pero la masa del origen
+	# del deltoide sigue existiendo.
+	var span_half: float = maxf((delt_in - torso_edge) * 0.5 + BRIDGE_OVERLAP, BRIDGE_MIN_HALF)
+	var center_x: float = (torso_edge + delt_in) * 0.5
+	for entry in _shoulder_bridges:
+		var b = entry.get("node")
+		if not is_instance_valid(b):
+			continue
+		var bs: float = float(entry.get("side", 1))
+		b.position = Vector3(bs * center_x, SHOULDER_Y - 0.02, 0.012)
+		# Z proporcional a la profundidad del torso para que nunca sobresalga
+		# en perfil: la pieza es de relleno lateral, no de volumen frontal.
+		var z_half: float = TORSO_R_AT_SHOULDER * torso.scale.z * 0.46
+		b.scale = Vector3(span_half / 0.06, 0.075 / 0.06, z_half / 0.06)
 
 	for leg in legs:
 		var thigh: MeshInstance3D = leg.get_meta("thigh")
