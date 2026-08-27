@@ -1977,7 +1977,16 @@ func _apply_build() -> void:
 
 	# C6a: V-taper base — el pecho es ancho/plano y la cintura recogida ANTES
 	# de aplicar peso/clase (el frijol del puerto era pecho=cintura).
-	torso.scale  = Vector3(_lerp(0.84, 1.34, w) * arch_xz * CHEST_X, 1.0, _lerp(0.86, 1.26, w) * arch_xz * CHEST_Z)
+	var _tsx: float = _lerp(0.84, 1.34, w) * arch_xz * CHEST_X
+	# PISO DE TORSO POR RAZA (director, 2026-08-24): "la raza manda" cuando
+	# raza y clase se contradicen. Sin esto, `arch_xz` del Duelist (0.80)
+	# empujaba al enano por debajo del elfo en ancho de pecho, contra su
+	# propio canon de trapezoide. El piso vive en `proportions.torso_x_min`
+	# del origen y solo muerde en builds delgados. Ver origins_data.gd.
+	var _tsx_min: float = float(_last_origin.get("proportions", {}).get("torso_x_min", 0.0))
+	if _tsx < _tsx_min:
+		_tsx = _tsx_min
+	torso.scale  = Vector3(_tsx, 1.0, _lerp(0.86, 1.26, w) * arch_xz * CHEST_Z)
 	# jerkin.scale (WAIST_XZ) migró — ahora lo lee CharacterOutfit.
 	# build_frontier() en vivo desde torso.scale/pelvis.scale (ver ahí).
 	pelvis.scale = Vector3(_lerp(0.88, 1.25, w) * arch_xz, 1.0, 1.0)

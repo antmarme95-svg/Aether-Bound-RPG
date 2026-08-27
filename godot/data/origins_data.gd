@@ -91,6 +91,20 @@ const ORIGINS: Array[Dictionary] = [
 			"neck_len": 0.45,
 			"head_scale": 1.24,
 			"hand_scale": 1.40,
+			# PISO DE TORSO POR RAZA (decisión del director, 2026-08-24).
+			# Medido: Darro (enano Duelist) daba hombro 2.40 cabezas y pecho
+			# 1.04 — el hombro le medía 2.3× el pecho y era el torso MÁS
+			# ANGOSTO del elenco, más que el elfo. Al revés de su canon
+			# ("trapezoide, casi tan ancha como alta"). Causa: dos
+			# multiplicadores peleando — `shoulder_x` 1.60 de la raza lo
+			# ensancha arriba mientras `arch_xz` 0.80 del Duelist le angosta
+			# el torso. Es la misma raíz de los brazos flotantes que tapó el
+			# puente escapular de la Pasada 4.
+			# Regla ratificada: LA RAZA MANDA. Un enano Duelist sigue siendo
+			# enano; la clase lo adelgaza RESPECTO DE OTRO ENANO, no por
+			# debajo del trapezoide. Este piso solo muerde en builds
+			# delgados: Dagna (Vanguard) da 2.02 y no lo toca.
+			"torso_x_min": 1.68,
 		},
 		# Rasgos faciales (2026-07-21, frente de geometría nueva): "frente
 		# pesada, mandíbula ancha" (lámina `fenotipo-enano-varon-v1.png`) —
