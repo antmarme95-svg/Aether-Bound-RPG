@@ -66,9 +66,9 @@ frase** — el linter la lee como parte del nombre si no.
   produce: enano (`shoulder_x` 1.60) × Duelist (`arch_xz` 0.80). **Nadie más
   junta hombros anchos con torso angosto**, por eso parecía aleatorio y era
   determinista.
-- ⚠️ **El ritmo escapulohumeral de [[Grados de Libertad del Rig]] NO era el fix
-  de esto.** Es una ley de **abducción** y el defecto era **estático**. Sigue
-  vigente para cuando se anime el brazo; no aplicaba en reposo.
+- ⚠️ El **ritmo escapulohumeral** de [[Grados de Libertad del Rig]] NO era el
+  fix de esto: es ley de **abducción** y el defecto era **estático**. Sigue
+  vigente para cuando se anime el brazo.
 - 🔴 **El "torso bola" de FRENTE no es el flanco: es `chest_mass`**, que lee
   como disco montado ENCIMA del torso. Único defecto grande que sigue abierto.
 - ⚠️ Antes de tocar importación de FBX: leer [[Lecciones]] §Godot 4.7
@@ -93,48 +93,33 @@ frase** — el linter la lee como parte del nombre si no.
    La lección de método que sobrevive: barrer la clase completa (los tres
    fijos), no un personaje a la vez — misma regla 8 de `CLAUDE.md`.
 
-1. **🎨 ANATOMÍA DEL RIG — 3 pasadas aplicadas, 1 revertida.**
-   Piloto: Roen (humano) / Darro (enano) / Valen (elfo), las tres razas, para
-   que cada fix se valide en tres cuerpos y no en uno. Dagna va de **control de
-   regresión** (es la única con las 8 piezas firma).
-   Render de contraste: `Godot --path godot res://scenes/character_lineup_sheet.tscn`.
-   Comparativo visual de las tres pasadas: artifact **Banco de Anatomía del Rig**.
-   - ✅ **Pasada 1** — control sin fixes (`276e0c6`).
-   - ✅ **Pasada 2** — dorsal ancho (`6ce094f`). Arregló el flanco vacío, que
-     se ve de espaldas. **De frente no cambió nada.**
-   - ❌ **Pasada 3 — REVERTIDA.** Se rotaron los pecs para que se "retorcieran
-     bajo la axila" (B4) y salió una **muesca en V** en el centro del pecho: al
-     rotar, los dos elipsoides se cruzan en ángulo y el Sobel entinta el cruce.
-     Dos variantes, las dos peores que no tocar. **Restricción que deja: a esta
-     escala de estilo el pectoral NO se puede rotar.** Descarta una familia
-     entera de soluciones.
-   - ✅ **Pasada 4 — puente escapular** (`f412c22`). **El cambio más visible de
-     todos:** los brazos de Darro vuelven al cuerpo. Se dimensiona en
-     `_apply_build` contra el hueco real, porque depende de raza × clase × peso.
-   - ⬜ **Pasada 5 — pecho de frente. DOS INTENTOS FALLIDOS, diagnóstico
-     corregido.** El defecto **no** es el encaje lateral del pecho bajo el hombro
-     (que es lo que dice B4): es que **`chest_mass` termina en una arista
-     horizontal abrupta** a la altura del esternón, y esa arista lee como borde
-     de disco. Descartado rotar el pectoral (Pasada 3: cualquier ángulo crea
-     arista que el Sobel entinta) y descartado mover el deltoides (no alcanza la
-     zona, y de perfil reabre la "hombrera de fútbol"). **Palanca siguiente con
-     su costo:** `chest_mass` misma — pero existe porque un QA leyó el perfil
-     como "tabla plana" (40% HIGH), así que aplanarla reabre ese defecto. Es un
-     intercambio, no un fix libre.
-   - ⬜ **Pasada 6 — primitiva del tórax.** La más cara (6 acoplamientos,
-     recalibrar 3 masas hijas). Los hallazgos técnicos ya están hechos y **no hay
-     que re-derivarlos** — `radial_segments = 6` (no 4), no invertir el taper de
-     `torso`, y bajar `pec.position.z` a ~0.108-0.112. En el plan:
+1. **🎨 ANATOMÍA DEL RIG — 3 fixes aplicados, 2 revertidos, anchos cerrados.**
+   Piloto: Roen (humano) / Darro (enano) / Valen (elfo) — las tres razas, para
+   validar cada fix en tres cuerpos. Dagna va de **control de regresión** (única
+   con las 8 piezas firma). Relato completo de cada pasada en [[LOG]]
+   §2026-08-24. Comparativo visual: artifact **Banco de Anatomía del Rig**.
+   `Godot --path godot res://scenes/character_lineup_sheet.tscn`
+   - ✅ Dorsal ancho (`6ce094f`) · puente escapular (`f412c22`, cerró los brazos
+     flotantes de Darro) · anchos ratificados (`3dfa6bc`).
+   - ❌ **Dos restricciones que dejaron los fracasos, y valen más que los fixes:**
+     el **pectoral NO se puede rotar** a esta escala (cualquier ángulo crea una
+     arista que el Sobel entinta), y **mover el deltoides no alcanza** la zona del
+     defecto (de perfil reabre la "hombrera de fútbol").
+   - ⬜ **Único defecto grande abierto: el pecho de frente.** No es el encaje
+     lateral bajo el hombro (B4) sino que **`chest_mass` termina en arista
+     horizontal abrupta** en el esternón. **Palanca con su costo:** tocar
+     `chest_mass` reabre el perfil "tabla plana" (QA 40% HIGH). Es un intercambio.
+   - ⬜ **Cadera sin decidir:** sin multiplicador racial ni piso. Defendible para
+     un trapezoide, pero es el hueco que queda del sistema de anchos.
+   - ⬜ Primitiva del tórax (la más cara: 6 acoplamientos). Hallazgos técnicos ya
+     hechos, **no re-derivarlos** — `radial_segments = 6`, no invertir el taper de
+     `torso`, bajar `pec.position.z` a ~0.108-0.112. En
      `~/.claude/plans/haz-el-plan-de-idempotent-lobster.md`.
-   - ⬜ Abdomen como masa propia (**B2**), oblicuos sobre la cresta ilíaca (**B5**),
-     y el **cuello de Valen**, que sigue sin existir.
-   - ⚠️ **Dos trampas de instrumento, ya pagadas:** el **ratio ancho/alto** del
-     lineup es **ciego** a la escultura del torso (el AABB lo dominan los brazos —
-     dio idéntico en las 3 pasadas). Y `godot/test_out/` está en `.gitignore`, así
-     que **el "antes" se copia ANTES de correr** o se pierde.
-   - **Insumo que sigue faltando para todas:** los **anchos** (pecho, cintura,
-     cadera, razón hombro/cadera). El libro no los trae — hay que **medirlos en
-     píxeles sobre las láminas ratificadas**. Ver [[LOG]] §2026-08-24.
+   - ⚠️ **Dos trampas de instrumento ya pagadas:** el **ratio ancho/alto** del
+     lineup es **ciego** a la escultura del torso (el AABB lo dominan los brazos).
+     Y `godot/test_out/` está en `.gitignore` — **el "antes" se copia ANTES de
+     correr** o se pierde.
+
 
 2. **Playtest — único bloqueo real: agendar a Diego, Santiago y Delmer.**
    Todo lo técnico está listo (protocolo, telemetría, escena gris, feel

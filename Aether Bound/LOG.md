@@ -1,5 +1,84 @@
 # LOG — bitácora append-only del Vault
 
+## [2026-08-24] canon | Los anchos del cuerpo, ratificados — y el ancla resultó estar ya verificada
+
+Cierra **el insumo que le faltaba a todas las pasadas de anatomía** y que
+ninguna podía inventar. Las alturas por raza (7.5 / 4.5 / 8 cabezas) eran canon
+desde hacía tiempo; los anchos no existían.
+
+### Primero se agotaron las dos fuentes, y las dos fallaron
+
+**El libro no trae medidas horizontales.** Diez capítulos barridos, apareció
+**una sola** (ancho de hombros = 2 alturas de cabeza).
+
+**Las láminas tampoco.** Tres métodos de medición en píxeles, cada uno
+arreglando el fallo del anterior, y los tres chocaron con **límites del
+material, no del código**:
+
+1. *"La racha del medio es el torso"* → basura (0.207 cabezas de hombro para
+   Valen = 3 cm). A distintas alturas la racha del medio es pelo, una línea de
+   anatomía o un hueco entre dedos.
+2. *"La racha que contiene el eje"* → las líneas internas de sombreado partían
+   el torso de Valen en 6 rachas.
+3. *Barrido direccional desde el eje*, que distingue línea de tinta (fina) de
+   aire (ancho) → reveló los límites reales, uno por lámina:
+   - **Roen:** la **capa** cuelga pegada al torso de un lado y el **brazo lo
+     toca** del otro. No hay hueco que encontrar. Confirmado viendo el overlay.
+   - **Darro:** los brazos tocan el torso sin separación alguna.
+   - **Valen:** su piel pálida y el papel cálido **se solapan en 70 niveles de
+     luminancia** (papel mediana 211, piel mediana 209). **Ningún umbral global
+     los separa** — y eso no es un bug, es cómo está pintada.
+
+**Conclusión:** son ilustraciones de personaje, no referencia ortográfica.
+Nunca se dibujaron para medirse. **Los anchos no se recuperan: se deciden.**
+
+### El ancla, que resultó estar ya verificada
+
+Al calcular los anchos actuales del rig para dárselos al director como base,
+apareció esto: **el hombro de Roen mide exactamente 2.00 cabezas** — clavado en
+la única medida horizontal que dio el libro. **Nadie lo había buscado; el rig ya
+lo cumplía.** Queda como **ancla del sistema**, y las otras razas se expresan
+como desviación de ella, igual que las alturas.
+
+### La regla ratificada: LA RAZA MANDA
+
+Cuando raza y clase se contradicen, **gana la raza**. Un enano Duelist sigue
+siendo enano: la clase lo adelgaza **respecto de otro enano**, no por debajo del
+canon de su raza.
+
+Salió de un caso medido. Darro daba **hombro 2.40 y pecho 1.04** — el hombro le
+medía **2.3× el pecho**, y era el torso **más angosto de todo el elenco, más que
+el elfo**, al revés de su canon de trapezoide. Causa: dos multiplicadores
+peleando — `shoulder_x` 1.60 de la raza ensancha arriba mientras `arch_xz` 0.80
+del Duelist angosta el torso. **Es la misma raíz de los brazos flotantes** que el
+puente escapular de la Pasada 4 había tapado: aquella corrigió el síntoma, esta
+corrige la proporción de abajo.
+
+Implementado como **`proportions.torso_x_min`** por origin: un **piso** que solo
+muerde en builds delgados. Darro pasa de pecho 1.04 a **1.64** y su razón
+hombro/pecho de 2.31 a **1.46** — más liviano que Dagna (2.03) como pide su
+ficha, sin ser el más angosto. Dagna da 2.02, no toca el piso; verificado en
+render junto con Valen.
+
+### Tabla vigente (alturas de cabeza)
+
+| | hombro | pecho | cintura | cadera |
+|---|---|---|---|---|
+| Roen humano/Vanguard | **2.00** ⚓ | 1.97 | 1.20 | 1.40 |
+| Dagna enana/Vanguard | 2.46 | 2.03 | 1.23 | 1.37 |
+| Darro enano/Duelist | 2.40 | 1.64 | 1.00 | 0.73 |
+| Valen elfo/Strategist | 1.65 | 1.22 | 0.74 | 0.91 |
+
+Escrita en [[Fenotipos y Creación de Personaje]] §Anchos del cuerpo — ese doc ya
+documentaba el campo `proportions` y las alturas medidas, así que es su hogar
+natural y no hizo falta página nueva.
+
+**Abierto y anotado, no bloqueante:** la **cadera** no tiene multiplicador
+racial ni piso (`pelvis.scale.x` solo lee peso × clase). Para un trapezoide
+—ancho arriba, angosto abajo— es defendible, pero **no está decidido**.
+
+---
+
 ## [2026-08-24] código | Hipótesis del deltoides: falló, y al fallar corrigió el diagnóstico
 
 Segundo intento fallido seguido sobre el pecho de frente. Se registra porque
