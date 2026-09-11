@@ -6,14 +6,18 @@
 ## Raíz
 
 - [[SCHEMA]] — el modelo de trabajo: capas, plantillas, contratos, regla de oro.
-- [[LOG]] — bitácora append-only de operaciones.
+- [[LOG]] — bitácora append-only de operaciones (periodo en curso).
+- `LOG-Archivo/` — tramos cerrados del LOG, verbatim y sin resumir
+  (VAULT-STARTER §4.1): [[2026-07]] (262 entradas) · [[2026-08]] (94).
 - `../VAULT-STARTER.md` — **exportable**: el método completo (VDD ×
   LLM-WIKI + rutina de cierre + dieta de arranque §9 + consejos de campo)
   destilado en un archivo único para que cualquier persona arranque su
   propio Vault adjuntándolo a su Claude Code. Generado 2026-07-13,
   fusionado con `project-context` (auditoría de tokens, niveles
   equipo/privado, puentes) el 2026-07-20.
-- `scripts/check_vault.py` — auditoría de **peso** de arranque del Vault
+- `scripts/check_vault.py` (raíz del repo) — auditoría de **peso** de arranque.
+  v4 desde 2026-09-11: herramienta ÚNICA del repo, descubre los tres ejes
+  sola; ya no hay una copia por eje
 - `scripts/hook_current_state.sh` + `.claude/settings.json` (raíz del repo) —
   hook `PostToolUse` que corre `check_vault.py` automáticamente al editar
   `Current-State.md` y devuelve el semáforo al mismo turno

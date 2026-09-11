@@ -124,7 +124,7 @@ ser **caro de arrancar**. Son dos ejes independientes; este framework solo
 auditaba el primero hasta ahora. La métrica que importa es cuántos tokens
 se pagan ANTES del primer mensaje de la sesión.
 
-**Medir.** `python3 "Aether Bound/scripts/check_vault.py" --json` reporta,
+**Medir.** `python3 scripts/check_vault.py --json` reporta,
 por archivo, si se auto-carga (hard = CLAUDE.md, siempre; soft = [[Current-State]],
 por protocolo; no = bajo demanda), su peso en tokens, y a nivel proyecto el
 **arranque_tokens** total con semáforo: 🟢 <10,000 · 🟡 10,000–30,000 ·

@@ -1,14 +1,16 @@
 ---
 status: vivo
-updated: 2026-08-23
+updated: 2026-09-11
 ---
 
 # Current State
 
 > Punto de entrada de TODA sesión. Describe dónde está el proyecto, nunca cómo
-> funciona el juego (eso vive en `10-Knowledge/`). Higiene de contexto
-> aplicada 2026-08-23 (4ta vez) — relato histórico movido a
-> [[Current-State-Historico]] VERBATIM; detalle completo también en [[LOG]].
+> funciona el juego (eso vive en `10-Knowledge/`). Histórico verbatim en
+> [[Current-State-Historico]]; detalle en [[LOG]].
+>
+> **2026-09-11:** [[LOG]] rotado a `LOG-Archivo/` y `check_vault.py` v4
+> instalado como herramienta única del repo. Recorte de este archivo pendiente.
 
 ## Estado general
 
@@ -27,7 +29,7 @@ autorizado (no combate genérico ni sistemas fuera del slice).
 ### 🛠️ Herramientas del vault
 
 ```
-python "Aether Bound/scripts/check_vault.py"    # peso de arranque
+python scripts/check_vault.py    # peso de arranque
 python "Aether Bound/scripts/check_canon.py"    # consistencia (22 clases)
 ```
 Exit 1 si hay críticos. **Orden no negociable:** linter en 0 → subagentes en

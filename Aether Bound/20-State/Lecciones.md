@@ -626,7 +626,7 @@ updated: 2026-08-12
   se actualiza al instalar, pero una sesión de shell existente no lo
   relee. Si `python`/`python3` fallan así después de instalar: abre una
   terminal NUEVA, o usa la ruta completa de arriba directamente. Afecta a
-  `Aether Bound/scripts/check_vault.py` (auditoría de peso de arranque,
+  `scripts/check_vault.py` (auditoría de peso de arranque,
   SCHEMA §8) — con Python real, el script corre en Windows sin más ajuste
   salvo forzar UTF-8 en `sys.stdout` (la consola de Windows no siempre usa
   UTF-8 por defecto; sin eso, los acentos salen como `�`).
