@@ -18,6 +18,82 @@
 > rotación por periodo lo corrige de paso, sin tocar el texto de ninguna
 > entrada.
 
+## [2026-09-21] código | Pasada 5: los pectorales estaban tragados — se recuperaron, y el disco sobrevivio
+
+Tercer intento sobre el pecho de frente. **Resultado mixto y hay que decirlo
+asi: el fix funciono para lo que midio, y el defecto grande sigue ahi.**
+
+### Lo que cambio el metodo
+
+Los dos intentos anteriores (Pasada 3, deltoides) fallaron por tantear. Este
+arranco **midiendo la geometria en vez de mirarla**, y la medicion contradijo
+la hipotesis con la que iba a entrar.
+
+**Hipotesis descartada ANTES de escribir codigo.** Iba a aplanar `chest_mass`.
+El barrido de la familia de parametros mostro que el intercambio
+protrusion↔arista es **monotono**: la arista solo se suaviza cuando la masa
+deja de sobresalir, y la protrusion es justo lo que compra el perfil contra
+"tabla plana". No es que el fix sea caro — es que **no existe** dentro de esa
+familia. Numeros: arista actual 23.7° en y=+0.0079; alargar la masa hacia abajo
+la empeora (27.9° → 75.2°) porque el cilindro se angosta al bajar y la masa
+tiene que clavarse mas para volver a entrar.
+
+**Segunda hipotesis descartada por ratificacion previa.** El hallazgo **B2** del
+libro pide "abdomen como masa propia" y encajaba perfecto: una masa abajo
+enterraria la arista. Pero el propio archivo (`character_rig.gd`, bloque
+ABDOMEN) tiene una prohibicion explicita — `abs_plate` fallo en **tres
+magnitudes distintas** y Boris ratifico "SIN masa elevada" el 2026-07-14,
+porque **la lamina no tiene nada que sobresalga ahi**. Es el limite de fuente
+que la cabecera de [[Principios de Anatomia 3D]] ya advierte: el libro describe
+anatomia real, el proyecto dibuja un estilo. **Gano la lamina.**
+
+### Lo que si encontro la medicion
+
+`pec.scale.z = 0.32` dejaba el frente del pectoral en z=0.1510 y la superficie
+de `chest_mass` bajo el en z=0.1507: **0.3 mm de relieve**. El comentario del
+propio archivo declara la intencion *"~3mm proud sobre chest_mass"*. O sea que
+los pectorales estaban **tragados por la masa de pecho** y el torso no tenia
+pectorales encima — solo el disco liso.
+
+Fix: `scale.z` 0.32 → **0.38**, que devuelve los 3.3 mm exactos de la intencion.
+
+**Por que `scale.z` y no `position.z`** (que es lo que el Sprint A6 habia
+bajado): en el borde de una elipsoide la contribucion del semieje z es **cero**,
+asi que el PERIMETRO no se mueve — solo bombea el centro. El filo superior se
+queda clavado en z=0.135 y la "streak crema" que A6 combatio **no se puede
+reabrir por construccion**, no por cuidado. Verificado en el render de perfil:
+identico, sin "hombrera de futbol".
+
+### Resultado en las tres razas
+
+| | Antes | Despues |
+|---|---|---|
+| **Valen** (elfo) | pecho liso, una sola masa | **la mejora mas clara** — dos lobulos y el valle esternal |
+| **Darro** (enano) | sin definicion | el borde del pectoral ya lee |
+| **Roen** (humano) | lobulos apenas insinuados | lobulos separados, valle mas hondo |
+
+Sin regresiones. Perfil intacto en los tres.
+
+### Y lo que NO arreglo
+
+**El defecto grande sigue completo.** El pecho sigue leyendo como **tapa de
+barril sobresaliendo del torso**, con un filo duro por debajo que cruza de lado
+a lado. Mas visible en Darro que en nadie.
+
+**Pero la medicion acoto de donde NO sale.** `chest_mass` tiene semieje x
+0.1485 contra un radio de cilindro de 0.1476 a esa altura: **estan a ras**. La
+masa de pecho **no desborda lateralmente**, y como es hija de `torso` escala
+junto con el, eso vale en cualquier build. **El voladizo de la silueta no es
+`chest_mass`: son los deltoides.** Que es territorio con aviso propio
+(`SHOULDER_X`, "dos rondas esculpieron el deltoide correcto sobre el pivote
+equivocado").
+
+### Estado del frente
+
+Tres hipotesis quemadas en esta zona. **Se para de esculpir el pecho** y la
+cuarta no se arranca sin decision del director: la evidencia apunta a los
+hombros, y ahi hay una leccion cara pagada de antemano.
+
 ## [2026-09-21] lint | La rotacion del LOG rompio 37 criticos de canon — y 34 eran del linter, no del vault
 
 Primera corrida de `check_canon.py` despues de la rotacion del 2026-09-11:

@@ -75,8 +75,10 @@ frase** — el linter la lee como parte del nombre si no.
 - ⚠️ El **ritmo escapulohumeral** de [[Grados de Libertad del Rig]] NO era el
   fix de esto: es ley de **abducción** y el defecto era **estático**. Sigue
   vigente para cuando se anime el brazo.
-- 🔴 **El "torso bola" de FRENTE no es el flanco: es `chest_mass`**, que lee
-  como disco montado ENCIMA del torso. Único defecto grande que sigue abierto.
+- 🔴 **El "torso bola" de FRENTE sigue abierto** — el pecho lee como tapa de
+  barril con filo duro debajo. **Pero ya NO es `chest_mass`:** medido, su semieje
+  x (0.1485) va a ras del radio del cilindro (0.1476) y escala junto al torso, así
+  que no desborda en ningún build. **El voladizo son los deltoides.**
 - ⚠️ Antes de tocar importación de FBX: leer [[Lecciones]] §Godot 4.7
   (orientación +Z/−Z, escala ×100, árbol duplicado al re-apropiar).
 
@@ -111,10 +113,19 @@ frase** — el linter la lee como parte del nombre si no.
      el **pectoral NO se puede rotar** a esta escala (cualquier ángulo crea una
      arista que el Sobel entinta), y **mover el deltoides no alcanza** la zona del
      defecto (de perfil reabre la "hombrera de fútbol").
-   - ⬜ **Único defecto grande abierto: el pecho de frente.** No es el encaje
-     lateral bajo el hombro (B4) sino que **`chest_mass` termina en arista
-     horizontal abrupta** en el esternón. **Palanca con su costo:** tocar
-     `chest_mass` reabre el perfil "tabla plana" (QA 40% HIGH). Es un intercambio.
+   - ✅ Pectorales recuperados (Pasada 5): estaban **tragados por `chest_mass`**
+     — 0.3 mm de relieve contra los ~3 mm que el propio archivo declaraba. Ganancia
+     clara en las tres razas, cero regresión. **Lever seguro por construcción:**
+     `pec.scale.z` mueve el centro y NO el perímetro, así que no puede reabrir la
+     "streak crema" de A6; `position.z` sí lo haría.
+   - ⬜ **El pecho de frente sigue abierto, y van TRES hipótesis quemadas.**
+     Aplanar `chest_mass` está **descartado por medición**: el intercambio
+     protrusión↔arista es monótono, o sea que el fix no es caro — **no existe**
+     en esa familia. Abdomen como masa propia (B2 del libro) está **prohibido por
+     ratificación** (`abs_plate` falló en 3 magnitudes, 2026-07-14: la lámina no
+     tiene nada que sobresalga ahí — **gana la lámina sobre el libro**).
+     **La evidencia apunta a los deltoides**, que es el territorio del aviso de
+     `SHOULDER_X`. No arrancar la cuarta sin decisión del director.
    - ⬜ **Cadera sin decidir:** sin multiplicador racial ni piso. Defendible para
      un trapezoide, pero es el hueco que queda del sistema de anchos.
    - ⬜ Primitiva del tórax (la más cara: 6 acoplamientos). Hallazgos técnicos ya

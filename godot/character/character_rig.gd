@@ -554,8 +554,25 @@ func _build() -> void:
 	for pside in [-1, 1]:
 		# Sprint A6: z 0.138→0.135 — el filo superior del pec asomaba
 		# sobre chest_mass y el rim lo encendía como "streak crema" en 3/4.
+		#
+		# Pasada 5 (2026-09-21): scale.z 0.32→0.38. MEDIDO, no tanteado.
+		# El comentario de arriba declara la intención "~3mm proud sobre
+		# chest_mass", pero la geometría ya no la cumplía: con 0.32 el
+		# frente del pec cae en z=0.1510 y la superficie de chest_mass en
+		# (x=0.055, y=0.09) en z=0.1507 — **0.3 mm de relieve**. Los pecs
+		# estaban tragados, y por eso el pecho leía como disco liso: no es
+		# que sobre chest_mass, es que faltaban los pectorales ENCIMA.
+		# 0.38 devuelve exactamente los ~3.3mm de la intención original.
+		#
+		# Por qué scale.z y NO position.z (que es lo que A6 bajó): en el
+		# borde de la elipsoide (y extremo) la contribución de az es CERO,
+		# así que el PERÍMETRO no se mueve — solo bombea el centro. El
+		# filo superior se queda clavado en z=0.135 y la "streak crema"
+		# de A6 no se puede reabrir. Mover position.z sí la reabriría.
+		# Techo conocido: scale.z 0.50 fue el "dos ojos en el torso" (QA
+		# 42%); 0.38 queda muy por debajo.
 		var pec = _sphere_mesh(0.05, skin_mat)
-		pec.scale = Vector3(1.7, 0.9, 0.32)
+		pec.scale = Vector3(1.7, 0.9, 0.38)
 		pec.position = Vector3(float(pside) * 0.055, 0.09, 0.135)
 		torso.add_child(pec)
 		_add_outline_pass(pec, Color("#f2b186"))
