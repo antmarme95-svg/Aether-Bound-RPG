@@ -18,6 +18,46 @@
 > rotación por periodo lo corrige de paso, sin tocar el texto de ninguna
 > entrada.
 
+## [2026-09-21] lint | La rotacion del LOG rompio 37 criticos de canon — y 34 eran del linter, no del vault
+
+Primera corrida de `check_canon.py` despues de la rotacion del 2026-09-11:
+**37 criticos**, cuando el sprint habia cerrado en 0. Ninguno venia de haber
+escrito canon nuevo — el vault no se toco en tres semanas. Los produjo la
+rotacion misma, y en dos clases distintas que conviene no confundir.
+
+**Clase 1 — 3 punteros muertos en archivos vivos.** [[00-Index]], [[Fenotipos y
+Creacion de Personaje]] y [[Current-State]] citaban `[[LOG]] §2026-08-13`,
+`§2026-08-24` y `§2026-08-21`. Las entradas existen y estan intactas, pero
+ahora viven en `LOG-Archivo/2026-08.md`, asi que `[[LOG]]` ya no las contiene.
+Deuda real: apuntaban a lo mas reciente que hicimos. Repuntadas a `[[2026-08]]`.
+
+**Clase 2 — 34 falsos positivos del propio `LOG-Archivo/`.** El linter empezo
+a barrer los tramos archivados como si fueran canon vivo. No lo son: la
+cabecera de la rotacion dice **"verbatim y sin resumir — archivar no es
+comprimir"**, y un tramo cerrado cita secciones que existian cuando se escribio.
+Sus enlaces envejecen **por diseno**.
+
+**El fix fue a la fuente, y la fuente ya tenia la respuesta escrita.** El linter
+ya distinguia esta naturaleza: `APPEND_ONLY` (`LOG.md`,
+`Current-State-Historico.md`) degrada sus hallazgos a INFO, con el comentario
+*"sus enlaces rotos son esperables"*. La rotacion creo archivos de esa misma
+naturaleza sin inscribirlos ahi. Se agrego `APPEND_ONLY_DIRS = ("LOG-Archivo/",)`
+**por carpeta, no por nombre** — a proposito: cada mes que se cierre suma un
+archivo, y una lista de basenames habria vuelto a romperse en octubre sin que
+nadie lo notara hasta la siguiente corrida.
+
+**La leccion de metodo:** una tarea de higiene que no toca ni una linea de canon
+puede romper canon igual, porque **las citas son acoplamiento**. Mover un archivo
+es cambiar la fuente de todo lo que lo cita. Rotar el LOG es barato; re-apuntar
+lo que lo citaba es la otra mitad de la tarea, y quedo sin hacer.
+
+**Queda abierto, sin bloquear:** `[[VAULT-STARTER]]` (LOG.md:23) no resuelve
+porque `VAULT-STARTER.md` vive en la **raiz del repo**, fuera del vault que el
+linter indexa. Es INFO. No lo toque: editarlo es reescribir una entrada del LOG,
+y esa decision es del director, no de la higiene.
+
+Cierre: **0 criticos / 0 medios**, 30 INFO, todos de archivos append-only.
+
 ## [2026-09-11] lint | LOG rotado y `check_vault.py` v4 instalado como herramienta única del repo
 
 Cierra los dos pendientes que dejó la auditoría de [[VAULT-STARTER]] v4 contra

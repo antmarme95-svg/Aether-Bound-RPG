@@ -36,6 +36,10 @@ APPEND_ONLY = {
     "LOG.md",
     "Current-State-Historico.md",
 }
+# Carpetas enteras de la misma naturaleza. `LOG-Archivo/` guarda los tramos
+# cerrados del LOG **verbatim** (rotacion 2026-09-11): archivar no es corregir,
+# asi que sus citas y enlaces envejecen por diseno y no son deuda de canon.
+APPEND_ONLY_DIRS = ("LOG-Archivo/",)
 # Carpetas que no son canon vivo. `30-Loops` SÍ se carga: es canon enlazable
 # ([[QA Loop]], [[Lint Loop]]) y sacarlo del índice rompe la resolución.
 DIRS_IGNORADOS = ("90-Raw", ".obsidian", "scripts")
@@ -287,7 +291,8 @@ def cargar_vault(root):
         docs[rel] = {
             "lines": text.splitlines(),
             "text": text,
-            "append_only": os.path.basename(rel) in APPEND_ONLY,
+            "append_only": (os.path.basename(rel) in APPEND_ONLY
+                             or rel.startswith(APPEND_ONLY_DIRS)),
         }
     return docs
 

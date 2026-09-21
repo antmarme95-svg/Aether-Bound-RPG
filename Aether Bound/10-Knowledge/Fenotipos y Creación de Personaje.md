@@ -62,7 +62,7 @@ tres métodos de medición en píxeles chocaron con límites del material, no de
 código — la capa de Roen cuelga pegada al torso y su brazo lo toca, los brazos
 de Darro tocan el torso sin hueco, y la piel pálida de Valen y el papel cálido
 **se solapan en 70 niveles de luminancia**, así que ningún umbral los separa.
-Detalle en [[LOG]] §2026-08-24.
+Detalle en [[2026-08]] §2026-08-24.
 
 Son ilustraciones de personaje, no referencia ortográfica: nunca se dibujaron
 para medirse.

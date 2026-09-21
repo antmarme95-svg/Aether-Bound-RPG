@@ -1,6 +1,6 @@
 ---
 status: vivo
-updated: 2026-09-11
+updated: 2026-09-21
 ---
 
 # Current State
@@ -11,6 +11,10 @@ updated: 2026-09-11
 >
 > **2026-09-11:** [[LOG]] rotado a `LOG-Archivo/` y `check_vault.py` v4
 > instalado como herramienta única del repo. Recorte de este archivo pendiente.
+> **2026-09-21:** la rotación dejó 37 críticos de canon — 3 punteros muertos
+> reales y 34 falsos positivos del archivo. Cerrado en 0, detalle en [[LOG]]
+> §2026-09-21. **Regla que deja: mover un archivo es cambiar la fuente de todo
+> lo que lo cita** — re-apuntar es la otra mitad de rotar.
 
 ## Estado general
 
@@ -58,7 +62,7 @@ frase** — el linter la lee como parte del nombre si no.
   `project.godot` ni el build congelado. Identidad lee bien (trenzas,
   hombreras, martillo-ariete, tatuajes); la escultura no (bola de torso,
   rim de forja quemado, sin cuello). El código de C6 no hubo que
-  reconstruirlo — estaba recuperable. Detalle: [[LOG]] §2026-08-21.
+  reconstruirlo — estaba recuperable. Detalle: [[2026-08]] §2026-08-21.
 - **Las tres razas están en el motor** y el frente de anatomía va por la
   **Pasada 4**. Detalle pasada por pasada, hipótesis viva y trampas ya
   pagadas: §Pendientes §1. Los defectos que quedan son **sistémicos en las
